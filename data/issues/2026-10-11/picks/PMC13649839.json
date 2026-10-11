@@ -1,0 +1,83 @@
+{
+  "pmcid": "PMC13649839",
+  "rank": 7,
+  "headline": "高光強度・昇温処理したシロイヌナズナPSIIのクライオ電顕：アンテナの脱離とD1 His252の動き",
+  "target_label": "PSII C2S2（シロイヌナズナ）",
+  "method_label": "クライオ電顕・全体 2.74 Å",
+  "summary": {
+    "background": "強光と高温はPSIIを傷める。D1の損傷と修復は知られるが、損傷したPSII複合体の構造変化を直接見た例は限られていた。",
+    "approach": "精製したPSII C2S2に2000 µEの光を30分当てて（約29°Cまで昇温）急速凍結し、クライオ電顕で2.74 Åの平均構造を決めた。対照は暗所で凍結した既報の構造。",
+    "findings": "LHCIIトリマーなどの周辺サブユニットが脱離し、非ヘム鉄周辺のD1・D2ループが見えなくなる。重炭酸イオンの密度もなく、D1 His252が向きを変える。"
+  },
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "非ヘム鉄のあるアクセプター側でD1・D2のDEループ複数箇所の密度が消え、重炭酸イオンの密度も3.0 RMSDでは見えなくなる。高光下で重炭酸が外れて光保護に働くという生化学の知見に、構造の側から補完的な証拠を与える。",
+      "evidence": [
+        {
+          "quote": "At a contour level of 3.0 RMSD the Coulomb potential map for the high light treated PS II complexes showed no density above the non-heme iron",
+          "section": "Results"
+        },
+        {
+          "quote": "Our result provides complementary structural information to the significant biophysical evidence that high light can cause the bicarbonate to dissociate from the non-heme iron",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "新しい結合部位",
+      "text": "D1 His252がQB結合ポケット側へ回転し、Ser264・Asn266と非典型的なセリンプロテアーゼ様トライアドを作りうる位置に来る。D1の自己切断を説明する仮説だが、著者自身も距離が長く、攻撃対象も不明確で、自己触媒が可能かは不明としている。",
+      "evidence": [
+        {
+          "quote": "We speculate that this may form an atypical serine-protease triad or diad",
+          "section": "Results"
+        },
+        {
+          "quote": "It is currently unclear from the high light structure if the proposed serine-protease triad would be capable of auto-catalytic cleavage of D1",
+          "section": "Discussion"
+        }
+      ]
+    },
+    {
+      "tag": "手法の工夫",
+      "text": "単離したPSIIを光処理してから凍結することで、プロテアーゼによる分解を受けない損傷状態を捉えられる。一方、C2対称を課した平均構造なので、個々の複合体の損傷の違いや非対称な損傷は平均化される。",
+      "evidence": [
+        {
+          "quote": "As the PS II complexes were illuminated after isolation, proteases were largely absent so that damaged PS II complexes remained undigested",
+          "section": "Introduction"
+        },
+        {
+          "quote": "It should be noted that C2-symmetry was enforced in the generation of the cryo-EM map, therefore asymmetric damage would be averaged out across both monomers.",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "シロイヌナズナ（Col-0）を8週間、20°C・8時間明/16時間暗で栽培。暗所16時間後に葉を回収。",
+    "construct": "BBY膜からPSII C2S2複合体（強結合アンテナ付き）を単離。",
+    "purification": "既報の方法（Forsman et al. 2026）に従う。",
+    "sample_prep": "1.6 mg Chl/mLを2000 µEで30分照射。約30秒後にQuantifoil R1.2/1.3 Cu 300へ。Vitrobot Mk IV 4°C・湿度100%、ブロット5秒。",
+    "data_collection": "Titan Krios G2＋Falcon 4＋Selectris、15,511ムービー、総線量40 e⁻/Å²。cryoSPARCでC2対称、2.74 Å。",
+    "evidence": [
+      {
+        "quote": "The leaves of the plants were harvested after 16 h of darkness, and BBY membranes (PS II-enriched thylakoid membrane fragments, Berthold et al. 1981)",
+        "section": "Methods"
+      },
+      {
+        "quote": "The sample (1.6 mg Chl mL− 1) was then put into a glass vial (approx. diameter 10 mm; sample height 10 mm) and exposed to 2000 µE of light for 30 min",
+        "section": "Methods"
+      },
+      {
+        "quote": "The grids were then plunge frozen in liquid ethane using an FEI Vitrobot MkIV (Thermo Fisher Scientific) at 100% humidity, 4 °C, a blot force of -5, a wait time of 1 s and a blotting time of 5 s.",
+        "section": "Methods"
+      },
+      {
+        "quote": "In total 15,511 movies were collected, which each contained 40 frames.",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": ["光化学系II", "光阻害", "D1", "重炭酸イオン", "非ヘム鉄", "クライオ電顕", "高光強度"],
+  "editor_notes": "対照構造は 9I4T（既報）。PDB 31FD は未公開（released ではない）のため、PDB 由来の分解能・リガンドは取得できず、method_label に本文の値（2.74 Å）を入れた。構造図は作れない可能性が高い。探索的研究と著者自身が位置づけており、仮説（セリンプロテアーゼ様トライアド）は推測として書いた。"
+}

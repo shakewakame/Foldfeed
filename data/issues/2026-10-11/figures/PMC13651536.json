@@ -1,0 +1,15 @@
+{
+ "pdb_id": "22YX",
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "Cytochrome P450"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "5-mer peptide"
+  }
+ ],
+ "ligand": true,
+ "ligand_color": "#D4452B"
+}

@@ -1,0 +1,1230 @@
+{
+  "issue_date": "2026-10-11",
+  "index_date": "2026-10-10",
+  "generated_at": "2026-10-11T00:08:56+00:00",
+  "query": "(\"cryo-EM\" OR \"cryoEM\" OR \"cryo-electron microscopy\" OR \"cryo-electron tomography\" OR \"subtomogram\" OR \"crystal structure\" OR \"X-ray crystallography\" OR \"crystallographic\" OR \"NMR structure\" OR \"solution structure\") AND (\"Protein Data Bank\" OR \"PDB\" OR \"wwPDB\" OR \"EMDB\" OR \"accession code\" OR \"accession codes\") AND OPEN_ACCESS:y AND NOT SRC:PPR AND FIRST_IDATE:[2026-10-10 TO 2026-10-10]",
+  "counts": {
+    "hits": 25,
+    "excluded_types": 3,
+    "parsed": 22,
+    "new_structure": 7,
+    "new_structure_ids_unlisted": 0,
+    "new_map_only": 0,
+    "uses_existing": 13,
+    "no_ids": 2
+  },
+  "candidates": [
+    {
+      "pmcid": "PMC13651536",
+      "pmid": null,
+      "doi": "10.1021/jacs.6c05584",
+      "title": "Mechanism for Aromatic Nitration Catalyzed by Cytochrome P450 Enzymes from Rufomycin Biosynthesis",
+      "journal": "Journal of the American Chemical Society",
+      "journal_abbrev": "J Am Chem Soc",
+      "authors": "Kirk A, Gullick J, Zhao Y, Schittenhelm R, Feixas F, Tomita H, Katsuyama Y, Ohnishi Y, De Voss J, Cryle M, Garcia-Borràs M.",
+      "pub_date": "2026-10-10",
+      "index_date": "2026-10-10",
+      "license": "cc by",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "AbstractDuring the biosynthesis of the peptide antibiotic rufomycin, the cytochrome P450 (P450) enzyme RufO catalyzes the aromatic nitration of a tyrosine residue in a ribosomal pentapeptide that serves as a precursor for nonribosomal peptide synthesis. To understand the mechanism of this unusual P450-mediated reaction, a series of pentapeptides were tested as substrates alongside molecular dynamics simulations and quantum mechanics/molecular mechanics (QM/MM, ONIOM approach) calculations. A new substrate-bound crystal structure of the homologue NsRufO was also obtained. These experiments revealed the intimate and necessary involvement of a histidine residue within the pentapeptide substrate of RufO in supporting effective nitration, with the protonation state of the intermediate compound II proposed to influence the production of nitrated tyrosine over unwanted nitrate formation. These findings provide key insights into the mechanism of P450-mediated nitration that explain how sequence differences in RufO and its homologues, along with the structure of the pentapeptide substrate, facilitate aromatic nitration of tyrosine by RufO.",
+      "kind": "new_structure",
+      "own_structures": [
+        {
+          "pdb_id": "22YX",
+          "status": "released",
+          "title": "RufO homolog binding with Nle-Arg-Tyr-Leu-His from Nonomuraea solani",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 1.59,
+          "release_date": "2026-08-12",
+          "deposit_date": "2026-01-28",
+          "citation_doi": "10.1021/jacs.6c05584",
+          "citation_pmid": null,
+          "citation_title": "Mechanism for Aromatic",
+          "polymers": [
+            {
+              "description": "5-mer peptide",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "Cytochrome P450",
+              "type": "Protein",
+              "uniprot_ids": [
+                "A0A1H6EVJ0"
+              ],
+              "organisms": [
+                "Nonomuraea solani"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "HEM",
+              "name": "PROTOPORPHYRIN IX CONTAINING FE"
+            }
+          ],
+          "evidence": "PDB primary citation matches this paper"
+        }
+      ],
+      "cited_pdb_ids": [
+        "8SPC",
+        "8U2M",
+        "9EBY",
+        "8SPP",
+        "9DUJ"
+      ],
+      "emdb_ids": [],
+      "proteins": [
+        {
+          "uniprot": "A0A1H6EVJ0",
+          "gene": null,
+          "synonyms": [],
+          "name": "Cytochrome P450",
+          "organism": "Nonomuraea solani",
+          "prior_pdb_count": 0,
+          "first_structure": true
+        }
+      ],
+      "score": 91
+    },
+    {
+      "pmcid": "PMC13649706",
+      "pmid": "42850284",
+      "doi": "10.1038/s41467-026-78496-8",
+      "title": "Recognition and mechanism of M. tuberculosis cell wall galactan transport",
+      "journal": "Nature Communications",
+      "journal_abbrev": "Nat Commun",
+      "authors": "Wei C, Abrahams K, Krisilia V, Li J, Gurcha S, Derr E, Hänisch M, Kalscheuer R, Besra G, Rao Z, Zhang L.",
+      "pub_date": "2026-01-01",
+      "index_date": "2026-10-10",
+      "license": "cc by-nc-nd",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "Mycobacterial-derived lipid-linked galactan (LLG) is an essential component of the Mycobacterial tuberculosis (Mtb) cell wall core arabinogalactan (AG), a well-established virulence factor and target of anti-tubercular drugs. Cross-membrane translocation of LLG is energetically unfavorable and is therefore catalyzed by WzmWzt, a prominent member of the polysaccharide ABC transporter sub-family. Here we present cryo-EM structures of WzmWztMtb to uncover critical steps of Mtb LLG translocation. Notably, densities suggestive of the mycobacterial-derived LLG substrates were observed in the structure of WzmWztMtb, indicating that the substrate may bind through two Wzm and two Wzt subunits. This proposed LLG binding is fulfilled by a fully upward extension of the Wzt gate helix, which serves as a critical step to prime Wzt for dimerization. The ATP-bound structure revealed a remarkable downward movement of the gate helix, together with the Wzt dimerization. The third, DDM/ATP-bound structure captured WztWzmMtb in an intermediate state with two DDM molecules in the Wzm central cavity. Using two conditional mycobacterial mutants for functional analyses, we have identified residues on the Wzm N-terminal interface helix (IFN) and on the Wzt helical domain are essential for LLG recognition and translocation in vivo. These data provide a clear structural basis for the development of Mtb cell wall targeted therapeutics for global tuberculosis treatment.",
+      "kind": "new_structure",
+      "own_structures": [
+        {
+          "pdb_id": "25IN",
+          "status": "released",
+          "title": "Mtb galactan transporter Rv3781/3783, open state",
+          "method": "ELECTRON MICROSCOPY",
+          "resolution": 2.91,
+          "release_date": "2026-10-07",
+          "deposit_date": "2026-04-06",
+          "citation_doi": null,
+          "citation_pmid": null,
+          "citation_title": "Rv3781/3783 complex, NBD_Open state",
+          "polymers": [
+            {
+              "description": "Probable O-antigen/lipopolysaccharide transport ATP-binding protein ABC transporter RfbE",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P72047"
+              ],
+              "organisms": [
+                "Mycobacterium tuberculosis H37Rv"
+              ]
+            },
+            {
+              "description": "Probable O-antigen/lipopolysaccharide transport integral membrane protein ABC transporter RfbD",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P72049"
+              ],
+              "organisms": [
+                "Mycobacterium tuberculosis H37Rv"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "A1E8P",
+              "name": "[(2~{Z},6~{E})-3,7,11-trimethyldodeca-2,6,10-trienyl] dihydrogen phosphate"
+            }
+          ],
+          "evidence": "entry without a published citation, listed in the deposition statement"
+        },
+        {
+          "pdb_id": "25IO",
+          "status": "released",
+          "title": "Mtb galactan transporter Rv3781/3783, ATP-bound",
+          "method": "ELECTRON MICROSCOPY",
+          "resolution": 2.78,
+          "release_date": "2026-10-07",
+          "deposit_date": "2026-04-06",
+          "citation_doi": null,
+          "citation_pmid": null,
+          "citation_title": "Rv3781/3783 complex, NBD_Closed state",
+          "polymers": [
+            {
+              "description": "Probable O-antigen/lipopolysaccharide transport integral membrane protein ABC transporter RfbD",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P72049"
+              ],
+              "organisms": [
+                "Mycobacterium tuberculosis H37Rv"
+              ]
+            },
+            {
+              "description": "Probable O-antigen/lipopolysaccharide transport ATP-binding protein ABC transporter RfbE",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P72047"
+              ],
+              "organisms": [
+                "Mycobacterium tuberculosis H37Rv"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "ATP",
+              "name": "ADENOSINE-5'-TRIPHOSPHATE"
+            }
+          ],
+          "evidence": "entry without a published citation, listed in the deposition statement"
+        },
+        {
+          "pdb_id": "25IP",
+          "status": "released",
+          "title": "Mtb galactan transporter Rv3781/3783, translocating intermediate state",
+          "method": "ELECTRON MICROSCOPY",
+          "resolution": 2.61,
+          "release_date": "2026-10-07",
+          "deposit_date": "2026-04-06",
+          "citation_doi": null,
+          "citation_pmid": null,
+          "citation_title": "Rv3781/3783 complex, DDM_bound",
+          "polymers": [
+            {
+              "description": "Probable O-antigen/lipopolysaccharide transport ATP-binding protein ABC transporter RfbE",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P72047"
+              ],
+              "organisms": [
+                "Mycobacterium tuberculosis H37Rv"
+              ]
+            },
+            {
+              "description": "Probable O-antigen/lipopolysaccharide transport integral membrane protein ABC transporter RfbD",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P72049"
+              ],
+              "organisms": [
+                "Mycobacterium tuberculosis H37Rv"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "A1E8P",
+              "name": "[(2~{Z},6~{E})-3,7,11-trimethyldodeca-2,6,10-trienyl] dihydrogen phosphate"
+            },
+            {
+              "id": "ATP",
+              "name": "ADENOSINE-5'-TRIPHOSPHATE"
+            }
+          ],
+          "evidence": "entry without a published citation, listed in the deposition statement"
+        }
+      ],
+      "cited_pdb_ids": [
+        "9QHV",
+        "9QHK",
+        "9QFX",
+        "9QHJ",
+        "8DKU",
+        "6JBH"
+      ],
+      "emdb_ids": [
+        "EMD-80143",
+        "EMD-80144",
+        "EMD-80145"
+      ],
+      "proteins": [
+        {
+          "uniprot": "P72047",
+          "gene": "rfbE",
+          "synonyms": [],
+          "name": "Probable O-antigen/lipopolysaccharide transport ATP-binding protein ABC transporter RfbE",
+          "organism": "Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)",
+          "prior_pdb_count": 0,
+          "first_structure": true
+        },
+        {
+          "uniprot": "P72049",
+          "gene": "rfbD",
+          "synonyms": [],
+          "name": "Probable O-antigen/lipopolysaccharide transport integral membrane protein ABC transporter RfbD",
+          "organism": "Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)",
+          "prior_pdb_count": 0,
+          "first_structure": true
+        }
+      ],
+      "score": 88
+    },
+    {
+      "pmcid": "PMC13650167",
+      "pmid": "42851131",
+      "doi": "10.1093/nar/gkag973",
+      "title": "An intrinsically disordered domain of transcription terminator Rho governs genome-wide Rho utilization (Rut) site selection in Mycobacterium tuberculosis",
+      "journal": "Nucleic Acids Research",
+      "journal_abbrev": "Nucleic Acids Res",
+      "authors": "",
+      "pub_date": "2026-10-09",
+      "index_date": "2026-10-10",
+      "license": "cc by-nc",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "AbstractRho-dependent transcription termination (RDTT) is crucial for bacterial gene regulation, fitness, and pathogenicity. RDTT relies on the ATP-dependent Rho helicase, which engages nascent transcripts at loosely defined, C > G-biased Rho utilization (Rut) sites to dismantle transcription complexes. In Mycobacterium tuberculosis, Rho features a unique, large N-terminal insertion domain (NID) of uncertain function. Using enzymatic Helicase-SELEX screening, we identified 1759 putative Rut sites across the M. tuberculosis genome with wild-type Rho (MtbRho) but only 47 with a NID-deleted variant (ΔNID-MtbRho), demonstrating NID’s importance for productive substrate recruitment. The selected Rut sites display an unusual composition and frequently occur upstream of or within coding regions, implying that MtbRho plays a broad role in conditional gene regulation. Integration with transcriptomics-defined RNA 3′ ends further highlights the contribution of MtbRho to transcriptional plasticity, through both direct termination and downstream regulatory cascades. Complementary RDTT assays, affinity measurements, solution NMR, and cryogenic electron microscopy analyses show that the NID is intrinsically disordered, yet critical for engaging Rut sites with substantial secondary structure. Altogether, our findings provide the first genome-wide map and characterization of Rut sites in a GC-rich pathogen and define the NID as a model intrinsically disordered protein region with a critical mechanistic and functional role in mycobacterial gene expression",
+      "kind": "new_structure",
+      "own_structures": [
+        {
+          "pdb_id": "31HX",
+          "status": "released",
+          "title": "Mycobacterium tuberculosis transcription termination factor Rho in complex with an RNA substrate bound to the primary binding site and the ATP analogue ADP-BeF3",
+          "method": "ELECTRON MICROSCOPY",
+          "resolution": 3.15,
+          "release_date": "2026-09-30",
+          "deposit_date": "2026-06-05",
+          "citation_doi": null,
+          "citation_pmid": null,
+          "citation_title": "Mycobacterium tuberculosis transcription termination factor Rho in complex with an RNA substrate bound to the primary binding site and the ATP analogue ADP-BeF3",
+          "polymers": [
+            {
+              "description": "Transcription termination factor Rho",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P9WHF2"
+              ],
+              "organisms": [
+                "Mycobacterium tuberculosis"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "ADP",
+              "name": "ADENOSINE-5'-DIPHOSPHATE"
+            },
+            {
+              "id": "BEF",
+              "name": "BERYLLIUM TRIFLUORIDE ION"
+            }
+          ],
+          "evidence": "entry without a published citation, listed in the deposition statement"
+        },
+        {
+          "pdb_id": "31HY",
+          "status": "released",
+          "title": "Mycobacterium tuberculosis transcription termination factor Rho in complex with an RNA substrate bound to the secondary binding site and the ATP analogue ADP-BeF3",
+          "method": "ELECTRON MICROSCOPY",
+          "resolution": 3.4,
+          "release_date": "2026-09-30",
+          "deposit_date": "2026-06-05",
+          "citation_doi": null,
+          "citation_pmid": null,
+          "citation_title": "Mycobacterium tuberculosis transcription termination factor Rho in complex with an RNA substrate bound to the primary binding site and the ATP analogue ADP-BeF3",
+          "polymers": [
+            {
+              "description": "Transcription termination factor Rho",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P9WHF2"
+              ],
+              "organisms": [
+                "Mycobacterium tuberculosis"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "BEF",
+              "name": "BERYLLIUM TRIFLUORIDE ION"
+            },
+            {
+              "id": "ADP",
+              "name": "ADENOSINE-5'-DIPHOSPHATE"
+            }
+          ],
+          "evidence": "entry without a published citation, listed in the deposition statement"
+        }
+      ],
+      "cited_pdb_ids": [],
+      "emdb_ids": [
+        "EMD-58424",
+        "EMD-58425"
+      ],
+      "proteins": [
+        {
+          "uniprot": "P9WHF2",
+          "gene": "rho",
+          "synonyms": [],
+          "name": "Transcription termination factor Rho",
+          "organism": "Mycobacterium tuberculosis (strain CDC 1551 / Oshkosh)",
+          "prior_pdb_count": 0,
+          "first_structure": true
+        }
+      ],
+      "score": 87
+    },
+    {
+      "pmcid": "PMC13651826",
+      "pmid": null,
+      "doi": "10.1016/j.isci.2026.117642",
+      "title": "Tregs transduced with a Ro60-reactive TCR have increased immunosuppressive functions in Sjögren’s disease",
+      "journal": "iScience",
+      "journal_abbrev": "iScience",
+      "authors": "Sherman Lim Z, Cheong R, Vincent F, Chang J, Loh K, Halim H, Kwai-Wai Kong G, Tay E, Peh C, Jia X, Rischmueller M, Ting Y, Ooi J.",
+      "pub_date": "2026-09-28",
+      "index_date": "2026-10-10",
+      "license": "cc by",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "SummarySjögren’s disease (SjD) is a T cell-driven autoimmune condition strongly associated with the HLA-DRB1∗03:01 allele and autoantibodies against the Ro60 protein. Previous studies have identified deficiencies in regulatory T cells (Treg) in patients, indicating a breakdown in immune tolerance. Current treatments remain limited to symptomatic relief or broad immunosuppression, without addressing the underlying immune dysregulation. In this study, we present the first preclinical evidence supporting a TCR-engineered Treg (TCR-Treg) therapy specifically targeting SjD. We designed a TCR-Treg that recognizes a dominant epitope of the Ro60 antigen (Ro60369-383) presented by HLA-DRB1∗03:01 and demonstrate that these cells can selectively suppress autoreactive T cells more effectively than polyclonal Treg. These findings underscore the pathogenic significance of the Ro-HLA-DRB1∗03:01 axis and provide proof-of-concept for a targeted, antigen-specific Treg therapy. This approach offers a promising strategy to restore immune tolerance and represents a potential disease-modifying treatment for genetically defined subsets of patients with SjD.",
+      "kind": "new_structure",
+      "own_structures": [
+        {
+          "pdb_id": "9YZ3",
+          "status": "released",
+          "title": "Ro60 peptide bound to human HLA-DR3",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 2.87,
+          "release_date": "2026-09-09",
+          "deposit_date": "2025-10-29",
+          "citation_doi": null,
+          "citation_pmid": null,
+          "citation_title": "Ro60 peptide bound to human HLA-DR3",
+          "polymers": [
+            {
+              "description": "RNA-binding protein RO60",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P10155"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "HLA class II histocompatibility antigen DR beta chain",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q5Y7D1"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "HLA class II histocompatibility antigen, DR alpha chain",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P01903"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "entry without a published citation, listed in the deposition statement"
+        }
+      ],
+      "cited_pdb_ids": [
+        "1A6A"
+      ],
+      "emdb_ids": [],
+      "proteins": [
+        {
+          "uniprot": "P01903",
+          "gene": "HLA-DRA",
+          "synonyms": [
+            "HLA-DRA1"
+          ],
+          "name": "HLA class II histocompatibility antigen, DR alpha chain",
+          "organism": "Homo sapiens",
+          "prior_pdb_count": 142,
+          "first_structure": false
+        },
+        {
+          "uniprot": "P10155",
+          "gene": "RO60",
+          "synonyms": [
+            "SSA2",
+            "TROVE2"
+          ],
+          "name": "RNA-binding protein RO60",
+          "organism": "Homo sapiens",
+          "prior_pdb_count": 0,
+          "first_structure": true
+        },
+        {
+          "uniprot": "Q5Y7D1",
+          "gene": "HLA-DRB1",
+          "synonyms": [],
+          "name": "HLA class II histocompatibility antigen DR beta chain",
+          "organism": "Homo sapiens",
+          "prior_pdb_count": 2,
+          "first_structure": false
+        }
+      ],
+      "score": 81
+    },
+    {
+      "pmcid": "PMC13649712",
+      "pmid": "42850259",
+      "doi": "10.1038/s41467-026-77583-0",
+      "title": "Role of PER-WDR5 interactions in the mammalian circadian clock",
+      "journal": "Nature Communications",
+      "journal_abbrev": "Nat Commun",
+      "authors": "Börgel A, Hof F, Welzel M, Rawleigh A, Wedemann M, Mororo Cavalcanti Keller R, Maissl V, Ricci K, Schick S, May-Simera H, Brown S, Kramer A, Luck K, Ripperger J, Wolf E.",
+      "pub_date": "2026-01-01",
+      "index_date": "2026-10-10",
+      "license": "cc by",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "In the mammalian circadian clock, the transcription factor CLOCK/BMAL1 cycles between an active state recruiting co-activators like MLL1 and repressed states associated with PER1/2 and CRY1/2 clock proteins. The MLL1 complex component WDR5 was also found in a repressive PER complex. Here we show that WDR5 directly binds to the CRY binding domain (CBD) regions of PER1 and PER2. PER2 binds WDR5 via a WBM motif within the PER2/CRY interface, imposing competition between PER2/WDR5-, PER2/CRY- and RbBP5/WDR5 complexes. PER1 binds WDR5 predominantly via a WIN motif outside the CBD, enabling formation of trimeric PER1WIN/WDR5/RbBP5WBM - and PER1/WDR5/CRY complexes. WDR5 WIN site inhibitors weaken PER1/WDR5 interactions and impact cellular Bmal1- and Per2 expression dependent on the PER1 WIN motif, likely modulating the primary BMAL1/CLOCK/PER/CRY- and secondary BMAL1/REV-ERB/ROR circadian feedback loop. Together, our studies revealed a role of WDR5 as a direct PER interaction partner with critical differences between PER1 and PER2.",
+      "kind": "new_structure",
+      "own_structures": [
+        {
+          "pdb_id": "8OK1",
+          "status": "released",
+          "title": "WD repeat containing protein 5 (WDR5)- N225A mutant",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 1.38,
+          "release_date": "2024-04-03",
+          "deposit_date": "2023-03-26",
+          "citation_doi": null,
+          "citation_pmid": null,
+          "citation_title": "A structural competition involving WDR5 times circadian oscillations",
+          "polymers": [
+            {
+              "description": "Glutathione S-transferase class-mu 26 kDa isozyme,WD repeat-containing protein 5",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P08515",
+                "P61965"
+              ],
+              "organisms": [
+                "Mus musculus"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "entry without a published citation, listed in the deposition statement"
+        },
+        {
+          "pdb_id": "8OKF",
+          "status": "released",
+          "title": "WD repeat containing protein 5 (WDR5)- PER2 peptide",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 1.85,
+          "release_date": "2024-04-10",
+          "deposit_date": "2023-03-28",
+          "citation_doi": null,
+          "citation_pmid": null,
+          "citation_title": "A structural competition involving WDR5 times circadian oscillations",
+          "polymers": [
+            {
+              "description": "PER2 peptide",
+              "type": "Protein",
+              "uniprot_ids": [
+                "O54943"
+              ],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "Glutathione S-transferase class-mu 26 kDa isozyme,WD repeat domain 5",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P08515",
+                "P61965"
+              ],
+              "organisms": [
+                "Mus musculus"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "144",
+              "name": "TRIS-HYDROXYMETHYL-METHYL-AMMONIUM"
+            }
+          ],
+          "evidence": "entry without a published citation, listed in the deposition statement"
+        }
+      ],
+      "cited_pdb_ids": [
+        "2H9L"
+      ],
+      "emdb_ids": [],
+      "proteins": [
+        {
+          "uniprot": "O54943",
+          "gene": "Per2",
+          "synonyms": [],
+          "name": "Period circadian protein homolog 2",
+          "organism": "Mus musculus",
+          "prior_pdb_count": 3,
+          "first_structure": false
+        },
+        {
+          "uniprot": "P08515",
+          "gene": null,
+          "synonyms": [],
+          "name": "Glutathione S-transferase class-mu 26 kDa isozyme",
+          "organism": "Schistosoma japonicum",
+          "prior_pdb_count": 68,
+          "first_structure": false
+        },
+        {
+          "uniprot": "P61965",
+          "gene": "Wdr5",
+          "synonyms": [
+            "Big",
+            "Big3"
+          ],
+          "name": "WD repeat-containing protein 5",
+          "organism": "Mus musculus",
+          "prior_pdb_count": 4,
+          "first_structure": false
+        }
+      ],
+      "score": 62
+    },
+    {
+      "pmcid": "PMC13649839",
+      "pmid": "42848133",
+      "doi": "10.1007/s11120-026-01238-w",
+      "title": "Effects of high light and elevated temperature on the structure of photosystem II isolated from Arabidopsis thaliana",
+      "journal": "Photosynthesis Research",
+      "journal_abbrev": "Photosynth Res",
+      "authors": "Forsman J, Graça A, Hall M, Schröder W, Messinger J.",
+      "pub_date": "2026-01-01",
+      "index_date": "2026-10-10",
+      "license": "cc by",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "AbstractPhotosystem II (PS II) is a large membrane-bound pigment-protein complex responsible for extracting electrons and protons from water during photosynthesis and releasing molecular oxygen into the atmosphere. While light is required to drive the photochemical reactions, high light and high temperature can be damaging to PS II. To gain insight into potential structural consequences of such conditions, we performed an exploratory study where isolated PS II complexes (C2S2) from Arabidopsis thaliana were exposed to high light and elevated temperature and employed cryo-electron microscopy for structural determination. This resulted in a ‘high light’ structure (2.74 Å global resolution) which is compared to the published 2.44 Å structure of intact Arabidopsis-PSII vitrified under dim light conditions (control). The high light structure is missing several of the subunits present in the control, including the strongly bound light-harvesting antenna complexes as well as several small transmembrane and extrinsic subunits. Beyond the loss of subunits, the clearest evidence of specific photodamage was found on the acceptor side of the D1 and D2 subunits near the non-heme iron, including the loss of the bicarbonate ligand of the non-heme iron. Finally, we were able to observe that high light/elevated temperature conditions result in the movement of the D1:His252 residue, potentially forming a serine protease triad that may trigger auto-proteolysis of the D1 subunit.Supplementary InformationThe online version contains supplementary material available at https://doi.org/10.1007/s11120-026-01238-w.Keywords: Photosynthesis, Photosystem II, Structure, Cryo-EM, High light, High temperature",
+      "kind": "new_structure",
+      "own_structures": [
+        {
+          "pdb_id": "31FD",
+          "status": "unreleased",
+          "evidence": "cited by the paper but not yet released (on hold until publication)"
+        }
+      ],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "proteins": [],
+      "score": 51
+    },
+    {
+      "pmcid": "PMC13649775",
+      "pmid": "42850230",
+      "doi": "10.1038/s41467-026-77503-2",
+      "title": "End processing in NHEJ by Polymerase λ and PNKP is coordinated during short-range synapsis",
+      "journal": "Nature Communications",
+      "journal_abbrev": "Nat Commun",
+      "authors": "Vogt A, Kaminski A, Williams J, Naila T, Laurent D, Tomkinson A, Lees-Miller S, Pedersen L, Kunkel T, He Y.",
+      "pub_date": "2026-01-01",
+      "index_date": "2026-10-10",
+      "license": "cc by",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "AbstractNon-homologous end joining (NHEJ) is a major pathway of DNA double strand break (DSB) repair, capable of directly joining both damaged strands of DNA through the coordinated activities of repair factors that detect the termini, physically bridge them together, and perform the chemistry necessary to complete repair. NHEJ is capable of repairing a variety of damaged DNA, employing various accessory end-processing factors to resolve chemically blocked ends, trim overhangs, and fill gaps in order to achieve directly ligatable DNA ends. To investigate the molecular mechanisms underlying end-processing, we determine the cryo-EM structure of the NHEJ specific polymerase Pol λ bound to the short-range synaptic complex, detailing the mode of its recruitment to the complex as well as a putative model for its activity. Furthermore, the coordinated end-processing activities of the short-range (SR) synaptic complex simultaneously bound by both Pol λ and PNKP, another accessory factor, demonstrates the ability of NHEJ to form large, multifunctional repair complexes capable of processing a variety of different DNA end structures to effect repair.Subject terms: Cryoelectron microscopy, DNA",
+      "kind": "new_structure",
+      "own_structures": [
+        {
+          "pdb_id": "9OX8",
+          "status": "released",
+          "title": "NHEJ Short-range complex with Polymerase lambda",
+          "method": "ELECTRON MICROSCOPY",
+          "resolution": 7.23,
+          "release_date": "2026-07-01",
+          "deposit_date": "2025-06-03",
+          "citation_doi": null,
+          "citation_pmid": null,
+          "citation_title": "End Processing in NHEJ by Polymerase lambda and PNKP is coordinated during short-range synapsis",
+          "polymers": [
+            {
+              "description": "Protein PAXX",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9BUH6"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "DNA (34-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "DNA (34-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "DNA repair protein XRCC4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q13426"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "DNA polymerase lambda",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGP5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "X-ray repair cross-complementing protein 5",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P13010"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "X-ray repair cross-complementing protein 6",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P12956"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "Non-homologous end-joining factor 1",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9H9Q4"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "DNA ligase 4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P49917"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "entry without a published citation, listed in the deposition statement"
+        }
+      ],
+      "cited_pdb_ids": [],
+      "emdb_ids": [
+        "EMD-70958",
+        "EMD-70960",
+        "EMD-70957",
+        "EMD-70959",
+        "EMD-70949"
+      ],
+      "proteins": [
+        {
+          "uniprot": "P12956",
+          "gene": "XRCC6",
+          "synonyms": [
+            "G22P1"
+          ],
+          "name": "DNA repair protein Ku70",
+          "organism": "Homo sapiens",
+          "prior_pdb_count": 64,
+          "first_structure": false
+        },
+        {
+          "uniprot": "P13010",
+          "gene": "XRCC5",
+          "synonyms": [
+            "G22P2"
+          ],
+          "name": "DNA repair protein Ku80",
+          "organism": "Homo sapiens",
+          "prior_pdb_count": 67,
+          "first_structure": false
+        },
+        {
+          "uniprot": "P49917",
+          "gene": "LIG4",
+          "synonyms": [],
+          "name": "DNA ligase 4",
+          "organism": "Homo sapiens",
+          "prior_pdb_count": 31,
+          "first_structure": false
+        },
+        {
+          "uniprot": "Q13426",
+          "gene": "XRCC4",
+          "synonyms": [],
+          "name": "DNA repair protein XRCC4",
+          "organism": "Homo sapiens",
+          "prior_pdb_count": 35,
+          "first_structure": false
+        },
+        {
+          "uniprot": "Q9BUH6",
+          "gene": "PAXX",
+          "synonyms": [
+            "C9orf142",
+            "XLS"
+          ],
+          "name": "Protein PAXX",
+          "organism": "Homo sapiens",
+          "prior_pdb_count": 20,
+          "first_structure": false
+        },
+        {
+          "uniprot": "Q9H9Q4",
+          "gene": "NHEJ1",
+          "synonyms": [
+            "XLF"
+          ],
+          "name": "Non-homologous end-joining factor 1",
+          "organism": "Homo sapiens",
+          "prior_pdb_count": 26,
+          "first_structure": false
+        },
+        {
+          "uniprot": "Q9UGP5",
+          "gene": "POLL",
+          "synonyms": [],
+          "name": "DNA polymerase lambda",
+          "organism": "Homo sapiens",
+          "prior_pdb_count": 96,
+          "first_structure": false
+        }
+      ],
+      "score": 51
+    },
+    {
+      "pmcid": "PMC13652343",
+      "pmid": "42853897",
+      "doi": "10.1371/journal.pone.0356614.r004",
+      "title": "3D CNN-CVAE and LSTM-guided de novo design of rotigotine derivatives targeting dopamine D1 and D3 receptors in restless legs syndrome",
+      "journal": "PLOS One",
+      "journal_abbrev": "PLoS One",
+      "authors": "Eliaçık S, Ali N.",
+      "pub_date": "2026-01-01",
+      "index_date": "2026-10-10",
+      "license": "cc by",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "AbstractRestless legs syndrome (RLS) is a chronic neurological disorder associated with altered dopaminergic signaling, while long-term dopamine agonist therapy may be limited by augmentation and reduced clinical benefit. This study applied a three-dimensional convolutional neural network conditional variational autoencoder integrated with long short-term memory molecular generation to design rotigotine-derived candidates targeting dopamine D1 and D3 receptors. Fourteen unique derivatives were generated and screened through pocket prediction, molecular docking, interaction profiling, pharmacophore analysis, density functional theory, ADMET prediction, 500 ns molecular dynamics simulations performed in explicit water without a lipid bilayer, and MM/GBSA calculations. Docking protocol validation using DockRMSD yielded RMSD values of 1.009 Å for Mevidalen in the D1 receptor and 1.359 Å for PD-128907 in the D3 receptor, supporting acceptable reproduction of both experimental binding poses. In docking-based ranking, AI Derivative 1 was placed above rotigotine for D1 (−5.744 vs −5.629 kcal/mol) and D3 (−7.934 vs −7.288 kcal/mol) and formed additional hydrogen-bond and hydrophobic contacts; the D1 difference of approximately 0.1 kcal/mol lies within the intrinsic uncertainty of docking scoring functions and is not interpreted as evidence of improved affinity. Docking scores are used throughout as ranking and prioritization metrics rather than quantitative binding free energies. It also exhibited a smaller HOMO-LUMO gap, a higher predicted LD50, and a shift from toxicity class 3 to class 4. Molecular dynamics analyses, including RMSD, RMSF, radius of gyration, solvent-accessible surface area, hydrogen bonding, DCCM, PCA, and free-energy landscapes, are reported as descriptive observations from single non-membrane trajectories and are not used to claim physiological relevance or superior binding stability. MM/GBSA estimates were favorable under the applied computational conditions. AI Derivative 1 therefore represents a computationally prioritized lead requiring experimental validation.",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "7CKZ",
+        "7CMV"
+      ],
+      "emdb_ids": [],
+      "proteins": [],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13652541",
+      "pmid": "42853605",
+      "doi": "10.7554/elife.111980.3.sa3",
+      "title": "A membrane-disruptive action of VBIT-4 challenges its role as a widely used VDAC1 oligomerization inhibitor",
+      "journal": "eLife",
+      "journal_abbrev": "Elife",
+      "authors": "Ravishankar V, Borges-Araújo L, Rajendran M, Lafargue E, Byrne D, Buzhinsky N, Wolfe M, Fitzgerald W, Bautista N, Beyene B, Larimi M, Duneau J, Sturgis J, Bezrukov S, Casuso I, Rostovtseva T, Bergdoll L.",
+      "pub_date": "2026-10-10",
+      "index_date": "2026-10-10",
+      "license": null,
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "AbstractVoltage-dependent anion channel (VDAC) is the most abundant protein of the mitochondrial outer membrane and a key regulator of metabolite exchange and mitochondrial physiology. Its oligomerization has been proposed to control processes such as mitochondrial DNA release and membrane remodeling, yet the underlying mechanisms remain poorly defined. VBIT-4 has been widely used as a putative inhibitor of VDAC1 oligomerization, despite limited mechanistic validation. Here, using high-speed atomic force microscopy (AFM), we visualized VDAC1 assemblies in lipid membranes and examined the effect of VBIT-4. Unexpectedly, VBIT-4 induced membrane defects and permeabilization at micromolar concentrations, independently of VDAC1. Quantitative AFM analysis further shows that VBIT-4 does not alter VDAC1 cluster organization. Complementary electrophysiology, microscale thermophoresis, and coarse-grained molecular dynamics demonstrate that VBIT-4 partitions into lipid bilayers, increases membrane permeability, and destabilizes membrane structure, without detectable effects on VDAC1 channel properties or assemblies. Consistent with this mechanism, VBIT-4 induces VDAC1-independent cytotoxicity in HeLa cells at concentrations above 10 µM. Together, these results demonstrate that VBIT-4 does not act as a specific inhibitor of VDAC1 oligomerization but instead functions as a membrane-active compound. This work provides a revised framework for interpreting studies using VBIT-4 and highlights the importance of systematically assessing drug-membrane interactions when targeting membrane proteins.Research organism: Other",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "6TIQ"
+      ],
+      "emdb_ids": [],
+      "proteins": [],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13650031",
+      "pmid": "42850722",
+      "doi": "10.1002/advs.78203",
+      "title": "Age‐Related Lamin B1 Deficiency Activates SLC7A11‐Dependent Disulfidptosis to Impair Osteogenesis via Intercepting Mitochondrial Fission",
+      "journal": "Advanced Science",
+      "journal_abbrev": "Advanced science",
+      "authors": "Yu W, Li Q, Zhang W, Zheng G, Chen J, Zeng Y, Xiao Z, Chen Z, Liu Z, Lin Y, Lin J, Su Z, Xie Z.",
+      "pub_date": "2026-10-08",
+      "index_date": "2026-10-10",
+      "license": "cc by",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "ABSTRACTSenile osteoporosis (SOP) is an aging‐related disease characterized by decreased bone mass and susceptibility to fracture. The pathological mechanism of SOP, which involves impaired osteogenesis of bone marrow‐derived mesenchymal stem cells (MSCs), warrants further investigation to facilitate the development of novel therapeutic agents. In this study, we demonstrated that age‐related lamin B1 (LMNB1) deficiency in SOP‐MSCs led to lamina‐associated domain (LAD) detachment, causing super‐enhancer (SE) formation to effectively drive SLC7A11 expression. Elevated SLC7A11 expression activated disulfidptosis in SOP‐MSCs, thereby resulting in disulfide bond formation in actin and subsequent cytoskeleton collapse. The disulfide‐crosslinked actin‐induced cytoskeleton disorganization further disrupted their binding with DRP1, inducing mitophagy and oxidative phosphorylation dysfunction by intercepting mitochondrial fission. The resulting mitochondrial disorders impaired the osteogenesis of SOP‐MSCs, aggravating age‐related bone loss in SOP. Moreover, we identified the FDA‐approved drug naldemedine as a potent inhibitor of SLC7A11‐dependent disulfidptosis through virtual molecular screening and confirmed its therapeutic potential for SOP. Our findings explore the connection among age‐related LMNB1 deficiency, SLC7A11‐dependent disulfidptosis and mitochondrial fission disruption in SOP‐MSCs and reveal their roles in the molecular mechanism of impaired osteogenesis in SOP. These data contribute to a better understanding of SOP pathogenesis and provide insight into potential clinical treatments.Keywords: Disulfidptosis, Lamin B1, Mitochondria, Osteogenesis, Senile osteoporosis, SLC7A11",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "7P9V",
+        "7EPZ",
+        "7P9U"
+      ],
+      "emdb_ids": [],
+      "proteins": [],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13650947",
+      "pmid": null,
+      "doi": "10.1021/acsorginorgau.6c00067",
+      "title": "Aqueous-Phase Peptide Synthesis via Stepwise Amino Acid Elongation Catalyzed by Aqualigase",
+      "journal": "ACS Organic & Inorganic Au",
+      "journal_abbrev": "ACS Org Inorg Au",
+      "authors": "Yan X, Lin Z, Chen R, Huang L, Tong L, Gao B, Zhang L.",
+      "pub_date": "2026-10-10",
+      "index_date": "2026-10-10",
+      "license": "cc by-nc-nd",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "Peptides have broad applications in fields such as food, medicine, and functional materials. Conventional solid-phase peptide synthesis (SPPS) constructs diverse peptide sequences through stepwise amino acid elongation but relies on stoichiometric coupling reagents and organic solvents, thereby generating considerable chemical waste. Aqualigase, an engineered subtilisin, offers a green alternative that directly condenses free carboxylic acids and amines in pure aqueous media. However, whether this system can support stepwise elongation using amino acids as building blocks remains unclear. Here, using the Aqualigase-catalyzed ligation of Ala-Ala-Pro-Phe and Ala-Phe as a model reaction, hydrogen-bond analysis revealed that a stable interaction between the P1′ residue of the acyl acceptor and Asn155 in the substrate-binding pocket is critical for effective binding of the acyl acceptor. Guided by this finding, we demonstrated that Aqualigase ligates peptides ranging from dipeptides to pentapeptides with amino acids as acyl acceptors, expanding its catalytic mode from peptide-fragment ligation to fragment-amino acid ligation. RMSF analysis further revealed pronounced flexibility in the loops surrounding the catalytic pocket, particularly residues 95 to 106 and 155 to 164, providing a structural basis for substrate accommodation. Substrate scope analysis showed that, under Aqualigase catalysis, amino acids are more broadly compatible as acyl acceptors than as acyl donors, supporting an N-to-C-terminal stepwise elongation strategy. Using this approach, the functional tripeptide Gly-Leu-Phe was synthesized in pure aqueous media through sequential amino acid elongation. This study establishes an engineered subtilisin-catalyzed strategy for stepwise peptide synthesis in pure aqueous media, providing a green route for flexible peptide construction.",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "8H7P"
+      ],
+      "emdb_ids": [],
+      "proteins": [],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13650131",
+      "pmid": "42850232",
+      "doi": "10.1038/s41467-026-77544-7",
+      "title": "Generation of GPC-3-targeted radicals for precise therapy of hepatocellular carcinoma",
+      "journal": "Nature Communications",
+      "journal_abbrev": "Nat Commun",
+      "authors": "Hao W, Zhang M, Fu Z, Cui X, Jiang H, Li R, Yan F, Ni D.",
+      "pub_date": "2026-01-01",
+      "index_date": "2026-10-10",
+      "license": "cc by-nc-nd",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "Exogenous free radicals oxidize and damage tumor proteins, but their non-specific reactivity also causes unintended harm to tumor-suppressive proteins, which compromises the therapeutic efficacy. Here we show a nanosystem that generates in-situ radical-conjugated species with predefined targeting capability toward oncogenic protein. This nanosystem consists of lipid nanoparticles encapsulating polyphenolic tannic acid and hydrophobic calcium peroxide nanoparticles in spatially segregated compartments. Upon cellular uptake, the components are released into the cellular membrane through membrane fusion. Consequently, calcium peroxide nanoparticles act as oxidizing agents, radicalizing tannic acid, which generates gallic acid species conjugated with phenoxyl radicals. Since gallic acid confers specific binding affinity for the oncogenic GPC-3 protein in hepatocellular carcinoma, the radical-conjugated species integrate dual functionalities: a targeting module that binds to the oncogenic GPC-3 protein, and a stabilized phenoxyl radical inducing site-specific oxidative damage. These species direct to GPC-3 and induce localized disruption of critical peptide segments and lipid domains, triggering protein cleavage and membrane shedding, which suppresses downstream signaling including the canonical Wnt/β-catenin pathway and finally inhibits hepatocellular carcinoma progression. By enabling site-specific radical delivery, this strategy achieves precise inactivation of predefined oncogenic targets and establishes a framework for molecularly free-radical-mediated antitumor therapy.",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "7ZAW"
+      ],
+      "emdb_ids": [],
+      "proteins": [],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13652269",
+      "pmid": "42853886",
+      "doi": "10.1371/journal.pone.0346073",
+      "title": "Identification of flavonoids from natural products against hyperlipidaemia through computational approaches",
+      "journal": "PLOS One",
+      "journal_abbrev": "PLoS One",
+      "authors": "Mustaffar Kamal N, Ismail N, Ali E.",
+      "pub_date": "2026-01-01",
+      "index_date": "2026-10-10",
+      "license": "cc by",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "Over the centuries, hyperlipidaemia has been recognised as a major risk factor contributing to cardiovascular disease (CVD). Current research increasingly explores natural compounds such as flavonoids for their potential lipid-lowering effects. This study evaluated pharmacological potential of flavonoids to identify strong inhibitors for target receptor, Proprotein Convertase Subtilisin/Kexin Type (PCSK9). A total of 29 compounds, including one FDA-approved drugs were screened for drug-likeness and ADMET properties, followed by molecular docking and Molecular Dynamics (MD) simulations using PCSK9 receptor containing glucose and sodium (PDB ID: 5OCA). This complex was chosen due to their functional relevance to cholesterol metabolism. As a results, 24 compounds satisfied Lipinski’s Rule of Five and exhibited favourable drug-likeness and toxicity profiles. Simvastatin (control) was discovered to bind into the pocket B binding site along with seven flavonoids; Diosmetin, Eupatorin, Isorhamnetin, Myricetin, Petunidin, Sinensetin, and Tilianin. These flavonoids displayed docking energies ranging from −8.0 to −10.2 kcal/mol. Tilianin showed the strongest affinity (−10.2 kcal/mol), while Simvastatin bound with −9.1 kcal/mol. MD simulations confirmed that the PCSK9-ligand complexes remained structurally stable throughout a 100 ns trajectory. MM/PBSA analysis further supported the binding interactions, revealing free energies values ranging from −17 to −30.41 kcal/mol. Among the flavonoids evaluated, Tilianin, Myricetin, and Sinensetin demonstrate the most favourable interaction profiles. These finding suggest that the selected flavonoids have strong potential as promising anti-hyperlipidaemic candidates targeting PCSK9.",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "5OCA"
+      ],
+      "emdb_ids": [],
+      "proteins": [],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13651608",
+      "pmid": null,
+      "doi": "10.1021/acs.jafc.6c09355",
+      "title": "Immunomodulatory Effects of Galleria mellonella and Alphitobius diaperinus Protein Digestates Generated Using a Modified INFOGEST Protocol – In Vitro and In Silico Evidence",
+      "journal": "Journal of Agricultural and Food Chemistry",
+      "journal_abbrev": "J Agric Food Chem",
+      "authors": "Ma Z, Boesch C, Mondor M, Sánchez-Velázquez O, Hernández-Álvarez A.",
+      "pub_date": "2026-10-10",
+      "index_date": "2026-10-10",
+      "license": "cc by",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "AbstractInsect-derived peptides have attracted increasing attention due to their potential health-promoting properties. This study investigated peptides released from Galleria mellonella (W) and Alphitobius diaperinus (B) proteins following a modified static INFOGEST protocol. Digestion-derived peptides were identified by LC-MS/MS and evaluated for anti-inflammatory activity using in vitro assays, bioinformatic prediction, and molecular docking, focusing on IKK-β as a key regulator of the NF-κB pathway. At 500 μg protein/mL, W-I2h and B-I2h reduced NF-κB reporter activity by 28.7% and 53.5%, respectively, and decreased nitric oxide production by 31%. Digestates also reduced IL-6, TNF-α, IFN-γ, and IL-1β secretion at selected concentrations and decreased IL-6 and IL-1β mRNA expression. Conversely, 25 μg protein/mL increased IL-1β secretion by 109.4% and 102.1%, respectively. Increased HO-1 and γGCS transcripts suggested modulation of Nrf2-responsive gene expression, although pathway activation was not confirmed. These findings demonstrate concentration-dependent immunomodulatory effects and identify candidate peptides for future validation.Keywords: bioactive peptides, inflammation, NF-κB pathway, Nrf2 pathway, edible insects, proinflammatory cytokines",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "3RZF"
+      ],
+      "emdb_ids": [],
+      "proteins": [],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13651850",
+      "pmid": "42853929",
+      "doi": "10.1126/sciadv.aeh0368",
+      "title": "Insect-specific aldehyde synthase governs cuticle strength: a selective insecticide target",
+      "journal": "Science Advances",
+      "journal_abbrev": "Sci Adv",
+      "authors": "Ding Y, Hu X, Pang Z, Liu H, Shen L, Liu Y, Liu T.",
+      "pub_date": "2026-10-09",
+      "index_date": "2026-10-10",
+      "license": "cc by-nc",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "Cuticular sclerotization is crucial for insect adaptation and flight, historically thought to be dominantly driven by dopamine and its downstream products. In this study, we demonstrate that 3,4-dihydroxyphenylacetaldehyde (DHPAA)—produced by DHPAA synthase (DHPAAS) and known in humans as a toxic dopamine metabolite—plays a central role. Cross-species RNAi, mechanical testing, and precursor quantification, consistently support this conclusion. In the migratory locust, we further reveal that DHPAA is essential for cuticular mechanical properties, whereas dopamine primarily regulates pigmentation. These findings establish a new paradigm for the chemistry of insect cuticle sclerotization. Then, we elucidate the catalytic mechanism of DHPAAS, laying the groundwork for its application in biosynthesis. Furthermore, we identify 2,5,2′,4′-tetrahydroxychalcone as a selective inhibitor of DHPAAS. Given that DHPAAS is insect-specific and absent in non-insect arthropods and vertebrates, our work points to a promising strategy for developing selective insecticides.",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "6JRL"
+      ],
+      "emdb_ids": [],
+      "proteins": [],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13649964",
+      "pmid": null,
+      "doi": "10.3389/fphar.2026.1908344",
+      "title": "Insights into osteoporosis triggered by common antiepileptic drugs via network toxicology, molecular docking and molecular dynamics simulations",
+      "journal": "Frontiers in Pharmacology",
+      "journal_abbrev": "Front Pharmacol",
+      "authors": "Wang C, Gao S, Wu M, Liang B, Wang B, Wang J.",
+      "pub_date": "2026-10-10",
+      "index_date": "2026-10-10",
+      "license": "cc by",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "BackgroundAntiepileptic drugs (AEDs), first-line treatments for epilepsy and related seizure disorders, are increasingly recognized as important risk factors for osteoporosis. However, the molecular mechanisms and specific targets underlying AED-induced bone loss remain largely unclear.MethodsWe explored these mechanisms using an integrated strategy combining network toxicology, molecular docking, molecular dynamics simulations, and in vitro experiments. Common targets of four AEDs and osteoporosis were identified through database screening, followed by protein-protein interaction network construction, hub gene identification, and functional enrichment analysis. Molecular docking was used to evaluate the predicted binding affinity between AEDs and primary hub targets, and 100-ns molecular dynamics simulations were applied to assess dynamic binding stability. Furthermore, colony formation assays and Western blots were performed in MC3T3-E1 pre-osteoblasts to support the computational predictions.ResultsWe identified 47, 50, 46, and 48 potential osteoporosis-related targets for carbamazepine phenobarbital phenytoin (PHT), and valproic acid respectively. These targets were mainly enriched in key signaling pathways and cellular processes associated with bone metabolism. Topological analysis identified four primary hub targets: epidermal growth factor receptor, CASP3, peroxisome proliferator-activated receptor gamma, and PTGS2. AEDs and their targets exhibited favorable binding affinity in the molecular docking simulations (binding energy < −5 kcal/mol). Molecular dynamics simulations revealed heterogeneous dynamic stability among the complexes: PB-CASP3 and PHT-PPARG reached relatively stable conformational equilibrium, whereas CBZ-EGFR displayed notable protein residue flexibility in the equilibrated trajectory, and VPA-PTGS2 sustained persistent structural fluctuations during the simulation period. In vitro experiments demonstrated that all AEDs inhibited the clonogenic capacity of MC3T3-E1 cells, and Western blot results further indicated that AEDs differentially modulated the expression and activation levels of their corresponding primary hub targets, which was consistent with the computational predictions.ConclusionThis study constructs an integrated research framework combining computational prediction and in vitro validation to explore potential molecular mechanisms underlying AED-induced osteoblast dysfunction and osteoporosis. The findings highlight candidate targets and provide a preliminary mechanistic basis for future rational clinical medication and skeletal protection in patients receiving long-term AED therapy.",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "1M17",
+        "6PDQ",
+        "9OLC",
+        "5IKR"
+      ],
+      "emdb_ids": [],
+      "proteins": [],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13649458",
+      "pmid": null,
+      "doi": "10.3389/fphar.2026.1923534",
+      "title": "Interaction of major monoterpenes from Rosmarinus officinalis L. essential oil with the human serotonin transporter: molecular docking, radioligand binding, and functional uptake studies",
+      "journal": "Frontiers in Pharmacology",
+      "journal_abbrev": "Front Pharmacol",
+      "authors": "Valle C, Segura K, Cárdenas P, Osses N, Mella J, Iturriaga-Vásquez P, Pino J, Lapier M.",
+      "pub_date": "2026-10-10",
+      "index_date": "2026-10-10",
+      "license": "cc by",
+      "pub_types": [
+        "brief-report",
+        "brief report"
+      ],
+      "abstract": "Major depressive disorder remains a leading cause of disability worldwide, and current antidepressants are limited by delayed therapeutic onset, incomplete efficacy, and adverse effects. Although Rosmarinus officinalis L. essential oil and its major monoterpenes exhibit antidepressant-like and anxiolytic properties, their molecular mechanisms remain unclear. This study investigated whether the principal rosemary monoterpenes, α-pinene, camphor, and 1,8-cineole, directly interact with the human serotonin transporter (hSERT) and its functional effects. Molecular docking simulations targeting the orthosteric (S1) and allosteric (S2) binding sites were combined with [3H]-paroxetine binding displacement assays and SERT-mediated uptake experiments based on the fluorescent serotonin analog FFN246 in HEK293 cells expressing YFP-tagged hSERT. Docking analyses predicted plausible binding poses for all three monoterpenes within both the S1 and S2 regions, although with less favorable docking scores than fluoxetine. Radioligand displacement assays provided experimental evidence that all three compounds interact with hSERT, producing concentration-dependent displacement of [3H]-paroxetine, with α-pinene displaying the highest potency, followed by 1,8-cineole and camphor. Functional assays further showed that all monoterpenes produced significant but incomplete inhibition of transporter-mediated FFN246 uptake, even at high micromolar concentrations, indicating partial rather than complete transporter blockade. Together, these findings identify hSERT as a previously unrecognized molecular target of rosemary monoterpenes, suggesting that these compounds may act as partial inhibitors of serotonin transport. These results provide new molecular insights into the potential mechanism that may contribute to the reported neurobehavioral effects of rosemary, and support further investigation of these compounds in serotonergic signaling and neurotransmission.",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "5I71",
+        "5I73"
+      ],
+      "emdb_ids": [],
+      "proteins": [],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13652328",
+      "pmid": "42832573",
+      "doi": "10.1371/journal.pntd.0014742",
+      "title": "Novel inhibitors against Cryptosporidium parvum through blocking its energy metabolism",
+      "journal": "PLOS Neglected Tropical Diseases",
+      "journal_abbrev": "PLoS Negl Trop Dis",
+      "authors": "Xu C, Ji Y, Sha Q, Li K.",
+      "pub_date": "2026-10-01",
+      "index_date": "2026-10-10",
+      "license": "cc by",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "Through systematic structural optimization and modification of anti-Cryptosporidium parvum compound NSC158011 (N-1-naphthalenyl-2-(phenylthiol) ethane thioamide), we constructed a virtual compound library comprising 1,440 derivatives, and 29 derivatives were selected via molecular docking for chemical synthesis. Among them, eight derivatives exhibited significant inhibitory effects on LDH compared with NSC158011. In vitro examination found that two derivatives could markedly reduce the number of C. parvum in cells while exhibiting reduced toxicity. In vivo studies in model animals (IFN-γ knockout mouse) and native animals (calves) further validated the derivatives’ potent anti-parasitic effects and their ability to alleviate intestinal villus atrophy caused by parasitic infections. Further investigations revealed that compound treatment was associated with upregulated expression of intestinal tight junction proteins (ZO-1, Occludin, Claudin-1) and downregulated the expression level of inflammatory protein Caspase-1. Analysis of the gut microbiota and metabolomics in calves indicated that treatment significantly restored the abundance of beneficial flora and regulated key metabolites, including isocitric acid and ornithine. The two derivatives identified in this study represent promising lead compounds for further development as anti-cryptosporidiosis agents, with potential relevance to livestock production and public health.",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "4ND5",
+        "1I0Z"
+      ],
+      "emdb_ids": [],
+      "proteins": [],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13650752",
+      "pmid": null,
+      "doi": "10.3389/fbinf.2026.1899416",
+      "title": "Reverse vaccinology and immunoinformatics-driven design of a multiepitope vaccine candidate against Renibacterium salmoninarum",
+      "journal": "Frontiers in Bioinformatics",
+      "journal_abbrev": "Front Bioinform",
+      "authors": "Morales C, Arriagada V, Bonilla E, Prina B, Godoy E, Molina-Chávez B, Osorio A, Gutierrez E, Roa V, Gómez L, Oñate Á.",
+      "pub_date": "2026-10-10",
+      "index_date": "2026-10-10",
+      "license": "cc by",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "Renibacterium salmoninarum, the etiological agent of bacterial kidney disease (BKD), remains a major challenge for salmonid aquaculture due to its intracellular lifestyle, chronic infection pattern, and the limited efficacy of current control strategies. In this study, a multiepitope vaccine candidate against Renibacterium salmoninarum was designed using reverse vaccinology and immunoinformatics approaches. Conserved antigenic proteins shared among three bacterial strains were identified through a systematic screening pipeline that included virulence prediction, essentiality analysis, antigenicity assessment, and exclusion of host homologs. Selected B-cell, MHC-I, and MHC-II epitopes were assembled into a chimeric construct and combined with conserved flagellin D0/D1 domains as a TLR5-targeting molecular adjuvant. The resulting construct, designated RS-MEVC, exhibited favorable predicted physicochemical and immunological properties, including high antigenicity, non-allergenicity, structural stability, and favorable stereochemical quality. Three-dimensional modeling revealed a predominantly α-helical structure, and structural validation supported the reliability of the refined model. Molecular docking predicted a stable interaction between RS-MEVC and Atlantic salmon TLR5, supported by multiple hydrogen bonds, salt bridges, and extensive intermolecular contacts. Molecular dynamics simulations further indicated stable conformational behavior of both the free vaccine construct and the vaccine-TLR5 complex, while MM-PBSA analysis predicted favorable binding energetics. Codon optimization and in silico cloning supported the feasibility of recombinant expression in Escherichia coli. Overall, these findings identify RS-MEVC as a promising computationally designed vaccine candidate against BKD and provide a rational framework for its subsequent experimental evaluation in salmonids.",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "1U0A",
+        "3V47"
+      ],
+      "emdb_ids": [],
+      "proteins": [],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13650956",
+      "pmid": null,
+      "doi": "10.1021/acsorginorgau.6c00026",
+      "title": "Substituent-Controlled Double Orthometalation and Anticancer Activity in Half-Sandwich Ir(III) Complexes Bearing C∧N Ligands",
+      "journal": "ACS Organic & Inorganic Au",
+      "journal_abbrev": "ACS Org Inorg Au",
+      "authors": "Sánchez-Migallón M, Gonzalo-Navarro C, Rodríguez A, Bermejo-Casadesús C, Manzano B, Massaguer A, Durá G.",
+      "pub_date": "2026-10-10",
+      "index_date": "2026-10-10",
+      "license": "cc by",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "AbstractPlatinum-based chemotherapeutic agents remain among the most widely used anticancer drugs; however, they show two main limitations: intrinsic or acquired resistance and severe side effects. To address these limitations, the design of alternative metal-based complexes with tunable properties is of growing interest. In this work, we report the rational design and synthesis of five novel half-sandwich Ir­(III) complexes incorporating benzo­[h]­imidazoquinoline ligands with an aryl ring. Two strategic structural modifications were introduced into the ligand: (i) alkylation of the imidazole nitrogen (H or 4-ethylmorpholine) and (ii) variation of the aryl substituent (OMe or CN), which not only induced the formation of a dinuclear complex but also modulated key physicochemical properties, including lipophilicity, cytotoxicity, or stability. The new complexes exhibited cytotoxicity toward different cancer cell lines, with IC50 values in the low micromolar range, which are within the same order of magnitude as cisplatin, though operating through a distinct mechanism. Notably, the complexes induced mitochondrial dysfunction, even when morpholine-containing ligands, typically associated with lysosomal targeting, were employed. Additional studies revealed interactions of the complexes with cellular molecules such as NADH and glutathione (GSH), disrupting redox homeostasis and increasing ROS (reactive oxygen species) levels. Furthermore, the complexes exhibited moderate binding affinity for bovine serum albumin (BSA), with molecular docking analyses suggesting a specific interaction near tryptophan residue 134. These Ir­(III) complexes are promising candidates for further development as anticancer agents with distinct mechanisms of action capable of overcoming drug resistance.Keywords: Iridium(III) anticancer complexes, half-sandwich complexes, benzo[h]imidazoquinoline ligands, mitochondrial dysfunction, redox homeostasis",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "4F5S"
+      ],
+      "emdb_ids": [],
+      "proteins": [],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13650799",
+      "pmid": "42852606",
+      "doi": "10.1002/jbt.71129",
+      "title": "Network Pharmacology‐Based Prediction and In Vivo Validation of Fumonisin B1‐Induced Liver Injury and Early Fibrosis",
+      "journal": "Journal of Biochemical and Molecular Toxicology",
+      "journal_abbrev": "J Biochem Mol Toxicol",
+      "authors": "Li N, Sun W, Liu X, Liu X, Xie Y, Xu H, Xu L, Zang J, Zhang L, Wu L, Shao K.",
+      "pub_date": "2026-10-01",
+      "index_date": "2026-10-10",
+      "license": "cc by-nc-nd",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "ABSTRACTFumonisin B1 (FB1) is a widespread mycotoxin contaminating food and feed, exhibiting severe hepatotoxicity. This study aimed to systematically investigate the underlying molecular mechanisms of FB1‐induced liver injury and early liver fibrosis by combining network pharmacology with an in vivo animal model. First, network pharmacology and molecular docking were utilized to screen the core targets and key signaling pathways of FB1‐induced hepatotoxicity. Subsequently, an in vivo C57BL/6 mouse model was established via intragastric administration of FB1 (5 mg/kg/day for 28 days). Serum levels of liver function and fibrosis markers (ALT, AST, HA, LN, PCIII, CIV) were measured. Histopathological changes and collagen deposition in liver tissues were evaluated using HE and Masson's trichrome staining. The relative mRNA expression of inflammation‐ (TNF‐α, IL‐1β, IL‐6) and fibrosis‐related core genes (TGF‐β1, α‐SMA, COL1A1) was quantified by qPCR. Network pharmacology predicted that inflammatory responses and fibrosis‐related pathways are central to FB1 hepatotoxicity. In vivo experiments confirmed that FB1 exposure significantly elevated serum ALT and AST levels, as well as the four indices of liver fibrosis (p < 0.001). Histopathology revealed severe hepatocyte necrosis, inflammatory cell infiltration, and massive deposition of blue‐stained collagen fibers. Furthermore, qPCR results demonstrated that FB1 significantly upregulated the expression of pro‐inflammatory cytokines, strongly activated the TGF‐β1 signaling pathway, and promoted the high expression of the hepatic stellate cell (HSC) activation marker (α‐SMA) and extracellular matrix (COL1A1). In conclusion, FB1 drives the pathogenesis of early liver fibrosis by inducing sustained hepatic inflammation and activating the TGF‐β1 signaling pathway, which promotes HSC activation and excessive extracellular matrix deposition. This study provides a vital theoretical basis for elucidating the target‐organ toxicity mechanisms of mycotoxins and identifying potential interventions.",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13652142",
+      "pmid": null,
+      "doi": "10.1093/bioadv/vbag289",
+      "title": "RCSB PDB AI Help Desk: retrieval-augmented generation for protein structure deposition support",
+      "journal": "Bioinformatics Advances",
+      "journal_abbrev": "Bioinform Adv",
+      "authors": "",
+      "pub_date": "2026-01-01",
+      "index_date": "2026-10-10",
+      "license": "cc by",
+      "pub_types": [
+        "brief-report",
+        "brief report"
+      ],
+      "abstract": "AbstractMotivationStructural biologists have contributed more than 260 000 experimentally determined three-dimensional structures of biological macromolecules to the Protein Data Bank. Incoming depositions are validated and biocurated by approximately 20 expert biocurators at the collaborating data centers worldwide. Biocurators at the Research Collaboratory for Structural Bioinformatics Protein Data Bank, who process more than 40% of global depositions, face growing difficulty sustaining efficient Help Desk operations, having received roughly 19 000 depositor messages across some 8000 entries in 2025.ResultsWe developed an artificial intelligence Help Desk assistant built on retrieval-augmented generation. Source documents are converted to Markdown with layout preserved, divided by a two-stage chunking procedure, embedded, and stored in a relational vector database. At query time, maximal marginal relevance retrieval selects diverse supporting passages, a topical guardrail filters out-of-scope questions, and a purpose-built system prompt prevents disclosure of internal curation terminology. Separate language model configurations handle question condensing and answer generation. The service runs in production on a container orchestration platform, providing around-the-clock depositor assistance with streaming, citation-backed responses.Availability and implementationFreely available at https://rcsb-deposit-help.rcsb.org. Source code: https://github.com/rcsb/rcsb-pdb-helpdesk (archived at Zenodo: https://doi.org/10.5281/zenodo.19560785).",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "proteins": [],
+      "score": 0
+    }
+  ]
+}

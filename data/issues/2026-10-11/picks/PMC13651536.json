@@ -1,0 +1,75 @@
+{
+  "pmcid": "PMC13651536",
+  "rank": 3,
+  "headline": "ルフォマイシン生合成のP450 RufOによるチロシンのニトロ化：基質のHis-5がプロトン中継に関わる",
+  "target_label": "NsRufO（P450）",
+  "summary": {
+    "background": "P450 RufOは、リボソーム合成ペンタペプチドMRYLHのTyr-3をNOを使ってニトロ化する。この珍しい反応の機構と、硝酸イオンが副生しない理由は不明だった。",
+    "approach": "変異ペプチドの反応性試験、MD、DFTとQM/MM計算を組み合わせ、相同酵素NsRufOに基質Nle-RYLHが結合した結晶構造を1.59 Åで決定した。",
+    "findings": "Tyr-3のフェノール水素が必須だった。計算では、H235→His-5→Tyr-3→Cpd IIというプロトン中継がチロシルラジカル生成を導き、硝酸生成を抑える。"
+  },
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "ペプチドの変異実験でTyr-3のOHが必須と分かり、計算はチロシルラジカルと・NO2の再結合による経路が最も有利だと示した。ただし競合する硝酸生成との障壁差は1 kcal/mol未満で、著者は定量的な証明ではなく、プロトン中継が反応を偏らせる可能性を支持するにとどめている。",
+      "evidence": [
+        {
+          "quote": "Mutation of the crucial Tyr-3 to Phe (Nle-RFLH) or O-Me-tyrosine (Nle-R-(OMe)­Tyr-LH) prevented nitration altogether",
+          "section": "Results and Discussion"
+        },
+        {
+          "quote": "these calculations, rather than quantitatively proving kinetic suppression of nitrate formation, should be interpreted as supporting a plausible role of the Tyr-3/His-5/H235/water proton relay in biasing product formation.",
+          "section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "tag": "新しい結合部位",
+      "text": "NsRufOの基質結合型構造（1.59 Å）では、Tyr-3とHis-5がヘムの真上に位置する。RufOとほぼ同じ結合様式だが、I-ヘリックスのH235はHis-5と水素結合せず、E239と水を介して結ぶ。H235が複数の配座をとることを裏づける。",
+      "evidence": [
+        {
+          "quote": "Although the substrate conformation is highly similar to that seen in RufO, the I-helix H235 of NsRufO does not H-bond to His-5 as is seen in RufO.",
+          "section": "Results and Discussion"
+        },
+        {
+          "quote": "Nle-RYLH is accommodated in the active-site pocket of NsRufO in an almost identical way to the structure of Nle-RYLH bound to RufO (PDB ID: 9DUJ).",
+          "section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "ペプチド選択性の知見は、ペプチド・タンパク質を選択的にニトロ化する生体触媒の設計に使えると著者は述べる。ただしNO源（NONOate）の分解で活性が大きく下がり、結果はすべて対照ペプチド比で報告されている点に注意が必要だ。",
+      "evidence": [
+        {
+          "quote": "this study provides a stronger foundation for engineering P450s for selective peptide nitration",
+          "section": "Conclusion"
+        },
+        {
+          "quote": "This reduction in activity appeared to result from degradation of the NO source (diethylamine NONOate) despite best efforts to preserve it",
+          "section": "Results and Discussion"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "RufOは大腸菌での収量が低く、相同酵素NsRufO（Nonomuraea solani、同一性46%）を使用。",
+    "construct": null,
+    "purification": null,
+    "sample_prep": "apo結晶（0.1 M Tris-HCl pH 8.0、30% PEG4000、0.35 M 硫酸リチウム）に100 mMの基質をソーキング。針状結晶。",
+    "data_collection": "空間群P21212、1.59 Å。データ収集の詳細は補足資料（Table S7）。",
+    "evidence": [
+      {
+        "quote": "Due to the low yield of RufO in E. coli, we turned to its homologue (NsRufO) from Nonomurae solani (with 46% identity)",
+        "section": "Results and Discussion"
+      },
+      {
+        "quote": "By soaking 100 mM substrate into the apo crystals obtained from PEG-containing conditions (0.1 M Tris-HCl, pH 8.0, 30% (w/v) PEG4000, 0.35 M lithium sulfate)",
+        "section": "Results and Discussion"
+      }
+    ]
+  },
+  "keywords": ["P450", "ニトロ化", "ルフォマイシン", "QM/MM", "RiPP", "ヘム酵素"],
+  "ligand_label": "Nle-RYLH（基質ペプチド）、ヘム",
+  "editor_notes": "結晶構造は論文の一部で、中心はMD・QM/MM計算と活性試験。パケットにMethods本文がなく、発現・精製・データ収集は補足資料にあるため lab_notes は null とした。論文中の菌名は 'Nonomurae solani' と綴られている（原文のまま引用）が、通常の学名は Nonomuraea。"
+}

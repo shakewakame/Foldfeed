@@ -1,0 +1,19 @@
+{
+ "pdb_id": "9YZ3",
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "HLA-DRA"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "HLA-DRB1"
+  },
+  {
+   "color": "#5F9296",
+   "label": "RO60"
+  }
+ ],
+ "ligand": false,
+ "ligand_color": "#D4452B"
+}

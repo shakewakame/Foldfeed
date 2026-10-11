@@ -1,0 +1,43 @@
+{
+ "pdb_id": "9OX8",
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "LIG4"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "NHEJ1"
+  },
+  {
+   "color": "#5F9296",
+   "label": "XRCC6"
+  },
+  {
+   "color": "#A5707A",
+   "label": "XRCC5"
+  },
+  {
+   "color": "#7C8AA8",
+   "label": "POLL"
+  },
+  {
+   "color": "#8A9A5B",
+   "label": "XRCC4"
+  },
+  {
+   "color": "#9C7B55",
+   "label": "DNA (34-MER)"
+  },
+  {
+   "color": "#6E6E8E",
+   "label": "DNA (34-MER)"
+  },
+  {
+   "color": "#3C5A8C",
+   "label": "PAXX"
+  }
+ ],
+ "ligand": false,
+ "ligand_color": "#D4452B"
+}
