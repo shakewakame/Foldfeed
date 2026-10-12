@@ -16,14 +16,28 @@ STRUCTURE_TERMS = (
 DEPOSITION_TERMS = (
     '"Protein Data Bank" OR "PDB" OR "wwPDB" OR "EMDB" OR "accession code" OR "accession codes"'
 )
+# Second search for 注目の論文 that are not new structures: prediction / design, simulation,
+# structure-based drug discovery. Papers already found by the structure search are skipped.
+IMPACT_TERMS = (
+    '"AlphaFold" OR "RoseTTAFold" OR "ESMFold" OR "structure prediction" OR "protein design" OR '
+    '"de novo design" OR "designed protein" OR "binder design" OR "ProteinMPNN" OR "RFdiffusion" OR '
+    '"molecular dynamics" OR "structure-based drug design" OR "structure-guided" OR '
+    '"co-crystal structure" OR "cocrystal structure"'
+)
+BIO_TERMS = '"protein" OR "enzyme" OR "receptor" OR "antibody" OR "peptide" OR "RNA"'
 # Article types that never report a new structure of their own.
 EXCLUDED_PUB_TYPES = {"review", "systematic review", "editorial", "comment", "letter",
                       "erratum", "published erratum", "retraction of publication",
-                      "retracted publication", "news"}
+                      "retracted publication", "news", "correction"}
 
 
 def build_query(index_date: str) -> str:
     return (f"({STRUCTURE_TERMS}) AND ({DEPOSITION_TERMS}) AND OPEN_ACCESS:y AND NOT SRC:PPR "
+            f"AND FIRST_IDATE:[{index_date} TO {index_date}]")
+
+
+def build_impact_query(index_date: str) -> str:
+    return (f"({IMPACT_TERMS}) AND ({BIO_TERMS}) AND OPEN_ACCESS:y AND NOT SRC:PPR "
             f"AND FIRST_IDATE:[{index_date} TO {index_date}]")
 
 

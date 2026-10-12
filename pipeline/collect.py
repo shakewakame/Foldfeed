@@ -17,10 +17,11 @@ import html
 import sys
 from concurrent.futures import ThreadPoolExecutor
 
-from . import europepmc, jats, pdb, uniprot
+from . import europepmc, impact, jats, pdb, uniprot
 from .common import cached, default_index_date, issue_date_for, issue_dir, write_json
 
 MAX_FULLTEXT = 120  # cap on papers whose full text is fetched on a busy day
+MAX_IMPACT_FULLTEXT = 25  # extra papers from the impact search, best pre-screen scores first
 KINDS = ("new_structure", "new_structure_ids_unlisted", "new_map_only", "uses_existing", "no_ids")
 NEW_KINDS = KINDS[:3]
 
@@ -117,6 +118,27 @@ def run(index_date: str, issue_date: str) -> dict:
         loaded = [x for x in ex.map(load, metas) if x[1] is not None]
     print(f"Full text parsed: {len(loaded)}", file=sys.stderr)
 
+    # 注目の論文: a second search beyond the structure terms, pre-screened on title and abstract.
+    impact_query = europepmc.build_impact_query(index_date)
+    raw2 = europepmc.search(impact_query)
+    seen = {m["pmcid"] for m in metas}
+    extra = []
+    for r in raw2:
+        m = europepmc.metadata(r)
+        if m["pmcid"] and m["pmcid"] not in seen and not europepmc.is_excluded_type(m):
+            seen.add(m["pmcid"])
+            m["prescreen"] = impact.prescreen(m)
+            extra.append(m)
+    extra = sorted((m for m in extra if m["prescreen"]["score"] >= 1),
+                   key=lambda m: -m["prescreen"]["score"])[:MAX_IMPACT_FULLTEXT]
+    with ThreadPoolExecutor(6) as ex:
+        loaded_extra = [x for x in ex.map(load, extra) if x[1] is not None]
+    for m, _ in loaded_extra:
+        m["source"] = "impact_search"
+        del m["prescreen"]
+    loaded += loaded_extra
+    print(f"Impact search: {len(raw2)} hits, {len(loaded_extra)} more papers parsed", file=sys.stderr)
+
     all_ids = sorted({pid for _, p in loaded for pid in p["pdb_ids"]})
     released = pdb.entries(all_ids)
     missing = [pid for pid in all_ids if pid not in released]
@@ -133,16 +155,25 @@ def run(index_date: str, issue_date: str) -> dict:
         m["title"] = p["title"] or html.unescape(m["title"])  # Europe PMC titles carry escaped markup
         c = {**m, **classify(m, p, released, holdings),
              "emdb_ids": p["emdb_ids"], "abstract": p["abstract"] or m["abstract"]}
+        if c["kind"] not in NEW_KINDS:
+            # Facts for a possible 注目の論文 article: the structures it used, and the pre-screen hints.
+            c["cited_structures"] = [released[pid] for pid in c["cited_pdb_ids"] if pid in released][:10]
+            c["impact"] = impact.prescreen(c)
         candidates.append(c)
         cached("packets", m["pmcid"], ".md").write_text(jats.packet_text(p), encoding="utf-8")
 
-    accs = sorted({a for c in candidates for s in c["own_structures"]
-                   for poly in s.get("polymers", []) for a in poly["uniprot_ids"]})
+    def structures(c):
+        return c["own_structures"] + c.get("cited_structures", [])
+
+    own_accs = {a for c in candidates for s in c["own_structures"]
+                for poly in s.get("polymers", []) for a in poly["uniprot_ids"]}
+    accs = sorted(own_accs | {a for c in candidates for s in c.get("cited_structures", [])
+                              for poly in s.get("polymers", []) for a in poly["uniprot_ids"]})
     proteins = uniprot.lookup(accs) if accs else {}
     own_ids = {s["pdb_id"] for c in candidates for s in c["own_structures"]}
-    first_structure_flags(proteins, own_ids)
+    first_structure_flags({a: v for a, v in proteins.items() if a in own_accs}, own_ids)
     for c in candidates:
-        c_accs = sorted({a for s in c["own_structures"] for poly in s.get("polymers", [])
+        c_accs = sorted({a for s in structures(c) for poly in s.get("polymers", [])
                          for a in poly["uniprot_ids"]})
         c["proteins"] = [proteins[a] for a in c_accs if a in proteins]
         c["score"] = score(c)
@@ -152,10 +183,12 @@ def run(index_date: str, issue_date: str) -> dict:
         "hits": len(raw), "excluded_types": len(excluded), "parsed": len(loaded),
         **{k: sum(c["kind"] == k for c in candidates)
            for k in KINDS},
+        "impact_search_hits": len(raw2), "impact_search_parsed": len(loaded_extra),
+        "impact_pool": sum(c["kind"] not in NEW_KINDS for c in candidates),
     }
     out = {"issue_date": issue_date, "index_date": index_date,
            "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
-           "query": query, "counts": counts, "candidates": candidates}
+           "query": query, "impact_query": impact_query, "counts": counts, "candidates": candidates}
     d = issue_dir(issue_date)
     write_json(d / "candidates.json", out)
     (d / "candidates.md").write_text(overview_md(out), encoding="utf-8")
@@ -195,10 +228,23 @@ def overview_md(out: dict) -> str:
                   f"- 構造: {'; '.join(structure_line(s) for s in x['own_structures']) or other_ids(x)}",
                   f"- タンパク質: {prots or '（UniProt 未対応）'}",
                   "", (x["abstract"] or "")[:900], ""]
-    others = [x for x in out["candidates"] if x["kind"] not in NEW_KINDS]
+    others = sorted((x for x in out["candidates"] if x["kind"] not in NEW_KINDS),
+                    key=lambda x: (-x["impact"]["score"], x["title"]))
     if others:
-        lines += ["## 対象外（既存構造の利用・ID なし）", ""]
-        lines += [f"- {x['pmcid']} {x['title']}（{x['journal_abbrev']}）" for x in others]
+        lines += ["# 注目の論文の候補（新しい構造以外）", "",
+                  f"事前スクリーニングの点数順（キーワードによる目安で、選定ではない）。上位から読み、"
+                  f"`pipeline/impact.py` の基準で最大 {impact.SHORTLIST} 本を採点する。", ""]
+        for i, x in enumerate(others, 1):
+            im = x["impact"]
+            types = "・".join(impact.TYPES[t] for t in im["types"]) or "種類の手がかりなし"
+            ids = ", ".join(s["pdb_id"] for s in x.get("cited_structures", [])[:5])
+            head = (f"- **{x['pmcid']}** [{im['score']}] {x['title']}（{x['journal_abbrev'] or x['journal']}）"
+                    f" — {types}" + (f" / 使用 PDB: {ids}" if ids else "") +
+                    ("".join(f" / ⚠ {f}" for f in im["flags"])))
+            lines.append(head)
+            if i <= 30:
+                lines.append(f"  - {(x['abstract'] or '')[:500]}")
+        lines.append("")
     return "\n".join(lines) + "\n"
 
 

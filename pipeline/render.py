@@ -11,7 +11,7 @@ import re
 import sys
 import unicodedata
 
-from . import brand, pdb, structure_svg
+from . import brand, impact, pdb, structure_svg
 from .common import issue_dir, read_json
 from .schema import LAB_NOTE_FIELDS
 
@@ -83,8 +83,27 @@ def text_block(lines, x, y, size, color, weight=400, line_height=1.35) -> str:
 
 # ---------- graphical abstract ----------
 
+def is_impact(pick: dict) -> bool:
+    return pick.get("section") == "impact"
+
+
+def split_sections(picks: list) -> tuple[list, list]:
+    """(new-structure articles, 注目の論文 articles), each in rank order."""
+    return [p for p in picks if not is_impact(p[1])], [p for p in picks if is_impact(p[1])]
+
+
+def load_impact(d) -> dict:
+    """data/issues/<date>/impact.json (the writer's scores for 注目の論文), or an empty record."""
+    path = d / "impact.json"
+    return read_json(path) if path.exists() else {"screened": 0, "scored": []}
+
+
 def pick_structure(cand: dict, pick: dict) -> dict | None:
     released = [s for s in cand["own_structures"] if s["status"] == "released"]
+    if not released and is_impact(pick):  # 注目の論文: draw a structure the paper used
+        released = list(cand.get("cited_structures", []))
+        if not pick.get("ga_pdb_id"):
+            return released[0] if released else None
     if pick.get("ga_pdb_id"):
         for s in released:
             if s["pdb_id"] == pick["ga_pdb_id"].upper():
@@ -183,6 +202,8 @@ def structure_figure(cand: dict, pick: dict, theme: brand.Theme | None = None) -
                     coords, lig_ids, prefer, SITE_W, SITE_H, genes, entity_colors=list(th.entities),
                     ligand_colors=structure_svg.LIGAND_PALETTE, ink=th.ink)
     ground = th.paper
+    if not body and is_impact(pick):
+        return "", {"pdb_id": None, "legend": [], "ligands": []}, ""
     if not body:
         ground = th.soft
         msg, sub = _placeholder(cand, s)
@@ -211,6 +232,10 @@ def structure_figure(cand: dict, pick: dict, theme: brand.Theme | None = None) -
 
 def structure_table(cand: dict) -> list[str]:
     own = cand["own_structures"]
+    if not own and cand.get("cited_structures"):  # 注目の論文: the structures it used
+        own = cand["cited_structures"]
+    elif not own and cand["kind"] in ("uses_existing", "no_ids"):
+        return ["論文が使った PDB 構造はない。", ""]
     if not own:
         if cand["kind"] == "new_map_only" and cand.get("emdb_ids"):
             links = ", ".join(f"[{e}](https://www.ebi.ac.uk/emdb/{e})" for e in cand["emdb_ids"][:12])
@@ -259,8 +284,10 @@ def article_md(cand: dict, pick: dict, n: int, info: dict | None = None) -> list
     key = "　".join(keys)
     out = [f"## {n}｜{pick['target_label']}", "",
            f"### {cand['title']}", "",
-           f"*{cand['journal']}*（{cand['pub_date']}） · [論文]({doi}) · ライセンス: {cand.get('license') or '不明'}", "",
-           f"![構造図：{pick['target_label']}](figures/{cand['pmcid']}.svg)", ""]
+           f"*{cand['journal']}*（{cand['pub_date']}） · [論文]({doi}) · ライセンス: {cand.get('license') or '不明'}", ""]
+    if info is None or info.get("pdb_id") or not is_impact(pick):
+        used = "（論文が使った既存の構造）" if is_impact(pick) else ""
+        out += [f"![構造図：{pick['target_label']}](figures/{cand['pmcid']}.svg)", ""] + ([f"<sub>PDB {info['pdb_id']}{used}</sub>", ""] if used and info else [])
     if key:
         out += [f"<sub>{key}</sub>", ""]
     if info and info.get("site"):
@@ -297,7 +324,26 @@ def contents_table(picks: list[tuple[dict, dict]]) -> list[str]:
     return rows + [""]
 
 
-def issue_md(meta: dict, picks: list[tuple[dict, dict]], infos: dict | None = None) -> str:
+def impact_md(record: dict, cands: dict) -> list[str]:
+    """The writer's scores for 注目の論文, for the editor to check the choice."""
+    if not record.get("scored"):
+        return []
+    names = {k: v[1].split("。")[0] for k, v in impact.RUBRIC.items()}
+    out = [f"## 注目の論文の採点（{record.get('screened', 0)} 本を確認し、{len(record['scored'])} 本を採点）", "",
+           f"基準は `pipeline/impact.py`（{impact.MAX_TOTAL} 点満点、{impact.THRESHOLD} 点以上から最大 {impact.MAX_PER_DAY} 本）。", "",
+           "| 選定 | 論文 | 種類 | " + " | ".join(impact.RUBRIC) + " | 計 | 理由 |",
+           "|---|---|---|" + "---|" * len(impact.RUBRIC) + "---|---|"]
+    for s in sorted(record["scored"], key=lambda s: -sum(s["scores"].values())):
+        c = cands.get(s["pmcid"], {})
+        out.append(f"| {'◯' if s.get('selected') else ''} | {s['pmcid']} {c.get('title', '')[:60]} | "
+                   f"{impact.TYPES.get(s.get('type'), s.get('type'))} | "
+                   + " | ".join(str(s["scores"].get(k, 0)) for k in impact.RUBRIC)
+                   + f" | {sum(s['scores'].values())} | {s.get('reason', '')} |")
+    return out + ["", f"<sub>{' / '.join(f'{k}：{v}' for k, v in names.items())}</sub>", ""]
+
+
+def issue_md(meta: dict, picks: list[tuple[dict, dict]], infos: dict | None = None,
+             impact_record: dict | None = None) -> str:
     c = meta["counts"]
     new_total = c["new_structure"] + c.get("new_structure_ids_unlisted", 0) + c.get("new_map_only", 0)
     picked = {p["pmcid"] for _, p in picks}
@@ -307,12 +353,20 @@ def issue_md(meta: dict, picks: list[tuple[dict, dict]], infos: dict | None = No
            f"# {meta['issue_date']} 号", "",
            f"**今日の新しい構造：{new_total} 本**　Europe PMC に {meta['index_date']} に登録された"
            f"オープンアクセス論文 {c['parsed']} 本のうち、新しい構造を報告した論文は {new_total} 本。{covered}", ""]
+    new, hot = split_sections(picks)
+    if hot:
+        out += [f"**注目の論文：{len(hot)} 本**（新しい構造ではないが、機構・予測やデザイン・手法・創薬の点で注目したい論文）", ""]
     if picks:
-        out += contents_table(picks)
+        out += contents_table(new + hot)
     out += ["> この号は AI が論文本文から作成した**レビュー用の下書き**です。"
             "数値・ID・リガンドは PDB / UniProt から取得し、AI の記述には本文からの引用を付けています。", "", "---", ""]
-    for n, (cand, pick) in enumerate(picks, 1):
+    for n, (cand, pick) in enumerate(new, 1):
         out += article_md(cand, pick, n, (infos or {}).get(cand["pmcid"]))
+    if hot:
+        out += ["# 注目の論文（新しい構造以外）", ""]
+        for n, (cand, pick) in enumerate(hot, len(new) + 1):
+            out += article_md(cand, pick, n, (infos or {}).get(cand["pmcid"]))
+    out += impact_md(impact_record or {}, {c["pmcid"]: c for c in meta["candidates"]})
     if rest:
         out += ["## 記事にしていない新しい構造", ""]
         for x in rest:
@@ -342,7 +396,11 @@ def main(argv=None) -> int:
     infos = {}
     for cand, pick in picks:
         svg, info, site_svg = structure_figure(cand, pick)
-        (fig_dir / f"{cand['pmcid']}.svg").write_text(svg, encoding="utf-8")
+        fig_path = fig_dir / f"{cand['pmcid']}.svg"
+        if svg:
+            fig_path.write_text(svg, encoding="utf-8")
+        elif fig_path.exists():
+            fig_path.unlink()
         site_path = fig_dir / f"{cand['pmcid']}-site.svg"
         if site_svg:
             site_path.write_text(site_svg, encoding="utf-8")
@@ -351,7 +409,7 @@ def main(argv=None) -> int:
         (fig_dir / f"{cand['pmcid']}.json").write_text(json.dumps(info, ensure_ascii=False, indent=1) + "\n",
                                                        encoding="utf-8")
         infos[cand["pmcid"]] = info
-    (d / "README.md").write_text(issue_md(meta, picks, infos), encoding="utf-8")
+    (d / "README.md").write_text(issue_md(meta, picks, infos, load_impact(d)), encoding="utf-8")
     print(f"Rendered {len(picks)} articles to {d / 'README.md'}")
     return 0
 

@@ -23,7 +23,7 @@ import shutil
 import sys
 from pathlib import Path
 
-from . import brand, render
+from . import brand, impact, render
 from .common import ISSUES_DIR, ROOT, read_json
 from .schema import LAB_NOTE_FIELDS
 
@@ -70,6 +70,12 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .toc li {{ display:grid; grid-template-columns:38px 1fr; align-items:baseline; padding:0 0 16px; }}
 .toc .n {{ font-family:var(--mono); font-size:12px; color:var(--acc-ink); font-weight:700; }}
 .toc .t {{ font-size:18px; line-height:1.5; }}
+.toc li.group {{ padding:6px 0 12px; }}
+.toc .g {{ font-family:var(--mono); font-size:11px; letter-spacing:.12em; color:var(--mute); }}
+.part {{ margin-top:70px; position:relative; padding-top:22px; }}
+.part::before {{ content:""; position:absolute; left:28px; right:28px; top:0; border-top:4px solid var(--ink); }}
+.part h2 {{ font-size:22px; margin:0 0 4px; }}
+.part p {{ margin:0; color:var(--ink2); font-size:14px; }}
 .toc .lead {{ grid-column:2; font-size:13.5px; color:var(--mute); line-height:1.65; }}
 .home-issue {{ margin-top:34px; }}
 .home-issue + .home-issue {{ margin-top:10px; }}
@@ -134,7 +140,7 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 
 @media (max-width:860px) {{
   .page > * {{ padding-left:18px; padding-right:18px; }}
-  .art::before, .colophon::before, .rest::before {{ left:18px; right:18px; }}
+  .art::before, .colophon::before, .rest::before, .part::before {{ left:18px; right:18px; }}
   .word .name {{ font-size:32px; }}
   .mast-row {{ flex-wrap:wrap; align-items:flex-start; }}
   .vol {{ text-align:left; }}
@@ -210,11 +216,12 @@ def quotes(evidence: list) -> str:
                    for e in evidence or [])
 
 
-def margin_html(cand: dict, pick: dict, n: int) -> str:
-    own = cand["own_structures"]
+def margin_html(cand: dict, pick: dict, n: int, impact_type: str | None = None) -> str:
+    hot = render.is_impact(pick)
+    own = cand["own_structures"] if not hot else cand.get("cited_structures", [])
     rel = [s for s in own if s["status"] == "released"]
-    method = render.method_line(cand)
-    if pick.get("method_label") and not rel:
+    method = render.method_line(cand) if not hot else "—"
+    if pick.get("method_label") and (hot or not rel):
         method = pick["method_label"]
     if own:
         links = []
@@ -227,15 +234,17 @@ def margin_html(cand: dict, pick: dict, n: int) -> str:
     elif cand["kind"] == "new_map_only" and cand.get("emdb_ids"):
         pdb_dd = "".join(f'<a class="pdb" href="https://www.ebi.ac.uk/emdb/{esc(e)}">{esc(e)}</a>' for e in cand["emdb_ids"][:6])
     else:
-        pdb_dd = "補足資料に記載"
-    pdb_label = "EMDB" if not own and cand["kind"] == "new_map_only" else "PDB"
+        pdb_dd = "—" if hot else "補足資料に記載"
+    pdb_label = "EMDB" if not own and cand["kind"] == "new_map_only" else ("PDB（使用）" if hot else "PDB")
     prots = cand.get("proteins", [])
     uni = ", ".join(f'<a href="https://www.uniprot.org/uniprotkb/{esc(p["uniprot"])}">{esc(p.get("gene") or p["uniprot"])}</a>'
                     for p in prots[:4])
     orgs = sorted({o for s in rel for q in s.get("polymers", []) for o in q["organisms"]})
     first = any(p.get("first_structure") for p in prots)
     rows = [("Target", esc(pick["target_label"])), ("Method", esc(method)), (pdb_label, pdb_dd),
-            ("Ligand", esc(pick.get("ligand_label") or render.ligand_line(cand)))]
+            ("Ligand", esc(pick.get("ligand_label") or ("—" if hot else render.ligand_line(cand))))]
+    if hot:
+        rows.insert(0, ("注目の論文", esc(impact.TYPES.get(impact_type or "", "新しい構造以外"))))
     if uni:
         rows.append(("UniProt", uni))
     if orgs:
@@ -253,6 +262,8 @@ def figures_html(cand: dict, pick: dict, date: str, root: Path, fig_base: str) -
         return ""
     info = read_json(fig_dir / f"{pm}.json") if (fig_dir / f"{pm}.json").exists() else {}
     out = [f'<img class="fig" src="{fig_base}/{date}/{esc(pm)}.svg" alt="構造図：{esc(pick["target_label"])}" loading="lazy">']
+    if render.is_impact(pick) and info.get("pdb_id"):
+        out.append(f'<p class="key"><span>PDB {esc(info["pdb_id"])}（論文が使った既存の構造）</span></p>')
     items = [f'<span><i style="background:{esc(x["color"])}"></i>{esc(x["label"])}</span>' for x in info.get("legend", [])]
     items += [f'<span><i class="stick" style="background:{esc(x["color"])}"></i>{esc(x["label"])}</span>'
               for x in info.get("ligands", [])]
@@ -270,7 +281,8 @@ def figures_html(cand: dict, pick: dict, date: str, root: Path, fig_base: str) -
     return "".join(out)
 
 
-def article_html(cand: dict, pick: dict, date: str, n: int, root: Path, fig_base: str) -> str:
+def article_html(cand: dict, pick: dict, date: str, n: int, root: Path, fig_base: str,
+                 impact_type: str | None = None) -> str:
     s = pick["summary"]
     lic = esc((cand.get("license") or "ライセンス不明").upper())
     hls = "".join(f'<div class="hl"><p>{esc(h["text"])}</p>{quotes(h.get("evidence"))}</div>'
@@ -292,39 +304,51 @@ def article_html(cand: dict, pick: dict, date: str, n: int, root: Path, fig_base
             f'<p class="sum"><b>やったこと</b>{esc(s["approach"])}</p>'
             f'<p class="sum"><b>分かったこと</b>{esc(s["findings"])}</p>'
             f'<h3>読みどころ</h3>{hls}{lab}</div>')
-    return f'<article class="art" id="a{n}">{margin_html(cand, pick, n)}{text}</article>'
+    return f'<article class="art" id="a{n}">{margin_html(cand, pick, n, impact_type)}{text}</article>'
 
 
 # ---------- pages ----------
 
-def load_issue(date: str, root: Path = ISSUES_DIR) -> tuple[dict, list[tuple[dict, dict]]]:
+def load_issue(date: str, root: Path = ISSUES_DIR) -> tuple[dict, list[tuple[dict, dict]], dict[str, str]]:
+    """Meta, the articles in page order (new structures, then 注目の論文), and each 注目の論文's type."""
     d = root / date
     meta = read_json(d / "candidates.json")
     cands = {c["pmcid"]: c for c in meta["candidates"]}
     picks = [(cands[pk["pmcid"]], pk) for pk in (read_json(p) for p in sorted((d / "picks").glob("*.json")))]
     picks.sort(key=lambda cp: cp[1].get("rank", 99))
-    return meta, picks
+    new, hot = render.split_sections(picks)
+    types = {s["pmcid"]: s.get("type") for s in render.load_impact(d).get("scored", [])}
+    return meta, new + hot, types
 
 
 def toc_html(picks: list[tuple[dict, dict]], href: str = "", label: str = "Contents") -> str:
-    items = "".join(f'<li><span class="n">{pad(n)}</span><a class="t" href="{href}#a{n}">{esc(pk["target_label"])}</a>'
-                    f'<span class="lead">{esc(pk["headline"])}</span></li>'
-                    for n, (_, pk) in enumerate(picks, 1))
-    return f'<h2 class="label">{label}</h2><ol>{items}</ol>'
+    items = []
+    for n, (_, pk) in enumerate(picks, 1):
+        if render.is_impact(pk) and (n == 1 or not render.is_impact(picks[n - 2][1])):
+            items.append('<li class="group"><span></span><span class="g">注目の論文（新しい構造以外）</span></li>')
+        items.append(f'<li><span class="n">{pad(n)}</span><a class="t" href="{href}#a{n}">{esc(pk["target_label"])}</a>'
+                     f'<span class="lead">{esc(pk["headline"])}</span></li>')
+    return f'<h2 class="label">{label}</h2><ol>{"".join(items)}</ol>'
 
 
 def issue_page(date: str, prev_date: str | None, next_date: str | None,
                root: Path = ISSUES_DIR, preview: bool = False) -> str:
-    meta, picks = load_issue(date, root)
+    meta, picks, types = load_issue(date, root)
+    n_hot = sum(render.is_impact(pk) for _, pk in picks)
     picked = {pk["pmcid"] for _, pk in picks}
     rest = [x for x in meta["candidates"] if x["kind"] in render.KIND_JA and x["pmcid"] not in picked]
     fig_base = "figures" if preview else "../figures"
     body = []
     if preview:
         body.append('<div class="preview-bar">プレビュー（未公開）— Pull Request をマージすると公開されます</div>')
-    body += [masthead(1, f"{jp_date(date)}号<br>新しい構造 {len(picks) + len(rest)} 件"),
+    counts = f"新しい構造 {len(picks) - n_hot + len(rest)} 件" + (f"<br>注目の論文 {n_hot} 件" if n_hot else "")
+    body += [masthead(1, f"{jp_date(date)}号<br>{counts}"),
              f'<section class="toc">{toc_html(picks)}</section>']
-    body += [article_html(cand, pk, date, n, root, fig_base) for n, (cand, pk) in enumerate(picks, 1)]
+    for n, (cand, pk) in enumerate(picks, 1):
+        if render.is_impact(pk) and (n == 1 or not render.is_impact(picks[n - 2][1])):
+            body.append('<section class="part"><h2>注目の論文</h2><p>新しい構造ではないが、既存の構造による機構の解明、'
+                        '構造予測・AI・デザイン、新しい手法、構造に基づく創薬の点で注目したい論文。</p></section>')
+        body.append(article_html(cand, pk, date, n, root, fig_base, types.get(cand["pmcid"])))
     if rest:
         items = "".join(f'<li><a href="{doi_url(x)}">{esc(x["title"])}</a> — <i>{esc(x["journal_abbrev"] or x["journal"])}</i>'
                         f'（{esc(render.KIND_JA[x["kind"]])}）</li>' for x in rest)
@@ -343,7 +367,7 @@ def issue_page(date: str, prev_date: str | None, next_date: str | None,
 def home(issues: list[str]) -> str:
     body = [masthead(0, "毎朝更新"), f'<p class="intro">{esc(DESCRIPTION)}</p>']
     for date in issues:
-        _, picks = load_issue(date)
+        _, picks, _ = load_issue(date)
         link = f'<a href="issues/{date}.html">{date.replace("-", ".")}</a>'
         body.append(f'<section class="toc home-issue">{toc_html(picks, f"issues/{date}.html", link)}</section>')
     body.append(colophon())
