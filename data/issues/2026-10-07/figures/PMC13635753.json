@@ -1,6 +1,11 @@
 {
  "pdb_id": "8TX9",
  "legend": [],
- "ligand": true,
- "ligand_color": "#D4452B"
+ "ligands": [
+  {
+   "id": "BMX",
+   "label": "ManNAc-6-P",
+   "color": "#C23B8E"
+  }
+ ]
 }

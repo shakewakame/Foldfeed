@@ -17,6 +17,13 @@ from collections import defaultdict
 PALETTE = ["#3B6FB6", "#E0A030", "#3E9E8F", "#9C5FB5", "#D0605E", "#6C8EBF",
            "#8DA94A", "#C17C4E", "#5AA9C8", "#B5869E"]
 LIGAND_COLOR = "#E4572E"
+# Carbon colours of the ligands in a figure, in order; other elements keep their usual colours
+# (N blue, O red, S yellow, P orange), so none of these is red, blue or orange.
+LIGAND_PALETTE = ["#C23B8E", "#2F9E57", "#7A52C7", "#D6A21E", "#178F8F", "#8C5A3C"]
+ELEMENT_COLORS = {"N": "#3461D1", "O": "#E8303A", "S": "#E0B21C", "P": "#F08A24", "F": "#3FA34D",
+                  "CL": "#3FA34D", "BR": "#9A3B1F", "I": "#7A2E99", "SE": "#E58A1C", "B": "#E6918A"}
+COVALENT_RADIUS = {"H": 0.31, "C": 0.76, "N": 0.71, "O": 0.66, "S": 1.05, "P": 1.07, "F": 0.57,
+                   "CL": 1.02, "BR": 1.20, "I": 1.39, "SE": 1.20, "B": 0.84, "SI": 1.11}
 SUBDIV = 3  # spline samples per residue
 TOKEN = re.compile(r"""'(?:[^']|'(?=\S))*'|"(?:[^"]|"(?=\S))*"|\S+""")
 MAX_TRACE_POINTS = 6000
@@ -250,15 +257,16 @@ def _points(pts: list[tuple[float, float]]) -> str:
 
 def render(cif_gz: bytes, ligand_ids: set[str], x0: float, y0: float, w: float, h: float,
            gene_names: dict[str, str] | None = None, margin: float = 28,
-           entity_colors: list[str] | None = None, ligand_color: str | None = None,
-           ) -> tuple[str, list[tuple[str, str]]]:
-    """SVG fragment for the box (x0, y0, w, h) and a legend [(colour, label)] per polymer entity.
+           entity_colors: list[str] | None = None, ligand_colors: list[str] | None = None,
+           ) -> tuple[str, list[tuple[str, str]], list[tuple[str, str]]]:
+    """SVG fragment for the box (x0, y0, w, h), a legend [(colour, label)] per polymer entity,
+    and [(colour, component id)] for the ligands drawn as sticks.
 
     Labels are UniProt gene names (gene_names: accession -> gene) when the entity maps to one,
     otherwise the entity description.
     """
     palette = entity_colors or PALETTE
-    lig_col = ligand_color or LIGAND_COLOR
+    lig_palette = ligand_colors or LIGAND_PALETTE
     cif = parse_cif(gzip.decompress(cif_gz).decode("utf-8", "replace"))
     atoms = cif["_atom_site"]
     entities = {e.get("id", ""): e.get("pdbx_description", "") for e in cif["_entity"]}
@@ -291,10 +299,14 @@ def render(cif_gz: bytes, ligand_ids: set[str], x0: float, y0: float, w: float, 
             chain_entity[key] = a.get("label_entity_id", "?")
         elif a.get("group_PDB") == "HETATM" and a.get("label_comp_id") in ligand_ids and \
                 a.get("type_symbol") not in ("H", "D"):
-            lig_atoms.append(xyz)
+            inst = (a.get("label_asym_id"), a.get("auth_seq_id"), a.get("label_comp_id"))
+            if (inst, a.get("label_atom_id")) in seen:  # alternate locations
+                continue
+            seen.add((inst, a.get("label_atom_id")))
+            lig_atoms.append({"xyz": xyz, "inst": inst, "el": (a.get("type_symbol") or "C").upper()})
     pts = [r["xyz"] for c in chains.values() for r in c]
     if not pts:
-        return "", []
+        return "", [], []
 
     # Break chains into continuous runs, then thin very large models.
     runs: list[tuple[str, list[dict]]] = []
@@ -330,7 +342,7 @@ def render(cif_gz: bytes, ligand_ids: set[str], x0: float, y0: float, w: float, 
         return (q[1], q[0], q[2]) if swap else q
 
     runs3 = [(k, [dict(r, q=xy(proj(r["xyz"]))) for r in v]) for k, v in runs]
-    ligq = [xy(proj(p)) for p in lig_atoms]
+    ligq = [xy(proj(p["xyz"])) for p in lig_atoms]
     allq = [r["q"] for _, v in runs3 for r in v]
     xs, ys, zs = [q[0] for q in allq + ligq], [q[1] for q in allq + ligq], [q[2] for q in allq]
     span_x, span_y = max(xs) - min(xs) or 1, max(ys) - min(ys) or 1
@@ -425,9 +437,66 @@ def render(cif_gz: bytes, ligand_ids: set[str], x0: float, y0: float, w: float, 
 
     parts.sort(key=lambda p: p[0])
     out = ["".join(s for _, s in parts)]
-    r = max(2.2, min(6.5, scale * 0.85))
-    if ligq:
-        out.append(f'<g fill="{lig_col}" stroke="{_shade(lig_col, 0.45)}" stroke-width="1">' +
-                   "".join(f'<circle cx="{a:.1f}" cy="{b:.1f}" r="{r:.1f}"/>' for a, b in map(sx, ligq)) + "</g>")
+    sticks, lig_legend = _sticks(lig_atoms, ligq, sx, scale, lig_palette)
+    out.append(sticks)
     legend = [(color[e], entities.get(e, f"entity {e}")) for e in entity_order]
-    return "".join(out), legend
+    return "".join(out), legend, lig_legend
+
+
+def _sticks(atoms: list[dict], q: list[tuple], sx, scale: float, lig_palette: list[str]
+            ) -> tuple[str, list[tuple[str, str]]]:
+    """Ligands as sticks: bonds inferred from interatomic distances within each molecule,
+    each half-bond coloured by its atom (carbon in the ligand's own colour)."""
+    if not atoms:
+        return "", []
+    comps: list[str] = []
+    for a in atoms:
+        if a["inst"][2] not in comps:
+            comps.append(a["inst"][2])
+    ccol = {c: lig_palette[i % len(lig_palette)] for i, c in enumerate(comps)}
+    width = max(1.8, min(7.0, 0.5 * scale))
+    edge = 1.4 if width > 3 else 1.0
+    by_inst: dict[tuple, list[int]] = defaultdict(list)
+    for i, a in enumerate(atoms):
+        by_inst[a["inst"]].append(i)
+
+    def atom_col(i):
+        el = atoms[i]["el"]
+        return ccol[atoms[i]["inst"][2]] if el == "C" else ELEMENT_COLORS.get(el, "#8A8F98")
+
+    groups = []
+    for inst, idx in by_inst.items():
+        bonds = []
+        for x, i in enumerate(idx):
+            ri = COVALENT_RADIUS.get(atoms[i]["el"], 1.3)
+            for j in idx[x + 1:]:
+                rj = COVALENT_RADIUS.get(atoms[j]["el"], 1.3)
+                if 0.4 < math.dist(atoms[i]["xyz"], atoms[j]["xyz"]) <= ri + rj + 0.45:
+                    bonds.append((i, j))
+        bonded = {k for b in bonds for k in b}
+        z = sum(q[i][2] for i in idx) / len(idx)
+        outline, fill = [], []
+        for i, j in sorted(bonds, key=lambda b: q[b[0]][2] + q[b[1]][2]):
+            (ax, ay), (bx, by) = sx(q[i]), sx(q[j])
+            mx, my = (ax + bx) / 2, (ay + by) / 2
+            outline.append(f"M{ax:.1f},{ay:.1f}L{bx:.1f},{by:.1f}")
+            fill.append((atom_col(i), f"M{ax:.1f},{ay:.1f}L{mx:.1f},{my:.1f}"))
+            fill.append((atom_col(j), f"M{mx:.1f},{my:.1f}L{bx:.1f},{by:.1f}"))
+        dark = _shade(ccol[inst[2]], 0.55)
+        svg = []
+        if outline:
+            svg.append(f'<path d="{"".join(outline)}" stroke="{dark}" stroke-width="{width + 2 * edge:.1f}"/>')
+            by_col: dict[str, list[str]] = defaultdict(list)
+            for col, d in fill:
+                by_col[col].append(d)
+            svg += [f'<path d="{"".join(ds)}" stroke="{col}" stroke-width="{width:.1f}"/>' for col, ds in by_col.items()]
+        for i in idx:  # lone atoms (ions, or atoms the distance rule left unbonded)
+            if i not in bonded:
+                cx, cy = sx(q[i])
+                svg.append(f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{width * 1.1:.1f}" fill="{atom_col(i)}" '
+                           f'stroke="{dark}" stroke-width="{edge}"/>')
+        groups.append((z, "".join(svg)))
+    groups.sort(key=lambda g: g[0])
+    body = ('<g fill="none" stroke-linecap="round" stroke-linejoin="round">' +
+            "".join(s for _, s in groups) + "</g>")
+    return body, [(ccol[c], c) for c in comps]

@@ -54,4 +54,5 @@ EXAMPLE = {
     "method_label": "手法・分解能の表示（PDB 情報がないときだけ。例：クライオ電顕・2.8 Å）",
     "ligand_label": "結合分子の表示（略号より分かりやすい名前。例：オラパリブ、タラゾパリブ）",
     "legend_labels": ["構造図の色の凡例名を entity の順に上書き（任意）"],
+    "ligand_names": {"A1CKT": "OX04529", "43M": "4CmC"},
 }

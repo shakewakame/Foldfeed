@@ -23,6 +23,7 @@ COMMON_ADDITIVES = {
     "PC1", "PCF", "PEF", "PEV", "PGV", "PGW", "LHG", "LMG", "DGD", "SQD", "CDL", "3PE", "6PL",
     "PTY", "PLX", "P5S", "LPP", "8PE", "PEK", "D12", "OCT", "HP6", "LNK", "UND", "R16", "C14",
     "PX4", "POV", "PSF", "CHD", "CPQ", "AJP", "DU0", "NKP", "LBN", "PIO", "9Z9", "A1L",
+    "CPS", "LMU", "DMU", "UMQ", "BNG", "HTG", "SDS", "TWT",  # detergents
 }
 
 ENTRY_QUERY = """

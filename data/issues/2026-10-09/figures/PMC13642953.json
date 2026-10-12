@@ -1,6 +1,16 @@
 {
  "pdb_id": "9ZLH",
  "legend": [],
- "ligand": true,
- "ligand_color": "#D4452B"
+ "ligands": [
+  {
+   "id": "ADP",
+   "label": "ADP",
+   "color": "#C23B8E"
+  },
+  {
+   "id": "U1C",
+   "label": "ダントロレン",
+   "color": "#2F9E57"
+  }
+ ]
 }
