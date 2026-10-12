@@ -72,10 +72,15 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .toc .t {{ font-size:18px; line-height:1.5; }}
 .toc li.group {{ padding:6px 0 12px; }}
 .toc .g {{ font-family:var(--mono); font-size:11px; letter-spacing:.12em; color:var(--mute); }}
-.part {{ margin-top:70px; position:relative; padding-top:22px; }}
+.toc .label.hot, .toc ol.hot {{ margin-top:18px; padding-top:18px; border-top:1px solid var(--hair); }}
+.part {{ margin-top:80px; position:relative; padding-top:20px; }}
 .part::before {{ content:""; position:absolute; left:28px; right:28px; top:0; border-top:4px solid var(--ink); }}
-.part h2 {{ font-size:22px; margin:0 0 4px; }}
-.part p {{ margin:0; color:var(--ink2); font-size:14px; }}
+.part::after {{ content:""; position:absolute; left:28px; right:28px; top:7px; border-top:1px solid var(--ink); }}
+.part h2 {{ font-size:27px; line-height:1.4; margin:8px 0 4px; display:flex; align-items:baseline; gap:16px; }}
+.part h2 span {{ font-family:var(--mono); font-size:12px; font-weight:500; color:var(--mute); letter-spacing:.08em; }}
+.part p {{ margin:0; color:var(--ink2); font-size:14px; max-width:760px; }}
+.part + .art {{ margin-top:18px; }}
+.part + .art::before {{ display:none; }}
 .toc .lead {{ grid-column:2; font-size:13.5px; color:var(--mute); line-height:1.65; }}
 .home-issue {{ margin-top:34px; }}
 .home-issue + .home-issue {{ margin-top:10px; }}
@@ -140,7 +145,8 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 
 @media (max-width:860px) {{
   .page > * {{ padding-left:18px; padding-right:18px; }}
-  .art::before, .colophon::before, .rest::before, .part::before {{ left:18px; right:18px; }}
+  .art::before, .colophon::before, .rest::before, .part::before, .part::after {{ left:18px; right:18px; }}
+  .part h2 {{ font-size:23px; }}
   .word .name {{ font-size:32px; }}
   .mast-row {{ flex-wrap:wrap; align-items:flex-start; }}
   .vol {{ text-align:left; }}
@@ -321,14 +327,37 @@ def load_issue(date: str, root: Path = ISSUES_DIR) -> tuple[dict, list[tuple[dic
     return meta, new + hot, types
 
 
-def toc_html(picks: list[tuple[dict, dict]], href: str = "", label: str = "Contents") -> str:
-    items = []
-    for n, (_, pk) in enumerate(picks, 1):
-        if render.is_impact(pk) and (n == 1 or not render.is_impact(picks[n - 2][1])):
-            items.append('<li class="group"><span></span><span class="g">注目の論文（新しい構造以外）</span></li>')
-        items.append(f'<li><span class="n">{pad(n)}</span><a class="t" href="{href}#a{n}">{esc(pk["target_label"])}</a>'
-                     f'<span class="lead">{esc(pk["headline"])}</span></li>')
-    return f'<h2 class="label">{label}</h2><ol>{"".join(items)}</ol>'
+PARTS = {
+    "new": ("新しい構造", "この号で報告された、PDB / EMDB に寄託された新しい構造。"),
+    "impact": ("注目の論文", "新しい構造ではないが、実験で決めた構造で確かめた注目の研究"
+                            "（既存構造による機構の解明・予測やデザインの実証・新しい手法・構造に基づく創薬）。"),
+}
+
+
+def toc_items(picks: list[tuple[dict, dict]], href: str = "", start: int = 1) -> str:
+    return "".join(f'<li><span class="n">{pad(n)}</span><a class="t" href="{href}#a{n}">{esc(pk["target_label"])}</a>'
+                   f'<span class="lead">{esc(pk["headline"])}</span></li>'
+                   for n, (_, pk) in enumerate(picks, start))
+
+
+def toc_html(picks: list[tuple[dict, dict]], href: str = "", label: str = "") -> str:
+    """Contents in two blocks, 新しい構造 and 注目の論文, each with its own label in the left column.
+    With `label` (the home page), that label heads the issue and the second block gets a sub-label."""
+    new, hot = render.split_sections(picks)
+    if label:
+        sub = (f'<li class="group"><span></span><span class="g">{PARTS["impact"][0]}</span></li>'
+               + toc_items(hot, href, len(new) + 1)) if hot else ""
+        return f'<h2 class="label">{label}</h2><ol>{toc_items(new, href)}{sub}</ol>'
+    out = f'<h2 class="label">{PARTS["new"][0]}</h2><ol>{toc_items(new, href)}</ol>' if new else ""
+    if hot:
+        out += f'<h2 class="label hot">{PARTS["impact"][0]}</h2><ol class="hot">{toc_items(hot, href, len(new) + 1)}</ol>'
+    return out
+
+
+def part_html(key: str, count: int) -> str:
+    title, note = PARTS[key]
+    return (f'<section class="part" id="{key}"><h2>{title}<span>{count} 本</span></h2>'
+            f'<p>{esc(note)}</p></section>')
 
 
 def issue_page(date: str, prev_date: str | None, next_date: str | None,
@@ -341,13 +370,13 @@ def issue_page(date: str, prev_date: str | None, next_date: str | None,
     body = []
     if preview:
         body.append('<div class="preview-bar">プレビュー（未公開）— Pull Request をマージすると公開されます</div>')
-    counts = f"新しい構造 {len(picks) - n_hot + len(rest)} 件" + (f"<br>注目の論文 {n_hot} 件" if n_hot else "")
+    counts = f"新しい構造 {len(picks) - n_hot + len(rest)} 本" + (f"<br>注目の論文 {n_hot} 本" if n_hot else "")
     body += [masthead(1, f"{jp_date(date)}号<br>{counts}"),
              f'<section class="toc">{toc_html(picks)}</section>']
     for n, (cand, pk) in enumerate(picks, 1):
-        if render.is_impact(pk) and (n == 1 or not render.is_impact(picks[n - 2][1])):
-            body.append('<section class="part"><h2>注目の論文</h2><p>新しい構造ではないが、既存の構造による機構の解明、'
-                        '構造予測・AI・デザイン、新しい手法、構造に基づく創薬の点で注目したい論文。</p></section>')
+        hot = render.is_impact(pk)
+        if n == 1 or hot != render.is_impact(picks[n - 2][1]):
+            body.append(part_html("impact" if hot else "new", n_hot if hot else len(picks) - n_hot))
         body.append(article_html(cand, pk, date, n, root, fig_base, types.get(cand["pmcid"])))
     if rest:
         items = "".join(f'<li><a href="{doi_url(x)}">{esc(x["title"])}</a> — <i>{esc(x["journal_abbrev"] or x["journal"])}</i>'

@@ -127,6 +127,7 @@ def run(index_date: str, issue_date: str) -> dict:
         m = europepmc.metadata(r)
         if m["pmcid"] and m["pmcid"] not in seen and not europepmc.is_excluded_type(m):
             seen.add(m["pmcid"])
+            m["source"] = "impact_search"
             m["prescreen"] = impact.prescreen(m)
             extra.append(m)
     extra = sorted((m for m in extra if m["prescreen"]["score"] >= 1),
@@ -134,7 +135,6 @@ def run(index_date: str, issue_date: str) -> dict:
     with ThreadPoolExecutor(6) as ex:
         loaded_extra = [x for x in ex.map(load, extra) if x[1] is not None]
     for m, _ in loaded_extra:
-        m["source"] = "impact_search"
         del m["prescreen"]
     loaded += loaded_extra
     print(f"Impact search: {len(raw2)} hits, {len(loaded_extra)} more papers parsed", file=sys.stderr)

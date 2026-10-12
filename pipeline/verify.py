@@ -163,6 +163,10 @@ def check_impact(record: dict, cands: dict, impact_picks: set[str]) -> list[str]
             selected.add(pm)
             if total < impact.THRESHOLD:
                 errors.append(f"{where}: selected with {total} points (threshold {impact.THRESHOLD})")
+            for k, need in impact.REQUIRED.items():
+                if isinstance(scores.get(k), int) and scores[k] < need:
+                    errors.append(f"{where}: selected with {k}={scores[k]}; needs at least {need} "
+                                  f"(checked against an experimentally determined structure)")
     if len(selected) > impact.MAX_PER_DAY:
         errors.append(f"impact.json: {len(selected)} papers selected (at most {impact.MAX_PER_DAY} a day)")
     for pm in sorted(selected - impact_picks):

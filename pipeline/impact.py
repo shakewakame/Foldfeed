@@ -3,7 +3,9 @@
 Papers that do not report a new structure can still deserve an article: a mechanism worked out on
 existing structures, structure prediction / AI / protein design, a new method or software, or
 structure-based drug discovery (owner's choice, 2026-10-12; up to MAX_PER_DAY a day, same format
-as the new-structure articles).
+as the new-structure articles). Only work checked against experimentally determined structures
+(X-ray, cryo-EM, NMR, including existing PDB entries) qualifies: papers resting on molecular
+dynamics, prediction or docking alone are left out (owner, 2026-10-12).
 
 Two stages:
   1. prescreen() — keyword hints from the title, abstract and journal, computed by pipeline.collect.
@@ -31,13 +33,15 @@ TYPES = {
 RUBRIC = {
     "novelty": (3, "何が初めてか。新しい機構・新しい能力・初めての実証を論文が示している（3＝分野の定説を変える／2＝明確に新しい／1＝既知の延長）"),
     "reach": (3, "誰に効くか。構造生物学の他の研究者が使える・考え方が変わる範囲（3＝分野全体／2＝大きなタンパク質ファミリーや広く使われる系／1＝その系だけ）"),
-    "structure": (2, "構造が結論の中心にあるか（2＝構造・予測・シミュレーションなしでは成り立たない／1＝補助的）"),
+    "structure": (2, "実験で決めた構造（X 線・クライオ電顕・NMR。既存の PDB 構造を含む）で結論を確かめているか（2＝実験構造なしでは結論が成り立たない／1＝実験構造で一部を確かめた／0＝MD・予測・ドッキングなど計算モデルだけ。0 点は選ばない）"),
     "support": (2, "裏付けの強さ（2＝独立した実験で検証：変異体・機能測定・既存手法との比較など／1＝一部の検証のみ／0＝計算のみで実験的検証なし）"),
 }
 MAX_TOTAL = sum(m for m, _ in RUBRIC.values())
+REQUIRED = {"structure": 1}  # minimum per criterion for a paper to be selected
 
 # Not selected regardless of score (the writer records the reason).
 EXCLUSIONS = [
+    "MD・構造予測・ドッキングなど計算だけが根拠で、実験で決めた構造による裏付けがない",
     "ドッキング・ネットワーク薬理学・免疫インフォマティクス・ADMET 予測だけで、実験的な検証がない",
     "総説・解説・プロトコル集（新しい結果がない）",
     "臨床研究で、構造が議論に関わらない",
@@ -53,12 +57,14 @@ _TYPE_WORDS = {
     "drug": ["structure-based", "structure-guided", "lead compound", "lead optimization", "potent", "selective inhibitor",
              "ic50", "nanomolar", "degrader", "protac", "covalent inhibitor", "fragment", "drug discovery",
              "co-crystal", "cocrystal"],
-    "mechanism": ["mechanism", "conformational", "allosteric", "gating", "catalytic", "molecular dynamics",
-                  "mutagenesis", "substrate recognition", "activation"],
+    "mechanism": ["mechanism", "conformational", "allosteric", "gating", "catalytic", "mutagenesis",
+                  "substrate recognition", "activation"],
 }
 _VALIDATION = ["mutagenesis", "mutant", "in vitro", "in vivo", "assay", "electrophysiology", "binding affinity",
                "isothermal titration", "surface plasmon", "kinetic", "mice", "cryo-em", "crystal structure",
                "nmr", "hydrogen-deuterium", "hdx", "cross-linking", "saxs", "single-molecule"]
+_EXP_STRUCTURE = ["crystal structure", "cryo-em", "cryoem", "cryo-electron", "x-ray", "nmr", "co-crystal",
+                  "cocrystal", "protein data bank", "pdb"]
 _LOW = ["network pharmacology", "molecular docking", "immunoinformatic", "reverse vaccinology", "admet",
         "virtual screening", "in silico", "multi-epitope", "multiepitope", "pharmacophore", "density functional",
         "mendelian randomization", "bibliometric", "bioinformatics analysis"]
@@ -80,8 +86,16 @@ def prescreen(meta: dict) -> dict:
     low = sorted({w for w in _LOW if w in text})
     journal = meta.get("journal_abbrev") in _JOURNALS
     bio = any(w in text for w in _BIO)
-    score = len(types) + min(len(validation), 3) + (2 if journal else 0) - 2 * len(low) - (4 if not bio else 0)
+    # The impact search itself requires experimental-structure terms somewhere in the full text.
+    exp_structure = (any(w in text for w in _EXP_STRUCTURE) or bool(meta.get("cited_structures"))
+                     or meta.get("source") == "impact_search")
+    score = (len(types) + min(len(validation), 3) + (2 if journal else 0) - 2 * len(low) - (4 if not bio else 0)
+             + (2 if exp_structure else -4))
     flags = []
+    if not exp_structure:
+        flags.append("実験構造の手がかりなし")
+    if "molecular dynamics" in text and not exp_structure:
+        flags.append("MD 中心の可能性")
     if low and not validation:
         flags.append("計算のみの可能性（" + "、".join(low[:3]) + "）")
     if not bio:
@@ -90,4 +104,4 @@ def prescreen(meta: dict) -> dict:
         score -= 10
         flags.append("訂正・撤回の告知")
     return {"score": score, "types": types, "validation": validation[:5], "low": low, "journal": journal,
-            "flags": flags}
+            "exp_structure": exp_structure, "flags": flags}

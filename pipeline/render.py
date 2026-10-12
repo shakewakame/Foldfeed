@@ -355,15 +355,17 @@ def issue_md(meta: dict, picks: list[tuple[dict, dict]], infos: dict | None = No
            f"オープンアクセス論文 {c['parsed']} 本のうち、新しい構造を報告した論文は {new_total} 本。{covered}", ""]
     new, hot = split_sections(picks)
     if hot:
-        out += [f"**注目の論文：{len(hot)} 本**（新しい構造ではないが、機構・予測やデザイン・手法・創薬の点で注目したい論文）", ""]
+        out += [f"**注目の論文：{len(hot)} 本**（新しい構造ではないが、実験で決めた構造で確かめた注目の研究）", ""]
     if picks:
         out += contents_table(new + hot)
     out += ["> この号は AI が論文本文から作成した**レビュー用の下書き**です。"
             "数値・ID・リガンドは PDB / UniProt から取得し、AI の記述には本文からの引用を付けています。", "", "---", ""]
+    if hot and new:
+        out += ["# 新しい構造", ""]
     for n, (cand, pick) in enumerate(new, 1):
         out += article_md(cand, pick, n, (infos or {}).get(cand["pmcid"]))
     if hot:
-        out += ["# 注目の論文（新しい構造以外）", ""]
+        out += ["# 注目の論文（新しい構造以外。実験で決めた構造で確かめた研究）", ""]
         for n, (cand, pick) in enumerate(hot, len(new) + 1):
             out += article_md(cand, pick, n, (infos or {}).get(cand["pmcid"]))
     out += impact_md(impact_record or {}, {c["pmcid"]: c for c in meta["candidates"]})
