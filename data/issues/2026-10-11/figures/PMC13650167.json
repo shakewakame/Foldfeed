@@ -12,5 +12,27 @@
    "label": "BeF3",
    "color": "#2F9E57"
   }
- ]
+ ],
+ "site": {
+  "ligand": "ADP",
+  "residues": [
+   "T540",
+   "R541",
+   "K542",
+   "P355",
+   "K356",
+   "A357",
+   "G358",
+   "K359",
+   "T360",
+   "T361",
+   "E390",
+   "F530"
+  ],
+  "polar": 11,
+  "neighbours": [
+   "BeF3"
+  ],
+  "label": "ADP"
+ }
 }

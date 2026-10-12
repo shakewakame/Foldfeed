@@ -55,4 +55,5 @@ EXAMPLE = {
     "ligand_label": "結合分子の表示（略号より分かりやすい名前。例：オラパリブ、タラゾパリブ）",
     "legend_labels": ["構造図の色の凡例名を entity の順に上書き（任意）"],
     "ligand_names": {"A1CKT": "OX04529", "43M": "4CmC"},
+    "site_ligand": "結合部位の拡大図に使うリガンドの ID（省略時は ligand_names の最初、なければ最大のリガンド。\"\" で拡大図なし）",
 }

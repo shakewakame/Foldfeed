@@ -255,18 +255,17 @@ def _points(pts: list[tuple[float, float]]) -> str:
     return " ".join(f"{a:.1f},{b:.1f}" for a, b in pts)
 
 
-def render(cif_gz: bytes, ligand_ids: set[str], x0: float, y0: float, w: float, h: float,
-           gene_names: dict[str, str] | None = None, margin: float = 28,
-           entity_colors: list[str] | None = None, ligand_colors: list[str] | None = None,
-           ) -> tuple[str, list[tuple[str, str]], list[tuple[str, str]]]:
-    """SVG fragment for the box (x0, y0, w, h), a legend [(colour, label)] per polymer entity,
-    and [(colour, component id)] for the ligands drawn as sticks.
+AA1 = {"ALA": "A", "ARG": "R", "ASN": "N", "ASP": "D", "CYS": "C", "GLN": "Q", "GLU": "E", "GLY": "G",
+       "HIS": "H", "ILE": "I", "LEU": "L", "LYS": "K", "MET": "M", "PHE": "F", "PRO": "P", "SER": "S",
+       "THR": "T", "TRP": "W", "TYR": "Y", "VAL": "V", "MSE": "M", "SEC": "U"}
+BACKBONE = {"N", "C", "O", "OXT"}
+CONTACT = 4.0  # Å: residues with any heavy atom this close to the ligand are drawn and listed
+POLAR = 3.3    # Å: N/O pairs this close are drawn as polar contacts
 
-    Labels are UniProt gene names (gene_names: accession -> gene) when the entity maps to one,
-    otherwise the entity description.
-    """
-    palette = entity_colors or PALETTE
-    lig_palette = ligand_colors or LIGAND_PALETTE
+
+def _load(cif_gz: bytes, ligand_ids: set[str], gene_names: dict[str, str] | None,
+          polymer_atoms: bool = False) -> dict:
+    """Backbone trace (CA/P with secondary structure), ligand atoms and, if asked, every polymer heavy atom."""
     cif = parse_cif(gzip.decompress(cif_gz).decode("utf-8", "replace"))
     atoms = cif["_atom_site"]
     entities = {e.get("id", ""): e.get("pdbx_description", "") for e in cif["_entity"]}
@@ -279,36 +278,44 @@ def render(cif_gz: bytes, ligand_ids: set[str], x0: float, y0: float, w: float, 
     chains: dict[str, list[dict]] = defaultdict(list)
     chain_entity: dict[str, str] = {}
     seen: set[tuple] = set()
-    lig_atoms = []
+    lig_atoms, poly = [], []
     for a in atoms:
         if a.get("pdbx_PDB_model_num", "1") != model:
             continue
+        el = (a.get("type_symbol") or "C").upper()
+        if el in ("H", "D"):
+            continue
         xyz = (float(a["Cartn_x"]), float(a["Cartn_y"]), float(a["Cartn_z"]))
-        if a.get("group_PDB") == "ATOM" and a.get("label_atom_id") in ("CA", "P"):
+        if a.get("group_PDB") == "ATOM":
             key = a.get("label_asym_id", "?")
             try:
                 seq = int(a.get("label_seq_id", ""))
             except ValueError:
                 continue
-            if (key, seq) in seen:  # alternate locations
+            name = a.get("label_atom_id", "")
+            if (key, seq, name) in seen:  # alternate locations
                 continue
-            seen.add((key, seq))
-            at = a["label_atom_id"]
-            chains[key].append({"seq": seq, "xyz": xyz, "at": at,
-                                "ss": "N" if at == "P" else ss_map.get((key, seq), "C")})
-            chain_entity[key] = a.get("label_entity_id", "?")
-        elif a.get("group_PDB") == "HETATM" and a.get("label_comp_id") in ligand_ids and \
-                a.get("type_symbol") not in ("H", "D"):
+            seen.add((key, seq, name))
+            if polymer_atoms:
+                poly.append({"xyz": xyz, "el": el, "name": name, "res": (key, seq),
+                             "comp": a.get("label_comp_id", ""), "auth": a.get("auth_seq_id", str(seq)),
+                             "chain": a.get("auth_asym_id", key), "entity": a.get("label_entity_id", "?")})
+            if name in ("CA", "P"):
+                chains[key].append({"seq": seq, "xyz": xyz, "at": name,
+                                    "ss": "N" if name == "P" else ss_map.get((key, seq), "C")})
+                chain_entity[key] = a.get("label_entity_id", "?")
+        elif a.get("group_PDB") == "HETATM" and a.get("label_comp_id") in ligand_ids:
             inst = (a.get("label_asym_id"), a.get("auth_seq_id"), a.get("label_comp_id"))
-            if (inst, a.get("label_atom_id")) in seen:  # alternate locations
+            if (inst, a.get("label_atom_id")) in seen:
                 continue
             seen.add((inst, a.get("label_atom_id")))
-            lig_atoms.append({"xyz": xyz, "inst": inst, "el": (a.get("type_symbol") or "C").upper()})
-    pts = [r["xyz"] for c in chains.values() for r in c]
-    if not pts:
-        return "", [], []
+            lig_atoms.append({"xyz": xyz, "inst": inst, "el": el})
+    return {"entities": entities, "chains": chains, "chain_entity": chain_entity,
+            "lig_atoms": lig_atoms, "poly": poly}
 
-    # Break chains into continuous runs, then thin very large models.
+
+def _runs(chains: dict[str, list[dict]], n_points: int) -> list[tuple[str, list[dict]]]:
+    """Continuous stretches of each chain, thinned for very large models."""
     runs: list[tuple[str, list[dict]]] = []
     for k, v in chains.items():
         cur: list[dict] = []
@@ -321,58 +328,37 @@ def render(cif_gz: bytes, ligand_ids: set[str], x0: float, y0: float, w: float, 
             cur.append(r)
         runs.append((k, cur))
     runs = [(k, v) for k, v in runs if len(v) > 1]
-    step = max(1, math.ceil(len(pts) / MAX_TRACE_POINTS))
+    step = max(1, math.ceil(n_points / MAX_TRACE_POINTS))
     if step > 1:
         runs = [(k, v[::step] + ([v[-1]] if (len(v) - 1) % step else [])) for k, v in runs]
+    return runs
 
-    cx, cy, cz = (sum(p[i] for p in pts) / len(pts) for i in range(3))
-    sample = pts[::step]
-    cov = [[sum((p[i] - (cx, cy, cz)[i]) * (p[j] - (cx, cy, cz)[j]) for p in sample) for j in range(3)]
-           for i in range(3)]
-    ev = _jacobi_eigen(cov)
 
+def _basis(points: list[tuple]) -> tuple[tuple, list[list[float]]]:
+    """Centroid and principal axes (longest first) of a point cloud."""
+    c = tuple(sum(p[i] for p in points) / len(points) for i in range(3))
+    cov = [[sum((p[i] - c[i]) * (p[j] - c[j]) for p in points) for j in range(3)] for i in range(3)]
+    return c, _jacobi_eigen(cov)
+
+
+def _projector(center: tuple, ev: list[list[float]], swap: bool):
     def proj(p):
-        d = (p[0] - cx, p[1] - cy, p[2] - cz)
-        return tuple(sum(d[k] * ev[k][c] for k in range(3)) for c in range(3))
-
-    # Wider than tall: put the longest axis horizontally if the box is wide, vertically otherwise.
-    swap = h > w
-
-    def xy(q):
+        d = (p[0] - center[0], p[1] - center[1], p[2] - center[2])
+        q = tuple(sum(d[k] * ev[k][c] for k in range(3)) for c in range(3))
         return (q[1], q[0], q[2]) if swap else q
+    return proj
 
-    runs3 = [(k, [dict(r, q=xy(proj(r["xyz"]))) for r in v]) for k, v in runs]
-    ligq = [xy(proj(p["xyz"])) for p in lig_atoms]
-    allq = [r["q"] for _, v in runs3 for r in v]
-    xs, ys, zs = [q[0] for q in allq + ligq], [q[1] for q in allq + ligq], [q[2] for q in allq]
-    span_x, span_y = max(xs) - min(xs) or 1, max(ys) - min(ys) or 1
-    scale = min((w - 2 * margin) / span_x, (h - 2 * margin) / span_y)
-    ox = x0 + w / 2 - (min(xs) + max(xs)) / 2 * scale
-    oy = y0 + h / 2 + (min(ys) + max(ys)) / 2 * scale
-    zmin, zmax = min(zs), max(zs)
 
-    def sx(q):
-        return ox + q[0] * scale, oy - q[1] * scale
-
-    def tint(col, z):
-        depth = (z - zmin) / ((zmax - zmin) or 1)  # 0 = far, 1 = near
-        return _mix(col, 0.42 * (1 - depth))
-
-    entity_order = []
-    for k, _ in runs3:
-        if chain_entity[k] not in entity_order:
-            entity_order.append(chain_entity[k])
-    color = {e: palette[i % len(palette)] for i, e in enumerate(entity_order)}
-
+def _cartoon(runs3: list[tuple[str, list[dict]]], chain_entity: dict, color: dict, sx, scale: float,
+             tint) -> list[tuple[float, str]]:
+    """Depth-tagged SVG pieces: cylinders for helices, arrows for strands, tubes for loops and nucleic acids."""
     tube = max(4.5, min(20.0, 2.7 * scale))   # helix cylinder diameter in px
     coil_w = max(1.4, 0.36 * tube)
     nuc_w = max(2.0, 0.5 * tube)
     arrow_hw = 0.5 * tube
     edge = 1.2 if tube > 8 else 0.8             # outline width
-
-    parts: list[tuple[float, str]] = []         # (depth, svg) painted far to near
+    parts: list[tuple[float, str]] = []
     uid = 0
-
     for k, v in runs3:
         base = color[chain_entity[k]]
         for kind, a, b in _elements(v):
@@ -421,10 +407,7 @@ def render(cif_gz: bytes, ligand_ids: set[str], x0: float, y0: float, w: float, 
                 lo, hi = max(0, a - 1), min(len(v) - 1, b + 1)
                 path = _spline([r["q"] for r in v[lo:hi + 1]], SUBDIV)
                 width = nuc_w if kind == "N" else coil_w
-                if kind == "N":
-                    piece = 6
-                else:
-                    piece = 7
+                piece = 6 if kind == "N" else 7
                 i = 0
                 while i < len(path) - 1:
                     seg = path[i:i + piece]
@@ -434,27 +417,289 @@ def render(cif_gz: bytes, ligand_ids: set[str], x0: float, y0: float, w: float, 
                                      f'stroke="{col}" stroke-width="{width:.1f}" fill="none" '
                                      f'stroke-linecap="round" stroke-linejoin="round"/>'))
                     i += piece - 1
-
-    parts.sort(key=lambda p: p[0])
-    out = ["".join(s for _, s in parts)]
-    sticks, lig_legend = _sticks(lig_atoms, ligq, sx, scale, lig_palette)
-    out.append(sticks)
-    legend = [(color[e], entities.get(e, f"entity {e}")) for e in entity_order]
-    return "".join(out), legend, lig_legend
+    return parts
 
 
-def _sticks(atoms: list[dict], q: list[tuple], sx, scale: float, lig_palette: list[str]
-            ) -> tuple[str, list[tuple[str, str]]]:
-    """Ligands as sticks: bonds inferred from interatomic distances within each molecule,
-    each half-bond coloured by its atom (carbon in the ligand's own colour)."""
-    if not atoms:
-        return "", []
+def _ligand_colors(lig_atoms: list[dict], palette: list[str]) -> dict[str, str]:
     comps: list[str] = []
-    for a in atoms:
+    for a in lig_atoms:
         if a["inst"][2] not in comps:
             comps.append(a["inst"][2])
-    ccol = {c: lig_palette[i % len(lig_palette)] for i, c in enumerate(comps)}
+    return {c: palette[i % len(palette)] for i, c in enumerate(comps)}
+
+
+def render(cif_gz: bytes, ligand_ids: set[str], x0: float, y0: float, w: float, h: float,
+           gene_names: dict[str, str] | None = None, margin: float = 28,
+           entity_colors: list[str] | None = None, ligand_colors: list[str] | None = None,
+           ) -> tuple[str, list[tuple[str, str]], list[tuple[str, str]]]:
+    """SVG fragment for the box (x0, y0, w, h), a legend [(colour, label)] per polymer entity,
+    and [(colour, component id)] for the ligands drawn as sticks.
+
+    Labels are UniProt gene names (gene_names: accession -> gene) when the entity maps to one,
+    otherwise the entity description.
+    """
+    palette = entity_colors or PALETTE
+    m = _load(cif_gz, ligand_ids, gene_names)
+    pts = [r["xyz"] for c in m["chains"].values() for r in c]
+    if not pts:
+        return "", [], []
+    runs = _runs(m["chains"], len(pts))
+    step = max(1, math.ceil(len(pts) / MAX_TRACE_POINTS))
+    center, ev = _basis(pts[::step])
+    # Wider than tall: put the longest axis horizontally if the box is wide, vertically otherwise.
+    proj = _projector(center, ev, h > w)
+
+    runs3 = [(k, [dict(r, q=proj(r["xyz"])) for r in v]) for k, v in runs]
+    lig_atoms = m["lig_atoms"]
+    ligq = [proj(a["xyz"]) for a in lig_atoms]
+    allq = [r["q"] for _, v in runs3 for r in v]
+    xs, ys, zs = [q[0] for q in allq + ligq], [q[1] for q in allq + ligq], [q[2] for q in allq]
+    span_x, span_y = max(xs) - min(xs) or 1, max(ys) - min(ys) or 1
+    scale = min((w - 2 * margin) / span_x, (h - 2 * margin) / span_y)
+    ox = x0 + w / 2 - (min(xs) + max(xs)) / 2 * scale
+    oy = y0 + h / 2 + (min(ys) + max(ys)) / 2 * scale
+    zmin, zmax = min(zs), max(zs)
+
+    def sx(q):
+        return ox + q[0] * scale, oy - q[1] * scale
+
+    def tint(col, z):
+        depth = (z - zmin) / ((zmax - zmin) or 1)  # 0 = far, 1 = near
+        return _mix(col, 0.42 * (1 - depth))
+
+    entity_order = []
+    for k, _ in runs3:
+        if m["chain_entity"][k] not in entity_order:
+            entity_order.append(m["chain_entity"][k])
+    color = {e: palette[i % len(palette)] for i, e in enumerate(entity_order)}
+
+    parts = _cartoon(runs3, m["chain_entity"], color, sx, scale, tint)
+    parts.sort(key=lambda p: p[0])
+    ccol = _ligand_colors(lig_atoms, ligand_colors or LIGAND_PALETTE)
+    for a in lig_atoms:
+        a["ccol"] = ccol[a["inst"][2]]
     width = max(1.8, min(7.0, 0.5 * scale))
+    out = "".join(s for _, s in parts) + _sticks(lig_atoms, ligq, sx, width)
+    legend = [(color[e], m["entities"].get(e, f"entity {e}")) for e in entity_order]
+    return out, legend, list((c, k) for k, c in ccol.items())
+
+
+class _Grid:
+    """Neighbour search over atoms in cubic cells."""
+
+    def __init__(self, atoms: list[dict], cell: float = 5.0):
+        self.cell, self.atoms = cell, atoms
+        self.cells: dict[tuple, list[int]] = defaultdict(list)
+        for i, a in enumerate(atoms):
+            self.cells[self._key(a["xyz"])].append(i)
+
+    def _key(self, p):
+        return tuple(int(math.floor(c / self.cell)) for c in p)
+
+    def near(self, p, r: float):
+        kx, ky, kz = self._key(p)
+        for dx in (-1, 0, 1):
+            for dy in (-1, 0, 1):
+                for dz in (-1, 0, 1):
+                    for i in self.cells.get((kx + dx, ky + dy, kz + dz), ()):
+                        d = math.dist(p, self.atoms[i]["xyz"])
+                        if d <= r:
+                            yield i, d
+
+
+def render_site(cif_gz: bytes, ligand_ids: set[str], prefer: list[str], w: float, h: float,
+                gene_names: dict[str, str] | None = None, entity_colors: list[str] | None = None,
+                ligand_colors: list[str] | None = None, ink: str = "#1B2638",
+                ) -> tuple[str, dict | None]:
+    """Close-up of the binding site of one ligand: the first of `prefer` (component IDs) present in the
+    model, otherwise the largest ligand. Ligands under 5 heavy atoms (ions, BeF3) get no close-up.
+
+    Draws the residues within CONTACT Å as sticks with labels, N/O pairs within POLAR Å as dashes,
+    neighbouring ligands, and the surrounding cartoon faded and clipped in front.
+    Returns (svg fragment for a w x h canvas, {"ligand", "residues", "polar", "neighbours"}) or ("", None).
+    """
+    palette = entity_colors or PALETTE
+    m = _load(cif_gz, ligand_ids, gene_names, polymer_atoms=True)
+    lig_atoms, poly = m["lig_atoms"], m["poly"]
+    ccol = _ligand_colors(lig_atoms, ligand_colors or LIGAND_PALETTE)
+    for a in lig_atoms:
+        a["ccol"] = ccol[a["inst"][2]]
+    insts: dict[tuple, list[int]] = defaultdict(list)
+    for i, a in enumerate(lig_atoms):
+        insts[a["inst"]].append(i)
+    size: dict[str, int] = {}
+    for k, idx in insts.items():
+        size[k[2]] = max(size.get(k[2], 0), len(idx))
+    order = [c for c in prefer if size.get(c, 0) >= 5]
+    order += sorted((c for c in size if c not in order and size[c] >= 5), key=lambda c: -size[c])
+    if not order or not poly:
+        return "", None
+    focus = order[0]
+    candidates = [k for k in insts if k[2] == focus]
+    grid = _Grid(poly)
+
+    def contacts(idx):
+        return {j for i in idx for j, _ in grid.near(lig_atoms[i]["xyz"], CONTACT)}
+
+    best = max(candidates, key=lambda k: len(contacts(insts[k])))
+    fidx = insts[best]
+    if len(fidx) < 4:
+        return "", None
+    near_atoms = contacts(fidx)
+    if not near_atoms:
+        return "", None
+    pocket = {poly[j]["res"] for j in near_atoms}
+    polar = []
+    for i in fidx:
+        if lig_atoms[i]["el"] in ("N", "O"):
+            for j, d in grid.near(lig_atoms[i]["xyz"], POLAR):
+                if poly[j]["el"] in ("N", "O"):
+                    polar.append((i, j))
+    polar_atoms = {j for _, j in polar}
+
+    # Ligand molecules touching the focus one (cofactors, a stacked second ligand) come along.
+    lig_grid = _Grid(lig_atoms)
+    keep_insts = {best}
+    for i in fidx:
+        for j, _ in lig_grid.near(lig_atoms[i]["xyz"], 4.5):
+            keep_insts.add(lig_atoms[j]["inst"])
+    lig_keep = [i for k in keep_insts for i in insts[k]]
+
+    # Side chains (from CA) of pocket residues; backbone atoms only when they make a polar contact.
+    side = []
+    for j, a in enumerate(poly):
+        if a["res"] not in pocket:
+            continue
+        if a["name"] in BACKBONE and j not in polar_atoms:
+            if not (a["name"] == "C" and any(poly[k]["res"] == a["res"] and poly[k]["name"] == "O"
+                                             for k in polar_atoms)):
+                continue
+        side.append(j)
+
+    focus_xyz = [lig_atoms[i]["xyz"] for i in fidx]
+    center, ev = _basis(focus_xyz + [poly[j]["xyz"] for j in side])
+    proj = _projector(center, ev, h > w)
+    fq = [proj(lig_atoms[i]["xyz"]) for i in lig_keep] + [proj(poly[j]["xyz"]) for j in side]
+    xs, ys = [q[0] for q in fq], [q[1] for q in fq]
+    mg = 46
+    scale = min((w - 2 * mg) / ((max(xs) - min(xs)) or 1), (h - 2 * mg) / ((max(ys) - min(ys)) or 1), 42.0)
+    ox = w / 2 - (min(xs) + max(xs)) / 2 * scale
+    oy = h / 2 + (min(ys) + max(ys)) / 2 * scale
+
+    def sx(q):
+        return ox + q[0] * scale, oy - q[1] * scale
+
+    # Faded cartoon around the site, with everything well in front of the ligand cut away.
+    zc = sum(proj(p)[2] for p in focus_xyz) / len(focus_xyz)
+    radius = max(w, h) / scale * 0.75
+    runs = []
+    for k, v in _runs(m["chains"], 0):
+        cur = []
+        for r in v:
+            q = proj(r["xyz"])
+            if math.dist(r["xyz"], center) <= radius and q[2] <= zc + 6.0:
+                cur.append(dict(r, q=q))
+            else:
+                if len(cur) > 1:
+                    runs.append((k, cur))
+                cur = []
+        if len(cur) > 1:
+            runs.append((k, cur))
+    entity_order = []
+    for k in m["chains"]:
+        if m["chain_entity"][k] not in entity_order:
+            entity_order.append(m["chain_entity"][k])
+    color = {e: palette[i % len(palette)] for i, e in enumerate(entity_order)}
+    zs = [r["q"][2] for _, v in runs for r in v] or [zc]
+    zmin, zmax = min(zs), max(zs)
+
+    def tint(col, z):
+        depth = (z - zmin) / ((zmax - zmin) or 1)
+        return _mix(col, 0.72 - 0.25 * depth)
+
+    parts = _cartoon(runs, m["chain_entity"], color, sx, scale, tint)
+    parts.sort(key=lambda p: p[0])
+
+    # Sticks: pocket residues (carbon in the chain's colour), then the ligands on top.
+    res_atoms = []
+    for j in side:
+        a = poly[j]
+        ent = a["entity"]
+        res_atoms.append({"xyz": a["xyz"], "el": a["el"], "inst": (a["res"], a["comp"], ""),
+                          "ccol": _shade(color.get(ent, palette[0]), 0.08)})
+    rq = [proj(a["xyz"]) for a in res_atoms]
+    lk = [lig_atoms[i] for i in lig_keep]
+    lq = [proj(a["xyz"]) for a in lk]
+    res_w = max(2.2, min(6.5, 0.24 * scale))
+    lig_w = max(3.0, min(10.0, 0.36 * scale))
+
+    dashes = []
+    for i, j in polar:
+        (ax, ay), (bx, by) = sx(proj(lig_atoms[i]["xyz"])), sx(proj(poly[j]["xyz"]))
+        dashes.append(f"M{ax:.1f},{ay:.1f}L{bx:.1f},{by:.1f}")
+
+    # Labels: one-letter code + author numbering, at the tip of each side chain.
+    by_res: dict[tuple, list[int]] = defaultdict(list)
+    for j in side:
+        by_res[poly[j]["res"]].append(j)
+    mind = {}
+    for j in near_atoms:
+        r = poly[j]["res"]
+        d = min(math.dist(poly[j]["xyz"], p) for p in focus_xyz)
+        mind[r] = min(d, mind.get(r, 99))
+    first = {}
+    for a in poly:
+        if a["res"] in pocket and a["res"] not in first:
+            first[a["res"]] = a
+    names = {r: (AA1.get(a["comp"], a["comp"]) + a["auth"], a["chain"]) for r, a in first.items()}
+    dup = defaultdict(int)
+    for n, _ in names.values():
+        dup[n] += 1
+    lcx, lcy = sx(proj(center))
+    labels, placed = [], []
+    for r in sorted(pocket, key=lambda r: mind.get(r, 99))[:14]:
+        idx = by_res.get(r) or []
+        ca = next((poly[j] for j in idx if poly[j]["name"] == "CA"), None)
+        pts2 = [sx(proj(poly[j]["xyz"])) for j in idx] or [(lcx, lcy)]
+        if ca:
+            cxy = sx(proj(ca["xyz"]))
+            tip = max(pts2, key=lambda p: math.dist(p, cxy))
+        else:
+            tip = pts2[0]
+        dx, dy = tip[0] - lcx, tip[1] - lcy
+        n = math.hypot(dx, dy) or 1
+        tx, ty = tip[0] + dx / n * 16, tip[1] + dy / n * 16 + 5
+        for _ in range(4):  # nudge away from labels already placed
+            if all(abs(tx - px) > 42 or abs(ty - py) > 18 for px, py in placed):
+                break
+            tx, ty = tx + dx / n * 16, ty + dy / n * 16
+        tx = max(24, min(w - 24, tx))
+        ty = max(18, min(h - 8, ty))
+        placed.append((tx, ty))
+        text, chain = names[r]
+        if dup[text] > 1:
+            text += f"({chain})"
+        labels.append(f'<text x="{tx:.1f}" y="{ty:.1f}" text-anchor="middle">{text}</text>')
+
+    body = (f'<defs><clipPath id="site-clip"><rect width="{w}" height="{h}"/></clipPath></defs>'
+            f'<g clip-path="url(#site-clip)">{"".join(s for _, s in parts)}'
+            f'{_sticks(res_atoms, rq, sx, res_w)}'
+            f'<path d="{"".join(dashes)}" stroke="{ink}" stroke-width="2" stroke-dasharray="5 4" '
+            f'fill="none" opacity="0.85"/>'
+            f'{_sticks(lk, lq, sx, lig_w)}'
+            f'<g font-size="15" font-weight="700" fill="{ink}" stroke="#FFFFFF" stroke-width="4" '
+            f'paint-order="stroke" stroke-linejoin="round">{"".join(labels)}</g></g>')
+    resid = sorted(pocket, key=lambda r: (names[r][1], int(re.sub(r"\D", "", names[r][0]) or 0)))
+    info = {"ligand": focus, "residues": [names[r][0] + (f"({names[r][1]})" if dup[names[r][0]] > 1 else "") for r in resid],
+            "polar": len(polar), "neighbours": sorted({k[2] for k in keep_insts if k != best})}
+    return body, info
+
+
+def _sticks(atoms: list[dict], q: list[tuple], sx, width: float) -> str:
+    """Molecules as sticks: bonds inferred from interatomic distances within each molecule
+    (atoms sharing "inst"), each half-bond coloured by its atom, carbon in the atom's "ccol"."""
+    if not atoms:
+        return ""
     edge = 1.4 if width > 3 else 1.0
     by_inst: dict[tuple, list[int]] = defaultdict(list)
     for i, a in enumerate(atoms):
@@ -462,7 +707,7 @@ def _sticks(atoms: list[dict], q: list[tuple], sx, scale: float, lig_palette: li
 
     def atom_col(i):
         el = atoms[i]["el"]
-        return ccol[atoms[i]["inst"][2]] if el == "C" else ELEMENT_COLORS.get(el, "#8A8F98")
+        return atoms[i]["ccol"] if el == "C" else ELEMENT_COLORS.get(el, "#8A8F98")
 
     groups = []
     for inst, idx in by_inst.items():
@@ -482,7 +727,7 @@ def _sticks(atoms: list[dict], q: list[tuple], sx, scale: float, lig_palette: li
             outline.append(f"M{ax:.1f},{ay:.1f}L{bx:.1f},{by:.1f}")
             fill.append((atom_col(i), f"M{ax:.1f},{ay:.1f}L{mx:.1f},{my:.1f}"))
             fill.append((atom_col(j), f"M{mx:.1f},{my:.1f}L{bx:.1f},{by:.1f}"))
-        dark = _shade(ccol[inst[2]], 0.55)
+        dark = _shade(atoms[idx[0]]["ccol"], 0.55)
         svg = []
         if outline:
             svg.append(f'<path d="{"".join(outline)}" stroke="{dark}" stroke-width="{width + 2 * edge:.1f}"/>')
@@ -497,6 +742,5 @@ def _sticks(atoms: list[dict], q: list[tuple], sx, scale: float, lig_palette: li
                            f'stroke="{dark}" stroke-width="{edge}"/>')
         groups.append((z, "".join(svg)))
     groups.sort(key=lambda g: g[0])
-    body = ('<g fill="none" stroke-linecap="round" stroke-linejoin="round">' +
+    return ('<g fill="none" stroke-linecap="round" stroke-linejoin="round">' +
             "".join(s for _, s in groups) + "</g>")
-    return body, [(ccol[c], c) for c in comps]

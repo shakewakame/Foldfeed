@@ -7,5 +7,21 @@
    "label": "グリシン",
    "color": "#C23B8E"
   }
- ]
+ ],
+ "site": {
+  "ligand": "GLY",
+  "residues": [
+   "G66",
+   "A68",
+   "G69",
+   "A70",
+   "U80",
+   "U81",
+   "C82",
+   "A83"
+  ],
+  "polar": 7,
+  "neighbours": [],
+  "label": "グリシン"
+ }
 }

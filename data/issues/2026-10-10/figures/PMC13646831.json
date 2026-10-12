@@ -20,5 +20,26 @@
    "label": "AMP-PNP",
    "color": "#C23B8E"
   }
- ]
+ ],
+ "site": {
+  "ligand": "ANP",
+  "residues": [
+   "Q307",
+   "L308",
+   "R309",
+   "Q312",
+   "P330",
+   "T331",
+   "G332",
+   "S333",
+   "G334",
+   "K335",
+   "T336",
+   "R337",
+   "E376"
+  ],
+  "polar": 11,
+  "neighbours": [],
+  "label": "AMP-PNP"
+ }
 }

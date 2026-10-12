@@ -1,10 +1,15 @@
 """Build the static website from the built issues.
 
-    python3 -m pipeline.site            # writes site/ (index + one page per issue, Qiita-like layout)
+    python3 -m pipeline.site            # writes site/ (index + one page per issue)
 
-Reads every data/issues/<date>/ that has candidates.json and a picks/ folder, and produces
-a browsable site under site/. Graphical abstracts and the logo are copied in so the pages are
-self-contained and can be served by any static host (Cloudflare Pages, GitHub Pages, ...).
+Reads every data/issues/<date>/ that has candidates.json and a picks/ folder and writes a
+self-contained site under site/ (figures and logo copied in) for GitHub Pages.
+
+Layout, settled with the owner in October 2026 (docs/design-feedback.md): a journal-like page
+on a cool grey ground in indigo ink with a single vermilion accent. Each article has a margin
+column for the data (number, target, method, PDB, ligand, UniProt, organism) and a text column:
+the paper's title, the protein figure and its key, the binding-site close-up, the headline,
+the three-part summary, 読みどころ with the original sentences always shown, and the lab notes.
 """
 
 from __future__ import annotations
@@ -15,147 +20,144 @@ import sys
 
 from . import brand, render
 from .common import ISSUES_DIR, ROOT, read_json
+from .schema import LAB_NOTE_FIELDS
 
 SITE_DIR = ROOT / "site"
-TAGLINE = "毎日、新しいタンパク質の構造を、研究者の視点で。"
-
-
-def esc(s: str) -> str:
-    return html.escape(s or "", quote=True)
-
-
-def slug(text: str) -> str:
-    return "a-" + "".join(c if c.isalnum() else "-" for c in (text or "")).strip("-").lower()[:40]
-
+TH = brand.THEME
+DESCRIPTION = "毎朝、査読済みのオープンアクセス論文から、新しいタンパク質の構造を報告した論文をすべて紹介する。"
 
 CSS = f"""
 :root {{
-  --ink:{brand.INK}; --emerald:{brand.EMERALD}; --emerald-dark:{brand.EMERALD_DARK};
-  --muted:{brand.MUTED}; --page:{brand.PAGE_BG}; --card:{brand.CARD_BG}; --hair:{brand.HAIRLINE};
-  --panel:{brand.PANEL};
+  --ground:{TH.ground}; --paper:{TH.paper}; --ink:{TH.ink}; --ink2:{TH.ink2}; --mute:{TH.muted};
+  --hair:{TH.hair}; --acc:{TH.accent}; --acc-ink:{TH.accent_ink};
+  --serif:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",YuMincho,"BIZ UDMincho",Georgia,serif;
+  --latin:Georgia,"Times New Roman","Noto Serif JP",serif;
+  --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
 }}
-* {{ box-sizing: border-box; }}
-html {{ scroll-behavior: smooth; }}
-body {{
-  margin:0; background:var(--page); color:#1b2733;
-  font-family:{brand.FONT}; font-size:16px; line-height:1.85;
-  -webkit-font-smoothing:antialiased;
+* {{ box-sizing:border-box; }}
+html, body {{ margin:0; background:var(--ground); }}
+body {{ color:var(--ink); font-family:var(--serif); font-size:16px; line-height:1.95;
+        -webkit-font-smoothing:antialiased; }}
+a {{ color:inherit; text-decoration:none; text-underline-offset:3px; }}
+a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-color:var(--acc); }}
+.kicker a {{ text-decoration:underline; text-decoration-color:var(--acc); }}
+.page > * {{ max-width:1120px; margin-left:auto; margin-right:auto; padding-left:28px; padding-right:28px; }}
+.mk {{ color:var(--acc-ink); font-weight:700; }}
+
+/* masthead: a heavy rule over a thin one */
+.mast {{ padding-top:30px; }}
+.mast-row {{ display:flex; align-items:flex-end; justify-content:space-between; gap:24px; }}
+.word {{ display:flex; align-items:center; gap:15px; text-decoration:none; }}
+.word img {{ width:46px; height:46px; display:block; }}
+.word .name {{ font-family:var(--latin); font-size:42px; line-height:1; letter-spacing:-0.02em; font-weight:700; margin:0; }}
+.word .sub {{ font-size:13px; letter-spacing:.12em; color:var(--mute); margin-top:7px; line-height:1.2; }}
+.vol {{ font-size:14px; text-align:right; color:var(--ink2); line-height:1.7; }}
+.rules {{ margin-top:18px; border-top:4px solid var(--ink); }}
+.rules::after {{ content:""; display:block; margin-top:3px; border-top:1px solid var(--ink); }}
+.intro {{ color:var(--ink2); font-size:14.5px; margin-top:18px; }}
+
+/* contents */
+.toc {{ margin-top:40px; margin-bottom:14px; display:grid; grid-template-columns:220px 1fr; gap:28px; }}
+.label {{ margin:0; font-family:var(--mono); font-size:12px; letter-spacing:.14em; font-weight:500;
+          color:var(--mute); text-transform:uppercase; padding-top:6px; }}
+.label a {{ text-decoration:none; }}
+.toc ol {{ list-style:none; margin:0; padding:0; }}
+.toc li {{ display:grid; grid-template-columns:38px 1fr; align-items:baseline; padding:0 0 16px; }}
+.toc .n {{ font-family:var(--mono); font-size:12px; color:var(--acc-ink); font-weight:700; }}
+.toc .t {{ font-size:18px; line-height:1.5; }}
+.toc .lead {{ grid-column:2; font-size:13.5px; color:var(--mute); line-height:1.65; }}
+.home-issue {{ margin-top:34px; }}
+.home-issue + .home-issue {{ margin-top:10px; }}
+
+/* article: margin column for the data, text column for the story */
+.art {{ display:grid; grid-template-columns:220px minmax(0,1fr); gap:28px; padding-top:60px; padding-bottom:24px;
+        margin-top:56px; position:relative; }}
+.art::before {{ content:""; position:absolute; left:28px; right:28px; top:0; border-top:1px solid var(--ink); }}
+.margin {{ font-family:var(--mono); font-size:11.5px; line-height:1.7; color:var(--ink2); }}
+.margin .no {{ font-family:var(--latin); font-size:78px; line-height:.9; color:var(--ink); letter-spacing:-0.04em;
+               margin-bottom:16px; }}
+.margin dl {{ margin:0; }}
+.margin dt {{ margin-top:13px; color:var(--mute); letter-spacing:.1em; font-size:10px; text-transform:uppercase; }}
+.margin dd {{ margin:2px 0 0; overflow-wrap:anywhere; }}
+.margin .pdb {{ display:block; }}
+.margin .first {{ margin-top:16px; }}
+.margin .sticky {{ position:sticky; top:24px; }}
+.kicker {{ font-family:var(--mono); font-size:11.5px; letter-spacing:.06em; color:var(--mute); margin:0 0 10px; line-height:1.7; }}
+.kicker b {{ color:var(--ink); font-weight:600; }}
+.art h2 {{ font-family:var(--latin); font-size:25px; line-height:1.38; letter-spacing:-0.005em; margin:0 0 24px;
+           font-weight:700; text-wrap:balance; scroll-margin-top:20px; }}
+.fig {{ display:block; width:100%; height:auto; border:1px solid var(--ink); background:var(--paper); margin:0 0 8px; }}
+.key {{ display:flex; flex-wrap:wrap; gap:2px 20px; margin:0; font-family:var(--mono); font-size:11.5px;
+        color:var(--ink2); line-height:1.9; }}
+.key i {{ display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:7px; }}
+.key i.stick {{ width:15px; height:4px; border-radius:2px; transform:rotate(-30deg); vertical-align:2px; }}
+.site {{ margin:26px 0 0; }}
+.site img {{ display:block; width:100%; height:auto; border:1px solid var(--ink); background:var(--paper); }}
+.site dl {{ display:grid; grid-template-columns:auto minmax(0,1fr) auto; gap:4px 26px; margin:8px 0 0;
+            font-family:var(--mono); font-size:11.5px; line-height:1.7; color:var(--ink2); }}
+.site dl div {{ min-width:0; }}
+.site dt {{ color:var(--mute); letter-spacing:.1em; font-size:10px; }}
+.site dd {{ margin:0; }}
+.site .dash {{ display:inline-block; width:22px; border-top:2px dashed var(--ink); vertical-align:4px; margin-right:6px; }}
+.art .headline {{ font-size:19px; font-weight:700; line-height:1.7; margin:34px 0 14px; text-wrap:balance; }}
+.sum {{ margin:0 0 12px; }}
+.sum b {{ font-weight:700; margin-right:1em; }}
+.art h3 {{ font-size:19px; line-height:1.5; font-weight:700; margin:44px 0 12px; }}
+.hl {{ margin:0 0 26px; }}
+.hl > p:first-child {{ margin:0; }}
+.src {{ margin:8px 0 0 1.4em; font-size:13px; line-height:1.7; color:var(--ink2); }}
+.src b {{ font-family:var(--mono); font-size:10.5px; letter-spacing:.1em; color:var(--acc-ink); margin-right:10px; }}
+.src i {{ font-family:var(--latin); }}
+.src span {{ font-family:var(--mono); font-size:10.5px; color:var(--mute); margin-left:8px; }}
+.lab {{ margin:0; font-size:14.5px; }}
+.lab div {{ display:grid; grid-template-columns:112px 1fr; gap:14px; padding:6px 0; border-bottom:1px dotted var(--hair); }}
+.lab dt {{ font-family:var(--mono); font-size:11px; color:var(--mute); padding-top:3px; }}
+.lab dd {{ margin:0; }}
+.lab-src {{ margin-top:10px; }}
+.rest {{ margin-top:56px; position:relative; padding-top:30px; }}
+.rest::before {{ content:""; position:absolute; left:28px; right:28px; top:0; border-top:1px solid var(--ink); }}
+.rest ul {{ margin:10px 0 0; padding-left:1.2em; font-size:14.5px; }}
+
+.issue-nav {{ display:flex; justify-content:space-between; gap:16px; margin-top:70px; font-family:var(--mono);
+              font-size:12px; color:var(--ink2); }}
+.colophon {{ margin-top:22px; padding-top:16px; padding-bottom:70px; position:relative; font-size:12.5px;
+             color:var(--mute); line-height:1.8; }}
+.colophon::before {{ content:""; position:absolute; left:28px; right:28px; top:0; border-top:4px solid var(--ink); }}
+.colophon p {{ margin:0 0 6px; max-width:720px; }}
+
+@media (max-width:860px) {{
+  .page > * {{ padding-left:18px; padding-right:18px; }}
+  .art::before, .colophon::before, .rest::before {{ left:18px; right:18px; }}
+  .word .name {{ font-size:32px; }}
+  .mast-row {{ flex-wrap:wrap; align-items:flex-start; }}
+  .vol {{ text-align:left; }}
+  .toc, .art {{ grid-template-columns:minmax(0,1fr); gap:14px; }}
+  .toc li {{ grid-template-columns:30px minmax(0,1fr); }}
+  .margin .no {{ font-size:52px; margin-bottom:10px; }}
+  .margin dl {{ display:grid; grid-template-columns:78px minmax(0,1fr); gap:3px 12px; }}
+  .margin dt {{ margin-top:0; padding-top:2px; }}
+  .margin .pdb {{ display:inline; margin-right:12px; }}
+  .margin .first {{ grid-column:2; margin-top:4px; }}
+  .margin .sticky {{ position:static; }}
+  .art h2 {{ font-size:21px; }}
+  .art .headline {{ font-size:17px; }}
+  .site dl {{ grid-template-columns:minmax(0,1fr); }}
+  .lab div {{ grid-template-columns:92px 1fr; }}
 }}
-a {{ color:var(--emerald-dark); text-decoration:none; }}
-a:hover {{ text-decoration:underline; }}
-img {{ max-width:100%; height:auto; }}
-
-/* top bar */
-.topbar {{ background:var(--ink); }}
-.topbar .inner {{ max-width:1180px; margin:0 auto; padding:14px 20px; display:flex; align-items:center; gap:16px; }}
-.topbar a.brand {{ display:flex; align-items:center; gap:12px; color:#fff; }}
-.topbar .mark {{ width:34px; height:34px; }}
-.topbar .name {{ font-weight:700; font-size:19px; color:#fff; }}
-.topbar .en {{ font-size:12px; letter-spacing:1px; color:#AFC9BE; }}
-.topbar .spacer {{ flex:1; }}
-.topbar .tag {{ color:#CFE3DB; font-size:13px; }}
-
-/* layout: content + right TOC rail */
-.wrap {{ max-width:1180px; margin:0 auto; padding:28px 20px 80px; display:grid;
-         grid-template-columns: minmax(0,1fr) 260px; gap:40px; }}
-.main {{ min-width:0; }}
-.rail {{ position:sticky; top:24px; align-self:start; font-size:14px; }}
-.rail h4 {{ margin:0 0 10px; font-size:12px; letter-spacing:1px; color:var(--muted); font-weight:700; }}
-.rail ol {{ list-style:none; margin:0; padding:0; border-left:2px solid var(--hair); }}
-.rail li {{ margin:0; }}
-.rail a {{ display:block; padding:6px 0 6px 14px; margin-left:-2px; border-left:2px solid transparent;
-           color:#4a5a63; line-height:1.5; }}
-.rail a:hover {{ border-left-color:var(--emerald); color:var(--ink); text-decoration:none; }}
-@media (max-width:1000px) {{ .wrap {{ grid-template-columns:1fr; }} .rail {{ display:none; }} }}
-
-/* issue header */
-.issue-head {{ margin:4px 0 26px; }}
-.issue-head .date {{ font-size:28px; font-weight:800; color:var(--ink); margin:0; }}
-.issue-head .lead {{ color:#3a4a53; margin:10px 0 0; }}
-.pill-count {{ display:inline-block; background:var(--emerald); color:#fff; font-weight:700;
-               font-size:13px; padding:3px 12px; border-radius:999px; margin-right:8px; }}
-.notice {{ background:#fff8ec; border:1px solid #f0dca8; color:#6b5a2a; font-size:13.5px;
-           border-radius:10px; padding:10px 14px; margin:16px 0 0; }}
-
-/* article card */
-.card {{ background:var(--card); border:1px solid var(--hair); border-radius:14px;
-         padding:26px 30px 10px; margin:0 0 26px; box-shadow:0 1px 2px rgba(22,50,79,.04); }}
-.card .kicker {{ font-size:13px; color:var(--muted); margin:0 0 4px; }}
-.card h2 {{ font-size:23px; line-height:1.45; color:var(--ink); margin:2px 0 14px;
-            font-weight:800; scroll-margin-top:20px; }}
-.ga {{ display:block; width:100%; border:1px solid var(--hair); border-radius:12px; margin:6px 0 6px; }}
-.key {{ display:flex; flex-wrap:wrap; gap:6px 18px; color:var(--muted); font-size:12.5px; margin:0 0 6px; }}
-.key i {{ display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:6px; }}
-.key i.stick {{ width:14px; height:4px; border-radius:2px; transform:rotate(-30deg); vertical-align:middle; }}
-.headline {{ font-size:18px; font-weight:700; color:var(--ink); line-height:1.6; margin:18px 0 8px; }}
-.meta {{ font-size:13.5px; color:var(--muted); margin:0 0 20px; }}
-.meta a {{ color:var(--emerald-dark); }}
-
-.card h3 {{ font-size:17px; color:var(--ink); font-weight:700; margin:26px 0 12px;
-            padding-bottom:7px; border-bottom:1px solid var(--hair); position:relative; }}
-.card h3::before {{ content:""; position:absolute; left:0; bottom:-1px; width:38px; height:3px;
-                    background:var(--emerald); border-radius:2px; }}
-
-.summary {{ margin:0; padding:0; list-style:none; }}
-.summary li {{ padding:8px 0 8px 0; border-bottom:1px dashed var(--hair); }}
-.summary li:last-child {{ border-bottom:none; }}
-.summary .k {{ display:inline-block; min-width:5.5em; font-weight:700; color:var(--emerald-dark); }}
-
-.hl {{ margin:0 0 16px; }}
-.hl .chip {{ display:inline-block; background:var(--panel); color:var(--emerald-dark);
-             border:1px solid var(--emerald); font-size:12px; font-weight:700;
-             padding:2px 10px; border-radius:999px; margin:0 0 7px; }}
-.hl p {{ margin:4px 0 0; }}
-details {{ margin:8px 0 0; }}
-details summary {{ cursor:pointer; color:var(--muted); font-size:13px; }}
-details blockquote {{ margin:8px 0 0; padding:8px 14px; border-left:3px solid var(--emerald);
-                      background:#f4faf7; color:#3a4a53; font-size:13.5px; border-radius:0 8px 8px 0; }}
-details blockquote .src {{ display:block; color:var(--muted); font-size:12px; margin-top:4px; }}
-
-table.struct {{ border-collapse:collapse; width:100%; font-size:13.5px; margin:4px 0 8px; }}
-table.struct th, table.struct td {{ border:1px solid var(--hair); padding:6px 10px; text-align:left; }}
-table.struct th {{ background:var(--panel); color:var(--ink); font-weight:700; }}
-.proteins {{ list-style:none; padding:0; margin:8px 0 0; font-size:14px; }}
-.proteins li {{ padding:3px 0; }}
-.first {{ color:var(--emerald-dark); font-weight:700; }}
-.labnotes {{ list-style:none; padding:0; margin:0; font-size:14.5px; }}
-.labnotes li {{ padding:4px 0; }}
-.labnotes .k {{ font-weight:700; color:var(--ink); }}
-
-/* home feed */
-.hero {{ max-width:1180px; margin:0 auto; padding:34px 20px 8px; }}
-.hero h1 {{ font-size:26px; color:var(--ink); margin:0 0 6px; }}
-.hero p {{ color:#3a4a53; margin:0; }}
-.feed {{ max-width:860px; margin:0 auto; padding:14px 20px 80px; }}
-.issue-card {{ display:block; background:var(--card); border:1px solid var(--hair); border-radius:14px;
-               padding:20px 24px; margin:0 0 16px; color:inherit; box-shadow:0 1px 2px rgba(22,50,79,.04); }}
-.issue-card:hover {{ border-color:var(--emerald); text-decoration:none; }}
-.issue-card .d {{ font-size:19px; font-weight:800; color:var(--ink); }}
-.issue-card .c {{ color:var(--muted); font-size:14px; margin:2px 0 10px; }}
-.issue-card ul {{ margin:0; padding-left:18px; color:#2b3a43; font-size:14.5px; }}
-.issue-card li {{ padding:2px 0; }}
-footer {{ border-top:1px solid var(--hair); color:var(--muted); font-size:13px; text-align:center;
-          padding:24px 20px 40px; }}
 """
 
 
-def page(title: str, body: str, depth: int) -> str:
-    up = "../" * depth
-    return (f'<!doctype html><html lang="ja"><head><meta charset="utf-8">'
-            f'<meta name="viewport" content="width=device-width, initial-scale=1">'
-            f'<title>{esc(title)}</title>'
-            f'<link rel="icon" href="{up}assets/logo-mark.svg">'
-            f'<style>{CSS}</style></head><body>'
-            f'<div class="topbar"><div class="inner">'
-            f'<a class="brand" href="{up}index.html">'
-            f'<img class="mark" src="{up}assets/logo-mark.svg" alt="">'
-            f'<span><span class="name">{esc(brand.SITE_NAME)}</span> '
-            f'<span class="en">{brand.SITE_NAME_EN} · β</span></span></a>'
-            f'<span class="spacer"></span>'
-            f'<span class="tag">{esc(TAGLINE)}</span>'
-            f'</div></div>{body}'
-            f'<footer>{esc(brand.SITE_NAME)}（ベータ版）・論文の要約は AI が作成した下書きです。'
-            f'数値と ID は PDB / UniProt に基づきます。</footer></body></html>')
+def esc(s) -> str:
+    return html.escape(str(s or ""), quote=True)
+
+
+def pad(n: int) -> str:
+    return f"{n:02d}"
+
+
+def jp_date(date: str) -> str:
+    y, m, d = (int(x) for x in date.split("-"))
+    return f"{y}年{m}月{d}日"
 
 
 def doi_url(cand: dict) -> str:
@@ -163,142 +165,181 @@ def doi_url(cand: dict) -> str:
         f"https://europepmc.org/article/PMC/{cand['pmcid']}"
 
 
-def quote_html(evidence: list) -> str:
-    if not evidence:
-        return ""
-    rows = "".join(f'<blockquote>{esc(e["quote"])}'
-                   f'<span class="src">— {esc(e.get("section", ""))}</span></blockquote>'
-                   for e in evidence)
-    return f'<div class="evidence">{rows}</div>'
+def page(title: str, body: str, depth: int, description: str = DESCRIPTION) -> str:
+    up = "../" * depth
+    return (f'<!doctype html><html lang="ja"><head><meta charset="utf-8">'
+            f'<meta name="viewport" content="width=device-width, initial-scale=1">'
+            f'<title>{esc(title)}</title>'
+            f'<meta name="description" content="{esc(description)}">'
+            f'<meta property="og:title" content="{esc(title)}">'
+            f'<meta property="og:description" content="{esc(description)}">'
+            f'<meta property="og:type" content="website">'
+            f'<link rel="icon" href="{up}assets/logo-mark.svg">'
+            f'<link rel="preconnect" href="https://fonts.googleapis.com">'
+            f'<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
+            f'<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap">'
+            f'<style>{CSS}</style></head><body><div class="page">{body}</div></body></html>')
 
 
-def struct_html(cand: dict) -> str:
+def masthead(depth: int, right: str = "") -> str:
+    up = "../" * depth
+    return (f'<header class="mast"><div class="mast-row">'
+            f'<a class="word" href="{up}index.html"><img src="{up}assets/logo-mark.svg" alt="">'
+            f'<div><div class="name">{esc(brand.SITE_NAME)}</div><div class="sub">{esc(brand.SITE_NAME_EN)}</div></div></a>'
+            f'<div class="vol">{right}</div></div><div class="rules"></div></header>')
+
+
+def colophon(extra: str = "") -> str:
+    return (f'<footer class="colophon"><p>{esc(brand.SITE_NAME)} — 構造生物学者のための毎日の新着構造。</p>'
+            f'{extra}<p>要約は AI が論文本文から作成し、編集者が確認している。数値・ID・リガンドは PDB / UniProt から取り、'
+            f'構造図は PDB の座標から描いている。「原文」は論文本文からの引用。</p><p>β版</p></footer>')
+
+
+# ---------- one article ----------
+
+def quotes(evidence: list) -> str:
+    return "".join(f'<p class="src"><b>原文</b><i>“{esc(e["quote"])}”</i><span>{esc(e.get("section", ""))}</span></p>'
+                   for e in evidence or [])
+
+
+def margin_html(cand: dict, pick: dict, n: int) -> str:
     own = cand["own_structures"]
-    if not own:
-        if cand["kind"] == "new_map_only" and cand.get("emdb_ids"):
-            links = ", ".join(f'<a href="https://www.ebi.ac.uk/emdb/{e}">{e}</a>' for e in cand["emdb_ids"][:12])
-            return f'<p>原子モデルのない cryo-EM マップ（EMDB）：{links}</p>'
-        return "<p>寄託の記載はあるが、ID は補足資料にのみ記載されている。</p>"
-    head = "<tr><th>PDB</th><th>手法</th><th>分解能</th><th>公開</th><th>生物種</th><th>リガンド</th></tr>"
-    rows = []
-    for s in own:
-        if s["status"] != "released":
-            rows.append(f'<tr><td>{esc(s["pdb_id"])}</td><td>—</td><td>—</td><td>公開待ち</td><td>—</td><td>—</td></tr>')
-            continue
-        orgs = esc(", ".join(sorted({o for p in s.get("polymers", []) for o in p["organisms"]})) or "—")
-        ligs = esc(", ".join(l["id"] for l in s.get("ligands") or []) or "—")
-        res = f"{s['resolution']:.2f} Å" if s.get("resolution") else "—"
-        rows.append(
-            f'<tr><td><a href="https://www.rcsb.org/structure/{esc(s["pdb_id"])}">{esc(s["pdb_id"])}</a></td>'
-            f'<td>{esc(render.method_ja(s["method"]))}</td><td>{res}</td>'
-            f'<td>{esc(s.get("release_date") or "—")}</td><td>{orgs}</td><td>{ligs}</td></tr>')
-    table = f'<table class="struct">{head}{"".join(rows)}</table>'
-    prots = []
-    for p in cand.get("proteins", []):
-        flag = ('<span class="first">PDB で初めての構造</span>' if p.get("first_structure")
-                else f'既存の PDB 構造 {p.get("prior_pdb_count", 0)} 件')
-        prots.append(f'<li><a href="https://www.uniprot.org/uniprotkb/{esc(p["uniprot"])}">{esc(p["uniprot"])}</a> '
-                     f'{esc(p.get("gene") or "")} {esc(p.get("name") or "")} — <i>{esc(p.get("organism") or "")}</i>（{flag}）</li>')
-    plist = f'<ul class="proteins">{"".join(prots)}</ul>' if prots else ""
-    return table + plist
+    rel = [s for s in own if s["status"] == "released"]
+    method = render.method_line(cand)
+    if pick.get("method_label") and not rel:
+        method = pick["method_label"]
+    if own:
+        links = []
+        for s in own[:6]:
+            tail = f"  {s['resolution']:.2f} Å" if s.get("resolution") else ("" if s["status"] == "released" else "  (未公開)")
+            links.append(f'<a class="pdb" href="https://www.rcsb.org/structure/{esc(s["pdb_id"])}">{esc(s["pdb_id"])}{tail}</a>')
+        if len(own) > 6:
+            links.append(f"<span>ほか {len(own) - 6} 件</span>")
+        pdb_dd = "".join(links)
+    elif cand["kind"] == "new_map_only" and cand.get("emdb_ids"):
+        pdb_dd = "".join(f'<a class="pdb" href="https://www.ebi.ac.uk/emdb/{esc(e)}">{esc(e)}</a>' for e in cand["emdb_ids"][:6])
+    else:
+        pdb_dd = "補足資料に記載"
+    pdb_label = "EMDB" if not own and cand["kind"] == "new_map_only" else "PDB"
+    prots = cand.get("proteins", [])
+    uni = ", ".join(f'<a href="https://www.uniprot.org/uniprotkb/{esc(p["uniprot"])}">{esc(p.get("gene") or p["uniprot"])}</a>'
+                    for p in prots[:4])
+    orgs = sorted({o for s in rel for q in s.get("polymers", []) for o in q["organisms"]})
+    first = any(p.get("first_structure") for p in prots)
+    rows = [("Target", esc(pick["target_label"])), ("Method", esc(method)), (pdb_label, pdb_dd),
+            ("Ligand", esc(pick.get("ligand_label") or render.ligand_line(cand)))]
+    if uni:
+        rows.append(("UniProt", uni))
+    if orgs:
+        rows.append(("Organism", "<i>" + esc(", ".join(orgs[:3])) + "</i>"))
+    dl = "".join(f"<dt>{k}</dt><dd>{v}</dd>" for k, v in rows)
+    if first:
+        dl += '<dd class="first"><span class="mk">PDB 初構造</span></dd>'
+    return f'<aside class="margin"><div class="sticky"><div class="no">{pad(n)}</div><dl>{dl}</dl></div></aside>'
 
 
-def figure_html(cand: dict, date: str) -> str:
-    """The protein figure (figures/<PMCID>.svg) with its colour key; older issues have ga/ instead."""
-    pm = esc(cand["pmcid"])
+def figures_html(cand: dict, pick: dict, date: str) -> str:
+    pm = cand["pmcid"]
     fig_dir = ISSUES_DIR / date / "figures"
-    if not (fig_dir / f"{cand['pmcid']}.svg").exists():
-        return f'<img class="ga" src="../ga/{date}/{pm}.svg" alt="グラフィカルアブストラクト">'
-    key = ""
-    info_path = fig_dir / f"{cand['pmcid']}.json"
-    if info_path.exists():
-        info = read_json(info_path)
-        items = [f'<span><i style="background:{esc(x["color"])}"></i>{esc(x["label"])}</span>' for x in info.get("legend", [])]
-        items += [f'<span><i class="stick" style="background:{esc(x["color"])}"></i>{esc(x["label"])}</span>'
-                  for x in info.get("ligands", [])]
-        key = f'<p class="key">{"".join(items)}</p>' if items else ""
-    return f'<img class="ga" src="../figures/{date}/{pm}.svg" alt="構造図">{key}'
+    if not (fig_dir / f"{pm}.svg").exists():
+        return ""
+    info = read_json(fig_dir / f"{pm}.json") if (fig_dir / f"{pm}.json").exists() else {}
+    out = [f'<img class="fig" src="../figures/{date}/{esc(pm)}.svg" alt="構造図：{esc(pick["target_label"])}" loading="lazy">']
+    items = [f'<span><i style="background:{esc(x["color"])}"></i>{esc(x["label"])}</span>' for x in info.get("legend", [])]
+    items += [f'<span><i class="stick" style="background:{esc(x["color"])}"></i>{esc(x["label"])}</span>'
+              for x in info.get("ligands", [])]
+    if items:
+        out.append(f'<p class="key">{"".join(items)}</p>')
+    st = info.get("site")
+    if st and (fig_dir / f"{pm}-site.svg").exists():
+        rows = [("結合部位", esc(st["label"]) + (f'（{esc("・".join(st["neighbours"]))} と隣接）' if st.get("neighbours") else "")),
+                (f"{render.CONTACT_NOTE}（{len(st['residues'])}）", esc(" ".join(st["residues"])))]
+        if st.get("polar"):
+            rows.append(("極性接触", f'<span class="dash"></span>N・O が 3.3 Å 以内の組 {st["polar"]}'))
+        dl = "".join(f"<div><dt>{k}</dt><dd>{v}</dd></div>" for k, v in rows)
+        out.append(f'<div class="site"><img src="../figures/{date}/{esc(pm)}-site.svg" '
+                   f'alt="{esc(st["label"])}の結合部位" loading="lazy"><dl>{dl}</dl></div>')
+    return "".join(out)
 
 
 def article_html(cand: dict, pick: dict, date: str, n: int) -> str:
-    anchor = slug(f"{n}-{pick['target_label']}")
     s = pick["summary"]
-    summary = (f'<ul class="summary">'
-               f'<li><span class="k">背景</span>{esc(s["background"])}</li>'
-               f'<li><span class="k">やったこと</span>{esc(s["approach"])}</li>'
-               f'<li><span class="k">分かったこと</span>{esc(s["findings"])}</li></ul>')
-    hls = "".join(f'<div class="hl"><p>{esc(h["text"])}</p>{quote_html(h.get("evidence", []))}</div>'
+    lic = esc((cand.get("license") or "ライセンス不明").upper())
+    hls = "".join(f'<div class="hl"><p>{esc(h["text"])}</p>{quotes(h.get("evidence"))}</div>'
                   for h in pick["highlights"])
     notes = pick.get("lab_notes") or {}
-    from .schema import LAB_NOTE_FIELDS
     filled = [(LAB_NOTE_FIELDS[k], notes[k]) for k in LAB_NOTE_FIELDS if notes.get(k)]
-    labnotes = ""
+    lab = ""
     if filled:
-        items = "".join(f'<li><span class="k">{esc(label)}</span>：{esc(v)}</li>' for label, v in filled)
-        labnotes = f'<h3>実験メモ</h3><ul class="labnotes">{items}</ul>{quote_html(notes.get("evidence", []))}'
-    lic = esc(cand.get("license") or "不明")
-    return (f'<article class="card">'
-            f'<p class="kicker">#{n} · {esc(pick["target_label"])}</p>'
-            f'<h2 id="{anchor}">{esc(cand["title"])}</h2>'
-            f'<p class="meta"><a href="{doi_url(cand)}">{esc(cand["journal"] or cand["journal_abbrev"])}'
-            f'（{esc(cand["pub_date"])}）</a> · ライセンス: {lic}</p>'
-            f'{figure_html(cand, date)}'
+        rows = "".join(f"<div><dt>{esc(k)}</dt><dd>{esc(v)}</dd></div>" for k, v in filled)
+        ev = quotes(notes.get("evidence"))
+        lab = f'<h3>実験メモ</h3><dl class="lab">{rows}</dl>' + (f'<div class="lab-src">{ev}</div>' if ev else "")
+    text = (f'<div class="text">'
+            f'<p class="kicker"><b>{esc(cand["journal"] or cand["journal_abbrev"])}</b> · {esc(cand["pub_date"])} · '
+            f'{lic} · <a href="{doi_url(cand)}">論文へ</a></p>'
+            f'<h2>{esc(cand["title"])}</h2>'
+            f'{figures_html(cand, pick, date)}'
             f'<p class="headline">{esc(pick["headline"])}</p>'
-            f'{summary}'
-            f'<h3>読みどころ</h3>{hls}'
-            f'<h3>構造データ</h3>{struct_html(cand)}'
-            f'{labnotes}'
-            f'</article>')
+            f'<p class="sum"><b>背景</b>{esc(s["background"])}</p>'
+            f'<p class="sum"><b>やったこと</b>{esc(s["approach"])}</p>'
+            f'<p class="sum"><b>分かったこと</b>{esc(s["findings"])}</p>'
+            f'<h3>読みどころ</h3>{hls}{lab}</div>')
+    return f'<article class="art" id="a{n}">{margin_html(cand, pick, n)}{text}</article>'
 
 
-def issue_page(date: str) -> tuple[str, dict]:
+# ---------- pages ----------
+
+def load_issue(date: str) -> tuple[dict, list[tuple[dict, dict]]]:
     d = ISSUES_DIR / date
     meta = read_json(d / "candidates.json")
     cands = {c["pmcid"]: c for c in meta["candidates"]}
-    picks = []
-    for path in sorted((d / "picks").glob("*.json")):
-        pk = read_json(path)
-        picks.append((cands[pk["pmcid"]], pk))
+    picks = [(cands[pk["pmcid"]], pk) for pk in (read_json(p) for p in sorted((d / "picks").glob("*.json")))]
     picks.sort(key=lambda cp: cp[1].get("rank", 99))
-    c = meta["counts"]
-    new_total = c["new_structure"] + c.get("new_structure_ids_unlisted", 0) + c.get("new_map_only", 0)
-
-    toc_items = []
-    for n, (_, pk) in enumerate(picks, 1):
-        a = slug(f"{n}-{pk['target_label']}")
-        toc_items.append(f'<li><a href="#{a}">{n}. {esc(pk["target_label"])}</a></li>')
-    toc = "".join(toc_items)
-    rail = f'<nav class="rail"><h4>この号の記事</h4><ol>{toc}</ol></nav>'
-    articles = "".join(article_html(cand, pk, date, n) for n, (cand, pk) in enumerate(picks, 1))
-    head = (f'<div class="issue-head"><p class="date">{esc(date)} 号</p>'
-            f'<p class="lead"><span class="pill-count">新しい構造 {new_total} 本</span>'
-            f'Europe PMC に {esc(meta["index_date"])} に登録されたオープンアクセス論文 {c["parsed"]} 本から。</p>'
-            f'<p class="notice">この号は AI が論文本文から作成したレビュー用の下書きです。'
-            f'数値・ID・リガンドは PDB / UniProt から取得し、記述には本文からの引用を付けています。</p></div>')
-    body = f'<div class="wrap"><div class="main">{head}{articles}</div>{rail}</div>'
-    summary = {"date": date, "new_total": new_total,
-               "targets": [pk["target_label"] for _, pk in picks]}
-    return page(f"{date} 号 · {brand.SITE_NAME}", body, depth=1), summary
+    return meta, picks
 
 
-def home(summaries: list[dict]) -> str:
-    cards = []
-    for s in summaries:
-        items = "".join(f"<li>{esc(t)}</li>" for t in s["targets"])
-        cards.append(f'<a class="issue-card" href="issues/{s["date"]}.html">'
-                     f'<div class="d">{esc(s["date"])} 号</div>'
-                     f'<div class="c">新しい構造 {s["new_total"]} 本</div>'
-                     f'<ul>{items}</ul></a>')
-    body = (f'<div class="hero"><h1>{esc(brand.SITE_NAME)} '
-            f'<span style="font-size:16px;color:{brand.MUTED};font-weight:400">{esc(brand.SITE_NAME_EN)}</span></h1>'
-            f'<p>{esc(TAGLINE)}</p></div>'
-            f'<div class="feed">{"".join(cards)}</div>')
-    return page(brand.SITE_NAME, body, depth=0)
+def toc_html(picks: list[tuple[dict, dict]], href: str = "", label: str = "Contents") -> str:
+    items = "".join(f'<li><span class="n">{pad(n)}</span><a class="t" href="{href}#a{n}">{esc(pk["target_label"])}</a>'
+                    f'<span class="lead">{esc(pk["headline"])}</span></li>'
+                    for n, (_, pk) in enumerate(picks, 1))
+    return f'<h2 class="label">{label}</h2><ol>{items}</ol>'
+
+
+def issue_page(date: str, prev_date: str | None, next_date: str | None) -> str:
+    meta, picks = load_issue(date)
+    picked = {pk["pmcid"] for _, pk in picks}
+    rest = [x for x in meta["candidates"] if x["kind"] in render.KIND_JA and x["pmcid"] not in picked]
+    body = [masthead(1, f"{jp_date(date)}号<br>新しい構造 {len(picks) + len(rest)} 件"),
+            f'<section class="toc">{toc_html(picks)}</section>']
+    body += [article_html(cand, pk, date, n) for n, (cand, pk) in enumerate(picks, 1)]
+    if rest:
+        items = "".join(f'<li><a href="{doi_url(x)}">{esc(x["title"])}</a> — <i>{esc(x["journal_abbrev"] or x["journal"])}</i>'
+                        f'（{esc(render.KIND_JA[x["kind"]])}）</li>' for x in rest)
+        body.append(f'<section class="rest"><h2 class="label">記事にしていない新しい構造</h2><ul>{items}</ul></section>')
+    prev_link = f'<a href="{prev_date}.html">← {jp_date(prev_date)}号</a>' if prev_date else "<span></span>"
+    next_link = f'<a href="{next_date}.html">{jp_date(next_date)}号 →</a>' if next_date else "<span></span>"
+    body.append(f'<nav class="issue-nav">{prev_link}<a href="../index.html">号の一覧</a>{next_link}</nav>')
+    body.append(colophon(f'<p>この号の対象：Europe PMC に {esc(meta["index_date"])} に登録されたオープンアクセス論文 '
+                         f'{meta["counts"]["parsed"]} 本のうち、新しい構造を報告した論文。</p>'))
+    desc = "、".join(pk["target_label"] for _, pk in picks[:6])
+    return page(f"{jp_date(date)}号 · {brand.SITE_NAME}", "".join(body), depth=1,
+                description=f"{jp_date(date)}の新しい構造：{desc}")
+
+
+def home(issues: list[str]) -> str:
+    body = [masthead(0, "毎朝更新"), f'<p class="intro">{esc(DESCRIPTION)}</p>']
+    for date in issues:
+        _, picks = load_issue(date)
+        link = f'<a href="issues/{date}.html">{date.replace("-", ".")}</a>'
+        body.append(f'<section class="toc home-issue">{toc_html(picks, f"issues/{date}.html", link)}</section>')
+    body.append(colophon())
+    return page(f"{brand.SITE_NAME}（{brand.SITE_NAME_EN}）", "".join(body), depth=0)
 
 
 def build() -> int:
     issues = sorted([d.name for d in ISSUES_DIR.iterdir()
-                     if (d / "candidates.json").exists() and (d / "picks").exists()], reverse=True)
+                     if (d / "candidates.json").exists() and (d / "picks").exists()
+                     and any((d / "picks").glob("*.json"))], reverse=True)
     if not issues:
         print("no built issues found")
         return 1
@@ -308,16 +349,14 @@ def build() -> int:
     (SITE_DIR / "issues").mkdir()
     for name in ("logo.svg", "logo-mark.svg"):
         shutil.copy(ROOT / "assets" / name, SITE_DIR / "assets" / name)
-    summaries = []
-    for date in issues:
-        html_text, summary = issue_page(date)
-        (SITE_DIR / "issues" / f"{date}.html").write_text(html_text, encoding="utf-8")
-        for folder in ("figures", "ga"):
-            src = ISSUES_DIR / date / folder
-            if src.exists():
-                shutil.copytree(src, SITE_DIR / folder / date)
-        summaries.append(summary)
-    (SITE_DIR / "index.html").write_text(home(summaries), encoding="utf-8")
+    for i, date in enumerate(issues):
+        prev_date = issues[i + 1] if i + 1 < len(issues) else None
+        next_date = issues[i - 1] if i > 0 else None
+        (SITE_DIR / "issues" / f"{date}.html").write_text(issue_page(date, prev_date, next_date), encoding="utf-8")
+        src = ISSUES_DIR / date / "figures"
+        if src.exists():
+            shutil.copytree(src, SITE_DIR / "figures" / date, ignore=shutil.ignore_patterns("*.json"))
+    (SITE_DIR / "index.html").write_text(home(issues), encoding="utf-8")
     print(f"built site/ with {len(issues)} issue(s): {', '.join(issues)}")
     return 0
 

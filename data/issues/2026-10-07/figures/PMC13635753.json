@@ -7,5 +7,27 @@
    "label": "ManNAc-6-P",
    "color": "#C23B8E"
   }
- ]
+ ],
+ "site": {
+  "ligand": "BMX",
+  "residues": [
+   "D160",
+   "W164",
+   "T132",
+   "G133",
+   "S134",
+   "S135",
+   "S179",
+   "L180",
+   "S181",
+   "T184",
+   "Y229",
+   "R148",
+   "Y265",
+   "W266"
+  ],
+  "polar": 12,
+  "neighbours": [],
+  "label": "ManNAc-6-P"
+ }
 }

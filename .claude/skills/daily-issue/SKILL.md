@@ -58,7 +58,8 @@ AI が書く文章の主張には、論文本文からの逐語引用を必ず�
    python3 -m pipeline.render $ISSUE
    ```
    `data/issues/$ISSUE/README.md`（号のページ）と `figures/<PMCID>.svg`（タンパクの構造図。文字は入らない）、
-   `figures/<PMCID>.json`（図の凡例と PDB ID）ができる。
+   `figures/<PMCID>.json`（図の凡例と PDB ID）、リガンドがあれば `figures/<PMCID>-site.svg`（結合部位の拡大図：
+   4 Å 以内の残基をスティックとラベルで、3.3 Å 以内の N・O の組を点線で示す）ができる。
 
 8. **コミットして PR を出す**
    ```bash
@@ -113,6 +114,8 @@ AI が書く文章の主張には、論文本文からの逐語引用を必ず�
     （例：`{"A1CKT": "OX04529", "U1C": "ダントロレン"}`）。ATP・NADP+ などよくある分子は自動で略号になるので不要。
     `python3 -m pipeline.render` の後、`figures/<PMCID>.json` の `ligands` に ID のまま・長い化学名のままの
     ものがあれば追加して描き直す
+  - `site_ligand`：結合部位の拡大図に使うリガンドの ID。省略時は `ligand_names` の最初のリガンド、なければ
+    最も大きいリガンド。論文の主役でないもの（緩衝液成分や結晶化剤）が選ばれたら指定し直す。`""` で拡大図なし
 - `editor_notes`：確信が持てない点、分類の判断、編集者に見てほしい点。
 
 ## ファイル

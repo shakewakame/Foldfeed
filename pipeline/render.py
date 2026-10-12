@@ -18,6 +18,8 @@ from .schema import LAB_NOTE_FIELDS
 SITE_NAME = brand.SITE_NAME
 FONT = brand.FONT
 W, H = 1200, 560
+SITE_W, SITE_H = 760, 500  # binding-site close-up
+CONTACT_NOTE = "4 Å 以内の残基"
 
 METHOD_JA = {
     "X-RAY DIFFRACTION": "X線結晶構造解析",
@@ -152,12 +154,18 @@ def ligand_name(lig_id: str, pdb_name: str | None, pick: dict) -> str:
     return name if name and len(name) <= 24 else lig_id
 
 
-def structure_figure(cand: dict, pick: dict, theme: brand.Theme | None = None) -> tuple[str, dict]:
-    """The protein and nothing else. Returns (svg, info); info holds the PDB ID and the colour key for the
-    page to print: [{"color", "label"}] per polymer entity, and [{"id", "label", "color"}] per ligand."""
-    th = theme or brand.THEMES[brand.DEFAULT_THEME]
+def structure_figure(cand: dict, pick: dict, theme: brand.Theme | None = None) -> tuple[str, dict, str]:
+    """The protein and nothing else, plus a close-up of the main ligand's binding site.
+
+    Returns (svg, info, site_svg). info holds what the page prints next to the figures: the PDB ID,
+    [{"color", "label"}] per polymer entity, [{"id", "label", "color"}] per ligand, and "site"
+    ({"ligand", "label", "residues", "polar", "neighbours"}) when a close-up was drawn (site_svg != "").
+    The close-up shows pick["site_ligand"] if given ("" for none), else a ligand the writer named in
+    ligand_names, else the largest ligand.
+    """
+    th = theme or brand.THEME
     s = pick_structure(cand, pick)
-    body, legend, lig_legend = "", [], []
+    body, legend, lig_legend, site_body, site = "", [], [], "", None
     if s:
         coords = pdb.coordinates(s["pdb_id"])
         if coords:
@@ -168,6 +176,12 @@ def structure_figure(cand: dict, pick: dict, theme: brand.Theme | None = None) -
                 ligand_colors=structure_svg.LIGAND_PALETTE)
             if pick.get("legend_labels"):
                 legend = [(col, lab) for (col, _), lab in zip(legend, pick["legend_labels"])]
+            want = pick.get("site_ligand")
+            if lig_legend and want != "":
+                prefer = [want] if want else list(pick.get("ligand_names") or {})
+                site_body, site = structure_svg.render_site(
+                    coords, lig_ids, prefer, SITE_W, SITE_H, genes, entity_colors=list(th.entities),
+                    ligand_colors=structure_svg.LIGAND_PALETTE, ink=th.ink)
     ground = th.paper
     if not body:
         ground = th.soft
@@ -182,7 +196,15 @@ def structure_figure(cand: dict, pick: dict, theme: brand.Theme | None = None) -
             "legend": [{"color": col, "label": lab} for col, lab in legend] if len(legend) > 1 else [],
             "ligands": [{"id": lid, "label": ligand_name(lid, pdb_names.get(lid), pick), "color": col}
                         for col, lid in lig_legend]}
-    return svg, info
+    site_svg = ""
+    if site_body:
+        names = {x["id"]: x["label"] for x in info["ligands"]}
+        info["site"] = dict(site, label=names.get(site["ligand"], site["ligand"]),
+                            neighbours=[names.get(n, n) for n in site["neighbours"]])
+        site_svg = (f'<svg xmlns="http://www.w3.org/2000/svg" width="{SITE_W}" height="{SITE_H}" '
+                    f'viewBox="0 0 {SITE_W} {SITE_H}" font-family="{FONT}">'
+                    f'<rect width="{SITE_W}" height="{SITE_H}" fill="{th.paper}"/>{site_body}</svg>\n')
+    return svg, info, site_svg
 
 
 # ---------- issue page ----------
@@ -241,6 +263,11 @@ def article_md(cand: dict, pick: dict, n: int, info: dict | None = None) -> list
            f"![構造図：{pick['target_label']}](figures/{cand['pmcid']}.svg)", ""]
     if key:
         out += [f"<sub>{key}</sub>", ""]
+    if info and info.get("site"):
+        st = info["site"]
+        out += [f"![結合部位：{st['label']}](figures/{cand['pmcid']}-site.svg)", "",
+                f"<sub>{st['label']}の結合部位。{CONTACT_NOTE}：{', '.join(st['residues'])}"
+                + (f"。点線は 3.3 Å 以内の N・O の組（{st['polar']} 組）" if st["polar"] else "") + "</sub>", ""]
     out += [f"**{pick['headline']}**", "",
             f"- **背景**：{s['background']}",
             f"- **やったこと**：{s['approach']}",
@@ -314,8 +341,13 @@ def main(argv=None) -> int:
     fig_dir.mkdir(exist_ok=True)
     infos = {}
     for cand, pick in picks:
-        svg, info = structure_figure(cand, pick)
+        svg, info, site_svg = structure_figure(cand, pick)
         (fig_dir / f"{cand['pmcid']}.svg").write_text(svg, encoding="utf-8")
+        site_path = fig_dir / f"{cand['pmcid']}-site.svg"
+        if site_svg:
+            site_path.write_text(site_svg, encoding="utf-8")
+        elif site_path.exists():
+            site_path.unlink()
         (fig_dir / f"{cand['pmcid']}.json").write_text(json.dumps(info, ensure_ascii=False, indent=1) + "\n",
                                                        encoding="utf-8")
         infos[cand["pmcid"]] = info
