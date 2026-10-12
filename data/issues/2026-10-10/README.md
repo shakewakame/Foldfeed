@@ -6,12 +6,12 @@
 
 | # | 標的 | 手法・分解能 | 見出し |
 |---|---|---|---|
-| 1 | MDA5（IFIH1）–dsRNA | クライオ電顕・2.81–3.21 Å（4 構造） | MDA5 T331Iは短いdsRNA上で安定なフィラメントを作る：ATP結合ポケットの乱れをクライオ電顕で可視化 `機構の解明` `機構の解明` `機構の解明` |
-| 2 | MERS-CoVスパイク–DPP4 | クライオ電顕・2.88–3.44 Å（7 構造） | MERS-CoVスパイクを受容体DPP4と1〜120時間インキュベートし、活性化の経路を連続スナップショットで捉えた `手法の工夫` `機構の解明` `創薬・モダリティ` |
-| 3 | グリシンリボスイッチ（コレラ菌） | クライオ電顕・2.86–3.27 Å（2 構造） | グリシンリボスイッチ：Mg²⁺とグリシンが協調して全体の折り畳みを安定化する（RNAのみで2.9 Å） `手法の工夫` `機構の解明` `新しい結合部位` |
-| 4 | SIRT2／SIRT5（ペプチド複合体） | X線結晶構造解析・1.45–2.80 Å（2 構造） | N-アシル-N-メチルリジンは脱アシル化酵素に外されない：SIRT2・SIRT5の結晶構造 `機構の解明` `機構の解明` `機構の解明` |
-| 5 | PoOMT1（Paeonia ostii） | X線結晶構造解析・1.83–2.28 Å（3 構造） | ボタンの根の4′-O-メチル基転移酵素PoOMT1：T字型ポケットが2基質を受け入れる `機構の解明` `機構の解明` `手法の工夫` |
-| 6 | ピキサントロン–AP部位DNA | NMR＋拘束MD、結晶 2.5 Å | ピキサントロンはDNAの脱塩基部位と位置異性体を作る：NMR構造で2種ともインターカレート `機構の解明` `創薬・モダリティ` `新しい結合部位` |
+| 1 | MDA5（IFIH1）–dsRNA | クライオ電顕・2.81–3.21 Å（4 構造） | MDA5 T331Iは短いdsRNA上で安定なフィラメントを作る：ATP結合ポケットの乱れをクライオ電顕で可視化 |
+| 2 | MERS-CoVスパイク–DPP4 | クライオ電顕・2.88–3.44 Å（7 構造） | MERS-CoVスパイクを受容体DPP4と1〜120時間インキュベートし、活性化の経路を連続スナップショットで捉えた |
+| 3 | グリシンリボスイッチ（コレラ菌） | クライオ電顕・2.86–3.27 Å（2 構造） | グリシンリボスイッチ：Mg²⁺とグリシンが協調して全体の折り畳みを安定化する（RNAのみで2.9 Å） |
+| 4 | SIRT2／SIRT5（ペプチド複合体） | X線結晶構造解析・1.45–2.80 Å（2 構造） | N-アシル-N-メチルリジンは脱アシル化酵素に外されない：SIRT2・SIRT5の結晶構造 |
+| 5 | PoOMT1（Paeonia ostii） | X線結晶構造解析・1.83–2.28 Å（3 構造） | ボタンの根の4′-O-メチル基転移酵素PoOMT1：T字型ポケットが2基質を受け入れる |
+| 6 | ピキサントロン–AP部位DNA | NMR＋拘束MD、結晶 2.5 Å | ピキサントロンはDNAの脱塩基部位と位置異性体を作る：NMR構造で2種ともインターカレート |
 
 > この号は AI が論文本文から作成した**レビュー用の下書き**です。数値・ID・リガンドは PDB / UniProt から取得し、AI の記述には本文からの引用を付けています。
 
@@ -19,22 +19,23 @@
 
 ## 1｜MDA5（IFIH1）–dsRNA
 
-![グラフィカルアブストラクト：Establishing the molecular basis for MDA5 mutation-linked autoimmunity](ga/PMC13646831.svg)
+### Establishing the molecular basis for MDA5 mutation-linked autoimmunity
 
-### MDA5 T331Iは短いdsRNA上で安定なフィラメントを作る：ATP結合ポケットの乱れをクライオ電顕で可視化
+*Nucleic Acids Research*（2026-10-08） · [論文](https://doi.org/10.1093/nar/gkag941) · ライセンス: cc by
 
-*Nucleic Acids Research*（2026-10-08） · [論文](https://doi.org/10.1093/nar/gkag941) · ライセンス: cc by  
-原題：Establishing the molecular basis for MDA5 mutation-linked autoimmunity
+![構造図：MDA5（IFIH1）–dsRNA](figures/PMC13646831.svg)
 
-#### 3行要約
+<sub>色（順に）：IFIH1 / RNA 13mer / RNA 13mer　スティック：AMP-PNP（ANP）</sub>
+
+**MDA5 T331Iは短いdsRNA上で安定なフィラメントを作る：ATP結合ポケットの乱れをクライオ電顕で可視化**
 
 - **背景**：自己免疫疾患に関連するMDA5変異T331Iが、なぜ恒常的なインターフェロン応答を起こすのか分子機構が不明だった。
 - **やったこと**：野生型（AMPPNP）とT331I（ATP）が112 bp dsRNA上に作る短いフィラメントのクライオ電顕構造（2.81〜3.21 Å）、ATPase測定、レポーター解析を行った。
 - **分かったこと**：T331IはATPase活性を失い、ATPの配置が乱れ、短いdsRNAでも安定なフィラメントを形成して30 bpのRNAでもシグナルを出す。
 
-#### ここが面白い
+#### 読みどころ
 
-**［機構の解明］** T331IはポリI:Cの存在下でもATPase活性が検出されなかった。野生型のフィラメントはATPを加えると速やかに解離するが、T331Iの短いフィラメントはATP存在下でも安定だった。
+T331IはポリI:Cの存在下でもATPase活性が検出されなかった。野生型のフィラメントはATPを加えると速やかに解離するが、T331Iの短いフィラメントはATP存在下でも安定だった。
 
 <details><summary>根拠（論文本文）</summary>
 
@@ -46,7 +47,7 @@
 
 </details>
 
-**［機構の解明］** 野生型ではArg309とArg337がATPのアデニン塩基を挟むが、T331IではATPが外側にずれてこのスタッキングが崩れ、P-ループとγリン酸の極性接触も失われる。DECHモチーフと水分子の連携も外れ、加水分解の障害と整合する。
+野生型ではArg309とArg337がATPのアデニン塩基を挟むが、T331IではATPが外側にずれてこのスタッキングが崩れ、P-ループとγリン酸の極性接触も失われる。DECHモチーフと水分子の連携も外れ、加水分解の障害と整合する。
 
 <details><summary>根拠（論文本文）</summary>
 
@@ -58,7 +59,7 @@
 
 </details>
 
-**［機構の解明］** T331Iのフィラメントはサブユニット間のねじれ角がほぼ一定（約71.5°）で、野生型は79.8〜82.3°とばらつく。サブユニット間の界面も野生型より424 Å²大きく、フィラメントが硬く安定化していると解釈される。
+T331Iのフィラメントはサブユニット間のねじれ角がほぼ一定（約71.5°）で、野生型は79.8〜82.3°とばらつく。サブユニット間の界面も野生型より424 Å²大きく、フィラメントが硬く安定化していると解釈される。
 
 <details><summary>根拠（論文本文）</summary>
 
@@ -111,22 +112,21 @@
 
 ## 2｜MERS-CoVスパイク–DPP4
 
-![グラフィカルアブストラクト：Receptor-induced activation of MERS-CoV spike revealed by time-course cryo-EM](ga/PMC13648974.svg)
+### Receptor-induced activation of MERS-CoV spike revealed by time-course cryo-EM
 
-### MERS-CoVスパイクを受容体DPP4と1〜120時間インキュベートし、活性化の経路を連続スナップショットで捉えた
+*PLOS Pathogens*（2026-10-01） · [論文](https://doi.org/10.1371/journal.ppat.1014545.r004) · ライセンス: cc by
 
-*PLOS Pathogens*（2026-10-01） · [論文](https://doi.org/10.1371/journal.ppat.1014545.r004) · ライセンス: cc by  
-原題：Receptor-induced activation of MERS-CoV spike revealed by time-course cryo-EM
+![構造図：MERS-CoVスパイク–DPP4](figures/PMC13648974.svg)
 
-#### 3行要約
+**MERS-CoVスパイクを受容体DPP4と1〜120時間インキュベートし、活性化の経路を連続スナップショットで捉えた**
 
 - **背景**：MERS-CoVの受容体DPP4への結合が、どう膜融合につながるのかは、SARS-CoV-2に比べて理解が遅れていた。
 - **やったこと**：野生型スパイク外部ドメインと可溶性DPP4を25 °Cで1、24、72、120時間混合し、各時点をクライオ電顕で解析した。
 - **分かったこと**：RBDが開くほどS1–S2界面が弱まり、3-up状態は不安定でS1が解離する。72時間以降の融合後S2を3.23 Åで解いた。
 
-#### ここが面白い
+#### 読みどころ
 
-**［手法の工夫］** 反応時間を変えた試料を並べるだけで、受容体結合後の状態の分布が時間とともに移る様子を捉えた。24時間では1-up約25%・2-up約40%・3-up約28%、72時間では3-upは検出されず融合後型が約24%になった。
+反応時間を変えた試料を並べるだけで、受容体結合後の状態の分布が時間とともに移る様子を捉えた。24時間では1-up約25%・2-up約40%・3-up約28%、72時間では3-upは検出されず融合後型が約24%になった。
 
 <details><summary>根拠（論文本文）</summary>
 
@@ -138,7 +138,7 @@
 
 </details>
 
-**［機構の解明］** 3-down状態に比べ3-up状態ではS1とS2の埋もれ表面積が6518.3 Å²から5293.8 Å²に減る。S2コアのHR1-CH領域も2つのDPP4が結合すると4.2 Å外側にずれ、SARS-CoV-2にはこの動きがほとんどない。
+3-down状態に比べ3-up状態ではS1とS2の埋もれ表面積が6518.3 Å²から5293.8 Å²に減る。S2コアのHR1-CH領域も2つのDPP4が結合すると4.2 Å外側にずれ、SARS-CoV-2にはこの動きがほとんどない。
 
 <details><summary>根拠（論文本文）</summary>
 
@@ -150,7 +150,7 @@
 
 </details>
 
-**［創薬・モダリティ］** 融合後S2（3.23 Å）では、HR2の上流リンカーがSD3とのβシートを離れ、隣のプロトマーの溝に沿う伸びた構造に再編される。著者は広域の融合阻害剤や中和抗体の標的候補とするが、これは構造からの推測である。
+融合後S2（3.23 Å）では、HR2の上流リンカーがSD3とのβシートを離れ、隣のプロトマーの溝に沿う伸びた構造に再編される。著者は広域の融合阻害剤や中和抗体の標的候補とするが、これは構造からの推測である。
 
 <details><summary>根拠（論文本文）</summary>
 
@@ -210,22 +210,23 @@
 
 ## 3｜グリシンリボスイッチ（コレラ菌）
 
-![グラフィカルアブストラクト：Structural basis for Mg²⁺–glycine synergy in the tandem glycine riboswitch revealed by cryo-EM](ga/PMC13648278.svg)
+### Structural basis for Mg²⁺–glycine synergy in the tandem glycine riboswitch revealed by cryo-EM
 
-### グリシンリボスイッチ：Mg²⁺とグリシンが協調して全体の折り畳みを安定化する（RNAのみで2.9 Å）
+*Npj Structural Biology*（2026-01-01） · [論文](https://doi.org/10.1038/s44511-026-00002-y) · ライセンス: cc by
 
-*Npj Structural Biology*（2026-01-01） · [論文](https://doi.org/10.1038/s44511-026-00002-y) · ライセンス: cc by  
-原題：Structural basis for Mg²⁺–glycine synergy in the tandem glycine riboswitch revealed by cryo-EM
+![構造図：グリシンリボスイッチ（コレラ菌）](figures/PMC13648278.svg)
 
-#### 3行要約
+<sub>スティック：グリシン（GLY）</sub>
+
+**グリシンリボスイッチ：Mg²⁺とグリシンが協調して全体の折り畳みを安定化する（RNAのみで2.9 Å）**
 
 - **背景**：リボスイッチは構造の不均一性が機能に不可欠だが、RNAは不均一性のため高分解能の構造解析が難しい。
 - **やったこと**：コレラ菌タンデムアプタマーをリガンドなし、Mg²⁺のみ、Mg²⁺＋グリシンの3条件でクライオ電顕にかけ、MDで補強した。
 - **分かったこと**：全体が折り畳まれた「walking man」型の集団は、Mg²⁺のみで約1/3、グリシン追加で約2/3になる。両リガンドは協調的に結合する。
 
-#### ここが面白い
+#### 読みどころ
 
-**［手法の工夫］** 粒子をサイズで絞らずに拾い、3条件それぞれで10個の構造にヘテロジニアス精製して、折り畳み状態の集団比を比較した。リガンドの添加で集団が移る様子を直接見られる。
+粒子をサイズで絞らずに拾い、3条件それぞれで10個の構造にヘテロジニアス精製して、折り畳み状態の集団比を比較した。リガンドの添加で集団が移る様子を直接見られる。
 
 <details><summary>根拠（論文本文）</summary>
 
@@ -237,7 +238,7 @@
 
 </details>
 
-**［機構の解明］** グリシン結合部位の2つのMg²⁺は、グリシン非存在下で密度が消えるか大きく弱まる。2つのアプタマーはHoogsteen塩基対（U77–A206）を介して安定化の経路でつながって見える。
+グリシン結合部位の2つのMg²⁺は、グリシン非存在下で密度が消えるか大きく弱まる。2つのアプタマーはHoogsteen塩基対（U77–A206）を介して安定化の経路でつながって見える。
 
 <details><summary>根拠（論文本文）</summary>
 
@@ -246,7 +247,7 @@
 
 </details>
 
-**［新しい結合部位］** 2.9 Å密度ではグリシンの向きを一意に決められず、MDとメタダイナミクスで検討した。アミノ基がA68・A175のリン酸側を向く配置が支持され、従来の結晶構造と異なる向きだった。
+2.9 Å密度ではグリシンの向きを一意に決められず、MDとメタダイナミクスで検討した。アミノ基がA68・A175のリン酸側を向く配置が支持され、従来の結晶構造と異なる向きだった。
 
 <details><summary>根拠（論文本文）</summary>
 
@@ -292,22 +293,23 @@
 
 ## 4｜SIRT2／SIRT5（ペプチド複合体）
 
-![グラフィカルアブストラクト：Structural and Enzymatic Basis for Impaired Deacylation of N‑Acyl‑N‑Methyl Lysine Residues](ga/PMC13648224.svg)
+### Structural and Enzymatic Basis for Impaired Deacylation of N‑Acyl‑N‑Methyl Lysine Residues
 
-### N-アシル-N-メチルリジンは脱アシル化酵素に外されない：SIRT2・SIRT5の結晶構造
+*Biochemistry*（2026-10-09） · [論文](https://doi.org/10.1021/acs.biochem.6c00508) · ライセンス: cc by
 
-*Biochemistry*（2026-10-09） · [論文](https://doi.org/10.1021/acs.biochem.6c00508) · ライセンス: cc by  
-原題：Structural and Enzymatic Basis for Impaired Deacylation of N‑Acyl‑N‑Methyl Lysine Residues
+![構造図：SIRT2／SIRT5（ペプチド複合体）](figures/PMC13648224.svg)
 
-#### 3行要約
+<sub>色（順に）：SIRT2 / KMyrMe peptide</sub>
+
+**N-アシル-N-メチルリジンは脱アシル化酵素に外されない：SIRT2・SIRT5の結晶構造**
 
 - **背景**：ヒストンH4で見つかったN-アセチル-N-メチルリジン（KAcMe）が、HDACやサーチュインで除去できるかは不明だった。
 - **やったこと**：KAcMeなどのモデルペプチドを合成し、HDAC1–11とSIRT1–6で脱アシル化を調べ、SIRT2・SIRT5とペプチドの結晶構造を決めた。
 - **分かったこと**：KAcMeはどの酵素にも検出可能な脱アセチル化を受けなかった。N-メチル化は基質の位置を乱し、切断されるアミド結合が触媒に不適な向きになる。
 
-#### ここが面白い
+#### 読みどころ
 
-**［機構の解明］** N-メチル基が加わると、試したサーチュインはH4K5のアセチル基もスクシニル基も外せなかった。N-メチル化はアミド結合の切断そのものを妨げる。
+N-メチル基が加わると、試したサーチュインはH4K5のアセチル基もスクシニル基も外せなかった。N-メチル化はアミド結合の切断そのものを妨げる。
 
 <details><summary>根拠（論文本文）</summary>
 
@@ -316,7 +318,7 @@
 
 </details>
 
-**［機構の解明］** zSIRT5–KSucMe複合体（2.8 Å）では、リジンNεとV221の相互作用が失われ、三級アミドのカルボニル酸素がNAD+の結合ポケットから約145°背を向ける。NAD+のリボースC1′を攻撃できる向きではない。
+zSIRT5–KSucMe複合体（2.8 Å）では、リジンNεとV221の相互作用が失われ、三級アミドのカルボニル酸素がNAD+の結合ポケットから約145°背を向ける。NAD+のリボースC1′を攻撃できる向きではない。
 
 <details><summary>根拠（論文本文）</summary>
 
@@ -325,7 +327,7 @@
 
 </details>
 
-**［機構の解明］** SIRT2–ミリストイル-N-メチルリジンペプチド複合体（1.45 Å）ではアミド結合がcis型をとる。NAD+を浸漬した構造（2.80 Å）ではtrans型に変わり、Zn結合ドメインの閉じに伴う立体障害が原因と著者は考える。SIRT2は600倍遅いながら反応できる。
+SIRT2–ミリストイル-N-メチルリジンペプチド複合体（1.45 Å）ではアミド結合がcis型をとる。NAD+を浸漬した構造（2.80 Å）ではtrans型に変わり、Zn結合ドメインの閉じに伴う立体障害が原因と著者は考える。SIRT2は600倍遅いながら反応できる。
 
 <details><summary>根拠（論文本文）</summary>
 
@@ -377,22 +379,23 @@
 
 ## 5｜PoOMT1（Paeonia ostii）
 
-![グラフィカルアブストラクト：Structural insights into a dual-substrate O-methyltransferase reveal the enzymatic mechanism of parallel paeonol biosynthesis](ga/PMC13646271.svg)
+### Structural insights into a dual-substrate O-methyltransferase reveal the enzymatic mechanism of parallel paeonol biosynthesis
 
-### ボタンの根の4′-O-メチル基転移酵素PoOMT1：T字型ポケットが2基質を受け入れる
+*Nature Communications*（2026-01-01） · [論文](https://doi.org/10.1038/s41467-026-77639-1) · ライセンス: cc by-nc-nd
 
-*Nature Communications*（2026-01-01） · [論文](https://doi.org/10.1038/s41467-026-77639-1) · ライセンス: cc by-nc-nd  
-原題：Structural insights into a dual-substrate O-methyltransferase reveal the enzymatic mechanism of parallel paeonol biosynthesis
+![構造図：PoOMT1（Paeonia ostii）](figures/PMC13646271.svg)
 
-#### 3行要約
+<sub>スティック：4′-ヒドロキシアセトフェノン（AC6）、SAH</sub>
+
+**ボタンの根の4′-O-メチル基転移酵素PoOMT1：T字型ポケットが2基質を受け入れる**
 
 - **背景**：牡丹皮の指標成分ペオノールの生合成後半（4′-O-メチル化と2′-水酸化）を担う酵素は未同定で、構造も機構も不明だった。
 - **やったこと**：トランスクリプトームとメタボロームからPoOMT1を同定し、SAH複合体と基質2種との三者複合体の結晶構造（1.83〜2.28 Å）、変異体解析で調べた。
 - **分かったこと**：His262-Asn263-Gln324の触媒三残基と、二重アンカーおよび立体制約を持つT字型ポケットが4′-OHへの位置選択性と2基質の受容を説明する。
 
-#### ここが面白い
+#### 読みどころ
 
-**［機構の解明］** 植物のI型OMTに保存されたHis-Asp-Glu三残基のAspとGluが、PoOMT1ではAsn263とGln324に置換されている。H262A・N263Aは活性を消失し、Q324Eは活性を2倍以上に高めた。
+植物のI型OMTに保存されたHis-Asp-Glu三残基のAspとGluが、PoOMT1ではAsn263とGln324に置換されている。H262A・N263Aは活性を消失し、Q324Eは活性を2倍以上に高めた。
 
 <details><summary>根拠（論文本文）</summary>
 
@@ -404,7 +407,7 @@
 
 </details>
 
-**［機構の解明］** 基質のアセチル基はLeu120・Leu126・Asn121に、4′-OHはHis262・Asn263に固定される（二重アンカー）。2′-OHはポケットと相互作用せず、2基質の触媒効率が近い理由になる。
+基質のアセチル基はLeu120・Leu126・Asn121に、4′-OHはHis262・Asn263に固定される（二重アンカー）。2′-OHはポケットと相互作用せず、2基質の触媒効率が近い理由になる。
 
 <details><summary>根拠（論文本文）</summary>
 
@@ -416,7 +419,7 @@
 
 </details>
 
-**［手法の工夫］** Region D（L117・F312・L315）をTrpに置換すると、2′-OHを持つ基質2への活性だけが消え、基質1への活性は保たれた。ポケットの形から基質選択を設計できることを示す。
+Region D（L117・F312・L315）をTrpに置換すると、2′-OHを持つ基質2への活性だけが消え、基質1への活性は保たれた。ポケットの形から基質選択を設計できることを示す。
 
 <details><summary>根拠（論文本文）</summary>
 
@@ -463,22 +466,21 @@
 
 ## 6｜ピキサントロン–AP部位DNA
 
-![グラフィカルアブストラクト：Characterization of Regioisomeric Conjugates Arising from Pixantrone at AP Sites in DNA](ga/PMC13648238.svg)
+### Characterization of Regioisomeric Conjugates Arising from Pixantrone at AP Sites in DNA
 
-### ピキサントロンはDNAの脱塩基部位と位置異性体を作る：NMR構造で2種ともインターカレート
+*Biochemistry*（2026-10-09） · [論文](https://doi.org/10.1021/acs.biochem.6c00116) · ライセンス: cc by
 
-*Biochemistry*（2026-10-09） · [論文](https://doi.org/10.1021/acs.biochem.6c00116) · ライセンス: cc by  
-原題：Characterization of Regioisomeric Conjugates Arising from Pixantrone at AP Sites in DNA
+![構造図：ピキサントロン–AP部位DNA](figures/PMC13648238.svg)
 
-#### 3行要約
+**ピキサントロンはDNAの脱塩基部位と位置異性体を作る：NMR構造で2種ともインターカレート**
 
 - **背景**：抗がん剤ピキサントロン（PIX）は非対称な構造のため、DNAの脱塩基（AP）部位と2種の位置異性体を作ると予想されたが、特徴づけがなかった。
 - **やったこと**：還元型PIX–AP部位コンジュゲートを含む12量体二本鎖をNMRで解析し、NOE拘束付きMDで構造を求めた。ドデカマーの結晶構造（2.5 Å）も解いた。
 - **分かったこと**：二本鎖DNAではR a:R b＝6:4で、どちらも3′側にインターカレートし対向するシトシンをメジャー溝へ押し出す。R bの方が深く入る。
 
-#### ここが面白い
+#### 読みどころ
 
-**［機構の解明］** 一本鎖ではR aとR bが1:1で生成するが、二本鎖では0 °Cで約1.8:1とR aが優勢で、Tm以上の60 °Cでは約1.1:1に戻る。著者は対向するシトシンとの水素結合が関与する速度論的な説明を「確定した機構ではなく妥当な解釈」とする。
+一本鎖ではR aとR bが1:1で生成するが、二本鎖では0 °Cで約1.8:1とR aが優勢で、Tm以上の60 °Cでは約1.1:1に戻る。著者は対向するシトシンとの水素結合が関与する速度論的な説明を「確定した機構ではなく妥当な解釈」とする。
 
 <details><summary>根拠（論文本文）</summary>
 
@@ -490,7 +492,7 @@
 
 </details>
 
-**［創薬・モダリティ］** 還元型PIX–AP部位コンジュゲートは、AP部位を模すTHF入り二本鎖（Tm 37.2 °C）より10.4 °C安定化したが、無修飾二本鎖（58.8 °C）よりは11.2 °C低い。AP部位を完全には修復できない。
+還元型PIX–AP部位コンジュゲートは、AP部位を模すTHF入り二本鎖（Tm 37.2 °C）より10.4 °C安定化したが、無修飾二本鎖（58.8 °C）よりは11.2 °C低い。AP部位を完全には修復できない。
 
 <details><summary>根拠（論文本文）</summary>
 
@@ -502,7 +504,7 @@
 
 </details>
 
-**［新しい結合部位］** 結晶構造ではPIXはインターカレートせず、隣の二本鎖のPIXと積み重なって外側に反転していた。NMR溶液構造の挿入型と異なる。
+結晶構造ではPIXはインターカレートせず、隣の二本鎖のPIXと積み重なって外側に反転していた。NMR溶液構造の挿入型と異なる。
 
 <details><summary>根拠（論文本文）</summary>
 

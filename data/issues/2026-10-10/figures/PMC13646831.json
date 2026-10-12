@@ -1,0 +1,24 @@
+{
+ "pdb_id": "9Y4J",
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "IFIH1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "RNA 13mer"
+  },
+  {
+   "color": "#5F9296",
+   "label": "RNA 13mer"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "ANP",
+   "label": "AMP-PNP",
+   "color": "#C23B8E"
+  }
+ ]
+}
