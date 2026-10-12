@@ -1,0 +1,20 @@
+{
+ "pdb_id": "9WWS",
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "pntA"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "pntB"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "NAP",
+   "label": "NADP+",
+   "color": "#C23B8E"
+  }
+ ]
+}
