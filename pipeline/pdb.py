@@ -24,6 +24,7 @@ COMMON_ADDITIVES = {
     "PTY", "PLX", "P5S", "LPP", "8PE", "PEK", "D12", "OCT", "HP6", "LNK", "UND", "R16", "C14",
     "PX4", "POV", "PSF", "CHD", "CPQ", "AJP", "DU0", "NKP", "LBN", "PIO", "9Z9", "A1L",
     "CPS", "LMU", "DMU", "UMQ", "BNG", "HTG", "SDS", "TWT",  # detergents
+    "BTB", "B3P", "HEZ", "IPA", "PE8", "PG0", "2PE", "12P",  # buffers and PEG fragments
 }
 
 ENTRY_QUERY = """
