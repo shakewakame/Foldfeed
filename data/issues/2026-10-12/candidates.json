@@ -1,0 +1,17 @@
+{
+  "issue_date": "2026-10-12",
+  "index_date": "2026-10-11",
+  "generated_at": "2026-10-12T00:08:43+00:00",
+  "query": "(\"cryo-EM\" OR \"cryoEM\" OR \"cryo-electron microscopy\" OR \"cryo-electron tomography\" OR \"subtomogram\" OR \"crystal structure\" OR \"X-ray crystallography\" OR \"crystallographic\" OR \"NMR structure\" OR \"solution structure\") AND (\"Protein Data Bank\" OR \"PDB\" OR \"wwPDB\" OR \"EMDB\" OR \"accession code\" OR \"accession codes\") AND OPEN_ACCESS:y AND NOT SRC:PPR AND FIRST_IDATE:[2026-10-11 TO 2026-10-11]",
+  "counts": {
+    "hits": 0,
+    "excluded_types": 0,
+    "parsed": 0,
+    "new_structure": 0,
+    "new_structure_ids_unlisted": 0,
+    "new_map_only": 0,
+    "uses_existing": 0,
+    "no_ids": 0
+  },
+  "candidates": []
+}
