@@ -1,0 +1,14 @@
+{
+ "pdb_id": "30KD",
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "SIRT2"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "KMyrMe peptide"
+  }
+ ],
+ "ligands": []
+}

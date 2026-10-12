@@ -1,0 +1,16 @@
+{
+ "pdb_id": "9WBA",
+ "legend": [],
+ "ligands": [
+  {
+   "id": "AC6",
+   "label": "4′-ヒドロキシアセトフェノン",
+   "color": "#C23B8E"
+  },
+  {
+   "id": "SAH",
+   "label": "SAH",
+   "color": "#2F9E57"
+  }
+ ]
+}
