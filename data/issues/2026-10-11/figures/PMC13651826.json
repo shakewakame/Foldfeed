@@ -14,6 +14,5 @@
    "label": "RO60"
   }
  ],
- "ligand": false,
- "ligand_color": "#D4452B"
+ "ligands": []
 }

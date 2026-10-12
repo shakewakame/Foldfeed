@@ -26,7 +26,7 @@
 
 ![構造図：WzmWzt（結核菌）](figures/PMC13649706.svg)
 
-<sub>色（順に）：rfbD / rfbE・赤の点はリガンド</sub>
+<sub>色（順に）：rfbD / rfbE　スティック：ファルネシルリン酸（A1E8P）、ATP</sub>
 
 **結核菌ガラクタン輸送体WzmWztの3状態：基質が結合するとゲートヘリックスが上向きに伸び、ATP結合で下向きに倒れる**
 
@@ -211,7 +211,7 @@ HLA-DR3は発現収量が低く、Ro60ペプチドの直接発現は約0.3 mg/L�
 
 ![構造図：NsRufO（P450）](figures/PMC13651536.svg)
 
-<sub>色（順に）：Cytochrome P450 / 5-mer peptide・赤の点はリガンド</sub>
+<sub>色（順に）：Cytochrome P450 / 5-mer peptide　スティック：ヘム（HEM）</sub>
 
 **ルフォマイシン生合成のP450 RufOによるチロシンのニトロ化：基質のHis-5がプロトン中継に関わる**
 
@@ -388,6 +388,8 @@ Pol λのBRCTドメインはKu70/80のブリッジをまたいで結合し、N�
 *Nucleic Acids Research*（2026-10-09） · [論文](https://doi.org/10.1093/nar/gkag973) · ライセンス: cc by-nc
 
 ![構造図：Rho（結核菌）](figures/PMC13650167.svg)
+
+<sub>スティック：ADP、BeF3（BEF）</sub>
 
 **結核菌Rhoの天然変性NIDは構造化RNAのRut部位選択を左右する：ゲノムワイドの地図とクライオ電顕**
 

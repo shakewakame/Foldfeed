@@ -10,6 +10,11 @@
    "label": "5-mer peptide"
   }
  ],
- "ligand": true,
- "ligand_color": "#D4452B"
+ "ligands": [
+  {
+   "id": "HEM",
+   "label": "ヘム",
+   "color": "#C23B8E"
+  }
+ ]
 }
