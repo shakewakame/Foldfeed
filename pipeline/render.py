@@ -133,6 +133,7 @@ COMMON_LIGAND_NAMES = {
     "SAM": "SAM", "SAH": "SAH", "HEM": "ヘム", "HEC": "ヘム c", "COA": "CoA", "ACO": "アセチル CoA",
     "PLP": "PLP", "TPP": "TPP", "BTN": "ビオチン", "RET": "レチナール", "CLA": "クロロフィル a",
     "SF4": "[4Fe-4S]", "FES": "[2Fe-2S]", "UDP": "UDP", "UTP": "UTP", "CTP": "CTP", "CDP": "CDP",
+    "BEF": "BeF3", "ALF": "AlF4", "AF3": "AlF3", "MGF": "MgF3", "VO4": "バナジン酸",
 }
 
 
