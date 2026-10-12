@@ -1,9 +1,12 @@
 """Build the static website from the built issues.
 
-    python3 -m pipeline.site            # writes site/ (index + one page per issue)
+    python3 -m pipeline.site                         # writes site/ (index + one page per issue)
+    python3 -m pipeline.site --preview DIR           # also preview pages for DIR/<date>/ (open PRs)
 
 Reads every data/issues/<date>/ that has candidates.json and a picks/ folder and writes a
-self-contained site under site/ (figures and logo copied in) for GitHub Pages.
+self-contained site under site/ (figures and logo copied in) for GitHub Pages. With --preview,
+issues not yet merged (copied out of open pull requests by the Pages workflow) are rendered to
+site/preview/<date>.html, unlisted and marked as previews, so the editor can see them before merging.
 
 Layout, settled with the owner in October 2026 (docs/design-feedback.md): a journal-like page
 on a cool grey ground in indigo ink with a single vermilion accent. Each article has a margin
@@ -14,9 +17,11 @@ the three-part summary, 読みどころ with the original sentences always shown
 
 from __future__ import annotations
 
+import argparse
 import html
 import shutil
 import sys
+from pathlib import Path
 
 from . import brand, render
 from .common import ISSUES_DIR, ROOT, read_json
@@ -118,6 +123,8 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .rest::before {{ content:""; position:absolute; left:28px; right:28px; top:0; border-top:1px solid var(--ink); }}
 .rest ul {{ margin:10px 0 0; padding-left:1.2em; font-size:14.5px; }}
 
+.preview-bar {{ max-width:none !important; background:var(--acc); color:#fff; font-family:var(--mono); font-size:12.5px;
+                letter-spacing:.04em; padding:9px 28px !important; text-align:center; }}
 .issue-nav {{ display:flex; justify-content:space-between; gap:16px; margin-top:70px; font-family:var(--mono);
               font-size:12px; color:var(--ink2); }}
 .colophon {{ margin-top:22px; padding-top:16px; padding-bottom:70px; position:relative; font-size:12.5px;
@@ -165,11 +172,12 @@ def doi_url(cand: dict) -> str:
         f"https://europepmc.org/article/PMC/{cand['pmcid']}"
 
 
-def page(title: str, body: str, depth: int, description: str = DESCRIPTION) -> str:
+def page(title: str, body: str, depth: int, description: str = DESCRIPTION, noindex: bool = False) -> str:
     up = "../" * depth
     return (f'<!doctype html><html lang="ja"><head><meta charset="utf-8">'
             f'<meta name="viewport" content="width=device-width, initial-scale=1">'
             f'<title>{esc(title)}</title>'
+            + ('<meta name="robots" content="noindex">' if noindex else "") +
             f'<meta name="description" content="{esc(description)}">'
             f'<meta property="og:title" content="{esc(title)}">'
             f'<meta property="og:description" content="{esc(description)}">'
@@ -238,13 +246,13 @@ def margin_html(cand: dict, pick: dict, n: int) -> str:
     return f'<aside class="margin"><div class="sticky"><div class="no">{pad(n)}</div><dl>{dl}</dl></div></aside>'
 
 
-def figures_html(cand: dict, pick: dict, date: str) -> str:
+def figures_html(cand: dict, pick: dict, date: str, root: Path, fig_base: str) -> str:
     pm = cand["pmcid"]
-    fig_dir = ISSUES_DIR / date / "figures"
+    fig_dir = root / date / "figures"
     if not (fig_dir / f"{pm}.svg").exists():
         return ""
     info = read_json(fig_dir / f"{pm}.json") if (fig_dir / f"{pm}.json").exists() else {}
-    out = [f'<img class="fig" src="../figures/{date}/{esc(pm)}.svg" alt="構造図：{esc(pick["target_label"])}" loading="lazy">']
+    out = [f'<img class="fig" src="{fig_base}/{date}/{esc(pm)}.svg" alt="構造図：{esc(pick["target_label"])}" loading="lazy">']
     items = [f'<span><i style="background:{esc(x["color"])}"></i>{esc(x["label"])}</span>' for x in info.get("legend", [])]
     items += [f'<span><i class="stick" style="background:{esc(x["color"])}"></i>{esc(x["label"])}</span>'
               for x in info.get("ligands", [])]
@@ -257,12 +265,12 @@ def figures_html(cand: dict, pick: dict, date: str) -> str:
         if st.get("polar"):
             rows.append(("極性接触", f'<span class="dash"></span>N・O が 3.3 Å 以内の組 {st["polar"]}'))
         dl = "".join(f"<div><dt>{k}</dt><dd>{v}</dd></div>" for k, v in rows)
-        out.append(f'<div class="site"><img src="../figures/{date}/{esc(pm)}-site.svg" '
+        out.append(f'<div class="site"><img src="{fig_base}/{date}/{esc(pm)}-site.svg" '
                    f'alt="{esc(st["label"])}の結合部位" loading="lazy"><dl>{dl}</dl></div>')
     return "".join(out)
 
 
-def article_html(cand: dict, pick: dict, date: str, n: int) -> str:
+def article_html(cand: dict, pick: dict, date: str, n: int, root: Path, fig_base: str) -> str:
     s = pick["summary"]
     lic = esc((cand.get("license") or "ライセンス不明").upper())
     hls = "".join(f'<div class="hl"><p>{esc(h["text"])}</p>{quotes(h.get("evidence"))}</div>'
@@ -278,7 +286,7 @@ def article_html(cand: dict, pick: dict, date: str, n: int) -> str:
             f'<p class="kicker"><b>{esc(cand["journal"] or cand["journal_abbrev"])}</b> · {esc(cand["pub_date"])} · '
             f'{lic} · <a href="{doi_url(cand)}">論文へ</a></p>'
             f'<h2>{esc(cand["title"])}</h2>'
-            f'{figures_html(cand, pick, date)}'
+            f'{figures_html(cand, pick, date, root, fig_base)}'
             f'<p class="headline">{esc(pick["headline"])}</p>'
             f'<p class="sum"><b>背景</b>{esc(s["background"])}</p>'
             f'<p class="sum"><b>やったこと</b>{esc(s["approach"])}</p>'
@@ -289,8 +297,8 @@ def article_html(cand: dict, pick: dict, date: str, n: int) -> str:
 
 # ---------- pages ----------
 
-def load_issue(date: str) -> tuple[dict, list[tuple[dict, dict]]]:
-    d = ISSUES_DIR / date
+def load_issue(date: str, root: Path = ISSUES_DIR) -> tuple[dict, list[tuple[dict, dict]]]:
+    d = root / date
     meta = read_json(d / "candidates.json")
     cands = {c["pmcid"]: c for c in meta["candidates"]}
     picks = [(cands[pk["pmcid"]], pk) for pk in (read_json(p) for p in sorted((d / "picks").glob("*.json")))]
@@ -305,13 +313,18 @@ def toc_html(picks: list[tuple[dict, dict]], href: str = "", label: str = "Conte
     return f'<h2 class="label">{label}</h2><ol>{items}</ol>'
 
 
-def issue_page(date: str, prev_date: str | None, next_date: str | None) -> str:
-    meta, picks = load_issue(date)
+def issue_page(date: str, prev_date: str | None, next_date: str | None,
+               root: Path = ISSUES_DIR, preview: bool = False) -> str:
+    meta, picks = load_issue(date, root)
     picked = {pk["pmcid"] for _, pk in picks}
     rest = [x for x in meta["candidates"] if x["kind"] in render.KIND_JA and x["pmcid"] not in picked]
-    body = [masthead(1, f"{jp_date(date)}号<br>新しい構造 {len(picks) + len(rest)} 件"),
-            f'<section class="toc">{toc_html(picks)}</section>']
-    body += [article_html(cand, pk, date, n) for n, (cand, pk) in enumerate(picks, 1)]
+    fig_base = "figures" if preview else "../figures"
+    body = []
+    if preview:
+        body.append('<div class="preview-bar">プレビュー（未公開）— Pull Request をマージすると公開されます</div>')
+    body += [masthead(1, f"{jp_date(date)}号<br>新しい構造 {len(picks) + len(rest)} 件"),
+             f'<section class="toc">{toc_html(picks)}</section>']
+    body += [article_html(cand, pk, date, n, root, fig_base) for n, (cand, pk) in enumerate(picks, 1)]
     if rest:
         items = "".join(f'<li><a href="{doi_url(x)}">{esc(x["title"])}</a> — <i>{esc(x["journal_abbrev"] or x["journal"])}</i>'
                         f'（{esc(render.KIND_JA[x["kind"]])}）</li>' for x in rest)
@@ -322,8 +335,9 @@ def issue_page(date: str, prev_date: str | None, next_date: str | None) -> str:
     body.append(colophon(f'<p>この号の対象：Europe PMC に {esc(meta["index_date"])} に登録されたオープンアクセス論文 '
                          f'{meta["counts"]["parsed"]} 本のうち、新しい構造を報告した論文。</p>'))
     desc = "、".join(pk["target_label"] for _, pk in picks[:6])
-    return page(f"{jp_date(date)}号 · {brand.SITE_NAME}", "".join(body), depth=1,
-                description=f"{jp_date(date)}の新しい構造：{desc}")
+    title = f"{jp_date(date)}号 · {brand.SITE_NAME}"
+    return page(("［プレビュー］" if preview else "") + title, "".join(body), depth=1,
+                description=f"{jp_date(date)}の新しい構造：{desc}", noindex=preview)
 
 
 def home(issues: list[str]) -> str:
@@ -336,10 +350,13 @@ def home(issues: list[str]) -> str:
     return page(f"{brand.SITE_NAME}（{brand.SITE_NAME_EN}）", "".join(body), depth=0)
 
 
-def build() -> int:
-    issues = sorted([d.name for d in ISSUES_DIR.iterdir()
-                     if (d / "candidates.json").exists() and (d / "picks").exists()
-                     and any((d / "picks").glob("*.json"))], reverse=True)
+def issue_dates(root: Path) -> list[str]:
+    return sorted([d.name for d in root.iterdir() if (d / "candidates.json").exists() and (d / "picks").exists()
+                   and any((d / "picks").glob("*.json"))], reverse=True) if root.exists() else []
+
+
+def build(preview_root: Path | None = None) -> int:
+    issues = issue_dates(ISSUES_DIR)
     if not issues:
         print("no built issues found")
         return 1
@@ -358,8 +375,20 @@ def build() -> int:
             shutil.copytree(src, SITE_DIR / "figures" / date, ignore=shutil.ignore_patterns("*.json"))
     (SITE_DIR / "index.html").write_text(home(issues), encoding="utf-8")
     print(f"built site/ with {len(issues)} issue(s): {', '.join(issues)}")
+    previews = issue_dates(preview_root) if preview_root else []
+    for date in previews:
+        out = SITE_DIR / "preview"
+        out.mkdir(exist_ok=True)
+        (out / f"{date}.html").write_text(issue_page(date, None, None, preview_root, preview=True), encoding="utf-8")
+        src = preview_root / date / "figures"
+        if src.exists():
+            shutil.copytree(src, out / "figures" / date, ignore=shutil.ignore_patterns("*.json"))
+    if previews:
+        print(f"previews: {', '.join(previews)}")
     return 0
 
 
 if __name__ == "__main__":
-    sys.exit(build())
+    ap = argparse.ArgumentParser(description="Build the static site into site/.")
+    ap.add_argument("--preview", type=Path, help="folder of unmerged issues (<date>/candidates.json, picks/, figures/)")
+    sys.exit(build(ap.parse_args().preview))
