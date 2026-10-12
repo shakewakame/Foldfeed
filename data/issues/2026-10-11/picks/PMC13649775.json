@@ -1,0 +1,83 @@
+{
+  "pmcid": "PMC13649775",
+  "rank": 4,
+  "headline": "NHEJの短距離シナプス複合体にPol λが結合：BRCTとN末端ペプチドで足場に係留される",
+  "target_label": "NHEJ短距離複合体＋Pol λ（ヒト）",
+  "summary": {
+    "background": "NHEJでは末端のギャップや化学的ブロックを処理する酵素が働くが、コアのNHEJ複合体の中でどう取り込まれ連携するかは構造的に不明だった。",
+    "approach": "Ku70/80、XRCC4-LigIV、XLF、PAXXにPol λを加えた短距離複合体をGraFixで安定化しクライオ電顕で解析。XL-MSと再構成ライゲーション実験も行った。",
+    "findings": "Pol λのBRCTがKu70/80のブリッジに結合し、N末端ペプチドがLigIVのBRCT1に接する。Pol λとPNKPは同じ複合体内で協調して末端を処理する。"
+  },
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "Pol λのBRCTドメインはKu70/80のブリッジをまたいで結合し、N末端のペプチド（残基8–15と推定）がLigIVのC-BRCT1に接する。BS3架橋MSでN末端とXRCC4・LigIVの間に多数の架橋が見つかり、この係留が裏づけられた。全体分解能は7.23 Åで、局所精密化で3.86–4.58 Åである。",
+      "evidence": [
+        {
+          "quote": "We observe two copies of Pol λ’s BRCT domain bound to the bridge region of Ku70/80",
+          "section": "Results"
+        },
+        {
+          "quote": "This revealed a total of 17 crosslinks between the N-terminus of Pol λ and X4L4",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "末端が相補的でない基質では、LigIVは開いた配座でDSBに留まる。Pol λの触媒ドメインが入る際はLigIVのOBDとNTDが退き、DBDは残って複合体を安定化するというモデルを示す。触媒ドメイン結合状態そのものは電顕で捉えられていない。",
+      "evidence": [
+        {
+          "quote": "These results support a mechanism whereby the OBD and NTD domains of LigIV’s catalytic domain are displaced by the polymerase during gap filling, while the LigIV DBD maintains its position at the DSB",
+          "section": "Results"
+        },
+        {
+          "quote": "we did not capture a population of particles by electron microscopy substantial enough to produce a 3D reconstruction with the polymerase’s catalytic domain bound to the DSB",
+          "section": "Discussion"
+        }
+      ]
+    },
+    {
+      "tag": "手法の工夫",
+      "text": "複合体をMg²⁺なしの緩衝液で組み立て、ビオチン化DNAでプルダウンして未結合因子を除いてからMg²⁺を加える。均質な複合体で酵素活性を測れ、同じ試料を電顕にも回せる。Pol λ、PNKP、LigIVが共存して初めて両鎖が連結される基質も示した。",
+      "evidence": [
+        {
+          "quote": "The assembly of the complex and its enzymatic activities are separated by first adding components in a buffer free of Mg2+ followed by performing a pulldown on the biotinylated nucleic acid substrate",
+          "section": "Results"
+        },
+        {
+          "quote": "This SR-Pol λ-PNKP complex processes and ligates substrates containing both overhangs and chemically blocked ends, with double ligation only occurring in the presence of both end-processing factors",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "Pol λは大腸菌Rosetta2(DE3)でGST融合として発現（18°C、IPTG 0.4 mM）。Ku70/80とLigIV-XRCC4はSf9、XLF・PAXX・PNKPは大腸菌。",
+    "construct": "ヒトPol λ全長（Met1–Trp575）、N末端GST融合。",
+    "purification": "グルタチオンSepharoseでTEV切断 → Superdex 200。",
+    "sample_prep": "1 nt非相補3′突出DNAで複合体を組み立て、GraFix（10–30%グリセロール/グルタルアルデヒド）で安定化。グラフェンオキサイド grid、Vitrobot IV。",
+    "data_collection": "Titan Krios＋K3、14,845ムービー、総線量62 e⁻/Å²。cryoSPARC 4.6で処理し、全体7.23 Å。",
+    "evidence": [
+      {
+        "quote": "The sequence encoding full-length human Pol λ (Met1-Trp575) was cloned into the NotI/EcoRI restriction sites of the pGEXM vector67 to generate an N-terminal GST-tagged fusion protein.",
+        "section": "Methods"
+      },
+      {
+        "quote": "GraFix22 was used to capture the SR-Pol λ complex.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Homemade graphene oxide (GO) grids70 were made for cryo-EM by applying GO to glow-discharged 2/1, 400 mesh Quantifoil grids",
+        "section": "Methods"
+      },
+      {
+        "quote": "Non-uniform refinement of a final set of 179,057 particles yielded a nominal global resolution of 7.23 Å.",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": ["NHEJ", "Pol λ", "PNKP", "LigIV", "Ku70/80", "DNA二本鎖切断修復", "クライオ電顕"],
+  "ligand_label": "DNA（1 nt 3′突出）",
+  "editor_notes": "全体分解能が7.23 Åと低く、PDB 9OX8 の詳細な側鎖モデルは局所精密化の範囲に限られる。BRCT・N末端ペプチドの位置はAlphaFold3予測を併用して配置している。『初』とは書いていない。"
+}

@@ -1,0 +1,25 @@
+{
+ "pdb_id": "25IP",
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "rfbD"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "rfbE"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "A1E8P",
+   "label": "ファルネシルリン酸",
+   "color": "#C23B8E"
+  },
+  {
+   "id": "ATP",
+   "label": "ATP",
+   "color": "#2F9E57"
+  }
+ ]
+}

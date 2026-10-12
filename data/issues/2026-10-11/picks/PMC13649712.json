@@ -1,0 +1,79 @@
+{
+  "pmcid": "PMC13649712",
+  "rank": 6,
+  "headline": "概日時計のPERとWDR5：PER2はWBMポケットで、PER1は主にWINポケットで結合する",
+  "target_label": "WDR5–PER2 WBMペプチド（マウス）",
+  "summary": {
+    "background": "WDR5は活性化型のMLL1複合体と抑制型のPER複合体の両方に見つかるが、PERとの直接結合の様式は分かっていなかった。",
+    "approach": "PER1/PER2とWDR5の結合をSEC・ITCで解析し、WDR5とPER2のWBMペプチドの複合体とWDR5 N225A変異体の結晶構造を決定。WIN部位阻害剤も試した。",
+    "findings": "PER2はCRY結合領域内のWBMでWDR5に結合しCRYと競合する。PER1はWIN部位への結合が主で、WDR5部位を使うMLL1と競合し、CRYやRbBP5との三者複合体を作れる。"
+  },
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "WDR5とPER2の結晶構造で、PER2のIle1205とVal1207がWDR5の2つの疎水性サブポケットに入る。ITCで測ったPER2–WDR5の結合は約50 µMと弱く、I1205GとD1206Aは結合を完全に壊す。",
+      "evidence": [
+        {
+          "quote": "Our 3D-structure revealed that the PER2 WBM motif 1205IDVTG1209 indeed binds to the WBM motif binding pocket of WDR5, inserting Ile1205 and Val1207 into its two hydrophobic sub-pockets",
+          "section": "Results"
+        },
+        {
+          "quote": "The D1206A mutation completely disrupted the PER2/WDR5 complex in SEC and ITC",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "新しい結合部位",
+      "text": "PER1はWINモチーフ（1110ARART1114）が主な結合部位で、親和性は3.1 µMとPER2の約15倍強い。WIN部位の三重変異体でPER1–WDR5複合体はほぼ壊れる。この部位はMLL1も使うため、PER1がMLL1を置き換えうる。ただしin vitroの実験は断片タンパク質を使っている。",
+      "evidence": [
+        {
+          "quote": "PER1 binds to WDR5 with a KD value of 3.1 µM (Fig. 3a, c), which corresponds to a ~15 times higher affinity than PER2",
+          "section": "Results"
+        },
+        {
+          "quote": "The triple mutant mostly disrupted the WDR5/PER1 complex in SEC (Fig. 3d), confirming the importance of the WDR5 WIN site for PER1 binding.",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "WDR5のWIN部位阻害剤（Inh-4、Inh-5）はPER1–WDR5複合体を部分的に解離させた。Inh-5は培養細胞のPER2::Luc振動の振幅を最大約50%下げたが、Per1欠損細胞では振幅に影響がなく、PER1に依存した作用と考えられる。",
+      "evidence": [
+        {
+          "quote": "Both inhibitors led to a partial dissociation of the PER1/WDR5 complex and accumulation of free WDR5",
+          "section": "Results"
+        },
+        {
+          "quote": "Our experiments suggest that the effect of Inh-5 on the oscillation amplitude of wildtype MDF cells needs functional PER1.",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "PER1、PER2、WDR5、RbBP5、MLL1は大腸菌Rosetta(DE3)・TB培地・18°Cで一晩発現。CRY1/2はSf9。",
+    "construct": "マウスWDR5 22–334、PER1 1013–1291、PER2 1132–1252。結晶化にはPER2 Y1198–1211ペプチド。",
+    "purification": "GSHまたはHisアフィニティ → 3Cプロテアーゼ切断 → Superdex 200（SEC）。",
+    "sample_prep": "WDR5/PER2ペプチド複合体：12 mg/mL WDR5＋2 mMペプチド、ハンギングドロップ20°C、0.1 M Tris pH 8.0、50 mM NaCl、13% PEG 8000。凍結保護は20% PEG 200。",
+    "data_collection": "空間群P42212（a=b=78.15 Å, c=101.75 Å）。データ収集・精密化の詳細は補足資料。",
+    "evidence": [
+      {
+        "quote": "PER1, PER2, WDR5, RbBP5, and MLL1 proteins were expressed overnight at 18 °C in E. coli Rosetta (DE3) cells using Terrific Broth (TB) medium.",
+        "section": "Methods"
+      },
+      {
+        "quote": "WDR5 22-334 was co-crystallized with a synthetic peptide (Genscript) including residues 1198–1211 of mouse PER2",
+        "section": "Methods"
+      },
+      {
+        "quote": "obtained at 20 °C using a hanging drop setup with a reservoir solution containing 0.1 M Tris pH 8.0, 50 mM NaCl and 13% PEG 8000",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": ["WDR5", "PER1", "PER2", "概日時計", "WINモチーフ", "WBMモチーフ", "CRY"],
+  "ligand_label": "Inh-5（WIN部位阻害剤）",
+  "editor_notes": "PDBは8OK1（WDR5 N225A、1.38 Å）と8OKF（WDR5–PER2ペプチド、1.85 Å）。8OK1が最高分解能だが、論文の主張に近い8OKFを構造図に指定した。ligand_label の Inh-5 は構造には含まれない（8OKF の 144 は別のリガンドかもしれない）ので、レビューで確認してほしい。"
+}

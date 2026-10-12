@@ -1,0 +1,94 @@
+{
+  "pmcid": "PMC13649706",
+  "rank": 1,
+  "headline": "結核菌ガラクタン輸送体WzmWztの3状態：基質が結合するとゲートヘリックスが上向きに伸び、ATP結合で下向きに倒れる",
+  "target_label": "WzmWzt（結核菌）",
+  "summary": {
+    "background": "結核菌細胞壁アラビノガラクタンの骨格となる脂質結合ガラクタン（LLG）は、ABC輸送体WzmWztで膜を越える。その認識と輸送の機構は分かっていなかった。",
+    "approach": "スメグマ菌で発現した複合体（Wzt E183Q変異体）をクライオ電顕で解析し、基質様密度あり、ATP結合、DDM/ATP結合の3状態を決定。変異株で機能を検証した。",
+    "findings": "共精製されたLLG様の密度が2つのWzmと2つのWztの全体に接する。ATP結合でゲートヘリックスが約40 Å動いてNBDが二量化し、基質結合部位が潰れる。"
+  },
+  "highlights": [
+    {
+      "tag": "初構造",
+      "text": "LLG3と推定した密度は、TMDだけでなくNBDにも接する。ABC輸送体の構造では見られていなかった様式だ。ただし密度から基質の完全な同定はできず、著者は追加の検証が必要だとしている。",
+      "evidence": [
+        {
+          "quote": "Unexpectedly, each LLG3 is engaged in interactions not only with the two TMDs, but also with the two NBDs",
+          "section": "Results"
+        },
+        {
+          "quote": "The modeling of LLG3 suggests that the substrate is bound, the EM density does not support unambiguous assignment to the intact LLG, and further orthogonal validation would be required for confident assignment.",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "基質結合状態ではNBDのゲートヘリックスが完全に上向きに伸びてTMDと基質に接する。ATPが結合するとゲートヘリックスは約40 Å離れた下向きの状態に移り、NBDが二量化する。TMDのArg48が基質結合部位から外れ、基質が上へ動く足がかりになると推定している。",
+      "evidence": [
+        {
+          "quote": "Notably, the structure revealed a dramatic downward conformation of the gate helix region upon ATP binding, which has never been observed in the WztAa or TarH structures.",
+          "section": "Results"
+        },
+        {
+          "quote": "The distance between the upward and downward gate helix is ~ 40 Å by measuring the Cα of Ala36",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "TMD中央の空洞にはDDM分子が2つ入った中間的な状態も捉えた。著者はこの状態が生理的かどうかは未確定とし、LLG3とDDMの結合部位を、立体構造特異的な阻害剤探索の足場になるとしている。ガラクタン経路の阻害剤は報告がない。",
+      "evidence": [
+        {
+          "quote": "Whether the DDM-bound conformation is physiologically relevant remains to be determined.",
+          "section": "Results"
+        },
+        {
+          "quote": "The LLG3 and DDM binding sites determined in this study provide a foundation for the discovery of conformational-specific inhibitors",
+          "section": "Discussion"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "スメグマ菌（M. smegmatis）で共発現。内在の脂質を複合体ごと回収できる。",
+    "construct": "Wzt N末端にFLAGタグ。野生型は精製できず、Walker B変異E183Qで精製に成功。",
+    "purification": "LMNGまたはDDMで可溶化し、抗Flagレジン → サイズ排除クロマトグラフィー（Superose 6）。LMNG試料はGDNに置換。",
+    "sample_prep": "Quantifoil R0.6/1 Cu 300メッシュ、Vitrobot Mark IV 4°C・湿度100%、ブロット3秒。",
+    "data_collection": "Titan Krios＋Gatan K3、ピクセルサイズ0.832 Å、総線量60 e⁻/Å²。cryoSPARCで処理。",
+    "evidence": [
+      {
+        "quote": "Our attempts to purify the stable wild-type WzmWztMtb complex were unsuccessful. We therefore introduced the Walker B mutation E183Q into Wzt",
+        "section": "Results"
+      },
+      {
+        "quote": "Grids were blotted for 3 s using an FEI Mark IV Vitrobot (humidity 100%, temperature 4 °C), followed by flash-freezing in liquid ethane.",
+        "section": "Methods"
+      },
+      {
+        "quote": "The protein complex solubilized in LMNG was washed with an additional 15 mL of Buffer 4(Buffer 1 supplemented with 0.04% GDN, 2 mM DTT) to replace the detergent micelle.",
+        "section": "Methods"
+      },
+      {
+        "quote": "images were recorded in super-resolution mode at a magnification of 105,000×, corresponding to a calibrated pixel size of 0.832 Å.",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "ABC輸送体",
+    "結核菌",
+    "ガラクタン",
+    "アラビノガラクタン",
+    "クライオ電顕",
+    "Wzm",
+    "Wzt"
+  ],
+  "ligand_label": "LLG3（推定）、ATP、DDM",
+  "ligand_names": {
+    "A1E8P": "ファルネシルリン酸"
+  },
+  "editor_notes": "初構造の判定は candidates の first_structure に従った（論文は『初』とは明言せず、関連する Mab 類縁体の構造が直前に報告されている）。LLG3の割り当ては論文自身が暫定としている。構造図は PDB 25IN（最高分解能は 25IP の 2.61 Å）。"
+}

@@ -1,0 +1,82 @@
+{
+  "pmcid": "PMC13651826",
+  "rank": 2,
+  "headline": "自己抗原Ro60ペプチドを結合したHLA-DR3の結晶構造：TCR認識に露出する3残基を特定",
+  "target_label": "HLA-DR3–Ro60ペプチド（ヒト）",
+  "summary": {
+    "background": "シェーグレン病の患者はHLA-DRB1*03:01とRo60自己抗体を持つが、HLA-DR3が自己抗原ペプチドを提示する構造はCLIPのものしかなかった。",
+    "approach": "HLA-DR3-CLIPに安定化変異（P4D）を入れて収量を上げ、Ro60 369–383とペプチド交換して結晶化。TCRの同定とTreg導入の機能試験も行った。",
+    "findings": "Ro60ペプチドは標準的なレジスターで結合し、核となる9残基はFLLAVDVSA。P2-Leu、P5-Val、P8-SerがTCR認識側に露出する。"
+  },
+  "highlights": [
+    {
+      "tag": "初構造",
+      "text": "HLA-DR3に自己抗原ペプチドが結合した初の構造だと著者は述べる。これまではCLIP複合体に限られていた。分解能は2.87 Åで、Rfreeは29.9%とやや高い。",
+      "evidence": [
+        {
+          "quote": "Notably, this is the first structure of HLA-DR3 bound to an autoantigenic peptide, as previous structural data have been limited to complexes with CLIP peptides.",
+          "section": "Results"
+        },
+        {
+          "quote": "the Ro60369–383 peptide adopts a canonical register, with the 9-mer binding core defined as FLLAVDVSA.",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "手法の工夫",
+      "text": "HLA-DR3は発現収量が低く、Ro60ペプチドの直接発現は約0.3 mg/Lだった。CLIPのポケット4をAspにした変異（P4D）で約11 mg/Lに上がり、熱安定性も改善したため、ペプチド交換で結晶化に必要な量を確保できた。",
+      "evidence": [
+        {
+          "quote": "Substituting aspartic acid at Pocket 4 from alanine (P4D) or lysine at Pocket 6 from proline (P6K) markedly improved yields, with CLIP_P6K reaching ∼1.3 mg/L and CLIP_P4D achieving ∼11 mg/L",
+          "section": "Results"
+        },
+        {
+          "quote": "These findings demonstrate that rationally designed point mutations can enhance the stability and expression of soluble HLA-DR3, enabling structural characterization of low-yield peptide-MHC complexes.",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "この構造は、Ro60に反応するTCRを導入したTreg療法の設計根拠になる。患者TregにこのTCRを導入するとin vitroで抑制能が約2倍になったが、in vivoの検証は今後の課題だ。",
+      "evidence": [
+        {
+          "quote": "Importantly, Ro60-Treg exhibited approximately 2-fold enhanced suppression of Ro60-driven inflammatory responses compared with non-engineered Treg",
+          "section": "Results"
+        },
+        {
+          "quote": "extending these findings into in vivo models will be an important next step to further validate functional efficacy",
+          "section": "Limitations of the study"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "Expi293 GnTI⁻細胞で一過性発現（PEI）。培養7日後に上清を回収。",
+    "construct": "α鎖・β鎖の細胞外領域をFos/Junジッパーで二量化。β鎖N末端にペプチドを共有結合（CLIP変異体）。",
+    "purification": "HisTrap → サイズ排除。Factor Xaで切断後、Ro60 369–383を20倍モルで37°C・72時間交換、StrepTactinで未交換体を除去。",
+    "sample_prep": "4 mg/mL。0.2 M マロン酸ナトリウム、20% PEG 3350で結晶化。20%グリセロールで凍結保護。",
+    "data_collection": "オーストラリア・シンクロトロンMX2。XDS/Aimlessで処理、PDB 1A6Aで分子置換。",
+    "evidence": [
+      {
+        "quote": "The recombinant HLA-DR3 with a covalently linked peptide was transiently expressed in Expi293 GnTI− cells (ThermoFisher) using Polyethylene",
+        "section": "STAR Methods"
+      },
+      {
+        "quote": "Synthetic Ro60369-383 peptide (GL Biochem) was added at a 20:1 M ratio and incubated with HLA-DR3 at 37 °C for 72 h to enable peptide exchange.",
+        "section": "STAR Methods"
+      },
+      {
+        "quote": "Crystals of HLA-DR3-Ro60369-383 were obtained in 0.2M of sodium malon salt and 20%w/v polyethylene glycol (PEG) 3350.",
+        "section": "STAR Methods"
+      },
+      {
+        "quote": "Molecular replacement was performed in PhaserMR (CCP4) using the coordinates of PDB entry 1A6A as the search model.",
+        "section": "STAR Methods"
+      }
+    ]
+  },
+  "keywords": ["HLA-DR3", "Ro60", "シェーグレン病", "TCR-Treg", "ペプチド-MHC", "X線結晶構造"],
+  "editor_notes": "構造は論文の一部（機能試験が中心）。『HLA-DR3に自己抗原が結合した初の構造』は著者の主張で、独自には確認していない。構造図はPDB 9YZ3。"
+}

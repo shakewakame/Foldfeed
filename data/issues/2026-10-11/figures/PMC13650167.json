@@ -1,0 +1,16 @@
+{
+ "pdb_id": "31HX",
+ "legend": [],
+ "ligands": [
+  {
+   "id": "ADP",
+   "label": "ADP",
+   "color": "#C23B8E"
+  },
+  {
+   "id": "BEF",
+   "label": "BeF3",
+   "color": "#2F9E57"
+  }
+ ]
+}

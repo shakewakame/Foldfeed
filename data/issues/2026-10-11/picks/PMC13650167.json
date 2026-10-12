@@ -1,0 +1,83 @@
+{
+  "pmcid": "PMC13650167",
+  "rank": 5,
+  "headline": "結核菌Rhoの天然変性NIDは構造化RNAのRut部位選択を左右する：ゲノムワイドの地図とクライオ電顕",
+  "target_label": "Rho（結核菌）",
+  "summary": {
+    "background": "結核菌のRho因子には約160残基の大きなN末端挿入ドメイン（NID）があるが、その役割とゲノム上のRut部位は不明だった。",
+    "approach": "Helicase-SELEXでRut部位を全ゲノムで探索し、結合測定、転写終結試験、NMR、RNAとADP-BeF3を加えた全長Rhoのクライオ電顕で解析した。",
+    "findings": "全長Rhoでは1759個、NID欠失では47個のRut部位が見つかった。NIDはRNA結合後も天然変性のままで、電顕でも秩序のある密度が見えない。"
+  },
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "NIDを欠くと、H-SELEXで拾えるRut部位が1759から47に激減する。NID欠失Rhoは二次構造が安定なRNAをほとんど結合できず、NIDが構造化RNAの捕捉に働くと考えられる。",
+      "evidence": [
+        {
+          "quote": "we identified 1759 significant Rut peaks with FL MtbRho (hereafter FL-Rut peaks) and only 47 significant Rut peaks with ΔNID-MtbRho",
+          "section": "Results and discussion"
+        },
+        {
+          "quote": "the maximal fraction of RNA bound by ΔNID-MtbRho depends on the predicted structural stability of the RNA",
+          "section": "Results and discussion"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "NMRでNIDは広い範囲で化学シフトが狭く、天然変性領域であることが示された。RNAを加えても折りたたまれず、基質RNAとADP-BeF3存在下の全長Rhoのクライオ電顕（2クラス）でもNIDに秩序のある密度は見えなかった。ヘキサマーがRNAを引き込む様子はクラスIIで示唆された。",
+      "evidence": [
+        {
+          "quote": "Crucially, we detected no ordered density for the NID in either class, indicating that the NID does not adopt a folded conformation in the context of the FL MtbRho hexamer, even in the presence of RNA.",
+          "section": "Results and discussion"
+        },
+        {
+          "quote": "This narrow chemical-shift dispersion is characteristic of a highly flexible, intrinsically disordered protein lacking secondary or tertiary structure",
+          "section": "Results and discussion"
+        }
+      ]
+    },
+    {
+      "tag": "手法の工夫",
+      "text": "M495L置換を入れるとRhoが57 bpのRNA–DNAレポーター二重鎖を巻き戻せ、H-SELEXが成立する。ただし著者は、この変異が下流の段階に及ぼすアロステリックな影響を完全には除外できないと述べている。",
+      "evidence": [
+        {
+          "quote": "Without this substitution, the enzyme indeed cannot unwind the 57-bp reporter RNA–DNA duplex used in H-SELEX",
+          "section": "Results and discussion"
+        },
+        {
+          "quote": "we cannot formally rule out allosteric effects impacting subsequent steps along the duplex unwinding reaction pathway",
+          "section": "Limitations of the study"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "大腸菌Rosetta-IIで過剰発現（pET28b系）。NMR試料は15N/13C標識の最少培地。",
+    "construct": "MtbRho全長とΔNID（NID 76–219欠失）。いずれもM495L置換入りとタグなし。",
+    "purification": "Ni-NTA → SP Sepharose → トロンビンでHisタグ切断、再度Ni-NTA/ベンズアミジン。",
+    "sample_prep": "4 µM Rho、16 µM pstC1 RNA、270 µM ADP-BeF3。UltrAufoil 1.2/1.3、Vitrobot IV 10°C・湿度95%、ブロット4秒。",
+    "data_collection": "Titan Krios G4＋Falcon 4i、22,095ムービー、総線量39.18 e⁻/Å²。cryoSPARC 4.5で処理。",
+    "evidence": [
+      {
+        "quote": "overexpressed in E. coli Rosetta-II cells (Novagen) harboring the pET28b-MtbRho or pET28b-ΔMtbRho plasmid",
+        "section": "Materials and methods"
+      },
+      {
+        "quote": "A reaction mixture containing 4 µM FL MtbRho and 16 μM pstC1 RNA in 25 μl EM buffer",
+        "section": "Materials and methods"
+      },
+      {
+        "quote": "After blotting for 4 s with a filter paper, grids were plunge-frozen in liquid ethane using a Vitrobot Mark IV (FEI) with 95% chamber humidity at 10°C.",
+        "section": "Materials and methods"
+      },
+      {
+        "quote": "Twenty-two thousand ninety-five movies were collected with a total electron dose of 39.18 e−/Å2",
+        "section": "Materials and methods"
+      }
+    ]
+  },
+  "keywords": ["Rho", "転写終結", "結核菌", "天然変性領域", "H-SELEX", "NMR", "クライオ電顕"],
+  "ligand_label": "ADP・BeF3、pstC1 RNA",
+  "editor_notes": "candidatesのfirst_structureはtrueだが、本文は既報のMtbRho構造（ref 37）と比較しており、初構造とは書いていない。記事ではNIDが天然変性であることの実験的実証として扱った。"
+}
