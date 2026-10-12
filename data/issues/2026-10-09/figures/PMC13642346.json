@@ -22,6 +22,11 @@
    "label": "scFv16"
   }
  ],
- "ligand": true,
- "ligand_color": "#D4452B"
+ "ligands": [
+  {
+   "id": "A1CKT",
+   "label": "OX04529",
+   "color": "#C23B8E"
+  }
+ ]
 }

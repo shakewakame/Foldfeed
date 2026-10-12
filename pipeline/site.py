@@ -86,6 +86,7 @@ img {{ max-width:100%; height:auto; }}
 .ga {{ display:block; width:100%; border:1px solid var(--hair); border-radius:12px; margin:6px 0 6px; }}
 .key {{ display:flex; flex-wrap:wrap; gap:6px 18px; color:var(--muted); font-size:12.5px; margin:0 0 6px; }}
 .key i {{ display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:6px; }}
+.key i.stick {{ width:14px; height:4px; border-radius:2px; transform:rotate(-30deg); vertical-align:middle; }}
 .headline {{ font-size:18px; font-weight:700; color:var(--ink); line-height:1.6; margin:18px 0 8px; }}
 .meta {{ font-size:13.5px; color:var(--muted); margin:0 0 20px; }}
 .meta a {{ color:var(--emerald-dark); }}
@@ -213,8 +214,8 @@ def figure_html(cand: dict, date: str) -> str:
     if info_path.exists():
         info = read_json(info_path)
         items = [f'<span><i style="background:{esc(x["color"])}"></i>{esc(x["label"])}</span>' for x in info.get("legend", [])]
-        if info.get("ligand"):
-            items.append(f'<span><i style="background:{esc(info["ligand_color"])}"></i>リガンド</span>')
+        items += [f'<span><i class="stick" style="background:{esc(x["color"])}"></i>{esc(x["label"])}</span>'
+                  for x in info.get("ligands", [])]
         key = f'<p class="key">{"".join(items)}</p>' if items else ""
     return f'<img class="ga" src="../figures/{date}/{pm}.svg" alt="構造図">{key}'
 

@@ -14,6 +14,5 @@
    "label": "D13r-34 antibody fragment light chain"
   }
  ],
- "ligand": false,
- "ligand_color": "#D4452B"
+ "ligands": []
 }

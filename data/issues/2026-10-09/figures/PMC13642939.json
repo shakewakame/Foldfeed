@@ -42,6 +42,5 @@
    "label": "DNA (154-MER)"
   }
  ],
- "ligand": false,
- "ligand_color": "#D4452B"
+ "ligands": []
 }

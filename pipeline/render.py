@@ -126,19 +126,45 @@ def _placeholder(cand: dict, s: dict | None) -> tuple[str, str]:
     return "PDB ID は論文の補足資料に記載", "（座標を自動取得できないため構造図なし）"
 
 
+# Short names for common ligands; anything else uses the pick's ligand_names, then the PDB name.
+COMMON_LIGAND_NAMES = {
+    "ANP": "AMP-PNP", "ACP": "AMP-PCP", "AGS": "ATPγS", "GNP": "GppNHp", "GSP": "GTPγS", "GCP": "GppCp",
+    "NAD": "NAD+", "NAI": "NADH", "NAP": "NADP+", "NDP": "NADPH", "FAD": "FAD", "FMN": "FMN",
+    "SAM": "SAM", "SAH": "SAH", "HEM": "ヘム", "HEC": "ヘム c", "COA": "CoA", "ACO": "アセチル CoA",
+    "PLP": "PLP", "TPP": "TPP", "BTN": "ビオチン", "RET": "レチナール", "CLA": "クロロフィル a",
+    "SF4": "[4Fe-4S]", "FES": "[2Fe-2S]", "UDP": "UDP", "UTP": "UTP", "CTP": "CTP", "CDP": "CDP",
+}
+
+
+def ligand_name(lig_id: str, pdb_name: str | None, pick: dict) -> str:
+    """Display name of a ligand: the writer's ligand_names, a common abbreviation, the PDB name, or the ID."""
+    own = (pick.get("ligand_names") or {}).get(lig_id)
+    if own:
+        return own
+    if lig_id in COMMON_LIGAND_NAMES:
+        return COMMON_LIGAND_NAMES[lig_id]
+    if lig_id in {"ATP", "ADP", "AMP", "GTP", "GDP", "GMP"}:
+        return lig_id
+    name = (pdb_name or "").strip()
+    if name.isupper():
+        name = name.lower()
+    return name if name and len(name) <= 24 else lig_id
+
+
 def structure_figure(cand: dict, pick: dict, theme: brand.Theme | None = None) -> tuple[str, dict]:
-    """The protein and nothing else. Returns (svg, info); info holds the PDB ID and the colour key
-    ([{"color", "label"}] per polymer entity, plus whether the ligand dots are drawn) for the page to print."""
+    """The protein and nothing else. Returns (svg, info); info holds the PDB ID and the colour key for the
+    page to print: [{"color", "label"}] per polymer entity, and [{"id", "label", "color"}] per ligand."""
     th = theme or brand.THEMES[brand.DEFAULT_THEME]
     s = pick_structure(cand, pick)
-    body, legend = "", []
+    body, legend, lig_legend = "", [], []
     if s:
         coords = pdb.coordinates(s["pdb_id"])
         if coords:
-            lig_ids = {l["id"] for l in s.get("ligands") or []}
+            lig_ids = {l["id"] for l in s.get("ligands") or []} - pdb.COMMON_ADDITIVES
             genes = {p["uniprot"]: p["gene"] for p in cand.get("proteins", []) if p.get("gene")}
-            body, legend = structure_svg.render(coords, lig_ids, 0, 0, W, H, genes, margin=34,
-                                                entity_colors=list(th.entities), ligand_color=th.ligand)
+            body, legend, lig_legend = structure_svg.render(
+                coords, lig_ids, 0, 0, W, H, genes, margin=34, entity_colors=list(th.entities),
+                ligand_colors=structure_svg.LIGAND_PALETTE)
             if pick.get("legend_labels"):
                 legend = [(col, lab) for (col, _), lab in zip(legend, pick["legend_labels"])]
     ground = th.paper
@@ -150,10 +176,11 @@ def structure_figure(cand: dict, pick: dict, theme: brand.Theme | None = None) -
                        for t, dy, size_, wt in ((msg, -10, 28, 600), (sub, 34, 19, 400)) if t)
     svg = (f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" '
            f'font-family="{FONT}"><rect width="{W}" height="{H}" fill="{ground}"/>{body}</svg>\n')
+    pdb_names = {l["id"]: l.get("name") for l in (s or {}).get("ligands") or []}
     info = {"pdb_id": s["pdb_id"] if s else None,
             "legend": [{"color": col, "label": lab} for col, lab in legend] if len(legend) > 1 else [],
-            "ligand": bool(s and s.get("ligands") and "<circle" in body),
-            "ligand_color": th.ligand}
+            "ligands": [{"id": lid, "label": ligand_name(lid, pdb_names.get(lid), pick), "color": col}
+                        for col, lid in lig_legend]}
     return svg, info
 
 
@@ -200,9 +227,13 @@ def quote_block(evidence: list) -> list[str]:
 def article_md(cand: dict, pick: dict, n: int, info: dict | None = None) -> list[str]:
     doi = f"https://doi.org/{cand['doi']}" if cand.get("doi") else f"https://europepmc.org/article/PMC/{cand['pmcid']}"
     s = pick["summary"]
-    key = ""
+    keys = []
     if info and info.get("legend"):
-        key = f"色（順に）：{' / '.join(x['label'] for x in info['legend'])}" + ("・赤の点はリガンド" if info.get("ligand") else "")
+        keys.append(f"色（順に）：{' / '.join(x['label'] for x in info['legend'])}")
+    if info and info.get("ligands"):
+        keys.append("スティック：" + "、".join(x["label"] if x["label"] == x["id"] else f"{x['label']}（{x['id']}）"
+                                          for x in info["ligands"]))
+    key = "　".join(keys)
     out = [f"## {n}｜{pick['target_label']}", "",
            f"### {cand['title']}", "",
            f"*{cand['journal']}*（{cand['pub_date']}） · [論文]({doi}) · ライセンス: {cand.get('license') or '不明'}", "",

@@ -10,6 +10,11 @@
    "label": "pntB"
   }
  ],
- "ligand": true,
- "ligand_color": "#D4452B"
+ "ligands": [
+  {
+   "id": "NAP",
+   "label": "NADP+",
+   "color": "#C23B8E"
+  }
+ ]
 }
