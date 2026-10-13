@@ -1,5 +1,12 @@
 {
  "pdb_id": "22EC",
- "legend": [],
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "MERS-CoV スパイク（S）",
+   "desc": "Spike glycoprotein",
+   "entity": "1"
+  }
+ ],
  "ligands": []
 }

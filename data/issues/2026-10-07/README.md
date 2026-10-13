@@ -123,7 +123,7 @@ WGRドメインが上側のDNAジャイアで切断を認識し、HDのArg296と
 
 ![構造図：SpNanR（肺炎球菌）](figures/PMC13635753.svg)
 
-<sub>スティック：ManNAc-6-P（BMX）</sub>
+<sub>色（順に）：SpNanR（転写調節因子）　スティック：ManNAc-6-P（BMX）</sub>
 
 ![結合部位：ManNAc-6-P](figures/PMC13635753-site.svg)
 
@@ -311,7 +311,7 @@ ManNAc-6-Pは1分子で3つのプロトマーにまたがって結合し（リ�
 
 ![構造図：大腸菌NNT（PntA/PntB）](figures/PMC13635403.svg)
 
-<sub>色（順に）：pntA / pntB　スティック：NADP+（NAP）</sub>
+<sub>色（順に）：PntA（NNT α サブユニット） / PntB（NNT β サブユニット）　スティック：NADP+（NAP）</sub>
 
 ![結合部位：NADP+](figures/PMC13635403-site.svg)
 

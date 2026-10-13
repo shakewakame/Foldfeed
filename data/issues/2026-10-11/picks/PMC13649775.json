@@ -88,5 +88,16 @@
     "クライオ電顕"
   ],
   "ligand_label": "DNA（1 nt 3′突出）",
-  "editor_notes": "全体分解能が7.23 Åと低く、PDB 9OX8 の詳細な側鎖モデルは局所精密化の範囲に限られる。BRCT・N末端ペプチドの位置はAlphaFold3予測を併用して配置している。『初』とは書いていない。"
+  "editor_notes": "全体分解能が7.23 Åと低く、PDB 9OX8 の詳細な側鎖モデルは局所精密化の範囲に限られる。BRCT・N末端ペプチドの位置はAlphaFold3予測を併用して配置している。『初』とは書いていない。",
+  "legend_labels": [
+    "LIG4（DNA リガーゼ 4）",
+    "XLF（NHEJ1）",
+    "Ku70（XRCC6）",
+    "Ku80（XRCC5）",
+    "Pol λ（POLL）",
+    "XRCC4",
+    "DNA 鎖 1",
+    "DNA 鎖 2",
+    "PAXX"
+  ]
 }

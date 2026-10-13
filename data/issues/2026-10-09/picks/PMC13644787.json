@@ -90,5 +90,8 @@
     "固体NMR",
     "G22S"
   ],
-  "editor_notes": "「初の高分解能構造」は著者の記述（Discussion）に基づく。PL・CTD は密度が弱くモデルから外れている。WT/G22S の 3.7 / 3.5 Å は PDB 値と一致。lab_notes の purification は主要工程が packet で確認できなかったため null。"
+  "editor_notes": "「初の高分解能構造」は著者の記述（Discussion）に基づく。PL・CTD は密度が弱くモデルから外れている。WT/G22S の 3.7 / 3.5 Å は PDB 値と一致。lab_notes の purification は主要工程が packet で確認できなかったため null。",
+  "legend_labels": [
+    "MscL（機械受容チャネル）"
+  ]
 }

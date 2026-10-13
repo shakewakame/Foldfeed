@@ -79,5 +79,9 @@
     "ヘム酵素"
   ],
   "ligand_label": "Nle-RYLH（基質ペプチド）、ヘム",
-  "editor_notes": "結晶構造は論文の一部で、中心はMD・QM/MM計算と活性試験。パケットにMethods本文がなく、発現・精製・データ収集は補足資料にあるため lab_notes は null とした。論文中の菌名は 'Nonomurae solani' と綴られている（原文のまま引用）が、通常の学名は Nonomuraea。"
+  "editor_notes": "結晶構造は論文の一部で、中心はMD・QM/MM計算と活性試験。パケットにMethods本文がなく、発現・精製・データ収集は補足資料にあるため lab_notes は null とした。論文中の菌名は 'Nonomurae solani' と綴られている（原文のまま引用）が、通常の学名は Nonomuraea。",
+  "legend_labels": [
+    "NsRufO（P450）",
+    "ペプチド（5 残基）"
+  ]
 }

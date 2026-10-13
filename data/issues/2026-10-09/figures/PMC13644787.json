@@ -1,5 +1,12 @@
 {
  "pdb_id": "9TIV",
- "legend": [],
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "MscL（機械受容チャネル）",
+   "desc": "Large-conductance mechanosensitive channel",
+   "entity": "1"
+  }
+ ],
  "ligands": []
 }

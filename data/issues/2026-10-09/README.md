@@ -38,7 +38,7 @@
 
 ![構造図：RyR1（ウサギ骨格筋）](figures/PMC13642953.svg)
 
-<sub>スティック：ADP、ダントロレン（U1C）</sub>
+<sub>色（順に）：RyR1（リアノジン受容体 1）　スティック：ADP、ダントロレン（U1C）</sub>
 
 ![結合部位：ダントロレン](figures/PMC13642953-site.svg)
 
@@ -151,7 +151,7 @@ MH誘発物質4CmCはコアソレノイド中心の隠れたポケットでQ4020
 
 ![構造図：DNA-PK–ヌクレオソーム複合体](figures/PMC13642939.svg)
 
-<sub>色（順に）：PRKDC / Unknown peptide / XRCC6 / XRCC5 / LOC121398065 / Histone H4 / LOC494591 / LOC121398078 / DNA (154-MER) / DNA (154-MER)</sub>
+<sub>色（順に）：DNA-PKcs（PRKDC） / 未同定のペプチド / Ku70（XRCC6） / Ku80（XRCC5） / ヒストン H3 / ヒストン H4 / ヒストン H2A / ヒストン H2B / DNA 鎖 1 / DNA 鎖 2</sub>
 
 **ヌクレオソーム末端で、Kuが約2巻きのDNAをほどく**
 
@@ -253,7 +253,7 @@ DNA-PKcsはリンカーが短い基質で連結を促進した（N-12で約7倍�
 
 ![構造図：GPR84–Gi（ヒト）](figures/PMC13642346.svg)
 
-<sub>色（順に）：GPR84 / GNAI1 / GNB1 / GNG2 / scFv16　スティック：OX04529（A1CKT）</sub>
+<sub>色（順に）：GPR84（受容体） / Gαi1（G タンパク質 α） / Gβ1（G タンパク質 β） / Gγ2（G タンパク質 γ） / scFv16（抗体断片）　スティック：OX04529（A1CKT）</sub>
 
 ![結合部位：OX04529](figures/PMC13642346-site.svg)
 
@@ -345,6 +345,8 @@ Leu336AlaとPhe187Ala変異は、OX04529によるβ-アレスチン動員を回�
 *Science Advances*（2026-10-09） · [論文](https://doi.org/10.1126/sciadv.aei0096) · ライセンス: cc by-nc
 
 ![構造図：大腸菌MscL（WT・G22S）](figures/PMC13644787.svg)
+
+<sub>色（順に）：MscL（機械受容チャネル）</sub>
 
 **MscLはG22Sでも閉じたまま、違いは動態に現れた**
 
@@ -439,7 +441,7 @@ Leu336AlaとPhe187Ala変異は、OX04529によるβ-アレスチン動員を回�
 
 ![構造図：赤痢菌IpaD–抗体Fab](figures/PMC7619511.svg)
 
-<sub>色（順に）：ipaD / D13r-34 antibody fragment heavy chain / D13r-34 antibody fragment light chain</sub>
+<sub>色（順に）：IpaD（赤痢菌） / D13r-34 抗体 Fab（重鎖） / D13r-34 抗体 Fab（軽鎖）</sub>
 
 **結合する場所で、抗体が溶血を抑えるか高めるかが分かれる**
 

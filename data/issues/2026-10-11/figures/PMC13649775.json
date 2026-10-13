@@ -3,39 +3,57 @@
  "legend": [
   {
    "color": "#3C5A8C",
-   "label": "LIG4"
+   "label": "LIG4（DNA リガーゼ 4）",
+   "desc": "DNA ligase 4",
+   "entity": "1"
   },
   {
    "color": "#C9A04B",
-   "label": "NHEJ1"
+   "label": "XLF（NHEJ1）",
+   "desc": "Non-homologous end-joining factor 1",
+   "entity": "2"
   },
   {
    "color": "#5F9296",
-   "label": "XRCC6"
+   "label": "Ku70（XRCC6）",
+   "desc": "X-ray repair cross-complementing protein 6",
+   "entity": "3"
   },
   {
    "color": "#A5707A",
-   "label": "XRCC5"
+   "label": "Ku80（XRCC5）",
+   "desc": "X-ray repair cross-complementing protein 5",
+   "entity": "4"
   },
   {
    "color": "#7C8AA8",
-   "label": "POLL"
+   "label": "Pol λ（POLL）",
+   "desc": "DNA polymerase lambda",
+   "entity": "5"
   },
   {
    "color": "#8A9A5B",
-   "label": "XRCC4"
+   "label": "XRCC4",
+   "desc": "DNA repair protein XRCC4",
+   "entity": "6"
   },
   {
    "color": "#9C7B55",
-   "label": "DNA (34-MER)"
+   "label": "DNA 鎖 1",
+   "desc": "DNA (34-MER)",
+   "entity": "7"
   },
   {
    "color": "#6E6E8E",
-   "label": "DNA (34-MER)"
+   "label": "DNA 鎖 2",
+   "desc": "DNA (34-MER)",
+   "entity": "8"
   },
   {
-   "color": "#3C5A8C",
-   "label": "PAXX"
+   "color": "#2a3f62",
+   "label": "PAXX",
+   "desc": "Protein PAXX",
+   "entity": "9"
   }
  ],
  "ligands": []

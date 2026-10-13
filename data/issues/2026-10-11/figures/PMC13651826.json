@@ -3,15 +3,21 @@
  "legend": [
   {
    "color": "#3C5A8C",
-   "label": "HLA-DRA"
+   "label": "HLA-DRα鎖",
+   "desc": "HLA class II histocompatibility antigen, DR alpha chain",
+   "entity": "1"
   },
   {
    "color": "#C9A04B",
-   "label": "HLA-DRB1"
+   "label": "HLA-DRβ鎖（DRB1）",
+   "desc": "HLA class II histocompatibility antigen DR beta chain",
+   "entity": "2"
   },
   {
    "color": "#5F9296",
-   "label": "RO60"
+   "label": "Ro60 ペプチド",
+   "desc": "RNA-binding protein RO60",
+   "entity": "3"
   }
  ],
  "ligands": []

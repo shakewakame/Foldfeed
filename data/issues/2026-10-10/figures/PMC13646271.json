@@ -1,16 +1,31 @@
 {
  "pdb_id": "9WBA",
- "legend": [],
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "PoOMT1（O-メチルトランスフェラーゼ）",
+   "desc": "O-methyltransferase PoOMT1",
+   "entity": "1"
+  }
+ ],
  "ligands": [
   {
    "id": "AC6",
    "label": "4′-ヒドロキシアセトフェノン",
-   "color": "#C23B8E"
+   "color": "#C23B8E",
+   "desc": "P-Hydroxyacetophenone",
+   "entity": [
+    "2"
+   ]
   },
   {
    "id": "SAH",
    "label": "SAH",
-   "color": "#2F9E57"
+   "color": "#2F9E57",
+   "desc": "S-Adenosyl-L-Homocysteine",
+   "entity": [
+    "3"
+   ]
   }
  ],
  "site": {

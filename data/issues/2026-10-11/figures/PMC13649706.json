@@ -3,23 +3,35 @@
  "legend": [
   {
    "color": "#3C5A8C",
-   "label": "rfbD"
+   "label": "Wzm（膜貫通サブユニット）",
+   "desc": "Probable O-antigen/lipopolysaccharide transport integral membrane protein ABC transporter RfbD",
+   "entity": "1"
   },
   {
    "color": "#C9A04B",
-   "label": "rfbE"
+   "label": "Wzt（ATP 結合サブユニット）",
+   "desc": "Probable O-antigen/lipopolysaccharide transport ATP-binding protein ABC transporter RfbE",
+   "entity": "2"
   }
  ],
  "ligands": [
   {
    "id": "A1E8P",
    "label": "ファルネシルリン酸",
-   "color": "#C23B8E"
+   "color": "#C23B8E",
+   "desc": "[(2~{Z},6~{E})-3,7,11-trimethyldodeca-2,6,10-trienyl] dihydrogen phosphate",
+   "entity": [
+    "4"
+   ]
   },
   {
    "id": "ATP",
    "label": "ATP",
-   "color": "#2F9E57"
+   "color": "#2F9E57",
+   "desc": "Adenosine-5'-Triphosphate",
+   "entity": [
+    "5"
+   ]
   }
  ],
  "site": {

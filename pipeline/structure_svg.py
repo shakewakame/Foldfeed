@@ -119,6 +119,53 @@ def _mix(hex_color: str, white: float) -> str:
     return f"#{r:02x}{g:02x}{b:02x}"
 
 
+def _toward(hex_color: str, target: str, f: float) -> str:
+    """Blend a colour toward another (the depth cue: far parts melt into the background)."""
+    a = [int(hex_color[i:i + 2], 16) for i in (1, 3, 5)]
+    b = [int(target[i:i + 2], 16) for i in (1, 3, 5)]
+    return "#" + "".join(f"{round(x + (y - x) * f):02x}" for x, y in zip(a, b))
+
+
+def _cycled(palette: list[str], i: int) -> str:
+    """The i-th colour; past the end of the palette, the same hues again but darker, so no two entities look alike."""
+    n = len(palette)
+    return palette[i % n] if i < n else _toward(palette[i % n], "#000000", min(0.55, 0.3 * (i // n)))
+
+
+class _Burial:
+    """How buried a point is (0 = exposed, 1 = deep inside), from the number of backbone points around it.
+
+    A cheap stand-in for the ambient occlusion of ChimeraX's `lighting soft`: crowded regions are darker,
+    exposed ones lighter, which is what gives the structure its volume without any directional light.
+    """
+
+    def __init__(self, pts: list[tuple], radius: float = 11.0):
+        self.r, self.cells = radius, defaultdict(list)
+        for p in pts:
+            self.cells[self._key(p)].append(p)
+        sample = pts[::max(1, len(pts) // 1500)]
+        counts = sorted(self._count(p) for p in sample) or [0]
+        self.lo = counts[int(0.1 * (len(counts) - 1))]
+        self.hi = max(counts[int(0.9 * (len(counts) - 1))], self.lo + 1)
+
+    def _key(self, p):
+        return (int(p[0] // self.r), int(p[1] // self.r), int(p[2] // self.r))
+
+    def _count(self, p) -> int:
+        kx, ky, kz = self._key(p)
+        n = 0
+        for dx in (-1, 0, 1):
+            for dy in (-1, 0, 1):
+                for dz in (-1, 0, 1):
+                    for q in self.cells.get((kx + dx, ky + dy, kz + dz), ()):
+                        if math.dist(p, q) <= self.r:
+                            n += 1
+        return n
+
+    def __call__(self, p) -> float:
+        return max(0.0, min(1.0, (self._count(p) - self.lo) / (self.hi - self.lo)))
+
+
 def _shade(hex_color: str, dark: float) -> str:
     r, g, b = (int(hex_color[i:i + 2], 16) for i in (1, 3, 5))
     return f"#{round(r * (1 - dark)):02x}{round(g * (1 - dark)):02x}{round(b * (1 - dark)):02x}"
@@ -231,8 +278,8 @@ def _cylinder(p0: tuple, p1: tuple, scale: float, radius: float, col: str, uid: 
         nx, ny = -nx, -ny
     m = max(0.6, radius * abs(d3[2]))  # semi-minor axis of the end caps
     ang = math.degrees(math.atan2(uy, ux))
-    edge = _shade(col, 0.35)
-    lit, dark = _mix(col, 0.38), _shade(col, 0.28)
+    edge = _shade(col, 0.30)
+    lit, dark = _mix(col, 0.16), _shade(col, 0.16)
     mx, my = (a[0] + b[0]) / 2, (a[1] + b[1]) / 2
     gid = f"c{uid}"
     grad = (f'<linearGradient id="{gid}" gradientUnits="userSpaceOnUse" '
@@ -245,7 +292,7 @@ def _cylinder(p0: tuple, p1: tuple, scale: float, radius: float, col: str, uid: 
             f'L{p(a, -1)} A{m:.1f},{radius:.1f} {ang:.1f} 0 0 {p(a, 1)} Z')
     near = b if p1[2] >= p0[2] else a
     cap = (f'<ellipse cx="{near[0]:.1f}" cy="{near[1]:.1f}" rx="{m:.1f}" ry="{radius:.1f}" '
-           f'transform="rotate({ang:.1f} {near[0]:.1f} {near[1]:.1f})" fill="{_mix(col, 0.3)}" '
+           f'transform="rotate({ang:.1f} {near[0]:.1f} {near[1]:.1f})" fill="{_mix(col, 0.2)}" '
            f'stroke="{edge}" stroke-width="0.9"/>')
     return (f'<defs>{grad}</defs><path d="{body}" fill="url(#{gid})" stroke="{edge}" '
             f'stroke-width="1" stroke-linejoin="round"/>{cap}')
@@ -269,6 +316,7 @@ def _load(cif_gz: bytes, ligand_ids: set[str], gene_names: dict[str, str] | None
     cif = parse_cif(gzip.decompress(cif_gz).decode("utf-8", "replace"))
     atoms = cif["_atom_site"]
     entities = {e.get("id", ""): e.get("pdbx_description", "") for e in cif["_entity"]}
+    descriptions = dict(entities)
     for ref in cif["_struct_ref"]:
         gene = (gene_names or {}).get(ref.get("pdbx_db_accession", ""))
         if ref.get("db_name") == "UNP" and gene:
@@ -309,8 +357,8 @@ def _load(cif_gz: bytes, ligand_ids: set[str], gene_names: dict[str, str] | None
             if (inst, a.get("label_atom_id")) in seen:
                 continue
             seen.add((inst, a.get("label_atom_id")))
-            lig_atoms.append({"xyz": xyz, "inst": inst, "el": el})
-    return {"entities": entities, "chains": chains, "chain_entity": chain_entity,
+            lig_atoms.append({"xyz": xyz, "inst": inst, "el": el, "entity": a.get("label_entity_id", "")})
+    return {"entities": entities, "descriptions": descriptions, "chains": chains, "chain_entity": chain_entity,
             "lig_atoms": lig_atoms, "poly": poly}
 
 
@@ -377,11 +425,12 @@ def _cartoon(runs3: list[tuple[str, list[dict]]], chain_entity: dict, color: dic
                     q1 = tuple(p1[c] + ext[c] for c in range(3))
                     z = (q0[2] + q1[2]) / 2
                     uid += 1
-                    parts.append((z, _cylinder(q0, q1, scale, tube / 2, tint(base, z), uid, sx)))
+                    parts.append((z, _cylinder(q0, q1, scale, tube / 2,
+                                               tint(base, z, tuple((q0[c] + q1[c]) / 2 for c in range(3))), uid, sx)))
             elif kind == "E":
                 path = _spline([r["q"] for r in v[a:b + 1]], SUBDIV)
                 z = sum(q[2] for q in path) / len(path)
-                col = tint(base, z)
+                col = tint(base, z, path[len(path) // 2])
                 sp = [sx(q) for q in path]
                 m = len(sp)
                 head = min(m - 1, int(1.6 * SUBDIV))
@@ -413,7 +462,7 @@ def _cartoon(runs3: list[tuple[str, list[dict]]], chain_entity: dict, color: dic
                 while i < len(path) - 1:
                     seg = path[i:i + piece]
                     z = sum(q[2] for q in seg) / len(seg)
-                    col = tint(_shade(base, 0.12), z)
+                    col = tint(_shade(base, 0.12), z, seg[len(seg) // 2])
                     parts.append((z, f'<polyline points="{_points([sx(q) for q in seg])}" '
                                      f'stroke="{col}" stroke-width="{width:.1f}" fill="none" '
                                      f'stroke-linecap="round" stroke-linejoin="round"/>'))
@@ -432,11 +481,15 @@ def _ligand_colors(lig_atoms: list[dict], palette: list[str]) -> dict[str, str]:
 def render(cif_gz: bytes, ligand_ids: set[str], x0: float, y0: float, w: float, h: float,
            gene_names: dict[str, str] | None = None, margin: float = 28,
            entity_colors: list[str] | None = None, ligand_colors: list[str] | None = None,
-           max_points: int = MAX_TRACE_POINTS,
-           ) -> tuple[str, list[tuple[str, str]], list[tuple[str, str]]]:
-    """SVG fragment for the box (x0, y0, w, h), a legend [(colour, label)] per polymer entity,
-    and [(colour, component id)] for the ligands drawn as sticks. `max_points` thins very large
-    models (every n-th residue is kept) — the list thumbnails use a small value.
+           max_points: int = MAX_TRACE_POINTS, bg: str = "#FFFFFF",
+           ) -> tuple[str, list[tuple[str, str, str]], list[tuple[str, str]]]:
+    """SVG fragment for the box (x0, y0, w, h), a legend [(colour, label, description)] per polymer
+    entity, and [(colour, component id, [entity ids])] for the ligands drawn as sticks. `max_points` thins very large
+    models (every n-th residue is kept) — the list thumbnails use a small value. `bg` is the colour the
+    depth cue fades into (the page ground: the figure itself has a transparent background).
+
+    Shading imitates ChimeraX's `lighting soft`: no key light, ambient occlusion (here: burial, see _Burial)
+    and a depth cue, so volume comes from crowding and distance rather than from a highlight.
 
     Labels are UniProt gene names (gene_names: accession -> gene) when the entity maps to one,
     otherwise the entity description.
@@ -466,15 +519,18 @@ def render(cif_gz: bytes, ligand_ids: set[str], x0: float, y0: float, w: float, 
     def sx(q):
         return ox + q[0] * scale, oy - q[1] * scale
 
-    def tint(col, z):
+    burial = _Burial(allq[::max(1, len(allq) // 6000)])
+
+    def tint(col, z, p):
         depth = (z - zmin) / ((zmax - zmin) or 1)  # 0 = far, 1 = near
-        return _mix(col, 0.42 * (1 - depth))
+        col = _shade(col, 0.36 * burial(p))          # crowded = dark (ambient occlusion)
+        return _toward(col, bg, 0.66 * (1 - depth) ** 1.15)  # depth cue
 
     entity_order = []
     for k, _ in runs3:
         if m["chain_entity"][k] not in entity_order:
             entity_order.append(m["chain_entity"][k])
-    color = {e: palette[i % len(palette)] for i, e in enumerate(entity_order)}
+    color = {e: _cycled(palette, i) for i, e in enumerate(entity_order)}
 
     parts = _cartoon(runs3, m["chain_entity"], color, sx, scale, tint)
     parts.sort(key=lambda p: p[0])
@@ -483,8 +539,11 @@ def render(cif_gz: bytes, ligand_ids: set[str], x0: float, y0: float, w: float, 
         a["ccol"] = ccol[a["inst"][2]]
     width = max(1.8, min(7.0, 0.5 * scale))
     out = "".join(s for _, s in parts) + _sticks(lig_atoms, ligq, sx, width)
-    legend = [(color[e], m["entities"].get(e, f"entity {e}")) for e in entity_order]
-    return out, legend, list((c, k) for k, c in ccol.items())
+    legend = [(color[e], m["entities"].get(e, f"entity {e}"), m["descriptions"].get(e, ""), e) for e in entity_order]
+    lig_entities: dict[str, set] = defaultdict(set)
+    for a in lig_atoms:
+        lig_entities[a["inst"][2]].add(a["entity"])
+    return out, legend, list((c, k, sorted(lig_entities[k])) for k, c in ccol.items())
 
 
 class _Grid:
@@ -512,7 +571,7 @@ class _Grid:
 
 def render_site(cif_gz: bytes, ligand_ids: set[str], prefer: list[str], w: float, h: float,
                 gene_names: dict[str, str] | None = None, entity_colors: list[str] | None = None,
-                ligand_colors: list[str] | None = None, ink: str = "#1B2638",
+                ligand_colors: list[str] | None = None, ink: str = "#1B2638", bg: str = "#FFFFFF",
                 ) -> tuple[str, dict | None]:
     """Close-up of the binding site of one ligand: the first of `prefer` (component IDs) present in the
     model, otherwise the largest ligand. Ligands under 5 heavy atoms (ions, BeF3) get no close-up.
@@ -612,13 +671,13 @@ def render_site(cif_gz: bytes, ligand_ids: set[str], prefer: list[str], w: float
     for k in m["chains"]:
         if m["chain_entity"][k] not in entity_order:
             entity_order.append(m["chain_entity"][k])
-    color = {e: palette[i % len(palette)] for i, e in enumerate(entity_order)}
+    color = {e: _cycled(palette, i) for i, e in enumerate(entity_order)}
     zs = [r["q"][2] for _, v in runs for r in v] or [zc]
     zmin, zmax = min(zs), max(zs)
 
-    def tint(col, z):
+    def tint(col, z, p):
         depth = (z - zmin) / ((zmax - zmin) or 1)
-        return _mix(col, 0.72 - 0.25 * depth)
+        return _toward(col, bg, 0.74 - 0.28 * depth)
 
     parts = _cartoon(runs, m["chain_entity"], color, sx, scale, tint)
     parts.sort(key=lambda p: p[0])
@@ -690,7 +749,7 @@ def render_site(cif_gz: bytes, ligand_ids: set[str], prefer: list[str], w: float
             f'<path d="{"".join(dashes)}" stroke="{ink}" stroke-width="2" stroke-dasharray="5 4" '
             f'fill="none" opacity="0.85"/>'
             f'{_sticks(lk, lq, sx, lig_w)}'
-            f'<g font-size="15" font-weight="700" fill="{ink}" stroke="#FFFFFF" stroke-width="4" '
+            f'<g font-size="15" font-weight="700" fill="{ink}" stroke="{bg}" stroke-width="4" '
             f'paint-order="stroke" stroke-linejoin="round">{"".join(labels)}</g></g>')
     resid = sorted(pocket, key=lambda r: (names[r][1], int(re.sub(r"\D", "", names[r][0]) or 0)))
     info = {"ligand": focus, "residues": [names[r][0] + (f"({names[r][1]})" if dup[names[r][0]] > 1 else "") for r in resid],

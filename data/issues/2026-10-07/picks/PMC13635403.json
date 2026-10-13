@@ -92,5 +92,9 @@
     "パルミトイルCoA"
   ],
   "ligand_label": "NADP(H)、NAD+、パルミトイルCoA",
-  "editor_notes": "大腸菌の dI2 と dI2–dIII の構造は既報で、本論文の新規性は全長酵素の状態変化。UniProt 上は既存の PDB 構造がある（初構造ではない）。"
+  "editor_notes": "大腸菌の dI2 と dI2–dIII の構造は既報で、本論文の新規性は全長酵素の状態変化。UniProt 上は既存の PDB 構造がある（初構造ではない）。",
+  "legend_labels": [
+    "PntA（NNT α サブユニット）",
+    "PntB（NNT β サブユニット）"
+  ]
 }

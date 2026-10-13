@@ -187,19 +187,25 @@ def thumbnail(cand: dict, pick: dict, theme: brand.Theme | None = None) -> str:
     body, _, _ = structure_svg.render(coords, {l["id"] for l in s.get("ligands") or []} - pdb.COMMON_ADDITIVES,
                                       0, 0, THUMB_W, THUMB_H, genes, margin=26,
                                       entity_colors=list(th.entities), ligand_colors=structure_svg.LIGAND_PALETTE,
-                                      max_points=THUMB_POINTS)
+                                      max_points=THUMB_POINTS, bg=th.ground)
     if not body:
         return ""
     return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{THUMB_W}" height="{THUMB_H}" '
-            f'viewBox="0 0 {THUMB_W} {THUMB_H}"><rect width="{THUMB_W}" height="{THUMB_H}" fill="{th.paper}"/>'
-            f'{body}</svg>\n')
+            f'viewBox="0 0 {THUMB_W} {THUMB_H}">{body}</svg>\n')
+
+
+def chem_name(name: str | None) -> str:
+    """The PDB's chemical name of a ligand, in readable case (the PDB writes most in capitals)."""
+    name = (name or "").strip()
+    return name.title() if name.isupper() else name
 
 
 def structure_figure(cand: dict, pick: dict, theme: brand.Theme | None = None) -> tuple[str, dict, str]:
     """The protein and nothing else, plus a close-up of the main ligand's binding site.
 
     Returns (svg, info, site_svg). info holds what the page prints next to the figures: the PDB ID,
-    [{"color", "label"}] per polymer entity, [{"id", "label", "color"}] per ligand, and "site"
+    [{"color", "label", "desc", "entity"}] per polymer entity (label: the writer's legend_labels if given, else the
+    gene name or PDB description; desc: the PDB description), [{"id", "label", "color", "desc", "entity"}] per ligand (entity: its mmCIF entity ids, for the 3D viewer), and "site"
     ({"ligand", "label", "residues", "polar", "neighbours"}) when a close-up was drawn (site_svg != "").
     The close-up shows pick["site_ligand"] if given ("" for none), else a ligand the writer named in
     ligand_names, else the largest ligand.
@@ -214,16 +220,17 @@ def structure_figure(cand: dict, pick: dict, theme: brand.Theme | None = None) -
             genes = {p["uniprot"]: p["gene"] for p in cand.get("proteins", []) if p.get("gene")}
             body, legend, lig_legend = structure_svg.render(
                 coords, lig_ids, 0, 0, W, H, genes, margin=34, entity_colors=list(th.entities),
-                ligand_colors=structure_svg.LIGAND_PALETTE)
-            if pick.get("legend_labels"):
-                legend = [(col, lab) for (col, _), lab in zip(legend, pick["legend_labels"])]
+                ligand_colors=structure_svg.LIGAND_PALETTE, bg=th.ground)
+            labels = pick.get("legend_labels") or []
+            legend = [(col, labels[i] if i < len(labels) else lab, desc, ent)
+                      for i, (col, lab, desc, ent) in enumerate(legend)]
             want = pick.get("site_ligand")
             if lig_legend and want != "":
                 prefer = [want] if want else list(pick.get("ligand_names") or {})
                 site_body, site = structure_svg.render_site(
                     coords, lig_ids, prefer, SITE_W, SITE_H, genes, entity_colors=list(th.entities),
-                    ligand_colors=structure_svg.LIGAND_PALETTE, ink=th.ink)
-    ground = th.paper
+                    ligand_colors=structure_svg.LIGAND_PALETTE, ink=th.ink, bg=th.ground)
+    ground = None  # the figure is transparent: it sits on the page ground
     if not body and is_impact(pick):
         return "", {"pdb_id": None, "legend": [], "ligands": []}, ""
     if not body:
@@ -232,21 +239,22 @@ def structure_figure(cand: dict, pick: dict, theme: brand.Theme | None = None) -
         body = "".join(text_block([t], W / 2, H / 2 + dy, size_, th.muted, wt)
                        .replace("<text ", '<text text-anchor="middle" ', 1)
                        for t, dy, size_, wt in ((msg, -10, 28, 600), (sub, 34, 19, 400)) if t)
+    base = f'<rect width="{W}" height="{H}" fill="{ground}"/>' if ground else ""
     svg = (f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" '
-           f'font-family="{FONT}"><rect width="{W}" height="{H}" fill="{ground}"/>{body}</svg>\n')
+           f'font-family="{FONT}">{base}{body}</svg>\n')
     pdb_names = {l["id"]: l.get("name") for l in (s or {}).get("ligands") or []}
     info = {"pdb_id": s["pdb_id"] if s else None,
-            "legend": [{"color": col, "label": lab} for col, lab in legend] if len(legend) > 1 else [],
-            "ligands": [{"id": lid, "label": ligand_name(lid, pdb_names.get(lid), pick), "color": col}
-                        for col, lid in lig_legend]}
+            "legend": [{"color": col, "label": lab, "desc": desc if desc != lab else "", "entity": ent}
+                       for col, lab, desc, ent in legend],
+            "ligands": [{"id": lid, "label": ligand_name(lid, pdb_names.get(lid), pick), "color": col,
+                         "desc": chem_name(pdb_names.get(lid)), "entity": ents} for col, lid, ents in lig_legend]}
     site_svg = ""
     if site_body:
         names = {x["id"]: x["label"] for x in info["ligands"]}
         info["site"] = dict(site, label=names.get(site["ligand"], site["ligand"]),
                             neighbours=[names.get(n, n) for n in site["neighbours"]])
         site_svg = (f'<svg xmlns="http://www.w3.org/2000/svg" width="{SITE_W}" height="{SITE_H}" '
-                    f'viewBox="0 0 {SITE_W} {SITE_H}" font-family="{FONT}">'
-                    f'<rect width="{SITE_W}" height="{SITE_H}" fill="{th.paper}"/>{site_body}</svg>\n')
+                    f'viewBox="0 0 {SITE_W} {SITE_H}" font-family="{FONT}">{site_body}</svg>\n')
     return svg, info, site_svg
 
 

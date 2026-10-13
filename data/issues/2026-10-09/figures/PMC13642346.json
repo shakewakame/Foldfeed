@@ -3,30 +3,44 @@
  "legend": [
   {
    "color": "#3C5A8C",
-   "label": "GPR84"
+   "label": "GPR84（受容体）",
+   "desc": "G-protein coupled receptor 84",
+   "entity": "1"
   },
   {
    "color": "#C9A04B",
-   "label": "GNAI1"
+   "label": "Gαi1（G タンパク質 α）",
+   "desc": "Guanine nucleotide-binding protein G(i) subunit alpha-1",
+   "entity": "2"
   },
   {
    "color": "#5F9296",
-   "label": "GNB1"
+   "label": "Gβ1（G タンパク質 β）",
+   "desc": "Guanine nucleotide-binding protein G(I)/G(S)/G(T) subunit beta-1",
+   "entity": "3"
   },
   {
    "color": "#A5707A",
-   "label": "GNG2"
+   "label": "Gγ2（G タンパク質 γ）",
+   "desc": "Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-2",
+   "entity": "4"
   },
   {
    "color": "#7C8AA8",
-   "label": "scFv16"
+   "label": "scFv16（抗体断片）",
+   "desc": "scFv16",
+   "entity": "5"
   }
  ],
  "ligands": [
   {
    "id": "A1CKT",
    "label": "OX04529",
-   "color": "#C23B8E"
+   "color": "#C23B8E",
+   "desc": "5-[3-[4-chloranyl-3-(trifluoromethyl)phenyl]propyl]-1-oxidanyl-pyridin-3-ol",
+   "entity": [
+    "6"
+   ]
   }
  ],
  "site": {

@@ -88,5 +88,10 @@
   ],
   "ga_pdb_id": "9Y4J",
   "ligand_label": "AMPPNP",
-  "editor_notes": "T331I側の構造はATP結合で、野生型はAMPPNP結合。条件が異なる点は比較の注意点（著者はATP/AMPPNPで同様のねじれ角を報告）。9Q60・9Q5W のリガンドは ATP と登録されている。Tetra複合体のマップは EMDB のみで PDB の座標は Di・Mono。"
+  "editor_notes": "T331I側の構造はATP結合で、野生型はAMPPNP結合。条件が異なる点は比較の注意点（著者はATP/AMPPNPで同様のねじれ角を報告）。9Q60・9Q5W のリガンドは ATP と登録されている。Tetra複合体のマップは EMDB のみで PDB の座標は Di・Mono。",
+  "legend_labels": [
+    "MDA5（IFIH1）",
+    "dsRNA 鎖 1",
+    "dsRNA 鎖 2"
+  ]
 }

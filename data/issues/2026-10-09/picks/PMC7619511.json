@@ -53,5 +53,10 @@
     "クライオ電顕"
   ],
   "ligand_label": "Fab（D13r.34、D02-F2、D02-E4）",
-  "editor_notes": "クライオ電顕の方法（グリッド作製・収集条件）は補足資料にあり、本文 packet には無いため lab_notes は全て null。IpaB の構造決定は不成功と著者が述べている。構造は 2 つ（IpaD–D13r.34、IpaD–D02-F2–D02-E4）。"
+  "editor_notes": "クライオ電顕の方法（グリッド作製・収集条件）は補足資料にあり、本文 packet には無いため lab_notes は全て null。IpaB の構造決定は不成功と著者が述べている。構造は 2 つ（IpaD–D13r.34、IpaD–D02-F2–D02-E4）。",
+  "legend_labels": [
+    "IpaD（赤痢菌）",
+    "D13r-34 抗体 Fab（重鎖）",
+    "D13r-34 抗体 Fab（軽鎖）"
+  ]
 }

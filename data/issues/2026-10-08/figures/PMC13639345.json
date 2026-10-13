@@ -1,5 +1,12 @@
 {
  "pdb_id": "23TK",
- "legend": [],
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "FlhAC（A489E 変異体）",
+   "desc": "Flagellar biosynthesis protein FlhA",
+   "entity": "1"
+  }
+ ],
  "ligands": []
 }

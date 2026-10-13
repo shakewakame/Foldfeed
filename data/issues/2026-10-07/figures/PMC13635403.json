@@ -3,18 +3,26 @@
  "legend": [
   {
    "color": "#3C5A8C",
-   "label": "pntA"
+   "label": "PntA（NNT α サブユニット）",
+   "desc": "NAD(P) transhydrogenase subunit alpha",
+   "entity": "1"
   },
   {
    "color": "#C9A04B",
-   "label": "pntB"
+   "label": "PntB（NNT β サブユニット）",
+   "desc": "NAD(P) transhydrogenase subunit beta",
+   "entity": "2"
   }
  ],
  "ligands": [
   {
    "id": "NAP",
    "label": "NADP+",
-   "color": "#C23B8E"
+   "color": "#C23B8E",
+   "desc": "Nadp Nicotinamide-Adenine-Dinucleotide Phosphate",
+   "entity": [
+    "4"
+   ]
   }
  ],
  "site": {

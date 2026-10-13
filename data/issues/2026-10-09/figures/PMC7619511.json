@@ -3,15 +3,21 @@
  "legend": [
   {
    "color": "#3C5A8C",
-   "label": "ipaD"
+   "label": "IpaD（赤痢菌）",
+   "desc": "Invasin IpaD",
+   "entity": "1"
   },
   {
    "color": "#C9A04B",
-   "label": "D13r-34 antibody fragment heavy chain"
+   "label": "D13r-34 抗体 Fab（重鎖）",
+   "desc": "D13r-34 antibody fragment heavy chain",
+   "entity": "2"
   },
   {
    "color": "#5F9296",
-   "label": "D13r-34 antibody fragment light chain"
+   "label": "D13r-34 抗体 Fab（軽鎖）",
+   "desc": "D13r-34 antibody fragment light chain",
+   "entity": "3"
   }
  ],
  "ligands": []

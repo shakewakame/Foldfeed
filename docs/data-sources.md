@@ -10,6 +10,7 @@
 | `rest.uniprot.org` | UniProt（遺伝子名・別名・機能） | OK（一時的な 503 が出ることがあるので再試行を入れる） |
 | `api.crossref.org` | Crossref（公開当日の論文検出・ライセンス） | OK |
 | `search.rcsb.org` | RCSB Search API | 接続不可（必須ではない。PDBe の UniProt→PDB 対応表で代用できる） |
+| `models.rcsb.org` | 3D ビューア用の座標（BinaryCIF）。**閲覧者のブラウザ**が記事ページから直接取得する。開発環境・ルーティンは使わない | 閲覧者側で必要 |
 | `cdn.rcsb.org` | RCSB の構造画像 | 接続不可（不要。構造図は座標から自前で描く） |
 | `api.biorxiv.org` | bioRxiv | 接続不可（bioRxiv 対応時に許可する） |
 

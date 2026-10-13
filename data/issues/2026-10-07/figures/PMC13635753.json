@@ -1,11 +1,22 @@
 {
  "pdb_id": "8TX9",
- "legend": [],
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "SpNanR（転写調節因子）",
+   "desc": "MurR/RpiR family transcriptional regulator",
+   "entity": "1"
+  }
+ ],
  "ligands": [
   {
    "id": "BMX",
    "label": "ManNAc-6-P",
-   "color": "#C23B8E"
+   "color": "#C23B8E",
+   "desc": "2-acetamido-2-deoxy-6-O-phosphono-alpha-D-mannopyranose",
+   "entity": [
+    "2"
+   ]
   }
  ],
  "site": {

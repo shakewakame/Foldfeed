@@ -3,11 +3,15 @@
  "legend": [
   {
    "color": "#3C5A8C",
-   "label": "SIRT2"
+   "label": "SIRT2（脱アシル化酵素）",
+   "desc": "NAD-dependent protein deacetylase sirtuin-2",
+   "entity": "1"
   },
   {
    "color": "#C9A04B",
-   "label": "KMyrMe peptide"
+   "label": "KMyrMe ペプチド",
+   "desc": "KMyrMe peptide",
+   "entity": "2"
   }
  ],
  "ligands": []

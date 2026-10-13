@@ -34,7 +34,7 @@
 
 ![構造図：QatBC（大腸菌 QatABCD）](figures/PMC13639016.svg)
 
-<sub>色（順に）：7-cyano-7-deazaguanine synthase / DUF5610 domain-containing protein</sub>
+<sub>色（順に）：QatC（QueC 型タンパク質） / QatB</sub>
 
 **QatBのN末端が、QatCの活性部位に差し込まれていた**
 
@@ -128,6 +128,8 @@ QatBのN末端を天然のまま得るため、Gly2のコドンをUlp1切断部�
 
 ![構造図：FlhAC A489E（サルモネラ）](figures/PMC13639345.svg)
 
+<sub>色（順に）：FlhAC（A489E 変異体）</sub>
+
 **鞭毛輸送の基質切り替えを、塩橋網の組み換えが助ける可能性**
 
 サルモネラFlhAC A489E抑制変異体の結晶構造。Arg-386周辺の塩橋網が変わる
@@ -216,7 +218,7 @@ Arg-386をAlaに置換した変異体は、FliH・FliIがあれば運動性と�
 
 ![構造図：HIV-1プロテアーゼ PRp51](figures/PMC13638461.svg)
 
-<sub>スティック：ダルナビル（017）</sub>
+<sub>色（順に）：HIV-1 プロテアーゼ　スティック：ダルナビル（017）</sub>
 
 ![結合部位：ダルナビル](figures/PMC13638461-site.svg)
 

@@ -1,16 +1,31 @@
 {
  "pdb_id": "9ZLH",
- "legend": [],
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "RyR1（リアノジン受容体 1）",
+   "desc": "Ryanodine receptor 1",
+   "entity": "1"
+  }
+ ],
  "ligands": [
   {
    "id": "ADP",
    "label": "ADP",
-   "color": "#C23B8E"
+   "color": "#C23B8E",
+   "desc": "Adenosine-5'-Diphosphate",
+   "entity": [
+    "2"
+   ]
   },
   {
    "id": "U1C",
    "label": "ダントロレン",
-   "color": "#2F9E57"
+   "color": "#2F9E57",
+   "desc": "Dantrolene",
+   "entity": [
+    "3"
+   ]
   }
  ],
  "site": {

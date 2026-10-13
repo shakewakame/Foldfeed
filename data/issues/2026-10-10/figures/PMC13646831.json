@@ -3,22 +3,32 @@
  "legend": [
   {
    "color": "#3C5A8C",
-   "label": "IFIH1"
+   "label": "MDA5（IFIH1）",
+   "desc": "Interferon-induced helicase C domain-containing protein 1",
+   "entity": "1"
   },
   {
    "color": "#C9A04B",
-   "label": "RNA 13mer"
+   "label": "dsRNA 鎖 1",
+   "desc": "RNA 13mer",
+   "entity": "2"
   },
   {
    "color": "#5F9296",
-   "label": "RNA 13mer"
+   "label": "dsRNA 鎖 2",
+   "desc": "RNA 13mer",
+   "entity": "3"
   }
  ],
  "ligands": [
   {
    "id": "ANP",
    "label": "AMP-PNP",
-   "color": "#C23B8E"
+   "color": "#C23B8E",
+   "desc": "Phosphoaminophosphonic Acid-Adenylate Ester",
+   "entity": [
+    "4"
+   ]
   }
  ],
  "site": {

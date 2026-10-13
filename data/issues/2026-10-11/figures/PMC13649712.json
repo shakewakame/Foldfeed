@@ -1,5 +1,12 @@
 {
  "pdb_id": "8OK1",
- "legend": [],
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "WDR5（GST 融合体）",
+   "desc": "Glutathione S-transferase class-mu 26 kDa isozyme,WD repeat-containing protein 5",
+   "entity": "1"
+  }
+ ],
  "ligands": []
 }

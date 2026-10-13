@@ -1,16 +1,31 @@
 {
  "pdb_id": "31HX",
- "legend": [],
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "Rho（転写終結因子）",
+   "desc": "Transcription termination factor Rho",
+   "entity": "1"
+  }
+ ],
  "ligands": [
   {
    "id": "ADP",
    "label": "ADP",
-   "color": "#C23B8E"
+   "color": "#C23B8E",
+   "desc": "Adenosine-5'-Diphosphate",
+   "entity": [
+    "2"
+   ]
   },
   {
    "id": "BEF",
    "label": "BeF3",
-   "color": "#2F9E57"
+   "color": "#2F9E57",
+   "desc": "Beryllium Trifluoride Ion",
+   "entity": [
+    "4"
+   ]
   }
  ],
  "site": {

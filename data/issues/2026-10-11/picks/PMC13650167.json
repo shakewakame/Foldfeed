@@ -88,5 +88,8 @@
     "クライオ電顕"
   ],
   "ligand_label": "ADP・BeF3、pstC1 RNA",
-  "editor_notes": "candidatesのfirst_structureはtrueだが、本文は既報のMtbRho構造（ref 37）と比較しており、初構造とは書いていない。記事ではNIDが天然変性であることの実験的実証として扱った。"
+  "editor_notes": "candidatesのfirst_structureはtrueだが、本文は既報のMtbRho構造（ref 37）と比較しており、初構造とは書いていない。記事ではNIDが天然変性であることの実験的実証として扱った。",
+  "legend_labels": [
+    "Rho（転写終結因子）"
+  ]
 }

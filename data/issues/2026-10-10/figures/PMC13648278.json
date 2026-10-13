@@ -1,11 +1,22 @@
 {
  "pdb_id": "9N3I",
- "legend": [],
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "グリシンリボスイッチ（RNA）",
+   "desc": "Glycine Riboswitch",
+   "entity": "1"
+  }
+ ],
  "ligands": [
   {
    "id": "GLY",
    "label": "グリシン",
-   "color": "#C23B8E"
+   "color": "#C23B8E",
+   "desc": "Glycine",
+   "entity": [
+    "2"
+   ]
   }
  ],
  "site": {

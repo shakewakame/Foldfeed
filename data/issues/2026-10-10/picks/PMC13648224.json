@@ -79,5 +79,9 @@
   ],
   "ga_pdb_id": "30KD",
   "ligand_label": "ミリストイル-N-メチルリジンペプチド",
-  "editor_notes": "30KU（zSIRT5–KSucMe）は未公開のため図には使えない。HDACについての結論は活性測定とAlphaFold2モデルへのドッキングによる推定で、HDACの結晶構造はない。本文の誤植らしき表記（Suc/Acの取り違え）は触れていない。ligand_label は仮。"
+  "editor_notes": "30KU（zSIRT5–KSucMe）は未公開のため図には使えない。HDACについての結論は活性測定とAlphaFold2モデルへのドッキングによる推定で、HDACの結晶構造はない。本文の誤植らしき表記（Suc/Acの取り違え）は触れていない。ligand_label は仮。",
+  "legend_labels": [
+    "SIRT2（脱アシル化酵素）",
+    "KMyrMe ペプチド"
+  ]
 }

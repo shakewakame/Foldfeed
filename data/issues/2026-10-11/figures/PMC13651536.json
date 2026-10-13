@@ -3,18 +3,26 @@
  "legend": [
   {
    "color": "#3C5A8C",
-   "label": "Cytochrome P450"
+   "label": "NsRufO（P450）",
+   "desc": "Cytochrome P450",
+   "entity": "1"
   },
   {
    "color": "#C9A04B",
-   "label": "5-mer peptide"
+   "label": "ペプチド（5 残基）",
+   "desc": "5-mer peptide",
+   "entity": "2"
   }
  ],
  "ligands": [
   {
    "id": "HEM",
    "label": "ヘム",
-   "color": "#C23B8E"
+   "color": "#C23B8E",
+   "desc": "Protoporphyrin Ix Containing Fe",
+   "entity": [
+    "4"
+   ]
   }
  ],
  "site": {

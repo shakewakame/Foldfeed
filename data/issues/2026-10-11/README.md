@@ -41,7 +41,7 @@
 
 ![構造図：WzmWzt（結核菌）](figures/PMC13649706.svg)
 
-<sub>色（順に）：rfbD / rfbE　スティック：ファルネシルリン酸（A1E8P）、ATP</sub>
+<sub>色（順に）：Wzm（膜貫通サブユニット） / Wzt（ATP 結合サブユニット）　スティック：ファルネシルリン酸（A1E8P）、ATP</sub>
 
 ![結合部位：ファルネシルリン酸](figures/PMC13649706-site.svg)
 
@@ -140,7 +140,7 @@ TMD中央の空洞にはDDM分子が2つ入った中間的な状態も捉えた�
 
 ![構造図：HLA-DR3–Ro60ペプチド（ヒト）](figures/PMC13651826.svg)
 
-<sub>色（順に）：HLA-DRA / HLA-DRB1 / RO60</sub>
+<sub>色（順に）：HLA-DRα鎖 / HLA-DRβ鎖（DRB1） / Ro60 ペプチド</sub>
 
 **HLA-DR3のRo60ペプチド：TCRに見える3残基を特定**
 
@@ -234,7 +234,7 @@ HLA-DR3は発現収量が低く、Ro60ペプチドの直接発現は約0.3 mg/L�
 
 ![構造図：NsRufO（P450）](figures/PMC13651536.svg)
 
-<sub>色（順に）：Cytochrome P450 / 5-mer peptide　スティック：ヘム（HEM）</sub>
+<sub>色（順に）：NsRufO（P450） / ペプチド（5 残基）　スティック：ヘム（HEM）</sub>
 
 ![結合部位：ヘム](figures/PMC13651536-site.svg)
 
@@ -322,7 +322,7 @@ NsRufOの基質結合型構造（1.59 Å）では、Tyr-3とHis-5がヘムの真
 
 ![構造図：NHEJ短距離複合体＋Pol λ（ヒト）](figures/PMC13649775.svg)
 
-<sub>色（順に）：LIG4 / NHEJ1 / XRCC6 / XRCC5 / POLL / XRCC4 / DNA (34-MER) / DNA (34-MER) / PAXX</sub>
+<sub>色（順に）：LIG4（DNA リガーゼ 4） / XLF（NHEJ1） / Ku70（XRCC6） / Ku80（XRCC5） / Pol λ（POLL） / XRCC4 / DNA 鎖 1 / DNA 鎖 2 / PAXX</sub>
 
 **Pol λは、BRCTとN末端ペプチドで足場に係留される**
 
@@ -420,7 +420,7 @@ Pol λのBRCTドメインはKu70/80のブリッジをまたいで結合し、N�
 
 ![構造図：Rho（結核菌）](figures/PMC13650167.svg)
 
-<sub>スティック：ADP、BeF3（BEF）</sub>
+<sub>色（順に）：Rho（転写終結因子）　スティック：ADP、BeF3（BEF）</sub>
 
 ![結合部位：ADP](figures/PMC13650167-site.svg)
 
@@ -516,6 +516,8 @@ M495L置換を入れるとRhoが57 bpのRNA–DNAレポーター二重鎖を巻�
 *Nature Communications*（2026-01-01） · [論文](https://doi.org/10.1038/s41467-026-77583-0) · ライセンス: cc by
 
 ![構造図：WDR5–PER2 WBMペプチド（マウス）](figures/PMC13649712.svg)
+
+<sub>色（順に）：WDR5（GST 融合体）</sub>
 
 **PER2とPER1は、WDR5の別のポケットで結合する**
 

@@ -39,7 +39,7 @@
 
 ![構造図：MDA5（IFIH1）–dsRNA](figures/PMC13646831.svg)
 
-<sub>色（順に）：IFIH1 / RNA 13mer / RNA 13mer　スティック：AMP-PNP（ANP）</sub>
+<sub>色（順に）：MDA5（IFIH1） / dsRNA 鎖 1 / dsRNA 鎖 2　スティック：AMP-PNP（ANP）</sub>
 
 ![結合部位：AMP-PNP](figures/PMC13646831-site.svg)
 
@@ -137,6 +137,8 @@ T331Iのフィラメントはサブユニット間のねじれ角がほぼ一定
 *PLOS Pathogens*（2026-10-01） · [論文](https://doi.org/10.1371/journal.ppat.1014545.r004) · ライセンス: cc by
 
 ![構造図：MERS-CoVスパイク–DPP4](figures/PMC13648974.svg)
+
+<sub>色（順に）：MERS-CoV スパイク（S）</sub>
 
 **MERS-CoVスパイクの活性化を、時間ごとの連続像で捉えた**
 
@@ -238,7 +240,7 @@ T331Iのフィラメントはサブユニット間のねじれ角がほぼ一定
 
 ![構造図：グリシンリボスイッチ（コレラ菌）](figures/PMC13648278.svg)
 
-<sub>スティック：グリシン（GLY）</sub>
+<sub>色（順に）：グリシンリボスイッチ（RNA）　スティック：グリシン（GLY）</sub>
 
 ![結合部位：グリシン](figures/PMC13648278-site.svg)
 
@@ -327,7 +329,7 @@ RNAのみの2.9 Å構造。折り畳んだ集団はMg²⁺で約1/3、グリシ�
 
 ![構造図：SIRT2／SIRT5（ペプチド複合体）](figures/PMC13648224.svg)
 
-<sub>色（順に）：SIRT2 / KMyrMe peptide</sub>
+<sub>色（順に）：SIRT2（脱アシル化酵素） / KMyrMe ペプチド</sub>
 
 **N-メチル化したアシルリジンは、サーチュインに外されない**
 
@@ -415,7 +417,7 @@ SIRT2–ミリストイル-N-メチルリジンペプチド複合体（1.45 Å�
 
 ![構造図：PoOMT1（Paeonia ostii）](figures/PMC13646271.svg)
 
-<sub>スティック：4′-ヒドロキシアセトフェノン（AC6）、SAH</sub>
+<sub>色（順に）：PoOMT1（O-メチルトランスフェラーゼ）　スティック：4′-ヒドロキシアセトフェノン（AC6）、SAH</sub>
 
 ![結合部位：4′-ヒドロキシアセトフェノン](figures/PMC13646271-site.svg)
 

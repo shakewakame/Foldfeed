@@ -3,11 +3,15 @@
  "legend": [
   {
    "color": "#3C5A8C",
-   "label": "7-cyano-7-deazaguanine synthase"
+   "label": "QatC（QueC 型タンパク質）",
+   "desc": "7-cyano-7-deazaguanine synthase",
+   "entity": "1"
   },
   {
    "color": "#C9A04B",
-   "label": "DUF5610 domain-containing protein"
+   "label": "QatB",
+   "desc": "DUF5610 domain-containing protein",
+   "entity": "2"
   }
  ],
  "ligands": []

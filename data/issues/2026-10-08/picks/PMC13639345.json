@@ -83,5 +83,8 @@
     "AlphaFold3",
     "抑制変異"
   ],
-  "editor_notes": "FlhBとの相互作用はAlphaFold3予測のみで、実験的には未検証。本文の記載どおり「予測」「考えられる」で書いた。"
+  "editor_notes": "FlhBとの相互作用はAlphaFold3予測のみで、実験的には未検証。本文の記載どおり「予測」「考えられる」で書いた。",
+  "legend_labels": [
+    "FlhAC（A489E 変異体）"
+  ]
 }

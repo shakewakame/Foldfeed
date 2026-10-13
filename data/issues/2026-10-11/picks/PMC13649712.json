@@ -84,5 +84,8 @@
     "CRY"
   ],
   "ligand_label": "Inh-5（WIN部位阻害剤）",
-  "editor_notes": "PDBは8OK1（WDR5 N225A、1.38 Å）と8OKF（WDR5–PER2ペプチド、1.85 Å）。8OK1が最高分解能だが、論文の主張に近い8OKFを構造図に指定した。ligand_label の Inh-5 は構造には含まれない（8OKF の 144 は別のリガンドかもしれない）ので、レビューで確認してほしい。"
+  "editor_notes": "PDBは8OK1（WDR5 N225A、1.38 Å）と8OKF（WDR5–PER2ペプチド、1.85 Å）。8OK1が最高分解能だが、論文の主張に近い8OKFを構造図に指定した。ligand_label の Inh-5 は構造には含まれない（8OKF の 144 は別のリガンドかもしれない）ので、レビューで確認してほしい。",
+  "legend_labels": [
+    "WDR5（GST 融合体）"
+  ]
 }
