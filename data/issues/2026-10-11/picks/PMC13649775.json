@@ -5,9 +5,44 @@
   "subhead": "NHEJ短距離シナプス複合体にPol λが結合した構造をクライオ電顕で解析した",
   "target_label": "NHEJ短距離複合体＋Pol λ（ヒト）",
   "summary": {
-    "background": "NHEJでは末端のギャップや化学的ブロックを処理する酵素が働くが、コアのNHEJ複合体の中でどう取り込まれ連携するかは構造的に不明だった。",
-    "approach": "Ku70/80、XRCC4-LigIV、XLF、PAXXにPol λを加えた短距離複合体をGraFixで安定化しクライオ電顕で解析。XL-MSと再構成ライゲーション実験も行った。",
-    "findings": "Pol λのBRCTがKu70/80のブリッジに結合し、N末端ペプチドがLigIVのBRCT1に接する。Pol λとPNKPは同じ複合体内で協調して末端を処理する。"
+    "question": "末端処理酵素がNHEJの中核複合体にどう組み込まれ、協調するのかは構造的に不明だった。",
+    "approach": "Pol λが結合した短距離シナプス複合体のクライオ電顕構造を決め、複合体の活性も調べた。",
+    "result": "Pol λの結合のしかたが見え、Pol λとPNKPは同じ複合体内で協調して末端を処理した。",
+    "learned": "末端処理は短距離シナプスの間に繰り返し起こる、というモデルを示した。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Single-molecule studies in Xenopus egg extracts indicate that at least certain end-processing events occur during short-range synapsis19, but the molecular details underlying these processes’ coordination with the core NHEJ machinery remain unclear, particularly in terms of the structural accommodation of the accessory factors within the large protein-DNA complexes that mediate repair.",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "To investigate the molecular mechanisms underlying end-processing, we determine the cryo-EM structure of the NHEJ specific polymerase Pol λ bound to the short-range synaptic complex, detailing the mode of its recruitment to the complex as well as a putative model for its activity.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "We also examine the activity of in vitro reconstituted complexes to show that both Pol λ and PNKP can cooperatively process the same DNA substrate within a single protein complex.",
+          "section": "Introduction"
+        }
+      ],
+      "result": [
+        {
+          "quote": "To investigate the molecular mechanisms underlying end-processing, we determine the cryo-EM structure of the NHEJ specific polymerase Pol λ bound to the short-range synaptic complex, detailing the mode of its recruitment to the complex as well as a putative model for its activity.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Furthermore, the coordinated end-processing activities of the short-range (SR) synaptic complex simultaneously bound by both Pol λ and PNKP, another accessory factor, demonstrates the ability of NHEJ to form large, multifunctional repair complexes capable of processing a variety of different DNA end structures to effect repair.Subject terms: Cryoelectron microscopy, DNA",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Our results provide evidence for a model in which NHEJ end-processing occurs iteratively during short-range synapsis, with the core NHEJ factors forming a stable platform for the enzymes to flexibly access the DSB junction.",
+          "section": "Introduction"
+        }
+      ]
+    }
   },
   "highlights": [
     {
@@ -99,5 +134,9 @@
     "DNA 鎖 1",
     "DNA 鎖 2",
     "PAXX"
+  ],
+  "categories": [
+    "nucleic",
+    "enzyme"
   ]
 }

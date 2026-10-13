@@ -6,9 +6,48 @@
   "takeaway": "DNA-PKcsはKuがヌクレオソームの壁を越えるのを助け、NHEJ開始を可能にする",
   "target_label": "DNA-PK–ヌクレオソーム複合体",
   "summary": {
-    "background": "NHEJの開始にはKuとDNA-PKcsが約25〜30 bpの遊離二本鎖DNAを必要とするが、クロマチンではヌクレオソームが障壁になる。DNA-PKcsの役割は不明だった。",
-    "approach": "リンカー長の異なるヌクレオソーム基質で連結反応を測り、Ku単独とDNA-PKのヌクレオソーム複合体をクライオ電顕で複数状態解析した。",
-    "findings": "Kuは約2巻きのヌクレオソームDNAをほどき、Ku70がヒストンと接する。DNA-PKcsはリンカーの短い基質で連結を促し、Kuを内側へ押し込む中間状態も捉えた。"
+    "question": "Ku・DNA-PKcsは約28 bpの遊離DNAを要するが、クロマチンでは得にくい。DNA-PKcsの役割は不明だった。",
+    "approach": "ヌクレオソーム上での連結反応を測り、Ku・DNA-PKcsとの複合体をクライオ電顕で解析した。",
+    "result": "DNA-PKcsは、DNAに余裕のないヌクレオソーム上でもNHEJを促した。",
+    "learned": "Kuはヌクレオソームの障壁をDNA-PKcsの助けで越え、段階的にDNAに沿って進むと考えられる。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Ku and DNA-PKcs require ~28 base pairs of free duplex DNA, which is often unavailable in chromatin with nucleosomes acting as barriers.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "The role of DNA-PKcs remains unclear, as previous in vitro studies mainly used naked DNA.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here, in vitro ligation assays show that DNA-PKcs promotes NHEJ on nucleosomes with limited DNA accessibility.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Cryo-EM structures of nucleosome-bound Ku and DNA-PKcs reveal that Ku encounters nucleosomal barriers and overcomes them with DNA-PKcs.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "Here, in vitro ligation assays show that DNA-PKcs promotes NHEJ on nucleosomes with limited DNA accessibility.",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Cryo-EM structures of nucleosome-bound Ku and DNA-PKcs reveal that Ku encounters nucleosomal barriers and overcomes them with DNA-PKcs.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Distinct structural states support a stepwise model of DNA-PK progressive translocating along nucleosomal DNA, highlighting DNA-PKcs function in chromatin-associated NHEJ in vivo.",
+          "section": "Abstract"
+        }
+      ]
+    }
   },
   "highlights": [
     {
@@ -95,5 +134,10 @@
     "ヒストン H2B",
     "DNA 鎖 1",
     "DNA 鎖 2"
+  ],
+  "categories": [
+    "kinase",
+    "nucleic",
+    "chromatin"
   ]
 }

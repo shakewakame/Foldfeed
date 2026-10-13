@@ -6,9 +6,48 @@
   "takeaway": "代謝物ManNAc-6-Pが3分子をまたいで四量体を固定し、DNA結合力は変えない",
   "target_label": "SpNanR（肺炎球菌）",
   "summary": {
-    "background": "肺炎球菌はシアル酸を感知してnan・siaAオペロンを活性化するが、RpiR型転写因子NanRによる活性化の分子機構は分かっていなかった。",
-    "approach": "エフェクター探索（DSF・ITC）、超遠心・native MS・SAXSによる会合状態の解析に加え、apo、エフェクター結合型、DNA複合体のX線結晶構造を決定した。",
-    "findings": "N-アセチルマンノサミン-6-リン酸（ManNAc-6-P）が二量体–四量体平衡を四量体側へ2000倍以上傾ける一方、DNAへの親和性は変えない。DNA結合ドメインが異性化酵素ドメインと構造的に連動しないためと説明できる。"
+    "question": "NanRがシアル酸の代謝遺伝子をどう活性化するのか、分子レベルでは不明だった。",
+    "approach": "代謝物の探索と解析に加え、apo型・代謝物結合型・DNA結合型の全長構造を決めた。",
+    "result": "代謝物が結合すると四量体が安定化するが、DNAへの親和性は変わらない。",
+    "learned": "DNA結合ドメインが糖イソメラーゼドメインと構造的に連動しないためと説明される。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "In Streptococcus pneumoniae, the RpiR transcriptional regulator NanR (SpNanR) senses sialic acid in the environment and upregulates transcription of the nan and sia A operons to increase uptake and metabolism of sialic acid.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "The molecular basis of this activation is unknown.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "We identify the effector that binds SpNanR to regulate expression of the nan and siaA operons.",
+          "section": "Introduction"
+        },
+        {
+          "quote": "We report the first full-length structures of the RpiR family transcriptional regulator SpNanR, including the unbound (apo) SpNanR crystal structure, SpNanR in complex with N-acetylmannosamine-6-phosphate, and SpNanR in complex with its cognate DNA recognition sequence.",
+          "section": "Introduction"
+        }
+      ],
+      "result": [
+        {
+          "quote": "SpNanR exists in a dimer–tetramer equilibrium, and N-acetylmannosamine-6-phosphate binding strongly stabilizes the tetramer.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Notably, the effector N-acetylmannosamine-6-phosphate does not affect the affinity of SpNanR for DNA.",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "The DNA-binding domains are not structurally coupled to the sugar isomerase domains, explaining why N-acetylmannosamine-6-phosphate binding does not affect DNA binding.",
+          "section": "Abstract"
+        }
+      ]
+    }
   },
   "highlights": [
     {
@@ -94,5 +133,8 @@
   "editor_notes": "PDB エントリーは 2024–2025 年に公開済みで、論文の引用情報はまだ PDB に反映されていない（データ可用性の記載から本論文の寄託と判定）。",
   "legend_labels": [
     "SpNanR（転写調節因子）"
+  ],
+  "categories": [
+    "regulation"
   ]
 }

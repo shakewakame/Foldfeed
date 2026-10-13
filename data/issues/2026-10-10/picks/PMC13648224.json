@@ -5,9 +5,40 @@
   "subhead": "SIRT2とSIRT5の結晶構造では、基質の位置が乱れ、切断に向かない向きになっていた",
   "target_label": "SIRT2／SIRT5（ペプチド複合体）",
   "summary": {
-    "background": "ヒストンH4で見つかったN-アセチル-N-メチルリジン（KAcMe）が、HDACやサーチュインで除去できるかは不明だった。",
-    "approach": "KAcMeなどのモデルペプチドを合成し、HDAC1–11とSIRT1–6で脱アシル化を調べ、SIRT2・SIRT5とペプチドの結晶構造を決めた。",
-    "findings": "KAcMeはどの酵素にも検出可能な脱アセチル化を受けなかった。N-メチル化は基質の位置を乱し、切断されるアミド結合が触媒に不適な向きになる。"
+    "question": "ヒストンH4で見つかったN-アセチル-N-メチルリジンを、酵素で外せるかは不明だった。",
+    "approach": "モデルペプチドを合成してHDACとサーチュインの活性を調べ、結晶構造も決めた。",
+    "result": "N-メチル化したペプチドは、どちらの酵素族でも検出できる脱アセチル化を受けなかった。",
+    "learned": "N-メチル化が基質の位置決めを乱し、切断される結合の向きがずれるためと考えられる。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "The recent discovery of N-acetyl-N-methyl lysine (KAcMe) on histone H4 showed that both marks can coexist on the same lysine side chain, raising the question of whether this dual modification is enzymatically reversible.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here, we synthesized model peptides containing N-acyl lysine or N-acyl-N-methyl lysine residues and tested their processing by Zn2+-dependent HDACs and NAD+-dependent sirtuins.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "X-ray crystal structures of sirtuin–peptide complexes, supported by inhibition studies and molecular docking, reveal that N-methylation disrupts productive substrate positioning and misaligns the scissile amide bond for catalysis.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "While the corresponding unmethylated substrates were deacylated by the expected enzymes, KAcMe-containing peptides were not detectably deacetylated by either enzyme family.",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "X-ray crystal structures of sirtuin–peptide complexes, supported by inhibition studies and molecular docking, reveal that N-methylation disrupts productive substrate positioning and misaligns the scissile amide bond for catalysis.",
+          "section": "Abstract"
+        }
+      ]
+    }
   },
   "highlights": [
     {
@@ -83,5 +114,9 @@
   "legend_labels": [
     "SIRT2（脱アシル化酵素）",
     "KMyrMe ペプチド"
+  ],
+  "categories": [
+    "enzyme",
+    "chromatin"
   ]
 }

@@ -5,9 +5,40 @@
   "subhead": "受容体DPP4と1〜120時間反応させ、融合後のS2を3.23 Åで解析した",
   "target_label": "MERS-CoVスパイク–DPP4",
   "summary": {
-    "background": "MERS-CoVの受容体DPP4への結合が、どう膜融合につながるのかは、SARS-CoV-2に比べて理解が遅れていた。",
-    "approach": "野生型スパイク外部ドメインと可溶性DPP4を25 °Cで1、24、72、120時間混合し、各時点をクライオ電顕で解析した。",
-    "findings": "RBDが開くほどS1–S2界面が弱まり、3-up状態は不安定でS1が解離する。72時間以降の融合後S2を3.23 Åで解いた。"
+    "question": "受容体結合が膜融合にどう結びつくのかは、構造的に不明だった。",
+    "approach": "スパイクとDPP4を一定時間反応させ、各時点の構造をクライオ電顕で決めた。",
+    "result": "RBDが開くほどS1–S2の結びつきが弱まり、融合後のS2構造も得られた。",
+    "learned": "MERS-CoVのスパイクはSARS-CoV-2より柔軟で、融合が起こりやすい性質と整合する。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "However, how receptor binding is structurally coupled to membrane fusion has remained unclear.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here, using cryo–electron microscopy, we determined structures of MERS-CoV spike-DPP4 complexes at defined incubation times, capturing a series of conformational states spanning prefusion, receptor-bound, and postfusion conformations.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "These structures reveal that receptor-binding domain (RBD) opening progressively weakens S1-S2 interactions, while DPP4 binding may induce conformational drift and loosening of the S2 fusion core.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Here, using cryo–electron microscopy, we determined structures of MERS-CoV spike-DPP4 complexes at defined incubation times, capturing a series of conformational states spanning prefusion, receptor-bound, and postfusion conformations.",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Compared with the SARS-CoV-2 spike, the MERS-CoV spike exhibits greater conformational plasticity, consistent with a lower threshold for receptor-induced fusion.",
+          "section": "Abstract"
+        }
+      ]
+    }
   },
   "highlights": [
     {
@@ -95,5 +126,9 @@
   "editor_notes": "著者は、構造は離散的なスナップショットで、反応が実際の侵入より遥かに遅い（可溶性タンパク質、25 °C、膜・プロテアーゼなし）in vitro の条件下のものと明記している。SARS-CoV-2より活性化が遅いという比較は他論文の条件との定性的比較。DPP4ダイマーによるトリマー間架橋は推測。ga_pdb_id=22EC は融合後S2で、DPP4を含まない。DPP4との複合体を示すには 22EA（3-up）も候補。",
   "legend_labels": [
     "MERS-CoV スパイク（S）"
+  ],
+  "categories": [
+    "pathogen",
+    "receptor"
   ]
 }

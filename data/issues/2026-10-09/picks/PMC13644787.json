@@ -6,9 +6,40 @@
   "takeaway": "クライオ電顕の静的構造とssNMRの動態を組み合わせ、MscLの開口初期の揺らぎを捉えた",
   "target_label": "大腸菌MscL（WT・G22S）",
   "summary": {
-    "background": "MscLは膜張力だけで開くモデルチャネルだが、大腸菌のMscLは全長の構造が決まっておらず、脂質膜中の動態も不明だった。",
-    "approach": "WTと低閾値変異体G22Sを、ペプチド（MSP）ナノディスクでクライオ電顕解析し（3.7 / 3.5 Å）、リポソーム中のssNMRで動態を比べた。",
-    "findings": "どちらも口径約2 Åで閉じた構造だった。G22SはNMRで周辺質ループの信号が消え、F78周辺などが摂動し、動態の増大を示した。"
+    "question": "大腸菌MscLの全体構造は未決定で、ゲート開閉の仕組みも不完全にしか分かっていなかった。",
+    "approach": "野生型とG22S変異体をナノディスク中でクライオ電顕解析し、リポソーム中のNMRで動態を調べた。",
+    "result": "クライオ電顕ではどちらも閉じた構造だった。G22SではNMRで広い範囲の構造変化が見えた。",
+    "learned": "変異体は動態が大きく、閉状態から開状態への初期の移行が見えているとされる。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Mechanosensitive channels are central to cellular responses to membrane tension, yet the structural basis of their gating remains incompletely understood.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "S2), a complete structure of MscL from E. coli has remained elusive.",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here, we determine the structures of wild-type and Gly22→Ser (G22S) mutants of MscL from Escherichia coli (EcMscL) by cryogenic electron microscopy (cryo-EM) in peptide-based lipid nanodiscs and complement them with solid-state nuclear magnetic resonance (NMR) measurements in liposomes to capture their dynamics in a native-like membrane environment.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "The cryo-EM structures reveal a closed conformation, whereas analysis of the low-threshold G22S mutant by NMR uncovers widespread conformational changes in both cytoplasmic and periplasmic regions.",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "These data indicate enhanced dynamics and conformational heterogeneity in the mutant, revealing the early transitions from the closed toward the open state.",
+          "section": "Abstract"
+        }
+      ]
+    }
   },
   "highlights": [
     {
@@ -93,5 +124,8 @@
   "editor_notes": "「初の高分解能構造」は著者の記述（Discussion）に基づく。PL・CTD は密度が弱くモデルから外れている。WT/G22S の 3.7 / 3.5 Å は PDB 値と一致。lab_notes の purification は主要工程が packet で確認できなかったため null。",
   "legend_labels": [
     "MscL（機械受容チャネル）"
+  ],
+  "categories": [
+    "channel"
   ]
 }

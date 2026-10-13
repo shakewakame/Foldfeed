@@ -6,9 +6,44 @@
   "target_label": "PSII C2S2（シロイヌナズナ）",
   "method_label": "クライオ電顕・全体 2.74 Å",
   "summary": {
-    "background": "強光と高温はPSIIを傷める。D1の損傷と修復は知られるが、損傷したPSII複合体の構造変化を直接見た例は限られていた。",
-    "approach": "精製したPSII C2S2に2000 µEの光を30分当てて（約29°Cまで昇温）急速凍結し、クライオ電顕で2.74 Åの平均構造を決めた。対照は暗所で凍結した既報の構造。",
-    "findings": "LHCIIトリマーなどの周辺サブユニットが脱離し、非ヘム鉄周辺のD1・D2ループが見えなくなる。重炭酸イオンの密度もなく、D1 His252が向きを変える。"
+    "question": "強光と高温はPSIIを傷める。その構造への影響を調べることが課題だった。",
+    "approach": "単離したPSII（C2S2）に強光と昇温を与え、クライオ電顕で構造を決めた。",
+    "result": "アンテナなどのサブユニットが失われ、非ヘム鉄付近のD1・D2で損傷が見え、重炭酸も外れていた。",
+    "learned": "D1のHis252が動き、セリンプロテアーゼ様の三つ組を作ってD1の自己切断を招く可能性がある。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "While light is required to drive the photochemical reactions, high light and high temperature can be damaging to PS II.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Our aim is to gain structural insight into the photoprotection and photodamage processes in PSII.",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "To gain insight into potential structural consequences of such conditions, we performed an exploratory study where isolated PS II complexes (C2S2) from Arabidopsis thaliana were exposed to high light and elevated temperature and employed cryo-electron microscopy for structural determination.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "The high light structure is missing several of the subunits present in the control, including the strongly bound light-harvesting antenna complexes as well as several small transmembrane and extrinsic subunits.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Beyond the loss of subunits, the clearest evidence of specific photodamage was found on the acceptor side of the D1 and D2 subunits near the non-heme iron, including the loss of the bicarbonate ligand of the non-heme iron.",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Finally, we were able to observe that high light/elevated temperature conditions result in the movement of the D1:His252 residue, potentially forming a serine protease triad that may trigger auto-proteolysis of the D1 subunit.Supplementary InformationThe online version contains supplementary material available at https://doi.org/10.1007/s11120-026-01238-w.Keywords: Photosynthesis, Photosystem II, Structure, Cryo-EM, High light, High temperature",
+          "section": "Abstract"
+        }
+      ]
+    }
   },
   "highlights": [
     {
@@ -88,5 +123,8 @@
     "クライオ電顕",
     "高光強度"
   ],
-  "editor_notes": "対照構造は 9I4T（既報）。PDB 31FD は未公開（released ではない）のため、PDB 由来の分解能・リガンドは取得できず、method_label に本文の値（2.74 Å）を入れた。構造図は作れない可能性が高い。探索的研究と著者自身が位置づけており、仮説（セリンプロテアーゼ様トライアド）は推測として書いた。"
+  "editor_notes": "対照構造は 9I4T（既報）。PDB 31FD は未公開（released ではない）のため、PDB 由来の分解能・リガンドは取得できず、method_label に本文の値（2.74 Å）を入れた。構造図は作れない可能性が高い。探索的研究と著者自身が位置づけており、仮説（セリンプロテアーゼ様トライアド）は推測として書いた。",
+  "categories": [
+    "photosynthesis"
+  ]
 }

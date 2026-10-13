@@ -18,15 +18,17 @@ the three-part summary, 読みどころ with the original sentences always shown
 from __future__ import annotations
 
 import argparse
+import datetime
 import html
 import json
 import shutil
 import sys
+import unicodedata
 from pathlib import Path
 
 from . import brand, impact, render
 from .common import ISSUES_DIR, ROOT, read_json
-from .schema import FEATURE_AXES, FEATURE_MIN, LAB_NOTE_FIELDS
+from .schema import CATEGORIES, FEATURE_AXES, FEATURE_MIN, LAB_NOTE_FIELDS, SUMMARY_FIELDS
 
 SITE_DIR = ROOT / "site"
 TH = brand.THEME
@@ -38,8 +40,10 @@ CSS = f"""
   --desc:{TH.desc}; --hair:{TH.hair}; --acc:{TH.accent}; --acc-ink:{TH.accent_ink};
   --serif:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",YuMincho,"BIZ UDMincho",Georgia,serif;
   --latin:Georgia,"Times New Roman","Noto Serif JP",serif;
+  --sans:"Noto Sans JP","Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",Meiryo,sans-serif;
   --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
-  --col:240px; --side:320px; --pad:48px;
+  --band:{TH.soft};
+  --col:240px; --side:320px; --pad:60px;
 }}
 * {{ box-sizing:border-box; }}
 html, body {{ margin:0; background:var(--ground); }}
@@ -49,7 +53,7 @@ a {{ color:inherit; text-decoration:none; text-underline-offset:3px; }}
 h2, h3, .headline, .subhead, .sub {{ word-break:auto-phrase; line-break:strict; }}
 a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-color:var(--acc); }}
 .kicker a {{ text-decoration:underline; text-decoration-color:var(--acc); }}
-.wrap {{ max-width:1800px; margin:0 auto; padding:0 var(--pad); }}
+.wrap {{ max-width:1720px; margin:0 auto; padding:0 var(--pad); }}
 .mk {{ color:var(--acc-ink); font-weight:700; }}
 .label {{ margin:0; font-family:var(--mono); font-size:12px; letter-spacing:.14em; font-weight:500;
           color:var(--mute); text-transform:uppercase; padding-top:6px; }}
@@ -114,8 +118,8 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .row .rp {{ grid-area:rp; }}
 .rk {{ display:none; margin:0 0 3px; font-family:var(--mono); font-size:11.5px; letter-spacing:.04em; color:var(--mute); line-height:1.6; }}
 .rk .n {{ color:var(--acc-ink); font-weight:700; margin-right:10px; }}
-.row h3 {{ margin:0; font-size:22px; line-height:1.5; font-weight:700; color:var(--ink); text-wrap:balance; }}
-.row .sub {{ margin:3px 0 0; font-size:15px; line-height:1.75; color:var(--desc); }}
+.row h3 {{ margin:0; font-family:var(--sans); font-size:21px; line-height:1.5; font-weight:700; color:var(--ink); text-wrap:balance; }}
+.row .sub {{ margin:3px 0 0; font-family:var(--sans); font-size:14px; line-height:1.8; color:var(--desc); }}
 .row .rm {{ margin:5px 0 0; font-family:var(--mono); font-size:11px; color:var(--mute); line-height:1.6; }}
 .thumb {{ display:block; border:1px solid var(--hair); }}
 .thumb img {{ display:block; width:100%; height:auto; }}
@@ -262,14 +266,91 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .colophon {{ padding-top:16px; padding-bottom:70px; font-size:12.5px; color:var(--mute); line-height:1.8; }}
 .colophon p {{ margin:0 0 6px; max-width:760px; }}
 
+
+/* the front page: a tinted band across the window with the day's pick, then the lists */
+.band {{ background:var(--band); border-bottom:2px solid var(--ink); }}
+.stats {{ display:flex; flex-wrap:wrap; gap:8px 44px; margin:0; padding:20px 0 18px; border-bottom:1px solid var(--hair); }}
+.stats div {{ display:flex; align-items:baseline; gap:10px; }}
+.stats dt {{ font-family:var(--mono); font-size:11px; letter-spacing:.12em; color:var(--mute); }}
+.stats dd {{ margin:0; font-family:var(--mono); font-size:13px; color:var(--ink); }}
+.stats dd b {{ font-family:var(--latin); font-size:28px; line-height:1; font-weight:700; letter-spacing:-.02em; margin:0 3px 0 0; }}
+.stats .new b {{ color:var(--acc-ink); }}
+.band .hero {{ margin-top:0; padding:34px 0 48px; }}
+.band .hero h3 {{ font-size:46px; line-height:1.34; }}
+.band .hero .sub {{ font-size:19px; }}
+.sec {{ margin-top:56px; }}
+.sec > .ix-h {{ border-top:2px solid var(--ink); }}
+.sec .lead {{ margin:14px 0 0; font-size:14.5px; color:var(--desc); }}
+.sec-more {{ margin:6px 0 0; font-family:var(--mono); font-size:13px; }}
+.sec-more a {{ text-decoration:underline; text-decoration-color:var(--acc); text-underline-offset:4px; }}
+.find {{ display:flex; gap:8px; margin:16px 0 0; }}
+.find input {{ flex:1; min-width:0; font:inherit; font-family:var(--sans); font-size:14.5px; padding:10px 12px; color:var(--ink);
+               border:1px solid var(--ink); background:transparent; border-radius:0; }}
+.find input::placeholder {{ color:var(--mute); }}
+.find button {{ font:inherit; font-family:var(--mono); font-size:13px; padding:10px 18px; border:1px solid var(--ink);
+                background:var(--ink); color:#fff; cursor:pointer; border-radius:0; }}
+.find button:hover {{ background:var(--acc-ink); border-color:var(--acc-ink); }}
+.cats {{ list-style:none; margin:12px 0 0; padding:0; display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:0 40px; }}
+.cats a {{ display:flex; justify-content:space-between; align-items:baseline; gap:12px; padding:10px 0; font-family:var(--sans);
+           font-size:15px; border-bottom:1px solid var(--hair); }}
+.cats .c {{ font-family:var(--mono); font-size:12px; color:var(--mute); }}
+.mail-grid {{ display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,1fr); gap:48px; margin-top:16px; align-items:start; }}
+.mail p {{ margin:0 0 8px; font-size:15px; color:var(--desc); }}
+.mail ul {{ margin:6px 0 0; padding-left:1.3em; font-size:14.5px; color:var(--desc); }}
+.mail .soon {{ font-family:var(--mono); font-size:12px; letter-spacing:.06em; color:var(--acc-ink); }}
+.mail form {{ display:flex; gap:8px; }}
+.mail input:disabled, .mail button:disabled {{ opacity:.5; cursor:not-allowed; }}
+.mail .fine {{ margin-top:10px; font-size:12.5px; color:var(--mute); }}
+
+/* an issue page opens with its date, large */
+.ihead {{ display:grid; grid-template-columns:var(--col) minmax(0,1fr); gap:28px; padding:44px 0 6px; align-items:end; }}
+.idate {{ line-height:1; }}
+.idate .y {{ display:block; font-family:var(--mono); font-size:15px; letter-spacing:.14em; color:var(--mute); }}
+.idate .md {{ display:block; font-family:var(--latin); font-size:84px; letter-spacing:-.045em; font-weight:700; color:var(--ink);
+              margin:8px 0 10px; white-space:nowrap; }}
+.idate .wd {{ display:block; font-family:var(--mono); font-size:13px; letter-spacing:.12em; color:var(--acc-ink); }}
+.ihead h1 {{ margin:0; font-size:34px; line-height:1.35; }}
+.ihead .ic {{ margin:6px 0 0; font-family:var(--mono); font-size:13.5px; color:var(--ink2); }}
+.ihead .in {{ margin:12px 0 0; display:flex; flex-wrap:wrap; gap:6px 24px; font-family:var(--mono); font-size:12.5px; }}
+.ihead .in a {{ text-decoration:underline; text-decoration-color:var(--acc); text-underline-offset:4px; }}
+.issue-body .toc {{ margin-top:30px; }}
+.row.feat {{ border-left:4px solid var(--acc); padding-left:18px; margin-left:-22px; }}
+.row.feat h3 {{ font-size:23px; }}
+.feat-mark {{ display:block; margin:0 0 2px; font-family:var(--mono); font-size:11px; letter-spacing:.12em; color:var(--acc-ink); font-weight:700; }}
+
+/* the article's four-line introduction */
+.intro4 {{ margin:8px 0 0; }}
+.intro4 div {{ display:grid; grid-template-columns:150px minmax(0,1fr); gap:16px; padding:10px 0; border-top:1px solid var(--hair); }}
+.intro4 div:last-child {{ border-bottom:1px solid var(--hair); }}
+.intro4 dt {{ font-family:var(--mono); font-size:11.5px; letter-spacing:.08em; color:var(--acc-ink); padding-top:5px; }}
+.intro4 dd {{ margin:0; font-size:16px; line-height:1.85; }}
+.intro4 .learned dd {{ font-weight:700; }}
+
+/* proteins.html: browse by kind of protein, search by name or ID */
+.pp-head h1 {{ margin:40px 0 4px; font-size:34px; line-height:1.4; }}
+.pp-head p {{ margin:0; color:var(--desc); font-size:15px; }}
+.pg {{ margin-top:40px; scroll-margin-top:20px; }}
+.pr {{ display:grid; grid-template-columns:132px minmax(0,1fr) 250px; gap:6px 22px; padding:13px 0; border-top:1px solid var(--hair);
+       align-items:baseline; }}
+.pr .pd {{ font-family:var(--mono); font-size:12px; color:var(--mute); white-space:nowrap; }}
+.pr .pt {{ font-family:var(--sans); font-size:17px; font-weight:700; line-height:1.55; }}
+.pr .ps {{ display:block; margin-top:2px; font-family:var(--sans); font-size:13.5px; font-weight:400; color:var(--desc); }}
+.pr .pm {{ font-family:var(--mono); font-size:11.5px; line-height:1.7; color:var(--ink2); overflow-wrap:anywhere; }}
+.pr .pm i {{ color:var(--mute); font-style:normal; letter-spacing:.08em; margin-right:6px; }}
+.pg-none {{ display:none; margin-top:30px; font-family:var(--mono); font-size:13px; color:var(--acc-ink); }}
+.sd-cats a {{ display:flex; justify-content:space-between; gap:12px; padding:5px 0; font-family:var(--sans); font-size:14px; }}
+.sd-cats .c {{ font-family:var(--mono); font-size:12px; color:var(--mute); }}
+
 @media (min-width:1500px) {{
   body {{ font-size:17px; }}
 }}
 @media (max-width:1560px) {{
-  :root {{ --col:200px; --side:290px; --pad:36px; }}
+  :root {{ --col:200px; --side:290px; --pad:44px; }}
   .shell {{ gap:0 40px; }}
   .side {{ padding-left:26px; }}
   .hero-grid {{ grid-template-columns:minmax(0,46fr) minmax(0,54fr); gap:32px; }}
+  .band .hero h3 {{ font-size:36px; }}
+  .idate .md {{ font-size:64px; }}
   .hero h3 {{ font-size:30px; }}
   .hero .sub {{ font-size:16.5px; }}
   .hf {{ grid-template-columns:repeat(2,minmax(0,1fr)); }}
@@ -290,7 +371,17 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
   .word .name {{ font-size:32px; }}
   .mast-row {{ flex-wrap:wrap; align-items:flex-start; }}
   .vol {{ text-align:left; }}
-  .art {{ grid-template-columns:minmax(0,1fr); gap:14px; }}
+  .art, .ihead {{ grid-template-columns:minmax(0,1fr); gap:14px; }}
+  .band .hero h3 {{ font-size:28px; }}
+  .band .hero {{ padding:24px 0 32px; }}
+  .stats {{ gap:6px 26px; }}
+  .idate .md {{ font-size:58px; display:inline-block; margin:0 14px 0 0; }}
+  .idate .y, .idate .wd {{ display:inline-block; }}
+  .ihead h1 {{ font-size:26px; }}
+  .intro4 div {{ grid-template-columns:minmax(0,1fr); gap:0; }}
+  .mail-grid {{ grid-template-columns:minmax(0,1fr); gap:20px; }}
+  .pr {{ grid-template-columns:minmax(0,1fr); }}
+  .row.feat {{ margin-left:0; padding-left:14px; }}
   .row {{ grid-template-columns:116px minmax(0,1fr); grid-template-areas:"th rt" "th rf" "th rp"; gap:4px 14px;
           align-items:start; padding:16px 0; }}
   .row .no {{ display:none; }}
@@ -338,13 +429,21 @@ def jp_date(date: str) -> str:
     return f"{y}年{m}月{d}日"
 
 
+WEEKDAY_JA = "月火水木金土日"
+
+
+def date_parts(date: str) -> tuple[int, int, int, str]:
+    y, m, d = (int(x) for x in date.split("-"))
+    return y, m, d, WEEKDAY_JA[datetime.date(y, m, d).weekday()]
+
+
 def doi_url(cand: dict) -> str:
     return f"https://doi.org/{cand['doi']}" if cand.get("doi") else \
         f"https://europepmc.org/article/PMC/{cand['pmcid']}"
 
 
 def page(title: str, body: str, depth: int, description: str = DESCRIPTION, noindex: bool = False,
-         viewer: bool = False) -> str:
+         viewer: bool = False, script: str = "") -> str:
     up = "../" * depth
     return (f'<!doctype html><html lang="ja"><head><meta charset="utf-8">'
             f'<meta name="viewport" content="width=device-width, initial-scale=1">'
@@ -357,9 +456,10 @@ def page(title: str, body: str, depth: int, description: str = DESCRIPTION, noin
             f'<link rel="icon" href="{up}assets/logo-mark.svg">'
             f'<link rel="preconnect" href="https://fonts.googleapis.com">'
             f'<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
-            f'<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap">'
+            f'<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">'
             f'<style>{CSS}</style></head><body><div class="page">{body}</div>'
-            + (f'<script src="{up}assets/viewer.js" defer></script>' if viewer else "") + '</body></html>')
+            + (f'<script src="{up}assets/viewer.js" defer></script>' if viewer else "")
+            + (f'<script>{script}</script>' if script else "") + '</body></html>')
 
 
 def masthead(depth: int, right: str = "") -> str:
@@ -542,6 +642,11 @@ def figures_html(cand: dict, pick: dict, date: str, root: Path, fig_base: str, u
 def article_html(cand: dict, pick: dict, date: str, n: int, root: Path, fig_base: str,
                  impact_type: str | None = None, up: str = "../") -> str:
     s = pick["summary"]
+    if "question" in s:
+        intro = "".join(f'<div class="{k}"><dt>{label}</dt><dd>{esc(s[k])}</dd></div>' for k, label in SUMMARY_FIELDS.items())
+    else:  # an issue written before the four-line introduction (e.g. an old pull request being previewed)
+        intro = "".join(f'<div><dt>{label}</dt><dd>{esc(s.get(k, ""))}</dd></div>'
+                        for k, label in (("background", "背景"), ("approach", "やったこと"), ("findings", "分かったこと")))
     lic = esc((cand.get("license") or "ライセンス不明").upper())
     hls = "".join(f'<div class="hl"><p>{esc(h["text"])}</p>{quotes(h.get("evidence"))}</div>'
                   for h in pick["highlights"])
@@ -559,9 +664,7 @@ def article_html(cand: dict, pick: dict, date: str, n: int, root: Path, fig_base
             f'{figures_html(cand, pick, date, root, fig_base, up)}'
             f'<p class="headline">{esc(pick["headline"])}</p>'
             f'<p class="subhead">{esc(pick.get("subhead") or "")}</p>'
-            f'<p class="sum"><b>背景</b>{esc(s["background"])}</p>'
-            f'<p class="sum"><b>やったこと</b>{esc(s["approach"])}</p>'
-            f'<p class="sum"><b>分かったこと</b>{esc(s["findings"])}</p>'
+            f'<dl class="intro4">{intro}</dl>'
             f'<h3>読みどころ</h3>{hls}{lab}</div>')
     return f'<article class="art" id="a{n}">{margin_html(cand, pick, n, impact_type)}{text}</article>'
 
@@ -635,14 +738,16 @@ def facts(cand: dict, pick: dict) -> dict:
             "first": any(p.get("first_structure") for p in prots)}
 
 
-def row_html(cand: dict, pick: dict, n: int, date: str, root: Path, fig_base: str, href_base: str) -> str:
+def row_html(cand: dict, pick: dict, n: int, date: str, root: Path, fig_base: str, href_base: str,
+             feat: bool = False) -> str:
     """One row of the index: number | headline and supplement | TARGET METHOD RES. | structure | PDB."""
     href = f"{href_base}#a{n}"
     f = facts(cand, pick)
     dl = "".join(f"<div><dt>{k}</dt><dd>{esc(v)}</dd></div>"
                  for k, v in (("TARGET", f["target"]), ("METHOD", f["method"]), ("RES.", f["res"])))
     first = '<span class="mk">PDB 初構造</span>' if f["first"] else ""
-    return (f'<li class="row"><span class="no">{pad(n)}</span><div class="rt">'
+    mark = '<span class="feat-mark">今日の一本</span>' if feat else ""
+    return (f'<li class="row{" feat" if feat else ""}"><span class="no">{pad(n)}</span><div class="rt">{mark}'
             f'<p class="rk"><span class="n">{pad(n)}</span></p>\n'
             f'<h3><a href="{href}">{esc(pick["headline"])}</a></h3>\n'
             f'<p class="sub">{esc(pick.get("subhead") or "")}</p>'
@@ -652,17 +757,19 @@ def row_html(cand: dict, pick: dict, n: int, date: str, root: Path, fig_base: st
 
 
 def contents_html(picks: list, date: str, root: Path, fig_base: str, href_base: str = "",
-                  featured: str | None = None) -> str:
+                  featured: str | None = None, mark: bool = False) -> str:
     """The index in two blocks, 新しい構造 and 注目の構造, each under a rule with its count.
 
-    The article shown as 今日の一本 is not repeated here (it keeps its number, so the list may skip one).
+    On the front page the article shown as 今日の一本 is not repeated here (it keeps its number, so the list may
+    skip one); on an issue page (mark=True) it stays in the list, marked.
     """
     new, hot = render.split_sections(picks)
     number = {c["pmcid"]: n for n, (c, _) in enumerate(new + hot, 1)}
     out = ""
     for key, items, cls in (("new", new, ""), ("impact", hot, " hot")):
-        body = "".join(row_html(c, pk, number[c["pmcid"]], date, root, fig_base, href_base)
-                       for c, pk in items if c["pmcid"] != featured)
+        body = "".join(row_html(c, pk, number[c["pmcid"]], date, root, fig_base, href_base,
+                                feat=mark and c["pmcid"] == featured)
+                       for c, pk in items if mark or c["pmcid"] != featured)
         if body:
             out += (f'<div class="ix-h{cls}"><h2 class="label">{PARTS[key][0]}</h2><span>{len(items)} 本</span></div>'
                     f'<ol class="rows">{body}</ol>')
@@ -718,8 +825,26 @@ def toc_side(picks: list, featured: str | None) -> str:
     return sd("この号の記事", f'<div class="sd-toc">{out}</div>', "side-only-issue")
 
 
+def issue_head(date: str, number: int | None, n_new: int, n_hot: int, prev_date: str | None, next_date: str | None) -> str:
+    """The top of an issue page: its date, large (year, month.day, weekday and the issue's number), and the counts."""
+    y, m, d, wd = date_parts(date)
+    num = f" · 第 {number} 号" if number else " · プレビュー"
+    links = "".join(x for x in (f'<a href="{prev_date}.html">← {jp_date_short(prev_date)}号</a>' if prev_date else "",
+                                f'<a href="{next_date}.html">{jp_date_short(next_date)}号 →</a>' if next_date else "",
+                                '<a href="../index.html">トップへ</a>'))
+    return (f'<header class="ihead"><div class="idate"><span class="y">{y}</span><span class="md">{m:02d}.{d:02d}</span>'
+            f'<span class="wd">{wd}曜日{num}</span></div><div><h1>{jp_date(date)}号</h1>'
+            f'<p class="ic">{counts_text(n_new, n_hot, " · ")}</p><p class="in">{links}</p></div></header>')
+
+
+def find_form(up: str = "") -> str:
+    return (f'<form class="find" action="{up}proteins.html" method="get" role="search">'
+            f'<input type="search" name="q" placeholder="UniProt ID・遺伝子名・タンパク質名・PDB ID" '
+            f'aria-label="タンパク質を探す"><button type="submit">探す</button></form>')
+
+
 def issue_page(date: str, prev_date: str | None, next_date: str | None,
-               root: Path = ISSUES_DIR, preview: bool = False) -> str:
+               root: Path = ISSUES_DIR, preview: bool = False, number: int | None = None) -> str:
     meta, picks, types = load_issue(date, root)
     n_hot = sum(render.is_impact(pk) for _, pk in picks)
     picked = {pk["pmcid"] for _, pk in picks}
@@ -731,11 +856,11 @@ def issue_page(date: str, prev_date: str | None, next_date: str | None,
         link = (f' · <a href="{esc(pr["url"])}">Pull Request #{pr["number"]} を開く（ここでマージ）</a>'
                 if pr.get("url") else "")
         bar = f'<div class="preview-bar">プレビュー（未公開）{link} · <a href="index.html">確認待ちの一覧</a></div>'
-    main = []
+    main = [issue_head(date, number, len(picks) - n_hot + len(rest), n_hot, prev_date, next_date)]
     feature = load_feature(date, root, picks) if picks else None
     if picks:
-        main.append(hero_html(feature, picks, date, root, fig_base))
-        main.append(f'<section class="toc">{contents_html(picks, date, root, fig_base, "", feature and feature["pmcid"])}</section>')
+        # the issue page lists every article, today's pick included (marked); the front page is where it is shown large
+        main.append(f'<section class="toc">{contents_html(picks, date, root, fig_base, "", feature and feature["pmcid"], mark=True)}</section>')
     else:
         c = meta["counts"]
         main.append(f'<section class="part"><h2>記事なし<span>0 本</span></h2><p>Europe PMC に {esc(meta["index_date"])} に'
@@ -751,13 +876,13 @@ def issue_page(date: str, prev_date: str | None, next_date: str | None,
         main.append(f'<section class="rest"><h2 class="label">記事にしていない新しい構造</h2><ul>{items}</ul></section>')
     prev_link = f'<a href="{prev_date}.html">← {jp_date(prev_date)}号</a>' if prev_date else "<span></span>"
     next_link = f'<a href="{next_date}.html">{jp_date(next_date)}号 →</a>' if next_date else "<span></span>"
-    main.append(f'<nav class="issue-nav">{prev_link}<a href="../index.html">号の一覧</a>{next_link}</nav>')
+    main.append(f'<nav class="issue-nav">{prev_link}<a href="../index.html">トップへ</a>{next_link}</nav>')
     nav = "".join(x for x in (f'<a href="{prev_date}.html">← {jp_date(prev_date)}号</a>' if prev_date else "",
                               f'<a href="{next_date}.html">{jp_date(next_date)}号 →</a>' if next_date else "",
-                              '<a href="../index.html">号の一覧</a>'))
-    side = (toc_side(picks, feature and feature["pmcid"]) if picks else "") + sd("号の移動", f'<div class="sd-nav">{nav}</div>')
-    counts = counts_text(len(picks) - n_hot + len(rest), n_hot)
-    head = masthead(1, f"{jp_date(date)}号<br>{counts}")
+                              '<a href="../index.html">トップへ</a>'))
+    side = ((toc_side(picks, feature and feature["pmcid"]) if picks else "") + sd("号の移動", f'<div class="sd-nav">{nav}</div>')
+            + sd("タンパク質を探す", find_form("../")))
+    head = masthead(1)
     foot = colophon(f'<p>この号の対象：Europe PMC に {esc(meta["index_date"])} に登録されたオープンアクセス論文 '
                     f'{meta["counts"]["parsed"]} 本のうち、新しい構造を報告した論文。</p>')
     desc = "、".join(pk["target_label"] for _, pk in picks[:6])
@@ -771,30 +896,94 @@ ABOUT = ("Europe PMC に前日登録されたオープンアクセスの査読�
          "構造図は PDB の座標から描いている。")
 
 
-def numbers_html(issues: list[str]) -> str:
-    """Running totals over every issue, all computed from the data."""
-    n_art = n_first = 0
+def library(issues: list[str], root: Path = ISSUES_DIR) -> list[dict]:
+    """Every article of every issue (newest first) with what the browse-and-search page needs: protein names,
+    UniProt accessions, gene names, PDB IDs, categories, and a lower-cased search string."""
+    out = []
     for date in issues:
-        _, picks, _ = load_issue(date, ISSUES_DIR)
-        n_art += len(picks)
-        n_first += sum(any(p.get("first_structure") for p in c.get("proteins", [])) for c, _ in picks)
-    cells = [("号", len(issues)), ("記事", n_art), ("PDB 初構造", n_first), ("掲載誌", len(journal_counts(issues)))]
+        _, picks, _ = load_issue(date, root)
+        for n, (cand, pick) in enumerate(picks, 1):
+            structs = cand.get("cited_structures", []) if render.is_impact(pick) else cand["own_structures"]
+            released = [x for x in structs if x["status"] == "released"]
+            names, ids = [], [p["uniprot"] for p in cand.get("proteins", [])]
+            for x in released:
+                for q in x.get("polymers", []):
+                    if q.get("description"):
+                        names.append(q["description"])
+                    ids += q.get("uniprot_ids", [])
+            genes = [p["gene"] for p in cand.get("proteins", []) if p.get("gene")]
+            row = {"date": date, "n": n, "cand": cand, "pick": pick, "cats": pick.get("categories") or ["other"],
+                   "uniprot": sorted(set(ids)), "genes": sorted(set(genes)), "names": sorted(set(names)),
+                   "pdbs": sorted({x["pdb_id"] for x in released})}
+            text = " ".join([pick["target_label"], pick["headline"], pick.get("subhead") or "", cand["title"]]
+                            + list(pick.get("legend_labels") or []) + row["genes"] + row["uniprot"] + row["names"] + row["pdbs"])
+            row["search"] = unicodedata.normalize("NFKC", text).lower()
+            out.append(row)
+    return out
+
+
+def category_counts(lib: list[dict]) -> list[tuple[str, int]]:
+    counts = {k: 0 for k in CATEGORIES}
+    for r in lib:
+        for c in set(r["cats"]):
+            counts[c if c in counts else "other"] += 1
+    return [(k, v) for k, v in counts.items() if v]
+
+
+def numbers_html(issues: list[str], lib: list[dict]) -> str:
+    """Running totals over every issue, all computed from the data."""
+    n_first = sum(any(p.get("first_structure") for p in r["cand"].get("proteins", [])) for r in lib)
+    cells = [("号", len(issues)), ("記事", len(lib)), ("PDB 初構造", n_first), ("掲載誌", len(journal_counts(issues)))]
     dl = "".join(f"<div><dt>{k}</dt><dd>{v}</dd></div>" for k, v in cells)
     return sd("これまでの数字", f'<dl class="nums">{dl}</dl>')
 
 
+def stats_html(latest: str, n_new: int, n_hot: int, issues: list[str], lib: list[dict]) -> str:
+    """The strip above the pick on the front page: the latest issue's date and size, and the running totals."""
+    _, m, d, wd = date_parts(latest)
+    return (f'<dl class="stats"><div class="new"><dt>最新号</dt><dd><b>{m}月{d}日</b>（{wd}）</dd></div>'
+            f'<div><dt>この号</dt><dd><b>{n_new + n_hot}</b>本'
+            + (f'（新しい構造 {n_new} · 注目の構造 {n_hot}）' if n_hot else "") + '</dd></div>'
+            f'<div><dt>これまで</dt><dd><b>{len(lib)}</b>本 · <b>{len(issues)}</b>号 · '
+            f'<b>{len(journal_counts(issues))}</b>誌</dd></div></dl>')
+
+
+def cats_html(lib: list[dict], up: str = "") -> str:
+    items = "".join(f'<li><a href="{up}proteins.html#c-{k}"><span>{esc(CATEGORIES[k])}</span><span class="c">{v}</span></a></li>'
+                    for k, v in sorted(category_counts(lib), key=lambda kv: (-kv[1], list(CATEGORIES).index(kv[0]))))
+    return f'<ul class="cats">{items}</ul>'
+
+
+def mail_html() -> str:
+    return ('<section class="sec mail" id="mail"><div class="ix-h"><h2 class="label">メールで受け取る</h2>'
+            '<span class="soon">準備中</span></div><div class="mail-grid"><div>'
+            '<p>メールでのお知らせを準備しています。始まったら、ここから登録できるようにします。</p>'
+            '<ul><li>毎朝の号の知らせ（新しい構造と注目の構造）</li><li>週のまとめ</li>'
+            '<li>気になるタンパク質のアラート（UniProt ID を登録）</li></ul></div><div>'
+            '<form aria-disabled="true" onsubmit="return false"><input type="email" placeholder="メールアドレス" disabled '
+            'aria-label="メールアドレス（準備中）"><button type="button" disabled>登録（準備中）</button></form>'
+            '<p class="fine">いまは登録できません。アドレスを集める仕組みができるまで、この欄は動きません。</p></div></div></section>')
+
+
 def home(issues: list[str]) -> str:
-    """The front page: the latest issue (今日の一本 and every other article with its structure), a sidebar
-    (the latest issue, the journals, running totals, about) and a compact list of past issues."""
+    """The front page. First screen: a band with the latest issue's date and size, the totals so far, and the day's
+    pick shown large. Scrolling: the rest of the latest issue, the archive by kind of protein (and a search), the
+    past issues, and (not yet working) a place for the mailing list."""
     latest, past = issues[0], issues[1:]
     meta, picks, _ = load_issue(latest, ISSUES_DIR)
     href = f"issues/{latest}.html"
     n_hot = sum(render.is_impact(pk) for _, pk in picks)
     feature = load_feature(latest, ISSUES_DIR, picks)
-    main = [hero_html(feature, picks, latest, ISSUES_DIR, "figures", href),
-            f'<section class="toc">{contents_html(picks, latest, ISSUES_DIR, "figures", href, feature and feature["pmcid"])}'
-            f'</section>',
-            f'<p class="more"><a href="{href}">この号のすべての記事を読む →</a></p>']
+    lib = library(issues)
+    band = (f'<div class="band"><div class="wrap">{stats_html(latest, len(picks) - n_hot, n_hot, issues, lib)}'
+            f'{hero_html(feature, picks, latest, ISSUES_DIR, "figures", href)}</div></div>')
+    n_list = len(picks) - (1 if feature else 0)
+    main = [f'<section class="toc">{contents_html(picks, latest, ISSUES_DIR, "figures", href, feature and feature["pmcid"])}</section>',
+            f'<p class="sec-more"><a href="{href}">{jp_date(latest)}号のすべての記事を読む →</a></p>',
+            f'<section class="sec"><div class="ix-h"><h2 class="label">タンパク質の種類から探す</h2>'
+            f'<a class="soon" href="proteins.html">一覧へ</a></div>'
+            f'<p class="lead">これまでに紹介した {len(lib)} 本を、タンパク質の種類ごとに読めます。'
+            f'UniProt ID・遺伝子名・タンパク質名・PDB ID でも探せます。</p>{find_form()}{cats_html(lib)}</section>']
     if past:
         items = []
         for date in past:
@@ -802,13 +991,79 @@ def home(issues: list[str]) -> str:
             targets = "・".join(pk["target_label"].split("（")[0] for _, pk in ps)
             items.append(f'<li><a class="d" href="issues/{date}.html">{jp_date_short(date)}号</a>'
                          f'<span class="t"><b>{len(ps)} 本</b>{esc(targets)}</span></li>')
-        main.append(f'<section class="past"><div class="ix-h"><h2 class="label">過去の号</h2><span>{len(past)} 号</span></div>'
+        main.append(f'<section class="sec past"><div class="ix-h"><h2 class="label">過去の号</h2><span>{len(past)} 号</span></div>'
                     f'<ol>{"".join(items)}</ol></section>')
-    side = (sd("最新号", f'<a class="sd-issue" href="{href}">{jp_date(latest)}号</a>'
-                         f'<p class="sd-meta">{counts_text(len(picks) - n_hot, n_hot)}</p>')
-            + journals_html(journal_counts(issues)) + numbers_html(issues) + sd("このサイトについて", f"<p>{esc(ABOUT)}</p>"))
-    head = masthead(0, f'<a href="{href}">{jp_date(latest)}号</a><br>{counts_text(len(picks) - n_hot, n_hot, " · ")}')
-    return page(f"{brand.SITE_NAME}（{brand.SITE_NAME_EN}）", head + shell("".join(main), side) + colophon(), depth=0)
+    main.append(mail_html())
+    side = (sd("タンパク質を探す", find_form()) + journals_html(journal_counts(issues)) + numbers_html(issues, lib)
+            + sd("このサイトについて", f"<p>{esc(ABOUT)}</p>"))
+    return page(f"{brand.SITE_NAME}（{brand.SITE_NAME_EN}）",
+                masthead(0) + band + shell("".join(main), side) + colophon(), depth=0)
+
+
+PROTEIN_SCRIPT = r"""
+(function () {
+  var q = document.getElementById('q'), rows = [].slice.call(document.querySelectorAll('.pr')),
+      groups = [].slice.call(document.querySelectorAll('.pg')), none = document.getElementById('pg-none'),
+      total = document.getElementById('pg-total');
+  function norm(s) { return s.normalize('NFKC').toLowerCase(); }
+  function apply() {
+    var terms = norm(q.value).split(/\s+/).filter(Boolean), shown = 0, seen = {};
+    rows.forEach(function (r) {
+      var ok = terms.every(function (t) { return r.getAttribute('data-s').indexOf(t) >= 0; });
+      var a = r.getAttribute('data-a');
+      r.hidden = !ok; if (ok && !seen[a]) { seen[a] = 1; shown++; }
+    });
+    groups.forEach(function (g) { g.hidden = !g.querySelector('.pr:not([hidden])'); });
+    none.style.display = shown ? 'none' : 'block';
+    total.textContent = terms.length ? shown + ' 本が見つかった' : '';
+  }
+  var m = /[?&]q=([^&]*)/.exec(location.search);
+  if (m) q.value = decodeURIComponent(m[1].replace(/\+/g, ' '));
+  q.addEventListener('input', apply);
+  q.form.addEventListener('submit', function (e) { e.preventDefault(); apply(); });
+  apply();
+})();
+"""
+
+
+def proteins_page(issues: list[str]) -> str:
+    """proteins.html: every article grouped by kind of protein; a search box narrows them by UniProt ID, gene name,
+    protein name, PDB ID or any word of the headline. Works without JavaScript as a plain grouped list."""
+    lib = library(issues)
+    counts = dict(category_counts(lib))
+    groups = []
+    for key in CATEGORIES:
+        rows = [r for r in lib if key in r["cats"] or (key == "other" and not set(r["cats"]) & set(CATEGORIES))]
+        if not rows:
+            continue
+        items = []
+        for r in rows:
+            y, m, d, _ = date_parts(r["date"])
+            meta = []
+            if r["uniprot"]:
+                meta.append(f'<i>UNIPROT</i>{esc(", ".join(r["uniprot"][:4]))}{" …" if len(r["uniprot"]) > 4 else ""}')
+            if r["genes"]:
+                meta.append(f'<i>GENE</i>{esc(", ".join(r["genes"][:4]))}')
+            if r["pdbs"]:
+                meta.append(f'<i>PDB</i>{esc(", ".join(r["pdbs"][:4]))}{" …" if len(r["pdbs"]) > 4 else ""}')
+            items.append(f'<li class="pr" data-a="{r["date"]}#{r["n"]}" data-s="{esc(r["search"])}"><span class="pd">{y}.{m:02d}.{d:02d} · {pad(r["n"])}</span>'
+                         f'<a class="pt" href="issues/{r["date"]}.html#a{r["n"]}">{esc(r["pick"]["headline"])}'
+                         f'<span class="ps">{esc(r["pick"]["target_label"])}</span></a>'
+                         f'<span class="pm">{"<br>".join(meta)}</span></li>')
+        groups.append(f'<section class="pg" id="c-{key}"><div class="ix-h"><h2 class="label">{esc(CATEGORIES[key])}</h2>'
+                      f'<span>{counts[key]} 本</span></div><ul class="rows" style="list-style:none;margin:0;padding:0">'
+                      f'{"".join(items)}</ul></section>')
+    head = (f'<header class="pp-head"><h1>タンパク質から探す</h1><p>これまでに紹介した {len(lib)} 本を、タンパク質の種類ごとに並べています。'
+            f'下の欄に UniProt ID・遺伝子名・タンパク質名・PDB ID・見出しの語を入れると絞り込めます（複数の語は AND）。</p>'
+            f'<form class="find" role="search"><input id="q" type="search" name="q" autocomplete="off" '
+            f'placeholder="例：P72047 / kinase / 25IP / リボソーム" aria-label="タンパク質を探す"><button type="submit">探す</button></form>'
+            f'<p id="pg-total" class="sd-meta"></p></header>')
+    main = head + "".join(groups) + '<p id="pg-none" class="pg-none">該当する記事はありませんでした。</p>'
+    side = sd("種類", '<div class="sd-cats">' + "".join(
+        f'<a href="#c-{k}"><span>{esc(CATEGORIES[k])}</span><span class="c">{counts[k]}</span></a>'
+        for k in CATEGORIES if k in counts) + "</div>") + sd("ほかのページ", '<div class="sd-nav"><a href="index.html">トップへ</a></div>')
+    return page(f"タンパク質から探す · {brand.SITE_NAME}", masthead(0) + shell(main, side, sticky=True) + colophon(), depth=0,
+                description="これまでに紹介した構造を、タンパク質の種類・UniProt ID・タンパク質名で探す。", script=PROTEIN_SCRIPT)
 
 
 def issue_dates(root: Path, require_articles: bool = True) -> list[str]:
@@ -853,11 +1108,13 @@ def build(preview_root: Path | None = None) -> int:
     for i, date in enumerate(issues):
         prev_date = issues[i + 1] if i + 1 < len(issues) else None
         next_date = issues[i - 1] if i > 0 else None
-        (SITE_DIR / "issues" / f"{date}.html").write_text(issue_page(date, prev_date, next_date), encoding="utf-8")
+        (SITE_DIR / "issues" / f"{date}.html").write_text(
+            issue_page(date, prev_date, next_date, number=len(issues) - i), encoding="utf-8")
         src = ISSUES_DIR / date / "figures"
         if src.exists():
             shutil.copytree(src, SITE_DIR / "figures" / date, ignore=shutil.ignore_patterns("*.json"))
     (SITE_DIR / "index.html").write_text(home(issues), encoding="utf-8")
+    (SITE_DIR / "proteins.html").write_text(proteins_page(issues), encoding="utf-8")
     print(f"built site/ with {len(issues)} issue(s): {', '.join(issues)}")
     previews = issue_dates(preview_root, require_articles=False) if preview_root else []
     out = SITE_DIR / "preview"

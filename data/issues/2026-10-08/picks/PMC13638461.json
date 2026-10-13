@@ -6,9 +6,40 @@
   "takeaway": "活性部位から離れた置換も、ダルナビルに対する活性部位の拡張に関わる",
   "target_label": "HIV-1プロテアーゼ PRp51",
   "summary": {
-    "background": "耐性置換は活性部位近傍の主要置換と離れた副次置換に分けられるが、離れた置換が阻害剤結合にどう効くかは不明確だった。",
-    "approach": "ダルナビル耐性株由来の14置換プロテアーゼ（PRp51）とダルナビルの複合体を1.55 Åで結晶構造解析し、GRL142との比較を1500 nsの分子動力学（MD）計算で行った。",
-    "findings": "結晶構造では相互作用に大きな差はなかった。MDではダルナビル複合体でフラップが開く集団と活性部位の拡張が大きく、GRL142では小さかった。主要・副次の二分類は単純すぎる可能性がある。"
+    "question": "耐性置換は主要と副次に分けられるが、この二分類に明確な定義はなかった。",
+    "approach": "14置換のPRp51とダルナビルの複合体を結晶構造解析し、分子動力学（MD）で調べた。",
+    "result": "野生型との差は、残基間距離も活性部位の容積も、ダルナビル複合体の方がGRL142複合体より大きかった。",
+    "learned": "近い置換と離れた置換が協調して働く。主要・副次の二分類は単純すぎる可能性がある。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "However, no precise definitions of such two categories exist.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Herein, using X-ray crystallography and molecular dynamics (MD) simulations we examined the structural basis of antiviral resistance of HIVDRVRp51, an HIV-1 variant that has three proximal (V32I, V82I, I84V) and eleven distal substitutions (L10I/I15V/K20R/L24I/L33F/M36I/ M46L/ I54M/L63P/K70Q/L89M) in the protease region (PRp51), and has high resistance against a protease inhibitor darunavir (DRV), but not against another protease inhibitor GRL142.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "MD demonstrated that the proximal and distal substitutions work in concert to carry out structural changes that result in larger perturbations in inter-residue distances and active site cavity volume for DRV-PRp51 over DRV-PRwt compared to GRL142-PRp51 over GRL142-PRwt.",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "MD demonstrated that the proximal and distal substitutions work in concert to carry out structural changes that result in larger perturbations in inter-residue distances and active site cavity volume for DRV-PRp51 over DRV-PRwt compared to GRL142-PRp51 over GRL142-PRwt.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "The results also suggest reconsideration of the simplistic classification of substitutions as either major or minor.Supplementary InformationThe online version contains supplementary material available at https://doi.org/10.1038/s41598-026-64620-7.",
+          "section": "Abstract"
+        }
+      ]
+    }
   },
   "highlights": [
     {
@@ -96,5 +127,9 @@
   },
   "legend_labels": [
     "HIV-1 プロテアーゼ"
+  ],
+  "categories": [
+    "protease",
+    "pathogen"
   ]
 }

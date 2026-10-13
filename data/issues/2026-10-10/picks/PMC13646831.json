@@ -5,9 +5,40 @@
   "subhead": "ATPの配置が乱れて加水分解が止まる様子を、クライオ電顕で見た",
   "target_label": "MDA5（IFIH1）–dsRNA",
   "summary": {
-    "background": "自己免疫疾患に関連するMDA5変異T331Iが、なぜ恒常的なインターフェロン応答を起こすのか分子機構が不明だった。",
-    "approach": "野生型（AMPPNP）とT331I（ATP）が112 bp dsRNA上に作る短いフィラメントのクライオ電顕構造（2.81〜3.21 Å）、ATPase測定、レポーター解析を行った。",
-    "findings": "T331IはATPase活性を失い、ATPの配置が乱れ、短いdsRNAでも安定なフィラメントを形成して30 bpのRNAでもシグナルを出す。"
+    "question": "MDA5変異T331Iが、なぜ恒常的なインターフェロン応答を起こすのか不明だった。",
+    "approach": "クライオ電顕に、酵素・細胞の実験を組み合わせて、変異体のATP結合ポケットを調べた。",
+    "result": "T331IはATPase活性を損ない、MDA5–dsRNA複合体が安定化していた。",
+    "learned": "ATPaseがフィラメントの安定性を調節し、自己免疫を防いでいる。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "While these results are notable, the actual molecular mechanism underlying constitutive MDA5 T331I signaling remains unclear.",
+          "section": "Introduction"
+        },
+        {
+          "quote": "Here, we show that the gain-of-function T331I disease-linked mutation within the ATP-binding pocket disrupts this balance, resulting in constitutive interferon signaling.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Through a combination of cryo-electron microscopy (cryoEM), biochemical assays, and cellular analyses, we reveal the extensive network of interactions that precisely position ATP for catalysis in the wild-type MDA5 ATP-binding pocket and also demonstrate that the T331I mutation impairs ATPase activity, thereby stabilizing MDA5–dsRNA complexes and leading to aberrant immune activation.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "Through a combination of cryo-electron microscopy (cryoEM), biochemical assays, and cellular analyses, we reveal the extensive network of interactions that precisely position ATP for catalysis in the wild-type MDA5 ATP-binding pocket and also demonstrate that the T331I mutation impairs ATPase activity, thereby stabilizing MDA5–dsRNA complexes and leading to aberrant immune activation.",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "These findings elucidate how MDA5 ATPase activity regulates antiviral specificity and prevents autoimmunity by controlling filament stability and downstream signaling, offering a mechanistic molecular explanation for disease pathogenesis.",
+          "section": "Abstract"
+        }
+      ]
+    }
   },
   "highlights": [
     {
@@ -93,5 +124,9 @@
     "MDA5（IFIH1）",
     "dsRNA 鎖 1",
     "dsRNA 鎖 2"
+  ],
+  "categories": [
+    "immune",
+    "nucleic"
   ]
 }

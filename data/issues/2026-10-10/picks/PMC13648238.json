@@ -5,9 +5,44 @@
   "subhead": "NMR構造では、どちらの異性体もDNAに挿入され、向かいのシトシンを押し出す",
   "target_label": "ピキサントロン–AP部位DNA",
   "summary": {
-    "background": "抗がん剤ピキサントロン（PIX）は非対称な構造のため、DNAの脱塩基（AP）部位と2種の位置異性体を作ると予想されたが、特徴づけがなかった。",
-    "approach": "還元型PIX–AP部位コンジュゲートを含む12量体二本鎖をNMRで解析し、NOE拘束付きMDで構造を求めた。ドデカマーの結晶構造（2.5 Å）も解いた。",
-    "findings": "二本鎖DNAではR a:R b＝6:4で、どちらも3′側にインターカレートし対向するシトシンをメジャー溝へ押し出す。R bの方が深く入る。"
+    "question": "ピキサントロンは、DNAの脱塩基部位と2種類の位置異性体を作ると予想された。",
+    "approach": "NMRに基づく分子動力学計算で構造を求め、結晶構造も決めた。",
+    "result": "二本鎖では異性体R aが優勢で、どちらも3′側にインターカレートした。",
+    "learned": "向かいのシトシンとの水素結合が、生成比と挿入の深さの違いを説明しうる。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "The nitrogen atom in the PIX aza-anthracenedione ring renders the two side-chain amines nonequivalent, and predicts the formation of regioisomeric Schiff base conjugates with AP sites in DNA, referred to as regioisomers A and B and designated as R a and R b (Chart ).",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Structures of reduced R a and R b conjugates from molecular dynamics calculations restrained by 1H NOESY data in 5′-d­(C1A2G3A4C5T6 X 7A8G9A10C11T12)-3′:5′-d­(A13G14T15C16T17C18A19G20T21C22T23G24)-3′, X = reduced PIX-AP site conjugate, showed that both regioisomers intercalated on the 3′ side of base pair T6/A19, displacing C18 into the major groove, with R a less intercalated than R b.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "A crystal structure in the Dickerson-Drew Dodecamer at 2.5 Å resolution revealed looped-out PIX stacking with PIX from a neighboring duplex.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "In dsDNA formation of R a was favored.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Structures of reduced R a and R b conjugates from molecular dynamics calculations restrained by 1H NOESY data in 5′-d­(C1A2G3A4C5T6 X 7A8G9A10C11T12)-3′:5′-d­(A13G14T15C16T17C18A19G20T21C22T23G24)-3′, X = reduced PIX-AP site conjugate, showed that both regioisomers intercalated on the 3′ side of base pair T6/A19, displacing C18 into the major groove, with R a less intercalated than R b.",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "The preferential formation of R a vs R b in dsDNA and deeper intercalation of R b may be explained by the differential ability of the asymmetric PIX N2 nitrogen in R a vs R b to hydrogen bond with the exocyclic N 4-amine of the cytosine displaced into the major groove.",
+          "section": "Abstract"
+        }
+      ]
+    }
   },
   "highlights": [
     {
@@ -87,5 +122,8 @@
   ],
   "method_label": "NMR＋拘束MD、結晶 2.5 Å",
   "ligand_label": "ピキサントロン（PIX）",
-  "editor_notes": "PDB/UniProt の情報がなく（ID は補足資料のみ）、図は PDB 情報なしで出る。NMR構造の座標の登録は本文から確認できない。結晶構造は PDB 7U38 と本文にあるが、候補データには載っていない。単一ドデカマー配列での結果で、結晶とNMRで挿入様式が異なる。Tm の記述で『安定化』の対象（THF入り二本鎖）に注意。ランクは手法・薬物-DNA相互作用として最後に置いた。"
+  "editor_notes": "PDB/UniProt の情報がなく（ID は補足資料のみ）、図は PDB 情報なしで出る。NMR構造の座標の登録は本文から確認できない。結晶構造は PDB 7U38 と本文にあるが、候補データには載っていない。単一ドデカマー配列での結果で、結晶とNMRで挿入様式が異なる。Tm の記述で『安定化』の対象（THF入り二本鎖）に注意。ランクは手法・薬物-DNA相互作用として最後に置いた。",
+  "categories": [
+    "nucleic"
+  ]
 }

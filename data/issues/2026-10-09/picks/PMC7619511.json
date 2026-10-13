@@ -6,9 +6,48 @@
   "takeaway": "IpaDの結合部位の違いが、抗体が毒性を抑えるか高めるかを分ける",
   "target_label": "赤痢菌IpaD–抗体Fab",
   "summary": {
-    "background": "赤痢菌には承認ワクチンがなく、防御に働く抗体と有害に働く抗体を分ける構造的な根拠が足りなかった。",
-    "approach": "サルの赤痢集団感染の検体からIpaD・IpaBなどに対するmAbを単離し、IpaDとFabの2つの複合体をクライオ電顕で解析した。",
-    "findings": "溶血を抑えるD13r.34とD02-F2は遠位ドメインに、溶血を高めるD02-E4はN末端ドメインに結合した。エピトープ変異体で結合の消失を確認した。"
+    "question": "赤痢菌のワクチンは未承認で、免疫の構造的・分子的な決め手が分かっていなかった。",
+    "approach": "サルの赤痢集団感染の検体から抗体を単離し、IpaDとの複合体をクライオ電顕で解析した。",
+    "result": "溶血を抑える抗体はIpaDの遠位ドメインに、溶血を高める抗体はN末端ドメインに結合した。",
+    "learned": "結合する場所で抗体の働きが分かれる。防御に働く応答を選ぶ抗原設計に役立つとされる。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "There is currently no approved vaccine for Shigella spp., a leading cause of diarrhea with increasing rates of antimicrobial resistance.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Shigella vaccine development is complicated in part by an incomplete understanding of the structural and molecular determinants of immunity.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "To address this, we isolated monoclonal antibodies against candidate Shigella vaccine antigens using samples from a Shigella flexneri outbreak in a nonhuman primate (NHP) research facility.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "To identify these functional epitopes on both IpaD and IpaB, we sought to determine representative mAb:antigen complex structures by cryogenic electron microscopy (cryo-EM).",
+          "section": "Results"
+        }
+      ],
+      "result": [
+        {
+          "quote": "Cryo-EM analysis of IpaD-mAb complexes revealed that in vitro hemolysis-blocking mAbs primarily bind the distal domain, whereas the in vitro hemolysis-enhancing mAbs bind to the N-terminal domain (Fig.",
+          "section": "Discussion"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "T3SS antibodies could either inhibit or enhance bacterial virulence in vitro and differed in vivo depending on their epitope specificity.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Collectively, these findings provide insights into protective and deleterious immune responses against Shigella that directly inform vaccine immunogen design.",
+          "section": "Abstract"
+        }
+      ]
+    }
   },
   "highlights": [
     {
@@ -58,5 +97,9 @@
     "IpaD（赤痢菌）",
     "D13r-34 抗体 Fab（重鎖）",
     "D13r-34 抗体 Fab（軽鎖）"
+  ],
+  "categories": [
+    "immune",
+    "pathogen"
   ]
 }

@@ -5,9 +5,44 @@
   "subhead": "NIDを欠くと、H-SELEXで見つかるRut部位が1759から47に減った",
   "target_label": "Rho（結核菌）",
   "summary": {
-    "background": "結核菌のRho因子には約160残基の大きなN末端挿入ドメイン（NID）があるが、その役割とゲノム上のRut部位は不明だった。",
-    "approach": "Helicase-SELEXでRut部位を全ゲノムで探索し、結合測定、転写終結試験、NMR、RNAとADP-BeF3を加えた全長Rhoのクライオ電顕で解析した。",
-    "findings": "全長Rhoでは1759個、NID欠失では47個のRut部位が見つかった。NIDはRNA結合後も天然変性のままで、電顕でも秩序のある密度が見えない。"
+    "question": "結核菌のRhoには、機能不明の大きなN末端挿入ドメイン（NID）があった。",
+    "approach": "Helicase-SELEXでRut部位を探し、結合測定・NMR・クライオ電顕でNIDを調べた。",
+    "result": "Rut部位は全長Rhoで1759個、NID欠失型では47個だった。NIDは天然変性だった。",
+    "learned": "NIDは天然変性のまま、二次構造をもつRut部位を捉えるのに重要と考えられる。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "In Mycobacterium tuberculosis, Rho features a unique, large N-terminal insertion domain (NID) of uncertain function.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Using enzymatic Helicase-SELEX screening, we identified 1759 putative Rut sites across the M. tuberculosis genome with wild-type Rho (MtbRho) but only 47 with a NID-deleted variant (ΔNID-MtbRho), demonstrating NID’s importance for productive substrate recruitment.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Complementary RDTT assays, affinity measurements, solution NMR, and cryogenic electron microscopy analyses show that the NID is intrinsically disordered, yet critical for engaging Rut sites with substantial secondary structure.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "Using enzymatic Helicase-SELEX screening, we identified 1759 putative Rut sites across the M. tuberculosis genome with wild-type Rho (MtbRho) but only 47 with a NID-deleted variant (ΔNID-MtbRho), demonstrating NID’s importance for productive substrate recruitment.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Complementary RDTT assays, affinity measurements, solution NMR, and cryogenic electron microscopy analyses show that the NID is intrinsically disordered, yet critical for engaging Rut sites with substantial secondary structure.",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Complementary RDTT assays, affinity measurements, solution NMR, and cryogenic electron microscopy analyses show that the NID is intrinsically disordered, yet critical for engaging Rut sites with substantial secondary structure.",
+          "section": "Abstract"
+        }
+      ]
+    }
   },
   "highlights": [
     {
@@ -91,5 +126,8 @@
   "editor_notes": "candidatesのfirst_structureはtrueだが、本文は既報のMtbRho構造（ref 37）と比較しており、初構造とは書いていない。記事ではNIDが天然変性であることの実験的実証として扱った。",
   "legend_labels": [
     "Rho（転写終結因子）"
+  ],
+  "categories": [
+    "nucleic"
   ]
 }

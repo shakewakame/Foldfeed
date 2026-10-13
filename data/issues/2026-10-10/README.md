@@ -49,9 +49,31 @@
 
 ATPの配置が乱れて加水分解が止まる様子を、クライオ電顕で見た
 
-- **背景**：自己免疫疾患に関連するMDA5変異T331Iが、なぜ恒常的なインターフェロン応答を起こすのか分子機構が不明だった。
-- **やったこと**：野生型（AMPPNP）とT331I（ATP）が112 bp dsRNA上に作る短いフィラメントのクライオ電顕構造（2.81〜3.21 Å）、ATPase測定、レポーター解析を行った。
-- **分かったこと**：T331IはATPase活性を失い、ATPの配置が乱れ、短いdsRNAでも安定なフィラメントを形成して30 bpのRNAでもシグナルを出す。
+- **これまでの疑問・課題**：MDA5変異T331Iが、なぜ恒常的なインターフェロン応答を起こすのか不明だった。
+- **アプローチ**：クライオ電顕に、酵素・細胞の実験を組み合わせて、変異体のATP結合ポケットを調べた。
+- **結果**：T331IはATPase活性を損ない、MDA5–dsRNA複合体が安定化していた。
+- **わかったこと**：ATPaseがフィラメントの安定性を調節し、自己免疫を防いでいる。
+
+<details><summary>この4行の根拠（論文本文）</summary>
+
+> While these results are notable, the actual molecular mechanism underlying constitutive MDA5 T331I signaling remains unclear.  
+> — これまでの疑問・課題／Introduction
+
+> Here, we show that the gain-of-function T331I disease-linked mutation within the ATP-binding pocket disrupts this balance, resulting in constitutive interferon signaling.  
+> — これまでの疑問・課題／Abstract
+
+> Through a combination of cryo-electron microscopy (cryoEM), biochemical assays, and cellular analyses, we reveal the extensive network of interactions that precisely position ATP for catalysis in the wild-type MDA5 ATP-binding pocket and also demonstrate that the T331I mutation impairs ATPase activity, thereby stabilizing MDA5–dsRNA complexes and leading to aberrant immune activation.  
+> — アプローチ／Abstract
+
+> Through a combination of cryo-electron microscopy (cryoEM), biochemical assays, and cellular analyses, we reveal the extensive network of interactions that precisely position ATP for catalysis in the wild-type MDA5 ATP-binding pocket and also demonstrate that the T331I mutation impairs ATPase activity, thereby stabilizing MDA5–dsRNA complexes and leading to aberrant immune activation.  
+> — 結果／Abstract
+
+> These findings elucidate how MDA5 ATPase activity regulates antiviral specificity and prevents autoimmunity by controlling filament stability and downstream signaling, offering a mechanistic molecular explanation for disease pathogenesis.  
+> — わかったこと／Abstract
+
+</details>
+
+<sub>分類：免疫（抗体・MHC・TCR・自然免疫）・DNA・RNA に関わるもの</sub>
 
 #### 読みどころ
 
@@ -144,9 +166,31 @@ T331Iのフィラメントはサブユニット間のねじれ角がほぼ一定
 
 受容体DPP4と1〜120時間反応させ、融合後のS2を3.23 Åで解析した
 
-- **背景**：MERS-CoVの受容体DPP4への結合が、どう膜融合につながるのかは、SARS-CoV-2に比べて理解が遅れていた。
-- **やったこと**：野生型スパイク外部ドメインと可溶性DPP4を25 °Cで1、24、72、120時間混合し、各時点をクライオ電顕で解析した。
-- **分かったこと**：RBDが開くほどS1–S2界面が弱まり、3-up状態は不安定でS1が解離する。72時間以降の融合後S2を3.23 Åで解いた。
+- **これまでの疑問・課題**：受容体結合が膜融合にどう結びつくのかは、構造的に不明だった。
+- **アプローチ**：スパイクとDPP4を一定時間反応させ、各時点の構造をクライオ電顕で決めた。
+- **結果**：RBDが開くほどS1–S2の結びつきが弱まり、融合後のS2構造も得られた。
+- **わかったこと**：MERS-CoVのスパイクはSARS-CoV-2より柔軟で、融合が起こりやすい性質と整合する。
+
+<details><summary>この4行の根拠（論文本文）</summary>
+
+> However, how receptor binding is structurally coupled to membrane fusion has remained unclear.  
+> — これまでの疑問・課題／Abstract
+
+> Here, using cryo–electron microscopy, we determined structures of MERS-CoV spike-DPP4 complexes at defined incubation times, capturing a series of conformational states spanning prefusion, receptor-bound, and postfusion conformations.  
+> — アプローチ／Abstract
+
+> These structures reveal that receptor-binding domain (RBD) opening progressively weakens S1-S2 interactions, while DPP4 binding may induce conformational drift and loosening of the S2 fusion core.  
+> — 結果／Abstract
+
+> Here, using cryo–electron microscopy, we determined structures of MERS-CoV spike-DPP4 complexes at defined incubation times, capturing a series of conformational states spanning prefusion, receptor-bound, and postfusion conformations.  
+> — 結果／Abstract
+
+> Compared with the SARS-CoV-2 spike, the MERS-CoV spike exhibits greater conformational plasticity, consistent with a lower threshold for receptor-induced fusion.  
+> — わかったこと／Abstract
+
+</details>
+
+<sub>分類：感染・ウイルス・防御系・GPCR・受容体</sub>
 
 #### 読みどころ
 
@@ -250,9 +294,31 @@ T331Iのフィラメントはサブユニット間のねじれ角がほぼ一定
 
 RNAだけの2.9 Å構造。折りたたんだ分子の割合は、Mg²⁺のみで約1/3、グリシン追加で約2/3
 
-- **背景**：リボスイッチは構造の不均一性が機能に不可欠だが、RNAは不均一性のため高分解能の構造解析が難しい。
-- **やったこと**：コレラ菌タンデムアプタマーをリガンドなし、Mg²⁺のみ、Mg²⁺＋グリシンの3条件でクライオ電顕にかけ、MDで補強した。
-- **分かったこと**：全体が折り畳まれた「walking man」型の集団は、Mg²⁺のみで約1/3、グリシン追加で約2/3になる。両リガンドは協調的に結合する。
+- **これまでの疑問・課題**：リボスイッチは構造の不均一性が機能に欠かせず、そのため構造解析が難しかった。
+- **アプローチ**：グリシンリボスイッチのタンデムアプタマーを、条件を変えてクライオ電顕で調べた。
+- **結果**：Mg²⁺だけでは約1/3、グリシンを加えると約2/3の粒子が完全に折りたたまれていた。
+- **わかったこと**：グリシンとMg²⁺は協同的に働き、折りたたみを安定化する。
+
+<details><summary>この4行の根拠（論文本文）</summary>
+
+> Conformational heterogeneity is fundamental to riboswitch functionality, yet this same attribute makes structural characterization of these mRNA elements challenging.  
+> — これまでの疑問・課題／Abstract
+
+> Here, we use cryo-electron microscopy to characterize different structural populations of the glycine riboswitch tandem aptamers, and molecular dynamics simulations to support the observed ligand orientation in the holo state.  
+> — アプローチ／Abstract
+
+> In Mg²⁺ conditions alone, approximately one-third of the picked particles are fully folded, whereas two thirds adopt distinct, partially folded states.  
+> — 結果／Abstract
+
+> While Mg2+ appears to shift the equilibrium toward folded conformations, glycine shifts the population of fully folded glycine riboswitch from approximately one to two thirds.  
+> — 結果／Introduction
+
+> The population data show that glycine and Mg²⁺ operate synergistically: glycine enhances Mg²⁺ localization, while Mg2+ drives glycine recruitment.  
+> — わかったこと／Abstract
+
+</details>
+
+<sub>分類：DNA・RNA に関わるもの</sub>
 
 #### 読みどころ
 
@@ -335,9 +401,31 @@ RNAだけの2.9 Å構造。折りたたんだ分子の割合は、Mg²⁺のみ�
 
 SIRT2とSIRT5の結晶構造では、基質の位置が乱れ、切断に向かない向きになっていた
 
-- **背景**：ヒストンH4で見つかったN-アセチル-N-メチルリジン（KAcMe）が、HDACやサーチュインで除去できるかは不明だった。
-- **やったこと**：KAcMeなどのモデルペプチドを合成し、HDAC1–11とSIRT1–6で脱アシル化を調べ、SIRT2・SIRT5とペプチドの結晶構造を決めた。
-- **分かったこと**：KAcMeはどの酵素にも検出可能な脱アセチル化を受けなかった。N-メチル化は基質の位置を乱し、切断されるアミド結合が触媒に不適な向きになる。
+- **これまでの疑問・課題**：ヒストンH4で見つかったN-アセチル-N-メチルリジンを、酵素で外せるかは不明だった。
+- **アプローチ**：モデルペプチドを合成してHDACとサーチュインの活性を調べ、結晶構造も決めた。
+- **結果**：N-メチル化したペプチドは、どちらの酵素族でも検出できる脱アセチル化を受けなかった。
+- **わかったこと**：N-メチル化が基質の位置決めを乱し、切断される結合の向きがずれるためと考えられる。
+
+<details><summary>この4行の根拠（論文本文）</summary>
+
+> The recent discovery of N-acetyl-N-methyl lysine (KAcMe) on histone H4 showed that both marks can coexist on the same lysine side chain, raising the question of whether this dual modification is enzymatically reversible.  
+> — これまでの疑問・課題／Abstract
+
+> Here, we synthesized model peptides containing N-acyl lysine or N-acyl-N-methyl lysine residues and tested their processing by Zn2+-dependent HDACs and NAD+-dependent sirtuins.  
+> — アプローチ／Abstract
+
+> X-ray crystal structures of sirtuin–peptide complexes, supported by inhibition studies and molecular docking, reveal that N-methylation disrupts productive substrate positioning and misaligns the scissile amide bond for catalysis.  
+> — アプローチ／Abstract
+
+> While the corresponding unmethylated substrates were deacylated by the expected enzymes, KAcMe-containing peptides were not detectably deacetylated by either enzyme family.  
+> — 結果／Abstract
+
+> X-ray crystal structures of sirtuin–peptide complexes, supported by inhibition studies and molecular docking, reveal that N-methylation disrupts productive substrate positioning and misaligns the scissile amide bond for catalysis.  
+> — わかったこと／Abstract
+
+</details>
+
+<sub>分類：酵素（その他）・クロマチン・ヒストン</sub>
 
 #### 読みどころ
 
@@ -427,9 +515,37 @@ SIRT2–ミリストイル-N-メチルリジンペプチド複合体（1.45 Å�
 
 ボタンの根の4′-O-メチル基転移酵素。触媒三残基はHis262・Asn263・Gln324だった
 
-- **背景**：牡丹皮の指標成分ペオノールの生合成後半（4′-O-メチル化と2′-水酸化）を担う酵素は未同定で、構造も機構も不明だった。
-- **やったこと**：トランスクリプトームとメタボロームからPoOMT1を同定し、SAH複合体と基質2種との三者複合体の結晶構造（1.83〜2.28 Å）、変異体解析で調べた。
-- **分かったこと**：His262-Asn263-Gln324の触媒三残基と、二重アンカーおよび立体制約を持つT字型ポケットが4′-OHへの位置選択性と2基質の受容を説明する。
+- **これまでの疑問・課題**：ペオノールの生合成の後半を担う酵素は未同定で、構造も機構も不明だった。
+- **アプローチ**：トランスクリプトームとメタボロームでPoOMT1を同定し、複合体の結晶構造と変異体で調べた。
+- **結果**：触媒三残基His-Asn-Glnと、T字型の基質結合ポケットが見つかった。
+- **わかったこと**：ポケットの形が、4′-OHへの位置選択性と、2種類の基質を受け入れる性質を支える。
+
+<details><summary>この4行の根拠（論文本文）</summary>
+
+> Paeonol, the medicinal indicator component of the traditional Chinese medicine ‘Mudanpi’, has an incompletely elucidated biosynthetic pathway, particularly its post-modification steps.  
+> — これまでの疑問・課題／Abstract
+
+> The specific OMT responsible for paeonol biosynthesis has not been characterized, and its enzymatic properties, protein structure, and catalytic mechanism remain unknown.  
+> — これまでの疑問・課題／Introduction
+
+> Here, using integrated transcriptomic and metabolomic analyses, we identify a key dual-substrate 4′-O-methyltransferase, PoOMT1, in Paeonia ostii.  
+> — アプローチ／Abstract
+
+> Structural analysis of the PoOMT1 ternary complex, combined with mutagenesis studies, uncover a His-Asn-Gln catalytic triad essential for the 4′-O-methylation, and reveal a T-shaped substrate binding pocket.  
+> — アプローチ／Abstract
+
+> Structural analysis of the PoOMT1 ternary complex, combined with mutagenesis studies, uncover a His-Asn-Gln catalytic triad essential for the 4′-O-methylation, and reveal a T-shaped substrate binding pocket.  
+> — 結果／Abstract
+
+> This pocket operates through dual-anchor and steric constraint mechanisms, which provide the structural basis for strict regioselectivity toward the 4′-OH group and facilitate the parallel biosynthetic pathway.  
+> — わかったこと／Abstract
+
+> In vitro assays demonstrate that PoOMT1 exhibits high affinity, catalytic efficiency, and strict regioselectivity toward two paeonol precursors: 4′-hydroxyacetophenone and 2′,4′-dihydroxyacetophenone.  
+> — わかったこと／Abstract
+
+</details>
+
+<sub>分類：酵素（その他）</sub>
 
 #### 読みどころ
 
@@ -514,9 +630,34 @@ Region D（L117・F312・L315）をTrpに置換すると、2′-OHを持つ基�
 
 NMR構造では、どちらの異性体もDNAに挿入され、向かいのシトシンを押し出す
 
-- **背景**：抗がん剤ピキサントロン（PIX）は非対称な構造のため、DNAの脱塩基（AP）部位と2種の位置異性体を作ると予想されたが、特徴づけがなかった。
-- **やったこと**：還元型PIX–AP部位コンジュゲートを含む12量体二本鎖をNMRで解析し、NOE拘束付きMDで構造を求めた。ドデカマーの結晶構造（2.5 Å）も解いた。
-- **分かったこと**：二本鎖DNAではR a:R b＝6:4で、どちらも3′側にインターカレートし対向するシトシンをメジャー溝へ押し出す。R bの方が深く入る。
+- **これまでの疑問・課題**：ピキサントロンは、DNAの脱塩基部位と2種類の位置異性体を作ると予想された。
+- **アプローチ**：NMRに基づく分子動力学計算で構造を求め、結晶構造も決めた。
+- **結果**：二本鎖では異性体R aが優勢で、どちらも3′側にインターカレートした。
+- **わかったこと**：向かいのシトシンとの水素結合が、生成比と挿入の深さの違いを説明しうる。
+
+<details><summary>この4行の根拠（論文本文）</summary>
+
+> The nitrogen atom in the PIX aza-anthracenedione ring renders the two side-chain amines nonequivalent, and predicts the formation of regioisomeric Schiff base conjugates with AP sites in DNA, referred to as regioisomers A and B and designated as R a and R b (Chart ).  
+> — これまでの疑問・課題／Introduction
+
+> Structures of reduced R a and R b conjugates from molecular dynamics calculations restrained by 1H NOESY data in 5′-d­(C1A2G3A4C5T6 X 7A8G9A10C11T12)-3′:5′-d­(A13G14T15C16T17C18A19G20T21C22T23G24)-3′, X = reduced PIX-AP site conjugate, showed that both regioisomers intercalated on the 3′ side of base pair T6/A19, displacing C18 into the major groove, with R a less intercalated than R b.  
+> — アプローチ／Abstract
+
+> A crystal structure in the Dickerson-Drew Dodecamer at 2.5 Å resolution revealed looped-out PIX stacking with PIX from a neighboring duplex.  
+> — アプローチ／Abstract
+
+> In dsDNA formation of R a was favored.  
+> — 結果／Abstract
+
+> Structures of reduced R a and R b conjugates from molecular dynamics calculations restrained by 1H NOESY data in 5′-d­(C1A2G3A4C5T6 X 7A8G9A10C11T12)-3′:5′-d­(A13G14T15C16T17C18A19G20T21C22T23G24)-3′, X = reduced PIX-AP site conjugate, showed that both regioisomers intercalated on the 3′ side of base pair T6/A19, displacing C18 into the major groove, with R a less intercalated than R b.  
+> — 結果／Abstract
+
+> The preferential formation of R a vs R b in dsDNA and deeper intercalation of R b may be explained by the differential ability of the asymmetric PIX N2 nitrogen in R a vs R b to hydrogen bond with the exocyclic N 4-amine of the cytosine displaced into the major groove.  
+> — わかったこと／Abstract
+
+</details>
+
+<sub>分類：DNA・RNA に関わるもの</sub>
 
 #### 読みどころ
 

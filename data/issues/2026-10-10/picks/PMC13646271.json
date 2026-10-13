@@ -5,9 +5,48 @@
   "subhead": "ボタンの根の4′-O-メチル基転移酵素。触媒三残基はHis262・Asn263・Gln324だった",
   "target_label": "PoOMT1（Paeonia ostii）",
   "summary": {
-    "background": "牡丹皮の指標成分ペオノールの生合成後半（4′-O-メチル化と2′-水酸化）を担う酵素は未同定で、構造も機構も不明だった。",
-    "approach": "トランスクリプトームとメタボロームからPoOMT1を同定し、SAH複合体と基質2種との三者複合体の結晶構造（1.83〜2.28 Å）、変異体解析で調べた。",
-    "findings": "His262-Asn263-Gln324の触媒三残基と、二重アンカーおよび立体制約を持つT字型ポケットが4′-OHへの位置選択性と2基質の受容を説明する。"
+    "question": "ペオノールの生合成の後半を担う酵素は未同定で、構造も機構も不明だった。",
+    "approach": "トランスクリプトームとメタボロームでPoOMT1を同定し、複合体の結晶構造と変異体で調べた。",
+    "result": "触媒三残基His-Asn-Glnと、T字型の基質結合ポケットが見つかった。",
+    "learned": "ポケットの形が、4′-OHへの位置選択性と、2種類の基質を受け入れる性質を支える。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Paeonol, the medicinal indicator component of the traditional Chinese medicine ‘Mudanpi’, has an incompletely elucidated biosynthetic pathway, particularly its post-modification steps.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "The specific OMT responsible for paeonol biosynthesis has not been characterized, and its enzymatic properties, protein structure, and catalytic mechanism remain unknown.",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here, using integrated transcriptomic and metabolomic analyses, we identify a key dual-substrate 4′-O-methyltransferase, PoOMT1, in Paeonia ostii.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Structural analysis of the PoOMT1 ternary complex, combined with mutagenesis studies, uncover a His-Asn-Gln catalytic triad essential for the 4′-O-methylation, and reveal a T-shaped substrate binding pocket.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "Structural analysis of the PoOMT1 ternary complex, combined with mutagenesis studies, uncover a His-Asn-Gln catalytic triad essential for the 4′-O-methylation, and reveal a T-shaped substrate binding pocket.",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "This pocket operates through dual-anchor and steric constraint mechanisms, which provide the structural basis for strict regioselectivity toward the 4′-OH group and facilitate the parallel biosynthetic pathway.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "In vitro assays demonstrate that PoOMT1 exhibits high affinity, catalytic efficiency, and strict regioselectivity toward two paeonol precursors: 4′-hydroxyacetophenone and 2′,4′-dihydroxyacetophenone.",
+          "section": "Abstract"
+        }
+      ]
+    }
   },
   "highlights": [
     {
@@ -89,5 +128,8 @@
   "editor_notes": "UniProt 未対応のため標的情報は PDB のみ。ga_pdb_id=9WBA は基質1との三者複合体（9WB6 は基質2）。論文は「構造が未知」と述べるが「初構造」とは明言していないので初構造扱いにしていない。本文に基質番号の欠落（Metabolomics 節）がある。 溶液中は二量体（ゲル濾過で約70 kDa）だが結晶中は単量体という点は記事から省いた。",
   "legend_labels": [
     "PoOMT1（O-メチルトランスフェラーゼ）"
+  ],
+  "categories": [
+    "enzyme"
   ]
 }

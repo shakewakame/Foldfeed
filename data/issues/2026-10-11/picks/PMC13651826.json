@@ -5,9 +5,44 @@
   "subhead": "自己抗原ペプチドとの結晶構造（2.87 Å）。Treg療法の設計の手がかりになる",
   "target_label": "HLA-DR3–Ro60ペプチド（ヒト）",
   "summary": {
-    "background": "シェーグレン病の患者はHLA-DRB1*03:01とRo60自己抗体を持つが、HLA-DR3が自己抗原ペプチドを提示する構造はCLIPのものしかなかった。",
-    "approach": "HLA-DR3-CLIPに安定化変異（P4D）を入れて収量を上げ、Ro60 369–383とペプチド交換して結晶化。TCRの同定とTreg導入の機能試験も行った。",
-    "findings": "Ro60ペプチドは標準的なレジスターで結合し、核となる9残基はFLLAVDVSA。P2-Leu、P5-Val、P8-SerがTCR認識側に露出する。"
+    "question": "HLA-DR3がRo60ペプチドを提示する構造は、CLIPペプチドのもの以外なかった。",
+    "approach": "Ro60ペプチドを結合したHLA-DR3の結晶構造を決め、Ro60反応性TCRを導入したTregも作った。",
+    "result": "Ro60ペプチドは標準的な向きで結合し、P2・P5・P8の3残基がTCR側に露出していた。",
+    "learned": "Ro60反応性TCRを導入したTregは、自己反応性T細胞を通常のTregより効果的に抑えた。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "yet no structural data currently exist for Ro60 peptide presentation by this allele beyond the invariant CLIP peptide structure",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Using this optimized platform, we determined the crystal structure of HLA-DR3 bound to the immunodominant Ro60369–383 peptide (PDB 9YZ3) at 2.87 Å resolution (R_work 23.7%, R_free 29.9%).",
+          "section": "Results"
+        },
+        {
+          "quote": "We designed a TCR-Treg that recognizes a dominant epitope of the Ro60 antigen (Ro60369-383) presented by HLA-DRB1∗03:01 and demonstrate that these cells can selectively suppress autoreactive T cells more effectively than polyclonal Treg.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "In the resulting structure, the Ro60369–383 peptide adopts a canonical register, with the 9-mer binding core defined as FLLAVDVSA.",
+          "section": "Results"
+        },
+        {
+          "quote": "Three residues: P2-Leucine, P5-Valine, and P8-Serine were solvent-exposed and positioned for TCR recognition (Figure 3).",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "We designed a TCR-Treg that recognizes a dominant epitope of the Ro60 antigen (Ro60369-383) presented by HLA-DRB1∗03:01 and demonstrate that these cells can selectively suppress autoreactive T cells more effectively than polyclonal Treg.",
+          "section": "Abstract"
+        }
+      ]
+    }
   },
   "highlights": [
     {
@@ -91,5 +126,8 @@
     "HLA-DRα鎖",
     "HLA-DRβ鎖（DRB1）",
     "Ro60 ペプチド"
+  ],
+  "categories": [
+    "immune"
   ]
 }

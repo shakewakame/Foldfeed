@@ -5,9 +5,52 @@
   "subhead": "基質結合でゲートヘリックスが上向きに伸び、ATP結合で下向きに倒れる",
   "target_label": "WzmWzt（結核菌）",
   "summary": {
-    "background": "結核菌細胞壁アラビノガラクタンの骨格となる脂質結合ガラクタン（LLG）は、ABC輸送体WzmWztで膜を越える。その認識と輸送の機構は分かっていなかった。",
-    "approach": "スメグマ菌で発現した複合体（Wzt E183Q変異体）をクライオ電顕で解析し、基質様密度あり、ATP結合、DDM/ATP結合の3状態を決定。変異株で機能を検証した。",
-    "findings": "共精製されたLLG様の密度が2つのWzmと2つのWztの全体に接する。ATP結合でゲートヘリックスが約40 Å動いてNBDが二量化し、基質結合部位が潰れる。"
+    "question": "結核菌の細胞壁ガラクタンを運ぶ輸送体が、基質をどう認識して輸送するかは未解決だった。",
+    "approach": "結核菌のWzmWztを、基質様の密度あり・ATP結合・DDM/ATP結合の3状態でクライオ電顕解析した。",
+    "result": "基質結合型ではゲートヘリックスが上向きに伸び、ATP結合型では下向きに動いてWztが二量体化した。",
+    "learned": "ゲートヘリックスの上向きの伸びが、Wztの二量体化の準備になる。必須の残基も特定した。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "However, due to the complex chemical structure of the natural LLP substrates and the existence of detergent micelles or phospholipids used in nanodisc reconstitution, the molecular basis of natural bacterial LLP recognition by these ABC transporters, in particular the transmembrane domains (TMDs), remains largely unresolved.",
+          "section": "Introduction"
+        },
+        {
+          "quote": "To address the long-standing mechanism of LLP recognition and ATP-dependent translocation by polysaccharide ABC transporters, we determined the cryo-EM structures of the Mtb LLG transporter WzmWztMtb in different conformations.",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here we present cryo-EM structures of WzmWztMtb to uncover critical steps of Mtb LLG translocation.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "The third, DDM/ATP-bound structure captured WztWzmMtb in an intermediate state with two DDM molecules in the Wzm central cavity.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "This proposed LLG binding is fulfilled by a fully upward extension of the Wzt gate helix, which serves as a critical step to prime Wzt for dimerization.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "The ATP-bound structure revealed a remarkable downward movement of the gate helix, together with the Wzt dimerization.",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Using two conditional mycobacterial mutants for functional analyses, we have identified residues on the Wzm N-terminal interface helix (IFN) and on the Wzt helical domain are essential for LLG recognition and translocation in vivo.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "This proposed LLG binding is fulfilled by a fully upward extension of the Wzt gate helix, which serves as a critical step to prime Wzt for dimerization.",
+          "section": "Abstract"
+        }
+      ]
+    }
   },
   "highlights": [
     {
@@ -95,5 +138,9 @@
   "legend_labels": [
     "Wzm（膜貫通サブユニット）",
     "Wzt（ATP 結合サブユニット）"
+  ],
+  "categories": [
+    "transporter",
+    "pathogen"
   ]
 }

@@ -5,9 +5,36 @@
   "subhead": "力プロファイル解析とクライオ電顕（平均2.3 Å）で、リボソーム上の新生鎖を追った",
   "target_label": "ホタルルシフェラーゼ（翻訳中）",
   "summary": {
-    "background": "多くのタンパク質はリボソームから出てくる途中で折りたたみ始める（共翻訳フォールディング）。研究は小さな単一ドメインに偏っており、複数ドメインの大きなタンパク質で過程を細かく追った例は少なかった。",
-    "approach": "550残基のホタルルシフェラーゼを対象に、翻訳停止配列を使う力プロファイル解析（5残基刻み）、停止させたリボソーム–新生鎖複合体（RNC）のクライオ電顕、粗視化モデルとMD、Trigger Factor添加実験を組み合わせた。",
-    "findings": "折りたたみは少数の協同的な転移の連続ではなく、中程度の力を生む圧縮・折りたたみが準連続的に続く過程だった。RF-2ドメインの折りたたみが大きな力のピークを作り、Trigger Factorはその中央部とC末端ドメインの合成時に新生鎖と広く相互作用する。"
+    "question": "共翻訳フォールディングの研究は、小さな単一ドメインのタンパク質に偏っていた。",
+    "approach": "力プロファイル解析で、550残基のホタルルシフェラーゼの折りたたみを追った。",
+    "result": "中程度の力を生む圧縮・折りたたみが連なり、RF-2ドメインの折りたたみで大きな力が出た。",
+    "learned": "折りたたみは、少数の協同的な段階が順に進むだけの単純な過程ではなかった。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "So far, studies of cotranslational folding have focused mainly on small, single-domain proteins.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here, we have used Force Profile Analysis to study the cotranslational folding of Firefly Luciferase, a complex 550-residue protein composed of an N-terminal domain (NTD) encompassing two split Rossmann folds (RF-1, RF-2) and a β-roll, and a flexibly attached C-terminal domain (CTD).",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "The folding process is characterized by a quasi-continuous series of compaction/folding steps that generate intermediate-size pulling forces on the nascent chain, punctuated by a prominent high-force event that represents the folding of the RF-2 domain, and a few low-force instances that likely indicate the formation of distinct folding intermediates.",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Our analysis uncovers a cotranslational compaction/folding process that is rich in detail and not just a simple succession of a few distinct, cooperative folding transitions.Subject terms: Protein folding, Computational biophysics, Cryoelectron microscopy, Single-molecule biophysics",
+          "section": "Abstract"
+        }
+      ]
+    }
   },
   "highlights": [
     {
@@ -80,5 +107,8 @@
   ],
   "method_label": "クライオ電顕・平均 2.3 Å（リボソーム–新生鎖複合体）",
   "ligand_label": "—",
-  "editor_notes": "原子モデルのない cryo-EM マップのみ（EMD-56368 ほか）で、PDB 構造はない。主結果は力プロファイル解析とMDで、クライオ電顕は補強。Europe PMC 上の公開日が 2026-01-01 と表示されるが、索引日は 2026-10-07。構造図は出せないため EMDB マップのみの表示になる。"
+  "editor_notes": "原子モデルのない cryo-EM マップのみ（EMD-56368 ほか）で、PDB 構造はない。主結果は力プロファイル解析とMDで、クライオ電顕は補強。Europe PMC 上の公開日が 2026-01-01 と表示されるが、索引日は 2026-10-07。構造図は出せないため EMDB マップのみの表示になる。",
+  "categories": [
+    "translation"
+  ]
 }

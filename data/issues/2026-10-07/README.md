@@ -41,9 +41,28 @@
 
 阻害剤はDNA結合面を固めており、PARP2がクロマチンに捕捉される理由の説明になりうる
 
-- **背景**：一本鎖切断（SSB）は最も頻繁なDNA損傷だが、クロマチンの制約された形の中でPARP2がそれをどう認識するかは分かっていなかった。
-- **やったこと**：SHL +5.3に一本鎖切断を入れたヌクレオソームとPARP2・HPF1の複合体をクライオ電顕で解析（全体2.8 Å）。オラパリブなど阻害剤3種の存在下でも構造を決めた。
-- **分かったこと**：WGRドメインが切断部位を、HDとHPF1が反対側のDNAジャイアを掴む多価結合を形成。阻害剤はDNA結合側の界面を安定化する一方、触媒モジュールを動的にし、DNAの非対称なほどけを促した。
+- **これまでの疑問・課題**：クロマチンの狭い構造の中で、PARP2が一本鎖切断をどう認識するかは不明だった。
+- **アプローチ**：一本鎖切断を入れたヌクレオソームとPARP2・HPF1の複合体を、クライオ電顕で解析した。
+- **結果**：WGRドメインが切断部位に、ヘリカルドメインとHPF1が反対側のDNAに結合し、DNAの2周にまたがる。
+- **わかったこと**：この結合様式が、遊離DNAよりヌクレオソーム上の切断を好む理由を説明する。
+
+<details><summary>この4行の根拠（論文本文）</summary>
+
+> Single-strand DNA breaks are among the most frequent forms of DNA damage, yet how PARP2 recognizes these lesions within the constrained geometry of chromatin remains unclear.  
+> — これまでの疑問・課題／Abstract
+
+> Here we use cryogenic electron microscopy (cryo-EM) to determine structures of PARP2 and HPF1 bound to nucleosomes containing a site-specific single-strand break (SSB) at superhelical location + 5.3.  
+> — アプローチ／Abstract
+
+> The structures reveal a multivalent binding mode in which the Trp-Gly-Arg (WGR) domain engages the break while the helical domain and HPF1 contact the opposing DNA gyre, spanning both DNA gyres of the nucleosome.  
+> — 結果／Abstract
+
+> This configuration explains the higher affinity of PARP2 for nucleosomal SSBs relative to free DNA.  
+> — わかったこと／Abstract
+
+</details>
+
+<sub>分類：クロマチン・ヒストン・DNA・RNA に関わるもの・酵素（その他）</sub>
 
 #### 読みどころ
 
@@ -133,9 +152,37 @@ WGRドメインが上側のDNAジャイアで切断を認識し、HDのArg296と
 
 全長のapo型とDNA結合型の構造を決定。Arg67の対がDNAの副溝に入り込む
 
-- **背景**：肺炎球菌はシアル酸を感知してnan・siaAオペロンを活性化するが、RpiR型転写因子NanRによる活性化の分子機構は分かっていなかった。
-- **やったこと**：エフェクター探索（DSF・ITC）、超遠心・native MS・SAXSによる会合状態の解析に加え、apo、エフェクター結合型、DNA複合体のX線結晶構造を決定した。
-- **分かったこと**：N-アセチルマンノサミン-6-リン酸（ManNAc-6-P）が二量体–四量体平衡を四量体側へ2000倍以上傾ける一方、DNAへの親和性は変えない。DNA結合ドメインが異性化酵素ドメインと構造的に連動しないためと説明できる。
+- **これまでの疑問・課題**：NanRがシアル酸の代謝遺伝子をどう活性化するのか、分子レベルでは不明だった。
+- **アプローチ**：代謝物の探索と解析に加え、apo型・代謝物結合型・DNA結合型の全長構造を決めた。
+- **結果**：代謝物が結合すると四量体が安定化するが、DNAへの親和性は変わらない。
+- **わかったこと**：DNA結合ドメインが糖イソメラーゼドメインと構造的に連動しないためと説明される。
+
+<details><summary>この4行の根拠（論文本文）</summary>
+
+> In Streptococcus pneumoniae, the RpiR transcriptional regulator NanR (SpNanR) senses sialic acid in the environment and upregulates transcription of the nan and sia A operons to increase uptake and metabolism of sialic acid.  
+> — これまでの疑問・課題／Abstract
+
+> The molecular basis of this activation is unknown.  
+> — これまでの疑問・課題／Abstract
+
+> We identify the effector that binds SpNanR to regulate expression of the nan and siaA operons.  
+> — アプローチ／Introduction
+
+> We report the first full-length structures of the RpiR family transcriptional regulator SpNanR, including the unbound (apo) SpNanR crystal structure, SpNanR in complex with N-acetylmannosamine-6-phosphate, and SpNanR in complex with its cognate DNA recognition sequence.  
+> — アプローチ／Introduction
+
+> SpNanR exists in a dimer–tetramer equilibrium, and N-acetylmannosamine-6-phosphate binding strongly stabilizes the tetramer.  
+> — 結果／Abstract
+
+> Notably, the effector N-acetylmannosamine-6-phosphate does not affect the affinity of SpNanR for DNA.  
+> — 結果／Abstract
+
+> The DNA-binding domains are not structurally coupled to the sugar isomerase domains, explaining why N-acetylmannosamine-6-phosphate binding does not affect DNA binding.  
+> — わかったこと／Abstract
+
+</details>
+
+<sub>分類：転写調節・シグナル伝達</sub>
 
 #### 読みどころ
 
@@ -227,9 +274,34 @@ ManNAc-6-Pは1分子で3つのプロトマーにまたがって結合し（リ�
 
 Lid2変異体のクライオ電顕構造（2.5 Å）では、標的鎖を活性部位に装填する動きが妨げられていた
 
-- **背景**：Cas12aは1つのRuvC活性部位で非標的鎖と標的鎖を順に切り、二本鎖切断を作る。片方の鎖だけ切るニッカーゼはゲノム編集の精度向上に役立つが、Lid構造がこの切り替えをどう制御するかは不明だった。
-- **やったこと**：大腸菌でGFP/RFPレポーターを使うin vivoスクリーニングでLbCas12aのLid領域変異体を探索。得られたLid2変異体をガイドRNA・標的DNAと複合体にし、クライオ電顕で2.5 Å構造を決定した。
-- **分かったこと**：Lid2ではαヘリックス状のLidがループに置き換わり、非標的鎖はRuvC活性部位に保持されるが、標的鎖切断に必要な構造変化が妨げられる。結果として非標的鎖だけを切るニッカーゼになる。
+- **これまでの疑問・課題**：Cas12aは1つのRuvCで両鎖を切るため、ニッカーゼへの改変は容易でなかった。
+- **アプローチ**：大腸菌でLid領域の変異体を探し、Lid2を2.5 Åのクライオ電顕で解析した。
+- **結果**：Lid2ではαヘリックス状のLidが置き換わり、非標的鎖だけを切るニッカーゼになった。
+- **わかったこと**：作り替えたLidが非標的鎖を活性部位に保ち、標的鎖の切断に必要な動きを妨げるとみられる。
+
+<details><summary>この4行の根拠（論文本文）</summary>
+
+> Because Cas12a nucleases have a single nuclease domain (RuvC) that cuts both strands, it is not straightforward to engineer a nickase [6].  
+> — これまでの疑問・課題／Introduction
+
+> We describe an unbiased in vivo screen in Escherichia coli to identify LbCas12a nickase variants.  
+> — アプローチ／Abstract
+
+> Cryo-electron microscopy (cryo-EM) at 2.5 Å resolution reveals that, in Lid2, the native α-helical Lid is replaced, uncoupling the concerted cleavage mechanism.  
+> — アプローチ／Abstract
+
+> Biochemical characterization confirms that Lid2 robustly nicks the non-target strand (NTS) with minor cleavage activity observed for the target strand (TS), accumulating predominantly nicked substrates.  
+> — 結果／Abstract
+
+> Cryo-electron microscopy (cryo-EM) at 2.5 Å resolution reveals that, in Lid2, the native α-helical Lid is replaced, uncoupling the concerted cleavage mechanism.  
+> — 結果／Abstract
+
+> Specifically, the remodeled Lid appears to stabilize the NTS in the active site, whereas it hampers the conformational transitions required for subsequent TS cleavage.  
+> — わかったこと／Abstract
+
+</details>
+
+<sub>分類：DNA・RNA に関わるもの・酵素（その他）</sub>
 
 #### 読みどころ
 
@@ -321,9 +393,31 @@ Lid2変異体のクライオ電顕構造（2.5 Å）では、標的鎖を活性�
 
 全長の大腸菌NNTを複数の状態で解析。阻害剤パルミトイルCoAはapoに近い状態で固定する
 
-- **背景**：NNTはNADHからNADP+へのヒドリド転移をプロトン輸送と共役させ、大腸菌ではNADPHの約4割を供給する。全長の大腸菌酵素の構造と状態変化は分かっていなかった。
-- **やったこと**：αとβサブユニットを逆順に融合した一本鎖変異体も作り、apo、NADP+/NAD+、NADPH/NADP+、NADPH単独、阻害剤パルミトイルCoA存在下の構造をクライオ電顕で解析した。
-- **分かったこと**：apoでは2つのdIIIが膜ドメインdIIに下向きに張り付き、通路に栓をする。NADP(H)が結合するとdIIIが外れて向きを変え、通路は細胞質側に開いてペリプラズム側が閉じる。パルミトイルCoAはapoに近い状態で固定する。
+- **これまでの疑問・課題**：全長の大腸菌NNTの構造と、状態の変化は分かっていなかった。
+- **アプローチ**：全長の大腸菌NNTを、apo・基質結合・阻害剤結合の状態でクライオ電顕で解析した。
+- **結果**：apoでは2つのdIIIが膜ドメインに張り付き、基質が結合すると外れて通路の向きが変わる。
+- **わかったこと**：dIIIの位置が、プロトン通路の開閉と触媒サイクルを左右する。
+
+<details><summary>この4行の根拠（論文本文）</summary>
+
+> Although the structures of isolated (dI)2 and (dI)2(dIII) complexes of E. coli transhydrogenase (EcTH) have been reported,21,31 the architecture and conformational landscape of the full-length enzyme have remained unknown despite extensive biochemical investigation.  
+> — これまでの疑問・課題／Introduction
+
+> Here we present cryo-EM structures of full-length Escherichia coli transhydrogenase in apo, substrate-bound, and inhibitor-bound states.  
+> — アプローチ／Abstract
+
+> In the apo state, both copies of the NADP(H)-binding domain (dIII) adopt a face-down configuration, with the binding pocket partially embedded in transmembrane domain dII, plugging the cytoplasmic side of the proton channel.  
+> — 結果／Abstract
+
+> Detachment of dIII from dII allows a conformation compatible with hydride transfer between NADP(H) in dIII and NAD(H) in dI, and is accompanied by conformational changes in the dII proton channel that close periplasmic access and open cytoplasmic access.  
+> — 結果／Abstract
+
+> These observations indicate that ligand-dependent positioning of dIII regulates access to the proton channel and shapes the catalytic cycle.  
+> — わかったこと／Introduction
+
+</details>
+
+<sub>分類：酵素（その他）・トランスポーター</sub>
 
 #### 読みどころ
 

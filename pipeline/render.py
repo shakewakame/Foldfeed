@@ -13,7 +13,7 @@ import unicodedata
 
 from . import brand, impact, pdb, structure_svg
 from .common import issue_dir, read_json
-from .schema import FEATURE_MIN, LAB_NOTE_FIELDS
+from .schema import CATEGORIES, FEATURE_MIN, LAB_NOTE_FIELDS, SUMMARY_FIELDS
 
 SITE_NAME = brand.SITE_NAME
 FONT = brand.FONT
@@ -329,10 +329,16 @@ def article_md(cand: dict, pick: dict, n: int, info: dict | None = None) -> list
                 f"<sub>{st['label']}の結合部位。{CONTACT_NOTE}：{', '.join(st['residues'])}"
                 + (f"。点線は 3.3 Å 以内の N・O の組（{st['polar']} 組）" if st["polar"] else "") + "</sub>", ""]
     out += [f"**{pick['headline']}**", "", pick.get("subhead") or "", "",
-            f"- **背景**：{s['background']}",
-            f"- **やったこと**：{s['approach']}",
-            f"- **分かったこと**：{s['findings']}", "",
-            "#### 読みどころ", ""]
+            ] + [f"- **{label}**：{s[k]}" for k, label in SUMMARY_FIELDS.items()] + [""]
+    sev = [(label, e) for k, label in SUMMARY_FIELDS.items() for e in (s.get("evidence") or {}).get(k, [])]
+    if sev:
+        out += ["<details><summary>この4行の根拠（論文本文）</summary>", ""]
+        for label, e in sev:
+            out += [f"> {e['quote']}  ", f"> — {label}／{e.get('section', '')}", ""]
+        out += ["</details>", ""]
+    if pick.get("categories"):
+        out += [f"<sub>分類：{'・'.join(CATEGORIES.get(c, c) for c in pick['categories'])}</sub>", ""]
+    out += ["#### 読みどころ", ""]
     for h in pick["highlights"]:
         out += [h["text"], ""] + quote_block(h.get("evidence", []))
     out += ["#### 構造データ", ""] + structure_table(cand) + protein_lines(cand)

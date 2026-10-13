@@ -14,14 +14,42 @@ LAB_NOTE_FIELDS = {
     "data_collection": "データ収集・解析",
 }
 
+# The article's short introduction, four lines in this order (the page shows the label, then the text).
+# Each line is short on purpose and says only what the paper says; each needs a verbatim quote in summary.evidence.
+SUMMARY_FIELDS = {
+    "question": "これまでの疑問・課題",
+    "approach": "アプローチ",
+    "result": "結果",
+    "learned": "わかったこと",
+}
+
+# What a protein is, for browsing the archive (proteins.html). One to three per article, from this list.
+CATEGORIES = {
+    "kinase": "キナーゼ",
+    "protease": "プロテアーゼ",
+    "receptor": "GPCR・受容体",
+    "channel": "イオンチャネル",
+    "transporter": "トランスポーター",
+    "enzyme": "酵素（その他）",
+    "nucleic": "DNA・RNA に関わるもの",
+    "chromatin": "クロマチン・ヒストン",
+    "translation": "リボソーム・翻訳・フォールディング",
+    "regulation": "転写調節・シグナル伝達",
+    "immune": "免疫（抗体・MHC・TCR・自然免疫）",
+    "pathogen": "感染・ウイルス・防御系",
+    "photosynthesis": "光合成・電子伝達",
+    "other": "その他",
+}
+
 # field: (required, max characters)
 LIMITS = {
     "headline": (True, 32),
     "subhead": (True, 56),
     "target_label": (True, 30),
-    "summary.background": (True, 140),
-    "summary.approach": (True, 140),
-    "summary.findings": (True, 160),
+    "summary.question": (True, 64),
+    "summary.approach": (True, 64),
+    "summary.result": (True, 72),
+    "summary.learned": (True, 72),
     "highlight.text": (True, 200),
     "lab_note": (False, 160),
 }
@@ -33,10 +61,18 @@ EXAMPLE = {
     "subhead": "補足（56字以内）：主見出しの内容を、構造や手法の言葉で具体的に。一覧では主見出しの下に出る",
     "target_label": "標的の短い表記（例：RyR1（ウサギ骨格筋））",
     "summary": {
-        "background": "背景：何が分かっていなかったか",
-        "approach": "やったこと：手法と対象",
-        "findings": "分かったこと：主な発見",
+        "question": "これまでの疑問・課題（64字以内）：論文が「分かっていなかった」と書いていること",
+        "approach": "アプローチ（64字以内）：何をどう調べたか",
+        "result": "結果（72字以内）：得られた観察・数値",
+        "learned": "わかったこと（72字以内）：その結果から論文が結論していること（著者が推測なら推測と書く）",
+        "evidence": {
+            "question": [{"quote": "上の各項目を支える、論文本文からの逐語引用（英語のまま）", "section": "Introduction"}],
+            "approach": [{"quote": "…", "section": "Abstract"}],
+            "result": [{"quote": "…", "section": "Results"}],
+            "learned": [{"quote": "…", "section": "Abstract"}],
+        },
     },
+    "categories": ["receptor"],  # CATEGORIES から 1〜3 個。タンパク質の種類で探すための分類
     "highlights": [
         {"tag": "機構の解明", "text": "面白い点の説明",
          "evidence": [{"quote": "論文本文からの逐語引用（英語のまま）", "section": "Results"}]},

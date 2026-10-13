@@ -5,9 +5,44 @@
   "subhead": "ルフォマイシン生合成のP450 RufOでは、Tyr-3のOHが反応に必須だった",
   "target_label": "NsRufO（P450）",
   "summary": {
-    "background": "P450 RufOは、リボソーム合成ペンタペプチドMRYLHのTyr-3をNOを使ってニトロ化する。この珍しい反応の機構と、硝酸イオンが副生しない理由は不明だった。",
-    "approach": "変異ペプチドの反応性試験、MD、DFTとQM/MM計算を組み合わせ、相同酵素NsRufOに基質Nle-RYLHが結合した結晶構造を1.59 Åで決定した。",
-    "findings": "Tyr-3のフェノール水素が必須だった。計算では、H235→His-5→Tyr-3→Cpd IIというプロトン中継がチロシルラジカル生成を導き、硝酸生成を抑える。"
+    "question": "RufOがチロシンをニトロ化する、珍しいP450反応の仕組みは不明だった。",
+    "approach": "変異ペプチドの反応試験、MD、QM/MM計算に加え、基質結合型NsRufOの結晶構造を決めた。",
+    "result": "基質ペプチドのヒスチジン（His-5）が、ニトロ化の進行に欠かせなかった。",
+    "learned": "中間体Compound IIのプロトン化状態が、ニトロ化か硝酸生成かを左右すると提案された。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "To understand the mechanism of this unusual P450-mediated reaction, a series of pentapeptides were tested as substrates alongside molecular dynamics simulations and quantum mechanics/molecular mechanics (QM/MM, ONIOM approach) calculations.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Nolan and co-workers recently suggested that differences in the hydrogen-bonding network to the substrate His-5 may contribute to enzymatic selectivity by increasing the Tyr-3 to His-5 distance by 0.7 Å in the RufO-bound MRYLH substrate (based on aromatic ring centroids in the crystal structures), which could hinder peptide cross-linking. , Complicating this further is data from previous studies that show RufO has the capacity to catalyze cross-linking of the non-native MRYLW substrate in addition to its capacity for catalyzing nitration of the native MRYLH substrate. ,, Thus, the underlying mechanisms that allow these two homologous P450s to catalyze different chemistry remain elusive.",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "To understand the mechanism of this unusual P450-mediated reaction, a series of pentapeptides were tested as substrates alongside molecular dynamics simulations and quantum mechanics/molecular mechanics (QM/MM, ONIOM approach) calculations.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "A new substrate-bound crystal structure of the homologue NsRufO was also obtained.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "These experiments revealed the intimate and necessary involvement of a histidine residue within the pentapeptide substrate of RufO in supporting effective nitration, with the protonation state of the intermediate compound II proposed to influence the production of nitrated tyrosine over unwanted nitrate formation.",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "These experiments revealed the intimate and necessary involvement of a histidine residue within the pentapeptide substrate of RufO in supporting effective nitration, with the protonation state of the intermediate compound II proposed to influence the production of nitrated tyrosine over unwanted nitrate formation.",
+          "section": "Abstract"
+        }
+      ]
+    }
   },
   "highlights": [
     {
@@ -83,5 +118,8 @@
   "legend_labels": [
     "NsRufO（P450）",
     "ペプチド（5 残基）"
+  ],
+  "categories": [
+    "enzyme"
   ]
 }

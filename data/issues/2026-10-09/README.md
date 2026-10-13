@@ -48,9 +48,37 @@
 
 RY12ドメインがATP:ADP比のセンサーとして働く可能性がある（実証は今後）
 
-- **背景**：悪性高熱症の唯一の治療薬ダントロレンと誘発物質4CmCについて、RyR1上の結合部位と作用機構は不明だった。
-- **やったこと**：RyR1–calstabin2–CaM複合体を、ダントロレン、ATP/ADP、4CmCなどの条件で解析した。RY12の局所精密化で2.4〜2.8 Åを得て、単一チャネル記録で検証した。
-- **分かったこと**：ダントロレンはRY12の裂け目でATPまたはADPと積み重なって結合する。ダントロレンがなくてもADP 2分子が結合する。4CmCは4か所に結合した。
+- **これまでの疑問・課題**：ダントロレンと悪性高熱症の誘発物質が、RyR1のどこにどう結合するかは不明だった。
+- **アプローチ**：ダントロレンや4CmCを結合したRyR1をクライオ電顕で解析し、機能も測った。
+- **結果**：ダントロレンはRY12ドメインでATPまたはADPと積み重なって結合し、4CmCは4か所に結合した。
+- **わかったこと**：RY12ドメインは、ATP/ADP比や小分子を感知するセンサーとして働く可能性がある。
+
+<details><summary>この4行の根拠（論文本文）</summary>
+
+> The precise binding sites and mechanisms of the therapeutic dantrolene and MH triggers have remained unclear.  
+> — これまでの疑問・課題／Abstract
+
+> Here, we present structures of RyR1 bound to dantrolene and the MH trigger 4-chloro-m-cresol (4CmC), revealing the dantrolene and 4CmC binding sites in atomic detail.  
+> — アプローチ／Abstract
+
+> Functional analyses confirm ATP or ADP is required for dantrolene inhibition, and a single point mutation disrupting this peripheral ATP site abolishes this ATP/ADP-dependent inhibition.  
+> — アプローチ／Abstract
+
+> Dantrolene binds stacked with ATP or ADP in the RY12 domain at the corner of the receptor, inducing a conformational change.  
+> — 結果／Abstract
+
+> Additionally, we identified four 4CmC binding sites, revealing one primary binding site in an amphipathic cavity in the core solenoid, and three auxiliary binding sites in the EF-hand, transmembrane, and RY12 domains.  
+> — 結果／Abstract
+
+> Strikingly, in the absence of dantrolene, this site selectively binds two ADP molecules even in the presence of excess ATP, indicating a role in ATP/ADP ratio sensing.  
+> — わかったこと／Abstract
+
+> These findings offer insights into the binding modes and mechanisms of MH-linked molecules, and reveal the RY12 domain’s regulatory role as a promiscuous sensor for adenine nucleotides and small ligands.Subject terms: Cryoelectron microscopy, Calcium channels, Permeation and transport  
+> — わかったこと／Abstract
+
+</details>
+
+<sub>分類：イオンチャネル</sub>
 
 #### 読みどころ
 
@@ -157,9 +185,37 @@ MH誘発物質4CmCはコアソレノイド中心の隠れたポケットでQ4020
 
 DNA-PKcsがKuを内側へ押し込む中間状態も、クライオ電顕で捉えた
 
-- **背景**：NHEJの開始にはKuとDNA-PKcsが約25〜30 bpの遊離二本鎖DNAを必要とするが、クロマチンではヌクレオソームが障壁になる。DNA-PKcsの役割は不明だった。
-- **やったこと**：リンカー長の異なるヌクレオソーム基質で連結反応を測り、Ku単独とDNA-PKのヌクレオソーム複合体をクライオ電顕で複数状態解析した。
-- **分かったこと**：Kuは約2巻きのヌクレオソームDNAをほどき、Ku70がヒストンと接する。DNA-PKcsはリンカーの短い基質で連結を促し、Kuを内側へ押し込む中間状態も捉えた。
+- **これまでの疑問・課題**：Ku・DNA-PKcsは約28 bpの遊離DNAを要するが、クロマチンでは得にくい。DNA-PKcsの役割は不明だった。
+- **アプローチ**：ヌクレオソーム上での連結反応を測り、Ku・DNA-PKcsとの複合体をクライオ電顕で解析した。
+- **結果**：DNA-PKcsは、DNAに余裕のないヌクレオソーム上でもNHEJを促した。
+- **わかったこと**：Kuはヌクレオソームの障壁をDNA-PKcsの助けで越え、段階的にDNAに沿って進むと考えられる。
+
+<details><summary>この4行の根拠（論文本文）</summary>
+
+> Ku and DNA-PKcs require ~28 base pairs of free duplex DNA, which is often unavailable in chromatin with nucleosomes acting as barriers.  
+> — これまでの疑問・課題／Abstract
+
+> The role of DNA-PKcs remains unclear, as previous in vitro studies mainly used naked DNA.  
+> — これまでの疑問・課題／Abstract
+
+> Here, in vitro ligation assays show that DNA-PKcs promotes NHEJ on nucleosomes with limited DNA accessibility.  
+> — アプローチ／Abstract
+
+> Cryo-EM structures of nucleosome-bound Ku and DNA-PKcs reveal that Ku encounters nucleosomal barriers and overcomes them with DNA-PKcs.  
+> — アプローチ／Abstract
+
+> Here, in vitro ligation assays show that DNA-PKcs promotes NHEJ on nucleosomes with limited DNA accessibility.  
+> — 結果／Abstract
+
+> Cryo-EM structures of nucleosome-bound Ku and DNA-PKcs reveal that Ku encounters nucleosomal barriers and overcomes them with DNA-PKcs.  
+> — わかったこと／Abstract
+
+> Distinct structural states support a stepwise model of DNA-PK progressive translocating along nucleosomal DNA, highlighting DNA-PKcs function in chromatin-associated NHEJ in vivo.  
+> — わかったこと／Abstract
+
+</details>
+
+<sub>分類：キナーゼ・DNA・RNA に関わるもの・クロマチン・ヒストン</sub>
 
 #### 読みどころ
 
@@ -263,9 +319,28 @@ DNA-PKcsはリンカーが短い基質で連結を促進した（N-12で約7倍�
 
 GPR84–Gi複合体の構造。Leu336AlaとPhe187Alaの変異で動員が回復した
 
-- **背景**：GPCRのバイアスアゴニストを合理的に設計するには、バイアスの分子機構の理解が足りなかった。GPR84のGタンパク質バイアス型アゴニストの構造は未解析だった。
-- **やったこと**：Gタンパク質バイアス型アゴニストOX04529とGPR84–Gi複合体のクライオ電顕構造（3.03 Å）を決め、MD、変異体解析、置換基ライブラリーで検証した。
-- **分かったこと**：OX04529のCF3基がLeu336とPhe187の配置を変え、極性ネットワークを乱してβ-アレスチン動員を抑える。置換基の体積とβ-アレスチン効力は逆相関した。
+- **これまでの疑問・課題**：GPCRのバイアスアゴニストを合理的に設計するには、機構の理解が足りなかった。
+- **アプローチ**：OX04529とGPR84–Gi複合体のクライオ電顕構造を決め、MDと変異体で検証した。
+- **結果**：OX04529の置換基がLeu336とPhe187に干渉し、β-アレスチン動員に必要な極性ネットワークを乱す。
+- **わかったこと**：置換基の立体的な大きさに基づく、バイアス型アゴニストの設計モデルを示した。
+
+<details><summary>この4行の根拠（論文本文）</summary>
+
+> Biased signaling in G protein-coupled receptors offers therapeutic promise, yet rational design of biased ligands remains challenging due to limited mechanistic understanding.  
+> — これまでの疑問・課題／Abstract
+
+> A high-resolution cryo-EM structure of GPR84-Gi in complex with OX04529, complemented by molecular dynamics simulations and targeted mutagenesis, reveals that steric interactions between ligand substituents and Leu3366.52 and Phe1875.47 indirectly disrupt a critical polar network involving Tyr3326.48, Asn1043.36 and Asn3627.45 essential for β-arrestin recruitment.  
+> — アプローチ／Abstract
+
+> A high-resolution cryo-EM structure of GPR84-Gi in complex with OX04529, complemented by molecular dynamics simulations and targeted mutagenesis, reveals that steric interactions between ligand substituents and Leu3366.52 and Phe1875.47 indirectly disrupt a critical polar network involving Tyr3326.48, Asn1043.36 and Asn3627.45 essential for β-arrestin recruitment.  
+> — 結果／Abstract
+
+> Based on these insights, we develop a steric-dependent model that enables rational design of G protein-biased agonists with predictable β-arrestin recruitment profiles.  
+> — わかったこと／Abstract
+
+</details>
+
+<sub>分類：GPCR・受容体</sub>
 
 #### 読みどころ
 
@@ -352,9 +427,31 @@ Leu336AlaとPhe187Ala変異は、OX04529によるβ-アレスチン動員を回�
 
 ナノディスク中の大腸菌MscLを、クライオ電顕（3.5〜3.7 Å）とNMRで解析した
 
-- **背景**：MscLは膜張力だけで開くモデルチャネルだが、大腸菌のMscLは全長の構造が決まっておらず、脂質膜中の動態も不明だった。
-- **やったこと**：WTと低閾値変異体G22Sを、ペプチド（MSP）ナノディスクでクライオ電顕解析し（3.7 / 3.5 Å）、リポソーム中のssNMRで動態を比べた。
-- **分かったこと**：どちらも口径約2 Åで閉じた構造だった。G22SはNMRで周辺質ループの信号が消え、F78周辺などが摂動し、動態の増大を示した。
+- **これまでの疑問・課題**：大腸菌MscLの全体構造は未決定で、ゲート開閉の仕組みも不完全にしか分かっていなかった。
+- **アプローチ**：野生型とG22S変異体をナノディスク中でクライオ電顕解析し、リポソーム中のNMRで動態を調べた。
+- **結果**：クライオ電顕ではどちらも閉じた構造だった。G22SではNMRで広い範囲の構造変化が見えた。
+- **わかったこと**：変異体は動態が大きく、閉状態から開状態への初期の移行が見えているとされる。
+
+<details><summary>この4行の根拠（論文本文）</summary>
+
+> Mechanosensitive channels are central to cellular responses to membrane tension, yet the structural basis of their gating remains incompletely understood.  
+> — これまでの疑問・課題／Abstract
+
+> S2), a complete structure of MscL from E. coli has remained elusive.  
+> — これまでの疑問・課題／Introduction
+
+> Here, we determine the structures of wild-type and Gly22→Ser (G22S) mutants of MscL from Escherichia coli (EcMscL) by cryogenic electron microscopy (cryo-EM) in peptide-based lipid nanodiscs and complement them with solid-state nuclear magnetic resonance (NMR) measurements in liposomes to capture their dynamics in a native-like membrane environment.  
+> — アプローチ／Abstract
+
+> The cryo-EM structures reveal a closed conformation, whereas analysis of the low-threshold G22S mutant by NMR uncovers widespread conformational changes in both cytoplasmic and periplasmic regions.  
+> — 結果／Abstract
+
+> These data indicate enhanced dynamics and conformational heterogeneity in the mutant, revealing the early transitions from the closed toward the open state.  
+> — わかったこと／Abstract
+
+</details>
+
+<sub>分類：イオンチャネル</sub>
 
 #### 読みどころ
 
@@ -447,9 +544,37 @@ Leu336AlaとPhe187Ala変異は、OX04529によるβ-アレスチン動員を回�
 
 赤痢菌IpaDと抗体Fabの複合体。遠位ドメインに結合すると溶血を抑え、N末端ドメインでは高めた
 
-- **背景**：赤痢菌には承認ワクチンがなく、防御に働く抗体と有害に働く抗体を分ける構造的な根拠が足りなかった。
-- **やったこと**：サルの赤痢集団感染の検体からIpaD・IpaBなどに対するmAbを単離し、IpaDとFabの2つの複合体をクライオ電顕で解析した。
-- **分かったこと**：溶血を抑えるD13r.34とD02-F2は遠位ドメインに、溶血を高めるD02-E4はN末端ドメインに結合した。エピトープ変異体で結合の消失を確認した。
+- **これまでの疑問・課題**：赤痢菌のワクチンは未承認で、免疫の構造的・分子的な決め手が分かっていなかった。
+- **アプローチ**：サルの赤痢集団感染の検体から抗体を単離し、IpaDとの複合体をクライオ電顕で解析した。
+- **結果**：溶血を抑える抗体はIpaDの遠位ドメインに、溶血を高める抗体はN末端ドメインに結合した。
+- **わかったこと**：結合する場所で抗体の働きが分かれる。防御に働く応答を選ぶ抗原設計に役立つとされる。
+
+<details><summary>この4行の根拠（論文本文）</summary>
+
+> There is currently no approved vaccine for Shigella spp., a leading cause of diarrhea with increasing rates of antimicrobial resistance.  
+> — これまでの疑問・課題／Abstract
+
+> Shigella vaccine development is complicated in part by an incomplete understanding of the structural and molecular determinants of immunity.  
+> — これまでの疑問・課題／Abstract
+
+> To address this, we isolated monoclonal antibodies against candidate Shigella vaccine antigens using samples from a Shigella flexneri outbreak in a nonhuman primate (NHP) research facility.  
+> — アプローチ／Abstract
+
+> To identify these functional epitopes on both IpaD and IpaB, we sought to determine representative mAb:antigen complex structures by cryogenic electron microscopy (cryo-EM).  
+> — アプローチ／Results
+
+> Cryo-EM analysis of IpaD-mAb complexes revealed that in vitro hemolysis-blocking mAbs primarily bind the distal domain, whereas the in vitro hemolysis-enhancing mAbs bind to the N-terminal domain (Fig.  
+> — 結果／Discussion
+
+> T3SS antibodies could either inhibit or enhance bacterial virulence in vitro and differed in vivo depending on their epitope specificity.  
+> — わかったこと／Abstract
+
+> Collectively, these findings provide insights into protective and deleterious immune responses against Shigella that directly inform vaccine immunogen design.  
+> — わかったこと／Abstract
+
+</details>
+
+<sub>分類：免疫（抗体・MHC・TCR・自然免疫）・感染・ウイルス・防御系</sub>
 
 #### 読みどころ
 

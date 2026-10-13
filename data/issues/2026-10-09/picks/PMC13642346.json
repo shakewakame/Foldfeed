@@ -6,9 +6,36 @@
   "takeaway": "リガンド置換基の立体的な大きさでGPR84のバイアスを設計できる",
   "target_label": "GPR84–Gi（ヒト）",
   "summary": {
-    "background": "GPCRのバイアスアゴニストを合理的に設計するには、バイアスの分子機構の理解が足りなかった。GPR84のGタンパク質バイアス型アゴニストの構造は未解析だった。",
-    "approach": "Gタンパク質バイアス型アゴニストOX04529とGPR84–Gi複合体のクライオ電顕構造（3.03 Å）を決め、MD、変異体解析、置換基ライブラリーで検証した。",
-    "findings": "OX04529のCF3基がLeu336とPhe187の配置を変え、極性ネットワークを乱してβ-アレスチン動員を抑える。置換基の体積とβ-アレスチン効力は逆相関した。"
+    "question": "GPCRのバイアスアゴニストを合理的に設計するには、機構の理解が足りなかった。",
+    "approach": "OX04529とGPR84–Gi複合体のクライオ電顕構造を決め、MDと変異体で検証した。",
+    "result": "OX04529の置換基がLeu336とPhe187に干渉し、β-アレスチン動員に必要な極性ネットワークを乱す。",
+    "learned": "置換基の立体的な大きさに基づく、バイアス型アゴニストの設計モデルを示した。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Biased signaling in G protein-coupled receptors offers therapeutic promise, yet rational design of biased ligands remains challenging due to limited mechanistic understanding.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "A high-resolution cryo-EM structure of GPR84-Gi in complex with OX04529, complemented by molecular dynamics simulations and targeted mutagenesis, reveals that steric interactions between ligand substituents and Leu3366.52 and Phe1875.47 indirectly disrupt a critical polar network involving Tyr3326.48, Asn1043.36 and Asn3627.45 essential for β-arrestin recruitment.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "A high-resolution cryo-EM structure of GPR84-Gi in complex with OX04529, complemented by molecular dynamics simulations and targeted mutagenesis, reveals that steric interactions between ligand substituents and Leu3366.52 and Phe1875.47 indirectly disrupt a critical polar network involving Tyr3326.48, Asn1043.36 and Asn3627.45 essential for β-arrestin recruitment.",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Based on these insights, we develop a steric-dependent model that enables rational design of G protein-biased agonists with predictable β-arrestin recruitment profiles.",
+          "section": "Abstract"
+        }
+      ]
+    }
   },
   "highlights": [
     {
@@ -90,5 +117,8 @@
     "Gβ1（G タンパク質 β）",
     "Gγ2（G タンパク質 γ）",
     "scFv16（抗体断片）"
+  ],
+  "categories": [
+    "receptor"
   ]
 }

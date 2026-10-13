@@ -6,9 +6,40 @@
   "takeaway": "NADP(H)が結合するとdIIIが膜ドメインから外れ、プロトン通路の開く向きが反転する",
   "target_label": "大腸菌NNT（PntA/PntB）",
   "summary": {
-    "background": "NNTはNADHからNADP+へのヒドリド転移をプロトン輸送と共役させ、大腸菌ではNADPHの約4割を供給する。全長の大腸菌酵素の構造と状態変化は分かっていなかった。",
-    "approach": "αとβサブユニットを逆順に融合した一本鎖変異体も作り、apo、NADP+/NAD+、NADPH/NADP+、NADPH単独、阻害剤パルミトイルCoA存在下の構造をクライオ電顕で解析した。",
-    "findings": "apoでは2つのdIIIが膜ドメインdIIに下向きに張り付き、通路に栓をする。NADP(H)が結合するとdIIIが外れて向きを変え、通路は細胞質側に開いてペリプラズム側が閉じる。パルミトイルCoAはapoに近い状態で固定する。"
+    "question": "全長の大腸菌NNTの構造と、状態の変化は分かっていなかった。",
+    "approach": "全長の大腸菌NNTを、apo・基質結合・阻害剤結合の状態でクライオ電顕で解析した。",
+    "result": "apoでは2つのdIIIが膜ドメインに張り付き、基質が結合すると外れて通路の向きが変わる。",
+    "learned": "dIIIの位置が、プロトン通路の開閉と触媒サイクルを左右する。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Although the structures of isolated (dI)2 and (dI)2(dIII) complexes of E. coli transhydrogenase (EcTH) have been reported,21,31 the architecture and conformational landscape of the full-length enzyme have remained unknown despite extensive biochemical investigation.",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here we present cryo-EM structures of full-length Escherichia coli transhydrogenase in apo, substrate-bound, and inhibitor-bound states.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "In the apo state, both copies of the NADP(H)-binding domain (dIII) adopt a face-down configuration, with the binding pocket partially embedded in transmembrane domain dII, plugging the cytoplasmic side of the proton channel.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Detachment of dIII from dII allows a conformation compatible with hydride transfer between NADP(H) in dIII and NAD(H) in dI, and is accompanied by conformational changes in the dII proton channel that close periplasmic access and open cytoplasmic access.",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "These observations indicate that ligand-dependent positioning of dIII regulates access to the proton channel and shapes the catalytic cycle.",
+          "section": "Introduction"
+        }
+      ]
+    }
   },
   "highlights": [
     {
@@ -96,5 +127,9 @@
   "legend_labels": [
     "PntA（NNT α サブユニット）",
     "PntB（NNT β サブユニット）"
+  ],
+  "categories": [
+    "enzyme",
+    "transporter"
   ]
 }

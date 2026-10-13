@@ -5,9 +5,40 @@
   "subhead": "RNAだけの2.9 Å構造。折りたたんだ分子の割合は、Mg²⁺のみで約1/3、グリシン追加で約2/3",
   "target_label": "グリシンリボスイッチ（コレラ菌）",
   "summary": {
-    "background": "リボスイッチは構造の不均一性が機能に不可欠だが、RNAは不均一性のため高分解能の構造解析が難しい。",
-    "approach": "コレラ菌タンデムアプタマーをリガンドなし、Mg²⁺のみ、Mg²⁺＋グリシンの3条件でクライオ電顕にかけ、MDで補強した。",
-    "findings": "全体が折り畳まれた「walking man」型の集団は、Mg²⁺のみで約1/3、グリシン追加で約2/3になる。両リガンドは協調的に結合する。"
+    "question": "リボスイッチは構造の不均一性が機能に欠かせず、そのため構造解析が難しかった。",
+    "approach": "グリシンリボスイッチのタンデムアプタマーを、条件を変えてクライオ電顕で調べた。",
+    "result": "Mg²⁺だけでは約1/3、グリシンを加えると約2/3の粒子が完全に折りたたまれていた。",
+    "learned": "グリシンとMg²⁺は協同的に働き、折りたたみを安定化する。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Conformational heterogeneity is fundamental to riboswitch functionality, yet this same attribute makes structural characterization of these mRNA elements challenging.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here, we use cryo-electron microscopy to characterize different structural populations of the glycine riboswitch tandem aptamers, and molecular dynamics simulations to support the observed ligand orientation in the holo state.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "In Mg²⁺ conditions alone, approximately one-third of the picked particles are fully folded, whereas two thirds adopt distinct, partially folded states.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "While Mg2+ appears to shift the equilibrium toward folded conformations, glycine shifts the population of fully folded glycine riboswitch from approximately one to two thirds.",
+          "section": "Introduction"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "The population data show that glycine and Mg²⁺ operate synergistically: glycine enhances Mg²⁺ localization, while Mg2+ drives glycine recruitment.",
+          "section": "Abstract"
+        }
+      ]
+    }
   },
   "highlights": [
     {
@@ -86,5 +117,8 @@
   "editor_notes": "グリシンの向きは密度だけでは決まらず MD による支持。著者は in vitro で細胞内の混雑や転写共役の折り畳みを再現していないと述べている。9N3J は Mg²⁺のみ（3.3 Å、グリシンなし）。集団比は粒子分類に依存し、約41%は同定できないクラス。",
   "legend_labels": [
     "グリシンリボスイッチ（RNA）"
+  ],
+  "categories": [
+    "nucleic"
   ]
 }

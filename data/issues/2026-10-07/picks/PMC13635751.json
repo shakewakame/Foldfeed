@@ -6,9 +6,36 @@
   "takeaway": "PARP2はDNA 2周分をまたいで切断を捉え、阻害剤はDNA結合面を固める",
   "target_label": "ヒトPARP2–HPF1／ヌクレオソーム",
   "summary": {
-    "background": "一本鎖切断（SSB）は最も頻繁なDNA損傷だが、クロマチンの制約された形の中でPARP2がそれをどう認識するかは分かっていなかった。",
-    "approach": "SHL +5.3に一本鎖切断を入れたヌクレオソームとPARP2・HPF1の複合体をクライオ電顕で解析（全体2.8 Å）。オラパリブなど阻害剤3種の存在下でも構造を決めた。",
-    "findings": "WGRドメインが切断部位を、HDとHPF1が反対側のDNAジャイアを掴む多価結合を形成。阻害剤はDNA結合側の界面を安定化する一方、触媒モジュールを動的にし、DNAの非対称なほどけを促した。"
+    "question": "クロマチンの狭い構造の中で、PARP2が一本鎖切断をどう認識するかは不明だった。",
+    "approach": "一本鎖切断を入れたヌクレオソームとPARP2・HPF1の複合体を、クライオ電顕で解析した。",
+    "result": "WGRドメインが切断部位に、ヘリカルドメインとHPF1が反対側のDNAに結合し、DNAの2周にまたがる。",
+    "learned": "この結合様式が、遊離DNAよりヌクレオソーム上の切断を好む理由を説明する。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Single-strand DNA breaks are among the most frequent forms of DNA damage, yet how PARP2 recognizes these lesions within the constrained geometry of chromatin remains unclear.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here we use cryogenic electron microscopy (cryo-EM) to determine structures of PARP2 and HPF1 bound to nucleosomes containing a site-specific single-strand break (SSB) at superhelical location + 5.3.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "The structures reveal a multivalent binding mode in which the Trp-Gly-Arg (WGR) domain engages the break while the helical domain and HPF1 contact the opposing DNA gyre, spanning both DNA gyres of the nucleosome.",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "This configuration explains the higher affinity of PARP2 for nucleosomal SSBs relative to free DNA.",
+          "section": "Abstract"
+        }
+      ]
+    }
   },
   "highlights": [
     {
@@ -89,5 +116,10 @@
   ],
   "method_label": "クライオ電顕・全体 2.8 Å",
   "ligand_label": "オラパリブ、タラゾパリブ、EB-47",
-  "editor_notes": "PDB/EMDB の ID は補足資料（Table S5）にのみ記載されており、構造データ表と構造図は空欄。ヒストンはショウジョウバエ由来。"
+  "editor_notes": "PDB/EMDB の ID は補足資料（Table S5）にのみ記載されており、構造データ表と構造図は空欄。ヒストンはショウジョウバエ由来。",
+  "categories": [
+    "chromatin",
+    "nucleic",
+    "enzyme"
+  ]
 }

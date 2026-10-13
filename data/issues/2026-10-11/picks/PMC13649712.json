@@ -5,9 +5,44 @@
   "subhead": "PER2はWBM部位でCRYと競合し、PER1は主にWIN部位でMLL1と競合する",
   "target_label": "WDR5–PER2 WBMペプチド（マウス）",
   "summary": {
-    "background": "WDR5は活性化型のMLL1複合体と抑制型のPER複合体の両方に見つかるが、PERとの直接結合の様式は分かっていなかった。",
-    "approach": "PER1/PER2とWDR5の結合をSEC・ITCで解析し、WDR5とPER2のWBMペプチドの複合体とWDR5 N225A変異体の結晶構造を決定。WIN部位阻害剤も試した。",
-    "findings": "PER2はCRY結合領域内のWBMでWDR5に結合しCRYと競合する。PER1はWIN部位への結合が主で、WDR5部位を使うMLL1と競合し、CRYやRbBP5との三者複合体を作れる。"
+    "question": "WDR5は、活性化型のMLL1複合体にも抑制型のPER複合体にも見つかっていた。",
+    "approach": "WDR5とPER1・PER2の結合を調べ、WDR5とPER2のWBMペプチドの結晶構造を決めた。",
+    "result": "PER2はWBMモチーフで、PER1は主にWINモチーフでWDR5に結合する。",
+    "learned": "WDR5はPERの直接の結合相手で、PER1とPER2で結合のしかたが大きく違う。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "The MLL1 complex component WDR5 was also found in a repressive PER complex.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here we show that WDR5 directly binds to the CRY binding domain (CBD) regions of PER1 and PER2.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "we determined the crystal structure of a complex of WDR5 with a PER2 WBM motif peptide",
+          "section": "Results"
+        }
+      ],
+      "result": [
+        {
+          "quote": "PER2 binds WDR5 via a WBM motif within the PER2/CRY interface, imposing competition between PER2/WDR5-, PER2/CRY- and RbBP5/WDR5 complexes.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "PER1 binds WDR5 predominantly via a WIN motif outside the CBD, enabling formation of trimeric PER1WIN/WDR5/RbBP5WBM - and PER1/WDR5/CRY complexes.",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Together, our studies revealed a role of WDR5 as a direct PER interaction partner with critical differences between PER1 and PER2.",
+          "section": "Abstract"
+        }
+      ]
+    }
   },
   "highlights": [
     {
@@ -87,5 +122,9 @@
   "editor_notes": "PDBは8OK1（WDR5 N225A、1.38 Å）と8OKF（WDR5–PER2ペプチド、1.85 Å）。8OK1が最高分解能だが、論文の主張に近い8OKFを構造図に指定した。ligand_label の Inh-5 は構造には含まれない（8OKF の 144 は別のリガンドかもしれない）ので、レビューで確認してほしい。",
   "legend_labels": [
     "WDR5（GST 融合体）"
+  ],
+  "categories": [
+    "regulation",
+    "chromatin"
   ]
 }

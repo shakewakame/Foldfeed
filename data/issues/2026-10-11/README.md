@@ -51,9 +51,40 @@
 
 基質結合でゲートヘリックスが上向きに伸び、ATP結合で下向きに倒れる
 
-- **背景**：結核菌細胞壁アラビノガラクタンの骨格となる脂質結合ガラクタン（LLG）は、ABC輸送体WzmWztで膜を越える。その認識と輸送の機構は分かっていなかった。
-- **やったこと**：スメグマ菌で発現した複合体（Wzt E183Q変異体）をクライオ電顕で解析し、基質様密度あり、ATP結合、DDM/ATP結合の3状態を決定。変異株で機能を検証した。
-- **分かったこと**：共精製されたLLG様の密度が2つのWzmと2つのWztの全体に接する。ATP結合でゲートヘリックスが約40 Å動いてNBDが二量化し、基質結合部位が潰れる。
+- **これまでの疑問・課題**：結核菌の細胞壁ガラクタンを運ぶ輸送体が、基質をどう認識して輸送するかは未解決だった。
+- **アプローチ**：結核菌のWzmWztを、基質様の密度あり・ATP結合・DDM/ATP結合の3状態でクライオ電顕解析した。
+- **結果**：基質結合型ではゲートヘリックスが上向きに伸び、ATP結合型では下向きに動いてWztが二量体化した。
+- **わかったこと**：ゲートヘリックスの上向きの伸びが、Wztの二量体化の準備になる。必須の残基も特定した。
+
+<details><summary>この4行の根拠（論文本文）</summary>
+
+> However, due to the complex chemical structure of the natural LLP substrates and the existence of detergent micelles or phospholipids used in nanodisc reconstitution, the molecular basis of natural bacterial LLP recognition by these ABC transporters, in particular the transmembrane domains (TMDs), remains largely unresolved.  
+> — これまでの疑問・課題／Introduction
+
+> To address the long-standing mechanism of LLP recognition and ATP-dependent translocation by polysaccharide ABC transporters, we determined the cryo-EM structures of the Mtb LLG transporter WzmWztMtb in different conformations.  
+> — これまでの疑問・課題／Introduction
+
+> Here we present cryo-EM structures of WzmWztMtb to uncover critical steps of Mtb LLG translocation.  
+> — アプローチ／Abstract
+
+> The third, DDM/ATP-bound structure captured WztWzmMtb in an intermediate state with two DDM molecules in the Wzm central cavity.  
+> — アプローチ／Abstract
+
+> This proposed LLG binding is fulfilled by a fully upward extension of the Wzt gate helix, which serves as a critical step to prime Wzt for dimerization.  
+> — 結果／Abstract
+
+> The ATP-bound structure revealed a remarkable downward movement of the gate helix, together with the Wzt dimerization.  
+> — 結果／Abstract
+
+> Using two conditional mycobacterial mutants for functional analyses, we have identified residues on the Wzm N-terminal interface helix (IFN) and on the Wzt helical domain are essential for LLG recognition and translocation in vivo.  
+> — わかったこと／Abstract
+
+> This proposed LLG binding is fulfilled by a fully upward extension of the Wzt gate helix, which serves as a critical step to prime Wzt for dimerization.  
+> — わかったこと／Abstract
+
+</details>
+
+<sub>分類：トランスポーター・感染・ウイルス・防御系</sub>
 
 #### 読みどころ
 
@@ -146,9 +177,34 @@ TMD中央の空洞にはDDM分子が2つ入った中間的な状態も捉えた�
 
 自己抗原ペプチドとの結晶構造（2.87 Å）。Treg療法の設計の手がかりになる
 
-- **背景**：シェーグレン病の患者はHLA-DRB1*03:01とRo60自己抗体を持つが、HLA-DR3が自己抗原ペプチドを提示する構造はCLIPのものしかなかった。
-- **やったこと**：HLA-DR3-CLIPに安定化変異（P4D）を入れて収量を上げ、Ro60 369–383とペプチド交換して結晶化。TCRの同定とTreg導入の機能試験も行った。
-- **分かったこと**：Ro60ペプチドは標準的なレジスターで結合し、核となる9残基はFLLAVDVSA。P2-Leu、P5-Val、P8-SerがTCR認識側に露出する。
+- **これまでの疑問・課題**：HLA-DR3がRo60ペプチドを提示する構造は、CLIPペプチドのもの以外なかった。
+- **アプローチ**：Ro60ペプチドを結合したHLA-DR3の結晶構造を決め、Ro60反応性TCRを導入したTregも作った。
+- **結果**：Ro60ペプチドは標準的な向きで結合し、P2・P5・P8の3残基がTCR側に露出していた。
+- **わかったこと**：Ro60反応性TCRを導入したTregは、自己反応性T細胞を通常のTregより効果的に抑えた。
+
+<details><summary>この4行の根拠（論文本文）</summary>
+
+> yet no structural data currently exist for Ro60 peptide presentation by this allele beyond the invariant CLIP peptide structure  
+> — これまでの疑問・課題／Introduction
+
+> Using this optimized platform, we determined the crystal structure of HLA-DR3 bound to the immunodominant Ro60369–383 peptide (PDB 9YZ3) at 2.87 Å resolution (R_work 23.7%, R_free 29.9%).  
+> — アプローチ／Results
+
+> We designed a TCR-Treg that recognizes a dominant epitope of the Ro60 antigen (Ro60369-383) presented by HLA-DRB1∗03:01 and demonstrate that these cells can selectively suppress autoreactive T cells more effectively than polyclonal Treg.  
+> — アプローチ／Abstract
+
+> In the resulting structure, the Ro60369–383 peptide adopts a canonical register, with the 9-mer binding core defined as FLLAVDVSA.  
+> — 結果／Results
+
+> Three residues: P2-Leucine, P5-Valine, and P8-Serine were solvent-exposed and positioned for TCR recognition (Figure 3).  
+> — 結果／Results
+
+> We designed a TCR-Treg that recognizes a dominant epitope of the Ro60 antigen (Ro60369-383) presented by HLA-DRB1∗03:01 and demonstrate that these cells can selectively suppress autoreactive T cells more effectively than polyclonal Treg.  
+> — わかったこと／Abstract
+
+</details>
+
+<sub>分類：免疫（抗体・MHC・TCR・自然免疫）</sub>
 
 #### 読みどころ
 
@@ -244,9 +300,34 @@ HLA-DR3は発現収量が低く、Ro60ペプチドの直接発現は約0.3 mg/L�
 
 ルフォマイシン生合成のP450 RufOでは、Tyr-3のOHが反応に必須だった
 
-- **背景**：P450 RufOは、リボソーム合成ペンタペプチドMRYLHのTyr-3をNOを使ってニトロ化する。この珍しい反応の機構と、硝酸イオンが副生しない理由は不明だった。
-- **やったこと**：変異ペプチドの反応性試験、MD、DFTとQM/MM計算を組み合わせ、相同酵素NsRufOに基質Nle-RYLHが結合した結晶構造を1.59 Åで決定した。
-- **分かったこと**：Tyr-3のフェノール水素が必須だった。計算では、H235→His-5→Tyr-3→Cpd IIというプロトン中継がチロシルラジカル生成を導き、硝酸生成を抑える。
+- **これまでの疑問・課題**：RufOがチロシンをニトロ化する、珍しいP450反応の仕組みは不明だった。
+- **アプローチ**：変異ペプチドの反応試験、MD、QM/MM計算に加え、基質結合型NsRufOの結晶構造を決めた。
+- **結果**：基質ペプチドのヒスチジン（His-5）が、ニトロ化の進行に欠かせなかった。
+- **わかったこと**：中間体Compound IIのプロトン化状態が、ニトロ化か硝酸生成かを左右すると提案された。
+
+<details><summary>この4行の根拠（論文本文）</summary>
+
+> To understand the mechanism of this unusual P450-mediated reaction, a series of pentapeptides were tested as substrates alongside molecular dynamics simulations and quantum mechanics/molecular mechanics (QM/MM, ONIOM approach) calculations.  
+> — これまでの疑問・課題／Abstract
+
+> Nolan and co-workers recently suggested that differences in the hydrogen-bonding network to the substrate His-5 may contribute to enzymatic selectivity by increasing the Tyr-3 to His-5 distance by 0.7 Å in the RufO-bound MRYLH substrate (based on aromatic ring centroids in the crystal structures), which could hinder peptide cross-linking. , Complicating this further is data from previous studies that show RufO has the capacity to catalyze cross-linking of the non-native MRYLW substrate in addition to its capacity for catalyzing nitration of the native MRYLH substrate. ,, Thus, the underlying mechanisms that allow these two homologous P450s to catalyze different chemistry remain elusive.  
+> — これまでの疑問・課題／Introduction
+
+> To understand the mechanism of this unusual P450-mediated reaction, a series of pentapeptides were tested as substrates alongside molecular dynamics simulations and quantum mechanics/molecular mechanics (QM/MM, ONIOM approach) calculations.  
+> — アプローチ／Abstract
+
+> A new substrate-bound crystal structure of the homologue NsRufO was also obtained.  
+> — アプローチ／Abstract
+
+> These experiments revealed the intimate and necessary involvement of a histidine residue within the pentapeptide substrate of RufO in supporting effective nitration, with the protonation state of the intermediate compound II proposed to influence the production of nitrated tyrosine over unwanted nitrate formation.  
+> — 結果／Abstract
+
+> These experiments revealed the intimate and necessary involvement of a histidine residue within the pentapeptide substrate of RufO in supporting effective nitration, with the protonation state of the intermediate compound II proposed to influence the production of nitrated tyrosine over unwanted nitrate formation.  
+> — わかったこと／Abstract
+
+</details>
+
+<sub>分類：酵素（その他）</sub>
 
 #### 読みどころ
 
@@ -328,9 +409,34 @@ NsRufOの基質結合型構造（1.59 Å）では、Tyr-3とHis-5がヘムの真
 
 NHEJ短距離シナプス複合体にPol λが結合した構造をクライオ電顕で解析した
 
-- **背景**：NHEJでは末端のギャップや化学的ブロックを処理する酵素が働くが、コアのNHEJ複合体の中でどう取り込まれ連携するかは構造的に不明だった。
-- **やったこと**：Ku70/80、XRCC4-LigIV、XLF、PAXXにPol λを加えた短距離複合体をGraFixで安定化しクライオ電顕で解析。XL-MSと再構成ライゲーション実験も行った。
-- **分かったこと**：Pol λのBRCTがKu70/80のブリッジに結合し、N末端ペプチドがLigIVのBRCT1に接する。Pol λとPNKPは同じ複合体内で協調して末端を処理する。
+- **これまでの疑問・課題**：末端処理酵素がNHEJの中核複合体にどう組み込まれ、協調するのかは構造的に不明だった。
+- **アプローチ**：Pol λが結合した短距離シナプス複合体のクライオ電顕構造を決め、複合体の活性も調べた。
+- **結果**：Pol λの結合のしかたが見え、Pol λとPNKPは同じ複合体内で協調して末端を処理した。
+- **わかったこと**：末端処理は短距離シナプスの間に繰り返し起こる、というモデルを示した。
+
+<details><summary>この4行の根拠（論文本文）</summary>
+
+> Single-molecule studies in Xenopus egg extracts indicate that at least certain end-processing events occur during short-range synapsis19, but the molecular details underlying these processes’ coordination with the core NHEJ machinery remain unclear, particularly in terms of the structural accommodation of the accessory factors within the large protein-DNA complexes that mediate repair.  
+> — これまでの疑問・課題／Introduction
+
+> To investigate the molecular mechanisms underlying end-processing, we determine the cryo-EM structure of the NHEJ specific polymerase Pol λ bound to the short-range synaptic complex, detailing the mode of its recruitment to the complex as well as a putative model for its activity.  
+> — アプローチ／Abstract
+
+> We also examine the activity of in vitro reconstituted complexes to show that both Pol λ and PNKP can cooperatively process the same DNA substrate within a single protein complex.  
+> — アプローチ／Introduction
+
+> To investigate the molecular mechanisms underlying end-processing, we determine the cryo-EM structure of the NHEJ specific polymerase Pol λ bound to the short-range synaptic complex, detailing the mode of its recruitment to the complex as well as a putative model for its activity.  
+> — 結果／Abstract
+
+> Furthermore, the coordinated end-processing activities of the short-range (SR) synaptic complex simultaneously bound by both Pol λ and PNKP, another accessory factor, demonstrates the ability of NHEJ to form large, multifunctional repair complexes capable of processing a variety of different DNA end structures to effect repair.Subject terms: Cryoelectron microscopy, DNA  
+> — 結果／Abstract
+
+> Our results provide evidence for a model in which NHEJ end-processing occurs iteratively during short-range synapsis, with the core NHEJ factors forming a stable platform for the enzymes to flexibly access the DSB junction.  
+> — わかったこと／Introduction
+
+</details>
+
+<sub>分類：DNA・RNA に関わるもの・酵素（その他）</sub>
 
 #### 読みどころ
 
@@ -430,9 +536,34 @@ Pol λのBRCTドメインはKu70/80のブリッジをまたいで結合し、N�
 
 NIDを欠くと、H-SELEXで見つかるRut部位が1759から47に減った
 
-- **背景**：結核菌のRho因子には約160残基の大きなN末端挿入ドメイン（NID）があるが、その役割とゲノム上のRut部位は不明だった。
-- **やったこと**：Helicase-SELEXでRut部位を全ゲノムで探索し、結合測定、転写終結試験、NMR、RNAとADP-BeF3を加えた全長Rhoのクライオ電顕で解析した。
-- **分かったこと**：全長Rhoでは1759個、NID欠失では47個のRut部位が見つかった。NIDはRNA結合後も天然変性のままで、電顕でも秩序のある密度が見えない。
+- **これまでの疑問・課題**：結核菌のRhoには、機能不明の大きなN末端挿入ドメイン（NID）があった。
+- **アプローチ**：Helicase-SELEXでRut部位を探し、結合測定・NMR・クライオ電顕でNIDを調べた。
+- **結果**：Rut部位は全長Rhoで1759個、NID欠失型では47個だった。NIDは天然変性だった。
+- **わかったこと**：NIDは天然変性のまま、二次構造をもつRut部位を捉えるのに重要と考えられる。
+
+<details><summary>この4行の根拠（論文本文）</summary>
+
+> In Mycobacterium tuberculosis, Rho features a unique, large N-terminal insertion domain (NID) of uncertain function.  
+> — これまでの疑問・課題／Abstract
+
+> Using enzymatic Helicase-SELEX screening, we identified 1759 putative Rut sites across the M. tuberculosis genome with wild-type Rho (MtbRho) but only 47 with a NID-deleted variant (ΔNID-MtbRho), demonstrating NID’s importance for productive substrate recruitment.  
+> — アプローチ／Abstract
+
+> Complementary RDTT assays, affinity measurements, solution NMR, and cryogenic electron microscopy analyses show that the NID is intrinsically disordered, yet critical for engaging Rut sites with substantial secondary structure.  
+> — アプローチ／Abstract
+
+> Using enzymatic Helicase-SELEX screening, we identified 1759 putative Rut sites across the M. tuberculosis genome with wild-type Rho (MtbRho) but only 47 with a NID-deleted variant (ΔNID-MtbRho), demonstrating NID’s importance for productive substrate recruitment.  
+> — 結果／Abstract
+
+> Complementary RDTT assays, affinity measurements, solution NMR, and cryogenic electron microscopy analyses show that the NID is intrinsically disordered, yet critical for engaging Rut sites with substantial secondary structure.  
+> — 結果／Abstract
+
+> Complementary RDTT assays, affinity measurements, solution NMR, and cryogenic electron microscopy analyses show that the NID is intrinsically disordered, yet critical for engaging Rut sites with substantial secondary structure.  
+> — わかったこと／Abstract
+
+</details>
+
+<sub>分類：DNA・RNA に関わるもの</sub>
 
 #### 読みどころ
 
@@ -523,9 +654,34 @@ M495L置換を入れるとRhoが57 bpのRNA–DNAレポーター二重鎖を巻�
 
 PER2はWBM部位でCRYと競合し、PER1は主にWIN部位でMLL1と競合する
 
-- **背景**：WDR5は活性化型のMLL1複合体と抑制型のPER複合体の両方に見つかるが、PERとの直接結合の様式は分かっていなかった。
-- **やったこと**：PER1/PER2とWDR5の結合をSEC・ITCで解析し、WDR5とPER2のWBMペプチドの複合体とWDR5 N225A変異体の結晶構造を決定。WIN部位阻害剤も試した。
-- **分かったこと**：PER2はCRY結合領域内のWBMでWDR5に結合しCRYと競合する。PER1はWIN部位への結合が主で、WDR5部位を使うMLL1と競合し、CRYやRbBP5との三者複合体を作れる。
+- **これまでの疑問・課題**：WDR5は、活性化型のMLL1複合体にも抑制型のPER複合体にも見つかっていた。
+- **アプローチ**：WDR5とPER1・PER2の結合を調べ、WDR5とPER2のWBMペプチドの結晶構造を決めた。
+- **結果**：PER2はWBMモチーフで、PER1は主にWINモチーフでWDR5に結合する。
+- **わかったこと**：WDR5はPERの直接の結合相手で、PER1とPER2で結合のしかたが大きく違う。
+
+<details><summary>この4行の根拠（論文本文）</summary>
+
+> The MLL1 complex component WDR5 was also found in a repressive PER complex.  
+> — これまでの疑問・課題／Abstract
+
+> Here we show that WDR5 directly binds to the CRY binding domain (CBD) regions of PER1 and PER2.  
+> — アプローチ／Abstract
+
+> we determined the crystal structure of a complex of WDR5 with a PER2 WBM motif peptide  
+> — アプローチ／Results
+
+> PER2 binds WDR5 via a WBM motif within the PER2/CRY interface, imposing competition between PER2/WDR5-, PER2/CRY- and RbBP5/WDR5 complexes.  
+> — 結果／Abstract
+
+> PER1 binds WDR5 predominantly via a WIN motif outside the CBD, enabling formation of trimeric PER1WIN/WDR5/RbBP5WBM - and PER1/WDR5/CRY complexes.  
+> — 結果／Abstract
+
+> Together, our studies revealed a role of WDR5 as a direct PER interaction partner with critical differences between PER1 and PER2.  
+> — わかったこと／Abstract
+
+</details>
+
+<sub>分類：転写調節・シグナル伝達・クロマチン・ヒストン</sub>
 
 #### 読みどころ
 
@@ -613,9 +769,34 @@ WDR5のWIN部位阻害剤（Inh-4、Inh-5）はPER1–WDR5複合体を部分的�
 
 シロイヌナズナPSIIのクライオ電顕（2.74 Å）。D1のHis252が向きを変えていた
 
-- **背景**：強光と高温はPSIIを傷める。D1の損傷と修復は知られるが、損傷したPSII複合体の構造変化を直接見た例は限られていた。
-- **やったこと**：精製したPSII C2S2に2000 µEの光を30分当てて（約29°Cまで昇温）急速凍結し、クライオ電顕で2.74 Åの平均構造を決めた。対照は暗所で凍結した既報の構造。
-- **分かったこと**：LHCIIトリマーなどの周辺サブユニットが脱離し、非ヘム鉄周辺のD1・D2ループが見えなくなる。重炭酸イオンの密度もなく、D1 His252が向きを変える。
+- **これまでの疑問・課題**：強光と高温はPSIIを傷める。その構造への影響を調べることが課題だった。
+- **アプローチ**：単離したPSII（C2S2）に強光と昇温を与え、クライオ電顕で構造を決めた。
+- **結果**：アンテナなどのサブユニットが失われ、非ヘム鉄付近のD1・D2で損傷が見え、重炭酸も外れていた。
+- **わかったこと**：D1のHis252が動き、セリンプロテアーゼ様の三つ組を作ってD1の自己切断を招く可能性がある。
+
+<details><summary>この4行の根拠（論文本文）</summary>
+
+> While light is required to drive the photochemical reactions, high light and high temperature can be damaging to PS II.  
+> — これまでの疑問・課題／Abstract
+
+> Our aim is to gain structural insight into the photoprotection and photodamage processes in PSII.  
+> — これまでの疑問・課題／Introduction
+
+> To gain insight into potential structural consequences of such conditions, we performed an exploratory study where isolated PS II complexes (C2S2) from Arabidopsis thaliana were exposed to high light and elevated temperature and employed cryo-electron microscopy for structural determination.  
+> — アプローチ／Abstract
+
+> The high light structure is missing several of the subunits present in the control, including the strongly bound light-harvesting antenna complexes as well as several small transmembrane and extrinsic subunits.  
+> — 結果／Abstract
+
+> Beyond the loss of subunits, the clearest evidence of specific photodamage was found on the acceptor side of the D1 and D2 subunits near the non-heme iron, including the loss of the bicarbonate ligand of the non-heme iron.  
+> — 結果／Abstract
+
+> Finally, we were able to observe that high light/elevated temperature conditions result in the movement of the D1:His252 residue, potentially forming a serine protease triad that may trigger auto-proteolysis of the D1 subunit.Supplementary InformationThe online version contains supplementary material available at https://doi.org/10.1007/s11120-026-01238-w.Keywords: Photosynthesis, Photosystem II, Structure, Cryo-EM, High light, High temperature  
+> — わかったこと／Abstract
+
+</details>
+
+<sub>分類：光合成・電子伝達</sub>
 
 #### 読みどころ
 

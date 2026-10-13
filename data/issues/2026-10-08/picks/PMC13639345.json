@@ -6,9 +6,40 @@
   "takeaway": "A489EがArg-386の塩橋網を組み換え、FlhAC環の状態遷移を起こしやすくする",
   "target_label": "FlhAC A489E（サルモネラ）",
   "summary": {
-    "background": "鞭毛のIII型分泌装置はフック完成時に基質特異性を切り替える。FlhB(P270A)の切り替え不全を部分的に回復するFlhA(A489E)の機構は不明だった。",
-    "approach": "FlhAC(A489E)の結晶構造を半閉型（2.90 Å）と開型（3.28 Å）の2状態で決定し、AlphaFold3によるFlhAC–FlhB複合体予測と運動性・分泌アッセイを組み合わせた。",
-    "findings": "A489EはArg-386・Glu-483周辺の塩橋網を組み換え、α2ヘリックス周辺の配置を変える。FlhBのC末端尾部がα2–β2の溝を占めるという予測モデルと合わせ、状態遷移の障壁を下げると考えられる。"
+    "question": "鞭毛のIII型分泌装置が基質特異性を切り替える構造的な仕組みは不明だった。",
+    "approach": "FlhAC(A489E)を結晶構造解析し、FlhBとの結合をAlphaFold3で予測した。",
+    "result": "A489EはArg-386とGlu-483周辺の塩橋網を組み換え、α2ヘリックスの位置が少しずれた。",
+    "learned": "この変化が、基質特異性の切り替えに伴う構造変化の障壁を下げる可能性がある。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "This process is regulated by the coordinated actions of FliK, FlhB, and FlhA, but the structural mechanism underlying substrate specificity switching remains unclear.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here, we determined the crystal structures of the C-terminal cytoplasmic domain of FlhA(FlhAC) carrying the A489E substitution, which partially restores motility of the cleavage-defective flhB(P270A) mutant.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "In parallel, AlphaFold3-based structural predictions suggested that the flexible C-terminal cytoplasmic tail of FlhB (FlhBCCT) binds to a groove formed between the α2 helix and β2 strand of FlhAC, overlapping with the intersubunit linker-binding site within the FlhAC ring.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "Structural analyses further revealed that the A489E substitution rearranges a local salt-bridge network involving Arg-386 and Glu-483, leading to subtle positional shifts of the α2 helix and remodeling of the predicted FlhBCCT-binding surface.",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "These structural changes may alter the predicted interaction between FlhAC and FlhBCCT, thereby lowering the energetic barrier associated with conformational remodeling of the FlhAC ring during substrate specificity switching.",
+          "section": "Abstract"
+        }
+      ]
+    }
   },
   "highlights": [
     {
@@ -86,5 +117,8 @@
   "editor_notes": "FlhBとの相互作用はAlphaFold3予測のみで、実験的には未検証。本文の記載どおり「予測」「考えられる」で書いた。",
   "legend_labels": [
     "FlhAC（A489E 変異体）"
+  ],
+  "categories": [
+    "transporter"
   ]
 }

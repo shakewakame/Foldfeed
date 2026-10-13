@@ -3,7 +3,9 @@
     python3 -m pipeline.verify 2026-10-07
 
 Errors (exit code 1):
-  - missing or over-long fields, unknown tags
+  - missing or over-long fields, unknown tags, unknown or too many categories
+  - the four-line summary (question / approach / result / learned): each line needs a verbatim quote, and the
+    names, abbreviations and numbers in it must appear in the paper
   - an evidence quote that does not appear verbatim in the paper's full text
   - "初構造" on a paper whose proteins already had PDB structures
   - a resolution (… Å) or PDB ID in the Japanese text that the paper / PDB does not support
@@ -24,7 +26,8 @@ import unicodedata
 
 from . import impact
 from .common import cached, issue_dir, read_json
-from .schema import FEATURE_AXES, FEATURE_MIN, FEATURE_REASON_LIMIT, LAB_NOTE_FIELDS, LIMITS, TAGS
+from .schema import (CATEGORIES, FEATURE_AXES, FEATURE_MIN, FEATURE_REASON_LIMIT, LAB_NOTE_FIELDS, LIMITS,
+                     SUMMARY_FIELDS, TAGS)
 
 NEW_KINDS = ("new_structure", "new_structure_ids_unlisted", "new_map_only")
 
@@ -39,10 +42,15 @@ def normalize(s: str) -> str:
     return re.sub(r"\s+", " ", s).strip().lower()
 
 
+def summary_texts(pick: dict) -> list[str]:
+    s = pick.get("summary") or {}
+    return [s.get(k) or "" for k in SUMMARY_FIELDS]
+
+
 def japanese_fields(pick: dict) -> list[str]:
     out = [pick.get(k, "") or "" for k in ("headline", "subhead", "takeaway", "target_label", "method_label",
                                            "ligand_label")]
-    out += list((pick.get("summary") or {}).values())
+    out += summary_texts(pick)
     out += [h.get("text", "") for h in pick.get("highlights", [])]
     out += [v for k, v in (pick.get("lab_notes") or {}).items() if k in LAB_NOTE_FIELDS and v]
     return [x for x in out if isinstance(x, str)]
@@ -69,8 +77,14 @@ def check_pick(pick: dict, cand: dict | None, corpus: str | None) -> tuple[list[
 
     for f in ("headline", "subhead", "target_label"):
         length(f, pick.get(f), f)
-    for f in ("background", "approach", "findings"):
+    for f in SUMMARY_FIELDS:
         length(f"summary.{f}", (pick.get("summary") or {}).get(f), f"summary.{f}")
+    cats = pick.get("categories") or []
+    if not 1 <= len(cats) <= 3:
+        errors.append(f"categories must have 1-3 items, has {len(cats)}")
+    for c in cats:
+        if c not in CATEGORIES:
+            errors.append(f"unknown category {c!r} (allowed: {', '.join(CATEGORIES)})")
 
     hs = pick.get("highlights") or []
     if not 1 <= len(hs) <= 3:
@@ -86,6 +100,12 @@ def check_pick(pick: dict, cand: dict | None, corpus: str | None) -> tuple[list[
         if not h.get("evidence"):
             errors.append(f"highlight {i}: needs at least one evidence quote")
         quotes += [(f"highlight {i}", e) for e in h.get("evidence") or []]
+
+    sev = (pick.get("summary") or {}).get("evidence") or {}
+    for k in SUMMARY_FIELDS:
+        if not sev.get(k):
+            errors.append(f"summary.{k}: needs at least one evidence quote (summary.evidence.{k})")
+        quotes += [(f"summary.{k}", e) for e in sev.get(k) or []]
 
     notes = pick.get("lab_notes") or {}
     for k in LAB_NOTE_FIELDS:
@@ -108,6 +128,7 @@ def check_pick(pick: dict, cand: dict | None, corpus: str | None) -> tuple[list[
 
     structures = cand["own_structures"] + cand.get("cited_structures", [])
     errors += check_headline_claims(pick, corpus)
+    errors += check_summary_claims(pick, corpus)
     known_res = {round(s["resolution"], 2) for s in structures if s.get("resolution")}
     known_ids = {s["pdb_id"] for s in cand["own_structures"]} | set(cand.get("cited_pdb_ids", []))
     for text in japanese_fields(pick):
@@ -141,7 +162,7 @@ def check_headline_claims(pick: dict, corpus: str | None) -> list[str]:
     highlights and target — so a short headline cannot introduce a claim the article does not support."""
     if corpus is None:
         return []
-    own = " ".join([pick.get("target_label", "")] + list((pick.get("summary") or {}).values())
+    own = " ".join([pick.get("target_label", "")] + summary_texts(pick)
                    + [h.get("text", "") for h in pick.get("highlights", [])])
     support = normalize(corpus) + " " + normalize(own)
     errors = []
@@ -151,6 +172,22 @@ def check_headline_claims(pick: dict, corpus: str | None) -> list[str]:
                 continue  # 3つの姿, 2種 — counts are read from the article text
             if normalize(tok) not in support:
                 errors.append(f"{field}: {tok!r} is not in the paper or in this article's summary/highlights")
+    return errors
+
+
+def check_summary_claims(pick: dict, corpus: str | None) -> list[str]:
+    """The four summary lines may only use names, abbreviations and numbers that the paper itself contains
+    (the target label counts too: it is how the article names the protein)."""
+    if corpus is None:
+        return []
+    support = normalize(corpus) + " " + normalize(pick.get("target_label", ""))
+    errors = []
+    for field in SUMMARY_FIELDS:
+        for tok in sorted(claim_tokens((pick.get("summary") or {}).get(field) or "")):
+            if tok.isdigit() and len(tok) == 1:
+                continue
+            if normalize(tok) not in support:
+                errors.append(f"summary.{field}: {tok!r} is not in the paper")
     return errors
 
 
