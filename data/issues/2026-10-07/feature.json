@@ -1,0 +1,25 @@
+{
+  "pmcid": "PMC13635751",
+  "axes": [
+    "structure",
+    "biology",
+    "drug"
+  ],
+  "reason": "PARP 阻害剤の働きの鍵とされる「捕捉」を、ヌクレオソーム上の DNA 切断への結合の仕方から説明する構造。",
+  "evidence": [
+    {
+      "quote": "This configuration explains the higher affinity of PARP2 for nucleosomal SSBs relative to free DNA.",
+      "section": "Abstract"
+    },
+    {
+      "quote": "Together, these structures provide a chromatin-context framework for understanding PARP2 recognition of nucleosomal DNA breaks and how PARPis reshape these interactions to promote PARP retention and local chromatin remodeling.",
+      "section": "Abstract"
+    }
+  ],
+  "considered": [
+    {
+      "pmcid": "PMC13635753",
+      "note": "NanR は構造の新規性が高いが、波及する範囲が肺炎球菌の転写調節に限られるため見送った。"
+    }
+  ]
+}

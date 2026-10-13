@@ -13,12 +13,14 @@ import unicodedata
 
 from . import brand, impact, pdb, structure_svg
 from .common import issue_dir, read_json
-from .schema import LAB_NOTE_FIELDS
+from .schema import FEATURE_MIN, LAB_NOTE_FIELDS
 
 SITE_NAME = brand.SITE_NAME
 FONT = brand.FONT
 W, H = 1200, 560
 SITE_W, SITE_H = 760, 500  # binding-site close-up
+THUMB_W, THUMB_H = 600, 400  # list thumbnail (3:2); same PDB structure, thinned to THUMB_POINTS residues
+THUMB_POINTS = 900
 CONTACT_NOTE = "4 Å 以内の残基"
 
 METHOD_JA = {
@@ -173,6 +175,26 @@ def ligand_name(lig_id: str, pdb_name: str | None, pick: dict) -> str:
     return name if name and len(name) <= 24 else lig_id
 
 
+def thumbnail(cand: dict, pick: dict, theme: brand.Theme | None = None) -> str:
+    """The same real PDB structure as the article figure, drawn small for the lists (3:2, thinned for
+    large models). Empty when the figure has no structure behind it: a list never shows invented art."""
+    th = theme or brand.THEME
+    s = pick_structure(cand, pick)
+    coords = pdb.coordinates(s["pdb_id"]) if s else None
+    if not coords:
+        return ""
+    genes = {p["uniprot"]: p["gene"] for p in cand.get("proteins", []) if p.get("gene")}
+    body, _, _ = structure_svg.render(coords, {l["id"] for l in s.get("ligands") or []} - pdb.COMMON_ADDITIVES,
+                                      0, 0, THUMB_W, THUMB_H, genes, margin=26,
+                                      entity_colors=list(th.entities), ligand_colors=structure_svg.LIGAND_PALETTE,
+                                      max_points=THUMB_POINTS)
+    if not body:
+        return ""
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{THUMB_W}" height="{THUMB_H}" '
+            f'viewBox="0 0 {THUMB_W} {THUMB_H}"><rect width="{THUMB_W}" height="{THUMB_H}" fill="{th.paper}"/>'
+            f'{body}</svg>\n')
+
+
 def structure_figure(cand: dict, pick: dict, theme: brand.Theme | None = None) -> tuple[str, dict, str]:
     """The protein and nothing else, plus a close-up of the main ligand's binding site.
 
@@ -295,7 +317,7 @@ def article_md(cand: dict, pick: dict, n: int, info: dict | None = None) -> list
         out += [f"![結合部位：{st['label']}](figures/{cand['pmcid']}-site.svg)", "",
                 f"<sub>{st['label']}の結合部位。{CONTACT_NOTE}：{', '.join(st['residues'])}"
                 + (f"。点線は 3.3 Å 以内の N・O の組（{st['polar']} 組）" if st["polar"] else "") + "</sub>", ""]
-    out += [f"**{pick['headline']}**", "",
+    out += [f"**{pick['headline']}**", "", pick.get("subhead") or "", "",
             f"- **背景**：{s['background']}",
             f"- **やったこと**：{s['approach']}",
             f"- **分かったこと**：{s['findings']}", "",
@@ -342,8 +364,30 @@ def impact_md(record: dict, cands: dict) -> list[str]:
     return out + ["", f"<sub>{' / '.join(f'{k}：{v}' for k, v in names.items())}</sub>", ""]
 
 
+def feature_md(feature: dict | None, picks: list[tuple[dict, dict]]) -> list[str]:
+    """今日の一本 for the review README: which article, why, what the picker weighed."""
+    if not feature:
+        return []
+    by_id = {c["pmcid"]: (n, c, pk) for n, (c, pk) in enumerate(split_sections(picks)[0] + split_sections(picks)[1], 1)}
+    if feature.get("pmcid") not in by_id:
+        return []
+    n, cand, pick = by_id[feature["pmcid"]]
+    axes = "・".join({"structure": "構造生物学", "biology": "生命科学", "drug": "創薬"}.get(a, a)
+                    for a in feature.get("axes", []))
+    out = ["## 今日の一本", "", f"**{n}｜{pick['headline']}**（{pick['target_label']}）", "",
+           f"選んだ理由（{axes}）：{feature['reason']}", ""]
+    for e in feature.get("evidence", []):
+        out.append(f"> {e['quote']}  ")
+        out.append(f"> — {e.get('section', '')}")
+        out.append("")
+    for c in feature.get("considered", []):
+        other = by_id.get(c.get("pmcid"))
+        out.append(f"- 迷った論文：{other[2]['target_label'] if other else c.get('pmcid')} — {c.get('note', '')}")
+    return out + [""]
+
+
 def issue_md(meta: dict, picks: list[tuple[dict, dict]], infos: dict | None = None,
-             impact_record: dict | None = None) -> str:
+             impact_record: dict | None = None, feature: dict | None = None) -> str:
     c = meta["counts"]
     new_total = c["new_structure"] + c.get("new_structure_ids_unlisted", 0) + c.get("new_map_only", 0)
     picked = {p["pmcid"] for _, p in picks}
@@ -356,6 +400,7 @@ def issue_md(meta: dict, picks: list[tuple[dict, dict]], infos: dict | None = No
     new, hot = split_sections(picks)
     if hot:
         out += [f"**注目の構造：{len(hot)} 本**（新しい構造ではないが、実験で決めた構造で確かめた注目の研究）", ""]
+    out += feature_md(feature, picks)
     if picks:
         out += contents_table(new + hot)
     out += ["> この号は AI が論文本文から作成した**レビュー用の下書き**です。"
@@ -408,10 +453,17 @@ def main(argv=None) -> int:
             site_path.write_text(site_svg, encoding="utf-8")
         elif site_path.exists():
             site_path.unlink()
+        thumb = thumbnail(cand, pick) if svg else ""
+        thumb_path = fig_dir / f"{cand['pmcid']}-thumb.svg"
+        if thumb:
+            thumb_path.write_text(thumb, encoding="utf-8")
+        elif thumb_path.exists():
+            thumb_path.unlink()
         (fig_dir / f"{cand['pmcid']}.json").write_text(json.dumps(info, ensure_ascii=False, indent=1) + "\n",
                                                        encoding="utf-8")
         infos[cand["pmcid"]] = info
-    (d / "README.md").write_text(issue_md(meta, picks, infos, load_impact(d)), encoding="utf-8")
+    feature = read_json(d / "feature.json") if (d / "feature.json").exists() and len(picks) >= FEATURE_MIN else None
+    (d / "README.md").write_text(issue_md(meta, picks, infos, load_impact(d), feature), encoding="utf-8")
     print(f"Rendered {len(picks)} articles to {d / 'README.md'}")
     return 0
 

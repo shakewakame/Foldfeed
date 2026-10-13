@@ -1,7 +1,8 @@
 {
   "pmcid": "PMC13648224",
   "rank": 4,
-  "headline": "N-アシル-N-メチルリジンは脱アシル化酵素に外されない：SIRT2・SIRT5の結晶構造",
+  "headline": "N-メチル化したアシルリジンは、サーチュインに外されない",
+  "subhead": "SIRT2・SIRT5の結晶構造。基質の位置が乱れ、切断に不適な向きになる",
   "target_label": "SIRT2／SIRT5（ペプチド複合体）",
   "summary": {
     "background": "ヒストンH4で見つかったN-アセチル-N-メチルリジン（KAcMe）が、HDACやサーチュインで除去できるかは不明だった。",

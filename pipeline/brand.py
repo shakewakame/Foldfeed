@@ -27,6 +27,7 @@ class Theme:
     paper: str       # background of the figures
     ink: str         # headings and body text
     ink2: str        # secondary text
+    desc: str        # description text under a headline: darker than the labels, lighter than the title
     muted: str       # labels
     hair: str        # the few thin rules that are kept
     accent: str      # the single accent (first-structure mark, contents numbers, quote label)
@@ -39,7 +40,7 @@ class Theme:
 
 
 THEMES = {
-    "b": Theme("b", "藍と朱", ground="#F0F1EF", paper="#FFFFFF", ink="#1B2638", ink2="#3B4659", muted="#6A7482",
+    "b": Theme("b", "藍と朱", ground="#F0F1EF", paper="#FFFFFF", ink="#1B2638", ink2="#3B4659", desc="#424C5C", muted="#5A6473",
                hair="#CDD1D8", accent="#C8442A", accent_ink="#B33A22", soft="#E4E7EB",
                entities=("#3C5A8C", "#C9A04B", "#5F9296", "#A5707A", "#7C8AA8", "#8A9A5B", "#9C7B55", "#6E6E8E"),
                ligand="#D4452B", loop_back="#8DA0C4", loop_front="#FFFFFF"),

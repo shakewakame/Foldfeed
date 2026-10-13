@@ -1,7 +1,8 @@
 {
   "pmcid": "PMC13639345",
   "rank": 2,
-  "headline": "FlhA(A489E)抑制変異体の結晶構造：Arg-386周辺の塩橋網の組み換えが鞭毛輸送装置の基質切り替えを助ける",
+  "headline": "鞭毛輸送の基質切り替えを、塩橋網の組み換えが助ける可能性",
+  "subhead": "サルモネラFlhAC A489E抑制変異体の結晶構造。Arg-386周辺の塩橋網が変わる",
   "takeaway": "A489EがArg-386の塩橋網を組み換え、FlhAC環の状態遷移を起こしやすくする",
   "target_label": "FlhAC A489E（サルモネラ）",
   "summary": {
@@ -74,6 +75,13 @@
       }
     ]
   },
-  "keywords": ["FlhA", "FlhB", "III型分泌装置", "鞭毛", "AlphaFold3", "抑制変異"],
+  "keywords": [
+    "FlhA",
+    "FlhB",
+    "III型分泌装置",
+    "鞭毛",
+    "AlphaFold3",
+    "抑制変異"
+  ],
   "editor_notes": "FlhBとの相互作用はAlphaFold3予測のみで、実験的には未検証。本文の記載どおり「予測」「考えられる」で書いた。"
 }

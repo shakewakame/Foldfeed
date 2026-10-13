@@ -1,0 +1,25 @@
+{
+  "pmcid": "PMC13648974",
+  "axes": [
+    "structure",
+    "biology",
+    "drug"
+  ],
+  "reason": "受容体と反応させる時間を変えた複数の状態を並べ、スパイクが融合型へ移る道筋を捉えた。抗ウイルス戦略の足場になると著者は述べる。",
+  "evidence": [
+    {
+      "quote": "Here, using cryo–electron microscopy, we determined structures of MERS-CoV spike-DPP4 complexes at defined incubation times, capturing a series of conformational states spanning prefusion, receptor-bound, and postfusion conformations.",
+      "section": "Abstract"
+    },
+    {
+      "quote": "Together, these findings outline a structural pathway. for receptor-induced activation of the MERS-CoV spike and provide a structural framework for the development of antiviral strategies targeting dynamic fusion intermediates.",
+      "section": "Abstract"
+    }
+  ],
+  "considered": [
+    {
+      "pmcid": "PMC13646831",
+      "note": "MDA5 T331I は疾患変異の機構解明として最後まで迷った。反応時間で状態を並べる手法が他の研究にも使える点で MERS を選んだ。"
+    }
+  ]
+}

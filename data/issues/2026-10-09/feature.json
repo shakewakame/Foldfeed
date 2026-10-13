@@ -1,0 +1,24 @@
+{
+  "pmcid": "PMC13642953",
+  "axes": [
+    "structure",
+    "drug"
+  ],
+  "reason": "悪性高熱症の治療薬ダントロレンの結合部位を原子レベルで示し、効くのに ATP か ADP が要ることを機能解析でも確かめた。",
+  "evidence": [
+    {
+      "quote": "Here, we present structures of RyR1 bound to dantrolene and the MH trigger 4-chloro-m-cresol (4CmC), revealing the dantrolene and 4CmC binding sites in atomic detail.",
+      "section": "Abstract"
+    },
+    {
+      "quote": "Functional analyses confirm ATP or ADP is required for dantrolene inhibition, and a single point mutation disrupting this peripheral ATP site abolishes this ATP/ADP-dependent inhibition.",
+      "section": "Abstract"
+    }
+  ],
+  "considered": [
+    {
+      "pmcid": "PMC13642939",
+      "note": "DNA-PK–ヌクレオソーム複合体の段階的な構造で最後まで迷った。薬の標的がはっきりしている RyR1 を選んだ。"
+    }
+  ]
+}

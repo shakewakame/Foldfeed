@@ -1,7 +1,8 @@
 {
   "pmcid": "PMC13650167",
   "rank": 5,
-  "headline": "結核菌Rhoの天然変性NIDは構造化RNAのRut部位選択を左右する：ゲノムワイドの地図とクライオ電顕",
+  "headline": "天然変性のNIDが、結核菌RhoのRut部位選択を左右する",
+  "subhead": "NIDを欠くとH-SELEXのRut部位が1759から47に減った",
   "target_label": "Rho（結核菌）",
   "summary": {
     "background": "結核菌のRho因子には約160残基の大きなN末端挿入ドメイン（NID）があるが、その役割とゲノム上のRut部位は不明だった。",
@@ -77,7 +78,15 @@
       }
     ]
   },
-  "keywords": ["Rho", "転写終結", "結核菌", "天然変性領域", "H-SELEX", "NMR", "クライオ電顕"],
+  "keywords": [
+    "Rho",
+    "転写終結",
+    "結核菌",
+    "天然変性領域",
+    "H-SELEX",
+    "NMR",
+    "クライオ電顕"
+  ],
   "ligand_label": "ADP・BeF3、pstC1 RNA",
   "editor_notes": "candidatesのfirst_structureはtrueだが、本文は既報のMtbRho構造（ref 37）と比較しており、初構造とは書いていない。記事ではNIDが天然変性であることの実験的実証として扱った。"
 }

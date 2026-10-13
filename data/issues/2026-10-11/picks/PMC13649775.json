@@ -1,7 +1,8 @@
 {
   "pmcid": "PMC13649775",
   "rank": 4,
-  "headline": "NHEJの短距離シナプス複合体にPol λが結合：BRCTとN末端ペプチドで足場に係留される",
+  "headline": "Pol λは、BRCTとN末端ペプチドで足場に係留される",
+  "subhead": "NHEJ短距離シナプス複合体にPol λが結合した構造（クライオ電顕）",
   "target_label": "NHEJ短距離複合体＋Pol λ（ヒト）",
   "summary": {
     "background": "NHEJでは末端のギャップや化学的ブロックを処理する酵素が働くが、コアのNHEJ複合体の中でどう取り込まれ連携するかは構造的に不明だった。",
@@ -77,7 +78,15 @@
       }
     ]
   },
-  "keywords": ["NHEJ", "Pol λ", "PNKP", "LigIV", "Ku70/80", "DNA二本鎖切断修復", "クライオ電顕"],
+  "keywords": [
+    "NHEJ",
+    "Pol λ",
+    "PNKP",
+    "LigIV",
+    "Ku70/80",
+    "DNA二本鎖切断修復",
+    "クライオ電顕"
+  ],
   "ligand_label": "DNA（1 nt 3′突出）",
   "editor_notes": "全体分解能が7.23 Åと低く、PDB 9OX8 の詳細な側鎖モデルは局所精密化の範囲に限られる。BRCT・N末端ペプチドの位置はAlphaFold3予測を併用して配置している。『初』とは書いていない。"
 }

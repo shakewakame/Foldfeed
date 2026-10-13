@@ -7,6 +7,9 @@ Errors (exit code 1):
   - an evidence quote that does not appear verbatim in the paper's full text
   - "初構造" on a paper whose proteins already had PDB structures
   - a resolution (… Å) or PDB ID in the Japanese text that the paper / PDB does not support
+  - a headline / subhead whose names, numbers or abbreviations appear neither in the paper nor in the
+    pick's own summary and highlights (the short headline may only say what the article supports)
+  - feature.json (今日の一本): the pick, axes, a verbatim quote, the reason length
   - impact.json (注目の構造): a quote per score that is not verbatim, a score out of range, a selected
     paper under the threshold, more than the daily cap, or a mismatch between selected papers and
     picks marked "section": "impact"
@@ -21,7 +24,7 @@ import unicodedata
 
 from . import impact
 from .common import cached, issue_dir, read_json
-from .schema import LAB_NOTE_FIELDS, LIMITS, TAGS
+from .schema import FEATURE_AXES, FEATURE_MIN, FEATURE_REASON_LIMIT, LAB_NOTE_FIELDS, LIMITS, TAGS
 
 NEW_KINDS = ("new_structure", "new_structure_ids_unlisted", "new_map_only")
 
@@ -37,7 +40,8 @@ def normalize(s: str) -> str:
 
 
 def japanese_fields(pick: dict) -> list[str]:
-    out = [pick.get(k, "") or "" for k in ("headline", "takeaway", "target_label", "method_label", "ligand_label")]
+    out = [pick.get(k, "") or "" for k in ("headline", "subhead", "takeaway", "target_label", "method_label",
+                                           "ligand_label")]
     out += list((pick.get("summary") or {}).values())
     out += [h.get("text", "") for h in pick.get("highlights", [])]
     out += [v for k, v in (pick.get("lab_notes") or {}).items() if k in LAB_NOTE_FIELDS and v]
@@ -63,7 +67,7 @@ def check_pick(pick: dict, cand: dict | None, corpus: str | None) -> tuple[list[
         if len(value) > limit:
             errors.append(f"{name} is {len(value)} characters (limit {limit})")
 
-    for f in ("headline", "target_label"):
+    for f in ("headline", "subhead", "target_label"):
         length(f, pick.get(f), f)
     for f in ("background", "approach", "findings"):
         length(f"summary.{f}", (pick.get("summary") or {}).get(f), f"summary.{f}")
@@ -103,6 +107,7 @@ def check_pick(pick: dict, cand: dict | None, corpus: str | None) -> tuple[list[
                 errors.append(f"{where}: quote not found in the paper: {q[:90]!r}")
 
     structures = cand["own_structures"] + cand.get("cited_structures", [])
+    errors += check_headline_claims(pick, corpus)
     known_res = {round(s["resolution"], 2) for s in structures if s.get("resolution")}
     known_ids = {s["pdb_id"] for s in cand["own_structures"]} | set(cand.get("cited_pdb_ids", []))
     for text in japanese_fields(pick):
@@ -116,6 +121,37 @@ def check_pick(pick: dict, cand: dict | None, corpus: str | None) -> tuple[list[
             if re.search(r"[A-Z]", tok) and tok not in known_ids:
                 errors.append(f"PDB ID {tok} is not among this paper's entries")
     return errors, warnings
+
+
+TOKEN = re.compile(r"[A-Za-z][A-Za-z0-9α-ωΑ-Ω'’+\-]*[A-Za-z0-9]|\d+(?:\.\d+)?")
+
+
+def claim_tokens(text: str) -> set[str]:
+    """Names, abbreviations and numbers in a Japanese headline (the parts a reader could take as a fact)."""
+    out = set()
+    for m in TOKEN.finditer(unicodedata.normalize("NFKC", text)):
+        tok = m.group(0)
+        if len(tok) >= 2 or tok.isdigit():
+            out.add(tok.lower())
+    return out
+
+
+def check_headline_claims(pick: dict, corpus: str | None) -> list[str]:
+    """Every name or number in headline/subhead must come from the paper or from the pick's own summary,
+    highlights and target — so a short headline cannot introduce a claim the article does not support."""
+    if corpus is None:
+        return []
+    own = " ".join([pick.get("target_label", "")] + list((pick.get("summary") or {}).values())
+                   + [h.get("text", "") for h in pick.get("highlights", [])])
+    support = normalize(corpus) + " " + normalize(own)
+    errors = []
+    for field in ("headline", "subhead"):
+        for tok in sorted(claim_tokens(pick.get(field) or "")):
+            if tok.isdigit() and len(tok) == 1:
+                continue  # 3つの姿, 2種 — counts are read from the article text
+            if normalize(tok) not in support:
+                errors.append(f"{field}: {tok!r} is not in the paper or in this article's summary/highlights")
+    return errors
 
 
 def corpus_for(pmcid: str) -> str | None:
@@ -176,6 +212,36 @@ def check_impact(record: dict, cands: dict, impact_picks: set[str]) -> list[str]
     return errors
 
 
+def check_feature(feature: dict, picks: dict[str, dict]) -> list[str]:
+    """feature.json: the pick exists among the articles, valid axes, a verbatim quote, a short reason."""
+    errors = []
+    pm = feature.get("pmcid")
+    if pm not in picks:
+        return [f"feature.json: {pm} is not one of this issue's articles"]
+    if not feature.get("axes") or any(a not in FEATURE_AXES for a in feature["axes"]):
+        errors.append(f"feature.json: axes must be a non-empty subset of {', '.join(FEATURE_AXES)}")
+    reason = feature.get("reason") or ""
+    if not reason:
+        errors.append("feature.json: reason is missing")
+    elif len(reason) > FEATURE_REASON_LIMIT:
+        errors.append(f"feature.json: reason is {len(reason)} characters (limit {FEATURE_REASON_LIMIT})")
+    corpus = corpus_for(pm)
+    ev = feature.get("evidence") or []
+    if not ev:
+        errors.append("feature.json: needs at least one evidence quote")
+    for e in ev:
+        q = e.get("quote", "") if isinstance(e, dict) else str(e)
+        if corpus is None:
+            errors.append("feature.json: full-text packet missing")
+            break
+        if len(q) < 20 or normalize(q) not in normalize(corpus):
+            errors.append(f"feature.json: quote not found in the paper: {q[:80]!r}")
+    for c in feature.get("considered") or []:
+        if c.get("pmcid") not in picks:
+            errors.append(f"feature.json: considered {c.get('pmcid')} is not one of this issue's articles")
+    return errors
+
+
 def main(argv=None) -> int:
     argv = argv if argv is not None else sys.argv[1:]
     if len(argv) != 1:
@@ -201,6 +267,15 @@ def main(argv=None) -> int:
         for w in warnings:
             print(f"   warning: {w}")
         failed |= bool(errors)
+    by_id = {read_json(p).get("pmcid"): read_json(p) for p in picks}
+    if (d / "feature.json").exists():
+        feature_errors = check_feature(read_json(d / "feature.json"), by_id)
+        print(f"[{'NG' if feature_errors else 'OK'}] feature.json")
+        for e in feature_errors:
+            print(f"   error: {e}")
+        failed |= bool(feature_errors)
+    elif len(picks) >= FEATURE_MIN:
+        print(f"note: {len(picks)} articles but no feature.json (今日の一本)")
     record = read_json(d / "impact.json") if (d / "impact.json").exists() else {"scored": []}
     impact_errors = check_impact(record, cands, impact_picks)
     if record.get("scored") or impact_picks:

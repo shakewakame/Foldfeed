@@ -25,16 +25,16 @@ from pathlib import Path
 
 from . import brand, impact, render
 from .common import ISSUES_DIR, ROOT, read_json
-from .schema import LAB_NOTE_FIELDS
+from .schema import FEATURE_AXES, FEATURE_MIN, LAB_NOTE_FIELDS
 
 SITE_DIR = ROOT / "site"
 TH = brand.THEME
-DESCRIPTION = "毎朝、査読済みのオープンアクセス論文から、新しいタンパク質の構造を報告した論文をすべて紹介する。"
+DESCRIPTION = "新着の査読済みオープンアクセス論文から、構造生物学論文を、毎日紹介するサイト。"
 
 CSS = f"""
 :root {{
   --ground:{TH.ground}; --paper:{TH.paper}; --ink:{TH.ink}; --ink2:{TH.ink2}; --mute:{TH.muted};
-  --hair:{TH.hair}; --acc:{TH.accent}; --acc-ink:{TH.accent_ink};
+  --desc:{TH.desc}; --hair:{TH.hair}; --acc:{TH.accent}; --acc-ink:{TH.accent_ink};
   --serif:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",YuMincho,"BIZ UDMincho",Georgia,serif;
   --latin:Georgia,"Times New Roman","Noto Serif JP",serif;
   --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
@@ -44,6 +44,7 @@ html, body {{ margin:0; background:var(--ground); }}
 body {{ color:var(--ink); font-family:var(--serif); font-size:16px; line-height:1.95;
         -webkit-font-smoothing:antialiased; }}
 a {{ color:inherit; text-decoration:none; text-underline-offset:3px; }}
+h2, h3, .headline, .subhead, .sub {{ word-break:auto-phrase; line-break:strict; }}
 a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-color:var(--acc); }}
 .kicker a {{ text-decoration:underline; text-decoration-color:var(--acc); }}
 .page > * {{ max-width:1120px; margin-left:auto; margin-right:auto; padding-left:28px; padding-right:28px; }}
@@ -56,34 +57,52 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .word img {{ width:46px; height:46px; display:block; }}
 .word .name {{ font-family:var(--latin); font-size:42px; line-height:1; letter-spacing:-0.02em; font-weight:700; margin:0; }}
 .word .sub {{ font-size:13px; letter-spacing:.12em; color:var(--mute); margin-top:7px; line-height:1.2; }}
+.word .tag {{ font-size:13px; color:var(--desc); margin-top:6px; line-height:1.5; }}
 .vol {{ font-size:14px; text-align:right; color:var(--ink2); line-height:1.7; }}
 .rules {{ margin-top:18px; border-top:4px solid var(--ink); }}
 .rules::after {{ content:""; display:block; margin-top:3px; border-top:1px solid var(--ink); }}
-.intro {{ color:var(--ink2); font-size:14.5px; margin-top:18px; }}
+.intro {{ color:var(--desc); font-size:14.5px; margin-top:18px; }}
 
-/* contents */
-.toc {{ margin-top:40px; margin-bottom:14px; display:grid; grid-template-columns:220px 1fr; gap:28px; }}
+/* contents: a label column, then one row per article: the real structure, the headline, a supplement */
+.toc {{ margin-top:40px; margin-bottom:14px; display:grid; grid-template-columns:220px minmax(0,1fr); gap:28px; }}
 .label {{ margin:0; font-family:var(--mono); font-size:12px; letter-spacing:.14em; font-weight:500;
           color:var(--mute); text-transform:uppercase; padding-top:6px; }}
 .label a {{ text-decoration:none; }}
-.toc ol {{ list-style:none; margin:0; padding:0; }}
-.toc li {{ display:grid; grid-template-columns:38px 1fr; align-items:baseline; padding:0 0 16px; }}
-.toc .n {{ font-family:var(--mono); font-size:12px; color:var(--acc-ink); font-weight:700; }}
-.toc .t {{ font-size:18px; line-height:1.5; }}
-.toc li.group {{ padding:6px 0 12px; }}
-.toc .g {{ font-family:var(--mono); font-size:11px; letter-spacing:.12em; color:var(--mute); }}
-.toc .label.hot, .toc ol.hot {{ margin-top:18px; padding-top:18px; border-top:1px solid var(--hair); }}
+.rows {{ list-style:none; margin:0; padding:0; }}
+.row {{ display:grid; grid-template-columns:220px minmax(0,1fr); gap:22px; margin:0 0 30px; align-items:start; }}
+.thumb {{ display:block; border:1px solid var(--ink); background:var(--paper); }}
+.thumb img {{ display:block; width:100%; height:auto; }}
+.thumb.none {{ aspect-ratio:3/2; display:flex; align-items:center; justify-content:center; background:var(--ground);
+               font-family:var(--mono); font-size:11px; color:var(--mute); text-align:center; padding:8px; }}
+.rk {{ margin:0 0 3px; font-family:var(--mono); font-size:11.5px; letter-spacing:.04em; color:var(--mute); line-height:1.6; }}
+.rk .n {{ color:var(--acc-ink); font-weight:700; margin-right:10px; }}
+.row h3 {{ margin:0; font-size:21px; line-height:1.5; font-weight:700; color:var(--ink); text-wrap:balance; }}
+.row .sub {{ margin:3px 0 0; font-size:14.5px; line-height:1.75; color:var(--desc); }}
+.row .rm {{ margin:6px 0 0; font-family:var(--mono); font-size:11px; color:var(--mute); line-height:1.6; }}
+.toc .label.hot, .toc .rows.hot {{ margin-top:18px; padding-top:18px; border-top:1px solid var(--hair); }}
+.hero {{ margin-top:40px; display:grid; grid-template-columns:220px minmax(0,1fr); gap:28px; }}
+.hero .mkt {{ color:var(--acc-ink); }}
+.hero-grid {{ display:grid; grid-template-columns:minmax(0,56fr) minmax(0,44fr); gap:30px; align-items:start; }}
+.hero h3 {{ margin:2px 0 0; font-size:35px; line-height:1.38; font-weight:700; color:var(--ink); text-wrap:balance; }}
+.hero .sub {{ margin:10px 0 0; font-size:17px; line-height:1.75; color:var(--desc); }}
+.hero .why {{ margin:18px 0 0; font-size:14px; line-height:1.8; color:var(--desc); }}
+.hero .why b {{ font-family:var(--mono); font-size:11px; letter-spacing:.1em; color:var(--mute); font-weight:500; margin-right:10px; }}
+.hero .go {{ margin:14px 0 0; font-family:var(--mono); font-size:13px; }}
+.hero .go a {{ text-decoration:underline; text-decoration-color:var(--acc); text-underline-offset:4px; }}
+.past {{ margin-top:64px; display:grid; grid-template-columns:220px minmax(0,1fr); gap:28px; }}
+.past ol {{ list-style:none; margin:0; padding:0; }}
+.past li {{ display:grid; grid-template-columns:110px minmax(0,1fr); gap:14px; margin:0 0 14px; align-items:baseline; }}
+.past .d {{ font-family:var(--mono); font-size:12.5px; }}
+.past .t {{ font-size:14.5px; color:var(--desc); line-height:1.7; }}
+.past .t b {{ font-family:var(--mono); font-size:11px; font-weight:500; color:var(--mute); margin-right:10px; }}
 .part {{ margin-top:80px; position:relative; padding-top:20px; }}
 .part::before {{ content:""; position:absolute; left:28px; right:28px; top:0; border-top:4px solid var(--ink); }}
 .part::after {{ content:""; position:absolute; left:28px; right:28px; top:7px; border-top:1px solid var(--ink); }}
 .part h2 {{ font-size:27px; line-height:1.4; margin:8px 0 4px; display:flex; align-items:baseline; gap:16px; }}
 .part h2 span {{ font-family:var(--mono); font-size:12px; font-weight:500; color:var(--mute); letter-spacing:.08em; }}
-.part p {{ margin:0; color:var(--ink2); font-size:14px; max-width:760px; }}
+.part p {{ margin:0; color:var(--desc); font-size:14px; max-width:760px; }}
 .part + .art {{ margin-top:18px; }}
 .part + .art::before {{ display:none; }}
-.toc .lead {{ grid-column:2; font-size:13.5px; color:var(--mute); line-height:1.65; }}
-.home-issue {{ margin-top:34px; }}
-.home-issue + .home-issue {{ margin-top:10px; }}
 
 /* article: margin column for the data, text column for the story */
 .art {{ display:grid; grid-template-columns:220px minmax(0,1fr); gap:28px; padding-top:60px; padding-bottom:24px;
@@ -115,7 +134,8 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .site dt {{ color:var(--mute); letter-spacing:.1em; font-size:10px; }}
 .site dd {{ margin:0; }}
 .site .dash {{ display:inline-block; width:22px; border-top:2px dashed var(--ink); vertical-align:4px; margin-right:6px; }}
-.art .headline {{ font-size:19px; font-weight:700; line-height:1.7; margin:34px 0 14px; text-wrap:balance; }}
+.art .headline {{ font-size:22px; font-weight:700; line-height:1.55; margin:34px 0 4px; text-wrap:balance; }}
+.art .subhead {{ font-size:16px; line-height:1.8; color:var(--desc); margin:0 0 18px; }}
 .sum {{ margin:0 0 12px; }}
 .sum b {{ font-weight:700; margin-right:1em; }}
 .art h3 {{ font-size:19px; line-height:1.5; font-weight:700; margin:44px 0 12px; }}
@@ -140,7 +160,7 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .queue {{ list-style:none; margin:30px 0 0; padding:0; }}
 .queue li {{ padding:18px 0; border-bottom:1px solid var(--hair); }}
 .queue .d {{ font-size:20px; font-weight:700; }}
-.queue .c {{ color:var(--ink2); font-size:14px; margin:2px 0 10px; }}
+.queue .c {{ color:var(--desc); font-size:14px; margin:2px 0 10px; }}
 .queue .btns {{ display:flex; flex-wrap:wrap; gap:10px; }}
 .queue .btns a {{ display:inline-block; padding:9px 16px; border:1px solid var(--ink); font-family:var(--mono); font-size:13px; }}
 .queue .btns a.go {{ background:var(--ink); color:#fff; }}
@@ -158,8 +178,14 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
   .word .name {{ font-size:32px; }}
   .mast-row {{ flex-wrap:wrap; align-items:flex-start; }}
   .vol {{ text-align:left; }}
-  .toc, .art {{ grid-template-columns:minmax(0,1fr); gap:14px; }}
-  .toc li {{ grid-template-columns:30px minmax(0,1fr); }}
+  .toc, .art, .hero, .past {{ grid-template-columns:minmax(0,1fr); gap:14px; }}
+  .row {{ grid-template-columns:116px minmax(0,1fr); gap:14px; margin-bottom:24px; }}
+  .row h3 {{ font-size:18px; }}
+  .row .sub {{ font-size:13.5px; }}
+  .hero-grid {{ grid-template-columns:minmax(0,1fr); gap:16px; }}
+  .hero h3 {{ font-size:26px; }}
+  .hero .sub {{ font-size:15.5px; }}
+  .past li {{ grid-template-columns:96px minmax(0,1fr); }}
   .margin .no {{ font-size:52px; margin-bottom:10px; }}
   .margin dl {{ display:grid; grid-template-columns:78px minmax(0,1fr); gap:3px 12px; }}
   .margin dt {{ margin-top:0; padding-top:2px; }}
@@ -167,7 +193,8 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
   .margin .first {{ grid-column:2; margin-top:4px; }}
   .margin .sticky {{ position:static; }}
   .art h2 {{ font-size:21px; }}
-  .art .headline {{ font-size:17px; }}
+  .art .headline {{ font-size:19px; }}
+  .art .subhead {{ font-size:15px; }}
   .site dl {{ grid-template-columns:minmax(0,1fr); }}
   .lab div {{ grid-template-columns:92px 1fr; }}
 }}
@@ -180,6 +207,11 @@ def esc(s) -> str:
 
 def pad(n: int) -> str:
     return f"{n:02d}"
+
+
+def jp_date_short(date: str) -> str:
+    _, m, d = (int(x) for x in date.split("-"))
+    return f"{m}月{d}日"
 
 
 def jp_date(date: str) -> str:
@@ -213,7 +245,8 @@ def masthead(depth: int, right: str = "") -> str:
     up = "../" * depth
     return (f'<header class="mast"><div class="mast-row">'
             f'<a class="word" href="{up}index.html"><img src="{up}assets/logo-mark.svg" alt="">'
-            f'<div><div class="name">{esc(brand.SITE_NAME)}</div><div class="sub">{esc(brand.SITE_NAME_EN)}</div></div></a>'
+            f'<div><div class="name">{esc(brand.SITE_NAME)}</div><div class="sub">{esc(brand.SITE_NAME_EN)}</div>'
+            f'<div class="tag">{esc(DESCRIPTION)}</div></div></a>'
             f'<div class="vol">{right}</div></div><div class="rules"></div></header>')
 
 
@@ -314,6 +347,7 @@ def article_html(cand: dict, pick: dict, date: str, n: int, root: Path, fig_base
             f'<h2>{esc(cand["title"])}</h2>'
             f'{figures_html(cand, pick, date, root, fig_base)}'
             f'<p class="headline">{esc(pick["headline"])}</p>'
+            f'<p class="subhead">{esc(pick.get("subhead") or "")}</p>'
             f'<p class="sum"><b>背景</b>{esc(s["background"])}</p>'
             f'<p class="sum"><b>やったこと</b>{esc(s["approach"])}</p>'
             f'<p class="sum"><b>分かったこと</b>{esc(s["findings"])}</p>'
@@ -343,24 +377,80 @@ PARTS = {
 }
 
 
-def toc_items(picks: list[tuple[dict, dict]], href: str = "", start: int = 1) -> str:
-    return "".join(f'<li><span class="n">{pad(n)}</span><a class="t" href="{href}#a{n}">{esc(pk["target_label"])}</a>'
-                   f'<span class="lead">{esc(pk["headline"])}</span></li>'
-                   for n, (_, pk) in enumerate(picks, start))
+def load_feature(date: str, root: Path, picks: list) -> dict | None:
+    """feature.json (今日の一本), when the issue has enough articles and the pick is among them."""
+    path = root / date / "feature.json"
+    if not path.exists() or len(picks) < FEATURE_MIN:
+        return None
+    f = read_json(path)
+    return f if any(c["pmcid"] == f.get("pmcid") for c, _ in picks) else None
 
 
-def toc_html(picks: list[tuple[dict, dict]], href: str = "", label: str = "") -> str:
-    """Contents in two blocks, 新しい構造 and 注目の構造, each with its own label in the left column.
-    With `label` (the home page), that label heads the issue and the second block gets a sub-label."""
+def thumb_html(cand: dict, pick: dict, date: str, root: Path, fig_base: str, href: str) -> str:
+    """The structure thumbnail (a real PDB structure, drawn by pipeline.render) as a link; never invented art."""
+    pm = cand["pmcid"]
+    if (root / date / "figures" / f"{pm}-thumb.svg").exists():
+        return (f'<a class="thumb" href="{href}"><img src="{fig_base}/{date}/{esc(pm)}-thumb.svg" width="600" height="400" '
+                f'alt="構造図：{esc(pick["target_label"])}" loading="lazy"></a>')
+    own = cand["own_structures"]
+    why = ("PDB 公開待ち" if own and not any(x["status"] == "released" for x in own)
+           else "PDB ID は補足資料" if cand["kind"] == "new_structure_ids_unlisted"
+           else "EMDB マップのみ" if cand["kind"] == "new_map_only" else "構造図なし")
+    return f'<a class="thumb none" href="{href}">{why}</a>'
+
+
+def meta_line(cand: dict, pick: dict) -> str:
+    hot = render.is_impact(pick)
+    method = pick.get("method_label") if (hot or not any(s["status"] == "released" for s in cand["own_structures"])) \
+        else render.method_line(cand)
+    return " · ".join(x for x in (cand["journal_abbrev"] or cand["journal"], method) if x)
+
+
+def row_html(cand: dict, pick: dict, n: int, date: str, root: Path, fig_base: str, href_base: str,
+             featured: bool = False) -> str:
+    href = f"{href_base}#a{n}"
+    mark = ' <span class="mkt">· 今日の一本</span>' if featured else ""
+    return (f'<li class="row">{thumb_html(cand, pick, date, root, fig_base, href)}<div>'
+            f'<p class="rk"><span class="n">{pad(n)}</span>{esc(pick["target_label"])}{mark}</p>'
+            f'<h3><a href="{href}">{esc(pick["headline"])}</a></h3>'
+            f'<p class="sub">{esc(pick.get("subhead") or "")}</p>'
+            f'<p class="rm">{esc(meta_line(cand, pick))}</p></div></li>')
+
+
+def contents_html(picks: list, date: str, root: Path, fig_base: str, href_base: str = "",
+                  featured: str | None = None) -> str:
+    """Contents in two blocks, 新しい構造 and 注目の構造, each labelled in the left column."""
     new, hot = render.split_sections(picks)
-    if label:
-        sub = (f'<li class="group"><span></span><span class="g">{PARTS["impact"][0]}</span></li>'
-               + toc_items(hot, href, len(new) + 1)) if hot else ""
-        return f'<h2 class="label">{label}</h2><ol>{toc_items(new, href)}{sub}</ol>'
-    out = f'<h2 class="label">{PARTS["new"][0]}</h2><ol>{toc_items(new, href)}</ol>' if new else ""
+
+    def rows(items, start):
+        return "".join(row_html(c, pk, n, date, root, fig_base, href_base, c["pmcid"] == featured)
+                       for n, (c, pk) in enumerate(items, start))
+
+    out = f'<h2 class="label">{PARTS["new"][0]}</h2><ol class="rows">{rows(new, 1)}</ol>' if new else ""
     if hot:
-        out += f'<h2 class="label hot">{PARTS["impact"][0]}</h2><ol class="hot">{toc_items(hot, href, len(new) + 1)}</ol>'
+        out += (f'<h2 class="label hot">{PARTS["impact"][0]}</h2>'
+                f'<ol class="rows hot">{rows(hot, len(new) + 1)}</ol>')
     return out
+
+
+def hero_html(feature: dict | None, picks: list, date: str, root: Path, fig_base: str, href_base: str = "") -> str:
+    """今日の一本: the day's one article, large, with the reason it was picked."""
+    if not feature:
+        return ""
+    for n, (cand, pk) in enumerate(picks, 1):
+        if cand["pmcid"] == feature["pmcid"]:
+            break
+    else:
+        return ""
+    href = f"{href_base}#a{n}"
+    axes = "・".join(FEATURE_AXES[a] for a in feature.get("axes", []) if a in FEATURE_AXES)
+    return (f'<section class="hero"><h2 class="label mkt">今日の一本</h2><div class="hero-grid"><div>'
+            f'<p class="rk"><span class="n">{pad(n)}</span>{esc(pk["target_label"])}</p>'
+            f'<h3><a href="{href}">{esc(pk["headline"])}</a></h3>'
+            f'<p class="sub">{esc(pk.get("subhead") or "")}</p>'
+            f'<p class="why"><b>選んだ理由（{esc(axes)}）</b>{esc(feature["reason"])}</p>'
+            f'<p class="go"><a href="{href}">記事を読む →</a></p></div>'
+            f'{thumb_html(cand, pk, date, root, fig_base, href)}</div></section>')
 
 
 def part_html(key: str, count: int) -> str:
@@ -385,7 +475,9 @@ def issue_page(date: str, prev_date: str | None, next_date: str | None,
     counts = f"新しい構造 {len(picks) - n_hot + len(rest)} 本" + (f"<br>注目の構造 {n_hot} 本" if n_hot else "")
     body += [masthead(1, f"{jp_date(date)}号<br>{counts}")]
     if picks:
-        body.append(f'<section class="toc">{toc_html(picks)}</section>')
+        feature = load_feature(date, root, picks)
+        body.append(hero_html(feature, picks, date, root, fig_base))
+        body.append(f'<section class="toc">{contents_html(picks, date, root, fig_base, "", feature and feature["pmcid"])}</section>')
     else:
         c = meta["counts"]
         body.append(f'<section class="part"><h2>記事なし<span>0 本</span></h2><p>Europe PMC に {esc(meta["index_date"])} に'
@@ -411,11 +503,25 @@ def issue_page(date: str, prev_date: str | None, next_date: str | None,
 
 
 def home(issues: list[str]) -> str:
-    body = [masthead(0, "毎朝更新"), f'<p class="intro">{esc(DESCRIPTION)}</p>']
-    for date in issues:
-        _, picks, _ = load_issue(date)
-        link = f'<a href="issues/{date}.html">{date.replace("-", ".")}</a>'
-        body.append(f'<section class="toc home-issue">{toc_html(picks, f"issues/{date}.html", link)}</section>')
+    """The front page: the latest issue (今日の一本 and every article with its structure) and a compact list of past issues."""
+    body = [masthead(0)]
+    latest, past = issues[0], issues[1:]
+    meta, picks, _ = load_issue(latest, ISSUES_DIR)
+    href = f"issues/{latest}.html"
+    n_hot = sum(render.is_impact(pk) for _, pk in picks)
+    body.append(f'<p class="intro"><a href="{href}">{jp_date(latest)}号</a> · 新しい構造 {len(picks) - n_hot} 本'
+                + (f" · 注目の構造 {n_hot} 本" if n_hot else "") + f' · <a href="{href}">この号のすべての記事へ</a></p>')
+    feature = load_feature(latest, ISSUES_DIR, picks)
+    body.append(hero_html(feature, picks, latest, ISSUES_DIR, "figures", href))
+    body.append(f'<section class="toc">{contents_html(picks, latest, ISSUES_DIR, "figures", href, feature and feature["pmcid"])}</section>')
+    if past:
+        items = []
+        for date in past:
+            _, ps, _ = load_issue(date, ISSUES_DIR)
+            targets = "・".join(pk["target_label"].split("（")[0] for _, pk in ps)
+            items.append(f'<li><a class="d" href="issues/{date}.html">{jp_date_short(date)}号</a>'
+                         f'<span class="t"><b>{len(ps)} 本</b>{esc(targets)}</span></li>')
+        body.append(f'<section class="past"><h2 class="label">過去の号</h2><ol>{"".join(items)}</ol></section>')
     body.append(colophon())
     return page(f"{brand.SITE_NAME}（{brand.SITE_NAME_EN}）", "".join(body), depth=0)
 

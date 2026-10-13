@@ -1,7 +1,8 @@
 {
   "pmcid": "PMC13649712",
   "rank": 6,
-  "headline": "概日時計のPERとWDR5：PER2はWBMポケットで、PER1は主にWINポケットで結合する",
+  "headline": "PER2とPER1は、WDR5の別のポケットで結合する",
+  "subhead": "PER2はWBM部位でCRYと競合し、PER1は主にWIN部位でMLL1と競合する",
   "target_label": "WDR5–PER2 WBMペプチド（マウス）",
   "summary": {
     "background": "WDR5は活性化型のMLL1複合体と抑制型のPER複合体の両方に見つかるが、PERとの直接結合の様式は分かっていなかった。",
@@ -73,7 +74,15 @@
       }
     ]
   },
-  "keywords": ["WDR5", "PER1", "PER2", "概日時計", "WINモチーフ", "WBMモチーフ", "CRY"],
+  "keywords": [
+    "WDR5",
+    "PER1",
+    "PER2",
+    "概日時計",
+    "WINモチーフ",
+    "WBMモチーフ",
+    "CRY"
+  ],
   "ligand_label": "Inh-5（WIN部位阻害剤）",
   "editor_notes": "PDBは8OK1（WDR5 N225A、1.38 Å）と8OKF（WDR5–PER2ペプチド、1.85 Å）。8OK1が最高分解能だが、論文の主張に近い8OKFを構造図に指定した。ligand_label の Inh-5 は構造には含まれない（8OKF の 144 は別のリガンドかもしれない）ので、レビューで確認してほしい。"
 }

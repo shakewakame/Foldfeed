@@ -1,0 +1,29 @@
+{
+  "pmcid": "PMC13649706",
+  "axes": [
+    "structure",
+    "biology",
+    "drug"
+  ],
+  "reason": "結核菌の細胞壁の材料を運ぶ輸送体の3つの状態を捉え、変異体で機能も確かめた。細胞壁を狙う薬の足場になると著者は述べる。",
+  "evidence": [
+    {
+      "quote": "The ATP-bound structure revealed a remarkable downward movement of the gate helix, together with the Wzt dimerization.",
+      "section": "Abstract"
+    },
+    {
+      "quote": "These data provide a clear structural basis for the development of Mtb cell wall targeted therapeutics for global tuberculosis treatment.",
+      "section": "Abstract"
+    }
+  ],
+  "considered": [
+    {
+      "pmcid": "PMC13651826",
+      "note": "HLA-DR3 の構造は Treg 療法の設計根拠だが、論文の中心は細胞療法で構造は一部のため見送った。"
+    },
+    {
+      "pmcid": "PMC13650167",
+      "note": "Rho の NID はゲノムワイドの解析が中心で、構造は補助的なため見送った。"
+    }
+  ]
+}

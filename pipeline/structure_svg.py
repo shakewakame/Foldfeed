@@ -314,7 +314,8 @@ def _load(cif_gz: bytes, ligand_ids: set[str], gene_names: dict[str, str] | None
             "lig_atoms": lig_atoms, "poly": poly}
 
 
-def _runs(chains: dict[str, list[dict]], n_points: int) -> list[tuple[str, list[dict]]]:
+def _runs(chains: dict[str, list[dict]], n_points: int, max_points: int = MAX_TRACE_POINTS
+          ) -> list[tuple[str, list[dict]]]:
     """Continuous stretches of each chain, thinned for very large models."""
     runs: list[tuple[str, list[dict]]] = []
     for k, v in chains.items():
@@ -328,7 +329,7 @@ def _runs(chains: dict[str, list[dict]], n_points: int) -> list[tuple[str, list[
             cur.append(r)
         runs.append((k, cur))
     runs = [(k, v) for k, v in runs if len(v) > 1]
-    step = max(1, math.ceil(n_points / MAX_TRACE_POINTS))
+    step = max(1, math.ceil(n_points / max_points))
     if step > 1:
         runs = [(k, v[::step] + ([v[-1]] if (len(v) - 1) % step else [])) for k, v in runs]
     return runs
@@ -431,9 +432,11 @@ def _ligand_colors(lig_atoms: list[dict], palette: list[str]) -> dict[str, str]:
 def render(cif_gz: bytes, ligand_ids: set[str], x0: float, y0: float, w: float, h: float,
            gene_names: dict[str, str] | None = None, margin: float = 28,
            entity_colors: list[str] | None = None, ligand_colors: list[str] | None = None,
+           max_points: int = MAX_TRACE_POINTS,
            ) -> tuple[str, list[tuple[str, str]], list[tuple[str, str]]]:
     """SVG fragment for the box (x0, y0, w, h), a legend [(colour, label)] per polymer entity,
-    and [(colour, component id)] for the ligands drawn as sticks.
+    and [(colour, component id)] for the ligands drawn as sticks. `max_points` thins very large
+    models (every n-th residue is kept) — the list thumbnails use a small value.
 
     Labels are UniProt gene names (gene_names: accession -> gene) when the entity maps to one,
     otherwise the entity description.
@@ -443,8 +446,8 @@ def render(cif_gz: bytes, ligand_ids: set[str], x0: float, y0: float, w: float, 
     pts = [r["xyz"] for c in m["chains"].values() for r in c]
     if not pts:
         return "", [], []
-    runs = _runs(m["chains"], len(pts))
-    step = max(1, math.ceil(len(pts) / MAX_TRACE_POINTS))
+    runs = _runs(m["chains"], len(pts), max_points)
+    step = max(1, math.ceil(len(pts) / max_points))
     center, ev = _basis(pts[::step])
     # Wider than tall: put the longest axis horizontally if the box is wide, vertically otherwise.
     proj = _projector(center, ev, h > w)

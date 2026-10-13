@@ -1,7 +1,8 @@
 {
   "pmcid": "PMC13635751",
   "rank": 1,
-  "headline": "PARP2がヌクレオソーム内のDNA切断を認識する構造と、PARP阻害剤による変化をクライオ電顕で捉えた",
+  "headline": "PARP2は、ヌクレオソームDNAの2周をまたいで切断を捉える",
+  "subhead": "阻害剤はDNA結合面を固め、PARP2をクロマチンに捕捉する説明になりうる",
   "takeaway": "PARP2はDNA 2周分をまたいで切断を捉え、阻害剤はDNA結合面を固める",
   "target_label": "ヒトPARP2–HPF1／ヌクレオソーム",
   "summary": {

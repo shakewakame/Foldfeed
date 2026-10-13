@@ -1,7 +1,8 @@
 {
   "pmcid": "PMC7619511",
   "rank": 5,
-  "headline": "赤痢菌IpaDと抗体の複合体構造：溶血を抑える抗体と高める抗体はエピトープが違う",
+  "headline": "結合する場所で、抗体が溶血を抑えるか高めるかが分かれる",
+  "subhead": "赤痢菌IpaDと3種の抗体Fabの複合体構造",
   "takeaway": "IpaDの結合部位の違いが、抗体が毒性を抑えるか高めるかを分ける",
   "target_label": "赤痢菌IpaD–抗体Fab",
   "summary": {
@@ -43,7 +44,14 @@
     "data_collection": null,
     "evidence": []
   },
-  "keywords": ["IpaD", "赤痢菌", "III型分泌装置", "抗体", "ワクチン", "クライオ電顕"],
+  "keywords": [
+    "IpaD",
+    "赤痢菌",
+    "III型分泌装置",
+    "抗体",
+    "ワクチン",
+    "クライオ電顕"
+  ],
   "ligand_label": "Fab（D13r.34、D02-F2、D02-E4）",
   "editor_notes": "クライオ電顕の方法（グリッド作製・収集条件）は補足資料にあり、本文 packet には無いため lab_notes は全て null。IpaB の構造決定は不成功と著者が述べている。構造は 2 つ（IpaD–D13r.34、IpaD–D02-F2–D02-E4）。"
 }

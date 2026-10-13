@@ -1,0 +1,20 @@
+{
+  "pmcid": "PMC13639016",
+  "axes": [
+    "structure",
+    "biology"
+  ],
+  "reason": "広く存在する抗ファージ防御系で、中心の QatC が何をするかを、結晶構造と変異体の防御実験の両方で示した。",
+  "evidence": [
+    {
+      "quote": "We show that the QatB N-terminal loop, its binding with QatC and QatC catalytic site are essential for QatABCD defense in vivo, suggesting a modification might occur analogous to CBASS.",
+      "section": "Abstract"
+    }
+  ],
+  "considered": [
+    {
+      "pmcid": "PMC13638461",
+      "note": "HIV プロテアーゼの耐性は創薬に近いが、結晶構造では差が出ず結論の中心が MD のため見送った。"
+    }
+  ]
+}

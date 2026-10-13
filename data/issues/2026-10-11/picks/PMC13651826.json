@@ -1,7 +1,8 @@
 {
   "pmcid": "PMC13651826",
   "rank": 2,
-  "headline": "自己抗原Ro60ペプチドを結合したHLA-DR3の結晶構造：TCR認識に露出する3残基を特定",
+  "headline": "HLA-DR3のRo60ペプチド：TCRに見える3残基を特定",
+  "subhead": "自己抗原ペプチド結合の結晶構造（2.87 Å）。Treg療法の設計根拠になる",
   "target_label": "HLA-DR3–Ro60ペプチド（ヒト）",
   "summary": {
     "background": "シェーグレン病の患者はHLA-DRB1*03:01とRo60自己抗体を持つが、HLA-DR3が自己抗原ペプチドを提示する構造はCLIPのものしかなかった。",
@@ -77,6 +78,13 @@
       }
     ]
   },
-  "keywords": ["HLA-DR3", "Ro60", "シェーグレン病", "TCR-Treg", "ペプチド-MHC", "X線結晶構造"],
+  "keywords": [
+    "HLA-DR3",
+    "Ro60",
+    "シェーグレン病",
+    "TCR-Treg",
+    "ペプチド-MHC",
+    "X線結晶構造"
+  ],
   "editor_notes": "構造は論文の一部（機能試験が中心）。『HLA-DR3に自己抗原が結合した初の構造』は著者の主張で、独自には確認していない。構造図はPDB 9YZ3。"
 }

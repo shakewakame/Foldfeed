@@ -1,7 +1,8 @@
 {
   "pmcid": "PMC13646831",
   "rank": 1,
-  "headline": "MDA5 T331Iは短いdsRNA上で安定なフィラメントを作る：ATP結合ポケットの乱れをクライオ電顕で可視化",
+  "headline": "T331Iは、短いdsRNAでも安定なフィラメントを作る",
+  "subhead": "ATP結合ポケットの乱れで加水分解が止まる様子を、クライオ電顕で可視化",
   "target_label": "MDA5（IFIH1）–dsRNA",
   "summary": {
     "background": "自己免疫疾患に関連するMDA5変異T331Iが、なぜ恒常的なインターフェロン応答を起こすのか分子機構が不明だった。",
