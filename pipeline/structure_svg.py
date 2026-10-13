@@ -307,6 +307,7 @@ AA1 = {"ALA": "A", "ARG": "R", "ASN": "N", "ASP": "D", "CYS": "C", "GLN": "Q", "
        "THR": "T", "TRP": "W", "TYR": "Y", "VAL": "V", "MSE": "M", "SEC": "U"}
 BACKBONE = {"N", "C", "O", "OXT"}
 CONTACT = 4.0  # Å: residues with any heavy atom this close to the ligand are drawn and listed
+MAX_SITES = 24  # copies of one ligand listed for the 3D viewer's "next binding site" button
 POLAR = 3.3    # Å: N/O pairs this close are drawn as polar contacts
 
 
@@ -484,7 +485,7 @@ def render(cif_gz: bytes, ligand_ids: set[str], x0: float, y0: float, w: float, 
            max_points: int = MAX_TRACE_POINTS, bg: str = "#FFFFFF",
            ) -> tuple[str, list[tuple[str, str, str]], list[tuple[str, str]]]:
     """SVG fragment for the box (x0, y0, w, h), a legend [(colour, label, description)] per polymer
-    entity, and [(colour, component id, [entity ids])] for the ligands drawn as sticks. `max_points` thins very large
+    entity, and [(colour, component id, [entity ids], [[asym id, residue number] per copy])] for the ligands drawn as sticks. `max_points` thins very large
     models (every n-th residue is kept) — the list thumbnails use a small value. `bg` is the colour the
     depth cue fades into (the page ground: the figure itself has a transparent background).
 
@@ -541,9 +542,13 @@ def render(cif_gz: bytes, ligand_ids: set[str], x0: float, y0: float, w: float, 
     out = "".join(s for _, s in parts) + _sticks(lig_atoms, ligq, sx, width)
     legend = [(color[e], m["entities"].get(e, f"entity {e}"), m["descriptions"].get(e, ""), e) for e in entity_order]
     lig_entities: dict[str, set] = defaultdict(set)
+    lig_sites: dict[str, list] = defaultdict(list)  # every copy of the ligand: [label_asym_id, auth_seq_id]
     for a in lig_atoms:
         lig_entities[a["inst"][2]].add(a["entity"])
-    return out, legend, list((c, k, sorted(lig_entities[k])) for k, c in ccol.items())
+        site = [a["inst"][0], a["inst"][1]]
+        if site not in lig_sites[a["inst"][2]]:
+            lig_sites[a["inst"][2]].append(site)
+    return out, legend, list((c, k, sorted(lig_entities[k]), lig_sites[k][:MAX_SITES]) for k, c in ccol.items())
 
 
 class _Grid:

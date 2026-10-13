@@ -96,31 +96,56 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .sd-toc h3:first-of-type {{ margin-top:0; }}
 .sd-nav {{ display:flex; flex-direction:column; gap:4px; font-family:var(--mono); font-size:12.5px; }}
 
-/* contents: a label column, then one row per article: the real structure, the headline, a supplement */
-.toc {{ margin-top:40px; margin-bottom:14px; display:grid; grid-template-columns:var(--col) minmax(0,1fr); gap:28px; }}
+/* contents: one table row per article: number, headline + supplement, TARGET / METHOD / RES., the real structure, PDB */
+.toc {{ margin-top:48px; }}
+.ix-h {{ display:flex; justify-content:space-between; align-items:baseline; gap:16px; border-top:1px solid var(--ink);
+         padding-top:12px; }}
+.ix-h .label {{ padding-top:0; }}
+.ix-h span {{ font-family:var(--mono); font-size:12px; letter-spacing:.08em; color:var(--mute); }}
+.ix-h.hot {{ margin-top:44px; }}
 .rows {{ list-style:none; margin:0; padding:0; }}
-.row {{ display:grid; grid-template-columns:var(--col) minmax(0,1fr); gap:24px; margin:0 0 30px; align-items:start; }}
+.row {{ display:grid; grid-template-columns:60px minmax(0,1fr) 220px 168px 112px; grid-template-areas:"no rt rf th rp";
+        gap:0 26px; align-items:center; padding:20px 0; border-top:1px solid var(--hair); }}
+.rows .row:first-child {{ border-top:0; }}
+.row .no {{ grid-area:no; font-family:var(--latin); font-size:30px; line-height:1; letter-spacing:-0.02em; color:var(--acc-ink); }}
+.row .rt {{ grid-area:rt; min-width:0; }}
+.row .rf {{ grid-area:rf; }}
+.row .thumb {{ grid-area:th; }}
+.row .rp {{ grid-area:rp; }}
+.rk {{ display:none; margin:0 0 3px; font-family:var(--mono); font-size:11.5px; letter-spacing:.04em; color:var(--mute); line-height:1.6; }}
+.rk .n {{ color:var(--acc-ink); font-weight:700; margin-right:10px; }}
+.row h3 {{ margin:0; font-size:22px; line-height:1.5; font-weight:700; color:var(--ink); text-wrap:balance; }}
+.row .sub {{ margin:3px 0 0; font-size:15px; line-height:1.75; color:var(--desc); }}
+.row .rm {{ margin:5px 0 0; font-family:var(--mono); font-size:11px; color:var(--mute); line-height:1.6; }}
 .thumb {{ display:block; border:1px solid var(--hair); }}
 .thumb img {{ display:block; width:100%; height:auto; }}
 .thumb.none {{ aspect-ratio:3/2; display:flex; align-items:center; justify-content:center;
                font-family:var(--mono); font-size:11px; color:var(--mute); text-align:center; padding:8px; }}
-.rk {{ margin:0 0 3px; font-family:var(--mono); font-size:11.5px; letter-spacing:.04em; color:var(--mute); line-height:1.6; }}
-.rk .n {{ color:var(--acc-ink); font-weight:700; margin-right:10px; }}
-.row h3 {{ margin:0; font-size:22px; line-height:1.5; font-weight:700; color:var(--ink); text-wrap:balance; }}
-.row .sub {{ margin:3px 0 0; font-size:15px; line-height:1.75; color:var(--desc); }}
-.row .rm {{ margin:6px 0 0; font-family:var(--mono); font-size:11px; color:var(--mute); line-height:1.6; }}
-.toc .label.hot, .toc .rows.hot {{ margin-top:18px; padding-top:18px; border-top:1px solid var(--hair); }}
+.rf, .hf {{ margin:0; font-family:var(--mono); }}
+.rf div {{ display:grid; grid-template-columns:62px minmax(0,1fr); gap:0 8px; padding:2px 0; }}
+.rf dt, .hf dt {{ font-size:10.5px; letter-spacing:.1em; color:var(--mute); padding-top:2px; }}
+.rf dd, .hf dd {{ margin:0; font-size:12px; line-height:1.6; color:var(--ink2); overflow-wrap:anywhere; }}
+.rp {{ font-family:var(--mono); line-height:1.5; }}
+.rp .pl {{ display:block; font-size:10.5px; letter-spacing:.1em; color:var(--mute); }}
+.rp b {{ display:block; font-size:15px; font-weight:500; color:var(--ink); }}
+.rp .mk {{ display:block; margin-top:4px; font-family:var(--serif); font-size:12px; }}
 .more {{ margin:8px 0 0; font-family:var(--mono); font-size:13px; }}
 .more a {{ text-decoration:underline; text-decoration-color:var(--acc); text-underline-offset:4px; }}
-.hero {{ margin-top:40px; display:grid; grid-template-columns:var(--col) minmax(0,1fr); gap:28px; }}
-.hero .mkt {{ color:var(--acc-ink); }}
-.hero-grid {{ display:grid; grid-template-columns:minmax(0,52fr) minmax(0,48fr); gap:34px; align-items:start; }}
-.hero h3 {{ margin:2px 0 0; font-size:38px; line-height:1.38; font-weight:700; color:var(--ink); text-wrap:balance; }}
-.hero .sub {{ margin:12px 0 0; font-size:18px; line-height:1.75; color:var(--desc); }}
-.hero .go {{ margin:18px 0 0; font-family:var(--mono); font-size:13px; }}
+.hero {{ margin-top:40px; }}
+.hero > .label {{ color:var(--acc-ink); display:block; padding-top:0; margin-bottom:16px; }}
+.hero > .label span {{ color:var(--mute); }}
+.hero-grid {{ display:grid; grid-template-columns:minmax(0,40fr) minmax(0,60fr); gap:44px; align-items:center; }}
+.hero h3 {{ margin:0; font-size:38px; line-height:1.38; font-weight:700; color:var(--ink); text-wrap:balance; }}
+.hero .sub {{ margin:14px 0 0; font-size:18px; line-height:1.75; color:var(--desc); }}
+.hf {{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px 22px; margin:22px 0 0; padding-top:16px;
+       border-top:1px solid var(--hair); }}
+.hf dd {{ font-size:12.5px; }}
+.hf a {{ text-decoration:underline; text-decoration-color:var(--acc); }}
+.hero .go {{ margin:20px 0 0; font-family:var(--mono); font-size:13px; }}
 .hero .go a {{ text-decoration:underline; text-decoration-color:var(--acc); text-underline-offset:4px; }}
-.past {{ margin-top:56px; display:grid; grid-template-columns:var(--col) minmax(0,1fr); gap:28px; }}
-.past ol {{ list-style:none; margin:0; padding:0; }}
+.hero .thumb img {{ width:100%; }}
+.past {{ margin-top:56px; }}
+.past ol {{ list-style:none; margin:14px 0 0; padding:0; }}
 .past li {{ display:grid; grid-template-columns:110px minmax(0,1fr); gap:14px; margin:0 0 14px; align-items:baseline; }}
 .past .d {{ font-family:var(--mono); font-size:12.5px; }}
 .past .t {{ font-size:14.5px; color:var(--desc); line-height:1.7; }}
@@ -169,6 +194,17 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .v3d-bar a {{ text-decoration:underline; text-decoration-color:var(--acc); }}
 .v3d-bar .help {{ color:var(--mute); flex-basis:100%; line-height:1.7; }}
 .v3d:not(.on) .on-only, .v3d.on .off-only {{ display:none; }}
+.v3d-now {{ color:var(--acc-ink); }}
+.v3d-wait {{ display:none; position:absolute; inset:0; z-index:2; flex-direction:column; align-items:center;
+             justify-content:center; gap:8px; padding:16px; text-align:center; font-family:var(--mono); font-size:13px;
+             line-height:1.7; color:var(--ink); background:rgba(240,241,239,.92); }}
+.v3d-wait b {{ font-weight:600; }}
+.v3d-wait .secs {{ color:var(--mute); }}
+.v3d.loading .v3d-wait {{ display:flex; }}
+.v3d.loading .v3d-view {{ aspect-ratio:1200/560; }}
+.v3d.loading .v3d-canvas {{ display:block; visibility:hidden; }}
+.v3d.loading .fig {{ height:100%; object-fit:contain; }}
+.v3d:not(.loading) .loading-only, .v3d.loading .off-only, .v3d.loading .on-only {{ display:none; }}
 .v3d-msg {{ margin:8px 0 0; font-family:var(--mono); font-size:12px; color:var(--acc-ink); }}
 .v3d .msp-state-snapshot-viewport-controls {{ display:none; }}
 .legend {{ display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px 44px; margin:18px 0 0; }}
@@ -181,7 +217,6 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .legend b {{ font-size:14.5px; font-weight:700; }}
 .legend b code {{ font-family:var(--mono); font-size:11px; font-weight:500; color:var(--mute); margin-left:8px; }}
 .legend .en {{ display:block; font-family:var(--mono); font-size:11.5px; color:var(--ink2); overflow-wrap:anywhere; }}
-.how {{ margin:14px 0 0; font-family:var(--mono); font-size:11.5px; color:var(--mute); line-height:1.8; }}
 .pdbnote {{ margin:8px 0 0; font-family:var(--mono); font-size:11.5px; color:var(--ink2); }}
 .site {{ margin:34px 0 0; }}
 .site img {{ display:block; width:100%; height:auto; border-top:1px solid var(--hair); border-bottom:1px solid var(--hair); }}
@@ -234,9 +269,13 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
   :root {{ --col:200px; --side:290px; --pad:36px; }}
   .shell {{ gap:0 40px; }}
   .side {{ padding-left:26px; }}
-  .hero-grid {{ grid-template-columns:minmax(0,58fr) minmax(0,42fr); gap:28px; }}
+  .hero-grid {{ grid-template-columns:minmax(0,46fr) minmax(0,54fr); gap:32px; }}
   .hero h3 {{ font-size:30px; }}
   .hero .sub {{ font-size:16.5px; }}
+  .hf {{ grid-template-columns:repeat(2,minmax(0,1fr)); }}
+  .row {{ grid-template-columns:44px minmax(0,1fr) 190px 132px 92px; gap:0 20px; }}
+  .row .no {{ font-size:24px; }}
+  .row h3 {{ font-size:20px; }}
   .margin .no {{ font-size:64px; }}
 }}
 @media (max-width:1120px) {{
@@ -251,11 +290,17 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
   .word .name {{ font-size:32px; }}
   .mast-row {{ flex-wrap:wrap; align-items:flex-start; }}
   .vol {{ text-align:left; }}
-  .toc, .art, .hero, .past {{ grid-template-columns:minmax(0,1fr); gap:14px; }}
-  .row {{ grid-template-columns:116px minmax(0,1fr); gap:14px; margin-bottom:24px; }}
+  .art {{ grid-template-columns:minmax(0,1fr); gap:14px; }}
+  .row {{ grid-template-columns:116px minmax(0,1fr); grid-template-areas:"th rt" "th rf" "th rp"; gap:4px 14px;
+          align-items:start; padding:16px 0; }}
+  .row .no {{ display:none; }}
+  .rk {{ display:block; }}
   .row h3 {{ font-size:18px; }}
   .row .sub {{ font-size:13.5px; }}
+  .rf div {{ grid-template-columns:54px minmax(0,1fr); }}
+  .rp b, .rp .pl {{ display:inline; margin-right:8px; }}
   .hero-grid {{ grid-template-columns:minmax(0,1fr); gap:16px; }}
+  .hf {{ grid-template-columns:repeat(2,minmax(0,1fr)); }}
   .hero h3 {{ font-size:26px; }}
   .hero .sub {{ font-size:15.5px; }}
   .past li {{ grid-template-columns:96px minmax(0,1fr); }}
@@ -425,10 +470,6 @@ def margin_html(cand: dict, pick: dict, n: int, impact_type: str | None = None) 
     return f'<aside class="margin"><div class="sticky"><div class="no">{pad(n)}</div><dl>{dl}</dl></div></aside>'
 
 
-HOW_TO_READ = ("円筒＝αヘリックス · 矢印＝βストランド · 細い管＝ループ · スティック＝リガンド"
-               "（炭素は固有の色、窒素は青・酸素は赤・硫黄は黄）。奥のものほど薄く、混み合った部分ほど濃く描く。")
-
-
 def legend_html(info: dict) -> str:
     """What each colour is, for readers who cannot tell the proteins apart by shape: polymers, then ligands."""
     def item(swatch: str, label: str, code: str, desc: str) -> str:
@@ -443,29 +484,35 @@ def legend_html(info: dict) -> str:
                   for x in info.get("ligands", []))
     groups = ((f'<section><h4>タンパク質・核酸</h4><ul>{prot}</ul></section>' if prot else "") +
               (f'<section><h4>リガンド</h4><ul>{lig}</ul></section>' if lig else ""))
-    return f'<div class="legend">{groups}</div><p class="how">{esc(HOW_TO_READ)}</p>' if groups else ""
+    return f'<div class="legend">{groups}</div>' if groups else ""
 
 
-def viewer_bar(info: dict, up: str) -> tuple[str, str]:
-    """Attributes for .v3d and the button bar (3D viewer, loaded on demand by assets/viewer.js)."""
+def viewer_bar(info: dict, up: str) -> tuple[str, str, str]:
+    """Attributes for .v3d, the "loading" overlay and the button bar (3D viewer, loaded on demand by assets/viewer.js)."""
     pdb = info.get("pdb_id")
     ents = [{"id": x["entity"], "color": x["color"]} for x in info.get("legend", []) if x.get("entity")]
     if not pdb or not ents:
-        return "", ""
-    ligs = [{"id": x["id"], "color": x["color"], "entity": x.get("entity", [])} for x in info.get("ligands", [])]
+        return "", "", ""
+    ligs = [{"id": x["id"], "label": x["label"], "color": x["color"], "entity": x.get("entity", []),
+             "sites": x.get("sites", [])} for x in info.get("ligands", [])]
     site = (info.get("site") or {}).get("ligand", "")
     attrs = (f' data-pdb="{esc(pdb)}" data-assets="{up}assets" data-site="{esc(site)}"'
-             f' data-ents="{esc(json.dumps(ents))}" data-ligs="{esc(json.dumps(ligs))}"')
-    focus = '<button type="button" data-v3d="site" class="on-only">結合部位へ</button>' if site else ""
+             f' data-ents="{esc(json.dumps(ents))}" data-ligs="{esc(json.dumps(ligs, ensure_ascii=False))}"')
+    wait = ('<div class="v3d-wait" role="status" aria-live="polite"><b>3D を読み込んでいます</b>'
+            '<span class="step"></span><span class="secs"></span></div>')
+    focus = ('<button type="button" data-v3d="site" class="on-only">結合部位へ（押すたびに次へ）</button>'
+             if any(x["sites"] for x in ligs) else "")
     bar = (f'<div class="v3d-bar">'
            f'<button type="button" class="go off-only" data-v3d="open">3D で動かす</button>'
+           f'<button type="button" class="loading-only" data-v3d="close">読み込みを中止</button>'
            f'{focus}<button type="button" data-v3d="reset" class="on-only">全体に戻す</button>'
            f'<button type="button" data-v3d="close" class="on-only">静止画に戻す</button>'
+           f'<span class="v3d-now on-only"></span>'
            f'<a href="https://www.rcsb.org/3d-view/{esc(pdb)}">RCSB で開く ↗</a>'
            f'<span class="help off-only">PDB {esc(pdb)} を RCSB から読み込み、ドラッグで回転・クリックで拡大して周囲のアミノ酸を表示できる。</span>'
            f'<span class="help on-only">ドラッグで回転 · ホイールで拡大縮小 · 残基をクリックで拡大し、周囲のアミノ酸をスティックで表示。</span>'
            f'</div><p class="v3d-msg" hidden></p>')
-    return attrs, bar
+    return attrs, wait, bar
 
 
 def figures_html(cand: dict, pick: dict, date: str, root: Path, fig_base: str, up: str = "../") -> str:
@@ -474,9 +521,9 @@ def figures_html(cand: dict, pick: dict, date: str, root: Path, fig_base: str, u
     if not (fig_dir / f"{pm}.svg").exists():
         return ""
     info = read_json(fig_dir / f"{pm}.json") if (fig_dir / f"{pm}.json").exists() else {}
-    attrs, bar = viewer_bar(info, up)
+    attrs, wait, bar = viewer_bar(info, up)
     img = f'<img class="fig" src="{fig_base}/{date}/{esc(pm)}.svg" alt="構造図：{esc(pick["target_label"])}" loading="lazy">'
-    out = [f'<div class="v3d"{attrs}><div class="v3d-view">{img}<div class="v3d-canvas"></div></div>{bar}</div>']
+    out = [f'<div class="v3d"{attrs}><div class="v3d-view">{img}<div class="v3d-canvas"></div>{wait}</div>{bar}</div>']
     if render.is_impact(pick) and info.get("pdb_id"):
         out.append(f'<p class="pdbnote">PDB {esc(info["pdb_id"])}（論文が使った既存の構造）</p>')
     out.append(legend_html(info))
@@ -563,45 +610,67 @@ def thumb_html(cand: dict, pick: dict, date: str, root: Path, fig_base: str, hre
     return f'<a class="thumb none" href="{href}">{why}</a>'
 
 
-def meta_line(cand: dict, pick: dict) -> str:
+def facts(cand: dict, pick: dict) -> dict:
+    """The few facts shown beside a headline: target, method, resolution, PDB (the structure of the figure),
+    ligand, UniProt, and whether it is the protein's first structure. All from the pick and PDB data."""
     hot = render.is_impact(pick)
-    method = pick.get("method_label") if (hot or not any(s["status"] == "released" for s in cand["own_structures"])) \
-        else render.method_line(cand)
-    return " · ".join(x for x in (cand["journal_abbrev"] or cand["journal"], method) if x)
+    own = cand["own_structures"] if not hot else cand.get("cited_structures", [])
+    rel = [x for x in own if x["status"] == "released"]
+    line = render.method_line(cand) if not hot else "—"
+    if pick.get("method_label") and (hot or not rel):
+        line = pick["method_label"]
+    method, _, res = line.partition("・")
+    shown = render.pick_structure(cand, pick)
+    if shown:
+        pdb = shown["pdb_id"] + (f"（ほか {len(rel) - 1} 件）" if len(rel) > 1 else "")
+    elif cand["kind"] == "new_map_only" and cand.get("emdb_ids"):
+        pdb = cand["emdb_ids"][0]
+    else:
+        pdb = "公開待ち" if own else ("—" if hot else "補足資料")
+    prots = cand.get("proteins", [])
+    return {"target": pick["target_label"], "method": method or "—", "res": res or "—", "pdb": pdb,
+            "pdb_id": shown["pdb_id"] if shown else None,
+            "ligand": pick.get("ligand_label") or ("—" if hot else render.ligand_line(cand)),
+            "uniprot": [(p["uniprot"], p.get("gene") or p["uniprot"]) for p in prots[:3]],
+            "first": any(p.get("first_structure") for p in prots)}
 
 
 def row_html(cand: dict, pick: dict, n: int, date: str, root: Path, fig_base: str, href_base: str) -> str:
+    """One row of the index: number | headline and supplement | TARGET METHOD RES. | structure | PDB."""
     href = f"{href_base}#a{n}"
-    return (f'<li class="row">{thumb_html(cand, pick, date, root, fig_base, href)}<div>'
-            f'<p class="rk"><span class="n">{pad(n)}</span>{esc(pick["target_label"])}</p>\n'
+    f = facts(cand, pick)
+    dl = "".join(f"<div><dt>{k}</dt><dd>{esc(v)}</dd></div>"
+                 for k, v in (("TARGET", f["target"]), ("METHOD", f["method"]), ("RES.", f["res"])))
+    first = '<span class="mk">PDB 初構造</span>' if f["first"] else ""
+    return (f'<li class="row"><span class="no">{pad(n)}</span><div class="rt">'
+            f'<p class="rk"><span class="n">{pad(n)}</span></p>\n'
             f'<h3><a href="{href}">{esc(pick["headline"])}</a></h3>\n'
-            f'<p class="sub">{esc(pick.get("subhead") or "")}</p>\n'
-            f'<p class="rm">{esc(meta_line(cand, pick))}</p></div></li>')
+            f'<p class="sub">{esc(pick.get("subhead") or "")}</p>'
+            f'<p class="rm">{esc(cand["journal_abbrev"] or cand["journal"])}</p></div>'
+            f'<dl class="rf">{dl}</dl>{thumb_html(cand, pick, date, root, fig_base, href)}'
+            f'<div class="rp"><span class="pl">PDB</span><b>{esc(f["pdb_id"] or f["pdb"])}</b>{first}</div></li>')
 
 
 def contents_html(picks: list, date: str, root: Path, fig_base: str, href_base: str = "",
                   featured: str | None = None) -> str:
-    """Contents in two blocks, 新しい構造 and 注目の構造, each labelled in the left column.
+    """The index in two blocks, 新しい構造 and 注目の構造, each under a rule with its count.
 
     The article shown as 今日の一本 is not repeated here (it keeps its number, so the list may skip one).
     """
     new, hot = render.split_sections(picks)
     number = {c["pmcid"]: n for n, (c, _) in enumerate(new + hot, 1)}
-
-    def rows(items):
-        return "".join(row_html(c, pk, number[c["pmcid"]], date, root, fig_base, href_base)
-                       for c, pk in items if c["pmcid"] != featured)
-
     out = ""
     for key, items, cls in (("new", new, ""), ("impact", hot, " hot")):
-        body = rows(items)
+        body = "".join(row_html(c, pk, number[c["pmcid"]], date, root, fig_base, href_base)
+                       for c, pk in items if c["pmcid"] != featured)
         if body:
-            out += (f'<h2 class="label{cls}">{PARTS[key][0]}</h2><ol class="rows{cls}">{body}</ol>')
+            out += (f'<div class="ix-h{cls}"><h2 class="label">{PARTS[key][0]}</h2><span>{len(items)} 本</span></div>'
+                    f'<ol class="rows">{body}</ol>')
     return out
 
 
 def hero_html(feature: dict | None, picks: list, date: str, root: Path, fig_base: str, href_base: str = "") -> str:
-    """今日の一本: the day's one article, large. The reason it was picked is for the pull request, not the site."""
+    """今日の一本: the day's one article, large, with its facts. The reason it was picked is for the pull request."""
     if not feature:
         return ""
     for n, (cand, pk) in enumerate(picks, 1):
@@ -610,12 +679,20 @@ def hero_html(feature: dict | None, picks: list, date: str, root: Path, fig_base
     else:
         return ""
     href = f"{href_base}#a{n}"
-    return (f'<section class="hero"><h2 class="label mkt">今日の一本</h2><div class="hero-grid"><div>'
-            f'<p class="rk"><span class="n">{pad(n)}</span>{esc(pk["target_label"])} · {esc(meta_line(cand, pk))}</p>'
+    f = facts(cand, pk)
+    uni = ", ".join(f'<a href="https://www.uniprot.org/uniprotkb/{esc(a)}">{esc(a)}</a>' for a, _ in f["uniprot"]) or "—"
+    cells = [("TARGET", esc(f["target"])), ("METHOD", esc(f["method"])), ("RES.", esc(f["res"])),
+             ("PDB", esc(f["pdb"])), ("LIGAND", esc(f["ligand"])), ("UNIPROT", uni)]
+    dl = "".join(f"<div><dt>{k}</dt><dd>{v}</dd></div>" for k, v in cells)
+    big = root / date / "figures" / f"{cand['pmcid']}.svg"   # the article's own figure, larger than the list thumbnail
+    fig = (f'<a class="thumb" href="{href}"><img src="{fig_base}/{date}/{esc(cand["pmcid"])}.svg" '
+           f'alt="構造図：{esc(pk["target_label"])}"></a>') if big.exists() else thumb_html(cand, pk, date, root, fig_base, href)
+    first = ' · <span class="mk">PDB 初構造</span>' if f["first"] else ""
+    return (f'<section class="hero"><h2 class="label">今日の一本 <span>/ {pad(n)}{first}</span></h2><div class="hero-grid"><div>'
             f'<h3><a href="{href}">{esc(pk["headline"])}</a></h3>'
             f'<p class="sub">{esc(pk.get("subhead") or "")}</p>'
-            f'<p class="go"><a href="{href}">記事を読む →</a></p></div>'
-            f'{thumb_html(cand, pk, date, root, fig_base, href)}</div></section>')
+            f'<dl class="hf">{dl}</dl>'
+            f'<p class="go"><a href="{href}">記事を読む →</a></p></div>{fig}</div></section>')
 
 
 def part_html(key: str, count: int) -> str:
@@ -725,7 +802,8 @@ def home(issues: list[str]) -> str:
             targets = "・".join(pk["target_label"].split("（")[0] for _, pk in ps)
             items.append(f'<li><a class="d" href="issues/{date}.html">{jp_date_short(date)}号</a>'
                          f'<span class="t"><b>{len(ps)} 本</b>{esc(targets)}</span></li>')
-        main.append(f'<section class="past"><h2 class="label">過去の号</h2><ol>{"".join(items)}</ol></section>')
+        main.append(f'<section class="past"><div class="ix-h"><h2 class="label">過去の号</h2><span>{len(past)} 号</span></div>'
+                    f'<ol>{"".join(items)}</ol></section>')
     side = (sd("最新号", f'<a class="sd-issue" href="{href}">{jp_date(latest)}号</a>'
                          f'<p class="sd-meta">{counts_text(len(picks) - n_hot, n_hot)}</p>')
             + journals_html(journal_counts(issues)) + numbers_html(issues) + sd("このサイトについて", f"<p>{esc(ABOUT)}</p>"))

@@ -22,6 +22,16 @@
    "desc": "Nadp Nicotinamide-Adenine-Dinucleotide Phosphate",
    "entity": [
     "4"
+   ],
+   "sites": [
+    [
+     "H",
+     "501"
+    ],
+    [
+     "K",
+     "501"
+    ]
    ]
   }
  ],

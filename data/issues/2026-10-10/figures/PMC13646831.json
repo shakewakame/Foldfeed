@@ -28,6 +28,12 @@
    "desc": "Phosphoaminophosphonic Acid-Adenylate Ester",
    "entity": [
     "4"
+   ],
+   "sites": [
+    [
+     "D",
+     "1101"
+    ]
    ]
   }
  ],

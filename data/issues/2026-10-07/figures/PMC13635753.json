@@ -16,6 +16,24 @@
    "desc": "2-acetamido-2-deoxy-6-O-phosphono-alpha-D-mannopyranose",
    "entity": [
     "2"
+   ],
+   "sites": [
+    [
+     "E",
+     "301"
+    ],
+    [
+     "G",
+     "301"
+    ],
+    [
+     "I",
+     "301"
+    ],
+    [
+     "K",
+     "301"
+    ]
    ]
   }
  ],

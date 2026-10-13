@@ -205,7 +205,9 @@ def structure_figure(cand: dict, pick: dict, theme: brand.Theme | None = None) -
 
     Returns (svg, info, site_svg). info holds what the page prints next to the figures: the PDB ID,
     [{"color", "label", "desc", "entity"}] per polymer entity (label: the writer's legend_labels if given, else the
-    gene name or PDB description; desc: the PDB description), [{"id", "label", "color", "desc", "entity"}] per ligand (entity: its mmCIF entity ids, for the 3D viewer), and "site"
+    gene name or PDB description; desc: the PDB description; entity: its mmCIF entity id, for the 3D viewer),
+    [{"id", "label", "color", "desc", "entity", "sites"}] per ligand (entity: its mmCIF entity ids; sites:
+    [asym id, residue number] of each copy, for the 3D viewer's "next binding site"), and "site"
     ({"ligand", "label", "residues", "polar", "neighbours"}) when a close-up was drawn (site_svg != "").
     The close-up shows pick["site_ligand"] if given ("" for none), else a ligand the writer named in
     ligand_names, else the largest ligand.
@@ -247,7 +249,8 @@ def structure_figure(cand: dict, pick: dict, theme: brand.Theme | None = None) -
             "legend": [{"color": col, "label": lab, "desc": desc if desc != lab else "", "entity": ent}
                        for col, lab, desc, ent in legend],
             "ligands": [{"id": lid, "label": ligand_name(lid, pdb_names.get(lid), pick), "color": col,
-                         "desc": chem_name(pdb_names.get(lid)), "entity": ents} for col, lid, ents in lig_legend]}
+                         "desc": chem_name(pdb_names.get(lid)), "entity": ents, "sites": sites}
+                        for col, lid, ents, sites in lig_legend]}
     site_svg = ""
     if site_body:
         names = {x["id"]: x["label"] for x in info["ligands"]}

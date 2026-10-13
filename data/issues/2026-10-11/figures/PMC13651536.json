@@ -22,6 +22,12 @@
    "desc": "Protoporphyrin Ix Containing Fe",
    "entity": [
     "4"
+   ],
+   "sites": [
+    [
+     "F",
+     "504"
+    ]
    ]
   }
  ],

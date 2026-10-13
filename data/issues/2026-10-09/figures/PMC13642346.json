@@ -40,6 +40,12 @@
    "desc": "5-[3-[4-chloranyl-3-(trifluoromethyl)phenyl]propyl]-1-oxidanyl-pyridin-3-ol",
    "entity": [
     "6"
+   ],
+   "sites": [
+    [
+     "F",
+     "601"
+    ]
    ]
   }
  ],

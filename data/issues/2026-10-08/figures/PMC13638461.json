@@ -16,6 +16,12 @@
    "desc": "(3R,3As,6Ar)-Hexahydrofuro[2,3-B]Furan-3-Yl(1S,2R)-3-[[(4-Aminophenyl)Sulfonyl](Isobutyl)Amino]-1-Benzyl-2-Hydroxypropylcarbamate",
    "entity": [
     "2"
+   ],
+   "sites": [
+    [
+     "B",
+     "101"
+    ]
    ]
   }
  ],

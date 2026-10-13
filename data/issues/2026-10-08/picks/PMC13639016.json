@@ -1,8 +1,8 @@
 {
   "pmcid": "PMC13639016",
   "rank": 1,
-  "headline": "QatBのN末端が、QatCの活性部位に差し込まれていた",
-  "subhead": "抗ファージ防御系QatBCの結晶構造。挿入部の変異で防御が低下した",
+  "headline": "QatBのN末端が、QatCの活性部位に入り込んでいた",
+  "subhead": "抗ファージ防御系QatBCの結晶構造。挿入部に変異を入れると防御が弱まった",
   "takeaway": "QatBのN末端ループがQueC型酵素QatCの活性部位に入り込み、基質候補となる",
   "target_label": "QatBC（大腸菌 QatABCD）",
   "summary": {

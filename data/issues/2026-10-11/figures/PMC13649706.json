@@ -22,6 +22,16 @@
    "desc": "[(2~{Z},6~{E})-3,7,11-trimethyldodeca-2,6,10-trienyl] dihydrogen phosphate",
    "entity": [
     "4"
+   ],
+   "sites": [
+    [
+     "G",
+     "301"
+    ],
+    [
+     "L",
+     "301"
+    ]
    ]
   },
   {
@@ -31,6 +41,16 @@
    "desc": "Adenosine-5'-Triphosphate",
    "entity": [
     "5"
+   ],
+   "sites": [
+    [
+     "H",
+     "301"
+    ],
+    [
+     "J",
+     "301"
+    ]
    ]
   }
  ],

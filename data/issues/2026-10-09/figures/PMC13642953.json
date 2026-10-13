@@ -16,6 +16,12 @@
    "desc": "Adenosine-5'-Diphosphate",
    "entity": [
     "2"
+   ],
+   "sites": [
+    [
+     "B",
+     "7601"
+    ]
    ]
   },
   {
@@ -25,6 +31,12 @@
    "desc": "Dantrolene",
    "entity": [
     "3"
+   ],
+   "sites": [
+    [
+     "C",
+     "7602"
+    ]
    ]
   }
  ],

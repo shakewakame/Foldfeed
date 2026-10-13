@@ -16,6 +16,12 @@
    "desc": "P-Hydroxyacetophenone",
    "entity": [
     "2"
+   ],
+   "sites": [
+    [
+     "B",
+     "401"
+    ]
    ]
   },
   {
@@ -25,6 +31,12 @@
    "desc": "S-Adenosyl-L-Homocysteine",
    "entity": [
     "3"
+   ],
+   "sites": [
+    [
+     "C",
+     "402"
+    ]
    ]
   }
  ],

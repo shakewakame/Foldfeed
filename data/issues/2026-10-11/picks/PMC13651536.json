@@ -1,8 +1,8 @@
 {
   "pmcid": "PMC13651536",
   "rank": 3,
-  "headline": "チロシンのニトロ化に、基質His-5のプロトン中継が関わる",
-  "subhead": "ルフォマイシン生合成のP450 RufO。Tyr-3のOHが必須だった",
+  "headline": "チロシンのニトロ化に、His-5のプロトン中継が関わる可能性",
+  "subhead": "ルフォマイシン生合成のP450 RufOでは、Tyr-3のOHが反応に必須だった",
   "target_label": "NsRufO（P450）",
   "summary": {
     "background": "P450 RufOは、リボソーム合成ペンタペプチドMRYLHのTyr-3をNOを使ってニトロ化する。この珍しい反応の機構と、硝酸イオンが副生しない理由は不明だった。",
