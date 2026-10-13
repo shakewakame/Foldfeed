@@ -1,0 +1,187 @@
+{
+  "issue_date": "2026-10-13",
+  "index_date": "2026-10-12",
+  "generated_at": "2026-10-13T00:08:25+00:00",
+  "query": "(\"cryo-EM\" OR \"cryoEM\" OR \"cryo-electron microscopy\" OR \"cryo-electron tomography\" OR \"subtomogram\" OR \"crystal structure\" OR \"X-ray crystallography\" OR \"crystallographic\" OR \"NMR structure\" OR \"solution structure\") AND (\"Protein Data Bank\" OR \"PDB\" OR \"wwPDB\" OR \"EMDB\" OR \"accession code\" OR \"accession codes\") AND OPEN_ACCESS:y AND NOT SRC:PPR AND FIRST_IDATE:[2026-10-12 TO 2026-10-12]",
+  "impact_query": "(\"AlphaFold\" OR \"RoseTTAFold\" OR \"ESMFold\" OR \"structure prediction\" OR \"protein design\" OR \"de novo design\" OR \"designed protein\" OR \"binder design\" OR \"ProteinMPNN\" OR \"RFdiffusion\" OR \"structure-based drug design\" OR \"structure-guided\" OR \"structure-based\" OR \"co-crystal structure\" OR \"cocrystal structure\" OR \"mechanism\") AND (\"crystal structure\" OR \"cryo-EM\" OR \"cryo-electron microscopy\" OR \"NMR structure\" OR \"Protein Data Bank\") AND (\"protein\" OR \"enzyme\" OR \"receptor\" OR \"antibody\" OR \"peptide\" OR \"RNA\") AND OPEN_ACCESS:y AND NOT SRC:PPR AND FIRST_IDATE:[2026-10-12 TO 2026-10-12]",
+  "counts": {
+    "hits": 1,
+    "excluded_types": 0,
+    "parsed": 2,
+    "new_structure": 0,
+    "new_structure_ids_unlisted": 0,
+    "new_map_only": 0,
+    "uses_existing": 1,
+    "no_ids": 1,
+    "impact_search_hits": 6,
+    "impact_search_parsed": 1,
+    "impact_pool": 2
+  },
+  "candidates": [
+    {
+      "pmcid": "PMC2268108",
+      "pmid": null,
+      "doi": null,
+      "title": "Abstracts of papers at the Fifty-Ninth Annual Meeting of the Society of General Physiologists",
+      "journal": "The Journal of General Physiology",
+      "journal_abbrev": "J Gen Physiol",
+      "authors": "",
+      "pub_date": "2005-07-01",
+      "index_date": "2026-10-12",
+      "license": "cc by-nc-sa",
+      "pub_types": [
+        "abstract"
+      ],
+      "abstract": "",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "1T5S",
+        "1VFP",
+        "1SU4"
+      ],
+      "emdb_ids": [],
+      "cited_structures": [
+        {
+          "pdb_id": "1T5S",
+          "status": "released",
+          "title": "Structure of the (SR)Ca2+-ATPase Ca2-E1-AMPPCP form",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 2.6,
+          "release_date": "2004-06-15",
+          "deposit_date": "2004-05-05",
+          "citation_doi": "10.1126/science.1099366",
+          "citation_pmid": "15192230",
+          "citation_title": "Phosphoryl transfer and calcium ion occlusion in the calcium pump.",
+          "polymers": [
+            {
+              "description": "Sarcoplasmic/endoplasmic reticulum calcium ATPase 1 isoform SERCA1a",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P04191"
+              ],
+              "organisms": [
+                "Oryctolagus cuniculus"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "ACP",
+              "name": "PHOSPHOMETHYLPHOSPHONIC ACID ADENYLATE ESTER"
+            }
+          ]
+        },
+        {
+          "pdb_id": "1VFP",
+          "status": "released",
+          "title": "Crystal structure of the SR CA2+-ATPase with bound AMPPCP",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 2.9,
+          "release_date": "2004-07-06",
+          "deposit_date": "2004-04-18",
+          "citation_doi": "10.1038/nature02680",
+          "citation_pmid": "15229613",
+          "citation_title": "Crystal structure of the calcium pump with a bound ATP analogue.",
+          "polymers": [
+            {
+              "description": "Sarcoplasmic/endoplasmic reticulum calcium ATPase 1",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P04191"
+              ],
+              "organisms": [
+                "Oryctolagus cuniculus"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "ACP",
+              "name": "PHOSPHOMETHYLPHOSPHONIC ACID ADENYLATE ESTER"
+            }
+          ]
+        },
+        {
+          "pdb_id": "1SU4",
+          "status": "released",
+          "title": "Crystal structure of calcium ATPase with two bound calcium ions",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 2.4,
+          "release_date": "2004-05-04",
+          "deposit_date": "2004-03-26",
+          "citation_doi": "10.1038/35015017",
+          "citation_pmid": "10864315",
+          "citation_title": "Crystal structure of the calcium pump of sarcoplasmic reticulum at 2.6 A resolution",
+          "polymers": [
+            {
+              "description": "Sarcoplasmic/endoplasmic reticulum calcium ATPase 1",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P04191"
+              ],
+              "organisms": [
+                "Oryctolagus cuniculus"
+              ]
+            }
+          ],
+          "ligands": []
+        }
+      ],
+      "impact": {
+        "score": -2,
+        "types": [],
+        "validation": [],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": [
+          "生体高分子が主題でない可能性"
+        ]
+      },
+      "proteins": [
+        {
+          "uniprot": "P04191",
+          "gene": "ATP2A1",
+          "synonyms": [],
+          "name": "Sarcoplasmic/endoplasmic reticulum calcium ATPase 1",
+          "organism": "Oryctolagus cuniculus"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC9442589",
+      "pmid": null,
+      "doi": "10.1007/s13337-022-00787-7",
+      "title": "Abstracts of the papers presented in the international conference of Indian Virological Society, VIROCON 2021 on “Emerging and Re-emerging Viral Diseases – Climate Change Impacts and Mitigation”, during March 26–28, 2022, at AIIMS, Hyderabad, India (Virtual Mode)",
+      "journal": "VirusDisease",
+      "journal_abbrev": "Virusdisease",
+      "authors": "",
+      "pub_date": "2022-09-01",
+      "index_date": "2026-10-12",
+      "license": null,
+      "pub_types": [
+        "calendar"
+      ],
+      "abstract": "",
+      "source": "impact_search",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "cited_structures": [],
+      "impact": {
+        "score": 2,
+        "types": [],
+        "validation": [],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [],
+      "score": 0
+    }
+  ]
+}
