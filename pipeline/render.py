@@ -391,7 +391,7 @@ def feature_md(feature: dict | None, picks: list[tuple[dict, dict]]) -> list[str
     n, cand, pick = by_id[feature["pmcid"]]
     axes = "・".join({"structure": "構造生物学", "biology": "生命科学", "drug": "創薬"}.get(a, a)
                     for a in feature.get("axes", []))
-    out = ["## 今日の一本", "", f"**{n}｜{pick['headline']}**（{pick['target_label']}）", "",
+    out = ["## Today's Structure（今日の一本）", "", f"**{n}｜{pick['headline']}**（{pick['target_label']}）", "",
            f"選んだ理由（{axes}）：{feature['reason']}", ""]
     for e in feature.get("evidence", []):
         out.append(f"> {e['quote']}  ")

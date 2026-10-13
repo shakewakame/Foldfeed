@@ -61,12 +61,12 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 
 /* masthead: a heavy rule over a thin one, running the full width of the window */
 .mast {{ padding-top:30px; }}
-.mast-row {{ display:flex; align-items:flex-end; justify-content:space-between; gap:24px; }}
-.word {{ display:flex; align-items:center; gap:15px; text-decoration:none; }}
+.mast-row {{ display:flex; align-items:center; justify-content:space-between; gap:24px; }}
+.brand {{ display:flex; align-items:center; gap:26px; min-width:0; }}
+.word {{ display:flex; align-items:center; gap:15px; text-decoration:none; flex:none; }}
 .word img {{ width:46px; height:46px; display:block; }}
 .word .name {{ font-family:var(--latin); font-size:42px; line-height:1; letter-spacing:-0.02em; font-weight:700; margin:0; }}
-.word .sub {{ font-size:13px; letter-spacing:.12em; color:var(--mute); margin-top:7px; line-height:1.2; }}
-.word .tag {{ font-size:13px; color:var(--desc); margin-top:6px; line-height:1.5; }}
+.tag {{ margin:0; padding-left:26px; border-left:1px solid var(--hair); font-size:13.5px; color:var(--desc); line-height:1.7; }}
 .vol {{ font-size:14px; text-align:right; color:var(--ink2); line-height:1.7; }}
 .vol a {{ text-decoration:underline; text-decoration-color:var(--acc); }}
 .rules {{ margin-top:18px; border-top:4px solid var(--ink); }}
@@ -278,6 +278,8 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .band .hero {{ margin-top:0; padding:34px 0 48px; }}
 .band .hero h3 {{ font-size:46px; line-height:1.34; }}
 .band .hero .sub {{ font-size:19px; }}
+.notice {{ margin:0; padding:12px 0 0; font-size:14px; color:var(--desc); }}
+.notice a {{ text-decoration:underline; text-decoration-color:var(--acc); }}
 .sec {{ margin-top:56px; }}
 .sec > .ix-h {{ border-top:2px solid var(--ink); }}
 .sec .lead {{ margin:14px 0 0; font-size:14.5px; color:var(--desc); }}
@@ -316,7 +318,7 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .issue-body .toc {{ margin-top:30px; }}
 .row.feat {{ border-left:4px solid var(--acc); padding-left:18px; margin-left:-22px; }}
 .row.feat h3 {{ font-size:23px; }}
-.feat-mark {{ display:block; margin:0 0 2px; font-family:var(--mono); font-size:11px; letter-spacing:.12em; color:var(--acc-ink); font-weight:700; }}
+.feat-mark {{ display:block; text-transform:uppercase; margin:0 0 2px; font-family:var(--mono); font-size:11px; letter-spacing:.12em; color:var(--acc-ink); font-weight:700; }}
 
 /* the article's four-line introduction */
 .intro4 {{ margin:8px 0 0; }}
@@ -369,6 +371,8 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
   :root {{ --pad:18px; }}
   .part h2 {{ font-size:23px; }}
   .word .name {{ font-size:32px; }}
+  .brand {{ flex-wrap:wrap; gap:8px 0; }}
+  .tag {{ padding-left:0; border-left:0; flex-basis:100%; font-size:13px; }}
   .mast-row {{ flex-wrap:wrap; align-items:flex-start; }}
   .vol {{ text-align:left; }}
   .art, .ihead {{ grid-template-columns:minmax(0,1fr); gap:14px; }}
@@ -466,9 +470,9 @@ def masthead(depth: int, right: str = "") -> str:
     """The wordmark row inside the page width; the double rule under it spans the whole window."""
     up = "../" * depth
     return (f'<header class="mast"><div class="wrap"><div class="mast-row">'
-            f'<a class="word" href="{up}index.html"><img src="{up}assets/logo-mark.svg" alt="">'
-            f'<div><div class="name">{esc(brand.SITE_NAME)}</div><div class="sub">{esc(brand.SITE_NAME_EN)}</div>'
-            f'<div class="tag">{esc(DESCRIPTION)}</div></div></a>'
+            f'<div class="brand"><a class="word" href="{up}index.html"><img src="{up}assets/logo-mark.svg" alt="">'
+            f'<span class="name">{esc(brand.SITE_NAME)}</span></a>'
+            f'<p class="tag">{esc(DESCRIPTION)}</p></div>'
             f'<div class="vol">{right}</div></div></div><div class="rules"></div></header>')
 
 
@@ -685,7 +689,7 @@ def load_issue(date: str, root: Path = ISSUES_DIR) -> tuple[dict, list[tuple[dic
 
 
 PARTS = {
-    "new": ("新しい構造", "この号で報告された、PDB / EMDB に寄託された新しい構造。"),
+    "new": ("New Structure", "この号で報告された、PDB / EMDB に寄託された新しい構造。"),
     "impact": ("注目の構造", "新しい構造ではないが、実験で決めた構造で確かめた注目の研究"
                             "（既存構造による機構の解明・予測やデザインの実証・新しい手法・構造に基づく創薬）。"),
 }
@@ -746,7 +750,7 @@ def row_html(cand: dict, pick: dict, n: int, date: str, root: Path, fig_base: st
     dl = "".join(f"<div><dt>{k}</dt><dd>{esc(v)}</dd></div>"
                  for k, v in (("TARGET", f["target"]), ("METHOD", f["method"]), ("RES.", f["res"])))
     first = '<span class="mk">PDB 初構造</span>' if f["first"] else ""
-    mark = '<span class="feat-mark">今日の一本</span>' if feat else ""
+    mark = '<span class="feat-mark">Today&#8217;s Structure</span>' if feat else ""
     return (f'<li class="row{" feat" if feat else ""}"><span class="no">{pad(n)}</span><div class="rt">{mark}'
             f'<p class="rk"><span class="n">{pad(n)}</span></p>\n'
             f'<h3><a href="{href}">{esc(pick["headline"])}</a></h3>\n'
@@ -777,7 +781,7 @@ def contents_html(picks: list, date: str, root: Path, fig_base: str, href_base: 
 
 
 def hero_html(feature: dict | None, picks: list, date: str, root: Path, fig_base: str, href_base: str = "") -> str:
-    """今日の一本: the day's one article, large, with its facts. The reason it was picked is for the pull request."""
+    """Today's Structure (今日の一本): the day's one article, large, with its facts. The reason it was picked is for the pull request."""
     if not feature:
         return ""
     for n, (cand, pk) in enumerate(picks, 1):
@@ -795,7 +799,7 @@ def hero_html(feature: dict | None, picks: list, date: str, root: Path, fig_base
     fig = (f'<a class="thumb" href="{href}"><img src="{fig_base}/{date}/{esc(cand["pmcid"])}.svg" '
            f'alt="構造図：{esc(pk["target_label"])}"></a>') if big.exists() else thumb_html(cand, pk, date, root, fig_base, href)
     first = ' · <span class="mk">PDB 初構造</span>' if f["first"] else ""
-    return (f'<section class="hero"><h2 class="label">今日の一本 <span>/ {pad(n)}{first}</span></h2><div class="hero-grid"><div>'
+    return (f'<section class="hero"><h2 class="label">Today&#8217;s Structure <span>/ {pad(n)}{first}</span></h2><div class="hero-grid"><div>'
             f'<h3><a href="{href}">{esc(pk["headline"])}</a></h3>'
             f'<p class="sub">{esc(pk.get("subhead") or "")}</p>'
             f'<dl class="hf">{dl}</dl>'
@@ -809,7 +813,7 @@ def part_html(key: str, count: int) -> str:
 
 
 def counts_text(n_new: int, n_hot: int, sep: str = "<br>") -> str:
-    return f"新しい構造 {n_new} 本" + (f"{sep}注目の構造 {n_hot} 本" if n_hot else "")
+    return f"New Structure {n_new} 本" + (f"{sep}注目の構造 {n_hot} 本" if n_hot else "")
 
 
 def toc_side(picks: list, featured: str | None) -> str:
@@ -864,7 +868,7 @@ def issue_page(date: str, prev_date: str | None, next_date: str | None,
     else:
         c = meta["counts"]
         main.append(f'<section class="part"><h2>記事なし<span>0 本</span></h2><p>Europe PMC に {esc(meta["index_date"])} に'
-                    f'登録された論文 {c.get("parsed", 0)} 本に、新しい構造も注目の構造もなかった。</p></section>')
+                    f'登録された論文 {c.get("parsed", 0)} 本に、New Structure も注目の構造もなかった。</p></section>')
     for n, (cand, pk) in enumerate(picks, 1):
         hot = render.is_impact(pk)
         if n == 1 or hot != render.is_impact(picks[n - 2][1]):
@@ -943,7 +947,7 @@ def stats_html(latest: str, n_new: int, n_hot: int, issues: list[str], lib: list
     _, m, d, wd = date_parts(latest)
     return (f'<dl class="stats"><div class="new"><dt>最新号</dt><dd><b>{m}月{d}日</b>（{wd}）</dd></div>'
             f'<div><dt>この号</dt><dd><b>{n_new + n_hot}</b>本'
-            + (f'（新しい構造 {n_new} · 注目の構造 {n_hot}）' if n_hot else "") + '</dd></div>'
+            + (f'（New Structure {n_new} · 注目の構造 {n_hot}）' if n_hot else "") + '</dd></div>'
             f'<div><dt>これまで</dt><dd><b>{len(lib)}</b>本 · <b>{len(issues)}</b>号 · '
             f'<b>{len(journal_counts(issues))}</b>誌</dd></div></dl>')
 
@@ -958,7 +962,7 @@ def mail_html() -> str:
     return ('<section class="sec mail" id="mail"><div class="ix-h"><h2 class="label">メールで受け取る</h2>'
             '<span class="soon">準備中</span></div><div class="mail-grid"><div>'
             '<p>メールでのお知らせを準備しています。始まったら、ここから登録できるようにします。</p>'
-            '<ul><li>毎朝の号の知らせ（新しい構造と注目の構造）</li><li>週のまとめ</li>'
+            '<ul><li>毎朝の号の知らせ（New Structure と注目の構造）</li><li>週のまとめ</li>'
             '<li>気になるタンパク質のアラート（UniProt ID を登録）</li></ul></div><div>'
             '<form aria-disabled="true" onsubmit="return false"><input type="email" placeholder="メールアドレス" disabled '
             'aria-label="メールアドレス（準備中）"><button type="button" disabled>登録（準備中）</button></form>'
@@ -969,13 +973,21 @@ def home(issues: list[str]) -> str:
     """The front page. First screen: a band with the latest issue's date and size, the totals so far, and the day's
     pick shown large. Scrolling: the rest of the latest issue, the archive by kind of protein (and a search), the
     past issues, and (not yet working) a place for the mailing list."""
-    latest, past = issues[0], issues[1:]
+    latest = next((d for d in issues if load_issue(d, ISSUES_DIR)[1]), issues[0])  # newest issue that has articles
+    newer_empty = issues[:issues.index(latest)]                                     # issues after it with no articles
+    past = [d for d in issues if d != latest]
     meta, picks, _ = load_issue(latest, ISSUES_DIR)
     href = f"issues/{latest}.html"
     n_hot = sum(render.is_impact(pk) for _, pk in picks)
     feature = load_feature(latest, ISSUES_DIR, picks)
     lib = library(issues)
-    band = (f'<div class="band"><div class="wrap">{stats_html(latest, len(picks) - n_hot, n_hot, issues, lib)}'
+    notice = ""
+    if newer_empty:
+        bits = "、".join(f'<a href="issues/{d}.html">{jp_date_short(d)}号</a>（Europe PMC に登録された該当論文 '
+                        f'{load_issue(d, ISSUES_DIR)[0]["counts"].get("parsed", 0)} 本）' for d in reversed(newer_empty))
+        notice = (f'<p class="notice">{bits}は、New Structure・注目の構造とも記事がありませんでした。'
+                  f'（Europe PMC への論文の登録が少ない日があります）</p>')
+    band = (f'<div class="band"><div class="wrap">{stats_html(latest, len(picks) - n_hot, n_hot, issues, lib)}{notice}'
             f'{hero_html(feature, picks, latest, ISSUES_DIR, "figures", href)}</div></div>')
     n_list = len(picks) - (1 if feature else 0)
     main = [f'<section class="toc">{contents_html(picks, latest, ISSUES_DIR, "figures", href, feature and feature["pmcid"])}</section>',
@@ -987,8 +999,9 @@ def home(issues: list[str]) -> str:
     if past:
         items = []
         for date in past:
-            _, ps, _ = load_issue(date, ISSUES_DIR)
-            targets = "・".join(pk["target_label"].split("（")[0] for _, pk in ps)
+            pm, ps, _ = load_issue(date, ISSUES_DIR)
+            targets = "・".join(pk["target_label"].split("（")[0] for _, pk in ps) or \
+                f'記事なし（Europe PMC に登録された該当論文 {pm["counts"].get("parsed", 0)} 本）'
             items.append(f'<li><a class="d" href="issues/{date}.html">{jp_date_short(date)}号</a>'
                          f'<span class="t"><b>{len(ps)} 本</b>{esc(targets)}</span></li>')
         main.append(f'<section class="sec past"><div class="ix-h"><h2 class="label">過去の号</h2><span>{len(past)} 号</span></div>'
@@ -1083,7 +1096,7 @@ def preview_index(previews: list[str], root: Path | None) -> str:
         merge = (f'<a class="go" href="{esc(pr["url"])}">Pull Request #{pr["number"]}（マージ）</a>'
                  if pr.get("url") else "")
         items.append(f'<li><div class="d">{jp_date(date)}号</div>'
-                     f'<div class="c">新しい構造 {len(picks) - n_hot} 本 · 注目の構造 {n_hot} 本</div>'
+                     f'<div class="c">New Structure {len(picks) - n_hot} 本 · 注目の構造 {n_hot} 本</div>'
                      f'<div class="btns"><a href="{date}.html">見た目を確認</a>{merge}</div></li>')
     body = [masthead(1, "確認待ちの号"),
             '<div class="wrap"><p class="intro">マージ前の号のプレビュー。見た目を確認して、問題がなければ Pull Request を開いて'
@@ -1094,7 +1107,7 @@ def preview_index(previews: list[str], root: Path | None) -> str:
 
 
 def build(preview_root: Path | None = None) -> int:
-    issues = issue_dates(ISSUES_DIR)
+    issues = issue_dates(ISSUES_DIR, require_articles=False)
     if not issues:
         print("no built issues found")
         return 1
