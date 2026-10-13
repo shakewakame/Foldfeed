@@ -118,7 +118,7 @@ def run(index_date: str, issue_date: str) -> dict:
         loaded = [x for x in ex.map(load, metas) if x[1] is not None]
     print(f"Full text parsed: {len(loaded)}", file=sys.stderr)
 
-    # 注目の論文: a second search beyond the structure terms, pre-screened on title and abstract.
+    # 注目の構造: a second search beyond the structure terms, pre-screened on title and abstract.
     impact_query = europepmc.build_impact_query(index_date)
     raw2 = europepmc.search(impact_query)
     seen = {m["pmcid"] for m in metas}
@@ -156,7 +156,7 @@ def run(index_date: str, issue_date: str) -> dict:
         c = {**m, **classify(m, p, released, holdings),
              "emdb_ids": p["emdb_ids"], "abstract": p["abstract"] or m["abstract"]}
         if c["kind"] not in NEW_KINDS:
-            # Facts for a possible 注目の論文 article: the structures it used, and the pre-screen hints.
+            # Facts for a possible 注目の構造 article: the structures it used, and the pre-screen hints.
             c["cited_structures"] = [released[pid] for pid in c["cited_pdb_ids"] if pid in released][:10]
             c["impact"] = impact.prescreen(c)
         candidates.append(c)
@@ -231,7 +231,7 @@ def overview_md(out: dict) -> str:
     others = sorted((x for x in out["candidates"] if x["kind"] not in NEW_KINDS),
                     key=lambda x: (-x["impact"]["score"], x["title"]))
     if others:
-        lines += ["# 注目の論文の候補（新しい構造以外）", "",
+        lines += ["# 注目の構造の候補（新しい構造以外）", "",
                   f"事前スクリーニングの点数順（キーワードによる目安で、選定ではない）。上位から読み、"
                   f"`pipeline/impact.py` の基準で最大 {impact.SHORTLIST} 本を採点する。", ""]
         for i, x in enumerate(others, 1):

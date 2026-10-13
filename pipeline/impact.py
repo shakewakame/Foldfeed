@@ -1,4 +1,4 @@
-"""注目の論文（新しい構造以外）: the machine pre-screen and the scoring rubric.
+"""注目の構造（新しい構造以外）: the machine pre-screen and the scoring rubric.
 
 Papers that do not report a new structure can still deserve an article: a mechanism worked out on
 existing structures, structure prediction / AI / protein design, a new method or software, or

@@ -3,9 +3,9 @@ name: Deploy FoldFeed site to GitHub Pages
 # Publish the site whenever an issue (or the site code) lands on the default branch.
 #
 # Open daily-issue pull requests (branches claude/issue-<date>) are rendered too, as unlisted
-# previews at /preview/<date>.html, so the editor can see an issue before merging it. When such a
-# pull request is opened, the editor is mentioned on it with the link: GitHub sends no notification
-# for pull requests opened under your own account, which is how the daily routine opens them.
+# previews at /preview/<date>.html, listed at /preview/ with a link to each pull request, so the
+# editor can check an issue on a phone before merging it. (The mention that announces a new pull
+# request is in notify.yml, outside this workflow's queue.)
 #
 # pull_request_target runs this workflow's code from the default branch; from a pull request it
 # only reads data/issues/<date>/ (JSON and SVG) and never runs code from the pull request.
@@ -26,10 +26,12 @@ permissions:
   pages: write
   id-token: write
 
-# Let a newer run supersede an in-flight one; never cancel a running deploy.
+# Every run rebuilds the whole site from the default branch and the open pull requests, so a newer
+# run makes an older one pointless: cancel it. (On 2026-10-12 a deploy sat "waiting" for nine hours
+# and held up every run queued behind it.)
 concurrency:
   group: pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -50,13 +52,16 @@ jobs:
         run: |
           mkdir -p preview
           gh pr list --repo "$GITHUB_REPOSITORY" --state open --base "$BASE" \
-            --json headRefName --jq '.[].headRefName' > branches.txt
-          while read -r branch; do
+            --json number,headRefName,url --jq '.[] | [.number, .headRefName, .url] | @tsv' > prs.tsv
+          while IFS=$'\t' read -r number branch url; do
             [[ "$branch" =~ ^claude/issue-([0-9]{4}-[0-9]{2}-[0-9]{2})(-[0-9]+)?$ ]] || continue
+            [[ "$number" =~ ^[0-9]+$ ]] || continue
             date="${BASH_REMATCH[1]}"
             git fetch --quiet --depth=1 origin "refs/heads/$branch" || continue
-            git archive FETCH_HEAD "data/issues/$date" | tar -x -C preview --strip-components=2 || true
-          done < branches.txt
+            git archive FETCH_HEAD "data/issues/$date" | tar -x -C preview --strip-components=2 || continue
+            printf '{"number": %s, "url": "https://github.com/%s/pull/%s"}\n' \
+              "$number" "$GITHUB_REPOSITORY" "$number" > "preview/$date/pr.json"
+          done < prs.tsv
           ls preview
       - name: Build site
         run: python3 -m pipeline.site --preview preview   # reads data/issues/*, assets/, writes site/
@@ -73,35 +78,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    outputs:
-      page_url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
 
-  notify:
-    needs: deploy
-    if: >-
-      github.event_name == 'pull_request_target' &&
-      (github.event.action == 'opened' || github.event.action == 'reopened') &&
-      startsWith(github.event.pull_request.head.ref, 'claude/issue-')
-    runs-on: ubuntu-latest
-    permissions:
-      pull-requests: write
-    steps:
-      - name: Mention the editor with the preview link
-        env:
-          GH_TOKEN: ${{ github.token }}
-          HEAD_REF: ${{ github.event.pull_request.head.ref }}
-          PR: ${{ github.event.pull_request.number }}
-          EDITOR: ${{ github.repository_owner }}
-          SITE: ${{ needs.deploy.outputs.page_url }}
-        run: |
-          date=$(grep -oE '[0-9]{4}-[0-9]{2}-[0-9]{2}' <<< "$HEAD_REF" | head -1)
-          body="@${EDITOR} 新しい号が届きました。
-
-          - 見た目の確認（未公開のプレビュー）：${SITE}preview/${date}.html
-          - 文章と根拠の確認：この Pull Request の「Files changed」タブ、または data/issues/${date}/README.md
-
-          問題がなければ「Merge pull request」で公開されます。直してほしい点はこの Pull Request にコメントしてください。"
-          gh pr comment "$PR" --repo "$GITHUB_REPOSITORY" --body "$body"

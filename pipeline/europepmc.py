@@ -16,7 +16,7 @@ STRUCTURE_TERMS = (
 DEPOSITION_TERMS = (
     '"Protein Data Bank" OR "PDB" OR "wwPDB" OR "EMDB" OR "accession code" OR "accession codes"'
 )
-# Second search for 注目の論文 that are not new structures: prediction / design checked by experiment,
+# Second search for 注目の構造 that are not new structures: prediction / design checked by experiment,
 # structure-based drug discovery, mechanisms. Papers already found by the structure search are skipped.
 IMPACT_TERMS = (
     '"AlphaFold" OR "RoseTTAFold" OR "ESMFold" OR "structure prediction" OR "protein design" OR '

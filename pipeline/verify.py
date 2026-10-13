@@ -7,7 +7,7 @@ Errors (exit code 1):
   - an evidence quote that does not appear verbatim in the paper's full text
   - "初構造" on a paper whose proteins already had PDB structures
   - a resolution (… Å) or PDB ID in the Japanese text that the paper / PDB does not support
-  - impact.json (注目の論文): a quote per score that is not verbatim, a score out of range, a selected
+  - impact.json (注目の構造): a quote per score that is not verbatim, a score out of range, a selected
     paper under the threshold, more than the daily cap, or a mismatch between selected papers and
     picks marked "section": "impact"
 Warnings: new-structure picks whose paper is not classified as a new structure, missing evidence for lab notes.
@@ -50,9 +50,9 @@ def check_pick(pick: dict, cand: dict | None, corpus: str | None) -> tuple[list[
         return [f"{pick.get('pmcid')} is not in candidates.json"], []
     if pick.get("section") == "impact":
         if cand["kind"] in NEW_KINDS:
-            errors.append("marked as 注目の論文 (section: impact) but the paper reports a new structure")
+            errors.append("marked as 注目の構造 (section: impact) but the paper reports a new structure")
     elif cand["kind"] not in NEW_KINDS:
-        warnings.append(f"classified as {cand['kind']}, not a new structure (use \"section\": \"impact\" for 注目の論文)")
+        warnings.append(f"classified as {cand['kind']}, not a new structure (use \"section\": \"impact\" for 注目の構造)")
 
     def length(name, value, key):
         required, limit = LIMITS[key]
@@ -172,7 +172,7 @@ def check_impact(record: dict, cands: dict, impact_picks: set[str]) -> list[str]
     for pm in sorted(selected - impact_picks):
         errors.append(f"impact.json: {pm} is selected but has no pick with \"section\": \"impact\"")
     for pm in sorted(impact_picks - selected):
-        errors.append(f"picks/{pm}.json is a 注目の論文 but is not selected in impact.json")
+        errors.append(f"picks/{pm}.json is a 注目の構造 but is not selected in impact.json")
     return errors
 
 

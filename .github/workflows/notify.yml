@@ -1,0 +1,37 @@
+name: Announce a new daily issue
+
+# GitHub sends no notification for pull requests opened under your own account, which is how the
+# daily routine opens them. When a daily-issue pull request is opened, this mentions the editor on
+# it with the preview links, which does arrive as a notification (mail / GitHub app).
+# It runs on its own, outside the Pages queue, so a busy or stuck deploy cannot swallow it; the
+# preview itself appears 1-2 minutes later, built by pages.yml.
+on:
+  pull_request_target:
+    types: [opened, reopened]
+
+permissions:
+  pull-requests: write
+
+jobs:
+  mention:
+    if: >-
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      startsWith(github.event.pull_request.head.ref, 'claude/issue-')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mention the editor with the preview links
+        env:
+          GH_TOKEN: ${{ github.token }}
+          HEAD_REF: ${{ github.event.pull_request.head.ref }}
+          PR: ${{ github.event.pull_request.number }}
+          EDITOR: ${{ github.repository_owner }}
+          SITE: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+        run: |
+          date=$(grep -oE '[0-9]{4}-[0-9]{2}-[0-9]{2}' <<< "$HEAD_REF" | head -1)
+          body="@${EDITOR} ${date} 号が届きました。
+
+          1. 見た目の確認（1〜2 分後に表示）：${SITE}preview/${date}.html
+             確認待ちの号の一覧（ブックマーク用）：${SITE}preview/
+          2. 問題がなければ、この Pull Request の下の「Merge pull request」→「Confirm merge」で公開されます。
+          3. 直してほしい点は、この Pull Request にコメントしてください。"
+          gh pr comment "$PR" --repo "$GITHUB_REPOSITORY" --body "$body"

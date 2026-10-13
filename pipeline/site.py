@@ -136,6 +136,14 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 
 .preview-bar {{ max-width:none !important; background:var(--acc); color:#fff; font-family:var(--mono); font-size:12.5px;
                 letter-spacing:.04em; padding:9px 28px !important; text-align:center; }}
+.preview-bar a {{ color:#fff; text-decoration:underline; }}
+.queue {{ list-style:none; margin:30px 0 0; padding:0; }}
+.queue li {{ padding:18px 0; border-bottom:1px solid var(--hair); }}
+.queue .d {{ font-size:20px; font-weight:700; }}
+.queue .c {{ color:var(--ink2); font-size:14px; margin:2px 0 10px; }}
+.queue .btns {{ display:flex; flex-wrap:wrap; gap:10px; }}
+.queue .btns a {{ display:inline-block; padding:9px 16px; border:1px solid var(--ink); font-family:var(--mono); font-size:13px; }}
+.queue .btns a.go {{ background:var(--ink); color:#fff; }}
 .issue-nav {{ display:flex; justify-content:space-between; gap:16px; margin-top:70px; font-family:var(--mono);
               font-size:12px; color:var(--ink2); }}
 .colophon {{ margin-top:22px; padding-top:16px; padding-bottom:70px; position:relative; font-size:12.5px;
@@ -250,7 +258,7 @@ def margin_html(cand: dict, pick: dict, n: int, impact_type: str | None = None) 
     rows = [("Target", esc(pick["target_label"])), ("Method", esc(method)), (pdb_label, pdb_dd),
             ("Ligand", esc(pick.get("ligand_label") or ("—" if hot else render.ligand_line(cand))))]
     if hot:
-        rows.insert(0, ("注目の論文", esc(impact.TYPES.get(impact_type or "", "新しい構造以外"))))
+        rows.insert(0, ("注目の構造", esc(impact.TYPES.get(impact_type or "", "新しい構造以外"))))
     if uni:
         rows.append(("UniProt", uni))
     if orgs:
@@ -316,11 +324,12 @@ def article_html(cand: dict, pick: dict, date: str, n: int, root: Path, fig_base
 # ---------- pages ----------
 
 def load_issue(date: str, root: Path = ISSUES_DIR) -> tuple[dict, list[tuple[dict, dict]], dict[str, str]]:
-    """Meta, the articles in page order (new structures, then 注目の論文), and each 注目の論文's type."""
+    """Meta, the articles in page order (new structures, then 注目の構造), and each 注目の構造's type."""
     d = root / date
     meta = read_json(d / "candidates.json")
     cands = {c["pmcid"]: c for c in meta["candidates"]}
-    picks = [(cands[pk["pmcid"]], pk) for pk in (read_json(p) for p in sorted((d / "picks").glob("*.json")))]
+    picks = [(cands[pk["pmcid"]], pk) for pk in (read_json(p) for p in sorted((d / "picks").glob("*.json")))
+             if pk.get("pmcid") in cands]
     picks.sort(key=lambda cp: cp[1].get("rank", 99))
     new, hot = render.split_sections(picks)
     types = {s["pmcid"]: s.get("type") for s in render.load_impact(d).get("scored", [])}
@@ -329,7 +338,7 @@ def load_issue(date: str, root: Path = ISSUES_DIR) -> tuple[dict, list[tuple[dic
 
 PARTS = {
     "new": ("新しい構造", "この号で報告された、PDB / EMDB に寄託された新しい構造。"),
-    "impact": ("注目の論文", "新しい構造ではないが、実験で決めた構造で確かめた注目の研究"
+    "impact": ("注目の構造", "新しい構造ではないが、実験で決めた構造で確かめた注目の研究"
                             "（既存構造による機構の解明・予測やデザインの実証・新しい手法・構造に基づく創薬）。"),
 }
 
@@ -341,7 +350,7 @@ def toc_items(picks: list[tuple[dict, dict]], href: str = "", start: int = 1) ->
 
 
 def toc_html(picks: list[tuple[dict, dict]], href: str = "", label: str = "") -> str:
-    """Contents in two blocks, 新しい構造 and 注目の論文, each with its own label in the left column.
+    """Contents in two blocks, 新しい構造 and 注目の構造, each with its own label in the left column.
     With `label` (the home page), that label heads the issue and the second block gets a sub-label."""
     new, hot = render.split_sections(picks)
     if label:
@@ -369,10 +378,18 @@ def issue_page(date: str, prev_date: str | None, next_date: str | None,
     fig_base = "figures" if preview else "../figures"
     body = []
     if preview:
-        body.append('<div class="preview-bar">プレビュー（未公開）— Pull Request をマージすると公開されます</div>')
-    counts = f"新しい構造 {len(picks) - n_hot + len(rest)} 本" + (f"<br>注目の論文 {n_hot} 本" if n_hot else "")
-    body += [masthead(1, f"{jp_date(date)}号<br>{counts}"),
-             f'<section class="toc">{toc_html(picks)}</section>']
+        pr = read_json(root / date / "pr.json") if (root / date / "pr.json").exists() else {}
+        link = (f' · <a href="{esc(pr["url"])}">Pull Request #{pr["number"]} を開く（ここでマージ）</a>'
+                if pr.get("url") else "")
+        body.append(f'<div class="preview-bar">プレビュー（未公開）{link} · <a href="index.html">確認待ちの一覧</a></div>')
+    counts = f"新しい構造 {len(picks) - n_hot + len(rest)} 本" + (f"<br>注目の構造 {n_hot} 本" if n_hot else "")
+    body += [masthead(1, f"{jp_date(date)}号<br>{counts}")]
+    if picks:
+        body.append(f'<section class="toc">{toc_html(picks)}</section>')
+    else:
+        c = meta["counts"]
+        body.append(f'<section class="part"><h2>記事なし<span>0 本</span></h2><p>Europe PMC に {esc(meta["index_date"])} に'
+                    f'登録された論文 {c.get("parsed", 0)} 本に、新しい構造も注目の構造もなかった。</p></section>')
     for n, (cand, pk) in enumerate(picks, 1):
         hot = render.is_impact(pk)
         if n == 1 or hot != render.is_impact(picks[n - 2][1]):
@@ -403,9 +420,31 @@ def home(issues: list[str]) -> str:
     return page(f"{brand.SITE_NAME}（{brand.SITE_NAME_EN}）", "".join(body), depth=0)
 
 
-def issue_dates(root: Path) -> list[str]:
-    return sorted([d.name for d in root.iterdir() if (d / "candidates.json").exists() and (d / "picks").exists()
-                   and any((d / "picks").glob("*.json"))], reverse=True) if root.exists() else []
+def issue_dates(root: Path, require_articles: bool = True) -> list[str]:
+    if not root or not root.exists():
+        return []
+    return sorted([d.name for d in root.iterdir() if (d / "candidates.json").exists() and
+                   (not require_articles or any((d / "picks").glob("*.json")))], reverse=True)
+
+
+def preview_index(previews: list[str], root: Path | None) -> str:
+    """/preview/: the issues waiting for the editor, each with its preview and its pull request."""
+    items = []
+    for date in previews:
+        _, picks, _ = load_issue(date, root)
+        n_hot = sum(render.is_impact(pk) for _, pk in picks)
+        pr = read_json(root / date / "pr.json") if (root / date / "pr.json").exists() else {}
+        merge = (f'<a class="go" href="{esc(pr["url"])}">Pull Request #{pr["number"]}（マージ）</a>'
+                 if pr.get("url") else "")
+        items.append(f'<li><div class="d">{jp_date(date)}号</div>'
+                     f'<div class="c">新しい構造 {len(picks) - n_hot} 本 · 注目の構造 {n_hot} 本</div>'
+                     f'<div class="btns"><a href="{date}.html">見た目を確認</a>{merge}</div></li>')
+    body = [masthead(1, "確認待ちの号"),
+            '<p class="intro">マージ前の号のプレビュー。見た目を確認して、問題がなければ Pull Request を開いて'
+            '「Merge pull request」→「Confirm merge」で公開する。このページはブックマークやホーム画面に追加しておける。</p>',
+            f'<ul class="queue">{"".join(items)}</ul>' if items else '<p class="intro">いま確認待ちの号はない。</p>',
+            colophon()]
+    return page(f"確認待ちの号 · {brand.SITE_NAME}", "".join(body), depth=1, noindex=True)
 
 
 def build(preview_root: Path | None = None) -> int:
@@ -428,10 +467,11 @@ def build(preview_root: Path | None = None) -> int:
             shutil.copytree(src, SITE_DIR / "figures" / date, ignore=shutil.ignore_patterns("*.json"))
     (SITE_DIR / "index.html").write_text(home(issues), encoding="utf-8")
     print(f"built site/ with {len(issues)} issue(s): {', '.join(issues)}")
-    previews = issue_dates(preview_root) if preview_root else []
+    previews = issue_dates(preview_root, require_articles=False) if preview_root else []
+    out = SITE_DIR / "preview"
+    out.mkdir(exist_ok=True)
+    (out / "index.html").write_text(preview_index(previews, preview_root), encoding="utf-8")
     for date in previews:
-        out = SITE_DIR / "preview"
-        out.mkdir(exist_ok=True)
         (out / f"{date}.html").write_text(issue_page(date, None, None, preview_root, preview=True), encoding="utf-8")
         src = preview_root / date / "figures"
         if src.exists():

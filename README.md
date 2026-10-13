@@ -10,7 +10,7 @@
 
 - 号の一覧：[data/issues/](data/issues/)（最初のサンプル：[2026-10-07](data/issues/2026-10-07/README.md)）
 - 作り方：[.claude/skills/daily-issue/SKILL.md](.claude/skills/daily-issue/SKILL.md)（毎朝のルーティンがこの手順で号を作り、Pull Request を出す）
-- 確認とマージの手順（編集者向け）：[docs/review-guide.md](docs/review-guide.md)。マージ前の見た目は `/preview/<日付>.html` で確認できる
+- 確認とマージの手順（編集者向け）：[docs/review-guide.md](docs/review-guide.md)。マージ前の見た目は確認待ちの一覧 `/preview/` から確認できる（スマホ可）
 
 ```bash
 python3 -m pipeline.collect                 # 候補を集める（前日に Europe PMC に登録された論文）
