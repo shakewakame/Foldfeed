@@ -9,6 +9,7 @@
     "approach": "Pol λが結合した短距離シナプス複合体のクライオ電顕構造を決め、複合体の活性も調べた。",
     "result": "Pol λの結合のしかたが見え、Pol λとPNKPは同じ複合体内で協調して末端を処理した。",
     "learned": "末端処理は短距離シナプスの間に繰り返し起こる、というモデルを示した。",
+    "open": "この協調のしくみがほかの末端処理因子にも当てはまるかは、今後の研究が必要とされる。",
     "evidence": {
       "question": [
         {
@@ -40,6 +41,12 @@
         {
           "quote": "Our results provide evidence for a model in which NHEJ end-processing occurs iteratively during short-range synapsis, with the core NHEJ factors forming a stable platform for the enzymes to flexibly access the DSB junction.",
           "section": "Introduction"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Future studies investigating the activities of other end-processing factors will be needed to determine if this mechanism of coordination is conserved and to test if the formation of even larger complexes capable of repairing a wider variety of DSBs is feasible.",
+          "section": "Discussion"
         }
       ]
     }

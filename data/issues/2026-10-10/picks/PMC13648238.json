@@ -9,6 +9,7 @@
     "approach": "NMRに基づく分子動力学計算で構造を求め、結晶構造も決めた。",
     "result": "二本鎖では異性体R aが優勢で、どちらも3′側にインターカレートした。",
     "learned": "向かいのシトシンとの水素結合が、生成比と挿入の深さの違いを説明しうる。",
+    "open": "2種類の異性体がDNA損傷の修復で区別して認識されるかは、問いとして残る。",
     "evidence": {
       "question": [
         {
@@ -40,6 +41,12 @@
         {
           "quote": "The preferential formation of R a vs R b in dsDNA and deeper intercalation of R b may be explained by the differential ability of the asymmetric PIX N2 nitrogen in R a vs R b to hydrogen bond with the exocyclic N 4-amine of the cytosine displaced into the major groove.",
           "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "The observation that PIX conjugates to AP sites in DNA as a mixture of regioisomeric products leads to the question as to whether R a and R b may be differentially recognized by DNA damage repair processes.",
+          "section": "Discussion"
         }
       ]
     }

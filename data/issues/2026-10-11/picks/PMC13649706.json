@@ -9,6 +9,7 @@
     "approach": "結核菌のWzmWztを、基質様の密度あり・ATP結合・DDM/ATP結合の3状態でクライオ電顕解析した。",
     "result": "基質結合型ではゲートヘリックスが上向きに伸び、ATP結合型では下向きに動いてWztが二量体化した。",
     "learned": "ゲートヘリックスの上向きの伸びが、Wztの二量体化の準備になる。必須の残基も特定した。",
+    "open": "DDMが入った中間的な状態が生理的なものかは、まだ決まっていない。",
     "evidence": {
       "question": [
         {
@@ -48,6 +49,12 @@
         {
           "quote": "This proposed LLG binding is fulfilled by a fully upward extension of the Wzt gate helix, which serves as a critical step to prime Wzt for dimerization.",
           "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Whether the DDM-bound conformation is physiologically relevant remains to be determined.Fig.",
+          "section": "Results"
         }
       ]
     }

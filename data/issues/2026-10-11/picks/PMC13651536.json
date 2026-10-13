@@ -9,6 +9,7 @@
     "approach": "変異ペプチドの反応試験、MD、QM/MM計算に加え、基質結合型NsRufOの結晶構造を決めた。",
     "result": "基質ペプチドのヒスチジン（His-5）が、ニトロ化の進行に欠かせなかった。",
     "learned": "中間体Compound IIのプロトン化状態が、ニトロ化か硝酸生成かを左右すると提案された。",
+    "open": "計算は硝酸生成の抑制を定量的に証明するものではなく、プロトン中継の役割がありうることを支持するにとどまる。",
     "evidence": {
       "question": [
         {
@@ -40,6 +41,12 @@
         {
           "quote": "These experiments revealed the intimate and necessary involvement of a histidine residue within the pentapeptide substrate of RufO in supporting effective nitration, with the protonation state of the intermediate compound II proposed to influence the production of nitrated tyrosine over unwanted nitrate formation.",
           "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "these calculations, rather than quantitatively proving kinetic suppression of nitrate formation, should be interpreted as supporting a plausible role of the Tyr-3/His-5/H235/water proton relay in biasing product formation",
+          "section": "Results and Discussion"
         }
       ]
     }

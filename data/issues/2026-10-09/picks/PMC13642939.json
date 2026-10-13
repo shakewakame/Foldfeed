@@ -10,6 +10,7 @@
     "approach": "ヌクレオソーム上での連結反応を測り、Ku・DNA-PKcsとの複合体をクライオ電顕で解析した。",
     "result": "DNA-PKcsは、DNAに余裕のないヌクレオソーム上でもNHEJを促した。",
     "learned": "Kuはヌクレオソームの障壁をDNA-PKcsの助けで越え、段階的にDNAに沿って進むと考えられる。",
+    "open": "続くNHEJの段階、特にヌクレオソーム上のシナプス複合体の形成は、今後の研究が必要とされる。",
     "evidence": {
       "question": [
         {
@@ -45,6 +46,12 @@
         {
           "quote": "Distinct structural states support a stepwise model of DNA-PK progressive translocating along nucleosomal DNA, highlighting DNA-PKcs function in chromatin-associated NHEJ in vivo.",
           "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Future studies investigating subsequent NHEJ steps, particularly the formation of synaptic complexes on nucleosomal substrates, will provide a more complete picture of NHEJ within chromatin.",
+          "section": "Discussion"
         }
       ]
     }

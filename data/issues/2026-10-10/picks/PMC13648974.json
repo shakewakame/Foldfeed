@@ -9,6 +9,7 @@
     "approach": "スパイクとDPP4を一定時間反応させ、各時点の構造をクライオ電顕で決めた。",
     "result": "RBDが開くほどS1–S2の結びつきが弱まり、融合後のS2構造も得られた。",
     "learned": "MERS-CoVのスパイクはSARS-CoV-2より柔軟で、融合が起こりやすい性質と整合する。",
+    "open": "SARS-CoV-2で報告された初期の融合中間体は今回見えなかったが、MERS-CoVでの存在は否定できない。",
     "evidence": {
       "question": [
         {
@@ -36,6 +37,12 @@
         {
           "quote": "Compared with the SARS-CoV-2 spike, the MERS-CoV spike exhibits greater conformational plasticity, consistent with a lower threshold for receptor-induced fusion.",
           "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Although an early fusion intermediate analogous to that described for SARS-CoV-2 was not observed under our experimental conditions, its existence in MERS-CoV cannot be excluded and may require different experimental conditions to stabilize.",
+          "section": "Discussion"
         }
       ]
     }

@@ -9,6 +9,7 @@
     "approach": "WDR5とPER1・PER2の結合を調べ、WDR5とPER2のWBMペプチドの結晶構造を決めた。",
     "result": "PER2はWBMモチーフで、PER1は主にWINモチーフでWDR5に結合する。",
     "learned": "WDR5はPERの直接の結合相手で、PER1とPER2で結合のしかたが大きく違う。",
+    "open": "PER2とWDR5の相互作用（PER1の約15分の1の強さ）が生体内で意味をもつかは、未確認。",
     "evidence": {
       "question": [
         {
@@ -40,6 +41,12 @@
         {
           "quote": "Together, our studies revealed a role of WDR5 as a direct PER interaction partner with critical differences between PER1 and PER2.",
           "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "The relevance of PER2 and its potential interaction with WDR5 (which is 15 times weaker than the PER1/WDR5 interaction) remains to be confirmed in vivo.",
+          "section": "Discussion"
         }
       ]
     }

@@ -10,6 +10,7 @@
     "approach": "野生型とG22S変異体をナノディスク中でクライオ電顕解析し、リポソーム中のNMRで動態を調べた。",
     "result": "クライオ電顕ではどちらも閉じた構造だった。G22SではNMRで広い範囲の構造変化が見えた。",
     "learned": "変異体は動態が大きく、閉状態から開状態への初期の移行が見えているとされる。",
+    "open": "開状態の構造を実験で決めることが、今後の課題とされる。",
     "evidence": {
       "question": [
         {
@@ -37,6 +38,12 @@
         {
           "quote": "These data indicate enhanced dynamics and conformational heterogeneity in the mutant, revealing the early transitions from the closed toward the open state.",
           "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Future work will aim at determining the open-state structures of WT or G22S MscL experimentally.",
+          "section": "DISCUSSION"
         }
       ]
     }

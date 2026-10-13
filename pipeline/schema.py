@@ -23,6 +23,10 @@ SUMMARY_FIELDS = {
     "learned": "わかったこと",
 }
 
+# An optional fifth line: what the paper itself says is still open (a limit it states, a question it leaves, work it
+# calls for). Written only when the paper says it; needs its own quote like the four lines above.
+SUMMARY_OPTIONAL = {"open": "残された課題"}
+
 # What a protein is, for browsing the archive (proteins.html). One to three per article, from this list.
 CATEGORIES = {
     "kinase": "キナーゼ",
@@ -50,6 +54,7 @@ LIMITS = {
     "summary.approach": (True, 64),
     "summary.result": (True, 72),
     "summary.learned": (True, 72),
+    "summary.open": (False, 64),
     "highlight.text": (True, 200),
     "lab_note": (False, 160),
 }
@@ -65,11 +70,13 @@ EXAMPLE = {
         "approach": "アプローチ（64字以内）：何をどう調べたか",
         "result": "結果（72字以内）：得られた観察・数値",
         "learned": "わかったこと（72字以内）：その結果から論文が結論していること（著者が推測なら推測と書く）",
+        "open": "残された課題（64字以内・任意）：論文自身が「まだ分からない」「今後の課題」と書いていることだけ。書いていなければこの行ごと省く",
         "evidence": {
             "question": [{"quote": "上の各項目を支える、論文本文からの逐語引用（英語のまま）", "section": "Introduction"}],
             "approach": [{"quote": "…", "section": "Abstract"}],
             "result": [{"quote": "…", "section": "Results"}],
             "learned": [{"quote": "…", "section": "Abstract"}],
+            "open": [{"quote": "…（open を書くときだけ）", "section": "Discussion"}],
         },
     },
     "categories": ["receptor"],  # CATEGORIES から 1〜3 個。タンパク質の種類で探すための分類

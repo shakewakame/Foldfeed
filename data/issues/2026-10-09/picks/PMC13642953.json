@@ -10,6 +10,7 @@
     "approach": "ダントロレンや4CmCを結合したRyR1をクライオ電顕で解析し、機能も測った。",
     "result": "ダントロレンはRY12ドメインでATPまたはADPと積み重なって結合し、4CmCは4か所に結合した。",
     "learned": "RY12ドメインは、ATP/ADP比や小分子を感知するセンサーとして働く可能性がある。",
+    "open": "4CmCの補助的な3つの結合部位に機能があるのかは、まだ分かっていない。",
     "evidence": {
       "question": [
         {
@@ -45,6 +46,12 @@
         {
           "quote": "These findings offer insights into the binding modes and mechanisms of MH-linked molecules, and reveal the RY12 domain’s regulatory role as a promiscuous sensor for adenine nucleotides and small ligands.Subject terms: Cryoelectron microscopy, Calcium channels, Permeation and transport",
           "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "The functional role, if any, of the auxiliary 4CmC binding sites remains unclear.",
+          "section": "Discussion"
         }
       ]
     }

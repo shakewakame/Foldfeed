@@ -54,7 +54,7 @@ ATPの配置が乱れて加水分解が止まる様子を、クライオ電顕�
 - **結果**：T331IはATPase活性を損ない、MDA5–dsRNA複合体が安定化していた。
 - **わかったこと**：ATPaseがフィラメントの安定性を調節し、自己免疫を防いでいる。
 
-<details><summary>この4行の根拠（論文本文）</summary>
+<details><summary>この紹介文の根拠（論文本文）</summary>
 
 > While these results are notable, the actual molecular mechanism underlying constitutive MDA5 T331I signaling remains unclear.  
 > — これまでの疑問・課題／Introduction
@@ -170,8 +170,9 @@ T331Iのフィラメントはサブユニット間のねじれ角がほぼ一定
 - **アプローチ**：スパイクとDPP4を一定時間反応させ、各時点の構造をクライオ電顕で決めた。
 - **結果**：RBDが開くほどS1–S2の結びつきが弱まり、融合後のS2構造も得られた。
 - **わかったこと**：MERS-CoVのスパイクはSARS-CoV-2より柔軟で、融合が起こりやすい性質と整合する。
+- **残された課題**：SARS-CoV-2で報告された初期の融合中間体は今回見えなかったが、MERS-CoVでの存在は否定できない。
 
-<details><summary>この4行の根拠（論文本文）</summary>
+<details><summary>この紹介文の根拠（論文本文）</summary>
 
 > However, how receptor binding is structurally coupled to membrane fusion has remained unclear.  
 > — これまでの疑問・課題／Abstract
@@ -187,6 +188,9 @@ T331Iのフィラメントはサブユニット間のねじれ角がほぼ一定
 
 > Compared with the SARS-CoV-2 spike, the MERS-CoV spike exhibits greater conformational plasticity, consistent with a lower threshold for receptor-induced fusion.  
 > — わかったこと／Abstract
+
+> Although an early fusion intermediate analogous to that described for SARS-CoV-2 was not observed under our experimental conditions, its existence in MERS-CoV cannot be excluded and may require different experimental conditions to stabilize.  
+> — 残された課題／Discussion
 
 </details>
 
@@ -298,8 +302,9 @@ RNAだけの2.9 Å構造。折りたたんだ分子の割合は、Mg²⁺のみ�
 - **アプローチ**：グリシンリボスイッチのタンデムアプタマーを、条件を変えてクライオ電顕で調べた。
 - **結果**：Mg²⁺だけでは約1/3、グリシンを加えると約2/3の粒子が完全に折りたたまれていた。
 - **わかったこと**：グリシンとMg²⁺は協同的に働き、折りたたみを安定化する。
+- **残された課題**：試験管内で折りたたみ直したRNAで、細胞内の混み合いや転写中の折りたたみは反映されていない。
 
-<details><summary>この4行の根拠（論文本文）</summary>
+<details><summary>この紹介文の根拠（論文本文）</summary>
 
 > Conformational heterogeneity is fundamental to riboswitch functionality, yet this same attribute makes structural characterization of these mRNA elements challenging.  
 > — これまでの疑問・課題／Abstract
@@ -315,6 +320,9 @@ RNAだけの2.9 Å構造。折りたたんだ分子の割合は、Mg²⁺のみ�
 
 > The population data show that glycine and Mg²⁺ operate synergistically: glycine enhances Mg²⁺ localization, while Mg2+ drives glycine recruitment.  
 > — わかったこと／Abstract
+
+> The RNA was refolded from a purified transcript under defined buffer conditions, which do not capture cellular crowding, the full complexity of physiological ion mixtures, or co-transcriptional folding by the polymerase.  
+> — 残された課題／Discussion
 
 </details>
 
@@ -405,8 +413,9 @@ SIRT2とSIRT5の結晶構造では、基質の位置が乱れ、切断に向か�
 - **アプローチ**：モデルペプチドを合成してHDACとサーチュインの活性を調べ、結晶構造も決めた。
 - **結果**：N-メチル化したペプチドは、どちらの酵素族でも検出できる脱アセチル化を受けなかった。
 - **わかったこと**：N-メチル化が基質の位置決めを乱し、切断される結合の向きがずれるためと考えられる。
+- **残された課題**：KAcMeは、まだ知られていない読み取りタンパク質に認識される新しいシグナルかもしれない。
 
-<details><summary>この4行の根拠（論文本文）</summary>
+<details><summary>この紹介文の根拠（論文本文）</summary>
 
 > The recent discovery of N-acetyl-N-methyl lysine (KAcMe) on histone H4 showed that both marks can coexist on the same lysine side chain, raising the question of whether this dual modification is enzymatically reversible.  
 > — これまでの疑問・課題／Abstract
@@ -422,6 +431,9 @@ SIRT2とSIRT5の結晶構造では、基質の位置が乱れ、切断に向か�
 
 > X-ray crystal structures of sirtuin–peptide complexes, supported by inhibition studies and molecular docking, reveal that N-methylation disrupts productive substrate positioning and misaligns the scissile amide bond for catalysis.  
 > — わかったこと／Abstract
+
+> Alternatively, KAcMe may constitute a completely new signal recognized by specific readers with yet unknown biological implications.  
+> — 残された課題／Discussion
 
 </details>
 
@@ -520,7 +532,7 @@ SIRT2–ミリストイル-N-メチルリジンペプチド複合体（1.45 Å�
 - **結果**：触媒三残基His-Asn-Glnと、T字型の基質結合ポケットが見つかった。
 - **わかったこと**：ポケットの形が、4′-OHへの位置選択性と、2種類の基質を受け入れる性質を支える。
 
-<details><summary>この4行の根拠（論文本文）</summary>
+<details><summary>この紹介文の根拠（論文本文）</summary>
 
 > Paeonol, the medicinal indicator component of the traditional Chinese medicine ‘Mudanpi’, has an incompletely elucidated biosynthetic pathway, particularly its post-modification steps.  
 > — これまでの疑問・課題／Abstract
@@ -634,8 +646,9 @@ NMR構造では、どちらの異性体もDNAに挿入され、向かいのシ�
 - **アプローチ**：NMRに基づく分子動力学計算で構造を求め、結晶構造も決めた。
 - **結果**：二本鎖では異性体R aが優勢で、どちらも3′側にインターカレートした。
 - **わかったこと**：向かいのシトシンとの水素結合が、生成比と挿入の深さの違いを説明しうる。
+- **残された課題**：2種類の異性体がDNA損傷の修復で区別して認識されるかは、問いとして残る。
 
-<details><summary>この4行の根拠（論文本文）</summary>
+<details><summary>この紹介文の根拠（論文本文）</summary>
 
 > The nitrogen atom in the PIX aza-anthracenedione ring renders the two side-chain amines nonequivalent, and predicts the formation of regioisomeric Schiff base conjugates with AP sites in DNA, referred to as regioisomers A and B and designated as R a and R b (Chart ).  
 > — これまでの疑問・課題／Introduction
@@ -654,6 +667,9 @@ NMR構造では、どちらの異性体もDNAに挿入され、向かいのシ�
 
 > The preferential formation of R a vs R b in dsDNA and deeper intercalation of R b may be explained by the differential ability of the asymmetric PIX N2 nitrogen in R a vs R b to hydrogen bond with the exocyclic N 4-amine of the cytosine displaced into the major groove.  
 > — わかったこと／Abstract
+
+> The observation that PIX conjugates to AP sites in DNA as a mixture of regioisomeric products leads to the question as to whether R a and R b may be differentially recognized by DNA damage repair processes.  
+> — 残された課題／Discussion
 
 </details>
 

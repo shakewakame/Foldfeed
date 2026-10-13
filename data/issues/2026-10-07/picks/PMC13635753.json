@@ -10,6 +10,7 @@
     "approach": "代謝物の探索と解析に加え、apo型・代謝物結合型・DNA結合型の全長構造を決めた。",
     "result": "代謝物が結合すると四量体が安定化するが、DNAへの親和性は変わらない。",
     "learned": "DNA結合ドメインが糖イソメラーゼドメインと構造的に連動しないためと説明される。",
+    "open": "ここで示した機構を生体内で確かめることが、今後の課題とされる。",
     "evidence": {
       "question": [
         {
@@ -45,6 +46,12 @@
         {
           "quote": "The DNA-binding domains are not structurally coupled to the sugar isomerase domains, explaining why N-acetylmannosamine-6-phosphate binding does not affect DNA binding.",
           "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "future work should aim to validate these mechanisms in vivo",
+          "section": "Conclusions"
         }
       ]
     }

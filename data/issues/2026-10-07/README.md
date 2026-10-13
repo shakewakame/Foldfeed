@@ -45,8 +45,9 @@
 - **アプローチ**：一本鎖切断を入れたヌクレオソームとPARP2・HPF1の複合体を、クライオ電顕で解析した。
 - **結果**：WGRドメインが切断部位に、ヘリカルドメインとHPF1が反対側のDNAに結合し、DNAの2周にまたがる。
 - **わかったこと**：この結合様式が、遊離DNAよりヌクレオソーム上の切断を好む理由を説明する。
+- **残された課題**：切断の位置が結合・活性化・クロマチン保持をどう左右するかは、今後の研究が必要とされる。
 
-<details><summary>この4行の根拠（論文本文）</summary>
+<details><summary>この紹介文の根拠（論文本文）</summary>
 
 > Single-strand DNA breaks are among the most frequent forms of DNA damage, yet how PARP2 recognizes these lesions within the constrained geometry of chromatin remains unclear.  
 > — これまでの疑問・課題／Abstract
@@ -59,6 +60,9 @@
 
 > This configuration explains the higher affinity of PARP2 for nucleosomal SSBs relative to free DNA.  
 > — わかったこと／Abstract
+
+> Future studies comparing additional lesion positions will be essential to determine how location tunes PARP2 binding, activation, and chromatin retention.  
+> — 残された課題／Discussion
 
 </details>
 
@@ -156,8 +160,9 @@ WGRドメインが上側のDNAジャイアで切断を認識し、HDのArg296と
 - **アプローチ**：代謝物の探索と解析に加え、apo型・代謝物結合型・DNA結合型の全長構造を決めた。
 - **結果**：代謝物が結合すると四量体が安定化するが、DNAへの親和性は変わらない。
 - **わかったこと**：DNA結合ドメインが糖イソメラーゼドメインと構造的に連動しないためと説明される。
+- **残された課題**：ここで示した機構を生体内で確かめることが、今後の課題とされる。
 
-<details><summary>この4行の根拠（論文本文）</summary>
+<details><summary>この紹介文の根拠（論文本文）</summary>
 
 > In Streptococcus pneumoniae, the RpiR transcriptional regulator NanR (SpNanR) senses sialic acid in the environment and upregulates transcription of the nan and sia A operons to increase uptake and metabolism of sialic acid.  
 > — これまでの疑問・課題／Abstract
@@ -179,6 +184,9 @@ WGRドメインが上側のDNAジャイアで切断を認識し、HDのArg296と
 
 > The DNA-binding domains are not structurally coupled to the sugar isomerase domains, explaining why N-acetylmannosamine-6-phosphate binding does not affect DNA binding.  
 > — わかったこと／Abstract
+
+> future work should aim to validate these mechanisms in vivo  
+> — 残された課題／Conclusions
 
 </details>
 
@@ -278,8 +286,9 @@ Lid2変異体のクライオ電顕構造（2.5 Å）では、標的鎖を活性�
 - **アプローチ**：大腸菌でLid領域の変異体を探し、Lid2を2.5 Åのクライオ電顕で解析した。
 - **結果**：Lid2ではαヘリックス状のLidが置き換わり、非標的鎖だけを切るニッカーゼになった。
 - **わかったこと**：作り替えたLidが非標的鎖を活性部位に保ち、標的鎖の切断に必要な動きを妨げるとみられる。
+- **残された課題**：このスクリーニングは、ニッカーゼ候補を見分ける定性的なもので、定量的ではない。
 
-<details><summary>この4行の根拠（論文本文）</summary>
+<details><summary>この紹介文の根拠（論文本文）</summary>
 
 > Because Cas12a nucleases have a single nuclease domain (RuvC) that cuts both strands, it is not straightforward to engineer a nickase [6].  
 > — これまでの疑問・課題／Introduction
@@ -298,6 +307,9 @@ Lid2変異体のクライオ電顕構造（2.5 Å）では、標的鎖を活性�
 
 > Specifically, the remodeled Lid appears to stabilize the NTS in the active site, whereas it hampers the conformational transitions required for subsequent TS cleavage.  
 > — わかったこと／Abstract
+
+> The system is therefore best regarded as a qualitative screen whether or not a certain variant acts as a potential nickase, rather than a quantitative one.  
+> — 残された課題／Discussion
 
 </details>
 
@@ -397,8 +409,9 @@ Lid2変異体のクライオ電顕構造（2.5 Å）では、標的鎖を活性�
 - **アプローチ**：全長の大腸菌NNTを、apo・基質結合・阻害剤結合の状態でクライオ電顕で解析した。
 - **結果**：apoでは2つのdIIIが膜ドメインに張り付き、基質が結合すると外れて通路の向きが変わる。
 - **わかったこと**：dIIIの位置が、プロトン通路の開閉と触媒サイクルを左右する。
+- **残された課題**：プロトン勾配下のリポソーム再構成で、共役効率を直接調べることが今後必要とされる。
 
-<details><summary>この4行の根拠（論文本文）</summary>
+<details><summary>この紹介文の根拠（論文本文）</summary>
 
 > Although the structures of isolated (dI)2 and (dI)2(dIII) complexes of E. coli transhydrogenase (EcTH) have been reported,21,31 the architecture and conformational landscape of the full-length enzyme have remained unknown despite extensive biochemical investigation.  
 > — これまでの疑問・課題／Introduction
@@ -414,6 +427,9 @@ Lid2変異体のクライオ電顕構造（2.5 Å）では、標的鎖を活性�
 
 > These observations indicate that ligand-dependent positioning of dIII regulates access to the proton channel and shapes the catalytic cycle.  
 > — わかったこと／Introduction
+
+> Future studies using proteoliposome reconstitution under a proton gradient will be required to directly assess the coupling efficiency of the chimera in the forward direction.  
+> — 残された課題／Discussion
 
 </details>
 

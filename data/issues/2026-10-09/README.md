@@ -52,8 +52,9 @@ RY12ドメインがATP:ADP比のセンサーとして働く可能性がある（
 - **アプローチ**：ダントロレンや4CmCを結合したRyR1をクライオ電顕で解析し、機能も測った。
 - **結果**：ダントロレンはRY12ドメインでATPまたはADPと積み重なって結合し、4CmCは4か所に結合した。
 - **わかったこと**：RY12ドメインは、ATP/ADP比や小分子を感知するセンサーとして働く可能性がある。
+- **残された課題**：4CmCの補助的な3つの結合部位に機能があるのかは、まだ分かっていない。
 
-<details><summary>この4行の根拠（論文本文）</summary>
+<details><summary>この紹介文の根拠（論文本文）</summary>
 
 > The precise binding sites and mechanisms of the therapeutic dantrolene and MH triggers have remained unclear.  
 > — これまでの疑問・課題／Abstract
@@ -75,6 +76,9 @@ RY12ドメインがATP:ADP比のセンサーとして働く可能性がある（
 
 > These findings offer insights into the binding modes and mechanisms of MH-linked molecules, and reveal the RY12 domain’s regulatory role as a promiscuous sensor for adenine nucleotides and small ligands.Subject terms: Cryoelectron microscopy, Calcium channels, Permeation and transport  
 > — わかったこと／Abstract
+
+> The functional role, if any, of the auxiliary 4CmC binding sites remains unclear.  
+> — 残された課題／Discussion
 
 </details>
 
@@ -189,8 +193,9 @@ DNA-PKcsがKuを内側へ押し込む中間状態も、クライオ電顕で捉�
 - **アプローチ**：ヌクレオソーム上での連結反応を測り、Ku・DNA-PKcsとの複合体をクライオ電顕で解析した。
 - **結果**：DNA-PKcsは、DNAに余裕のないヌクレオソーム上でもNHEJを促した。
 - **わかったこと**：Kuはヌクレオソームの障壁をDNA-PKcsの助けで越え、段階的にDNAに沿って進むと考えられる。
+- **残された課題**：続くNHEJの段階、特にヌクレオソーム上のシナプス複合体の形成は、今後の研究が必要とされる。
 
-<details><summary>この4行の根拠（論文本文）</summary>
+<details><summary>この紹介文の根拠（論文本文）</summary>
 
 > Ku and DNA-PKcs require ~28 base pairs of free duplex DNA, which is often unavailable in chromatin with nucleosomes acting as barriers.  
 > — これまでの疑問・課題／Abstract
@@ -212,6 +217,9 @@ DNA-PKcsがKuを内側へ押し込む中間状態も、クライオ電顕で捉�
 
 > Distinct structural states support a stepwise model of DNA-PK progressive translocating along nucleosomal DNA, highlighting DNA-PKcs function in chromatin-associated NHEJ in vivo.  
 > — わかったこと／Abstract
+
+> Future studies investigating subsequent NHEJ steps, particularly the formation of synaptic complexes on nucleosomal substrates, will provide a more complete picture of NHEJ within chromatin.  
+> — 残された課題／Discussion
 
 </details>
 
@@ -323,8 +331,9 @@ GPR84–Gi複合体の構造。Leu336AlaとPhe187Alaの変異で動員が回復�
 - **アプローチ**：OX04529とGPR84–Gi複合体のクライオ電顕構造を決め、MDと変異体で検証した。
 - **結果**：OX04529の置換基がLeu336とPhe187に干渉し、β-アレスチン動員に必要な極性ネットワークを乱す。
 - **わかったこと**：置換基の立体的な大きさに基づく、バイアス型アゴニストの設計モデルを示した。
+- **残された課題**：GPR84とβ-アレスチンの相互作用が貪食作用を高めるか抑えるかは、分かっていない。
 
-<details><summary>この4行の根拠（論文本文）</summary>
+<details><summary>この紹介文の根拠（論文本文）</summary>
 
 > Biased signaling in G protein-coupled receptors offers therapeutic promise, yet rational design of biased ligands remains challenging due to limited mechanistic understanding.  
 > — これまでの疑問・課題／Abstract
@@ -337,6 +346,9 @@ GPR84–Gi複合体の構造。Leu336AlaとPhe187Alaの変異で動員が回復�
 
 > Based on these insights, we develop a steric-dependent model that enables rational design of G protein-biased agonists with predictable β-arrestin recruitment profiles.  
 > — わかったこと／Abstract
+
+> whether interactions with a β-arrestin enhances or limits such pro-phagocytic effects remain unknown  
+> — 残された課題／Introduction
 
 </details>
 
@@ -431,8 +443,9 @@ Leu336AlaとPhe187Ala変異は、OX04529によるβ-アレスチン動員を回�
 - **アプローチ**：野生型とG22S変異体をナノディスク中でクライオ電顕解析し、リポソーム中のNMRで動態を調べた。
 - **結果**：クライオ電顕ではどちらも閉じた構造だった。G22SではNMRで広い範囲の構造変化が見えた。
 - **わかったこと**：変異体は動態が大きく、閉状態から開状態への初期の移行が見えているとされる。
+- **残された課題**：開状態の構造を実験で決めることが、今後の課題とされる。
 
-<details><summary>この4行の根拠（論文本文）</summary>
+<details><summary>この紹介文の根拠（論文本文）</summary>
 
 > Mechanosensitive channels are central to cellular responses to membrane tension, yet the structural basis of their gating remains incompletely understood.  
 > — これまでの疑問・課題／Abstract
@@ -448,6 +461,9 @@ Leu336AlaとPhe187Ala変異は、OX04529によるβ-アレスチン動員を回�
 
 > These data indicate enhanced dynamics and conformational heterogeneity in the mutant, revealing the early transitions from the closed toward the open state.  
 > — わかったこと／Abstract
+
+> Future work will aim at determining the open-state structures of WT or G22S MscL experimentally.  
+> — 残された課題／DISCUSSION
 
 </details>
 
@@ -548,8 +564,9 @@ Leu336AlaとPhe187Ala変異は、OX04529によるβ-アレスチン動員を回�
 - **アプローチ**：サルの赤痢集団感染の検体から抗体を単離し、IpaDとの複合体をクライオ電顕で解析した。
 - **結果**：溶血を抑える抗体はIpaDの遠位ドメインに、溶血を高める抗体はN末端ドメインに結合した。
 - **わかったこと**：結合する場所で抗体の働きが分かれる。防御に働く応答を選ぶ抗原設計に役立つとされる。
+- **残された課題**：再設計したIpaDが防御的な抗体応答を起こすかは、今後の検証が必要とされる。
 
-<details><summary>この4行の根拠（論文本文）</summary>
+<details><summary>この紹介文の根拠（論文本文）</summary>
 
 > There is currently no approved vaccine for Shigella spp., a leading cause of diarrhea with increasing rates of antimicrobial resistance.  
 > — これまでの疑問・課題／Abstract
@@ -571,6 +588,9 @@ Leu336AlaとPhe187Ala変異は、OX04529によるβ-アレスチン動員を回�
 
 > Collectively, these findings provide insights into protective and deleterious immune responses against Shigella that directly inform vaccine immunogen design.  
 > — わかったこと／Abstract
+
+> Future work should evaluate whether these redesigned IpaD constructs retain immunogenicity and elicit protective antibody responses, and whether antibody responses against IpaD distal domain epitopes A and B are protective in vivo.  
+> — 残された課題／Discussion
 
 </details>
 

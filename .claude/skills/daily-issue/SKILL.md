@@ -198,7 +198,10 @@ MD・構造予測・ドッキングだけが根拠の論文は入れない（オ
     - **各行に根拠の引用が必要**：`summary.evidence.question / approach / result / learned` に、packet から**英語のまま一字一句**コピーした
       20 字以上の文を 1〜2 個ずつ（Abstract と Introduction の文で足りることが多い）。`pipeline.verify` が本文との一致と、
       各行の名前・略号・数値が論文にあることを機械的に確かめる。
-    - 引用の文は画面には出ない（号の `README.md` に「この4行の根拠」として出る。編集者が見る）。
+    - 引用の文は画面には出ない（号の `README.md` に「この紹介文の根拠」として出る。編集者が見る）。
+    - **任意の 5 行目 `open`（残された課題、64 字）**：論文自身が「まだ分からない」「今後の研究が必要」「限界」と書いていることがあるときだけ
+      書く（Discussion・Limitations・Conclusion の文）。書いていなければ**この行ごと省く**（FoldFeed 側の推測で埋めない）。
+      これにも引用が必要（`summary.evidence.open`）。
   - `categories`（1〜3 個）：タンパク質の種類。`pipeline/schema.py` の `CATEGORIES` から選ぶ
     （kinase・protease・receptor・channel・transporter・enzyme・nucleic・chromatin・translation・regulation・immune・pathogen・
     photosynthesis・other）。ホームの「タンパク質の種類から探す」と `proteins.html` に使われる。迷ったら主役のタンパク質の働きで選ぶ。

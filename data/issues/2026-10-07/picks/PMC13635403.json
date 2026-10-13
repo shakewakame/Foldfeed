@@ -10,6 +10,7 @@
     "approach": "全長の大腸菌NNTを、apo・基質結合・阻害剤結合の状態でクライオ電顕で解析した。",
     "result": "apoでは2つのdIIIが膜ドメインに張り付き、基質が結合すると外れて通路の向きが変わる。",
     "learned": "dIIIの位置が、プロトン通路の開閉と触媒サイクルを左右する。",
+    "open": "プロトン勾配下のリポソーム再構成で、共役効率を直接調べることが今後必要とされる。",
     "evidence": {
       "question": [
         {
@@ -37,6 +38,12 @@
         {
           "quote": "These observations indicate that ligand-dependent positioning of dIII regulates access to the proton channel and shapes the catalytic cycle.",
           "section": "Introduction"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Future studies using proteoliposome reconstitution under a proton gradient will be required to directly assess the coupling efficiency of the chimera in the forward direction.",
+          "section": "Discussion"
         }
       ]
     }

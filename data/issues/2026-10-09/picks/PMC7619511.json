@@ -10,6 +10,7 @@
     "approach": "サルの赤痢集団感染の検体から抗体を単離し、IpaDとの複合体をクライオ電顕で解析した。",
     "result": "溶血を抑える抗体はIpaDの遠位ドメインに、溶血を高める抗体はN末端ドメインに結合した。",
     "learned": "結合する場所で抗体の働きが分かれる。防御に働く応答を選ぶ抗原設計に役立つとされる。",
+    "open": "再設計したIpaDが防御的な抗体応答を起こすかは、今後の検証が必要とされる。",
     "evidence": {
       "question": [
         {
@@ -45,6 +46,12 @@
         {
           "quote": "Collectively, these findings provide insights into protective and deleterious immune responses against Shigella that directly inform vaccine immunogen design.",
           "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Future work should evaluate whether these redesigned IpaD constructs retain immunogenicity and elicit protective antibody responses, and whether antibody responses against IpaD distal domain epitopes A and B are protective in vivo.",
+          "section": "Discussion"
         }
       ]
     }

@@ -10,6 +10,7 @@
     "approach": "単離したPSII（C2S2）に強光と昇温を与え、クライオ電顕で構造を決めた。",
     "result": "アンテナなどのサブユニットが失われ、非ヘム鉄付近のD1・D2で損傷が見え、重炭酸も外れていた。",
     "learned": "D1のHis252が動き、セリンプロテアーゼ様の三つ組を作ってD1の自己切断を招く可能性がある。",
+    "open": "提案したセリンプロテアーゼ様の三つ組が、D1を自己切断できるかは、いまは分からない。",
     "evidence": {
       "question": [
         {
@@ -41,6 +42,12 @@
         {
           "quote": "Finally, we were able to observe that high light/elevated temperature conditions result in the movement of the D1:His252 residue, potentially forming a serine protease triad that may trigger auto-proteolysis of the D1 subunit.Supplementary InformationThe online version contains supplementary material available at https://doi.org/10.1007/s11120-026-01238-w.Keywords: Photosynthesis, Photosystem II, Structure, Cryo-EM, High light, High temperature",
           "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "It is currently unclear from the high light structure if the proposed serine-protease triad would be capable of auto-catalytic cleavage of D1",
+          "section": "Discussion"
         }
       ]
     }

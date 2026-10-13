@@ -28,7 +28,7 @@ from pathlib import Path
 
 from . import brand, impact, render
 from .common import ISSUES_DIR, ROOT, read_json
-from .schema import CATEGORIES, FEATURE_AXES, FEATURE_MIN, LAB_NOTE_FIELDS, SUMMARY_FIELDS
+from .schema import CATEGORIES, FEATURE_AXES, FEATURE_MIN, LAB_NOTE_FIELDS, SUMMARY_FIELDS, SUMMARY_OPTIONAL
 
 SITE_DIR = ROOT / "site"
 TH = brand.THEME
@@ -304,6 +304,32 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .mail input:disabled, .mail button:disabled {{ opacity:.5; cursor:not-allowed; }}
 .mail .fine {{ margin-top:10px; font-size:12.5px; color:var(--mute); }}
 
+
+.mix {{ display:flex; flex-wrap:wrap; gap:4px 28px; margin:34px 0 -16px; font-family:var(--mono); font-size:12.5px; color:var(--ink2); }}
+.mix b {{ font-weight:500; letter-spacing:.1em; font-size:11px; color:var(--mute); margin-right:10px; }}
+.issue-body .mix, .main > .mix:first-child {{ margin-top:30px; }}
+.mine {{ display:flex; flex-wrap:wrap; align-items:center; gap:8px 8px; margin:26px 0 -10px; padding:14px 0 0; border-top:1px solid var(--hair); }}
+.mine-l {{ font-family:var(--mono); font-size:11px; letter-spacing:.12em; color:var(--mute); margin-right:6px; }}
+.chip {{ font:inherit; font-family:var(--sans); font-size:13px; line-height:1.4; padding:4px 11px; color:var(--ink2); background:transparent;
+         border:1px solid var(--hair); border-radius:0; cursor:pointer; }}
+.chip:hover {{ border-color:var(--ink); color:var(--ink); }}
+.chip.on {{ background:var(--ink); border-color:var(--ink); color:#fff; }}
+.mine .only {{ margin-left:10px; font-family:var(--sans); font-size:13px; color:var(--ink2); cursor:pointer; }}
+.mine-n {{ font-family:var(--mono); font-size:12px; color:var(--acc-ink); }}
+.mine-f {{ flex-basis:100%; font-size:12px; color:var(--mute); }}
+.row.hit {{ border-left:4px solid var(--acc); padding-left:18px; margin-left:-22px; }}
+.row.hit .rt::before {{ content:"関心あり"; display:block; font-family:var(--mono); font-size:11px; letter-spacing:.1em; color:var(--acc-ink); font-weight:700; }}
+.row[hidden], .pr[hidden], .pg[hidden] {{ display:none; }}
+.band .hero .v3d-view {{ border:1px solid var(--hair); }}
+.band .hero .v3d-bar {{ margin-top:8px; }}
+.rel {{ list-style:none; margin:0; padding:0; }}
+.rel li {{ display:grid; grid-template-columns:minmax(0,1fr) 210px; gap:4px 20px; align-items:baseline; padding:9px 0; border-top:1px solid var(--hair); }}
+.rel li:last-child {{ border-bottom:1px solid var(--hair); }}
+.rel a {{ display:flex; flex-wrap:wrap; gap:0 14px; align-items:baseline; }}
+.rel .rd {{ font-family:var(--mono); font-size:11.5px; color:var(--mute); }}
+.rel b {{ font-family:var(--sans); font-size:15.5px; font-weight:700; }}
+.rel .why {{ font-family:var(--mono); font-size:11.5px; color:var(--acc-ink); }}
+
 /* an issue page opens with its date, large */
 .ihead {{ display:grid; grid-template-columns:var(--col) minmax(0,1fr); gap:28px; padding:44px 0 6px; align-items:end; }}
 .idate {{ line-height:1; }}
@@ -327,6 +353,8 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .intro4 dt {{ font-family:var(--mono); font-size:11.5px; letter-spacing:.08em; color:var(--acc-ink); padding-top:5px; }}
 .intro4 dd {{ margin:0; font-size:16px; line-height:1.85; }}
 .intro4 .learned dd {{ font-weight:700; }}
+.intro4 .open dt {{ color:var(--mute); }}
+.intro4 .open dd {{ color:var(--desc); font-size:15px; }}
 
 /* proteins.html: browse by kind of protein, search by name or ID */
 .pp-head h1 {{ margin:40px 0 4px; font-size:34px; line-height:1.4; }}
@@ -385,7 +413,8 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
   .intro4 div {{ grid-template-columns:minmax(0,1fr); gap:0; }}
   .mail-grid {{ grid-template-columns:minmax(0,1fr); gap:20px; }}
   .pr {{ grid-template-columns:minmax(0,1fr); }}
-  .row.feat {{ margin-left:0; padding-left:14px; }}
+  .row.feat, .row.hit {{ margin-left:0; padding-left:14px; }}
+  .rel li {{ grid-template-columns:minmax(0,1fr); }}
   .row {{ grid-template-columns:116px minmax(0,1fr); grid-template-areas:"th rt" "th rf" "th rp"; gap:4px 14px;
           align-items:start; padding:16px 0; }}
   .row .no {{ display:none; }}
@@ -643,11 +672,22 @@ def figures_html(cand: dict, pick: dict, date: str, root: Path, fig_base: str, u
     return "".join(out)
 
 
+def related_html(items: list[dict], up: str) -> str:
+    if not items:
+        return ""
+    lis = "".join(f'<li><a href="{up}issues/{x["row"]["date"]}.html#a{x["row"]["n"]}">'
+                  f'<span class="rd">{x["row"]["date"][5:].replace("-", ".")} · {pad(x["row"]["n"])}</span>'
+                  f'<b>{esc(x["row"]["pick"]["headline"])}</b></a><span class="why">{esc(x["why"])}</span></li>'
+                  for x in items)
+    return f'<h3>関連する記事</h3><ul class="rel">{lis}</ul>'
+
+
 def article_html(cand: dict, pick: dict, date: str, n: int, root: Path, fig_base: str,
-                 impact_type: str | None = None, up: str = "../") -> str:
+                 impact_type: str | None = None, up: str = "../", related: list[dict] | None = None) -> str:
     s = pick["summary"]
     if "question" in s:
-        intro = "".join(f'<div class="{k}"><dt>{label}</dt><dd>{esc(s[k])}</dd></div>' for k, label in SUMMARY_FIELDS.items())
+        intro = "".join(f'<div class="{k}"><dt>{label}</dt><dd>{esc(s[k])}</dd></div>'
+                        for k, label in {**SUMMARY_FIELDS, **SUMMARY_OPTIONAL}.items() if s.get(k))
     else:  # an issue written before the four-line introduction (e.g. an old pull request being previewed)
         intro = "".join(f'<div><dt>{label}</dt><dd>{esc(s.get(k, ""))}</dd></div>'
                         for k, label in (("background", "背景"), ("approach", "やったこと"), ("findings", "分かったこと")))
@@ -669,7 +709,7 @@ def article_html(cand: dict, pick: dict, date: str, n: int, root: Path, fig_base
             f'<p class="headline">{esc(pick["headline"])}</p>'
             f'<p class="subhead">{esc(pick.get("subhead") or "")}</p>'
             f'<dl class="intro4">{intro}</dl>'
-            f'<h3>読みどころ</h3>{hls}{lab}</div>')
+            f'<h3>読みどころ</h3>{hls}{lab}{related_html(related or [], up)}</div>')
     return f'<article class="art" id="a{n}">{margin_html(cand, pick, n, impact_type)}{text}</article>'
 
 
@@ -751,7 +791,8 @@ def row_html(cand: dict, pick: dict, n: int, date: str, root: Path, fig_base: st
                  for k, v in (("TARGET", f["target"]), ("METHOD", f["method"]), ("RES.", f["res"])))
     first = '<span class="mk">PDB 初構造</span>' if f["first"] else ""
     mark = '<span class="feat-mark">Today&#8217;s Structure</span>' if feat else ""
-    return (f'<li class="row{" feat" if feat else ""}"><span class="no">{pad(n)}</span><div class="rt">{mark}'
+    cats = " ".join(pick.get("categories") or [])
+    return (f'<li class="row{" feat" if feat else ""}" data-cats="{esc(cats)}"><span class="no">{pad(n)}</span><div class="rt">{mark}'
             f'<p class="rk"><span class="n">{pad(n)}</span></p>\n'
             f'<h3><a href="{href}">{esc(pick["headline"])}</a></h3>\n'
             f'<p class="sub">{esc(pick.get("subhead") or "")}</p>'
@@ -780,7 +821,8 @@ def contents_html(picks: list, date: str, root: Path, fig_base: str, href_base: 
     return out
 
 
-def hero_html(feature: dict | None, picks: list, date: str, root: Path, fig_base: str, href_base: str = "") -> str:
+def hero_html(feature: dict | None, picks: list, date: str, root: Path, fig_base: str, href_base: str = "",
+              up: str = "") -> str:
     """Today's Structure (今日の一本): the day's one article, large, with its facts. The reason it was picked is for the pull request."""
     if not feature:
         return ""
@@ -796,8 +838,17 @@ def hero_html(feature: dict | None, picks: list, date: str, root: Path, fig_base
              ("PDB", esc(f["pdb"])), ("LIGAND", esc(f["ligand"])), ("UNIPROT", uni)]
     dl = "".join(f"<div><dt>{k}</dt><dd>{v}</dd></div>" for k, v in cells)
     big = root / date / "figures" / f"{cand['pmcid']}.svg"   # the article's own figure, larger than the list thumbnail
-    fig = (f'<a class="thumb" href="{href}"><img src="{fig_base}/{date}/{esc(cand["pmcid"])}.svg" '
-           f'alt="構造図：{esc(pk["target_label"])}"></a>') if big.exists() else thumb_html(cand, pk, date, root, fig_base, href)
+    info = read_json(root / date / "figures" / f"{cand['pmcid']}.json") if (root / date / "figures" / f"{cand['pmcid']}.json").exists() else {}
+    attrs, wait, bar = viewer_bar(info, up) if big.exists() else ("", "", "")
+    if attrs:   # the structure can be turned in place (Mol*, loaded only when asked for)
+        fig = (f'<div class="v3d"{attrs}><div class="v3d-view"><a href="{href}"><img class="fig" '
+               f'src="{fig_base}/{date}/{esc(cand["pmcid"])}.svg" alt="構造図：{esc(pk["target_label"])}"></a>'
+               f'<div class="v3d-canvas"></div>{wait}</div>{bar}</div>')
+    elif big.exists():
+        fig = (f'<a class="thumb" href="{href}"><img src="{fig_base}/{date}/{esc(cand["pmcid"])}.svg" '
+               f'alt="構造図：{esc(pk["target_label"])}"></a>')
+    else:
+        fig = thumb_html(cand, pk, date, root, fig_base, href)
     first = ' · <span class="mk">PDB 初構造</span>' if f["first"] else ""
     return (f'<section class="hero"><h2 class="label">Today&#8217;s Structure <span>/ {pad(n)}{first}</span></h2><div class="hero-grid"><div>'
             f'<h3><a href="{href}">{esc(pk["headline"])}</a></h3>'
@@ -829,7 +880,8 @@ def toc_side(picks: list, featured: str | None) -> str:
     return sd("この号の記事", f'<div class="sd-toc">{out}</div>', "side-only-issue")
 
 
-def issue_head(date: str, number: int | None, n_new: int, n_hot: int, prev_date: str | None, next_date: str | None) -> str:
+def issue_head(date: str, number: int | None, n_new: int, n_hot: int, prev_date: str | None, next_date: str | None,
+               index_date: str | None = None) -> str:
     """The top of an issue page: its date, large (year, month.day, weekday and the issue's number), and the counts."""
     y, m, d, wd = date_parts(date)
     num = f" · 第 {number} 号" if number else " · プレビュー"
@@ -838,7 +890,10 @@ def issue_head(date: str, number: int | None, n_new: int, n_hot: int, prev_date:
                                 '<a href="../index.html">トップへ</a>'))
     return (f'<header class="ihead"><div class="idate"><span class="y">{y}</span><span class="md">{m:02d}.{d:02d}</span>'
             f'<span class="wd">{wd}曜日{num}</span></div><div><h1>{jp_date(date)}号</h1>'
-            f'<p class="ic">{counts_text(n_new, n_hot, " · ")}</p><p class="in">{links}</p></div></header>')
+            f'<p class="ic">{counts_text(n_new, n_hot, " · ")}</p>'
+            + (f'<p class="ic">対象：Europe PMC に {date_parts(index_date)[1]}月{date_parts(index_date)[2]}日に登録された'
+               f'オープンアクセス論文</p>' if index_date else "")
+            + f'<p class="in">{links}</p></div></header>')
 
 
 def find_form(up: str = "") -> str:
@@ -848,7 +903,8 @@ def find_form(up: str = "") -> str:
 
 
 def issue_page(date: str, prev_date: str | None, next_date: str | None,
-               root: Path = ISSUES_DIR, preview: bool = False, number: int | None = None) -> str:
+               root: Path = ISSUES_DIR, preview: bool = False, number: int | None = None,
+               related: dict | None = None) -> str:
     meta, picks, types = load_issue(date, root)
     n_hot = sum(render.is_impact(pk) for _, pk in picks)
     picked = {pk["pmcid"] for _, pk in picks}
@@ -860,10 +916,11 @@ def issue_page(date: str, prev_date: str | None, next_date: str | None,
         link = (f' · <a href="{esc(pr["url"])}">Pull Request #{pr["number"]} を開く（ここでマージ）</a>'
                 if pr.get("url") else "")
         bar = f'<div class="preview-bar">プレビュー（未公開）{link} · <a href="index.html">確認待ちの一覧</a></div>'
-    main = [issue_head(date, number, len(picks) - n_hot + len(rest), n_hot, prev_date, next_date)]
+    main = [issue_head(date, number, len(picks) - n_hot + len(rest), n_hot, prev_date, next_date, meta.get("index_date"))]
     feature = load_feature(date, root, picks) if picks else None
     if picks:
         # the issue page lists every article, today's pick included (marked); the front page is where it is shown large
+        main.append(breakdown_html(picks))
         main.append(f'<section class="toc">{contents_html(picks, date, root, fig_base, "", feature and feature["pmcid"], mark=True)}</section>')
     else:
         c = meta["counts"]
@@ -873,7 +930,8 @@ def issue_page(date: str, prev_date: str | None, next_date: str | None,
         hot = render.is_impact(pk)
         if n == 1 or hot != render.is_impact(picks[n - 2][1]):
             main.append(part_html("impact" if hot else "new", n_hot if hot else len(picks) - n_hot))
-        main.append(article_html(cand, pk, date, n, root, fig_base, types.get(cand["pmcid"]), "../"))
+        main.append(article_html(cand, pk, date, n, root, fig_base, types.get(cand["pmcid"]), "../",
+                                 (related or {}).get((date, n))))
     if rest:
         items = "".join(f'<li><a href="{doi_url(x)}">{esc(x["title"])}</a> — <i>{esc(x["journal_abbrev"] or x["journal"])}</i>'
                         f'（{esc(render.KIND_JA[x["kind"]])}）</li>' for x in rest)
@@ -900,6 +958,14 @@ ABOUT = ("Europe PMC に前日登録されたオープンアクセスの査読�
          "構造図は PDB の座標から描いている。")
 
 
+METHOD_WORDS = (("クライオ", "cryo-em cryoem"), ("X線", "x-ray crystallography"), ("NMR", "nmr"))
+
+
+def method_kinds(method: str) -> list[str]:
+    """'クライオ電顕 / X線結晶構造解析' -> ['クライオ電顕', 'X線結晶構造解析']; the page groups by these."""
+    return [m.strip() for m in method.split("/") if m.strip() and m.strip() != "—"]
+
+
 def library(issues: list[str], root: Path = ISSUES_DIR) -> list[dict]:
     """Every article of every issue (newest first) with what the browse-and-search page needs: protein names,
     UniProt accessions, gene names, PDB IDs, categories, and a lower-cased search string."""
@@ -916,13 +982,42 @@ def library(issues: list[str], root: Path = ISSUES_DIR) -> list[dict]:
                         names.append(q["description"])
                     ids += q.get("uniprot_ids", [])
             genes = [p["gene"] for p in cand.get("proteins", []) if p.get("gene")]
+            method = facts(cand, pick)["method"]
             row = {"date": date, "n": n, "cand": cand, "pick": pick, "cats": pick.get("categories") or ["other"],
                    "uniprot": sorted(set(ids)), "genes": sorted(set(genes)), "names": sorted(set(names)),
-                   "pdbs": sorted({x["pdb_id"] for x in released})}
+                   "pdbs": sorted({x["pdb_id"] for x in released}), "method": method,
+                   "gene_of": {p["uniprot"]: p["gene"] for p in cand.get("proteins", []) if p.get("gene")}}
             text = " ".join([pick["target_label"], pick["headline"], pick.get("subhead") or "", cand["title"]]
-                            + list(pick.get("legend_labels") or []) + row["genes"] + row["uniprot"] + row["names"] + row["pdbs"])
+                            + list(pick.get("legend_labels") or []) + row["genes"] + row["uniprot"] + row["names"] + row["pdbs"]
+                            + [method] + [w for key, w in METHOD_WORDS if key in method])
             row["search"] = unicodedata.normalize("NFKC", text).lower()
             out.append(row)
+    return out
+
+
+BROAD_KINDS = {"enzyme", "nucleic", "other"}   # too wide to say two articles are related
+
+
+def related_articles(lib: list[dict], limit: int = 3) -> dict[tuple[str, int], list[dict]]:
+    """For every article, up to `limit` other articles of the site that share something checkable: first a UniProt
+    accession (the same protein), then the same main kind of protein. Nothing here is a claim about the papers."""
+    out = {}
+    for r in lib:
+        strong, weak = [], []
+        for o in lib:
+            if o is r:
+                continue
+            shared = sorted(set(r["uniprot"]) & set(o["uniprot"]))
+            if shared:
+                names = [r["gene_of"].get(a) or o["gene_of"].get(a) or a for a in shared]
+                strong.append((len(shared), o["date"], o["n"], o, "同じタンパク質：" + "、".join(dict.fromkeys(names[:3]))))
+            elif r["cats"][0] == o["cats"][0] and r["cats"][0] not in BROAD_KINDS:
+                weak.append((o["date"], o["n"], o, f"同じ種類：{CATEGORIES.get(r['cats'][0], r['cats'][0])}"))
+        strong.sort(key=lambda t: (t[0], t[1], t[2]), reverse=True)   # most shared proteins, then newest
+        weak.sort(key=lambda t: (t[0], t[1]), reverse=True)
+        picked = [{"row": t[3], "why": t[4]} for t in strong[:limit]]
+        picked += [{"row": t[2], "why": t[3]} for t in weak[:max(0, limit - len(picked))]]
+        out[(r["date"], r["n"])] = picked
     return out
 
 
@@ -942,20 +1037,80 @@ def numbers_html(issues: list[str], lib: list[dict]) -> str:
     return sd("これまでの数字", f'<dl class="nums">{dl}</dl>')
 
 
-def stats_html(latest: str, n_new: int, n_hot: int, issues: list[str], lib: list[dict]) -> str:
-    """The strip above the pick on the front page: the latest issue's date and size, and the running totals."""
+def stats_html(latest: str, n_new: int, n_hot: int, issues: list[str], lib: list[dict], index_date: str | None = None) -> str:
+    """The strip above the pick on the front page: the latest issue's date and size, the day it covers, and the
+    running totals."""
     _, m, d, wd = date_parts(latest)
-    return (f'<dl class="stats"><div class="new"><dt>最新号</dt><dd><b>{m}月{d}日</b>（{wd}）</dd></div>'
+    period = ""
+    if index_date:
+        _, im, idd, _ = date_parts(index_date)
+        period = f'<div><dt>対象</dt><dd>{im}月{idd}日に Europe PMC へ登録された論文</dd></div>'
+    return (f'<dl class="stats"><div class="new"><dt>最新号</dt><dd><b>{m}月{d}日</b>（{wd}）</dd></div>{period}'
             f'<div><dt>この号</dt><dd><b>{n_new + n_hot}</b>本'
             + (f'（New Structure {n_new} · 注目の構造 {n_hot}）' if n_hot else "") + '</dd></div>'
             f'<div><dt>これまで</dt><dd><b>{len(lib)}</b>本 · <b>{len(issues)}</b>号 · '
             f'<b>{len(journal_counts(issues))}</b>誌</dd></div></dl>')
 
 
+def breakdown_html(picks: list) -> str:
+    """One line on what the issue holds, counted from the data: methods, kinds of protein, first structures."""
+    methods, kinds, first = {}, {}, 0
+    for cand, pk in picks:
+        for m in method_kinds(facts(cand, pk)["method"]):
+            methods[m] = methods.get(m, 0) + 1
+        for c in dict.fromkeys(pk.get("categories") or ["other"]):
+            kinds[c] = kinds.get(c, 0) + 1
+        first += any(p.get("first_structure") for p in cand.get("proteins", []))
+    if not picks:
+        return ""
+    top = lambda d, label: "・".join(f"{label(k)} {v}" for k, v in sorted(d.items(), key=lambda kv: -kv[1])[:5])
+    bits = [f"<b>手法</b>{esc(top(methods, lambda k: k))}", f"<b>種類</b>{esc(top(kinds, lambda k: CATEGORIES.get(k, k)))}"]
+    if first:
+        bits.append(f"<b>PDB 初構造</b>{first} 本")
+    return f'<p class="mix">{"".join(f"<span>{b}</span>" for b in bits)}</p>'
+
+
 def cats_html(lib: list[dict], up: str = "") -> str:
     items = "".join(f'<li><a href="{up}proteins.html#c-{k}"><span>{esc(CATEGORIES[k])}</span><span class="c">{v}</span></a></li>'
                     for k, v in sorted(category_counts(lib), key=lambda kv: (-kv[1], list(CATEGORIES).index(kv[0]))))
     return f'<ul class="cats">{items}</ul>'
+
+
+MINE_SCRIPT = r"""
+(function () {
+  var box = document.getElementById('mine'); if (!box) return;
+  var KEY = 'ff-interest', ONLY = 'ff-interest-only';
+  function read(k, d) { try { var v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } }
+  function write(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) { /* private mode: still works for this visit */ } }
+  var mine = read(KEY, []), only = read(ONLY, false);
+  var chips = [].slice.call(box.querySelectorAll('.chip')), rows = [].slice.call(document.querySelectorAll('.row[data-cats]')),
+      check = document.getElementById('mine-only'), count = document.getElementById('mine-n');
+  function apply() {
+    var hit = 0;
+    chips.forEach(function (c) { c.classList.toggle('on', mine.indexOf(c.getAttribute('data-c')) >= 0); c.setAttribute('aria-pressed', mine.indexOf(c.getAttribute('data-c')) >= 0); });
+    rows.forEach(function (r) {
+      var cats = r.getAttribute('data-cats').split(' '), m = mine.length && cats.some(function (c) { return mine.indexOf(c) >= 0; });
+      r.classList.toggle('hit', !!m); r.hidden = !!(only && mine.length && !m); if (m) hit++;
+    });
+    check.checked = only; count.textContent = mine.length ? '関心に合う記事 ' + hit + ' 本' : '';
+  }
+  chips.forEach(function (c) { c.addEventListener('click', function () {
+    var k = c.getAttribute('data-c'), i = mine.indexOf(k); if (i >= 0) mine.splice(i, 1); else mine.push(k); write(KEY, mine); apply(); }); });
+  check.addEventListener('change', function () { only = check.checked; write(ONLY, only); apply(); });
+  box.hidden = false; apply();
+})();
+"""
+
+
+def mine_html(lib: list[dict]) -> str:
+    """Saved interests: kinds of protein the reader picks, kept in this browser only (localStorage). Rows of the new
+    issue that match are marked, or the others hidden. Hidden until the script runs, so it never shows empty."""
+    chips = "".join(f'<button type="button" class="chip" data-c="{k}" aria-pressed="false">{esc(CATEGORIES[k])}</button>'
+                    for k, _ in sorted(category_counts(lib), key=lambda kv: list(CATEGORIES).index(kv[0])))
+    return (f'<div class="mine" id="mine" hidden><span class="mine-l">自分の関心</span>{chips}'
+            f'<label class="only"><input type="checkbox" id="mine-only"> 関心のある記事だけ表示</label>'
+            f'<span class="mine-n" id="mine-n"></span>'
+            f'<span class="mine-f">選んだ種類はこのブラウザにだけ保存されます（アカウントは不要）。</span></div>')
 
 
 def mail_html() -> str:
@@ -987,10 +1142,11 @@ def home(issues: list[str]) -> str:
                         f'{load_issue(d, ISSUES_DIR)[0]["counts"].get("parsed", 0)} 本）' for d in reversed(newer_empty))
         notice = (f'<p class="notice">{bits}は、New Structure・注目の構造とも記事がありませんでした。'
                   f'（Europe PMC への論文の登録が少ない日があります）</p>')
-    band = (f'<div class="band"><div class="wrap">{stats_html(latest, len(picks) - n_hot, n_hot, issues, lib)}{notice}'
-            f'{hero_html(feature, picks, latest, ISSUES_DIR, "figures", href)}</div></div>')
+    band = (f'<div class="band"><div class="wrap">{stats_html(latest, len(picks) - n_hot, n_hot, issues, lib, meta.get("index_date"))}{notice}'
+            f'{hero_html(feature, picks, latest, ISSUES_DIR, "figures", href, "")}</div></div>')
     n_list = len(picks) - (1 if feature else 0)
-    main = [f'<section class="toc">{contents_html(picks, latest, ISSUES_DIR, "figures", href, feature and feature["pmcid"])}</section>',
+    main = [breakdown_html(picks) + mine_html(lib),
+            f'<section class="toc">{contents_html(picks, latest, ISSUES_DIR, "figures", href, feature and feature["pmcid"])}</section>',
             f'<p class="sec-more"><a href="{href}">{jp_date(latest)}号のすべての記事を読む →</a></p>',
             f'<section class="sec"><div class="ix-h"><h2 class="label">タンパク質の種類から探す</h2>'
             f'<a class="soon" href="proteins.html">一覧へ</a></div>'
@@ -1010,7 +1166,7 @@ def home(issues: list[str]) -> str:
     side = (sd("タンパク質を探す", find_form()) + journals_html(journal_counts(issues)) + numbers_html(issues, lib)
             + sd("このサイトについて", f"<p>{esc(ABOUT)}</p>"))
     return page(f"{brand.SITE_NAME}（{brand.SITE_NAME_EN}）",
-                masthead(0) + band + shell("".join(main), side) + colophon(), depth=0)
+                masthead(0) + band + shell("".join(main), side) + colophon(), depth=0, viewer=True, script=MINE_SCRIPT)
 
 
 PROTEIN_SCRIPT = r"""
@@ -1118,11 +1274,12 @@ def build(preview_root: Path | None = None) -> int:
     for name in ("logo.svg", "logo-mark.svg", "viewer.js"):
         shutil.copy(ROOT / "assets" / name, SITE_DIR / "assets" / name)
     shutil.copytree(ROOT / "assets" / "vendor", SITE_DIR / "assets" / "vendor")
+    related = related_articles(library(issues))
     for i, date in enumerate(issues):
         prev_date = issues[i + 1] if i + 1 < len(issues) else None
         next_date = issues[i - 1] if i > 0 else None
         (SITE_DIR / "issues" / f"{date}.html").write_text(
-            issue_page(date, prev_date, next_date, number=len(issues) - i), encoding="utf-8")
+            issue_page(date, prev_date, next_date, number=len(issues) - i, related=related), encoding="utf-8")
         src = ISSUES_DIR / date / "figures"
         if src.exists():
             shutil.copytree(src, SITE_DIR / "figures" / date, ignore=shutil.ignore_patterns("*.json"))
@@ -1134,7 +1291,7 @@ def build(preview_root: Path | None = None) -> int:
     out.mkdir(exist_ok=True)
     (out / "index.html").write_text(preview_index(previews, preview_root), encoding="utf-8")
     for date in previews:
-        (out / f"{date}.html").write_text(issue_page(date, None, None, preview_root, preview=True), encoding="utf-8")
+        (out / f"{date}.html").write_text(issue_page(date, None, None, preview_root, preview=True, related=related), encoding="utf-8")
         src = preview_root / date / "figures"
         if src.exists():
             shutil.copytree(src, out / "figures" / date, ignore=shutil.ignore_patterns("*.json"))

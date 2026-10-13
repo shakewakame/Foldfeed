@@ -9,6 +9,7 @@
     "approach": "Ro60ペプチドを結合したHLA-DR3の結晶構造を決め、Ro60反応性TCRを導入したTregも作った。",
     "result": "Ro60ペプチドは標準的な向きで結合し、P2・P5・P8の3残基がTCR側に露出していた。",
     "learned": "Ro60反応性TCRを導入したTregは、自己反応性T細胞を通常のTregより効果的に抑えた。",
+    "open": "導入したTregの性質と安定性を、さまざまな条件で調べることが今後の課題とされる。",
     "evidence": {
       "question": [
         {
@@ -40,6 +41,12 @@
         {
           "quote": "We designed a TCR-Treg that recognizes a dominant epitope of the Ro60 antigen (Ro60369-383) presented by HLA-DRB1∗03:01 and demonstrate that these cells can selectively suppress autoreactive T cells more effectively than polyclonal Treg.",
           "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Future studies will therefore focus on systematically evaluating the phenotype and stability of the engineered Treg across these settings.",
+          "section": "Discussion"
         }
       ]
     }

@@ -13,7 +13,7 @@ import unicodedata
 
 from . import brand, impact, pdb, structure_svg
 from .common import issue_dir, read_json
-from .schema import CATEGORIES, FEATURE_MIN, LAB_NOTE_FIELDS, SUMMARY_FIELDS
+from .schema import CATEGORIES, FEATURE_MIN, LAB_NOTE_FIELDS, SUMMARY_FIELDS, SUMMARY_OPTIONAL
 
 SITE_NAME = brand.SITE_NAME
 FONT = brand.FONT
@@ -329,10 +329,11 @@ def article_md(cand: dict, pick: dict, n: int, info: dict | None = None) -> list
                 f"<sub>{st['label']}の結合部位。{CONTACT_NOTE}：{', '.join(st['residues'])}"
                 + (f"。点線は 3.3 Å 以内の N・O の組（{st['polar']} 組）" if st["polar"] else "") + "</sub>", ""]
     out += [f"**{pick['headline']}**", "", pick.get("subhead") or "", "",
-            ] + [f"- **{label}**：{s[k]}" for k, label in SUMMARY_FIELDS.items()] + [""]
-    sev = [(label, e) for k, label in SUMMARY_FIELDS.items() for e in (s.get("evidence") or {}).get(k, [])]
+            ] + [f"- **{label}**：{s[k]}" for k, label in {**SUMMARY_FIELDS, **SUMMARY_OPTIONAL}.items() if s.get(k)] + [""]
+    sev = [(label, e) for k, label in {**SUMMARY_FIELDS, **SUMMARY_OPTIONAL}.items() for e in (s.get("evidence") or {}).get(k, [])
+           if s.get(k)]
     if sev:
-        out += ["<details><summary>この4行の根拠（論文本文）</summary>", ""]
+        out += ["<details><summary>この紹介文の根拠（論文本文）</summary>", ""]
         for label, e in sev:
             out += [f"> {e['quote']}  ", f"> — {label}／{e.get('section', '')}", ""]
         out += ["</details>", ""]

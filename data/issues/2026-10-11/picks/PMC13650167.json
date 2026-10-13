@@ -9,6 +9,7 @@
     "approach": "Helicase-SELEXでRut部位を探し、結合測定・NMR・クライオ電顕でNIDを調べた。",
     "result": "Rut部位は全長Rhoで1759個、NID欠失型では47個だった。NIDは天然変性だった。",
     "learned": "NIDは天然変性のまま、二次構造をもつRut部位を捉えるのに重要と考えられる。",
+    "open": "MtbRhoとRNAポリメラーゼの相互作用が一過性か安定か、NIDが関わるかは、実験で確かめる必要がある。",
     "evidence": {
       "question": [
         {
@@ -40,6 +41,12 @@
         {
           "quote": "Complementary RDTT assays, affinity measurements, solution NMR, and cryogenic electron microscopy analyses show that the NID is intrinsically disordered, yet critical for engaging Rut sites with substantial secondary structure.",
           "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Moreover, the nature of the interaction between MtbRho and MtbRNAP—whether transient or stable, stabilized or not by the NID—remains to be experimentally determined. ### The NID is an intrinsically disordered domain and remains dynamically flexible upon RNA binding Two main scenarios could explain why the N-terminal domain (NTD; residues 1–221, including the NID) is unresolved in the cryo-EM structure of MtbRho [37].",
+          "section": "Results and discussion"
         }
       ]
     }

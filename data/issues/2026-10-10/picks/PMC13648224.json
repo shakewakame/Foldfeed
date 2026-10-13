@@ -9,6 +9,7 @@
     "approach": "モデルペプチドを合成してHDACとサーチュインの活性を調べ、結晶構造も決めた。",
     "result": "N-メチル化したペプチドは、どちらの酵素族でも検出できる脱アセチル化を受けなかった。",
     "learned": "N-メチル化が基質の位置決めを乱し、切断される結合の向きがずれるためと考えられる。",
+    "open": "KAcMeは、まだ知られていない読み取りタンパク質に認識される新しいシグナルかもしれない。",
     "evidence": {
       "question": [
         {
@@ -36,6 +37,12 @@
         {
           "quote": "X-ray crystal structures of sirtuin–peptide complexes, supported by inhibition studies and molecular docking, reveal that N-methylation disrupts productive substrate positioning and misaligns the scissile amide bond for catalysis.",
           "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Alternatively, KAcMe may constitute a completely new signal recognized by specific readers with yet unknown biological implications.",
+          "section": "Discussion"
         }
       ]
     }

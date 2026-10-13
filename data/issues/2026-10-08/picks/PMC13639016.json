@@ -10,6 +10,7 @@
     "approach": "QatBC複合体のapo型とATP結合型を結晶構造解析し、変異体の抗ファージ活性を調べた。",
     "result": "QatBのN末端ループがQatCの触媒中心に入り込む。この部分や触媒残基は防御に必須だった。",
     "learned": "QatCはCap9と同様に、タンパク質を修飾する酵素とみられる。",
+    "open": "QatCが実際にどんな反応を触媒するかは、いまも分かっていない。",
     "evidence": {
       "question": [
         {
@@ -41,6 +42,12 @@
         {
           "quote": "Together, our findings demonstrate that QatC likely acts as a functional analog of Cap9, mediating protein modification within the QatABCD system, and highlight the evolutionary diversification of QueC-like enzymes as a general strategy in prokaryotic immune defense.",
           "section": "Introduction"
+        }
+      ],
+      "open": [
+        {
+          "quote": "It remains unknown what exact reaction is catalyzed by QatC.",
+          "section": "Discussion"
         }
       ]
     }

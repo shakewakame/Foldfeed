@@ -9,6 +9,7 @@
     "approach": "大腸菌でLid領域の変異体を探し、Lid2を2.5 Åのクライオ電顕で解析した。",
     "result": "Lid2ではαヘリックス状のLidが置き換わり、非標的鎖だけを切るニッカーゼになった。",
     "learned": "作り替えたLidが非標的鎖を活性部位に保ち、標的鎖の切断に必要な動きを妨げるとみられる。",
+    "open": "このスクリーニングは、ニッカーゼ候補を見分ける定性的なもので、定量的ではない。",
     "evidence": {
       "question": [
         {
@@ -40,6 +41,12 @@
         {
           "quote": "Specifically, the remodeled Lid appears to stabilize the NTS in the active site, whereas it hampers the conformational transitions required for subsequent TS cleavage.",
           "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "The system is therefore best regarded as a qualitative screen whether or not a certain variant acts as a potential nickase, rather than a quantitative one.",
+          "section": "Discussion"
         }
       ]
     }

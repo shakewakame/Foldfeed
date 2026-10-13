@@ -27,7 +27,7 @@ import unicodedata
 from . import impact
 from .common import cached, issue_dir, read_json
 from .schema import (CATEGORIES, FEATURE_AXES, FEATURE_MIN, FEATURE_REASON_LIMIT, LAB_NOTE_FIELDS, LIMITS,
-                     SUMMARY_FIELDS, TAGS)
+                     SUMMARY_FIELDS, SUMMARY_OPTIONAL, TAGS)
 
 NEW_KINDS = ("new_structure", "new_structure_ids_unlisted", "new_map_only")
 
@@ -42,9 +42,12 @@ def normalize(s: str) -> str:
     return re.sub(r"\s+", " ", s).strip().lower()
 
 
+ALL_SUMMARY = {**SUMMARY_FIELDS, **SUMMARY_OPTIONAL}
+
+
 def summary_texts(pick: dict) -> list[str]:
     s = pick.get("summary") or {}
-    return [s.get(k) or "" for k in SUMMARY_FIELDS]
+    return [s.get(k) or "" for k in ALL_SUMMARY]
 
 
 def japanese_fields(pick: dict) -> list[str]:
@@ -77,7 +80,7 @@ def check_pick(pick: dict, cand: dict | None, corpus: str | None) -> tuple[list[
 
     for f in ("headline", "subhead", "target_label"):
         length(f, pick.get(f), f)
-    for f in SUMMARY_FIELDS:
+    for f in ALL_SUMMARY:
         length(f"summary.{f}", (pick.get("summary") or {}).get(f), f"summary.{f}")
     cats = pick.get("categories") or []
     if not 1 <= len(cats) <= 3:
@@ -102,7 +105,9 @@ def check_pick(pick: dict, cand: dict | None, corpus: str | None) -> tuple[list[
         quotes += [(f"highlight {i}", e) for e in h.get("evidence") or []]
 
     sev = (pick.get("summary") or {}).get("evidence") or {}
-    for k in SUMMARY_FIELDS:
+    for k in ALL_SUMMARY:
+        if k in SUMMARY_OPTIONAL and not (pick.get("summary") or {}).get(k):
+            continue   # an optional line that is not written needs nothing
         if not sev.get(k):
             errors.append(f"summary.{k}: needs at least one evidence quote (summary.evidence.{k})")
         quotes += [(f"summary.{k}", e) for e in sev.get(k) or []]
@@ -182,7 +187,7 @@ def check_summary_claims(pick: dict, corpus: str | None) -> list[str]:
         return []
     support = normalize(corpus) + " " + normalize(pick.get("target_label", ""))
     errors = []
-    for field in SUMMARY_FIELDS:
+    for field in ALL_SUMMARY:
         for tok in sorted(claim_tokens((pick.get("summary") or {}).get(field) or "")):
             if tok.isdigit() and len(tok) == 1:
                 continue

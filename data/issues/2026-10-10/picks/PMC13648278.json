@@ -9,6 +9,7 @@
     "approach": "グリシンリボスイッチのタンデムアプタマーを、条件を変えてクライオ電顕で調べた。",
     "result": "Mg²⁺だけでは約1/3、グリシンを加えると約2/3の粒子が完全に折りたたまれていた。",
     "learned": "グリシンとMg²⁺は協同的に働き、折りたたみを安定化する。",
+    "open": "試験管内で折りたたみ直したRNAで、細胞内の混み合いや転写中の折りたたみは反映されていない。",
     "evidence": {
       "question": [
         {
@@ -36,6 +37,12 @@
         {
           "quote": "The population data show that glycine and Mg²⁺ operate synergistically: glycine enhances Mg²⁺ localization, while Mg2+ drives glycine recruitment.",
           "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "The RNA was refolded from a purified transcript under defined buffer conditions, which do not capture cellular crowding, the full complexity of physiological ion mixtures, or co-transcriptional folding by the polymerase.",
+          "section": "Discussion"
         }
       ]
     }

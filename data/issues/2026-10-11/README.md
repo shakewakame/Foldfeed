@@ -55,8 +55,9 @@
 - **アプローチ**：結核菌のWzmWztを、基質様の密度あり・ATP結合・DDM/ATP結合の3状態でクライオ電顕解析した。
 - **結果**：基質結合型ではゲートヘリックスが上向きに伸び、ATP結合型では下向きに動いてWztが二量体化した。
 - **わかったこと**：ゲートヘリックスの上向きの伸びが、Wztの二量体化の準備になる。必須の残基も特定した。
+- **残された課題**：DDMが入った中間的な状態が生理的なものかは、まだ決まっていない。
 
-<details><summary>この4行の根拠（論文本文）</summary>
+<details><summary>この紹介文の根拠（論文本文）</summary>
 
 > However, due to the complex chemical structure of the natural LLP substrates and the existence of detergent micelles or phospholipids used in nanodisc reconstitution, the molecular basis of natural bacterial LLP recognition by these ABC transporters, in particular the transmembrane domains (TMDs), remains largely unresolved.  
 > — これまでの疑問・課題／Introduction
@@ -81,6 +82,9 @@
 
 > This proposed LLG binding is fulfilled by a fully upward extension of the Wzt gate helix, which serves as a critical step to prime Wzt for dimerization.  
 > — わかったこと／Abstract
+
+> Whether the DDM-bound conformation is physiologically relevant remains to be determined.Fig.  
+> — 残された課題／Results
 
 </details>
 
@@ -181,8 +185,9 @@ TMD中央の空洞にはDDM分子が2つ入った中間的な状態も捉えた�
 - **アプローチ**：Ro60ペプチドを結合したHLA-DR3の結晶構造を決め、Ro60反応性TCRを導入したTregも作った。
 - **結果**：Ro60ペプチドは標準的な向きで結合し、P2・P5・P8の3残基がTCR側に露出していた。
 - **わかったこと**：Ro60反応性TCRを導入したTregは、自己反応性T細胞を通常のTregより効果的に抑えた。
+- **残された課題**：導入したTregの性質と安定性を、さまざまな条件で調べることが今後の課題とされる。
 
-<details><summary>この4行の根拠（論文本文）</summary>
+<details><summary>この紹介文の根拠（論文本文）</summary>
 
 > yet no structural data currently exist for Ro60 peptide presentation by this allele beyond the invariant CLIP peptide structure  
 > — これまでの疑問・課題／Introduction
@@ -201,6 +206,9 @@ TMD中央の空洞にはDDM分子が2つ入った中間的な状態も捉えた�
 
 > We designed a TCR-Treg that recognizes a dominant epitope of the Ro60 antigen (Ro60369-383) presented by HLA-DRB1∗03:01 and demonstrate that these cells can selectively suppress autoreactive T cells more effectively than polyclonal Treg.  
 > — わかったこと／Abstract
+
+> Future studies will therefore focus on systematically evaluating the phenotype and stability of the engineered Treg across these settings.  
+> — 残された課題／Discussion
 
 </details>
 
@@ -304,8 +312,9 @@ HLA-DR3は発現収量が低く、Ro60ペプチドの直接発現は約0.3 mg/L�
 - **アプローチ**：変異ペプチドの反応試験、MD、QM/MM計算に加え、基質結合型NsRufOの結晶構造を決めた。
 - **結果**：基質ペプチドのヒスチジン（His-5）が、ニトロ化の進行に欠かせなかった。
 - **わかったこと**：中間体Compound IIのプロトン化状態が、ニトロ化か硝酸生成かを左右すると提案された。
+- **残された課題**：計算は硝酸生成の抑制を定量的に証明するものではなく、プロトン中継の役割がありうることを支持するにとどまる。
 
-<details><summary>この4行の根拠（論文本文）</summary>
+<details><summary>この紹介文の根拠（論文本文）</summary>
 
 > To understand the mechanism of this unusual P450-mediated reaction, a series of pentapeptides were tested as substrates alongside molecular dynamics simulations and quantum mechanics/molecular mechanics (QM/MM, ONIOM approach) calculations.  
 > — これまでの疑問・課題／Abstract
@@ -324,6 +333,9 @@ HLA-DR3は発現収量が低く、Ro60ペプチドの直接発現は約0.3 mg/L�
 
 > These experiments revealed the intimate and necessary involvement of a histidine residue within the pentapeptide substrate of RufO in supporting effective nitration, with the protonation state of the intermediate compound II proposed to influence the production of nitrated tyrosine over unwanted nitrate formation.  
 > — わかったこと／Abstract
+
+> these calculations, rather than quantitatively proving kinetic suppression of nitrate formation, should be interpreted as supporting a plausible role of the Tyr-3/His-5/H235/water proton relay in biasing product formation  
+> — 残された課題／Results and Discussion
 
 </details>
 
@@ -413,8 +425,9 @@ NHEJ短距離シナプス複合体にPol λが結合した構造をクライオ�
 - **アプローチ**：Pol λが結合した短距離シナプス複合体のクライオ電顕構造を決め、複合体の活性も調べた。
 - **結果**：Pol λの結合のしかたが見え、Pol λとPNKPは同じ複合体内で協調して末端を処理した。
 - **わかったこと**：末端処理は短距離シナプスの間に繰り返し起こる、というモデルを示した。
+- **残された課題**：この協調のしくみがほかの末端処理因子にも当てはまるかは、今後の研究が必要とされる。
 
-<details><summary>この4行の根拠（論文本文）</summary>
+<details><summary>この紹介文の根拠（論文本文）</summary>
 
 > Single-molecule studies in Xenopus egg extracts indicate that at least certain end-processing events occur during short-range synapsis19, but the molecular details underlying these processes’ coordination with the core NHEJ machinery remain unclear, particularly in terms of the structural accommodation of the accessory factors within the large protein-DNA complexes that mediate repair.  
 > — これまでの疑問・課題／Introduction
@@ -433,6 +446,9 @@ NHEJ短距離シナプス複合体にPol λが結合した構造をクライオ�
 
 > Our results provide evidence for a model in which NHEJ end-processing occurs iteratively during short-range synapsis, with the core NHEJ factors forming a stable platform for the enzymes to flexibly access the DSB junction.  
 > — わかったこと／Introduction
+
+> Future studies investigating the activities of other end-processing factors will be needed to determine if this mechanism of coordination is conserved and to test if the formation of even larger complexes capable of repairing a wider variety of DSBs is feasible.  
+> — 残された課題／Discussion
 
 </details>
 
@@ -540,8 +556,9 @@ NIDを欠くと、H-SELEXで見つかるRut部位が1759から47に減った
 - **アプローチ**：Helicase-SELEXでRut部位を探し、結合測定・NMR・クライオ電顕でNIDを調べた。
 - **結果**：Rut部位は全長Rhoで1759個、NID欠失型では47個だった。NIDは天然変性だった。
 - **わかったこと**：NIDは天然変性のまま、二次構造をもつRut部位を捉えるのに重要と考えられる。
+- **残された課題**：MtbRhoとRNAポリメラーゼの相互作用が一過性か安定か、NIDが関わるかは、実験で確かめる必要がある。
 
-<details><summary>この4行の根拠（論文本文）</summary>
+<details><summary>この紹介文の根拠（論文本文）</summary>
 
 > In Mycobacterium tuberculosis, Rho features a unique, large N-terminal insertion domain (NID) of uncertain function.  
 > — これまでの疑問・課題／Abstract
@@ -560,6 +577,9 @@ NIDを欠くと、H-SELEXで見つかるRut部位が1759から47に減った
 
 > Complementary RDTT assays, affinity measurements, solution NMR, and cryogenic electron microscopy analyses show that the NID is intrinsically disordered, yet critical for engaging Rut sites with substantial secondary structure.  
 > — わかったこと／Abstract
+
+> Moreover, the nature of the interaction between MtbRho and MtbRNAP—whether transient or stable, stabilized or not by the NID—remains to be experimentally determined. ### The NID is an intrinsically disordered domain and remains dynamically flexible upon RNA binding Two main scenarios could explain why the N-terminal domain (NTD; residues 1–221, including the NID) is unresolved in the cryo-EM structure of MtbRho [37].  
+> — 残された課題／Results and discussion
 
 </details>
 
@@ -658,8 +678,9 @@ PER2はWBM部位でCRYと競合し、PER1は主にWIN部位でMLL1と競合す�
 - **アプローチ**：WDR5とPER1・PER2の結合を調べ、WDR5とPER2のWBMペプチドの結晶構造を決めた。
 - **結果**：PER2はWBMモチーフで、PER1は主にWINモチーフでWDR5に結合する。
 - **わかったこと**：WDR5はPERの直接の結合相手で、PER1とPER2で結合のしかたが大きく違う。
+- **残された課題**：PER2とWDR5の相互作用（PER1の約15分の1の強さ）が生体内で意味をもつかは、未確認。
 
-<details><summary>この4行の根拠（論文本文）</summary>
+<details><summary>この紹介文の根拠（論文本文）</summary>
 
 > The MLL1 complex component WDR5 was also found in a repressive PER complex.  
 > — これまでの疑問・課題／Abstract
@@ -678,6 +699,9 @@ PER2はWBM部位でCRYと競合し、PER1は主にWIN部位でMLL1と競合す�
 
 > Together, our studies revealed a role of WDR5 as a direct PER interaction partner with critical differences between PER1 and PER2.  
 > — わかったこと／Abstract
+
+> The relevance of PER2 and its potential interaction with WDR5 (which is 15 times weaker than the PER1/WDR5 interaction) remains to be confirmed in vivo.  
+> — 残された課題／Discussion
 
 </details>
 
@@ -773,8 +797,9 @@ WDR5のWIN部位阻害剤（Inh-4、Inh-5）はPER1–WDR5複合体を部分的�
 - **アプローチ**：単離したPSII（C2S2）に強光と昇温を与え、クライオ電顕で構造を決めた。
 - **結果**：アンテナなどのサブユニットが失われ、非ヘム鉄付近のD1・D2で損傷が見え、重炭酸も外れていた。
 - **わかったこと**：D1のHis252が動き、セリンプロテアーゼ様の三つ組を作ってD1の自己切断を招く可能性がある。
+- **残された課題**：提案したセリンプロテアーゼ様の三つ組が、D1を自己切断できるかは、いまは分からない。
 
-<details><summary>この4行の根拠（論文本文）</summary>
+<details><summary>この紹介文の根拠（論文本文）</summary>
 
 > While light is required to drive the photochemical reactions, high light and high temperature can be damaging to PS II.  
 > — これまでの疑問・課題／Abstract
@@ -793,6 +818,9 @@ WDR5のWIN部位阻害剤（Inh-4、Inh-5）はPER1–WDR5複合体を部分的�
 
 > Finally, we were able to observe that high light/elevated temperature conditions result in the movement of the D1:His252 residue, potentially forming a serine protease triad that may trigger auto-proteolysis of the D1 subunit.Supplementary InformationThe online version contains supplementary material available at https://doi.org/10.1007/s11120-026-01238-w.Keywords: Photosynthesis, Photosystem II, Structure, Cryo-EM, High light, High temperature  
 > — わかったこと／Abstract
+
+> It is currently unclear from the high light structure if the proposed serine-protease triad would be capable of auto-catalytic cleavage of D1  
+> — 残された課題／Discussion
 
 </details>
 

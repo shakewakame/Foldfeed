@@ -10,6 +10,7 @@
     "approach": "OX04529とGPR84–Gi複合体のクライオ電顕構造を決め、MDと変異体で検証した。",
     "result": "OX04529の置換基がLeu336とPhe187に干渉し、β-アレスチン動員に必要な極性ネットワークを乱す。",
     "learned": "置換基の立体的な大きさに基づく、バイアス型アゴニストの設計モデルを示した。",
+    "open": "GPR84とβ-アレスチンの相互作用が貪食作用を高めるか抑えるかは、分かっていない。",
     "evidence": {
       "question": [
         {
@@ -33,6 +34,12 @@
         {
           "quote": "Based on these insights, we develop a steric-dependent model that enables rational design of G protein-biased agonists with predictable β-arrestin recruitment profiles.",
           "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "whether interactions with a β-arrestin enhances or limits such pro-phagocytic effects remain unknown",
+          "section": "Introduction"
         }
       ]
     }

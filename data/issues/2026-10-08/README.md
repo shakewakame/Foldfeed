@@ -44,8 +44,9 @@
 - **アプローチ**：QatBC複合体のapo型とATP結合型を結晶構造解析し、変異体の抗ファージ活性を調べた。
 - **結果**：QatBのN末端ループがQatCの触媒中心に入り込む。この部分や触媒残基は防御に必須だった。
 - **わかったこと**：QatCはCap9と同様に、タンパク質を修飾する酵素とみられる。
+- **残された課題**：QatCが実際にどんな反応を触媒するかは、いまも分かっていない。
 
-<details><summary>この4行の根拠（論文本文）</summary>
+<details><summary>この紹介文の根拠（論文本文）</summary>
 
 > However, the mechanism of QatABCD, even the function of QatC in this system, remains unclear.  
 > — これまでの疑問・課題／Abstract
@@ -64,6 +65,9 @@
 
 > Together, our findings demonstrate that QatC likely acts as a functional analog of Cap9, mediating protein modification within the QatABCD system, and highlight the evolutionary diversification of QueC-like enzymes as a general strategy in prokaryotic immune defense.  
 > — わかったこと／Introduction
+
+> It remains unknown what exact reaction is catalyzed by QatC.  
+> — 残された課題／Discussion
 
 </details>
 
@@ -164,7 +168,7 @@ QatBのN末端を天然のまま得るため、Gly2のコドンをUlp1切断部�
 - **結果**：A489EはArg-386とGlu-483周辺の塩橋網を組み換え、α2ヘリックスの位置が少しずれた。
 - **わかったこと**：この変化が、基質特異性の切り替えに伴う構造変化の障壁を下げる可能性がある。
 
-<details><summary>この4行の根拠（論文本文）</summary>
+<details><summary>この紹介文の根拠（論文本文）</summary>
 
 > This process is regulated by the coordinated actions of FliK, FlhB, and FlhA, but the structural mechanism underlying substrate specificity switching remains unclear.  
 > — これまでの疑問・課題／Abstract
@@ -280,7 +284,7 @@ Arg-386をAlaに置換した変異体は、FliH・FliIがあれば運動性と�
 - **結果**：野生型との差は、残基間距離も活性部位の容積も、ダルナビル複合体の方がGRL142複合体より大きかった。
 - **わかったこと**：近い置換と離れた置換が協調して働く。主要・副次の二分類は単純すぎる可能性がある。
 
-<details><summary>この4行の根拠（論文本文）</summary>
+<details><summary>この紹介文の根拠（論文本文）</summary>
 
 > However, no precise definitions of such two categories exist.  
 > — これまでの疑問・課題／Abstract
@@ -394,7 +398,7 @@ MDでは、活性部位容積が結晶構造の値から100 Å3以内に収ま�
 - **結果**：中程度の力を生む圧縮・折りたたみが連なり、RF-2ドメインの折りたたみで大きな力が出た。
 - **わかったこと**：折りたたみは、少数の協同的な段階が順に進むだけの単純な過程ではなかった。
 
-<details><summary>この4行の根拠（論文本文）</summary>
+<details><summary>この紹介文の根拠（論文本文）</summary>
 
 > So far, studies of cotranslational folding have focused mainly on small, single-domain proteins.  
 > — これまでの疑問・課題／Abstract
