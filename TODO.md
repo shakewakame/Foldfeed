@@ -23,7 +23,7 @@
 
 - [x] 毎日更新の静的サイト（記事ページ・新着一覧、Qiita 風レイアウト）
 - [x] サイト名（FoldFeed）とロゴ（仮）
-- [x] GitHub Pages で公開（https://shakewakame.github.io/Structuralbiology/ ）。リポジトリは公開、配信元は GitHub Actions
+- [x] GitHub Pages で公開（https://shakewakame.github.io/Foldfeed/ ）。リポジトリは公開、配信元は GitHub Actions
 - [x] グラフィカルアブストラクトをやめて、タンパクの構造図だけにする（シリンダー／矢印／チューブのカートゥーン、配色は藍と朱）
 - [ ] 構造図の PNG 化（SNS 用。OGP 画像は図に題を重ねた別レイアウトを検討）
 - [ ] 正式版ロゴ（FoldFeed 確定後）

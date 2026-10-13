@@ -16,7 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 ISSUES_DIR = ROOT / "data" / "issues"
 CACHE_DIR = ROOT / ".cache"
 
-USER_AGENT = "structbio-daily/0.1 (+https://github.com/shakewakame/Structuralbiology)"
+USER_AGENT = "structbio-daily/0.1 (+https://github.com/shakewakame/Foldfeed)"
 
 
 def default_index_date() -> dt.date:

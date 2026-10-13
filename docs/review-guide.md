@@ -8,7 +8,7 @@
 
 ### 最初に一度だけ
 - **確認待ちの一覧**を開いて、ホーム画面に追加する：
-  https://shakewakame.github.io/Structuralbiology/preview/
+  https://shakewakame.github.io/Foldfeed/preview/
   - iPhone（Safari）：下の共有ボタン →「ホーム画面に追加」
   - Android（Chrome）：右上のメニュー →「ホーム画面に追加」
 - （任意）GitHub アプリを入れてログインし、通知を許可する。PR ができたときのメンション通知がスマホに届く。
@@ -24,7 +24,7 @@
 
 ## パソコンでの手順
 
-- PR の一覧：https://github.com/shakewakame/Structuralbiology/pulls （リポジトリ上部の「Pull requests」タブ）
+- PR の一覧：https://github.com/shakewakame/Foldfeed/pulls （リポジトリ上部の「Pull requests」タブ）
 - 見た目：上と同じプレビュー。PR の本文の先頭と、PR に付くメンションのコメントにもリンクがある。
 - 文章と根拠を細かく見るなら、PR の「Files changed」タブで `data/issues/<日付>/README.md` を開く
   （右上の「…」→「View file」で表示形式になる）。注目の構造の採点表もこのファイルの末尾にある。

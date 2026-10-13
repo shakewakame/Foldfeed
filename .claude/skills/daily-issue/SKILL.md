@@ -76,11 +76,11 @@ AI が書く文章の主張には、論文本文からの逐語引用を必ず�
    ```
    PR はリポジトリのデフォルトブランチに向けて作る。タイトル：`構造生物学デイリー $ISSUE 号`。
    本文の先頭に、見た目を確認するプレビューのリンク
-   `https://shakewakame.github.io/Structuralbiology/preview/$ISSUE.html`（PR を出してから 1〜2 分で表示される）を書く。
+   `https://shakewakame.github.io/Foldfeed/preview/$ISSUE.html`（PR を出してから 1〜2 分で表示される）を書く。
    続けて、選んだ論文の見出し、号のページへのリンク、候補数（`candidates.json` の `counts`）、
    選ばなかった有力候補とその理由、`editor_notes` の要約を書く。
    PR を出すと GitHub Actions がプレビューを公開し（`pages.yml`）、編集者にメンション付きのコメントで知らせる（`notify.yml`）。
-   確認待ちの号は `https://shakewakame.github.io/Structuralbiology/preview/` に一覧で出る。記事が 0 本の日もプレビューは出る。
+   確認待ちの号は `https://shakewakame.github.io/Foldfeed/preview/` に一覧で出る。記事が 0 本の日もプレビューは出る。
    `config/editorial.json` の `review_required` が `true` の間は**マージしない**（編集者が確認してマージする）。
    `false` なら、検証が通っていればマージする。
 
