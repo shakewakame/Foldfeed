@@ -1,0 +1,176 @@
+{
+  "issue_date": "2026-10-14",
+  "index_date": "2026-10-13",
+  "generated_at": "2026-10-14T00:08:33+00:00",
+  "query": "(\"cryo-EM\" OR \"cryoEM\" OR \"cryo-electron microscopy\" OR \"cryo-electron tomography\" OR \"subtomogram\" OR \"crystal structure\" OR \"X-ray crystallography\" OR \"crystallographic\" OR \"NMR structure\" OR \"solution structure\") AND (\"Protein Data Bank\" OR \"PDB\" OR \"wwPDB\" OR \"EMDB\" OR \"accession code\" OR \"accession codes\") AND OPEN_ACCESS:y AND NOT SRC:PPR AND FIRST_IDATE:[2026-10-13 TO 2026-10-13]",
+  "impact_query": "(\"AlphaFold\" OR \"RoseTTAFold\" OR \"ESMFold\" OR \"structure prediction\" OR \"protein design\" OR \"de novo design\" OR \"designed protein\" OR \"binder design\" OR \"ProteinMPNN\" OR \"RFdiffusion\" OR \"structure-based drug design\" OR \"structure-guided\" OR \"structure-based\" OR \"co-crystal structure\" OR \"cocrystal structure\" OR \"mechanism\") AND (\"crystal structure\" OR \"cryo-EM\" OR \"cryo-electron microscopy\" OR \"NMR structure\" OR \"Protein Data Bank\") AND (\"protein\" OR \"enzyme\" OR \"receptor\" OR \"antibody\" OR \"peptide\" OR \"RNA\") AND OPEN_ACCESS:y AND NOT SRC:PPR AND FIRST_IDATE:[2026-10-13 TO 2026-10-13]",
+  "counts": {
+    "hits": 1,
+    "excluded_types": 0,
+    "parsed": 3,
+    "new_structure": 0,
+    "new_structure_ids_unlisted": 0,
+    "new_map_only": 0,
+    "uses_existing": 1,
+    "no_ids": 2,
+    "impact_search_hits": 3,
+    "impact_search_parsed": 2,
+    "impact_pool": 3
+  },
+  "candidates": [
+    {
+      "pmcid": "PMC9327302",
+      "pmid": null,
+      "doi": "10.1093/nar/gkac522",
+      "title": "Torsional behaviour of supercoiled DNA regulates recognition of architectural protein Fis on minicircle DNA",
+      "journal": "Nucleic Acids Research",
+      "journal_abbrev": "Nucleic Acids Res",
+      "authors": "",
+      "pub_date": "2022-06-24",
+      "index_date": "2026-10-13",
+      "license": "cc by",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "AbstractThree-dimensional genome organization is indispensable for regulating its functions. Experimental techniques based on the proximity ligation principle have identified spatially segregated domains at a sub-megabase level. The transcriptional activity of these domains is strongly coupled with the supercoiled DNA topology. The underlying molecular principle however remains unknown. By developing a computational framework, we investigate the differential kinetics of an architectural protein Fis on supercoiled DNA. We find that DNA supercoiling favours formation of juxtaposition sites where proteins can perform intersegmental transfer between the spatially close sites. The juxtaposition sites in positively supercoiled DNA are torsionally pinned that results in a slow protein diffusion on it, whereas the torsional behaviour of negatively supercoiled DNA ensures rapid protein-DNA communication and overall fast recognition of the cognate site by proteins. The result is robust for other proteins irrespective of their molecular features. Furthermore, our study suggests that variation in protein diffusivity on different supercoiled DNA also influences the shape of the latter. By unravelling the underlying molecular picture, our results unravel a plausible link between the degree of DNA supercoiling and the regulation of gene transcription that significantly advances the current understanding of the function and organization of chromatin inside cells.",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "3IV5"
+      ],
+      "emdb_ids": [],
+      "cited_structures": [
+        {
+          "pdb_id": "3IV5",
+          "status": "released",
+          "title": "Crystal structure of Fis bound to 27 bp optimal binding sequence F1",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 2.9,
+          "release_date": "2010-04-28",
+          "deposit_date": "2009-08-31",
+          "citation_doi": "10.1101/gad.1900610",
+          "citation_pmid": "20395367",
+          "citation_title": "The shape of the DNA minor groove directs binding by the DNA-bending protein Fis.",
+          "polymers": [
+            {
+              "description": "DNA (27-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": []
+            },
+            {
+              "description": "DNA (27-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": []
+            },
+            {
+              "description": "DNA-binding protein fis",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0A6R3"
+              ],
+              "organisms": [
+                "Escherichia coli"
+              ]
+            }
+          ],
+          "ligands": []
+        }
+      ],
+      "impact": {
+        "score": 5,
+        "types": [],
+        "validation": [
+          "kinetic"
+        ],
+        "low": [],
+        "journal": true,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [
+        {
+          "uniprot": "P0A6R3",
+          "gene": "fis",
+          "synonyms": [],
+          "name": "DNA-binding protein Fis",
+          "organism": "Escherichia coli (strain K12)"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC1081557",
+      "pmid": null,
+      "doi": null,
+      "title": "Eighth International Conference on the Juvenile Hormones",
+      "journal": "Journal of Insect Science",
+      "journal_abbrev": "J Insect Sci",
+      "authors": "",
+      "pub_date": "2004-01-01",
+      "index_date": "2026-10-13",
+      "license": null,
+      "pub_types": [
+        "meeting-report",
+        "meeting report"
+      ],
+      "abstract": "",
+      "source": "impact_search",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "cited_structures": [],
+      "impact": {
+        "score": 2,
+        "types": [],
+        "validation": [],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC7122369",
+      "pmid": null,
+      "doi": "10.1007/978-3-7091-1419-3_8",
+      "title": "Virus-like Particle Vaccines for Norovirus Gastroenteritis",
+      "journal": "Molecular Vaccines",
+      "journal_abbrev": null,
+      "authors": "Chen Q.",
+      "pub_date": "2013-06-10",
+      "index_date": "2026-10-13",
+      "license": null,
+      "pub_types": [
+        "chapter-article"
+      ],
+      "abstract": "AbstractGastroenteritis (GE) and its associated diarrheal diseases remain as one of the top causes of death in the world. Noroviruses (NoVs) are a group of genetically diverse RNA viruses that cause the great majority of nonbacterial gastroenteritis in humans. However, there is still no vaccine licensed for human use to prevent NoV GE. The lack of a tissue culture system and a small animal model further hinders the development of NoV vaccines.Virus-like particles (VLPs) that mimic the antigenic architecture of authentic virions, however, can be produced in insect, mammalian, and plant cells by the expression of the capsid protein. The particulate nature and high-density presentation of viral structure proteins on their surface render VLPs as a premier vaccine platform with superior safety, immunogenicity, and manufacturability. Therefore, this chapter focuses on the development of effective NoV vaccines based on VLPs of capsid proteins. The expression and structure of NoV VLPs, especially VLPs of Norwalk virus, the prototype NoV, are extensively discussed. The ability of NoV VLPs in stimulating a potent systemic and mucosal anti-NoV immunity through oral and intranasal delivery in mice is presented.The advantages of plant expression systems as a novel production platform for VLP-based NoV vaccines are discussed in light of their cost-effectiveness, production speed, and scalability. Recent achievements from the first successful demonstration of NoV VLP production in plant expression system under the current Good Manufacture Practice (cGMP) regulation by the US Food and Drug Administration (FDA) are detailed.Moreover, results of human clinical trials demonstrating the safety and efficacy of insect and plant-derived NoV VLPs are also presented. Due to the diversity of capsid protein among different NoV strains and its rapid antigenic drift, we speculate that vaccine development should focus on multivalent VLP vaccines derived from capsid proteins of the most prevalent strains. With the very recent approval of the first plant-made biologics by the FDA, we also speculate that plant-based production systems will play an important role in manufacturing such multivalent VLP-based NoV vaccines.Keywords: Reverse Transcription Polymerase Chain Reaction, Transient Expression System, Norwalk Virus, Venezuelan Equine Encephalitis, Plant Expression System",
+      "source": "impact_search",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "cited_structures": [],
+      "impact": {
+        "score": 4,
+        "types": [
+          "drug"
+        ],
+        "validation": [
+          "mice"
+        ],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [],
+      "score": 0
+    }
+  ]
+}
