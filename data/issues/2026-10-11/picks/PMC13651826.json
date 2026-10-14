@@ -1,20 +1,24 @@
 {
   "pmcid": "PMC13651826",
   "rank": 2,
-  "headline": "HLA-DR3のRo60ペプチドは、TCRに3残基を見せる",
-  "subhead": "自己抗原ペプチドとの結晶構造（2.87 Å）。Treg療法の設計の手がかりになる",
+  "headline": "Ro60ペプチドは、HLA-DR3の上で3つの残基をTCRに向ける",
+  "subhead": "自己抗原ペプチドと結合したHLA-DR3の初の結晶構造（2.87 Å）。TCRを組み込んだTregは抑制力が約2倍に",
   "target_label": "HLA-DR3–Ro60ペプチド（ヒト）",
   "summary": {
-    "question": "HLA-DR3がRo60ペプチドを提示する構造は、CLIPペプチドのもの以外なかった。",
-    "approach": "Ro60ペプチドを結合したHLA-DR3の結晶構造を決め、Ro60反応性TCRを導入したTregも作った。",
-    "result": "Ro60ペプチドは標準的な向きで結合し、P2・P5・P8の3残基がTCR側に露出していた。",
-    "learned": "Ro60反応性TCRを導入したTregは、自己反応性T細胞を通常のTregより効果的に抑えた。",
+    "question": "シェーグレン病では、HLA-DR3が自己抗原Ro60の断片をT細胞に見せる。しかしその結合の構造は、これまで分かっていなかった。",
+    "approach": "Ro60ペプチドを結合したHLA-DR3の結晶構造を決め、Ro60に反応するTCR（T細胞の受容体）を組み込んだ制御性T細胞（Treg）も作った。",
+    "result": "ペプチドは標準的な向きで結合し、P2・P5・P8の3つの残基が外に出てTCRと接する位置にあった。",
+    "learned": "このTCRを組み込んだTregは、Ro60に反応する炎症を、通常のTregより約2倍強く抑えた。",
     "open": "導入したTregの性質と安定性を、さまざまな条件で調べることが今後の課題とされる。",
     "evidence": {
       "question": [
         {
-          "quote": "yet no structural data currently exist for Ro60 peptide presentation by this allele beyond the invariant CLIP peptide structure",
+          "quote": "This allele is particularly efficient at presenting peptides derived from the Ro autoantigen",
           "section": "Introduction"
+        },
+        {
+          "quote": "Notably, this is the first structure of HLA-DR3 bound to an autoantigenic peptide, as previous structural data have been limited to complexes with CLIP peptides.",
+          "section": "Results"
         }
       ],
       "approach": [
@@ -29,15 +33,19 @@
       ],
       "result": [
         {
-          "quote": "In the resulting structure, the Ro60369–383 peptide adopts a canonical register, with the 9-mer binding core defined as FLLAVDVSA.",
+          "quote": "Three residues: P2-Leucine, P5-Valine, and P8-Serine were solvent-exposed and positioned for TCR recognition (Figure 3).",
           "section": "Results"
         },
         {
-          "quote": "Three residues: P2-Leucine, P5-Valine, and P8-Serine were solvent-exposed and positioned for TCR recognition (Figure 3).",
+          "quote": "the Ro60369–383 peptide adopts a canonical register",
           "section": "Results"
         }
       ],
       "learned": [
+        {
+          "quote": "Importantly, Ro60-Treg exhibited approximately 2-fold enhanced suppression of Ro60-driven inflammatory responses compared with non-engineered Treg, demonstrating robust antigen-specific regulatory function across both donor types.",
+          "section": "Results"
+        },
         {
           "quote": "We designed a TCR-Treg that recognizes a dominant epitope of the Ro60 antigen (Ro60369-383) presented by HLA-DRB1∗03:01 and demonstrate that these cells can selectively suppress autoreactive T cells more effectively than polyclonal Treg.",
           "section": "Abstract"

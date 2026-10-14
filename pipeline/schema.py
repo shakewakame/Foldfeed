@@ -47,30 +47,31 @@ CATEGORIES = {
 
 # field: (required, max characters)
 LIMITS = {
-    "headline": (True, 32),
-    "subhead": (True, 56),
+    "headline": (True, 36),
+    "subhead": (True, 64),
     "target_label": (True, 30),
-    "summary.question": (True, 64),
-    "summary.approach": (True, 64),
-    "summary.result": (True, 72),
-    "summary.learned": (True, 72),
-    "summary.open": (False, 64),
+    "summary.question": (True, 80),
+    "summary.approach": (True, 80),
+    "summary.result": (True, 90),
+    "summary.learned": (True, 100),
+    "summary.open": (False, 80),
     "highlight.text": (True, 200),
     "lab_note": (False, 160),
 }
+FIGURE_TITLE_LIMIT = 16   # a figure_notes title / a compare panel title
 
 EXAMPLE = {
     "pmcid": "PMC00000000",
     "rank": 1,
-    "headline": "主見出し（32字以内）：発見の面白さを先に見せる短い一文。一覧と記事の頭に大きく出る",
-    "subhead": "補足（56字以内）：主見出しの内容を、構造や手法の言葉で具体的に。一覧では主見出しの下に出る",
+    "headline": "主見出し（36字以内）：発見の面白さを先に見せる短い一文。一覧と記事の頭に大きく出る",
+    "subhead": "補足（64字以内）：主見出しの内容を、構造や手法の言葉で具体的に。一覧では主見出しの下に出る",
     "target_label": "標的の短い表記（例：RyR1（ウサギ骨格筋））",
     "summary": {
-        "question": "これまでの疑問・課題（64字以内）：論文が「分かっていなかった」と書いていること",
-        "approach": "アプローチ（64字以内）：何をどう調べたか",
-        "result": "結果（72字以内）：得られた観察・数値",
-        "learned": "わかったこと（72字以内）：その結果から論文が結論していること（著者が推測なら推測と書く）",
-        "open": "残された課題（64字以内・任意）：論文自身が「まだ分からない」「今後の課題」と書いていることだけ。書いていなければこの行ごと省く",
+        "question": "これまでの疑問・課題（80字以内）：論文が「分かっていなかった」と書いていること",
+        "approach": "アプローチ（80字以内）：何をどう調べたか",
+        "result": "結果（90字以内）：得られた観察・数値",
+        "learned": "わかったこと（100字以内）：その結果から論文が結論していること（著者が推測なら推測と書く）",
+        "open": "残された課題（80字以内・任意）：論文自身が「まだ分からない」「今後の課題」と書いていることだけ。書いていなければこの行ごと省く",
         "evidence": {
             "question": [{"quote": "上の各項目を支える、論文本文からの逐語引用（英語のまま）", "section": "Introduction"}],
             "approach": [{"quote": "…", "section": "Abstract"}],
@@ -102,6 +103,17 @@ EXAMPLE = {
     "ligand_names": {"A1CKT": "OX04529", "43M": "4CmC"},
     "section": "注目の構造（新しい構造以外）なら \"impact\"。新しい構造の記事では書かない",
     "site_ligand": "結合部位の拡大図に使うリガンドの ID（省略時は ligand_names の最初、なければ最大のリガンド。\"\" で拡大図なし）",
+    # Optional: what the figure points at. legend_labels / ligand_names already put a leader-line label on each protein and ligand.
+    "figure_notes": [{"title": "ゲートヘリックス（16字以内）", "sub": "Wzt の一部（任意）",
+                      "entity": "凡例の何番目のタンパク質か（1 始まり）", "range": ["最初の残基番号", "最後の残基番号（論文の番号）"]}],
+    # Optional: a second figure that shows what the paper found, from two or three PDB entries of the same assembly
+    # (e.g. open and closed). Superposed on one polymer, same view; the stretch of figure_notes[0] in the accent colour.
+    "compare": {"panels": [{"pdb": "25IN", "title": "基質結合型"}, {"pdb": "25IO", "title": "ATP 結合型"}],
+                "align": "重ね合わせに使うタンパク質（凡例の何番目か、1 始まり）",
+                "focus": "（任意）省略時は figure_notes の最初",
+                "mark": {"entity": 2, "residue": 36, "text": "約40 Å（論文が書いている距離）"}},
+    # figure_notes / compare を付けたときは必須：論文本文の逐語引用（残基の範囲・構造の違い・距離を支えるもの）
+    "figure_evidence": [{"quote": "…", "section": "Results"}],
 }
 
 

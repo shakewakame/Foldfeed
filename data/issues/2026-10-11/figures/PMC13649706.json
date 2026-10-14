@@ -1,15 +1,15 @@
 {
- "pdb_id": "25IP",
+ "pdb_id": "25IN",
  "legend": [
   {
    "color": "#3C5A8C",
-   "label": "Wzm（膜貫通サブユニット）",
+   "label": "Wzm（膜貫通）",
    "desc": "Probable O-antigen/lipopolysaccharide transport integral membrane protein ABC transporter RfbD",
    "entity": "1"
   },
   {
    "color": "#C9A04B",
-   "label": "Wzt（ATP 結合サブユニット）",
+   "label": "Wzt（ATP 結合）",
    "desc": "Probable O-antigen/lipopolysaccharide transport ATP-binding protein ABC transporter RfbE",
    "entity": "2"
   }
@@ -17,39 +17,28 @@
  "ligands": [
   {
    "id": "A1E8P",
-   "label": "ファルネシルリン酸",
+   "label": "LLG3の脂質（推定）",
    "color": "#C23B8E",
    "desc": "[(2~{Z},6~{E})-3,7,11-trimethyldodeca-2,6,10-trienyl] dihydrogen phosphate",
-   "entity": [
-    "4"
-   ],
-   "sites": [
-    [
-     "G",
-     "301"
-    ],
-    [
-     "L",
-     "301"
-    ]
-   ]
-  },
-  {
-   "id": "ATP",
-   "label": "ATP",
-   "color": "#2F9E57",
-   "desc": "Adenosine-5'-Triphosphate",
    "entity": [
     "5"
    ],
    "sites": [
     [
-     "H",
+     "I",
      "301"
     ],
     [
      "J",
+     "302"
+    ],
+    [
+     "K",
      "301"
+    ],
+    [
+     "L",
+     "302"
     ]
    ]
   }
@@ -57,18 +46,32 @@
  "site": {
   "ligand": "A1E8P",
   "residues": [
-   "C178",
-   "L182",
-   "R185",
-   "Y186",
-   "L264",
-   "F267",
-   "A268",
-   "Y272",
-   "F21"
+   "R45",
+   "R48",
+   "W55",
+   "I56",
+   "A59",
+   "T62",
+   "P191",
+   "L192",
+   "S195",
+   "K29"
   ],
-  "polar": 1,
+  "polar": 2,
   "neighbours": [],
-  "label": "ファルネシルリン酸"
+  "label": "LLG3の脂質（推定）"
+ },
+ "compare": {
+  "panels": [
+   {
+    "pdb": "25IN",
+    "title": "基質（LLG3）結合型"
+   },
+   {
+    "pdb": "25IO",
+    "title": "ATP 結合型"
+   }
+  ],
+  "distance": 37.2
  }
 }

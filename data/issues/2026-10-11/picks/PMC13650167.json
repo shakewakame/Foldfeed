@@ -1,17 +1,21 @@
 {
   "pmcid": "PMC13650167",
   "rank": 5,
-  "headline": "天然変性のNIDが、結核菌RhoのRut部位の選び方を左右する",
-  "subhead": "NIDを欠くと、H-SELEXで見つかるRut部位が1759から47に減った",
+  "headline": "結核菌のRhoは、天然変性のNIDで転写停止の目印を選ぶ",
+  "subhead": "NIDを欠くと、Rhoが見つけるRut部位は1759か所から47か所に減った",
   "target_label": "Rho（結核菌）",
   "summary": {
-    "question": "結核菌のRhoには、機能不明の大きなN末端挿入ドメイン（NID）があった。",
-    "approach": "Helicase-SELEXでRut部位を探し、結合測定・NMR・クライオ電顕でNIDを調べた。",
-    "result": "Rut部位は全長Rhoで1759個、NID欠失型では47個だった。NIDは天然変性だった。",
-    "learned": "NIDは天然変性のまま、二次構造をもつRut部位を捉えるのに重要と考えられる。",
+    "question": "Rhoは、RNAのRut部位に取りついて転写を止める。結核菌のRhoに特有の大きなNIDドメインの役割は不明だった。",
+    "approach": "配列を網羅的に探す実験（Helicase-SELEX）で結核菌ゲノム全体のRut部位を探し、NMRとクライオ電顕でNIDの状態を調べた。",
+    "result": "Rut部位は全長のRhoで1759か所、NIDを欠くRhoでは47か所だった。NIDは決まった形をとらない（天然変性）ドメインだった。",
+    "learned": "決まった形をもたないNIDが、二次構造をもつRut部位をつかまえるのに重要とみられる。",
     "open": "MtbRhoとRNAポリメラーゼの相互作用が一過性か安定か、NIDが関わるかは、実験で確かめる必要がある。",
     "evidence": {
       "question": [
+        {
+          "quote": "RDTT relies on the ATP-dependent Rho helicase, which engages nascent transcripts at loosely defined, C > G-biased Rho utilization (Rut) sites to dismantle transcription complexes.",
+          "section": "Abstract"
+        },
         {
           "quote": "In Mycobacterium tuberculosis, Rho features a unique, large N-terminal insertion domain (NID) of uncertain function.",
           "section": "Abstract"
@@ -41,6 +45,10 @@
         {
           "quote": "Complementary RDTT assays, affinity measurements, solution NMR, and cryogenic electron microscopy analyses show that the NID is intrinsically disordered, yet critical for engaging Rut sites with substantial secondary structure.",
           "section": "Abstract"
+        },
+        {
+          "quote": "Collectively, our data demonstrate that the NID of MtbRho is an intrinsically disordered domain (IDR) critical for the efficient recognition and utilization of genuine Rut sites across the mycobacterial transcriptome.",
+          "section": "Introduction"
         }
       ],
       "open": [

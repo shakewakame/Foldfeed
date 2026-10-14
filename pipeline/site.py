@@ -140,10 +140,10 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .hero-grid {{ display:grid; grid-template-columns:minmax(0,46fr) minmax(0,54fr); gap:52px; align-items:center; }}
 .hero h3 {{ margin:0; font-size:42px; line-height:1.36; font-weight:700; color:var(--ink); text-wrap:balance; }}
 .hero .sub {{ margin:12px 0 0; font-size:18px; line-height:1.75; color:var(--desc); }}
-.hero .intro4 {{ margin-top:24px; }}
-.hero .intro4 div {{ grid-template-columns:146px minmax(0,1fr); gap:12px; padding:8px 0; }}
-.hero .intro4 dt {{ font-size:11px; padding-top:4px; }}
-.hero .intro4 dd {{ font-size:15px; line-height:1.75; }}
+.hero .intro4 {{ margin-top:22px; }}
+.hero .intro4 div {{ grid-template-columns:128px minmax(0,1fr); gap:12px; padding:5px 0; }}
+.hero .intro4 dt {{ font-size:12px; padding-top:5px; }}
+.hero .intro4 dd {{ font-size:15px; line-height:1.85; }}
 .hf {{ display:grid; grid-template-columns:minmax(0,1.15fr) minmax(0,.9fr) minmax(0,1.5fr) minmax(0,1fr); gap:10px 18px; margin:20px 0 0; font-family:var(--mono); }}
 .hf dt {{ font-size:10.5px; letter-spacing:.1em; color:var(--mute); }}
 .hf dd {{ margin:0; font-size:12px; line-height:1.6; color:var(--ink2); overflow-wrap:anywhere; }}
@@ -213,6 +213,15 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .v3d:not(.loading) .loading-only, .v3d.loading .off-only, .v3d.loading .on-only {{ display:none; }}
 .v3d-msg {{ margin:8px 0 0; font-family:var(--mono); font-size:12px; color:var(--acc-ink); }}
 .v3d .msp-state-snapshot-viewport-controls {{ display:none; }}
+.figtabs {{ display:flex; gap:22px; margin:0 0 8px; font-family:var(--mono); font-size:12.5px; }}
+.figtabs button {{ font:inherit; letter-spacing:.04em; background:none; border:0; border-bottom:2px solid transparent; padding:2px 0 4px;
+                   color:var(--mute); cursor:pointer; }}
+.figtabs button:hover {{ color:var(--ink); }}
+.figtabs button.on {{ color:var(--ink); border-bottom-color:var(--acc); }}
+.v3d .fig.cmp, .v3d.show-cmp .fig:not(.cmp), .v3d.show-cmp .v3d-bar {{ display:none; }}
+.v3d.show-cmp .fig.cmp {{ display:block; }}
+.cmpfig {{ margin:26px 0 0; }}
+.cmpfig .fig {{ border-top:1px solid var(--hair); border-bottom:1px solid var(--hair); }}
 .legend {{ display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px 44px; margin:18px 0 0; }}
 .legend h4 {{ margin:0 0 4px; font-family:var(--mono); font-size:11px; letter-spacing:.12em; font-weight:500; color:var(--mute); }}
 .legend ul {{ list-style:none; margin:0; padding:0; }}
@@ -338,14 +347,11 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .row.feat h3 {{ font-size:23px; }}
 .feat-mark {{ display:block; text-transform:uppercase; margin:0 0 2px; font-family:var(--mono); font-size:11px; letter-spacing:.12em; color:var(--acc-ink); font-weight:700; }}
 
-/* the article's four-line introduction */
-.intro4 {{ margin:8px 0 0; }}
-.intro4 div {{ display:grid; grid-template-columns:150px minmax(0,1fr); gap:16px; padding:10px 0; border-top:1px solid var(--hair); }}
-.intro4 div:last-child {{ border-bottom:1px solid var(--hair); }}
-.intro4 dt {{ font-family:var(--mono); font-size:11.5px; letter-spacing:.08em; color:var(--acc-ink); padding-top:5px; }}
-.intro4 dd {{ margin:0; font-size:16px; line-height:1.85; }}
-.intro4 .learned dd {{ font-weight:700; }}
-.intro4 .open dt {{ color:var(--mute); }}
+/* the article's four-line introduction: plain lines, one weight, no rules; the labels are quiet and sit beside the text */
+.intro4 {{ margin:10px 0 0; max-width:46em; }}
+.intro4 div {{ display:grid; grid-template-columns:138px minmax(0,1fr); gap:14px; padding:6px 0; }}
+.intro4 dt {{ font-size:12.5px; letter-spacing:.04em; color:var(--mute); padding-top:6px; }}
+.intro4 dd {{ margin:0; font-size:16px; line-height:1.9; color:var(--ink2); }}
 .intro4 .open dd {{ color:var(--desc); font-size:15px; }}
 
 /* proteins.html: browse by kind of protein, search by name or ID */
@@ -430,6 +436,10 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
   .site dl {{ grid-template-columns:minmax(0,1fr); }}
   .lab div {{ grid-template-columns:92px 1fr; }}
   .legend {{ grid-template-columns:minmax(0,1fr); }}
+  /* the annotated figures carry small text: keep them readable and let the figure be panned inside its frame */
+  .v3d:not(.on):not(.loading) .v3d-view, .cmpfig {{ overflow-x:auto; -webkit-overflow-scrolling:touch; }}
+  .v3d:not(.on):not(.loading) .v3d-view .fig, .cmpfig .fig {{ width:auto; min-width:760px; max-width:none; }}
+  .v3d:not(.on):not(.loading) .v3d-view .fig.cmp {{ min-width:760px; }}
 }}
 """
 
@@ -649,6 +659,9 @@ def figures_html(cand: dict, pick: dict, date: str, root: Path, fig_base: str, u
     if render.is_impact(pick) and info.get("pdb_id"):
         out.append(f'<p class="pdbnote">PDB {esc(info["pdb_id"])}（論文が使った既存の構造）</p>')
     out.append(legend_html(info))
+    if info.get("compare") and (fig_dir / f"{pm}-compare.svg").exists():
+        out.append(f'<div class="cmpfig"><img class="fig" src="{fig_base}/{date}/{esc(pm)}-compare.svg" '
+                   f'alt="構造の比較：{esc("と".join(x["title"] for x in info["compare"]["panels"]))}" loading="lazy"></div>')
     st = info.get("site")
     if st and (fig_dir / f"{pm}-site.svg").exists():
         rows = [("結合部位", esc(st["label"]) + (f'（{esc("・".join(st["neighbours"]))} と隣接）' if st.get("neighbours") else "")),
@@ -834,9 +847,17 @@ def hero_html(feature: dict | None, picks: list, date: str, root: Path, fig_base
     big = root / date / "figures" / f"{cand['pmcid']}.svg"   # the article's own figure, larger than the list thumbnail
     info = read_json(root / date / "figures" / f"{cand['pmcid']}.json") if (root / date / "figures" / f"{cand['pmcid']}.json").exists() else {}
     attrs, wait, bar = viewer_bar(info, up) if big.exists() else ("", "", "")
+    has_cmp = bool(info.get("compare")) and (root / date / "figures" / f"{cand['pmcid']}-compare.svg").exists()
+    tabs = cmp_img = ""
+    if has_cmp:
+        first_tab = "全体と結合部位" if info.get("site") else "全体"
+        tabs = (f'<div class="figtabs"><button type="button" data-fig="main" class="on">{first_tab}</button>'
+                f'<button type="button" data-fig="cmp">構造の比較</button></div>')
+        cmp_img = (f'<img class="fig cmp" src="{fig_base}/{date}/{esc(cand["pmcid"])}-compare.svg" '
+                   f'alt="構造の比較：{esc("と".join(x["title"] for x in info["compare"]["panels"]))}">')
     if attrs:   # the structure can be turned in place (Mol*, loaded only when asked for)
-        fig = (f'<div class="v3d"{attrs}><div class="v3d-view"><a href="{href}"><img class="fig" '
-               f'src="{fig_base}/{date}/{esc(cand["pmcid"])}.svg" alt="構造図：{esc(pk["target_label"])}"></a>'
+        fig = (f'<div class="v3d"{attrs}>{tabs}<div class="v3d-view"><a href="{href}"><img class="fig" '
+               f'src="{fig_base}/{date}/{esc(cand["pmcid"])}.svg" alt="構造図：{esc(pk["target_label"])}"></a>{cmp_img}'
                f'<div class="v3d-canvas"></div>{wait}</div>{bar}</div>')
     elif big.exists():
         fig = (f'<a class="thumb" href="{href}"><img src="{fig_base}/{date}/{esc(cand["pmcid"])}.svg" '

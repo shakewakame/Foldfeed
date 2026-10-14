@@ -1,18 +1,22 @@
 {
   "pmcid": "PMC13649839",
   "rank": 7,
-  "headline": "強光・昇温処理でPSIIはアンテナが外れ、重炭酸も見えなくなる",
-  "subhead": "シロイヌナズナPSIIのクライオ電顕（2.74 Å）。D1のHis252が向きを変えていた",
+  "headline": "強光と高温でPSIIはアンテナを失い、重炭酸イオンも抜ける",
+  "subhead": "シロイヌナズナのPSIIを2.74 Åで解析。D1のHis252が内側を向き、自己切断を招く可能性がある",
   "target_label": "PSII C2S2（シロイヌナズナ）",
   "method_label": "クライオ電顕・全体 2.74 Å",
   "summary": {
-    "question": "強光と高温はPSIIを傷める。その構造への影響を調べることが課題だった。",
-    "approach": "単離したPSII（C2S2）に強光と昇温を与え、クライオ電顕で構造を決めた。",
-    "result": "アンテナなどのサブユニットが失われ、非ヘム鉄付近のD1・D2で損傷が見え、重炭酸も外れていた。",
-    "learned": "D1のHis252が動き、セリンプロテアーゼ様の三つ組を作ってD1の自己切断を招く可能性がある。",
-    "open": "提案したセリンプロテアーゼ様の三つ組が、D1を自己切断できるかは、いまは分からない。",
+    "question": "強い光や高温は、光合成で水を分解するタンパク質複合体PSIIを傷める。その傷が構造のどこに出るかを知りたかった。",
+    "approach": "単離したPSII（C2S2型）に強い光と高温を与えてクライオ電顕で解析し、弱い光で凍らせた既存の構造と比べた。",
+    "result": "アンテナなどのサブユニットが外れ、電子を受け取る側の非ヘム鉄まわりに損傷があり、重炭酸イオンも失われていた。",
+    "learned": "D1のHis252が動き、セリンプロテアーゼ（タンパク質を切る酵素）に似た3残基の組ができて、D1を自ら切断させる可能性がある。",
+    "open": "この3残基の組が実際にD1を切断できるかは、まだ分かっていない。",
     "evidence": {
       "question": [
+        {
+          "quote": "Photosystem II (PS II) is a large membrane-bound pigment-protein complex responsible for extracting electrons and protons from water during photosynthesis and releasing molecular oxygen into the atmosphere.",
+          "section": "Abstract"
+        },
         {
           "quote": "While light is required to drive the photochemical reactions, high light and high temperature can be damaging to PS II.",
           "section": "Abstract"
@@ -25,6 +29,10 @@
       "approach": [
         {
           "quote": "To gain insight into potential structural consequences of such conditions, we performed an exploratory study where isolated PS II complexes (C2S2) from Arabidopsis thaliana were exposed to high light and elevated temperature and employed cryo-electron microscopy for structural determination.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "This resulted in a ‘high light’ structure (2.74 Å global resolution) which is compared to the published 2.44 Å structure of intact Arabidopsis-PSII vitrified under dim light conditions (control).",
           "section": "Abstract"
         }
       ],
@@ -42,6 +50,10 @@
         {
           "quote": "Finally, we were able to observe that high light/elevated temperature conditions result in the movement of the D1:His252 residue, potentially forming a serine protease triad that may trigger auto-proteolysis of the D1 subunit.Supplementary InformationThe online version contains supplementary material available at https://doi.org/10.1007/s11120-026-01238-w.Keywords: Photosynthesis, Photosystem II, Structure, Cryo-EM, High light, High temperature",
           "section": "Abstract"
+        },
+        {
+          "quote": "We speculate that this may form an atypical serine-protease triad or diad (Ekici et al.",
+          "section": "Results"
         }
       ],
       "open": [

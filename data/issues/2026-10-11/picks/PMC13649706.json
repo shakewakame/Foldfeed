@@ -1,29 +1,29 @@
 {
   "pmcid": "PMC13649706",
   "rank": 1,
-  "headline": "基質とATPで切り替わる、結核菌ガラクタン輸送体の3状態",
-  "subhead": "基質結合でゲートヘリックスが上向きに伸び、ATP結合で下向きに倒れる",
+  "headline": "基質とATPで構造が切り替わる、結核菌のガラクタン輸送体",
+  "subhead": "3つの状態をクライオ電顕で解析。ゲートヘリックスの動きが輸送のカギを握る",
   "target_label": "WzmWzt（結核菌）",
   "summary": {
-    "question": "結核菌の細胞壁ガラクタンを運ぶ輸送体が、基質をどう認識して輸送するかは未解決だった。",
-    "approach": "結核菌のWzmWztを、基質様の密度あり・ATP結合・DDM/ATP結合の3状態でクライオ電顕解析した。",
-    "result": "基質結合型ではゲートヘリックスが上向きに伸び、ATP結合型では下向きに動いてWztが二量体化した。",
-    "learned": "ゲートヘリックスの上向きの伸びが、Wztの二量体化の準備になる。必須の残基も特定した。",
-    "open": "DDMが入った中間的な状態が生理的なものかは、まだ決まっていない。",
+    "question": "ABC輸送体のWzmWztは、結核菌の細胞壁の材料になる糖鎖（ガラクタン）を膜の向こう側へ運ぶ。その運び方は未解明だった。",
+    "approach": "基質とみられる分子が結合した状態、ATPが結合した状態など、WzmWztの3つの姿をクライオ電顕で調べた。",
+    "result": "基質が結合した状態ではゲートヘリックスが上向きに伸び、ATPが結合すると約40 Å下向きに動いて、2つのWztが合わさって二量体になった。",
+    "learned": "基質が結合するとゲートヘリックスが伸び、二量体になる準備が整う。ATPで二量体になると基質の居場所がつぶれ、基質は膜の通路へ押し出されると考えられる。",
+    "open": "界面活性剤DDMが入った中間的な状態が、細胞内でも起こるかは未確認。",
     "evidence": {
       "question": [
         {
-          "quote": "However, due to the complex chemical structure of the natural LLP substrates and the existence of detergent micelles or phospholipids used in nanodisc reconstitution, the molecular basis of natural bacterial LLP recognition by these ABC transporters, in particular the transmembrane domains (TMDs), remains largely unresolved.",
-          "section": "Introduction"
+          "quote": "Cross-membrane translocation of LLG is energetically unfavorable and is therefore catalyzed by WzmWzt, a prominent member of the polysaccharide ABC transporter sub-family.",
+          "section": "Abstract"
         },
         {
-          "quote": "To address the long-standing mechanism of LLP recognition and ATP-dependent translocation by polysaccharide ABC transporters, we determined the cryo-EM structures of the Mtb LLG transporter WzmWztMtb in different conformations.",
+          "quote": "However, due to the complex chemical structure of the natural LLP substrates and the existence of detergent micelles or phospholipids used in nanodisc reconstitution, the molecular basis of natural bacterial LLP recognition by these ABC transporters, in particular the transmembrane domains (TMDs), remains largely unresolved.",
           "section": "Introduction"
         }
       ],
       "approach": [
         {
-          "quote": "Here we present cryo-EM structures of WzmWztMtb to uncover critical steps of Mtb LLG translocation.",
+          "quote": "Notably, densities suggestive of the mycobacterial-derived LLG substrates were observed in the structure of WzmWztMtb, indicating that the substrate may bind through two Wzm and two Wzt subunits.",
           "section": "Abstract"
         },
         {
@@ -39,21 +39,25 @@
         {
           "quote": "The ATP-bound structure revealed a remarkable downward movement of the gate helix, together with the Wzt dimerization.",
           "section": "Abstract"
+        },
+        {
+          "quote": "The distance between the upward and downward gate helix is ~ 40 Å",
+          "section": "Results"
         }
       ],
       "learned": [
         {
-          "quote": "Using two conditional mycobacterial mutants for functional analyses, we have identified residues on the Wzm N-terminal interface helix (IFN) and on the Wzt helical domain are essential for LLG recognition and translocation in vivo.",
+          "quote": "This proposed LLG binding is fulfilled by a fully upward extension of the Wzt gate helix, which serves as a critical step to prime Wzt for dimerization.",
           "section": "Abstract"
         },
         {
-          "quote": "This proposed LLG binding is fulfilled by a fully upward extension of the Wzt gate helix, which serves as a critical step to prime Wzt for dimerization.",
-          "section": "Abstract"
+          "quote": "ATP binding-induced NBD dimerization, together with the local conformational changes on the TMD interface, crushes the LLG3 binding cavity and forces the substrate to translocate through the TMD cavity.",
+          "section": "Discussion"
         }
       ],
       "open": [
         {
-          "quote": "Whether the DDM-bound conformation is physiologically relevant remains to be determined.Fig.",
+          "quote": "Whether the DDM-bound conformation is physiologically relevant remains to be determined",
           "section": "Results"
         }
       ]
@@ -139,15 +143,59 @@
   ],
   "ligand_label": "LLG3（推定）、ATP、DDM",
   "ligand_names": {
-    "A1E8P": "ファルネシルリン酸"
+    "A1E8P": "LLG3の脂質（推定）"
   },
   "editor_notes": "初構造の判定は candidates の first_structure に従った（論文は『初』とは明言せず、関連する Mab 類縁体の構造が直前に報告されている）。LLG3の割り当ては論文自身が暫定としている。構造図は PDB 25IN（最高分解能は 25IP の 2.61 Å）。",
   "legend_labels": [
-    "Wzm（膜貫通サブユニット）",
-    "Wzt（ATP 結合サブユニット）"
+    "Wzm（膜貫通）",
+    "Wzt（ATP 結合）"
   ],
   "categories": [
     "transporter",
     "pathogen"
+  ],
+  "ga_pdb_id": "25IN",
+  "figure_notes": [
+    {
+      "title": "ゲートヘリックス",
+      "sub": "Wzt の一部",
+      "entity": 2,
+      "range": [
+        23,
+        46
+      ]
+    }
+  ],
+  "compare": {
+    "panels": [
+      {
+        "pdb": "25IN",
+        "title": "基質（LLG3）結合型"
+      },
+      {
+        "pdb": "25IO",
+        "title": "ATP 結合型"
+      }
+    ],
+    "align": 1,
+    "mark": {
+      "entity": 2,
+      "residue": 36,
+      "text": "約40 Å"
+    }
+  },
+  "figure_evidence": [
+    {
+      "quote": "except for N-terminal 1–10 of the TMD and N-terminal 1–5 of the NBD in both states, the C-terminus 40-46 of the NBD gate helix, and 265–273 of the NBD subunit in the open state, the N-terminal 23–33 of the NBD gate helix region",
+      "section": "Results"
+    },
+    {
+      "quote": "The distance between the upward and downward gate helix is ~ 40 Å by measuring the Cα of Ala36",
+      "section": "Results"
+    },
+    {
+      "quote": "Consequently, the gate helix region is dissociated from the TMDs and participates in ATP binding and NBD dimerization",
+      "section": "Results"
+    }
   ]
 }

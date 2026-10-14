@@ -26,8 +26,8 @@ import unicodedata
 
 from . import impact
 from .common import cached, issue_dir, read_json
-from .schema import (CATEGORIES, FEATURE_AXES, FEATURE_MIN, FEATURE_REASON_LIMIT, LAB_NOTE_FIELDS, LIMITS,
-                     SUMMARY_FIELDS, SUMMARY_OPTIONAL, TAGS)
+from .schema import (CATEGORIES, FEATURE_AXES, FEATURE_MIN, FEATURE_REASON_LIMIT, FIGURE_TITLE_LIMIT, LAB_NOTE_FIELDS,
+                     LIMITS, SUMMARY_FIELDS, SUMMARY_OPTIONAL, TAGS)
 
 NEW_KINDS = ("new_structure", "new_structure_ids_unlisted", "new_map_only")
 
@@ -56,6 +56,9 @@ def japanese_fields(pick: dict) -> list[str]:
     out += summary_texts(pick)
     out += [h.get("text", "") for h in pick.get("highlights", [])]
     out += [v for k, v in (pick.get("lab_notes") or {}).items() if k in LAB_NOTE_FIELDS and v]
+    cmp_ = pick.get("compare") or {}
+    out += [(cmp_.get("mark") or {}).get("text", "")] + [pn.get("title", "") for pn in cmp_.get("panels") or []]
+    out += [n.get("title", "") + " " + n.get("sub", "") for n in pick.get("figure_notes") or []]
     return [x for x in out if isinstance(x, str)]
 
 
@@ -119,6 +122,9 @@ def check_pick(pick: dict, cand: dict | None, corpus: str | None) -> tuple[list[
     if any(notes.get(k) for k in LAB_NOTE_FIELDS) and not notes.get("evidence"):
         warnings.append("lab_notes has content but no evidence quotes")
     quotes += [("lab_notes", e) for e in notes.get("evidence") or []]
+    fig_errors = check_figure_fields(pick, cand)
+    errors += fig_errors
+    quotes += [("figure_evidence", e) for e in pick.get("figure_evidence") or []]
 
     if corpus is None:
         errors.append("full-text packet missing; run pipeline.collect first")
@@ -134,6 +140,7 @@ def check_pick(pick: dict, cand: dict | None, corpus: str | None) -> tuple[list[
     structures = cand["own_structures"] + cand.get("cited_structures", [])
     errors += check_headline_claims(pick, corpus)
     errors += check_summary_claims(pick, corpus)
+    errors += check_figure_claims(pick, corpus)
     known_res = {round(s["resolution"], 2) for s in structures if s.get("resolution")}
     known_ids = {s["pdb_id"] for s in cand["own_structures"]} | set(cand.get("cited_pdb_ids", []))
     for text in japanese_fields(pick):
@@ -147,6 +154,57 @@ def check_pick(pick: dict, cand: dict | None, corpus: str | None) -> tuple[list[
             if re.search(r"[A-Z]", tok) and tok not in known_ids:
                 errors.append(f"PDB ID {tok} is not among this paper's entries")
     return errors, warnings
+
+
+def check_figure_fields(pick: dict, cand: dict) -> list[str]:
+    """figure_notes (a stretch of residues pointed at on the figure) and compare (a second figure from other PDB entries
+    of the same paper): well-formed, and backed by verbatim quotes (figure_evidence)."""
+    errors = []
+    notes, cmp_ = pick.get("figure_notes"), pick.get("compare")
+    if not notes and not cmp_:
+        return errors
+    if not pick.get("figure_evidence"):
+        errors.append("figure_notes / compare need figure_evidence (verbatim quotes that support the residues and the difference shown)")
+    for i, n in enumerate(notes or [], 1):
+        rng = n.get("range")
+        if not (isinstance(rng, list) and len(rng) == 2 and all(isinstance(x, int) for x in rng) and rng[0] <= rng[1]):
+            errors.append(f"figure_notes {i}: range must be [first, last] residue numbers")
+        if not isinstance(n.get("entity", 1), int) or n.get("entity", 1) < 1:
+            errors.append(f"figure_notes {i}: entity is the 1-based number in the legend")
+        if not n.get("title") or len(n["title"]) > FIGURE_TITLE_LIMIT:
+            errors.append(f"figure_notes {i}: title is missing or over {FIGURE_TITLE_LIMIT} characters")
+    if cmp_:
+        known = {s["pdb_id"] for s in cand.get("own_structures", []) + cand.get("cited_structures", [])} | set(cand.get("cited_pdb_ids", []))
+        panels = cmp_.get("panels") or []
+        if not 2 <= len(panels) <= 3:
+            errors.append("compare: 2 or 3 panels")
+        for i, pn in enumerate(panels, 1):
+            if pn.get("pdb", "").upper() not in known:
+                errors.append(f"compare panel {i}: PDB ID {pn.get('pdb')} is not among this paper's entries")
+            if not pn.get("title") or len(pn["title"]) > FIGURE_TITLE_LIMIT:
+                errors.append(f"compare panel {i}: title is missing or over {FIGURE_TITLE_LIMIT} characters")
+        if not (notes or cmp_.get("focus")):
+            errors.append("compare: needs figure_notes (or compare.focus) to say which stretch to show")
+    return errors
+
+
+def check_figure_claims(pick: dict, corpus: str | None) -> list[str]:
+    """Names and numbers written on the figure (note titles, panel titles, the arrow's text) must come from the paper."""
+    if corpus is None:
+        return []
+    texts = [n.get("title", "") + " " + n.get("sub", "") for n in pick.get("figure_notes") or []]
+    cmp_ = pick.get("compare") or {}
+    texts += [p.get("title", "") for p in cmp_.get("panels") or []]
+    texts.append((cmp_.get("mark") or {}).get("text", ""))
+    support = normalize(corpus) + " " + normalize(pick.get("target_label", "")) + " " + normalize(" ".join(summary_texts(pick)))
+    errors = []
+    for t in texts:
+        for tok in sorted(claim_tokens(t)):
+            if tok.isdigit() and len(tok) == 1:
+                continue
+            if normalize(tok) not in support:
+                errors.append(f"figure text {t.strip()!r}: {tok!r} is not in the paper")
+    return errors
 
 
 TOKEN = re.compile(r"[A-Za-z][A-Za-z0-9α-ωΑ-Ω'’+\-]*[A-Za-z0-9]|\d+(?:\.\d+)?")

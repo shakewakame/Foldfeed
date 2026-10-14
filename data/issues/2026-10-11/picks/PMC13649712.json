@@ -1,20 +1,24 @@
 {
   "pmcid": "PMC13649712",
   "rank": 6,
-  "headline": "PER2とPER1は、WDR5の異なる部位に結合する",
-  "subhead": "PER2はWBM部位でCRYと競合し、PER1は主にWIN部位でMLL1と競合する",
+  "headline": "体内時計のPER1とPER2は、WDR5の別々の場所に結合する",
+  "subhead": "PER2はCRYと取り合う場所に、PER1は別の場所に結合する。PER2側を結晶構造で確認した",
   "target_label": "WDR5–PER2 WBMペプチド（マウス）",
   "summary": {
-    "question": "WDR5は、活性化型のMLL1複合体にも抑制型のPER複合体にも見つかっていた。",
-    "approach": "WDR5とPER1・PER2の結合を調べ、WDR5とPER2のWBMペプチドの結晶構造を決めた。",
-    "result": "PER2はWBMモチーフで、PER1は主にWINモチーフでWDR5に結合する。",
-    "learned": "WDR5はPERの直接の結合相手で、PER1とPER2で結合のしかたが大きく違う。",
-    "open": "PER2とWDR5の相互作用（PER1の約15分の1の強さ）が生体内で意味をもつかは、未確認。",
+    "question": "体内時計で遺伝子の働きを抑えるPER1・PER2の複合体に、WDR5が見つかっていた。その役割は不明だった。",
+    "approach": "WDR5とPER1・PER2の結合の強さを測り、WDR5とPER2の短いペプチドの結晶構造を決めた。",
+    "result": "PER2はWBMという短い配列で、PER1は主にWINという別の配列でWDR5に結合した。PER1のほうが約15倍強く結合する。",
+    "learned": "PER2の結合場所はCRYの結合面と重なるので、WDR5とCRYは取り合いになる。PER1はWDR5とCRYの両方と同時に複合体をつくれる。",
+    "open": "PER2とWDR5の結合（PER1の約15分の1の強さ）が、生体内で働くかは未確認。",
     "evidence": {
       "question": [
         {
           "quote": "The MLL1 complex component WDR5 was also found in a repressive PER complex.",
           "section": "Abstract"
+        },
+        {
+          "quote": "While WDR5 is a well characterized MLL1 complex component, its role in repressive PER containing complexes of the mammalian circadian clock is unknown.",
+          "section": "Introduction"
         }
       ],
       "approach": [
@@ -23,7 +27,7 @@
           "section": "Abstract"
         },
         {
-          "quote": "we determined the crystal structure of a complex of WDR5 with a PER2 WBM motif peptide",
+          "quote": "Our 3D-structure revealed that the PER2 WBM motif 1205IDVTG1209 indeed binds to the WBM motif binding pocket of WDR5, inserting Ile1205 and Val1207 into its two hydrophobic sub-pockets (Fig.",
           "section": "Results"
         }
       ],
@@ -35,11 +39,19 @@
         {
           "quote": "PER1 binds WDR5 predominantly via a WIN motif outside the CBD, enabling formation of trimeric PER1WIN/WDR5/RbBP5WBM - and PER1/WDR5/CRY complexes.",
           "section": "Abstract"
+        },
+        {
+          "quote": "In contrast, PER1 predominantly binds to the WDR5 WIN site via a WIN motif outside the CBD and exhibits a 15-fold higher affinity for WDR5 than PER2.",
+          "section": "Introduction"
         }
       ],
       "learned": [
         {
-          "quote": "Together, our studies revealed a role of WDR5 as a direct PER interaction partner with critical differences between PER1 and PER2.",
+          "quote": "PER2 binds WDR5 via a WBM motif within the PER2/CRY interface, imposing competition between PER2/WDR5-, PER2/CRY- and RbBP5/WDR5 complexes.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "PER1 binds WDR5 predominantly via a WIN motif outside the CBD, enabling formation of trimeric PER1WIN/WDR5/RbBP5WBM - and PER1/WDR5/CRY complexes.",
           "section": "Abstract"
         }
       ],

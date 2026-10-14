@@ -213,6 +213,14 @@
   }
 
   document.addEventListener("click", function (ev) {
+    var t = ev.target.closest && ev.target.closest("[data-fig]");
+    if (t) {                                            // front page: overview / comparison figure
+      var holder = t.closest(".v3d");
+      if (t.dataset.fig === "cmp") { stop(holder); say(holder, ""); }
+      holder.classList.toggle("show-cmp", t.dataset.fig === "cmp");
+      [].forEach.call(holder.querySelectorAll("[data-fig]"), function (x) { x.classList.toggle("on", x === t); });
+      return;
+    }
     var b = ev.target.closest && ev.target.closest("[data-v3d]");
     if (!b) return;
     var box = b.closest(".v3d");

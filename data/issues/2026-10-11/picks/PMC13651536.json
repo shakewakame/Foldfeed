@@ -1,23 +1,23 @@
 {
   "pmcid": "PMC13651536",
   "rank": 3,
-  "headline": "チロシンのニトロ化に、His-5のプロトン中継が関わる可能性",
-  "subhead": "ルフォマイシン生合成のP450 RufOでは、Tyr-3のOHが反応に必須だった",
+  "headline": "P450酵素RufOのニトロ化には、基質のヒスチジンが欠かせない",
+  "subhead": "抗生物質ルフォマイシンの合成で、His-5を介したプロトンの受け渡しが関わる可能性がある",
   "target_label": "NsRufO（P450）",
   "summary": {
-    "question": "RufOがチロシンをニトロ化する、珍しいP450反応の仕組みは不明だった。",
-    "approach": "変異ペプチドの反応試験、MD、QM/MM計算に加え、基質結合型NsRufOの結晶構造を決めた。",
-    "result": "基質ペプチドのヒスチジン（His-5）が、ニトロ化の進行に欠かせなかった。",
-    "learned": "中間体Compound IIのプロトン化状態が、ニトロ化か硝酸生成かを左右すると提案された。",
+    "question": "P450酵素RufOは、ペプチド中のチロシンにニトロ基を付ける。この珍しい反応がどう進むのかは、はっきりしていなかった。",
+    "approach": "基質ペプチドを変えて反応を調べ、分子動力学とQM/MM計算を行い、基質が結合したNsRufOの結晶構造も決めた。",
+    "result": "基質ペプチド中のヒスチジン（His-5）が、ニトロ化を効率よく進めるのに必要だった。",
+    "learned": "His-5を経由してプロトンを受け渡す経路が、計算で見つかった。これが副産物の硝酸の生成を避けるのに役立つ可能性がある。",
     "open": "計算は硝酸生成の抑制を定量的に証明するものではなく、プロトン中継の役割がありうることを支持するにとどまる。",
     "evidence": {
       "question": [
         {
-          "quote": "To understand the mechanism of this unusual P450-mediated reaction, a series of pentapeptides were tested as substrates alongside molecular dynamics simulations and quantum mechanics/molecular mechanics (QM/MM, ONIOM approach) calculations.",
+          "quote": "During the biosynthesis of the peptide antibiotic rufomycin, the cytochrome P450 (P450) enzyme RufO catalyzes the aromatic nitration of a tyrosine residue in a ribosomal pentapeptide that serves as a precursor for nonribosomal peptide synthesis.",
           "section": "Abstract"
         },
         {
-          "quote": "Nolan and co-workers recently suggested that differences in the hydrogen-bonding network to the substrate His-5 may contribute to enzymatic selectivity by increasing the Tyr-3 to His-5 distance by 0.7 Å in the RufO-bound MRYLH substrate (based on aromatic ring centroids in the crystal structures), which could hinder peptide cross-linking. , Complicating this further is data from previous studies that show RufO has the capacity to catalyze cross-linking of the non-native MRYLW substrate in addition to its capacity for catalyzing nitration of the native MRYLH substrate. ,, Thus, the underlying mechanisms that allow these two homologous P450s to catalyze different chemistry remain elusive.",
+          "quote": "Thus, the underlying mechanisms that allow these two homologous P450s to catalyze different chemistry remain elusive.",
           "section": "Introduction"
         }
       ],
@@ -39,8 +39,12 @@
       ],
       "learned": [
         {
-          "quote": "These experiments revealed the intimate and necessary involvement of a histidine residue within the pentapeptide substrate of RufO in supporting effective nitration, with the protonation state of the intermediate compound II proposed to influence the production of nitrated tyrosine over unwanted nitrate formation.",
-          "section": "Abstract"
+          "quote": "Instead, an energetically favored proton relay transition state was found, where a proton is shuttled from protonated H235 through His-5 and Tyr-3 to Cpd II (TS-5, DE+ZPE = 6.6 kcal mol–1) (Figure blue and Figure S94).",
+          "section": "Results and Discussion"
+        },
+        {
+          "quote": "Now, through a combination of substrate turnover experiments, molecular dynamics (MD) simulations, and quantum mechanics (QM) calculations, we present results that strongly implicate tyrosyl radical formation as essential in the proposed mechanism of nitration and suggest that differences in the hydrogen-bonding network in RufO may facilitate a key proton-transfer step to avoid nitrate formation.",
+          "section": "Introduction"
         }
       ],
       "open": [
