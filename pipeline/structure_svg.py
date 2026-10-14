@@ -413,12 +413,72 @@ def _projector(center: tuple, ev: list[list[float]], swap: bool):
     return proj
 
 
+RIBBON_HALF = 1.25   # Å: half the width of a helix ribbon
+LIGHT = (-0.45, 0.55, 0.70)   # toward the light: upper left, in front
+_LN = math.sqrt(sum(c * c for c in LIGHT))
+LIGHT = tuple(c / _LN for c in LIGHT)
+
+
+def _unit(v):
+    n = math.sqrt(sum(c * c for c in v)) or 1.0
+    return tuple(c / n for c in v)
+
+
+def _helix_ribbon(v: list[dict], a: int, b: int, half_w: float, color, sx) -> list[str]:
+    """A helix as a flat ribbon wound round its axis (the usual cartoon), as shaded quads drawn back to front.
+
+    v: residues with "q" (projected alpha-carbon position, Å; z toward the viewer), a..b the helix. half_w in Å.
+    color(z, p, face): the fill for a point at depth z, face = how much the face looks toward the light (0..1).
+    Each quad is stroked with its own colour (no seams) and the two long edges get a dark line, so the band
+    reads as a ribbon where it passes in front of itself."""
+    pts = [v[i]["q"] for i in range(a, b + 1)]
+    n = len(pts)
+    if n < 4:
+        return []
+    axis = []
+    for i in range(n):
+        lo, hi = max(0, i - 1), min(n - 1, i + 2)
+        m = hi - lo + 1
+        axis.append(tuple(sum(pts[j][c] for j in range(lo, hi + 1)) / m for c in range(3)))
+    radial = [_unit(tuple(pts[i][c] - axis[i][c] for c in range(3))) for i in range(n)]
+    tang = [_unit(tuple(pts[min(n - 1, i + 1)][c] - pts[max(0, i - 1)][c] for c in range(3))) for i in range(n)]
+    width = []
+    for i in range(n):
+        t, r = tang[i], radial[i]
+        width.append(_unit((t[1] * r[2] - t[2] * r[1], t[2] * r[0] - t[0] * r[2], t[0] * r[1] - t[1] * r[0])))
+    sub = 6
+    path, rad, wid = _spline(pts, sub), _spline(radial, sub), _spline(width, sub)
+    quads = []
+    for k in range(len(path) - 1):
+        w0, w1 = _unit(wid[k]), _unit(wid[k + 1])
+        r_mid = _unit(tuple((rad[k][c] + rad[k + 1][c]) / 2 for c in range(3)))
+        face = max(0.0, sum(r_mid[c] * LIGHT[c] for c in range(3)))
+        if r_mid[2] < 0:                       # the inner face turned toward the viewer: darker
+            face *= 0.55
+        l0 = sx(tuple(path[k][c] + w0[c] * half_w for c in range(3)))
+        r0 = sx(tuple(path[k][c] - w0[c] * half_w for c in range(3)))
+        l1 = sx(tuple(path[k + 1][c] + w1[c] * half_w for c in range(3)))
+        r1 = sx(tuple(path[k + 1][c] - w1[c] * half_w for c in range(3)))
+        z = (path[k][2] + path[k + 1][2]) / 2
+        quads.append((z, l0, l1, r1, r0, color(z, path[k], face)))
+    quads.sort(key=lambda q: q[0])
+    out = []
+    for z, l0, l1, r1, r0, col in quads:
+        edge = _shade(col, 0.42)
+        out.append(f'<polygon points="{_points([l0, l1, r1, r0])}" fill="{col}" stroke="{col}" stroke-width="0.8" '
+                   f'stroke-linejoin="round"/>'
+                   f'<path d="M{l0[0]:.1f},{l0[1]:.1f}L{l1[0]:.1f},{l1[1]:.1f}M{r0[0]:.1f},{r0[1]:.1f}L{r1[0]:.1f},{r1[1]:.1f}" '
+                   f'stroke="{edge}" stroke-width="1.1" stroke-linecap="round" fill="none"/>')
+    return out
+
+
 ON_TOP = 1e6   # added to the depth of a highlighted stretch so it is drawn after (over) everything else
 
 
 def _cartoon(runs3: list[tuple[str, list[dict]]], chain_entity: dict, color: dict, sx, scale: float,
-             tint, hl_color: str | None = None) -> list[tuple[float, str]]:
-    """Depth-tagged SVG pieces: cylinders for helices, arrows for strands, tubes for loops and nucleic acids.
+             tint, hl_color: str | None = None, helix: str = "cylinder") -> list[tuple[float, str]]:
+    """Depth-tagged SVG pieces: cylinders (or, helix="ribbon", wound ribbons) for helices, arrows for strands, tubes for
+    loops and nucleic acids.
     Residues flagged "hl" (the stretch a figure note points at) are drawn in hl_color, undimmed."""
     tube = max(4.5, min(20.0, 2.7 * scale))   # helix cylinder diameter in px
     coil_w = max(1.4, 0.36 * tube)
@@ -430,6 +490,17 @@ def _cartoon(runs3: list[tuple[str, list[dict]]], chain_entity: dict, color: dic
     for k, v in runs3:
         for kind, a, b, hl in _elements(v):
             base = hl_color if (hl and hl_color) else color[chain_entity[k]]
+            if kind == "H" and helix == "ribbon":
+                zc = sum(v[i]["q"][2] for i in range(a, b + 1)) / (b - a + 1)
+
+                def face_color(z, p, face, base=base, hl=hl):
+                    col = tint(base, z, p, hl)
+                    return _mix(col, 0.20 * face) if face > 0.5 else _shade(col, 0.22 * (1 - face))
+
+                pieces = _helix_ribbon(v, a, b, RIBBON_HALF, face_color, sx)
+                if pieces:
+                    parts.append((zc + (ON_TOP if hl else 0), "<g>" + "".join(pieces) + "</g>"))
+                continue
             if kind == "H":
                 win = []
                 for i in range(a, b + 1):
@@ -518,7 +589,7 @@ def _clip(text: str, size: float, bold: bool, max_px: float) -> str:
 
 
 def _leaders(items: list[dict], x0: float, y0: float, w: float, h: float, bl: float, br: float,
-             ink: str, bg: str) -> str:
+             ink: str, bg: str, font: float = 1.0) -> str:
     """Leader-line labels in the left and right bands of the figure box.
 
     items: {"ax", "ay" (where the line ends, in the figure), "side" ("L"/"R"), "title", "sub", "swatch" (colour or
@@ -529,10 +600,10 @@ def _leaders(items: list[dict], x0: float, y0: float, w: float, h: float, bl: fl
         group = sorted((i for i in items if i["side"] == side), key=lambda i: i["ay"])
         if not group:
             continue
-        gap = 56
-        lo, hi = y0 + 28, y0 + h - 46
+        gap = 56 * font
+        lo, hi = y0 + 28 * font, y0 + h - 46 * font
         if (len(group) - 1) * gap > hi - lo:
-            gap = max(40, (hi - lo) / max(1, len(group) - 1))
+            gap = max(40 * font, (hi - lo) / max(1, len(group) - 1))
         pos = [min(max(i["ay"], lo), hi) for i in group]
         for k in range(1, len(pos)):
             pos[k] = max(pos[k], pos[k - 1] + gap)
@@ -540,30 +611,98 @@ def _leaders(items: list[dict], x0: float, y0: float, w: float, h: float, bl: fl
             pos = [p - (pos[-1] - hi) for p in pos]
             for k in range(len(pos) - 2, -1, -1):     # keep the order and the gaps after the shift
                 pos[k] = min(pos[k], pos[k + 1] - gap)
-        edge = x0 + bl - 12 if side == "L" else x0 + w - br + 12
+        edge = x0 + bl - 12 * font if side == "L" else x0 + w - br + 12 * font
         for it, ly in zip(group, pos):
             col = it.get("color") or ink
             sgn = 1 if side == "L" else -1
             anchor = "end" if side == "L" else "start"
             title, sub = it["title"], it.get("sub") or ""
-            parts.append(f'<path d="M{edge:.1f},{ly - 5:.1f}h{sgn * 16:.1f}L{it["ax"]:.1f},{it["ay"]:.1f}" '
-                         f'stroke="{bg}" stroke-width="4" fill="none" stroke-linejoin="round" opacity=".85"/>'
-                         f'<path d="M{edge:.1f},{ly - 5:.1f}h{sgn * 16:.1f}L{it["ax"]:.1f},{it["ay"]:.1f}" '
-                         f'stroke="{col}" stroke-width="1.4" fill="none" stroke-linejoin="round"/>'
-                         f'<circle cx="{it["ax"]:.1f}" cy="{it["ay"]:.1f}" r="3.8" fill="{bg}" stroke="{col}" '
-                         f'stroke-width="1.8"/>')
-            tx = edge - sgn * 10                 # the text sits beside the line; a colour chip, if any, between the two
+            parts.append(f'<path d="M{edge:.1f},{ly - 5 * font:.1f}h{sgn * 16 * font:.1f}L{it["ax"]:.1f},{it["ay"]:.1f}" '
+                         f'stroke="{bg}" stroke-width="{4 * font:.1f}" fill="none" stroke-linejoin="round" opacity=".85"/>'
+                         f'<path d="M{edge:.1f},{ly - 5 * font:.1f}h{sgn * 16 * font:.1f}L{it["ax"]:.1f},{it["ay"]:.1f}" '
+                         f'stroke="{col}" stroke-width="{1.4 * font:.1f}" fill="none" stroke-linejoin="round"/>'
+                         f'<circle cx="{it["ax"]:.1f}" cy="{it["ay"]:.1f}" r="{3.8 * font:.1f}" fill="{bg}" stroke="{col}" '
+                         f'stroke-width="{1.8 * font:.1f}"/>')
+            tx = edge - sgn * 10 * font                 # the text sits beside the line; a colour chip, if any, between the two
             sw = ""
             if it.get("swatch"):
-                sx0 = tx - 12 if side == "L" else tx
-                sw = (f'<rect x="{sx0:.1f}" y="{ly - 14:.1f}" width="13" height="13" rx="1.5" fill="{it["swatch"]}" '
+                sx0 = tx - 13 * font if side == "L" else tx
+                sw = (f'<rect x="{sx0:.1f}" y="{ly - 14 * font:.1f}" width="{13 * font:.1f}" height="{13 * font:.1f}" rx="1.5" fill="{it["swatch"]}" '
                       f'stroke="{_shade(it["swatch"], 0.35)}" stroke-width="1"/>')
-                tx -= sgn * 19
-            parts.append(f'{sw}<text x="{tx:.1f}" y="{ly:.1f}" text-anchor="{anchor}" font-size="{TITLE_PX}" '
+                tx -= sgn * 19 * font
+            parts.append(f'{sw}<text x="{tx:.1f}" y="{ly:.1f}" text-anchor="{anchor}" font-size="{TITLE_PX * font:.1f}" '
                          f'font-weight="700" fill="{col}">{_esc(title)}</text>')
             if sub:
-                parts.append(f'<text x="{tx:.1f}" y="{ly + 21:.1f}" text-anchor="{anchor}" font-size="{SUB_PX}" '
+                parts.append(f'<text x="{tx:.1f}" y="{ly + 21 * font:.1f}" text-anchor="{anchor}" font-size="{SUB_PX * font:.1f}" '
                              f'fill="{ink}" opacity=".78">{_esc(sub)}</text>')
+    return "".join(parts)
+
+
+def _label_block(it: dict, font: float) -> float:
+    """Width of a horizontally placed label: the chip and name, or the line under it, whichever is wider."""
+    chip = 19 * font if it.get("swatch") else 0
+    return max(_text_width(it["title"], TITLE_PX * font, True) + chip, _text_width(it.get("sub") or "", SUB_PX * font)) + 14 * font
+
+
+def _pack_rows(group: list[dict], w: float, font: float) -> list[list[dict]]:
+    """Labels of one band, left to right, in as many rows as it takes to fit the width."""
+    rows: list[list[dict]] = [[]]
+    used = 0.0
+    for it in sorted(group, key=lambda i: i["ax"]):
+        bw = _label_block(it, font)
+        if rows[-1] and used + bw + 8 * font > w - 16:
+            rows.append([])
+            used = 0.0
+        rows[-1].append(it)
+        used += bw + 8 * font
+    return rows if rows[0] else []
+
+
+def _leaders_h(items: list[dict], x0: float, y0: float, w: float, h: float, bt: float, bb: float,
+               ink: str, bg: str, font: float = 1.0) -> str:
+    """Leader-line labels in a band above ("T") and a band below ("B") the structure (the phone layout: a tall box
+    has room for them where it has none at the sides). Each label sits above/below its anchor as far as the
+    neighbours allow; a band that is too crowded gets a second row."""
+    parts: list[str] = []
+    row_h = 54 * font
+    for side in ("T", "B"):
+        group = [i for i in items if i["side"] == side]
+        for r, row in enumerate(_pack_rows(group, w, font)):
+            blocks = [_label_block(i, font) for i in row]
+            xs = [min(max(i["ax"], x0 + b / 2 + 8), x0 + w - b / 2 - 8) for i, b in zip(row, blocks)]
+            for k in range(1, len(xs)):                           # left to right: keep the blocks apart
+                xs[k] = max(xs[k], xs[k - 1] + (blocks[k - 1] + blocks[k]) / 2 + 8 * font)
+            over = xs[-1] + blocks[-1] / 2 + 8 - (x0 + w)
+            if over > 0:                                          # too far right: pull everything back
+                xs = [x - over for x in xs]
+                for k in range(len(xs) - 2, -1, -1):
+                    xs[k] = min(xs[k], xs[k + 1] - (blocks[k] + blocks[k + 1]) / 2 - 8 * font)
+            for it, lx in zip(row, xs):
+                col = it.get("color") or ink
+                title, sub = it["title"], it.get("sub") or ""
+                if side == "T":
+                    ty = y0 + bt - 30 * font - r * row_h
+                    sy = ty + 21 * font + (6 * font if sub else -12 * font)
+                else:
+                    ty = y0 + h - bb + 28 * font + r * row_h
+                    sy = ty - 19 * font - 6 * font
+                path = f"M{lx:.1f},{sy:.1f}L{it['ax']:.1f},{it['ay']:.1f}"
+                parts.append(f'<path d="{path}" stroke="{bg}" stroke-width="{4 * font:.1f}" fill="none" opacity=".85"/>'
+                             f'<path d="{path}" stroke="{col}" stroke-width="{1.4 * font:.1f}" fill="none"/>'
+                             f'<circle cx="{it["ax"]:.1f}" cy="{it["ay"]:.1f}" r="{3.8 * font:.1f}" fill="{bg}" stroke="{col}" '
+                             f'stroke-width="{1.8 * font:.1f}"/>')
+                chip = 19 * font if it.get("swatch") else 0
+                tx = lx + chip / 2
+                if it.get("swatch"):
+                    tw = _text_width(title, TITLE_PX * font, True)
+                    parts.append(f'<rect x="{tx - tw / 2 - chip:.1f}" y="{ty - 14 * font:.1f}" width="{13 * font:.1f}" '
+                                 f'height="{13 * font:.1f}" rx="1.5" fill="{it["swatch"]}" stroke="{_shade(it["swatch"], 0.35)}" '
+                                 f'stroke-width="1"/>')
+                parts.append(f'<text x="{tx:.1f}" y="{ty:.1f}" text-anchor="middle" font-size="{TITLE_PX * font:.1f}" '
+                             f'font-weight="700" fill="{col}">{_esc(title)}</text>')
+                if sub:
+                    parts.append(f'<text x="{lx:.1f}" y="{ty + 21 * font:.1f}" text-anchor="middle" '
+                                 f'font-size="{SUB_PX * font:.1f}" fill="{ink}" opacity=".78">{_esc(sub)}</text>')
     return "".join(parts)
 
 
@@ -577,7 +716,7 @@ def render(cif_gz: bytes, ligand_ids: set[str], x0: float, y0: float, w: float, 
            max_points: int = MAX_TRACE_POINTS, bg: str = "#FFFFFF",
            notes: list[dict] | None = None, labels: dict | None = None, bands: tuple[float, float] = (0, 0),
            site_xyz: tuple | None = None, ink: str = "#1B2638", hl_color: str = HIGHLIGHT,
-           probe: dict | None = None,
+           probe: dict | None = None, font: float = 1.0, band_mode: str = "sides",
            ) -> tuple[str, list[tuple[str, str, str]], list[tuple[str, str]]]:
     """SVG fragment for the box (x0, y0, w, h), a legend [(colour, label, description)] per polymer
     entity, and [(colour, component id, [entity ids], [[asym id, residue number] per copy])] for the ligands drawn as sticks. `max_points` thins very large
@@ -593,7 +732,8 @@ def render(cif_gz: bytes, ligand_ids: set[str], x0: float, y0: float, w: float, 
     Annotation (all optional). `notes`: [{"entity": index in legend order, "range": [first, last] in the paper's
     residue numbering, "title", "sub"}] draws that stretch in hl_color with a leader-line label. `labels`:
     {"entities": [(title, sub) or None per entity in legend order], "ligands": {component id: (title, sub)}}
-    puts a leader-line label on each. `bands` = (left, right) widths kept free in the box for the labels.
+    puts a leader-line label on each. `bands` = (left, right) widths kept free in the box for the labels; with
+    band_mode="topbottom" it is (top, bottom) heights instead and the labels sit above and below (the phone layout).
     `site_xyz` circles the ligand copy nearest to that point (the zoomed site); its position in the figure
     comes back in probe["site"].
     """
@@ -606,9 +746,10 @@ def render(cif_gz: bytes, ligand_ids: set[str], x0: float, y0: float, w: float, 
     step = max(1, math.ceil(len(pts) / max_points))
     center, ev = _basis(pts[::step])
     annotated = bool(labels or notes or site_xyz)
+    tb = band_mode == "topbottom"
     pad = max(bands) if annotated else 0                    # widest band a label may need (a first, symmetric layout)
     # Wider than tall: put the longest axis horizontally if the box is wide, vertically otherwise.
-    proj = _projector(center, ev, h > w - 2 * pad)
+    proj = _projector(center, ev, (h - 2 * pad > w) if tb else (h > w - 2 * pad))
 
     entity_order = []
     for k, _ in runs:
@@ -634,11 +775,11 @@ def render(cif_gz: bytes, ligand_ids: set[str], x0: float, y0: float, w: float, 
     span_x, span_y = max(xs) - min(xs) or 1, max(ys) - min(ys) or 1
     zmin, zmax = min(zs), max(zs)
 
-    def layout(bl: float, br: float):
-        bw = w - bl - br
-        sc = min((bw - 2 * margin) / span_x, (h - 2 * margin) / span_y)
+    def layout(bl: float, br: float, bt: float = 0, bb: float = 0):
+        bw, bh = w - bl - br, h - bt - bb
+        sc = min((bw - 2 * margin) / span_x, (bh - 2 * margin) / span_y)
         ox_ = x0 + bl + bw / 2 - (min(xs) + max(xs)) / 2 * sc
-        oy_ = y0 + h / 2 + (min(ys) + max(ys)) / 2 * sc
+        oy_ = y0 + bt + bh / 2 + (min(ys) + max(ys)) / 2 * sc
         return sc, ox_, oy_
 
     by_inst: dict[tuple, list[int]] = defaultdict(list)
@@ -648,14 +789,14 @@ def render(cif_gz: bytes, ligand_ids: set[str], x0: float, y0: float, w: float, 
     for a in lig_atoms:
         a["ccol"] = ccol[a["inst"][2]]
 
-    def items_for(sx, cx, sides: dict | None) -> list[dict]:
+    def items_for(sx, cx, sides: dict | None, cy: float = 0.0) -> list[dict]:
         """Leader-line labels with their anchors. sides: key -> "L"/"R" from an earlier layout, or None (by position)."""
         items: list[dict] = []
 
         def put(key, ax, ay, title, sub, swatch, col):
-            side = (sides or {}).get(key) or ("L" if ax < cx else "R")
-            items.append({"key": key, "ax": ax, "ay": ay, "side": side, "title": _clip(title, TITLE_PX, True, 176),
-                          "sub": _clip(sub, SUB_PX, False, 176), "swatch": swatch, "color": col})
+            side = (sides or {}).get(key) or (("T" if ay < cy else "B") if tb else ("L" if ax < cx else "R"))
+            items.append({"key": key, "ax": ax, "ay": ay, "side": side, "title": _clip(title, TITLE_PX * font, True, 176 * font),
+                          "sub": _clip(sub, SUB_PX * font, False, 176 * font), "swatch": swatch, "color": col})
 
         for idx, lab in enumerate((labels or {}).get("entities") or []):
             if not lab or idx >= len(entity_order):
@@ -664,10 +805,16 @@ def render(cif_gz: bytes, ligand_ids: set[str], x0: float, y0: float, w: float, 
             pp = [(sx(r["q"]), r["q"][2]) for k, v in runs3 if m["chain_entity"][k] == ent for r in v]
             if not pp:
                 continue
-            side = (sides or {}).get(("e", idx)) or ("L" if sum(p_[0][0] for p_ in pp) / len(pp) < cx else "R")
-            lo_x, hi_x = min(p_[0][0] for p_ in pp), max(p_[0][0] for p_ in pp)
-            cut = lo_x + 0.4 * (hi_x - lo_x) if side == "L" else hi_x - 0.4 * (hi_x - lo_x)
-            near = [p_ for p_ in pp if (p_[0][0] <= cut if side == "L" else p_[0][0] >= cut)] or pp
+            if tb:
+                side = (sides or {}).get(("e", idx)) or ("T" if sum(p_[0][1] for p_ in pp) / len(pp) < cy else "B")
+                lo_y, hi_y = min(p_[0][1] for p_ in pp), max(p_[0][1] for p_ in pp)
+                cut = lo_y + 0.4 * (hi_y - lo_y) if side == "T" else hi_y - 0.4 * (hi_y - lo_y)
+                near = [p_ for p_ in pp if (p_[0][1] <= cut if side == "T" else p_[0][1] >= cut)] or pp
+            else:
+                side = (sides or {}).get(("e", idx)) or ("L" if sum(p_[0][0] for p_ in pp) / len(pp) < cx else "R")
+                lo_x, hi_x = min(p_[0][0] for p_ in pp), max(p_[0][0] for p_ in pp)
+                cut = lo_x + 0.4 * (hi_x - lo_x) if side == "L" else hi_x - 0.4 * (hi_x - lo_x)
+                near = [p_ for p_ in pp if (p_[0][0] <= cut if side == "L" else p_[0][0] >= cut)] or pp
             (ax, ay), _ = max(near, key=lambda p_: p_[1])
             put(("e", idx), ax, ay, lab[0], lab[1] if len(lab) > 1 else "", color[ent], ink)
             items[-1]["side"] = side
@@ -697,21 +844,29 @@ def render(cif_gz: bytes, ligand_ids: set[str], x0: float, y0: float, w: float, 
                 put(("n", j), ax, ay, note["title"], note.get("sub", ""), None, hl_color)
         return items
 
-    bl = br = pad
+    bl = br = bt = bb = 0.0
+    sides = None
     if annotated and pad:
-        # first layout (equal bands) decides which side each label goes to; then each side gets only the width its
+        # first layout (equal bands) decides which side each label goes to; then each side gets only the room its
         # own labels need, and the structure takes the rest
-        sc, ox, oy = layout(pad, pad)
-        first = items_for(lambda q: (ox + q[0] * sc, oy - q[1] * sc), x0 + w / 2, None)
-        need = {"L": 0.0, "R": 0.0}
-        for it in first:
-            need[it["side"]] = max(need[it["side"]], _text_width(it["title"], TITLE_PX, True) + 42,
-                                   _text_width(it["sub"], SUB_PX) + 42)
-        bl, br = min(pad, need["L"]), min(pad, need["R"])
+        if tb:
+            sc, ox, oy = layout(0, 0, pad, pad)
+            first = items_for(lambda q: (ox + q[0] * sc, oy - q[1] * sc), x0 + w / 2, None, y0 + h / 2)
+            row_h = 54 * font
+            rows = {sd_: len(_pack_rows([i for i in first if i["side"] == sd_], w, font)) for sd_ in ("T", "B")}
+            bt = min(pad, rows["T"] * row_h + 8 * font) if rows["T"] else 0.0
+            bb = min(pad, rows["B"] * row_h + 8 * font) if rows["B"] else 0.0
+        else:
+            bl = br = pad
+            sc, ox, oy = layout(pad, pad)
+            first = items_for(lambda q: (ox + q[0] * sc, oy - q[1] * sc), x0 + w / 2, None)
+            need = {"L": 0.0, "R": 0.0}
+            for it in first:
+                need[it["side"]] = max(need[it["side"]], _text_width(it["title"], TITLE_PX * font, True) + 42 * font,
+                                       _text_width(it["sub"], SUB_PX * font) + 42 * font)
+            bl, br = min(pad, need["L"]), min(pad, need["R"])
         sides = {it["key"]: it["side"] for it in first}
-    else:
-        sides = None
-    scale, ox, oy = layout(bl, br)
+    scale, ox, oy = layout(bl, br, bt, bb)
 
     def sx(q):
         return ox + q[0] * scale, oy - q[1] * scale
@@ -743,13 +898,14 @@ def render(cif_gz: bytes, ligand_ids: set[str], x0: float, y0: float, w: float, 
             near_inst = min(by_inst, key=lambda k: min(math.dist(lig_atoms[i]["xyz"], site_xyz) for i in by_inst[k]))
             q = [sx(ligq[i]) for i in by_inst[near_inst]]
             px, py = sum(p_[0] for p_ in q) / len(q), sum(p_[1] for p_ in q) / len(q)
-            out += (f'<circle cx="{px:.1f}" cy="{py:.1f}" r="30" fill="none" stroke="{ink}" stroke-width="1.8" '
+            out += (f'<circle cx="{px:.1f}" cy="{py:.1f}" r="{30 * font:.1f}" fill="none" stroke="{ink}" stroke-width="{1.8 * font:.1f}" '
                     f'stroke-dasharray="5 4"/>')
             if probe is not None:
-                probe["site"] = (px, py, 30.0)
-        items = items_for(sx, x0 + w / 2, sides)
+                probe["site"] = (px, py, 30.0 * font)
+        items = items_for(sx, x0 + w / 2, sides, y0 + h / 2)
         if items:
-            out += _leaders(items, x0, y0, w, h, bl, br, ink, bg)
+            out += (_leaders_h(items, x0, y0, w, h, bt, bb, ink, bg, font) if tb
+                    else _leaders(items, x0, y0, w, h, bl, br, ink, bg, font))
     return out, legend, list((c, k, sorted(lig_entities[k]), lig_sites[k][:MAX_SITES]) for k, c in ccol.items())
 
 
@@ -792,7 +948,8 @@ def _apply(R, cp, cq, p):
 def compare(panels: list[dict], x0: float, y0: float, w: float, h: float, align: int, focus: dict,
             mark: dict | None = None, gene_names: dict[str, str] | None = None, entity_colors: list[str] | None = None,
             ligand_colors: list[str] | None = None, bg: str = "#FFFFFF", ink: str = "#1B2638",
-            hl_color: str = HIGHLIGHT, gap: float = 36, names: list | None = None) -> tuple[str, dict]:
+            hl_color: str = HIGHLIGHT, gap: float = 36, names: list | None = None,
+            font: float = 1.0, vertical: bool = False) -> tuple[str, dict]:
     """Two (or more) structures of the same assembly side by side, superposed on one polymer entity, with the
     same view, the stretch `focus` in the accent colour and, when `mark` is given, an arrow from where one
     residue sits in the first panel to where it sits in the next.
@@ -802,6 +959,8 @@ def compare(panels: list[dict], x0: float, y0: float, w: float, h: float, align:
     focus: {"entity": index, "range": [first, last] (the paper's residue numbering), "title"}.
     mark: {"entity": index, "residue": number, "text"}: the arrow's residue and its label.
     names: a short name per polymer entity (legend order, None to skip), written on the first panel.
+    font: factor for the text (the phone version is drawn with larger text); vertical: stack the panels (the movement
+    then runs left to right, so each wide, short panel shows it at full length).
     The view is chosen so that the arrow is vertical (the first panel's residue on top): the movement shows.
     Returns (svg fragment, {"distance": Å between the marked residue's Cα in panels 1 and 2 or None}); the
     fragment is "" when the structures cannot be superposed."""
@@ -857,17 +1016,20 @@ def compare(panels: list[dict], x0: float, y0: float, w: float, h: float, align:
     if marks:
         d = tuple(marks[1][c] - marks[0][c] for c in range(3))
         dist = math.sqrt(sum(x * x for x in d)) or 1.0
-        yv = tuple(-x / dist for x in d)                      # panel 1's residue above panel 2's
+        fixed = tuple(x / dist for x in d) if vertical else tuple(-x / dist for x in d)
+        # `fixed` is the direction of the movement: along the picture's x (stacked panels: panel 1's residue left of
+        # panel 2's) or along y (side by side: panel 1's residue above panel 2's)
     else:
-        yv = None
-    if yv:
+        fixed = None
+    if fixed:
         proj_pts = []
         for p in all_pts[::max(1, len(all_pts) // 1500)]:
             dd = tuple(p[c] - center[c] for c in range(3))
-            t = sum(dd[c] * yv[c] for c in range(3))
-            proj_pts.append(tuple(dd[c] - t * yv[c] for c in range(3)))
+            t = sum(dd[c] * fixed[c] for c in range(3))
+            proj_pts.append(tuple(dd[c] - t * fixed[c] for c in range(3)))
         cov = [[sum(p[i] * p[j] for p in proj_pts) for j in range(3)] for i in range(3)]
-        xv = tuple(_jacobi_eigen(cov)[r][0] for r in range(3))
+        other = tuple(_jacobi_eigen(cov)[r][0] for r in range(3))
+        xv, yv = (fixed, other) if vertical else (other, fixed)
         zv = (xv[1] * yv[2] - xv[2] * yv[1], xv[2] * yv[0] - xv[0] * yv[2], xv[0] * yv[1] - xv[1] * yv[0])
         ev = [[xv[r], yv[r], zv[r]] for r in range(3)]
         proj = _projector(center, ev, False)
@@ -875,7 +1037,11 @@ def compare(panels: list[dict], x0: float, y0: float, w: float, h: float, align:
         c0, ev = _basis(all_pts[::max(1, len(all_pts) // 1500)])
         proj = _projector(c0, ev, h > (w - gap) / len(panels))
 
-    pw = (w - gap * (len(panels) - 1)) / len(panels)
+    n_pan = len(panels)
+    if vertical:
+        pw, ph = w, (h - gap * (n_pan - 1)) / n_pan
+    else:
+        pw, ph = (w - gap * (n_pan - 1)) / n_pan, h
     built = []
     for i, m in enumerate(ms):
         runs = _runs(m["chains"], sum(len(c) for c in m["chains"].values()))
@@ -892,15 +1058,15 @@ def compare(panels: list[dict], x0: float, y0: float, w: float, h: float, align:
         built.append((m, runs3, lig, ligq))
     allq = [r["q"] for _, runs3, _, _ in built for _, v in runs3 for r in v] + [q for _, _, _, lq in built for q in lq]
     xs, ys, zs = [q[0] for q in allq], [q[1] for q in allq], [q[2] for q in allq]
-    margin_top = 64                                          # room for each panel's title
-    scale = min((pw - 40) / ((max(xs) - min(xs)) or 1), (h - margin_top - 30) / ((max(ys) - min(ys)) or 1))
-    cy = y0 + margin_top + (h - margin_top - 30) / 2
+    margin_top = 64 * font                                   # room for each panel's title
+    scale = min((pw - 40) / ((max(xs) - min(xs)) or 1), (ph - margin_top - 30) / ((max(ys) - min(ys)) or 1))
     zmin, zmax = min(zs), max(zs)
     burial = _Burial([q for q in allq[::max(1, len(allq) // 6000)]])
     out, info_dist = [], None
 
     for i, (m, runs3, lig, ligq) in enumerate(built):
-        px0 = x0 + i * (pw + gap)
+        px0, py0 = (x0, y0 + i * (ph + gap)) if vertical else (x0 + i * (pw + gap), y0)
+        cy = py0 + margin_top + (ph - margin_top - 30) / 2
         ox = px0 + pw / 2 - (min(xs) + max(xs)) / 2 * scale
         oy = cy + (min(ys) + max(ys)) / 2 * scale
 
@@ -925,7 +1091,7 @@ def compare(panels: list[dict], x0: float, y0: float, w: float, h: float, align:
         hit = [(sx(r["q"]), r["q"][2]) for _, v in runs3 for r in v if r.get("hl")]
         if hit:
             (ax, ay), _ = max(hit, key=lambda p: p[1])
-            extra += (f'<text x="{ax + 16:.1f}" y="{ay + 5:.1f}" font-size="20" font-weight="700" fill="{hl_color}" '
+            extra += (f'<text x="{ax + 16:.1f}" y="{ay + 5:.1f}" font-size="{20 * font:.1f}" font-weight="700" fill="{hl_color}" '
                       f'stroke="{bg}" stroke-width="5" paint-order="stroke" stroke-linejoin="round">'
                       f'{_esc(focus["title"])}</text>')
         if i == 0:
@@ -939,7 +1105,7 @@ def compare(panels: list[dict], x0: float, y0: float, w: float, h: float, align:
                 cym = sum(p_[0][1] for p_ in pp) / len(pp)
                 near = sorted(pp, key=lambda p_: math.dist(p_[0], (cxm, cym)))[:max(3, len(pp) // 8)]
                 (ax, ay), _ = max(near, key=lambda p_: p_[1])
-                extra += (f'<text x="{ax:.1f}" y="{ay:.1f}" text-anchor="middle" font-size="18" font-weight="700" fill="{ink}" '
+                extra += (f'<text x="{ax:.1f}" y="{ay:.1f}" text-anchor="middle" font-size="{18 * font:.1f}" font-weight="700" fill="{ink}" '
                           f'stroke="{bg}" stroke-width="5" paint-order="stroke" stroke-linejoin="round">{_esc(nm)}</text>')
         if marks and i > 0:
             # where the marked residue was in the first panel (ghost), and the arrow to where it is now
@@ -959,18 +1125,22 @@ def compare(panels: list[dict], x0: float, y0: float, w: float, h: float, align:
                       f'L{now[0] - ux * 14 + uy * 6:.1f},{now[1] - uy * 14 - ux * 6:.1f}Z" fill="{ink}"/>'
                       f'<circle cx="{ghost[0]:.1f}" cy="{ghost[1]:.1f}" r="4.5" fill="{bg}" stroke="{hl_color}" stroke-width="2"/>')
             if mark.get("text"):
-                extra += (f'<text x="{(ghost[0] + now[0]) / 2 + 12:.1f}" y="{(ghost[1] + now[1]) / 2 + 5:.1f}" font-size="20" '
+                extra += (f'<text x="{(ghost[0] + now[0]) / 2 + 12:.1f}" y="{(ghost[1] + now[1]) / 2 + 5:.1f}" font-size="{20 * font:.1f}" '
                           f'font-weight="700" fill="{ink}" stroke="{bg}" stroke-width="5" paint-order="stroke" '
                           f'stroke-linejoin="round">{_esc(mark["text"])}</text>')
         title = panels[i].get("title") or ""
         sub = panels[i].get("sub") or ""
-        head = (f'<text x="{px0 + 4:.1f}" y="{y0 + 26:.1f}" font-size="23" font-weight="700" fill="{ink}">{_esc(title)}</text>'
-                + (f'<text x="{px0 + 4:.1f}" y="{y0 + 48:.1f}" font-size="15.5" fill="{ink}" opacity=".75">{_esc(sub)}</text>'
+        head = (f'<text x="{px0 + 4:.1f}" y="{py0 + 26 * font:.1f}" font-size="{23 * font:.1f}" font-weight="700" fill="{ink}">{_esc(title)}</text>'
+                + (f'<text x="{px0 + 4:.1f}" y="{py0 + 48 * font:.1f}" font-size="{15.5 * font:.1f}" fill="{ink}" opacity=".75">{_esc(sub)}</text>'
                    if sub else ""))
         out.append(f'<g>{body}{extra}</g>{head}')
         if i > 0:
-            vx = px0 - gap / 2
-            out.insert(0, f'<path d="M{vx:.1f},{y0 + 8:.1f}V{y0 + h - 8:.1f}" stroke="{ink}" stroke-width="1" opacity=".18"/>')
+            if vertical:
+                vy = py0 - gap / 2
+                out.insert(0, f'<path d="M{x0 + 8:.1f},{vy:.1f}H{x0 + w - 8:.1f}" stroke="{ink}" stroke-width="1" opacity=".18"/>')
+            else:
+                vx = px0 - gap / 2
+                out.insert(0, f'<path d="M{vx:.1f},{y0 + 8:.1f}V{y0 + h - 8:.1f}" stroke="{ink}" stroke-width="1" opacity=".18"/>')
     if marks:
         info_dist = round(math.dist(marks[0], marks[1]), 1)
     return "".join(out), {"distance": info_dist}
@@ -1109,7 +1279,7 @@ def render_site(cif_gz: bytes, ligand_ids: set[str], prefer: list[str], w: float
         depth = (z - zmin) / ((zmax - zmin) or 1)
         return _toward(col, bg, 0.74 - 0.28 * depth)
 
-    parts = _cartoon(runs, m["chain_entity"], color, sx, scale, tint)
+    parts = _cartoon(runs, m["chain_entity"], color, sx, scale, tint, helix="ribbon")
     parts.sort(key=lambda p: p[0])
 
     # Sticks: pocket residues (carbon in the chain's colour), then the ligands on top.

@@ -218,8 +218,9 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
                    color:var(--mute); cursor:pointer; }}
 .figtabs button:hover {{ color:var(--ink); }}
 .figtabs button.on {{ color:var(--ink); border-bottom-color:var(--acc); }}
+.fig.m {{ display:none; }}
 .v3d .fig.cmp, .v3d.show-cmp .fig:not(.cmp), .v3d.show-cmp .v3d-bar {{ display:none; }}
-.v3d.show-cmp .fig.cmp {{ display:block; }}
+.v3d.show-cmp .fig.cmp.d {{ display:block; }}
 .cmpfig {{ margin:26px 0 0; }}
 .cmpfig .fig {{ border-top:1px solid var(--hair); border-bottom:1px solid var(--hair); }}
 .legend {{ display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px 44px; margin:18px 0 0; }}
@@ -309,15 +310,14 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .mix {{ display:flex; flex-wrap:wrap; gap:4px 28px; margin:34px 0 -16px; font-family:var(--mono); font-size:12.5px; color:var(--ink2); }}
 .mix b {{ font-weight:500; letter-spacing:.1em; font-size:11px; color:var(--mute); margin-right:10px; }}
 .issue-body .mix, .main > .mix:first-child {{ margin-top:30px; }}
-.mine {{ display:flex; flex-wrap:wrap; align-items:center; gap:8px 8px; margin:26px 0 -10px; padding:14px 0 0; border-top:1px solid var(--hair); }}
-.mine-l {{ font-family:var(--mono); font-size:11px; letter-spacing:.12em; color:var(--mute); margin-right:6px; }}
-.chip {{ font:inherit; font-family:var(--sans); font-size:13px; line-height:1.4; padding:4px 11px; color:var(--ink2); background:transparent;
+.mine .chips {{ display:flex; flex-wrap:wrap; gap:6px; }}
+.chip {{ font:inherit; font-family:var(--sans); font-size:12.5px; line-height:1.4; padding:3px 9px; color:var(--ink2); background:transparent;
          border:1px solid var(--hair); border-radius:0; cursor:pointer; }}
 .chip:hover {{ border-color:var(--ink); color:var(--ink); }}
 .chip.on {{ background:var(--ink); border-color:var(--ink); color:#fff; }}
-.mine .only {{ margin-left:10px; font-family:var(--sans); font-size:13px; color:var(--ink2); cursor:pointer; }}
-.mine-n {{ font-family:var(--mono); font-size:12px; color:var(--acc-ink); }}
-.mine-f {{ flex-basis:100%; font-size:12px; color:var(--mute); }}
+.mine .only {{ display:block; margin-top:12px; font-family:var(--sans); font-size:13px; color:var(--ink2); cursor:pointer; }}
+.mine-n {{ margin:6px 0 0; font-family:var(--mono); font-size:12px; color:var(--acc-ink); }}
+.mine[hidden] {{ display:none; }}
 .row.hit {{ border-left:4px solid var(--acc); padding-left:18px; margin-left:-22px; }}
 .row.hit .rt::before {{ content:"関心あり"; display:block; font-family:var(--mono); font-size:11px; letter-spacing:.1em; color:var(--acc-ink); font-weight:700; }}
 .row[hidden], .pr[hidden], .pg[hidden] {{ display:none; }}
@@ -436,10 +436,10 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
   .site dl {{ grid-template-columns:minmax(0,1fr); }}
   .lab div {{ grid-template-columns:92px 1fr; }}
   .legend {{ grid-template-columns:minmax(0,1fr); }}
-  /* the annotated figures carry small text: keep them readable and let the figure be panned inside its frame */
-  .v3d:not(.on):not(.loading) .v3d-view, .cmpfig {{ overflow-x:auto; -webkit-overflow-scrolling:touch; }}
-  .v3d:not(.on):not(.loading) .v3d-view .fig, .cmpfig .fig {{ width:auto; min-width:760px; max-width:none; }}
-  .v3d:not(.on):not(.loading) .v3d-view .fig.cmp {{ min-width:760px; }}
+  /* phone: the figures have a portrait version of their own (larger text, parts stacked) that fits the screen */
+  .hasm .fig.d {{ display:none !important; }}
+  .v3d.hasm:not(.show-cmp) .fig.m:not(.cmp), .cmpfig.hasm .fig.m, .v3d.hasm.show-cmp .fig.cmp.m {{ display:block; }}
+  .v3d.on .v3d-view, .v3d.loading .v3d-view {{ aspect-ratio:1 / 1.15; }}
 }}
 """
 
@@ -654,14 +654,21 @@ def figures_html(cand: dict, pick: dict, date: str, root: Path, fig_base: str, u
         return ""
     info = read_json(fig_dir / f"{pm}.json") if (fig_dir / f"{pm}.json").exists() else {}
     attrs, wait, bar = viewer_bar(info, up)
-    img = f'<img class="fig" src="{fig_base}/{date}/{esc(pm)}.svg" alt="構造図：{esc(pick["target_label"])}" loading="lazy">'
-    out = [f'<div class="v3d"{attrs}><div class="v3d-view">{img}<div class="v3d-canvas"></div>{wait}</div>{bar}</div>']
+    has_m = (fig_dir / f"{pm}-m.svg").exists()   # the phone version of the figure (portrait, larger text)
+    img = f'<img class="fig d" src="{fig_base}/{date}/{esc(pm)}.svg" alt="構造図：{esc(pick["target_label"])}" loading="lazy">'
+    if has_m:
+        img += f'<img class="fig m" src="{fig_base}/{date}/{esc(pm)}-m.svg" alt="" loading="lazy">'
+    out = [f'<div class="v3d{" hasm" if has_m else ""}"{attrs}><div class="v3d-view">{img}<div class="v3d-canvas"></div>{wait}</div>{bar}</div>']
     if render.is_impact(pick) and info.get("pdb_id"):
         out.append(f'<p class="pdbnote">PDB {esc(info["pdb_id"])}（論文が使った既存の構造）</p>')
     out.append(legend_html(info))
     if info.get("compare") and (fig_dir / f"{pm}-compare.svg").exists():
-        out.append(f'<div class="cmpfig"><img class="fig" src="{fig_base}/{date}/{esc(pm)}-compare.svg" '
-                   f'alt="構造の比較：{esc("と".join(x["title"] for x in info["compare"]["panels"]))}" loading="lazy"></div>')
+        has_cm = (fig_dir / f"{pm}-compare-m.svg").exists()
+        alt = f'構造の比較：{esc("と".join(x["title"] for x in info["compare"]["panels"]))}'
+        out.append(f'<div class="cmpfig{" hasm" if has_cm else ""}"><img class="fig d" src="{fig_base}/{date}/{esc(pm)}-compare.svg" '
+                   f'alt="{alt}" loading="lazy">'
+                   + (f'<img class="fig m" src="{fig_base}/{date}/{esc(pm)}-compare-m.svg" alt="" loading="lazy">' if has_cm else "")
+                   + '</div>')
     st = info.get("site")
     if st and (fig_dir / f"{pm}-site.svg").exists():
         rows = [("結合部位", esc(st["label"]) + (f'（{esc("・".join(st["neighbours"]))} と隣接）' if st.get("neighbours") else "")),
@@ -853,11 +860,15 @@ def hero_html(feature: dict | None, picks: list, date: str, root: Path, fig_base
         first_tab = "全体と結合部位" if info.get("site") else "全体"
         tabs = (f'<div class="figtabs"><button type="button" data-fig="main" class="on">{first_tab}</button>'
                 f'<button type="button" data-fig="cmp">構造の比較</button></div>')
-        cmp_img = (f'<img class="fig cmp" src="{fig_base}/{date}/{esc(cand["pmcid"])}-compare.svg" '
+        cmp_img = (f'<img class="fig cmp d" src="{fig_base}/{date}/{esc(cand["pmcid"])}-compare.svg" '
                    f'alt="構造の比較：{esc("と".join(x["title"] for x in info["compare"]["panels"]))}">')
+        if (root / date / "figures" / f"{cand['pmcid']}-compare-m.svg").exists():
+            cmp_img += f'<img class="fig cmp m" src="{fig_base}/{date}/{esc(cand["pmcid"])}-compare-m.svg" alt="">'
     if attrs:   # the structure can be turned in place (Mol*, loaded only when asked for)
-        fig = (f'<div class="v3d"{attrs}>{tabs}<div class="v3d-view"><a href="{href}"><img class="fig" '
-               f'src="{fig_base}/{date}/{esc(cand["pmcid"])}.svg" alt="構造図：{esc(pk["target_label"])}"></a>{cmp_img}'
+        has_m = (root / date / "figures" / f"{cand['pmcid']}-m.svg").exists()
+        main_m = f'<img class="fig m" src="{fig_base}/{date}/{esc(cand["pmcid"])}-m.svg" alt="">' if has_m else ""
+        fig = (f'<div class="v3d{" hasm" if has_m else ""}"{attrs}>{tabs}<div class="v3d-view"><a href="{href}"><img class="fig d" '
+               f'src="{fig_base}/{date}/{esc(cand["pmcid"])}.svg" alt="構造図：{esc(pk["target_label"])}">{main_m}</a>{cmp_img}'
                f'<div class="v3d-canvas"></div>{wait}</div>{bar}</div>')
     elif big.exists():
         fig = (f'<a class="thumb" href="{href}"><img src="{fig_base}/{date}/{esc(cand["pmcid"])}.svg" '
@@ -1102,13 +1113,16 @@ MINE_SCRIPT = r"""
 
 
 def mine_html(lib: list[dict]) -> str:
-    """Saved interests: kinds of protein the reader picks, kept in this browser only (localStorage). Rows of the new
-    issue that match are marked, or the others hidden. Hidden until the script runs, so it never shows empty."""
+    """Saved interests (a block of the front page's sidebar): kinds of protein the reader picks, kept in this browser
+    only (localStorage). Rows of the new issue that match are marked, or the others hidden. Hidden until the script
+    runs, so it never shows empty. (It sat under Today's Structure before; a control that comes before the content
+    it filters is in the way of a first-time reader, so it lives beside the search instead.)"""
     chips = "".join(f'<button type="button" class="chip" data-c="{k}" aria-pressed="false">{esc(CATEGORIES[k])}</button>'
                     for k, _ in sorted(category_counts(lib), key=lambda kv: list(CATEGORIES).index(kv[0])))
-    return (f'<div class="mine" id="mine" hidden><span class="mine-l" title="選んだ種類はこのブラウザにだけ保存されます">自分の関心</span>{chips}'
-            f'<label class="only"><input type="checkbox" id="mine-only"> 関心のある記事だけ表示</label>'
-            f'<span class="mine-n" id="mine-n"></span></div>')
+    block = sd("自分の関心", f'<div class="chips">{chips}</div>'
+                           f'<label class="only"><input type="checkbox" id="mine-only"> 関心のある記事だけ表示</label>'
+                           f'<p class="mine-n" id="mine-n"></p>', "mine")
+    return block.replace('<section class="sd mine">', '<section class="sd mine" id="mine" hidden>', 1)
 
 
 def mail_html() -> str:
@@ -1133,7 +1147,7 @@ def home(issues: list[str]) -> str:
     lib = library(issues)
     hero = hero_html(feature, picks, latest, ISSUES_DIR, "figures", href, "")
     band = f'<div class="band"><div class="wrap">{hero}</div></div>' if hero else ""
-    main = [breakdown_html(picks) + mine_html(lib),
+    main = [breakdown_html(picks),
             f'<section class="toc">{contents_html(picks, latest, ISSUES_DIR, "figures", href, feature and feature["pmcid"])}</section>',
             f'<p class="sec-more"><a href="{href}">{jp_date(latest)}号のすべての記事を読む →</a></p>',
             f'<section class="sec"><div class="ix-h"><h2 class="label">タンパク質の種類から探す</h2>'
@@ -1149,7 +1163,7 @@ def home(issues: list[str]) -> str:
         main.append(f'<section class="sec past"><div class="ix-h"><h2 class="label">過去の号</h2><span>{len(past)} 号</span></div>'
                     f'<ol>{"".join(items)}</ol></section>')
     main.append(mail_html())
-    side = (sd("タンパク質を探す", find_form()) + journals_html(journal_counts(issues)) + numbers_html(issues, lib)
+    side = (sd("タンパク質を探す", find_form()) + mine_html(lib) + journals_html(journal_counts(issues)) + numbers_html(issues, lib)
             + sd("このサイトについて", f"<p>{esc(ABOUT)}</p>"))
     return page(f"{brand.SITE_NAME}（{brand.SITE_NAME_EN}）",
                 masthead(0) + band + shell("".join(main), side) + colophon(), depth=0, viewer=True, script=MINE_SCRIPT)

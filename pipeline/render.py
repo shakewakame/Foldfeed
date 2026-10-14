@@ -22,6 +22,7 @@ W, H = 1200, 560
 SITE_W, SITE_H = 760, 500  # binding-site close-up
 INSET_W, INSET_H = 410, 400  # the same site, small, beside the overview
 MAX_LABELS = 8  # leader-line labels on one figure (entities); ligands get their own few
+M_W, M_OVERVIEW_H, M_INSET_H, M_COMPARE_H, M_BAND, M_FONT = 640, 640, 380, 460, 190, 1.3  # the phone version
 THUMB_W, THUMB_H = 600, 400  # list thumbnail (3:2); same PDB structure, thinned to THUMB_POINTS residues
 THUMB_POINTS = 900
 CONTACT_NOTE = "4 Å 以内の残基"
@@ -219,6 +220,19 @@ def figure_notes(pick: dict) -> list[dict]:
     return out
 
 
+def _annotation_inputs(pick: dict, lig_ids: set, pdb_names: dict, site: dict | None, prefer: list) -> tuple:
+    """What the leader lines say: (entity labels the writer gave, up to 4 ligand labels with the zoomed one first,
+    figure_notes)."""
+    names = [split_label(t) for t in (pick.get("legend_labels") or [])[:MAX_LABELS]]
+    lig_order = ([site["ligand"]] if site else []) + [x for x in prefer if x in lig_ids and not (site and x == site["ligand"])]
+    lig_order += [x for x in sorted(lig_ids) if x not in lig_order]
+    lig_labels = {}
+    for lid in lig_order[:4]:
+        nm, role = split_label(ligand_name(lid, pdb_names.get(lid), pick))
+        lig_labels[lid] = (nm, " · ".join(x for x in (role, lid if nm != lid else "") if x))
+    return names, lig_labels, figure_notes(pick)
+
+
 def structure_figure(cand: dict, pick: dict, theme: brand.Theme | None = None) -> tuple[str, dict, str]:
     """The protein and nothing else, plus a close-up of the main ligand's binding site.
 
@@ -256,15 +270,7 @@ def structure_figure(cand: dict, pick: dict, theme: brand.Theme | None = None) -
                     inset_body, inset = structure_svg.render_site(
                         coords, lig_ids, prefer, INSET_W, INSET_H, genes, entity_colors=ent_colors,
                         ligand_colors=structure_svg.LIGAND_PALETTE, ink=th.ink, bg=th.ground, label_size=17)
-            # leader-line labels: entities the writer named, then a few ligands (the zoomed one first)
-            names = [split_label(t) for t in (pick.get("legend_labels") or [])[:MAX_LABELS]]
-            lig_order = ([site["ligand"]] if site else []) + [x for x in prefer if x in lig_ids and not (site and x == site["ligand"])]
-            lig_order += [x for x in sorted(lig_ids) if x not in lig_order]
-            lig_labels = {}
-            for lid in lig_order[:4]:
-                nm, role = split_label(ligand_name(lid, pdb_names.get(lid), pick))
-                lig_labels[lid] = (nm, " · ".join(x for x in (role, lid if nm != lid else "") if x))
-            notes = figure_notes(pick)
+            names, lig_labels, notes = _annotation_inputs(pick, lig_ids, pdb_names, site, prefer)
             band = 220 if (names or lig_labels or notes) else 0   # the most a side may give to its labels
             box_w = W - (INSET_W + 30) if inset_body else W
             probe: dict = {}
@@ -326,21 +332,68 @@ def _inset(body: str, site: dict, circle: tuple | None, pick: dict, th: brand.Th
     return f'{lines}{frame}{title}<g transform="translate({x},{y})">{body}</g>'
 
 
-def compare_figure(cand: dict, pick: dict, theme: brand.Theme | None = None) -> tuple[str, dict]:
-    """The figure that shows what the paper found: pick["compare"]'s structures, superposed and side by side,
-    with the stretch the paper is about in the accent colour. ("", {}) when the pick has none or the
-    structures cannot be superposed."""
+def structure_figure_mobile(cand: dict, pick: dict, theme: brand.Theme | None = None) -> str:
+    """The same figure drawn for a phone: portrait, the overview on top and the binding-site zoom below it, with the text
+    scaled up so it stays readable when the picture is shown 350 px wide. "" when the pick has no structure."""
+    th = theme or brand.THEME
+    s = pick_structure(cand, pick)
+    coords = pdb.coordinates(s["pdb_id"]) if s else None
+    if not coords:
+        return ""
+    lig_ids = {l["id"] for l in s.get("ligands") or []} - pdb.COMMON_ADDITIVES
+    genes = {p["uniprot"]: p["gene"] for p in cand.get("proteins", []) if p.get("gene")}
+    pdb_names = {l["id"]: l.get("name") for l in s.get("ligands") or []}
+    want = pick.get("site_ligand")
+    prefer = [want] if want else list(pick.get("ligand_names") or {})
+    ent_colors = list(th.entities)
+    inset_body, inset, site = "", None, None
+    if lig_ids and want != "":
+        inset_body, inset = structure_svg.render_site(
+            coords, lig_ids, prefer, M_W, M_INSET_H, genes, entity_colors=ent_colors,
+            ligand_colors=structure_svg.LIGAND_PALETTE, ink=th.ink, bg=th.ground, label_size=23)
+        site = inset
+    names, lig_labels, notes = _annotation_inputs(pick, lig_ids, pdb_names, site, prefer)
+    oh = M_OVERVIEW_H if inset_body else M_OVERVIEW_H + 80
+    probe: dict = {}
+    body, _, _ = structure_svg.render(
+        coords, lig_ids, 0, 0, M_W, oh, genes, margin=16, entity_colors=ent_colors,
+        ligand_colors=structure_svg.LIGAND_PALETTE, bg=th.ground, notes=notes,
+        labels={"entities": names, "ligands": lig_labels}, bands=(M_BAND, M_BAND), band_mode="topbottom",
+        site_xyz=tuple(inset["center"]) if inset else None, ink=th.ink, hl_color=th.accent, probe=probe, font=M_FONT)
+    total = oh
+    if inset_body:
+        y = oh + 46
+        circle = probe.get("site")
+        lines = ""
+        if circle:
+            cx, cy, r = circle
+            for tx in (0, M_W):
+                d = math.hypot(tx - cx, y - cy) or 1
+                lines += (f'<path d="M{cx + (tx - cx) / d * r:.1f},{cy + (y - cy) / d * r:.1f}L{tx},{y}" '
+                          f'stroke="{th.ink}" stroke-width="1.4" opacity=".5" fill="none"/>')
+        name = ligand_name(site["ligand"], pdb_names.get(site["ligand"]), pick)
+        body += (f'{lines}<rect x="0.6" y="{y}" width="{M_W - 1.2}" height="{M_INSET_H}" fill="none" stroke="{th.ink}" '
+                 f'stroke-width="1.6"/><text x="0" y="{y - 12}" font-size="26" font-weight="700" fill="{th.ink}">'
+                 f'結合部位の拡大<tspan font-weight="400" font-size="22" dx="12" opacity=".75">{esc(name)}</tspan></text>'
+                 f'<g transform="translate(0,{y})">{inset_body}</g>')
+        total = y + M_INSET_H + 4
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{M_W}" height="{total}" viewBox="0 0 {M_W} {total}" '
+            f'font-family="{FONT}">{body}</svg>\n')
+
+
+def _compare_inputs(cand: dict, pick: dict):
+    """(panels for structure_svg.compare, focus, mark, genes, entity names, align) from pick["compare"]; None if the
+    pick has no usable comparison."""
     spec = pick.get("compare")
     if not spec:
-        return "", {}
-    th = theme or brand.THEME
+        return None
     known = {x["pdb_id"]: x for x in cand.get("own_structures", []) + cand.get("cited_structures", [])}
     panels = []
     for pn in spec["panels"]:
         pid = pn["pdb"].upper()
         coords = pdb.coordinates(pid)
         if not coords:
-            return "", {}
+            return None
         lig = {l["id"] for l in (known.get(pid) or {}).get("ligands") or []} - pdb.COMMON_ADDITIVES
         panels.append({"cif": coords, "ligands": lig, "title": pn["title"], "sub": f"PDB {pid}"})
     focus = spec.get("focus") or {}
@@ -350,20 +403,50 @@ def compare_figure(cand: dict, pick: dict, theme: brand.Theme | None = None) -> 
         focus = {"entity": int(focus.get("entity", 1)) - 1, "range": [int(x) for x in focus.get("range", [])],
                  "title": focus.get("title", "")}
     if not focus.get("range"):
-        return "", {}
+        return None
     mark = spec.get("mark")
     if mark:
         mark = {"entity": int(mark.get("entity", 1)) - 1, "residue": int(mark["residue"]), "text": mark.get("text", "")}
     genes = {p["uniprot"]: p["gene"] for p in cand.get("proteins", []) if p.get("gene")}
     names = [split_label(t)[0] for t in (pick.get("legend_labels") or [])[:MAX_LABELS]]
+    return panels, focus, mark, genes, names, int(spec.get("align", 1)) - 1
+
+
+def compare_figure_mobile(cand: dict, pick: dict, theme: brand.Theme | None = None) -> str:
+    """The comparison figure for a phone: the panels stacked, the movement running left to right, larger text."""
+    th = theme or brand.THEME
+    inp = _compare_inputs(cand, pick)
+    if not inp:
+        return ""
+    panels, focus, mark, genes, names, align = inp
+    h = M_COMPARE_H * len(panels) + 30 * (len(panels) - 1)
+    body, _ = structure_svg.compare(
+        panels, 0, 0, M_W, h, align, focus, mark, genes, entity_colors=list(th.entities),
+        ligand_colors=structure_svg.LIGAND_PALETTE, bg=th.ground, ink=th.ink, hl_color=th.accent, names=None,
+        font=M_FONT, vertical=True, gap=30)
+    if not body:
+        return ""
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{M_W}" height="{h}" viewBox="0 0 {M_W} {h}" '
+            f'font-family="{FONT}">{body}</svg>\n')
+
+
+def compare_figure(cand: dict, pick: dict, theme: brand.Theme | None = None) -> tuple[str, dict]:
+    """The figure that shows what the paper found: pick["compare"]'s structures, superposed and side by side,
+    with the stretch the paper is about in the accent colour. ("", {}) when the pick has none or the
+    structures cannot be superposed."""
+    th = theme or brand.THEME
+    inp = _compare_inputs(cand, pick)
+    if not inp:
+        return "", {}
+    panels, focus, mark, genes, names, align = inp
     body, info = structure_svg.compare(
-        panels, 0, 0, W, H, int(spec.get("align", 1)) - 1, focus, mark, genes, entity_colors=list(th.entities),
+        panels, 0, 0, W, H, align, focus, mark, genes, entity_colors=list(th.entities),
         ligand_colors=structure_svg.LIGAND_PALETTE, bg=th.ground, ink=th.ink, hl_color=th.accent, names=names)
     if not body:
         return "", {}
     svg = (f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" '
            f'font-family="{FONT}">{body}</svg>\n')
-    return svg, {"panels": [{"pdb": pn["pdb"].upper(), "title": pn["title"]} for pn in spec["panels"]],
+    return svg, {"panels": [{"pdb": pn["pdb"].upper(), "title": pn["title"]} for pn in pick["compare"]["panels"]],
                  "distance": info.get("distance")}
 
 
@@ -597,6 +680,13 @@ def main(argv=None) -> int:
                       f"{cmp_info['distance']} Å (check the residue, the chain and the entity numbers)")
         elif cmp_path.exists():
             cmp_path.unlink()
+        for suffix, maker in (("-m", structure_figure_mobile), ("-compare-m", compare_figure_mobile)):
+            mob_path = fig_dir / f"{cand['pmcid']}{suffix}.svg"
+            mob = maker(cand, pick) if svg and (suffix == "-m" or cmp_svg) else ""
+            if mob:
+                mob_path.write_text(mob, encoding="utf-8")
+            elif mob_path.exists():
+                mob_path.unlink()
         thumb = thumbnail(cand, pick) if svg else ""
         thumb_path = fig_dir / f"{cand['pmcid']}-thumb.svg"
         if thumb:
