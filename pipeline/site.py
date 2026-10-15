@@ -907,8 +907,16 @@ def toc_side(picks: list, featured: str | None) -> str:
     return sd("この号の記事", f'<div class="sd-toc">{out}</div>', "side-only-issue")
 
 
+def index_span(index_date: str, index_from: str | None = None) -> str:
+    """'10月13日' for one day, '10月11日〜14日' for a catch-up window of several days."""
+    if not index_from or index_from == index_date:
+        return jp_date_short(index_date)
+    (_, m1, d1), (_, m2, d2) = ((int(x) for x in v.split("-")) for v in (index_from, index_date))
+    return f"{m1}月{d1}日〜{d2}日" if m1 == m2 else f"{m1}月{d1}日〜{m2}月{d2}日"
+
+
 def issue_head(date: str, number: int | None, n_new: int, n_hot: int, prev_date: str | None, next_date: str | None,
-               index_date: str | None = None) -> str:
+               index_date: str | None = None, index_from: str | None = None) -> str:
     """The top of an issue page: its date, large (year, month.day, weekday and the issue's number), and the counts."""
     y, m, d, wd = date_parts(date)
     num = f" · 第 {number} 号" if number else " · プレビュー"
@@ -918,7 +926,7 @@ def issue_head(date: str, number: int | None, n_new: int, n_hot: int, prev_date:
     return (f'<header class="ihead"><div class="idate"><span class="y">{y}</span><span class="md">{m:02d}.{d:02d}</span>'
             f'<span class="wd">{wd}曜日{num}</span></div><div><h1>{jp_date(date)}号</h1>'
             f'<p class="ic">{counts_text(n_new, n_hot, " · ")}</p>'
-            + (f'<p class="ic">対象：{date_parts(index_date)[1]}月{date_parts(index_date)[2]}日登録分</p>' if index_date else "")
+            + (f'<p class="ic">対象：{index_span(index_date, index_from)}登録分</p>' if index_date else "")
             + f'<p class="in">{links}</p></div></header>')
 
 
@@ -942,7 +950,8 @@ def issue_page(date: str, prev_date: str | None, next_date: str | None,
         link = (f' · <a href="{esc(pr["url"])}">Pull Request #{pr["number"]} を開く（ここでマージ）</a>'
                 if pr.get("url") else "")
         bar = f'<div class="preview-bar">プレビュー（未公開）{link} · <a href="index.html">確認待ちの一覧</a></div>'
-    main = [issue_head(date, number, len(picks) - n_hot + len(rest), n_hot, prev_date, next_date, meta.get("index_date"))]
+    main = [issue_head(date, number, len(picks) - n_hot + len(rest), n_hot, prev_date, next_date, meta.get("index_date"),
+                       meta.get("index_from"))]
     feature = load_feature(date, root, picks) if picks else None
     if picks:
         # the issue page lists every article, today's pick included (marked); the front page is where it is shown large
@@ -970,7 +979,8 @@ def issue_page(date: str, prev_date: str | None, next_date: str | None,
     side = ((toc_side(picks, feature and feature["pmcid"]) if picks else "") + sd("号の移動", f'<div class="sd-nav">{nav}</div>')
             + sd("タンパク質を探す", find_form("../")))
     head = masthead(1)
-    foot = colophon(f'<p>この号の対象：Europe PMC に {esc(meta["index_date"])} に登録されたオープンアクセス論文 '
+    span = f'{meta["index_from"]}〜{meta["index_date"]}' if meta.get("index_from") else meta["index_date"]
+    foot = colophon(f'<p>この号の対象：Europe PMC に {esc(span)} に登録されたオープンアクセス論文 '
                     f'{meta["counts"]["parsed"]} 本のうち、新しい構造を報告した論文。</p>')
     desc = "、".join(pk["target_label"] for _, pk in picks[:6])
     title = f"{jp_date(date)}号 · {brand.SITE_NAME}"

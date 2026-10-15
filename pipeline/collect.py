@@ -2,6 +2,13 @@
 
     python3 -m pipeline.collect                      # index date = yesterday (UTC), issue date = index date + 1
     python3 -m pipeline.collect --index-date 2026-10-06 --issue-date 2026-10-07
+    python3 -m pipeline.collect --catch-up           # from the day after the last issue that had papers, up to yesterday
+    python3 -m pipeline.collect --index-from 2026-10-11 --index-date 2026-10-16   # an explicit window
+
+Before searching it asks whether Europe PMC is taking in new papers at all (europepmc.health). If it is not, nothing is
+written and the exit code is 3: an empty search on such a day says nothing about structure papers, so there is no issue
+to make. --force collects anyway. A window (--catch-up / --index-from) also skips papers already listed in an earlier
+issue, so papers Europe PMC indexes late are not lost and not repeated.
 
 Writes:
     data/issues/<issue>/candidates.json   facts for every candidate (committed)
@@ -14,11 +21,12 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import html
+import json
 import sys
 from concurrent.futures import ThreadPoolExecutor
 
 from . import europepmc, impact, jats, pdb, uniprot
-from .common import cached, default_index_date, issue_date_for, issue_dir, write_json
+from .common import ISSUES_DIR, cached, default_index_date, issue_date_for, issue_dir, write_json
 
 MAX_FULLTEXT = 120  # cap on papers whose full text is fetched on a busy day
 MAX_IMPACT_FULLTEXT = 25  # extra papers from the impact search, best pre-screen scores first
@@ -91,10 +99,61 @@ def score(c: dict) -> int:
     return s
 
 
-def run(index_date: str, issue_date: str) -> dict:
-    query = europepmc.build_query(index_date)
+MIN_PARSED_COVERED = 10  # an older issue (written before health was recorded) counts as having covered its day from this many papers
+MAX_WINDOW_DAYS = 14
+
+
+def _issues() -> list[dict]:
+    out = []
+    for f in sorted(ISSUES_DIR.glob("*/candidates.json")):
+        try:
+            out.append(json.loads(f.read_text(encoding="utf-8")))
+        except ValueError:
+            continue
+    return out
+
+
+def covered(meta: dict) -> bool:
+    """Did this issue really cover its day? The ones made while Europe PMC was not indexing (hits 0, 1, 1 on
+    2026-10-12..14) did not."""
+    h = meta.get("health") or {}
+    if h.get("status") in ("ok", "stalled"):
+        return h["status"] == "ok"
+    return (meta.get("counts") or {}).get("parsed", 0) >= MIN_PARSED_COVERED
+
+
+def catch_up_start(end: dt.date) -> dt.date:
+    """The day after the last index date that an issue covered (at most MAX_WINDOW_DAYS back; the end day when none)."""
+    done = [dt.date.fromisoformat(m["index_date"]) for m in _issues()
+            if covered(m) and dt.date.fromisoformat(m["index_date"]) < end]
+    start = max(done) + dt.timedelta(days=1) if done else end
+    return max(start, end - dt.timedelta(days=MAX_WINDOW_DAYS - 1))
+
+
+def already_listed(except_issue: str) -> set[str]:
+    """PMCIDs that an earlier issue already considered (they are not offered again by a catch-up window)."""
+    return {c["pmcid"] for m in _issues() if m["issue_date"] != except_issue for c in m["candidates"]}
+
+
+def run(index_date: str, issue_date: str, index_from: str | None = None, force: bool = False) -> dict:
+    windowed = bool(index_from) and index_from != index_date
+    health = europepmc.health(index_date)
+    print(f"Europe PMC health for {index_date}: {health['status']} (new open-access papers that day {health['fresh_oa']}, "
+          f"usual {health['baseline']}, stall below {health['threshold']})", file=sys.stderr)
+    if health["status"] == "stalled" and not force:
+        print(f"STALLED: Europe PMC indexed almost no new open-access papers on {index_date}. A search would find nothing "
+              f"whatever the structure papers of the day were, so no issue is written (exit code 3). Run again once it "
+              f"recovers with --catch-up; --force collects anyway.", file=sys.stderr)
+        raise SystemExit(3)
+    query = europepmc.build_query(index_date, index_from if windowed else None)
     raw = europepmc.search(query)
-    print(f"Europe PMC: {len(raw)} hits for index date {index_date}", file=sys.stderr)
+    if windowed:
+        listed = already_listed(issue_date)
+        before = len(raw)
+        raw = [r for r in raw if r.get("pmcid") not in listed]
+        print(f"Window {index_from}..{index_date}: {before} hits, {before - len(raw)} already in an earlier issue",
+              file=sys.stderr)
+    print(f"Europe PMC: {len(raw)} hits for index date {index_from + '..' if windowed else ''}{index_date}", file=sys.stderr)
 
     metas, excluded = [], []
     for r in raw:
@@ -102,7 +161,8 @@ def run(index_date: str, issue_date: str) -> dict:
         if not m["pmcid"]:
             continue
         (excluded if europepmc.is_excluded_type(m) else metas).append(m)
-    metas = metas[:MAX_FULLTEXT]
+    days = (dt.date.fromisoformat(index_date) - dt.date.fromisoformat(index_from)).days + 1 if windowed else 1
+    metas = metas[:MAX_FULLTEXT * min(days, 3)]
 
     def load(m):
         xml = europepmc.fulltext_xml(m["pmcid"])
@@ -119,9 +179,11 @@ def run(index_date: str, issue_date: str) -> dict:
     print(f"Full text parsed: {len(loaded)}", file=sys.stderr)
 
     # 注目の構造: a second search beyond the structure terms, pre-screened on title and abstract.
-    impact_query = europepmc.build_impact_query(index_date)
+    impact_query = europepmc.build_impact_query(index_date, index_from if windowed else None)
     raw2 = europepmc.search(impact_query)
     seen = {m["pmcid"] for m in metas}
+    if windowed:
+        seen |= listed
     extra = []
     for r in raw2:
         m = europepmc.metadata(r)
@@ -186,8 +248,8 @@ def run(index_date: str, issue_date: str) -> dict:
         "impact_search_hits": len(raw2), "impact_search_parsed": len(loaded_extra),
         "impact_pool": sum(c["kind"] not in NEW_KINDS for c in candidates),
     }
-    out = {"issue_date": issue_date, "index_date": index_date,
-           "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
+    out = {"issue_date": issue_date, "index_date": index_date, **({"index_from": index_from} if windowed else {}),
+           "health": health, "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
            "query": query, "impact_query": impact_query, "counts": counts, "candidates": candidates}
     d = issue_dir(issue_date)
     write_json(d / "candidates.json", out)
@@ -212,7 +274,8 @@ def other_ids(x: dict) -> str:
 
 def overview_md(out: dict) -> str:
     c = out["counts"]
-    lines = [f"# 候補一覧 {out['issue_date']}（Europe PMC 索引日 {out['index_date']}）", "",
+    span = f"{out['index_from']}〜{out['index_date']}" if out.get("index_from") else out["index_date"]
+    lines = [f"# 候補一覧 {out['issue_date']}（Europe PMC 索引日 {span}）", "",
              f"検索ヒット {c['hits']} 件 → 本文解析 {c['parsed']} 件 → 新しい構造 {c['new_structure']} 件"
              f"（ID が補足資料のみ {c['new_structure_ids_unlisted']} 件、マップのみ {c['new_map_only']} 件、"
              f"既存構造の利用 {c['uses_existing']} 件、ID なし {c['no_ids']} 件）", ""]
@@ -250,11 +313,17 @@ def overview_md(out: dict) -> str:
 
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--index-date", default=str(default_index_date()))
+    ap.add_argument("--index-date", default=str(default_index_date()), help="the last index day (default: yesterday, UTC)")
+    ap.add_argument("--index-from", help="first index day of a window (papers already in an earlier issue are skipped)")
+    ap.add_argument("--catch-up", action="store_true",
+                    help="window from the day after the last issue that covered its day, up to --index-date")
     ap.add_argument("--issue-date", help="default: index date + 1")
+    ap.add_argument("--force", action="store_true", help="collect even when Europe PMC is not indexing new papers")
     a = ap.parse_args(argv)
-    issue = a.issue_date or str(issue_date_for(dt.date.fromisoformat(a.index_date)))
-    run(a.index_date, issue)
+    end = dt.date.fromisoformat(a.index_date)
+    start = a.index_from or (str(catch_up_start(end)) if a.catch_up else None)
+    issue = a.issue_date or str(issue_date_for(end))
+    run(a.index_date, issue, start, a.force)
 
 
 if __name__ == "__main__":

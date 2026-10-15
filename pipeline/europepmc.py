@@ -2,7 +2,9 @@
 
 from __future__ import annotations
 
+import datetime as dt
 import json
+import statistics
 
 from .common import cached, fetch
 
@@ -33,14 +35,64 @@ EXCLUDED_PUB_TYPES = {"review", "systematic review", "editorial", "comment", "le
                       "retracted publication", "news", "correction"}
 
 
-def build_query(index_date: str) -> str:
+PUB_FLOOR_DAYS = 21  # a catch-up search ignores papers published longer ago than this before its first day
+
+
+def _window(index_date: str, index_from: str | None) -> str:
+    """FIRST_IDATE for one day, or for a catch-up window. A window also asks for recently published papers only, so a
+    bulk re-index of old records (Europe PMC did one on 2026-10-13) cannot flood it."""
+    if not index_from or index_from == index_date:
+        return f"FIRST_IDATE:[{index_date} TO {index_date}]"
+    floor = dt.date.fromisoformat(index_from) - dt.timedelta(days=PUB_FLOOR_DAYS)
+    return f"FIRST_IDATE:[{index_from} TO {index_date}] AND FIRST_PDATE:[{floor} TO {index_date}]"
+
+
+def build_query(index_date: str, index_from: str | None = None) -> str:
     return (f"({STRUCTURE_TERMS}) AND ({DEPOSITION_TERMS}) AND OPEN_ACCESS:y AND NOT SRC:PPR "
-            f"AND FIRST_IDATE:[{index_date} TO {index_date}]")
+            f"AND {_window(index_date, index_from)}")
 
 
-def build_impact_query(index_date: str) -> str:
+def build_impact_query(index_date: str, index_from: str | None = None) -> str:
     return (f"({IMPACT_TERMS}) AND ({EXP_STRUCTURE_TERMS}) AND ({BIO_TERMS}) AND OPEN_ACCESS:y AND NOT SRC:PPR "
-            f"AND FIRST_IDATE:[{index_date} TO {index_date}]")
+            f"AND {_window(index_date, index_from)}")
+
+
+# ---------- is Europe PMC taking in new papers? ----------
+# From 2026-10-11 Europe PMC stopped indexing new open-access papers (about 1,000 a day before, a handful after) and,
+# on 10-13, indexed 63,000 old records at once. A search for "yesterday" then finds nothing, which looks the same as a
+# day without structure papers. health() tells the two apart by counting the open-access papers that were first indexed
+# on the day AND published in the last two weeks ("fresh"), and comparing that with the previous two weeks.
+HEALTH_DAYS = 14        # days of history for the baseline
+STALL_FLOOR = 50        # fewer fresh open-access papers than this is a stall whatever the baseline
+STALL_RATIO = 0.10      # ... and so is less than this share of the baseline (the median of the previous days)
+
+
+def count(query: str) -> int | None:
+    """Number of hits (no records fetched); None when Europe PMC does not answer."""
+    try:
+        d = json.loads(fetch(f"{BASE}/search", params={"query": query, "format": "json", "resultType": "lite",
+                                                        "pageSize": 1}, retries=3))
+        return d["hitCount"]
+    except Exception:
+        return None
+
+
+def fresh_oa(day: dt.date) -> int | None:
+    lo = day - dt.timedelta(days=14)
+    return count(f"OPEN_ACCESS:y AND NOT SRC:PPR AND FIRST_IDATE:[{day} TO {day}] AND FIRST_PDATE:[{lo} TO {day}]")
+
+
+def health(index_date: str) -> dict:
+    """{"status": "ok" | "stalled" | "unknown", "fresh_oa", "baseline", "threshold", "days"}."""
+    day = dt.date.fromisoformat(index_date)
+    today = fresh_oa(day)
+    history = [n for n in (fresh_oa(day - dt.timedelta(days=k)) for k in range(1, HEALTH_DAYS + 1)) if n is not None]
+    baseline = statistics.median(history) if history else None
+    out = {"fresh_oa": today, "baseline": baseline, "days": len(history)}
+    if today is None:
+        return {**out, "status": "unknown", "threshold": None}
+    threshold = max(STALL_FLOOR, STALL_RATIO * (baseline or 0))
+    return {**out, "threshold": round(threshold), "status": "stalled" if today < threshold else "ok"}
 
 
 def search(query: str, page_size: int = 500) -> list[dict]:

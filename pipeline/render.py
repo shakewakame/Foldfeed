@@ -610,7 +610,8 @@ def issue_md(meta: dict, picks: list[tuple[dict, dict]], infos: dict | None = No
     covered = "すべて紹介する。" if not rest else f"うち {len(picks)} 本を紹介する（残りは末尾に一覧）。"
     out = ['<p align="center"><img src="../../../assets/logo.svg" alt="構造生物学デイリー" height="56"></p>', "",
            f"# {meta['issue_date']} 号", "",
-           f"**今日の新しい構造：{new_total} 本**　Europe PMC に {meta['index_date']} に登録された"
+           f"**今日の新しい構造：{new_total} 本**　Europe PMC に "
+           f"{meta['index_from'] + '〜' if meta.get('index_from') else ''}{meta['index_date']} に登録された"
            f"オープンアクセス論文 {c['parsed']} 本のうち、新しい構造を報告した論文は {new_total} 本。{covered}", ""]
     new, hot = split_sections(picks)
     if hot:
