@@ -5,6 +5,7 @@ from __future__ import annotations
 import datetime as dt
 import gzip
 import hashlib
+import http.client
 import json
 import time
 import urllib.error
@@ -65,7 +66,7 @@ def fetch(url: str, *, params: dict | None = None, data: bytes | None = None,
                 return None
             if e.code not in (408, 429, 500, 502, 503, 504) or attempt == retries:
                 raise
-        except (urllib.error.URLError, TimeoutError, ConnectionError):
+        except (urllib.error.URLError, TimeoutError, ConnectionError, http.client.HTTPException):  # incl. IncompleteRead
             if attempt == retries:
                 raise
         time.sleep(delay)

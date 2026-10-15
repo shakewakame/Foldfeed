@@ -33,6 +33,7 @@ SOURCE = "pmc-aws"
 CREDIT = ("この号の論文情報と全文は、米国国立医学図書館（NLM）の PMC オープンアクセスデータセット"
           "（AWS Open Data）から取得した。")
 ID_FLOOR, ID_CEIL = 10_000_000, 99_999_999   # 8-digit PMC IDs: the ones being issued now
+PUB_FLOOR_DAYS = 180    # papers published longer ago than this before the window are left out
 ID_MARGIN = 6_000        # IDs are issued roughly in the order of arrival; list this far before the bisected start
 IMPACT_CAP = 80          # impact-search candidates whose XML is read (best text score first)
 WORKERS = 8
@@ -122,7 +123,11 @@ def _flags(item: dict) -> dict:
     if path.exists():
         return json.loads(path.read_text())
     pid = f"{item['pmcid']}.{item['version']}"
-    text = fetch(f"{BASE}/{pid}/{pid}.txt", retries=3).decode("utf-8", "replace")
+    try:
+        text = fetch(f"{BASE}/{pid}/{pid}.txt", retries=4).decode("utf-8", "replace")
+    except Exception as e:      # one unreadable article must not stop the day's run (not cached: tried again next time)
+        print(f"  could not read {pid}: {e}", file=sys.stderr)
+        return {"structure": False, "impact": False, "rank": 0, "failed": True}
     strong = {m.group(0).lower() for m in IMPACT.finditer(text)}
     out = {"structure": bool(STRUCTURE.search(text) and DEPOSITION.search(text)),
            "impact": bool(strong and EXPERIMENTAL.search(text) and BIO.search(text)),
@@ -207,13 +212,15 @@ def discover(index_from: str, index_date: str, skip: set[str], max_main: int) ->
         main = list(ex.map(build, main_items))
         impact = list(ex.map(build, [i for i, _ in impact_items]))
 
-    floor = str(dt.date.fromisoformat(index_from) - dt.timedelta(days=europepmc.PUB_FLOOR_DAYS))
+    floor = str(dt.date.fromisoformat(index_from) - dt.timedelta(days=PUB_FLOOR_DAYS))
 
     def keep(m):
-        # not retracted, not an author manuscript or a preprint, and published recently: a record that was only
-        # rewritten in the window (metadata refreshed) is not a new paper
-        return (m is not None and not m["retracted"] and not m["manuscript"] and m["source_kind"] != "preprint"
+        # Same as the Europe PMC flow (which also takes author manuscripts and papers published weeks earlier that only
+        # now reached PMC), except: not retracted, not a preprint, and not published more than half a year before the
+        # window (a bulk back-fill of old records is not news)
+        return (m is not None and not m["retracted"] and m["source_kind"] != "preprint"
                 and (m["pub_date"] or "9999") >= floor)
+
     def clean(ms):
         out = [m for m in ms if keep(m)]
         for m in out:
@@ -221,5 +228,8 @@ def discover(index_from: str, index_date: str, skip: set[str], max_main: int) ->
                 m.pop(k, None)
         return out
 
-    return {"listed": len(items), "screened": sum(f["structure"] for f in flags), "main": clean(main),
+    failed = sum(bool(f.get("failed")) for f in flags)
+    if failed:
+        print(f"  {failed} of {len(items)} articles could not be read", file=sys.stderr)
+    return {"listed": len(items), "screened": sum(f["structure"] for f in flags), "failed": failed, "main": clean(main),
             "impact": clean(impact)}
