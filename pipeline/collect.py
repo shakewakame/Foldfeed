@@ -5,9 +5,11 @@
     python3 -m pipeline.collect --catch-up           # from the day after the last issue that had papers, up to yesterday
     python3 -m pipeline.collect --index-from 2026-10-11 --index-date 2026-10-16   # an explicit window
 
-Before searching it asks whether Europe PMC is taking in new papers at all (europepmc.health). If it is not, nothing is
-written and the exit code is 3: an empty search on such a day says nothing about structure papers, so there is no issue
-to make. --force collects anyway. A window (--catch-up / --index-from) also skips papers already listed in an earlier
+Before searching it asks whether Europe PMC is taking in new papers at all (europepmc.health). If it is not, it switches
+by itself to PMC's own Open Access dataset on AWS (pipeline/pmcoa.py; --source pmc-aws forces it, --source europepmc
+forbids it): the issue is then marked "source": "pmc-aws" and the site credits NLM on it. If that finds no new articles
+either, nothing is written and the exit code is 3: an empty search on such a day says nothing about structure papers.
+--force collects from Europe PMC anyway. A window (--catch-up / --index-from) also skips papers already listed in an earlier
 issue, so papers Europe PMC indexes late are not lost and not repeated.
 
 Writes:
@@ -25,7 +27,7 @@ import json
 import sys
 from concurrent.futures import ThreadPoolExecutor
 
-from . import europepmc, impact, jats, pdb, uniprot
+from . import europepmc, impact, jats, pdb, pmcoa, uniprot
 from .common import ISSUES_DIR, cached, default_index_date, issue_date_for, issue_dir, write_json
 
 MAX_FULLTEXT = 120  # cap on papers whose full text is fetched on a busy day
@@ -116,6 +118,8 @@ def _issues() -> list[dict]:
 def covered(meta: dict) -> bool:
     """Did this issue really cover its day? The ones made while Europe PMC was not indexing (hits 0, 1, 1 on
     2026-10-12..14) did not."""
+    if meta.get("source") == pmcoa.SOURCE:
+        return True
     h = meta.get("health") or {}
     if h.get("status") in ("ok", "stalled"):
         return h["status"] == "ok"
@@ -135,34 +139,54 @@ def already_listed(except_issue: str) -> set[str]:
     return {c["pmcid"] for m in _issues() if m["issue_date"] != except_issue for c in m["candidates"]}
 
 
-def run(index_date: str, issue_date: str, index_from: str | None = None, force: bool = False) -> dict:
+def run(index_date: str, issue_date: str, index_from: str | None = None, force: bool = False,
+        source: str = "auto") -> dict:
     windowed = bool(index_from) and index_from != index_date
     health = europepmc.health(index_date)
     print(f"Europe PMC health for {index_date}: {health['status']} (new open-access papers that day {health['fresh_oa']}, "
           f"usual {health['baseline']}, stall below {health['threshold']})", file=sys.stderr)
-    if health["status"] == "stalled" and not force:
-        print(f"STALLED: Europe PMC indexed almost no new open-access papers on {index_date}. A search would find nothing "
-              f"whatever the structure papers of the day were, so no issue is written (exit code 3). Run again once it "
-              f"recovers with --catch-up; --force collects anyway.", file=sys.stderr)
+    stalled = health["status"] == "stalled" and not force
+    fallback = source == "pmc-aws" or (source == "auto" and stalled)
+    if stalled and source == "europepmc":
+        print(f"STALLED: Europe PMC indexed almost no new open-access papers on {index_date}; no issue is written "
+              f"(exit code 3). --force collects anyway.", file=sys.stderr)
         raise SystemExit(3)
-    query = europepmc.build_query(index_date, index_from if windowed else None)
-    raw = europepmc.search(query)
-    if windowed:
-        listed = already_listed(issue_date)
-        before = len(raw)
-        raw = [r for r in raw if r.get("pmcid") not in listed]
-        print(f"Window {index_from}..{index_date}: {before} hits, {before - len(raw)} already in an earlier issue",
-              file=sys.stderr)
-    print(f"Europe PMC: {len(raw)} hits for index date {index_from + '..' if windowed else ''}{index_date}", file=sys.stderr)
-
-    metas, excluded = [], []
-    for r in raw:
-        m = europepmc.metadata(r)
-        if not m["pmcid"]:
-            continue
-        (excluded if europepmc.is_excluded_type(m) else metas).append(m)
     days = (dt.date.fromisoformat(index_date) - dt.date.fromisoformat(index_from)).days + 1 if windowed else 1
-    metas = metas[:MAX_FULLTEXT * min(days, 3)]
+    listed = already_listed(issue_date) if (windowed or fallback) else set()
+    pmc = None
+    if fallback:
+        print(f"Europe PMC is not indexing: taking the papers from PMC Open Access on AWS ({index_from or index_date}..{index_date})",
+              file=sys.stderr)
+        try:
+            pmc = pmcoa.discover(index_from or index_date, index_date, listed, MAX_FULLTEXT * min(days, 3))
+        except Exception as e:
+            print(f"  PMC Open Access on AWS failed: {e}", file=sys.stderr)
+        if not pmc or not pmc["listed"]:
+            print("STALLED: Europe PMC is not indexing and PMC Open Access (AWS) has no new articles either; no issue is "
+                  "written (exit code 3).", file=sys.stderr)
+            raise SystemExit(3)
+        query = impact_query = f"PMC Open Access on AWS, articles written {index_from or index_date}..{index_date}"
+        raw, metas, excluded = pmc["main"], [], []
+        for m in pmc["main"]:
+            (excluded if europepmc.is_excluded_type(m) else metas).append(m)
+        print(f"PMC Open Access: {pmc['listed']} new articles, {pmc['screened']} with structure words, "
+              f"{len(metas)} kept ({len(excluded)} excluded types)", file=sys.stderr)
+    else:
+        query = europepmc.build_query(index_date, index_from if windowed else None)
+        raw = europepmc.search(query)
+        if windowed:
+            before = len(raw)
+            raw = [r for r in raw if r.get("pmcid") not in listed]
+            print(f"Window {index_from}..{index_date}: {before} hits, {before - len(raw)} already in an earlier issue",
+                  file=sys.stderr)
+        print(f"Europe PMC: {len(raw)} hits for index date {index_from + '..' if windowed else ''}{index_date}", file=sys.stderr)
+        metas, excluded = [], []
+        for r in raw:
+            m = europepmc.metadata(r)
+            if not m["pmcid"]:
+                continue
+            (excluded if europepmc.is_excluded_type(m) else metas).append(m)
+        metas = metas[:MAX_FULLTEXT * min(days, 3)]
 
     def load(m):
         xml = europepmc.fulltext_xml(m["pmcid"])
@@ -179,14 +203,17 @@ def run(index_date: str, issue_date: str, index_from: str | None = None, force: 
     print(f"Full text parsed: {len(loaded)}", file=sys.stderr)
 
     # 注目の構造: a second search beyond the structure terms, pre-screened on title and abstract.
-    impact_query = europepmc.build_impact_query(index_date, index_from if windowed else None)
-    raw2 = europepmc.search(impact_query)
     seen = {m["pmcid"] for m in metas}
-    if windowed:
-        seen |= listed
+    seen |= listed
     extra = []
-    for r in raw2:
-        m = europepmc.metadata(r)
+    if pmc is not None:
+        raw2 = pmc["impact"]
+        pool = [(m, None) for m in raw2]
+    else:
+        impact_query = europepmc.build_impact_query(index_date, index_from if windowed else None)
+        raw2 = europepmc.search(impact_query)
+        pool = [(europepmc.metadata(r), r) for r in raw2]
+    for m, _ in pool:
         if m["pmcid"] and m["pmcid"] not in seen and not europepmc.is_excluded_type(m):
             seen.add(m["pmcid"])
             m["source"] = "impact_search"
@@ -249,7 +276,7 @@ def run(index_date: str, issue_date: str, index_from: str | None = None, force: 
         "impact_pool": sum(c["kind"] not in NEW_KINDS for c in candidates),
     }
     out = {"issue_date": issue_date, "index_date": index_date, **({"index_from": index_from} if windowed else {}),
-           "health": health, "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
+           "health": health, **({"source": pmcoa.SOURCE} if fallback else {}), "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
            "query": query, "impact_query": impact_query, "counts": counts, "candidates": candidates}
     d = issue_dir(issue_date)
     write_json(d / "candidates.json", out)
@@ -318,12 +345,14 @@ def main(argv=None):
     ap.add_argument("--catch-up", action="store_true",
                     help="window from the day after the last issue that covered its day, up to --index-date")
     ap.add_argument("--issue-date", help="default: index date + 1")
-    ap.add_argument("--force", action="store_true", help="collect even when Europe PMC is not indexing new papers")
+    ap.add_argument("--force", action="store_true", help="collect from Europe PMC even when it is not indexing new papers")
+    ap.add_argument("--source", choices=("auto", "europepmc", "pmc-aws"), default="auto",
+                    help="auto: Europe PMC, or PMC Open Access on AWS while Europe PMC is not indexing")
     a = ap.parse_args(argv)
     end = dt.date.fromisoformat(a.index_date)
     start = a.index_from or (str(catch_up_start(end)) if a.catch_up else None)
     issue = a.issue_date or str(issue_date_for(end))
-    run(a.index_date, issue, start, a.force)
+    run(a.index_date, issue, start, a.force, a.source)
 
 
 if __name__ == "__main__":

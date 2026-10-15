@@ -26,7 +26,7 @@ import sys
 import unicodedata
 from pathlib import Path
 
-from . import brand, impact, render
+from . import brand, impact, pmcoa, render
 from .common import ISSUES_DIR, ROOT, read_json
 from .schema import CATEGORIES, FEATURE_AXES, FEATURE_MIN, LAB_NOTE_FIELDS, SUMMARY_FIELDS, SUMMARY_OPTIONAL
 
@@ -980,8 +980,10 @@ def issue_page(date: str, prev_date: str | None, next_date: str | None,
             + sd("タンパク質を探す", find_form("../")))
     head = masthead(1)
     span = f'{meta["index_from"]}〜{meta["index_date"]}' if meta.get("index_from") else meta["index_date"]
-    foot = colophon(f'<p>この号の対象：Europe PMC に {esc(span)} に登録されたオープンアクセス論文 '
-                    f'{meta["counts"]["parsed"]} 本のうち、新しい構造を報告した論文。</p>')
+    from_nlm = meta.get("source") == pmcoa.SOURCE      # Europe PMC was not indexing: the papers came from NLM's PMC data
+    foot = colophon(f'<p>この号の対象：{"PMC" if from_nlm else "Europe PMC"} に {esc(span)} に登録されたオープンアクセス論文 '
+                    f'{meta["counts"]["parsed"]} 本のうち、新しい構造を報告した論文。</p>'
+                    + (f'<p>{esc(pmcoa.CREDIT)}</p>' if from_nlm else ""))
     desc = "、".join(pk["target_label"] for _, pk in picks[:6])
     title = f"{jp_date(date)}号 · {brand.SITE_NAME}"
     return page(("［プレビュー］" if preview else "") + title, bar + head + shell("".join(main), side, sticky=True) + foot, depth=1,
@@ -1176,7 +1178,9 @@ def home(issues: list[str]) -> str:
     side = (sd("タンパク質を探す", find_form()) + mine_html(lib) + journals_html(journal_counts(issues)) + numbers_html(issues, lib)
             + sd("このサイトについて", f"<p>{esc(ABOUT)}</p>"))
     return page(f"{brand.SITE_NAME}（{brand.SITE_NAME_EN}）",
-                masthead(0) + band + shell("".join(main), side) + colophon(), depth=0, viewer=True, script=MINE_SCRIPT)
+                masthead(0) + band + shell("".join(main), side)
+                + colophon(f'<p>{esc(pmcoa.CREDIT)}</p>' if load_issue(latest, ISSUES_DIR)[0].get("source") == pmcoa.SOURCE else ""),
+                depth=0, viewer=True, script=MINE_SCRIPT)
 
 
 PROTEIN_SCRIPT = r"""

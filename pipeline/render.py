@@ -12,7 +12,7 @@ import re
 import sys
 import unicodedata
 
-from . import brand, impact, pdb, structure_svg
+from . import brand, impact, pdb, pmcoa, structure_svg
 from .common import issue_dir, read_json
 from .schema import CATEGORIES, FEATURE_MIN, LAB_NOTE_FIELDS, SUMMARY_FIELDS, SUMMARY_OPTIONAL
 
@@ -610,9 +610,11 @@ def issue_md(meta: dict, picks: list[tuple[dict, dict]], infos: dict | None = No
     covered = "すべて紹介する。" if not rest else f"うち {len(picks)} 本を紹介する（残りは末尾に一覧）。"
     out = ['<p align="center"><img src="../../../assets/logo.svg" alt="構造生物学デイリー" height="56"></p>', "",
            f"# {meta['issue_date']} 号", "",
-           f"**今日の新しい構造：{new_total} 本**　Europe PMC に "
+           f"**今日の新しい構造：{new_total} 本**　{'PMC' if meta.get('source') == 'pmc-aws' else 'Europe PMC'} に "
            f"{meta['index_from'] + '〜' if meta.get('index_from') else ''}{meta['index_date']} に登録された"
            f"オープンアクセス論文 {c['parsed']} 本のうち、新しい構造を報告した論文は {new_total} 本。{covered}", ""]
+    if meta.get("source") == "pmc-aws":   # Europe PMC was not indexing; see pipeline/pmcoa.py
+        out += [f"出典：{pmcoa.CREDIT}", ""]
     new, hot = split_sections(picks)
     if hot:
         out += [f"**注目の構造：{len(hot)} 本**（新しい構造ではないが、実験で決めた構造で確かめた注目の研究）", ""]

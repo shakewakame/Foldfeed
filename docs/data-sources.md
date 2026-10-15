@@ -13,6 +13,8 @@
 | `models.rcsb.org` | 3D ビューア用の座標（BinaryCIF）。**閲覧者のブラウザ**が記事ページから直接取得する。開発環境・ルーティンは使わない | 閲覧者側で必要 |
 | `cdn.rcsb.org` | RCSB の構造画像 | 接続不可（不要。構造図は座標から自前で描く） |
 | `api.biorxiv.org` | bioRxiv | 接続不可（bioRxiv 対応時に許可する） |
+| `pmc-oa-opendata.s3.amazonaws.com` | PMC オープンアクセスデータ（NLM 公式、AWS Open Data）。論文ごとのメタデータ JSON・全文 XML・テキスト。**Europe PMC が止まったときの代替**（`pipeline/pmcoa.py`） | OK（2026-10-15） |
+| `eutils.ncbi.nlm.nih.gov` / `pubmed.ncbi.nlm.nih.gov` / `pmc.ncbi.nlm.nih.gov` / `www.ncbi.nlm.nih.gov` / `ftp.ncbi.nlm.nih.gov` | NCBI（PubMed・PMC 本体） | 接続不可（403。使うにはネットワーク設定で許可が要る） |
 
 本番の毎日の実行は GitHub Actions 上で行うため、上の制限は開発環境だけの話。
 
@@ -78,5 +80,5 @@
 1. **Europe PMC の PDB ID 自動抽出は数週間遅れる。** 直近数日の論文は抽出結果が空なので、毎日の処理では本文 XML から自前で PDB / EMDB ID を抜き出す。
 2. **公開日ではなく索引日で取得する。** 公開日で検索すると、Europe PMC への登録が遅れた論文を取りこぼす。
 3. **Europe PMC への登録の遅れはジャーナルによって違う。** 中央値は 3 日。Nature Communications・Science Advances・eLife・PNAS は約 1 日、NAR は約 17 日。遅いジャーナルは Crossref で公開当日に見つけて補う（NAR は Crossref でライセンス情報付きで取得できることを確認）。
-5. **Europe PMC の新着の取り込みは止まることがある。** 2026-10-11 の索引日から、新しいオープンアクセス論文がほぼ入らなくなった（出版日別の件数が 1 日 700〜1,000 本から 0〜9 本へ。10-13 には古い記録 63,000 件を一括索引）。検索が 0 件でも「構造の論文がなかった」とは限らない。`pipeline.europepmc.health()` が「その日に初めて索引された直近 2 週間の出版」の件数を前 14 日の中央値と比べて停止を判定し、停止なら号を作らない。回復後は `pipeline.collect --catch-up` で止まっていた期間をまとめて拾う。NCBI（PMC 本体）には開発環境から接続できず（403）、原因が Europe PMC か PMC かは切り分けていない
+5. **Europe PMC の新着の取り込みは止まることがある。** 2026-10-11 の索引日から、新しいオープンアクセス論文がほぼ入らなくなった（出版日別の件数が 1 日 700〜1,000 本から 0〜9 本へ。10-13 には古い記録 63,000 件を一括索引）。検索が 0 件でも「構造の論文がなかった」とは限らない。`pipeline.europepmc.health()` が「その日に初めて索引された直近 2 週間の出版」の件数を前 14 日の中央値と比べて停止を判定し、停止なら号を作らない。停止中は PMC のオープンデータ（AWS）に自動で切り替える（`pipeline/pmcoa.py`）。このバケットには止まっていた間も新着（10/10 以降で 8,554 本以上）が入っていたので、止まっていたのは Europe PMC の取り込みで、PMC 本体ではない。回復後は `pipeline.collect --catch-up` で止まっていた期間をまとめて拾う
 4. **同じジャーナルでもライセンスが論文ごとに違う**（例：Nature Communications にも CC BY-NC-ND の論文がある）。ライセンスは論文ごとに判定する。
