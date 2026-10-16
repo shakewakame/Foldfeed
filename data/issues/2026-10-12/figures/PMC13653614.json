@@ -1,0 +1,24 @@
+{
+ "pdb_id": "5GRJ",
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "PD-L1（標的の免疫チェックポイント）",
+   "desc": "avelumab H chain",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "アベルマブ軽鎖（抗体）",
+   "desc": "avelumab L chain",
+   "entity": "2"
+  },
+  {
+   "color": "#5F9296",
+   "label": "アベルマブ重鎖（抗体）",
+   "desc": "Programmed cell death 1 ligand 1",
+   "entity": "3"
+  }
+ ],
+ "ligands": []
+}
