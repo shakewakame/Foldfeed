@@ -1,67 +1,230 @@
 {
   "issue_date": "2026-10-13",
   "index_date": "2026-10-12",
-  "generated_at": "2026-10-13T00:08:25+00:00",
-  "query": "(\"cryo-EM\" OR \"cryoEM\" OR \"cryo-electron microscopy\" OR \"cryo-electron tomography\" OR \"subtomogram\" OR \"crystal structure\" OR \"X-ray crystallography\" OR \"crystallographic\" OR \"NMR structure\" OR \"solution structure\") AND (\"Protein Data Bank\" OR \"PDB\" OR \"wwPDB\" OR \"EMDB\" OR \"accession code\" OR \"accession codes\") AND OPEN_ACCESS:y AND NOT SRC:PPR AND FIRST_IDATE:[2026-10-12 TO 2026-10-12]",
-  "impact_query": "(\"AlphaFold\" OR \"RoseTTAFold\" OR \"ESMFold\" OR \"structure prediction\" OR \"protein design\" OR \"de novo design\" OR \"designed protein\" OR \"binder design\" OR \"ProteinMPNN\" OR \"RFdiffusion\" OR \"structure-based drug design\" OR \"structure-guided\" OR \"structure-based\" OR \"co-crystal structure\" OR \"cocrystal structure\" OR \"mechanism\") AND (\"crystal structure\" OR \"cryo-EM\" OR \"cryo-electron microscopy\" OR \"NMR structure\" OR \"Protein Data Bank\") AND (\"protein\" OR \"enzyme\" OR \"receptor\" OR \"antibody\" OR \"peptide\" OR \"RNA\") AND OPEN_ACCESS:y AND NOT SRC:PPR AND FIRST_IDATE:[2026-10-12 TO 2026-10-12]",
+  "health": {
+    "fresh_oa": 9,
+    "baseline": 969.5,
+    "days": 14,
+    "threshold": 97,
+    "status": "stalled"
+  },
+  "source": "pmc-aws",
+  "split_from": "2026-10-16",
+  "generated_at": "2026-10-16T00:23:12+00:00",
+  "query": "PMC Open Access on AWS, articles written 2026-10-11..2026-10-15",
+  "impact_query": "PMC Open Access on AWS, articles written 2026-10-11..2026-10-15",
   "counts": {
-    "hits": 1,
-    "excluded_types": 0,
-    "parsed": 2,
-    "new_structure": 0,
+    "hits": 12,
+    "parsed": 13,
+    "new_structure": 3,
     "new_structure_ids_unlisted": 0,
     "new_map_only": 0,
-    "uses_existing": 1,
-    "no_ids": 1,
-    "impact_search_hits": 6,
+    "uses_existing": 4,
+    "no_ids": 6,
     "impact_search_parsed": 1,
-    "impact_pool": 2
+    "impact_pool": 10
   },
   "candidates": [
     {
-      "pmcid": "PMC2268108",
-      "pmid": null,
-      "doi": null,
-      "title": "Abstracts of papers at the Fifty-Ninth Annual Meeting of the Society of General Physiologists",
-      "journal": "The Journal of General Physiology",
-      "journal_abbrev": "J Gen Physiol",
-      "authors": "",
-      "pub_date": "2005-07-01",
+      "pmcid": "PMC13652807",
+      "pmid": 42855465,
+      "doi": "10.1038/s41467-026-78428-6",
+      "title": "A co-evolved peptide-GPCR system senses host entry to drive fungal infection",
+      "journal": "Nature Communications",
+      "journal_abbrev": "Nat Commun",
+      "authors": "Mendoza-Rojas G, Nakonz P, Lu M, Kühne NM, Postma J, Shtakser N, Heinen M, Patel M, Arguello-Miranda O, Heimel K, Billerbeck S, Altegoer F",
+      "pub_date": "2026-10-09",
       "index_date": "2026-10-12",
-      "license": "cc by-nc-sa",
+      "license": "cc by",
       "pub_types": [
-        "abstract"
+        "research-article"
       ],
-      "abstract": "",
+      "abstract": "A successful infection requires pathogens to recognize the specific host environment in order to reprogram their physiology accordingly. One major way in which eukaryotic cells sense their surroundings is via G-Protein Coupled Receptors (GPCRs), which share a seven-transmembrane architecture and G-protein-mediated downstream signaling. While mammalian GPCRs are well-characterized and represent important drug targets, their fungal counterparts remain poorly understood. Here we uncover a GPCR-based mechanism that allows the corn pathogen Ustilago maydis to sense whether it has entered plant tissue. During infection, the fungus secretes the protein Pit2, which is cleaved by host apoplastic cysteine proteases, releasing a peptide ligand ‘hidden’ within the protein core. This ligand activates the fungal GPCR Gpe1, thus promoting fungal proliferation after initial host penetration. We elucidate the crystal structure of Pit2 and model the complex formed by Gpe1 and the Pit2-derived peptide. Structure-guided mutational analysis supports that disrupting this interaction reduces fungal virulence. The Gpe1/Pit2 system is conserved in related fungal species, with co-evolutionary signatures apparently preserving receptor-ligand specificity. Furthermore, this system shows mechanistic similarities to mammalian receptors, suggesting an evolutionary link between fungal and mammalian GPCRs.",
+      "kind": "new_structure",
+      "own_structures": [
+        {
+          "pdb_id": "9RXK",
+          "status": "released",
+          "title": "Crystal structure of the Ustilago maydis virulence factor Pit2",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 2.35,
+          "release_date": "2026-07-22",
+          "deposit_date": "2025-07-11",
+          "citation_doi": null,
+          "citation_pmid": null,
+          "citation_title": "A co-evolved peptide-GPCR system senses host entry to drive fungal infection",
+          "polymers": [
+            {
+              "description": "Secreted effector PIT2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "A0A0D1EAR7"
+              ],
+              "organisms": [
+                "Mycosarcoma maydis"
+              ]
+            },
+            {
+              "description": "Immunoglobulin G-binding protein G",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P19909"
+              ],
+              "organisms": [
+                "Streptococcus"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "entry without a published citation, listed in the deposition statement"
+        }
+      ],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "proteins": [
+        {
+          "uniprot": "A0A0D1EAR7",
+          "gene": "PIT2",
+          "synonyms": [],
+          "name": "Secreted effector PIT2",
+          "organism": "Mycosarcoma maydis",
+          "prior_pdb_count": 0,
+          "first_structure": true
+        },
+        {
+          "uniprot": "P19909",
+          "gene": "spg",
+          "synonyms": [],
+          "name": "Immunoglobulin G-binding protein G",
+          "organism": "Streptococcus sp. group G",
+          "prior_pdb_count": 91,
+          "first_structure": false
+        }
+      ],
+      "score": 86
+    },
+    {
+      "pmcid": "PMC13654475",
+      "pmid": 42861354,
+      "doi": "10.1016/j.crfs.2026.101584",
+      "title": "Integrated computation-guided thermostabilization of the fungal sweet protein Honey Truffle Sweetener",
+      "journal": "Current Research in Food Science",
+      "journal_abbrev": "Curr Res Food Sci",
+      "authors": "Wang Z, Wang W, Zhu F, Zhang Y, Li Y, Zhu Z, Lu Z, Huang A, Yu M, Liu S",
+      "pub_date": "2026-09-28",
+      "index_date": "2026-10-12",
+      "license": "cc by-nc",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "Thermostability limits the use of sweet proteins as sugar substitutes in thermally processed foods. Here, we report an integrated computation-guided workflow for thermostabilizing Honey Truffle Sweetener (HTS), a recently identified fungal sweet protein with low intrinsic stability. We determined the HTS crystal structure and used it to guide subsequent computational analyses. Rosetta and ThermoMPNN evaluated candidate substitutions from complementary physics-based and deep-learning-based perspectives, and the selected single-mutant library was experimentally characterized. The resulting melting-temperature data were then used to develop SMRC-Net, which combines mutation-centered features from the ESM2 protein language model with molecular dynamics-derived structural descriptors to support mutation prioritization. Repeated nested cross-validation supported quantitative Tm prediction within the HTS scaffold, while prospective testing showed 9/10 directional agreement in a small, computationally selected variant set. Validated substitutions were then assembled stepwise in small modules, followed by the introduction of an engineered disulfide bond. The final variant, FM, had a melting temperature of 82.1 °C, 27.5 °C higher than that of wild-type HTS. Untreated FM retained sweetness, while separate heat- and pH-treatment assays showed retained solubility and largely preserved secondary-structure profiles. Sweetness after these treatments was not evaluated. Molecular dynamics analyses indicated that FM was not uniformly rigidified but instead exhibited localized flexibility redistribution and a more consolidated conformational ensemble. This work provides a practical computation-guided framework for protein thermostabilization, with potential applicability to other compact proteins.",
+      "kind": "new_structure",
+      "own_structures": [
+        {
+          "pdb_id": "21WR",
+          "status": "released",
+          "title": "X-ray crystal structure of Honey Truffle Sweetener",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 1.58,
+          "release_date": "2026-10-07",
+          "deposit_date": "2026-01-01",
+          "citation_doi": "10.1016/j.crfs.2026.101584",
+          "citation_pmid": null,
+          "citation_title": "Integrated Computation-Guided Thermostabilization of the Fungal Sweet Protein Honey Truffle Sweetener",
+          "polymers": [
+            {
+              "description": "Honey Truffle Sweetener",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mattirolomyces terfezioides"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB primary citation matches this paper"
+        }
+      ],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "proteins": [],
+      "score": 56
+    },
+    {
+      "pmcid": "PMC13653942",
+      "pmid": 42861050,
+      "doi": "10.1016/j.bbrep.2026.102821",
+      "title": "Structural characterization of HCoV-229E and H163A main protease (Mpro) interactions with the inhibitor narlaprevir",
+      "journal": "Biochemistry and Biophysics Reports",
+      "journal_abbrev": "Biochem Biophys Rep",
+      "authors": "Yuan G, Zeng P, Zhou X, Guo L, Li W, Cui J, Li J",
+      "pub_date": "2026-10-04",
+      "index_date": "2026-10-12",
+      "license": "cc by",
+      "pub_types": [
+        "brief-report"
+      ],
+      "abstract": "Narlaprevir, originally developed as a clinical-stage inhibitor of the hepatitis C virus (HCV) NS3/4A protease, has recently demonstrated potent inhibitory activity against the SARS-CoV-2 main protease (Mpro), with its co-crystal structure already resolved. To elucidate the mechanistic basis of its cross-genus inhibition and drug resistance profiles, we determined the crystal structures of narlaprevir in complex with HCoV-229E Mpro and the SARS-CoV-2 Mpro(H163A) mutant at resolutions of 2.01 Å and 2.14 Å, respectively. By integrating these crystallographic data with molecular dynamics (MD) simulations and Molecular Mechanics/Poisson-Boltzmann Surface Area (MM/PBSA) free energy calculations, we systematically compared narlaprevir against clinically approved antivirals, including bofutrelvir, PF-07304814, and pomotrelvir. Structural analysis revealed that narlaprevir forms a conserved covalent C–S bond with the catalytic cysteine residue across all investigated complexes. Thermodynamic evaluations indicated that the SARS-CoV-2 WT-Mpro–narlaprevir complex exhibits the most negative total binding free energy (−66.29 kcal/mol), suggesting a marginally stronger theoretical binding affinity compared to the 229E–narlaprevir (−64.91 kcal/mol) and H163A–narlaprevir (−64.14 kcal/mol) complexes. Notably, distinct from the approved drugs, narlaprevir exclusively occupies protomer A when bound to both HCoV-229E and H163A Mpro. Collectively, these findings establish narlaprevir as a highly promising lead compound with notable broad-spectrum potential. While its overall efficacy parallels that of clinically approved agents, it exhibits distinct binding characteristics. These insights provide a critical structural foundation for the rational design of next-generation antiviral strategies capable of mitigating threats from both circulating and emerging coronaviruses.",
+      "kind": "new_structure",
+      "own_structures": [
+        {
+          "pdb_id": "9XXJ",
+          "status": "unreleased",
+          "evidence": "cited by the paper but not yet released (on hold until publication)"
+        },
+        {
+          "pdb_id": "24DE",
+          "status": "unreleased",
+          "evidence": "cited by the paper but not yet released (on hold until publication)"
+        }
+      ],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "proteins": [],
+      "score": 52
+    },
+    {
+      "pmcid": "PMC13654546",
+      "pmid": 42861413,
+      "doi": "10.1016/j.isci.2026.117652",
+      "title": "FGFR kinase isoform and activation state modulate ATPase activity",
+      "journal": "iScience",
+      "journal_abbrev": "iScience",
+      "authors": "Besch A, Lamon G, Zhang Y, Traaseth NJ",
+      "pub_date": "2026-09-29",
+      "index_date": "2026-10-12",
+      "license": "cc by-nc-nd",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "SummaryFibroblast growth factor (FGF) binding to FGF receptor (FGFR) induces trans-autophosphorylation of activation loop tyrosine residues within the receptor’s intracellular kinase domain, thereby activating the receptor and promoting downstream substrate phosphorylation. Here, using activity assays and 31P NMR spectroscopy on the FGFR kinase domain, we show that phosphorylation of activation loop tyrosine residues not only enhances kinase activity but also increases the rate of ATP hydrolysis by 33-fold. This ATPase activity varies among FGFR kinase isoforms, with a 5.4-fold difference between FGFR2 and FGFR3 kinases. Conversion of ATP to ADP in phosphorylation assays also promotes the reverse phosphorylation reaction, which involves phosphoryl group transfer from phosphotyrosine to ADP to regenerate ATP. Based on these observations, we hypothesize that ATPase activity occurs in cells and may decrease the local ATP/ADP ratio surrounding FGFR. Such a mechanism would reduce the favorability of phosphorylation and may promote signal termination through reverse phosphorylation.",
       "kind": "uses_existing",
       "own_structures": [],
       "cited_pdb_ids": [
-        "1T5S",
-        "1VFP",
-        "1SU4"
+        "6PNX"
       ],
       "emdb_ids": [],
       "cited_structures": [
         {
-          "pdb_id": "1T5S",
+          "pdb_id": "6PNX",
           "status": "released",
-          "title": "Structure of the (SR)Ca2+-ATPase Ca2-E1-AMPPCP form",
+          "title": "Crystal Structure of an Asymmetric Dimer of FGF Receptor 3 Kinases Trapped in A-loop Tyrosine Transphosphorylation Reaction",
           "method": "X-RAY DIFFRACTION",
-          "resolution": 2.6,
-          "release_date": "2004-06-15",
-          "deposit_date": "2004-05-05",
-          "citation_doi": "10.1126/science.1099366",
-          "citation_pmid": "15192230",
-          "citation_title": "Phosphoryl transfer and calcium ion occlusion in the calcium pump.",
+          "resolution": 2.199,
+          "release_date": "2020-01-22",
+          "deposit_date": "2019-07-03",
+          "citation_doi": "10.1038/s41589-019-0455-7",
+          "citation_pmid": "31959966",
+          "citation_title": "Molecular basis for receptor tyrosine kinase A-loop tyrosine transphosphorylation.",
           "polymers": [
             {
-              "description": "Sarcoplasmic/endoplasmic reticulum calcium ATPase 1 isoform SERCA1a",
+              "description": "Fibroblast growth factor receptor 3",
               "type": "Protein",
               "uniprot_ids": [
-                "P04191"
+                "P22607"
               ],
               "organisms": [
-                "Oryctolagus cuniculus"
+                "Homo sapiens"
               ]
             }
           ],
@@ -71,57 +234,97 @@
               "name": "PHOSPHOMETHYLPHOSPHONIC ACID ADENYLATE ESTER"
             }
           ]
-        },
+        }
+      ],
+      "impact": {
+        "score": 5,
+        "types": [
+          "mechanism"
+        ],
+        "validation": [
+          "assay",
+          "nmr"
+        ],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [
         {
-          "pdb_id": "1VFP",
-          "status": "released",
-          "title": "Crystal structure of the SR CA2+-ATPase with bound AMPPCP",
-          "method": "X-RAY DIFFRACTION",
-          "resolution": 2.9,
-          "release_date": "2004-07-06",
-          "deposit_date": "2004-04-18",
-          "citation_doi": "10.1038/nature02680",
-          "citation_pmid": "15229613",
-          "citation_title": "Crystal structure of the calcium pump with a bound ATP analogue.",
-          "polymers": [
-            {
-              "description": "Sarcoplasmic/endoplasmic reticulum calcium ATPase 1",
-              "type": "Protein",
-              "uniprot_ids": [
-                "P04191"
-              ],
-              "organisms": [
-                "Oryctolagus cuniculus"
-              ]
-            }
+          "uniprot": "P22607",
+          "gene": "FGFR3",
+          "synonyms": [
+            "JTK4"
           ],
-          "ligands": [
-            {
-              "id": "ACP",
-              "name": "PHOSPHOMETHYLPHOSPHONIC ACID ADENYLATE ESTER"
-            }
-          ]
-        },
+          "name": "Fibroblast growth factor receptor 3",
+          "organism": "Homo sapiens"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13653007",
+      "pmid": 42853349,
+      "doi": "10.1007/s42770-026-02098-1",
+      "title": "Genomic and functional characterization of Bacillus subtilis subsp. subtilis INPA R296 with emulsifying activity in cultivation with residual soybean oil",
+      "journal": "Brazilian Journal of Microbiology",
+      "journal_abbrev": "Braz J Microbiol",
+      "authors": "Rodrigues SP, Silva JCI, Menezes NC, de Souza RC, Santos AO, Graça IRS, Hanada RE, Barbosa LK, Koolen HHF, Silva GF, Oliveira LA",
+      "pub_date": "2026-10-09",
+      "index_date": "2026-10-12",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "Biosurfactants are amphiphilic microbial metabolites with potential to reduce surface and interfacial tension and to promote emulsification. This study investigated the biosynthetic potential, emulsifying activity, and metabolomic profile of Bacillus subtilis subsp. subtilis INPA R296 cultivated in media supplemented with residual soybean oil. Phylogenomic analyses supported the taxonomic placement of the strain close to Bacillus subtilis subsp. subtilis 168T. Genome mining predicted 11 biosynthetic gene clusters (BGCs), including NRPS clusters related to surfactin and fengycin biosynthesis. Synteny analyses indicated conservation of these clusters among phylogenetically related Bacillus strains. Functional assays showed that culture-medium composition influenced cell growth, emulsification indices, and emulsifying activity. UHPLC-HRMS/MS combined with molecular networking enabled the putative annotation of metabolites belonging to several chemical classes, including cyclic lipopeptides, N-acyl amino acids, and oxylipins. The main contribution of this study is the integrated evaluation of genomic biosynthetic potential, emulsifying activity, and putative metabolite annotations in strain INPA R296 cultivated with a low-cost agro-industrial residue. Because no biosurfactant yield, surface/interfacial tension, authentic-standard validation, or structural isolation was performed, the results demonstrate emulsifying potential and the occurrence of putatively annotated amphiphilic metabolites rather than confirmed biosurfactant production. These findings identify INPA R296 as a target for further investigation of amphiphilic metabolites with potential biotechnological applications.Supplementary InformationThe online version contains supplementary material available at https://doi.org/10.1007/s42770-026-02098-1.",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "1NRP"
+      ],
+      "emdb_ids": [],
+      "cited_structures": [
         {
-          "pdb_id": "1SU4",
+          "pdb_id": "1NRP",
           "status": "released",
-          "title": "Crystal structure of calcium ATPase with two bound calcium ions",
+          "title": "CRYSTALLOGRAPHIC STRUCTURES OF THROMBIN COMPLEXED WITH THROMBIN RECEPTOR PEPTIDES: EXISTENCE OF EXPECTED AND NOVEL BINDING MODES",
           "method": "X-RAY DIFFRACTION",
-          "resolution": 2.4,
-          "release_date": "2004-05-04",
-          "deposit_date": "2004-03-26",
-          "citation_doi": "10.1038/35015017",
-          "citation_pmid": "10864315",
-          "citation_title": "Crystal structure of the calcium pump of sarcoplasmic reticulum at 2.6 A resolution",
+          "resolution": 3.0,
+          "release_date": "1994-05-31",
+          "deposit_date": "1994-01-18",
+          "citation_doi": "10.1021/bi00177a018",
+          "citation_pmid": "8136362",
+          "citation_title": "Crystallographic structures of thrombin complexed with thrombin receptor peptides: existence of expected and novel binding modes.",
           "polymers": [
             {
-              "description": "Sarcoplasmic/endoplasmic reticulum calcium ATPase 1",
+              "description": "RECEPTOR BASED PEPTIDE NR'S",
               "type": "Protein",
               "uniprot_ids": [
-                "P04191"
+                "P25116"
               ],
               "organisms": [
-                "Oryctolagus cuniculus"
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "ALPHA-THROMBIN (LARGE SUBUNIT)",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P00734"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "ALPHA-THROMBIN (SMALL SUBUNIT)",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P00734"
+              ],
+              "organisms": [
+                "Homo sapiens"
               ]
             }
           ],
@@ -129,42 +332,1768 @@
         }
       ],
       "impact": {
-        "score": -2,
-        "types": [],
-        "validation": [],
+        "score": 4,
+        "types": [
+          "drug"
+        ],
+        "validation": [
+          "assay"
+        ],
         "low": [],
         "journal": false,
         "exp_structure": true,
-        "flags": [
-          "生体高分子が主題でない可能性"
-        ]
+        "flags": []
       },
       "proteins": [
         {
-          "uniprot": "P04191",
-          "gene": "ATP2A1",
+          "uniprot": "P00734",
+          "gene": "F2",
           "synonyms": [],
-          "name": "Sarcoplasmic/endoplasmic reticulum calcium ATPase 1",
-          "organism": "Oryctolagus cuniculus"
+          "name": "Prothrombin",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P25116",
+          "gene": "F2R",
+          "synonyms": [
+            "CF2R",
+            "PAR1",
+            "TR"
+          ],
+          "name": "Proteinase-activated receptor 1",
+          "organism": "Homo sapiens"
         }
       ],
       "score": 5
     },
     {
-      "pmcid": "PMC9442589",
-      "pmid": null,
-      "doi": "10.1007/s13337-022-00787-7",
-      "title": "Abstracts of the papers presented in the international conference of Indian Virological Society, VIROCON 2021 on “Emerging and Re-emerging Viral Diseases – Climate Change Impacts and Mitigation”, during March 26–28, 2022, at AIIMS, Hyderabad, India (Virtual Mode)",
-      "journal": "VirusDisease",
-      "journal_abbrev": "Virusdisease",
-      "authors": "",
-      "pub_date": "2022-09-01",
+      "pmcid": "PMC13654189",
+      "pmid": 42861278,
+      "doi": "10.1002/exp2.70235",
+      "title": "Reversal of Chronic Stress‐Induced Inflammaging by Bazi Bushen Formula Through AMPK‐Sirtuins Axis Activation and Myeloid Reset",
+      "journal": "Exploration",
+      "journal_abbrev": "Exploration (Beijing)",
+      "authors": "Li M, Chen Z, Wang L, Wang Z, Zhang S, Niu K, Shen X, Lu X, Zhang R, Jiang Y, Li Y, Dai Y, Tang X, Hou B, Shi M, Wang X, Guo Z, Xing X, Kang N, Li H, Kang T, Bischof E, Hou Y, Jia Z",
+      "pub_date": "2026-10-11",
       "index_date": "2026-10-12",
-      "license": null,
+      "license": "cc by",
       "pub_types": [
-        "calendar"
+        "research-article"
       ],
-      "abstract": "",
+      "abstract": "ABSTRACTChronic stress potentially accelerates aging and increases age‐related disease risk. However, the underlying mechanisms and organ specificity remain unclear. Utilizing a 12‐month unpredictable chronic mild stress (UCMS) mouse model, we revealed chronic stress significantly exacerbates systemic inflammation, causing widespread tissue damage and lifespan shortening. Integrated single‐cell RNA sequencing analysis of multiple tissues suggests a common feature of lymphocyte reduction and myeloid cell expansion. The lungs and kidneys exhibited pronounced stress responses, including epigenetic dysregulation and mitochondrial dysfunction. Both β‐nicotinamide mononucleotide (NMN) and compound medicine Bazi Bushen (BZBS) effectively alleviate the UCMS‐induced aging phenotypes. BZBS restores immune system homeostasis and reduces stress/inflammation levels in various tissues. Bioactive compounds from BZBS constituents—Schisandra chinensis (Turcz.) Baill. and Cnidium monnieri (L.) Cusson—improved mitochondrial function via AMPK‐SIRT‐PGC‐1α signaling activation. The present study underscores the importance of early intervention in chronic stress to prevent or delay age‐related diseases, with significant implications for public health strategies aimed at healthy aging.",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "5EZV",
+        "4ZZH",
+        "4BN4",
+        "6XV1"
+      ],
+      "emdb_ids": [],
+      "cited_structures": [
+        {
+          "pdb_id": "5EZV",
+          "status": "released",
+          "title": "X-ray crystal structure of AMP-activated protein kinase alpha-2/alpha-1 RIM chimaera (alpha-2(1-347)/alpha-1(349-401)/alpha-2(397-end) beta-1 gamma-1) co-crystallized with C2 (5-(5-hydroxyl-isoxazol-3-yl)-furan-2-phosphonic acid)",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 2.99,
+          "release_date": "2016-03-09",
+          "deposit_date": "2015-11-26",
+          "citation_doi": "10.1038/ncomms10912",
+          "citation_pmid": "26952388",
+          "citation_title": "Structural basis of allosteric and synergistic activation of AMPK by furan-2-phosphonic derivative C2 binding.",
+          "polymers": [
+            {
+              "description": "5'-AMP-activated protein kinase subunit gamma-1",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P54619"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "5'-AMP-activated protein kinase subunit beta-1",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9Y478"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "5'-AMP-activated protein kinase catalytic subunit alpha-2/alpha-1 RIM SWAP chimera",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P54646",
+                "Q13131"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "STU",
+              "name": "STAUROSPORINE"
+            },
+            {
+              "id": "C1V",
+              "name": "3-[4-(2-hydroxyphenyl)phenyl]-4-oxidanyl-6-oxidanylidene-7H-thieno[2,3-b]pyridine-5-carbonitrile"
+            },
+            {
+              "id": "C2Z",
+              "name": "5-(5-hydroxyl-isoxazol-3-yl)-furan-2-phosphonic acid"
+            }
+          ]
+        },
+        {
+          "pdb_id": "4ZZH",
+          "status": "released",
+          "title": "SIRT1/Activator Complex",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 3.1001,
+          "release_date": "2015-07-15",
+          "deposit_date": "2015-05-22",
+          "citation_doi": "10.1038/ncomms8645",
+          "citation_pmid": "26134520",
+          "citation_title": "Crystallographic structure of a small molecule SIRT1 activator-enzyme complex.",
+          "polymers": [
+            {
+              "description": "NAD-dependent protein deacetylase sirtuin-1",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q96EB6"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "4TO",
+              "name": "(4S)-N-[3-(1,3-oxazol-5-yl)phenyl]-7-[3-(trifluoromethyl)phenyl]-3,4-dihydro-1,4-methanopyrido[2,3-b][1,4]diazepine-5(2H)-carboxamide"
+            }
+          ]
+        },
+        {
+          "pdb_id": "4BN4",
+          "status": "released",
+          "title": "Structure of human SIRT3 in complex with ADP-ribose",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 1.3,
+          "release_date": "2013-06-26",
+          "deposit_date": "2013-05-13",
+          "citation_doi": "10.1107/s0907444913015448",
+          "citation_pmid": "23897466",
+          "citation_title": "Structures of Human Sirtuin 3 Complexes with Adp-Ribose and with Carba-Nad+ and Srt1720: Binding Details and Inhibition Mechanism",
+          "polymers": [
+            {
+              "description": "NAD-DEPENDENT PROTEIN DEACETYLASE SIRTUIN-3, MITOCHONDRIAL",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9NTG7"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "AR6",
+              "name": "[(2R,3S,4R,5R)-5-(6-AMINOPURIN-9-YL)-3,4-DIHYDROXY-OXOLAN-2-YL]METHYL[HYDROXY-[[(2R,3S,4R,5S)-3,4,5-TRIHYDROXYOXOLAN-2-YL]METHOXY]PHOSPHORYL] HYDROGEN PHOSPHATE"
+            },
+            {
+              "id": "OP2",
+              "name": "2-[2-[2-[2-[2-(2-hydroxyethyloxy)ethoxy]ethoxy]ethoxy]ethoxy]ethanoic acid"
+            }
+          ]
+        },
+        {
+          "pdb_id": "6XV1",
+          "status": "released",
+          "title": "Human Sirt6 13-308 in complex with ADP-ribose and the activator MDL-801",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 1.95,
+          "release_date": "2020-10-28",
+          "deposit_date": "2020-01-21",
+          "citation_doi": "10.1038/s41589-021-00749-y",
+          "citation_pmid": "33649599",
+          "citation_title": "Binding site for activator MDL-801 on SIRT6.",
+          "polymers": [
+            {
+              "description": "NAD-dependent protein deacetylase sirtuin-6",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q8N6T7"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "8L9",
+              "name": "5-[[3,5-bis(chloranyl)phenyl]sulfonylamino]-2-[(5-bromanyl-4-fluoranyl-2-methyl-phenyl)sulfamoyl]benzoic acid"
+            },
+            {
+              "id": "AR6",
+              "name": "[(2R,3S,4R,5R)-5-(6-AMINOPURIN-9-YL)-3,4-DIHYDROXY-OXOLAN-2-YL]METHYL[HYDROXY-[[(2R,3S,4R,5S)-3,4,5-TRIHYDROXYOXOLAN-2-YL]METHOXY]PHOSPHORYL] HYDROGEN PHOSPHATE"
+            }
+          ]
+        }
+      ],
+      "impact": {
+        "score": 4,
+        "types": [
+          "drug",
+          "mechanism"
+        ],
+        "validation": [],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [
+        {
+          "uniprot": "P54619",
+          "gene": "PRKAG1",
+          "synonyms": [],
+          "name": "5'-AMP-activated protein kinase subunit gamma-1",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P54646",
+          "gene": "PRKAA2",
+          "synonyms": [
+            "AMPK",
+            "AMPK2"
+          ],
+          "name": "5'-AMP-activated protein kinase catalytic subunit alpha-2",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "Q13131",
+          "gene": "PRKAA1",
+          "synonyms": [
+            "AMPK1"
+          ],
+          "name": "5'-AMP-activated protein kinase catalytic subunit alpha-1",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "Q8N6T7",
+          "gene": "SIRT6",
+          "synonyms": [
+            "SIR2L6"
+          ],
+          "name": "NAD-dependent protein deacylase sirtuin-6",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "Q96EB6",
+          "gene": "SIRT1",
+          "synonyms": [
+            "SIR2L1"
+          ],
+          "name": "NAD-dependent protein deacetylase sirtuin-1",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "Q9NTG7",
+          "gene": "SIRT3",
+          "synonyms": [
+            "SIR2L3"
+          ],
+          "name": "NAD-dependent protein deacetylase sirtuin-3, mitochondrial",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "Q9Y478",
+          "gene": "PRKAB1",
+          "synonyms": [
+            "AMPK"
+          ],
+          "name": "5'-AMP-activated protein kinase subunit beta-1",
+          "organism": "Homo sapiens"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13646495",
+      "pmid": 42843340,
+      "doi": "10.1016/j.molcel.2026.09.008",
+      "title": "Ribosome remodeling drives translation adaptation during viral infection and cellular stress",
+      "journal": "Molecular cell",
+      "journal_abbrev": "Mol Cell",
+      "authors": "Tsai HY, Liu L, Fleming RH, Mintseris J, Ekanayake D, Guo JA, Gu X, Gygi SP, Lee ASY",
+      "pub_date": "2026-10-07",
+      "index_date": "2026-10-12",
+      "license": "tdm",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "SummaryThe ribosome is the highly conserved molecular machine that decodes mRNAs during protein synthesis. While traditionally thought to consist of a uniform set of proteins, here we discover that ribosome composition is reprogrammed to adapt to intrinsic and external cellular perturbations. During infection of human cells by non-segmented negative-sense viruses, viral entry into cells recruits the large ribosomal subunit protein rpL40 to a noncanonical site on the small subunit of 80S ribosomes near the mRNA entry site. These specialized ribosomes preferentially bind viral mRNAs to drive enhanced viral protein synthesis that is critical for replication under host pressures. Unexpectedly, we find that viruses have co-opted this translation pathway from a previously unrecognized endogenous ribosome remodeling program in which metabolic stress alters ribosome structure to promote mRNA translation required for cell survival. Thus, ribosome remodeling is a conserved mechanism enabling dynamic protein synthesis across pathogen and cellular adaptation.",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "4UG0"
+      ],
+      "emdb_ids": [],
+      "cited_structures": [
+        {
+          "pdb_id": "4UG0",
+          "status": "released",
+          "title": "STRUCTURE OF THE HUMAN 80S RIBOSOME",
+          "method": "ELECTRON MICROSCOPY",
+          "resolution": 3.6,
+          "release_date": "2015-06-10",
+          "deposit_date": "2015-03-20",
+          "citation_doi": "10.1038/nature14427",
+          "citation_pmid": "25901680",
+          "citation_title": "Structure of the human 80S ribosome",
+          "polymers": [
+            {
+              "description": "28S ribosomal RNA",
+              "type": "RNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "5S ribosomal RNA",
+              "type": "RNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "5.8S ribosomal RNA",
+              "type": "RNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "60S RIBOSOMAL PROTEIN L3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P39023"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "60S RIBOSOMAL PROTEIN L4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P36578"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "60S RIBOSOMAL PROTEIN L5",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P46777"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "60S RIBOSOMAL PROTEIN L6",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q02878"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "60S RIBOSOMAL PROTEIN L7",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P18124"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "60S RIBOSOMAL PROTEIN L7A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P62424"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "60S RIBOSOMAL PROTEIN L11",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P62913"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "60S RIBOSOMAL PROTEIN L14",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P50914"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "60S RIBOSOMAL PROTEIN L15",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P61313"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "60S RIBOSOMAL PROTEIN L13A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P40429"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "60S RIBOSOMAL PROTEIN L17",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P18621"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "60S RIBOSOMAL PROTEIN L18",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q07020"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "60S RIBOSOMAL PROTEIN L18A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q02543"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "60S RIBOSOMAL PROTEIN L21",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P46778"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "60S RIBOSOMAL PROTEIN L22",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P35268"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "60S RIBOSOMAL PROTEIN L23",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P62829"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "60S RIBOSOMAL PROTEIN L24",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P83731"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "60S RIBOSOMAL PROTEIN L23A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P62750"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "60S RIBOSOMAL PROTEIN L26",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P61254"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "60S RIBOSOMAL PROTEIN L27",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P61353"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "60S RIBOSOMAL PROTEIN L27A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P46776"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "60S RIBOSOMAL PROTEIN L29",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P47914"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "60S RIBOSOMAL PROTEIN L30",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P62888"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "60S RIBOSOMAL PROTEIN L31",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P62899"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "60S RIBOSOMAL PROTEIN L32",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P62910"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "60S RIBOSOMAL PROTEIN L34",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P49207"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "60S RIBOSOMAL PROTEIN L35",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P42766"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "60S RIBOSOMAL PROTEIN L36",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9Y3U8"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "60S RIBOSOMAL PROTEIN L37",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P61927"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "60S RIBOSOMAL PROTEIN L38",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P63173"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "UBIQUITIN-60S RIBOSOMAL PROTEIN L40",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P62987"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "60S RIBOSOMAL PROTEIN L41",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P62945"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "60S RIBOSOMAL PROTEIN L36A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P83881"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "60S RIBOSOMAL PROTEIN L37A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P61513"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "60S RIBOSOMAL PROTEIN L28",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P46779"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "60S RIBOSOMAL PROTEIN L10A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P62906"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "18S ribosomal RNA",
+              "type": "RNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "HUMAN INITIATOR MET-TRNA-I",
+              "type": "RNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "40S RIBOSOMAL PROTEIN SA",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P08865"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "40S RIBOSOMAL PROTEIN S3A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P61247"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "40S RIBOSOMAL PROTEIN S3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P23396"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "40S RIBOSOMAL PROTEIN S4, X ISOFORM",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P62701"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "40S RIBOSOMAL PROTEIN S5",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P46782"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "40S RIBOSOMAL PROTEIN S7",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P62081"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "40S RIBOSOMAL PROTEIN S8",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P62241"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "40S RIBOSOMAL PROTEIN S10",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P46783"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "40S RIBOSOMAL PROTEIN S11",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P62280"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "40S RIBOSOMAL PROTEIN S15",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P62841"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "40S RIBOSOMAL PROTEIN S19",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P39019"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "40S RIBOSOMAL PROTEIN S21",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P63220"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "40S RIBOSOMAL PROTEIN S23",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P62266"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "40S RIBOSOMAL PROTEIN S26",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P62854"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "40S RIBOSOMAL PROTEIN S28",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P62857"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "40S RIBOSOMAL PROTEIN S29",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P62273"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "UBIQUITIN-40S RIBOSOMAL PROTEIN S27A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P62979"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "GUANINE NUCLEOTIDE-BINDING PROTEIN SUBUNIT BETA-2-LIKE 1",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P63244"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "40S RIBOSOMAL PROTEIN S2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P15880"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "40S RIBOSOMAL PROTEIN S6",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P62753"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "40S RIBOSOMAL PROTEIN S9",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P46781"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "40S RIBOSOMAL PROTEIN",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "40S RIBOSOMAL PROTEIN S14",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P62263"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "40S RIBOSOMAL PROTEIN S15A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P62244"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "40S RIBOSOMAL PROTEIN S30",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P62861"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "40S RIBOSOMAL PROTEIN S27",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P42677"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "40S RIBOSOMAL PROTEIN S25",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P62851"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "40S RIBOSOMAL PROTEIN S24",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P62847"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "40S RIBOSOMAL PROTEIN S13",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P62277"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "40S RIBOSOMAL PROTEIN S20",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P60866"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "40S RIBOSOMAL PROTEIN S18",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P62269"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "40S RIBOSOMAL PROTEIN S17-LIKE",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P08708"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "40S RIBOSOMAL PROTEIN S16",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P62249"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "60S RIBOSOMAL PROTEIN L39",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P62891"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "60S RIBOSOMAL PROTEIN L8",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P62917"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "60S RIBOSOMAL PROTEIN L35A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P18077"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "60S RIBOSOMAL PROTEIN L19",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84098"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "60S RIBOSOMAL PROTEIN L13",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P26373"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "60S RIBOSOMAL PROTEIN L10-LIKE",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q96L21"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            },
+            {
+              "description": "60S RIBOSOMAL PROTEIN L9",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P32969"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            }
+          ],
+          "ligands": []
+        }
+      ],
+      "impact": {
+        "score": 5,
+        "types": [
+          "mechanism"
+        ],
+        "validation": [],
+        "low": [],
+        "journal": true,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [
+        {
+          "uniprot": "P08708",
+          "gene": "RPS17",
+          "synonyms": [
+            "RPS17L"
+          ],
+          "name": "Small ribosomal subunit protein eS17",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P08865",
+          "gene": "RPSA",
+          "synonyms": [
+            "LAMBR",
+            "LAMR1"
+          ],
+          "name": "Small ribosomal subunit protein uS2",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P15880",
+          "gene": "RPS2",
+          "synonyms": [
+            "RPS4"
+          ],
+          "name": "Small ribosomal subunit protein uS5",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P18077",
+          "gene": "RPL35A",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein eL33",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P18124",
+          "gene": "RPL7",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein uL30",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P18621",
+          "gene": "RPL17",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein uL22",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P23396",
+          "gene": "RPS3",
+          "synonyms": [],
+          "name": "Small ribosomal subunit protein uS3",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P26373",
+          "gene": "RPL13",
+          "synonyms": [
+            "BBC1"
+          ],
+          "name": "Large ribosomal subunit protein eL13",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P32969",
+          "gene": "RPL9",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein uL6",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P35268",
+          "gene": "RPL22",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein eL22",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P36578",
+          "gene": "RPL4",
+          "synonyms": [
+            "RPL1"
+          ],
+          "name": "Large ribosomal subunit protein uL4",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P39019",
+          "gene": "RPS19",
+          "synonyms": [],
+          "name": "Small ribosomal subunit protein eS19",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P39023",
+          "gene": "RPL3",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein uL3",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P40429",
+          "gene": "RPL13A",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein uL13",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P42677",
+          "gene": "RPS27",
+          "synonyms": [
+            "MPS1"
+          ],
+          "name": "Small ribosomal subunit protein eS27",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P42766",
+          "gene": "RPL35",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein uL29",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P46776",
+          "gene": "RPL27A",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein uL15",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P46777",
+          "gene": "RPL5",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein uL18",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P46778",
+          "gene": "RPL21",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein eL21",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P46779",
+          "gene": "RPL28",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein eL28",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P46781",
+          "gene": "RPS9",
+          "synonyms": [],
+          "name": "Small ribosomal subunit protein uS4",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P46782",
+          "gene": "RPS5",
+          "synonyms": [],
+          "name": "Small ribosomal subunit protein uS7",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P46783",
+          "gene": "RPS10",
+          "synonyms": [],
+          "name": "Small ribosomal subunit protein eS10",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P47914",
+          "gene": "RPL29",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein eL29",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P49207",
+          "gene": "RPL34",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein eL34",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P50914",
+          "gene": "RPL14",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein eL14",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P60866",
+          "gene": "RPS20",
+          "synonyms": [],
+          "name": "Small ribosomal subunit protein uS10",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P61247",
+          "gene": "RPS3A",
+          "synonyms": [
+            "FTE1",
+            "MFTL"
+          ],
+          "name": "Small ribosomal subunit protein eS1",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P61254",
+          "gene": "RPL26",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein uL24",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P61313",
+          "gene": "RPL15",
+          "synonyms": [
+            "EC45"
+          ],
+          "name": "Large ribosomal subunit protein eL15",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P61353",
+          "gene": "RPL27",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein eL27",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P61513",
+          "gene": "RPL37A",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein eL43",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P61927",
+          "gene": "RPL37",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein eL37",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P62081",
+          "gene": "RPS7",
+          "synonyms": [],
+          "name": "Small ribosomal subunit protein eS7",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P62241",
+          "gene": "RPS8",
+          "synonyms": [],
+          "name": "Small ribosomal subunit protein eS8",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P62244",
+          "gene": "RPS15A",
+          "synonyms": [],
+          "name": "Small ribosomal subunit protein uS8",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P62249",
+          "gene": "RPS16",
+          "synonyms": [],
+          "name": "Small ribosomal subunit protein uS9",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P62263",
+          "gene": "RPS14",
+          "synonyms": [],
+          "name": "Small ribosomal subunit protein uS11",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P62266",
+          "gene": "RPS23",
+          "synonyms": [],
+          "name": "Small ribosomal subunit protein uS12",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P62269",
+          "gene": "RPS18",
+          "synonyms": [
+            "D6S218E"
+          ],
+          "name": "Small ribosomal subunit protein uS13",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P62273",
+          "gene": "RPS29",
+          "synonyms": [],
+          "name": "Small ribosomal subunit protein uS14",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P62277",
+          "gene": "RPS13",
+          "synonyms": [],
+          "name": "Small ribosomal subunit protein uS15",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P62280",
+          "gene": "RPS11",
+          "synonyms": [],
+          "name": "Small ribosomal subunit protein uS17",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P62424",
+          "gene": "RPL7A",
+          "synonyms": [
+            "SURF-3",
+            "SURF3"
+          ],
+          "name": "Large ribosomal subunit protein eL8",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P62701",
+          "gene": "RPS4X",
+          "synonyms": [
+            "CCG2",
+            "RPS4",
+            "SCAR"
+          ],
+          "name": "Small ribosomal subunit protein eS4, X isoform",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P62750",
+          "gene": "RPL23A",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein uL23",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P62753",
+          "gene": "RPS6",
+          "synonyms": [],
+          "name": "Small ribosomal subunit protein eS6",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P62829",
+          "gene": "RPL23",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein uL14",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P62841",
+          "gene": "RPS15",
+          "synonyms": [
+            "RIG"
+          ],
+          "name": "Small ribosomal subunit protein uS19",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P62847",
+          "gene": "RPS24",
+          "synonyms": [],
+          "name": "Small ribosomal subunit protein eS24",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P62851",
+          "gene": "RPS25",
+          "synonyms": [],
+          "name": "Small ribosomal subunit protein eS25",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P62854",
+          "gene": "RPS26",
+          "synonyms": [],
+          "name": "Small ribosomal subunit protein eS26",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P62857",
+          "gene": "RPS28",
+          "synonyms": [],
+          "name": "Small ribosomal subunit protein eS28",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P62861",
+          "gene": "FAU",
+          "synonyms": [],
+          "name": "Ubiquitin-like FUBI-ribosomal protein eS30 fusion protein",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P62888",
+          "gene": "RPL30",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein eL30",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P62891",
+          "gene": "RPL39",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein eL39",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P62899",
+          "gene": "RPL31",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein eL31",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P62906",
+          "gene": "RPL10A",
+          "synonyms": [
+            "NEDD6"
+          ],
+          "name": "Large ribosomal subunit protein uL1",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P62910",
+          "gene": "RPL32",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein eL32",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P62913",
+          "gene": "RPL11",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein uL5",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P62917",
+          "gene": "RPL8",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein uL2",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P62945",
+          "gene": "RPL41",
+          "synonyms": [],
+          "name": "Small ribosomal subunit protein eS32",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P62979",
+          "gene": "RPS27A",
+          "synonyms": [
+            "UBA80",
+            "UBCEP1"
+          ],
+          "name": "Ubiquitin-ribosomal protein eS31 fusion protein",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P62987",
+          "gene": "UBA52",
+          "synonyms": [
+            "UBCEP2"
+          ],
+          "name": "Ubiquitin-ribosomal protein eL40 fusion protein",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P63173",
+          "gene": "RPL38",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein eL38",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P63220",
+          "gene": "RPS21",
+          "synonyms": [],
+          "name": "Small ribosomal subunit protein eS21",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P63244",
+          "gene": "RACK1",
+          "synonyms": [
+            "GNB2L1"
+          ],
+          "name": "Small ribosomal subunit protein RACK1",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P83731",
+          "gene": "RPL24",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein eL24",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P83881",
+          "gene": "RPL36A",
+          "synonyms": [
+            "RPL44"
+          ],
+          "name": "Large ribosomal subunit protein eL42",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P84098",
+          "gene": "RPL19",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein eL19",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "Q02543",
+          "gene": "RPL18A",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein eL20",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "Q02878",
+          "gene": "RPL6",
+          "synonyms": [
+            "TXREB1"
+          ],
+          "name": "Large ribosomal subunit protein eL6",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "Q07020",
+          "gene": "RPL18",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein eL18",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "Q96L21",
+          "gene": "RPL10L",
+          "synonyms": [],
+          "name": "Ribosomal protein uL16-like",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "Q9Y3U8",
+          "gene": "RPL36",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein eL36",
+          "organism": "Homo sapiens"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13647468",
+      "pmid": 42851917,
+      "doi": "10.1021/acscatal.6c05422",
+      "title": "DiploPhos: A Hemilabile Bisphosphine for Sterically Hindered Ni-Catalyzed Suzuki–Miyaura Couplings",
+      "journal": "ACS catalysis",
+      "journal_abbrev": "ACS Catal",
+      "authors": "Raab TJ, Ho HC, Kerr T, Tao N, Shekhar S, Swiatowiec R, Haibach MC, Doyle AG",
+      "pub_date": "2026-09-12",
+      "index_date": "2026-10-12",
+      "license": "tdm",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "Pharmaceutically relevant Suzuki–Miyaura cross-couplings (SMCs) often require designer phosphine ligands and palladium loadings above 1 mol% to couple Lewis basic, sterically congested substrates. Recent work has demonstrated that nickel is an attractive alternative to palladium for facile SMCs, but further ligand development is required for Ni catalysis to rival Pd for more challenging couplings. We applied prior work on monophosphine ligand design for Ni to develop a bisphosphine, DiploPhos, that outperforms state-of-the-art ligands for Ni to achieve sterically hindered Ni SMCs with ≥3 ortho-substituents. Catalyst speciation studies revealed the hemilabile nature of DiploPhos, which improves reactivity relative to stronger chelating ligands but also leads to the formation of less-active DiploPhos-bridged aggregates. Lewis basic functionality (present on substrates or additives) was found to promote the disaggregation of these species and led to increased SMC yields. This observation is contrary to most other systems in which Lewis basic substrates inhibit Ni-catalyzed SMC reactions. Ligand exchange studies demonstrated that despite its hemilability, DiploPhos is more resistant to displacement by heterocycles than similar bisphosphines. Together, these properties led to best-in-class reactivity for sterically hindered, Lewis base-rich Ni SMCs.",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "cited_structures": [],
+      "impact": {
+        "score": -4,
+        "types": [],
+        "validation": [],
+        "low": [],
+        "journal": false,
+        "exp_structure": false,
+        "flags": [
+          "実験構造の手がかりなし"
+        ]
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13646288",
+      "pmid": 42844267,
+      "doi": "10.1038/s41467-026-77356-9",
+      "title": "Geometry of braided DNA dictates supercoiling partitioning",
+      "journal": "Nature Communications",
+      "journal_abbrev": "Nat Commun",
+      "authors": "Hong Y, Singh G, Wang H, Park Sh, Wang MD",
+      "pub_date": "2026-09-08",
+      "index_date": "2026-10-12",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "DNA’s helical structure requires the replisome to rotate relative to the parental DNA during replication, generating supercoiling that partitions ahead and behind the fork. The influence of DNA substrate geometry on supercoiling partitioning and torsional resistance remains unclear. Here, we have engineered DNA-braiding substrates with end separations found during replication, measured braiding torques using an angular optical trap, and interpreted the results using Monte Carlo simulations. A substrate with small separations readily initiates braiding, suggesting that the fork would rotate during replication, partitioning supercoiling behind the replisome and reducing torsional resistance. In contrast, a substrate with a substantial separation at one end imposes a pronounced ‘torsional barrier’ that hinders braiding initiation, suggesting a lack of fork rotation during replication, so supercoiling would partition ahead of the replisome. Our findings reveal a physical mechanism in which DNA fork geometry could modulate replisome dynamics, manage topological stress, and regulate replication progression in vivo.",
       "source": "impact_search",
       "kind": "no_ids",
       "own_structures": [],
@@ -172,13 +2101,161 @@
       "emdb_ids": [],
       "cited_structures": [],
       "impact": {
-        "score": 2,
+        "score": 6,
+        "types": [
+          "mechanism"
+        ],
+        "validation": [
+          "in vivo"
+        ],
+        "low": [],
+        "journal": true,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13653760",
+      "pmid": 42765591,
+      "doi": "10.1002/cm.70205",
+      "title": "Pathogenic Bordetella bacteria exploit axonemal microtubules to penetrate the ciliary barrier",
+      "journal": "Cytoskeleton (Hoboken, N.J.)",
+      "journal_abbrev": "Cytoskeleton (Hoboken)",
+      "authors": "Costello MS, Raimondi MW, Hayes CS",
+      "pub_date": "2026-09-21",
+      "index_date": "2026-10-12",
+      "license": "tdm",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "Respiratory pathogens face a daunting physical challenge during host colonization. Invading microbes must resist elimination by motile respiratory cilia, which beat continuously to sweep debris from the airways. Bacteria have long been known to use adhesive proteins to bind host cells, but recent work shows that Bordetella species utilize an unusual strategy to colonize respiratory epithelia. Bordetella deploy FhaB adhesins that translocate a novel microtubule-binding domain into cilia to interact with the axoneme. These findings reveal FhaB to be a unique adhesive factor that exploits the internal cytoskeleton to colonize a protected niche in host respiratory tract.",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "cited_structures": [],
+      "impact": {
+        "score": -4,
         "types": [],
         "validation": [],
         "low": [],
         "journal": false,
+        "exp_structure": false,
+        "flags": [
+          "実験構造の手がかりなし"
+        ]
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13653839",
+      "pmid": 42350861,
+      "doi": "10.1007/s10123-026-00856-7",
+      "title": "Revealing 3-hydroxybenzoate-4-hydroxylase from Pseudarthrobacter phenanthrenivorans Sphe3 via In-Cell NMR analysis and molecular cloning",
+      "journal": "International Microbiology",
+      "journal_abbrev": "Int Microbiol",
+      "authors": "Asimakoula S, Primikyri A, Tsagogiannis E, Koukkou AI",
+      "pub_date": "2026-06-26",
+      "index_date": "2026-10-12",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "This study aims at the functional and kinetic characterization of 3-Hydroxybenzoate-4-Hydroxylase (3HB4H) from Pseudarthrobacter phenanthrenivorans Sphe3. Bioinformatic sequence and structural analyses suggested that Asphe3_36590 gene encodes a putative 3HB4H, a finding supported by transcriptional data of a ~ 2000-fold induction when Sphe3 cells were grown on 3-Hydroxybenzoate (3-HBA) compared to glucose. The recombinant 3HB4H is highly specific for 3-HBA and follows Michaelis–Menten kinetics, with Km and Vmax values of 72.6 µM and 42.5 µM × min− 1, respectively, at pH 8.5 and 25 ◦C. It accepts both NADH and NADPH as cofactors and primarily hydroxylates 3-HBA to protocatechuate (PCA), while also converting 4-Hydroxybenzoate and gentisic acid. Combining heterologous expression with in-cell NMR using living Escherichia coli (E. coli) cells overexpressing 3HB4H, demonstrated that 3HB4H encoded by Asphe3_36590 gene catalyzes the hydroxylation of 3-HBA. Real-time NMR revealed rapid intracellular conversion of 3-HBA to PCA, providing direct functional validation of the enzyme in a living cellular environment. Sphe3 3HB4H represents the first biochemically characterized single-subunit FAD-depended hydroxylase (monooxygenase) in Actinobacteria. Furthermore, these findings highlight the exceptional power of in-cell NMR to capture enzymatic activity non-invasively, allowing direct observation of substrate consumption and PCA formation without the need for derivatization or chromatographic separation. This approach offers a powerful platform for investigating enzymatic activity and metabolic transformations in living cells.Graphical Abstract Supplementary InformationThe online version contains supplementary material available at https://doi.org/10.1007/s10123-026-00856-7.",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "cited_structures": [],
+      "impact": {
+        "score": 5,
+        "types": [
+          "mechanism"
+        ],
+        "validation": [
+          "kinetic",
+          "nmr"
+        ],
+        "low": [],
+        "journal": false,
         "exp_structure": true,
         "flags": []
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13653361",
+      "pmid": 42569860,
+      "doi": "10.1002/anie.6337773",
+      "title": "Stereoselective Synthesis of Aminals through Enzyme-Catalyzed Intermolecular C(sp3)-H Amidation of Azacycles",
+      "journal": "Angewandte Chemie (International ed. in English)",
+      "journal_abbrev": "Angew Chem Int Ed Engl",
+      "authors": "Chattopadhyay A, Roy S, Fasan R",
+      "pub_date": "2026-08-08",
+      "index_date": "2026-10-12",
+      "license": "tdm",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "Stereogenic aminals are widespread in natural products, pharmaceuticals, and biologically active compounds, including important classes of antibiotics. Methodologies for asymmetric synthesis of aminals are therefore highly desirable, yet they remain scarce and mostly rely on C–N bond formation at functionalized carbon centers such as carbonyls. Here we report the development of a strategy for asymmetric synthesis of aminals via direct, stereoselective C(sp3)–H functionalization of cyclic amines via an enzyme-catalyzed intermolecular nitrene transfer reaction with dioxazolones. Using engineered variants of thermophilic cytochrome P450 (CYP119) from Sulfolobus solfataricus as catalysts, this approach enables the synthesis of a diverse set of indoline-based aminals in good to high yields, excellent regio- and chemoselectivity, and with enantioselectivity up to >99% ee. This methodology could be further extended to pyrrolidines, piperidines, or morpholines as well as different dioxazolone reagents, yielding a diverse range of enantioenriched aminal scaffolds. This work expands the scope of abiological intermolecular C(sp3)–H amination reactions accessible through biocatalysis and provides a convenient, new route to the synthesis of enantioenriched aminal compounds.",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "cited_structures": [],
+      "impact": {
+        "score": -2,
+        "types": [],
+        "validation": [],
+        "low": [],
+        "journal": true,
+        "exp_structure": false,
+        "flags": [
+          "実験構造の手がかりなし"
+        ]
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13653821",
+      "pmid": 42168686,
+      "doi": "10.1007/s10123-026-00838-9",
+      "title": "Study on the Mechanism of Berberine Reversing MRSA Resistance to β-Lactam Antibiotics by Inhibiting blaZ Expression",
+      "journal": "International Microbiology",
+      "journal_abbrev": "Int Microbiol",
+      "authors": "Zhou F, Gu X, Lin M, Dai Y, Li Y, Jiang M, Yangzong B, Wang Y, Sun X, Wang L",
+      "pub_date": "2026-05-22",
+      "index_date": "2026-10-12",
+      "license": "cc by-nc-nd",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "This study elucidates a novel mechanism by which the natural product berberine (BBR) reverses methicillin-resistant Staphylococcus aureus (MRSA) resistance to β-lactam antibiotics. It was established that BBR interferes with the BlaR1/BlaI regulatory pathway by means of downregulating the signal sensor gene blaR1 and the repressor gene blaI, thereby significantly suppressing the expression of the β-lactamase-encoding gene blaZ at the transcriptional level. The combination susceptibility testing demonstrated that BBR and Oxacillin exhibited synergistic or additive effects in 76.92% of the bacterial strains that were tested. This enhanced efficacy was closely associated with the presence of the blaZ gene. Molecular docking and dynamics simulations further confirmed that BBR stably binds to the active site of the BlaZ protein. These findings systematically clarify the multi-target mechanism of BBR as an antibiotic synergist and provide an important theoretical basis for developing combination therapeutic strategies against MRSA.",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "cited_structures": [],
+      "impact": {
+        "score": -5,
+        "types": [
+          "mechanism"
+        ],
+        "validation": [],
+        "low": [
+          "molecular docking"
+        ],
+        "journal": false,
+        "exp_structure": false,
+        "flags": [
+          "実験構造の手がかりなし",
+          "計算のみの可能性（molecular docking）"
+        ]
       },
       "proteins": [],
       "score": 0
