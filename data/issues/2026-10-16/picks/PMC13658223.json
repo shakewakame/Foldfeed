@@ -1,0 +1,165 @@
+{
+  "pmcid": "PMC13658223",
+  "rank": 7,
+  "headline": "増殖を抑える抗体は、マラリア原虫PfRIPRの尾部を折り曲げる",
+  "subhead": "抗体4種との複合体を解析し、折れ曲がりを起こさない抗体は増殖を抑えなかった",
+  "target_label": "PfRIPR（熱帯熱マラリア原虫）",
+  "summary": {
+    "question": "赤血球への侵入に必須な複合体の中心因子PfRIPRに、抗体がどう結合して侵入を防ぐのかは、構造がなく不明だった。",
+    "approach": "ヒト由来3種とマウス由来1種の抗体とPfRIPR断片の複合体を、X線結晶構造とクライオ電顕で解析した。",
+    "result": "増殖阻害抗体RP.012は、EGF6とEGF7の間で尾部を曲げていた。非阻害のMAD8-739では曲がらなかった。",
+    "learned": "PfRIPRの尾部が侵入の際に形を変える必要があり、RP.012はその動きを妨げる可能性がある。",
+    "open": "抗体を組み合わせたときに相乗効果が生じる仕組みは、まだ明らかでない。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Few monoclonal antibodies (mAbs) have been identified and, with no structures of mAbs bound to PfRIPR, we do not understand how they block invasion, limiting our ability to rationally design the most effective vaccine immunogen based on PfRIPR.",
+          "section": "Introduction"
+        },
+        {
+          "quote": "PfRIPR is the largest and one of the least understood components of PfPCRCR.",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "We structurally characterised four PfRIPR tail-binding antibodies in complex with PfRIPR fragments.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "we obtained crystal structures of PfRIPR EGF6-7 bound to the Fab fragment of RP.012 at 2.20 Å resolution (Fig. 2a, Supplementary Fig. 4 and Supplementary Table 2), and of PfRIPR EGF5-6 and the single chain variable fragment (scFv) of MAD8-739 at 2.80 Å resolution (Fig. 2b and Supplementary Table 2).",
+          "section": "Results"
+        }
+      ],
+      "result": [
+        {
+          "quote": "We show that growth-inhibitory antibody RP.012 induces a kink in the PfRIPR tail while non-inhibitory antibodies do not.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "In contrast, the MAD8-739-bound structure of EGF5-6 is similar to the AlphaFold model (Fig. 2c), suggesting that MAD8-739 does not bend PfRIPR.",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "These studies have implications for the design of PfRIPR-based vaccine immunogens and indicate that the tail of PfRIPR undergoes essential conformational changes during erythrocyte invasion.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "This is consistent with a model in which flexibility in a hinge between EGF6 and 7 is likely required for PfRIPR function (Fig. 4c).",
+          "section": "Discussion"
+        }
+      ],
+      "open": [
+        {
+          "quote": "The mechanism by which synergy occurs is currently not clear.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "immune",
+    "pathogen"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "RP.012との結晶構造（2.20 Å）では、EGF6とEGF7の向きが78°ずれていた。AlphaFoldの直線的な予測と比べると、EGF7が74°回転した曲がりがある。以前から尾部の柔らかさが指摘された位置にあたる。",
+      "evidence": [
+        {
+          "quote": "RP.012 binds at the interface between EGF-like domains 6 and 7, such that lines through the two domains lie at 78° to one another",
+          "section": "Results"
+        },
+        {
+          "quote": "Structural alignment of this prediction with our RP.012-bound structure reveals a bend between EGF6 and 7 that rotates EGF7 by 74°",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "手法の工夫",
+      "text": "EGF5-8を蛍光タンパク質で挟んだFRETプローブでは、RP.012だけがFRET効率を上げた。EGF6-7をジスルフィド結合で伸びた形に固定すると、RP.012は結合できなくなった。",
+      "evidence": [
+        {
+          "quote": "RP.012 increased FRET efficiency of the probe significantly (Fig. 2f), while MAD8-2 and MAD8-739 decreased FRET efficiency (Fig. 2f).",
+          "section": "Results"
+        },
+        {
+          "quote": "unlike MAD8-2, RP.012 could not bind PfRIPR67L, indicating that its epitope is no longer accessible in this conformationally-restrained version of PfRIPR",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "MAD8-2はRP.012の阻害を打ち消し（約16%、RP.012単独は46%）、C末端ドメインに結合するMAD8-66との併用では約93%に上がった。ワクチン抗原にはEGF5-8以外も要る可能性がある。",
+      "evidence": [
+        {
+          "quote": "The observed GIA of RP.012 plus MAD8-2 was only ~16% compared to 46% for RP.012 alone (Fig. 1d), indicating that MAD8-2 can indeed compete with and antagonise RP.012.",
+          "section": "Results"
+        },
+        {
+          "quote": "MAD8-66 and RP.012 had a combined GIA of ~93%, substantially improving the neutralising capacity of RP.012.",
+          "section": "Results"
+        },
+        {
+          "quote": "the best immunogen may require discontinuous regions of PfRIPR, from both EGF5-8 and the CTD.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "PfRIPR 断片や抗体は Expi293F 細胞で発現。抗体の Fab・scFv も同じ細胞。",
+    "construct": "RP.012 はマウス抗体を、ヒト IgG1 定常領域のキメラとして発現。scFv は VH-(GGGGS)3-VL。",
+    "purification": "Protein G、ニッケル樹脂などでアフィニティー精製し、S200・S75 でゲル濾過。",
+    "sample_prep": "結晶は18 °C のシッティングドロップ蒸気拡散（RP.012 複合体は 14.7 mg/mL）。クライオ電顕は C-flat 1.2/1.3、Vitrobot Mark IV。",
+    "data_collection": "結晶は Diamond Light Source（I04、I24）。クライオ電顕は Titan Krios＋K3、28,491 ムービー。",
+    "evidence": [
+      {
+        "quote": "PfRIPR EGF5-8 (D717-D900) with an N-terminal monoFc tag and TEV protease cleavage site and a C-terminal C-tag was recombinantly expressed in Expi293F™ cells (Gibco) as recommended.",
+        "section": "Methods"
+      },
+      {
+        "quote": "The murine antibody RP.012 was recombinantly expressed as a chimeric human antibody composed of the mouse variable domain and human IgG1 constant domains.",
+        "section": "Methods"
+      },
+      {
+        "quote": "These were constructed by joining the variable heavy (VH) and variable light (VL) domains of each antibody with a (GGGGS)3 linker in the format VH-(GGGGS)3-VL.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Crystals were obtained using sitting drop vapour diffusion by mixing 100 nL reservoir solution with 100 nL protein complex at 14.7 mg/mL in Morpheus G12 (0.1 M Buffer Sytem 3 pH 8.5, 0.1 M Carboxylic acids, 37.5% v/v Precipitant Mix 4) at 18 °C after 2 months.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Crystals were cryo-cooled in liquid nitrogen, then diffraction data collected at Diamond Light Source on beamline I04 (wavelength 0.9537 Å) which auto-processed with xia2-dials50 to 2.20 Å.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Grids were prepared with a FEI Vitrobot Mark IV (Thermo Fisher) by applying 3 µL of complex at 0.25 mg/mL to C-Flat 1.2/1.3 grids (Electron Microscopy Sciences) which had been glow-discharged for 60 s at 15 mA.",
+        "section": "Methods"
+      },
+      {
+        "quote": "A total of 28,491 movies were collected.",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "PfRIPR",
+    "マラリア",
+    "中和抗体",
+    "ワクチン",
+    "RP.012",
+    "EGF様ドメイン"
+  ],
+  "legend_labels": [
+    "PfRIPR（抗体の標的）",
+    "RP.012（重鎖）",
+    "RP.012（軽鎖）"
+  ],
+  "editor_notes": "PfRIPR は PDB に既存の構造（PfRCR の 8CDD など、prior_pdb_count 5）があり、初構造ではない。新規性は抗体との複合体で、尾部の EGF5-7 などの構造が増えた点。MAD8-2 の複合体（9TUZ）は低分解能で、論文自身が残基レベルの相互作用は決められないとしている。9TV0 の PfRIPR-PfCyRPA は MAD8-2 の Fab が結合したクライオ電顕構造。「折れ曲がりを起こさない抗体は増殖を抑えなかった」は、MAD8-739 と MAD8-2 についての記述（MAD8-66 は C 末端ドメインに結合し、曲がりは調べていない）。本文は欠けていない。"
+}

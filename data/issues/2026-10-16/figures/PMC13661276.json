@@ -1,0 +1,72 @@
+{
+ "pdb_id": "9TK9",
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "CLN8（アシル転移酵素）",
+   "desc": "Protein CLN8",
+   "entity": "1"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "HXA",
+   "label": "DHA（C22:6）",
+   "color": "#C23B8E",
+   "desc": "Docosa-4,7,10,13,16,19-Hexaenoic Acid",
+   "entity": [
+    "2"
+   ],
+   "sites": [
+    [
+     "B",
+     "301"
+    ]
+   ]
+  },
+  {
+   "id": "COA",
+   "label": "CoA",
+   "color": "#2F9E57",
+   "desc": "Coenzyme A",
+   "entity": [
+    "3"
+   ],
+   "sites": [
+    [
+     "C",
+     "302"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "HXA",
+  "residues": [
+   "K95",
+   "A96",
+   "F134",
+   "H138",
+   "F141",
+   "A142",
+   "G145",
+   "F146",
+   "C149",
+   "G156",
+   "Y158",
+   "L159",
+   "T163",
+   "L222",
+   "L226",
+   "L233",
+   "F234",
+   "G237",
+   "L240",
+   "L241",
+   "I245"
+  ],
+  "polar": 0,
+  "neighbours": [],
+  "label": "DHA（C22:6）"
+ }
+}

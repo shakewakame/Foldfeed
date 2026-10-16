@@ -1,0 +1,80 @@
+{
+  "pmcid": "PMC13650764",
+  "rank": 3,
+  "headline": "ECT2LとDZANK1は、繊毛の根もとで微小管をつなぐ",
+  "subhead": "気道細胞の中で構造を直接解析し、2遺伝子の変異は原発性線毛運動異常症の原因になる",
+  "target_label": "ヒト繊毛の移行帯（ECT2L・DZANK1）",
+  "summary": {
+    "question": "繊毛の根もとの関門である移行帯の分子構成と、運動性繊毛の病気との関係は、よく分かっていなかった。",
+    "approach": "ヒトの気道細胞を凍結して薄く削り、その場のクライオ電子線トモグラフィーとサブトモグラム平均で調べた。",
+    "result": "移行帯の二連微小管を6.9–7.3 Åで解き、9つのタンパク質を同定した。連結部の主役はECT2LとDZANK1だった。",
+    "learned": "ECT2LかDZANK1の機能喪失変異が原発性線毛運動異常症を起こし、移行帯の欠陥と運動性繊毛の病気が直接結びついた。",
+    "open": "DZANK1のIg様ドメインとアンキリン反復の位置は、まだ定まっていない。",
+    "evidence": {
+      "question": [
+        {"quote": "The ciliary transition zone (TZ) regulates ciliary proteome composition, yet its molecular architecture, protein content, and contribution to motile ciliopathies remain poorly defined.", "section": "Abstract"}
+      ],
+      "approach": [
+        {"quote": "We applied in situ cryo-electron tomography and subtomogram averaging to human multiciliated epithelial cells.", "section": "Abstract"}
+      ],
+      "result": [
+        {"quote": "composite map at 6.9–7.3 Å resolution", "section": "Results"},
+        {"quote": "This approach resolved TZ-specific doublet microtubules at subnanometer resolution and identified nine constituent proteins. We found that ECT2L and DZANK1 form the major linker complexes between adjacent TZ doublet microtubules.", "section": "Abstract"}
+      ],
+      "learned": [
+        {"quote": "Biallelic loss-of-function variants in either gene cause primary ciliary dyskinesia.", "section": "Abstract"},
+        {"quote": "These findings establish a direct genetic link between TZ defects and human motile ciliopathies", "section": "Abstract"}
+      ],
+      "open": [
+        {"quote": "The positions of N-terminal immunoglobulin-like and C-terminal ankyrin repeat domains of DZANK1 remain uncertain but may correspond to weak inward-projecting density from the TZ linker", "section": "Results"}
+      ]
+    }
+  },
+  "categories": ["other"],
+  "highlights": [
+    {
+      "tag": "手法の工夫",
+      "text": "培養したヒト気道細胞をFIB（集束イオンビーム）で厚さ約200 nmのラメラに削り、細胞の中でそのまま移行帯を撮影した。精製せずに、細胞の中の状態のまま構造を解いている。",
+      "evidence": [
+        {"quote": "Focused ion beam (FIB) milling was performed on the periphery of the frozen ciliated cells, generating thin lamellae suitable for cryo-ET", "section": "Results"},
+        {"quote": "FIB milling was performed in AutoTEM Cryo using stepwise decreasing currents as the lamellae were thinned (1.0 nA–30 pA; final thickness, ~200 nm).", "section": "Methods"}
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "隣り合う微小管の連結部は、ECT2LとSKP1が2対2で組んだ複合体が並んだものと解釈された。DZANK1がその複合体どうしを橋渡しし、DYNLL1/2とともに隣のA管に取り付く。ただしDZANK1の小さなZn結合ドメインは、弱い密度のため明確には置けていない。",
+      "evidence": [
+        {"quote": "We therefore conclude that a major component of the TZ linker is an ECT2L–SKP1 heterotetramer with 2:2 stoichiometry.", "section": "Results"},
+        {"quote": "These observations together indicate that TZ linkers are linear arrays of ECT2L–SKP1–DZANK1–DYNLL1/2 complexes", "section": "Results"},
+        {"quote": "Although these small domains could not be modeled unambiguously in the relatively weak density, the subtomogram map was consistent with their presence", "section": "Results"}
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "ECT2LかDZANK1の機能喪失変異をもつ患者4人の細胞では、移行帯の連結部が失われ、繊毛の先がこぶ状に膨らんだ。ECT2Lを壊したiPS細胞由来の細胞でも同じこぶ状の先端が見られた。",
+      "evidence": [
+        {"quote": "identified four unrelated individuals with predicted loss-of-function variants: three with distinct biallelic ECT2L variants", "section": "Results"},
+        {"quote": "DMTs were irregularly spaced and often lacked discernible TZ linkers", "section": "Results"},
+        {"quote": "Electron microscopy of ECT2L-KO cultures revealed widespread bulbous ciliary tips", "section": "Results"}
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "ヒト鼻上皮の初代培養細胞を気液界面（ALI）で分化させ、繊毛を形成させた（3〜4週間）。",
+    "construct": null,
+    "purification": null,
+    "sample_prep": "細胞を単離して金グリッド（Quantifoil R3.5/1）に載せ、Vitrobot Mark IVで背面ブロット8秒・湿度100%で凍結。Aquilos 2のcryo-FIB/SEMでラメラを作製。",
+    "data_collection": "Titan Krios＋Selectris＋Falcon 4i、64,000倍、ピクセル2 Å。Warpでトモグラムを再構成し、RELION5でサブトモグラム平均。",
+    "evidence": [
+      {"quote": "Ciliation was observed 3–4 weeks after transition to ALI.", "section": "Methods"},
+      {"quote": "Grids were blotted from the back for 8 s with a blot force of 10 and 100% humidity before being plunged into liquid ethane cooled by liquid nitrogen.", "section": "Methods"},
+      {"quote": "Lamella preparation was performed on an Aquilos 2 cryo-FIB/SEM (Thermo Fisher Scientific).", "section": "Methods"},
+      {"quote": "Tilt series were collected on a 300-kV Titan Krios transmission electron microscope equipped with a Selectris energy filter and a Falcon4i detector (Thermo Fisher Scientific).", "section": "Methods"},
+      {"quote": "The subtomograms were exported and aligned in RELION5 (53).", "section": "Methods"}
+    ]
+  },
+  "keywords": ["移行帯", "ECT2L", "DZANK1", "原発性線毛運動異常症", "クライオ電子線トモグラフィー", "その場構造解析"],
+  "editor_notes": "in situ のサブトモグラム平均で、PDB は 11YJ（二連微小管、7.3 Å）と 11XU（連結部、PDB 登録値 9.6 Å。本文は約8 Å と書く）。原子モデルの多くは AlphaFold/Boltz-2 のモデルを密度に当てはめたもので、タンパク質の同定は DomainSeeker による当てはめ探索と免疫染色などによる。論文は「初」とは書いていない（ECT2L・DZANK1 などは first_structure=true）ので見出しでも言わない。ライセンスは tdm（本文は読めた、切れなし）。見出しの「つなぐ」は論文の linker complexes という記述に合わせた。遺伝学の部分（患者4人）も読みどころに入れたが、構造の論文としての中心は in situ 構造と連結部の同定。",
+  "legend_labels": ["ECT2L（連結部の主成分）", "SKP1（F-box結合）", "DYNLL1（ダイニン軽鎖）", "DZANK1（連結部の橋渡し）"],
+  "ga_pdb_id": "11XU"
+}

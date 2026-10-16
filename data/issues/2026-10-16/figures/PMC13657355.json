@@ -1,0 +1,49 @@
+{
+ "pdb_id": "9TXD",
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "ClpC（N末端ドメイン）",
+   "desc": "ATP-dependent Clp protease ATP-binding subunit ClpC",
+   "entity": "1"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "A1JXU",
+   "label": "Cpd-8",
+   "color": "#C23B8E",
+   "desc": "4-[6-[2-[(3~{R})-3,5-bis(4-methoxyphenyl)-3,4-dihydropyrazol-2-yl]-2-oxidanylidene-ethyl]sulfanyl-4-oxidanylidene-5~{H}-pyrazolo[3,4-d]pyrimidin-1-yl]benzenesulfonamide",
+   "entity": [
+    "2"
+   ],
+   "sites": [
+    [
+     "B",
+     "201"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "A1JXU",
+  "residues": [
+   "L2",
+   "F3",
+   "G4",
+   "R5",
+   "L6",
+   "L14",
+   "Y80",
+   "M92",
+   "A95",
+   "H100",
+   "N101",
+   "F102",
+   "V103"
+  ],
+  "polar": 2,
+  "neighbours": [],
+  "label": "Cpd-8"
+ }
+}

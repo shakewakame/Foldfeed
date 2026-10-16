@@ -1,0 +1,199 @@
+{
+  "pmcid": "PMC13661610",
+  "rank": 9,
+  "headline": "拮抗薬は別の場所に結合し、MRGPRX4の作動薬の結合を妨げる",
+  "subhead": "クライオ電顕の3状態で、拮抗薬の結合に伴いE247が作動薬のリン酸の結合部位へ入り込んでいた",
+  "target_label": "MRGPRX4（ヒト、かゆみ受容体）",
+  "summary": {
+    "question": "胆汁酸によるかゆみを伝えるMRGPRX4が阻害される仕組みは分かっておらず、拮抗薬結合型の構造も未報告だった。",
+    "approach": "作動薬DEX-P・拮抗薬cmpd54-4を結合した状態とリガンドなし（apo）の3状態をクライオ電顕で解析した。",
+    "result": "拮抗薬は作動薬と別の部位に結合し、細胞外ループ2のW158が外へ回って窪みができた。細胞外ループ3のE247は作動薬の結合部位へ入っていた。",
+    "learned": "拮抗薬は作動薬と結合部位を奪い合うのではなく、細胞外側の構造を変えて作動薬の結合を立体的に妨げると考えられる。",
+    "open": "拮抗薬結合型は完全な不活性型ではなくGタンパク質と結合した中間状態で、不活性化の細かな段階は調べられていない。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Although Mas-related G protein-coupled receptor X4 (MRGPRX4) has recently been identified as a key mediator of bile acid-induced pruritus, the structural mechanisms underlying its inhibition remain poorly understood, hindering the development of therapeutic antagonists.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Most importantly, an antagonist-bound structure has yet to be reported, posing a key obstacle to the development of MRGPRX4-targeted antipruritic drugs.",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here, we report the cryo-electron microscopy structures of MRGPRX4 in three distinct states: agonist-bound state, antagonist-bound state, and apo state.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "In contrast, in the cmpd54-4-bound structure, W1584.61 rotated outward toward the membrane, thereby creating a previously uncharacterized antagonist-specific subpocket that accommodated cmpd54-4",
+          "section": "Results"
+        },
+        {
+          "quote": "In addition to ECL2, ECL3 in the cmpd54-4-bound MRGPRX4 structure also underwent substantial conformational rearrangement to shift toward the agonist-binding pocket",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Collectively, these structural observations indicated that binding of the antagonist cmpd54-4 induced substantial conformational rearrangements in the extracellular pocket of MRGPRX4 to sterically prevent agonist binding rather than simply competing for the canonical agonist-binding site.",
+          "section": "Results"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Furthermore, as we were unable to isolate a conformation representing a fully inactive state, the cmpd54-4-bound MRGPRX4–miniGsq complex represents only an intermediate conformation along the activation pathway.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "receptor"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "拮抗薬cmpd54-4は作動薬と別の亜ポケットに結合する。作動薬型ではW158が窪みをふさぐが、拮抗薬型ではW158が外向きになり専用の窪みができる。apo構造のW158も外向きだった。",
+      "evidence": [
+        {
+          "quote": "Notably, this antagonist-binding pocket was inaccessible in the DEX-P-bound MRGPRX4 structure (Fig. 4c), where the ECL2 residue W1584.61 projected into the pocket and occluded antagonist binding (Fig. 4d–f).",
+          "section": "Results"
+        },
+        {
+          "quote": "Notably, from a top-down extracellular view, the position of W1584.61 in the apo state resembled that in the antagonist-bound structure, whereas the position of E2477.28 more closely matched that in the agonist-bound conformation (Fig. 5a–c).",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "拮抗薬型ではE247が陽性の窪み（R82・R86・R95）に入って塩橋を作り、作動薬のリン酸の結合部位をふさぐ。著者は、これほど大きな拮抗薬誘導の構造変化はクラスA GPCRでは珍しいと述べている。",
+      "evidence": [
+        {
+          "quote": "This movement enables E2477.28 to form salt bridge interactions with R822.60, R862.64, and R953.25 within a positively charged subpocket, effectively occluding the phosphate-binding site for DEX-P and further preventing agonist binding",
+          "section": "Discussion"
+        },
+        {
+          "quote": "Such extensive antagonist-induced conformational changes are uncommon among class A GPCRs.",
+          "section": "Discussion"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "拮抗薬の結合部位は多型のある83位から離れ、IC50は2つの変異型で同程度だった。著者は、このポケットを狙う拮抗薬は多型による効き方の差を避けられる可能性があると考えている。",
+      "evidence": [
+        {
+          "quote": "DEX-P was more potent against the S832.61 variant, whereas cmpd54-4 exhibited similar IC50 values against both.",
+          "section": "Discussion"
+        },
+        {
+          "quote": "Therefore, antagonists targeting the cmpd54-4 pocket are likely to be effective regardless of the residue at position 83, suggesting that drug design focused on this binding site may circumvent polymorphism-dependent differences in efficacy.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "Sf9細胞に、MRGPRX4・miniGsqβ1γ2・scFv16のバキュロウイルスを2:1:1で共感染させて発現。",
+    "construct": "S83型ヒトMRGPRX4のN末端にHAシグナル・Flag・10×His・TEV部位・BRILを付加。miniGsqはminiGsにGαqのα5ヘリックスの鍵残基を移したキメラ。",
+    "purification": "LMNG/CHSで可溶化 → TALON → Superdex 200。ピーク画分にDEX-P 300 μMまたはcmpd54-4 200 μMを加え、約3 mg/mLに濃縮。",
+    "sample_prep": "Quantifoil R1.2/1.3（300メッシュ）、Vitrobot、4℃・湿度100%、ブロット3.5秒。",
+    "data_collection": "Titan Krios（300 kV）＋K3、カウンティングモード、0.82 Å/pixel、総線量50 e-/Å2。cryoSPARC v4.4.1で処理。",
+    "evidence": [
+      {
+        "quote": "For protein co-infection, Sf9 cells at a density of 2 × 106 cells/mL were co-infected with baculoviruses encoding MRGPRX4, miniGsqβ1γ2, and scFv16 at a multiplicity of infection of 2:1:1.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Several key residues of the α5 helix were replaced with the corresponding sequence from Gαq to confer Gq coupling specificity47, while the N-terminal region was substituted with that of Gαi1 to facilitate scFv16 binding.",
+        "section": "Methods"
+      },
+      {
+        "quote": "The peak fraction was divided and incubated separately with 300 µM DEX-P (Aladdin, 2392-39-4) or 200 µM cmpd54-4 and then concentrated to ~3 mg/mL",
+        "section": "Methods"
+      },
+      {
+        "quote": "The grids were blotted for 3.5 s with a blot force of 0 at 4 °C and 100% humidity, followed by rapid vitrification in liquid ethane using a Vitrobot (FEI).",
+        "section": "Methods"
+      },
+      {
+        "quote": "All MRGPRX4–G protein complex datasets were collected on a Titan Krios electron microscope (Thermo Fisher Scientific) operating at 300 kV and equipped with a K3 Summit direct electron detector (Gatan).",
+        "section": "Methods"
+      },
+      {
+        "quote": "Micrographs were obtained in counting mode at a pixel size of 0.82 Å and a defocus range of −0.8 μm to −1.6 μm. Each video comprised 40 frames with a total dose of 50 e−/Å2.",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "MRGPRX4",
+    "GPCR",
+    "かゆみ",
+    "胆汁うっ滞性そう痒",
+    "拮抗薬",
+    "デキサメタゾンリン酸"
+  ],
+  "ligand_label": "DEX-P（デキサメタゾンリン酸）、cmpd54-4",
+  "editor_notes": "本文は完結（切れなし）。作動薬結合型の MRGPRX4 構造（7S8P, 8YRG, 8KEX）は既報で、初構造ではない（first_structure は false）。論文が新しいとするのは拮抗薬結合型（逆作動薬 cmpd54-4）と apo の構造で、『拮抗薬結合型は未報告だった』は Introduction の記述。拮抗薬型は Gq（miniGsq）と結合した中間状態で完全な不活性型ではない、と著者自身が限界に挙げている。特異な部分はMD（W158 の動き）に一部依拠。",
+  "ga_pdb_id": "23CX",
+  "legend_labels": [
+    "miniGsq（改変Gα）",
+    "Gβ1（Gタンパク質β）",
+    "Gγ2（Gタンパク質γ）",
+    "scFv16（抗体断片）",
+    "MRGPRX4（かゆみ受容体）"
+  ],
+  "figure_notes": [
+    {
+      "title": "細胞外ループ2",
+      "sub": "E157–F178",
+      "entity": 5,
+      "range": [
+        157,
+        178
+      ]
+    },
+    {
+      "title": "細胞外ループ3",
+      "sub": "L238–Y250",
+      "entity": 5,
+      "range": [
+        238,
+        250
+      ]
+    }
+  ],
+  "compare": {
+    "panels": [
+      {
+        "pdb": "23CV",
+        "title": "作動薬型（DEX-P）"
+      },
+      {
+        "pdb": "23CX",
+        "title": "拮抗薬型（cmpd54-4）"
+      }
+    ],
+    "align": 5
+  },
+  "figure_evidence": [
+    {
+      "quote": "Red arrows indicate the conformational transition of ECL2 and ECL3 from the DEX-P-bound state to the cmpd54-4-bound state. The regions L238–Y250 and E157–F178 are highlighted as nontransparent cartoons.",
+      "section": "Figure legends"
+    },
+    {
+      "quote": "In addition to ECL2, ECL3 in the cmpd54-4-bound MRGPRX4 structure also underwent substantial conformational rearrangement to shift toward the agonist-binding pocket (Fig. 4b).",
+      "section": "Results"
+    }
+  ],
+  "ligand_names": {
+    "3T5": "DEX-P",
+    "A1E43": "cmpd54-4"
+  }
+}

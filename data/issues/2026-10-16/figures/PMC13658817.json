@@ -1,0 +1,24 @@
+{
+ "pdb_id": "29CP",
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "Fab軽鎖（自己抗体）",
+   "desc": "IgLON family member 5",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "Fab重鎖（自己抗体）",
+   "desc": "Fab Heavy Chain",
+   "entity": "2"
+  },
+  {
+   "color": "#5F9296",
+   "label": "IgLON5（神経接着分子）",
+   "desc": "Fab Light Chain",
+   "entity": "3"
+  }
+ ],
+ "ligands": []
+}

@@ -1,0 +1,83 @@
+{
+ "pdb_id": "29KN",
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "RUVBL1（シャペロン）",
+   "desc": "RuvB-like 1",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "RUVBL2（シャペロン）",
+   "desc": "RuvB-like 2",
+   "entity": "2"
+  },
+  {
+   "color": "#5F9296",
+   "label": "DNAAF19（組み立て因子）",
+   "desc": "Dynein axonemal assembly factor 19",
+   "entity": "3"
+  },
+  {
+   "color": "#A5707A",
+   "label": "DPCD（アダプター）",
+   "desc": "Protein DPCD",
+   "entity": "4"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "ADP",
+   "label": "ADP",
+   "color": "#C23B8E",
+   "desc": "Adenosine-5'-Diphosphate",
+   "entity": [
+    "5"
+   ],
+   "sites": [
+    [
+     "M",
+     "501"
+    ],
+    [
+     "N",
+     "501"
+    ],
+    [
+     "O",
+     "501"
+    ],
+    [
+     "P",
+     "501"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "ADP",
+  "residues": [
+   "A24",
+   "H25",
+   "H27",
+   "G45",
+   "M46",
+   "V47",
+   "Q78",
+   "P79",
+   "G80",
+   "T81",
+   "G82",
+   "K83",
+   "T84",
+   "Y362",
+   "I370",
+   "L399",
+   "R400"
+  ],
+  "polar": 25,
+  "neighbours": [],
+  "label": "ADP"
+ }
+}

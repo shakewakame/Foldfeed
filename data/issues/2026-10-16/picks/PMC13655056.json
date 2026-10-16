@@ -1,0 +1,169 @@
+{
+  "pmcid": "PMC13655056",
+  "rank": 15,
+  "headline": "歯周病菌のMfa線毛は、プロテアーゼによる鎖の交換でつながる",
+  "subhead": "重合したMfa1の線維を3.0 Åのクライオ電顕で解析し、Ca2+の結合も確かめた",
+  "target_label": "Mfa1線毛（P. gingivalis）",
+  "summary": {
+    "question": "歯周病菌の短い線毛であるMfa線毛の構造と、組み立ての仕組みは不明だった。",
+    "approach": "組換えMfa1を酵素RgpBで試験管内で重合させ、できた線維をクライオ電顕で解析した。",
+    "result": "切断で解放された鎖が隣のサブユニットの溝に入り、元の鎖と入れ替わっていた。Ca2+も結合部位に残っていた。",
+    "learned": "Mfa線毛もFim線毛と同じく、プロテアーゼによる鎖の交換で組み上がることが確かめられた。",
+    "open": "重合が先端側のピリンから始まるとされるが、順に重合する正確な仕組みは不明だ。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "The functional polymerized structure of the Fim pilus is known, whereas the structure and assembly mechanism of the Mfa pilus remain unclear.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here, we show the structure of the polymerized recombinant Mfa1 stalk pilin determined by cryo-electron microscopy at 3.0 Å resolution.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "rMfa1 monomers at 1.5 mg/mL concentration were mixed with 1 mg/mL RgpB and incubated at 37 °C for 4 h.",
+          "section": "Methods"
+        }
+      ],
+      "result": [
+        {
+          "quote": "In the polymeric state, the overall topology is preserved, but the anchor strand β1 and the donor strand β14 are replaced by the donor strands β14 and βC of the posterior donor subunit, respectively (Fig. 1H).",
+          "section": "Results and discussion"
+        },
+        {
+          "quote": "The atomic model of the Mfa1 filament reveals that Mfa1 pilins polymerize by protease-mediated strand exchange and retain a Ca2+ ion in the metal-binding pocket",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "This observation confirms that protease-mediated strand exchange is a common polymerization mechanism for Fim and Mfa pili in P. gingivalis.",
+          "section": "Results and discussion"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Pilus polymerization is presumed to be initiated from tip pilins or adaptor pilins, although the precise mechanism of sequential polymerization remains unclear.",
+          "section": "Results and discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "pathogen"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "Mfa1のC末端の2残基、または1残基を欠くと、細胞は線毛を作れなかった。C末端のドナー鎖が隣のサブユニットに入り込んで鎖の交換を始めるのに、末端が必要だと著者は考えている。",
+      "evidence": [
+        {
+          "quote": "A ladder pattern was detected by Western blot only in samples from cells expressing full-length Mfa1 (Fig. 2B).",
+          "section": "Results and discussion"
+        },
+        {
+          "quote": "These results suggest that the C-terminus of the Mfa1 donor strand is essential for strand exchange in the type V pilus assembly mechanism.",
+          "section": "Results and discussion"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "Ca2+の結合部位を壊した変異体（DDNE/A）でも重合し、EDTA処理にも安定だった。一方、この変異体の線維はヒトの血管内皮細胞のIL-6産生を強く促し、Ca2+が免疫による認識を和らげている可能性がある（著者の推測）。",
+      "evidence": [
+        {
+          "quote": "These results suggest that the metal ion is not required for polymerization nor for the stability of Mfa1.",
+          "section": "Results and discussion"
+        },
+        {
+          "quote": "In contrast, incubation of HUVECs with DDNE/A rMfa1 filaments stimulated IL-6 production more strongly than the wild-type Mfa1 filament (Fig. 3D).",
+          "section": "Results and discussion"
+        },
+        {
+          "quote": "The Mfa1 structure containing Ca2+ ion presumably reduces immune recognition in the host.",
+          "section": "Results and discussion"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "連鎖球菌のSspBが結合するとされる領域を重合体の構造に写すと、αヘリックス（343–362）が単量体とは違う位置にあった。SspBとのドッキングは直接の接触を支持せず、結合の確定には至っていない。",
+      "evidence": [
+        {
+          "quote": "A structural comparison of the putative SspB binding cleft of the monomeric state of Mfa1 with its polymeric state shows that the α-helix 343–362 has moved to a different position (Fig. 4B).",
+          "section": "Results and discussion"
+        },
+        {
+          "quote": "Mapping of the SspB interaction region of Mfa1 onto the atomic model of polymerized three Mfa1 subunits shows its 3D location on the Mfa pilus (Fig. 4A).",
+          "section": "Results and discussion"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "N末端Hisタグ付きMfa1（残基21–563）を大腸菌BL21(DE3)で発現（IPTG 1 mM、20℃・18時間）。",
+    "construct": "野生型rMfa1と、金属結合部位のD507A・D509A・N512A・E514A変異体（DDNE/A）。",
+    "purification": "Talonレジンでアフィニティ精製し、PBSに置換。RgpBもHisタグ付きで精製。",
+    "sample_prep": "rMfa1（1.5 mg/mL）をRgpB（1 mg/mL）と37℃・4時間反応させて重合し、PEG-6000で沈殿。Quantifoil 2/1 Cu 400メッシュ、ブロット3秒・4℃・湿度100%。",
+    "data_collection": "Titan Krios（300 kV）＋Falcon 3（カウンティング）、2,503ムービー、1.08 Å/pixel。CryoSPARCで267,383断片から2.99 Å（対称性は課さない）。",
+    "evidence": [
+      {
+        "quote": "Recombinant proteins in E. coli were expressed in LB medium containing 1 mM IPTG at 20 °C for 18 h.",
+        "section": "Methods"
+      },
+      {
+        "quote": "We cloned and overexpressed the N-terminal His-tagged recombinant Mfa1 (rMfa1) containing residues 21–563 in Escherichia coli and then purified the subunit in monomeric form.",
+        "section": "Results and discussion"
+      },
+      {
+        "quote": "Recombinant Mfa1 with an N-terminal His-tag was purified by affinity chromatography using Talon resin (Takara Bio, Shiga, Japan).",
+        "section": "Methods"
+      },
+      {
+        "quote": "rMfa1 monomers at 1.5 mg/mL concentration were mixed with 1 mg/mL RgpB and incubated at 37 °C for 4 h.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Polymerized rMfa1 filaments were precipitated with 4% (w/vol) polyethylene glycol (PEG-6000), 0.2 M NaCl at 4 °C",
+        "section": "Methods"
+      },
+      {
+        "quote": "Three µL of sample solution were applied to holey carbon grids (Quantifoil 2/1 Cu 400-mesh)",
+        "section": "Methods"
+      },
+      {
+        "quote": "Grids were blotted for 3 s at 4 °C and 100% relative humidity, then immediately plunge-frozen in liquid ethane with a Vitrobot Mark IV",
+        "section": "Methods"
+      },
+      {
+        "quote": "on a Falcon-3 direct electron detector (TFS) in counting mode at a calibrated magnification of 77,142x (corresponding to a pixel size of 1.08 Å/pixel at the specimen level)",
+        "section": "Methods"
+      },
+      {
+        "quote": "Dose fractions from 2503 movies were aligned using motioncor254, dose-weighted, and summed.",
+        "section": "Methods"
+      },
+      {
+        "quote": "3D classification provided a more homogeneous class with 267,383 particle fragments that were refined to 2.99 Å resolution.",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "Mfa1",
+    "V型線毛",
+    "Porphyromonas gingivalis",
+    "歯周病",
+    "ストランド交換",
+    "Ca2+"
+  ],
+  "ga_pdb_id": "21CO",
+  "legend_labels": [
+    "Mfa1（サブユニット1）",
+    "Mfa1（サブユニット2）",
+    "Mfa1（サブユニット3）"
+  ],
+  "editor_notes": "21COは重合したMfa1（3サブユニット）の新しい構造。ただしMfa1の単量体結晶構造（5NF2、5NF3）は既報なので first_structure は false で『初』とは書かず、重合体の構造として扱った。題の『native assembled』に反し、試料は大腸菌で作った組換えMfa1をRgpBで試験管内重合したもの（細胞から取った線毛ではない）。らせんパラメータは本文（ねじれ68.8°、上昇74.2 Å）と Table 2（91.5°、73.4 Å）が食い違うため、記事には書いていない。Ca2+はICP-AESで同定（PDBのリガンド欄には出ていない）。SspBとの結合はドッキング予測にとどまる。"
+}

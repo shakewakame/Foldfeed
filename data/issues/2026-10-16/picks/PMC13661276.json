@@ -1,0 +1,82 @@
+{
+  "pmcid": "PMC13661276",
+  "rank": 1,
+  "headline": "CLN8は、BMPの材料LPGを立体を選んでつくる酵素だ",
+  "subhead": "クライオ電顕で活性部位を示し、Batten病の変異は酵素活性を弱めた",
+  "target_label": "ヒトCLN8（Batten病タンパク質）",
+  "summary": {
+    "question": "Batten病の原因タンパク質CLN8が、リソソームの脂質BMPの合成で何をするかは不明だった。",
+    "approach": "精製CLN8の酵素反応と、アポ型およびアシルCoA存在下のクライオ電顕構造を調べた。",
+    "result": "CLN8はS,S型のGPGに最もよくアシル基を移し、構造ではH138の隣にアシル鎖が見えた。",
+    "learned": "S,S型GPGからリゾホスファチジルグリセロール（LPG）をつくる立体特異的な酵素で、LPGはBMPの材料になる。",
+    "open": "CLN8がつくったLPGが、リソソームの内腔へどう移るかは未解決だ。",
+    "evidence": {
+      "question": [
+        {"quote": "However, the role of CLN8 in this pathway has remained unclear.", "section": "Abstract"}
+      ],
+      "approach": [
+        {"quote": "Cryo-electron microscopy structures define the CLN8 active site and support a ping-pong acyl transfer mechanism.", "section": "Abstract"}
+      ],
+      "result": [
+        {"quote": "CLN8 acylated S,S-GPG most efficiently, with substantially lower activity for R,S-GPG and only trace activity with R,R-GPG", "section": "Results"},
+        {"quote": "In both complexes, the acyl chain was positioned with a carboxy group adjacent to H138 within the central cavity and the tail oriented towards the ER lumen", "section": "Results"}
+      ],
+      "learned": [
+        {"quote": "Together, our stable-isotope tracing and enzymatic assays identify CLN8 as a stereospecific GPG acyltransferase that converts S,S-GPG and acyl-CoAs into S,S-2-acyl-LPG.", "section": "Results"}
+      ],
+      "open": [
+        {"quote": "How this intermediate reaches the lysosomal lumen remains unresolved but may involve membrane contact sites", "section": "Discussion"}
+      ]
+    }
+  },
+  "categories": ["enzyme"],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "活性部位はE117・H138・H139・E167・R204からなる。H138にアシル基が一時的に結合する中間体を経るピンポン機構が考えられる。ただし共有結合の密度は見えておらず、著者は水に露出した活性部位のため中間体が不安定なのだろうと説明する。",
+      "evidence": [
+        {"quote": "we identified a putative active site comprising E117, H138, H139, E167 and R204", "section": "Results"},
+        {"quote": "continuous covalent density between H138 and the acyl chain was not resolved", "section": "Results"}
+      ]
+    },
+    {
+      "tag": "新しい結合部位",
+      "text": "二量体の界面近くの膜内ポケットに、予想外にCoAが結合していた。見えたのはCoA部分だけで、アシルCoAだった可能性がある。",
+      "evidence": [
+        {"quote": "Unexpectedly, we observed two CoA molecules bound in pockets located within the transmembrane region of each monomer, positioned at the dimer interface", "section": "Results"},
+        {"quote": "Although only the CoA moiety is resolved in the cryo-EM density, this species may represent acyl-CoA", "section": "Results"}
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "CLN8の産物であるS,S-LPGを補うと、CLN8欠損細胞とマウス肝臓でBMPが戻り、ゼブラフィッシュの神経症状も改善した。ただし成体マウスの脳では回復がごくわずかだった。",
+      "evidence": [
+        {"quote": "Exogenous S,S-lysophosphatidylglycerol, but not the R,S stereoisomer, restores BMP synthesis in CLN8-deficient cells and mice and improves neurological phenotypes in cln8 mutant zebrafish.", "section": "Abstract"},
+        {"quote": "recovery of 18:1–18:1 BMP in the brains of S,S-LPG-treated Cln8mnd/mnd mice was substantially poorer", "section": "Results"}
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "構造解析用のヒトCLN8は酵母 W303.1B で発現（ガラクトース誘導）。",
+    "construct": "コドン最適化したC末端Hisタグ付きのヒトCLN8。Factor Xaでタグを切断。",
+    "purification": "LMNGで膜を可溶化し、Ni-Sepharose、続いてサイズ排除クロマトグラフィー。",
+    "sample_prep": "基質結合型はCLN8を100 µMのC18:1-CoAまたはC22:6-CoAと室温で1時間。Vitrobot Mark IV、4℃・湿度95%、ブロット3.0秒。",
+    "data_collection": "Titan Krios＋Falcon 4i＋Selectris Xフィルター。cryoSPARC v3.3.2で処理し、最終 2.69–3.65 Å。",
+    "evidence": [
+      {"quote": "Saccharomyces cerevisiae strain W303.1B (MATα leu2-3,112 trp1-1 can1-100 ura3-1 ade2-1 his3-11,15) (ATCC: 201238) was used for protein expression and purification.", "section": "Methods"},
+      {"quote": "W303 yeast strain expressing codon-optimized C-His-tagged human CLN8", "section": "Methods"},
+      {"quote": "For purification, yeast membranes were solubilized in 21 ml buffer containing 1.5% LMNG, 20 mM Hepes (pH 7.0), 150 mM NaCl, 30 mM imidazole and protease inhibitors and incubated for 1.5 h at 4 °C.", "section": "Methods"},
+      {"quote": "For the substrate-bound conditions, CLN8 (2 mg ml−1) was incubated in SEC buffer containing", "section": "Methods"},
+      {"quote": "vitrified in a Vitrobot Mark IV (Thermo Fisher Scientific) operated at 4 °C and 95% relative humidity (blot time, 3.0 s; blot force, −10)", "section": "Methods"},
+      {"quote": "Datasets were collected from a single grid per condition on a Titan Krios (Thermo Fisher Scientific) operating at 300 kV and nominal magnification ×165,000, equipped with a Falcon 4i detector and a Selectris X energy filter in counting mode.", "section": "Methods"},
+      {"quote": "Processing was performed in cryoSPARC v3.3.2.", "section": "Methods"}
+    ]
+  },
+  "keywords": ["CLN8", "Batten病", "BMP", "アシル基転移酵素", "リソソーム"],
+  "ligand_label": "CoA、DHA（C22:6）",
+  "editor_notes": "UniProt Q9UBY8 に既存PDBがなく first_structure は true だが、論文は「初の構造」とは書いていないので本文・見出しでは「初」と言わない。PDB は3件（9THK アポ 3.6 Å、9TKA C18:1-CoA 2.7 Å、9TK9 C22:6-CoA 2.73 Å）。PDB 上のリガンドは CoA と DHA のみで、論文の「アシル鎖」は C22:6 側が HXA として登録されている。共有結合中間体の密度は見えていない点は highlights に明記。本文は最後まで読めた（切れなし）。",
+  "legend_labels": ["CLN8（アシル転移酵素）"],
+  "ligand_names": {"HXA": "DHA（C22:6）", "COA": "CoA"},
+  "ga_pdb_id": "9TK9",
+  "site_ligand": "HXA"
+}
