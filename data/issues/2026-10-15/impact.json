@@ -1,0 +1,205 @@
+{
+  "screened": 43,
+  "scored": [
+    {
+      "pmcid": "PMC13660981",
+      "type": "mechanism",
+      "scores": {
+        "novelty": 2,
+        "reach": 2,
+        "structure": 1,
+        "support": 2
+      },
+      "selected": false,
+      "reason": "境界例。既存のクライオ電顕構造（5K7L・5VA1）は変異位置を界面に位置づけるのに使われただけで、構造そのものによる検証が弱いため、記事にしなかった。",
+      "evidence": {
+        "novelty": [
+          {
+            "quote": "While the PAS-CNBHD interactions have established roles in channel gating [6,12–15], it remains unclear whether the CNBHD-CNBHD interface contributes to channel gating.",
+            "section": "Introduction"
+          },
+          {
+            "quote": "These findings identify EGL-2 as an important sleep regulator and uncover a conserved gating mechanism by which the intersubunit CNBHD-CNBHD interface restrains KCNH channel activation to regulate neuronal excitability and behavior.",
+            "section": "Abstract"
+          }
+        ],
+        "reach": [
+          {
+            "quote": "Moreover, mutations at the corresponding residue in the ERG-subfamily KCNH channels C. elegans UNC-103 and human hERG also produce gain-of-function effects, and electrophysiological analysis showed that hERG(G749R) shifts voltage-dependent channel activation to more negative potentials and accelerates activation kinetics.",
+            "section": "Abstract"
+          },
+          {
+            "quote": "EAG and ERG potassium channels share a similar overall tetrameric architecture that includes a conserved intersubunit interface between two CNBHDs from adjacent subunits (S2 Fig) [4,5], raising the possibility that the CNBHD-CNBHD interface may have a conserved role in regulating KCNH channel activity.",
+            "section": "Results"
+          }
+        ],
+        "structure": [
+          {
+            "quote": "Based on the cryo-EM structure of rEag1 [4] and the AlphaFold3-predicted structure of EGL-2 [25], the G574 residue lies at a conserved interface between two CNBHDs from adjacent subunits of EAG homotetrameric channels (Figs 2C-2H, S2, and S1 Video).",
+            "section": "Results"
+          },
+          {
+            "quote": "Sphere representations of the intracellular gating ring of the following three homotetrameric channels: C. elegans EGL-2 (AlphaFold3-predicted structure), rEag1 (cryo-EM structure; PDB: 5K7L), and hERG (cryo-EM structure; PDB: 5VA1).",
+            "section": "Supporting information"
+          }
+        ],
+        "support": [
+          {
+            "quote": "Genetic analysis demonstrated that the sleep-suppressing phenotype of G574E requires both an intact potassium selectivity filter and the intrinsic ligand-occupied CNBHD.",
+            "section": "Abstract"
+          },
+          {
+            "quote": "Thus, the increased current carried by mutant channels is explained, at least in part, by channel activation at more negative membrane potentials.",
+            "section": "Results"
+          }
+        ]
+      }
+    },
+    {
+      "pmcid": "PMC13661046",
+      "type": "mechanism",
+      "scores": {
+        "novelty": 2,
+        "reach": 1,
+        "structure": 1,
+        "support": 2
+      },
+      "selected": false,
+      "reason": "既存の結晶構造 3WYR の Cys10-Cys28 結合を手がかりに、アロステリックなジスルフィド切り替えを変異体・質量分析・結合測定で示した良い研究だが、対象は KIR2DL4 に限られ合計 6 点で基準に届かない。",
+      "evidence": {
+        "novelty": [
+          {
+            "quote": "The atypical Cys10–Cys28 disulfide bond in the KIR2DL4 structure is an allosteric disulfide with potential to switch to a conventional Cys28–Cys74 bond.",
+            "section": "Abstract"
+          }
+        ],
+        "reach": [
+          {
+            "quote": "Thus, allosteric disulfide-mediated conversion from an inactive to an HLA-G binding form regulates KIR2DL4 trafficking and a functional response that promotes fetal development.",
+            "section": "Abstract"
+          }
+        ],
+        "structure": [
+          {
+            "quote": "The X-ray crystal structure of a KIR2DL4 that had been produced and purified from human cells (Moradi et al., 2015) revealed an unexpected cross-β strand Cys10–Cys28 bond in D0, rather than the canonical cross-β sheet Cys28–Cys74 (Figure 5C).",
+            "section": "Discussion"
+          }
+        ],
+        "support": [
+          {
+            "quote": "A purified Cys10Leu KIR2DL4 mutant bound HLA-G with micromolar affinity in a peptide-dependent manner.",
+            "section": "Abstract"
+          }
+        ]
+      }
+    },
+    {
+      "pmcid": "PMC13659490",
+      "type": "mechanism",
+      "scores": {
+        "novelty": 2,
+        "reach": 1,
+        "structure": 1,
+        "support": 2
+      },
+      "selected": false,
+      "reason": "CaBP2 の EF ハンドごとの Ca2+ 結合を ITC と NMR で測り電気生理で機能を確かめたが、構造決定や既存の実験構造は使わず、NMR は安定性の評価にとどまる。合計 6 点。",
+      "evidence": {
+        "novelty": [
+          {
+            "quote": "Remarkably, CaBP2L displays strong Ca2+ binding affinity similar to CaM.",
+            "section": "Introduction"
+          }
+        ],
+        "reach": [
+          {
+            "quote": "Therefore, we propose that CaBP2L displays a distinct Ca2+ binding property compared to other CaBPs, and that Ca2+ binding influences the stability of its structure and consequently channel regulation.",
+            "section": "Abstract"
+          }
+        ],
+        "structure": [
+          {
+            "quote": "Furthermore, NMR analysis shows that truncated CaBP2L lacking the N-segment becomes structurally unstable under low Ca2+ concentrations, while the presence of Ca2+ ions stabilizes its structure.",
+            "section": "Introduction"
+          }
+        ],
+        "support": [
+          {
+            "quote": "Furthermore, our electrophysiology experiments show that upon disruption of all three Ca2+ binding EF hands of CaBP2 its ability to attenuate Ca2+-dependent inactivation is reduced.",
+            "section": "Abstract"
+          }
+        ]
+      }
+    },
+    {
+      "pmcid": "PMC13659818",
+      "type": "method",
+      "scores": {
+        "novelty": 2,
+        "reach": 2,
+        "structure": 0,
+        "support": 2
+      },
+      "selected": false,
+      "reason": "非触媒残基を狙う大環状の共有結合プローブという新しい設計で、MS と選択性で検証された。ただし結論は標識・質量分析で示され、実験構造（uPA の 4JK6）は uPA 側の置換位置の選択に使われただけで、結論の根拠にならない。structure=0 のため選ばない。",
+      "evidence": {
+        "novelty": [
+          {
+            "quote": "Here, we introduce covalent macrocyclic activity-based probes (cmABPs) that selectively target non-catalytic residues within serine protease active sites.",
+            "section": "Abstract"
+          }
+        ],
+        "reach": [
+          {
+            "quote": "Extension to urokinase plasminogen activator further demonstrates the generality of this strategy.",
+            "section": "Abstract"
+          }
+        ],
+        "support": [
+          {
+            "quote": "Biochemical and mass spectrometry analyses confirmed selective modification of an active-site lysine by 23, along with robust performance in complex biological samples.",
+            "section": "Abstract"
+          }
+        ]
+      }
+    },
+    {
+      "pmcid": "PMC13660641",
+      "type": "method",
+      "scores": {
+        "novelty": 2,
+        "reach": 1,
+        "structure": 1,
+        "support": 1
+      },
+      "selected": false,
+      "reason": "非標識タンパク質の NMR シグナル帰属を AI 予測の化学シフトで自動化する実験手法。実際のスペクトルで HEWL など 3 種を測ったが、帰属であって構造の決定ではなく、BMRB との一致は 71〜85%。合計 5 点。",
+      "evidence": {
+        "novelty": [
+          {
+            "quote": "we have developed a pseudo-labeling strategy for the automated resonance assignment of unlabeled proteins.",
+            "section": "Abstract"
+          }
+        ],
+        "reach": [
+          {
+            "quote": "We anticipate that this labeling-free strategy will lower the technical barrier to biomolecular NMR, enabling researchers without specialized NMR expertise to employ NMR spectroscopy in fundamental life science research and drug development.",
+            "section": "Abstract"
+          }
+        ],
+        "structure": [
+          {
+            "quote": "Using high-field NMR spectrometers equipped with cryoprobes, we acquired natural-abundance 1H–13C and 1H–15N heteronuclear correlation spectra directly from unlabeled samples.",
+            "section": "Abstract"
+          }
+        ],
+        "support": [
+          {
+            "quote": "Among these assignments, 87 were consistent with the reference assignment deposited in BMRB, yielding an overall assignment accuracy of 84%.",
+            "section": "Results"
+          }
+        ]
+      }
+    }
+  ]
+}
