@@ -4,6 +4,9 @@
     python3 -m pipeline.collect --index-date 2026-10-06 --issue-date 2026-10-07
     python3 -m pipeline.collect --catch-up           # from the day after the last issue that had papers, up to yesterday
     python3 -m pipeline.collect --index-from 2026-10-11 --index-date 2026-10-16   # an explicit window
+    python3 -m pipeline.collect --split 2026-10-16   # split an existing catch-up issue into one issue per day
+
+A window (catch-up) gives one issue per index day, each with its own candidates, articles and PR (split_by_day).
 
 Before searching it asks whether Europe PMC is taking in new papers at all (europepmc.health). If it is not, it switches
 by itself to PMC's own Open Access dataset on AWS (pipeline/pmcoa.py; --source pmc-aws forces it, --source europepmc
@@ -134,9 +137,10 @@ def catch_up_start(end: dt.date) -> dt.date:
     return max(start, end - dt.timedelta(days=MAX_WINDOW_DAYS - 1))
 
 
-def already_listed(except_issue: str) -> set[str]:
-    """PMCIDs that an earlier issue already considered (they are not offered again by a catch-up window)."""
-    return {c["pmcid"] for m in _issues() if m["issue_date"] != except_issue for c in m["candidates"]}
+def already_listed(except_issues: set[str]) -> set[str]:
+    """PMCIDs that an earlier issue already considered (they are not offered again by a catch-up window).
+    The issues of the window itself (except_issues) are being written again and do not count."""
+    return {c["pmcid"] for m in _issues() if m["issue_date"] not in except_issues for c in m["candidates"]}
 
 
 def run(index_date: str, issue_date: str, index_from: str | None = None, force: bool = False,
@@ -152,7 +156,9 @@ def run(index_date: str, issue_date: str, index_from: str | None = None, force: 
               f"(exit code 3). --force collects anyway.", file=sys.stderr)
         raise SystemExit(3)
     days = (dt.date.fromisoformat(index_date) - dt.date.fromisoformat(index_from)).days + 1 if windowed else 1
-    listed = already_listed(issue_date) if (windowed or fallback) else set()
+    window_issues = ({str(issue_date_for(dt.date.fromisoformat(index_from) + dt.timedelta(days=k))) for k in range(days)}
+                     if windowed else {issue_date})
+    listed = already_listed(window_issues) if (windowed or fallback) else set()
     pmc = None
     if fallback:
         print(f"Europe PMC is not indexing: taking the papers from PMC Open Access on AWS ({index_from or index_date}..{index_date})",
@@ -278,11 +284,52 @@ def run(index_date: str, issue_date: str, index_from: str | None = None, force: 
     out = {"issue_date": issue_date, "index_date": index_date, **({"index_from": index_from} if windowed else {}),
            "health": health, **({"source": pmcoa.SOURCE} if fallback else {}), "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
            "query": query, "impact_query": impact_query, "counts": counts, "candidates": candidates}
-    d = issue_dir(issue_date)
+    if windowed:      # a catch-up: one issue per day, not one that mixes the days
+        issues = split_by_day(out)
+        for iss in issues:
+            write_issue(iss)
+        print(f"Catch-up {index_from}..{index_date}: {len(issues)} issues "
+              f"({', '.join(i['issue_date'] + ':' + str(i['counts']['parsed']) for i in issues)}); one PR for each",
+              file=sys.stderr)
+        return issues[-1]
+    write_issue(out)
+    return out
+
+
+def split_by_day(out: dict, health_of=None) -> list[dict]:
+    """One issue per index day of a catch-up window (oldest first), made from the window's collected result.
+
+    Each day's issue holds the candidates first indexed (or, for PMC Open Access, written) that day, so a catch-up after
+    a stall gives the issues that would have come out day by day, each with its own articles and PR, not one issue
+    that mixes five days. Issue date = index day + 1, as always."""
+    health_of = health_of or europepmc.health
+    end = dt.date.fromisoformat(out["index_date"])
+    start = dt.date.fromisoformat(out.get("index_from") or out["index_date"])
+    n = (end - start).days + 1
+    issues = []
+    for k in range(n):
+        day = start + dt.timedelta(days=k)
+        inside = lambda c: bool(c.get("index_date")) and start <= dt.date.fromisoformat(c["index_date"][:10]) <= end   # noqa: E731
+        cands = [c for c in out["candidates"]
+                 if (c.get("index_date") or "")[:10] == str(day) or (k == n - 1 and not inside(c))]
+        main = [c for c in cands if c.get("source") != "impact_search"]
+        counts = {"hits": len(main), "parsed": len(cands),
+                  **{kind: sum(c["kind"] == kind for c in cands) for kind in KINDS},
+                  "impact_search_parsed": len(cands) - len(main),
+                  "impact_pool": sum(c["kind"] not in NEW_KINDS for c in cands)}
+        issues.append({"issue_date": str(issue_date_for(day)), "index_date": str(day), "health": health_of(str(day)),
+                       **({"source": out["source"]} if out.get("source") else {}),
+                       "split_from": out["issue_date"], "generated_at": out["generated_at"],
+                       "query": out["query"], "impact_query": out["impact_query"], "counts": counts,
+                       "candidates": cands})
+    return issues
+
+
+def write_issue(out: dict) -> None:
+    d = issue_dir(out["issue_date"])
     write_json(d / "candidates.json", out)
     (d / "candidates.md").write_text(overview_md(out), encoding="utf-8")
-    print(f"Wrote {d / 'candidates.json'}: {counts}", file=sys.stderr)
-    return out
+    print(f"Wrote {d / 'candidates.json'}: {out['counts']}", file=sys.stderr)
 
 
 def structure_line(s: dict) -> str:
@@ -345,10 +392,17 @@ def main(argv=None):
     ap.add_argument("--catch-up", action="store_true",
                     help="window from the day after the last issue that covered its day, up to --index-date")
     ap.add_argument("--issue-date", help="default: index date + 1")
+    ap.add_argument("--split", metavar="ISSUE", help="split an existing catch-up issue's candidates into one issue per day")
     ap.add_argument("--force", action="store_true", help="collect from Europe PMC even when it is not indexing new papers")
     ap.add_argument("--source", choices=("auto", "europepmc", "pmc-aws"), default="auto",
                     help="auto: Europe PMC, or PMC Open Access on AWS while Europe PMC is not indexing")
     a = ap.parse_args(argv)
+    if a.split:
+        meta = json.loads((issue_dir(a.split) / "candidates.json").read_text(encoding="utf-8"))
+        issues = split_by_day(meta)
+        for iss in issues:
+            write_issue(iss)
+        return
     end = dt.date.fromisoformat(a.index_date)
     start = a.index_from or (str(catch_up_start(end)) if a.catch_up else None)
     issue = a.issue_date or str(issue_date_for(end))
