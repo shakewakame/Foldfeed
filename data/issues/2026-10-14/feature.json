@@ -1,0 +1,28 @@
+{
+  "pmcid": "PMC13650764",
+  "axes": [
+    "structure",
+    "biology"
+  ],
+  "reason": "ヒトの細胞の中で繊毛の根もとの連結部を解き、その主役ECT2LとDZANK1の変異が原発性線毛運動異常症の原因になることを示した。",
+  "evidence": [
+    {
+      "quote": "We found that ECT2L and DZANK1 form the major linker complexes between adjacent TZ doublet microtubules.",
+      "section": "Abstract"
+    },
+    {
+      "quote": "Biallelic loss-of-function variants in either gene cause primary ciliary dyskinesia.",
+      "section": "Abstract"
+    }
+  ],
+  "considered": [
+    {
+      "pmcid": "PMC13655028",
+      "note": "BAM に結合した BepA の 2 つの状態から活性化の仕組みを示すが、基質が特定できず、ナノボディが状態の分布に影響しうるため選ばなかった。"
+    },
+    {
+      "pmcid": "PMC13657355",
+      "note": "ClpC を活性化する低分子を 8 種類見つけたが、結晶構造があるのは 1 化合物だけで、ほかは計算と変異による間接的な推定のため選ばなかった。"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+ "pdb_id": "9SOW",
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "BamA（外膜バレル）",
+   "desc": "Outer membrane protein assembly factor BamA",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "BamB（付属リポタンパク質）",
+   "desc": "Outer membrane protein assembly factor BamB",
+   "entity": "2"
+  },
+  {
+   "color": "#5F9296",
+   "label": "BamC（付属リポタンパク質）",
+   "desc": "Outer membrane protein assembly factor BamC",
+   "entity": "3"
+  },
+  {
+   "color": "#A5707A",
+   "label": "BamD（付属リポタンパク質）",
+   "desc": "Outer membrane protein assembly factor BamD",
+   "entity": "4"
+  },
+  {
+   "color": "#7C8AA8",
+   "label": "BamE（付属リポタンパク質）",
+   "desc": "Outer membrane protein assembly factor BamE",
+   "entity": "5"
+  },
+  {
+   "color": "#8A9A5B",
+   "label": "BepA（プロテアーゼ）",
+   "desc": "Beta-barrel assembly-enhancing protease",
+   "entity": "6"
+  },
+  {
+   "color": "#9C7B55",
+   "label": "停滞した基質（OMP）",
+   "desc": "Unknown beta-barrel substrate",
+   "entity": "7"
+  }
+ ],
+ "ligands": []
+}

@@ -1,0 +1,30 @@
+{
+ "pdb_id": "11XU",
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "ECT2L（連結部の主成分）",
+   "desc": "Epithelial cell-transforming sequence 2 oncogene-like",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "SKP1（F-box結合）",
+   "desc": "S-phase kinase-associated protein 1",
+   "entity": "2"
+  },
+  {
+   "color": "#5F9296",
+   "label": "DYNLL1（ダイニン軽鎖）",
+   "desc": "Dynein light chain 1, cytoplasmic",
+   "entity": "3"
+  },
+  {
+   "color": "#A5707A",
+   "label": "DZANK1（連結部の橋渡し）",
+   "desc": "Double zinc ribbon and ankyrin repeat-containing protein 1",
+   "entity": "4"
+  }
+ ],
+ "ligands": []
+}

@@ -1,0 +1,164 @@
+{
+  "pmcid": "PMC13657355",
+  "rank": 4,
+  "headline": "黄色ブドウ球菌ClpCを活性化する低分子が8種類見つかった",
+  "subhead": "結晶構造でCpd-8が疎水性の溝に入ることを確認し、他の化合物の結合部位は計算と変異で絞り込んだ",
+  "target_label": "ClpC NTD（黄色ブドウ球菌）",
+  "summary": {
+    "question": "細菌のタンパク質分解装置を動かすClpCについて、黄色ブドウ球菌のClpCを調節する低分子は報告されていなかった。",
+    "approach": "約11万の低分子ライブラリーをスクリーニングし、結晶構造・ドッキング・変異体で結合部位を調べた。",
+    "result": "8化合物がClpCのATP分解を2.2〜4.9倍に高めた。作用部位はN末端ドメイン（NTD）とみられ、Cpd-8は疎水性の溝に結合した（1.90 Å）。",
+    "learned": "疎水性の溝とpArg1ポケット（リン酸化アルギニンの結合部位）は低分子で狙える調節部位だが、細胞での毒性はClpC/ClpPに依存しなかった。",
+    "open": "ほとんどの化合物のNTDへの直接結合はまだ確かめられておらず、最適化が必要である。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "However, no chemical modulators of S. aureus ClpC have been described.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "To identify compounds that activate the S. aureus ClpC/ClpP protease, we conducted a high-throughput screen using a chemically diverse library of approximately 110,000 small molecules (Figure S1).",
+          "section": "Results"
+        },
+        {
+          "quote": "Structural, computational, and mutational analyses define two ligandable regulatory sites within the ClpC N-terminal domain (NTD) as compound targets",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "All compounds significantly stimulated ClpC ATPase activity (2.2- to 4.9-fold), but to a lesser extent than MecA-mediated activation (12.9-fold) (Figure 1E).",
+          "section": "Results"
+        },
+        {
+          "quote": "We infer that all eight tested compounds deregulate ClpC by binding to its NTD.",
+          "section": "Results"
+        },
+        {
+          "quote": "We could obtain crystal structures of ClpC-NTD with bound Cpd-8 at 1.90 Å and in the apo state at 1.78 Å resolution (Table S1).",
+          "section": "Results"
+        },
+        {
+          "quote": "Cpd-8 binds to a part of the hydrophobic groove, and the entire ligand shows clear electron density",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Structural, computational, and mutational analyses define two ligandable regulatory sites within the ClpC N-terminal domain (NTD) as compound targets: a conserved hydrophobic groove and an allosteric pArg1 pocket, both engaged in substrate recognition.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "This demonstrates that the toxicity observed across all compounds does not depend on ClpC/ClpP, but rather likely results from effects of unknown origin, which become enhanced in the absence of ClpC/ClpP (Figure 7C).",
+          "section": "Results"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Direct binding of most compounds to the ClpC NTD remains to be determined.",
+          "section": "Limitations"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "pathogen",
+    "enzyme"
+  ],
+  "highlights": [
+    {
+      "tag": "創薬・モダリティ",
+      "text": "約11万化合物のスクリーニングから、FITC-カゼインの分解を高める8化合物を選んだ。EC50は低〜中μMで、ClpPだけではどの化合物でも分解は起きなかったため、標的はClpCとみられる。",
+      "evidence": [
+        {
+          "quote": "The compounds' potencies were in the low-to moderate micromolar range, with compounds 8, 10, and 41 showing the lowest EC50 values (Cpd-8: 12 μM; Cpd-10: 4.4 μM; Cpd-41: 8 μM)",
+          "section": "Results"
+        },
+        {
+          "quote": "None of the tested compounds enabled ClpP to degrade FITC-casein, suggesting that they target ClpC.",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "新しい結合部位",
+      "text": "Cpd-8は疎水性の溝の一部に結合し、水素結合はGly4との1本で、他は疎水性の接触だった。静止状態のClpCに重ねるとAAA1ドメインと衝突するため、これが活性化の原因だと著者は推測している。",
+      "evidence": [
+        {
+          "quote": "Notably, protein and ligand form only one hydrogen bond, namely between Gly4 and the carbonyl group of Cpd-8a, whereas all other protein-ligand interactions involve hydrophobic contacts",
+          "section": "Results"
+        },
+        {
+          "quote": "We speculate that re-orientation of the ClpC N-terminus could clash with the resting state and destabilize it, leading to ClpC activation.",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "新しい結合部位",
+      "text": "Cpd-10とCpd-41はMecA-mEOSの分解を妨げ、pArg1部位の変異体T7Dでは効かなかった。小分子でpArg1ポケットを狙える可能性を示すが、結合の根拠は変異体とドッキングによる間接的なものである。",
+      "evidence": [
+        {
+          "quote": "Indeed, Cpd-10 and Cpd-41 effectively abolished MecA-mEOS degradation, indicating they bind to at least one of the pArg-binding sites (Figure 4E).",
+          "section": "Results"
+        },
+        {
+          "quote": "Intriguingly, most compounds still enhanced ClpC-T7D activity, whereas Cpd-10 and Cpd-41 no longer did so (Figure 4G).",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "ClpC・ClpP・MecAなどを、pDS56系ベクターで大腸菌ΔclpB株に過剰発現（2x YT、30℃）。",
+    "construct": "ClpC（野生型・変異体）、単離NTD、NTDを欠くΔN-ClpC。いずれもC末端His6タグ付き。",
+    "purification": "Ni-IDAで精製 → Superdex 200ゲルろ過（Tris-HCl pH 7.5、KCl、MgCl2、グリセロール、DTT）。",
+    "sample_prep": "シッティングドロップ蒸気拡散、18℃（291.15 K）。タンパク質7.5 mg/mL 500 nL＋リザーバー100 nL（硫酸アンモニウム約1.9〜2.1 M）。14〜21日で結晶化。",
+    "data_collection": "ESRF ID30A-1で測定、XDS・AIMLESSで処理。AlphaFold2モデルを探索モデルにPHASERで分子置換し、phenix.refineで精密化。",
+    "evidence": [
+      {
+        "quote": "Staphylococcus aureus (Sa) ClpC (WT and derivatives), ClpP, and MecA were purified from E. coli ΔclpB::kan cells overexpressing them using pDS56-derived expression vectors.",
+        "section": "Methods"
+      },
+      {
+        "quote": "ClpC, ClpP, MecA, FtsZ, MecA-mEOS3.2, and isolated ClpC-NTD harbor a C-terminal His6-tag and were purified using Ni-IDA",
+        "section": "Methods"
+      },
+      {
+        "quote": "Crystals were grown at 291.15 K using sitting drop vapor diffusion.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Crystallization drops contained 100 nL reservoir solution and 500 nL protein at a concentration of 7.5 mg/mL.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Data were collected at ESRF beamline ID30A-1 at cryogenic conditions, integrated using XDS,65 and scaled using AIMLESS66",
+        "section": "Methods"
+      },
+      {
+        "quote": "Phases were obtained by molecular replacement with PHASER68 implemented in the Phenix package69 using an AlphaFold270 prediction as search model.",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "ClpC",
+    "ClpP",
+    "AAA+プロテアーゼ",
+    "黄色ブドウ球菌",
+    "低分子活性化剤",
+    "NTD"
+  ],
+  "ligand_label": "Cpd-8",
+  "editor_notes": "本文は完結（STAR Methods まで）。新規構造は S. aureus ClpC の N 末端ドメイン(NTD)の apo (9TXC, 1.78 Å) と Cpd-8 複合体 (9TXD, 1.90 Å)。ClpC の既存構造は多数ありfirst_structure は false（『初』は使わない）。8化合物のうち結晶構造があるのは Cpd-8 のみで、Cpd-10 などはドッキング・変異体・SAR による間接的な推定（著者も限界に記載）。Cpd-8 のリガンドの片方(Cpd-8b)は結晶中で隣接分子と接触しており、タンパク質との接触は Cpd-8a 部分のみ。細胞での増殖抑制は ClpC/ClpP 非依存。",
+  "ga_pdb_id": "9TXD",
+  "legend_labels": [
+    "ClpC（N末端ドメイン）"
+  ],
+  "ligand_names": {
+    "A1JXU": "Cpd-8"
+  }
+}
