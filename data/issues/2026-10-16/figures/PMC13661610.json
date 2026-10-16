@@ -1,0 +1,92 @@
+{
+ "pdb_id": "23CX",
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "miniGsq（改変Gα）",
+   "desc": "Gs-mini-Gq chimera",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "Gβ1（Gタンパク質β）",
+   "desc": "Guanine nucleotide-binding protein G(I)/G(S)/G(T) subunit beta-1",
+   "entity": "2"
+  },
+  {
+   "color": "#5F9296",
+   "label": "Gγ2（Gタンパク質γ）",
+   "desc": "Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-2",
+   "entity": "3"
+  },
+  {
+   "color": "#A5707A",
+   "label": "scFv16（抗体断片）",
+   "desc": "scFv16",
+   "entity": "4"
+  },
+  {
+   "color": "#7C8AA8",
+   "label": "MRGPRX4（かゆみ受容体）",
+   "desc": "Soluble cytochrome b562,Mas-related G-protein coupled receptor member X4",
+   "entity": "5"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "A1E43",
+   "label": "cmpd54-4",
+   "color": "#C23B8E",
+   "desc": "(2~{S})-2-[[3-[[2-chloranyl-4-(trifluoromethyl)phenoxy]methyl]phenyl]carbonylamino]propanoic acid",
+   "entity": [
+    "6"
+   ],
+   "sites": [
+    [
+     "F",
+     "401"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "A1E43",
+  "residues": [
+   "K96",
+   "V99",
+   "S100",
+   "T103",
+   "Y106",
+   "F107",
+   "E157",
+   "P180",
+   "V181",
+   "L184",
+   "F232",
+   "G233",
+   "L235",
+   "G236",
+   "A237",
+   "I239",
+   "Y240",
+   "Y254",
+   "M258"
+  ],
+  "polar": 2,
+  "neighbours": [],
+  "label": "cmpd54-4"
+ },
+ "compare": {
+  "panels": [
+   {
+    "pdb": "23CV",
+    "title": "作動薬型（DEX-P）"
+   },
+   {
+    "pdb": "23CX",
+    "title": "拮抗薬型（cmpd54-4）"
+   }
+  ],
+  "distance": null
+ }
+}
