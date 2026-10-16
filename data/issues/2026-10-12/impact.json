@@ -1,0 +1,113 @@
+{
+  "screened": 21,
+  "scored": [
+    {
+      "pmcid": "PMC13653584",
+      "type": "mechanism",
+      "scores": {
+        "novelty": 2,
+        "reach": 2,
+        "structure": 2,
+        "support": 2
+      },
+      "selected": true,
+      "reason": "フルオロプロリンの立体を変えるとモルテングロビュールの三本のヘリックスの向きと結合親和性が変わることを、NOE による構造計算（既存の NMR 構造 2KKJ・1KBH と比較）と ITC・アミロイド解析で示した。",
+      "evidence": {
+        "novelty": [
+          {
+            "quote": "Seemingly subtle inversion of chirality at carbon‐4 atom was sufficient to modify the relative orientation of α‐helices and to modulate the binding affinity of the resulting NCBD variants to AD‐ACTR.",
+            "section": "Conclusion"
+          },
+          {
+            "quote": "By chemical incorporation of stereoisomeric 4‐fluoroproline residues at selected sites in the sequence of a folded, multi‐conformational protein (“molten‐globule”), we were able to modify its structural properties that propagated to highly distinct functional features, such as modulation of ligand binding affinities or misfolding and aggregation into amyloids.",
+            "section": "Abstract"
+          }
+        ],
+        "reach": [
+          {
+            "quote": "Our results explicitly show how prolines can modulate dynamics and long‐range couplings between protein structural elements, a functional role that goes well beyond a simple model of two‐state trans‐cis “switching” effectors.",
+            "section": "Conclusion"
+          },
+          {
+            "quote": "Molecular disorder precludes the use of X‐ray and cryo‐EM approaches, whereas NMR provides insights into both their structural and dynamical properties.",
+            "section": "Discussion"
+          }
+        ],
+        "structure": [
+          {
+            "quote": "The folds of the five NCBD variants were further investigated by analyzing the NOESY maps recorded at 700 and 900 MHz using an iterative structure calculation procedure implemented in ARIA program [25].",
+            "section": "Results"
+          },
+          {
+            "quote": "Out of the four fluorinated NCBDs, only P13(4R) displayed relative helices orientation comparable to a previously reported solution structure of free NCBD [17] (PDB ID: 2KKJ) and in complex with AD‐ACTR (PDB: ID 1KBH) [28].",
+            "section": "Discussion"
+          }
+        ],
+        "support": [
+          {
+            "quote": "Our results are consistent with these data with KD of 277 nM for P13(4R) NCBD and 402 nM for P13(4S) NCBD variants at 25 °C, respectively.",
+            "section": "Discussion"
+          },
+          {
+            "quote": "The addition of aggregated P30(4R) NCBD to ThT induced a fluorescence enhancement accompanied by a shift of the excitation maximum from 340 to 448 nm and emission from 450 to 480 nm, indicating the presence of amyloid structures (Figure S26) [27].",
+            "section": "Results"
+          }
+        ]
+      }
+    },
+    {
+      "pmcid": "PMC13653614",
+      "type": "method",
+      "scores": {
+        "novelty": 2,
+        "reach": 2,
+        "structure": 1,
+        "support": 2
+      },
+      "selected": true,
+      "reason": "SSNMR と HDX-MS を組み合わせた抗体-抗原のエピトープ・パラトープ解析で、既存の X 線構造 5GRJ と同じ結合面を再現し、5GRJ にない PD-L1 C 末端の保護も見いだした。",
+      "evidence": {
+        "novelty": [
+          {
+            "quote": "In this study, we introduce an integration of solid‐state nuclear magnetic resonance (SSNMR) and hydrogen–deuterium exchange mass spectrometry (HDX‐MS) to explore the interaction between Avelumab and the programmed cell death‐ligand 1 (PD‐L1).",
+            "section": "Abstract"
+          },
+          {
+            "quote": "Here, we integrated newly acquired HDX‐MS and NMR data with previously described x‐ray data that revealed novel features of PD‐L1 binding to Avelumab.",
+            "section": "Results"
+          }
+        ],
+        "reach": [
+          {
+            "quote": "This methodology provides both mechanistic and structural insights important for the design and optimization of biotherapeutics.",
+            "section": "Abstract"
+          },
+          {
+            "quote": "The flexibility and size of the mAbs often prevent achieving atomic‐level structural information in the pharmaceutical formulation by traditional methods.",
+            "section": "Abstract"
+          }
+        ],
+        "structure": [
+          {
+            "quote": "Our HDX results are consistent with the previously reported x‐ray data (Figure 4A,B), which identified the C, C′, F, and G strands and the CC′ loop of PD‐L1 as part of the binding epitope (Figure 1, enlarged view at the top).",
+            "section": "Results"
+          },
+          {
+            "quote": "This protection may be due to a potential interaction of the C‐terminus with residues of the Avelumab light chain, which was not observed in the x‐ray structure (5GRJ) [8].",
+            "section": "Results"
+          }
+        ],
+        "support": [
+          {
+            "quote": "Overall, the HDX results on PD‐L1 show a very pronounced decrease in deuterium uptake (down to −43%) located in close proximity to the potential binding site (e.g., I54‐E60 and D61‐K75), determined using x‐ray crystallography (Figure 4).",
+            "section": "Results"
+          },
+          {
+            "quote": "The strong agreement between SSNMR, HDX‐MS, and previously reported x‐ray data supports the reliability of the interaction model and confirms that Avelumab and the related fusion protein engage PD‐L1 through the same binding interface.",
+            "section": "Conclusion"
+          }
+        ]
+      }
+    }
+  ]
+}
