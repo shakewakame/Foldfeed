@@ -12,48 +12,90 @@
     "open": "DNAAF19とDPCDがRUVBL2のヌクレオチド交換を共同で促すかは、結論できていない。",
     "evidence": {
       "question": [
-        {"quote": "However, recent cryoelectron microscopy (cryo-EM) structures of ciliary axonemes have not revealed the presence of DNAAF19, leaving its role in dynein arm assembly unclear", "section": "Introduction"}
+        {
+          "quote": "However, recent cryoelectron microscopy (cryo-EM) structures of ciliary axonemes have not revealed the presence of DNAAF19, leaving its role in dynein arm assembly unclear",
+          "section": "Introduction"
+        }
       ],
       "approach": [
-        {"quote": "we characterized the protein–protein interaction network of mouse Dnaaf19 using SF-TAP affinity purification followed by mass spectrometry", "section": "Results"},
-        {"quote": "We therefore copurified these three human proteins coexpressed in bacterial cells and determined the cryo-EM structure of the complex at an overall 3.5-Å resolution", "section": "Results"}
+        {
+          "quote": "we characterized the protein–protein interaction network of mouse Dnaaf19 using SF-TAP affinity purification followed by mass spectrometry",
+          "section": "Results"
+        },
+        {
+          "quote": "We therefore copurified these three human proteins coexpressed in bacterial cells and determined the cryo-EM structure of the complex at an overall 3.5-Å resolution",
+          "section": "Results"
+        }
       ],
       "result": [
-        {"quote": "Focused 3D classification showed that hDNAAF19 is absent from hRUVBL1 but present in all five hRUVBL2 subunits with variable occupancy", "section": "Results"},
-        {"quote": "The EM map clearly showed five copies of hDPCD bound to hRUVBL2, and the density was absent in hRUVBL1", "section": "Results"}
+        {
+          "quote": "Focused 3D classification showed that hDNAAF19 is absent from hRUVBL1 but present in all five hRUVBL2 subunits with variable occupancy",
+          "section": "Results"
+        },
+        {
+          "quote": "The EM map clearly showed five copies of hDPCD bound to hRUVBL2, and the density was absent in hRUVBL1",
+          "section": "Results"
+        }
       ],
       "learned": [
-        {"quote": "We propose that DNAAF19 functions as part of a cochaperone complex with RUVBL1/2 and other partners, including DPCD, to facilitate dynein arm assembly.", "section": "Abstract"}
+        {
+          "quote": "We propose that DNAAF19 functions as part of a cochaperone complex with RUVBL1/2 and other partners, including DPCD, to facilitate dynein arm assembly.",
+          "section": "Abstract"
+        }
       ],
       "open": [
-        {"quote": "At this moment, we cannot conclude that DNAAF19 and DPCD work in concert to facilitate the nucleotide exchange of RUVBL2.", "section": "Discussion"}
+        {
+          "quote": "At this moment, we cannot conclude that DNAAF19 and DPCD work in concert to facilitate the nucleotide exchange of RUVBL2.",
+          "section": "Discussion"
+        }
       ]
     }
   },
-  "categories": ["translation", "pathogen"],
+  "categories": [
+    "translation",
+    "pathogen"
+  ],
   "highlights": [
     {
       "tag": "機構の解明",
       "text": "DNAAF19はRPAP3-Cドメインのα6ヘリックスでRUVBL2に結合する。R175がD435・Y430と塩橋をつくり、L178とL182が疎水ポケットに入る。接触面は約700 Å2で、RPAP3やSPAG1の場合より小さい。",
       "evidence": [
-        {"quote": "The interaction between hDNAAF19 and hRUVBL1/2 is primarily mediated by the α6 helix of RPAP3-C, where residue R175 forms salt bridges with D435 and Y430", "section": "Results"},
-        {"quote": "These contacts create an interaction interface of ~700 Å2 between hDNAAF19 and hRUVBL1/2, approximately 250 and 400 Å2 smaller than that of hRPAP3-RUVBL1/2 and hSPAG1-RUVBL1/2.", "section": "Results"}
+        {
+          "quote": "The interaction between hDNAAF19 and hRUVBL1/2 is primarily mediated by the α6 helix of RPAP3-C, where residue R175 forms salt bridges with D435 and Y430",
+          "section": "Results"
+        },
+        {
+          "quote": "These contacts create an interaction interface of ~700 Å2 between hDNAAF19 and hRUVBL1/2, approximately 250 and 400 Å2 smaller than that of hRPAP3-RUVBL1/2 and hSPAG1-RUVBL1/2.",
+          "section": "Results"
+        }
       ]
     },
     {
       "tag": "機構の解明",
       "text": "DPCDが結合したRUVBL2のサブユニットでは、ADPが減るか見えなくなる。著者はDPCDがヌクレオチド結合部位の「ゲート」を開けやすくすると考えるが、DPCDだけでは足りないとも述べている。",
       "evidence": [
-        {"quote": "These results imply that hDPCD promotes an open conformation of the N terminus in hRUVBL2 subunits that exhibit incomplete ADP occupancy.", "section": "Results"},
-        {"quote": "Our results suggest that DPCD is not sufficient to release ADP from the nucleotide-binding pocket of RUVBL2 by inducing a conformational change in its N terminus.", "section": "Discussion"}
+        {
+          "quote": "These results imply that hDPCD promotes an open conformation of the N terminus in hRUVBL2 subunits that exhibit incomplete ADP occupancy.",
+          "section": "Results"
+        },
+        {
+          "quote": "Our results suggest that DPCD is not sufficient to release ADP from the nucleotide-binding pocket of RUVBL2 by inducing a conformational change in its N terminus.",
+          "section": "Discussion"
+        }
       ]
     },
     {
       "tag": "機構の解明",
       "text": "原発性線毛運動異常症（PCD）で最も多い変異H154Pは、H154がP117と作る相互作用を失ってRPAP3-Cドメインを不安定にする。ただしRUVBL2との結合は弱いながら残り、部分的に機能を保つらしい。",
       "evidence": [
-        {"quote": "These results suggest that the H154P variant of hDNAAF19 is a hypomorphic variant that destabilizes the RPAP3-C domain but still retains the interaction with hRUVBL2.", "section": "Results"},
-        {"quote": "The H154P variant destabilizes the RPAP3-C domain by losing the interaction", "section": "Results"}
+        {
+          "quote": "These results suggest that the H154P variant of hDNAAF19 is a hypomorphic variant that destabilizes the RPAP3-C domain but still retains the interaction with hRUVBL2.",
+          "section": "Results"
+        },
+        {
+          "quote": "The H154P variant destabilizes the RPAP3-C domain by losing the interaction",
+          "section": "Results"
+        }
       ]
     }
   ],
@@ -64,15 +106,38 @@
     "sample_prep": null,
     "data_collection": "データはリーズ大学のAstbury Biostructure Laboratoryで収集。モデルはAlphaFold3、ChimeraX、PHENIX、Cootで構築。",
     "evidence": [
-      {"quote": "hRUVBL1, RUVBL2, and hDNAAF19 coexpressed in bacterial cells were purified using Ni affinity purification followed by size-exclusion chromatography.", "section": "Methods"},
-      {"quote": "The cryo-EM data of hDNAAF19–RUVBL1/2 and its complex with DPCD were collected at the Astbury Biostructure Laboratory, University of Leeds.", "section": "Methods"},
-      {"quote": "The models of hDNAAF19–RUVBL1/2 and its complex with hDPCD were built using AlphaFold3 (28), Chimera X (50), PHENIX (51), and Coot (52).", "section": "Methods"}
+      {
+        "quote": "hRUVBL1, RUVBL2, and hDNAAF19 coexpressed in bacterial cells were purified using Ni affinity purification followed by size-exclusion chromatography.",
+        "section": "Methods"
+      },
+      {
+        "quote": "The cryo-EM data of hDNAAF19–RUVBL1/2 and its complex with DPCD were collected at the Astbury Biostructure Laboratory, University of Leeds.",
+        "section": "Methods"
+      },
+      {
+        "quote": "The models of hDNAAF19–RUVBL1/2 and its complex with hDPCD were built using AlphaFold3 (28), Chimera X (50), PHENIX (51), and Coot (52).",
+        "section": "Methods"
+      }
     ]
   },
-  "keywords": ["DNAAF19", "CCDC103", "RUVBL1/2", "DPCD", "原発性線毛運動異常症", "ダイニンアーム"],
+  "keywords": [
+    "DNAAF19",
+    "CCDC103",
+    "RUVBL1/2",
+    "DPCD",
+    "原発性線毛運動異常症",
+    "ダイニンアーム"
+  ],
   "ligand_label": "ADP",
   "editor_notes": "DNAAF19 には既存PDB 1件、RUVBL1/2 には多数あり、複合体としては新規だが論文は「初」とは書いていない（DPCD は first_structure=true だが論文は明言せず）。見出しは「らしい」で推測の度合いを合わせた。クライオ電顕のコンストラクトや凍結条件は SI Appendix にあり、本文（Materials and Methods）は要約のみのため lab_notes は一部 null。RUVBL1:RUVBL2 が 1:5 になる点は、著者も実験条件による可能性を残している。PDB は 29JR（DNAAF19–RUVBL1/2）と 29KN（DPCD 付き複合体）。",
-  "legend_labels": ["RUVBL1（シャペロン）", "RUVBL2（シャペロン）", "DNAAF19（組み立て因子）", "DPCD（アダプター）"],
-  "ligand_names": {"ADP": "ADP"},
+  "legend_labels": [
+    "RUVBL1（シャペロン）",
+    "RUVBL2（シャペロン）",
+    "DNAAF19（組み立て因子）",
+    "DPCD（アダプター）"
+  ],
+  "ligand_names": {
+    "ADP": "ADP"
+  },
   "ga_pdb_id": "29KN"
 }
