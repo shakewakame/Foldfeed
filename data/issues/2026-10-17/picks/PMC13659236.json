@@ -1,0 +1,105 @@
+{
+  "pmcid": "PMC13659236",
+  "rank": 1,
+  "section": "impact",
+  "headline": "ZBP1は、できあがったZ型RNAにだけ結合する",
+  "subhead": "NMR・CD・ITCで調べると、無修飾のRNAをZ型に変換できなかった",
+  "target_label": "ZBP1のZαドメイン（ヒト）",
+  "method_label": "NMR・CD・ITC",
+  "summary": {
+    "question": "ZBP1はADAR1と同様にA型RNAをZ型に変換できると考えられてきたが、実験での確認はなかった。",
+    "approach": "ZBP1のZα1・Zα2ドメインと核酸の結合を、NMR・CD・ITCなどで調べた。",
+    "result": "二本鎖DNAはZ型にできたが、無修飾の(CpG)n RNAはZ型に変換できなかった。",
+    "learned": "ZBP1が感知するZ型RNAは、すでにZ型になりやすいものに限られる可能性がある。",
+    "open": "ADAR1がZBP1を抑えるという競合モデルは、さらに検証が必要だ。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "ZBP1 has been previously shown to bind and convert B-DNA to the Z-conformation and was assumed to be able to convert A-RNA as well, despite the lack of experimental validation.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here, we use NMR and other biophysical and biochemical experiments to characterize the Z-DNA and Z-RNA binding properties of ZBP1’s Zα1 and Zα2 domains.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "While ZBP1’s Zα domains are able to convert and stabilize unmodified dsDNA in the Z-conformation, they are incapable of flipping unmodified (CpG)n repeat dsRNA.",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "This functional difference likely restricts ZBP1 sensing to pre-Z-forming nucleic acids, preventing aberrant immune activation and reflecting mechanistic differences from ADAR1.",
+          "section": "Introduction"
+        }
+      ],
+      "open": [
+        {
+          "quote": "This model is consistent with previously published genetic studies [2, 37, 102]; however, more research is needed to validate the competitive binding model.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "nucleic",
+    "immune"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "ZBP1は無修飾のRNAをZ型に変換できず、A型に近い形で結合した。ADAR1のZαドメインとは性質が異なる。",
+      "evidence": [
+        {
+          "quote": "but cannot convert A-RNA, instead binding it in an A-form-like mode.",
+          "section": "Introduction"
+        },
+        {
+          "quote": "These results contrast with ADAR1’s Zα domain, which can bind and flip both dsDNA and dsRNA into the Z-conformation",
+          "section": "Abstract"
+        }
+      ]
+    },
+    {
+      "tag": "新しい結合部位",
+      "text": "8-メチルグアニンで安定化したZ型RNAにはZBP1が結合した。酸化で生じる8-オキソグアニンはさらに強くZ型を安定化し、生理的な標的候補になりうる。",
+      "evidence": [
+        {
+          "quote": "To our surprise, 8-oxoguanine seems to be a greater natural Z-RNA stabilizer than the 8-methylguanine modification (Fig. 5A).",
+          "section": "Results"
+        },
+        {
+          "quote": "8-Oxoguanine is the most prevalent oxidative product upon exposure to ROS",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "大腸菌LOBSTR-BL21(DE3)で発現。15N標識はM9培地",
+    "construct": null,
+    "purification": null,
+    "sample_prep": null,
+    "data_collection": "Bruker 600 MHzで15N-HSQC滴定",
+    "evidence": [
+      {
+        "quote": "Briefly, the plasmids were transformed and expressed in LOBSTR-BL21(DE3) Escherichia coli.",
+        "section": "Methods"
+      },
+      {
+        "quote": "All experiments were carried out on a Bruker 600 MHz spectrometer",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "ZBP1",
+    "ADAR1",
+    "Z-RNA"
+  ],
+  "editor_notes": "結晶・クライオ電顕の構造決定はなく、NMR（化学シフト摂動）・CD・ITC で結合様式と立体配座を調べた研究。structure は 1 点とした。"
+}

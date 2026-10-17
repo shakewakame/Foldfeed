@@ -1,0 +1,110 @@
+{
+  "pmcid": "PMC13646831",
+  "rank": 1,
+  "headline": "MDA5のT331I変異は、ATPを分解できず自己免疫につながる",
+  "subhead": "短いdsRNAにもフィラメントが残り、インターフェロン応答が続く",
+  "target_label": "MDA5（ヒト）",
+  "summary": {
+    "question": "疾患に関わるMDA5のT331I変異が、なぜ常にインターフェロンのシグナルを出すのかは不明だった。",
+    "approach": "細胞のレポーター実験、ATPase測定、短い112 bp dsRNAとの複合体のクライオ電顕で野生型と比べた。",
+    "result": "T331I変異体はATPase活性が検出されず、ATPを加えても短いdsRNA上のフィラメントが壊れなかった。",
+    "learned": "ATP加水分解が止まるとフィラメントが外れず、自己のdsRNAでも免疫が過剰に活性化すると考えられる。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "While these results are notable, the actual molecular mechanism underlying constitutive MDA5 T331I signaling remains unclear.",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Through a combination of cryo-electron microscopy (cryoEM), biochemical assays, and cellular analyses, we reveal the extensive network of interactions that precisely position ATP for catalysis in the wild-type MDA5 ATP-binding pocket",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "However, the T331I mutant displayed no detectable ATPase activity in the presence of poly (I:C)",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Based on these results, we conclude that the T331I mutation eliminates the ATPase activity of MDA5, which in turn blocks the disassembly of filaments formed by the T331I mutant even on short dsRNA.",
+          "section": "Results"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "immune",
+    "nucleic"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "T331I変異体は、30 bpほどの短いdsRNAでもインターフェロン応答を引き起こした。野生型は短いdsRNAにはほとんど応答しない。この変異体は、長さを見分ける能力を失っている。",
+      "evidence": [
+        {
+          "quote": "By contrast, the T331I mutant exhibited robust signaling upon stimulation by almost every RNA tested, including dsRNAs as short as 30 bp (SLR30) in length (Fig. 1C).",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "ATPを加えると、野生型のフィラメントは短いdsRNA上でほぼ壊れて遊離RNAが増えたが、T331Iのフィラメントは壊れずに残った。ATP分解がフィラメントの解体に必要であることを直接示している。",
+      "evidence": [
+        {
+          "quote": "In contrast, the short filaments formed by T331I on dsRNA112 were stable even in the presence of ATP, and no evidence of filament disassembly was observed (Fig. 2C, bottom panel, and Supplementary Fig. S4B).",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "野生型の複合体では、ATP結合ポケットでATPを触媒の位置に置く相互作用の網目が見えた。野生型はATPの非加水分解アナログ（AMPPNP）で、T331IはATPで複合体を作って構造を決めた。",
+      "evidence": [
+        {
+          "quote": "we reveal the extensive network of interactions that precisely position ATP for catalysis in the wild-type MDA5 ATP-binding pocket",
+          "section": "Abstract"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "ヒトMDA5（CARD を除いた構築体）を大腸菌 Rosetta (DE3) で発現。",
+    "construct": "N 末端の 297 残基（CARD）を除いた。",
+    "purification": "ニッケルカラム、SUMO プロテアーゼ、ヘパリン、Superdex 200 で精製。",
+    "sample_prep": "5 µM のタンパク質と 0.2 µM の 112 bp dsRNA を AMPPNP または ATP 存在下で一晩インキュベートし、UltrAuFoil グリッドに載せた。",
+    "data_collection": "Titan Krios と K3 で収集し、cryoSPARC v4.0 で処理した。",
+    "evidence": [
+      {
+        "quote": "The N-terminal 297 residues were removed from both protein constructs to reconstitute wild-type MDA5/dsRNA112 or T331I/dsRNA112 complexes.",
+        "section": "Methods"
+      },
+      {
+        "quote": "The protein–dsRNA complexes were first assembled by the incubation of 5 µM proteins and 0.2 µM dsRNAs at 4°C overnight",
+        "section": "Methods"
+      },
+      {
+        "quote": "Recorded movie frames were processed using cryoSPARC v4.0.",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "MDA5",
+    "T331I",
+    "dsRNA"
+  ],
+  "legend_labels": [
+    "MDA5（RNA センサー）",
+    "dsRNA（二本鎖RNA）"
+  ],
+  "ligand_names": {
+    "ANP": "AMPPNP",
+    "ATP": "ATP"
+  },
+  "editor_notes": "PDB 9Y4J/9Y4L は野生型 + AMPPNP、9Q60/9Q5W の対応は未確認（ligand は ATP、T331I と考えられる）。凡例の順序は render 後に確認すること。"
+}
