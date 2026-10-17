@@ -1,0 +1,5 @@
+{"pmcid": "PMC13646831", "axes": ["structure", "biology"],
+ "reason": "自己免疫疾患に結びつくMDA5変異T331Iが、ATPの触媒を妨げて持続的なインターフェロン応答を生む仕組みを、クライオ電顕で示した。",
+ "evidence": [{"quote": "the gain-of-function T331I disease-linked mutation within the ATP-binding pocket disrupts this balance, resulting in constitutive interferon signaling", "section": "Abstract"}],
+ "considered": [{"pmcid": "PMC13639035", "note": "翻訳中の折りたたみを力プロファイル解析で追った研究で面白いが、クライオ電顕は補助的で構造の主張が弱い。"},
+                {"pmcid": "PMC13659236", "note": "ZBP1のZ型RNA結合を示したが、決定した構造がなくNMR・ITCによる間接的な根拠にとどまる。"}]}

@@ -1,0 +1,43 @@
+{
+  "screened": 22,
+  "scored": [
+    {
+      "pmcid": "PMC13659236",
+      "type": "mechanism",
+      "scores": {
+        "novelty": 2,
+        "reach": 2,
+        "structure": 1,
+        "support": 2
+      },
+      "selected": true,
+      "reason": "NMR・CD・ITCで、ZBP1がZ型RNAへの変換能を持たないことを示した。結晶構造は決めていないが、NMRで結合様式を実験的に確かめた。",
+      "evidence": {
+        "novelty": [
+          {
+            "quote": "To our knowledge, this is the first report of ZBP1’s inability to convert (CpG)n RNA helices to the Z-form, and it calls into question the physiological ligands responsible for ZBP1’s activation and initiation of downstream signaling events.",
+            "section": "Discussion"
+          }
+        ],
+        "reach": [
+          {
+            "quote": "This work highlights the functional variability of Zα domains and narrows down potential physiological substrates of ZBP1 in infection and disease.",
+            "section": "Abstract"
+          }
+        ],
+        "structure": [
+          {
+            "quote": "Interestingly, both ZαADAR1 and Zα1ZBP1 have nearly identical CSP magnitudes and directions for their respective Tyr residues, indicating highly similar binding modes to the Z-form oligo.",
+            "section": "Results"
+          }
+        ],
+        "support": [
+          {
+            "quote": "Consistent with the inability of any ZBP1 construct to convert RNA to the Z-form, Zα1ZBP1 has nearly identical binding modes to the LNA and unmodified RNA 6-mers",
+            "section": "Results"
+          }
+        ]
+      }
+    }
+  ]
+}
