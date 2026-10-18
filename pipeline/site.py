@@ -38,7 +38,8 @@ TAGLINE = "構造生物学者のための情報収集サポートサイト"
 LEAD = ("新着の査読済みオープンアクセス論文から、", "構造生物学の論文を、", "毎日ピックアップして紹介")
 LATEST = {"date": None}   # the newest issue with articles (the menu's "Latest Article"), set by build()
 
-CHART_NEW, CHART_HOT = "#2F5DA8", "#C8442A"   # 藍 / 朱: validated against the ground #FAFAF8 (dataviz validate_palette)
+CHART_NEW, CHART_UPD, CHART_HOT = "#2F5DA8", "#1F8A70", "#C8442A"   # 藍 / 青緑 / 朱 for New Structure, Structure Update,
+# Structure-Based Study: validated together against the ground #FAFAF8 (dataviz validate_palette, all pairs)
 CHART_TRACK = "#D6DEEB"                        # the meter's track: a light step of the same blue
 CHART_ISSUES = 30                              # the papers-per-issue chart shows the latest issues only
 
@@ -110,7 +111,7 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 
 /* contents: one table row per article: number, headline + supplement, TARGET / METHOD / RES., the real structure, PDB */
 .toc {{ margin-top:var(--sec); }}
-/* every section heading of the pages (Picked up Today's Structure, About FoldFeed, New Structure, Notable Structure, ...),
+/* every section heading of the pages (Picked up Today's Structure, About FoldFeed, New Structure, Structure Update, ...),
    all in English: one face, one size, and (as on Nature's pages) a thin rule under the title, the content below it.
    Sections are told apart by space, not rules; a sub-section inside one opens with a short bar above it */
 .ix-h {{ display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding-bottom:12px; margin-bottom:26px;
@@ -169,7 +170,7 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .part + .art::before {{ display:none; }}
 
 /* article: margin column for the data, text column for the story */
-/* the articles under a New / Notable Structure heading are its sub-sections: each after the first opens with the bar */
+/* the articles under a part's heading (New Structure, ...) are its sub-sections: each after the first opens with the bar */
 .art {{ display:grid; grid-template-columns:var(--col) minmax(0,1fr); gap:28px; padding-top:44px; padding-bottom:24px;
         margin-top:72px; position:relative; }}
 .art::before {{ top:0; }}
@@ -408,6 +409,7 @@ html, body {{ overflow-x:clip; }}   /* a guard: nothing may widen the page sidew
 .ppi .lg {{ display:flex; align-items:center; gap:6px; font-size:12.5px; }}
 .ppi .lg i {{ display:inline-block; width:10px; height:10px; border-radius:2px; margin-left:10px; }}
 .ppi .lg i.n {{ background:{CHART_NEW}; }}
+.ppi .lg i.u {{ background:{CHART_UPD}; }}
 .ppi .lg i.h {{ background:{CHART_HOT}; }}
 .plot {{ position:relative; height:190px; margin:14px 0 0 26px; }}
 .yt span {{ position:absolute; left:-26px; right:0; bottom:calc(var(--y) * 100%); border-top:1px solid var(--hair);
@@ -419,6 +421,7 @@ html, body {{ overflow-x:clip; }}   /* a guard: nothing may widen the page sidew
                justify-content:flex-end; transform-origin:bottom; transition:transform .9s cubic-bezier(.2,.8,.2,1);
                transition-delay:calc(var(--i) * 45ms + 150ms); }}
 .col .stack i {{ display:block; height:calc(var(--h) * 100%); background:{CHART_NEW}; }}
+.col .stack i.u {{ background:{CHART_UPD}; margin-bottom:2px; }}
 .col .stack i.h {{ background:{CHART_HOT}; margin-bottom:2px; }}
 .col .stack i:first-child {{ border-radius:4px 4px 0 0; }}
 .col:hover .stack i, .col:focus-visible .stack i {{ filter:brightness(1.18); }}
@@ -433,7 +436,7 @@ html, body {{ overflow-x:clip; }}   /* a guard: nothing may widen the page sidew
              font-family:var(--sans); font-size:12.5px; white-space:nowrap; }}
 .ppi .tip[hidden] {{ display:none; }}
 .ppi {{ padding-bottom:26px; }}
-.sr {{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }}
+.sr {{ position:absolute; left:0; top:0; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); clip-path:inset(50%); }}
 .about .jl {{ columns:3 260px; column-gap:44px; font-size:14.5px; }}
 .about .jl li {{ break-inside:avoid; display:grid; grid-template-columns:minmax(0,1fr) auto; gap:4px 14px; padding:7px 0 8px;
                  border-bottom:1px solid var(--hair); }}
@@ -548,13 +551,15 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
 .ih-date {{ margin:4px 0 0; font-family:var(--latin); font-size:92px; line-height:1; letter-spacing:-.035em; font-weight:700; color:var(--ink); }}
 .ih-src {{ margin:12px 0 0; font-size:14.5px; color:var(--desc); }}
 .ih-fig {{ position:relative; margin-top:30px; padding-top:22px; border-top:1px solid var(--hair); }}
-.ih-kpis {{ grid-template-columns:repeat(4,minmax(0,1fr)); }}
+.ih-kpis {{ grid-template-columns:repeat(5,minmax(0,1fr)); }}
 .kl i {{ display:inline-block; width:10px; height:10px; border-radius:2px; margin-right:7px; vertical-align:baseline; }}
 .kl .sw-n {{ background:{CHART_NEW}; }}
+.kl .sw-u {{ background:{CHART_UPD}; }}
 .kl .sw-h {{ background:{CHART_HOT}; }}
 .ih-bar {{ display:flex; gap:2px; height:14px; margin-top:24px; }}
 .ih-bar a {{ flex:var(--w) 1 0; min-width:3px; background:{CHART_NEW}; transform-origin:left;
              transition:transform .7s cubic-bezier(.2,.8,.2,1) calc(var(--i) * 45ms + 250ms), filter .2s; }}
+.ih-bar a.u {{ background:{CHART_UPD}; }}
 .ih-bar a.h {{ background:{CHART_HOT}; }}
 .ih-bar a:first-child {{ border-radius:3px 0 0 3px; }}
 .ih-bar a:last-child {{ border-radius:0 3px 3px 0; }}
@@ -973,7 +978,6 @@ def journal_counts(issues: list[str], root: Path = ISSUES_DIR) -> list[tuple[str
 # a paper whose protein (UniProt entry) had no structure in the PDB before it; the other new structures add a state, a
 # ligand or a partner to a protein solved before (2026-10-18: "PDB 初構造" and "初めて解かれた構造" were both misread)
 FIRST_LABEL = "初めて構造が解かれたタンパク質"
-NOTABLE_NEW = "既知のタンパク質の新しい構造"   # the Notable Structure row of a new structure of a protein solved before
 
 
 # ---------- one article ----------
@@ -1014,9 +1018,7 @@ def margin_html(cand: dict, pick: dict, n: int, impact_type: str | None = None) 
     rows = [("Target", esc(pick.get("target_en") or pick["target_label"])), ("Method", esc(method)), (pdb_label, pdb_dd),
             ("Ligand", esc(pick.get("ligand_label") or ("—" if hot else render.ligand_line(cand))))]
     if hot:
-        rows.insert(0, ("Notable", esc(impact.TYPES.get(impact_type or "", "新しい構造以外"))))
-    elif render.part_of(cand, pick) == "impact":
-        rows.insert(0, ("Notable", NOTABLE_NEW))
+        rows.insert(0, ("Study", esc(impact.TYPES.get(impact_type or "", "新しい構造以外"))))
     if uni:
         rows.append(("UniProt", uni))
     if orgs:
@@ -1179,16 +1181,16 @@ def load_issue(date: str, root: Path = ISSUES_DIR) -> tuple[dict, list[tuple[dic
     picks = [(cands[pk["pmcid"]], pk) for pk in (read_json(p) for p in sorted((d / "picks").glob("*.json")))
              if pk.get("pmcid") in cands]
     picks.sort(key=lambda cp: cp[1].get("rank", 99))
-    new, hot = render.split_sections(picks)
     types = {s["pmcid"]: s.get("type") for s in render.load_impact(d).get("scored", [])}
-    return meta, new + hot, types
+    return meta, render.ordered(picks), types
 
 
 PARTS = {
     "new": ("New Structure", "構造が初めて解かれたタンパク質。"),
-    "impact": ("Notable Structure", "既に構造があるタンパク質の新しい構造（別の状態・リガンド・相手との複合体など）と、"
-                            "既存の構造を使って仕組みの解明や創薬に迫った注目の研究。"),
+    "update": ("Structure Update", "既に構造があるタンパク質の新しい構造（別の状態・リガンド・相手との複合体など）。"),
+    "impact": ("Structure-Based Study", "既存の構造を使って仕組みの解明や創薬に迫った注目の研究。"),
 }
+PART_CLS = {"new": "n", "update": "u", "impact": "h"}   # the colour of a part in the charts, the bar and the swatches
 
 
 def load_feature(date: str, root: Path, picks: list) -> dict | None:
@@ -1255,7 +1257,7 @@ def row_html(cand: dict, pick: dict, n: int, date: str, root: Path, fig_base: st
             f'<div class="rp"><span class="pl">PDB</span><b>{esc(f["pdb_id"] or f["pdb"])}</b></div></div></li>')
 
 
-HOME_PARTS = {"new": "Today’s New Structure", "impact": "Today’s Notable Structure"}
+HOME_PARTS = {"new": "Today’s New Structure", "update": "Today’s Structure Update", "impact": "Today’s Structure-Based Study"}
 
 
 def contents_html(picks: list, date: str, root: Path, fig_base: str, href_base: str = "",
@@ -1265,16 +1267,17 @@ def contents_html(picks: list, date: str, root: Path, fig_base: str, href_base: 
     On the front page the article shown as 今日の一本 is not repeated here (it keeps its number, so the list may
     skip one); on an issue page (mark=True) it stays in the list, marked.
     """
-    new, hot = render.split_sections(picks)
-    number = {c["pmcid"]: n for n, (c, _) in enumerate(new + hot, 1)}
+    parts = render.sections(picks)
+    number = {c["pmcid"]: n for n, (c, _) in enumerate(render.ordered(picks), 1)}
     out = ""
-    for key, items, cls in (("new", new, ""), ("impact", hot, " hot")):
+    for key, items in parts.items():
+        cls = " hot" if out else ""
         body = "".join(row_html(c, pk, number[c["pmcid"]], date, root, fig_base, href_base,
                                 feat=mark and c["pmcid"] == featured)
                        for c, pk in items if mark or c["pmcid"] != featured)
         if not body:
             continue
-        if mark:   # an issue page: the contents, under one heading (the articles follow under New / Notable Structure)
+        if mark:   # an issue page: the contents, under one heading (the articles follow under each part's heading)
             out += (f'<h3 class="toc-sub{cls}">{PARTS[key][0]}<span>{len(items)}</span></h3><ol class="rows">{body}</ol>')
         else:   # the front page: the way to the whole issue sits at the start of the lists, beside the first heading
             y, m, d, _ = date_parts(date)
@@ -1309,9 +1312,8 @@ def lead_html(feature: dict | None, picks: list, date: str, root: Path, fig_base
     lines = "".join(f'<span style="--i:{i}">{esc(t)}</span>' for i, t in enumerate(LEAD))
     go = (('<a class="lead-go" href="#today"><span class="tri" aria-hidden="true">▽</span>'
            'Picked up: Today’s Structure</a>') if feature_of(feature, picks) else "")
-    new, hot = render.split_sections(picks)
-    more = "".join(f'<a class="lead-go alt" href="#{key}"><span class="tri" aria-hidden="true">▽</span>{label}<b>{n}</b></a>'
-                   for key, label, n in (("new-list", "New Structure", len(new)), ("impact-list", "Notable Structure", len(hot))) if n)
+    more = "".join(f'<a class="lead-go alt" href="#{key}-list"><span class="tri" aria-hidden="true">▽</span>{PARTS[key][0]}'
+                   f'<b>{len(items)}</b></a>' for key, items in render.sections(picks).items() if items)
     go = (f'<div class="lead-btns"><a class="lead-go alt" href="#about"><span class="tri" aria-hidden="true">▽</span>'
           f'About FoldFeed</a>{go}{more}</div>')   # in the order of the page
     hit = feature_of(feature, picks)
@@ -1413,17 +1415,12 @@ def part_html(key: str, count: int, date: str) -> str:
             f'<span class="ixm"><b>{n_articles(count)}</b></span></h2></section>')
 
 
-def counts_text(n_new: int, n_hot: int, sep: str = "<br>") -> str:
-    return f"New Structure {n_new} 本" + (f"{sep}Notable Structure {n_hot} 本" if n_hot else "")
-
-
 def toc_side(picks: list, featured: str | None) -> str:
     """The sidebar of an issue page (beside the articles): the way back to the top of the issue, then every article,
     grouped, each a link to its anchor."""
-    new, hot = render.split_sections(picks)
-    number = {c["pmcid"]: n for n, (c, _) in enumerate(new + hot, 1)}
+    number = {c["pmcid"]: n for n, (c, _) in enumerate(render.ordered(picks), 1)}
     out = ""
-    for key, items in (("new", new), ("impact", hot)):
+    for key, items in render.sections(picks).items():
         if items:
             links = "".join(f'<a href="#a{number[c["pmcid"]]}"><b>{pad(number[c["pmcid"]])}</b>'
                             f'<span>{esc(pk["headline"])}</span></a>' for c, pk in items)
@@ -1473,31 +1470,31 @@ def issue_nav(prev_date: str | None, next_date: str | None, cls: str, top: bool 
 def issue_head(date: str, number: int | None, picks: list, prev_date: str | None, next_date: str | None,
                index_date: str | None = None, index_from: str | None = None, nature: bool = False) -> str:
     """The first screen of an issue page: which issue it is (the date, once, large), how many articles, how many of them
-    New and Notable Structure, and about how long reading them all takes, as figures that count up and a bar of the
+    New Structure, Structure Update and Structure-Based Study, and about how long reading them all takes, as figures that count up and a bar of the
     articles (one segment each, as long as its reading time, coloured by its part; each a link to it), with buttons
     down to the two parts and the neighbouring issues."""
     y, m, d, _ = date_parts(date)
-    new, hot = render.split_sections(picks)
+    parts = render.sections(picks)
     mins = [reading_minutes(pk) for _, pk in picks]
     total = max(1, round(sum(mins))) if picks else 0
     kicker = (f"Issue No. {number}" if number else "Preview") + f" · {WEEKDAY_EN[datetime.date(y, m, d).weekday()]}"
     # (the papers not written up are listed at the foot of the page, under Not Covered, not counted here)
     src = (f'<p class="ih-src">{index_span(index_date, index_from)}に論文データベースへ登録された論文'
            + ('と、同じ日に Nature 系の雑誌で出版された論文' if nature else '') + 'から</p>') if index_date else ""
-    tiles = [("Articles", len(picks), ""), ("New Structure", len(new), "n"), ("Notable Structure", len(hot), "h")]
+    tiles = [("Articles", len(picks), "")] + [(PARTS[k][0], len(v), PART_CLS[k]) for k, v in parts.items()]
     kpis = "".join(f'<div class="kpi"><span class="kl">{f"<i class=sw-{c}></i>" if c else ""}{k}</span>'
                    f'<span class="kv" data-count="{v}">{v}</span></div>' for k, v, c in tiles)
     kpis += (f'<div class="kpi"><span class="kl">Reading time</span><span class="kv"><small>約 </small>'
              f'<span data-count="{total}">{total}</span><small> 分</small></span></div>') if picks else ""
-    segs = "".join(f'<a class="{"h" if render.part_of(c, pk) == "impact" else "n"}" href="#a{n}" style="--w:{t:.2f};--i:{n - 1}" '
+    segs = "".join(f'<a class="{PART_CLS[render.part_of(c, pk)]}" href="#a{n}" style="--w:{t:.2f};--i:{n - 1}" '
                    f'data-tip="{pad(n)} · {esc(pk["headline"])} · 約\u00a0{max(1, round(t))}\u00a0分" aria-label="{pad(n)} {esc(pk["headline"])}"></a>'
                    for n, ((c, pk), t) in enumerate(zip(picks, mins), 1))
     bar = (f'<div class="ih-bar" role="list">{segs}</div>'
            f'<p class="ih-scale"><span>Article 01</span><span>{pad(len(picks))}</span></p><div class="tip" hidden></div>') if picks else ""
     btns = "".join(f'<a class="lead-go" href="#{key}"><span class="tri" aria-hidden="true">▽</span>{label}'
                    + (f'<b>{n}</b>' if key != "contents" else "") + '</a>'
-                   for key, label, n in (("contents", "Contents", len(picks)), ("new", "New Structure", len(new)),
-                                         ("impact", "Notable Structure", len(hot))) if n)
+                   for key, label, n in (("contents", "Contents", len(picks)),
+                                         *((k, PARTS[k][0], len(v)) for k, v in parts.items())) if n)
     nav = issue_nav(prev_date, next_date, "ih-nav") if prev_date or next_date else ""
     return (f'<header class="ihead" id="issue-top"><div class="ih-top"><div><p class="ih-k">{kicker}</p>'
             f'<h1 class="ih-date">{y}.{m:02d}.{d:02d}</h1>{src}</div>{nav}</div>'
@@ -1515,7 +1512,7 @@ def issue_page(date: str, prev_date: str | None, next_date: str | None,
                root: Path = ISSUES_DIR, preview: bool = False, number: int | None = None,
                related: dict | None = None) -> str:
     meta, picks, types = load_issue(date, root)
-    n_hot = sum(render.part_of(c, pk) == "impact" for c, pk in picks)
+    counts = {k: len(v) for k, v in render.sections(picks).items()}
     picked = {pk["pmcid"] for _, pk in picks}
     rest = render.not_covered(meta, picked)
     fig_base = "figures" if preview else "../figures"
@@ -1536,9 +1533,9 @@ def issue_page(date: str, prev_date: str | None, next_date: str | None,
         top.append('<section class="part"><h2>No Articles</h2></section>')
     main = []
     for n, (cand, pk) in enumerate(picks, 1):
-        hot = render.part_of(cand, pk) == "impact"
-        if n == 1 or hot != (render.part_of(*picks[n - 2]) == "impact"):
-            main.append(part_html("impact" if hot else "new", n_hot if hot else len(picks) - n_hot, date))
+        part = render.part_of(cand, pk)
+        if n == 1 or part != render.part_of(*picks[n - 2]):
+            main.append(part_html(part, counts[part], date))
         main.append(article_html(cand, pk, date, n, root, fig_base, types.get(cand["pmcid"]), "../",
                                  (related or {}).get((date, n))))
     if rest:
@@ -1566,9 +1563,9 @@ ABOUT = (   # the front page's About FoldFeed, in polite Japanese (the owner's w
      "構造生物学の論文を|毎日ピックアップして|ご紹介します。"),
     ("紹介する論文",
      "構造が初めて解かれた|タンパク質の論文は、|New Structure で|すべてご紹介します。"
-     "既に構造がある|タンパク質の新しい構造|（別の状態や複合体など）の論文も、|Notable Structure で|すべてご紹介します。"
+     "既に構造がある|タンパク質の新しい構造|（別の状態や複合体など）の論文は、|Structure Update で|すべてご紹介します。"
      "PDB ID を|本文から確かめられない論文も、|構造図なしで|ご紹介します。"
-     "そのほか、|既存の構造を使って|仕組みの解明や創薬に迫った|注目の研究を、|Notable Structure で |1 日 3 本まで|ご紹介します。"),
+     "そのほか、|既存の構造を使って|仕組みの解明や創薬に迫った|注目の研究を、|Structure-Based Study で |1 日 3 本まで|ご紹介します。"),
     ("掲載のタイミング",
      "論文は、|論文データベースに登録された|翌日にご紹介します。"
      "データベースに|論文が届く時期は、|雑誌によって異なります。"
@@ -1584,7 +1581,7 @@ ABOUT = (   # the front page's About FoldFeed, in polite Japanese (the owner's w
 
 def numbers_html(issues: list[str], lib: list[dict]) -> str:
     """FoldFeed in Numbers: three counts that count up as they come into view, the share of papers that are a
-    protein's first PDB structure as a meter, and the papers of each issue (New / Notable Structure, stacked) as
+    protein's first PDB structure as a meter, and the papers of each issue (the three parts, stacked) as
     columns that grow from the baseline; hovering or focusing a column tells its numbers. Every number is also in
     the page as text (the final values are written in; a table holds the chart's data for screen readers)."""
     papers = {r["cand"]["pmcid"]: r["cand"] for r in lib}
@@ -1601,35 +1598,37 @@ def numbers_html(issues: list[str], lib: list[dict]) -> str:
     rows = []
     for date in sorted(issues)[-CHART_ISSUES:]:
         _, picks, _ = load_issue(date, ISSUES_DIR)
-        n_hot = sum(render.part_of(c, pk) == "impact" for c, pk in picks)
-        rows.append((date, len(picks) - n_hot, n_hot))
-    top = max([a + b for _, a, b in rows] + [1])
+        rows.append((date, *(len(v) for v in render.sections(picks).values())))
+    top = max([a + u + b for _, a, u, b in rows] + [1])
     step = 5 if top <= 25 else 10
     ymax = -(-top // step) * step
     ticks = "".join(f'<span style="--y:{t / ymax:.3f}">{t}</span>' for t in range(0, ymax + 1, step))
     cols = []
-    for i, (date, a, b) in enumerate(rows):
+    for i, (date, *ns) in enumerate(rows):
         _, m, d, _ = date_parts(date)
-        tip = f"{m}月{d}日号 · New Structure {a} 本" + (f" · Notable Structure {b} 本" if b else "")
-        seg = (f'<i class="h" style="--h:{b / ymax:.4f}"></i>' if b else "") + (f'<i class="n" style="--h:{a / ymax:.4f}"></i>' if a else "")
-        last = f'<b class="cap" style="--h:{(a + b) / ymax:.4f}">{a + b}</b>' if i == len(rows) - 1 else ""
+        tip = f"{m}月{d}日号 · " + " · ".join(f"{PARTS[k][0]} {v} 本" for k, v in zip(render.PART_KEYS, ns) if v)
+        # stacked from the baseline in page order: New Structure at the bottom, Structure-Based Study on top
+        seg = "".join(f'<i class="{PART_CLS[k]}" style="--h:{v / ymax:.4f}"></i>'
+                      for k, v in reversed(list(zip(render.PART_KEYS, ns))) if v)
+        last = f'<b class="cap" style="--h:{sum(ns) / ymax:.4f}">{sum(ns)}</b>' if i == len(rows) - 1 else ""
         cols.append(f'<a class="col" href="issues/{date}.html" style="--i:{i}" data-tip="{esc(tip)}" aria-label="{esc(tip)}">'
                     f'<span class="stack">{seg}</span>{last}<span class="x">{m}.{d:02d}</span></a>')
-    table = "".join(f"<tr><th>{date}</th><td>{a}</td><td>{b}</td></tr>" for date, a, b in rows)
-    chart = (f'<figure class="ppi"><figcaption><b>Papers per Issue</b>'
-             f'<span class="lg"><i class="n"></i>New Structure<i class="h"></i>Notable Structure</span></figcaption>'
+    table = "".join(f"<tr><th>{date}</th>" + "".join(f"<td>{v}</td>" for v in ns) + "</tr>" for date, *ns in rows)
+    legend = "".join(f'<i class="{PART_CLS[k]}"></i>{PARTS[k][0]}' for k in render.PART_KEYS)
+    chart = (f'<figure class="ppi"><figcaption><b>Papers per Issue</b><span class="lg">{legend}</span></figcaption>'
              f'<div class="plot"><div class="yt">{ticks}</div><div class="cols">{"".join(cols)}</div></div>'
-             f'<table class="sr"><caption>号ごとの紹介本数</caption><tr><th>号</th><th>New Structure</th>'
-             f'<th>Notable Structure</th></tr>{table}</table><div class="tip" hidden></div></figure>')
+             f'<table class="sr"><caption>号ごとの紹介本数</caption><tr><th>号</th>'
+             + "".join(f"<th>{PARTS[k][0]}</th>" for k in render.PART_KEYS)
+             + f'</tr>{table}</table><div class="tip" hidden></div></figure>')
     return f'<div class="kpis">{kpis}</div>{meter}{chart}'
 
 
 # 掲載のタイミング once the Nature journals are read the day after publication (pipeline/springer.py)
 TIMING_NATURE = ("掲載のタイミング",
-                 "Nature Communications・|Nature Structural & |Molecular Biology などの|Nature 系の雑誌の論文は、|"
-                 "出版の翌日に|ご紹介します。"
-                 "そのほかの雑誌の論文は、|論文データベースに登録された|翌日にご紹介します。"
-                 "データベースに|論文が届く時期は、|雑誌によって異なります。")
+                 "論文は、|論文データベースに登録された|翌日にご紹介します。"
+                 "データベースに|論文が届く時期は、|雑誌によって異なります。"
+                 "Nature 系の雑誌は|出版からおよそ 1 か月後に届くため、|出版の時点で|全文が公開されている論文だけ、|"
+                 "出版の翌日に|ご紹介します。")
 
 
 def about_html(issues: list[str], lib: list[dict]) -> str:
@@ -1735,7 +1734,7 @@ def cats_html(lib: list[dict], up: str = "") -> str:
 def mail_html() -> str:
     return ('<section class="sec mail" id="mail"><div class="ix-h"><h2 class="label">Newsletter</h2>'
             '<span class="soon">準備中</span></div><div class="mail-grid"><div>'
-            '<ul><li>毎朝の号の知らせ（New Structure と Notable Structure）</li><li>週のまとめ</li>'
+            '<ul><li>毎朝の号の知らせ（New Structure・Structure Update・Structure-Based Study）</li><li>週のまとめ</li>'
             '<li>気になるタンパク質のアラート（UniProt ID を登録）</li></ul></div><div>'
             '<form aria-disabled="true" onsubmit="return false"><input type="email" placeholder="メールアドレス" disabled '
             'aria-label="メールアドレス（準備中）"><button type="button" disabled>登録（準備中）</button></form>'
@@ -1853,12 +1852,12 @@ def preview_index(previews: list[str], root: Path | None) -> str:
     items = []
     for date in previews:
         _, picks, _ = load_issue(date, root)
-        n_hot = sum(render.part_of(c, pk) == "impact" for c, pk in picks)
+        counts = " · ".join(f"{PARTS[k][0]} {len(v)} 本" for k, v in render.sections(picks).items() if v) or "記事なし"
         pr = read_json(root / date / "pr.json") if (root / date / "pr.json").exists() else {}
         merge = (f'<a class="go" href="{esc(pr["url"])}">Pull Request #{pr["number"]}（マージ）</a>'
                  if pr.get("url") else "")
         items.append(f'<li><div class="d">{jp_date(date)}号</div>'
-                     f'<div class="c">New Structure {len(picks) - n_hot} 本 · Notable Structure {n_hot} 本</div>'
+                     f'<div class="c">{counts}</div>'
                      f'<div class="btns"><a href="{date}.html">見た目を確認</a>{merge}</div></li>')
     body = [masthead(1, "Awaiting Review"),
             '<div class="wrap"><p class="intro">マージ前の号のプレビュー。見た目を確認して、問題がなければ Pull Request を開いて'

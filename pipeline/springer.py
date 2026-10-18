@@ -8,7 +8,7 @@ How:
   1. Crossref lists each journal's articles published online on the day (licence and DOI included);
   2. for the open-access ones (a Creative Commons licence), the Springer Nature Open Access API gives the full text as JATS
      XML, the format PMC uses, so `jats.parse` and the rest of the pipeline read it unchanged;
-  3. the same words as the Europe PMC query (structure x deposition; or, for Notable Structure, impact x experimental
+  3. the same words as the Europe PMC query (structure x deposition; or, for Structure-Based Study, impact x experimental
      structure x biology) decide which papers become candidates.
 
 The API key is read from the environment variable SPRINGER_NATURE_OA_API_KEY (set in the cloud environment's settings; it is

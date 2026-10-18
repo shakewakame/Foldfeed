@@ -6,7 +6,7 @@ description: 構造生物学デイリーの毎日の号を作る。前日に Eur
 # 毎日の号を作る
 
 構造生物学者向けのニュースレター。毎日、査読済みのオープンアクセス論文のうち新しい構造を報告した論文を**すべて**、
-要約・読みどころ・実験メモ・構造図を付けて紹介する。新しい構造以外でも、基準を満たした注目の構造（サイトの表記は Notable Structure）を最大 3 本加える。
+要約・読みどころ・実験メモ・構造図を付けて紹介する。新しい構造以外でも、基準を満たした注目の構造（サイトの表記は Structure-Based Study）を最大 3 本加える。
 
 **原則：数値・ID・リガンド・生物種は PDB / UniProt から機械的に取得し、手で書かない。
 AI が書く文章の主張には、論文本文からの逐語引用を必ず付ける。**
@@ -69,13 +69,14 @@ AI が書く文章の主張には、論文本文からの逐語引用を必ず�
 4. **対象と順番を決める**：`candidates.md` の新しい構造の論文を**すべて**記事にする（**本数の上限はない**。
    2026-10-18 のオーナーの決定で「1 日 15 本まで」をやめた）。順番（`rank`）は下の「並べ方」で決める。
    0 本なら記事は書かず、手順 7 へ。
-   **New Structure と Notable Structure の分け方はサイトが自動で決める**（`render.part_of`、オーナーの決定 2026-10-18）：
+   **New Structure・Structure Update・Structure-Based Study の 3 部の分け方はサイトが自動で決める**（`render.part_of`、オーナーの決定 2026-10-18）：
    - **New Structure**：構造が**初めて解かれたタンパク質**の論文（論文のタンパク質のどれかに、それまで PDB の構造がなかった：
      `candidates.json` の `proteins[].first_structure`）。
-   - **Notable Structure**：それ以外の新しい構造の論文**すべて**（既に構造があるタンパク質の別の状態・リガンド・相手との複合体、
-     EMDB のマップだけ、PDB ID を本文からたどれない論文）と、手順 5b で選ぶ既存の構造を使った研究。
+   - **Structure Update**：それ以外の新しい構造の論文**すべて**（既に構造があるタンパク質の別の状態・リガンド・相手との複合体、
+     EMDB のマップだけ、PDB ID を本文からたどれない論文）。
+   - **Structure-Based Study**：手順 5b で選ぶ、既存の構造を使った研究（`"section": "impact"`、1 日最大 3 本）。
    - タンパク質を UniProt に対応づけられない論文（PDB が未公開、ID が本文にない）で、論文が「初めての構造」と書いているときだけ、
-     その逐語引用を `first_claim` に書く（New Structure になる。`pipeline/schema.py`）。書いていなければ Notable Structure。
+     その逐語引用を `first_claim` に書く（New Structure になる。`pipeline/schema.py`）。書いていなければ Structure Update。
 
 5. **記事を書く**：論文ごとに `.cache/packets/<PMCID>.md` を**全体に目を通して**から
    `data/issues/$ISSUE/picks/<PMCID>.json` を書く。形式は `pipeline/schema.py` の `EXAMPLE`、

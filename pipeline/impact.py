@@ -18,7 +18,7 @@ Two stages:
 
 from __future__ import annotations
 
-# 2026-10-18 (owner): aim for 1-3 Notable Structure articles a day. Until then the line was 7 points and at most 5 a
+# 2026-10-18 (owner): aim for 1-3 Structure-Based Study (once Notable Structure) articles a day. Until then the line was 7 points and at most 5 a
 # day, which picked 0-2 (0.7 a day on average over 10-12..10-18): the threshold goes down to 6, with two guards so
 # that the extra papers are not the weak ones that sat at 6 (single-system follow-ups, and papers whose "structure"
 # was an MD / docking / QM-MM model built on a PDB entry): novelty must be at least 2 and the structure criterion is

@@ -123,20 +123,28 @@ def first_structure(cand: dict, pick: dict | None = None) -> bool:
     return bool(pick and pick.get("first_claim"))
 
 
+# The three parts of an issue (the owner's rule, 2026-10-18): the key, as used in anchors and data, in page order
+PART_KEYS = ("new", "update", "impact")
+PART_NAMES = {"new": "New Structure", "update": "Structure Update", "impact": "Structure-Based Study"}
+
+
+def ordered(picks: list) -> list:
+    """The articles in page order: part by part, in rank order within each."""
+    return [p for items in sections(picks).values() for p in items]
+
+
 def part_of(cand: dict, pick: dict) -> str:
-    """Where an article goes on the pages (the owner's rule, 2026-10-18): "new" = New Structure, a protein whose structure
-    is solved for the first time; "impact" = Notable Structure, every other new structure (a new state, ligand or partner
-    of a protein solved before, a map, a paper whose PDB IDs cannot be traced) and the studies that use existing
-    structures."""
-    return "new" if not is_impact(pick) and first_structure(cand, pick) else "impact"
+    """Where an article goes on the pages: "new" = New Structure, a protein whose structure is solved for the first
+    time; "update" = Structure Update, a new structure of a protein solved before (a new state, ligand or partner, a map,
+    a paper whose PDB IDs cannot be traced); "impact" = Structure-Based Study, a study that uses existing structures."""
+    if is_impact(pick):
+        return "impact"
+    return "new" if first_structure(cand, pick) else "update"
 
 
-def split_sections(picks: list) -> tuple[list, list]:
-    """(New Structure articles, Notable Structure articles), each in rank order; in Notable Structure the new
-    structures come first, then the studies that use existing structures."""
-    new = [p for p in picks if part_of(*p) == "new"]
-    hot = [p for p in picks if part_of(*p) != "new"]
-    return new, [p for p in hot if not is_impact(p[1])] + [p for p in hot if is_impact(p[1])]
+def sections(picks: list) -> dict[str, list]:
+    """The articles of each part (PART_KEYS), each in rank order."""
+    return {k: [p for p in picks if part_of(*p) == k] for k in PART_KEYS}
 
 
 def load_impact(d) -> dict:
@@ -659,7 +667,7 @@ def feature_md(feature: dict | None, picks: list[tuple[dict, dict]]) -> list[str
     """今日の一本 for the review README: which article, why, what the picker weighed."""
     if not feature:
         return []
-    by_id = {c["pmcid"]: (n, c, pk) for n, (c, pk) in enumerate(split_sections(picks)[0] + split_sections(picks)[1], 1)}
+    by_id = {c["pmcid"]: (n, c, pk) for n, (c, pk) in enumerate(ordered(picks), 1)}
     if feature.get("pmcid") not in by_id:
         return []
     n, cand, pick = by_id[feature["pmcid"]]
@@ -691,22 +699,21 @@ def issue_md(meta: dict, picks: list[tuple[dict, dict]], infos: dict | None = No
            f"オープンアクセス論文 {c['parsed']} 本のうち、新しい構造を報告した論文は {new_total} 本。{covered}", ""]
     if meta.get("source") == "pmc-aws":   # Europe PMC was not indexing; see pipeline/pmcoa.py
         out += [f"出典：{pmcoa.CREDIT}", ""]
-    new, hot = split_sections(picks)
-    if hot:
-        out += [f"**New Structure {len(new)} 本・Notable Structure {len(hot)} 本**（New：構造が初めて解かれたタンパク質。"
-                f"Notable：既知のタンパク質の新しい構造と、既存の構造を使った注目の研究）", ""]
+    parts = sections(picks)
+    out += [" · ".join(f"**{PART_NAMES[k]} {len(v)} 本**" for k, v in parts.items() if v)
+            + "（New Structure：構造が初めて解かれたタンパク質。Structure Update：既知のタンパク質の新しい構造。"
+              "Structure-Based Study：既存の構造を使った注目の研究）", ""] if picks else []
     out += feature_md(feature, picks)
     if picks:
-        out += contents_table(new + hot)
+        out += contents_table(ordered(picks))
     out += ["> この号は AI が論文本文から作成した**レビュー用の下書き**です。"
             "数値・ID・リガンドは PDB / UniProt から取得し、AI の記述には本文からの引用を付けています。", "", "---", ""]
-    if hot and new:
-        out += ["# New Structure（構造が初めて解かれたタンパク質）", ""]
-    for n, (cand, pick) in enumerate(new, 1):
-        out += article_md(cand, pick, n, (infos or {}).get(cand["pmcid"]))
-    if hot:
-        out += ["# Notable Structure（既知のタンパク質の新しい構造と、既存の構造を使った注目の研究）", ""]
-        for n, (cand, pick) in enumerate(hot, len(new) + 1):
+    n = 0
+    for k, items in parts.items():
+        if items:
+            out += [f"# {PART_NAMES[k]}", ""]
+        for cand, pick in items:
+            n += 1
             out += article_md(cand, pick, n, (infos or {}).get(cand["pmcid"]))
     out += impact_md(impact_record or {}, {c["pmcid"]: c for c in meta["candidates"]})
     if rest:
