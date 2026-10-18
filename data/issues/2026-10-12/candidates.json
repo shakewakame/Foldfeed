@@ -1,17 +1,2336 @@
 {
   "issue_date": "2026-10-12",
   "index_date": "2026-10-11",
-  "generated_at": "2026-10-12T00:08:43+00:00",
-  "query": "(\"cryo-EM\" OR \"cryoEM\" OR \"cryo-electron microscopy\" OR \"cryo-electron tomography\" OR \"subtomogram\" OR \"crystal structure\" OR \"X-ray crystallography\" OR \"crystallographic\" OR \"NMR structure\" OR \"solution structure\") AND (\"Protein Data Bank\" OR \"PDB\" OR \"wwPDB\" OR \"EMDB\" OR \"accession code\" OR \"accession codes\") AND OPEN_ACCESS:y AND NOT SRC:PPR AND FIRST_IDATE:[2026-10-11 TO 2026-10-11]",
+  "health": {
+    "fresh_oa": 13,
+    "baseline": 969.5,
+    "days": 14,
+    "threshold": 97,
+    "status": "stalled"
+  },
+  "source": "pmc-aws",
+  "split_from": "2026-10-16",
+  "generated_at": "2026-10-16T00:23:12+00:00",
+  "query": "PMC Open Access on AWS, articles written 2026-10-11..2026-10-15",
+  "impact_query": "PMC Open Access on AWS, articles written 2026-10-11..2026-10-15",
   "counts": {
-    "hits": 0,
-    "excluded_types": 0,
-    "parsed": 0,
-    "new_structure": 0,
+    "hits": 18,
+    "parsed": 23,
+    "new_structure": 2,
     "new_structure_ids_unlisted": 0,
     "new_map_only": 0,
-    "uses_existing": 0,
-    "no_ids": 0
+    "uses_existing": 13,
+    "no_ids": 8,
+    "impact_search_parsed": 5,
+    "impact_pool": 21
   },
-  "candidates": []
+  "candidates": [
+    {
+      "pmcid": "PMC13652804",
+      "pmid": 42855469,
+      "doi": "10.1038/s41467-026-77424-0",
+      "title": "PI3Kδ is selectively inhibited by roginolisib by stabilizing the C-terminal helix kα12",
+      "journal": "Nature Communications",
+      "journal_abbrev": "Nat Commun",
+      "authors": "Vadas O, Tiede S, Chaouki M, Tesmer L, Rao S, Visentin R, Grädler U, Augustin M, Kiefersauer R, Gößer C, Quillet-Mary A, Ysebaert L, Guillermet-Guibert J, van der Veen L, Di Conza G, Hummer G",
+      "pub_date": "2026-10-09",
+      "index_date": "2026-10-11",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "Phosphoinositide 3-kinases (PI3Ks) are major regulators of cell growth, proliferation and signalling, constituting key therapeutic targets in cancer, inflammation, and other diseases. Individual class I PI3K isoforms control key cellular functions, imposing the need to generate isoform-specific inhibition for therapeutic intervention. Roginolisib is a selective PI3Kδ inhibitor that shows promise for the treatment of cancer. Using a combination of X-ray crystallography, molecular dynamics simulations, and hydrogen-deuterium exchange mass spectrometry, we describe the mechanism driving roginolisib’s potent and isoform-selective inhibition of PI3Kδ. Roginolisib uniquely stabilises the catalytic C-terminal helix kα12, locking the enzyme in an inactive conformation. This binding mode also results in more sustained inhibition of phosphatidylinositol 3,4,5-trisphosphate formation in tumour samples of CLL patients. Inhibition of PI3Ks by stabilization of helix kα12 into an inactive conformation has not, to the best of our knowledge, been described before and may provide the basis for novel, more selective and effective pharmacological strategies.",
+      "kind": "new_structure",
+      "own_structures": [
+        {
+          "pdb_id": "9T07",
+          "status": "released",
+          "title": "HUMAN PI3KDELTA IN COMPLEX WITH Roginolisib",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 2.75,
+          "release_date": "2026-07-08",
+          "deposit_date": "2025-10-16",
+          "citation_doi": null,
+          "citation_pmid": null,
+          "citation_title": "HUMAN PI3KDELTA IN COMPLEX WITH Roginolisib",
+          "polymers": [
+            {
+              "description": "Phosphatidylinositol 3-kinase regulatory subunit alpha",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P23727"
+              ],
+              "organisms": [
+                "Bos taurus"
+              ]
+            },
+            {
+              "description": "Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit delta isoform",
+              "type": "Protein",
+              "uniprot_ids": [
+                "O00329"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "QGU",
+              "name": "[6-fluoranyl-1-[4-(morpholin-4-ylmethyl)phenyl]-5,5-bis(oxidanylidene)-4H-thiochromeno[4,3-c]pyrazol-3-yl]-morpholin-4-yl-methanone"
+            }
+          ],
+          "evidence": "entry without a published citation, listed in the deposition statement"
+        },
+        {
+          "pdb_id": "9T1P",
+          "status": "released",
+          "title": "Human PI3Kdelta in complex with IOA-288",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 2.97,
+          "release_date": "2026-07-08",
+          "deposit_date": "2025-10-21",
+          "citation_doi": null,
+          "citation_pmid": null,
+          "citation_title": "Roginolisib selectively inhibits PI3Kdelta by stabilizing the C-terminal helix kalpha12",
+          "polymers": [
+            {
+              "description": "Phosphatidylinositol 3-kinase regulatory subunit alpha",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P23727"
+              ],
+              "organisms": [
+                "Bos taurus"
+              ]
+            },
+            {
+              "description": "Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit delta isoform",
+              "type": "Protein",
+              "uniprot_ids": [
+                "O00329"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "A1JS2",
+              "name": "[7-fluoranyl-1-[(3~{R})-1-(2-morpholin-4-ylethyl)piperidin-3-yl]-5,5-bis(oxidanylidene)-4~{H}-thiochromeno[4,3-c]pyrazol-3-yl]-morpholin-4-yl-methanone"
+            }
+          ],
+          "evidence": "entry without a published citation, listed in the deposition statement"
+        }
+      ],
+      "cited_pdb_ids": [
+        "4XE0",
+        "2Y3A",
+        "6PYR"
+      ],
+      "emdb_ids": [],
+      "proteins": [
+        {
+          "uniprot": "O00329",
+          "gene": "PIK3CD",
+          "synonyms": [],
+          "name": "Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit delta isoform",
+          "organism": "Homo sapiens",
+          "prior_pdb_count": 18,
+          "first_structure": false
+        },
+        {
+          "uniprot": "P23727",
+          "gene": "PIK3R1",
+          "synonyms": [],
+          "name": "Phosphatidylinositol 3-kinase regulatory subunit alpha",
+          "organism": "Bos taurus",
+          "prior_pdb_count": 28,
+          "first_structure": false
+        }
+      ],
+      "score": 57
+    },
+    {
+      "pmcid": "PMC13653627",
+      "pmid": 42631357,
+      "doi": "10.1002/anie.7948330",
+      "title": "Molecular Basis for Activation to Inhibition Switching in Kv7.2 Channel Modulators",
+      "journal": "Angewandte Chemie (International Ed. in English)",
+      "journal_abbrev": "Angew Chem Int Ed Engl",
+      "authors": "Ciaglia T, Carleo G, Yang Z, Matteo FD, De Rosa F, Smaldone G, Gao Z, D'Alì M, Turcio R, Ma D, Sarno VD, Su N, Giofrè SV, Pepe G, Campiglia P, Bertamino A, Miceli F, Guo J, Iraci N, Ostacolo C, Taglialatela M",
+      "pub_date": "2026-08-22",
+      "index_date": "2026-10-11",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "ABSTRACTKv7 voltage‐gated potassium channels play a critical role in controlling electrical properties of excitable tissues. Neuronally‐expressed Kv7 channels are involved in both common and rare neuropsychiatric disorders, ranging from epilepsy to depression and neurodegenerative diseases; thus, they represent attractive therapeutic targets. However, no Kv7 modulator is currently available for clinical use. Improved knowledge of the functional and structural determinants responsible for ligand‐induced Kv7 channel modulation is likely to fill this gap. In the present work, we describe the cryo‐electron microscopy structures of human Kv7.2 channels in complex with two retigabine analogues: compound 60 (c60), which we previously described as a Kv7 activator with improved pharmacokinetic and pharmacodynamic properties, and the newly designed compound 106 (c106), which acts as a potent Kv7 blocker. Although both compounds occupy the same pocket at the S5–S6 interface in the pore domain, docking and molecular dynamics simulations and electrophysiological experiments revealed that the opposite functional behavior is due to their differential interaction, involving the L307 residue. Thus, we herein provide novel mechanistic insights into the molecular mechanisms governing Kv7 channel modulation by exogenous ligands which may prove useful to target Kv7 channels with more potent and selective modulators.",
+      "source": "impact_search",
+      "kind": "new_structure",
+      "own_structures": [
+        {
+          "pdb_id": "22SA",
+          "status": "unreleased",
+          "evidence": "cited by the paper but not yet released (on hold until publication)"
+        },
+        {
+          "pdb_id": "22SB",
+          "status": "unreleased",
+          "evidence": "cited by the paper but not yet released (on hold until publication)"
+        }
+      ],
+      "cited_pdb_ids": [
+        "8J01",
+        "8W4U",
+        "8IJK",
+        "9IXY",
+        "9XB9",
+        "9XED"
+      ],
+      "emdb_ids": [],
+      "proteins": [],
+      "score": 52
+    },
+    {
+      "pmcid": "PMC13653019",
+      "pmid": 42853489,
+      "doi": "10.1186/s43556-026-00594-2",
+      "title": "An inducible co-stimulator ligand (ICOSL)-based peptide therapy for proteinuric kidney diseases targeting αvβ3 integrin",
+      "journal": "Molecular Biomedicine",
+      "journal_abbrev": "Mol Biomed",
+      "authors": "Jimenez-Uribe AP, Xu Y, Cao Y, Spear R, Koh KH, Mansini AP, Alcantar AG, Kliewe F, Endlich N, Reiser J, Mangos S, Hahm E",
+      "pub_date": "2026-10-09",
+      "index_date": "2026-10-11",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "Dysregulated αvβ3 integrin activation in podocytes contributes to proteinuric kidney disease by disrupting podocyte architecture and the glomerular filtration barrier. However, no treatments currently exist that therapeutically target this integrin. We previously identified inducible co-stimulator ligand (ICOSL) as an endogenous antagonist of αvβ3 integrin that protects kidney function through its arginine-glycine-aspartic acid (RGD) motif, independent of its canonical role in immunity. Leveraging the therapeutic advantages of small peptides and the renoprotective function of ICOSL, we used a structure-guided approach to design a 19-amino acid human ICOSL-derived peptide (hICOSL-19) containing the RGD motif and evaluated its therapeutic potential for proteinuric kidney disease. hICOSL-19 exhibited high-affinity binding to αvβ3 integrin, similar to full-length ICOSL, and retained its αvβ3-antagonistic activity. PEGylation of hICOSL-19 (PhICOSL-19) extended its circulating half-life while preserving its antagonistic function. In murine models of acute and chronic proteinuric kidney disease, including immune-mediated glomerulonephritis and diabetic nephropathy, PhICOSL-19 treatment significantly reduced proteinuria, limited glomerular injury, and preserved podocyte architecture. In vitro and in vivo safety assessments further showed no detectable podocyte cytotoxicity, T-cell activation, or anti-drug antibody response. These findings suggest that an ICOSL-derived peptide targeting αvβ3 integrin represents a potential therapeutic strategy for proteinuric kidney diseases associated with αvβ3 integrin activation.Supplementary InformationThe online version contains supplementary material available at https://doi.org/10.1186/s43556-026-00594-2.",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "6X4G"
+      ],
+      "emdb_ids": [],
+      "cited_structures": [
+        {
+          "pdb_id": "6X4G",
+          "status": "released",
+          "title": "Crystal structure of ICOS in complex with ICOS-L and an anti ICOS-L VNAR domain",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 3.5,
+          "release_date": "2020-10-14",
+          "deposit_date": "2020-05-22",
+          "citation_doi": "10.1038/s41467-020-18828-4",
+          "citation_pmid": "33033255",
+          "citation_title": "Structural characterization of the ICOS/ICOS-L immune complex reveals high molecular mimicry by therapeutic antibodies.",
+          "polymers": [
+            {
+              "description": "Inducible T-cell costimulator",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9Y6W8"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "anti ICOS-L VHH domain VNAR",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Orectolobus maculatus"
+              ]
+            },
+            {
+              "description": "ICOS ligand",
+              "type": "Protein",
+              "uniprot_ids": [
+                "O75144"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": []
+        }
+      ],
+      "impact": {
+        "score": 6,
+        "types": [
+          "drug",
+          "mechanism"
+        ],
+        "validation": [
+          "in vitro",
+          "in vivo"
+        ],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [
+        {
+          "uniprot": "O75144",
+          "gene": "ICOSLG",
+          "synonyms": [
+            "B7H2",
+            "B7RP1",
+            "ICOSL",
+            "KIAA0653"
+          ],
+          "name": "ICOS ligand",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "Q9Y6W8",
+          "gene": "ICOS",
+          "synonyms": [
+            "AILIM"
+          ],
+          "name": "Inducible T-cell costimulator",
+          "organism": "Homo sapiens"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13653614",
+      "pmid": 42631373,
+      "doi": "10.1002/anie.1540355",
+      "title": "Characterization of Full‐Length Antibody Complexes Through HDX‐Mass Spectrometry Coupled With NMR Spectroscopy: New Insight Into Avelumab/PD‐L1 Interaction",
+      "journal": "Angewandte Chemie (International Ed. in English)",
+      "journal_abbrev": "Angew Chem Int Ed Engl",
+      "authors": "Sacco F, Baroni F, Capolupo A, Petrocchi S, Zöller J, Cerofolini L, Russomanno P, Calamandrei R, Susini B, Lin S, D'Amici F, Ravera E, Langer J, Fragai M",
+      "pub_date": "2026-08-22",
+      "index_date": "2026-10-11",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "ABSTRACTRecombinant biomacromolecules have significantly transformed pharmaceuticals, in particular monoclonal antibodies (mAbs) that target key areas in oncology, immunology, inflammation, and neurodegenerative diseases. Developing biotherapeutics requires a detailed understanding of their biological properties. This, in turn, brings about the importance of characterizing higher‐order protein structures at each stage, from production to patient. The flexibility and size of the mAbs often prevent achieving atomic‐level structural information in the pharmaceutical formulation by traditional methods. In this study, we introduce an integration of solid‐state nuclear magnetic resonance (SSNMR) and hydrogen–deuterium exchange mass spectrometry (HDX‐MS) to explore the interaction between Avelumab and the programmed cell death‐ligand 1 (PD‐L1). With this approach, we were able to obtain epitope (by both NMR and HDX) and paratope mapping (by HDX), together with a detailed characterization of the structural rearrangements arising upon binding. This methodology provides both mechanistic and structural insights important for the design and optimization of biotherapeutics.",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "5GRJ"
+      ],
+      "emdb_ids": [],
+      "cited_structures": [
+        {
+          "pdb_id": "5GRJ",
+          "status": "released",
+          "title": "Crystal structure of human PD-L1 with monoclonal antibody avelumab",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 3.206,
+          "release_date": "2016-11-02",
+          "deposit_date": "2016-08-11",
+          "citation_doi": "10.1038/cr.2016.102",
+          "citation_pmid": "27573173",
+          "citation_title": "Structural basis of anti-PD-L1 monoclonal antibody avelumab for tumor therapy.",
+          "polymers": [
+            {
+              "description": "Programmed cell death 1 ligand 1",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9NZQ7"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "avelumab L chain",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "avelumab H chain",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": []
+        }
+      ],
+      "impact": {
+        "score": 7,
+        "types": [
+          "method"
+        ],
+        "validation": [
+          "hdx",
+          "nmr"
+        ],
+        "low": [],
+        "journal": true,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [
+        {
+          "uniprot": "Q9NZQ7",
+          "gene": "CD274",
+          "synonyms": [
+            "B7H1",
+            "PDCD1L1",
+            "PDCD1LG1",
+            "PDL1"
+          ],
+          "name": "Programmed cell death 1 ligand 1",
+          "organism": "Homo sapiens"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13653116",
+      "pmid": 42855945,
+      "doi": "10.1002/cbdv.71811",
+      "title": "Chemical Composition and Multi‐Target Bioactivity of Salvia sclarea L. Essential Oil From the Algerian Edough Massif: Antimicrobial, Enzyme‐Inhibitory, and Molecular Docking Studies",
+      "journal": "Chemistry & Biodiversity",
+      "journal_abbrev": "Chem Biodivers",
+      "authors": "Djendi ML, Benzaid C, Dekir A, Chenna H, Trea F, Rahal S, Klaiaia LR, Kübra S",
+      "pub_date": "2026-10-09",
+      "index_date": "2026-10-11",
+      "license": "cc by-nc-nd",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "ABSTRACT Salvia sclarea L. (clary sage) is widely used in Algerian traditional medicine, yet its essential oil from the Edough Mountains (northeastern Algeria) remains poorly characterized. An ethnobotanical survey among 85 informants revealed high recognition (RFC = 0.918) and versatility (UV = 1.671), with predominant uses against digestive, nervous, and gynecological disorders (ICF up to 0.88). Hydrodistillation of the aerial parts yielded 1.90% (w/w) of a pale‐yellow essential oil dominated by oxygenated monoterpenes (68.95%), mainly linalyl anthranilate (47.75%), and linalool (16.24%). The oil showed potent antimicrobial activity (MIC 15.32–1000 µg/mL), strong antibiofilm effects (up to 76.02% inhibition), remarkable antioxidant capacity (DPPH EC50 = 40.38 µg/mL), anti‐inflammatory activity (EC50 = 291.10 µg/mL), and interesting inhibitory effects on acetylcholinesterase (EC50 = 64.40 µg/mL) and α‐amylase (EC50 = 69.49 µg/mL). These findings suggest that the Algerian chemotype of S. sclarea may represent a promising source of bioactive natural compounds. Molecular docking and 100 ns molecular dynamics simulations elucidated the binding modes and stability of the major constituents in the enzyme active sites. This study validates traditional knowledge and positions the oil as a promising natural resource for managing oxidative stress‐related and microbial disorders.",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "7XN1"
+      ],
+      "emdb_ids": [],
+      "cited_structures": [
+        {
+          "pdb_id": "7XN1",
+          "status": "released",
+          "title": "Crystal structure of human acetylcholinesterase in complex with tacrine",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 2.85,
+          "release_date": "2023-03-01",
+          "deposit_date": "2022-04-27",
+          "citation_doi": "10.1016/j.ijbiomac.2022.05.009",
+          "citation_pmid": null,
+          "citation_title": "Crystal structure of human acetylcholinesterase in complex with tacrine: Implications for drug discovery",
+          "polymers": [
+            {
+              "description": "Acetylcholinesterase",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P22303"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "THA",
+              "name": "TACRINE"
+            }
+          ]
+        }
+      ],
+      "impact": {
+        "score": 1,
+        "types": [
+          "drug"
+        ],
+        "validation": [],
+        "low": [
+          "molecular docking"
+        ],
+        "journal": false,
+        "exp_structure": true,
+        "flags": [
+          "計算のみの可能性（molecular docking）"
+        ]
+      },
+      "proteins": [
+        {
+          "uniprot": "P22303",
+          "gene": "ACHE",
+          "synonyms": [],
+          "name": "Acetylcholinesterase",
+          "organism": "Homo sapiens"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13653149",
+      "pmid": 42855917,
+      "doi": "10.1002/cbdv.71787",
+      "title": "Chlorothiophene‐Substituted N‐Phenylpyrazolines: Synthesis, Anticancer Evaluation, and Computational Insight into COX‐2 Inhibition",
+      "journal": "Chemistry & Biodiversity",
+      "journal_abbrev": "Chem Biodivers",
+      "authors": "Riza NF, Wulan FF, Ghifari TA, Astuti E, Wahyuningsih TD",
+      "pub_date": "2026-10-09",
+      "index_date": "2026-10-11",
+      "license": "cc by-nc",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "ABSTRACTCancer remains a leading cause of mortality worldwide, highlighting the need for novel anticancer agents. Pyrazoline derivatives have attracted considerable interest due to their structural flexibility, enabling modifications, including bioisosteric replacement, to enhance anticancer potential. In this study, eight N‐phenylpyrazoline analogs bearing chlorothiophene moieties were synthesized via cyclocondensation of chalcone intermediates with phenylhydrazine, yielding 59%–94%. Structural characterization was confirmed using ATR–IR, GC–MS, 1H‐, and 13C–NMR analyses. The synthesized derivatives (2a‐2h) were assessed for cytotoxicity against the T47D, MCF7, and WiDr cancer cell lines, along with normal Vero cells, using the MTT assay. Selectivity was determined by comparing cytotoxic effects on cancer versus normal cells. Among the compounds, 5‐(benzo[d][1,3]dioxol‐5‐yl)‐3‐(5‐chlorothiophen‐2‐yl)‐1‐phenyl‐4,5‐dihydro‐1H‐pyrazole (2g) exhibited the most potent cytotoxicity against WiDr cells (IC50 = 19.63 µg/mL) and the highest selectivity index (SI = 665.88). Molecular docking revealed strong binding affinities of compound 2g to COX‐2 (−10.5 kcal/mol), supported by favorable pharmacokinetic properties.",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "3LN1"
+      ],
+      "emdb_ids": [],
+      "cited_structures": [
+        {
+          "pdb_id": "3LN1",
+          "status": "released",
+          "title": "Structure of celecoxib bound at the COX-2 active site",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 2.4,
+          "release_date": "2010-10-27",
+          "deposit_date": "2010-02-01",
+          "citation_doi": "10.1016/j.bmcl.2010.07.054",
+          "citation_pmid": "20709553",
+          "citation_title": "The novel benzopyran class of selective cyclooxygenase-2 inhibitors. Part 2: The second clinical candidate having a shorter and favorable human half-life.",
+          "polymers": [
+            {
+              "description": "Prostaglandin G/H synthase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q05769"
+              ],
+              "organisms": [
+                "Mus musculus"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "HEM",
+              "name": "PROTOPORPHYRIN IX CONTAINING FE"
+            },
+            {
+              "id": "CEL",
+              "name": "4-[5-(4-METHYLPHENYL)-3-(TRIFLUOROMETHYL)-1H-PYRAZOL-1-YL]BENZENESULFONAMIDE"
+            }
+          ]
+        }
+      ],
+      "impact": {
+        "score": 4,
+        "types": [
+          "drug"
+        ],
+        "validation": [
+          "assay",
+          "kinetic",
+          "nmr"
+        ],
+        "low": [
+          "molecular docking"
+        ],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [
+        {
+          "uniprot": "Q05769",
+          "gene": "Ptgs2",
+          "synonyms": [
+            "Cox-2",
+            "Cox2",
+            "Pghs-b",
+            "Tis10"
+          ],
+          "name": "Prostaglandin G/H synthase 2",
+          "organism": "Mus musculus"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13653471",
+      "pmid": 42810095,
+      "doi": "10.1016/j.psj.2026.107854",
+      "title": "Dietary water extract of Ampelopsis grossedentata modulates intestinal morphology and pectoral muscle lipid metabolism in broiler chickens in association with AMPK/PPAR-related pathways",
+      "journal": "Poultry Science",
+      "journal_abbrev": "Poult Sci",
+      "authors": "Wang W, Wang J, Li H, Li P, Zeng J, Huang P",
+      "pub_date": "2026-09-26",
+      "index_date": "2026-10-11",
+      "license": "cc by-nc-nd",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "This study evaluated the effects of dietary water extract of Ampelopsis grossedentata (WEA) on growth performance, metabolic status, intestinal morphology, and pectoral muscle lipid remodeling in white-feathered broilers. A total of 480 one-day-old broilers were randomly assigned to six dietary treatments and fed a basal diet supplemented with 0, 12.5, 25, 50, 100, or 200 mg/kg WEA for 42 d. Targeted flavonoid profiling showed that flavones and flavonols were the largest subclasses based on annotated compound number, while dihydromyricetin was the most abundant individual compound. Dietary WEA did not significantly affect average daily gain or average daily feed intake, whereas overall feed conversion ratio differed among treatments, with the 50 mg/kg group showing a lower value than the 200 mg/kg group. Most slaughter traits and conventional meat-quality indices were unchanged. WEA increased serum albumin and reduced low-density lipoprotein cholesterol at 50–200 mg/kg on day 42, and improved ileal villus height and villus height-to-crypt depth ratio at selected doses. Based on the relatively favorable feed conversion ratio, reduced serum low-density lipoprotein cholesterol, improved intestinal morphology, and absence of high-dose-associated oxidative fluctuations, the 50 mg/kg WEA group was selected for multi-omics analysis. Pectoral muscle lipidomics identified 46 differential lipid species, characterized by decreased neutral lipids, including triacylglycerols, monoacylglycerols, and free fatty acids, and increased phosphatidylcholine and phosphatidylethanolamine derivatives. Transcriptomic analysis revealed 1,032 differentially expressed genes in pectoral muscle and 1,227 in ileum, with enrichment in AMPK, cAMP, PPAR signaling, lipolysis regulation, and fat digestion and absorption pathways. qPCR further supported AMPK upregulation and FAS downregulation in pectoral muscle, as well as SCD1 downregulation in ileum. These findings indicate that dietary WEA mainly acts as a metabolic and intestinal function modulator rather than a direct growth promoter in broilers, and 50 mg/kg WEA may be a suitable supplementation level for regulating lipid metabolism and intestinal health.",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "3AQV",
+        "2ZNN"
+      ],
+      "emdb_ids": [],
+      "cited_structures": [
+        {
+          "pdb_id": "3AQV",
+          "status": "released",
+          "title": "Human AMP-activated protein kinase alpha 2 subunit kinase domain (T172D) complexed with compound C",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 2.08,
+          "release_date": "2011-04-27",
+          "deposit_date": "2010-11-19",
+          "citation_doi": "10.1107/s0907444911010201",
+          "citation_pmid": "21543851",
+          "citation_title": "Structural basis for compound C inhibition of the human AMP-activated protein kinase alpha 2 subunit kinase domain",
+          "polymers": [
+            {
+              "description": "5'-AMP-activated protein kinase catalytic subunit alpha-2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P54646"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "TAK",
+              "name": "6-[4-(2-piperidin-1-ylethoxy)phenyl]-3-pyridin-4-ylpyrazolo[1,5-a]pyrimidine"
+            }
+          ]
+        },
+        {
+          "pdb_id": "2ZNN",
+          "status": "released",
+          "title": "Human PPAR alpha ligand binding domain in complex with a synthetic agonist TIPP703",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 2.01,
+          "release_date": "2009-05-05",
+          "deposit_date": "2008-04-30",
+          "citation_doi": "10.1107/s0907444909015935",
+          "citation_pmid": "19622862",
+          "citation_title": "Adaptability and selectivity of human peroxisome proliferator-activated receptor (PPAR) pan agonists revealed from crystal structures",
+          "polymers": [
+            {
+              "description": "Peroxisome proliferator-activated receptor alpha",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q07869"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "S44",
+              "name": "(2S)-2-(4-propoxy-3-{[({4-[(3S,5S,7S)-tricyclo[3.3.1.1~3,7~]dec-1-yl]phenyl}carbonyl)amino]methyl}benzyl)butanoic acid"
+            }
+          ]
+        }
+      ],
+      "impact": {
+        "score": 2,
+        "types": [],
+        "validation": [],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [
+        {
+          "uniprot": "P54646",
+          "gene": "PRKAA2",
+          "synonyms": [
+            "AMPK",
+            "AMPK2"
+          ],
+          "name": "5'-AMP-activated protein kinase catalytic subunit alpha-2",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "Q07869",
+          "gene": "PPARA",
+          "synonyms": [
+            "NR1C1",
+            "PPAR"
+          ],
+          "name": "Peroxisome proliferator-activated receptor alpha",
+          "organism": "Homo sapiens"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13653584",
+      "pmid": 42631386,
+      "doi": "10.1002/anie.4052471",
+      "title": "Distinct Molten‐Globule Conformations in an Interacting Protein Domain Resolved by 19F NMR of Fluoroproline Residues",
+      "journal": "Angewandte Chemie (International Ed. in English)",
+      "journal_abbrev": "Angew Chem Int Ed Engl",
+      "authors": "Bouzayene AB, Sai M, Jouin A, Nominé Y, Torbeev V, Kieffer B",
+      "pub_date": "2026-08-22",
+      "index_date": "2026-10-11",
+      "license": "cc by-nc-nd",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "ABSTRACTRecently, the application of deep learning to structural data deposited in the Protein Data Bank has enabled the reliable and accurate prediction of 3D folded structures of proteins from their sequences. However, this approach is not applicable to highly dynamic proteins, where multiple structures interconvert. Furthermore, the mechanistic details of protein folding and unfolding remain challenging to study. Herein, we present a set of data highlighting these complexities. By chemical incorporation of stereoisomeric 4‐fluoroproline residues at selected sites in the sequence of a folded, multi‐conformational protein (“molten‐globule”), we were able to modify its structural properties that propagated to highly distinct functional features, such as modulation of ligand binding affinities or misfolding and aggregation into amyloids. Application of NMR methods, notably 19F NMR spectroscopy, provided detailed molecular insights into the observed phenomena. This study illustrates how subtle residue‐localized conformational bias can affect the overall protein conformational dynamics influencing protein–protein interactions that are important for cellular functions and related to diseases.",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "2KKJ",
+        "1KBH"
+      ],
+      "emdb_ids": [],
+      "cited_structures": [
+        {
+          "pdb_id": "2KKJ",
+          "status": "released",
+          "title": "Solution structure of the Nuclear coactivator binding domain of CBP",
+          "method": "SOLUTION NMR",
+          "resolution": null,
+          "release_date": "2010-06-30",
+          "deposit_date": "2009-06-24",
+          "citation_doi": "10.1073/pnas.1001693107",
+          "citation_pmid": "20616042",
+          "citation_title": "Conformational selection in the molten globule state of the nuclear coactivator binding domain of CBP",
+          "polymers": [
+            {
+              "description": "CREB-binding protein",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P45481"
+              ],
+              "organisms": [
+                "Mus musculus"
+              ]
+            }
+          ],
+          "ligands": []
+        },
+        {
+          "pdb_id": "1KBH",
+          "status": "released",
+          "title": "Mutual Synergistic Folding in the Interaction Between Nuclear Receptor Coactivators CBP and ACTR",
+          "method": "SOLUTION NMR",
+          "resolution": null,
+          "release_date": "2002-02-06",
+          "deposit_date": "2001-11-06",
+          "citation_doi": "10.1038/415549a",
+          "citation_pmid": "11823864",
+          "citation_title": "Mutual synergistic folding in recruitment of CBP/p300 by p160 nuclear receptor coactivators.",
+          "polymers": [
+            {
+              "description": "CREB-BINDING PROTEIN",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P45481"
+              ],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "nuclear receptor coactivator",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9Y6Q9"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": []
+        }
+      ],
+      "impact": {
+        "score": 8,
+        "types": [
+          "method",
+          "ai_design",
+          "mechanism"
+        ],
+        "validation": [
+          "nmr"
+        ],
+        "low": [],
+        "journal": true,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [
+        {
+          "uniprot": "P45481",
+          "gene": "Crebbp",
+          "synonyms": [
+            "Cbp"
+          ],
+          "name": "Histone lysine acetyltransferase CREBBP",
+          "organism": "Mus musculus"
+        },
+        {
+          "uniprot": "Q9Y6Q9",
+          "gene": "NCOA3",
+          "synonyms": [
+            "AIB1",
+            "BHLHE42",
+            "RAC3",
+            "TRAM1"
+          ],
+          "name": "Nuclear receptor coactivator 3",
+          "organism": "Homo sapiens"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13653633",
+      "pmid": 42531138,
+      "doi": "10.1002/anie.9938411",
+      "title": "In Silico to In Cerebro—Development of the Orexin Receptor Antagonist “Photorexant” for Photomodulation In Vitro and in Mouse Brains",
+      "journal": "Angewandte Chemie (International Ed. in English)",
+      "journal_abbrev": "Angew Chem Int Ed Engl",
+      "authors": "Angermann M, Deventer MH, Ledesma‐Martin V, Martinho N, Flake A, Mori S, Nuñez A, Pignatelli J, Guedes RC, Stove CP, Decker M",
+      "pub_date": "2026-07-30",
+      "index_date": "2026-10-11",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "ABSTRACTIn this study, we report the first photoswitchable small molecule dual ligands for the orexin receptor subtypes 1 (OX1R) and 2 (OX2R) as molecular tools for optical control of orexin signaling. The orexin system is critical for several physiological processes and has been increasingly implicated in the pathogenesis of various psychiatric disorders. We implemented a prospective structure‐based design approach, generating azobenzene‐containing derivatives of the FDA‐approved dual orexin receptor antagonist suvorexant with a computational workflow that featured a novel fragmentation and azobenzene‐fusion strategy. The derivatives were subsequently evaluated by molecular docking to ensure preservation of the characteristic binding mode of suvorexant. Top candidates were synthesized and characterized by photophysical and pharmacological methods, namely our recently developed β‐arrestin 2 and miniGαq recruitment assays for both receptor subtypes. Optimization of the photoswitchable moiety yielded the highly potent antagonist “photorexant,” exhibiting an up to 11‐fold activity difference between photoisomers. A newly optimized assay protocol for the characterization of photoswitchable GPCR antagonists demonstrated dynamic, reversible photomodulation of orexin receptors by photorexant in vitro. Electrophysiological studies in hypothalamic and locus coeruleus neurons in mice demonstrated photomodulation of its antagonistic properties in vivo, positioning photorexant as an excellent tool for further investigation of orexin signaling.",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "6TO7",
+        "4S0V",
+        "6TQ7",
+        "6TQ9"
+      ],
+      "emdb_ids": [],
+      "cited_structures": [
+        {
+          "pdb_id": "6TO7",
+          "status": "released",
+          "title": "Crystal structure of the Orexin-1 receptor in complex with suvorexant at 2.29 A resolution",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 2.26,
+          "release_date": "2020-01-01",
+          "deposit_date": "2019-12-11",
+          "citation_doi": "10.1021/acs.jmedchem.9b01787",
+          "citation_pmid": "31860301",
+          "citation_title": "Comparison of Orexin 1 and Orexin 2 Ligand Binding Modes Using X-ray Crystallography and Computational Analysis.",
+          "polymers": [
+            {
+              "description": "Orexin receptor type 1",
+              "type": "Protein",
+              "uniprot_ids": [
+                "O43613"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "SUV",
+              "name": "[(7R)-4-(5-chloro-1,3-benzoxazol-2-yl)-7-methyl-1,4-diazepan-1-yl][5-methyl-2-(2H-1,2,3-triazol-2-yl)phenyl]methanone"
+            },
+            {
+              "id": "SOG",
+              "name": "octyl 1-thio-beta-D-glucopyranoside"
+            }
+          ]
+        },
+        {
+          "pdb_id": "4S0V",
+          "status": "released",
+          "title": "Crystal structure of the human OX2 orexin receptor bound to the insomnia drug Suvorexant",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 2.5,
+          "release_date": "2015-01-14",
+          "deposit_date": "2015-01-06",
+          "citation_doi": "10.1038/nature14035",
+          "citation_pmid": "25533960",
+          "citation_title": "Crystal structure of the human OX2 orexin receptor bound to the insomnia drug suvorexant.",
+          "polymers": [
+            {
+              "description": "Human Orexin receptor type 2 fusion protein to P. abysii Glycogen Synthase",
+              "type": "Protein",
+              "uniprot_ids": [
+                "O43614",
+                "Q9V2J8"
+              ],
+              "organisms": [
+                "Homo sapiens",
+                "Pyrococcus abyssi GE5"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "SUV",
+              "name": "[(7R)-4-(5-chloro-1,3-benzoxazol-2-yl)-7-methyl-1,4-diazepan-1-yl][5-methyl-2-(2H-1,2,3-triazol-2-yl)phenyl]methanone"
+            }
+          ]
+        },
+        {
+          "pdb_id": "6TQ7",
+          "status": "released",
+          "title": "Crystal structure of the Orexin-1 receptor in complex with SB-334867",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 2.6636,
+          "release_date": "2020-01-01",
+          "deposit_date": "2019-12-16",
+          "citation_doi": "10.1021/acs.jmedchem.9b01787",
+          "citation_pmid": "31860301",
+          "citation_title": "Comparison of Orexin 1 and Orexin 2 Ligand Binding Modes Using X-ray Crystallography and Computational Analysis.",
+          "polymers": [
+            {
+              "description": "Orexin receptor type 1",
+              "type": "Protein",
+              "uniprot_ids": [
+                "O43613"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "NVK",
+              "name": "1-(2-methyl-1,3-benzoxazol-6-yl)-3-(1,5-naphthyridin-4-yl)urea"
+            },
+            {
+              "id": "SOG",
+              "name": "octyl 1-thio-beta-D-glucopyranoside"
+            }
+          ]
+        },
+        {
+          "pdb_id": "6TQ9",
+          "status": "released",
+          "title": "Crystal structure of the Orexin-1 receptor in complex with SB-408124",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 2.655,
+          "release_date": "2020-01-01",
+          "deposit_date": "2019-12-16",
+          "citation_doi": "10.1021/acs.jmedchem.9b01787",
+          "citation_pmid": "31860301",
+          "citation_title": "Comparison of Orexin 1 and Orexin 2 Ligand Binding Modes Using X-ray Crystallography and Computational Analysis.",
+          "polymers": [
+            {
+              "description": "Orexin receptor type 1",
+              "type": "Protein",
+              "uniprot_ids": [
+                "O43613"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "NVN",
+              "name": "1-[6,8-bis(fluoranyl)-2-methyl-quinolin-4-yl]-3-[4-(dimethylamino)phenyl]urea"
+            },
+            {
+              "id": "SOG",
+              "name": "octyl 1-thio-beta-D-glucopyranoside"
+            }
+          ]
+        }
+      ],
+      "impact": {
+        "score": 5,
+        "types": [
+          "method",
+          "drug"
+        ],
+        "validation": [
+          "assay",
+          "in vitro",
+          "in vivo",
+          "mice"
+        ],
+        "low": [
+          "in silico",
+          "molecular docking"
+        ],
+        "journal": true,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [
+        {
+          "uniprot": "O43613",
+          "gene": "HCRTR1",
+          "synonyms": [
+            "ORXR1",
+            "OX1R",
+            "OXR1"
+          ],
+          "name": "Orexin/Hypocretin receptor type 1",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "O43614",
+          "gene": "HCRTR2",
+          "synonyms": [
+            "ORXR2",
+            "OX2R",
+            "OXR2"
+          ],
+          "name": "Orexin receptor type 2",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "Q9V2J8",
+          "gene": null,
+          "synonyms": [],
+          "name": "GlgA glycogen synthase",
+          "organism": "Pyrococcus abyssi (strain GE5 / Orsay)"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13653114",
+      "pmid": 42855934,
+      "doi": "10.1002/cbdv.71806",
+      "title": "Integrated Phytochemical, Immunological, and Network Pharmacology Investigation of Anti‐Inflammatory Lignans From Zanthoxylum armatum Fruits",
+      "journal": "Chemistry & Biodiversity",
+      "journal_abbrev": "Chem Biodivers",
+      "authors": "Singh NI, Singh SP, Mukherjee C, Singh CB",
+      "pub_date": "2026-10-09",
+      "index_date": "2026-10-11",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "ABSTRACTIn the present study, bioactive lignans from Zanthoxylum armatum fruits have been investigated for their anti‐inflammatory properties and evaluated using dendritic cell‐based immunological assays and network pharmacology. The ethyl acetate fraction was subjected to bioassay‐guided fractionation, chromatography, and HPLC to isolate pure compounds, characterised by NMR, LC‐QTOF‐MS, and single‐crystal x‐ray diffraction. Biological activities were evaluated using DPPH/ABTS radical scavenging assays, albumin denaturation and haemolysis inhibition assays, and flow cytometric analysis of IL‐12p40/70 and CD80 expression in CpG‐stimulated MuTuDC1940 dendritic cells. Sesamin exhibited the strongest antioxidant activity, while sesamin and fargesin showed notable anti‐inflammatory effects. In CpG‐stimulated MuTuDC1940 cells, sesamin reduced the proportion of IL‐12‐positive cells from 63.85% in the CpG‐treated group to 52.67%, whereas fargesin (63.23%) showed little change and eudesmin (65.88%) showed a slight increase. Nevertheless, intracellular IL‐12 MFI was significantly reduced by eudesmin, sesamin, and fargesin compared with CpG stimulation (p < 0.01), suggesting modulation of IL‐12 expression intensity rather than a uniform reduction in the IL‐12‐positive cell population. Network pharmacology, PPI, GO, and KEGG analyses indicated involvement of PI3K–Akt, NF‐κB, JAK–STAT, toll‐like receptor, Rap1, and VEGF signalling pathways. These findings suggest these compounds may serve as potential natural therapeutics for inflammatory and immune‐mediated diseases.",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "1I8L",
+        "1F42"
+      ],
+      "emdb_ids": [],
+      "cited_structures": [
+        {
+          "pdb_id": "1I8L",
+          "status": "released",
+          "title": "HUMAN B7-1/CTLA-4 CO-STIMULATORY COMPLEX",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 3.0,
+          "release_date": "2001-04-04",
+          "deposit_date": "2001-03-14",
+          "citation_doi": "10.1038/35069118",
+          "citation_pmid": "11279502",
+          "citation_title": "Crystal structure of the B7-1/CTLA-4 complex that inhibits human immune responses.",
+          "polymers": [
+            {
+              "description": "CYTOTOXIC T-LYMPHOCYTE PROTEIN 4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P16410"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "T LYMPHOCYTE ACTIVATION ANTIGEN CD80",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P33681"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": []
+        },
+        {
+          "pdb_id": "1F42",
+          "status": "released",
+          "title": "THE P40 DOMAIN OF HUMAN INTERLEUKIN-12",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 2.5,
+          "release_date": "2001-06-13",
+          "deposit_date": "2000-06-07",
+          "citation_doi": "10.1093/emboj/19.14.3530",
+          "citation_pmid": "10899108",
+          "citation_title": "Charged residues dominate a unique interlocking topography in the heterodimeric cytokine interleukin-12.",
+          "polymers": [
+            {
+              "description": "INTERLEUKIN-12 BETA CHAIN",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P29460"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "MNB",
+              "name": "5-MERCAPTO-2-NITRO-BENZOIC ACID"
+            }
+          ]
+        }
+      ],
+      "impact": {
+        "score": 3,
+        "types": [
+          "drug"
+        ],
+        "validation": [
+          "assay",
+          "nmr"
+        ],
+        "low": [
+          "network pharmacology"
+        ],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [
+        {
+          "uniprot": "P16410",
+          "gene": "CTLA4",
+          "synonyms": [
+            "CD152"
+          ],
+          "name": "Cytotoxic T-lymphocyte protein 4",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P29460",
+          "gene": "IL12B",
+          "synonyms": [
+            "NKSF2"
+          ],
+          "name": "Interleukin-12 subunit beta",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P33681",
+          "gene": "CD80",
+          "synonyms": [
+            "CD28LG",
+            "CD28LG1",
+            "LAB7"
+          ],
+          "name": "T-lymphocyte activation antigen CD80",
+          "organism": "Homo sapiens"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13649486",
+      "pmid": 42856909,
+      "doi": "10.3389/fmolb.2026.1906533",
+      "title": "Integrated computational investigation of Glycosmis pentaphylla-derived compounds against major venom proteins of Daboia russelii",
+      "journal": "Frontiers in Molecular Biosciences",
+      "journal_abbrev": "Front Mol Biosci",
+      "authors": "Hussain SS, Kingsley DJ",
+      "pub_date": "2026-09-25",
+      "index_date": "2026-10-11",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "Snakebite envenomation remains a significant neglected tropical disease, particularly in South Asia, where Daboia russelii (Russell’s viper) causes substantial morbidity and mortality. Current antivenom therapy is limited by poor efficacy against local tissue damage, high production costs, restricted toxin specificity, and adverse immune reactions, highlighting the need for alternative or adjunct therapeutic strategies. Using an integrated computational and experimental approach, phytocompounds identified from Glycosmis pentaphylla leaf extracts were evaluated as potential inhibitors of major venom proteins. A total of 32 compounds identified by GC-MS were screened against phospholipase A2 (PLA2), snake venom metalloproteinases (SVMPs), snake venom serine proteases (SVSPs), L-amino acid oxidase (LAAO), and snake C-type lectin-like proteins (SNACLECs) using molecular docking. Representative high-affinity protein-ligand complexes were further evaluated by 100 ns molecular dynamics simulations. Pharmacokinetic, toxicity, protein-protein interaction, and pathway enrichment analyses were also performed to assess the therapeutic potential of the identified compounds. Preliminary experimental validation was conducted using trypsin-casein protease inhibition, skim milk agar protease inhibition, and erythrocyte membrane stabilization assays. Compared with N-acetyl cysteine (NAC), β-sitosterol, 3-chloro-5-cholestene, and vitamin E exhibited stronger binding affinities and more stable interactions with multiple venom proteins. Molecular dynamics analyses (RMSD, RMSF, radius of gyration, solvent-accessible surface area, and hydrogen bonding) further supported the stability of the selected protein-ligand complexes. Pharmacokinetic and toxicity predictions indicated acceptable drug-likeness and comparatively safe toxicity profiles for most selected compounds. STRING-based protein-protein interaction and pathway enrichment analyses revealed associations with inflammatory, coagulation, oxidative stress, and extracellular matrix-related pathways involved in venom pathology. The G. pentaphylla extract demonstrated concentration-dependent protease inhibition (56.86% at 5 mg/mL), reduced caseinolytic activity (28.19% inhibition), and significant erythrocyte membrane stabilization (39.23%), providing preliminary experimental support for the computational predictions. Overall, these findings identify G. pentaphylla-derived phytocompounds as potential lead compounds for future antivenom development and provide a computational foundation for subsequent venom-specific biochemical and in vivo validation toward safer and more affordable adjunct therapies for snakebite management.",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "1DPY",
+        "1VIP",
+        "2PVT",
+        "2PYC",
+        "3SBK",
+        "2E3X",
+        "3KVE",
+        "3UBU"
+      ],
+      "emdb_ids": [],
+      "cited_structures": [
+        {
+          "pdb_id": "1DPY",
+          "status": "released",
+          "title": "THREE-DIMENSIONAL STRUCTURE OF A NOVEL PHOSPHOLIPASE A2 FROM INDIAN COMMON KRAIT AT 2.45 A RESOLUTION",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 2.45,
+          "release_date": "2000-06-28",
+          "deposit_date": "1999-12-28",
+          "citation_doi": "10.1006/jmbi.2001.4550",
+          "citation_pmid": "11286555",
+          "citation_title": "Sequence and crystal structure determination of a basic phospholipase A2 from common krait (Bungarus caeruleus) at 2.4 A resolution: identification and characterization of its pharmacological sites.",
+          "polymers": [
+            {
+              "description": "PHOSPHOLIPASE A2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9DF52"
+              ],
+              "organisms": [
+                "Bungarus caeruleus"
+              ]
+            }
+          ],
+          "ligands": []
+        },
+        {
+          "pdb_id": "1VIP",
+          "status": "released",
+          "title": "ANTICOAGULANT CLASS II PHOSPHOLIPASE A2 FROM THE VENOM OF VIPERA RUSSELLI RUSSELLI",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 2.2,
+          "release_date": "1997-06-16",
+          "deposit_date": "1997-02-27",
+          "citation_doi": "10.1016/s0041-0101(97)00051-2",
+          "citation_pmid": "9604284",
+          "citation_title": "The three-dimensional structures of two toxins from snake venom throw light on the anticoagulant and neurotoxic sites of phospholipase A2.",
+          "polymers": [
+            {
+              "description": "PHOSPHOLIPASE A2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P81458"
+              ],
+              "organisms": [
+                "Daboia russellii russellii"
+              ]
+            }
+          ],
+          "ligands": []
+        },
+        {
+          "pdb_id": "2PVT",
+          "status": "released",
+          "title": "Crystal structure of a new isoform of phospholipase A2 from russells viper at 2.1 A resolution",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 2.1,
+          "release_date": "2007-05-22",
+          "deposit_date": "2007-05-10",
+          "citation_doi": null,
+          "citation_pmid": null,
+          "citation_title": "Crystal structure of a new isoform of phospholipase A2 from russells viper at 2.1 A resolution",
+          "polymers": [
+            {
+              "description": "phospholipase A2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P59071"
+              ],
+              "organisms": [
+                "Daboia russellii pulchella"
+              ]
+            }
+          ],
+          "ligands": []
+        },
+        {
+          "pdb_id": "2PYC",
+          "status": "released",
+          "title": "Crystal structure of a monomeric phospholipase A2 from Russell's viper at 1.5A resolution",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 1.5,
+          "release_date": "2007-05-29",
+          "deposit_date": "2007-05-16",
+          "citation_doi": null,
+          "citation_pmid": null,
+          "citation_title": "Crystal structure of a monomeric phospholipase A2 from Russell's viper at 1.5A resolution",
+          "polymers": [
+            {
+              "description": "Phospholipase A2 VRV-PL-VIIIa",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P59071"
+              ],
+              "organisms": [
+                "Daboia russellii pulchella"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "CCN",
+              "name": "ACETONITRILE"
+            }
+          ]
+        },
+        {
+          "pdb_id": "3SBK",
+          "status": "released",
+          "title": "Russell's viper venom serine proteinase, RVV-V (PPACK-bound form)",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 2.55,
+          "release_date": "2011-09-07",
+          "deposit_date": "2011-06-05",
+          "citation_doi": "10.1016/j.febslet.2011.08.022",
+          "citation_pmid": "21871889",
+          "citation_title": "Structural basis of coagulation factor V recognition for cleavage by RVV-V",
+          "polymers": [
+            {
+              "description": "Vipera russelli proteinase RVV-V gamma",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P18965"
+              ],
+              "organisms": [
+                "Daboia russellii siamensis"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "0G6",
+              "name": "D-phenylalanyl-N-[(2S,3S)-6-{[amino(iminio)methyl]amino}-1-chloro-2-hydroxyhexan-3-yl]-L-prolinamide"
+            }
+          ]
+        },
+        {
+          "pdb_id": "2E3X",
+          "status": "released",
+          "title": "Crystal structure of Russell's viper venom metalloproteinase",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 2.91,
+          "release_date": "2007-12-11",
+          "deposit_date": "2006-11-30",
+          "citation_doi": "10.1016/j.febslet.2007.11.062",
+          "citation_pmid": "18060879",
+          "citation_title": "Crystal structure of RVV-X: an example of evolutionary gain of specificity by ADAM proteinases.",
+          "polymers": [
+            {
+              "description": "Coagulation factor X-activating enzyme light chain 1",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q4PRD1"
+              ],
+              "organisms": [
+                "Daboia russellii siamensis"
+              ]
+            },
+            {
+              "description": "Coagulation factor X-activating enzyme light chain 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q4PRD2"
+              ],
+              "organisms": [
+                "Daboia russellii siamensis"
+              ]
+            },
+            {
+              "description": "Coagulation factor X-activating enzyme heavy chain",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q7LZ61"
+              ],
+              "organisms": [
+                "Daboia russellii siamensis"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "GM6",
+              "name": "3-(N-HYDROXYCARBOXAMIDO)-2-ISOBUTYLPROPANOYL-TRP-METHYLAMIDE"
+            }
+          ]
+        },
+        {
+          "pdb_id": "3KVE",
+          "status": "released",
+          "title": "Structure of native L-amino acid oxidase from Vipera ammodytes ammodytes: stabilization of the quaternary structure by divalent ions and structural changes in the dynamic active site",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 2.57,
+          "release_date": "2010-10-13",
+          "deposit_date": "2009-11-30",
+          "citation_doi": null,
+          "citation_pmid": null,
+          "citation_title": "Structure of native L-amino acid oxidase from Vipera ammodytes ammodytes: stabilization of the quaternary structure by divalent ions and structural changes in the dynamic active site",
+          "polymers": [
+            {
+              "description": "L-amino acid oxidase",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0DI84"
+              ],
+              "organisms": [
+                "Vipera ammodytes ammodytes"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "FAD",
+              "name": "FLAVIN-ADENINE DINUCLEOTIDE"
+            }
+          ]
+        },
+        {
+          "pdb_id": "3UBU",
+          "status": "released",
+          "title": "Crystal structure of agkisacucetin, a GpIb-binding snaclec (snake C-type lectin) that inhibits platelet",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 1.91,
+          "release_date": "2012-04-11",
+          "deposit_date": "2011-10-25",
+          "citation_doi": "10.1002/prot.24060",
+          "citation_pmid": "22447656",
+          "citation_title": "Crystal structure of agkisacucetin, a Gpib-binding snake C-type lectin that inhibits platelet adhesion and aggregation.",
+          "polymers": [
+            {
+              "description": "Agglucetin subunit beta-2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q8AYA3"
+              ],
+              "organisms": [
+                "Deinagkistrodon acutus"
+              ]
+            },
+            {
+              "description": "Agglucetin subunit alpha-1",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q8JIV9"
+              ],
+              "organisms": [
+                "Deinagkistrodon acutus"
+              ]
+            }
+          ],
+          "ligands": []
+        }
+      ],
+      "impact": {
+        "score": 4,
+        "types": [
+          "drug"
+        ],
+        "validation": [
+          "assay",
+          "in vivo",
+          "kinetic"
+        ],
+        "low": [
+          "molecular docking"
+        ],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [
+        {
+          "uniprot": "P0DI84",
+          "gene": null,
+          "synonyms": [],
+          "name": "L-amino-acid oxidase",
+          "organism": "Vipera ammodytes ammodytes"
+        },
+        {
+          "uniprot": "P18965",
+          "gene": null,
+          "synonyms": [],
+          "name": "Factor V activator RVV-V gamma",
+          "organism": "Daboia siamensis"
+        },
+        {
+          "uniprot": "P59071",
+          "gene": null,
+          "synonyms": [],
+          "name": "Basic phospholipase A2 VRV-PL-VIIIa",
+          "organism": "Daboia russelii"
+        },
+        {
+          "uniprot": "P81458",
+          "gene": null,
+          "synonyms": [],
+          "name": "Basic phospholipase A2 RVV-VD",
+          "organism": "Daboia russelii"
+        },
+        {
+          "uniprot": "Q4PRD1",
+          "gene": "LC1",
+          "synonyms": [],
+          "name": "Snaclec coagulation factor X-activating enzyme light chain 1",
+          "organism": "Daboia siamensis"
+        },
+        {
+          "uniprot": "Q4PRD2",
+          "gene": "LC2",
+          "synonyms": [],
+          "name": "Snaclec coagulation factor X-activating enzyme light chain 2",
+          "organism": "Daboia siamensis"
+        },
+        {
+          "uniprot": "Q7LZ61",
+          "gene": null,
+          "synonyms": [],
+          "name": "Coagulation factor X-activating enzyme heavy chain",
+          "organism": "Daboia siamensis"
+        },
+        {
+          "uniprot": "Q8AYA3",
+          "gene": null,
+          "synonyms": [],
+          "name": "Snaclec agglucetin subunit beta-2",
+          "organism": "Deinagkistrodon acutus"
+        },
+        {
+          "uniprot": "Q8JIV9",
+          "gene": null,
+          "synonyms": [],
+          "name": "Snaclec agglucetin subunit alpha-1",
+          "organism": "Deinagkistrodon acutus"
+        },
+        {
+          "uniprot": "Q9DF52",
+          "gene": null,
+          "synonyms": [],
+          "name": "Basic phospholipase A2 KPA2",
+          "organism": "Bungarus caeruleus"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13649423",
+      "pmid": 42856803,
+      "doi": "10.3389/fphar.2026.1876559",
+      "title": "Interpretable machine learning classifies β-lactamase subclasses and prioritizes boundary variants for antimicrobial resistance surveillance",
+      "journal": "Frontiers in Pharmacology",
+      "journal_abbrev": "Front Pharmacol",
+      "authors": "Kaushik R, Re S",
+      "pub_date": "2026-09-25",
+      "index_date": "2026-10-11",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "IntroductionAntimicrobial resistance is a major global health threat, and β-lactamase-mediated inactivation of β-lactam antibiotics remains a leading cause of treatment failure. Rapid identification of emerging β-lactamase variants and improved understanding of their functional diversity are therefore essential for resistance surveillance and therapeutic development.MethodsHere, we developed an interpretable machine learning framework to classify major Class A β-lactamase subclasses (TEM, SHV, and CTX-M) and distinguish them from non-β-lactamase hydrolases using multidimensional protein descriptors. Descriptors based on sequence composition, physicochemical properties, residue accessibility, and structural topology were evaluated to identify a minimal panel of 30 descriptors while preserving biological interpretability.ResultsThe selected descriptors provided strong discriminatory power and were linked to steric environment, hydrophobicity, flexibility, solvent exposure, and residue interaction patterns, consistent with roles in substrate recognition and catalysis. Projection into reduced descriptor space identified transitional variants near subclass boundaries, including CTX-M/SHV convergence zones and non-β-lactamase hydrolases with partial β-lactamase-like signatures. Representative case studies indicated that some apparent misclassifications may reflect annotation inconsistencies, scaffold convergence, or early adaptive trajectories, highlighting candidates for experimental follow-up. External validation using 271 independent proteins annotated as non-β-lactamase hydrolases demonstrated 96.95% specificity, with only limited false-positive assignments. Most incorrect classifications showed weak statistical support, indicating that confidence filtering could further improve screening performance.DiscussionOverall, this study demonstrates that compact descriptor-based models can provide accurate and interpretable classification of β-lactamase-related proteins while identifying emerging boundary variants relevant to antimicrobial resistance surveillance. The framework offers a scalable approach for protein annotation, monitoring resistance evolution, and supporting future inhibitor development.",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "1ZG4",
+        "4JPM",
+        "4HBT"
+      ],
+      "emdb_ids": [],
+      "cited_structures": [
+        {
+          "pdb_id": "1ZG4",
+          "status": "released",
+          "title": "TEM1 beta lactamase",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 1.55,
+          "release_date": "2005-05-17",
+          "deposit_date": "2005-04-20",
+          "citation_doi": "10.1107/s0907444905014356",
+          "citation_pmid": "16041072",
+          "citation_title": "Structure of the wild-type TEM-1 beta-lactamase at 1.55 A and the mutant enzyme Ser70Ala at 2.1 A suggest the mode of noncovalent catalysis for the mutant enzyme.",
+          "polymers": [
+            {
+              "description": "Beta-lactamase TEM",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P62593"
+              ],
+              "organisms": [
+                "Escherichia coli"
+              ]
+            }
+          ],
+          "ligands": []
+        },
+        {
+          "pdb_id": "4JPM",
+          "status": "released",
+          "title": "Structure of SHV-1 beta-lactamase in complex with the 7-alkylidenecephalosporin DCM-1-10 at 1.14 Ang resolution",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 1.14,
+          "release_date": "2013-12-04",
+          "deposit_date": "2013-03-19",
+          "citation_doi": "10.1021/ja403598g",
+          "citation_pmid": "24219313",
+          "citation_title": "beta-Lactamase Inhibition by 7-Alkylidenecephalosporin Sulfones: Allylic Transposition and Formation of an Unprecedented Stabilized Acyl-Enzyme.",
+          "polymers": [
+            {
+              "description": "Beta-lactamase SHV-1",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0AD64"
+              ],
+              "organisms": [
+                "Klebsiella pneumoniae"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "MA4",
+              "name": "CYCLOHEXYL-HEXYL-BETA-D-MALTOSIDE"
+            },
+            {
+              "id": "1OG",
+              "name": " 7-alkylidenecephalosporin DCM-1-10, bound form "
+            }
+          ]
+        },
+        {
+          "pdb_id": "4HBT",
+          "status": "released",
+          "title": "Crystal structure of native CTX-M-15 extended-spectrum beta-lactamase",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 1.1,
+          "release_date": "2013-04-10",
+          "deposit_date": "2012-09-28",
+          "citation_doi": "10.1128/aac.02247-12",
+          "citation_pmid": "23439634",
+          "citation_title": "Structural insight into potent broad-spectrum inhibition with reversible recyclization mechanism: avibactam in complex with CTX-M-15 and Pseudomonas aeruginosa AmpC beta-lactamases",
+          "polymers": [
+            {
+              "description": "Beta-lactamase",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9EXV5"
+              ],
+              "organisms": [
+                "Escherichia coli"
+              ]
+            }
+          ],
+          "ligands": []
+        }
+      ],
+      "impact": {
+        "score": 5,
+        "types": [
+          "method",
+          "ai_design",
+          "mechanism"
+        ],
+        "validation": [],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [
+        {
+          "uniprot": "P0AD64",
+          "gene": "bla",
+          "synonyms": [
+            "blaSHV-1",
+            "shv1"
+          ],
+          "name": "Beta-lactamase SHV-1",
+          "organism": "Klebsiella pneumoniae"
+        },
+        {
+          "uniprot": "P62593",
+          "gene": "bla",
+          "synonyms": [],
+          "name": "Beta-lactamase TEM",
+          "organism": "Escherichia coli"
+        },
+        {
+          "uniprot": "Q9EXV5",
+          "gene": "blaUOE-1",
+          "synonyms": [
+            "bla",
+            "bla CTX-M-15",
+            "blaCTX-M-15",
+            "blaCTX-M15",
+            "CTX-M-15"
+          ],
+          "name": "Beta-lactamase",
+          "organism": "Escherichia coli"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13653756",
+      "pmid": 42805913,
+      "doi": "10.24546/0100505590",
+      "title": "PARP3 Promotes SARS-CoV-2 Replication via Interaction with the Viral Nucleocapsid Protein",
+      "journal": "Kobe Journal of Medical Sciences",
+      "journal_abbrev": "Kobe J Med Sci",
+      "authors": "ADYAKSA DNM, RHAMADIANTI AF, DENG L, ABE T, MATSUI C, SHOJI I",
+      "pub_date": "2026-08-31",
+      "index_date": "2026-10-11",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) exploits host cellular machinery to support its replication. Members of the host poly(ADP-ribose) polymerase (PARP) family regulate the DNA damage response and have been implicated in both antiviral and proviral processes. In this study, we investigated the potential role of PARP3 in SARS-CoV-2 replication in VeroE6/Rep3 cells. siRNA-mediated knockdown of PARP3 reduced viral subgenomic RNA (sgRNA) levels and reporter activity, whereas PARP3 overexpression enhanced these processes, suggesting that PARP3 promotes SARS-CoV-2 replication. In addition, PARP3 expression was increased in SARS-CoV-2-infected Calu-3 cells and in cells expressing SARS-CoV-2 nucleocapsid protein, suggesting that the nucleocapsid protein contributes to PARP3 upregulation during infection. Co-immunoprecipitation and immunofluorescence analyses revealed that PARP3 associates with the nucleocapsid protein and redistributes to the cytoplasm in nucleocapsid-expressing cells. Screening of a PARP inhibitor library identified venadaparib as a compound that reduced SARS-CoV-2 sgRNA levels and reporter activity in VeroE6/Rep3 cells with limited cytotoxicity under the condition tested. We further found that venadaparib reduced the interaction between PARP3 and the nucleocapsid protein. Molecular docking analysis further suggested that venadaparib can bind to the PARP3 catalytic domain. Collectively, these findings support a model in which PARP3 facilitates SARS-CoV-2 replication through its interaction with the viral nucleocapsid protein and suggest that venadaparib warrants further evaluation as a host-directed antiviral candidate.",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "4L70"
+      ],
+      "emdb_ids": [],
+      "cited_structures": [
+        {
+          "pdb_id": "4L70",
+          "status": "released",
+          "title": "Human artd3 (parp3) - catalytic domain in complex with inhibitor ME0352",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 2.0,
+          "release_date": "2014-02-19",
+          "deposit_date": "2013-06-13",
+          "citation_doi": "10.1021/jm401394u",
+          "citation_pmid": "24188023",
+          "citation_title": "Chemical Probes to Study ADP-Ribosylation: Synthesis and Biochemical Evaluation of Inhibitors of the Human ADP-Ribosyltransferase ARTD3/PARP3.",
+          "polymers": [
+            {
+              "description": "Poly [ADP-ribose] polymerase 3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9Y6F1"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "1V9",
+              "name": "3-(4-oxo-3,4-dihydroquinazolin-2-yl)-N-[(1S)-1-phenylpropyl]propanamide"
+            }
+          ]
+        }
+      ],
+      "impact": {
+        "score": 2,
+        "types": [
+          "drug",
+          "mechanism"
+        ],
+        "validation": [],
+        "low": [
+          "molecular docking"
+        ],
+        "journal": false,
+        "exp_structure": true,
+        "flags": [
+          "計算のみの可能性（molecular docking）"
+        ]
+      },
+      "proteins": [
+        {
+          "uniprot": "Q9Y6F1",
+          "gene": "PARP3",
+          "synonyms": [
+            "ADPRT3",
+            "ADPRTL3"
+          ],
+          "name": "Protein mono-ADP-ribosyltransferase PARP3",
+          "organism": "Homo sapiens"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13653024",
+      "pmid": 42853356,
+      "doi": "10.1186/s40643-026-01127-z",
+      "title": "Physicochemical evaluation, GC–MS-based phytoconstituent analysis and network pharmacology study of Guduchi Arka: an ayurvedic hydro-distillate",
+      "journal": "Bioresources and Bioprocessing",
+      "journal_abbrev": "Bioresour Bioprocess",
+      "authors": "Sharma D, Dane G, Tandon S, Jagtap C, Kumar V, Mondal S, Thakur A, Charde V, Rawat H, Nahar R, Lale SK, Sharma BS, Khanduri S, Maheshwar T, Srikanth N, Acharya R",
+      "pub_date": "2026-10-09",
+      "index_date": "2026-10-11",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "Guduchi Arka is a classical Ayurvedic hydro-distillate formulation with quick absorption and healing properties, prepared from Tinospora cordifolia (Willd.) Miers. Despite its long history of traditional use, the scientific community still lacks a complete set of quality parameters for its chemical composition and its molecular mechanisms. To overcome this problem, laboratory analysis and computer modelling parameters were used to investigate the quality, safety, and effectiveness of the formulation in treating fever and cold. Guduchi samples were obtained from three locations in India (Jhansi, Bengaluru, and Itanagar), and the raw materials were analysed to verify compliance with API standards. Authenticated Guduchi samples were processed arka preparation by using a standardised hydro-distillation method, and the resulting arka was assessed by physicochemical analysis, with a pH of 6.15–6.95, a specific gravity near 1.00, and an essential oil content of approximately 0.236%. Raw drugs and Arka preparations complied with standard API safety standards, as no pathogenic organisms were detected, heavy metals, pesticides, and aflatoxins were undetectable, and microbial content was below the standard API limit. GC–MS analysis of the arka formulation revealed a consistent and rich array of bioactive compounds, including 1-Eicosanol, α-Campholenal, o-toluric acid, Anethole, Estragole, Embelin, Nicolaioidesin A, (-)-Globulol, Paliclavine, and Chamazulene. To assess its therapeutic significance, 20 phytoconstituents of the Guduchi arka formulation were screened using network pharmacology and molecular docking. These compounds showed 248 overlapping targets with genes associated with fever and respiratory infections. The key regulatory proteins HSP90AA1, EGFR, and HSP90AB1 emerged as central nodes in the protein–protein interaction networks. To better validate the molecular docking study, robust biological interactions were observed: Nicolaiodesin A interacted effectively with EGFR (score: − 7.2 kcal/mol), whereas Embelin interacted effectively with HSP90AA1 (score: − 6.6 kcal/mol). Finally, this study demonstrates that Guduchi Arka is a highly standardised and safe formulation that retains all its healing phytochemicals during the distillation process. This study elucidates the mode of action of Guduchi Arka on immunity and inflammation, providing a solid scientific basis for its traditional use and future applications in herbal medicine.Graphical abstract",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "5UGB",
+        "4BQG",
+        "6N8Y"
+      ],
+      "emdb_ids": [],
+      "cited_structures": [
+        {
+          "pdb_id": "5UGB",
+          "status": "released",
+          "title": "Crystal structure of the EGFR kinase domain in complex with 4-(4-{[2-{[(3S)-1-acetylpyrrolidin-3-yl]amino}-9-(propan-2-yl)-9H-purin-6-yl]amino}phenyl)-1-methylpiperazin-1-ium",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 2.53,
+          "release_date": "2017-03-22",
+          "deposit_date": "2017-01-07",
+          "citation_doi": "10.1021/acs.jmedchem.6b01894",
+          "citation_pmid": "28287730",
+          "citation_title": "Discovery of N-((3R,4R)-4-Fluoro-1-(6-((3-methoxy-1-methyl-1H-pyrazol-4-yl)amino)-9-methyl-9H-purin-2-yl)pyrrolidine-3-yl)acrylamide (PF-06747775) through Structure-Based Drug Design: A High Affinity Irreversible Inhibitor Targeting Oncogenic EGFR Mutants with Selectivity over Wild-Type EGFR.",
+          "polymers": [
+            {
+              "description": "Epidermal growth factor receptor",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P00533"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "8BM",
+              "name": "4-(4-{[2-{[(3S)-1-acetylpyrrolidin-3-yl]amino}-9-(propan-2-yl)-9H-purin-6-yl]amino}phenyl)-1-methylpiperazin-1-ium"
+            }
+          ]
+        },
+        {
+          "pdb_id": "4BQG",
+          "status": "released",
+          "title": "structure of HSP90 with an inhibitor bound",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 1.9,
+          "release_date": "2013-10-23",
+          "deposit_date": "2013-05-30",
+          "citation_doi": "10.1016/j.bmc.2013.09.018",
+          "citation_pmid": "24100158",
+          "citation_title": "Discovery of Nms-E973 as Novel, Selective and Potent Inhibitor of Heat Shock Protein 90 (Hsp90).",
+          "polymers": [
+            {
+              "description": "HSP90AA1 PROTEIN",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P07900"
+              ],
+              "organisms": [
+                "HOMO SAPIENS"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "50Q",
+              "name": "5-(3,4-dichloro-phenoxy)-benzene-1,3-diol"
+            }
+          ]
+        },
+        {
+          "pdb_id": "6N8Y",
+          "status": "released",
+          "title": "Hsp90-beta bound to PU-11-trans",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 1.55390799533,
+          "release_date": "2019-07-03",
+          "deposit_date": "2018-11-30",
+          "citation_doi": "10.1002/prot.25750",
+          "citation_pmid": "31141217",
+          "citation_title": "Structures of Hsp90 alpha and Hsp90 beta bound to a purine-scaffold inhibitor reveal an exploitable residue for drug selectivity.",
+          "polymers": [
+            {
+              "description": "Heat shock protein HSP 90-beta",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P08238"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "KFY",
+              "name": "9-[(2E)-but-2-en-1-yl]-8-[(3,4,5-trimethoxyphenyl)methyl]-9H-purin-6-amine"
+            }
+          ]
+        }
+      ],
+      "impact": {
+        "score": -1,
+        "types": [
+          "mechanism"
+        ],
+        "validation": [],
+        "low": [
+          "molecular docking",
+          "network pharmacology"
+        ],
+        "journal": false,
+        "exp_structure": true,
+        "flags": [
+          "計算のみの可能性（molecular docking、network pharmacology）"
+        ]
+      },
+      "proteins": [
+        {
+          "uniprot": "P00533",
+          "gene": "EGFR",
+          "synonyms": [
+            "ERBB",
+            "ERBB1",
+            "HER1"
+          ],
+          "name": "Epidermal growth factor receptor",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P07900",
+          "gene": "HSP90AA1",
+          "synonyms": [
+            "HSP90A",
+            "HSPC1",
+            "HSPCA"
+          ],
+          "name": "Heat shock protein HSP 90-alpha",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P08238",
+          "gene": "HSP90AB1",
+          "synonyms": [
+            "HSP90B",
+            "HSPC2",
+            "HSPC3",
+            "HSPCB"
+          ],
+          "name": "Heat shock protein HSP 90-beta",
+          "organism": "Homo sapiens"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13653134",
+      "pmid": 42855938,
+      "doi": "10.1002/cbdv.71776",
+      "title": "Phytochemical Fingerprinting of Sanchezia nobilis Hook. F. Leaf Extract and Evaluation of Anxiolytic, Cytotoxic, and Antioxidant Activities In Vivo, In Vitro, and In Silico",
+      "journal": "Chemistry & Biodiversity",
+      "journal_abbrev": "Chem Biodivers",
+      "authors": "Paul PP, Sakib MR, Kundu P, Chakraborty D, Fatema T, Hossen S, Abid A, Mitra T, Shill MC, Karmakar UK",
+      "pub_date": "2026-10-09",
+      "index_date": "2026-10-11",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "ABSTRACTPresent studies emphasize the pharmacological, toxicological, and molecular simulation studies of the potent phytoconstituents in the Sanchezia nobilis leaf extract (SNE) and its nonpolar and polar fractions. We identified 27 phytoconstituents in SNE using Gas Chromatography Mass Spectrometry (GC‐MS), where aniline, dibutyl phthalate, and isoquinoline are noteworthy. Anxiolytic assessments by hole board test (HBT) and elevated plus maze test (EPMT) demonstrated dose‐dependent effects of nonpolar and polar fractions of SNE. Both fractions also exhibited minimal cytotoxicity in brine shrimp lethality test. SNE crude extract demonstrated good antioxidant properties. In silico analysis revealed promising binding affinities of aniline and isoquinoline with target protein molecules responsible for anxiolytic and antidepressive effects. Molecular dynamics (MD) modelling and quantitative chemical‐based DFT approaches confirmed satisfactory pharmacokinetics (PK) and toxicity profiles for the selected medications. HOMO‐LUMO analysis highlighted the remarkable features of the chosen components. MD studies also supported aniline and isoquinoline as potential candidates requiring further pharmacological validation due to their interactions with chimeric alpha1GABAA receptor proteins. Our data provided promising drug‐like phytoconstituents in the S. nobilis leaf offering future drug discovery in mental health treatment.",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "6CDU"
+      ],
+      "emdb_ids": [],
+      "cited_structures": [
+        {
+          "pdb_id": "6CDU",
+          "status": "released",
+          "title": "Crystal structure of a chimeric human alpha1GABAA receptor in complex with alphaxalone",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 3.45,
+          "release_date": "2018-08-22",
+          "deposit_date": "2018-02-09",
+          "citation_doi": "10.1038/s41467-018-06361-4",
+          "citation_pmid": "30266951",
+          "citation_title": "Structural basis of neurosteroid anesthetic action on GABAAreceptors.",
+          "polymers": [
+            {
+              "description": "chimeric alpha1GABAA receptor",
+              "type": "Protein",
+              "uniprot_ids": [
+                "E0SJQ4",
+                "P14867"
+              ],
+              "organisms": [
+                "Dickeya dadantii (strain 3937)",
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "EY4",
+              "name": "(3a,5a)-3-Hydroxypregnane-11,20-dione"
+            }
+          ]
+        }
+      ],
+      "impact": {
+        "score": 4,
+        "types": [
+          "drug"
+        ],
+        "validation": [
+          "in vitro",
+          "in vivo",
+          "kinetic"
+        ],
+        "low": [
+          "in silico"
+        ],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [
+        {
+          "uniprot": "E0SJQ4",
+          "gene": null,
+          "synonyms": [],
+          "name": "Gamma-aminobutyric-acid receptor subunit beta-1",
+          "organism": "Dickeya dadantii (strain 3937)"
+        },
+        {
+          "uniprot": "P14867",
+          "gene": "GABRA1",
+          "synonyms": [],
+          "name": "Gamma-aminobutyric acid receptor subunit alpha-1",
+          "organism": "Homo sapiens"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13653682",
+      "pmid": 42859697,
+      "doi": "10.1093/rb/rbag160",
+      "title": "A Janus bacterial cellulose patch with antibacterial, antioxidant, anti-inflammatory and angiogenic activities for enhanced oral ulcer healing",
+      "journal": "Regenerative Biomaterials",
+      "journal_abbrev": "Regen Biomater",
+      "authors": "Wang G, Yan J, Cui C, Zhou L, Wu X, Li B",
+      "pub_date": "2026-07-25",
+      "index_date": "2026-10-11",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "AbstractOral ulcers are complex mucosal lesions characterized by infection, inflammatory imbalance, elevated oxidative stress and impaired vascular regeneration, with therapeutic efficacy hindered by rapid drug loss in the highly wet and dynamic oral environment. Here, we developed a Janus-structured bacterial cellulose (BC)-based multifunctional oral patch (Ber@ZIF/BC, BZB) for stable retention and controlled release of Ber@ZIF (BZ) at ulcer sites. Encapsulation of berberine within ZIF and incorporation into Janus BC endowed the system with robust wet adhesion and microenvironment-responsive drug release. In vitro, BZB effectively inhibited Staphylococcus aureus and Escherichia coli, scavenged intracellular reactive oxygen species, preserved cell viability under oxidative stress and promoted epithelial and endothelial cell migration and angiogenesis while modulating inflammatory cytokine expression. In rat oral ulcer models, BZB accelerated ulcer closure, enhanced collagen remodeling and neovascularization and restored the inflammatory microenvironment. This Janus BZB patch synergistically regulates infection, oxidative stress and tissue regeneration, offering a promising strategy for precise, durable and efficient treatment of oral ulcers with translational potential.",
+      "source": "impact_search",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "cited_structures": [],
+      "impact": {
+        "score": 5,
+        "types": [
+          "method",
+          "drug"
+        ],
+        "validation": [
+          "in vitro"
+        ],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13653579",
+      "pmid": 42622251,
+      "doi": "10.1002/anie.3766984",
+      "title": "Coupling Exponential Rolling Circle Amplification to Lateral Flow Devices for Point‐of‐Care Detection of Viral RNA",
+      "journal": "Angewandte Chemie (International Ed. in English)",
+      "journal_abbrev": "Angew Chem Int Ed Engl",
+      "authors": "Mathai A, Ali M, Li Y, Brennan JD",
+      "pub_date": "2026-08-20",
+      "index_date": "2026-10-11",
+      "license": "cc by-nc-nd",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "ABSTRACTSensitive detection of viral RNA in biological samples remains challenging because of low viral loads, complex matrices, and RNA secondary structures. Here, we present a heat‐free, reverse‐transcription‐free lateral flow platform that converts structured viral RNA into visual signals through RNase I‐mediated primer generation, exponential rolling circle amplification (E‐RCA), and toehold‐mediated strand displacement (TMSD). The newly developed E‐RCA circuit uses a single additional primer, P2, which is extended on primary RCA products and then processed by Φ29 DNA polymerase to generate a feedback primer, enabling rapid exponential amplification from a circular DNA template. RCA products and P2‐extended products subsequently trigger a newly designed TMSD module to release bridging DNA strands that generate visible lateral flow signals. Using SARS‐CoV‐2 as a model, the assay achieved detection limits down to 500 aM, sample‐to‐result times of approximately 45 min, and 95%–100% accuracy across four viral RNA regions in clinical saliva samples, providing a platform for rapid point‐of‐care RNA diagnostics.",
+      "source": "impact_search",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "cited_structures": [],
+      "impact": {
+        "score": 6,
+        "types": [
+          "method"
+        ],
+        "validation": [
+          "assay"
+        ],
+        "low": [],
+        "journal": true,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13653578",
+      "pmid": 42622291,
+      "doi": "10.1002/anie.3647018",
+      "title": "Evidence for a Cu(II)‐Catalysed CuAAC Reaction: A Combined Experimental and Computational Study",
+      "journal": "Angewandte Chemie (International Ed. in English)",
+      "journal_abbrev": "Angew Chem Int Ed Engl",
+      "authors": "Andrews MJ, Richardson TM, Roberts DD, Maestro A, Hilton TA, Sotorrios L, Martín‐Fernández C, Craciunescu L, Peschke F, McKay AP, Macgregor SA, Burley GA, Watson AJB",
+      "pub_date": "2026-08-20",
+      "index_date": "2026-10-11",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "ABSTRACTThe Cu‐catalysed azide‐alkyne cycloaddition (CuAAC) reaction is one of the most broadly applied catalytic processes, with applications throughout synthetic chemistry, drug discovery, chemical biology, and materials science. This field of research is built upon the mechanistic premise that the metal‐centred events proceed via Cu(I) catalysis. Here, we report details of a CuAAC reaction that can also be catalysed by Cu(II) through a self‐assembled dinuclear Cu(II) complex that incorporates the triazole product. Computational analysis supports the experimental findings and the autocatalytic role of the triazole. Assessment across additional alkyne substrates reveals a more nuanced role in other cases. This work provides an additional mechanistic pathway possible for CuAAC reactions, establishing a mechanistic continuum that extends through Cu(I), mixed Cu(I)/Cu(II), and Cu(II) catalytic frameworks.",
+      "source": "impact_search",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "cited_structures": [],
+      "impact": {
+        "score": 6,
+        "types": [
+          "drug",
+          "mechanism"
+        ],
+        "validation": [],
+        "low": [],
+        "journal": true,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13653577",
+      "pmid": 42636104,
+      "doi": "10.1002/anie.5009703",
+      "title": "Farnesyltransferase Enables Modular Assembly of Dual‐Functional Nanobody Conjugates for in Vivo Imaging of Inflammation",
+      "journal": "Angewandte Chemie (International Ed. in English)",
+      "journal_abbrev": "Angew Chem Int Ed Engl",
+      "authors": "Venkatachalapathy S, Lee YH, Farid AS, Moravej H, Rouhani SD, Rowley JE, Rashidian M, Distefano MD",
+      "pub_date": "2026-08-24",
+      "index_date": "2026-10-11",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "ABSTRACTNon‐invasive imaging of inflammation is critical for disease diagnosis, monitoring, and therapeutic evaluation. Nanobodies, due to their many unique properties, are emerging as powerful imaging agents; however, conventional non‐specific conjugation strategies often yield heterogeneous products that limit in vivo performance. Here, we report a chemoenzymatic strategy that enables precise and modular assembly of nanobody conjugates using farnesyltransferase (FTase)‐mediated site‐specific modification. We developed a trifunctional FTase substrate that introduces two orthogonal bioorthogonal handles, an aldehyde and an azide, onto nanobodies in a single enzymatic step. These handles enable independent and controlled conjugation of imaging payloads (fluorophores or radioisotopes) and pharmacokinetic modifiers (i.e. PEG), which enhance in vivo signal‐to‐noise ratios. Applying this strategy to nanobodies targeting CD45 and CD11b, markers broadly expressed on all immune cells and myeloid subsets, respectively, we generated well‐defined, dually modified constructs that enabled high‐contrast in vivo visualization of immune organs, including the spleen and lymph nodes. In a mouse model of localized inflammation, these probes robustly delineated inflamed tissue with high sensitivity and specificity. Together, this FTase‐enabled dual‐labeling approach provides a versatile and generalizable platform for the rapid generation of precisely defined nanobody‐based imaging agents, advancing non‐invasive detection and monitoring of inflammation across diverse disease contexts.",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "cited_structures": [],
+      "impact": {
+        "score": 1,
+        "types": [
+          "method"
+        ],
+        "validation": [
+          "in vivo",
+          "kinetic"
+        ],
+        "low": [],
+        "journal": true,
+        "exp_structure": false,
+        "flags": [
+          "実験構造の手がかりなし"
+        ]
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13650271",
+      "pmid": 42857277,
+      "doi": "10.1002/fsn3.72468",
+      "title": "Ginsenoside Rb1 From the Functional Food Panax ginseng Suppresses Pancreatic Cancer Progression via Macrophage Reprogramming Through the PI3K‐AKT Pathway",
+      "journal": "Food Science & Nutrition",
+      "journal_abbrev": "Food Sci Nutr",
+      "authors": "Dong C, Wang G, Niu Y, Sun X, Ren W, Zhang J, Zhang Y, Wu R, Wu X",
+      "pub_date": "2026-10-08",
+      "index_date": "2026-10-11",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "ABSTRACTPancreatic ductal adenocarcinoma (PDAC) is a highly malignant gastrointestinal tumor, and its nutritional intervention strategies remain relatively limited. Ginseng, a representative medicinal herb officially included in China's “Food and Medicinal Same Origin” catalogue, is widely used in tea beverages, soups, and functional foods. Its active component, ginsenoside Rb1 (GRB1), derived from the medicine‐food homology plant Panax ginseng , has been reported to possess antitumor and immunomodulatory effects, but its role in the PDAC tumor microenvironment remains unclear. This study aims to screen and identify GRB1 from the Chai‐Gui‐Xiaoji formula containing ginseng, experimentally validate its antitumor mechanism against PDAC, and reveal its potential as a functional food ingredient or nutritional adjuvant derived from ginseng. This work is framed within the medicine–food homology (yao shi tong yuan) paradigm, an ancient philosophy holding that many edible plants possess both nutritional value and bioactive properties, which is increasingly recognized by modern nutritional science as a framework for developing evidence‐based functional food ingredients. sUsing ultra‐high performance liquid chromatography‐quadrupole time‐of‐flight mass spectrometry (UPLC‐Q‐TOF‐MS) technology, we screened bioactive components from Chaigui Xiaoji Formula (CGXJF) containing ginseng. Combining component analysis, blood absorption component analysis, and network pharmacology target screening, we identified ginsenoside Rb1 (GRB1) as the core candidate. Through target prediction, protein interaction analysis, KEGG enrichment, and molecular docking, we identified the PI3K‐AKT signaling pathway as a potential GRB1‐related pathway. Pancreatic ductal adenocarcinoma (PDAC) was established through in situ and liver metastasis mouse models, and functional validation was performed using macrophage and patient‐derived organoid models. Tumor growth and liver metastasis were evaluated through in situ and liver metastasis models; PI3K/AKT phosphorylation and M2‐like macrophage polarization were detected by immunoblotting and other methods. To explore the mechanistic basis of GRB1‐related tumor inhibition, we used macrophage function experiments and patient‐derived organoid models as complementary functional tools to evaluate the involvement of macrophage regulation. Following the screening logic of the medicine–food homology paradigm, priority was given to orally relevant bioactive constituents derived from edible botanicals with established dietary exposure. Network pharmacology identified 110 shared targets between GRB1 and pancreatic cancer from 587 candidate GRB1 targets and 905 PDAC‐related targets; the PPI network contained 491 nodes and 3728 edges, with hub targets including STAT3, AKT1, CASP3, BCL2, HIF1A, MTOR, and NFκB1, and KEGG enrichment locked PI3K‐AKT signaling as the priority pathway. In orthotopic and liver metastasis mouse models, GRB1 inhibited tumor growth, reduced Ki67‐positive proliferation, decreased liver metastatic burden, lowered Zeb‐1 and Vimentin expression, and prolonged survival without obvious toxicity. GRB1 treatment was associated with dose‐dependent reductions in PI3K and AKT phosphorylation and reduced M2‐like macrophage polarization, as shown by decreased CD206, CD163, ARG1, CD115, and TGFB1; molecular docking suggested possible interactions between GRB1 and AKT1 and PIK3CA. In macrophage models, GRB1 reduced M2‐like polarization and PI3K/AKT phosphorylation; conditioned medium from GRB1‐treated M2‐like macrophages reduced patient‐derived organoid growth, and co‐injection with GRB1‐treated M2‐like macrophages reduced metastatic burden in vivo. These findings suggest that GRB1 may modulate the immunosuppressive PDAC microenvironment partly through PI3K‐AKT‐associated macrophage modulation. An integrated UPLC‐Q‐TOF‐MS and network pharmacology strategy identified GRB1 from the medicine‐food homology herb Panax ginseng as the principal anti‐PDAC constituent. GRB1 exhibited anti‐PDAC efficacy, accompanied by attenuated PI3K‐AKT signaling and reduced M2‐like macrophage polarization, supporting its development as a ginseng‐derived functional food ingredient or nutritional adjuvant for PDAC prevention and supportive care. These findings exemplify how the medicine–food homology paradigm can bridge traditional dietary wisdom with modern nutritional oncology.",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "cited_structures": [],
+      "impact": {
+        "score": -4,
+        "types": [
+          "method",
+          "drug",
+          "mechanism"
+        ],
+        "validation": [
+          "in vivo"
+        ],
+        "low": [
+          "molecular docking",
+          "network pharmacology"
+        ],
+        "journal": false,
+        "exp_structure": false,
+        "flags": [
+          "実験構造の手がかりなし"
+        ]
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13651822",
+      "pmid": 42857713,
+      "doi": "10.1016/j.isci.2026.117704",
+      "title": "Inducible dCas12a system expands CRISPRi/a capabilities for functional genomics in malaria parasite Plasmodium falciparum",
+      "journal": "iScience",
+      "journal_abbrev": "iScience",
+      "authors": "Lucky AB, Li X, Kobakhidze G, Gonzales JL, Wang C, Cui L, Dong G, Miao J",
+      "pub_date": "2026-09-22",
+      "index_date": "2026-10-11",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "SummaryWe developed inducible dead Cas12a (dCas12a)-based CRISPR interference/activation (CRISPRi/a) systems for Plasmodium falciparum, expanding the gene regulation toolkit beyond dCas9. Our previous systems fused dCas9 to the catalytic domains of PfSir2a or PfGCN5 under DiCre/loxP regulon, enabling conditional gene regulation but remaining constrained by Cas9’s NGG protospacer adjacent motif (PAM) requirement. Unlike dCas9, dCas12a recognizes T-rich PAMs and processes a single transcript into multiple sgRNAs via its RNase activity, allowing multiplexed regulation of one or multiple genes. Functional validation targeting EBA175 and ATG18 demonstrated that single sgRNAs mediated CRISPRi/a’s active gene regulation, while multiplexed sgRNA arrays enhanced CRISPRi activities. Using this platform, we showed that conditional repression of the histone methyltransferase gene PfSET7 impairs schizont egress and merozoite invasion, highlighting its critical role in parasite multiplication, consistent with its Toxoplasma homolog TgADTM1. Altogether, these results establish dCas12a-based CRISPRi/a as a versatile platform for conditional and multiplexed gene regulation in P. falciparum.",
+      "source": "impact_search",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "cited_structures": [],
+      "impact": {
+        "score": 4,
+        "types": [
+          "method",
+          "mechanism"
+        ],
+        "validation": [],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13653615",
+      "pmid": 42631397,
+      "doi": "10.1002/anie.9880459",
+      "title": "Ruthenium‐Catalyzed Nitrile‐Acrylate Reductive Coupling by 2‐Propanol: Synthesis of Enantioenriched β‐Amino Esters",
+      "journal": "Angewandte Chemie (International Ed. in English)",
+      "journal_abbrev": "Angew Chem Int Ed Engl",
+      "authors": "Höthker S, Hayter CE, Shen W, Krische MJ",
+      "pub_date": "2026-08-22",
+      "index_date": "2026-10-11",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "ABSTRACTUsing a ruthenium catalyst derived from RuHCl(CO)(PPh3)3 and Cy‐BIPHEP, 2‐propanol‐mediated reductive coupling of phenyl acrylate with aromatic or aliphatic nitriles occurs to form α,β‐unsaturated β‐amino esters. Although the reaction products, which incorporate acyclic tetrasubstituted alkenes, are challenging substrates for asymmetric hydrogenation, trifluoroethanol (TFE) enabled rhodium‐Walphos‐catalyzed hydrogenation occurs with high levels of enantioselectivity. Thus, through successive transfer hydrogenative coupling‐asymmetric hydrogenation events, abundant nitrile and acrylate feedstocks are converted to enantioenriched β‐amino esters. This method represents a new catalytic transformation of nitriles and the first reductive C─C coupling of nitriles beyond the use of stoichiometric metals or metalloids.",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "cited_structures": [],
+      "impact": {
+        "score": -5,
+        "types": [
+          "mechanism"
+        ],
+        "validation": [],
+        "low": [],
+        "journal": true,
+        "exp_structure": false,
+        "flags": [
+          "実験構造の手がかりなし",
+          "生体高分子が主題でない可能性"
+        ]
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13653120",
+      "pmid": 42855946,
+      "doi": "10.1002/cbdv.71807",
+      "title": "UHPLC/MS‐MS Profiling, Antioxidant and Antimicrobial Properties of Atriplex halimus L. and Marrubium deserti De Noé Extracts: In Vitro and In Silico",
+      "journal": "Chemistry & Biodiversity",
+      "journal_abbrev": "Chem Biodivers",
+      "authors": "Siad N, Hamia C, Djeridane A, Benalia M, Mahfoudi R, Bouakkaz H, Yilmaz MA, Cakir O, Tarhan A, Yousfi M",
+      "pub_date": "2026-10-09",
+      "index_date": "2026-10-11",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "ABSTRACTThis study aims to evaluate the chemical composition and both in vitro and in silico antioxidant and antimicrobial activities of Atriplex halimus L. and Marrubium deserti De Noé, collected from Algeria. UHPLC‑MS/MS analysis revealed that the major compounds in the tested extracts are protocatechuic aldehyde, caffeic acid, cynaroside, and cosmosiin. The data demonstrated that the dichloromethane fraction was richer in polyphenols and flavonoids than the aqueous fraction. The extracts exhibited greater antioxidant capacity against ABTS compared to DPPH and FRAP assays. Antimicrobial activity was assessed by determining MIC50%, MIC90%, and MBC using a technique that correlates the colorimetric method with absorbance and concentration. The results showed that the extracts strongly inhibited all tested microorganisms, with MIC50%, MIC90%, and MBC values ranging from 0.0029 to 4.485 mg/mL, 0.0054 to 8.693 mg/mL, and 0.006 to 9.659 mg/mL, respectively. Furthermore, the extracts demonstrated notable efficacy comparable to antibiotics, especially against Candida albicans and Pseudomonas aeruginosa. These in vitro findings were supported by computational analyses. These methods provide predictive evidence regarding the plausibility of the observed biological effects of the extracts. The results of this research suggest that these Algerian plants exhibit significant therapeutic potential and should be considered for nutritional and medicinal applications.",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "cited_structures": [],
+      "impact": {
+        "score": -7,
+        "types": [
+          "drug"
+        ],
+        "validation": [
+          "assay",
+          "in vitro"
+        ],
+        "low": [
+          "in silico"
+        ],
+        "journal": false,
+        "exp_structure": false,
+        "flags": [
+          "実験構造の手がかりなし",
+          "生体高分子が主題でない可能性"
+        ]
+      },
+      "proteins": [],
+      "score": 0
+    }
+  ]
 }

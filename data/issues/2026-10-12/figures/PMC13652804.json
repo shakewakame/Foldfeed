@@ -1,0 +1,61 @@
+{
+ "pdb_id": "9T07",
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "p110δ（触媒サブユニット）",
+   "desc": "Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit delta isoform",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "p85α（調節サブユニット）",
+   "desc": "Phosphatidylinositol 3-kinase regulatory subunit alpha",
+   "entity": "2"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "QGU",
+   "label": "ロギノリシブ",
+   "color": "#C23B8E",
+   "desc": "[6-fluoranyl-1-[4-(morpholin-4-ylmethyl)phenyl]-5,5-bis(oxidanylidene)-4H-thiochromeno[4,3-c]pyrazol-3-yl]-morpholin-4-yl-methanone",
+   "entity": [
+    "3"
+   ],
+   "sites": [
+    [
+     "C",
+     "1101"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "QGU",
+  "residues": [
+   "M752",
+   "S754",
+   "P758",
+   "W760",
+   "I777",
+   "K779",
+   "Y813",
+   "I825",
+   "E826",
+   "V827",
+   "V828",
+   "S831",
+   "D832",
+   "T833",
+   "N836",
+   "M900",
+   "F908",
+   "I910",
+   "D911"
+  ],
+  "polar": 2,
+  "neighbours": [],
+  "label": "ロギノリシブ"
+ }
+}

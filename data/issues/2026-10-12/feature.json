@@ -1,0 +1,28 @@
+{
+  "pmcid": "PMC13652804",
+  "axes": [
+    "structure",
+    "drug"
+  ],
+  "reason": "新しい創薬候補ロギノリシブの結合様式を、既存薬イデラリシブとの結晶構造の比較で示し、選択性の手がかりをMDとHDX-MSで調べた。",
+  "evidence": [
+    {
+      "quote": "X-ray crystal structures show distinct binding modes of roginolisib and idelalisib",
+      "section": "Results"
+    },
+    {
+      "quote": "Uniquely, binding of roginolisib protected the C-terminal helix kα12 from H/D exchange (region 1022–1044), indicating either direct interaction with this region, and/or stabilisation of the secondary structure",
+      "section": "Results"
+    }
+  ],
+  "considered": [
+    {
+      "pmcid": "PMC13653584",
+      "note": "フルオロプロリンの立体でヘリックスの向きが変わることを NMR で示すが、新しい構造の登録はなく、創薬への結びつきが直接でないため選ばなかった。"
+    },
+    {
+      "pmcid": "PMC13653614",
+      "note": "HDX-MS と固体 NMR で既存の 5GRJ の結合面を確かめた研究で、新しい構造ではなく手法の確認にとどまるため選ばなかった。"
+    }
+  ]
+}
