@@ -38,6 +38,10 @@ TAGLINE = "構造生物学者のための情報収集サポートサイト"
 LEAD = ("新着の査読済みオープンアクセス論文から、", "構造生物学の論文を、", "毎日ピックアップして紹介")
 LATEST = {"date": None}   # the newest issue with articles (the menu's "Latest Article"), set by build()
 
+CHART_NEW, CHART_HOT = "#2F5DA8", "#C8442A"   # 藍 / 朱: validated against the ground #F0F1EF (dataviz validate_palette)
+CHART_TRACK = "#D6DEEB"                        # the meter's track: a light step of the same blue
+CHART_ISSUES = 30                              # the papers-per-issue chart shows the latest issues only
+
 CSS = f"""
 :root {{
   --ground:{TH.ground}; --paper:{TH.paper}; --ink:{TH.ink}; --ink2:{TH.ink2}; --mute:{TH.muted};
@@ -105,8 +109,8 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 
 /* contents: one table row per article: number, headline + supplement, TARGET / METHOD / RES., the real structure, PDB */
 .toc {{ margin-top:48px; }}
-/* every section heading of the pages (Picked up Today's Structure, About FoldFeed, New Structure, 注目の構造, ...): one
-   face, one size, a 2 px rule above */
+/* every section heading of the pages (Picked up Today's Structure, About FoldFeed, New Structure, Notable Structure, ...),
+   all in English: one face, one size, a 2 px rule above */
 .ix-h {{ display:flex; justify-content:space-between; align-items:baseline; gap:16px; border-top:2px solid var(--ink);
          padding-top:14px; margin-bottom:4px; }}
 .ix-h .label, .part h2 {{ padding-top:0; font-family:var(--latin); font-size:30px; letter-spacing:0; text-transform:none;
@@ -346,15 +350,33 @@ body.head-away {{ --headnow:0px; }}
 .menu summary::-webkit-details-marker {{ display:none; }}
 .menu .mb {{ width:50px; height:50px; border-radius:50%; background:var(--ink); display:flex; flex-direction:column;
              align-items:center; justify-content:center; gap:5px; }}
-.menu .mb i {{ display:block; width:20px; height:2px; background:#fff; transition:transform .15s; }}
-.menu[open] .mb i:nth-child(1) {{ transform:translateY(7px) rotate(45deg); }}
-.menu[open] .mb i:nth-child(2) {{ opacity:0; }}
-.menu[open] .mb i:nth-child(3) {{ transform:translateY(-7px) rotate(-45deg); }}
+.menu .mb {{ transition:background .2s, transform .25s cubic-bezier(.2,.8,.2,1); }}
+.menu .mb i {{ display:block; width:20px; height:2px; background:#fff;
+               transition:transform .32s cubic-bezier(.2,.8,.2,1), opacity .2s; }}
+.menu.on .mb i:nth-child(1), html:not(.js) .menu[open] .mb i:nth-child(1) {{ transform:translateY(7px) rotate(45deg); }}
+.menu.on .mb i:nth-child(2), html:not(.js) .menu[open] .mb i:nth-child(2) {{ opacity:0; transform:scaleX(.2); }}
+.menu.on .mb i:nth-child(3), html:not(.js) .menu[open] .mb i:nth-child(3) {{ transform:translateY(-7px) rotate(-45deg); }}
 .menu summary:hover .mb, .menu summary:focus-visible .mb {{ background:var(--acc-ink); }}
+.menu summary:active .mb {{ transform:scale(.92); }}
 .menu-list {{ position:absolute; right:0; top:calc(100% + 12px); z-index:30; min-width:230px; display:flex; flex-direction:column;
               background:var(--ground); border:1px solid var(--ink); padding:8px 0; text-align:right; }}
-.menu-list a {{ padding:8px 22px; font-family:var(--mono); font-size:14px; color:var(--ink); text-decoration:none; }}
-.menu-list a:hover {{ background:var(--ink); color:#fff; text-decoration:none; }}
+.menu-list a {{ position:relative; padding:9px 24px; font-family:var(--mono); font-size:14px; color:var(--ink); text-decoration:none;
+               transition:color .2s; }}
+.menu-list a::before {{ content:""; position:absolute; inset:0; z-index:-1; background:var(--ink); transform:scaleX(0);
+                       transform-origin:right; transition:transform .28s cubic-bezier(.2,.8,.2,1); }}
+.menu-list a:hover, .menu-list a:focus-visible {{ color:#fff; text-decoration:none; }}
+.menu-list a:hover::before, .menu-list a:focus-visible::before {{ transform:scaleX(1); }}
+.menu-list {{ isolation:isolate; }}
+.js .menu-list {{ opacity:0; transform:translateY(-12px) scaleY(.94); transform-origin:top right;
+                  transition:opacity .22s ease, transform .32s cubic-bezier(.2,.8,.2,1); }}
+.js .menu.on .menu-list {{ opacity:1; transform:none; }}
+.js .menu-list a {{ opacity:0; transform:translateX(14px);
+                    transition:opacity .25s ease, transform .34s cubic-bezier(.2,.8,.2,1), color .2s; }}
+.js .menu.on .menu-list a {{ opacity:1; transform:none; }}
+.js .menu.on .menu-list a:nth-child(2) {{ transition-delay:40ms; }}
+.js .menu.on .menu-list a:nth-child(3) {{ transition-delay:80ms; }}
+.js .menu.on .menu-list a:nth-child(4) {{ transition-delay:120ms; }}
+.js .menu.on .menu-list a:hover {{ transition-delay:0ms; }}
 
 /* the front page's first screen: what the site is, the button down to Today's Structure, a large structure */
 .lead {{ }}
@@ -383,12 +405,97 @@ body.head-away {{ --headnow:0px; }}
               justify-content:space-between; align-items:baseline; }}
 .about-sub span {{ font-family:var(--mono); font-size:12.5px; font-weight:500; color:var(--mute); }}
 .about > .wrap > .about-sub {{ margin-top:38px; padding-top:18px; border-top:1px solid var(--hair); }}
-.about .nums {{ gap:22px 24px; }}
-.about .nums dt {{ font-size:13px; letter-spacing:.04em; font-family:var(--sans); color:var(--ink2); }}
-.about .nums dd {{ font-size:40px; }}
+/* FoldFeed in Numbers: counts, a meter, a column chart (dataviz: thin marks, 4 px rounded data ends, 2 px gaps,
+   hairline grid, legend for the two series, values in text tokens) */
+.kpis {{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }}
+.kpi {{ display:flex; flex-direction:column; gap:2px; min-width:0; }}
+.kl {{ font-family:var(--sans); font-size:13px; color:var(--ink2); }}
+.kv {{ font-family:var(--sans); font-size:44px; line-height:1.1; font-weight:600; color:var(--ink); letter-spacing:-0.01em; }}
+.kv small {{ font-size:15px; font-weight:500; color:var(--mute); letter-spacing:0; }}
+.meter-row {{ display:grid; grid-template-columns:auto minmax(0,1fr) auto; gap:18px; align-items:end; margin-top:22px;
+              padding-top:18px; border-top:1px solid var(--hair); }}
+.meter {{ height:10px; margin-bottom:14px; background:{CHART_TRACK}; border-radius:5px; overflow:hidden; }}
+.meter i {{ display:block; height:100%; background:{CHART_NEW}; border-radius:0 5px 5px 0; transform-origin:left;
+            transform:scaleX(var(--v)); transition:transform 1.3s cubic-bezier(.2,.8,.2,1) .25s; }}
+.mp {{ font-family:var(--sans); font-size:15px; font-weight:600; color:var(--ink2); margin-bottom:8px; }}
+.ppi {{ position:relative; margin:22px 0 0; padding-top:18px; border-top:1px solid var(--hair); }}
+.ppi figcaption {{ display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; gap:6px 16px;
+                   font-family:var(--sans); font-size:14px; color:var(--ink2); }}
+.ppi figcaption b {{ font-size:15px; color:var(--ink); }}
+.ppi .lg {{ display:flex; align-items:center; gap:6px; font-size:12.5px; }}
+.ppi .lg i {{ display:inline-block; width:10px; height:10px; border-radius:2px; margin-left:10px; }}
+.ppi .lg i.n {{ background:{CHART_NEW}; }}
+.ppi .lg i.h {{ background:{CHART_HOT}; }}
+.plot {{ position:relative; height:190px; margin:14px 0 0 26px; }}
+.yt span {{ position:absolute; left:-26px; right:0; bottom:calc(var(--y) * 100%); border-top:1px solid var(--hair);
+            font-family:var(--mono); font-size:10.5px; line-height:0; color:var(--mute); }}
+.yt span:first-child {{ border-top-color:var(--ink2); }}
+.cols {{ position:absolute; inset:0; display:flex; align-items:stretch; }}
+.col {{ position:relative; flex:1 1 0; min-width:0; display:flex; justify-content:center; text-decoration:none; outline:none; }}
+.col .stack {{ position:absolute; bottom:0; width:min(18px, 60%); height:100%; display:flex; flex-direction:column;
+               justify-content:flex-end; transform-origin:bottom; transition:transform .9s cubic-bezier(.2,.8,.2,1);
+               transition-delay:calc(var(--i) * 45ms + 150ms); }}
+.col .stack i {{ display:block; height:calc(var(--h) * 100%); background:{CHART_NEW}; }}
+.col .stack i.h {{ background:{CHART_HOT}; margin-bottom:2px; }}
+.col .stack i:first-child {{ border-radius:4px 4px 0 0; }}
+.col:hover .stack i, .col:focus-visible .stack i {{ filter:brightness(1.18); }}
+.col:focus-visible .stack {{ outline:2px solid var(--ink); outline-offset:3px; }}
+.col .cap {{ position:absolute; bottom:calc(var(--h) * 100% + 4px); font-family:var(--sans); font-size:12.5px; font-weight:600;
+             color:var(--ink); transition:opacity .4s ease 1.2s; }}
+.col .x {{ position:absolute; top:calc(100% + 6px); font-family:var(--mono); font-size:10px; color:var(--mute); white-space:nowrap; }}
+.col:nth-child(even) .x {{ visibility:hidden; }}
+.col:nth-last-child(2) .x {{ visibility:hidden; }}
+.col:last-child .x {{ visibility:visible; }}
+.ppi .tip {{ position:absolute; z-index:5; pointer-events:none; padding:6px 10px; background:var(--ink); color:#fff;
+             font-family:var(--sans); font-size:12.5px; white-space:nowrap; }}
+.ppi .tip[hidden] {{ display:none; }}
+.ppi {{ padding-bottom:26px; }}
+.sr {{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }}
 .about .jl {{ columns:3 260px; column-gap:44px; font-size:14.5px; }}
-.about .jl li {{ break-inside:avoid; }}
+.about .jl li {{ break-inside:avoid; display:grid; grid-template-columns:minmax(0,1fr) auto; gap:4px 14px; padding:7px 0 8px;
+                 border-bottom:1px solid var(--hair); }}
+.about .jl .bar {{ grid-column:1 / -1; height:6px; }}
+.about .jl .bar i {{ display:block; height:100%; width:calc(var(--v) * 100%); min-width:6px; background:{CHART_NEW};
+                     border-radius:0 3px 3px 0; transform-origin:left;
+                     transition:transform .9s cubic-bezier(.2,.8,.2,1) calc(var(--i) * 30ms + 200ms); }}
+.anim .about .jl:not(.in) .bar i, .anim .about-side:not(.in) .meter i {{ transform:scaleX(0); }}
+.anim .about-side:not(.in) .stack {{ transform:scaleY(0); }}
+.anim .about-side:not(.in) .cap {{ opacity:0; }}
 .lead-go:hover {{ background:var(--acc-ink); color:#fff; text-decoration:none; }}
+
+/* motion (all off for prefers-reduced-motion): blocks rise into place as they enter the view, the first screen comes
+   in line by line, links and buttons answer the pointer */
+.anim .rv {{ opacity:0; transform:translateY(22px);
+             transition:opacity .7s cubic-bezier(.2,.7,.2,1) var(--d,0ms), transform .8s cubic-bezier(.2,.7,.2,1) var(--d,0ms); }}
+.anim .rv.in {{ opacity:1; transform:none; }}
+@keyframes rise {{ from {{ opacity:0; transform:translateY(18px); }} to {{ opacity:1; transform:none; }} }}
+@keyframes fadein {{ from {{ opacity:0; }} to {{ opacity:1; }} }}
+@keyframes pulse {{ 0%, 100% {{ opacity:.35; }} 50% {{ opacity:1; }} }}
+.anim .lead-h span {{ animation:rise .9s cubic-bezier(.2,.7,.2,1) both; animation-delay:calc(var(--i) * 140ms + 80ms); }}
+.anim .lead-btns {{ animation:rise .9s cubic-bezier(.2,.7,.2,1) .55s both; }}
+.anim .lead-art {{ animation:fadein 1.2s ease .2s both; }}
+.lead-wait {{ animation:pulse 1.6s ease-in-out infinite; }}
+.v3d.loading .v3d-canvas, .v3d.on .v3d-canvas {{ transition:opacity .8s ease; }}
+.v3d.loading .v3d-canvas {{ opacity:0; }}
+.v3d.on .v3d-canvas {{ opacity:1; }}
+a, .chip, .find button, .v3d-bar button, .figtabs button {{ transition:color .2s, background-color .2s, border-color .2s,
+   text-decoration-color .2s; }}
+.lead-go, .reads a {{ transition:background-color .25s, color .25s, box-shadow .25s; }}
+.lead-go .tri {{ display:inline-block; transition:transform .3s cubic-bezier(.2,.8,.2,1); }}
+.lead-go:hover .tri {{ transform:translateY(3px); }}
+.reads .arr {{ display:inline-block; transition:transform .3s cubic-bezier(.2,.8,.2,1); }}
+.read-art:hover .arr {{ transform:translateX(5px); }}
+.read-paper:hover .arr {{ transform:translate(3px,-3px); }}
+.thumb {{ overflow:hidden; }}
+.thumb img {{ transition:transform .5s cubic-bezier(.2,.8,.2,1); }}
+.row:hover .thumb img, .rel a:hover .thumb img {{ transform:scale(1.05); }}
+.row h3 a, .today-h a {{ background:linear-gradient(currentColor,currentColor) left bottom / 0 1px no-repeat;
+                         transition:background-size .35s cubic-bezier(.2,.8,.2,1), color .2s; }}
+.row:hover h3 a, .today-h a:hover {{ background-size:100% 1px; text-decoration:none; }}
+@media (prefers-reduced-motion:reduce) {{
+  *, *::before, *::after {{ animation-duration:.01ms !important; animation-iteration-count:1 !important;
+                            transition-duration:.01ms !important; transition-delay:0ms !important; }}
+}}
 .lead-art {{ display:block; margin-right:calc(-1 * var(--pad) + 24px); }}
 .lead-art img {{ display:block; width:100%; height:auto; max-height:min(640px, calc(100vh - 170px)); object-fit:contain; }}
 .lead-3d .v3d-view, .lead-3d.on .v3d-view, .lead-3d.loading .v3d-view {{ aspect-ratio:1000/780; max-height:min(640px, calc(100vh - 210px));
@@ -593,6 +700,7 @@ def jp_date(date: str) -> str:
 
 
 WEEKDAY_JA = "月火水木金土日"
+WEEKDAY_EN = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
 
 
 def date_parts(date: str) -> tuple[int, int, int, str]:
@@ -685,11 +793,94 @@ MENU_SCRIPT = r"""
     if (history.replaceState) history.replaceState(null, '', '#' + id);
   });
 })();
-document.addEventListener('click', function (e) {
-  document.querySelectorAll('details.menu[open]').forEach(function (d) {
-    if (!d.contains(e.target) || e.target.closest('.menu-list a')) d.removeAttribute('open');
+(function () {
+  /* MENU: opens and closes with an animation (.on), so <details> is driven by hand; without JavaScript it is a
+     plain <details>. Closes on a click elsewhere, on a link in it, and on Escape. */
+  function toggle(d, on) {
+    clearTimeout(d._t);
+    if (on) {
+      d.open = true;
+      requestAnimationFrame(function () { requestAnimationFrame(function () { d.classList.add('on'); }); });
+    } else {
+      d.classList.remove('on');
+      d._t = setTimeout(function () { if (!d.classList.contains('on')) d.open = false; }, 320);
+    }
+  }
+  [].forEach.call(document.querySelectorAll('details.menu'), function (d) {
+    d.querySelector('summary').addEventListener('click', function (e) { e.preventDefault(); toggle(d, !d.classList.contains('on')); });
   });
-});
+  document.addEventListener('click', function (e) {
+    [].forEach.call(document.querySelectorAll('details.menu.on'), function (d) {
+      if (!d.contains(e.target) || e.target.closest('.menu-list a')) toggle(d, false);
+    });
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') [].forEach.call(document.querySelectorAll('details.menu.on'), function (d) { toggle(d, false); });
+  });
+})();
+(function () {
+  /* Motion with a job: blocks come up as they enter the view (the reader sees where the next part starts), counts
+     count up and the charts grow once they are in view. Only with JavaScript and when the reader has not asked for
+     reduced motion; otherwise everything is simply there, final values included. */
+  var root = document.documentElement;
+  var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (calm || !('IntersectionObserver' in window)) return;
+  root.classList.add('anim');
+  var SEL = '.ix-h, .about-dl > div, .about-side, .about .jl, .about > .wrap > .about-sub, .today-k, .today-h, .today-sub, '
+          + '.today-fig, .today-4 > div, .reads, .rows > li, .sec-more, .cats, .past li, .find, .mail-grid, .shell:not(.sticky-side) .side .sd, '
+          + '.ihead, .part, .art, .rest, .pp-head, .pg .pr, .queue li';
+  var els = [].slice.call(document.querySelectorAll(SEL));
+  var seen = new Map();
+  els.forEach(function (el) {                     // a short stagger among siblings that come in together
+    var k = seen.get(el.parentNode) || 0;
+    seen.set(el.parentNode, k + 1);
+    el.style.setProperty('--d', Math.min(k, 6) * 70 + 'ms');
+    el.classList.add('rv');
+  });
+  function countUp(el) {
+    var to = +el.getAttribute('data-count'), t0 = null, dur = 1200;
+    function f(t) {
+      t0 = t0 || t;
+      var p = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(to * e);
+      if (p < 1) requestAnimationFrame(f);
+    }
+    requestAnimationFrame(f);
+  }
+  var counts = [].slice.call(document.querySelectorAll('[data-count]'));
+  counts.forEach(function (el) { el.textContent = '0'; });
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      e.target.classList.add('in');
+      [].forEach.call(e.target.querySelectorAll('[data-count]'), countUp);
+      io.unobserve(e.target);
+    });
+  }, { rootMargin: '0px 0px -6% 0px', threshold: 0 });
+  els.forEach(function (el) { io.observe(el); });
+  counts.forEach(function (el) { if (!el.closest('.rv')) countUp(el); });
+})();
+(function () {
+  /* the papers-per-issue chart: one tooltip, on hover and on keyboard focus (values are in the table too) */
+  [].forEach.call(document.querySelectorAll('.ppi'), function (fig) {
+    var tip = fig.querySelector('.tip');
+    function show(c) {
+      tip.textContent = c.getAttribute('data-tip');
+      tip.hidden = false;
+      var r = c.getBoundingClientRect(), f = fig.getBoundingClientRect();
+      var x = Math.max(0, Math.min(f.width - tip.offsetWidth, r.left - f.left + r.width / 2 - tip.offsetWidth / 2));
+      tip.style.left = x + 'px';
+      tip.style.top = (c.querySelector('.stack').getBoundingClientRect().top - f.top - tip.offsetHeight - 10) + 'px';
+    }
+    function hide() { tip.hidden = true; }
+    [].forEach.call(fig.querySelectorAll('.col'), function (c) {
+      c.addEventListener('pointerenter', function () { show(c); });
+      c.addEventListener('focus', function () { show(c); });
+      c.addEventListener('pointerleave', hide);
+      c.addEventListener('blur', hide);
+    });
+  });
+})();
 """
 
 
@@ -782,7 +973,7 @@ def margin_html(cand: dict, pick: dict, n: int, impact_type: str | None = None) 
     rows = [("Target", esc(pick.get("target_en") or pick["target_label"])), ("Method", esc(method)), (pdb_label, pdb_dd),
             ("Ligand", esc(pick.get("ligand_label") or ("—" if hot else render.ligand_line(cand))))]
     if hot:
-        rows.insert(0, ("注目の構造", esc(impact.TYPES.get(impact_type or "", "新しい構造以外"))))
+        rows.insert(0, ("Notable", esc(impact.TYPES.get(impact_type or "", "新しい構造以外"))))
     if uni:
         rows.append(("UniProt", uni))
     if orgs:
@@ -805,8 +996,8 @@ def legend_html(info: dict) -> str:
     lig = "".join(item(f'<i class="stick" style="background:{esc(x["color"])}"></i>', x["label"],
                        "" if x["label"] == x["id"] else x["id"], x.get("desc", ""))
                   for x in info.get("ligands", []))
-    groups = ((f'<section><h4>タンパク質・核酸</h4><ul>{prot}</ul></section>' if prot else "") +
-              (f'<section><h4>リガンド</h4><ul>{lig}</ul></section>' if lig else ""))
+    groups = ((f'<section><h4>Proteins &amp; Nucleic Acids</h4><ul>{prot}</ul></section>' if prot else "") +
+              (f'<section><h4>Ligands</h4><ul>{lig}</ul></section>' if lig else ""))
     return f'<div class="legend">{groups}</div>' if groups else ""
 
 
@@ -902,7 +1093,7 @@ def related_html(items: list[dict], up: str) -> str:
                   f'<span class="rd">{x["row"]["date"][5:].replace("-", ".")} · {pad(x["row"]["n"])}</span>'
                   f'<b>{esc(x["row"]["pick"]["headline"])}</b></a><span class="why">{esc(x["why"])}</span></li>'
                   for x in items)
-    return f'<h3>関連する記事</h3><ul class="rel">{lis}</ul>'
+    return f'<h3>Related Articles</h3><ul class="rel">{lis}</ul>'
 
 
 def article_html(cand: dict, pick: dict, date: str, n: int, root: Path, fig_base: str,
@@ -916,7 +1107,7 @@ def article_html(cand: dict, pick: dict, date: str, n: int, root: Path, fig_base
     if filled:
         rows = "".join(f"<div><dt>{esc(k)}</dt><dd>{esc(v)}</dd></div>" for k, v in filled)
         ev = quotes(notes.get("evidence"))
-        lab = f'<h3>実験メモ</h3><dl class="lab">{rows}</dl>' + (f'<div class="lab-src">{ev}</div>' if ev else "")
+        lab = f'<h3>Lab Notes</h3><dl class="lab">{rows}</dl>' + (f'<div class="lab-src">{ev}</div>' if ev else "")
     text = (f'<div class="text">'
             f'<p class="kicker"><b>{esc(cand["journal"] or cand["journal_abbrev"])}</b> · {esc(cand["pub_date"])} · '
             f'{lic} · <a href="{doi_url(cand)}" rel="noopener">原著論文（英語）↗</a></p>'
@@ -925,7 +1116,7 @@ def article_html(cand: dict, pick: dict, date: str, n: int, root: Path, fig_base
             f'<p class="headline">{esc(pick["headline"])}</p>'
             f'<p class="subhead">{esc(pick.get("subhead") or "")}</p>'
             f'{intro_html(pick)}'
-            f'<h3>読みどころ</h3>{hls}{lab}{related_html(related or [], up)}</div>')
+            f'<h3>Highlights</h3>{hls}{lab}{related_html(related or [], up)}</div>')
     return f'<article class="art" id="a{n}">{margin_html(cand, pick, n, impact_type)}{text}</article>'
 
 
@@ -946,7 +1137,7 @@ def load_issue(date: str, root: Path = ISSUES_DIR) -> tuple[dict, list[tuple[dic
 
 PARTS = {
     "new": ("New Structure", "この号で報告された、PDB / EMDB に寄託された新しい構造。"),
-    "impact": ("注目の構造", "新しい構造ではないが、実験で決めた構造で確かめた注目の研究"
+    "impact": ("Notable Structure", "新しい構造ではないが、実験で決めた構造で確かめた注目の研究"
                             "（既存構造による機構の解明・予測やデザインの実証・新しい手法・構造に基づく創薬）。"),
 }
 
@@ -1052,7 +1243,7 @@ def lead_html(feature: dict | None, picks: list, date: str, root: Path, fig_base
     on the right Today's Structure in the 3D viewer, opened by itself on a wide screen, with no text around it but
     "読み込み中" while it loads. On a phone (where it is not opened) and when it cannot load, the same structure is
     shown as a drawing from the same view (pipeline.render: <pmcid>-hero.svg)."""
-    lines = "".join(f'<span>{esc(t)}</span>' for t in LEAD)
+    lines = "".join(f'<span style="--i:{i}">{esc(t)}</span>' for i, t in enumerate(LEAD))
     go = (('<a class="lead-go" href="#today"><span class="tri" aria-hidden="true">▽</span>'
            'Picked up: Today’s Structure</a>') if feature_of(feature, picks) else "")
     go = (f'<div class="lead-btns">{go}<a class="lead-go alt" href="#about"><span class="tri" aria-hidden="true">▽</span>'
@@ -1149,7 +1340,7 @@ def part_html(key: str, count: int) -> str:
 
 
 def counts_text(n_new: int, n_hot: int, sep: str = "<br>") -> str:
-    return f"New Structure {n_new} 本" + (f"{sep}注目の構造 {n_hot} 本" if n_hot else "")
+    return f"New Structure {n_new} 本" + (f"{sep}Notable Structure {n_hot} 本" if n_hot else "")
 
 
 def toc_side(picks: list, featured: str | None) -> str:
@@ -1162,7 +1353,7 @@ def toc_side(picks: list, featured: str | None) -> str:
             links = "".join(f'<a href="#a{number[c["pmcid"]]}"><b>{pad(number[c["pmcid"]])}</b>'
                             f'<span>{esc(pk["headline"])}</span></a>' for c, pk in items)
             out += f'<h3>{PARTS[key][0]}</h3>{links}'
-    return sd("この号の記事", f'<div class="sd-toc">{out}</div>', "side-only-issue")
+    return sd("In This Issue", f'<div class="sd-toc">{out}</div>', "side-only-issue")
 
 
 def index_span(index_date: str, index_from: str | None = None) -> str:
@@ -1177,12 +1368,12 @@ def issue_head(date: str, number: int | None, n_new: int, n_hot: int, prev_date:
                index_date: str | None = None, index_from: str | None = None) -> str:
     """The top of an issue page: its date, large (year, month.day, weekday and the issue's number), and the counts."""
     y, m, d, wd = date_parts(date)
-    num = f" · 第 {number} 号" if number else " · プレビュー"
+    num = f" · No. {number}" if number else " · Preview"
     links = "".join(x for x in (f'<a href="{prev_date}.html">← {jp_date_short(prev_date)}号</a>' if prev_date else "",
                                 f'<a href="{next_date}.html">{jp_date_short(next_date)}号 →</a>' if next_date else "",
                                 '<a href="../index.html">トップへ</a>'))
     return (f'<header class="ihead"><div class="idate"><span class="y">{y}</span><span class="md">{m:02d}.{d:02d}</span>'
-            f'<span class="wd">{wd}曜日{num}</span></div><div><h1>{jp_date(date)}号</h1>'
+            f'<span class="wd">{WEEKDAY_EN[datetime.date(y, m, d).weekday()]}{num}</span></div><div><h1>Issue of {y}.{m:02d}.{d:02d}</h1>'
             f'<p class="ic">{counts_text(n_new, n_hot, " · ")}</p>'
             + (f'<p class="ic">対象：{index_span(index_date, index_from)}登録分</p>' if index_date else "")
             + f'<p class="in">{links}</p></div></header>')
@@ -1217,7 +1408,7 @@ def issue_page(date: str, prev_date: str | None, next_date: str | None,
         main.append(f'<section class="toc">{contents_html(picks, date, root, fig_base, "", feature and feature["pmcid"], mark=True)}</section>')
     else:
         c = meta["counts"]
-        main.append('<section class="part"><h2>記事なし<span>0 本</span></h2></section>')
+        main.append('<section class="part"><h2>No Articles<span>0 本</span></h2></section>')
     for n, (cand, pk) in enumerate(picks, 1):
         hot = render.is_impact(pk)
         if n == 1 or hot != render.is_impact(picks[n - 2][1]):
@@ -1227,15 +1418,15 @@ def issue_page(date: str, prev_date: str | None, next_date: str | None,
     if rest:
         items = "".join(f'<li><a href="{doi_url(x)}">{esc(x["title"])}</a> — <i>{esc(x["journal_abbrev"] or x["journal"])}</i>'
                         f'（{esc(render.KIND_JA[x["kind"]])}）</li>' for x in rest)
-        main.append(f'<section class="rest"><h2 class="label">記事にしていない新しい構造</h2><ul>{items}</ul></section>')
+        main.append(f'<section class="rest"><h2 class="label">Other New Structures</h2><ul>{items}</ul></section>')
     prev_link = f'<a href="{prev_date}.html">← {jp_date(prev_date)}号</a>' if prev_date else "<span></span>"
     next_link = f'<a href="{next_date}.html">{jp_date(next_date)}号 →</a>' if next_date else "<span></span>"
     main.append(f'<nav class="issue-nav">{prev_link}<a href="../index.html">トップへ</a>{next_link}</nav>')
     nav = "".join(x for x in (f'<a href="{prev_date}.html">← {jp_date(prev_date)}号</a>' if prev_date else "",
                               f'<a href="{next_date}.html">{jp_date(next_date)}号 →</a>' if next_date else "",
                               '<a href="../index.html">トップへ</a>'))
-    side = ((toc_side(picks, feature and feature["pmcid"]) if picks else "") + sd("号の移動", f'<div class="sd-nav">{nav}</div>')
-            + sd("タンパク質を探す", find_form("../")))
+    side = ((toc_side(picks, feature and feature["pmcid"]) if picks else "") + sd("Issues", f'<div class="sd-nav">{nav}</div>')
+            + sd("Article Search", find_form("../")))
     head = masthead(1)
     span = f'{meta["index_from"]}〜{meta["index_date"]}' if meta.get("index_from") else meta["index_date"]
     from_nlm = meta.get("source") == pmcoa.SOURCE      # Europe PMC was not indexing: the papers came from NLM's PMC data
@@ -1263,22 +1454,62 @@ ABOUT = (   # the front page's About FoldFeed, in polite Japanese (the owner's w
 )
 
 
-def about_html(issues: list[str], lib: list[dict]) -> str:
-    """About FoldFeed, right under the first screen: what the site is (polite Japanese), the running totals
-    (これまでの紹介実績) and every journal the papers came from. All numbers are computed from the data; a paper that
-    came back in a later issue counts once."""
+def numbers_html(issues: list[str], lib: list[dict]) -> str:
+    """FoldFeed in Numbers: three counts that count up as they come into view, the share of papers that are a
+    protein's first PDB structure as a meter, and the papers of each issue (New / Notable Structure, stacked) as
+    columns that grow from the baseline; hovering or focusing a column tells its numbers. Every number is also in
+    the page as text (the final values are written in; a table holds the chart's data for screen readers)."""
     papers = {r["cand"]["pmcid"]: r["cand"] for r in lib}
     n_first = sum(any(p.get("first_structure") for p in c.get("proteins", [])) for c in papers.values())
+    share = n_first / len(papers) if papers else 0
+    tiles = [("発行した号", len(issues)), ("紹介した論文", len(papers)), ("掲載誌", len(journal_counts(issues)))]
+    kpis = "".join(f'<div class="kpi"><span class="kl">{k}</span><span class="kv" data-count="{v}">{v}</span></div>'
+                   for k, v in tiles)
+    meter = (f'<div class="meter-row"><div class="kpi"><span class="kl">PDB 初構造</span><span class="kv">'
+             f'<span data-count="{n_first}">{n_first}</span><small> / {len(papers)} 本</small></span></div>'
+             f'<div class="meter" role="img" aria-label="紹介した論文の {round(share * 100)}% が PDB 初構造">'
+             f'<i style="--v:{share:.3f}"></i></div><span class="mp">{round(share * 100)}%</span></div>')
+    rows = []
+    for date in sorted(issues)[-CHART_ISSUES:]:
+        _, picks, _ = load_issue(date, ISSUES_DIR)
+        n_hot = sum(render.is_impact(pk) for _, pk in picks)
+        rows.append((date, len(picks) - n_hot, n_hot))
+    top = max([a + b for _, a, b in rows] + [1])
+    step = 5 if top <= 25 else 10
+    ymax = -(-top // step) * step
+    ticks = "".join(f'<span style="--y:{t / ymax:.3f}">{t}</span>' for t in range(0, ymax + 1, step))
+    cols = []
+    for i, (date, a, b) in enumerate(rows):
+        _, m, d, _ = date_parts(date)
+        tip = f"{m}月{d}日号 · New Structure {a} 本" + (f" · Notable Structure {b} 本" if b else "")
+        seg = (f'<i class="h" style="--h:{b / ymax:.4f}"></i>' if b else "") + (f'<i class="n" style="--h:{a / ymax:.4f}"></i>' if a else "")
+        last = f'<b class="cap" style="--h:{(a + b) / ymax:.4f}">{a + b}</b>' if i == len(rows) - 1 else ""
+        cols.append(f'<a class="col" href="issues/{date}.html" style="--i:{i}" data-tip="{esc(tip)}" aria-label="{esc(tip)}">'
+                    f'<span class="stack">{seg}</span>{last}<span class="x">{m}.{d:02d}</span></a>')
+    table = "".join(f"<tr><th>{date}</th><td>{a}</td><td>{b}</td></tr>" for date, a, b in rows)
+    chart = (f'<figure class="ppi"><figcaption><b>Papers per Issue</b>'
+             f'<span class="lg"><i class="n"></i>New Structure<i class="h"></i>Notable Structure</span></figcaption>'
+             f'<div class="plot"><div class="yt">{ticks}</div><div class="cols">{"".join(cols)}</div></div>'
+             f'<table class="sr"><caption>号ごとの紹介本数</caption><tr><th>号</th><th>New Structure</th>'
+             f'<th>Notable Structure</th></tr>{table}</table><div class="tip" hidden></div></figure>')
+    return f'<div class="kpis">{kpis}</div>{meter}{chart}'
+
+
+def about_html(issues: list[str], lib: list[dict]) -> str:
+    """About FoldFeed, right under the first screen: what the site is (polite Japanese), FoldFeed in Numbers (an
+    infographic, see numbers_html) and every journal the papers came from, as bars. All numbers are computed from the
+    data; a paper that came back in a later issue counts once."""
     journals = journal_counts(issues)
     rows = "".join(f'<div><dt>{esc(k)}</dt><dd>{esc(v)}</dd></div>' for k, v in ABOUT)
-    cells = [("発行した号", len(issues)), ("紹介した論文", len(papers)), ("PDB 初構造", n_first), ("掲載誌", len(journals))]
-    nums = "".join(f'<div><dt>{k}</dt><dd>{v}</dd></div>' for k, v in cells)
-    jl = "".join(f'<li><span>{esc(n)}</span><span class="c">{c}</span></li>' for n, c in journals)
+    most = max([c for _, c in journals] + [1])
+    jl = "".join(f'<li style="--i:{i}"><span class="jn">{esc(n)}</span><span class="c">{c}</span>'
+                 f'<span class="bar" aria-hidden="true"><i style="--v:{c / most:.3f}"></i></span></li>'
+                 for i, (n, c) in enumerate(journals))
     return (f'<section class="about" id="about"><div class="wrap">'
             f'<div class="ix-h"><h2 class="label">About FoldFeed</h2></div>'
             f'<div class="about-grid"><dl class="about-dl">{rows}</dl>'
-            f'<div class="about-side"><h3 class="about-sub">これまでの紹介実績</h3><dl class="nums">{nums}</dl></div></div>'
-            f'<h3 class="about-sub">掲載誌一覧<span>論文数</span></h3><ul class="jl">{jl}</ul></div></section>')
+            f'<div class="about-side"><h3 class="about-sub">FoldFeed in Numbers</h3>{numbers_html(issues, lib)}</div></div>'
+            f'<h3 class="about-sub">Journals<span>論文数</span></h3><ul class="jl">{jl}</ul></div></section>')
 
 
 METHOD_WORDS = (("クライオ", "cryo-em cryoem"), ("X線", "x-ray crystallography"), ("NMR", "nmr"))
@@ -1409,16 +1640,16 @@ def mine_html(lib: list[dict]) -> str:
     it filters is in the way of a first-time reader, so it lives beside the search instead.)"""
     chips = "".join(f'<button type="button" class="chip" data-c="{k}" aria-pressed="false">{esc(CATEGORIES[k])}</button>'
                     for k, _ in sorted(category_counts(lib), key=lambda kv: list(CATEGORIES).index(kv[0])))
-    block = sd("自分の関心", f'<div class="chips">{chips}</div>'
+    block = sd("My Interests", f'<div class="chips">{chips}</div>'
                            f'<label class="only"><input type="checkbox" id="mine-only"> 関心のある記事だけ表示</label>'
                            f'<p class="mine-n" id="mine-n"></p>', "mine")
     return block.replace('<section class="sd mine">', '<section class="sd mine" id="mine" hidden>', 1)
 
 
 def mail_html() -> str:
-    return ('<section class="sec mail" id="mail"><div class="ix-h"><h2 class="label">メールで受け取る</h2>'
+    return ('<section class="sec mail" id="mail"><div class="ix-h"><h2 class="label">Newsletter</h2>'
             '<span class="soon">準備中</span></div><div class="mail-grid"><div>'
-            '<ul><li>毎朝の号の知らせ（New Structure と注目の構造）</li><li>週のまとめ</li>'
+            '<ul><li>毎朝の号の知らせ（New Structure と Notable Structure）</li><li>週のまとめ</li>'
             '<li>気になるタンパク質のアラート（UniProt ID を登録）</li></ul></div><div>'
             '<form aria-disabled="true" onsubmit="return false"><input type="email" placeholder="メールアドレス" disabled '
             'aria-label="メールアドレス（準備中）"><button type="button" disabled>登録（準備中）</button></form>'
@@ -1440,7 +1671,7 @@ def home(issues: list[str]) -> str:
            + today_html(feature, picks, latest, ISSUES_DIR, "figures", href, ""))
     main = [f'<section class="toc">{contents_html(picks, latest, ISSUES_DIR, "figures", href, feature and feature["pmcid"])}</section>',
             f'<p class="sec-more"><a href="{href}">{jp_date(latest)}号のすべての記事を読む →</a></p>',
-            f'<section class="sec"><div class="ix-h"><h2 class="label">タンパク質の種類から探す</h2>'
+            f'<section class="sec"><div class="ix-h"><h2 class="label">Browse by Protein Type</h2>'
             f'<a class="soon" href="proteins.html">一覧へ</a></div>'
             f'{find_form()}{cats_html(lib)}</section>']
     if past:
@@ -1450,10 +1681,10 @@ def home(issues: list[str]) -> str:
             targets = "・".join(pk["target_label"].split("（")[0] for _, pk in ps) or "記事なし"
             items.append(f'<li><a class="d" href="issues/{date}.html">{jp_date_short(date)}号</a>'
                          f'<span class="t"><b>{len(ps)} 本</b>{esc(targets)}</span></li>')
-        main.append(f'<section class="sec past"><div class="ix-h"><h2 class="label">過去の号</h2><span>{len(past)} 号</span></div>'
+        main.append(f'<section class="sec past"><div class="ix-h"><h2 class="label">Past Issues</h2><span>{len(past)} 号</span></div>'
                     f'<ol>{"".join(items)}</ol></section>')
     main.append(mail_html())
-    side = sd("タンパク質を探す", find_form()) + mine_html(lib)
+    side = sd("Article Search", find_form()) + mine_html(lib)
     return page(f"{brand.SITE_NAME}（{brand.SITE_NAME_EN}）",
                 masthead(0) + top + shell("".join(main), side)
                 + colophon(f'<p>{esc(pmcoa.CREDIT)}</p>' if load_issue(latest, ISSUES_DIR)[0].get("source") == pmcoa.SOURCE else ""),
@@ -1513,14 +1744,14 @@ def proteins_page(issues: list[str]) -> str:
         groups.append(f'<section class="pg" id="c-{key}"><div class="ix-h"><h2 class="label">{esc(CATEGORIES[key])}</h2>'
                       f'<span>{counts[key]} 本</span></div><ul class="rows" style="list-style:none;margin:0;padding:0">'
                       f'{"".join(items)}</ul></section>')
-    head = (f'<header class="pp-head"><h1>タンパク質から探す</h1>'
+    head = (f'<header class="pp-head"><h1>Article Search</h1>'
             f'<form class="find" role="search"><input id="q" type="search" name="q" autocomplete="off" '
             f'placeholder="例：P72047 / kinase / 25IP / リボソーム" aria-label="タンパク質を探す"><button type="submit">探す</button></form>'
             f'<p id="pg-total" class="sd-meta"></p></header>')
     main = head + "".join(groups) + '<p id="pg-none" class="pg-none">該当する記事はありませんでした。</p>'
-    side = sd("種類", '<div class="sd-cats">' + "".join(
+    side = sd("Categories", '<div class="sd-cats">' + "".join(
         f'<a href="#c-{k}"><span>{esc(CATEGORIES[k])}</span><span class="c">{counts[k]}</span></a>'
-        for k in CATEGORIES if k in counts) + "</div>") + sd("ほかのページ", '<div class="sd-nav"><a href="index.html">トップへ</a></div>')
+        for k in CATEGORIES if k in counts) + "</div>") + sd("Pages", '<div class="sd-nav"><a href="index.html">トップへ</a></div>')
     return page(f"タンパク質から探す · {brand.SITE_NAME}", masthead(0) + shell(main, side, sticky=True) + colophon(), depth=0,
                 description="これまでに紹介した構造を、タンパク質の種類・UniProt ID・タンパク質名で探す。", script=PROTEIN_SCRIPT)
 
@@ -1542,9 +1773,9 @@ def preview_index(previews: list[str], root: Path | None) -> str:
         merge = (f'<a class="go" href="{esc(pr["url"])}">Pull Request #{pr["number"]}（マージ）</a>'
                  if pr.get("url") else "")
         items.append(f'<li><div class="d">{jp_date(date)}号</div>'
-                     f'<div class="c">New Structure {len(picks) - n_hot} 本 · 注目の構造 {n_hot} 本</div>'
+                     f'<div class="c">New Structure {len(picks) - n_hot} 本 · Notable Structure {n_hot} 本</div>'
                      f'<div class="btns"><a href="{date}.html">見た目を確認</a>{merge}</div></li>')
-    body = [masthead(1, "確認待ちの号"),
+    body = [masthead(1, "Awaiting Review"),
             '<div class="wrap"><p class="intro">マージ前の号のプレビュー。見た目を確認して、問題がなければ Pull Request を開いて'
             '「Merge pull request」→「Confirm merge」で公開する。このページはブックマークやホーム画面に追加しておける。</p>',
             f'<ul class="queue">{"".join(items)}</ul>' if items else '<p class="intro">いま確認待ちの号はない。</p>',
