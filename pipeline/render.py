@@ -12,7 +12,7 @@ import re
 import sys
 import unicodedata
 
-from . import brand, impact, pdb, pmcoa, structure_svg, uniprot
+from . import brand, impact, jats, pdb, pmcoa, structure_svg, uniprot
 from .common import issue_dir, read_json
 from .schema import CATEGORIES, FEATURE_MIN, LAB_NOTE_FIELDS, SUMMARY_FIELDS, SUMMARY_OPTIONAL
 
@@ -35,6 +35,14 @@ METHOD_LABEL = {   # the METHOD column: short English names, as structural biolo
     "NEUTRON DIFFRACTION": "Neutron",
 }
 TOMOGRAPHY = "SUBTOMOGRAM AVERAGING"   # an EM entry made by cryo-electron tomography: shown as Cryo-ET
+def not_covered(meta: dict, picked: set) -> list[dict]:
+    """The candidates that may report a new structure but have no article, for the list at the foot of an issue.
+    A preprint that slipped in before the collector dropped them (Research Square in PMC) is left out: the site covers
+    peer-reviewed papers only."""
+    return [x for x in meta["candidates"] if x["kind"] in KIND_JA and x["pmcid"] not in picked
+            and not (x.get("doi") or "").lower().startswith(jats.PREPRINT_DOI_PREFIXES)]
+
+
 KIND_JA = {
     "new_structure": "新しい構造",
     "new_structure_ids_unlisted": "新しい構造（ID は補足資料）",
@@ -652,7 +660,7 @@ def issue_md(meta: dict, picks: list[tuple[dict, dict]], infos: dict | None = No
     c = meta["counts"]
     new_total = c["new_structure"] + c.get("new_structure_ids_unlisted", 0) + c.get("new_map_only", 0)
     picked = {p["pmcid"] for _, p in picks}
-    rest = [x for x in meta["candidates"] if x["kind"] in KIND_JA and x["pmcid"] not in picked]
+    rest = not_covered(meta, picked)
     covered = "すべて紹介する。" if not rest else f"うち {len(picks)} 本を紹介する（残りは末尾に一覧）。"
     out = ['<p align="center"><img src="../../../assets/logo.svg" alt="構造生物学デイリー" height="56"></p>', "",
            f"# {meta['issue_date']} 号", "",

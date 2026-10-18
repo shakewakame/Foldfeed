@@ -51,6 +51,8 @@ CSS = f"""
   --sans:"Noto Sans JP","Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",Meiryo,sans-serif;
   --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
   --col:240px; --side:320px; --pad:clamp(24px,6vw,96px); --head:106px;
+  --sec:96px;   /* the space between sections, which replaces the rules between them */
+  --rule:#B3BAC4;   /* the thin rule under a section heading */
 }}
 * {{ box-sizing:border-box; }}
 html, body {{ margin:0; background:var(--ground); }}
@@ -107,15 +109,20 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .sd-nav {{ display:flex; flex-direction:column; gap:4px; font-family:var(--mono); font-size:12.5px; }}
 
 /* contents: one table row per article: number, headline + supplement, TARGET / METHOD / RES., the real structure, PDB */
-.toc {{ margin-top:48px; }}
+.toc {{ margin-top:var(--sec); }}
 /* every section heading of the pages (Picked up Today's Structure, About FoldFeed, New Structure, Notable Structure, ...),
-   all in English: one face, one size, a 2 px rule above */
-.ix-h {{ display:flex; justify-content:space-between; align-items:baseline; gap:16px; border-top:2px solid var(--ink);
-         padding-top:14px; margin-bottom:4px; }}
+   all in English: one face, one size, and (as on Nature's pages) a thin rule under the title, the content below it.
+   Sections are told apart by space, not rules; a sub-section inside one opens with a short bar above it */
+.ix-h {{ display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding-bottom:12px; margin-bottom:26px;
+         border-bottom:1px solid var(--rule); }}
+.rows + .toc-sub, .art, .about > .wrap > .about-sub {{ position:relative; }}
+.rows + .toc-sub::before, .art::before, .about > .wrap > .about-sub::before {{
+  content:""; position:absolute; left:0; top:-28px; width:36px; height:0; border-top:4px solid var(--ink); }}
+.rows + .toc-sub {{ margin-top:72px; }}
 .ix-h .label, .part h2 {{ padding-top:0; font-family:var(--latin); font-size:30px; letter-spacing:0; text-transform:none;
                font-weight:700; color:var(--ink); line-height:1.35; }}
 .ix-h span {{ font-family:var(--mono); font-size:13px; letter-spacing:.08em; color:var(--mute); }}
-.ix-h.hot {{ margin-top:44px; }}
+.ix-h.hot {{ margin-top:var(--sec); }}
 .rows {{ list-style:none; margin:0; padding:0; }}
 /* a row of an index leads with its structure: number | the figure, large | headline and supplement | the facts */
 .row {{ display:grid; grid-template-columns:60px 360px minmax(0,1fr) 250px; grid-template-areas:"no th rt rx";
@@ -151,22 +158,21 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .past .d {{ font-family:var(--mono); font-size:12.5px; }}
 .past .t {{ font-size:14.5px; color:var(--desc); line-height:1.7; }}
 .past .t b {{ font-family:var(--mono); font-size:11px; font-weight:500; color:var(--mute); margin-right:10px; }}
-.part {{ margin-top:80px; position:relative; padding-top:20px; }}
-.part::before {{ content:""; position:absolute; left:0; right:0; top:0; border-top:4px solid var(--ink); }}
-.part::after {{ content:""; position:absolute; left:0; right:0; top:7px; border-top:1px solid var(--ink); }}
-.part h2 {{ margin:8px 0 4px; display:flex; align-items:baseline; gap:16px; }}
+.part {{ margin-top:var(--sec); }}
+.part h2 {{ margin:0; display:flex; align-items:baseline; gap:16px; padding-bottom:12px; border-bottom:1px solid var(--rule); }}
 .part h2 {{ justify-content:space-between; }}
 .ixm, .ix-h .ixm {{ margin-left:auto; text-align:right; font-family:var(--mono); font-size:14px; font-weight:400; letter-spacing:.04em;
         color:var(--ink2); white-space:nowrap; }}
 .ixm b, .ix-h .ixm b {{ margin-left:18px; font-weight:700; color:var(--ink); }}
 .part p {{ margin:0; color:var(--desc); font-size:14px; max-width:760px; }}
-.part + .art {{ margin-top:18px; }}
+.part + .art {{ margin-top:8px; }}
 .part + .art::before {{ display:none; }}
 
 /* article: margin column for the data, text column for the story */
-.art {{ display:grid; grid-template-columns:var(--col) minmax(0,1fr); gap:28px; padding-top:60px; padding-bottom:24px;
-        margin-top:56px; position:relative; }}
-.art::before {{ content:""; position:absolute; left:0; right:0; top:0; border-top:1px solid var(--ink); }}
+/* the articles under a New / Notable Structure heading are its sub-sections: each after the first opens with the bar */
+.art {{ display:grid; grid-template-columns:var(--col) minmax(0,1fr); gap:28px; padding-top:44px; padding-bottom:24px;
+        margin-top:72px; position:relative; }}
+.art::before {{ top:0; }}
 .margin {{ font-family:var(--mono); font-size:11.5px; line-height:1.7; color:var(--ink2); }}
 .margin .no {{ font-family:var(--latin); font-size:78px; line-height:.9; color:var(--ink); letter-spacing:-0.04em;
                margin-bottom:16px; }}
@@ -260,8 +266,7 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .lab dt {{ font-family:var(--mono); font-size:11px; color:var(--mute); padding-top:3px; }}
 .lab dd {{ margin:0; }}
 .lab-src {{ margin-top:10px; }}
-.rest {{ margin-top:56px; position:relative; padding-top:30px; }}
-.rest::before {{ content:""; position:absolute; left:0; right:0; top:0; border-top:1px solid var(--ink); }}
+.rest {{ margin-top:var(--sec); }}
 .rest ul {{ margin:10px 0 0; padding-left:1.2em; font-size:14.5px; }}
 
 .preview-bar {{ background:var(--acc); color:#fff; font-family:var(--mono); font-size:12.5px;
@@ -280,7 +285,7 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 
 
 /* the front page: the day's pick fills the first screen on the page ground, closed by a heavy rule */
-.sec {{ margin-top:56px; }}
+.sec {{ margin-top:var(--sec); }}
 .sec .lead {{ margin:14px 0 0; font-size:14.5px; color:var(--desc); }}
 .ix-all {{ display:inline-flex; align-items:center; gap:12px; margin-left:22px; padding:11px 18px; background:var(--ink); color:#fff;
            font-family:var(--sans); font-size:14.5px; font-weight:700; transition:background-color .25s; }}
@@ -371,7 +376,7 @@ html, body {{ overflow-x:clip; }}   /* a guard: nothing may widen the page sidew
 .lead-go.alt:hover {{ background:var(--ink); color:#fff; }}
 
 /* About FoldFeed, right under the first screen */
-.about {{ padding:40px 0 30px; }}
+.about {{ padding:var(--sec) 0 0; }}
 .about-grid {{ display:grid; grid-template-columns:minmax(0,64fr) minmax(0,36fr); gap:48px; margin-top:22px; align-items:start; }}
 .about-dl {{ margin:0; }}
 .about-dl div {{ display:grid; grid-template-columns:136px minmax(0,1fr); gap:16px; padding:10px 0; border-top:1px solid var(--hair); }}
@@ -381,7 +386,7 @@ html, body {{ overflow-x:clip; }}   /* a guard: nothing may widen the page sidew
 .about-sub {{ margin:0 0 14px; font-family:var(--sans); font-size:17px; font-weight:700; color:var(--ink); display:flex;
               justify-content:space-between; align-items:baseline; }}
 .about-sub span {{ font-family:var(--mono); font-size:12.5px; font-weight:500; color:var(--mute); }}
-.about > .wrap > .about-sub {{ margin-top:38px; padding-top:18px; border-top:1px solid var(--hair); }}
+.about > .wrap > .about-sub {{ margin-top:72px; }}
 /* FoldFeed in Numbers: counts, a meter, a column chart (dataviz: thin marks, 4 px rounded data ends, 2 px gaps,
    hairline grid, legend for the two series, values in text tokens) */
 .kpis {{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }}
@@ -486,7 +491,7 @@ a, .find button, .v3d-bar button, .figtabs button {{ transition:color .2s, backg
 }}
 
 /* Today's Structure on the front page, in the order of the editor's layout: name, headline, figure, four lines, links */
-.today {{ padding:40px 0 30px; }}
+.today {{ padding:var(--sec) 0 0; }}
 .today .today-k {{ margin-top:18px; }}
 .today-k {{ margin:0; display:flex; flex-wrap:wrap; align-items:baseline; gap:6px 22px; }}
 .today-k .tg {{ font-family:var(--sans); font-size:22px; font-weight:500; color:var(--ink); letter-spacing:.01em; line-height:1.4; }}
@@ -534,7 +539,7 @@ a.ib:hover {{ background:var(--ink); color:#fff; text-decoration:none; }}
 a.ib.prev:hover .ar {{ transform:translateX(-4px); }}
 a.ib.next:hover .ar {{ transform:translateX(4px); }}
 .ib.off {{ color:var(--mute); box-shadow:inset 0 0 0 1px var(--hair); }}
-.issue-nav {{ justify-content:space-between; margin-top:70px; padding-top:26px; border-top:2px solid var(--ink); }}
+.issue-nav {{ justify-content:space-between; margin-top:var(--sec); }}
 .issue-nav .up {{ background:var(--ink); color:#fff; }}
 .issue-nav a.up:hover {{ background:var(--acc-ink); }}
 .ih-k {{ margin:0; font-family:var(--mono); font-size:14px; letter-spacing:.14em; text-transform:uppercase;
@@ -560,7 +565,7 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
 .ih-fig .tip[hidden] {{ display:none; }}
 .ihead .lead-btns {{ margin-top:26px; }}
 .lead-go b {{ margin-left:12px; font-weight:700; }}
-.toc-sub {{ display:flex; gap:12px; align-items:baseline; margin:22px 0 2px; font-family:var(--mono); font-size:13px;
+.toc-sub {{ display:flex; flex-wrap:wrap; gap:12px; align-items:baseline; margin:22px 0 2px; font-family:var(--mono); font-size:13px;
             letter-spacing:.1em; text-transform:uppercase; color:var(--ink2); }}
 .toc-sub span {{ color:var(--mute); }}
 .part h2 .hd {{ margin-left:16px; font-family:var(--latin); font-weight:400; color:var(--mute); }}
@@ -616,7 +621,7 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
   .side:not(:has(.sd:not(.side-only-issue))) {{ display:none; }}   /* nothing left in it on a narrow screen */
 }}
 @media (max-width:860px) {{
-  :root {{ --pad:18px; }}
+  :root {{ --pad:18px; --sec:64px; }}
   :root {{ --head:118px; }}
   .mast {{ padding-top:14px; }}
   .rules {{ margin-top:10px; }}
@@ -638,7 +643,7 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
   .about-dl div {{ grid-template-columns:minmax(0,1fr); gap:2px; }}
   .about-dl dd {{ font-size:15px; }}
   .lead-art img {{ max-height:none; }}
-  .today {{ padding:32px 0 40px; }}
+  .today {{ padding-top:var(--sec); }}
   .today-k .tg {{ font-size:18px; }}
   .ix-h .label, .part h2 {{ font-size:23px; }}
   .today-h {{ font-size:26px; }}
@@ -1453,7 +1458,7 @@ def issue_nav(prev_date: str | None, next_date: str | None, cls: str, top: bool 
             f'{link(next_date, "Next issue", "next")}</nav>')
 
 
-def issue_head(date: str, number: int | None, picks: list, n_rest: int, prev_date: str | None, next_date: str | None,
+def issue_head(date: str, number: int | None, picks: list, prev_date: str | None, next_date: str | None,
                index_date: str | None = None, index_from: str | None = None) -> str:
     """The first screen of an issue page: which issue it is (the date, once, large), how many articles, how many of them
     New and Notable Structure, and about how long reading them all takes, as figures that count up and a bar of the
@@ -1464,8 +1469,8 @@ def issue_head(date: str, number: int | None, picks: list, n_rest: int, prev_dat
     mins = [reading_minutes(pk) for _, pk in picks]
     total = max(1, round(sum(mins))) if picks else 0
     kicker = (f"Issue No. {number}" if number else "Preview") + f" · {WEEKDAY_EN[datetime.date(y, m, d).weekday()]}"
-    src = (f'<p class="ih-src">{index_span(index_date, index_from)}に論文データベースへ登録された論文から'
-           + (f'（ほかに記事にしていない新しい構造 {n_rest} 本）' if n_rest else "") + '</p>') if index_date else ""
+    # (the papers not written up are listed at the foot of the page, under Not Covered, not counted here)
+    src = f'<p class="ih-src">{index_span(index_date, index_from)}に論文データベースへ登録された論文から</p>' if index_date else ""
     tiles = [("Articles", len(picks), ""), ("New Structure", len(new), "n"), ("Notable Structure", len(hot), "h")]
     kpis = "".join(f'<div class="kpi"><span class="kl">{f"<i class=sw-{c}></i>" if c else ""}{k}</span>'
                    f'<span class="kv" data-count="{v}">{v}</span></div>' for k, v, c in tiles)
@@ -1499,7 +1504,7 @@ def issue_page(date: str, prev_date: str | None, next_date: str | None,
     meta, picks, types = load_issue(date, root)
     n_hot = sum(render.is_impact(pk) for _, pk in picks)
     picked = {pk["pmcid"] for _, pk in picks}
-    rest = [x for x in meta["candidates"] if x["kind"] in render.KIND_JA and x["pmcid"] not in picked]
+    rest = render.not_covered(meta, picked)
     fig_base = "figures" if preview else "../figures"
     bar = ""
     if preview:
@@ -1508,7 +1513,7 @@ def issue_page(date: str, prev_date: str | None, next_date: str | None,
                 if pr.get("url") else "")
         bar = f'<div class="preview-bar">プレビュー（未公開）{link} · <a href="index.html">確認待ちの一覧</a></div>'
     # the first screen and the contents run the full width; the sidebar starts with the articles
-    top = [issue_head(date, number, picks, len(rest), prev_date, next_date, meta.get("index_date"), meta.get("index_from"))]
+    top = [issue_head(date, number, picks, prev_date, next_date, meta.get("index_date"), meta.get("index_from"))]
     feature = load_feature(date, root, picks) if picks else None
     if picks:
         # the issue page lists every article, today's pick included (marked); the front page is where it is shown large
@@ -1525,7 +1530,7 @@ def issue_page(date: str, prev_date: str | None, next_date: str | None,
     if rest:
         items = "".join(f'<li><a href="{doi_url(x)}">{esc(x["title"])}</a> — <i>{esc(x["journal_abbrev"] or x["journal"])}</i>'
                         f'（{esc(render.KIND_JA[x["kind"]])}）</li>' for x in rest)
-        main.append(f'<section class="rest"><h2 class="label">Other New Structures</h2><ul>{items}</ul></section>')
+        main.append(f'<section class="rest"><div class="ix-h"><h2 class="label">Not Covered</h2></div><ul>{items}</ul></section>')
     main.append(issue_nav(prev_date, next_date, "issue-nav", top=True))
     side = toc_side(picks, feature and feature["pmcid"]) if picks else ""   # the issue links and the search are elsewhere
     head = masthead(1)

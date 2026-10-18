@@ -7,6 +7,7 @@ import json
 import statistics
 
 from .common import cached, fetch
+from .jats import PREPRINT_DOI_PREFIXES
 
 BASE = "https://www.ebi.ac.uk/europepmc/webservices/rest"
 
@@ -129,6 +130,10 @@ def metadata(r: dict) -> dict:
 
 
 def is_excluded_type(meta: dict) -> bool:
+    """A review, editorial and the like (unless also a research article), or a preprint that PMC holds as an article
+    (Research Square, bioRxiv...: NOT SRC:PPR does not catch these): the site covers peer-reviewed papers only."""
+    if (meta.get("doi") or "").lower().startswith(PREPRINT_DOI_PREFIXES):
+        return True
     return any(t in EXCLUDED_PUB_TYPES for t in meta["pub_types"]) and \
         "research-article" not in meta["pub_types"]
 
