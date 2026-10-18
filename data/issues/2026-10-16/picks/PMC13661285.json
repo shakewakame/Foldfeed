@@ -1,0 +1,157 @@
+{
+  "pmcid": "PMC13661285",
+  "rank": 6,
+  "headline": "ランダムな環状ペプチドから、細胞内で働くKeap1阻害剤を得た",
+  "subhead": "15,360種から選んで改良し、Keap1との結晶構造で結合の仕方を確かめた",
+  "target_label": "Keap1 Kelchドメイン（ヒト）",
+  "summary": {
+    "question": "事前にリガンドの情報がない標的に、細胞膜を通る環状ペプチドをゼロから作るのは難しかった。",
+    "approach": "Keap1とNrf2の結合を妨げる分子を15,360種のランダムな環状ペプチドから探し、3回の改良を重ねた。",
+    "result": "最良のペプチド30はKi 53 nMでKeap1に結合し、細胞のレポーターアッセイで用量依存的に働いた。",
+    "learned": "電荷を持たない小さなペプチドが、Nrf2とは別の接触でKeap1に結合し、細胞内で結合を阻害できた。",
+    "open": "細胞での活性は試験管内より弱く、排出ポンプが原因の可能性があると著者は述べる。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "However, developing such compounds de novo without prior information about lead structures such as natural ligands or fragments remains a notable challenge.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "By screening 15,360 fully random cyclic peptides, we were able to identify an inhibitor of the E3 ligase adaptor Keap1 and its substrate Nrf2.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "could be improved in three iterative rounds into a membrane-permeable cyclic peptide that blocked this PPI in live cells",
+          "section": "Main"
+        }
+      ],
+      "result": [
+        {
+          "quote": "Excitingly, peptide 30, which displayed the best combination of activity (Ki = 53 ± 5 nM) and polar surface (only two H-bond donors) exhibited a robust, dose-dependent activity in the cellular model with an IC50 of around 50 μM",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "which engage Keap1 through entirely distinct sets of molecular contacts",
+          "section": "Results"
+        },
+        {
+          "quote": "This makes peptide 30 a fully de novo developed cyclic peptide that successfully inhibits a PPI inside living cells.",
+          "section": "Results"
+        }
+      ],
+      "open": [
+        {
+          "quote": "This indicated removal of 30 by efflux pumps (efflux ratio > 90), which could explain the lower activity found in the cellular assay compared to in vitro inhibition.",
+          "section": "Results"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "regulation"
+  ],
+  "highlights": [
+    {
+      "tag": "手法の工夫",
+      "text": "ナノモル規模で合成した約1.5万種のライブラリーを混合物のまま選別した。最初のヒットの活性には、二量体・三量体の副産物とシステイン（C434）とのジスルフィド交換が寄与した可能性があると著者は書く。",
+      "evidence": [
+        {
+          "quote": "Interestingly, our identification of the two initial Keap1–Nrf2 inhibitors 1 and 2 from library 1 benefited from some unexpected allies: dimeric and trimeric peptide byproducts that showed enhanced activity, as well as potential covalent interactions through disulfide exchange with a target protein cysteine residue.",
+          "section": "Discussion"
+        }
+      ]
+    },
+    {
+      "tag": "新しい結合部位",
+      "text": "Keap1に結合した直鎖ペプチド6のX線構造（1.70 Å）は、Nrf2が結合する場所を占めながら、まったく違う接触をしていた。電荷による相互作用に頼らず、水素結合の受容基が主役だった。環状体の結晶は還元剤DTTのため得られていない。",
+      "evidence": [
+        {
+          "quote": "The linear peptide 6 occupied the same space as the region of Nrf2 that interacts with Keap1 but formed completely different molecular contacts.",
+          "section": "Results"
+        },
+        {
+          "quote": "Unlike Nrf2, peptide 6 did not rely on charged interactions and used mostly H-bond acceptor groups for H-bonding interactions",
+          "section": "Results"
+        },
+        {
+          "quote": "Because of the presence of reducing agent DTT in conditions that yielded diffraction-quality crystals, we obtained a structure of the bound linear analog (6) rather than the cyclic peptide",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "ペプチド30はNrf2由来のペプチドと分子量・親和性が近いが、電荷がなく、水素結合の供与基は2個（Nrf2は9個）、極性表面積は203 Å²（433 Å²）と極性がずっと低い。この低さが膜透過と細胞内での阻害に重要だったと著者は述べる。",
+      "evidence": [
+        {
+          "quote": "Notably, while the two peptides are similar in molecular weight (890.6 Da for 30 versus 1,052.1 Da for Nrf2) and binding affinity (53 nM versus 23 nM), peptide 30 is far less polar, having no charges (versus four negative charges in the Nrf2 sequence), featuring only two H-bond donors (versus nine) and a substantially lower topological polar surface area (TPSA of 203 Å2 versus 433 Å2).",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "ヒトKeap1 Kelchドメイン（321–609）を大腸菌BL21(DE3)で発現（IPTG 0.5 mM、20℃で一晩）。",
+    "construct": "N末端にHis6タグとTEV切断部位。結晶化にはE540A/E542Aの2置換体を使い、TEVでタグを除去。",
+    "purification": "Ni-NTAアフィニティ、続いてSuperdex 75のサイズ排除クロマトグラフィー。",
+    "sample_prep": "Keap1にペプチド6・30・33・34を8倍モル過剰で混ぜ、18℃のシッティングドロップ蒸気拡散で共結晶化。25%グリセロールで凍結保護。",
+    "data_collection": "ESRFのMASSIF-1/-3（ペプチド6・30）とSLSのPX-I（33・34）で回折データを収集。XDS、PHENIXの分子置換（1U6D）、Cootで構築。",
+    "evidence": [
+      {
+        "quote": "Protein expression was induced by adding a final concentration of 0.5 mM IPTG and the culture was incubated at 20 °C while being shaken overnight (200 rpm).",
+        "section": "Methods"
+      },
+      {
+        "quote": "Recombinant human Kelch domain of Keap1 (321–609) with an N-terminal addition of His6 tag and tobacco etch virus (TEV) cleavage site for tag removal was cloned into the vector pET29b(+) (Novagen) for bacterial expression.",
+        "section": "Methods"
+      },
+      {
+        "quote": "The Keap1 Kelch domain with the two substitutions (E540A and E542A)37 was used for X-ray crystallization.",
+        "section": "Methods"
+      },
+      {
+        "quote": "The desired protein was purified from the culture supernatant by Ni-NTA affinity chromatography.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Cocrystallization was performed by mixing Keap1 at 12 mg ml−1 with an eightfold molar excess of peptide 6, 30, 33 and 34.",
+        "section": "Methods"
+      },
+      {
+        "quote": "The recombinant Keap1 Kelch domain bound to the peptide was crystallized at 18 °C using the sitting-drop vapor diffusion approach.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Suitable crystals were collected, cryoprotected using the mother liquor supplemented with 25% glycerol and rapidly frozen in liquid nitrogen.",
+        "section": "Methods"
+      },
+      {
+        "quote": "were collected at the MASSIF-1 and MASSIF-3 beamlines of the European Synchrotron Radiation Facility (ESRF).",
+        "section": "Methods"
+      },
+      {
+        "quote": "The structure was solved by molecular replacement using PHENIX (version 1.20.1)50 with the atomic coordinates of Keap1 (PDB 1U6D) as a search model.",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "Keap1",
+    "Nrf2",
+    "環状ペプチド",
+    "タンパク質間相互作用",
+    "膜透過性",
+    "ライブラリースクリーニング"
+  ],
+  "ga_pdb_id": "9QDU",
+  "legend_labels": [
+    "環状ペプチド30（阻害剤）",
+    "Keap1（Kelch）"
+  ],
+  "site_ligand": "",
+  "editor_notes": "新しい複合体構造（9IH9、9QDU、9QBS、9QBT）だが、Keap1自体の構造は既に117件あるため first_structure は false で、『初』とは書いていない。9IH9はDTT下で環状ペプチド4が還元された直鎖ペプチド6との複合体で、論文も環状体の結晶は得られなかったと明記している。9QDU（環状ペプチド30）を構造図に使った。分類は適切なものがなく regulation（E3リガーゼのアダプター）とした。"
+}

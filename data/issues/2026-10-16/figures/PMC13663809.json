@@ -1,0 +1,31 @@
+{
+ "pdb_id": "10OY",
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "TASK-2（Kチャネル）",
+   "desc": "Potassium channel TASK2",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "ApoA-I（ナノディスク）",
+   "desc": "Apolipoprotein A-I",
+   "entity": "2"
+  }
+ ],
+ "ligands": [],
+ "compare": {
+  "panels": [
+   {
+    "pdb": "10OY",
+    "title": "pH 6.5 野生型"
+   },
+   {
+    "pdb": "10PB",
+    "title": "pH 6.5 L127N"
+   }
+  ],
+  "distance": null
+ }
+}

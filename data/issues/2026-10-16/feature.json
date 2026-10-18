@@ -1,0 +1,28 @@
+{
+  "pmcid": "PMC13661276",
+  "axes": [
+    "structure",
+    "biology"
+  ],
+  "reason": "Batten病の原因タンパク質CLN8の働きを、活性測定とクライオ電顕の活性部位で示し、病変異が活性を弱めることも確かめた。",
+  "evidence": [
+    {
+      "quote": "Cryo-electron microscopy structures define the CLN8 active site and support a ping-pong acyl transfer mechanism.",
+      "section": "Abstract"
+    },
+    {
+      "quote": "Together, our stable-isotope tracing and enzymatic assays identify CLN8 as a stereospecific GPG acyltransferase that converts S,S-GPG and acyl-CoAs into S,S-2-acyl-LPG.",
+      "section": "Results"
+    }
+  ],
+  "considered": [
+    {
+      "pmcid": "PMC13663681",
+      "note": "RUVBL1/2 に結合して働く共シャペロンとしての役割は提案の段階で、酵素活性と病変異を結んだ CLN8 を上にした。"
+    },
+    {
+      "pmcid": "PMC13663809",
+      "note": "TASK-2 の pH ゲートの 2 段階の機構を構造で示すが、活性測定と病変異まで生物学の問いに答えた CLN8 を上にした。"
+    }
+  ]
+}

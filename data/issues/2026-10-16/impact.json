@@ -1,0 +1,117 @@
+{
+  "screened": 112,
+  "scored": [
+    {
+      "pmcid": "PMC13663732",
+      "type": "mechanism",
+      "scores": {
+        "novelty": 2,
+        "reach": 1,
+        "structure": 1,
+        "support": 2
+      },
+      "selected": false,
+      "reason": "NPM1 の Tyr17・Tyr67 のリン酸化模倣で五量体が壊れることを NMR・DSC・AUC・ITC で示したが、構造の根拠は既存構造 4N8M を使った MD が中心で、NMR は折れたたみの有無の確認にとどまる。合計 6 点。",
+      "evidence": {
+        "novelty": [
+          {
+            "quote": "We characterize a set of stress-induced tyrosine phosphorylations that collectively destabilize the NPM1 oligomer, weakening its molecular interactions and preventing incorporation into phase-separated condensates such as the nucleolus.",
+            "section": "Abstract"
+          }
+        ],
+        "reach": [
+          {
+            "quote": "By linking phosphorylation-driven structural remodeling to changes in subcellular localization, this work uncovers a molecular mechanism by which genotoxic stress reshapes nucleolar organization and function.",
+            "section": "Abstract"
+          }
+        ],
+        "structure": [
+          {
+            "quote": "These results were further confirmed by NMR spectroscopy of the WT and the three phosphomimetic single mutant NPM11–130 species (Fig. 5C). 2D [1H,15N] TROSY spectra of deuterated WT, Y29pCMF, and Y67pCMF species exhibited disperse signals similar to the folded protein spectra previously reported (20).",
+            "section": "Results"
+          }
+        ],
+        "support": [
+          {
+            "quote": "Consistent with MDs data, the Y17pCMF and Y67pCMF single and double mutants showed a completely monomeric state (Fig. 4 A, Left panel).",
+            "section": "Results"
+          }
+        ]
+      }
+    },
+    {
+      "pmcid": "PMC13662901",
+      "type": "mechanism",
+      "scores": {
+        "novelty": 2,
+        "reach": 1,
+        "structure": 1,
+        "support": 2
+      },
+      "selected": false,
+      "reason": "既存のクライオ電顕構造 6V38 へのドッキングで見つけたプレグネノロン結合部位 Tyr450 を、変異体・結合測定・ノックインマウスで確かめた。ただし構造側の根拠はドッキングで、対象も BK チャネルに限られ合計 6 点。",
+      "evidence": {
+        "novelty": [
+          {
+            "quote": "Our study provides a new paradigm in vasoactive steroid-BK channel interactions that can be used in developing pharmacophores/new agents to replace/regulate pregnenolone effects in clinical scenarios, and underscores that CRAC motifs may mediate ionotropic receptor regulation by steroids other than cholesterol.",
+            "section": "Abstract"
+          }
+        ],
+        "reach": [
+          {
+            "quote": "underscores that CRAC motifs may mediate ionotropic receptor regulation by steroids other than cholesterol.",
+            "section": "Abstract"
+          }
+        ],
+        "structure": [
+          {
+            "quote": "Based on a slo1 cryo-EM structure (PDB 6V38) computational modeling identified Tyr450, Hys409 and Asp896 as participants in pregnenolone recognition, with hydrogen-arene interactions between steroid and Tyr450.",
+            "section": "Abstract"
+          }
+        ],
+        "support": [
+          {
+            "quote": "Consistently, slo1Y450F proteins failed to bind pregnenolone.",
+            "section": "Abstract"
+          },
+          {
+            "quote": "In contrast to their wild-type counterparts, middle cerebral arteries from Kcnma1 Y450F knock-in mice failed to constrict to pregnenolone, whether probed ex vivo or in vivo.",
+            "section": "Abstract"
+          }
+        ]
+      }
+    },
+    {
+      "pmcid": "PMC13661599",
+      "type": "drug",
+      "scores": {
+        "novelty": 2,
+        "reach": 2,
+        "structure": 0,
+        "support": 2
+      },
+      "selected": false,
+      "reason": "VAV1 分解誘導剤と RT-ループ degron は変異体で検証されたが、三者複合体は AlphaFold・ドッキング・Boltz-2 のモデルで、既存の 4CI3・5FQD はテンプレートに使われただけ。実験構造による裏付けがなく structure=0 のため選ばない。",
+      "evidence": {
+        "novelty": [
+          {
+            "quote": "We elucidate a non-canonical RT-loop degron (RDxS motif, residues 796–799) in SH3-2, distinct from previously characterized G-loop degrons, supported by the physics- and AI-driven GluePlex workflow and site-directed mutagenesis.",
+            "section": "Abstract"
+          }
+        ],
+        "reach": [
+          {
+            "quote": "We developed the GluePlex workflow, a physics- and AI-driven modeling tool prioritizing protein-protein interactions with small molecule ligands.",
+            "section": "Discussion"
+          }
+        ],
+        "support": [
+          {
+            "quote": "Evaluation of mutants treated with NGT-201-12 revealed that mutations within the RT-loop exerted the most destructive effects on degradation efficiency (Fig. 3E and Supplementary Fig. 1J).",
+            "section": "Results"
+          }
+        ]
+      }
+    }
+  ]
+}

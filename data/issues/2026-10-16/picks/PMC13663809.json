@@ -1,0 +1,182 @@
+{
+  "pmcid": "PMC13663809",
+  "rank": 4,
+  "headline": "TASK-2は細胞内が酸性になると、ジッパー状の門と脂質で閉じる",
+  "subhead": "5つのクライオ電顕構造で解析。麻酔薬ブピバカインは脂質と同じ部位に入る",
+  "target_label": "TASK-2（マウス）",
+  "summary": {
+    "question": "細胞内のpHで開閉するカリウムチャネルTASK-2が、細胞内側でどう閉じ、麻酔薬にどう阻害されるかは不明だった。",
+    "approach": "マウスTASK-2の野生型、変異体、ブピバカイン存在下の構造をクライオ電顕で解析し、電気生理で確かめた。",
+    "result": "酸性ではTM4がZゲートを作り、空洞に脂質が入る。ブピバカインは高pHで、脂質と重なる位置に結合した。",
+    "learned": "細胞内側のpH感知はZゲートと脂質ブロックの2段で働き、ブピバカインも同じ空洞を塞ぐと考えられる。",
+    "open": "空洞の脂質の有無とチャネル活性の関係は相関にとどまり、別の機構は排除できない。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Despite its importance, the molecular mechanisms controlling its intracellular gating and inhibition have remained unclear.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "However, the contribution of lipids to gating TASK-2 and the precise intracellular gating mechanism are unclear",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "We use cryoelectron microscopy and electrophysiology to address these questions.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "The interaction between residues 241 to 246 from each subunit seals the cavity from the cytoplasm like a zipper.",
+          "section": "Results"
+        },
+        {
+          "quote": "Bupivacaine binding is only observed at high pHint, consistent with state-dependent block that requires an open intracellular gate.",
+          "section": "Discussion"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "We found TASK-2 employs a unique mechanism to gate closed in response to low intracellular pH that involves protein and lipid components.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "We found that bupivacaine inhibits TASK-2 by binding in the channel cavity at a site that overlaps with that of cavity lipids at low pHint.",
+          "section": "Discussion"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Still, the link between cavity lipid occupancy in structures and channel activity is correlative, and we cannot exclude alternative mechanisms to explain TASK-2L127N gain-of-function.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "channel"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "pH 6.5では、各サブユニットのTM4の241〜246番付近がほどけて横向きに伸び、2本がβシートをつくって細胞質側の入り口をジッパーのように塞ぐ。著者はこれをZゲートと呼ぶ。",
+      "evidence": [
+        {
+          "quote": "At pH 6.5, the helical segment between residues 241 to 246 is broken and redirected laterally across the cytoplasmic channel entrance, forming a short intersubunit beta sheet",
+          "section": "Results"
+        },
+        {
+          "quote": "We refer to this as a “Z” (for zipper) gate.",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "空洞に入った脂質のアシル鎖が、イオンの通り道を直接塞ぐ。L127N変異体は脂質が消えて開口確率が約40倍になり、K245Aでは開いたZゲートでも脂質が塞ぐ。二重変異で内側のpH感知が消えた。",
+      "evidence": [
+        {
+          "quote": "The presence of these acyl chains in the cavity directly occludes the conduction pathway (Fig. 1F).",
+          "section": "Results"
+        },
+        {
+          "quote": "TASK-2L127N has a ~40x higher PO than TASK-2WT at neutral pH",
+          "section": "Results"
+        },
+        {
+          "quote": "That pHint gating is lost in TASK-2L127N/K245A, but not in TASK-2L127N or TASK-2K245A alone, suggests Z-gate formation and lipid block are both pH-dependent processes (Fig. 2).",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "ブピバカイン（IC50 7.6 μM）は開いたチャネルの空洞に結合し、密度は4通りの向きに合う。pH 6.5では脂質が先に入るため結合が見られず、L127N変異体はほとんど阻害されない。",
+      "evidence": [
+        {
+          "quote": "Racemic bupivacaine inhibited mouse TASK-2 with an IC50 = 7.6 ± 0.91 µM (n = 4 patches)",
+          "section": "Results"
+        },
+        {
+          "quote": "An additional strong, nonprotein, density feature in the channel cavity underneath the selectivity filter is consistent with bupivacaine bound in four possible configurations, each with 0.25 occupancy",
+          "section": "Results"
+        },
+        {
+          "quote": "Consistently, we found TASK-2L127N is nearly insensitive to bupivacaine block",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "マウスTASK-2（1〜335番）をPichia pastorisで発現。電気生理はアフリカツメガエル卵母細胞。",
+    "construct": "野生型とL127N、K245A、L127N/K245Aなどの変異体。",
+    "purification": "DDM/CHSで抽出し、抗GFPナノボディのアフィニティークロマトグラフィーとゲル濾過で精製。",
+    "sample_prep": "MSP1D1ナノディスク（DOPE:POPS:POPC＝2:1:1）に再構成。pH 8.5またはpH 6.5、ブピバカイン300 µMの有無。",
+    "data_collection": "Titan KriosまたはTalos Arctica。RELIONとcryoSPARCで処理（TOPAZ、ベイズ研磨、不均一でない精密化）。",
+    "evidence": [
+      {
+        "quote": "Mus musculus TASK-2 (amino acids 1 to 335, with or without mutations) was expressed in Pichia pastoris, extracted in DDM/CHS, purified by anti-GFP nanobody affinity chromatography and size-exclusion chromatography, and reconstituted into MSP1D1 nanodiscs with a 2:1:1 DOPE:POPS:POPC lipid mixture for structural studies at pH 8.5 or pH 6.5, with or without 300 µM bupivacaine.",
+        "section": "Methods Summary"
+      },
+      {
+        "quote": "Cryo-EM data were collected on a Titan Krios or Talos Arctica and processed in RELION and cryoSPARC with iterative TOPAZ particle picking, 2D/3D classification, Bayesian polishing, and nonuniform refinement to yield final reconstructions at 2.6 to 3.2 Å resolution (47–50).",
+        "section": "Methods Summary"
+      },
+      {
+        "quote": "Electrophysiological characterization was performed on M. musculus TASK-2 expressed in Xenopus laevis oocytes using inside-out patch-clamp (single-channel and macroscopic) or two-electrode voltage-clamp recordings (55).",
+        "section": "Methods Summary"
+      }
+    ]
+  },
+  "keywords": [
+    "TASK-2",
+    "K2Pチャネル",
+    "pH感受性",
+    "ブピバカイン",
+    "局所麻酔薬",
+    "脂質"
+  ],
+  "ga_pdb_id": "10OY",
+  "legend_labels": [
+    "TASK-2（Kチャネル）",
+    "ApoA-I（ナノディスク）"
+  ],
+  "editor_notes": "TASK-2 には既存の PDB 構造（6WLV、6WM0、prior_pdb_count 2）があり、初構造ではない。新規性は約1 Å 高分解能の pH 6.5 構造、変異体、ブピバカイン結合構造。ブピバカインの密度は4通りのポーズ（占有率0.25）を仮定したモデルで、リガンドは A1C7A と OJ0（R・S 体）。図は閉じた野生型（10OY）を使った。本文は欠けていない。",
+  "figure_notes": [
+    {
+      "title": "Zゲート",
+      "sub": "TM4 の 241〜246 番",
+      "entity": 1,
+      "range": [
+        241,
+        246
+      ]
+    }
+  ],
+  "compare": {
+    "panels": [
+      {
+        "pdb": "10OY",
+        "title": "pH 6.5 野生型"
+      },
+      {
+        "pdb": "10PB",
+        "title": "pH 6.5 L127N"
+      }
+    ],
+    "align": 1
+  },
+  "figure_evidence": [
+    {
+      "quote": "At pH 6.5, the helical segment between residues 241 to 246 is broken and redirected laterally across the cytoplasmic channel entrance, forming a short intersubunit beta sheet",
+      "section": "Results"
+    },
+    {
+      "quote": "In contrast, the intracellular side of the channel adopts an open conformation similar to TASK-2WT at high pH: Lipid density is absent from the channel cavity, K245 residues project up from the top of TM4 away from the cytosol and parallel to the ion conduction axis, and the Z-gate is open",
+      "section": "Results"
+    }
+  ]
+}
