@@ -105,10 +105,12 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 
 /* contents: one table row per article: number, headline + supplement, TARGET / METHOD / RES., the real structure, PDB */
 .toc {{ margin-top:48px; }}
-.ix-h {{ display:flex; justify-content:space-between; align-items:baseline; gap:16px; border-top:1px solid var(--ink);
+/* every section heading of the pages (Picked up Today's Structure, About FoldFeed, New Structure, 注目の構造, ...): one
+   face, one size, a 2 px rule above */
+.ix-h {{ display:flex; justify-content:space-between; align-items:baseline; gap:16px; border-top:2px solid var(--ink);
          padding-top:14px; margin-bottom:4px; }}
-.ix-h .label {{ padding-top:0; font-family:var(--latin); font-size:26px; letter-spacing:.01em; text-transform:none;
-               font-weight:700; color:var(--ink); line-height:1.4; }}
+.ix-h .label, .part h2 {{ padding-top:0; font-family:var(--latin); font-size:30px; letter-spacing:0; text-transform:none;
+               font-weight:700; color:var(--ink); line-height:1.35; }}
 .ix-h span {{ font-family:var(--mono); font-size:13px; letter-spacing:.08em; color:var(--mute); }}
 .ix-h.hot {{ margin-top:44px; }}
 .rows {{ list-style:none; margin:0; padding:0; }}
@@ -164,7 +166,7 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .part {{ margin-top:80px; position:relative; padding-top:20px; }}
 .part::before {{ content:""; position:absolute; left:0; right:0; top:0; border-top:4px solid var(--ink); }}
 .part::after {{ content:""; position:absolute; left:0; right:0; top:7px; border-top:1px solid var(--ink); }}
-.part h2 {{ font-size:27px; line-height:1.4; margin:8px 0 4px; display:flex; align-items:baseline; gap:16px; }}
+.part h2 {{ margin:8px 0 4px; display:flex; align-items:baseline; gap:16px; }}
 .part h2 span {{ font-family:var(--mono); font-size:12px; font-weight:500; color:var(--mute); letter-spacing:.08em; }}
 .part p {{ margin:0; color:var(--desc); font-size:14px; max-width:760px; }}
 .part + .art {{ margin-top:18px; }}
@@ -289,7 +291,6 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .band {{ border-bottom:4px solid var(--ink); }}
 .band .hero {{ margin-top:0; padding:38px 0 52px; }}
 .sec {{ margin-top:56px; }}
-.sec > .ix-h {{ border-top:2px solid var(--ink); }}
 .sec .lead {{ margin:14px 0 0; font-size:14.5px; color:var(--desc); }}
 .sec-more {{ margin:6px 0 0; font-family:var(--mono); font-size:13px; }}
 .sec-more a {{ text-decoration:underline; text-decoration-color:var(--acc); text-underline-offset:4px; }}
@@ -356,7 +357,7 @@ body.head-away {{ --headnow:0px; }}
 .menu-list a:hover {{ background:var(--ink); color:#fff; text-decoration:none; }}
 
 /* the front page's first screen: what the site is, the button down to Today's Structure, a large structure */
-.lead {{ border-bottom:1px solid var(--hair); }}
+.lead {{ }}
 .lead-grid {{ display:grid; grid-template-columns:minmax(0,44fr) minmax(0,56fr); gap:36px; align-items:center;
               min-height:min(560px, calc(100vh - 150px)); padding-top:24px; padding-bottom:24px; }}
 .lead-h {{ margin:0; font-family:var(--serif); font-weight:400; font-size:clamp(18px, 1.72vw, 30px); line-height:1.8;
@@ -365,6 +366,28 @@ body.head-away {{ --headnow:0px; }}
 .lead-go {{ display:inline-flex; align-items:center; gap:12px; margin-top:34px; padding:14px 24px 14px 20px;
             background:var(--ink); color:#fff; font-family:var(--mono); font-size:14.5px; letter-spacing:.06em; }}
 .lead-go .tri {{ font-size:13px; }}
+.lead-btns {{ display:flex; flex-wrap:wrap; gap:12px 14px; margin-top:34px; }}
+.lead-btns .lead-go {{ margin-top:0; }}
+.lead-go.alt {{ background:transparent; color:var(--ink); box-shadow:inset 0 0 0 1px var(--ink); }}
+.lead-go.alt:hover {{ background:var(--ink); color:#fff; }}
+
+/* About FoldFeed, right under the first screen */
+.about {{ padding:40px 0 30px; }}
+.about-grid {{ display:grid; grid-template-columns:minmax(0,62fr) minmax(0,38fr); gap:56px; margin-top:22px; align-items:start; }}
+.about-dl {{ margin:0; }}
+.about-dl div {{ display:grid; grid-template-columns:150px minmax(0,1fr); gap:16px; padding:10px 0; border-top:1px solid var(--hair); }}
+.about-dl div:first-child {{ border-top:0; padding-top:0; }}
+.about-dl dt {{ font-size:15px; font-weight:700; color:var(--ink2); padding-top:3px; }}
+.about-dl dd {{ margin:0; font-size:16px; line-height:1.95; color:var(--ink2); }}
+.about-sub {{ margin:0 0 14px; font-family:var(--sans); font-size:17px; font-weight:700; color:var(--ink); display:flex;
+              justify-content:space-between; align-items:baseline; }}
+.about-sub span {{ font-family:var(--mono); font-size:12.5px; font-weight:500; color:var(--mute); }}
+.about > .wrap > .about-sub {{ margin-top:38px; padding-top:18px; border-top:1px solid var(--hair); }}
+.about .nums {{ gap:22px 24px; }}
+.about .nums dt {{ font-size:13px; letter-spacing:.04em; font-family:var(--sans); color:var(--ink2); }}
+.about .nums dd {{ font-size:40px; }}
+.about .jl {{ columns:3 260px; column-gap:44px; font-size:14.5px; }}
+.about .jl li {{ break-inside:avoid; }}
 .lead-go:hover {{ background:var(--acc-ink); color:#fff; text-decoration:none; }}
 .lead-art {{ display:block; margin-right:calc(-1 * var(--pad) + 24px); }}
 .lead-art img {{ display:block; width:100%; height:auto; max-height:min(640px, calc(100vh - 170px)); object-fit:contain; }}
@@ -379,13 +402,10 @@ body.head-away {{ --headnow:0px; }}
 }}
 
 /* Today's Structure on the front page, in the order of the editor's layout: name, headline, figure, four lines, links */
-.today {{ padding:46px 0 54px; border-bottom:4px solid var(--ink); }}
-.today-sec {{ margin:0 0 22px; padding-bottom:14px; border-bottom:1px solid var(--ink); font-family:var(--latin); font-size:40px;
-              line-height:1.2; font-weight:700; letter-spacing:-0.005em; color:var(--ink); }}
-.today-sec .pu {{ display:block; margin-bottom:6px; font-family:var(--mono); font-size:15px; letter-spacing:.2em;
-                  text-transform:uppercase; font-weight:700; color:var(--acc-ink); }}
+.today {{ padding:40px 0 30px; }}
+.today .today-k {{ margin-top:18px; }}
 .today-k {{ margin:0; display:flex; flex-wrap:wrap; align-items:baseline; gap:6px 22px; }}
-.today-k .tg {{ font-family:var(--sans); font-size:28px; font-weight:500; color:var(--ink); letter-spacing:.01em; line-height:1.4; }}
+.today-k .tg {{ font-family:var(--sans); font-size:22px; font-weight:500; color:var(--ink); letter-spacing:.01em; line-height:1.4; }}
 .today-k .dt {{ margin-left:auto; text-align:right; font-family:var(--mono); font-size:14px; letter-spacing:.04em; color:var(--ink2); }}
 .today-k .dt b {{ margin-left:18px; font-weight:700; color:var(--ink); }}
 .today-h {{ margin:12px 0 0; font-size:34px; line-height:1.42; font-weight:700; color:var(--ink); text-wrap:balance; }}
@@ -491,19 +511,21 @@ body.head-away {{ --headnow:0px; }}
   .menu .mt {{ font-size:12px; }}
   .lead-h {{ font-size:17px; line-height:1.85; }}
   .lead-go {{ margin-top:22px; font-size:13.5px; }}
+  .lead-btns {{ margin-top:22px; }}
+  .about-grid {{ grid-template-columns:minmax(0,1fr); gap:30px; }}
+  .about-dl div {{ grid-template-columns:minmax(0,1fr); gap:2px; }}
+  .about-dl dd {{ font-size:15px; }}
+  .about .nums dd {{ font-size:32px; }}
   .lead-art img {{ max-height:none; }}
   .today {{ padding:32px 0 40px; }}
-  .today-sec {{ font-size:29px; margin-bottom:16px; }}
-  .today-sec .pu {{ font-size:13px; }}
-  .today-k .tg {{ font-size:21px; }}
-  .ix-h .label {{ font-size:21px; }}
+  .today-k .tg {{ font-size:18px; }}
+  .ix-h .label, .part h2 {{ font-size:23px; }}
   .today-h {{ font-size:26px; }}
   .today-sub {{ font-size:15.5px; }}
   .today-4 div {{ grid-template-columns:minmax(0,1fr); gap:0; padding:6px 0; }}
   .today-4 dt {{ padding-top:0; font-size:13.5px; }}
   .today-4 dd {{ font-size:15px; }}
   .reads a {{ min-width:0; flex:1 1 100%; }}
-  .part h2 {{ font-size:23px; }}
   .word .name {{ font-size:32px; }}
   .brand {{ flex-wrap:wrap; gap:8px 0; }}
   .tag {{ padding-left:0; border-left:0; flex-basis:100%; font-size:13px; }}
@@ -712,26 +734,17 @@ def journal_name(cand: dict) -> str:
 
 
 def journal_counts(issues: list[str], root: Path = ISSUES_DIR) -> list[tuple[str, int]]:
-    """Journals of every article so far, most articles first."""
+    """Journals of every paper so far (a paper that came back in a later issue counts once), most papers first."""
     counts: dict[str, int] = {}
+    seen: set[str] = set()
     for date in issues:
         _, picks, _ = load_issue(date, root)
         for cand, _ in picks:
             name = journal_name(cand)
-            if name:
+            if name and cand["pmcid"] not in seen:
+                seen.add(cand["pmcid"])
                 counts[name] = counts.get(name, 0) + 1
     return sorted(counts.items(), key=lambda kv: (-kv[1], kv[0].lower()))
-
-
-JOURNAL_LIMIT = 16
-
-
-def journals_html(counts: list[tuple[str, int]]) -> str:
-    if not counts:
-        return ""
-    items = "".join(f'<li><span>{esc(n)}</span><span class="c">{c}</span></li>' for n, c in counts[:JOURNAL_LIMIT])
-    more = (f'<p class="jl-more">ほか {len(counts) - JOURNAL_LIMIT} 誌</p>' if len(counts) > JOURNAL_LIMIT else "")
-    return sd("掲載ジャーナル", f'<ul class="jl">{items}</ul>{more}')
 
 
 # ---------- one article ----------
@@ -1040,8 +1053,10 @@ def lead_html(feature: dict | None, picks: list, date: str, root: Path, fig_base
     "読み込み中" while it loads. On a phone (where it is not opened) and when it cannot load, the same structure is
     shown as a drawing from the same view (pipeline.render: <pmcid>-hero.svg)."""
     lines = "".join(f'<span>{esc(t)}</span>' for t in LEAD)
-    go = ('<a class="lead-go" href="#today"><span class="tri" aria-hidden="true">▽</span>'
-          'Picked up: Today’s Structure</a>') if feature_of(feature, picks) else ""
+    go = (('<a class="lead-go" href="#today"><span class="tri" aria-hidden="true">▽</span>'
+           'Picked up: Today’s Structure</a>') if feature_of(feature, picks) else "")
+    go = (f'<div class="lead-btns">{go}<a class="lead-go alt" href="#about"><span class="tri" aria-hidden="true">▽</span>'
+          f'About FoldFeed</a></div>')
     hit = feature_of(feature, picks)
     art_html = ""
     if hit and (root / date / "figures" / f"{hit[1]['pmcid']}-hero.svg").exists():
@@ -1116,7 +1131,7 @@ def today_html(feature: dict | None, picks: list, date: str, root: Path, fig_bas
     rows = "".join(f'<div><dt>{label}</dt><dd>{esc(pk["summary"][k])}</dd></div>'
                    for k, label in TODAY_FIELDS.items() if pk["summary"].get(k))
     return (f'<section class="today" id="today"><div class="wrap">'
-            f'<h2 class="today-sec"><span class="pu">Pick up</span>Today’s Structure</h2>'
+            f'<div class="ix-h"><h2 class="label">Picked up Today’s Structure</h2></div>'
             f'<p class="today-k"><span class="tg">{esc(pk.get("target_en") or pk["target_label"])}</span>'
             f'<span class="dt">{(first + " · ") if first else ""}Issue of {y}.{m:02d}.{d:02d}<b>Number {pad(n)}</b></span></p>'
             f'<h3 class="today-h"><a href="{href}">{esc(pk["headline"])}</a></h3>'
@@ -1233,9 +1248,37 @@ def issue_page(date: str, prev_date: str | None, next_date: str | None,
                 description=f"{jp_date(date)}の新しい構造：{desc}", noindex=preview, viewer=True)
 
 
-ABOUT = ("Europe PMC に前日登録されたオープンアクセスの査読済み論文から、構造生物学の論文を毎日紹介する。"
-         "新しい構造（PDB / EMDB に寄託）は全件、新しい構造ではない注目の構造は 1 日 5 本まで、基準を決めて選ぶ。"
-         "構造図は PDB の座標から描いている。")
+ABOUT = (   # the front page's About FoldFeed, in polite Japanese (the owner's wording request, 2026-10-18)
+    ("どんなサイトか",
+     "FoldFeed は、構造生物学に携わる方のための情報収集サポートサイトです。前日に論文データベース（Europe PMC）へ"
+     "新しく登録された査読済みのオープンアクセス論文の中から、構造生物学の論文を毎日ピックアップしてご紹介します。"),
+    ("紹介する論文",
+     "新しい構造（PDB・EMDB に登録された構造）を報告した論文は、すべてご紹介します。そのほか、既存の構造を使って"
+     "仕組みの解明や創薬に迫った注目の研究を、1 日 5 本までご紹介します。記事が 3 本以上ある日は、その中の 1 本を"
+     "Today’s Structure として大きく取り上げます。"),
+    ("記事のつくり",
+     "各記事では、論文が明らかにしたことを日本語で短くまとめ、構造図と結合部位の拡大図、実験条件のメモを添えています。"
+     "分解能・PDB ID・リガンドは PDB と UniProt から取得し、構造図は PDB の座標から描いています。紹介文は AI が論文本文を"
+     "もとに作成し、内容ごとに論文本文の該当箇所を引用したうえで、編集者が確認してから公開しています。"),
+)
+
+
+def about_html(issues: list[str], lib: list[dict]) -> str:
+    """About FoldFeed, right under the first screen: what the site is (polite Japanese), the running totals
+    (これまでの紹介実績) and every journal the papers came from. All numbers are computed from the data; a paper that
+    came back in a later issue counts once."""
+    papers = {r["cand"]["pmcid"]: r["cand"] for r in lib}
+    n_first = sum(any(p.get("first_structure") for p in c.get("proteins", [])) for c in papers.values())
+    journals = journal_counts(issues)
+    rows = "".join(f'<div><dt>{esc(k)}</dt><dd>{esc(v)}</dd></div>' for k, v in ABOUT)
+    cells = [("発行した号", len(issues)), ("紹介した論文", len(papers)), ("PDB 初構造", n_first), ("掲載誌", len(journals))]
+    nums = "".join(f'<div><dt>{k}</dt><dd>{v}</dd></div>' for k, v in cells)
+    jl = "".join(f'<li><span>{esc(n)}</span><span class="c">{c}</span></li>' for n, c in journals)
+    return (f'<section class="about" id="about"><div class="wrap">'
+            f'<div class="ix-h"><h2 class="label">About FoldFeed</h2></div>'
+            f'<div class="about-grid"><dl class="about-dl">{rows}</dl>'
+            f'<div class="about-side"><h3 class="about-sub">これまでの紹介実績</h3><dl class="nums">{nums}</dl></div></div>'
+            f'<h3 class="about-sub">掲載誌一覧<span>論文数</span></h3><ul class="jl">{jl}</ul></div></section>')
 
 
 METHOD_WORDS = (("クライオ", "cryo-em cryoem"), ("X線", "x-ray crystallography"), ("NMR", "nmr"))
@@ -1307,14 +1350,6 @@ def category_counts(lib: list[dict]) -> list[tuple[str, int]]:
         for c in set(r["cats"]):
             counts[c if c in counts else "other"] += 1
     return [(k, v) for k, v in counts.items() if v]
-
-
-def numbers_html(issues: list[str], lib: list[dict]) -> str:
-    """Running totals over every issue, all computed from the data."""
-    n_first = sum(any(p.get("first_structure") for p in r["cand"].get("proteins", [])) for r in lib)
-    cells = [("号", len(issues)), ("記事", len(lib)), ("PDB 初構造", n_first), ("掲載誌", len(journal_counts(issues)))]
-    dl = "".join(f"<div><dt>{k}</dt><dd>{v}</dd></div>" for k, v in cells)
-    return sd("これまでの数字", f'<dl class="nums">{dl}</dl>')
 
 
 def breakdown_html(picks: list) -> str:
@@ -1401,7 +1436,8 @@ def home(issues: list[str]) -> str:
     href = f"issues/{latest}.html"
     feature = load_feature(latest, ISSUES_DIR, picks)
     lib = library(issues)
-    top = lead_html(feature, picks, latest, ISSUES_DIR, "figures") + today_html(feature, picks, latest, ISSUES_DIR, "figures", href, "")
+    top = (lead_html(feature, picks, latest, ISSUES_DIR, "figures") + about_html(issues, lib)
+           + today_html(feature, picks, latest, ISSUES_DIR, "figures", href, ""))
     main = [f'<section class="toc">{contents_html(picks, latest, ISSUES_DIR, "figures", href, feature and feature["pmcid"])}</section>',
             f'<p class="sec-more"><a href="{href}">{jp_date(latest)}号のすべての記事を読む →</a></p>',
             f'<section class="sec"><div class="ix-h"><h2 class="label">タンパク質の種類から探す</h2>'
@@ -1417,8 +1453,7 @@ def home(issues: list[str]) -> str:
         main.append(f'<section class="sec past"><div class="ix-h"><h2 class="label">過去の号</h2><span>{len(past)} 号</span></div>'
                     f'<ol>{"".join(items)}</ol></section>')
     main.append(mail_html())
-    side = (sd("タンパク質を探す", find_form()) + mine_html(lib) + journals_html(journal_counts(issues)) + numbers_html(issues, lib)
-            + sd("このサイトについて", f"<p>{esc(ABOUT)}</p>"))
+    side = sd("タンパク質を探す", find_form()) + mine_html(lib)
     return page(f"{brand.SITE_NAME}（{brand.SITE_NAME_EN}）",
                 masthead(0) + top + shell("".join(main), side)
                 + colophon(f'<p>{esc(pmcoa.CREDIT)}</p>' if load_issue(latest, ISSUES_DIR)[0].get("source") == pmcoa.SOURCE else ""),
