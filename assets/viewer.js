@@ -22,7 +22,7 @@
   "use strict";
   var ELEMENT = { N: "#3461D1", O: "#E8303A", S: "#E0B21C", P: "#F08A24", F: "#3FA34D", CL: "#3FA34D",
                   BR: "#9A3B1F", I: "#7A2E99", SE: "#E58A1C", B: "#E6918A" };
-  var GROUND = "#F0F1EF";
+  var GROUND = "#FAFAF8";   // the page ground (pipeline/brand.py)
   var NEUTRAL = "#8A93A0";
   var TIMEOUT = 120;    // seconds before a load is given up
   var loading = null;   // promise for Mol* itself

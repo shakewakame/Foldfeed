@@ -103,7 +103,10 @@ EXAMPLE = {
     "ligand_label": "結合分子の表示（略号より分かりやすい名前。例：オラパリブ、タラゾパリブ）",
     "legend_labels": ["構造図の色の凡例名を entity の順に上書き（任意）"],
     "ligand_names": {"A1CKT": "OX04529", "43M": "4CmC"},
-    "section": "注目の構造（新しい構造以外）なら \"impact\"。新しい構造の記事では書かない",
+    "section": "既存の構造を使った研究（注目の構造の採点で選んだもの）なら \"impact\"。新しい構造の記事では書かない",
+    # Optional: only when none of the paper's proteins could be matched to UniProt (PDB entries not yet released, IDs not
+    # in the text) and the paper itself says its protein had no structure before. Puts the article in New Structure.
+    "first_claim": [{"quote": "論文本文の逐語引用（例：the first structure of ...）", "section": "Results"}],
     "site_ligand": "結合部位の拡大図に使うリガンドの ID（省略時は ligand_names の最初、なければ最大のリガンド。\"\" で拡大図なし）",
     # Optional: what the figure points at. legend_labels / ligand_names already put a leader-line label on each protein and ligand.
     "figure_notes": [{"title": "ゲートヘリックス（16字以内）", "sub": "Wzt の一部（任意）",

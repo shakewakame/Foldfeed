@@ -109,12 +109,34 @@ def text_block(lines, x, y, size, color, weight=400, line_height=1.35) -> str:
 # ---------- graphical abstract ----------
 
 def is_impact(pick: dict) -> bool:
+    """A study that uses existing structures (no new structure of its own), chosen by the impact rubric."""
     return pick.get("section") == "impact"
 
 
+def first_structure(cand: dict, pick: dict | None = None) -> bool:
+    """A protein of the paper had no structure in the PDB before it (SIFTS, `first_structure`). When none of the
+    paper's proteins could be matched to UniProt (entries not yet released, IDs not in the text), the paper's own
+    statement counts instead: pick["first_claim"], quoted (checked by pipeline.verify)."""
+    prots = cand.get("proteins") or []
+    if prots:
+        return any(p.get("first_structure") for p in prots)
+    return bool(pick and pick.get("first_claim"))
+
+
+def part_of(cand: dict, pick: dict) -> str:
+    """Where an article goes on the pages (the owner's rule, 2026-10-18): "new" = New Structure, a protein whose structure
+    is solved for the first time; "impact" = Notable Structure, every other new structure (a new state, ligand or partner
+    of a protein solved before, a map, a paper whose PDB IDs cannot be traced) and the studies that use existing
+    structures."""
+    return "new" if not is_impact(pick) and first_structure(cand, pick) else "impact"
+
+
 def split_sections(picks: list) -> tuple[list, list]:
-    """(new-structure articles, 注目の構造 articles), each in rank order."""
-    return [p for p in picks if not is_impact(p[1])], [p for p in picks if is_impact(p[1])]
+    """(New Structure articles, Notable Structure articles), each in rank order; in Notable Structure the new
+    structures come first, then the studies that use existing structures."""
+    new = [p for p in picks if part_of(*p) == "new"]
+    hot = [p for p in picks if part_of(*p) != "new"]
+    return new, [p for p in hot if not is_impact(p[1])] + [p for p in hot if is_impact(p[1])]
 
 
 def load_impact(d) -> dict:
@@ -671,18 +693,19 @@ def issue_md(meta: dict, picks: list[tuple[dict, dict]], infos: dict | None = No
         out += [f"出典：{pmcoa.CREDIT}", ""]
     new, hot = split_sections(picks)
     if hot:
-        out += [f"**注目の構造：{len(hot)} 本**（新しい構造ではないが、実験で決めた構造で確かめた注目の研究）", ""]
+        out += [f"**New Structure {len(new)} 本・Notable Structure {len(hot)} 本**（New：構造が初めて解かれたタンパク質。"
+                f"Notable：既知のタンパク質の新しい構造と、既存の構造を使った注目の研究）", ""]
     out += feature_md(feature, picks)
     if picks:
         out += contents_table(new + hot)
     out += ["> この号は AI が論文本文から作成した**レビュー用の下書き**です。"
             "数値・ID・リガンドは PDB / UniProt から取得し、AI の記述には本文からの引用を付けています。", "", "---", ""]
     if hot and new:
-        out += ["# 新しい構造", ""]
+        out += ["# New Structure（構造が初めて解かれたタンパク質）", ""]
     for n, (cand, pick) in enumerate(new, 1):
         out += article_md(cand, pick, n, (infos or {}).get(cand["pmcid"]))
     if hot:
-        out += ["# 注目の構造（新しい構造以外。実験で決めた構造で確かめた研究）", ""]
+        out += ["# Notable Structure（既知のタンパク質の新しい構造と、既存の構造を使った注目の研究）", ""]
         for n, (cand, pick) in enumerate(hot, len(new) + 1):
             out += article_md(cand, pick, n, (infos or {}).get(cand["pmcid"]))
     out += impact_md(impact_record or {}, {c["pmcid"]: c for c in meta["candidates"]})

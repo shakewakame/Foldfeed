@@ -40,7 +40,7 @@ class Theme:
 
 
 THEMES = {
-    "b": Theme("b", "藍と朱", ground="#F0F1EF", paper="#FFFFFF", ink="#1B2638", ink2="#283346", desc="#2F3A4C", muted="#4A5466",
+    "b": Theme("b", "藍と朱", ground="#FAFAF8", paper="#FFFFFF", ink="#1B2638", ink2="#283346", desc="#2F3A4C", muted="#4A5466",
                hair="#CDD1D8", accent="#C8442A", accent_ink="#B33A22", soft="#E4E7EB",
                entities=("#3C5A8C", "#C9A04B", "#5F9296", "#A5707A", "#7C8AA8", "#8A9A5B", "#9C7B55", "#6E6E8E"),
                ligand="#D4452B", loop_back="#8DA0C4", loop_front="#FFFFFF"),

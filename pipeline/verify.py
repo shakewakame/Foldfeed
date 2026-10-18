@@ -127,6 +127,14 @@ def check_pick(pick: dict, cand: dict | None, corpus: str | None) -> tuple[list[
     fig_errors = check_figure_fields(pick, cand)
     errors += fig_errors
     quotes += [("figure_evidence", e) for e in pick.get("figure_evidence") or []]
+    if pick.get("first_claim"):
+        # the paper's own word that its protein had no structure before: used only when no protein could be matched
+        if cand.get("proteins"):
+            warnings.append("first_claim is ignored: the paper's proteins are matched to UniProt, and PDB decides")
+        if not isinstance(pick["first_claim"], list) or not all(isinstance(e, dict) for e in pick["first_claim"]):
+            errors.append('first_claim must be a list of {"quote": ..., "section": ...}')
+        else:
+            quotes += [("first_claim", e) for e in pick["first_claim"]]
 
     if corpus is None:
         errors.append("full-text packet missing; run pipeline.collect first")
