@@ -187,6 +187,20 @@
 | トップの右側 | **最初から今日の一本の 3D ビューア**（Mol*）。広い画面（1121 px 以上）では読み込み後に自動で開き、読み込むまでは同じ向きの静止画（`-hero.svg`）を出す。**ボタン・操作の説明などの文字は出さず、読み込み中は「読み込み中」の文字だけ**を出す（静止画も出さない。読み込めなかったときは静止画）。上でホイールを回してもページがスクロールする（拡大は Ctrl／⌘＋ホイール）。スマホ（1 段組み）では開かず静止画（Mol* 約 5 MB と縦スワイプを奪うのを避ける） |
 | 3D の最初の向き | 3D ビューアは**図と同じ向き**から始まる（render が図の視点を MolViewSpec のカメラとして `figures/<PMCID>.json` の `view`・`hero_view` に保存）。膜タンパク質は 3D でも外側が上。記事の 3D の「全体に戻す」もこの向きに戻る |
 
+## 2026-10-18（Round 19：Nature 系を出版の翌日に）
+
+| 項目 | 決定 |
+|---|---|
+| 経路 | Crossref（出版日で探す：接続可）＋ **Springer Nature Open Access API**（全文を JATS XML で：オーナーがキーを取得し、環境変数 `SPRINGER_NATURE_OA_API_KEY` と許可ドメイン `api.springernature.com` を設定）。nature.com の記事ページを直接読む案はやめた（ボット対策があり、Python の通信には「Client Challenge」が返る。対策を避ける作りはしない） |
+| 対象誌 | Nature Communications・Nature Structural & Molecular Biology・Communications Biology・Nature・Nature Chemical Biology・Communications Chemistry・Cell Discovery・Cell Research・Nature Microbiology・Nature Methods・Nature Chemistry・Signal Transduction and Targeted Therapy・The EMBO Journal・EMBO Reports（`springer.JOURNALS`、DOI の記事番号の頭で見分ける）。オープンアクセス（CC ライセンス）のものだけ。Scientific Reports は 1 日約 150 本と多く、構造の論文はまれなので従来の経路のまま |
+| 量 | 2026-10-01〜17 の Crossref では、Nat Commun 約 29 本/日、ほか 14 誌合計で 1 日 60 本前後の全文を読む（1 秒に 1 本、1 日の上限 150 本）。要旨のない記録が多い（Nat Commun の 6 割）ので要旨では絞らず、全文で Europe PMC と同じ語（構造×寄託、注目の構造の語）で絞る |
+| ID | PMCID がまだないので `SN-<DOI の記事番号>`（例：`SN-s41467-026-77727-2`）を `pmcid` の欄に入れる。ファイル名・アンカー・本文の保存先はこれで動く |
+| 重複 | 号の `candidates.json` に、その日この経路で読んだ DOI をすべて記録（`springer.read`）。1 か月後に Europe PMC / PMC に同じ論文が届いても DOI で除く。あわせて、これまでの号の候補の DOI と同じ論文も除く（同じ論文が 10/08 と 10/17 に二度出た例があった） |
+| 失敗したとき | キーがない・API が拒否（401/403）・通信失敗の日は、その経路を飛ばす（読めなかった論文は記録しないので、従来どおり PMC から入る）。号の作成は止めない |
+| 画面 | この経路の論文がある号の第一画面は「10月17日に論文データベースへ登録された論文と、同じ日に Nature 系の雑誌で出版された論文から」。About の「掲載のタイミング」は、この経路で読んだ号が 1 つでもあれば自動で「Nature Communications・Nature Structural & Molecular Biology などの Nature 系の雑誌の論文は、出版の翌日にご紹介します。そのほかの雑誌の論文は、論文データベースに登録された翌日にご紹介します。…」に変わる |
+| 移行期 | この経路を始める前に出版された Nature 系の論文は、これから 1〜2 か月のあいだ PMC から届き続ける（前の号に出ていないので除かれない）。取りこぼしはない |
+| 確認 | 手元の検証：Crossref の取得、14 誌の DOI の見分け、既存の Nat Commun 論文 2 本の JATS を API の応答に見立てた通し試験（候補・PDB の照合・本文の保存・号の記録）。キーはこのセッションからは見えない（環境変数は新しいセッションから有効）ため、実際の API は別のセッションで読み取りだけの確認を行った |
+
 ## 2026-10-18（Round 18：New と Notable の分け方・背景色）
 
 | 項目 | 決定 |
