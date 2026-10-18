@@ -1,0 +1,147 @@
+{
+  "pmcid": "PMC13672048",
+  "section": "impact",
+  "rank": 1,
+  "headline": "オピオイドの効力は、Gαドメインの開きやすさに表れる",
+  "subhead": "既存の構造を使い、一分子FRETでμOR–Gi複合体のAHDの動きを測った。強い作動薬ほど開きが速い",
+  "target_label": "μOR–Gi 複合体（マウス・ヒト）",
+  "method_label": "一分子FRET・GTP代謝回転（既存のGi・μOR構造を使用）",
+  "ga_pdb_id": "7T2H",
+  "summary": {
+    "question": "オピオイド受容体に結合した作動薬の効果が、結びついた G タンパク質にどう伝わるかは分かっていなかった。",
+    "approach": "既存の構造を使い、Gαi の 2 か所を蛍光標識して、一分子 FRET で α ヘリックスドメイン（AHD）の開閉を測った。",
+    "result": "効力の高い作動薬ほど AHD が開いた状態（低 FRET）にいる割合が高く、GTP 代謝回転と R2 = 0.97 で相関した。",
+    "learned": "受容体のリガンドは 70 Å 以上離れた結合部位から G タンパク質の形を調節し、効力を決める一因になると示唆される。",
+    "open": "絶対的な速度は、界面活性剤ミセルやシステイン置換、温度などの実験条件の影響を受けうると論文は述べている。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Although orthosteric ligands are known to modulate GPCR conformation, how these effects propagate to the bound G protein remains unclear.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Using single-molecule Förster resonance energy transfer imaging, we monitored AHD motions in Gi proteins coupled to the μ-opioid receptor across different ligand- and nucleotide-bound states.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "This ligand-induced low-FRET occupancy was strongly correlated with in vitro GTP turnover activity (a direct measure of efficacy) (R2 = 0.97; Fig. 2b)",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "We find that receptor ligands differentially modulate these dynamics from a binding site over 70 Å away, with higher-efficacy agonists accelerating transitions to an open, low-nucleotide-affinity conformation.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "These data also capture transient AHD intermediates during nucleotide exchange and suggest that allosteric control over the G protein conformational states provides an additional mechanism for encoding opioid efficacy and signaling outcomes.",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "The absolute values of these rates may nevertheless be influenced by experimental conditions, such as the detergent micelle, cysteine substitutions, temperature and/or limitations in imaging speed and fluorescent probes.",
+          "section": "Results"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "receptor"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "作動薬の効力が高いほど、AHD が開いた状態（低 FRET）に留まる割合が増えた。その割合は GTP 代謝回転活性と強く相関した（R2 = 0.97）。",
+      "evidence": [
+        {
+          "quote": "At μOR bound to full agonists, occupancy of the low-FRET (0.27) state increased relative to partial agonists, whereas that of the high-FRET (0.62) state decreased (Fig. 2a).",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "強い作動薬（LFT）の複合体では、AHD が開く見かけの速さが apo の約 2.25 倍（約 0.9 s−1 と約 0.4 s−1）だった。開いた状態に留まる時間はどの作動薬でも約 1.4 秒で近かった。",
+      "evidence": [
+        {
+          "quote": "with the apparent rate of AHD opening being approximately 2.25-fold faster for LFT-occupied compared to apo-occupied complexes (~0.9 s−1 and ~0.4 s−1, respectively)",
+          "section": "Results"
+        },
+        {
+          "quote": "Conversely, dwell times in the low-FRET state were similar (~1.4 s on average) across all ligands tested",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "GTP に似せた GMP・PPi を加えると、AHD は短命な中間の FRET 状態を経て閉じた。論文は、ヌクレオチドとの接触が一度にではなく段階的に切れる、または形成される機構を示唆している。",
+      "evidence": [
+        {
+          "quote": "Together, these findings suggest a mechanism where nucleotide contacts are broken or formed progressively rather than all at once, providing a free-energy-efficient pathway for nucleotide exchange through a transient intermediate step",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "Gαi1 は大腸菌 BL21(DE3)、μOR は Sf9 昆虫細胞のバキュロウイルス系で発現した。",
+    "construct": "Gαi1 に R90C と E238C を導入した最小システイン変異体を標識に使った。",
+    "purification": "μOR–Gi 複合体は M1 抗 Flag カラムで精製し、さらに Superdex 200 のゲルろ過にかけた。",
+    "sample_prep": "LD555 と JFX673 で Gαi を標識し、複合体を M1 Fab で石英スライドに固定した。",
+    "data_collection": "自作のプリズム型 TIRF 顕微鏡で 19 °C、50 ms の時間分解能で撮像した。",
+    "evidence": [
+      {
+        "quote": "The R90C and E238C substitutions were introduced into a previously published minimal cysteine background (C3S;C66A;C214S;C350S;C325A;C351I) of human Gαi1",
+        "section": "Methods"
+      },
+      {
+        "quote": "was expressed in BL21(DE3) cells (Sigma-Aldrich, CMC0014) using pET28a and purified as previously described",
+        "section": "Methods"
+      },
+      {
+        "quote": "Mouse μOR was expressed in Sf9 insect cells (Expression Systems, 940-001S) using the baculovirus method",
+        "section": "Methods"
+      },
+      {
+        "quote": "The eluate was further purified using a room temperature Superdex 200 10/300 SEC column in complex buffer containing 0.1–1 μM ligand.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Maleimide-conjugated LD555 (Lumidyne Technologies) and JFX673-peg4 (Janelia Fluor) were added simultaneously, each at a twofold molar excess, and incubated at room temperature for 0.5 h.",
+        "section": "Methods"
+      },
+      {
+        "quote": "loaded onto the microscope slide at 200 pM by pulling down the N-terminal Flag tag on the receptor",
+        "section": "Methods"
+      },
+      {
+        "quote": "All imaging was performed at 19 °C and videos were recorded with Andor Solis (i) software (Andor) at a 50-ms time resolution (20 fps).",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "μOR",
+    "Gi",
+    "smFRET",
+    "AHD"
+  ],
+  "editor_notes": "既存の PDB 構造（1GP2、7L0Q、7T2H）は標識部位の設計と状態の解釈に使われるだけで、新しい構造は報告していない。structure は 1 点。構造図は μOR–Gi の 7T2H を使うが、論文の図 1b は 1GP2 と 7L0Q。legend_labels は render 前のため未記入。",
+  "legend_labels": [
+    "Gαi1（G タンパク質 α）",
+    "Gβ1（G タンパク質 β）",
+    "Gγ2（G タンパク質 γ）",
+    "scFv16（抗体断片）",
+    "μオピオイド受容体"
+  ],
+  "ligand_names": {
+    "EID": "ロフェンタニル"
+  },
+  "site_ligand": "EID"
+}

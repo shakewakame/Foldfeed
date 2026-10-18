@@ -1,0 +1,52 @@
+{
+ "pdb_id": "9OK8",
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "NLRP6（センサー）",
+   "desc": "NACHT, LRR and PYD domains-containing protein 6",
+   "entity": "1"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "ATP",
+   "label": "ATP",
+   "color": "#C23B8E",
+   "desc": "Adenosine-5'-Triphosphate",
+   "entity": [
+    "2"
+   ],
+   "sites": [
+    [
+     "B",
+     "901"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "ATP",
+  "residues": [
+   "A329",
+   "A330",
+   "P331",
+   "A383",
+   "H539",
+   "V541",
+   "L542",
+   "R545",
+   "E611",
+   "E613",
+   "L619",
+   "E620",
+   "Y623",
+   "V649",
+   "R650",
+   "D655"
+  ],
+  "polar": 8,
+  "neighbours": [],
+  "label": "ATP"
+ }
+}

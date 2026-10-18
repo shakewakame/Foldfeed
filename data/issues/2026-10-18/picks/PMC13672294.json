@@ -1,0 +1,125 @@
+{
+  "pmcid": "PMC13672294",
+  "rank": 14,
+  "headline": "乾いたタンパク質は、レーザーで氷を溶かすと水を取り戻して元に近づく",
+  "subhead": "ソフトランディングしたβ-ガラクトシダーゼを、30 µsのレーザー融解で再水和して解析した",
+  "target_label": "β-ガラクトシダーゼ・GroEL（大腸菌）",
+  "summary": {
+    "question": "ソフトランディングでは試料が乾燥し、タンパク質が縮んだ形でしか観察できなかった。",
+    "approach": "着地させたタンパク質に非晶質の氷を重ね、30 µsのレーザーパルスで氷を一瞬溶かして再水和し、GroELとβ-ガラクトシダーゼを調べた。",
+    "result": "再水和した粒子は幅広い形の集団になった。一部の粒子は、天然に近い形に戻った。",
+    "learned": "著者は、融解の時間を延ばすなどの方法で全粒子を再水和できるとみており、ソフトランディングによる日常的な試料調製が近づくと述べている。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "However, only compacted configurations are observed after soft-landing since the proteins are dehydrated in the process.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here, we deposit a layer of amorphous ice onto the sample and briefly flash melt it to rehydrate the soft-landed proteins.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "Melting with a 30 µs laser pulse creates a broad ensemble of partially rehydrated structures. However, a subset of particles returns to a configuration close to the native state.",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "This allows us to propose strategies to fully rehydrate the entire ensemble and brings routine sample preparation by soft-landing mass spectrometry within reach.",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Future experiments will also have to show whether this approach can be generalized to a wide range of proteins.",
+          "section": "Results"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "enzyme",
+    "translation"
+  ],
+  "highlights": [
+    {
+      "tag": "手法の工夫",
+      "text": "ソフトランディングで着地させた粒子の上に、その場で非晶質の氷を50 nm重ね、532 nmのレーザーを30 µs当てて溶かすと、粒子が再水和して膨らむ。レーザーを切ると数マイクロ秒で再びガラス化するため、新しい形が凍結される。",
+      "evidence": [
+        {
+          "quote": "The sample is then flash melted with a 30 µs laser pulse (Fig. 1E, 532 nm wavelength), allowing the proteins to rehydrate (Fig. 1F).",
+          "section": "Results"
+        },
+        {
+          "quote": "Once the heating laser is switched off, the sample rapidly cools and revitrifies within microseconds27, trapping the proteins in their new configurations (Fig. 1G).",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "GroELは着地すると高さが約24%、直径が約7%縮んだが、レーザー融解後はサブユニット間の水で満たされた空間が戻った。β-ガラクトシダーゼでは、天然状態に最も近い粒子だけを選ぶと3.7 Åの再構成が得られ、分子モデルの差は0.7 Åだった。",
+      "evidence": [
+        {
+          "quote": "A comparison with the native structure (Figs. 2D, 1.9 Å) reveals that dehydration has significantly compacted the soft-landed particles, reducing their height and diameter by about 24% and 7%, respectively.",
+          "section": "Results"
+        },
+        {
+          "quote": "This is also reflected in the similarity of the molecular models that we have built for both structures (Supplementary Information E and Supplementary Fig. 14, root-mean-square deviation of 0.7 Å)",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "実験Tips",
+      "text": "界面への吸着が再水和を遅らせ、粒子を非対称にする可能性がある。天然に近い粒子ほど配向の偏りが小さかった。ソフトランディングでは、通常の試料に混じる二量体が見えず、四量体だけが見つかった。",
+      "evidence": [
+        {
+          "quote": "Our results suggest that adsorption to an interface hinders many particles from fully returning to the native state during the short time window provided by the melting laser pulses.",
+          "section": "Results"
+        },
+        {
+          "quote": "While a conventional sample of β‑galactosidase contains some fraction of dimers (Supplementary Fig. 5C), only tetramers are found after soft-landing",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "GroELとβ-ガラクトシダーゼはSigma-Aldrichの市販品。",
+    "construct": null,
+    "purification": null,
+    "sample_prep": "酢酸アンモニウム中でネイティブ質量分析。UltrAuFoil＋2 nm非晶質炭素膜のグリッドに、110 K・2 eV/電荷で着地。",
+    "data_collection": "改造したJEOL 2010Fでレーザー融解（30 µs、532 nm）。",
+    "evidence": [
+      {
+        "quote": "Samples of GroEL and β-galactosidase were purchased from Sigma-Aldrich (G3153-5MG and C7688-1MG).",
+        "section": "Methods"
+      },
+      {
+        "quote": "Protein ions were deposited with an energy of 2 eV per charge, as measured with a retarding-grid energy detector, with a typical ion current of 50 pA and 20 min deposition time.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Laser melting and revitrification experiments were performed with a modified JEOL 2010F transmission electron microscope37,38.",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "ソフトランディング",
+    "レーザーフラッシュ融解",
+    "β-ガラクトシダーゼ",
+    "GroEL",
+    "クライオ電顕"
+  ],
+  "editor_notes": "新しい構造は、プレート凍結（9HKI）と再水和した粒子（9HLM）の2つのβ-ガラクトシダーゼで、タンパク質自体の初構造ではない。手法論文。",
+  "legend_labels": [
+    "β-ガラクトシダーゼ"
+  ]
+}

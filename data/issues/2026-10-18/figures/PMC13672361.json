@@ -1,0 +1,12 @@
+{
+ "pdb_id": "21MW",
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "NHA1（Na+/H+ 交換体）",
+   "desc": "Sodium/hydrogen exchanger 9B1",
+   "entity": "1"
+  }
+ ],
+ "ligands": []
+}

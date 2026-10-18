@@ -1,0 +1,134 @@
+{
+  "pmcid": "PMC13645619",
+  "rank": 9,
+  "headline": "AP-7-168は分子糊としてβ2ARを二量体にし、アレスチンを遮る",
+  "subhead": "2分子のAP-7-168がTM3・4・5の間に収まって2つの受容体を結びつける様子を、クライオ電顕で捉えた",
+  "target_label": "β2AR（ヒト）二量体",
+  "summary": {
+    "question": "β2ARを偏って阻害する化合物AP-7-168が、どのような分子機構で働くのかは分かっていなかった。",
+    "approach": "AP-7-168を結合させたβ2ARをクライオ電顕で解析し、生化学・生物物理の実験と細胞での二量体化の測定を組み合わせた。",
+    "result": "2分子のAP-7-168がTM3・4・5が作る空間に収まり、受容体2つをつないでいた（2.5 Å）。細胞でも二量体化が起きた。",
+    "learned": "二量体は隣の受容体との立体障害でGRKやβアレスチンの結合を妨げる一方、Gタンパク質は受け入れうると考えられる。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Despite these promising findings, the molecular mechanism by which AP modulates β2AR function remains unclear, posing a considerable obstacle to the further development and optimization of AP as a therapeutic agent.",
+          "section": "Main"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here, using cryo-EM combined with various biochemical and biophysical approaches, we demonstrate that AP functions as a molecular glue by stabilizing a β2AR homodimer, which in turn alters the downstream signalling behaviours.",
+          "section": "Main"
+        }
+      ],
+      "result": [
+        {
+          "quote": "The two AP molecules are packed against each other through π–π and van der Waals interactions and fit in an allosteric pocket formed by TM3, TM4 and TM5 of two β2AR protomers (Figs. 1e and 2a–c).",
+          "section": "Structural basis of AP binding"
+        },
+        {
+          "quote": "Together, these results demonstrate that AP robustly stabilizes β2AR dimerization in native cellular environments.",
+          "section": "β2AR dimerization in liposomes and cells"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Structural analysis indicates that steric hindrance imposed by the adjacent protomer prevents GRK and β-arrestin from adopting their canonical binding modes.",
+          "section": "Discussion"
+        },
+        {
+          "quote": "By contrast, docked Gs appeared to be accommodated (clashscore, 6.55), and the outward movements of TM5 and TM6 required for G-protein binding are not restricted by the dimer contacts.",
+          "section": "Biased signalling of AP-mediated dimer"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "receptor"
+  ],
+  "highlights": [
+    {
+      "tag": "新しい結合部位",
+      "text": "AP-7-168は、2分子が互いに積み重なる形でTM3・4・5が作る空間に収まる。2-アミノ基がGlu122とつくる水素結合など、これまでの構造活性相関と変異の結果を説明できる。非偏りのNAM AS408と結合部位は重なるが、キナゾリン環は180°反転していた。",
+      "evidence": [
+        {
+          "quote": "Moreover, the 2-amino group in AP forms hydrogen bond interactions with Glu1223.41 in TM3 (Fig. 2a).",
+          "section": "Structural basis of AP binding"
+        },
+        {
+          "quote": "The quinazoline rings of AP and AS408 are nearly parallel, but they are flipped 180° relative to each other (Fig. 2e).",
+          "section": "Structural basis of AP binding"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "二量体のβ2ARは、AP存在下でGRK5によるリン酸化がほぼ完全に阻害され、βアレスチンによるアゴニスト親和性の上昇も消えた。一方で単量体では影響が小さい。Gsとは二量体でも結合した。リガンドが二量体を安定化して偏りを生む戦略の可能性を示している。",
+      "evidence": [
+        {
+          "quote": "AP-bound β2AR dimers exhibited near-complete inhibition of GRK5 phosphorylation in both detergent and nanodiscs (Fig. 4h and Supplementary Fig. 8a)",
+          "section": "Biased signalling of AP-mediated dimer"
+        },
+        {
+          "quote": "Despite adopting an inactive conformation in the structural models, the β2AR dimer retains the ability to engage Gs",
+          "section": "Biased signalling of AP-mediated dimer"
+        }
+      ]
+    },
+    {
+      "tag": "実験Tips",
+      "text": "精製した単量体にAPを加えても二量体はできにくかったが、細胞膜をAPで処理してから界面活性剤で可溶化すると、ほぼ完全に二量体化した。連続した流動性のある膜が、膜貫通部の接触を助けることを示唆している。",
+      "evidence": [
+        {
+          "quote": "Although incubation of AP with purified monomeric β2AR in detergent did not result in efficient dimerization as assessed by SEC (Fig. 1c), we achieved almost complete β2AR dimerization by pretreating resuspended cell membrane with AP for around 30 min at room temperature before detergent extraction (Fig. 1c and Methods).",
+          "section": "Structure determination of AP-bound β2AR"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "β2AR（PN1コンストラクト）をSf9細胞で発現。二量体は、細胞を10 μM APとともに30分処理してから可溶化。",
+    "construct": null,
+    "purification": "LMNGで可溶化し、M1抗Flag親和精製とSuperdex 200によるゲルろ過。10 μM APを精製中ずっと維持。",
+    "sample_prep": "二量体はPOPC:POPS:コレステロール（7:2:1）のナノディスク（MSP1E3D1）に再構成し、アゴニストBI-167107を加えた。Quantifoil R1.2/1.3 Auグリッド、Vitrobot Mark IV。",
+    "data_collection": "Titan Krios G3i（300 kV）。ナノディスク試料は17,997枚を収集し、cryoSPARCで解析（二量体にC2対称を適用）。",
+    "evidence": [
+      {
+        "quote": "The β2AR construct PN1 was expressed and purified as previously described39,42. In brief, Sf9 cells were infected with a PN1-containing baculovirus produced using the BestBac method.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Lipids were prepared by mixing 1-palmitoyl-2-oleoyl-glycero-3-phosphocholine (POPC, Avanti), 1-palmitoyl-2-oleoyl-sn-glycero-3-phospho-L-serine (POPS, Avanti) and cholesterol (Sigma-Aldrich) at a molar ratio of 7:2:1",
+        "section": "Methods"
+      },
+      {
+        "quote": "Quantifoil R1.2/1.3 Au grids were glow-discharged with air for 90 s at 10 mA using Plasma Cleaner (PELCO EasiGlow).",
+        "section": "Methods"
+      },
+      {
+        "quote": "C2 symmetry was imposed for the final NU refinement of dimer species.",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "β2AR",
+    "GPCR",
+    "二量体",
+    "分子糊",
+    "アロステリック",
+    "βアレスチン",
+    "AP-7-168"
+  ],
+  "editor_notes": "初構造とは書いていない（9Q3L が最初の AP 結合構造かは本文に明言なし）。ligand_label は未設定（AP-7-168 と DFPQ の PDB 上の ID は描画後に確認してほしい）。open 行は論文に明確な限界・今後の課題の記述がないため省いた。",
+  "legend_labels": [
+    "β2AR（受容体）"
+  ],
+  "ligand_names": {
+    "A1CNS": "AP-7-168",
+    "P0G": "BI-167107",
+    "LFA": "エイコサン"
+  },
+  "site_ligand": "A1CNS"
+}

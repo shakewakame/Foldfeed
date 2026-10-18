@@ -1,0 +1,175 @@
+{
+  "pmcid": "PMC13669368",
+  "rank": 2,
+  "headline": "OCTN1の外向き・内向きの構造から、阻害薬メベンダゾールを見いだした",
+  "subhead": "ヒトOCTN1のapo型とエルゴチオネン結合型をクライオ電顕で解き、構造に基づく仮想スクリーニングで阻害剤を探した",
+  "target_label": "ヒトOCTN1（SLC22A4）",
+  "summary": {
+    "question": "OCTN1が基質を認識して運ぶ仕組みは、構造の面からはよく分かっていなかった。",
+    "approach": "ヒトOCTN1のapo型とエルゴチオネン（ET）結合型をクライオ電顕で解析し、構造をもとに阻害剤を探した。",
+    "result": "apo型は外向き（3.11 Å）、ET結合型は内向き（3.37 Å）だった。メベンダゾール（MBZ）はKD 2.48 nMで結合し、ET輸送を約60%抑えた。",
+    "learned": "OCTN1はNa⁺と共役して輸送する。MBZは、がん細胞の増殖を、OCTN1を介して抑えるとみられる。",
+    "open": "MBZを結合させたOCTN1のクライオ電顕構造は、最適化を重ねても決められなかった。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Despite its physiological and clinical relevance, the structural mechanisms underlying substrate recognition and transport by OCTN1 have remained poorly understood.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here, we present cryo-EM structures of human OCTN1 in both apo and ET-bound states, revealing the binding site of ET and elucidating conformational changes essential for sodium-dependent substrate transport.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Furthermore, structure-based screening identifies mebendazole (MBZ) as a small-molecule inhibitor that targets OCTN1 to suppress tumor cell proliferation, with an affinity in the nanomolar range.",
+          "section": "Introduction"
+        }
+      ],
+      "result": [
+        {
+          "quote": "We obtained a 3D reconstruction of OCTN1 (apo-state) at 3.11 Å resolution and completed the model",
+          "section": "Results"
+        },
+        {
+          "quote": "subsequently determined the structure of OCTN1 in ET-bound state at 3.37 Å resolution",
+          "section": "Results"
+        },
+        {
+          "quote": "Mebendazole (MBZ) was identified as the top candidate, exhibiting a KD of 2.48 ± 0.31 nM",
+          "section": "Results"
+        },
+        {
+          "quote": "At a concentration of 20 nM, it suppressed ET uptake by ~60% (Fig. 5E).",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "These results suggest that OCTN1 adopts a Na⁺-coupled transport mechanism analogous to OCTN2, even in the absence of resolvable Na⁺ density in our cryo-EM structures.",
+          "section": "Results"
+        },
+        {
+          "quote": "Taken together, these results indicate that MBZ regulates the proliferation and migration in HeLa and A549 cells by targeting OCTN1",
+          "section": "Results"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Despite extensive optimization of sample preparation, detergent screening and nanodiscs reconstitution, we failed to resolve the cryo-EM structure of the MBZ-bound OCTN1 complex.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "transporter"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "ETの結合ポケットは芳香族残基（Y211、F239、F441）が囲み、R469がETのカルボキシ基と水素結合を作る。R469をAlaに替えると取り込みが85%以上失われた。OCT1ではこの位置がAspで、OCTN1ではE381とR469の電荷の組み合わせが、双性イオンのETを受け入れるのに役立つと論文は述べている。",
+      "evidence": [
+        {
+          "quote": "One polar interaction enhances binding specificity and affinity: R469 (TM11) donates a hydrogen bond to the carboxylate oxygen of ET.",
+          "section": "Results"
+        },
+        {
+          "quote": "The R469A substitution was most detrimental, abrogating over 85% of uptake activity",
+          "section": "Results"
+        },
+        {
+          "quote": "This configuration enables OCTN1 to accommodate not only cations but also zwitterionic substrates like ET.",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "ET結合型の構造を使った承認薬の仮想スクリーニングで、駆虫薬メベンダゾール（MBZ）が最上位の候補になった。HeLaとA549細胞の増殖を抑え、OCTN1をノックダウンするとこの効果はほぼ消えた。マウス異種移植でも腫瘍が約3分の1になった。MBZの結合の様子は、AF3予測とMDによるモデルである。",
+      "evidence": [
+        {
+          "quote": "We performed a virtual screen of FDA-approved drugs based on their computationally predicted binding affinity (docking score in kcal/mol) to the substrate-binding pocket of OCTN1-ET",
+          "section": "Results"
+        },
+        {
+          "quote": "indicating that the anti-proliferative effect of MBZ was largely abolished upon OCTN1 depletion",
+          "section": "Results"
+        },
+        {
+          "quote": "with final tumor volumes and weights reduced to approximately one-third of those in the control group",
+          "section": "Results"
+        },
+        {
+          "quote": "To characterize the binding mode of MBZ, we combined AF3 structural prediction and molecular dynamics (MD) simulations",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "外向きのapo型と内向きのET結合型を比べると、C末端側のドメインがN末端側のドメインに対して剛体として動いていた。TM7とTM10の細胞外側が内側に傾き、細胞質側が開く。TM8だけは約40°傾き、その仕組みは未解明である。",
+      "evidence": [
+        {
+          "quote": "Comparative analysis of the NTD and CTD confirmed that the alternating-access transport of OCTN1 is dominated by rigid-body domain rotation, fully consistent with the canonical MFS rocker-switch mechanism",
+          "section": "Results"
+        },
+        {
+          "quote": "undergoing a ~ 40° helical tilt during the outward-to-inward conformational transition",
+          "section": "Results"
+        },
+        {
+          "quote": "The molecular mechanism underlying this torsional motion of TM8 remains to be further clarified.",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "HEK293F細胞にBacMam法で発現（バキュロウイルスをSf9で作り、MOI 20で感染、酪酸ナトリウム添加）。",
+    "construct": "全長ヒトOCTN1、C末端にtwin-Strepタグ（pEG-BacMam）。",
+    "purification": "LMNG/CHSで可溶化し、Strep-Tactinアフィニティ → Superose 6によるサイズ排除クロマトグラフィー。ET結合型は2 mM ETと氷上で一晩インキュベート。",
+    "sample_prep": "Quantifoil Au R1.2/1.3（300メッシュ）、Vitrobot Mark IV、8°C・湿度100%。",
+    "data_collection": "Titan Krios。apoはK3（9,779ムービー）、ET結合型はFalcon 4（9,385ムービー）。cryoSPARCで処理。",
+    "evidence": [
+      {
+        "quote": "baculovirus was first generated in Sf9 cells and used to infect HEK293F cells at an MOI of 20, with 10 mM sodium butyrate added post-infection to enhance expression.",
+        "section": "Methods"
+      },
+      {
+        "quote": "The synthesized gene, encoding human OCTN1 with a C-terminal twin-Strep tag, was cloned into the pEG-BacMam vector (Invitrogen) for heterologous expression.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Final purification involved size-exclusion chromatography on a Superose 6 10/300 GL column (Cytiva) equilibrated with buffer B",
+        "section": "Methods"
+      },
+      {
+        "quote": "the purified apo human OCTN1 sample was incubated on ice overnight with a final concentration of 2 mM ergothioneine",
+        "section": "Methods"
+      },
+      {
+        "quote": "blotted under 100% humidity at 8 °C and plunged into liquid ethane using a Mark IV Vitrobot (Thermo Fisher Scientific, USA)",
+        "section": "Methods"
+      },
+      {
+        "quote": "a total of 9,779 movies were automatically recorded using EPU.",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "OCTN1",
+    "SLC22A4",
+    "エルゴチオネン",
+    "メベンダゾール",
+    "Na⁺共役輸送",
+    "がん細胞の増殖"
+  ],
+  "ligand_label": "エルゴチオネン（ET）",
+  "editor_notes": "PDB 9WTX の LW8 はエルゴチオネン（ET）のこと（本文 Fig. 1）と思われる。候補リストの「初構造」はそのまま採用せず、「初めて」とは書いていない（論文は OCTN1 の高分解能構造が「lacking」と書く）。MBZ の結合モードは構造ではなく AF3＋MD のモデル。ga_pdb_id は 9WTX（ET 結合型）が合うと思われる。",
+  "legend_labels": [
+    "OCTN1（輸送体）"
+  ]
+}

@@ -1,0 +1,73 @@
+{
+ "pdb_id": "7T2H",
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "Gαi1（G タンパク質 α）",
+   "desc": "Guanine nucleotide-binding protein G(i) subunit alpha-1",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "Gβ1（G タンパク質 β）",
+   "desc": "Guanine nucleotide-binding protein G(I)/G(S)/G(T) subunit beta-1",
+   "entity": "2"
+  },
+  {
+   "color": "#5F9296",
+   "label": "Gγ2（G タンパク質 γ）",
+   "desc": "Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-2",
+   "entity": "3"
+  },
+  {
+   "color": "#A5707A",
+   "label": "scFv16（抗体断片）",
+   "desc": "scFv16",
+   "entity": "4"
+  },
+  {
+   "color": "#7C8AA8",
+   "label": "μオピオイド受容体",
+   "desc": "Mu-type opioid receptor",
+   "entity": "5"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "EID",
+   "label": "ロフェンタニル",
+   "color": "#C23B8E",
+   "desc": "Lofentanil",
+   "entity": [
+    "6"
+   ],
+   "sites": [
+    [
+     "F",
+     "401"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "EID",
+  "residues": [
+   "N127",
+   "W133",
+   "V143",
+   "I144",
+   "D147",
+   "Y148",
+   "M151",
+   "V236",
+   "W293",
+   "H297",
+   "W318",
+   "I322",
+   "Y326"
+  ],
+  "polar": 1,
+  "neighbours": [],
+  "label": "ロフェンタニル"
+ }
+}

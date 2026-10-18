@@ -1,0 +1,4 @@
+{"pmcid": "PMC13672095", "axes": ["structure", "biology"],
+ "reason": "AMPA受容体が開く前の中間状態を、部分作動薬と時分割クライオ電顕で複数の状態として捉え、ゲーティング経路を構造で示した。",
+ "evidence": [{"quote": "While the terminal apo, open and desensitized states have been structurally characterized, the intermediate pre-active state has remained an enigma.", "section": "Abstract"}],
+ "considered": [{"pmcid": "PMC13645619", "note": "分子糊としてβ2ARを二量体化する創薬上の新規性は大きいが、構造生物学・生命科学の軸ではAMPA受容体の方が突出した。"}, {"pmcid": "PMC13669368", "note": "OCTN1の初の構造だが、阻害薬の結合様式が構造ではなくモデルのため見送った。"}]}

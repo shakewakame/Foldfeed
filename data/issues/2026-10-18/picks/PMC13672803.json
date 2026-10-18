@@ -1,0 +1,146 @@
+{
+  "pmcid": "PMC13672803",
+  "rank": 4,
+  "headline": "A17の末端ペプチドが、D13の棒状集合体を足場の格子に組み替える",
+  "subhead": "足場タンパク質D13の2種類の集合体をクライオ電顕で解析し、棒状から格子への移行を示した。",
+  "target_label": "ワクシニアウイルスD13（足場）",
+  "summary": {
+    "question": "未成熟ウイルス粒子の足場がどう組み上がるかは、粒子の形が不規則で、よく分かっていなかった。",
+    "approach": "試験管内で作らせたD13（足場タンパク質）の2種類の集合体を、クライオ電顕とトモグラフィーで解析した。",
+    "result": "足場様粒子（SLP）は2.9 Å、棒状のtwisterは3.9 Åで解析。A17のN末端ペプチドを加えるとtwisterがSLPに変わった。",
+    "learned": "A17の末端がD13の底の空洞に入ると、棒状の事前集合体が不安定になり、足場の形成が始まると著者は提案している。",
+    "open": "膜に埋め込んだ全長A17を使って、この組み替えを試験管内で再現することが次の課題とされる。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "the molecular mechanisms underlying scaffold assembly remain poorly understood due to the transient and pleomorphic nature of IVs",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here, we present single-particle cryo-electron microscopy and cryo-electron tomography structures of two distinct in vitro assemblies of the vaccinia virus scaffold protein D13 that recapitulate oligomeric states previously observed in situ.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "We analyzed the images of lattice patches of the SLP, yielding a 3D reconstruction at 2.9 Å resolution",
+          "section": "Results"
+        },
+        {
+          "quote": "Images of the dodecameric rings of D13 trimers that form the twister were used to reconstruct a single-particle cryo-EM map at 3.9 Å resolution",
+          "section": "Results"
+        },
+        {
+          "quote": "Consistent with our hypothesis, this led to a structural transformation into SLPs",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "We propose that this interaction destabilizes the pre-assembly conformation and initiates scaffold formation upon viral membrane recruitment",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "reconstituting this assembly process in vitro using full-length A17 embedded in lipid bilayers or liposomes will be a crucial next step",
+          "section": "Results"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "pathogen"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "twisterは、D13三量体6個の環が2枚向かい合い、約12 Åの隙間を挟んで約19.3°ねじれた構造だった。底の空洞の芳香族残基（F環）をアラニンに替えた変異体はtwisterを作らなかった。",
+      "evidence": [
+        {
+          "quote": "These rings are vertically connected, separated by an approximately 12 Å gap between their membrane-binding base surfaces.",
+          "section": "Results"
+        },
+        {
+          "quote": "the rings are slightly rotated relative to each other by approximately 19.3°, precluding axial alignment",
+          "section": "Results"
+        },
+        {
+          "quote": "All mutant proteins failed to form twister-like structures and instead produced laterally extended net-like aggregates",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "A17が結合する底の空洞は、リファンピシンの結合部位でもある。著者は、足場タンパク質を標的にする抗ウイルス薬の設計の土台になると述べ、結合面の保存から広い抗ウイルス薬の可能性にも触れている。",
+      "evidence": [
+        {
+          "quote": "Our study provides a foundation for the design of next-generation antiviral agents analogous to capsid-targeting drugs such as lenacapavir for HIV-1",
+          "section": "Discussion"
+        },
+        {
+          "quote": "the conservation of intertrimeric interfaces across poxvirus genera suggests the potential for developing broad-spectrum antiviral agents",
+          "section": "Discussion"
+        }
+      ]
+    },
+    {
+      "tag": "手法の工夫",
+      "text": "形が不規則に見える粒子でも、繰り返し単位を通常の単粒子解析で解けた。eGFPを付けたD13も同じ足場様粒子を作り、N末端が底の空洞に入ることは形成の必須条件ではないと分かった。",
+      "evidence": [
+        {
+          "quote": "repeating structural components of seemingly irregular particles can be analyzed using conventional single-particle analysis",
+          "section": "Results"
+        },
+        {
+          "quote": "its translocation into the base cavity is not a prerequisite",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "大腸菌 BL21 (DE3) で発現（eGFP-D13 は Rosetta (DE3)）。",
+    "construct": "pPROEX-HTa に全長 D13（1–551）、N 末端欠失（18–551）、F 環・N 末端の変異体、eGFP-D13 融合体。",
+    "purification": "Ni-NTA による IMAC。TEV プロテアーゼで His6 タグを除去（His6-D13 を除く）し、サイズ排除クロマトグラフィー。",
+    "sample_prep": "精製タンパク質（26 μM）を 150 mM NaCl に透析して集合体を作製。グリッドは Quantifoil R1.2/1.3 Cu 300 メッシュ、Vitrobot Mark IV。",
+    "data_collection": "Krios G4（K3 または Falcon 4i）。単粒子解析は cryoSPARC v4.5.3。",
+    "evidence": [
+      {
+        "quote": "The genes encoding both the wild type and mutant D13 in the pPROEX-HTa vector were expressed in Escherichia coli BL21 (DE3) cells, whereas eGFP-D13 was expressed in Rosetta (DE3) cells.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Gene products were purified by immobilized metal affinity chromatography (IMAC) using a gravity column filled with nickel-nitrilotriacetic acid (Ni-NTA) agarose (QIAGEN).",
+        "section": "Methods"
+      },
+      {
+        "quote": "A 100 μL aliquot of purified proteins (i.e., His6-D13 and untagged D13 for SLP and twister, respectively) at 26 μM was dialyzed in a buffer containing 10 mM Tris-HCl (pH 8.0), 150 mM NaCl, and 2 mM β-mercaptoethanol at 4 °C for at least 12 h.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Krios G4 TEM (TFS) equipped with a K3 BioContinuum direct electron detector (Gatan)",
+        "section": "Methods"
+      },
+      {
+        "quote": "Single-particle cryo-EM data of His6-D13 trimer SLPs were processed using CryoSPARC v4.5.3",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "ワクシニアウイルス",
+    "D13",
+    "足場タンパク質",
+    "A17",
+    "ポックスウイルス",
+    "リファンピシン"
+  ],
+  "editor_notes": "D13 の既存構造（7VFD など）は既報で、本論文の新しさは棒状（twister）と格子（SLP）の 2 種類の集合体の構造と A17 N 末端ペプチドによる移行。A17 ペプチドや D13 N 末端の底の空洞の密度は不均一で原子モデルは作られていない（論文が明記）。構造は in vitro の集合体で、実際のウイルス粒子ではない。",
+  "legend_labels": [
+    "D13（足場）"
+  ]
+}
