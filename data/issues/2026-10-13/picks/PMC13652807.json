@@ -1,0 +1,152 @@
+{
+  "pmcid": "PMC13652807",
+  "rank": 1,
+  "headline": "Pit2から切り出されたペプチドが、カビのGPCRを活性化する",
+  "subhead": "Pit2の結晶構造で、リガンドのペプチドは二量体の芯に隠れていた",
+  "target_label": "Pit2（トウモロコシ黒穂病菌）",
+  "summary": {
+    "question": "菌類のGPCR（細胞外の信号を受け取る7回膜貫通型の受容体）は、リガンドも活性化の仕組みもよく分かっていない。",
+    "approach": "黒穂病菌のGpe1を酵母に発現させて活性化を測り、Pit2の結晶構造とAlphaFold3のモデルで結合を調べた。",
+    "result": "Pit2由来のWWFGFTGSLでGpe1が活性化した（EC50は80 nM）。このペプチドはPit2二量体の界面に埋まっていた。",
+    "learned": "Pit2はペプチドを二量体の中に隠し、宿主のプロテアーゼが切ると放出されてGpe1を活性化すると考えられる。",
+    "open": "Pit2から生じる2種類のペプチドが、感染でそれぞれどう寄与するかは今後の課題だ。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "although the repertoire of ligands and activation mechanisms remains poorly understood",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "We elucidate the crystal structure of Pit2 and model the complex formed by Gpe1 and the Pit2-derived peptide.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "Dose-response analysis revealed an EC50 of 80 nM for wildtype Gpe1",
+          "section": "Results"
+        },
+        {
+          "quote": "The dimer interface buries the conserved hydrophobic WWFGFTGSL motif forming β1",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Our results indicate that Pit2 acts as a structural chassis containing the activating peptide in the homodimer interface, thereby preventing premature activation of Gpe1 prior to host-mediated proteolytic release of Pit2-derived peptides.",
+          "section": "Results"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Future work has to investigate the individual contribution of these two peptide versions during U. maydis infection.",
+          "section": "Results"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "receptor",
+    "pathogen"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "Pit2は5本のβストランドと1本のαヘリックスからなる、絡み合った二量体だった。活性化ペプチドWWFGFTGSLは二量体の界面に埋まり、宿主のプロテアーゼで切られるまでGpe1を活性化できないと考えられる。",
+      "evidence": [
+        {
+          "quote": "Pit2 is composed of five β-strands and one α-helix, forming a tightly intertwined homodimer.",
+          "section": "Results"
+        },
+        {
+          "quote": "thereby preventing premature activation of Gpe1 prior to host-mediated proteolytic release of Pit2-derived peptides",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "新しい結合部位",
+      "text": "Gpe1とペプチドの複合体は実験構造ではなく、AlphaFold3のモデルだ。N末端のトリプトファンがTM1とECL2の空洞に入ると予測され、W37AとC178Aは受容体をほぼ無応答にし、菌の毒性も強く下げた。",
+      "evidence": [
+        {
+          "quote": "In the predicted structure, the N-terminal tryptophan residues of the Pit2 peptide are buried top-down in a cavity formed by TM1 and ECL2 of Gpe1, with the C-terminus oriented extracellularly",
+          "section": "Results"
+        },
+        {
+          "quote": "variation of C178A and W37A strongly decreased EC50 and rendered Gpe1 almost non-responsive",
+          "section": "Results"
+        },
+        {
+          "quote": "strains containing C178A and W37A a strong attenuation in virulence",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "Gpe1に似た担子菌の受容体群で、TM3のR133とTM6のN246・N247が保存されていた。これらはロドプシン型GPCRのイオンロックを思わせ、R133Aなどの変異で活性が消えた。ただし受容体の安定性の低下による可能性も著者は残している。",
+      "evidence": [
+        {
+          "quote": "Overall, this residue network is reminiscent of the ionic lock described in rhodopsin/class A GPCRs",
+          "section": "Results"
+        },
+        {
+          "quote": "More disruptive substitutions, N246L + N247L and R133A, abolished detectable receptor activation.",
+          "section": "Results"
+        },
+        {
+          "quote": "reduced activity of individual variants may also reflect effects on receptor stability or intracellular trafficking competence",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "大腸菌で発現（本文はSHuffle (DE3) とBL21 (DE3) の両方を記載）。",
+    "construct": "シグナルペプチドを除いたPit2を、GB1タグ・6×His・TEV切断部位をもつpEM-GB1ベクターに組み込んだ。",
+    "purification": "Ni-NTAのあとTEVで切断し、逆アフィニティとSuperdex S200 Increase 16/600のサイズ排除クロマトグラフィー。",
+    "sample_prep": "ハンギングドロップ法、室温。20 mg/mLのGB1-Pit2を0.1 M Bicine pH 9、1.6 M硫酸アンモニウムで約2週間かけて結晶化。",
+    "data_collection": "ESRFで低温データを収集。XDS/XSCALEで処理し、既存の構造を探索モデルに分子置換（Phaser-MR）、Coot・Phenixで精密化。",
+    "evidence": [
+      {
+        "quote": "The E. coli strain SHuffle® (DE3) (Novagen) was used to express all produced proteins in this study.",
+        "section": "Methods"
+      },
+      {
+        "quote": "For cloning of protein expression constructs, the pEM-GB1 vector was used for, encoding the solubility tag GB1, a hexahistidine (6His) tag and a Tobacco etch virus protease (TEV) recognition site.",
+        "section": "Methods"
+      },
+      {
+        "quote": "The cleaved protein was subjected to a reverse affinity chromatography to remove the hexahistidine tag fused with GB1 and the uncleaved protein.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Hexahistidine tag fused with GB1-UmPit2 crystallized at 20 mg/mL within 2 weeks in in 0.1 M Bicine and 1.6 M Ammonium sulfate at pH 9.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Data were collected under cryogenic conditions at the European Synchrotron Radiation Facility (ESRF)",
+        "section": "Methods"
+      },
+      {
+        "quote": "The structure of Pit2 was determined by molecular replacement using Phenix version 1.20.1-448745 integrated Phaser-MR and 5BMH as the search model.",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "Pit2",
+    "Gpe1",
+    "GPCR",
+    "Ustilago maydis",
+    "システインプロテアーゼ",
+    "ペプチドリガンド"
+  ],
+  "editor_notes": "実験構造は Pit2 の結晶構造（9RXK、PDB 2.35 Å、本文は 2.3 Å）だけで、Gpe1–ペプチド複合体は AlphaFold3 のモデル（著者自身が結合様式は不確かで変異の設計にだけ使うと明記）。見出し「活性化する」は酵母レポーター系と植物感染の結果に基づく。PDB には GB1 タグ（Immunoglobulin G-binding protein G）が2つ目の鎖として載っている。本文は GB1-Pit2 が結晶化したと書く一方、精製ではタグを TEV で切ると書き、発現株も SHuffle(DE3) と BL21(DE3) の両方があって矛盾している（lab_notes は両方を記載）。論文は初の構造とは書いていない（PIT2 は first_structure=true）ので見出しで言わない。本文は最後まで読めた。",
+  "legend_labels": [
+    "GB1（融合タグ）",
+    "Pit2（分泌エフェクター）"
+  ]
+}

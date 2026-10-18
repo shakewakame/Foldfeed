@@ -1,13 +1,50 @@
 # 候補一覧 2026-10-13（Europe PMC 索引日 2026-10-12）
 
-検索ヒット 1 件 → 本文解析 2 件 → 新しい構造 0 件（ID が補足資料のみ 0 件、マップのみ 0 件、既存構造の利用 1 件、ID なし 1 件）
+検索ヒット 12 件 → 本文解析 13 件 → 新しい構造 3 件（ID が補足資料のみ 0 件、マップのみ 0 件、既存構造の利用 4 件、ID なし 6 件）
 
-# 注目の論文の候補（新しい構造以外）
+## 1. A co-evolved peptide-GPCR system senses host entry to drive fungal infection
+- PMC13652807 / Nat Commun / 公開 2026-10-09 / cc by / score 86
+- 構造: 9RXK（X-RAY DIFFRACTION 2.35 Å）
+- タンパク質: PIT2【初構造】, spg
+
+A successful infection requires pathogens to recognize the specific host environment in order to reprogram their physiology accordingly. One major way in which eukaryotic cells sense their surroundings is via G-Protein Coupled Receptors (GPCRs), which share a seven-transmembrane architecture and G-protein-mediated downstream signaling. While mammalian GPCRs are well-characterized and represent important drug targets, their fungal counterparts remain poorly understood. Here we uncover a GPCR-based mechanism that allows the corn pathogen Ustilago maydis to sense whether it has entered plant tissue. During infection, the fungus secretes the protein Pit2, which is cleaved by host apoplastic cysteine proteases, releasing a peptide ligand ‘hidden’ within the protein core. This ligand activates the fungal GPCR Gpe1, thus promoting fungal proliferation after initial host penetration. We elucidat
+
+## 2. Integrated computation-guided thermostabilization of the fungal sweet protein Honey Truffle Sweetener
+- PMC13654475 / Curr Res Food Sci / 公開 2026-09-28 / cc by-nc / score 56
+- 構造: 21WR（X-RAY DIFFRACTION 1.58 Å）
+- タンパク質: （UniProt 未対応）
+
+Thermostability limits the use of sweet proteins as sugar substitutes in thermally processed foods. Here, we report an integrated computation-guided workflow for thermostabilizing Honey Truffle Sweetener (HTS), a recently identified fungal sweet protein with low intrinsic stability. We determined the HTS crystal structure and used it to guide subsequent computational analyses. Rosetta and ThermoMPNN evaluated candidate substitutions from complementary physics-based and deep-learning-based perspectives, and the selected single-mutant library was experimentally characterized. The resulting melting-temperature data were then used to develop SMRC-Net, which combines mutation-centered features from the ESM2 protein language model with molecular dynamics-derived structural descriptors to support mutation prioritization. Repeated nested cross-validation supported quantitative Tm prediction with
+
+## 3. Structural characterization of HCoV-229E and H163A main protease (Mpro) interactions with the inhibitor narlaprevir
+- PMC13653942 / Biochem Biophys Rep / 公開 2026-10-04 / cc by / score 52
+- 構造: 9XXJ（未公開）; 24DE（未公開）
+- タンパク質: （UniProt 未対応）
+
+Narlaprevir, originally developed as a clinical-stage inhibitor of the hepatitis C virus (HCV) NS3/4A protease, has recently demonstrated potent inhibitory activity against the SARS-CoV-2 main protease (Mpro), with its co-crystal structure already resolved. To elucidate the mechanistic basis of its cross-genus inhibition and drug resistance profiles, we determined the crystal structures of narlaprevir in complex with HCoV-229E Mpro and the SARS-CoV-2 Mpro(H163A) mutant at resolutions of 2.01 Å and 2.14 Å, respectively. By integrating these crystallographic data with molecular dynamics (MD) simulations and Molecular Mechanics/Poisson-Boltzmann Surface Area (MM/PBSA) free energy calculations, we systematically compared narlaprevir against clinically approved antivirals, including bofutrelvir, PF-07304814, and pomotrelvir. Structural analysis revealed that narlaprevir forms a conserved cova
+
+# 注目の構造の候補（新しい構造以外）
 
 事前スクリーニングの点数順（キーワードによる目安で、選定ではない）。上位から読み、`pipeline/impact.py` の基準で最大 10 本を採点する。
 
-- **PMC9442589** [2] Abstracts of the papers presented in the international conference of Indian Virological Society, VIROCON 2021 on “Emerging and Re-emerging Viral Diseases – Climate Change Impacts and Mitigation”, during March 26–28, 2022, at AIIMS, Hyderabad, India (Virtual Mode)（Virusdisease） — 種類の手がかりなし
-  - 
-- **PMC2268108** [-2] Abstracts of papers at the Fifty-Ninth Annual Meeting of the Society of General Physiologists（J Gen Physiol） — 種類の手がかりなし / 使用 PDB: 1T5S, 1VFP, 1SU4 / ⚠ 生体高分子が主題でない可能性
-  - 
+- **PMC13646288** [6] Geometry of braided DNA dictates supercoiling partitioning（Nat Commun） — 既存構造で機構を解明
+  - DNA’s helical structure requires the replisome to rotate relative to the parental DNA during replication, generating supercoiling that partitions ahead and behind the fork. The influence of DNA substrate geometry on supercoiling partitioning and torsional resistance remains unclear. Here, we have engineered DNA-braiding substrates with end separations found during replication, measured braiding torques using an angular optical trap, and interpreted the results using Monte Carlo simulations. A su
+- **PMC13654546** [5] FGFR kinase isoform and activation state modulate ATPase activity（iScience） — 既存構造で機構を解明 / 使用 PDB: 6PNX
+  - SummaryFibroblast growth factor (FGF) binding to FGF receptor (FGFR) induces trans-autophosphorylation of activation loop tyrosine residues within the receptor’s intracellular kinase domain, thereby activating the receptor and promoting downstream substrate phosphorylation. Here, using activity assays and 31P NMR spectroscopy on the FGFR kinase domain, we show that phosphorylation of activation loop tyrosine residues not only enhances kinase activity but also increases the rate of ATP hydrolysis
+- **PMC13653839** [5] Revealing 3-hydroxybenzoate-4-hydroxylase from Pseudarthrobacter phenanthrenivorans Sphe3 via In-Cell NMR analysis and molecular cloning（Int Microbiol） — 既存構造で機構を解明
+  - This study aims at the functional and kinetic characterization of 3-Hydroxybenzoate-4-Hydroxylase (3HB4H) from Pseudarthrobacter phenanthrenivorans Sphe3. Bioinformatic sequence and structural analyses suggested that Asphe3_36590 gene encodes a putative 3HB4H, a finding supported by transcriptional data of a ~ 2000-fold induction when Sphe3 cells were grown on 3-Hydroxybenzoate (3-HBA) compared to glucose. The recombinant 3HB4H is highly specific for 3-HBA and follows Michaelis–Menten kinetics, 
+- **PMC13646495** [5] Ribosome remodeling drives translation adaptation during viral infection and cellular stress（Mol Cell） — 既存構造で機構を解明 / 使用 PDB: 4UG0
+  - SummaryThe ribosome is the highly conserved molecular machine that decodes mRNAs during protein synthesis. While traditionally thought to consist of a uniform set of proteins, here we discover that ribosome composition is reprogrammed to adapt to intrinsic and external cellular perturbations. During infection of human cells by non-segmented negative-sense viruses, viral entry into cells recruits the large ribosomal subunit protein rpL40 to a noncanonical site on the small subunit of 80S ribosome
+- **PMC13653007** [4] Genomic and functional characterization of Bacillus subtilis subsp. subtilis INPA R296 with emulsifying activity in cultivation with residual soybean oil（Braz J Microbiol） — 構造に基づく創薬 / 使用 PDB: 1NRP
+  - Biosurfactants are amphiphilic microbial metabolites with potential to reduce surface and interfacial tension and to promote emulsification. This study investigated the biosynthetic potential, emulsifying activity, and metabolomic profile of Bacillus subtilis subsp. subtilis INPA R296 cultivated in media supplemented with residual soybean oil. Phylogenomic analyses supported the taxonomic placement of the strain close to Bacillus subtilis subsp. subtilis 168T. Genome mining predicted 11 biosynth
+- **PMC13654189** [4] Reversal of Chronic Stress‐Induced Inflammaging by Bazi Bushen Formula Through AMPK‐Sirtuins Axis Activation and Myeloid Reset（Exploration (Beijing)） — 構造に基づく創薬・既存構造で機構を解明 / 使用 PDB: 5EZV, 4ZZH, 4BN4, 6XV1
+  - ABSTRACTChronic stress potentially accelerates aging and increases age‐related disease risk. However, the underlying mechanisms and organ specificity remain unclear. Utilizing a 12‐month unpredictable chronic mild stress (UCMS) mouse model, we revealed chronic stress significantly exacerbates systemic inflammation, causing widespread tissue damage and lifespan shortening. Integrated single‐cell RNA sequencing analysis of multiple tissues suggests a common feature of lymphocyte reduction and myel
+- **PMC13653361** [-2] Stereoselective Synthesis of Aminals through Enzyme-Catalyzed Intermolecular C(sp3)-H Amidation of Azacycles（Angew Chem Int Ed Engl） — 種類の手がかりなし / ⚠ 実験構造の手がかりなし
+  - Stereogenic aminals are widespread in natural products, pharmaceuticals, and biologically active compounds, including important classes of antibiotics. Methodologies for asymmetric synthesis of aminals are therefore highly desirable, yet they remain scarce and mostly rely on C–N bond formation at functionalized carbon centers such as carbonyls. Here we report the development of a strategy for asymmetric synthesis of aminals via direct, stereoselective C(sp3)–H functionalization of cyclic amines 
+- **PMC13647468** [-4] DiploPhos: A Hemilabile Bisphosphine for Sterically Hindered Ni-Catalyzed Suzuki–Miyaura Couplings（ACS Catal） — 種類の手がかりなし / ⚠ 実験構造の手がかりなし
+  - Pharmaceutically relevant Suzuki–Miyaura cross-couplings (SMCs) often require designer phosphine ligands and palladium loadings above 1 mol% to couple Lewis basic, sterically congested substrates. Recent work has demonstrated that nickel is an attractive alternative to palladium for facile SMCs, but further ligand development is required for Ni catalysis to rival Pd for more challenging couplings. We applied prior work on monophosphine ligand design for Ni to develop a bisphosphine, DiploPhos, t
+- **PMC13653760** [-4] Pathogenic Bordetella bacteria exploit axonemal microtubules to penetrate the ciliary barrier（Cytoskeleton (Hoboken)） — 種類の手がかりなし / ⚠ 実験構造の手がかりなし
+  - Respiratory pathogens face a daunting physical challenge during host colonization. Invading microbes must resist elimination by motile respiratory cilia, which beat continuously to sweep debris from the airways. Bacteria have long been known to use adhesive proteins to bind host cells, but recent work shows that Bordetella species utilize an unusual strategy to colonize respiratory epithelia. Bordetella deploy FhaB adhesins that translocate a novel microtubule-binding domain into cilia to intera
+- **PMC13653821** [-5] Study on the Mechanism of Berberine Reversing MRSA Resistance to β-Lactam Antibiotics by Inhibiting blaZ Expression（Int Microbiol） — 既存構造で機構を解明 / ⚠ 実験構造の手がかりなし / ⚠ 計算のみの可能性（molecular docking）
+  - This study elucidates a novel mechanism by which the natural product berberine (BBR) reverses methicillin-resistant Staphylococcus aureus (MRSA) resistance to β-lactam antibiotics. It was established that BBR interferes with the BlaR1/BlaI regulatory pathway by means of downregulating the signal sensor gene blaR1 and the repressor gene blaI, thereby significantly suppressing the expression of the β-lactamase-encoding gene blaZ at the transcriptional level. The combination susceptibility testing 
 
