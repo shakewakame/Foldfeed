@@ -14,8 +14,9 @@
  *
  * The camera starts from the figure's own view (data-view: MolViewSpec camera target / position / up), so the 3D
  * structure first appears as drawn, membrane proteins with their outside up. The front page's .v3d[data-auto] opens
- * by itself on a wide screen and stays open while the reader opens another one; over it the mouse wheel scrolls the
- * page (Ctrl / ⌘ + wheel zooms), so the first screen does not trap the scroll.
+ * by itself on a wide screen and stays open while the reader opens another one; it has no buttons or messages (if
+ * it cannot load, the drawing simply stays). Over it the mouse wheel scrolls the page (Ctrl / ⌘ + wheel zooms), so
+ * the first screen does not trap the scroll.
  */
 (function () {
   "use strict";
@@ -153,7 +154,8 @@
   }
 
   function say(box, text) {
-    var n = box.querySelector(".v3d-msg");
+    var n = box.querySelector(".v3d-msg");   // the front page's viewer has none: it stays a drawing, silently
+    if (!n) return;
     n.textContent = text;
     n.hidden = !text;
   }
@@ -188,10 +190,10 @@
     if (!auto) current = box;
     var token = box._token, started = Date.now();
     var step = box.querySelector(".v3d-wait .step"), secs = box.querySelector(".v3d-wait .secs");
-    function stage(text) { step.textContent = text; }
+    function stage(text) { if (step) step.textContent = text; }
     function tick() {
       var s = Math.round((Date.now() - started) / 1000);
-      secs.textContent = "経過 " + s + " 秒" + (s >= 15 ? "（回線が遅いか、混んでいる。まだ動いている）" : "");
+      if (secs) secs.textContent = "経過 " + s + " 秒" + (s >= 15 ? "（回線が遅いか、混んでいる。まだ動いている）" : "");
       if (s >= TIMEOUT) fail();
     }
     function fail() {
