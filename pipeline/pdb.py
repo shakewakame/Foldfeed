@@ -33,6 +33,7 @@ query($ids: [String!]!) {
     rcsb_id
     struct { title }
     exptl { method }
+    em_experiment { reconstruction_method }
     rcsb_entry_info { resolution_combined }
     rcsb_accession_info { initial_release_date deposit_date }
     rcsb_primary_citation { pdbx_database_id_DOI pdbx_database_id_PubMed title }
@@ -86,6 +87,7 @@ def _entry_facts(e: dict) -> dict:
         "status": "released",
         "title": (e.get("struct") or {}).get("title"),
         "method": ", ".join(x["method"] for x in e.get("exptl") or []),
+        "em_reconstruction": (e.get("em_experiment") or {}).get("reconstruction_method"),
         "resolution": res[0] if res else None,
         "release_date": (acc.get("initial_release_date") or "")[:10] or None,
         "deposit_date": (acc.get("deposit_date") or "")[:10] or None,
@@ -95,6 +97,21 @@ def _entry_facts(e: dict) -> dict:
         "polymers": polymers,
         "ligands": ligands,
     }
+
+
+EM_QUERY = "query($ids: [String!]!) { entries(entry_ids: $ids) { rcsb_id em_experiment { reconstruction_method } } }"
+
+
+def em_reconstructions(ids: list[str]) -> dict[str, str | None]:
+    """PDB ID -> the EM reconstruction method ("SINGLE PARTICLE", "SUBTOMOGRAM AVERAGING", "HELICAL", ...)."""
+    out = {}
+    for i in range(0, len(ids), 100):
+        body = fetch(GRAPHQL, data=json.dumps({"query": EM_QUERY, "variables": {"ids": ids[i:i + 100]}}).encode(),
+                     headers={"Content-Type": "application/json"})
+        for e in (json.loads(body).get("data") or {}).get("entries") or []:
+            if e:
+                out[e["rcsb_id"].upper()] = (e.get("em_experiment") or {}).get("reconstruction_method")
+    return out
 
 
 def holding_status(pdb_id: str) -> str | None:

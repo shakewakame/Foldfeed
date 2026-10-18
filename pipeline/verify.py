@@ -81,8 +81,10 @@ def check_pick(pick: dict, cand: dict | None, corpus: str | None) -> tuple[list[
         if len(value) > limit:
             errors.append(f"{name} is {len(value)} characters (limit {limit})")
 
-    for f in ("headline", "subhead", "target_label"):
+    for f in ("headline", "subhead", "target_label", "target_en"):
         length(f, pick.get(f), f)
+    if pick.get("target_en") and re.search(r"[\u3040-\u30ff\u4e00-\u9fff]", pick["target_en"]):
+        errors.append("target_en must be in English (no Japanese)")
     for f in ALL_SUMMARY:
         length(f"summary.{f}", (pick.get("summary") or {}).get(f), f"summary.{f}")
     cats = pick.get("categories") or []

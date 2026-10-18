@@ -50,6 +50,7 @@ LIMITS = {
     "headline": (True, 36),
     "subhead": (True, 64),
     "target_label": (True, 30),
+    "target_en": (True, 52),
     "summary.question": (True, 80),
     "summary.approach": (True, 80),
     "summary.result": (True, 90),
@@ -66,6 +67,7 @@ EXAMPLE = {
     "headline": "主見出し（36字以内）：発見の面白さを先に見せる短い一文。一覧と記事の頭に大きく出る",
     "subhead": "補足（64字以内）：主見出しの内容を、構造や手法の言葉で具体的に。一覧では主見出しの下に出る",
     "target_label": "標的の短い表記（例：RyR1（ウサギ骨格筋））",
+    "target_en": "標的の英語表記（52字以内。サイトの TARGET 欄に出る。例：RyR1 (rabbit skeletal muscle)）",
     "summary": {
         "question": "これまでの疑問・課題（80字以内）：論文が「分かっていなかった」と書いていること",
         "approach": "アプローチ（80字以内）：何をどう調べたか",
@@ -97,7 +99,7 @@ EXAMPLE = {
     "editor_notes": "確信が持てない点や、編集者に確認してほしい点（任意）",
     # Optional overrides for the structure figure and the page margin:
     "ga_pdb_id": "構造図に使う PDB ID（省略時は分解能が最も高い自前の構造）",
-    "method_label": "手法・分解能の表示（PDB 情報がないときだけ。例：クライオ電顕・2.8 Å）",
+    "method_label": "手法・分解能の表示（PDB 情報がないときだけ。手法は英語で：Cryo-EM / Cryo-ET / X-ray / NMR。例：Cryo-EM・2.8 Å）",
     "ligand_label": "結合分子の表示（略号より分かりやすい名前。例：オラパリブ、タラゾパリブ）",
     "legend_labels": ["構造図の色の凡例名を entity の順に上書き（任意）"],
     "ligand_names": {"A1CKT": "OX04529", "43M": "4CmC"},

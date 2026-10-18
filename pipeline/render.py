@@ -12,29 +12,29 @@ import re
 import sys
 import unicodedata
 
-from . import brand, impact, pdb, pmcoa, structure_svg
+from . import brand, impact, pdb, pmcoa, structure_svg, uniprot
 from .common import issue_dir, read_json
 from .schema import CATEGORIES, FEATURE_MIN, LAB_NOTE_FIELDS, SUMMARY_FIELDS, SUMMARY_OPTIONAL
 
 SITE_NAME = brand.SITE_NAME
 FONT = brand.FONT
 W, H = 1200, 560
-SITE_W, SITE_H = 760, 500  # binding-site close-up
-INSET_W, INSET_H = 410, 400  # the same site, small, beside the overview
+INSET_W, INSET_H = 410, 400  # the binding site, zoomed, beside the overview
 MAX_LABELS = 8  # leader-line labels on one figure (entities); ligands get their own few
 M_W, M_OVERVIEW_H, M_INSET_H, M_COMPARE_H, M_BAND, M_FONT = 640, 640, 380, 460, 190, 1.3  # the phone version
 THUMB_W, THUMB_H = 600, 400  # list thumbnail (3:2); same PDB structure, thinned to THUMB_POINTS residues
+HERO_W, HERO_H = 1000, 780   # Today's Structure drawn large, without labels, for the front page's first screen
 THUMB_POINTS = 900
-CONTACT_NOTE = "4 Å 以内の残基"
 
-METHOD_JA = {
-    "X-RAY DIFFRACTION": "X線結晶構造解析",
-    "ELECTRON MICROSCOPY": "クライオ電顕",
-    "SOLUTION NMR": "溶液NMR",
-    "SOLID-STATE NMR": "固体NMR",
-    "ELECTRON CRYSTALLOGRAPHY": "電子線結晶構造解析",
-    "NEUTRON DIFFRACTION": "中性子回折",
+METHOD_LABEL = {   # the METHOD column: short English names, as structural biologists write them
+    "X-RAY DIFFRACTION": "X-ray",
+    "ELECTRON MICROSCOPY": "Cryo-EM",
+    "SOLUTION NMR": "Solution NMR",
+    "SOLID-STATE NMR": "Solid-state NMR",
+    "ELECTRON CRYSTALLOGRAPHY": "MicroED",
+    "NEUTRON DIFFRACTION": "Neutron",
 }
+TOMOGRAPHY = "SUBTOMOGRAM AVERAGING"   # an EM entry made by cryo-electron tomography: shown as Cryo-ET
 KIND_JA = {
     "new_structure": "新しい構造",
     "new_structure_ids_unlisted": "新しい構造（ID は補足資料）",
@@ -42,8 +42,19 @@ KIND_JA = {
 }
 
 
-def method_ja(m: str | None) -> str:
-    return ", ".join(METHOD_JA.get(x.strip(), x.strip()) for x in (m or "").split(",") if x.strip())
+def method_name(m: str | None, em_reconstruction: str | None = None) -> str:
+    """'X-ray', 'Cryo-EM', 'Cryo-ET' (subtomogram averaging), 'Solution NMR', ... for the PDB's method(s)."""
+    names = []
+    for x in (m or "").split(","):
+        x = x.strip()
+        if x:
+            names.append("Cryo-ET" if x == "ELECTRON MICROSCOPY" and em_reconstruction == TOMOGRAPHY
+                         else METHOD_LABEL.get(x, x))
+    return ", ".join(names)
+
+
+def structure_method(s: dict) -> str:
+    return method_name(s.get("method"), s.get("em_reconstruction"))
 
 
 def esc(s: str) -> str:
@@ -124,7 +135,7 @@ def method_line(cand: dict) -> str:
     rel = [s for s in cand["own_structures"] if s["status"] == "released"]
     if not rel:
         return "PDB 公開待ち" if cand["own_structures"] else "—"
-    methods = sorted({method_ja(s["method"]) for s in rel})
+    methods = sorted({structure_method(s) for s in rel})
     res = [s["resolution"] for s in rel if s.get("resolution")]
     res_txt = (f"{min(res):.2f} Å" if len(res) == 1 or min(res) == max(res)
                else f"{min(res):.2f}–{max(res):.2f} Å") if res else ""
@@ -191,11 +202,29 @@ def thumbnail(cand: dict, pick: dict, theme: brand.Theme | None = None) -> str:
     body, _, _ = structure_svg.render(coords, {l["id"] for l in s.get("ligands") or []} - pdb.COMMON_ADDITIVES,
                                       0, 0, THUMB_W, THUMB_H, genes, margin=26,
                                       entity_colors=list(th.entities), ligand_colors=structure_svg.LIGAND_PALETTE,
-                                      max_points=THUMB_POINTS, bg=th.ground)
+                                      max_points=THUMB_POINTS, bg=th.ground, topology=uniprot.topology)
     if not body:
         return ""
     return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{THUMB_W}" height="{THUMB_H}" '
             f'viewBox="0 0 {THUMB_W} {THUMB_H}">{body}</svg>\n')
+
+
+def hero_figure(cand: dict, pick: dict, theme: brand.Theme | None = None) -> str:
+    """Today's Structure for the front page's first screen: the same PDB structure as the article's figure, large, with
+    its ligands but no labels or close-up (the article's figure follows right below). "" without a structure."""
+    th = theme or brand.THEME
+    s = pick_structure(cand, pick)
+    coords = pdb.coordinates(s["pdb_id"]) if s else None
+    if not coords:
+        return ""
+    genes = {p["uniprot"]: p["gene"] for p in cand.get("proteins", []) if p.get("gene")}
+    body, _, _ = structure_svg.render(coords, {l["id"] for l in s.get("ligands") or []} - pdb.COMMON_ADDITIVES,
+                                      0, 0, HERO_W, HERO_H, genes, margin=18, entity_colors=list(th.entities),
+                                      ligand_colors=structure_svg.LIGAND_PALETTE, bg=th.ground, topology=uniprot.topology)
+    if not body:
+        return ""
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{HERO_W}" height="{HERO_H}" '
+            f'viewBox="0 0 {HERO_W} {HERO_H}">{body}</svg>\n')
 
 
 def chem_name(name: str | None) -> str:
@@ -233,25 +262,26 @@ def _annotation_inputs(pick: dict, lig_ids: set, pdb_names: dict, site: dict | N
     return names, lig_labels, figure_notes(pick)
 
 
-def structure_figure(cand: dict, pick: dict, theme: brand.Theme | None = None) -> tuple[str, dict, str]:
-    """The protein and nothing else, plus a close-up of the main ligand's binding site.
+def structure_figure(cand: dict, pick: dict, theme: brand.Theme | None = None) -> tuple[str, dict]:
+    """The protein and nothing else, with a close-up of the main ligand's binding site beside it.
 
     The figure labels what is what with leader lines (each polymer entity the writer named in legend_labels, the
     ligands, and the stretches pick["figure_notes"] points at), and when a ligand's binding site is drawn it is shown
-    in a frame beside the overview, circled on it.
+    in a frame beside the overview, circled on it, with its probable hydrogen bonds and π interactions. (The close-up
+    is drawn only there: a second, larger copy below the figure only repeated it.)
 
-    Returns (svg, info, site_svg). info holds what the page prints next to the figures: the PDB ID,
+    Returns (svg, info). info holds what the page prints next to the figures: the PDB ID,
     [{"color", "label", "desc", "entity"}] per polymer entity (label: the writer's legend_labels if given, else the
     gene name or PDB description; desc: the PDB description; entity: its mmCIF entity id, for the 3D viewer),
     [{"id", "label", "color", "desc", "entity", "sites"}] per ligand (entity: its mmCIF entity ids; sites:
     [asym id, residue number] of each copy, for the 3D viewer's "next binding site"), and "site"
-    ({"ligand", "label", "residues", "polar", "neighbours"}) when a close-up was drawn (site_svg != "").
+    ({"ligand", "label", "residues", "hbonds", "pi", "neighbours"}) when a close-up was drawn.
     The close-up shows pick["site_ligand"] if given ("" for none), else a ligand the writer named in
     ligand_names, else the largest ligand.
     """
     th = theme or brand.THEME
     s = pick_structure(cand, pick)
-    body, legend, lig_legend, site_body, site = "", [], [], "", None
+    body, legend, lig_legend, site = "", [], [], None
     if s:
         coords = pdb.coordinates(s["pdb_id"])
         if coords:
@@ -263,13 +293,10 @@ def structure_figure(cand: dict, pick: dict, theme: brand.Theme | None = None) -
             ent_colors = list(th.entities)
             inset_body, inset = "", None
             if lig_ids and want != "":
-                site_body, site = structure_svg.render_site(
-                    coords, lig_ids, prefer, SITE_W, SITE_H, genes, entity_colors=ent_colors,
-                    ligand_colors=structure_svg.LIGAND_PALETTE, ink=th.ink, bg=th.ground)
-                if site:
-                    inset_body, inset = structure_svg.render_site(
-                        coords, lig_ids, prefer, INSET_W, INSET_H, genes, entity_colors=ent_colors,
-                        ligand_colors=structure_svg.LIGAND_PALETTE, ink=th.ink, bg=th.ground, label_size=17)
+                inset_body, inset = structure_svg.render_site(
+                    coords, lig_ids, prefer, INSET_W, INSET_H, genes, entity_colors=ent_colors,
+                    ligand_colors=structure_svg.LIGAND_PALETTE, ink=th.ink, bg=th.ground, label_size=17)
+                site = inset
             names, lig_labels, notes = _annotation_inputs(pick, lig_ids, pdb_names, site, prefer)
             band = 220 if (names or lig_labels or notes) else 0   # the most a side may give to its labels
             box_w = W - (INSET_W + 30) if inset_body else W
@@ -278,7 +305,8 @@ def structure_figure(cand: dict, pick: dict, theme: brand.Theme | None = None) -
                 coords, lig_ids, 0, 0, box_w, H, genes, margin=26, entity_colors=ent_colors,
                 ligand_colors=structure_svg.LIGAND_PALETTE, bg=th.ground, notes=notes,
                 labels={"entities": names, "ligands": lig_labels}, bands=(band, band),
-                site_xyz=tuple(inset["center"]) if inset else None, ink=th.ink, hl_color=th.accent, probe=probe)
+                site_xyz=tuple(inset["center"]) if inset else None, ink=th.ink, hl_color=th.accent, probe=probe,
+                topology=uniprot.topology)
             if inset_body:
                 body += _inset(inset_body, inset, probe.get("site"), pick, th, ligand_name(
                     site["ligand"], pdb_names.get(site["ligand"]), pick))
@@ -287,7 +315,7 @@ def structure_figure(cand: dict, pick: dict, theme: brand.Theme | None = None) -
                       for i, (col, lab, desc, ent) in enumerate(legend)]
     ground = None  # the figure is transparent: it sits on the page ground
     if not body and is_impact(pick):
-        return "", {"pdb_id": None, "legend": [], "ligands": []}, ""
+        return "", {"pdb_id": None, "legend": [], "ligands": []}
     if not body:
         ground = th.soft
         msg, sub = _placeholder(cand, s)
@@ -304,19 +332,34 @@ def structure_figure(cand: dict, pick: dict, theme: brand.Theme | None = None) -
             "ligands": [{"id": lid, "label": ligand_name(lid, pdb_names.get(lid), pick), "color": col,
                          "desc": chem_name(pdb_names.get(lid)), "entity": ents, "sites": sites}
                         for col, lid, ents, sites in lig_legend]}
-    site_svg = ""
-    if site_body:
+    if site:
         names_ = {x["id"]: x["label"] for x in info["ligands"]}
         info["site"] = {k: v for k, v in dict(site, label=names_.get(site["ligand"], site["ligand"]),
                                               neighbours=[names_.get(n, n) for n in site["neighbours"]]).items()
                         if k != "center"}
-        site_svg = (f'<svg xmlns="http://www.w3.org/2000/svg" width="{SITE_W}" height="{SITE_H}" '
-                    f'viewBox="0 0 {SITE_W} {SITE_H}" font-family="{FONT}">{site_body}</svg>\n')
-    return svg, info, site_svg
+    return svg, info
+
+
+def interaction_key(site: dict, right: float, y: float, size: float, ink: str) -> str:
+    """What the dotted lines in a binding-site close-up are, right-aligned at (right, y); only the kinds drawn."""
+    kinds = [(structure_svg.HBOND_COLOR, "水素結合")] if site.get("hbonds") else []
+    kinds += [(structure_svg.PI_COLOR, "π相互作用")] if site.get("pi") else []
+    out, x = [], right
+    dot, line = max(2.6, size * 0.2), size * 2.2
+    for col, text in reversed(kinds):
+        tw = sum(char_width(ch) for ch in text) * size
+        x -= tw
+        out.append(f'<text x="{x:.1f}" y="{y:.1f}" font-size="{size:.1f}" fill="{ink}" opacity=".8">{text}</text>')
+        x -= line + size * 0.5
+        out.append(f'<path d="M{x:.1f},{y - size * 0.34:.1f}h{line:.1f}" stroke="{col}" stroke-width="{dot:.1f}" '
+                   f'stroke-dasharray="0.1 {2.3 * dot:.1f}" stroke-linecap="round"/>')
+        x -= size * 1.2
+    return "".join(out)
 
 
 def _inset(body: str, site: dict, circle: tuple | None, pick: dict, th: brand.Theme, name: str) -> str:
-    """The zoomed binding site in a frame on the right of the overview, joined to the circle drawn on the overview."""
+    """The zoomed binding site in a frame on the right of the overview, joined to the circle drawn on the overview,
+    with the key to its dotted lines below the frame."""
     x, y = W - INSET_W - 6, (H - INSET_H) / 2 + 14
     frame = (f'<rect x="{x}" y="{y}" width="{INSET_W}" height="{INSET_H}" fill="none" stroke="{th.ink}" '
              f'stroke-width="1.2"/>')
@@ -329,7 +372,8 @@ def _inset(body: str, site: dict, circle: tuple | None, pick: dict, th: brand.Th
             d = math.hypot(tx - cx, ty - cy) or 1
             lines += (f'<path d="M{cx + (tx - cx) / d * r:.1f},{cy + (ty - cy) / d * r:.1f}L{tx},{ty}" '
                       f'stroke="{th.ink}" stroke-width="1.1" opacity=".5" fill="none"/>')
-    return f'{lines}{frame}{title}<g transform="translate({x},{y})">{body}</g>'
+    key = interaction_key(site, x + INSET_W, y + INSET_H + 26, 15, th.ink)
+    return f'{lines}{frame}{title}<g transform="translate({x},{y})">{body}</g>{key}'
 
 
 def structure_figure_mobile(cand: dict, pick: dict, theme: brand.Theme | None = None) -> str:
@@ -359,7 +403,8 @@ def structure_figure_mobile(cand: dict, pick: dict, theme: brand.Theme | None = 
         coords, lig_ids, 0, 0, M_W, oh, genes, margin=16, entity_colors=ent_colors,
         ligand_colors=structure_svg.LIGAND_PALETTE, bg=th.ground, notes=notes,
         labels={"entities": names, "ligands": lig_labels}, bands=(M_BAND, M_BAND), band_mode="topbottom",
-        site_xyz=tuple(inset["center"]) if inset else None, ink=th.ink, hl_color=th.accent, probe=probe, font=M_FONT)
+        site_xyz=tuple(inset["center"]) if inset else None, ink=th.ink, hl_color=th.accent, probe=probe, font=M_FONT,
+        topology=uniprot.topology)
     total = oh
     if inset_body:
         y = oh + 46
@@ -377,6 +422,9 @@ def structure_figure_mobile(cand: dict, pick: dict, theme: brand.Theme | None = 
                  f'結合部位の拡大<tspan font-weight="400" font-size="22" dx="12" opacity=".75">{esc(name)}</tspan></text>'
                  f'<g transform="translate(0,{y})">{inset_body}</g>')
         total = y + M_INSET_H + 4
+        if site.get("hbonds") or site.get("pi"):
+            body += interaction_key(site, M_W, y + M_INSET_H + 34, 21, th.ink)
+            total += 44
     return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{M_W}" height="{total}" viewBox="0 0 {M_W} {total}" '
             f'font-family="{FONT}">{body}</svg>\n')
 
@@ -423,7 +471,7 @@ def compare_figure_mobile(cand: dict, pick: dict, theme: brand.Theme | None = No
     body, _ = structure_svg.compare(
         panels, 0, 0, M_W, h, align, focus, mark, genes, entity_colors=list(th.entities),
         ligand_colors=structure_svg.LIGAND_PALETTE, bg=th.ground, ink=th.ink, hl_color=th.accent, names=None,
-        font=M_FONT, vertical=True, gap=30)
+        font=M_FONT, vertical=True, gap=30, topology=uniprot.topology)
     if not body:
         return ""
     return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{M_W}" height="{h}" viewBox="0 0 {M_W} {h}" '
@@ -441,7 +489,8 @@ def compare_figure(cand: dict, pick: dict, theme: brand.Theme | None = None) -> 
     panels, focus, mark, genes, names, align = inp
     body, info = structure_svg.compare(
         panels, 0, 0, W, H, align, focus, mark, genes, entity_colors=list(th.entities),
-        ligand_colors=structure_svg.LIGAND_PALETTE, bg=th.ground, ink=th.ink, hl_color=th.accent, names=names)
+        ligand_colors=structure_svg.LIGAND_PALETTE, bg=th.ground, ink=th.ink, hl_color=th.accent, names=names,
+        topology=uniprot.topology)
     if not body:
         return "", {}
     svg = (f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" '
@@ -471,7 +520,7 @@ def structure_table(cand: dict) -> list[str]:
         orgs = sorted({o for p in s.get("polymers", []) for o in p["organisms"]})
         ligs = ", ".join(l["id"] for l in s.get("ligands") or []) or "—"
         res = f"{s['resolution']:.2f} Å" if s.get("resolution") else "—"
-        rows.append(f"| [{s['pdb_id']}](https://www.rcsb.org/structure/{s['pdb_id']}) | {method_ja(s['method'])} | "
+        rows.append(f"| [{s['pdb_id']}](https://www.rcsb.org/structure/{s['pdb_id']}) | {structure_method(s)} | "
                     f"{res} | {s.get('release_date') or '—'} | {', '.join(orgs) or '—'} | {ligs} |")
     return rows + [""]
 
@@ -520,11 +569,6 @@ def article_md(cand: dict, pick: dict, n: int, info: dict | None = None) -> list
             for e in pick["figure_evidence"]:
                 out += [f"> {e['quote']}  ", f"> — {e.get('section', '')}", ""]
             out += ["</details>", ""]
-    if info and info.get("site"):
-        st = info["site"]
-        out += [f"![結合部位：{st['label']}](figures/{cand['pmcid']}-site.svg)", "",
-                f"<sub>{st['label']}の結合部位。{CONTACT_NOTE}：{', '.join(st['residues'])}"
-                + (f"。点線は 3.3 Å 以内の N・O の組（{st['polar']} 組）" if st["polar"] else "") + "</sub>", ""]
     out += [f"**{pick['headline']}**", "", pick.get("subhead") or "", "",
             ] + [f"- **{label}**：{s[k]}" for k, label in {**SUMMARY_FIELDS, **SUMMARY_OPTIONAL}.items() if s.get(k)] + [""]
     sev = [(label, e) for k, label in {**SUMMARY_FIELDS, **SUMMARY_OPTIONAL}.items() for e in (s.get("evidence") or {}).get(k, [])
@@ -660,16 +704,14 @@ def main(argv=None) -> int:
     fig_dir.mkdir(exist_ok=True)
     infos = {}
     for cand, pick in picks:
-        svg, info, site_svg = structure_figure(cand, pick)
+        svg, info = structure_figure(cand, pick)
         fig_path = fig_dir / f"{cand['pmcid']}.svg"
         if svg:
             fig_path.write_text(svg, encoding="utf-8")
         elif fig_path.exists():
             fig_path.unlink()
-        site_path = fig_dir / f"{cand['pmcid']}-site.svg"
-        if site_svg:
-            site_path.write_text(site_svg, encoding="utf-8")
-        elif site_path.exists():
+        site_path = fig_dir / f"{cand['pmcid']}-site.svg"   # the separate close-up of earlier renders
+        if site_path.exists():
             site_path.unlink()
         cmp_svg, cmp_info = compare_figure(cand, pick) if svg else ("", {})
         cmp_path = fig_dir / f"{cand['pmcid']}-compare.svg"
@@ -700,6 +742,13 @@ def main(argv=None) -> int:
                                                        encoding="utf-8")
         infos[cand["pmcid"]] = info
     feature = read_json(d / "feature.json") if (d / "feature.json").exists() and len(picks) >= FEATURE_MIN else None
+    for cand, pick in picks:   # the front page's large picture: Today's Structure only
+        hero_path = fig_dir / f"{cand['pmcid']}-hero.svg"
+        hero = hero_figure(cand, pick) if feature and feature.get("pmcid") == cand["pmcid"] else ""
+        if hero:
+            hero_path.write_text(hero, encoding="utf-8")
+        elif hero_path.exists():
+            hero_path.unlink()
     (d / "README.md").write_text(issue_md(meta, picks, infos, load_impact(d), feature), encoding="utf-8")
     print(f"Rendered {len(picks)} articles to {d / 'README.md'}")
     return 0

@@ -33,7 +33,8 @@ def _unquote(v: str) -> str:
     return v[1:-1] if len(v) >= 2 and v[0] == v[-1] and v[0] in "'\"" else v
 
 
-def parse_cif(text: str, categories=("_atom_site", "_entity", "_struct_ref", "_struct_conf", "_struct_sheet_range")) -> dict[str, list[dict]]:
+def parse_cif(text: str, categories=("_atom_site", "_entity", "_struct_ref", "_struct_ref_seq", "_struct_conf",
+                                      "_struct_sheet_range")) -> dict[str, list[dict]]:
     """Rows of the requested mmCIF categories, from both loop_ and single-row key-value form."""
     lines = text.splitlines()
     out: dict[str, list[dict]] = {c: [] for c in categories}
@@ -307,9 +308,170 @@ AA1 = {"ALA": "A", "ARG": "R", "ASN": "N", "ASP": "D", "CYS": "C", "GLN": "Q", "
        "HIS": "H", "ILE": "I", "LEU": "L", "LYS": "K", "MET": "M", "PHE": "F", "PRO": "P", "SER": "S",
        "THR": "T", "TRP": "W", "TYR": "Y", "VAL": "V", "MSE": "M", "SEC": "U"}
 BACKBONE = {"N", "C", "O", "OXT"}
-CONTACT = 4.0  # Å: residues with any heavy atom this close to the ligand are drawn and listed
+CONTACT = 4.0  # Å: residues with any heavy atom this close to the ligand are drawn (as sticks)
 MAX_SITES = 24  # copies of one ligand listed for the 3D viewer's "next binding site" button
-POLAR = 3.3    # Å: N/O pairs this close are drawn as polar contacts
+HBOND = 3.5    # Å: ligand–polymer N/O pairs this close are drawn as (probable) hydrogen bonds
+# π interactions, with PLIP's limits (Salentin et al. 2015): ring centroids within 5.5 Å, the rings parallel
+# (< 30°) or T-shaped (60–90°), and one centroid at most 2.0 Å off the other ring's normal; a cation (Lys NZ,
+# the Arg guanidinium) within 6.0 Å of a ligand ring and above it in the same way.
+PI_DIST, PI_OFFSET, CATION_PI_DIST = 5.5, 2.0, 6.0
+HBOND_COLOR = "#2C9FD8"   # light blue dots
+PI_COLOR = "#E8842A"      # orange dots
+AROMATIC_RINGS = {          # ring atoms of aromatic residues and nucleotide bases
+    "PHE": [("CG", "CD1", "CD2", "CE1", "CE2", "CZ")], "TYR": [("CG", "CD1", "CD2", "CE1", "CE2", "CZ")],
+    "TRP": [("CD2", "CE2", "CE3", "CZ2", "CZ3", "CH2"), ("CG", "CD1", "NE1", "CE2", "CD2")],
+    "HIS": [("CG", "ND1", "CD2", "CE1", "NE2")],
+    **{b: [("N1", "C2", "N3", "C4", "C5", "C6"), ("C4", "C5", "N7", "C8", "N9")] for b in ("A", "G", "DA", "DG")},
+    **{b: [("N1", "C2", "N3", "C4", "C5", "C6")] for b in ("C", "U", "DC", "DT")},
+}
+
+
+def _unp_segments(cif: dict) -> dict[str, list[tuple]]:
+    """entity id -> [(first, last residue in the model's numbering, first UniProt position, accession, auth chain)]
+    from _struct_ref_seq, for the UniProt (UNP) references."""
+    refs = {r.get("id"): r for r in cif.get("_struct_ref", [])}
+    out: dict[str, list[tuple]] = defaultdict(list)
+    for row in cif.get("_struct_ref_seq", []):
+        ref = refs.get(row.get("ref_id"))
+        if not ref or ref.get("db_name") != "UNP":
+            continue
+        try:
+            first, last, db = int(row["seq_align_beg"]), int(row["seq_align_end"]), int(row["db_align_beg"])
+        except (KeyError, ValueError):
+            continue
+        acc = row.get("pdbx_db_accession") or ref.get("pdbx_db_accession")
+        out[ref.get("entity_id", "")].append((first, last, db, acc, row.get("pdbx_strand_id")))
+    return out
+
+
+def _unp_position(segments: dict, entity: str, achain: str, seq: int) -> tuple[str | None, int | None]:
+    """(UniProt accession, position) of residue `seq` (the model's numbering) of a chain, or (None, None)."""
+    hits = [s for s in segments.get(entity, ()) if s[0] <= seq <= s[1]]
+    if not hits:
+        return None, None
+    first, _, db, acc, _ = next((s for s in hits if s[4] == achain), hits[0])
+    return acc, db + seq - first
+
+
+# Which side of a membrane a UniProt topological domain is on, as a rank: the side with the higher rank is drawn on top
+# (extracellular above periplasm above cytoplasm, so a bacterial outer-membrane barrel and an inner-membrane transporter
+# both stand with their outside up). Lumen, periplasm, the mitochondrial intermembrane space and the like are
+# topologically outside; cytoplasm, matrix, stroma and nucleoplasm inside.
+INSIDE = ("cytoplasmic", "mitochondrial matrix", "stromal", "nuclear", "chloroplast stroma")
+TM_MIN_RESIDUES = 8   # a transmembrane segment counts for the membrane's direction with at least this many residues modelled
+
+
+def _side_rank(description: str) -> int | None:
+    d = (description or "").strip().lower()
+    if not d:
+        return None
+    if d.startswith("extracellular"):
+        return 2
+    return 0 if d.startswith(INSIDE) else 1
+
+
+def _unit3(v):
+    n = math.sqrt(sum(c * c for c in v)) or 1.0
+    return tuple(c / n for c in v)
+
+
+def _mean3(pts):
+    return tuple(sum(p[i] for p in pts) / len(pts) for i in range(3))
+
+
+def membrane_normal(m: dict, topology) -> tuple | None:
+    """The membrane's normal, pointing to the outside (extracellular, lumenal or periplasmic side), for a model with
+    UniProt transmembrane segments; None for a soluble protein (or when the topology cannot be had).
+
+    topology: accession -> UniProt features [{"type", "start", "end", "description"}] ("Transmembrane", "Topological
+    domain"). Each modelled transmembrane segment gives a direction (its first to its last turn); the topological
+    domains on either side say which way it runs (inside -> outside or back). Segments whose sides UniProt does not
+    give only fix the axis; when no segment has sides, the positive-inside rule (more Lys/Arg on the cytoplasmic
+    side) picks the sign."""
+    if topology is None:
+        return None
+    signed, unsigned, tm_pts = [], [], []
+    for v in m["chains"].values():
+        for acc in sorted({r["acc"] for r in v if r.get("acc")}):
+            feats = topology(acc) or []
+            tms = [(f["start"], f["end"]) for f in feats if f.get("type") == "Transmembrane"
+                   and isinstance(f.get("start"), int) and isinstance(f.get("end"), int)]
+            if not tms:
+                continue
+            doms = [(f["start"], f["end"], _side_rank(f.get("description", ""))) for f in feats
+                    if f.get("type") == "Topological domain" and isinstance(f.get("start"), int) and isinstance(f.get("end"), int)]
+            pos = {r["unp"]: r["xyz"] for r in v if r.get("acc") == acc and r.get("unp") is not None and r["at"] == "CA"}
+            for a, b in tms:
+                seg = [pos[i] for i in range(a, b + 1) if i in pos]
+                if len(seg) < TM_MIN_RESIDUES:
+                    continue
+                axis = tuple(e - s for s, e in zip(_mean3(seg[:4]), _mean3(seg[-4:])))
+                if math.sqrt(sum(c * c for c in axis)) < 8.0:
+                    continue
+                axis = _unit3(axis)
+                tm_pts += seg
+                before = next((r for s, e, r in doms if r is not None and 0 <= a - e <= 3), None)
+                after = next((r for s, e, r in doms if r is not None and 0 <= s - b <= 3), None)
+                if before is not None and after is not None:
+                    sign = (after > before) - (after < before)
+                elif after is not None:
+                    sign = 1 if after > 0 else -1
+                elif before is not None:
+                    sign = -1 if before > 0 else 1
+                else:
+                    sign = 0
+                (signed.append(tuple(c * sign for c in axis)) if sign else unsigned.append(axis))
+    if not signed and not unsigned:
+        return None
+    if signed:
+        n = _unit3(tuple(sum(a[i] for a in signed) for i in range(3)))
+        if sum(sum(x * y for x, y in zip(a, n)) for a in signed) < 0.5 * len(signed):
+            return None                          # the segments disagree: better no orientation than a wrong one
+        n = _unit3(tuple(n[i] * len(signed) + sum(a[i] * (1 if sum(x * y for x, y in zip(a, n)) >= 0 else -1)
+                                                   for a in unsigned) for i in range(3)))
+    else:
+        cov = [[sum(a[i] * a[j] for a in unsigned) for j in range(3)] for i in range(3)]
+        ev = _jacobi_eigen(cov)
+        n = _unit3(tuple(ev[r][0] for r in range(3)))
+        if sum(abs(sum(x * y for x, y in zip(a, n))) for a in unsigned) < 0.6 * len(unsigned):
+            return None
+        c = _mean3(tm_pts)
+        up = down = 0
+        for v in m["chains"].values():
+            for r in v:
+                if r.get("comp") in ("LYS", "ARG"):
+                    t = sum((r["xyz"][i] - c[i]) * n[i] for i in range(3))
+                    up += 15 < t < 35
+                    down += -35 < t < -15
+        if up > down:
+            n = tuple(-x for x in n)
+    return n
+
+
+def _upright(center: tuple, normal: tuple, pts: list[tuple]):
+    """Projector (x right, y up, z toward the viewer) with `normal` straight up and the widest spread in the plane
+    of the membrane across the picture."""
+    flat = []
+    for p in pts:
+        d = tuple(p[i] - center[i] for i in range(3))
+        t = sum(d[i] * normal[i] for i in range(3))
+        flat.append(tuple(d[i] - t * normal[i] for i in range(3)))
+    cov = [[sum(q[i] * q[j] for q in flat) for j in range(3)] for i in range(3)]
+    ev = _jacobi_eigen(cov)
+    x = tuple(ev[r][0] for r in range(3))
+    t = sum(x[i] * normal[i] for i in range(3))
+    x = _unit3(tuple(x[i] - t * normal[i] for i in range(3)))
+    return _frame(center, x, normal)
+
+
+def _frame(center: tuple, x: tuple, y: tuple):
+    """Projector onto the right-handed frame x (right), y (up), z = x × y (toward the viewer)."""
+    z = (x[1] * y[2] - x[2] * y[1], x[2] * y[0] - x[0] * y[2], x[0] * y[1] - x[1] * y[0])
+
+    def proj(p):
+        d = (p[0] - center[0], p[1] - center[1], p[2] - center[2])
+        return (sum(d[i] * x[i] for i in range(3)), sum(d[i] * y[i] for i in range(3)), sum(d[i] * z[i] for i in range(3)))
+    return proj
 
 
 def _load(cif_gz: bytes, ligand_ids: set[str], gene_names: dict[str, str] | None,
@@ -324,6 +486,7 @@ def _load(cif_gz: bytes, ligand_ids: set[str], gene_names: dict[str, str] | None
         if ref.get("db_name") == "UNP" and gene:
             entities[ref.get("entity_id", "")] = gene
     ss_map = _secondary_structure(cif)
+    unp_segments = _unp_segments(cif)
     model = next((a.get("pdbx_PDB_model_num") for a in atoms), "1")
     chains: dict[str, list[dict]] = defaultdict(list)
     chain_entity: dict[str, str] = {}
@@ -352,9 +515,11 @@ def _load(cif_gz: bytes, ligand_ids: set[str], gene_names: dict[str, str] | None
                              "chain": a.get("auth_asym_id", key), "entity": a.get("label_entity_id", "?")})
             if name in ("CA", "P"):
                 auth = a.get("auth_seq_id", "")
+                achain = a.get("auth_asym_id", key)
+                acc, unp = _unp_position(unp_segments, a.get("label_entity_id", "?"), achain, seq)
                 chains[key].append({"seq": seq, "xyz": xyz, "at": name,
                                     "auth": int(auth) if auth.lstrip("-").isdigit() else None,
-                                    "achain": a.get("auth_asym_id", key),
+                                    "achain": achain, "comp": a.get("label_comp_id", ""), "acc": acc, "unp": unp,
                                     "ss": "N" if name == "P" else ss_map.get((key, seq), "C")})
                 chain_entity[key] = a.get("label_entity_id", "?")
         elif a.get("group_PDB") == "HETATM" and a.get("label_comp_id") in ligand_ids:
@@ -589,12 +754,13 @@ def _clip(text: str, size: float, bold: bool, max_px: float) -> str:
 
 
 def _leaders(items: list[dict], x0: float, y0: float, w: float, h: float, bl: float, br: float,
-             ink: str, bg: str, font: float = 1.0) -> str:
+             ink: str, bg: str, font: float = 1.0, hug: tuple[float, float] | None = None) -> str:
     """Leader-line labels in the left and right bands of the figure box.
 
     items: {"ax", "ay" (where the line ends, in the figure), "side" ("L"/"R"), "title", "sub", "swatch" (colour or
     None), "color" (line and title colour)}. Labels on one side are spread so they never overlap, in the order of
-    their anchors, so the lines do not cross each other."""
+    their anchors, so the lines do not cross each other. hug = (left, right) edges of the drawn structure: a narrow
+    structure (an upright membrane protein) keeps its labels beside it instead of out at the edges of the box."""
     parts: list[str] = []
     for side in ("L", "R"):
         group = sorted((i for i in items if i["side"] == side), key=lambda i: i["ay"])
@@ -612,6 +778,8 @@ def _leaders(items: list[dict], x0: float, y0: float, w: float, h: float, bl: fl
             for k in range(len(pos) - 2, -1, -1):     # keep the order and the gaps after the shift
                 pos[k] = min(pos[k], pos[k + 1] - gap)
         edge = x0 + bl - 12 * font if side == "L" else x0 + w - br + 12 * font
+        if hug:
+            edge = max(edge, hug[0] - 30 * font) if side == "L" else min(edge, hug[1] + 30 * font)
         for it, ly in zip(group, pos):
             col = it.get("color") or ink
             sgn = 1 if side == "L" else -1
@@ -716,7 +884,7 @@ def render(cif_gz: bytes, ligand_ids: set[str], x0: float, y0: float, w: float, 
            max_points: int = MAX_TRACE_POINTS, bg: str = "#FFFFFF",
            notes: list[dict] | None = None, labels: dict | None = None, bands: tuple[float, float] = (0, 0),
            site_xyz: tuple | None = None, ink: str = "#1B2638", hl_color: str = HIGHLIGHT,
-           probe: dict | None = None, font: float = 1.0, band_mode: str = "sides",
+           probe: dict | None = None, font: float = 1.0, band_mode: str = "sides", topology=None,
            ) -> tuple[str, list[tuple[str, str, str]], list[tuple[str, str]]]:
     """SVG fragment for the box (x0, y0, w, h), a legend [(colour, label, description)] per polymer
     entity, and [(colour, component id, [entity ids], [[asym id, residue number] per copy])] for the ligands drawn as sticks. `max_points` thins very large
@@ -736,6 +904,9 @@ def render(cif_gz: bytes, ligand_ids: set[str], x0: float, y0: float, w: float, 
     band_mode="topbottom" it is (top, bottom) heights instead and the labels sit above and below (the phone layout).
     `site_xyz` circles the ligand copy nearest to that point (the zoomed site); its position in the figure
     comes back in probe["site"].
+
+    A membrane protein (UniProt transmembrane segments in the model; `topology`: accession -> UniProt features) stands
+    upright with its outside (extracellular, lumenal, periplasmic) up, as membrane proteins are shown in papers.
     """
     palette = entity_colors or PALETTE
     m = _load(cif_gz, ligand_ids, gene_names)
@@ -748,8 +919,12 @@ def render(cif_gz: bytes, ligand_ids: set[str], x0: float, y0: float, w: float, 
     annotated = bool(labels or notes or site_xyz)
     tb = band_mode == "topbottom"
     pad = max(bands) if annotated else 0                    # widest band a label may need (a first, symmetric layout)
-    # Wider than tall: put the longest axis horizontally if the box is wide, vertically otherwise.
-    proj = _projector(center, ev, (h - 2 * pad > w) if tb else (h > w - 2 * pad))
+    normal = membrane_normal(m, topology)
+    if normal:
+        proj = _upright(center, normal, pts[::step])
+    else:
+        # Wider than tall: put the longest axis horizontally if the box is wide, vertically otherwise.
+        proj = _projector(center, ev, (h - 2 * pad > w) if tb else (h > w - 2 * pad))
 
     entity_order = []
     for k, _ in runs:
@@ -904,8 +1079,9 @@ def render(cif_gz: bytes, ligand_ids: set[str], x0: float, y0: float, w: float, 
                 probe["site"] = (px, py, 30.0 * font)
         items = items_for(sx, x0 + w / 2, sides, y0 + h / 2)
         if items:
+            hug = (ox + min(xs) * scale, ox + max(xs) * scale)
             out += (_leaders_h(items, x0, y0, w, h, bt, bb, ink, bg, font) if tb
-                    else _leaders(items, x0, y0, w, h, bl, br, ink, bg, font))
+                    else _leaders(items, x0, y0, w, h, bl, br, ink, bg, font, hug))
     return out, legend, list((c, k, sorted(lig_entities[k]), lig_sites[k][:MAX_SITES]) for k, c in ccol.items())
 
 
@@ -949,7 +1125,7 @@ def compare(panels: list[dict], x0: float, y0: float, w: float, h: float, align:
             mark: dict | None = None, gene_names: dict[str, str] | None = None, entity_colors: list[str] | None = None,
             ligand_colors: list[str] | None = None, bg: str = "#FFFFFF", ink: str = "#1B2638",
             hl_color: str = HIGHLIGHT, gap: float = 36, names: list | None = None,
-            font: float = 1.0, vertical: bool = False) -> tuple[str, dict]:
+            font: float = 1.0, vertical: bool = False, topology=None) -> tuple[str, dict]:
     """Two (or more) structures of the same assembly side by side, superposed on one polymer entity, with the
     same view, the stretch `focus` in the accent colour and, when `mark` is given, an arrow from where one
     residue sits in the first panel to where it sits in the next.
@@ -961,7 +1137,8 @@ def compare(panels: list[dict], x0: float, y0: float, w: float, h: float, align:
     names: a short name per polymer entity (legend order, None to skip), written on the first panel.
     font: factor for the text (the phone version is drawn with larger text); vertical: stack the panels (the movement
     then runs left to right, so each wide, short panel shows it at full length).
-    The view is chosen so that the arrow is vertical (the first panel's residue on top): the movement shows.
+    The view is chosen so that the arrow is vertical (the first panel's residue on top): the movement shows. A
+    membrane protein (see render) stands upright instead, outside up, turned so that the movement lies in the picture.
     Returns (svg fragment, {"distance": Å between the marked residue's Cα in panels 1 and 2 or None}); the
     fragment is "" when the structures cannot be superposed."""
     palette = entity_colors or PALETTE
@@ -1021,7 +1198,18 @@ def compare(panels: list[dict], x0: float, y0: float, w: float, h: float, align:
         # panel 2's) or along y (side by side: panel 1's residue above panel 2's)
     else:
         fixed = None
-    if fixed:
+    normal = membrane_normal(ms[0], topology)
+    if normal:
+        pts_ = all_pts[::max(1, len(all_pts) // 1500)]
+        inplane = None
+        if marks:
+            d = tuple(marks[1][c] - marks[0][c] for c in range(3))
+            t = sum(d[c] * normal[c] for c in range(3))
+            flat = tuple(d[c] - t * normal[c] for c in range(3))
+            if math.sqrt(sum(x * x for x in flat)) > 0.3 * math.sqrt(sum(x * x for x in d)):
+                inplane = _unit3(flat)          # the movement's sideways part runs across the picture
+        proj = _frame(center, inplane, normal) if inplane else _upright(center, normal, pts_)
+    elif fixed:
         proj_pts = []
         for p in all_pts[::max(1, len(all_pts) // 1500)]:
             dd = tuple(p[c] - center[c] for c in range(3))
@@ -1169,6 +1357,72 @@ class _Grid:
                             yield i, d
 
 
+def _ring(pts: list[tuple]) -> tuple[tuple, tuple, float] | None:
+    """(centroid, unit normal, largest distance of an atom from the best plane) of a ring."""
+    c = _mean3(pts)
+    cov = [[sum((p[i] - c[i]) * (p[j] - c[j]) for p in pts) for j in range(3)] for i in range(3)]
+    ev = _jacobi_eigen(cov)
+    n = _unit3(tuple(ev[r][2] for r in range(3)))
+    return c, n, max(abs(sum((p[i] - c[i]) * n[i] for i in range(3))) for p in pts)
+
+
+def _ligand_rings(atoms: list[dict]) -> list[tuple[tuple, tuple]]:
+    """Planar five- and six-membered rings of a ligand (taken as aromatic): [(centroid, normal)]."""
+    idx = [i for i, a in enumerate(atoms) if a["el"] in ("C", "N", "O", "S")]
+    nb: dict[int, set] = defaultdict(set)
+    for x, i in enumerate(idx):
+        for j in idx[x + 1:]:
+            r = COVALENT_RADIUS.get(atoms[i]["el"], 0.8) + COVALENT_RADIUS.get(atoms[j]["el"], 0.8) + 0.45
+            if 0.4 < math.dist(atoms[i]["xyz"], atoms[j]["xyz"]) <= r:
+                nb[i].add(j)
+                nb[j].add(i)
+    rings: set[frozenset] = set()
+
+    def walk(start, cur, path):
+        if len(path) > 6:
+            return
+        for j in nb[cur]:
+            if j == start and len(path) >= 5:
+                rings.add(frozenset(path))
+            elif j not in path and j > start:
+                walk(start, j, path + [j])
+    for i in idx:
+        walk(i, i, [i])
+    out = []
+    for rg in rings:
+        if len(rg) not in (5, 6):
+            continue
+        fit = _ring([atoms[i]["xyz"] for i in rg])
+        if fit[2] <= 0.15:
+            out.append(fit[:2])
+    return out
+
+
+def _pi_stacked(a: tuple, b: tuple) -> bool:
+    (ca, na), (cb, nb_) = a, b
+    d = math.dist(ca, cb)
+    if d > PI_DIST:
+        return False
+    ang = math.degrees(math.acos(min(1.0, abs(sum(x * y for x, y in zip(na, nb_))))))
+    if not (ang < 30 or ang > 60):
+        return False
+    v = tuple(cb[i] - ca[i] for i in range(3))
+    off = []
+    for n in (na, nb_):
+        t = sum(v[i] * n[i] for i in range(3))
+        off.append(math.sqrt(max(0.0, d * d - t * t)))
+    return min(off) <= PI_OFFSET
+
+
+def _above(ring: tuple, p: tuple, limit: float) -> bool:
+    c, n = ring
+    d = math.dist(c, p)
+    if d > limit:
+        return False
+    t = sum((p[i] - c[i]) * n[i] for i in range(3))
+    return math.sqrt(max(0.0, d * d - t * t)) <= PI_OFFSET
+
+
 def render_site(cif_gz: bytes, ligand_ids: set[str], prefer: list[str], w: float, h: float,
                 gene_names: dict[str, str] | None = None, entity_colors: list[str] | None = None,
                 ligand_colors: list[str] | None = None, ink: str = "#1B2638", bg: str = "#FFFFFF",
@@ -1176,9 +1430,12 @@ def render_site(cif_gz: bytes, ligand_ids: set[str], prefer: list[str], w: float
     """Close-up of the binding site of one ligand: the first of `prefer` (component IDs) present in the
     model, otherwise the largest ligand. Ligands under 5 heavy atoms (ions, BeF3) get no close-up.
 
-    Draws the residues within CONTACT Å as sticks with labels, N/O pairs within POLAR Å as dashes,
-    neighbouring ligands, and the surrounding cartoon faded and clipped in front.
-    Returns (svg fragment for a w x h canvas, {"ligand", "residues", "polar", "neighbours"}) or ("", None).
+    Draws the residues within CONTACT Å as sticks, the probable hydrogen bonds (ligand–polymer N/O pairs within
+    HBOND Å) as light-blue dots and the probable π interactions (stacking with aromatic side chains or bases,
+    cation–π from Lys/Arg) as orange dots, neighbouring ligands, and the surrounding cartoon faded and clipped in
+    front. Only the residues that make one of the drawn interactions are labelled.
+    Returns (svg fragment for a w x h canvas, {"ligand", "residues", "hbonds", "pi", "neighbours", "center"})
+    or ("", None).
     """
     palette = entity_colors or PALETTE
     m = _load(cif_gz, ligand_ids, gene_names, polymer_atoms=True)
@@ -1214,10 +1471,41 @@ def render_site(cif_gz: bytes, ligand_ids: set[str], prefer: list[str], w: float
     polar = []
     for i in fidx:
         if lig_atoms[i]["el"] in ("N", "O"):
-            for j, d in grid.near(lig_atoms[i]["xyz"], POLAR):
+            for j, d in grid.near(lig_atoms[i]["xyz"], HBOND):
                 if poly[j]["el"] in ("N", "O"):
                     polar.append((i, j))
     polar_atoms = {j for _, j in polar}
+
+    # π interactions: the ligand's planar rings against aromatic side chains / bases and Lys/Arg cations nearby
+    lig_rings = _ligand_rings([lig_atoms[i] for i in fidx])
+    pi_lines: list[tuple[tuple, tuple]] = []
+    pi_res: set = set()
+    if lig_rings:
+        around = {j for i in fidx for j, _ in grid.near(lig_atoms[i]["xyz"], CATION_PI_DIST + 2.0)}
+        by_res_atoms: dict[tuple, dict[str, tuple]] = defaultdict(dict)
+        comp_of: dict[tuple, str] = {}
+        near_res = {poly[x]["res"] for x in around}
+        for j in (k for k, a in enumerate(poly) if a["res"] in near_res):
+            by_res_atoms[poly[j]["res"]][poly[j]["name"]] = poly[j]["xyz"]
+            comp_of[poly[j]["res"]] = poly[j]["comp"]
+        for res, names_ in by_res_atoms.items():
+            comp = comp_of.get(res, "")
+            for ring_names in AROMATIC_RINGS.get(comp, []):
+                if all(n in names_ for n in ring_names):
+                    fit = _ring([names_[n] for n in ring_names])
+                    for lr in lig_rings:
+                        if _pi_stacked(lr, fit[:2]):
+                            pi_lines.append((lr[0], fit[0]))
+                            pi_res.add(res)
+            cation = (names_.get("NZ") if comp == "LYS" else
+                      _mean3([names_[n] for n in ("NE", "NH1", "NH2")]) if comp == "ARG" and all(
+                          n in names_ for n in ("NE", "NH1", "NH2")) else None)
+            if cation:
+                for lr in lig_rings:
+                    if _above(lr, cation, CATION_PI_DIST):
+                        pi_lines.append((lr[0], cation))
+                        pi_res.add(res)
+    pocket |= pi_res
 
     # Ligand molecules touching the focus one (cofactors, a stacked second ligand) come along.
     lig_grid = _Grid(lig_atoms)
@@ -1299,6 +1587,11 @@ def render_site(cif_gz: bytes, ligand_ids: set[str], prefer: list[str], w: float
     for i, j in polar:
         (ax, ay), (bx, by) = sx(proj(lig_atoms[i]["xyz"])), sx(proj(poly[j]["xyz"]))
         dashes.append(f"M{ax:.1f},{ay:.1f}L{bx:.1f},{by:.1f}")
+    pis = []
+    for a_, b_ in pi_lines:
+        (ax, ay), (bx, by) = sx(proj(a_)), sx(proj(b_))
+        pis.append(f"M{ax:.1f},{ay:.1f}L{bx:.1f},{by:.1f}")
+    dot = max(2.6, 0.2 * label_size)
 
     # Labels: one-letter code + author numbering, at the tip of each side chain.
     by_res: dict[tuple, list[int]] = defaultdict(list)
@@ -1319,7 +1612,8 @@ def render_site(cif_gz: bytes, ligand_ids: set[str], prefer: list[str], w: float
         dup[n] += 1
     lcx, lcy = sx(proj(center))
     labels, placed = [], []
-    for r in sorted(pocket, key=lambda r: mind.get(r, 99))[:14]:
+    talking = {poly[j]["res"] for _, j in polar} | pi_res   # only the residues that make a drawn interaction
+    for r in sorted(talking, key=lambda r: mind.get(r, 99))[:14]:
         idx = by_res.get(r) or []
         ca = next((poly[j] for j in idx if poly[j]["name"] == "CA"), None)
         pts2 = [sx(proj(poly[j]["xyz"])) for j in idx] or [(lcx, lcy)]
@@ -1346,16 +1640,24 @@ def render_site(cif_gz: bytes, ligand_ids: set[str], prefer: list[str], w: float
     body = (f'<defs><clipPath id="site-clip"><rect width="{w}" height="{h}"/></clipPath></defs>'
             f'<g clip-path="url(#site-clip)">{"".join(s for _, s in parts)}'
             f'{_sticks(res_atoms, rq, sx, res_w)}'
-            f'<path d="{"".join(dashes)}" stroke="{ink}" stroke-width="2" stroke-dasharray="5 4" '
-            f'fill="none" opacity="0.85"/>'
             f'{_sticks(lk, lq, sx, lig_w)}'
+            + _dots(dashes, HBOND_COLOR, dot, bg) + _dots(pis, PI_COLOR, dot, bg) +
             f'<g font-size="{label_size}" font-weight="700" fill="{ink}" stroke="{bg}" stroke-width="4" '
             f'paint-order="stroke" stroke-linejoin="round">{"".join(labels)}</g></g>')
     resid = sorted(pocket, key=lambda r: (names[r][1], int(re.sub(r"\D", "", names[r][0]) or 0)))
     info = {"ligand": focus, "residues": [names[r][0] + (f"({names[r][1]})" if dup[names[r][0]] > 1 else "") for r in resid],
-            "polar": len(polar), "neighbours": sorted({k[2] for k in keep_insts if k != best}),
+            "hbonds": len(polar), "pi": len(pi_lines), "neighbours": sorted({k[2] for k in keep_insts if k != best}),
             "center": [round(sum(p[c] for p in focus_xyz) / len(focus_xyz), 2) for c in range(3)]}
     return body, info
+
+
+def _dots(paths: list[str], color: str, dot: float, bg: str) -> str:
+    """A dotted line (an interaction), each dot ringed in the ground colour so it shows over the sticks."""
+    if not paths:
+        return ""
+    d, gap = "".join(paths), f"0.1 {2.3 * dot:.1f}"
+    return (f'<path d="{d}" stroke="{bg}" stroke-width="{dot + 2.2:.1f}" stroke-dasharray="{gap}" stroke-linecap="round" fill="none"/>'
+            f'<path d="{d}" stroke="{color}" stroke-width="{dot:.1f}" stroke-dasharray="{gap}" stroke-linecap="round" fill="none"/>')
 
 
 def _sticks(atoms: list[dict], q: list[tuple], sx, width: float) -> str:

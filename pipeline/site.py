@@ -33,6 +33,9 @@ from .schema import CATEGORIES, FEATURE_AXES, FEATURE_MIN, LAB_NOTE_FIELDS, SUMM
 SITE_DIR = ROOT / "site"
 TH = brand.THEME
 DESCRIPTION = "新着の査読済みオープンアクセス論文から、構造生物学論文を、毎日紹介するサイト。"
+TAGLINE = "構造生物学者のための情報収集サポートサイト"
+LEAD = ("新着の査読済みオープンアクセス論文から、", "構造生物学の論文を、", "毎日ピックアップして紹介")
+LATEST = {"date": None}   # the newest issue with articles (the menu's "Latest Article"), set by build()
 
 CSS = f"""
 :root {{
@@ -184,7 +187,7 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
            font-weight:700; text-wrap:balance; scroll-margin-top:20px; }}
 
 /* figures: transparent, on the page ground; the legend and a 3D viewer follow */
-.v3d-view {{ position:relative; border-top:1px solid var(--hair); border-bottom:1px solid var(--hair); }}
+.v3d-view {{ position:relative; }}
 .fig {{ display:block; width:100%; height:auto; margin:0; }}
 .v3d-canvas {{ display:none; position:absolute; inset:0; }}
 .v3d.on .v3d-canvas {{ display:block; }}
@@ -222,7 +225,6 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .v3d .fig.cmp, .v3d.show-cmp .fig:not(.cmp), .v3d.show-cmp .v3d-bar {{ display:none; }}
 .v3d.show-cmp .fig.cmp.d {{ display:block; }}
 .cmpfig {{ margin:26px 0 0; }}
-.cmpfig .fig {{ border-top:1px solid var(--hair); border-bottom:1px solid var(--hair); }}
 .legend {{ display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px 44px; margin:18px 0 0; }}
 .legend h4 {{ margin:0 0 4px; font-family:var(--mono); font-size:11px; letter-spacing:.12em; font-weight:500; color:var(--mute); }}
 .legend ul {{ list-style:none; margin:0; padding:0; }}
@@ -321,8 +323,66 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .row.hit {{ border-left:4px solid var(--acc); padding-left:18px; margin-left:-22px; }}
 .row.hit .rt::before {{ content:"関心あり"; display:block; font-family:var(--mono); font-size:11px; letter-spacing:.1em; color:var(--acc-ink); font-weight:700; }}
 .row[hidden], .pr[hidden], .pg[hidden] {{ display:none; }}
-.hero .v3d-view {{ border:1px solid var(--hair); }}
 .hero .v3d-bar {{ margin-top:10px; }}
+
+/* MENU: a round button at the right of the masthead; the list drops below it */
+.vol {{ display:flex; align-items:center; gap:22px; }}
+.menu {{ position:relative; }}
+.menu summary {{ list-style:none; display:flex; align-items:center; gap:14px; cursor:pointer; user-select:none;
+                 font-family:var(--mono); font-size:13px; letter-spacing:.16em; color:var(--ink); }}
+.menu summary::-webkit-details-marker {{ display:none; }}
+.menu .mb {{ width:50px; height:50px; border-radius:50%; background:var(--ink); display:flex; flex-direction:column;
+             align-items:center; justify-content:center; gap:5px; }}
+.menu .mb i {{ display:block; width:20px; height:2px; background:#fff; transition:transform .15s; }}
+.menu[open] .mb i:nth-child(1) {{ transform:translateY(7px) rotate(45deg); }}
+.menu[open] .mb i:nth-child(2) {{ opacity:0; }}
+.menu[open] .mb i:nth-child(3) {{ transform:translateY(-7px) rotate(-45deg); }}
+.menu summary:hover .mb, .menu summary:focus-visible .mb {{ background:var(--acc-ink); }}
+.menu-list {{ position:absolute; right:0; top:calc(100% + 12px); z-index:30; min-width:230px; display:flex; flex-direction:column;
+              background:var(--ground); border:1px solid var(--ink); padding:8px 0; text-align:right; }}
+.menu-list a {{ padding:8px 22px; font-family:var(--mono); font-size:14px; color:var(--ink); text-decoration:none; }}
+.menu-list a:hover {{ background:var(--ink); color:#fff; text-decoration:none; }}
+
+/* the front page's first screen: what the site is, the button down to Today's Structure, a large structure */
+.lead {{ border-bottom:1px solid var(--hair); }}
+.lead-grid {{ display:grid; grid-template-columns:minmax(0,44fr) minmax(0,56fr); gap:36px; align-items:center;
+              min-height:min(560px, calc(100vh - 150px)); padding-top:24px; padding-bottom:24px; }}
+.lead-h {{ margin:0; font-family:var(--serif); font-weight:400; font-size:clamp(18px, 1.72vw, 30px); line-height:1.8;
+           color:var(--ink); letter-spacing:.02em; }}
+.lead-h span {{ display:block; white-space:nowrap; }}
+.lead-go {{ display:inline-flex; align-items:center; gap:12px; margin-top:34px; padding:14px 24px 14px 20px;
+            background:var(--ink); color:#fff; font-family:var(--mono); font-size:14.5px; letter-spacing:.06em; }}
+.lead-go .tri {{ font-size:13px; }}
+.lead-go:hover {{ background:var(--acc-ink); color:#fff; text-decoration:none; }}
+.lead-art {{ display:block; margin-right:calc(-1 * var(--pad) + 24px); }}
+.lead-art img {{ display:block; width:100%; height:auto; max-height:min(640px, calc(100vh - 170px)); object-fit:contain; }}
+
+/* Today's Structure on the front page, in the order of the editor's layout: name, headline, figure, four lines, links */
+.today {{ padding:46px 0 54px; border-bottom:4px solid var(--ink); scroll-margin-top:8px; }}
+.today-k {{ margin:0; display:flex; flex-wrap:wrap; align-items:baseline; gap:6px 22px; }}
+.today-k .lb {{ font-family:var(--mono); font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:var(--acc-ink); font-weight:700; }}
+.today-k .tg {{ font-family:var(--sans); font-size:24px; font-weight:500; color:var(--ink); letter-spacing:.01em; }}
+.today-k .dt {{ font-family:var(--mono); font-size:12.5px; color:var(--mute); }}
+.today-h {{ margin:14px 0 0; font-size:38px; line-height:1.4; font-weight:700; color:var(--ink); text-wrap:balance; }}
+.today-sub {{ margin:10px 0 0; font-size:18px; line-height:1.75; color:var(--desc); }}
+.today-fig {{ margin-top:22px; }}
+.today-fig .v3d-bar {{ margin-top:10px; }}
+.today-4 {{ margin:26px 0 0; max-width:1120px; }}
+.today-4 div {{ display:grid; grid-template-columns:150px minmax(0,1fr); gap:16px; padding:7px 0; }}
+.today-4 dt {{ font-size:13px; color:var(--mute); padding-top:5px; letter-spacing:.04em; }}
+.today-4 dd {{ margin:0; font-size:16px; line-height:1.85; color:var(--ink2); }}
+.reads {{ display:flex; flex-wrap:wrap; gap:14px 18px; margin-top:28px; }}
+.reads a {{ display:block; padding:12px 22px 11px; min-width:260px; border:1px solid var(--ink); }}
+.reads b {{ font-family:var(--sans); font-size:16px; font-weight:700; }}
+.reads .arr {{ margin-left:12px; font-family:var(--mono); font-size:16px; }}
+.reads small {{ display:block; margin-top:2px; font-family:var(--mono); font-size:11.5px; letter-spacing:.02em; }}
+.read-art {{ background:var(--ink); color:#fff; }}
+.read-art small {{ color:#C9D1DD; }}
+.read-art:hover {{ background:var(--acc-ink); border-color:var(--acc-ink); color:#fff; text-decoration:none; }}
+.read-paper {{ color:var(--ink); }}
+.read-paper small {{ color:var(--mute); }}
+.read-paper:hover {{ background:var(--ink); color:#fff; text-decoration:none; }}
+.read-paper:hover small {{ color:#C9D1DD; }}
 .rel {{ list-style:none; margin:0; padding:0; }}
 .rel li {{ display:grid; grid-template-columns:minmax(0,1fr) 210px; gap:4px 20px; align-items:baseline; padding:9px 0; border-top:1px solid var(--hair); }}
 .rel li:last-child {{ border-bottom:1px solid var(--hair); }}
@@ -386,6 +446,8 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
   .margin .no {{ font-size:64px; }}
 }}
 @media (max-width:1120px) {{
+  .lead-grid {{ grid-template-columns:minmax(0,1fr); min-height:0; gap:26px; padding-top:30px; }}
+  .lead-art {{ margin-right:0; }}
   .shell {{ grid-template-columns:minmax(0,1fr); }}
   .side {{ border-left:0; padding-left:0; border-top:4px solid var(--ink); margin-top:20px; }}
   .sticky-side .side-in {{ position:static; max-height:none; overflow:visible; }}
@@ -395,6 +457,21 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 }}
 @media (max-width:860px) {{
   :root {{ --pad:18px; }}
+  .mast-row {{ position:relative; }}
+  .vol {{ position:absolute; right:0; top:0; }}
+  .menu .mb {{ width:44px; height:44px; }}
+  .menu .mt {{ font-size:12px; }}
+  .lead-h {{ font-size:17px; line-height:1.85; }}
+  .lead-go {{ margin-top:22px; font-size:13.5px; }}
+  .lead-art img {{ max-height:none; }}
+  .today {{ padding:32px 0 40px; }}
+  .today-k .tg {{ font-size:19px; }}
+  .today-h {{ font-size:26px; }}
+  .today-sub {{ font-size:15.5px; }}
+  .today-4 div {{ grid-template-columns:minmax(0,1fr); gap:0; padding:6px 0; }}
+  .today-4 dt {{ padding-top:0; font-size:12px; }}
+  .today-4 dd {{ font-size:15px; }}
+  .reads a {{ min-width:0; flex:1 1 100%; }}
   .part h2 {{ font-size:23px; }}
   .word .name {{ font-size:32px; }}
   .brand {{ flex-wrap:wrap; gap:8px 0; }}
@@ -492,17 +569,38 @@ def page(title: str, body: str, depth: int, description: str = DESCRIPTION, noin
             f'<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">'
             f'<style>{CSS}</style></head><body><div class="page">{body}</div>'
             + (f'<script src="{up}assets/viewer.js" defer></script>' if viewer else "")
-            + (f'<script>{script}</script>' if script else "") + '</body></html>')
+            + f'<script>{MENU_SCRIPT}{script}</script></body></html>')
+
+
+def menu_html(up: str) -> str:
+    """MENU: a round button that opens the four ways around the site (a <details>, so it works without JavaScript)."""
+    latest = f'{up}issues/{LATEST["date"]}.html' if LATEST["date"] else f"{up}index.html"
+    items = (("Top", f"{up}index.html"), ("Today’s Structure", f"{up}index.html#today"),
+             ("Article Search", f"{up}proteins.html"), ("Latest Article", latest))
+    links = "".join(f'<a href="{h}">{esc(t)}</a>' for t, h in items)
+    return (f'<details class="menu"><summary><span class="mt">MENU</span>'
+            f'<span class="mb" aria-hidden="true"><i></i><i></i><i></i></span></summary>'
+            f'<nav class="menu-list" aria-label="サイト内のページ">{links}</nav></details>')
+
+
+MENU_SCRIPT = r"""
+document.addEventListener('click', function (e) {
+  document.querySelectorAll('details.menu[open]').forEach(function (d) {
+    if (!d.contains(e.target) || e.target.closest('.menu-list a')) d.removeAttribute('open');
+  });
+});
+"""
 
 
 def masthead(depth: int, right: str = "") -> str:
-    """The wordmark row inside the page width; the double rule under it spans the whole window."""
+    """The wordmark row inside the page width, with the MENU button on the right; the double rule under it spans the
+    whole window."""
     up = "../" * depth
     return (f'<header class="mast"><div class="wrap"><div class="mast-row">'
             f'<div class="brand"><a class="word" href="{up}index.html"><img src="{up}assets/logo-mark.svg" alt="">'
             f'<span class="name">{esc(brand.SITE_NAME)}</span></a>'
-            f'<p class="tag">{esc(DESCRIPTION)}</p></div>'
-            f'<div class="vol">{right}</div></div></div><div class="rules"></div></header>')
+            f'<p class="tag">{esc(TAGLINE)}</p></div>'
+            f'<div class="vol">{right}{menu_html(up)}</div></div></div><div class="rules"></div></header>')
 
 
 def shell(main: str, side: str, sticky: bool = False) -> str:
@@ -589,7 +687,7 @@ def margin_html(cand: dict, pick: dict, n: int, impact_type: str | None = None) 
                     for p in prots[:4])
     orgs = sorted({o for s in rel for q in s.get("polymers", []) for o in q["organisms"]})
     first = any(p.get("first_structure") for p in prots)
-    rows = [("Target", esc(pick["target_label"])), ("Method", esc(method)), (pdb_label, pdb_dd),
+    rows = [("Target", esc(pick.get("target_en") or pick["target_label"])), ("Method", esc(method)), (pdb_label, pdb_dd),
             ("Ligand", esc(pick.get("ligand_label") or ("—" if hot else render.ligand_line(cand))))]
     if hot:
         rows.insert(0, ("注目の構造", esc(impact.TYPES.get(impact_type or "", "新しい構造以外"))))
@@ -669,15 +767,6 @@ def figures_html(cand: dict, pick: dict, date: str, root: Path, fig_base: str, u
                    f'alt="{alt}" loading="lazy">'
                    + (f'<img class="fig m" src="{fig_base}/{date}/{esc(pm)}-compare-m.svg" alt="" loading="lazy">' if has_cm else "")
                    + '</div>')
-    st = info.get("site")
-    if st and (fig_dir / f"{pm}-site.svg").exists():
-        rows = [("結合部位", esc(st["label"]) + (f'（{esc("・".join(st["neighbours"]))} と隣接）' if st.get("neighbours") else "")),
-                (f"{render.CONTACT_NOTE}（{len(st['residues'])}）", esc(" ".join(st["residues"])))]
-        if st.get("polar"):
-            rows.append(("極性接触", f'<span class="dash"></span>N・O が 3.3 Å 以内の組 {st["polar"]}'))
-        dl = "".join(f"<div><dt>{k}</dt><dd>{v}</dd></div>" for k, v in rows)
-        out.append(f'<div class="site"><img src="{fig_base}/{date}/{esc(pm)}-site.svg" '
-                   f'alt="{esc(st["label"])}の結合部位" loading="lazy"><dl>{dl}</dl></div>')
     return "".join(out)
 
 
@@ -718,7 +807,7 @@ def article_html(cand: dict, pick: dict, date: str, n: int, root: Path, fig_base
         lab = f'<h3>実験メモ</h3><dl class="lab">{rows}</dl>' + (f'<div class="lab-src">{ev}</div>' if ev else "")
     text = (f'<div class="text">'
             f'<p class="kicker"><b>{esc(cand["journal"] or cand["journal_abbrev"])}</b> · {esc(cand["pub_date"])} · '
-            f'{lic} · <a href="{doi_url(cand)}">論文へ</a></p>'
+            f'{lic} · <a href="{doi_url(cand)}" rel="noopener">原著論文（英語）↗</a></p>'
             f'<h2>{esc(cand["title"])}</h2>'
             f'{figures_html(cand, pick, date, root, fig_base, up)}'
             f'<p class="headline">{esc(pick["headline"])}</p>'
@@ -790,7 +879,7 @@ def facts(cand: dict, pick: dict) -> dict:
     else:
         pdb = "公開待ち" if own else ("—" if hot else "補足資料")
     prots = cand.get("proteins", [])
-    return {"target": pick["target_label"], "method": method or "—", "res": res or "—", "pdb": pdb,
+    return {"target": pick.get("target_en") or pick["target_label"], "method": method or "—", "res": res or "—", "pdb": pdb,
             "pdb_id": shown["pdb_id"] if shown else None,
             "ligand": pick.get("ligand_label") or ("—" if hot else render.ligand_line(cand)),
             "uniprot": [(p["uniprot"], p.get("gene") or p["uniprot"]) for p in prots[:3]],
@@ -836,53 +925,101 @@ def contents_html(picks: list, date: str, root: Path, fig_base: str, href_base: 
     return out
 
 
-def hero_html(feature: dict | None, picks: list, date: str, root: Path, fig_base: str, href_base: str = "",
-              up: str = "") -> str:
-    """Today's Structure (今日の一本): the day's one article, large, with its facts. The reason it was picked is for the pull request."""
+def feature_of(feature: dict | None, picks: list) -> tuple[int, dict, dict] | None:
+    """(article number, cand, pick) of the day's Today's Structure, or None."""
     if not feature:
-        return ""
+        return None
     for n, (cand, pk) in enumerate(picks, 1):
         if cand["pmcid"] == feature["pmcid"]:
-            break
-    else:
-        return ""
-    href = f"{href_base}#a{n}"
-    f = facts(cand, pk)
-    cells = [("TARGET", esc(f["target"])), ("METHOD", esc(f["method"])), ("RES.", esc(f["res"])), ("PDB", esc(f["pdb"]))]
-    dl = "".join(f"<div><dt>{k}</dt><dd>{v}</dd></div>" for k, v in cells)
-    _, m, d, wd = date_parts(date)
-    big = root / date / "figures" / f"{cand['pmcid']}.svg"   # the article's own figure, larger than the list thumbnail
-    info = read_json(root / date / "figures" / f"{cand['pmcid']}.json") if (root / date / "figures" / f"{cand['pmcid']}.json").exists() else {}
+            return n, cand, pk
+    return None
+
+
+def lead_html(feature: dict | None, picks: list, date: str, root: Path, fig_base: str) -> str:
+    """The first screen of the front page: what the site is (three lines), the button down to Today's Structure, and
+    a large picture. The picture is assets/hero.(svg|png|webp|jpg) when the editor has made one, otherwise Today's
+    Structure itself, drawn without labels (pipeline.render: <pmcid>-hero.svg)."""
+    lines = "".join(f'<span>{esc(t)}</span>' for t in LEAD)
+    go = ('<a class="lead-go" href="#today"><span class="tri" aria-hidden="true">▽</span>'
+          'Picked up: Today’s Structure</a>') if feature_of(feature, picks) else ""
+    art = ""
+    own = next((p for p in (ROOT / "assets").glob("hero.*") if p.suffix in (".svg", ".png", ".webp", ".jpg")), None)
+    hit = feature_of(feature, picks)
+    if own:
+        art = f'<img src="assets/{esc(own.name)}" alt="">'
+    elif hit and (root / date / "figures" / f"{hit[1]['pmcid']}-hero.svg").exists():
+        art = (f'<img src="{fig_base}/{date}/{esc(hit[1]["pmcid"])}-hero.svg" '
+               f'alt="構造図：{esc(hit[2].get("target_en") or hit[2]["target_label"])}">')
+    art_html = f'<a class="lead-art" href="#today" tabindex="-1">{art}</a>' if art else ""
+    return (f'<section class="lead"><div class="wrap lead-grid"><div class="lead-text">'
+            f'<h1 class="lead-h">{lines}</h1>{go}</div>{art_html}</div></section>')
+
+
+def feature_figure(cand: dict, pk: dict, date: str, root: Path, fig_base: str, href: str, up: str = "") -> str:
+    """Today's Structure's figure: the article's own figure (overview and binding site), with the comparison figure on
+    a second tab when there is one, and the 3D viewer."""
+    pm = cand["pmcid"]
+    fd = root / date / "figures"
+    big = fd / f"{pm}.svg"
+    info = read_json(fd / f"{pm}.json") if (fd / f"{pm}.json").exists() else {}
     attrs, wait, bar = viewer_bar(info, up) if big.exists() else ("", "", "")
-    has_cmp = bool(info.get("compare")) and (root / date / "figures" / f"{cand['pmcid']}-compare.svg").exists()
+    has_cmp = bool(info.get("compare")) and (fd / f"{pm}-compare.svg").exists()
     tabs = cmp_img = ""
     if has_cmp:
         first_tab = "全体と結合部位" if info.get("site") else "全体"
         tabs = (f'<div class="figtabs"><button type="button" data-fig="main" class="on">{first_tab}</button>'
                 f'<button type="button" data-fig="cmp">構造の比較</button></div>')
-        cmp_img = (f'<img class="fig cmp d" src="{fig_base}/{date}/{esc(cand["pmcid"])}-compare.svg" '
+        cmp_img = (f'<img class="fig cmp d" src="{fig_base}/{date}/{esc(pm)}-compare.svg" '
                    f'alt="構造の比較：{esc("と".join(x["title"] for x in info["compare"]["panels"]))}">')
-        if (root / date / "figures" / f"{cand['pmcid']}-compare-m.svg").exists():
-            cmp_img += f'<img class="fig cmp m" src="{fig_base}/{date}/{esc(cand["pmcid"])}-compare-m.svg" alt="">'
+        if (fd / f"{pm}-compare-m.svg").exists():
+            cmp_img += f'<img class="fig cmp m" src="{fig_base}/{date}/{esc(pm)}-compare-m.svg" alt="">'
+    alt = f'構造図：{esc(pk.get("target_en") or pk["target_label"])}'
     if attrs:   # the structure can be turned in place (Mol*, loaded only when asked for)
-        has_m = (root / date / "figures" / f"{cand['pmcid']}-m.svg").exists()
-        main_m = f'<img class="fig m" src="{fig_base}/{date}/{esc(cand["pmcid"])}-m.svg" alt="">' if has_m else ""
-        fig = (f'<div class="v3d{" hasm" if has_m else ""}"{attrs}>{tabs}<div class="v3d-view"><a href="{href}"><img class="fig d" '
-               f'src="{fig_base}/{date}/{esc(cand["pmcid"])}.svg" alt="構造図：{esc(pk["target_label"])}">{main_m}</a>{cmp_img}'
-               f'<div class="v3d-canvas"></div>{wait}</div>{bar}</div>')
-    elif big.exists():
-        fig = (f'<a class="thumb" href="{href}"><img src="{fig_base}/{date}/{esc(cand["pmcid"])}.svg" '
-               f'alt="構造図：{esc(pk["target_label"])}"></a>')
-    else:
-        fig = thumb_html(cand, pk, date, root, fig_base, href)
-    first = ' · <span class="mk">PDB 初構造</span>' if f["first"] else ""
-    return (f'<section class="hero"><div class="hero-grid"><div>'
-            f'<h2 class="label">Today&#8217;s Structure <span>/ {pad(n)} · {m}月{d}日（{wd}）号{first}</span></h2>'
-            f'<h3><a href="{href}">{esc(pk["headline"])}</a></h3>'
-            f'<p class="sub">{esc(pk.get("subhead") or "")}</p>'
-            f'{intro_html({**pk, "summary": {k: v for k, v in pk["summary"].items() if k != "open"}})}'
-            f'<dl class="hf">{dl}</dl>'
-            f'<p class="go"><a href="{href}">記事を読む →</a></p></div>{fig}</div></section>')
+        has_m = (fd / f"{pm}-m.svg").exists()
+        main_m = f'<img class="fig m" src="{fig_base}/{date}/{esc(pm)}-m.svg" alt="">' if has_m else ""
+        return (f'<div class="v3d{" hasm" if has_m else ""}"{attrs}>{tabs}<div class="v3d-view"><a href="{href}"><img class="fig d" '
+                f'src="{fig_base}/{date}/{esc(pm)}.svg" alt="{alt}">{main_m}</a>{cmp_img}'
+                f'<div class="v3d-canvas"></div>{wait}</div>{bar}</div>')
+    if big.exists():
+        return f'<a class="thumb" href="{href}"><img src="{fig_base}/{date}/{esc(pm)}.svg" alt="{alt}"></a>'
+    return thumb_html(cand, pk, date, root, fig_base, href)
+
+
+def read_links(cand: dict, href: str) -> str:
+    """The two ways on from a summary, told apart by who wrote it, in which language and where it lives: FoldFeed's
+    article (Japanese, on this site) and the paper itself (English, on the journal's site)."""
+    journal = cand.get("journal_abbrev") or cand.get("journal") or "掲載誌"
+    return (f'<div class="reads">'
+            f'<a class="read-art" href="{href}"><b>解説記事を読む</b><span class="arr" aria-hidden="true">→</span>'
+            f'<small>FoldFeed の日本語の解説（このサイト）</small></a>'
+            f'<a class="read-paper" href="{doi_url(cand)}" rel="noopener"><b>原著論文を開く</b><span class="arr" aria-hidden="true">↗</span>'
+            f'<small>{esc(journal)} · 英語 · 外部サイト</small></a></div>')
+
+
+def today_html(feature: dict | None, picks: list, date: str, root: Path, fig_base: str, href_base: str = "",
+               up: str = "") -> str:
+    """Today's Structure (今日の一本) on the front page: the English name of the target, the headline, the figure, the
+    four-line introduction and the two links (the article, the paper). The reason it was picked is for the pull request."""
+    hit = feature_of(feature, picks)
+    if not hit:
+        return ""
+    n, cand, pk = hit
+    href = f"{href_base}#a{n}"
+    _, m, d, wd = date_parts(date)
+    first = '<span class="mk">PDB 初構造</span>' if facts(cand, pk)["first"] else ""
+    rows = "".join(f'<div><dt>{label}</dt><dd>{esc(pk["summary"][k])}</dd></div>'
+                   for k, label in TODAY_FIELDS.items() if pk["summary"].get(k))
+    return (f'<section class="today" id="today"><div class="wrap">'
+            f'<p class="today-k"><span class="lb">Today’s Structure</span>'
+            f'<span class="tg">{esc(pk.get("target_en") or pk["target_label"])}</span>'
+            f'<span class="dt">{m}月{d}日（{wd}）号 · {pad(n)}{(" · " + first) if first else ""}</span></p>'
+            f'<h2 class="today-h"><a href="{href}">{esc(pk["headline"])}</a></h2>'
+            f'<p class="today-sub">{esc(pk.get("subhead") or "")}</p>'
+            f'<div class="today-fig">{feature_figure(cand, pk, date, root, fig_base, href, up)}</div>'
+            f'<dl class="today-4">{rows}</dl>{read_links(cand, href)}</div></section>')
+
+
+TODAY_FIELDS = {"question": "疑問・課題", "approach": "アプローチ", "result": "結果", "learned": "わかったこと"}
 
 
 def part_html(key: str, count: int) -> str:
@@ -1024,7 +1161,7 @@ def library(issues: list[str], root: Path = ISSUES_DIR) -> list[dict]:
                    "uniprot": sorted(set(ids)), "genes": sorted(set(genes)), "names": sorted(set(names)),
                    "pdbs": sorted({x["pdb_id"] for x in released}), "method": method,
                    "gene_of": {p["uniprot"]: p["gene"] for p in cand.get("proteins", []) if p.get("gene")}}
-            text = " ".join([pick["target_label"], pick["headline"], pick.get("subhead") or "", cand["title"]]
+            text = " ".join([pick["target_label"], pick.get("target_en") or "", pick["headline"], pick.get("subhead") or "", cand["title"]]
                             + list(pick.get("legend_labels") or []) + row["genes"] + row["uniprot"] + row["names"] + row["pdbs"]
                             + [method] + [w for key, w in METHOD_WORDS if key in method])
             row["search"] = unicodedata.normalize("NFKC", text).lower()
@@ -1148,19 +1285,18 @@ def mail_html() -> str:
 
 
 def home(issues: list[str]) -> str:
-    """The front page. First screen: Today's Structure alone, large, with the four-line introduction, so a visitor sees
-    at once what is being shown. Scrolling: the rest of the latest issue, the archive by kind of protein (and a search),
-    the past issues (empty ones too, as "記事なし"), and (not yet working) a place for the mailing list."""
+    """The front page. First screen: what the site is, in three lines, a large structure, and the button down to
+    Today's Structure (the day's one article, with its figure and four-line introduction), so a first-time visitor
+    sees what the site does before what it shows. Then: the rest of the latest issue, the archive by kind of protein
+    (and a search), the past issues (empty ones too, as "記事なし"), and (not yet working) a place for the mailing list."""
     latest = next((d for d in issues if load_issue(d, ISSUES_DIR)[1]), issues[0])  # newest issue that has articles
     past = [d for d in issues if d != latest]
     _, picks, _ = load_issue(latest, ISSUES_DIR)
     href = f"issues/{latest}.html"
     feature = load_feature(latest, ISSUES_DIR, picks)
     lib = library(issues)
-    hero = hero_html(feature, picks, latest, ISSUES_DIR, "figures", href, "")
-    band = f'<div class="band"><div class="wrap">{hero}</div></div>' if hero else ""
-    main = [breakdown_html(picks),
-            f'<section class="toc">{contents_html(picks, latest, ISSUES_DIR, "figures", href, feature and feature["pmcid"])}</section>',
+    top = lead_html(feature, picks, latest, ISSUES_DIR, "figures") + today_html(feature, picks, latest, ISSUES_DIR, "figures", href, "")
+    main = [f'<section class="toc">{contents_html(picks, latest, ISSUES_DIR, "figures", href, feature and feature["pmcid"])}</section>',
             f'<p class="sec-more"><a href="{href}">{jp_date(latest)}号のすべての記事を読む →</a></p>',
             f'<section class="sec"><div class="ix-h"><h2 class="label">タンパク質の種類から探す</h2>'
             f'<a class="soon" href="proteins.html">一覧へ</a></div>'
@@ -1178,7 +1314,7 @@ def home(issues: list[str]) -> str:
     side = (sd("タンパク質を探す", find_form()) + mine_html(lib) + journals_html(journal_counts(issues)) + numbers_html(issues, lib)
             + sd("このサイトについて", f"<p>{esc(ABOUT)}</p>"))
     return page(f"{brand.SITE_NAME}（{brand.SITE_NAME_EN}）",
-                masthead(0) + band + shell("".join(main), side)
+                masthead(0) + top + shell("".join(main), side)
                 + colophon(f'<p>{esc(pmcoa.CREDIT)}</p>' if load_issue(latest, ISSUES_DIR)[0].get("source") == pmcoa.SOURCE else ""),
                 depth=0, viewer=True, script=MINE_SCRIPT)
 
@@ -1231,7 +1367,7 @@ def proteins_page(issues: list[str]) -> str:
                 meta.append(f'<i>PDB</i>{esc(", ".join(r["pdbs"][:4]))}{" …" if len(r["pdbs"]) > 4 else ""}')
             items.append(f'<li class="pr" data-a="{r["date"]}#{r["n"]}" data-s="{esc(r["search"])}"><span class="pd">{y}.{m:02d}.{d:02d} · {pad(r["n"])}</span>'
                          f'<a class="pt" href="issues/{r["date"]}.html#a{r["n"]}">{esc(r["pick"]["headline"])}'
-                         f'<span class="ps">{esc(r["pick"]["target_label"])}</span></a>'
+                         f'<span class="ps">{esc(r["pick"].get("target_en") or r["pick"]["target_label"])}</span></a>'
                          f'<span class="pm">{"<br>".join(meta)}</span></li>')
         groups.append(f'<section class="pg" id="c-{key}"><div class="ix-h"><h2 class="label">{esc(CATEGORIES[key])}</h2>'
                       f'<span>{counts[key]} 本</span></div><ul class="rows" style="list-style:none;margin:0;padding:0">'
@@ -1286,6 +1422,9 @@ def build(preview_root: Path | None = None) -> int:
     (SITE_DIR / "issues").mkdir()
     for name in ("logo.svg", "logo-mark.svg", "viewer.js"):
         shutil.copy(ROOT / "assets" / name, SITE_DIR / "assets" / name)
+    for own in (ROOT / "assets").glob("hero.*"):     # the front page's picture, when the editor has made one
+        shutil.copy(own, SITE_DIR / "assets" / own.name)
+    LATEST["date"] = next((d for d in issues if load_issue(d, ISSUES_DIR)[1]), None)
     shutil.copytree(ROOT / "assets" / "vendor", SITE_DIR / "assets" / "vendor")
     related = related_articles(library(issues))
     for i, date in enumerate(issues):
