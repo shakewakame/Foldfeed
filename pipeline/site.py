@@ -89,17 +89,11 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .sd + .sd {{ padding-top:24px; border-top:1px solid var(--hair); }}
 .sd .label {{ padding-top:0; margin-bottom:10px; }}
 .sd p {{ margin:0 0 8px; font-size:13.5px; line-height:1.85; color:var(--desc); }}
-.sd-issue {{ display:block; font-size:19px; font-weight:700; line-height:1.5; }}
 .sd-meta {{ font-family:var(--mono); font-size:12px !important; color:var(--ink2) !important; line-height:1.8 !important; }}
 .jl {{ list-style:none; margin:0; padding:0; font-size:14px; line-height:1.55; }}
 .jl li {{ display:flex; justify-content:space-between; align-items:baseline; gap:14px; padding:5px 0;
           border-bottom:1px dotted var(--hair); }}
 .jl .c {{ font-family:var(--mono); font-size:12px; color:var(--mute); white-space:nowrap; }}
-.jl-more {{ font-family:var(--mono); font-size:11.5px; color:var(--mute); margin-top:8px; }}
-.nums {{ display:grid; grid-template-columns:1fr 1fr; gap:16px 18px; margin:0; }}
-.nums div {{ min-width:0; }}
-.nums dt {{ font-family:var(--mono); font-size:10.5px; letter-spacing:.1em; color:var(--mute); }}
-.nums dd {{ margin:2px 0 0; font-family:var(--latin); font-size:30px; line-height:1.1; letter-spacing:-0.02em; }}
 .sd-toc a {{ display:grid; grid-template-columns:28px minmax(0,1fr); gap:6px; padding:5px 0; font-size:13.5px;
              line-height:1.6; color:var(--ink2); }}
 .sd-toc a b {{ font-family:var(--mono); font-size:11.5px; color:var(--acc-ink); padding-top:1px; }}
@@ -135,32 +129,16 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .thumb img {{ display:block; width:100%; height:auto; }}
 .thumb.none {{ aspect-ratio:3/2; display:flex; align-items:center; justify-content:center;
                font-family:var(--mono); font-size:11px; color:var(--mute); text-align:center; padding:8px; }}
-.rf, .hf {{ margin:0; font-family:var(--mono); }}
+.rf {{ margin:0; font-family:var(--mono); }}
 .rf div {{ display:grid; grid-template-columns:62px minmax(0,1fr); gap:0 8px; padding:2px 0; }}
-.rf dt, .hf dt {{ font-size:10.5px; letter-spacing:.1em; color:var(--mute); padding-top:2px; }}
-.rf dd, .hf dd {{ margin:0; font-size:12px; line-height:1.6; color:var(--ink2); overflow-wrap:anywhere; }}
+.rf dt {{ font-size:10.5px; letter-spacing:.1em; color:var(--mute); padding-top:2px; }}
+.rf dd {{ margin:0; font-size:12px; line-height:1.6; color:var(--ink2); overflow-wrap:anywhere; }}
 .rp {{ font-family:var(--mono); line-height:1.5; }}
 .rp .pl {{ display:block; font-size:10.5px; letter-spacing:.1em; color:var(--mute); }}
 .rp b {{ display:block; font-size:15px; font-weight:500; color:var(--ink); }}
 .rp .mk {{ display:block; margin-top:4px; font-family:var(--serif); font-size:12px; }}
 .more {{ margin:8px 0 0; font-family:var(--mono); font-size:13px; }}
 .more a {{ text-decoration:underline; text-decoration-color:var(--acc); text-underline-offset:4px; }}
-.hero {{ margin-top:40px; }}
-.hero .label {{ color:var(--acc-ink); display:block; padding-top:0; margin-bottom:16px; }}
-.hero .label span {{ color:var(--mute); }}
-.hero-grid {{ display:grid; grid-template-columns:minmax(0,46fr) minmax(0,54fr); gap:52px; align-items:center; }}
-.hero h3 {{ margin:0; font-size:42px; line-height:1.36; font-weight:700; color:var(--ink); text-wrap:balance; }}
-.hero .sub {{ margin:12px 0 0; font-size:18px; line-height:1.75; color:var(--desc); }}
-.hero .intro4 {{ margin-top:22px; }}
-.hero .intro4 div {{ grid-template-columns:128px minmax(0,1fr); gap:12px; padding:5px 0; }}
-.hero .intro4 dt {{ font-size:12px; padding-top:5px; }}
-.hero .intro4 dd {{ font-size:15px; line-height:1.85; }}
-.hf {{ display:grid; grid-template-columns:minmax(0,1.15fr) minmax(0,.9fr) minmax(0,1.5fr) minmax(0,1fr); gap:10px 18px; margin:20px 0 0; font-family:var(--mono); }}
-.hf dt {{ font-size:10.5px; letter-spacing:.1em; color:var(--mute); }}
-.hf dd {{ margin:0; font-size:12px; line-height:1.6; color:var(--ink2); overflow-wrap:anywhere; }}
-.hero .go {{ margin:20px 0 0; font-family:var(--mono); font-size:13px; }}
-.hero .go a {{ text-decoration:underline; text-decoration-color:var(--acc); text-underline-offset:4px; }}
-.hero .thumb img {{ width:100%; }}
 .past {{ margin-top:56px; }}
 .past ol {{ list-style:none; margin:14px 0 0; padding:0; }}
 .past li {{ display:grid; grid-template-columns:110px minmax(0,1fr); gap:14px; margin:0 0 14px; align-items:baseline; }}
@@ -256,7 +234,6 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .site dl div {{ min-width:0; }}
 .site dt {{ color:var(--mute); letter-spacing:.1em; font-size:10px; }}
 .site dd {{ margin:0; }}
-.site .dash {{ display:inline-block; width:22px; border-top:2px dashed var(--ink); vertical-align:4px; margin-right:6px; }}
 .art .headline {{ font-size:22px; font-weight:700; line-height:1.55; margin:34px 0 4px; text-wrap:balance; }}
 .art .subhead {{ font-size:16px; line-height:1.8; color:var(--desc); margin:0 0 18px; }}
 .sum {{ margin:0 0 12px; }}
@@ -287,16 +264,12 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .queue .btns {{ display:flex; flex-wrap:wrap; gap:10px; }}
 .queue .btns a {{ display:inline-block; padding:9px 16px; border:1px solid var(--ink); font-family:var(--mono); font-size:13px; }}
 .queue .btns a.go {{ background:var(--ink); color:#fff; }}
-.issue-nav {{ display:flex; justify-content:space-between; gap:16px; margin-top:70px; font-family:var(--mono);
-              font-size:12px; color:var(--ink2); }}
 .colo {{ margin-top:22px; border-top:4px solid var(--ink); }}
 .colophon {{ padding-top:16px; padding-bottom:70px; font-size:12.5px; color:var(--mute); line-height:1.8; }}
 .colophon p {{ margin:0 0 6px; max-width:760px; }}
 
 
 /* the front page: the day's pick fills the first screen on the page ground, closed by a heavy rule */
-.band {{ border-bottom:4px solid var(--ink); }}
-.band .hero {{ margin-top:0; padding:38px 0 52px; }}
 .sec {{ margin-top:56px; }}
 .sec .lead {{ margin:14px 0 0; font-size:14.5px; color:var(--desc); }}
 .sec-more {{ margin:6px 0 0; font-family:var(--mono); font-size:13px; }}
@@ -318,24 +291,11 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .mail .soon {{ font-family:var(--mono); font-size:12px; letter-spacing:.06em; color:var(--acc-ink); }}
 .mail form {{ display:flex; gap:8px; }}
 .mail input:disabled, .mail button:disabled {{ opacity:.5; cursor:not-allowed; }}
-.mail .fine {{ margin-top:10px; font-size:12.5px; color:var(--mute); }}
 
 
-.mix {{ display:flex; flex-wrap:wrap; gap:4px 28px; margin:34px 0 -16px; font-family:var(--mono); font-size:12.5px; color:var(--ink2); }}
-.mix b {{ font-weight:500; letter-spacing:.1em; font-size:11px; color:var(--mute); margin-right:10px; }}
-.issue-body .mix, .main > .mix:first-child {{ margin-top:30px; }}
-.mine .chips {{ display:flex; flex-wrap:wrap; gap:6px; }}
-.chip {{ font:inherit; font-family:var(--sans); font-size:12.5px; line-height:1.4; padding:3px 9px; color:var(--ink2); background:transparent;
-         border:1px solid var(--hair); border-radius:0; cursor:pointer; }}
-.chip:hover {{ border-color:var(--ink); color:var(--ink); }}
-.chip.on {{ background:var(--ink); border-color:var(--ink); color:#fff; }}
-.mine .only {{ display:block; margin-top:12px; font-family:var(--sans); font-size:13px; color:var(--ink2); cursor:pointer; }}
-.mine-n {{ margin:6px 0 0; font-family:var(--mono); font-size:12px; color:var(--acc-ink); }}
-.mine[hidden] {{ display:none; }}
 .row.hit {{ border-left:4px solid var(--acc); padding-left:18px; margin-left:-22px; }}
 .row.hit .rt::before {{ content:"関心あり"; display:block; font-family:var(--mono); font-size:11px; letter-spacing:.1em; color:var(--acc-ink); font-weight:700; }}
 .row[hidden], .pr[hidden], .pg[hidden] {{ display:none; }}
-.hero .v3d-bar {{ margin-top:10px; }}
 
 /* The header (wordmark, MENU, the double rule) slides away while the reader scrolls down and comes back as soon as
    they scroll up; on the first screen it always stays (HEAD_SCRIPT). Whatever sticks while scrolling (an article's
@@ -399,9 +359,9 @@ html, body {{ overflow-x:clip; }}   /* a guard: nothing may widen the page sidew
 
 /* About FoldFeed, right under the first screen */
 .about {{ padding:40px 0 30px; }}
-.about-grid {{ display:grid; grid-template-columns:minmax(0,62fr) minmax(0,38fr); gap:56px; margin-top:22px; align-items:start; }}
+.about-grid {{ display:grid; grid-template-columns:minmax(0,64fr) minmax(0,36fr); gap:48px; margin-top:22px; align-items:start; }}
 .about-dl {{ margin:0; }}
-.about-dl div {{ display:grid; grid-template-columns:150px minmax(0,1fr); gap:16px; padding:10px 0; border-top:1px solid var(--hair); }}
+.about-dl div {{ display:grid; grid-template-columns:136px minmax(0,1fr); gap:16px; padding:10px 0; border-top:1px solid var(--hair); }}
 .about-dl div:first-child {{ border-top:0; padding-top:0; }}
 .about-dl dt {{ font-size:15px; font-weight:700; color:var(--ink2); padding-top:3px; }}
 .about-dl dd {{ margin:0; font-size:16px; line-height:1.95; color:var(--ink2); }}
@@ -482,7 +442,7 @@ html, body {{ overflow-x:clip; }}   /* a guard: nothing may widen the page sidew
 .v3d.loading .v3d-canvas, .v3d.on .v3d-canvas {{ transition:opacity .8s ease; }}
 .v3d.loading .v3d-canvas {{ opacity:0; }}
 .v3d.on .v3d-canvas {{ opacity:1; }}
-a, .chip, .find button, .v3d-bar button, .figtabs button {{ transition:color .2s, background-color .2s, border-color .2s,
+a, .find button, .v3d-bar button, .figtabs button {{ transition:color .2s, background-color .2s, border-color .2s,
    text-decoration-color .2s; }}
 .lead-go, .reads a {{ transition:background-color .25s, color .25s, box-shadow .25s; }}
 .lead-go .tri {{ display:inline-block; transition:transform .3s cubic-bezier(.2,.8,.2,1); }}
@@ -548,17 +508,49 @@ a, .chip, .find button, .v3d-bar button, .figtabs button {{ transition:color .2s
 .rel .why {{ font-family:var(--mono); font-size:11.5px; color:var(--acc-ink); }}
 
 /* an issue page opens with its date, large */
-.ihead {{ display:grid; grid-template-columns:var(--col) minmax(0,1fr); gap:28px; padding:44px 0 6px; align-items:end; }}
-.idate {{ line-height:1; }}
-.idate .y {{ display:block; font-family:var(--mono); font-size:15px; letter-spacing:.14em; color:var(--mute); }}
-.idate .md {{ display:block; font-family:var(--latin); font-size:84px; letter-spacing:-.045em; font-weight:700; color:var(--ink);
-              margin:8px 0 10px; white-space:nowrap; }}
-.idate .wd {{ display:block; font-family:var(--mono); font-size:13px; letter-spacing:.12em; color:var(--acc-ink); }}
-.ihead h1 {{ margin:0; font-size:34px; line-height:1.35; }}
-.ihead .ic {{ margin:6px 0 0; font-family:var(--mono); font-size:13.5px; color:var(--ink2); }}
-.ihead .in {{ margin:12px 0 0; display:flex; flex-wrap:wrap; gap:6px 24px; font-family:var(--mono); font-size:12.5px; }}
-.ihead .in a {{ text-decoration:underline; text-decoration-color:var(--acc); text-underline-offset:4px; }}
-.issue-body .toc {{ margin-top:30px; }}
+/* an issue page's first screen: the issue (one date, large), the figures of the day and the bar of its articles */
+.ihead {{ padding:40px 0 10px; }}
+.ih-nav, .issue-nav {{ display:flex; justify-content:space-between; gap:16px; }}
+.ih-nav a, .issue-nav a {{ display:flex; flex-direction:column; gap:1px; text-decoration:none; padding:6px 0; }}
+.ih-nav span, .issue-nav span {{ font-family:var(--mono); font-size:11.5px; letter-spacing:.08em; color:var(--mute); transition:color .2s; }}
+.ih-nav b, .issue-nav b {{ font-family:var(--mono); font-size:15px; font-weight:700; color:var(--ink); transition:color .2s; }}
+.ih-nav .next, .issue-nav .next {{ text-align:right; }}
+.ih-nav a:hover span, .ih-nav a:hover b, .issue-nav a:hover span, .issue-nav a:hover b {{ color:var(--acc-ink); }}
+.issue-nav {{ margin-top:70px; padding-top:16px; border-top:2px solid var(--ink); }}
+.issue-nav .up {{ text-align:center; }}
+.ih-k {{ margin:18px 0 0; font-family:var(--mono); font-size:14px; letter-spacing:.14em; text-transform:uppercase;
+         color:var(--acc-ink); font-weight:700; }}
+.ih-date {{ margin:4px 0 0; font-family:var(--latin); font-size:92px; line-height:1; letter-spacing:-.035em; font-weight:700; color:var(--ink); }}
+.ih-src {{ margin:12px 0 0; font-size:14.5px; color:var(--desc); }}
+.ih-fig {{ position:relative; margin-top:30px; padding-top:22px; border-top:1px solid var(--hair); }}
+.ih-kpis {{ grid-template-columns:repeat(4,minmax(0,1fr)); }}
+.kl i {{ display:inline-block; width:10px; height:10px; border-radius:2px; margin-right:7px; vertical-align:baseline; }}
+.kl .sw-n {{ background:{CHART_NEW}; }}
+.kl .sw-h {{ background:{CHART_HOT}; }}
+.ih-bar {{ display:flex; gap:2px; height:14px; margin-top:24px; }}
+.ih-bar a {{ flex:var(--w) 1 0; min-width:3px; background:{CHART_NEW}; transform-origin:left;
+             transition:transform .7s cubic-bezier(.2,.8,.2,1) calc(var(--i) * 45ms + 250ms), filter .2s; }}
+.ih-bar a.h {{ background:{CHART_HOT}; }}
+.ih-bar a:first-child {{ border-radius:3px 0 0 3px; }}
+.ih-bar a:last-child {{ border-radius:0 3px 3px 0; }}
+.ih-bar a:hover, .ih-bar a:focus-visible {{ filter:brightness(1.2); outline:none; }}
+.anim .ihead:not(.in) .ih-bar a {{ transform:scaleX(0); }}
+.ih-scale {{ display:flex; justify-content:space-between; margin:6px 0 0; font-family:var(--mono); font-size:11px; color:var(--mute); }}
+.ih-fig .tip {{ position:absolute; z-index:5; pointer-events:none; padding:6px 10px; background:var(--ink); color:#fff;
+                font-family:var(--sans); font-size:12.5px; max-width:420px; }}
+.ih-fig .tip[hidden] {{ display:none; }}
+.ihead .lead-btns {{ margin-top:26px; }}
+.lead-go b {{ margin-left:12px; font-weight:700; }}
+.toc-sub {{ display:flex; gap:12px; align-items:baseline; margin:22px 0 2px; font-family:var(--mono); font-size:13px;
+            letter-spacing:.1em; text-transform:uppercase; color:var(--ink2); }}
+.toc-sub span {{ color:var(--mute); }}
+.part h2 .hd {{ margin-left:16px; font-family:var(--latin); font-weight:400; color:var(--mute); }}
+.shell.solo {{ grid-template-columns:minmax(0,1fr); }}
+/* an issue page: its contents sidebar sits close to the right edge of the window */
+.wrap.sticky-side {{ max-width:none; padding-left:max(var(--pad), calc((100vw - 1600px) / 2 + var(--pad)));
+                     padding-right:clamp(16px, 2vw, 32px); }}
+.about-dl dd .s {{ display:block; text-wrap:balance; }}
+.about-dl dd .w {{ white-space:nowrap; }}
 .row.feat {{ border-left:4px solid var(--acc); padding-left:18px; margin-left:-22px; }}
 .row.feat h3 {{ font-size:23px; }}
 .feat-mark {{ display:block; text-transform:uppercase; margin:0 0 2px; font-family:var(--mono); font-size:11px; letter-spacing:.12em; color:var(--acc-ink); font-weight:700; }}
@@ -592,10 +584,6 @@ a, .chip, .find button, .v3d-bar button, .figtabs button {{ transition:color .2s
   :root {{ --col:200px; --side:290px; }}
   .shell {{ gap:0 40px; }}
   .side {{ padding-left:26px; }}
-  .hero-grid {{ gap:36px; }}
-  .hero h3 {{ font-size:35px; }}
-  .hero .sub {{ font-size:16.5px; }}
-  .idate .md {{ font-size:64px; }}
   .row {{ grid-template-columns:44px minmax(0,1fr) 190px 132px 92px; gap:0 20px; }}
   .row .no {{ font-size:24px; }}
   .row h3 {{ font-size:20px; }}
@@ -605,11 +593,10 @@ a, .chip, .find button, .v3d-bar button, .figtabs button {{ transition:color .2s
   .lead-grid {{ grid-template-columns:minmax(0,1fr); min-height:0; gap:26px; padding-top:30px; }}
   .lead-art {{ margin-right:0; }}
   .shell {{ grid-template-columns:minmax(0,1fr); }}
+  .wrap.sticky-side {{ padding-right:var(--pad); }}
   .side {{ border-left:0; padding-left:0; border-top:4px solid var(--ink); margin-top:20px; }}
   .sticky-side .side-in {{ position:static; max-height:none; overflow:visible; }}
   .side-only-issue {{ display:none; }}
-  .hero-grid {{ grid-template-columns:minmax(0,1fr); gap:26px; }}
-  .hf {{ grid-template-columns:repeat(2,minmax(0,1fr)); }}
 }}
 @media (max-width:860px) {{
   :root {{ --pad:18px; }}
@@ -626,11 +613,12 @@ a, .chip, .find button, .v3d-bar button, .figtabs button {{ transition:color .2s
   .ixm, .ix-h .ixm {{ font-size:12px; }}
   .ixm b, .ix-h .ixm b {{ margin-left:10px; }}
   .lead-go {{ margin-top:22px; font-size:13.5px; }}
-  .lead-btns {{ margin-top:22px; }}
+  .lead-btns {{ margin-top:22px; display:grid; grid-template-columns:minmax(0,1fr); gap:10px; }}
+  .lead-btns .lead-go {{ justify-content:flex-start; }}
+  .lead-go b {{ margin-left:auto; }}
   .about-grid {{ grid-template-columns:minmax(0,1fr); gap:30px; }}
   .about-dl div {{ grid-template-columns:minmax(0,1fr); gap:2px; }}
   .about-dl dd {{ font-size:15px; }}
-  .about .nums dd {{ font-size:32px; }}
   .lead-art img {{ max-height:none; }}
   .today {{ padding:32px 0 40px; }}
   .today-k .tg {{ font-size:18px; }}
@@ -646,13 +634,11 @@ a, .chip, .find button, .v3d-bar button, .figtabs button {{ transition:color .2s
   .tag {{ padding-left:0; border-left:0; flex-basis:100%; font-size:13px; }}
   .mast-row {{ flex-wrap:wrap; align-items:flex-start; }}
   .vol {{ text-align:left; }}
-  .art, .ihead {{ grid-template-columns:minmax(0,1fr); gap:14px; }}
-  .hero h3 {{ font-size:28px; }}
-  .band .hero {{ padding:24px 0 32px; }}
-  .idate .md {{ font-size:58px; display:inline-block; margin:0 14px 0 0; }}
-  .idate .y, .idate .wd {{ display:inline-block; }}
-  .ihead h1 {{ font-size:26px; }}
-  .intro4 div, .hero .intro4 div {{ grid-template-columns:minmax(0,1fr); gap:0; }}
+  .art {{ grid-template-columns:minmax(0,1fr); gap:14px; }}
+  .ih-date {{ font-size:56px; }}
+  .ih-kpis {{ grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }}
+  .ih-nav b, .issue-nav b {{ font-size:13.5px; }}
+  .intro4 div {{ grid-template-columns:minmax(0,1fr); gap:0; }}
   .mail-grid {{ grid-template-columns:minmax(0,1fr); gap:20px; }}
   .pr {{ grid-template-columns:minmax(0,1fr); }}
   .row.feat, .row.hit {{ margin-left:0; padding-left:14px; }}
@@ -665,9 +651,6 @@ a, .chip, .find button, .v3d-bar button, .figtabs button {{ transition:color .2s
   .row .sub {{ font-size:13.5px; }}
   .rf div {{ grid-template-columns:54px minmax(0,1fr); }}
   .rp b, .rp .pl {{ display:inline; margin-right:8px; }}
-  .hero-grid {{ grid-template-columns:minmax(0,1fr); gap:16px; }}
-  .hf {{ grid-template-columns:repeat(2,minmax(0,1fr)); }}
-  .hero .sub {{ font-size:15.5px; }}
   .past li {{ grid-template-columns:96px minmax(0,1fr); }}
   .margin .no {{ font-size:52px; margin-bottom:10px; }}
   .margin dl {{ display:grid; grid-template-columns:78px minmax(0,1fr); gap:3px 12px; }}
@@ -869,19 +852,21 @@ MENU_SCRIPT = r"""
   counts.forEach(function (el) { if (!el.closest('.rv')) countUp(el); });
 })();
 (function () {
-  /* the papers-per-issue chart: one tooltip, on hover and on keyboard focus (values are in the table too) */
-  [].forEach.call(document.querySelectorAll('.ppi'), function (fig) {
+  /* the papers-per-issue chart and an issue's bar of articles: one tooltip, on hover and on keyboard focus (the values
+     are also in the page: the table, the article list) */
+  [].forEach.call(document.querySelectorAll('.ppi, .ih-fig'), function (fig) {
     var tip = fig.querySelector('.tip');
+    if (!tip) return;
     function show(c) {
       tip.textContent = c.getAttribute('data-tip');
       tip.hidden = false;
       var r = c.getBoundingClientRect(), f = fig.getBoundingClientRect();
       var x = Math.max(0, Math.min(f.width - tip.offsetWidth, r.left - f.left + r.width / 2 - tip.offsetWidth / 2));
       tip.style.left = x + 'px';
-      tip.style.top = (c.querySelector('.stack').getBoundingClientRect().top - f.top - tip.offsetHeight - 10) + 'px';
+      tip.style.top = ((c.querySelector('.stack') || c).getBoundingClientRect().top - f.top - tip.offsetHeight - 10) + 'px';
     }
     function hide() { tip.hidden = true; }
-    [].forEach.call(fig.querySelectorAll('.col'), function (c) {
+    [].forEach.call(fig.querySelectorAll('[data-tip]'), function (c) {
       c.addEventListener('pointerenter', function () { show(c); });
       c.addEventListener('focus', function () { show(c); });
       c.addEventListener('pointerleave', hide);
@@ -904,15 +889,17 @@ def masthead(depth: int, right: str = "") -> str:
 
 
 def shell(main: str, side: str, sticky: bool = False) -> str:
-    """Main column and right sidebar. Only the sidebar of an issue page (its contents) stays in view while scrolling."""
+    """Main column and right sidebar. Only the sidebar of an issue page (its contents) stays in view while scrolling.
+    With no sidebar (the front page) the main column takes the whole width."""
+    if not side:
+        return f'<div class="wrap shell solo"><main class="main">{main}</main></div>'
     return (f'<div class="wrap shell{" sticky-side" if sticky else ""}"><main class="main">{main}</main>'
             f'<aside class="side"><div class="side-in">{side}</div></aside></div>')
 
 
 def colophon(extra: str = "") -> str:
     return (f'<footer class="colo"><div class="wrap colophon"><p>{esc(brand.SITE_NAME)} — 構造生物学者のための毎日の新着構造。</p>'
-            f'{extra}<p>要約は AI が論文本文から作成し、編集者が確認している。数値・ID・リガンドは PDB / UniProt から取り、'
-            f'構造図は PDB の座標から描いている。「原文」は論文本文からの引用。</p><p>β版</p></div></footer>')
+            f'{extra}<p>β版</p></div></footer>')   # how the articles are made is told in About FoldFeed
 
 
 def sd(label: str, inner: str, cls: str = "") -> str:
@@ -988,7 +975,7 @@ def margin_html(cand: dict, pick: dict, n: int, impact_type: str | None = None) 
         rows.append(("Organism", "<i>" + esc(", ".join(orgs[:3])) + "</i>"))
     dl = "".join(f"<dt>{k}</dt><dd>{v}</dd>" for k, v in rows)
     if first:
-        dl += '<dd class="first"><span class="mk">PDB 初構造</span></dd>'
+        dl += '<dd class="first"><span class="mk">初めて解かれた構造</span></dd>'
     return f'<aside class="margin"><div class="sticky"><div class="no">{pad(n)}</div><dl>{dl}</dl></div></aside>'
 
 
@@ -1204,7 +1191,7 @@ def row_html(cand: dict, pick: dict, n: int, date: str, root: Path, fig_base: st
     f = facts(cand, pick)
     dl = "".join(f"<div><dt>{k}</dt><dd>{esc(v)}</dd></div>"
                  for k, v in (("TARGET", f["target"]), ("METHOD", f["method"]), ("RES.", f["res"])))
-    first = '<span class="mk">PDB 初構造</span>' if f["first"] else ""
+    first = '<span class="mk">初めて解かれた構造</span>' if f["first"] else ""
     mark = '<span class="feat-mark">Today&#8217;s Structure</span>' if feat else ""
     cats = " ".join(pick.get("categories") or [])
     return (f'<li class="row{" feat" if feat else ""}" data-cats="{esc(cats)}"><span class="no">{pad(n)}</span><div class="rt">{mark}'
@@ -1214,6 +1201,9 @@ def row_html(cand: dict, pick: dict, n: int, date: str, root: Path, fig_base: st
             f'<p class="rm">{esc(cand["journal_abbrev"] or cand["journal"])}</p></div>'
             f'<dl class="rf">{dl}</dl>{thumb_html(cand, pick, date, root, fig_base, href)}'
             f'<div class="rp"><span class="pl">PDB</span><b>{esc(f["pdb_id"] or f["pdb"])}</b>{first}</div></li>')
+
+
+HOME_PARTS = {"new": "Today’s New Structure", "impact": "Today’s Notable Structure"}
 
 
 def contents_html(picks: list, date: str, root: Path, fig_base: str, href_base: str = "",
@@ -1230,10 +1220,20 @@ def contents_html(picks: list, date: str, root: Path, fig_base: str, href_base: 
         body = "".join(row_html(c, pk, number[c["pmcid"]], date, root, fig_base, href_base,
                                 feat=mark and c["pmcid"] == featured)
                        for c, pk in items if mark or c["pmcid"] != featured)
-        if body:
-            out += (f'<div class="ix-h{cls}"><h2 class="label">{PARTS[key][0]}</h2>{issue_meta(date, len(items))}</div>'
+        if not body:
+            continue
+        if mark:   # an issue page: the contents, under one heading (the articles follow under New / Notable Structure)
+            out += (f'<h3 class="toc-sub{cls}">{PARTS[key][0]}<span>{len(items)}</span></h3><ol class="rows">{body}</ol>')
+        else:
+            out += (f'<div class="ix-h{cls}" id="{key}-list"><h2 class="label">{HOME_PARTS[key]}</h2>{issue_meta(date, len(items))}</div>'
                     f'<ol class="rows">{body}</ol>')
+    if mark and out:
+        out = f'<div class="ix-h"><h2 class="label">Contents</h2><span class="ixm"><b>{n_articles(len(picks))}</b></span></div>' + out
     return out
+
+
+def n_articles(n: int) -> str:
+    return f"{n} {'Article' if n == 1 else 'Articles'}"
 
 
 def feature_of(feature: dict | None, picks: list) -> tuple[int, dict, dict] | None:
@@ -1254,8 +1254,11 @@ def lead_html(feature: dict | None, picks: list, date: str, root: Path, fig_base
     lines = "".join(f'<span style="--i:{i}">{esc(t)}</span>' for i, t in enumerate(LEAD))
     go = (('<a class="lead-go" href="#today"><span class="tri" aria-hidden="true">▽</span>'
            'Picked up: Today’s Structure</a>') if feature_of(feature, picks) else "")
+    new, hot = render.split_sections(picks)
+    more = "".join(f'<a class="lead-go alt" href="#{key}"><span class="tri" aria-hidden="true">▽</span>{label}<b>{n}</b></a>'
+                   for key, label, n in (("new-list", "New Structure", len(new)), ("impact-list", "Notable Structure", len(hot))) if n)
     go = (f'<div class="lead-btns"><a class="lead-go alt" href="#about"><span class="tri" aria-hidden="true">▽</span>'
-          f'About FoldFeed</a>{go}</div>')   # in the order of the page
+          f'About FoldFeed</a>{go}{more}</div>')   # in the order of the page
     hit = feature_of(feature, picks)
     art_html = ""
     if hit and (root / date / "figures" / f"{hit[1]['pmcid']}-hero.svg").exists():
@@ -1326,7 +1329,7 @@ def today_html(feature: dict | None, picks: list, date: str, root: Path, fig_bas
     n, cand, pk = hit
     href = f"{href_base}#a{n}"
     y, m, d, _ = date_parts(date)
-    first = '<span class="mk">PDB 初構造</span>' if facts(cand, pk)["first"] else ""
+    first = '<span class="mk">初めて解かれた構造</span>' if facts(cand, pk)["first"] else ""
     rows = "".join(f'<div><dt>{label}</dt><dd>{esc(pk["summary"][k])}</dd></div>'
                    for k, label in TODAY_FIELDS.items() if pk["summary"].get(k))
     return (f'<section class="today" id="today"><div class="wrap">'
@@ -1349,8 +1352,11 @@ def issue_meta(date: str, count: int) -> str:
 
 
 def part_html(key: str, count: int, date: str) -> str:
+    """An issue page's 'New Structure 2026.10.18' heading over its articles, with how many on the right."""
     title, note = PARTS[key]
-    return f'<section class="part" id="{key}"><h2>{title}{issue_meta(date, count)}</h2></section>'
+    y, m, d, _ = date_parts(date)
+    return (f'<section class="part" id="{key}"><h2>{title}<span class="hd">{y}.{m:02d}.{d:02d}</span>'
+            f'<span class="ixm"><b>{n_articles(count)}</b></span></h2></section>')
 
 
 def counts_text(n_new: int, n_hot: int, sep: str = "<br>") -> str:
@@ -1378,19 +1384,63 @@ def index_span(index_date: str, index_from: str | None = None) -> str:
     return f"{m1}月{d1}日〜{d2}日" if m1 == m2 else f"{m1}月{d1}日〜{m2}月{d2}日"
 
 
-def issue_head(date: str, number: int | None, n_new: int, n_hot: int, prev_date: str | None, next_date: str | None,
+READ_CHARS_PER_MIN = 500   # Japanese technical prose, read with care
+FIGURE_MIN = 0.5           # time with each article's figures
+
+
+def reading_minutes(pick: dict) -> float:
+    """How long one article takes to read: its Japanese text (headline, supplement, the introduction, highlights,
+    lab notes) at READ_CHARS_PER_MIN, plus FIGURE_MIN for its figures. The quoted English is not counted."""
+    s = pick.get("summary") or {}
+    parts = [pick.get("headline") or "", pick.get("subhead") or ""]
+    parts += [s.get(k) or "" for k in (*SUMMARY_FIELDS, *SUMMARY_OPTIONAL)]
+    parts += [h.get("text") or "" for h in pick.get("highlights") or []]
+    parts += [v for k, v in (pick.get("lab_notes") or {}).items() if k in LAB_NOTE_FIELDS and v]
+    return sum(len(x) for x in parts) / READ_CHARS_PER_MIN + FIGURE_MIN
+
+
+def issue_nav(prev_date: str | None, next_date: str | None, cls: str, top: bool = False) -> str:
+    """Previous / next issue, each named as such with its date (and, at the foot of a page, the way back to the top)."""
+    def link(date, label, side):
+        if not date:
+            return f'<span class="{side} none"></span>'
+        y, m, d, _ = date_parts(date)
+        return f'<a class="{side}" href="{date}.html"><span>{label}</span><b>{y}.{m:02d}.{d:02d}</b></a>'
+    mid = '<a class="up" href="../index.html"><span>FoldFeed</span><b>Top</b></a>' if top else ""
+    return (f'<nav class="{cls}" aria-label="ほかの号">{link(prev_date, "← Previous issue", "prev")}{mid}'
+            f'{link(next_date, "Next issue →", "next")}</nav>')
+
+
+def issue_head(date: str, number: int | None, picks: list, n_rest: int, prev_date: str | None, next_date: str | None,
                index_date: str | None = None, index_from: str | None = None) -> str:
-    """The top of an issue page: its date, large (year, month.day, weekday and the issue's number), and the counts."""
-    y, m, d, wd = date_parts(date)
-    num = f" · No. {number}" if number else " · Preview"
-    links = "".join(x for x in (f'<a href="{prev_date}.html">← {jp_date_short(prev_date)}号</a>' if prev_date else "",
-                                f'<a href="{next_date}.html">{jp_date_short(next_date)}号 →</a>' if next_date else "",
-                                '<a href="../index.html">トップへ</a>'))
-    return (f'<header class="ihead"><div class="idate"><span class="y">{y}</span><span class="md">{m:02d}.{d:02d}</span>'
-            f'<span class="wd">{WEEKDAY_EN[datetime.date(y, m, d).weekday()]}{num}</span></div><div><h1>Issue of {y}.{m:02d}.{d:02d}</h1>'
-            f'<p class="ic">{counts_text(n_new, n_hot, " · ")}</p>'
-            + (f'<p class="ic">対象：{index_span(index_date, index_from)}登録分</p>' if index_date else "")
-            + f'<p class="in">{links}</p></div></header>')
+    """The first screen of an issue page: which issue it is (the date, once, large), how many articles, how many of them
+    New and Notable Structure, and about how long reading them all takes, as figures that count up and a bar of the
+    articles (one segment each, as long as its reading time, coloured by its part; each a link to it), with buttons
+    down to the two parts and the neighbouring issues."""
+    y, m, d, _ = date_parts(date)
+    new, hot = render.split_sections(picks)
+    mins = [reading_minutes(pk) for _, pk in picks]
+    total = max(1, round(sum(mins))) if picks else 0
+    kicker = (f"Issue No. {number}" if number else "Preview") + f" · {WEEKDAY_EN[datetime.date(y, m, d).weekday()]}"
+    src = (f'<p class="ih-src">{index_span(index_date, index_from)}に論文データベースへ登録された論文から'
+           + (f'（ほかに記事にしていない新しい構造 {n_rest} 本）' if n_rest else "") + '</p>') if index_date else ""
+    tiles = [("Articles", len(picks), ""), ("New Structure", len(new), "n"), ("Notable Structure", len(hot), "h")]
+    kpis = "".join(f'<div class="kpi"><span class="kl">{f"<i class=sw-{c}></i>" if c else ""}{k}</span>'
+                   f'<span class="kv" data-count="{v}">{v}</span></div>' for k, v, c in tiles)
+    kpis += (f'<div class="kpi"><span class="kl">Reading time</span><span class="kv"><small>約 </small>'
+             f'<span data-count="{total}">{total}</span><small> 分</small></span></div>') if picks else ""
+    segs = "".join(f'<a class="{"h" if render.is_impact(pk) else "n"}" href="#a{n}" style="--w:{t:.2f};--i:{n - 1}" '
+                   f'data-tip="{pad(n)} · {esc(pk["headline"])} · 約\u00a0{max(1, round(t))}\u00a0分" aria-label="{pad(n)} {esc(pk["headline"])}"></a>'
+                   for n, ((_, pk), t) in enumerate(zip(picks, mins), 1))
+    bar = (f'<div class="ih-bar" role="list">{segs}</div>'
+           f'<p class="ih-scale"><span>Article 01</span><span>{pad(len(picks))}</span></p><div class="tip" hidden></div>') if picks else ""
+    btns = "".join(f'<a class="lead-go{" alt" if key == "impact" else ""}" href="#{key}"><span class="tri" aria-hidden="true">▽</span>'
+                   f'{label}<b>{n}</b></a>'
+                   for key, label, n in (("new", "New Structure", len(new)), ("impact", "Notable Structure", len(hot))) if n)
+    return (f'<header class="ihead">{issue_nav(prev_date, next_date, "ih-nav")}'
+            f'<p class="ih-k">{kicker}</p><h1 class="ih-date">{y}.{m:02d}.{d:02d}</h1>{src}'
+            f'<div class="ih-fig"><div class="kpis ih-kpis">{kpis}</div>{bar}</div>'
+            + (f'<div class="lead-btns">{btns}</div>' if btns else "") + '</header>')
 
 
 def find_form(up: str = "") -> str:
@@ -1413,16 +1463,13 @@ def issue_page(date: str, prev_date: str | None, next_date: str | None,
         link = (f' · <a href="{esc(pr["url"])}">Pull Request #{pr["number"]} を開く（ここでマージ）</a>'
                 if pr.get("url") else "")
         bar = f'<div class="preview-bar">プレビュー（未公開）{link} · <a href="index.html">確認待ちの一覧</a></div>'
-    main = [issue_head(date, number, len(picks) - n_hot + len(rest), n_hot, prev_date, next_date, meta.get("index_date"),
-                       meta.get("index_from"))]
+    main = [issue_head(date, number, picks, len(rest), prev_date, next_date, meta.get("index_date"), meta.get("index_from"))]
     feature = load_feature(date, root, picks) if picks else None
     if picks:
         # the issue page lists every article, today's pick included (marked); the front page is where it is shown large
-        main.append(breakdown_html(picks))
         main.append(f'<section class="toc">{contents_html(picks, date, root, fig_base, "", feature and feature["pmcid"], mark=True)}</section>')
     else:
-        c = meta["counts"]
-        main.append('<section class="part"><h2>No Articles<span>0 本</span></h2></section>')
+        main.append('<section class="part"><h2>No Articles</h2></section>')
     for n, (cand, pk) in enumerate(picks, 1):
         hot = render.is_impact(pk)
         if n == 1 or hot != render.is_impact(picks[n - 2][1]):
@@ -1433,14 +1480,8 @@ def issue_page(date: str, prev_date: str | None, next_date: str | None,
         items = "".join(f'<li><a href="{doi_url(x)}">{esc(x["title"])}</a> — <i>{esc(x["journal_abbrev"] or x["journal"])}</i>'
                         f'（{esc(render.KIND_JA[x["kind"]])}）</li>' for x in rest)
         main.append(f'<section class="rest"><h2 class="label">Other New Structures</h2><ul>{items}</ul></section>')
-    prev_link = f'<a href="{prev_date}.html">← {jp_date(prev_date)}号</a>' if prev_date else "<span></span>"
-    next_link = f'<a href="{next_date}.html">{jp_date(next_date)}号 →</a>' if next_date else "<span></span>"
-    main.append(f'<nav class="issue-nav">{prev_link}<a href="../index.html">トップへ</a>{next_link}</nav>')
-    nav = "".join(x for x in (f'<a href="{prev_date}.html">← {jp_date(prev_date)}号</a>' if prev_date else "",
-                              f'<a href="{next_date}.html">{jp_date(next_date)}号 →</a>' if next_date else "",
-                              '<a href="../index.html">トップへ</a>'))
-    side = ((toc_side(picks, feature and feature["pmcid"]) if picks else "") + sd("Issues", f'<div class="sd-nav">{nav}</div>')
-            + sd("Article Search", find_form("../")))
+    main.append(issue_nav(prev_date, next_date, "issue-nav", top=True))
+    side = toc_side(picks, feature and feature["pmcid"]) if picks else ""   # the issue links and the search are elsewhere
     head = masthead(1)
     span = f'{meta["index_from"]}〜{meta["index_date"]}' if meta.get("index_from") else meta["index_date"]
     from_nlm = meta.get("source") == pmcoa.SOURCE      # Europe PMC was not indexing: the papers came from NLM's PMC data
@@ -1454,17 +1495,25 @@ def issue_page(date: str, prev_date: str | None, next_date: str | None,
 
 
 ABOUT = (   # the front page's About FoldFeed, in polite Japanese (the owner's wording request, 2026-10-18)
+    # One sentence per line. "|" marks where a sentence may wrap (between phrases), so a long sentence breaks into
+    # even halves at a phrase boundary and no line is left with 「す。」 alone.
     ("どんなサイトか",
-     "FoldFeed は、構造生物学に携わる方のための情報収集サポートサイトです。前日に論文データベース（Europe PMC）へ"
-     "新しく登録された査読済みのオープンアクセス論文の中から、構造生物学の論文を毎日ピックアップしてご紹介します。"),
+     "FoldFeed は、|構造生物学に携わる方のための|情報収集サポートサイトです。"
+     "前日に|論文データベース（Europe PMC）へ|新しく登録された|査読済みの|オープンアクセス論文の中から、|"
+     "構造生物学の論文を|毎日ピックアップして|ご紹介します。"),
     ("紹介する論文",
-     "新しい構造（PDB・EMDB に登録された構造）を報告した論文は、すべてご紹介します。そのほか、既存の構造を使って"
-     "仕組みの解明や創薬に迫った注目の研究を、1 日 3 本までご紹介します。記事が 3 本以上ある日は、その中の 1 本を"
-     "Today’s Structure として大きく取り上げます。"),
+     "新しい構造|（PDB・EMDB に|登録された構造）を|報告した論文を|すべてご紹介します。"
+     "そのほか、|既存の構造を使って|仕組みの解明や創薬に迫った|注目の研究を、|1 日 3 本までご紹介します。"),
+    ("掲載のタイミング",
+     "論文は、|論文データベースに登録された|翌日にご紹介します。"
+     "データベースに|論文が届く時期は、|雑誌によって異なります。"
+     "Nature 系の雑誌は|出版からおよそ 1 か月後に届くため、|掲載もそのころになります。"),
     ("記事のつくり",
-     "各記事では、論文が明らかにしたことを日本語で短くまとめ、構造図と結合部位の拡大図、実験条件のメモを添えています。"
-     "分解能・PDB ID・リガンドは PDB と UniProt から取得し、構造図は PDB の座標から描いています。紹介文は AI が論文本文を"
-     "もとに作成し、内容ごとに論文本文の該当箇所を引用したうえで、編集者が確認してから公開しています。"),
+     "各記事では、|論文が明らかにしたことを|日本語で短くまとめ、|構造図と結合部位の拡大図、|実験条件のメモを|添えています。"
+     "分解能・PDB ID・リガンドは、|PDB と UniProt から|取得しています。"
+     "構造図は、|PDB の座標から|描いています。"
+     "紹介文は AI が|論文本文をもとに作成し、|内容ごとに|論文本文の該当箇所を|引用したうえで、|編集者が確認してから|"
+     "公開しています。"),
 )
 
 
@@ -1479,9 +1528,9 @@ def numbers_html(issues: list[str], lib: list[dict]) -> str:
     tiles = [("発行した号", len(issues)), ("紹介した論文", len(papers)), ("掲載誌", len(journal_counts(issues)))]
     kpis = "".join(f'<div class="kpi"><span class="kl">{k}</span><span class="kv" data-count="{v}">{v}</span></div>'
                    for k, v in tiles)
-    meter = (f'<div class="meter-row"><div class="kpi"><span class="kl">PDB 初構造</span><span class="kv">'
+    meter = (f'<div class="meter-row"><div class="kpi"><span class="kl">初めて解かれた構造</span><span class="kv">'
              f'<span data-count="{n_first}">{n_first}</span><small> / {len(papers)} 本</small></span></div>'
-             f'<div class="meter" role="img" aria-label="紹介した論文の {round(share * 100)}% が PDB 初構造">'
+             f'<div class="meter" role="img" aria-label="紹介した論文の {round(share * 100)}% が、そのタンパク質で初めて解かれた構造">'
              f'<i style="--v:{share:.3f}"></i></div><span class="mp">{round(share * 100)}%</span></div>')
     rows = []
     for date in sorted(issues)[-CHART_ISSUES:]:
@@ -1514,7 +1563,10 @@ def about_html(issues: list[str], lib: list[dict]) -> str:
     infographic, see numbers_html) and every journal the papers came from, as bars. All numbers are computed from the
     data; a paper that came back in a later issue counts once."""
     journals = journal_counts(issues)
-    rows = "".join(f'<div><dt>{esc(k)}</dt><dd>{"<br>".join(esc(x) + "。" for x in v.split("。") if x)}</dd></div>'
+    # one sentence per line; it may wrap only at the marked phrase boundaries, balanced over its lines
+    def sentence(x: str) -> str:
+        return "<wbr>".join(f'<span class=w>{esc(w)}</span>' for w in x.split("|"))
+    rows = "".join(f'<div><dt>{esc(k)}</dt><dd>{"".join(f"<span class=s>{sentence(x)}。</span>" for x in v.split("。") if x)}</dd></div>'
                    for k, v in ABOUT)
     most = max([c for _, c in journals] + [1])
     jl = "".join(f'<li style="--i:{i}"><span class="jn">{esc(n)}</span><span class="c">{c}</span>'
@@ -1598,67 +1650,10 @@ def category_counts(lib: list[dict]) -> list[tuple[str, int]]:
     return [(k, v) for k, v in counts.items() if v]
 
 
-def breakdown_html(picks: list) -> str:
-    """One line on what the issue holds, counted from the data: methods, kinds of protein, first structures."""
-    methods, kinds, first = {}, {}, 0
-    for cand, pk in picks:
-        for m in method_kinds(facts(cand, pk)["method"]):
-            methods[m] = methods.get(m, 0) + 1
-        for c in dict.fromkeys(pk.get("categories") or ["other"]):
-            kinds[c] = kinds.get(c, 0) + 1
-        first += any(p.get("first_structure") for p in cand.get("proteins", []))
-    if not picks:
-        return ""
-    top = lambda d, label: "・".join(f"{label(k)} {v}" for k, v in sorted(d.items(), key=lambda kv: -kv[1])[:5])
-    bits = [f"<b>手法</b>{esc(top(methods, lambda k: k))}", f"<b>種類</b>{esc(top(kinds, lambda k: CATEGORIES.get(k, k)))}"]
-    if first:
-        bits.append(f"<b>PDB 初構造</b>{first} 本")
-    return f'<p class="mix">{"".join(f"<span>{b}</span>" for b in bits)}</p>'
-
-
 def cats_html(lib: list[dict], up: str = "") -> str:
     items = "".join(f'<li><a href="{up}proteins.html#c-{k}"><span>{esc(CATEGORIES[k])}</span><span class="c">{v}</span></a></li>'
                     for k, v in sorted(category_counts(lib), key=lambda kv: (-kv[1], list(CATEGORIES).index(kv[0]))))
     return f'<ul class="cats">{items}</ul>'
-
-
-MINE_SCRIPT = r"""
-(function () {
-  var box = document.getElementById('mine'); if (!box) return;
-  var KEY = 'ff-interest', ONLY = 'ff-interest-only';
-  function read(k, d) { try { var v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } }
-  function write(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) { /* private mode: still works for this visit */ } }
-  var mine = read(KEY, []), only = read(ONLY, false);
-  var chips = [].slice.call(box.querySelectorAll('.chip')), rows = [].slice.call(document.querySelectorAll('.row[data-cats]')),
-      check = document.getElementById('mine-only'), count = document.getElementById('mine-n');
-  function apply() {
-    var hit = 0;
-    chips.forEach(function (c) { c.classList.toggle('on', mine.indexOf(c.getAttribute('data-c')) >= 0); c.setAttribute('aria-pressed', mine.indexOf(c.getAttribute('data-c')) >= 0); });
-    rows.forEach(function (r) {
-      var cats = r.getAttribute('data-cats').split(' '), m = mine.length && cats.some(function (c) { return mine.indexOf(c) >= 0; });
-      r.classList.toggle('hit', !!m); r.hidden = !!(only && mine.length && !m); if (m) hit++;
-    });
-    check.checked = only; count.textContent = mine.length ? '関心に合う記事 ' + hit + ' 本' : '';
-  }
-  chips.forEach(function (c) { c.addEventListener('click', function () {
-    var k = c.getAttribute('data-c'), i = mine.indexOf(k); if (i >= 0) mine.splice(i, 1); else mine.push(k); write(KEY, mine); apply(); }); });
-  check.addEventListener('change', function () { only = check.checked; write(ONLY, only); apply(); });
-  box.hidden = false; apply();
-})();
-"""
-
-
-def mine_html(lib: list[dict]) -> str:
-    """Saved interests (a block of the front page's sidebar): kinds of protein the reader picks, kept in this browser
-    only (localStorage). Rows of the new issue that match are marked, or the others hidden. Hidden until the script
-    runs, so it never shows empty. (It sat under Today's Structure before; a control that comes before the content
-    it filters is in the way of a first-time reader, so it lives beside the search instead.)"""
-    chips = "".join(f'<button type="button" class="chip" data-c="{k}" aria-pressed="false">{esc(CATEGORIES[k])}</button>'
-                    for k, _ in sorted(category_counts(lib), key=lambda kv: list(CATEGORIES).index(kv[0])))
-    block = sd("My Interests", f'<div class="chips">{chips}</div>'
-                           f'<label class="only"><input type="checkbox" id="mine-only"> 関心のある記事だけ表示</label>'
-                           f'<p class="mine-n" id="mine-n"></p>', "mine")
-    return block.replace('<section class="sd mine">', '<section class="sd mine" id="mine" hidden>', 1)
 
 
 def mail_html() -> str:
@@ -1699,11 +1694,11 @@ def home(issues: list[str]) -> str:
         main.append(f'<section class="sec past"><div class="ix-h"><h2 class="label">Past Issues</h2><span>{len(past)} 号</span></div>'
                     f'<ol>{"".join(items)}</ol></section>')
     main.append(mail_html())
-    side = mine_html(lib)   # the search is in Browse by Protein Type, right in the page
+    side = ""   # no sidebar: the search is in Browse by Protein Type, the interests were dropped (2026-10-18)
     return page(f"{brand.SITE_NAME}（{brand.SITE_NAME_EN}）",
                 masthead(0) + top + shell("".join(main), side)
                 + colophon(f'<p>{esc(pmcoa.CREDIT)}</p>' if load_issue(latest, ISSUES_DIR)[0].get("source") == pmcoa.SOURCE else ""),
-                depth=0, viewer=True, script=MINE_SCRIPT)
+                depth=0, viewer=True)
 
 
 PROTEIN_SCRIPT = r"""
