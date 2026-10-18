@@ -15,6 +15,11 @@ either, nothing is written and the exit code is 3: an empty search on such a day
 --force collects from Europe PMC anyway. A window (--catch-up / --index-from) also skips papers already listed in an earlier
 issue, so papers Europe PMC indexes late are not lost and not repeated.
 
+The Nature journals come the day after publication instead (pipeline/springer.py: Crossref + the Springer Nature Open
+Access API, when SPRINGER_NATURE_OA_API_KEY is set): the papers published on the index day(s) are read and screened like
+the rest. Each issue records the DOIs that route read ("springer"), and a paper that reaches Europe PMC / PMC later is
+dropped if its DOI is there (or in an earlier issue's candidates).
+
 Writes:
     data/issues/<issue>/candidates.json   facts for every candidate (committed)
     data/issues/<issue>/candidates.md     overview for choosing the picks (committed)
@@ -30,7 +35,7 @@ import json
 import sys
 from concurrent.futures import ThreadPoolExecutor
 
-from . import europepmc, impact, jats, pdb, pmcoa, uniprot
+from . import europepmc, impact, jats, pdb, pmcoa, springer, uniprot
 from .common import ISSUES_DIR, cached, default_index_date, issue_date_for, issue_dir, write_json
 
 MAX_FULLTEXT = 120  # cap on papers whose full text is fetched on a busy day
@@ -143,6 +148,18 @@ def already_listed(except_issues: set[str]) -> set[str]:
     return {c["pmcid"] for m in _issues() if m["issue_date"] not in except_issues for c in m["candidates"]}
 
 
+def already_read(except_issues: set[str]) -> set[str]:
+    """DOIs an earlier issue already had: its candidates', and every paper the Springer Nature route read for it
+    (a paper of the Nature journals that reaches Europe PMC a month later is not offered again)."""
+    out = set()
+    for m in _issues():
+        if m["issue_date"] in except_issues:
+            continue
+        out |= {c["doi"] for c in m["candidates"] if c.get("doi")}
+        out |= set((m.get("springer") or {}).get("read", []))
+    return out
+
+
 def run(index_date: str, issue_date: str, index_from: str | None = None, force: bool = False,
         source: str = "auto") -> dict:
     windowed = bool(index_from) and index_from != index_date
@@ -159,6 +176,10 @@ def run(index_date: str, issue_date: str, index_from: str | None = None, force: 
     window_issues = ({str(issue_date_for(dt.date.fromisoformat(index_from) + dt.timedelta(days=k))) for k in range(days)}
                      if windowed else {issue_date})
     listed = already_listed(window_issues) if (windowed or fallback) else set()
+    seen_dois = already_read(window_issues)
+    first = dt.date.fromisoformat(index_from or index_date)
+    sn = springer.discover([str(first + dt.timedelta(days=k)) for k in range(days)], seen_dois)
+    seen_dois |= {d for ds in sn["read"].values() for d in ds}
     pmc = None
     if fallback:
         print(f"Europe PMC is not indexing: taking the papers from PMC Open Access on AWS ({index_from or index_date}..{index_date})",
@@ -193,6 +214,10 @@ def run(index_date: str, issue_date: str, index_from: str | None = None, force: 
                 continue
             (excluded if europepmc.is_excluded_type(m) else metas).append(m)
         metas = metas[:MAX_FULLTEXT * min(days, 3)]
+    before = len(metas)
+    metas = [m for m in metas if not (m.get("doi") and m["doi"].lower() in seen_dois)]
+    if before != len(metas):
+        print(f"  {before - len(metas)} already in an earlier issue or read from Springer Nature (by DOI)", file=sys.stderr)
 
     def load(m):
         xml = europepmc.fulltext_xml(m["pmcid"])
@@ -207,6 +232,9 @@ def run(index_date: str, issue_date: str, index_from: str | None = None, force: 
     with ThreadPoolExecutor(6) as ex:
         loaded = [x for x in ex.map(load, metas) if x[1] is not None]
     print(f"Full text parsed: {len(loaded)}", file=sys.stderr)
+    loaded += sn["main"]
+    if sn["main"]:
+        print(f"Springer Nature: {len(sn['main'])} structure papers added", file=sys.stderr)
 
     # 注目の構造: a second search beyond the structure terms, pre-screened on title and abstract.
     seen = {m["pmcid"] for m in metas}
@@ -220,6 +248,8 @@ def run(index_date: str, issue_date: str, index_from: str | None = None, force: 
         raw2 = europepmc.search(impact_query)
         pool = [(europepmc.metadata(r), r) for r in raw2]
     for m, _ in pool:
+        if m.get("doi") and m["doi"].lower() in seen_dois:
+            continue
         if m["pmcid"] and m["pmcid"] not in seen and not europepmc.is_excluded_type(m):
             seen.add(m["pmcid"])
             m["source"] = "impact_search"
@@ -231,6 +261,9 @@ def run(index_date: str, issue_date: str, index_from: str | None = None, force: 
         loaded_extra = [x for x in ex.map(load, extra) if x[1] is not None]
     for m, _ in loaded_extra:
         del m["prescreen"]
+    for m, p in sn["impact"]:          # the Springer Nature papers with the 注目の構造 words, pre-screened the same way
+        if impact.prescreen(m)["score"] >= 1:
+            loaded_extra.append((m, p))
     loaded += loaded_extra
     print(f"Impact search: {len(raw2)} hits, {len(loaded_extra)} more papers parsed", file=sys.stderr)
 
@@ -281,9 +314,13 @@ def run(index_date: str, issue_date: str, index_from: str | None = None, force: 
         "impact_search_hits": len(raw2), "impact_search_parsed": len(loaded_extra),
         "impact_pool": sum(c["kind"] not in NEW_KINDS for c in candidates),
     }
+    counts["springer_read"] = sum(len(v) for v in sn["read"].values())
     out = {"issue_date": issue_date, "index_date": index_date, **({"index_from": index_from} if windowed else {}),
            "health": health, **({"source": pmcoa.SOURCE} if fallback else {}), "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
-           "query": query, "impact_query": impact_query, "counts": counts, "candidates": candidates}
+           "query": query, "impact_query": impact_query, "counts": counts,
+           **({"springer": {"days": sn["days"], "read": sorted(d for v in sn["read"].values() for d in v),
+                            "by_day": sn["read"]}} if sn["read"] else {}),
+           "candidates": candidates}
     if windowed:      # a catch-up: one issue per day, not one that mixes the days
         issues = split_by_day(out)
         for iss in issues:
@@ -317,8 +354,11 @@ def split_by_day(out: dict, health_of=None) -> list[dict]:
                   **{kind: sum(c["kind"] == kind for c in cands) for kind in KINDS},
                   "impact_search_parsed": len(cands) - len(main),
                   "impact_pool": sum(c["kind"] not in NEW_KINDS for c in cands)}
+        sn_read = ((out.get("springer") or {}).get("by_day") or {}).get(str(day), [])
         issues.append({"issue_date": str(issue_date_for(day)), "index_date": str(day), "health": health_of(str(day)),
                        **({"source": out["source"]} if out.get("source") else {}),
+                       **({"springer": {"days": [str(day)] if str(day) in out["springer"]["days"] else [],
+                                        "read": sn_read, "by_day": {str(day): sn_read}}} if sn_read else {}),
                        "split_from": out["issue_date"], "generated_at": out["generated_at"],
                        "query": out["query"], "impact_query": out["impact_query"], "counts": counts,
                        "candidates": cands})

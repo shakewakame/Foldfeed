@@ -1471,7 +1471,7 @@ def issue_nav(prev_date: str | None, next_date: str | None, cls: str, top: bool 
 
 
 def issue_head(date: str, number: int | None, picks: list, prev_date: str | None, next_date: str | None,
-               index_date: str | None = None, index_from: str | None = None) -> str:
+               index_date: str | None = None, index_from: str | None = None, nature: bool = False) -> str:
     """The first screen of an issue page: which issue it is (the date, once, large), how many articles, how many of them
     New and Notable Structure, and about how long reading them all takes, as figures that count up and a bar of the
     articles (one segment each, as long as its reading time, coloured by its part; each a link to it), with buttons
@@ -1482,7 +1482,8 @@ def issue_head(date: str, number: int | None, picks: list, prev_date: str | None
     total = max(1, round(sum(mins))) if picks else 0
     kicker = (f"Issue No. {number}" if number else "Preview") + f" · {WEEKDAY_EN[datetime.date(y, m, d).weekday()]}"
     # (the papers not written up are listed at the foot of the page, under Not Covered, not counted here)
-    src = f'<p class="ih-src">{index_span(index_date, index_from)}に論文データベースへ登録された論文から</p>' if index_date else ""
+    src = (f'<p class="ih-src">{index_span(index_date, index_from)}に論文データベースへ登録された論文'
+           + ('と、同じ日に Nature 系の雑誌で出版された論文' if nature else '') + 'から</p>') if index_date else ""
     tiles = [("Articles", len(picks), ""), ("New Structure", len(new), "n"), ("Notable Structure", len(hot), "h")]
     kpis = "".join(f'<div class="kpi"><span class="kl">{f"<i class=sw-{c}></i>" if c else ""}{k}</span>'
                    f'<span class="kv" data-count="{v}">{v}</span></div>' for k, v, c in tiles)
@@ -1525,7 +1526,8 @@ def issue_page(date: str, prev_date: str | None, next_date: str | None,
                 if pr.get("url") else "")
         bar = f'<div class="preview-bar">プレビュー（未公開）{link} · <a href="index.html">確認待ちの一覧</a></div>'
     # the first screen and the contents run the full width; the sidebar starts with the articles
-    top = [issue_head(date, number, picks, prev_date, next_date, meta.get("index_date"), meta.get("index_from"))]
+    top = [issue_head(date, number, picks, prev_date, next_date, meta.get("index_date"), meta.get("index_from"),
+                      bool((meta.get("springer") or {}).get("read")))]
     feature = load_feature(date, root, picks) if picks else None
     if picks:
         # the issue page lists every article, today's pick included (marked); the front page is where it is shown large
@@ -1622,6 +1624,14 @@ def numbers_html(issues: list[str], lib: list[dict]) -> str:
     return f'<div class="kpis">{kpis}</div>{meter}{chart}'
 
 
+# 掲載のタイミング once the Nature journals are read the day after publication (pipeline/springer.py)
+TIMING_NATURE = ("掲載のタイミング",
+                 "Nature Communications・|Nature Structural & |Molecular Biology などの|Nature 系の雑誌の論文は、|"
+                 "出版の翌日に|ご紹介します。"
+                 "そのほかの雑誌の論文は、|論文データベースに登録された|翌日にご紹介します。"
+                 "データベースに|論文が届く時期は、|雑誌によって異なります。")
+
+
 def about_html(issues: list[str], lib: list[dict]) -> str:
     """About FoldFeed, right under the first screen: what the site is (polite Japanese), FoldFeed in Numbers (an
     infographic, see numbers_html) and every journal the papers came from, as bars. All numbers are computed from the
@@ -1630,8 +1640,10 @@ def about_html(issues: list[str], lib: list[dict]) -> str:
     # one sentence per line; it may wrap only at the marked phrase boundaries, balanced over its lines
     def sentence(x: str) -> str:
         return "<wbr>".join(f'<span class=w>{esc(w)}</span>' for w in x.split("|"))
+    nature = any((load_issue(d, ISSUES_DIR)[0].get("springer") or {}).get("read") for d in issues)
+    about = [TIMING_NATURE if nature and k == "掲載のタイミング" else (k, v) for k, v in ABOUT]
     rows = "".join(f'<div><dt>{esc(k)}</dt><dd>{"".join(f"<span class=s>{sentence(x)}。</span>" for x in v.split("。") if x)}</dd></div>'
-                   for k, v in ABOUT)
+                   for k, v in about)
     most = max([c for _, c in journals] + [1])
     jl = "".join(f'<li style="--i:{i}"><span class="jn">{esc(n)}</span><span class="c">{c}</span>'
                  f'<span class="bar" aria-hidden="true"><i style="--v:{c / most:.3f}"></i></span></li>'

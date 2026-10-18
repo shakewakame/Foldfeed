@@ -50,6 +50,14 @@ AI が書く文章の主張には、論文本文からの逐語引用を必ず�
      以降の手順（本文の読み方・記事の書き方・検証）は Europe PMC のときと同じ。
      この経路で作った号は `candidates.json` に `"source": "pmc-aws"` が付き、**画面のフッターに NLM の出典が自動で出る**
      （Europe PMC の号には出ない）。PR の本文に「Europe PMC が止まっていたため PMC のデータから作った」と一行書く。
+   - **Nature 系の雑誌は出版の翌日に入る**（`pipeline/springer.py`、2026-10-18 から）：Crossref で前日（UTC）に出版された
+     Nature Communications・NSMB・Communications Biology・Nature など 14 誌の論文を探し、オープンアクセスのものの全文を
+     Springer Nature の Open Access API（JATS XML）から読む。環境変数 `SPRINGER_NATURE_OA_API_KEY` が要る（クラウド環境の設定。
+     リポジトリには書かない）。キーがない・API が失敗した日は自動で飛ばし、その論文は従来どおり 1 か月ほど後に PMC から入る。
+     この経路の論文には PMCID がないので、`pmcid` の欄に `SN-<DOI の記事番号>`（例：`SN-s41467-026-77727-2`）が入る。
+     本文は同じく `.cache/packets/SN-....md`、記事のファイルは `picks/SN-....json`。あとから PMC に同じ論文が届いても
+     DOI で除かれる（`candidates.json` の `springer.read`）。Scientific Reports は本数が多い（1 日約 150 本）ので従来の経路のまま。
+     PR の本文に「Springer Nature の API から N 本」と一行書く。
    - **終了コード 3（`STALLED`）なら号を作らない**：Europe PMC が止まっていて、PMC（AWS）にも新着がない（または取得に失敗した）。
      何も書かれていない（`data/issues/` にも出ない）ので、手順 1 で作ったブランチは push せずに捨て、PR は作らず、
      `PushNotification` で知らせて終わる。`--source europepmc` は PMC への切り替えを禁じる試験用、`--source pmc-aws` は
