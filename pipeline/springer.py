@@ -114,14 +114,18 @@ def published(day: str) -> tuple[list[dict], bool]:
 
 
 def fulltext(doi: str, api_key: str) -> str | None:
-    """The article's JATS XML from the Open Access API (cached), or None when the API has no full text for it."""
+    """The article's JATS XML from the Open Access API (cached), or None when the API has no full text for it yet.
+
+    Right after publication the API may hold only the accepted manuscript's record: metadata and authors, no <body>
+    (seen 2026-10-18 for papers published two days before). That is not full text: it is neither cached nor returned,
+    so the paper is tried again on a later run and, until then, still counts as not read."""
     path = cached("fulltext", paper_id(doi), ".xml")
     if path.exists():
         return path.read_text(encoding="utf-8")
     body = fetch(OA_API, params={"q": f"doi:{doi}", "api_key": api_key}, retries=3).decode("utf-8", "replace")
     root = ET.fromstring(body)
     art = next((e for e in root.iter() if e.tag.rsplit("}", 1)[-1] == "article"), None)
-    if art is None:
+    if art is None or not any(e.tag.rsplit("}", 1)[-1] == "body" for e in art.iter()):
         return None
     xml = ET.tostring(art, encoding="unicode")
     path.write_text(xml, encoding="utf-8")
@@ -221,6 +225,9 @@ def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--probe", metavar="DOI", help="fetch one paper's full text and show what was read")
     ap.add_argument("--day", help="list one publication day's candidates (nothing is written but the full-text cache)")
+    ap.add_argument("--coverage", nargs="+", metavar="DAY",
+                    help="for each publication day, how many open-access papers already have full text in the API")
+    ap.add_argument("--sample", type=int, default=8, help="papers tried per day with --coverage (default 8)")
     a = ap.parse_args(argv)
     if a.probe:
         if not key():
@@ -239,6 +246,21 @@ def main(argv=None):
                           "chars": sum(len(s["text"]) for s in p["sections"]), "pdb_ids": p["pdb_ids"][:12],
                           "emdb_ids": p["emdb_ids"][:6], "deposition_statement": p["deposition_statement"],
                           "data_availability": p["data_availability"][:300]}, ensure_ascii=False, indent=2))
+    elif a.coverage:
+        if not key():
+            raise SystemExit(f"{KEY_ENV} is not set")
+        for day in a.coverage:
+            items, _ = published(day)
+            oa = [i for i in items if i["license"]][:a.sample]
+            full = 0
+            for it in oa:
+                try:
+                    full += fulltext(it["doi"], key()) is not None
+                except Exception as e:
+                    print(f"  {it['doi']}: {e}", file=sys.stderr)
+                time.sleep(PAUSE)
+            print(f"{day}: {full} of {len(oa)} open-access papers have full text in the API "
+                  f"({len([i for i in items if i['license']])} open access that day)")
     elif a.day:
         r = discover([a.day], set())
         for kind in ("main", "impact"):
