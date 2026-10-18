@@ -155,6 +155,12 @@ def meta(item: dict, xml: str) -> dict:
     }
 
 
+def screen_text(parsed: dict) -> str:
+    """The text the query words are looked for in: abstract, data availability, body, captions."""
+    return "\n".join([parsed["abstract"], parsed["data_availability"], *(s["text"] for s in parsed["sections"]),
+                      *parsed["figure_captions"]])
+
+
 def discover(days: list[str], skip_dois: set[str]) -> dict:
     """The candidates of the publication days, shaped like the Europe PMC ones:
     {"days": the days fully read, "read": {day: [DOIs read]}, "main": [(meta, parsed)], "impact": [(meta, parsed)]}.
@@ -197,7 +203,7 @@ def discover(days: list[str], skip_dois: set[str]) -> dict:
                 continue
             if europepmc.is_excluded_type(m):
                 continue
-            body = "\n".join([parsed["abstract"], parsed["data_availability"], *(s["text"] for s in parsed["sections"])])
+            body = screen_text(parsed)
             strong = {x.group(0).lower() for x in pmcoa.IMPACT.finditer(body)}
             if pmcoa.STRUCTURE.search(body) and pmcoa.DEPOSITION.search(body):
                 out["main"].append((m, parsed))
@@ -224,7 +230,12 @@ def main(argv=None):
         if not xml:
             raise SystemExit(f"no full text for {doi}")
         p = jats.parse(xml)
+        body = screen_text(p)
         print(json.dumps({"id": paper_id(doi), "title": p["title"], "journal": p["journal"], "sections": len(p["sections"]),
+                          "screen": {"structure_words": sorted({x.group(0).lower() for x in pmcoa.STRUCTURE.finditer(body)})[:8],
+                                     "deposition_words": sorted({x.group(0).lower() for x in pmcoa.DEPOSITION.finditer(body)})[:8]},
+                          "section_titles": [s["title"] for s in p["sections"]][:40],
+                          "root": ET.fromstring(xml).tag, "xml_chars": len(xml),
                           "chars": sum(len(s["text"]) for s in p["sections"]), "pdb_ids": p["pdb_ids"][:12],
                           "emdb_ids": p["emdb_ids"][:6], "deposition_statement": p["deposition_statement"],
                           "data_availability": p["data_availability"][:300]}, ensure_ascii=False, indent=2))
