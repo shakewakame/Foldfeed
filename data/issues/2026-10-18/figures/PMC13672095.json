@@ -1,0 +1,59 @@
+{
+ "pdb_id": "11VZ",
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "GluA2–γ2（AMPA 受容体）",
+   "desc": "Isoform Flip of Glutamate receptor 2,Voltage-dependent calcium channel gamma-2 subunit",
+   "entity": "1"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "KAI",
+   "label": "カイニン酸",
+   "color": "#C23B8E",
+   "desc": "3-(Carboxymethyl)-4-Isopropenylproline",
+   "entity": [
+    "2"
+   ],
+   "sites": [
+    [
+     "E",
+     "1301"
+    ],
+    [
+     "H",
+     "1301"
+    ],
+    [
+     "I",
+     "1301"
+    ],
+    [
+     "J",
+     "1301"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "KAI",
+  "residues": [
+   "Y450",
+   "P478",
+   "T480",
+   "R485",
+   "L650",
+   "G653",
+   "S654",
+   "T655",
+   "T686",
+   "E705",
+   "Y732"
+  ],
+  "polar": 3,
+  "neighbours": [],
+  "label": "カイニン酸"
+ }
+}

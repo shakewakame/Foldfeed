@@ -1,0 +1,158 @@
+{
+  "pmcid": "PMC13672361",
+  "rank": 3,
+  "headline": "ヒトNHA1の内向き構造は、エレベーター型の輸送を裏づける",
+  "subhead": "精子の運動に関わるNa⁺/H⁺交換体を3.6 Åで解析し、モデルした外向き状態との比較でコア領域の動きを調べた",
+  "target_label": "ヒトNHA1（SLC9B1）",
+  "summary": {
+    "question": "精子の運動と男性の生殖能力に関わるNHA1の、構造と輸送の仕組みは分かっていなかった。",
+    "approach": "ヒトNHA1の全長をクライオ電顕で解析し、モデルした外向き状態と比べて、変異体のNa⁺輸送も測った。",
+    "result": "3.6 Åの内向き構造が得られた。外向きと比べ、コア領域がダイマー領域に対して細胞質側へ大きく動いていた。",
+    "learned": "この動きはエレベーター型の輸送機構を支持する。D258・D259・E453などの残基が、状態の切り替えと輸送に関わるらしい。",
+    "open": "ダイマー界面に見える脂質とみられる密度の正体と役割は、さらに調べる必要がある。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Despite its physiological importance, the structural and mechanistic basis of NHA1 function has remained elusive.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Structural comparison with the modeled NHA1 in an outward-open state reveals dramatic conformational changes in the core domain",
+          "section": "Introduction"
+        },
+        {
+          "quote": "Their contribution to substrate transport is further supported by mutagenesis and sodium transport assays",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "Here, we present the cryo-EM structure of human NHA1 at 3.6 Å resolution, captured in an inward-open conformation.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Consequently, the core domain in the inward-open state is lowered toward the intracellular side, while the dimeric domain remains largely unchanged, in accordance with the elevator transport mechanism",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Structural comparisons with modeled outward-open states reveal substantial conformational changes in the core domain, supporting an elevator-like transport mechanism.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Additionally, several key residues are identified that modify their interaction patterns, likely aiding in the conformational switches necessary for substrate transport.",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Further exploration is needed to clarify the exact identity and functional roles of these lipid molecules in NHA1.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "transporter"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "NHA1は2つの鎖がTM0とTM8で組み合わさったダイマーで、各鎖は14本の膜貫通ヘリックスを持つ。内向きの構造では、イオン結合部位のD259に細胞質側から届く通路が見える。D258とD259のどちらか一方を替えても輸送はわずかに下がるだけで、両方を替えると大きく下がった。",
+      "evidence": [
+        {
+          "quote": "Each NHA1 protomer contains 14 transmembrane helices (TMs), TM0 to TM13",
+          "section": "Results"
+        },
+        {
+          "quote": "our NHA1 structure is captured in an inward-open conformation, as demonstrated by an obvious accessible path from the cytoplasmic side to D259",
+          "section": "Results"
+        },
+        {
+          "quote": "These results indicate that the two aspartates may have cooperative and partially compensatory roles in substrate binding and transport.",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "内向き状態ではE453がR157と塩橋を作る。モデルした外向き状態では、R157はE387と組むと予測された。E453をAlaに替えると輸送が大きく下がった。著者はこれを構造から導いた仮説と位置づけ、R157が切り替えの支点になりうると述べている。",
+      "evidence": [
+        {
+          "quote": "In the inward-open state, E453 from TM12b forms a salt bridge with R157 from TM3, and a hydrogen bond with S153 from TM3",
+          "section": "Results"
+        },
+        {
+          "quote": "While our MD simulations support the physical plausibility of the modeled outward-open structure, these specific interactions should be interpreted as structure-guided hypotheses.",
+          "section": "Results"
+        },
+        {
+          "quote": "Among these mutants, E453A exhibited significantly reduced transport activity",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "構造では見えない C 末端のS503を、リン酸化の有無を模した変異で調べた。リン酸化を模したS503Dは野生型の約2倍の輸送活性を示し、精子の受精能獲得で活性を調節している可能性が示唆された。",
+      "evidence": [
+        {
+          "quote": "the S503D variant, which mimics, although imperfect, the phosphorylated state, demonstrated approximately twofold higher transport activity than wild-type NHA1",
+          "section": "Results"
+        },
+        {
+          "quote": "These observations suggest a potential role for S503 phosphorylation in regulating NHA1 transport activity",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "HEK293S GnTI−細胞にBacMam法で発現（Sf9で作ったバキュロウイルスを感染、酪酸ナトリウム添加、30°Cで48時間）。",
+    "construct": "全長ヒトNHA1、C末端にFLAG-TEV切断部位-eGFP（pEG BacMam）。",
+    "purification": "DDM/CHSで可溶化し、GFPナノボディ樹脂で精製。TEVでタグを切り、Superose 6でLMNGに置換しながらサイズ排除クロマトグラフィー。",
+    "sample_prep": "1.2 mg/mL、Quantifoil R1.2/1.3 金300メッシュ、Vitrobot Mark IV、4°C・湿度100%、ブロット4.5秒。",
+    "data_collection": "Titan Krios G3＋K3＋BioQuantum、ピクセルサイズ1.06 Å、総線量約50 e−/Å²。cryoSPARCで処理し、最終は270,161粒子。",
+    "evidence": [
+      {
+        "quote": "Protein expression was induced 8–12 h post-infection by adding 10 mM sodium butyrate, followed by temperature shift to 30 °C and incubated for an additional 48 h.",
+        "section": "Methods"
+      },
+      {
+        "quote": "subcloned into the pEG BacMam vector containing a C-terminal fusion tag (FLAG-TEV protease cleavage site (ENLYFQG)-eGFP) for structural studies",
+        "section": "Methods"
+      },
+      {
+        "quote": "TEV protease was added to cleave the C-terminal GFP tag and release the target protein from the resin.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Vitrification was performed using a Vitrobot Mark IV (Thermo Fisher Scientific) under the following condition: 4 °C chamber temperature, 100% humidity, blot force 0 with Whatman 597 filter paper, and a blot time of 4.5 s.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Data acquisition was performed on a 300 kV Titan Krios G3 cryo-electron microscope (Thermo Fisher Scientific) equipped with a Gatan K3 direct electron detector and a BioQuantum energy filter",
+        "section": "Methods"
+      },
+      {
+        "quote": "Final processing utilized 270,161 particles for ab initio model generation, non-uniform refinement and local refinement (detergent micelle exclusion) to generate the final map.",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "NHA1",
+    "SLC9B1",
+    "Na⁺/H⁺交換体",
+    "エレベーター型輸送",
+    "精子",
+    "クライオ電顕"
+  ],
+  "editor_notes": "外向き状態は SWISS-MODEL（bison NHA2 を鋳型）のホモロジーモデルで、実測の構造ではない（本文にも明記）。「初構造」とは書いていない。S503 の highlight は構造に見えない領域の機能アッセイ。ga_pdb_id は 21MW のみ。",
+  "legend_labels": [
+    "NHA1（Na+/H+ 交換体）"
+  ]
+}

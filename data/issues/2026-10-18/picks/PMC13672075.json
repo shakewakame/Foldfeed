@@ -1,0 +1,135 @@
+{
+  "pmcid": "PMC13672075",
+  "rank": 8,
+  "headline": "ポリユビキチンの位置が動くと、タウ線維の原線維間の接合面がずれる",
+  "subhead": "ADとVTの患者脳のタウ線維をクライオ電顕で解析し、ユビスタチンBの処理でVT Ia型の接合面が変わった",
+  "target_label": "タウ線維（AD・VT患者脳）",
+  "summary": {
+    "question": "タウ線維の核（コア）の外側にある密度が線維の安定性に与える影響は、よく分かっていなかった。",
+    "approach": "AD・VT患者脳のタウ線維を解析し、ユビスタチンBでポリユビキチンの極性を変えてクライオ電顕で比べた。",
+    "result": "処理したVTでは未処理で見えない6種の線維が現れ、VT Ia型は減少した。弱い密度は正電荷の残基の側へ移った。",
+    "learned": "コアの外側の要素（翻訳後修飾など）が、タウ線維の構造と安定性に影響しうることが示唆された。",
+    "open": "他のタウオパチーの線維でも同様の修飾依存の変化が起きるかは、今後ユビスタチンBで調べる必要がある。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "The effect of these extra densities on the stability of tau filaments is not well understood.",
+          "section": "Main"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Chemical modulation of the polarity of polyubiquitin adjacent to the tau core with the small molecule ubistatin B resulted in the repositioning of poorly structured densities toward positively charged residues on the highly structured core filament",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "In contrast, the reconstruction of ubiB-treated VT tau filaments yielded six filament types that were not detected in the untreated VT filament preparations (Figs. 4e,f and 5).",
+          "section": "Results"
+        },
+        {
+          "quote": "In general, upon ubiB treatment, some of the poorly structured additional densities adjacent to the structured core filament shifted toward electrostatically positively charged tau amino acid residues (colored blue in Fig. 6).",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "These results suggest that structural elements outside of the highly ordered tau filament core, including PTMs, may influence filament structure and stability.",
+          "section": "Discussion"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Testing fibrils from additional tauopathies with ubiB would help to clarify whether similar PTM-dependent modulation of the core generalizes beyond AD and VT tau.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "other"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "VT（液胞性タウオパチー）の脳には5種類のタウ線維がある。ADの線維はVTの3例では見つからなかった。VT Ia・II・IIIは既知の構造と対応し、VT IVとVでは新しい原線維の接合面が見られた。マウスへの接種でも、AD由来とVT由来のタウは異なる広がりを示した。",
+      "evidence": [
+        {
+          "quote": "Tau filament reconstructions of the three VT cases resulted in five different cross-β-sheet filaments, each consisting of the same pair of protofilaments but with differences in protofilament–protofilament interface interactions (Fig. 2c).",
+          "section": "Results"
+        },
+        {
+          "quote": "In contrast, VT tau-injected mice showed more cortical and contralateral tau pathology, mimicking the preferential neocortical involvement seen in VT (Fig. 1c).",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "新しい結合部位",
+      "text": "ユビスタチンB処理でVT Ia型が減り、新しいVT Ib〜If型が現れた。K321とK331の間の距離はVT Iaの17.4 Åから、VT Ibの19.4 ÅからVT Ifの26.0 Åへ広がった。著者は、ポリユビキチンが接合面に集まって原線維を外側へ押したと解釈している。",
+      "evidence": [
+        {
+          "quote": "the interprotofilament distance between K321 and K331 was greater for VT Ib (19.4 Å), VT Ic (21.5 Å), VT Id (20.8 Å), VT Ie (24.0 Å) and VT If (26.0 Å) than for VT Ia (17.4 Å) (Extended Data Fig. 8)",
+          "section": "Results"
+        },
+        {
+          "quote": "the accumulation of polyubiquitin around the positively charged lysine residues at the protofilament interface appeared to have pushed VT Ia protofilaments outward",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "手法の工夫",
+      "text": "K48結合型の二ユビキチンに結合する小分子ユビスタチンBで、コア外の弱い密度がポリユビキチンかを探った。ADのPHFとSFは処理後も同じ型のままで、変わったのはVT Iaの接合面だけだった。著者は、人為的な処理であり、脳から抽出した線維を使った点も限界として述べている。",
+      "evidence": [
+        {
+          "quote": "Consistent with this interpretation, only the VT Ia interface changed after ubiB treatment, whereas VT IV and VT V, which also have relatively sparse interface-stabilizing features (Supplementary Table 5), did not.",
+          "section": "Discussion"
+        },
+        {
+          "quote": "Thus, their native distributional and interatomic features were not available.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": null,
+    "construct": null,
+    "purification": "凍結したヒト前頭葉新皮質（灰白質）からサルコシル不溶性のタウ線維を段階的に抽出。",
+    "sample_prep": "穴あきカーボングリッド（QuantiFoil R1.2/1.3、200メッシュ）に3 μLを滴下し、Leica EM GP2で液体エタンに凍結。ユビスタチンB処理は1 mM、約2.5 μMタウ、室温4時間。",
+    "data_collection": "Titan Krios G3i（300 kV）、Gatan K3、エネルギーフィルター20 eV。RELIONでらせん再構成。",
+    "evidence": [
+      {
+        "quote": "AD and VT tau filaments were sequentially extracted from frozen, human frontal neocortex as previously described8 with minor modifications.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Next, 3 μl of the supernatant was applied to glow-discharged holey carbon grids (QuantiFoil Cu R1.2/1.3, 200-mesh) and plunge-frozen in liquid ethane using a Leica EM GP2 automatic plunge freezer.",
+        "section": "Methods"
+      },
+      {
+        "quote": "the supernatant was diluted in ubiB solution to achieve a mixture of 1 mM ubiB and ~2.5 μM tau protein in PBS.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Images were acquired using EPU 3.10 software on a Gatan K3 Summit detector in counted super-resolution mode using a Thermo Fisher Titan Krios G3i at 300 kV.",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "タウ",
+    "アルツハイマー病",
+    "液胞性タウオパチー",
+    "ポリユビキチン",
+    "ユビスタチンB",
+    "クライオ電顕",
+    "アミロイド線維"
+  ],
+  "editor_notes": "kind は new_structure（10LN など複数の患者脳由来タウ線維）。タンパク質の種類に合う分類が無いので other とした。見出しの「位置が動く」は、著者が『ポリユビキチンかもしれない（may represent）』と述べている弱い密度の移動に基づく。全体を通して著者の解釈は推測の語調で書いた。",
+  "legend_labels": [
+    "タウ（MAPT）"
+  ]
+}

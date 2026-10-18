@@ -1,0 +1,91 @@
+{
+ "pdb_id": "9Q3L",
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "β2AR（受容体）",
+   "desc": "Beta-2 adrenergic receptor",
+   "entity": "1"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "LFA",
+   "label": "エイコサン",
+   "color": "#C23B8E",
+   "desc": "Eicosane",
+   "entity": [
+    "3"
+   ],
+   "sites": [
+    [
+     "D",
+     "502"
+    ],
+    [
+     "H",
+     "502"
+    ]
+   ]
+  },
+  {
+   "id": "P0G",
+   "label": "BI-167107",
+   "color": "#2F9E57",
+   "desc": "8-[(1R)-2-{[1,1-dimethyl-2-(2-methylphenyl)ethyl]amino}-1-hydroxyethyl]-5-hydroxy-2H-1,4-benzoxazin-3(4H)-one",
+   "entity": [
+    "4"
+   ],
+   "sites": [
+    [
+     "E",
+     "503"
+    ],
+    [
+     "I",
+     "503"
+    ]
+   ]
+  },
+  {
+   "id": "A1CNS",
+   "label": "AP-7-168",
+   "color": "#7A52C7",
+   "desc": "6-bromo-N~4~-cyclohexyl-N~2~-(3,4-difluorophenyl)quinazoline-2,4-diamine",
+   "entity": [
+    "5"
+   ],
+   "sites": [
+    [
+     "F",
+     "504"
+    ],
+    [
+     "J",
+     "504"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "A1CNS",
+  "residues": [
+   "E122(A)",
+   "V157",
+   "V206(A)",
+   "E122(B)",
+   "C125",
+   "V126",
+   "V129",
+   "V206(B)",
+   "V210",
+   "I214"
+  ],
+  "polar": 2,
+  "neighbours": [
+   "AP-7-168",
+   "エイコサン"
+  ],
+  "label": "AP-7-168"
+ }
+}

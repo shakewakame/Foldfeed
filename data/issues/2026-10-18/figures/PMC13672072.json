@@ -1,0 +1,72 @@
+{
+ "pdb_id": "28OE",
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "PHC2（サブユニット）",
+   "desc": "Isoform 2 of Polyhomeotic-like protein 2",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "CBX7（サブユニット）",
+   "desc": "Chromobox 7",
+   "entity": "2"
+  },
+  {
+   "color": "#5F9296",
+   "label": "RING1B（E3）",
+   "desc": "E3 ubiquitin-protein ligase RING2",
+   "entity": "3"
+  },
+  {
+   "color": "#A5707A",
+   "label": "BMI1（サブユニット）",
+   "desc": "Polycomb complex protein BMI-1",
+   "entity": "4"
+  },
+  {
+   "color": "#7C8AA8",
+   "label": "UBCH5C（E2）",
+   "desc": "Ubiquitin-conjugating enzyme E2 D3",
+   "entity": "5"
+  },
+  {
+   "color": "#8A9A5B",
+   "label": "ヒストン H3",
+   "desc": "Histone H3",
+   "entity": "6"
+  },
+  {
+   "color": "#9C7B55",
+   "label": "ヒストン H4",
+   "desc": "Histone H4",
+   "entity": "7"
+  },
+  {
+   "color": "#6E6E8E",
+   "label": "ヒストン H2A",
+   "desc": "Histone H2A",
+   "entity": "8"
+  },
+  {
+   "color": "#2a3f62",
+   "label": "ヒストン H2B",
+   "desc": "Histone H2B",
+   "entity": "9"
+  },
+  {
+   "color": "#8d7034",
+   "label": "DNA（一方の鎖）",
+   "desc": "DNA (151-MER)",
+   "entity": "10"
+  },
+  {
+   "color": "#426669",
+   "label": "DNA（相補鎖）",
+   "desc": "DNA (151-MER)",
+   "entity": "11"
+  }
+ ],
+ "ligands": []
+}

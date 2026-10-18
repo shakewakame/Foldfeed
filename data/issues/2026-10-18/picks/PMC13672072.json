@@ -1,0 +1,146 @@
+{
+  "pmcid": "PMC13672072",
+  "rank": 7,
+  "headline": "PRC1は4つのサブユニットを密に組み、E2酵素をヌクレオソーム上に置く",
+  "subhead": "ヌクレオソーム結合型のヒトPRC1をクライオ電顕で解析し、PHC2を含む界面の働きを調べた",
+  "target_label": "ヒトcPRC1（PRC1.4）",
+  "summary": {
+    "question": "PRC1全体の構造は未解明で、サブユニットの配置や触媒の連携は分かっていなかった。",
+    "approach": "RING1B・BMI1・PHC2・CBX7とUBCH5Cを、H3K27me3ヌクレオソームに結合させてクライオ電顕で解析した。",
+    "result": "2.7 Åの構造で、4つのサブユニットがβシートでつながる密な構造をとり、UBCH5Cの位置を決めていた。",
+    "learned": "PHC2は複合体の組み立てと酵素活性をつなぎ、ショウジョウバエのPhのSAMドメインは標的遺伝子への集合に必要だった。",
+    "open": "PHC2とUBCH5Cの相互作用が生体内でH2A修飾に寄与するかは、今後の変異体解析で調べる必要がある。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "However, how cPRC1 subunits are arranged within an intact complex, how the holocomplex engages nucleosomes and how catalytic activity is coordinated in this context have remained unresolved, as a structure of a PRC1 holocomplex has so far been lacking.",
+          "section": "Main"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here, we used single-particle cryo-electron microscopy (cryo-EM) to determine the structure of human cPRC1, comprising RING1B, BMI1, PHC2 and CBX7, bound to a mononucleosome in complex with the ubiquitin-conjugating enzyme UBCH5C.",
+          "section": "Main"
+        }
+      ],
+      "result": [
+        {
+          "quote": "The final reconstruction reached a global resolution of 2.7 Å, enabling unambiguous fitting of the nucleosome core, previously determined structures of individual PRC1 domains and UBCH5C",
+          "section": "Results"
+        },
+        {
+          "quote": "An extended intermolecular β‑sheet network stabilizes interactions between the four PRC1 subunits, forming the architectural core of the complex",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "PHC2 in humans and Ph in Drosophila, thus, act as a central link of complex assembly, enzymatic activity and genomic targeting of PRC1.",
+          "section": "Main"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Whether the PHC2/Ph–UBCH5C interaction contributes to PRC1-mediated H2A monoubiquitination in vivo remains to be determined by analyzing separation-of-function mutants that selectively disrupt this interaction.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "chromatin",
+    "enzyme"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "BMI1のRAWULドメインがUBCH5Cの背面に位置し、RING1Bとの複合面でUBCH5C R15を挟む。従来はUBCH5CがRING1Bのみと結合するとされていた。さらにPHC2もUBCH5Cに近接し、PHC2のLLVGモチーフをアラニンに置換すると活性が2倍超低下した。",
+      "evidence": [
+        {
+          "quote": "In contrast, our structure reveals that BMI1 also directly contributes to UBCH5C engagement and further suggests a potential interface between PHC2 and UBCH5C (Fig. 3a).",
+          "section": "Results"
+        },
+        {
+          "quote": "the PRC1(PHC24A) mutant complex exhibited more than a twofold reduction in E3 ligase activity toward H2A monoubiquitination compared to wild-type (WT) PRC1",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "4サブユニット版のPRC1は10分でH2AK119のモノユビキチン化がほぼ完了し、RING1B–BMI1二量体より活性が高かった。ショウジョウバエのPh（PHC2の相同分子）のSAMドメインは、複合体の形成には不要だが、標的遺伝子での局在とH2Aのユビキチン化に必要だった。",
+      "evidence": [
+        {
+          "quote": "In time-course assays, PRC1 catalyzed near-complete H2AK119 monoubiquitination within 10 min, followed by the appearance of diubiquitinated H2A at later time points",
+          "section": "Results"
+        },
+        {
+          "quote": "Thus, although V5–PhΔSAM retains the capacity to assemble into PRC1 (Fig. 4h), it fails to recruit the complex to PREs.",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "手法の工夫",
+      "text": "ビオチン化ヌクレオソームをストレプトアビジン単層のグリッドに結合させて撮影した。UBCH5Cがないと複合体の上部が大きく揺らぎ、UBCH5Cの存在で安定化した。CBX7のクロモドメインは分解能が足りず、モデルに含められなかった。",
+      "evidence": [
+        {
+          "quote": "The sample was applied to streptavidin‑coated grids (Extended Data Fig. 2a) and analyzed by single‑particle cryo‑EM.",
+          "section": "Results"
+        },
+        {
+          "quote": "Lastly, we note that the conformation of the upper lobe of PRC1 is stabilized in the presence of UBCH5C.",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "RING1B・BMI1・CBX7・PHC2をTrichoplusia ni HighFive昆虫細胞で共発現。",
+    "construct": "ヒトの全長配列。PHC2のSAMドメインにL307E;L311E置換を入れてオリゴマー化を防いだ。",
+    "purification": "Ni-NTA、Strep-Tactin、タグ除去後に陽イオン交換とサイズ排除クロマトグラフィー。",
+    "sample_prep": "5′ビオチン化ヌクレオソーム（H3Kc27me3）を、ストレプトアビジン単層で覆ったQuantifoil R2/2金グリッドに結合させ、Vitrobot Mark IV（4℃、湿度96%）で凍結。",
+    "data_collection": "Titan Krios（300 kV）とGatan K3、SerialEMで収集。cryoSPARC 4.7.0で解析し、2.7 Å（FSC 0.143）。",
+    "evidence": [
+      {
+        "quote": "PRC1 subunits (RING1B, BMI1, PHC2 and CBX7) were coexpressed in Trichoplusia ni HighFive insect cells",
+        "section": "Methods"
+      },
+      {
+        "quote": "The PHC2 SAM domain was mutated to contain L307E;L311E substitutions to disrupt SAM-domain-mediated oligomerization.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Quantifoil R2/2 gold grids coated with a streptavidin monolayer were prepared as previously described57,58.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Data were acquired on a Titan Krios transmission EM instrument (FEI) operated at 300 kV and equipped with a Gatan K3 direct electron detector in counting mode.",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "PRC1",
+    "Polycomb",
+    "ヌクレオソーム",
+    "H2AK119",
+    "UBCH5C",
+    "PHC2",
+    "ショウジョウバエ"
+  ],
+  "editor_notes": "カテゴリは chromatin と enzyme。論文は PHC2・CBX7・UBCH5C について初構造とは明言していない（見出しに「初」は使っていない）。パケットは Methods 途中まで読めており、Extended Data は未確認。",
+  "legend_labels": [
+    "PHC2（サブユニット）",
+    "CBX7（サブユニット）",
+    "RING1B（E3）",
+    "BMI1（サブユニット）",
+    "UBCH5C（E2）",
+    "ヒストン H3",
+    "ヒストン H4",
+    "ヒストン H2A",
+    "ヒストン H2B",
+    "DNA（一方の鎖）",
+    "DNA（相補鎖）"
+  ]
+}

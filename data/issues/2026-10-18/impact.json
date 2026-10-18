@@ -1,0 +1,353 @@
+{
+ "screened": 43,
+ "scored": [
+  {
+   "pmcid": "PMC13672048",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 2,
+    "reach": 2,
+    "structure": 1,
+    "support": 2
+   },
+   "selected": true,
+   "reason": "既存の Gi・μOR 構造を基準にした smFRET で、リガンドの効力が G タンパク質の AHD 開閉に伝わることを示した。GTP 代謝回転との相関や NTSR1 でも確かめている。実験構造は標識部位の設計と状態の解釈に使われ、結論の直接の根拠は smFRET なので structure は 1。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "These data also capture transient AHD intermediates during nucleotide exchange and suggest that allosteric control over the G protein conformational states provides an additional mechanism for encoding opioid efficacy and signaling outcomes.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "These findings suggest that AHD displacement may be a general determinant of ligand efficacy across G protein–receptor pairs",
+      "section": "Results"
+     }
+    ],
+    "structure": [
+     {
+      "quote": "Labeling sites R90C (green) and E238C (magenta) shown on superimposed Gαi structures in the inactive (GDP-bound) state (PDB 1GP2) and in the receptor-coupled (nucleotide-free) state with an open AHD (PDB 7L0Q).",
+      "section": "Main"
+     }
+    ],
+    "support": [
+     {
+      "quote": "This ligand-induced low-FRET occupancy was strongly correlated with in vitro GTP turnover activity (a direct measure of efficacy) (R2 = 0.97; Fig. 2b)",
+      "section": "Results"
+     },
+     {
+      "quote": "Parallel smFRET imaging of NTSR1–Gi ternary complexes (Methods), which couple promiscuously in vitro, yielded a correlation between agonist-induced low-FRET occupancy and GTP turnover similar to that of μOR",
+      "section": "Results"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13676074",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 2,
+    "reach": 2,
+    "structure": 2,
+    "support": 2
+   },
+   "selected": false,
+   "reason": "点数は高いが、自前のクライオ電顕構造（3.4 Å と 3.2 Å）を報告する論文で、PDB 番号が候補に載っていないだけで新しい構造の記事側で扱うべきもの。注目の構造（新しい構造以外）には入れない。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "Target recognition activates the HD domain of Cas10IVc, triggering metal-dependent collateral cleavage of single-stranded DNA and RNA.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "Together, these findings define type IV-C as a dsDNA-recognizing Class 1 CRISPR-Cas system that executes immunity through collateral nuclease activity.",
+      "section": "Discussion"
+     }
+    ],
+    "structure": [
+     {
+      "quote": "Based on the structural observations, we conclude that PAM recognition and R-loop formation allosterically activate the HD nuclease through a conditional alignment of active site residues.",
+      "section": "Results"
+     }
+    ],
+    "support": [
+     {
+      "quote": "Target recognition activates the HD domain of Cas10IVc, triggering metal-dependent collateral cleavage of single-stranded DNA and RNA.",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13646495",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 2,
+    "reach": 2,
+    "structure": 0,
+    "support": 2
+   },
+   "selected": false,
+   "reason": "リボソームの rpL40 が感染や飢餓で追加される現象を変異体などで示した。ただし追加 rpL40 の位置は XL-MS と Chai-1 予測が根拠で、実験構造（X 線・クライオ電顕・NMR）による確認がなく structure は 0。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "here we discover that ribosome composition is reprogrammed to adapt to intrinsic and external cellular perturbations.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "Thus, ribosome remodeling is a conserved mechanism enabling dynamic protein synthesis across pathogen and cellular adaptation.",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "However, upon VSV infection, cells expressing the aN8 mutant were no longer able to increase rpL40 occupancy on ribosomes",
+      "section": "Results"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13669341",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 2,
+    "reach": 2,
+    "structure": 1,
+    "support": 1
+   },
+   "selected": false,
+   "reason": "既発表のクライオ ET マップに MD 由来の 3 連ヌクレオソームを当てはめる手法。結論の中心は MD で、実験構造は照合に使うだけのため structure 1、support 1 で 6 点。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "The results reveal that tri-nucleosome models can be successfully used for fitting and the near-atomistic interpretation of cryo-ET density maps of native human chromatin.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "Moreover, histone tails were shown to promote chromatin compaction via three major patterns: through histone-DNA interactions, histone H2A-H4 and H3-H4 tail-tail interactions.",
+      "section": "Abstract"
+     }
+    ],
+    "structure": [
+     {
+      "quote": "we combine extensive all-atom molecular dynamics simulations of tri-nucleosomes with varying linker lengths and cryo-electron tomography (cryo-ET) of native nucleosome arrays.",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "Notably, the distributions of MD-generated structural parameters of tri-nucleosomes were found to be in strong agreement with those of experimental condensed chromatin arrays.",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13670896",
+   "type": "method",
+   "scores": {
+    "novelty": 2,
+    "reach": 1,
+    "structure": 1,
+    "support": 2
+   },
+   "selected": false,
+   "reason": "ネイティブ質量分析とナノボディで β1AR のリガンド依存の状態差を見る手法。構造は既存 PDB との比較に使うだけで、対象も β1AR に限られるため 6 点。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "Notably, leveraging the quantitative capacity of nMS, we uncovered distinct propensities of two highly similar nanobodies, Nb80 and Nb6B9, and showed that Nb6B9 engages weak-agonist-stabilized receptor states more effectively than Nb80.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "Together, our study highlights the utility of nanobody-based nMS for evaluating the structural heterogeneity and dynamic landscapes of GPCRs.",
+      "section": "Abstract"
+     }
+    ],
+    "structure": [
+     {
+      "quote": "Three-dimensional structures of thermostabilized β1AR in the inactive state (PDB: 4GPO) and active state (PDB: 6H7L) were visualized and analyzed.",
+      "section": "Methods"
+     }
+    ],
+    "support": [
+     {
+      "quote": "Using the β1-adrenergic receptor (β1AR) as a model, we demonstrated a strong correlation between ligand efficacy and receptor complex formation with diverse active-state-specific nanobodies.",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13672106",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 2,
+    "reach": 2,
+    "structure": 0,
+    "support": 2
+   },
+   "selected": false,
+   "reason": "ICP55 による 1 アミノ酸の切断が複合体の安定性を保つことをプロテオミクスと BN-PAGE で示した。実験構造は図の説明に使われるだけで structure は 0。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "Thus, we uncover a conserved, post-translational mechanism that safeguards mitochondrial proteostasis by regulating complex integrity through a single amino-acid cleavage",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "demonstrate that loss of ICP55 triggers widespread destabilization of protein assemblies, with a global shift toward smaller subcomplexes",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "In ICP55KO mitochondria, HSP60 complex formation was markedly decreased, despite unchanged steady-state levels of the protein (Fig. 3b).",
+      "section": "Results"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13670219",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 2,
+    "reach": 1,
+    "structure": 1,
+    "support": 2
+   },
+   "selected": false,
+   "reason": "IR・EPR・QM/MM で CO が E1 状態に結合することを示した。既存の結晶構造は QM/MM の基準と照合に使うのみで、対象はニトロゲナーゼに限られ 6 点。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "We find that CO binds predominantly at the E1 state, whereas EPR-active species correspond to CO-bound E2 states.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "Nitrogenase drives biological nitrogen fixation through an eight-step cycle",
+      "section": "Abstract"
+     }
+    ],
+    "structure": [
+     {
+      "quote": "The [E2](µ2CO)(CO)Fe6 isomer is consistent with the reported hi-CO crystal structure",
+      "section": "Results"
+     }
+    ],
+    "support": [
+     {
+      "quote": "Here, we combine static and stopped-flow IR, EPR spectroscopy, photolysis, and quantum mechanical/molecular mechanical (QM/MM) calculations, supported by non-negative matrix factorization (NMF), to investigate CO binding under varying electron flux, varying CO pressure, and H2 pressure.",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13674862",
+   "type": "ai_design",
+   "scores": {
+    "novelty": 2,
+    "reach": 1,
+    "structure": 0,
+    "support": 1
+   },
+   "selected": false,
+   "reason": "CatSper の温度・pH 感受性の機構を AlphaFold3 モデルで提案した。実験構造による確認がなく structure は 0。電気生理は N 末端除去の影響を見ただけ。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "Phylogenetic analysis shows that N-terminal length and histidine enrichment of the pore-forming subunit CatSper1 strongly correlate with species-specific fertilization temperatures",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "The cation channel of sperm, CatSper, is a sperm-specific calcium channel essential for male fertility across metazoans.",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "Functional validation using electrophysiology and calcium imaging in mouse sperm shows that capacitation-associated partial removal of the CatSper1 N-terminus selectively impairs temperature-dependent activation.",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13669383",
+   "type": "ai_design",
+   "scores": {
+    "novelty": 2,
+    "reach": 2,
+    "structure": 0,
+    "support": 0
+   },
+   "selected": false,
+   "reason": "メタゲノムと言語モデル・構造予測による進化の解析で、実験で決めた構造による裏付けも実験的検証もない。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "Using hidden Markov models and protein language models, we identify and characterize small viral genomes encoding HK97-fold proteins that exhibit molecular similarities to encapsulins yet lack portal and tail genes.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "The observations support a bidirectional evolution between encapsulins and HK97-fold viruses enabled by the viral procapsid state.",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13673040",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 1,
+    "reach": 1,
+    "structure": 0,
+    "support": 1
+   },
+   "selected": false,
+   "reason": "擬似リン酸化変異体の機能相補試験が中心で、構造はホモロジーモデルのみ。新規性・波及とも限られる。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "Here, we show that canonical oligomerization residues are replaced by serines in Cpn60.1 homologues, enabling a phosphorylation‑switch.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "Cpn60.1 homologues exhibited impaired oligomerization and thereby failed to exhibit chaperonin activity.",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "a double phospho-mimetic variant (S393D + S75D) exhibited chaperonin activity in groEL conditional mutant strains",
+      "section": "Abstract"
+     }
+    ]
+   }
+  }
+ ]
+}

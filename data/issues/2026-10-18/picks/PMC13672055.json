@@ -1,0 +1,159 @@
+{
+  "pmcid": "PMC13672055",
+  "rank": 6,
+  "headline": "ATPがNLRP6の各ドメインを束ねて、活性化を抑える",
+  "subhead": "ヒトNLRP6単量体の2つの構造から、別のポケットに入るATPと酸性ループが阻害状態を支えると示した。",
+  "target_label": "ヒトNLRP6（炎症の感知因子）",
+  "summary": {
+    "question": "NLRP6が、どのような構造で抑えられた状態に保たれているかは分かっていなかった。",
+    "approach": "ヒトNLRP6単量体を、ATP結合型と非結合型の2状態でクライオ電顕により解析し、変異体を細胞で調べた。",
+    "result": "ATPは通常のATP結合部位とは別のポケットに入り、NACHTの各ドメインとLRRをつないで縮めていた。",
+    "learned": "ATPの結合やNBDの相互作用を壊すと活性化が進み、NLRP6はATPなどの協同で自己抑制されている。",
+    "open": "細胞実験はNLRP6を本来発現しない細胞での過剰発現系で、生理的な意義は今後の検証課題とされる。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "However, how NLRP6 is maintained in an inhibited structure is unknown.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here we report two cryogenic-electron microscopy structures of human NLRP6 monomer in the adenosine-5′-triphosphate (ATP)/NBD-bound (twisted conformation) and unbound (extended conformation) states.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Disruption of ATP binding and NBD interactions unleashes the NLRP6 inflammasome activation in the cellular study.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "Instead, we detected that ATP molecule binds to a distinct site and coordinates almost all domains of NLRP6",
+          "section": "Results"
+        },
+        {
+          "quote": "The ATP-binding event connects and compacts the NACHT subdomains and the LRR domain, thus maintaining NLRP6 in an inhibitory conformation.",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Together, our data reveal the ATP-mediated cooperative inhibition mechanism of NLRP6",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Disruption of ATP binding and NBD interactions unleashes the NLRP6 inflammasome activation in the cellular study.",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "We acknowledge that our overexpression system in reconstituted HEK-293T cells has its caveats and limitations",
+          "section": "Discussion"
+        },
+        {
+          "quote": "In future study, to further explore the physiological relevance of our findings, we will use physiological cell lines such as primary intestinal epithelial cells",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "immune"
+  ],
+  "highlights": [
+    {
+      "tag": "新しい結合部位",
+      "text": "NLRP3などでADPが入る正規の触媒ポケットは空で、ATPはHD1・HD2・NBD・WHD・LRRと酸性ループが集まる別のポケットに入っていた。γリン酸にはE609、E613、H539などが水素結合していた。",
+      "evidence": [
+        {
+          "quote": "Unlike other solved NLR structures that have ADP or ATP-γS occupying the classical enzyme catalytic pocket, the twisted conformation of NLRP6 uses a noncanonical pocket for ATP binding and mediates subsequent inhibition",
+          "section": "Discussion"
+        },
+        {
+          "quote": "The γ-phosphate group establishes a strong hydrogen-bonding network with E609 and E613 in the acidic loop, H539 in the HD2 domain, backbone of A330 in the NBD domain and E504 in the WHD domain",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "ATP結合部位の変異（H539L、Y623A）はATP加水分解を2.0倍と3.8倍に高め、細胞でもカスパーゼ-1の切断を増やした。酸性ループは、ねじれ型ではATPを覆って固定していた。",
+      "evidence": [
+        {
+          "quote": "H539L and Y623A mutations boosted ATP hydrolysis activity substantially compared to the WT protein, with an enhancement of 2.0-fold and 3.8-fold, respectively.",
+          "section": "Results"
+        },
+        {
+          "quote": "H539L, E620A, Y623A, R545A in the HD2 domain, E611A and E613A in the acidic loop and A383G in the HD1 domain promoted caspase-1 cleavage substantially",
+          "section": "Results"
+        },
+        {
+          "quote": "the short acidic loop (E609–N616) at the C-terminal of HD2 domain acts as a shield to stabilize the ATP molecule in the inhibitory pocket",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "NLRP3の阻害剤MCC950は、NLRP3で似た位置に結合するが、この再構成系ではNLRP6を抑えなかった。著者は、NLRP6に選択的な阻害薬・活性化薬を探す道が開けると述べている。",
+      "evidence": [
+        {
+          "quote": "Although MCC950 is a potent NLRP3 inhibitor, NLRP6 inflammasome activity was not inhibited by MCC950 in our reconstituted system",
+          "section": "Discussion"
+        },
+        {
+          "quote": "The small-molecule selectivity of the binding pockets opens an exciting pharmacological avenue to discover NLRP6-specific inhibitors/activators in the future direction.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "Sf9 昆虫細胞にバキュロウイルス（Bac-to-Bac）で発現。",
+    "construct": "N 末端側を欠いた NLRP6（14–892）に N 末端 His6-MBP タグ（切断しないリンカー）。",
+    "purification": "Ni-NTA → サイズ排除クロマトグラフィー（Superdex 200 Increase）を、塩濃度を下げて 2 回。",
+    "sample_prep": "Quantifoil R1.2/1.3 Cu 300 メッシュ、Vitrobot、ブロット 4 秒、湿度 100%。",
+    "data_collection": "Titan Krios（300 kV）＋Falcon4EC、Leginon で収集。cryoSPARC v4.4.0 で処理。",
+    "evidence": [
+      {
+        "quote": "NLRP6 (14–892) was expressed in SF9 cells (Thermo Fisher, cat. no. 11496015).",
+        "section": "Methods"
+      },
+      {
+        "quote": "Human NLRP6 with an N-terminal flexible region deleted (amino acids 14–892) was cloned into pFastBac-HTB vector engineered with an N-terminal 6×His-MBP tag.",
+        "section": "Methods"
+      },
+      {
+        "quote": "further purified by SEC (Superdex 200 increase 10/300 GL column, Cytiva)",
+        "section": "Methods"
+      },
+      {
+        "quote": "blotted for 4 s under 100% relative humidity with an applied force of 1, and then plunged rapidly into liquid ethane using a Vitrobot (Thermo Fisher Scientific)",
+        "section": "Methods"
+      },
+      {
+        "quote": "Cryo-EM data for human NLRP6 were collected at 300 kV on a TFS Titan Krios microscope equipped with a Falcon4EC direct detector (NCCAT/NYSBC).",
+        "section": "Methods"
+      },
+      {
+        "quote": "A total of 14,261 micrographs of human NLRP6 were collected and processed using CryoSPARC v4.4.0",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "NLRP6",
+    "インフラマソーム",
+    "ATP",
+    "自然免疫",
+    "酸性ループ",
+    "MCC950"
+  ],
+  "editor_notes": "9OK8 がねじれ型（ATP 結合）、9OK7 が伸びた型（ATP・NBD なし）。分解能は 3.7 Å 前後で、MBP タグと PYD は見えていない。NLRP6 の既存構造は UniProt 上に 2 件ある（初構造ではない）。細胞実験は HEK-293T での再構成系（著者が限界を明記）。ATP 結合ポケットが ATP 加水分解を担うかは未確定と論文は述べている。",
+  "ligand_label": "ATP",
+  "legend_labels": [
+    "NLRP6（センサー）"
+  ]
+}

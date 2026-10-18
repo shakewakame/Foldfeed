@@ -1,0 +1,146 @@
+{
+  "pmcid": "PMC13672387",
+  "rank": 13,
+  "headline": "光合成の光化学系Iの単量体を、温度と界面活性剤で作る",
+  "subhead": "単量体の光化学系Iをクライオ電顕で高分解能に解析し、脂質や界面活性剤の配置を示した",
+  "target_label": "光化学系I単量体（T. vestitus）",
+  "summary": {
+    "question": "光化学系Iの単量体を、活性を保ったまま大量に得る方法と、高分解能の構造が必要だった。",
+    "approach": "三量体を界面活性剤C12E8と高温で単量体にし、クライオ電顕で構造を決め、分光法と小角中性子散乱で調べた。",
+    "result": "PsaL以外のサブユニットが見えた。SQD分子1個と、リング状に並ぶ16個のβDMが見つかった。",
+    "learned": "この単量体の構造は溶液中でも保たれていた。三量体との比較から、失われた赤色クロロフィルの割り当てを著者は示唆している。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Here, we present a novel protocol for producing large quantities of nearly intact and active T. vestitus mPSI from purified, active tPSI.",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here, we have developed a novel protocol to obtain large amounts of intact, active mPSI from Thermosynechococcus vestitus (Tv) by dissociating highly purified tPSI using the detergent octaethylene glycol monododecyl ether (C12E8) at elevated temperatures.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "This structure retains all subunits except PsaL and we identified a sulfoquinovosyl diacylglycerol (SQD) molecule and 16 n-dodecyl ß-maltoside (βDM) molecules arranged in a ring around the complex.",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "The mPSI structure was verified in solution at physiological temperature by applying small angle neutron scattering.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Comparing the cofactor inventory of mPSI to that of tPSI, we suggest the assignment of a red-shifted chlorophyll pigment",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "The density did not allow model building and could not be improved by local refinement, likely due to the small size of Cyt c6 (10 kDa) and to its high mobility.",
+          "section": "Results"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "photosynthesis"
+  ],
+  "highlights": [
+    {
+      "tag": "手法の工夫",
+      "text": "BDMで精製した三量体を、1%のC12E8と60°Cで30分処理すると、ほぼ単量体になった。PsaLは失われるが、酸素の消費活性は三量体と同程度に高い。温度と界面活性剤だけでよい点が工夫である。",
+      "evidence": [
+        {
+          "quote": "Incubating ßDM tPSI for 30 min with the addition of 1% C12E8 at 60 °C yielded almost solely mPSI.",
+          "section": "Results"
+        },
+        {
+          "quote": "The functional integrity of our mPSI is demonstrated by the O2 activity rates, which are similarly high for mPSI and tPSI (SI, Table S1).",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "新しい結合部位",
+      "text": "膜の周りに16個のβDMが二重層のように並ぶ構造と、PSIで新たに見つかったSQD分子が見えた。PsaLが外れた単量体では、三量体にあった2つ目のCa2+結合部位に、Mg2+が入っていた。",
+      "evidence": [
+        {
+          "quote": "arranged in a bilayer structure around the peripheral hydrophobic transmembrane region of mPSI",
+          "section": "Results"
+        },
+        {
+          "quote": "Our mPSI cryo-EM structure revealed an intact second binding site, now occupied by a Mg²⁺ ion, unlike the tPSI structures",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "単量体ではカロテノイド6個（三量体の24%）とクロロフィルa 5個が失われていた。スペクトルの解析から、失われた赤色クロロフィルは708〜710 nm付近の吸収に寄与するものらしい。チトクロムc6を加えると、P700の近くに追加の密度が見えたが、モデルは作れなかった。",
+      "evidence": [
+        {
+          "quote": "This loss corresponds to 24% of the 25 identified ß-Cars in 7FIX.",
+          "section": "Results"
+        },
+        {
+          "quote": "Therefore, it is suggested that the red Chl missing in our mPSI belongs to the pool of red Chls absorbing around 710 nm.",
+          "section": "Results"
+        },
+        {
+          "quote": "This density did not allow model building and could not be improved by local refinement",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "天然のT. vestitus BP1から三量体PSIを単離。Cyt c6は大腸菌で発現（C末端6×Hisタグ）。",
+    "construct": null,
+    "purification": "βDM三量体を1% C12E8・60°C・30分で単量体化し、10〜35%ショ糖密度勾配で分離。",
+    "sample_prep": "Quantifoil R 1.2/1.3 Cuグリッド、Vitrobot Mark IV（4°C、湿度100%、30秒インキュベート、2秒ブロット）。",
+    "data_collection": "Titan Krios G3＋K3で22,001ムービー。cryoSPARC 4.5で解析、ModelAngeloで初期モデルを作成。",
+    "evidence": [
+      {
+        "quote": "After the monomerisation procedure described above, the PSI solution was loaded onto a sucrose gradient with 10–35% (w/v) sucrose in sucrose buffer",
+        "section": "Experimental procedures"
+      },
+      {
+        "quote": "The plunge-freezing was performed with a Vitrobot Mark IV device, with the chamber at 4 °C and 100% relative humidity, 30 s of incubation time between application and blotting, 2 s of blotting (at blot force 0) before vitrification in liquid ethane.",
+        "section": "Experimental procedures"
+      },
+      {
+        "quote": "A total of 22 001 movies were collected on a Titan Krios G3 operated at 300 kV and equipped with a Gatan K3 BioQuantum detector.",
+        "section": "Experimental procedures"
+      },
+      {
+        "quote": "An atomic model was automatically built into the 3D reconstruction using ModelAngelo version 1.0.12",
+        "section": "Experimental procedures"
+      }
+    ]
+  },
+  "keywords": [
+    "光化学系I",
+    "シアノバクテリア",
+    "SQDG",
+    "赤色クロロフィル",
+    "チトクロムc6"
+  ],
+  "editor_notes": "PDB 9QFP は 1.74 Å（本文は 1.8 Å）。Tv の単量体 PSI は既報（6LU1, 3.2 Å）があり初構造ではない。著者は PSI でSQDの同定は初と書くが、見出しでは使っていない。Cyt c6 の結合は低分解能の密度のみ。",
+  "legend_labels": [
+    "PsaA（反応中心）",
+    "PsaB（反応中心）",
+    "PsaC（Fe-S 中心）",
+    "PsaD",
+    "PsaE",
+    "PsaF",
+    "PsaI",
+    "PsaJ",
+    "PsaK",
+    "PsaM",
+    "4.8K タンパク質"
+  ]
+}
