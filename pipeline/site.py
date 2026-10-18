@@ -507,18 +507,24 @@ a, .find button, .v3d-bar button, .figtabs button {{ transition:color .2s, backg
 .rel b {{ font-family:var(--sans); font-size:15.5px; font-weight:700; }}
 .rel .why {{ font-family:var(--mono); font-size:11.5px; color:var(--acc-ink); }}
 
-/* an issue page opens with its date, large */
 /* an issue page's first screen: the issue (one date, large), the figures of the day and the bar of its articles */
 .ihead {{ padding:40px 0 10px; }}
-.ih-nav, .issue-nav {{ display:flex; justify-content:space-between; gap:16px; }}
-.ih-nav a, .issue-nav a {{ display:flex; flex-direction:column; gap:1px; text-decoration:none; padding:6px 0; }}
-.ih-nav span, .issue-nav span {{ font-family:var(--mono); font-size:11.5px; letter-spacing:.08em; color:var(--mute); transition:color .2s; }}
-.ih-nav b, .issue-nav b {{ font-family:var(--mono); font-size:15px; font-weight:700; color:var(--ink); transition:color .2s; }}
-.ih-nav .next, .issue-nav .next {{ text-align:right; }}
-.ih-nav a:hover span, .ih-nav a:hover b, .issue-nav a:hover span, .issue-nav a:hover b {{ color:var(--acc-ink); }}
-.issue-nav {{ margin-top:70px; padding-top:16px; border-top:2px solid var(--ink); }}
-.issue-nav .up {{ text-align:center; }}
-.ih-k {{ margin:18px 0 0; font-family:var(--mono); font-size:14px; letter-spacing:.14em; text-transform:uppercase;
+.ih-top {{ display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-end; gap:20px 32px; }}
+/* the neighbouring issues as buttons: arrow, what it is, its date; the missing one (no newer issue yet) stays, greyed */
+.ih-nav, .issue-nav {{ display:flex; flex-wrap:wrap; gap:12px; }}
+.ib {{ display:inline-flex; align-items:baseline; gap:10px; padding:12px 18px; font-family:var(--mono); font-size:13px;
+       letter-spacing:.06em; color:var(--ink); box-shadow:inset 0 0 0 1px var(--ink); text-decoration:none;
+       transition:background-color .25s, color .25s; }}
+.ib b {{ font-weight:700; letter-spacing:.02em; }}
+.ib .ar {{ display:inline-block; transition:transform .3s cubic-bezier(.2,.8,.2,1); }}
+a.ib:hover {{ background:var(--ink); color:#fff; text-decoration:none; }}
+a.ib.prev:hover .ar {{ transform:translateX(-4px); }}
+a.ib.next:hover .ar {{ transform:translateX(4px); }}
+.ib.off {{ color:var(--mute); box-shadow:inset 0 0 0 1px var(--hair); }}
+.issue-nav {{ justify-content:space-between; margin-top:70px; padding-top:26px; border-top:2px solid var(--ink); }}
+.issue-nav .up {{ background:var(--ink); color:#fff; }}
+.issue-nav a.up:hover {{ background:var(--acc-ink); }}
+.ih-k {{ margin:0; font-family:var(--mono); font-size:14px; letter-spacing:.14em; text-transform:uppercase;
          color:var(--acc-ink); font-weight:700; }}
 .ih-date {{ margin:4px 0 0; font-family:var(--latin); font-size:92px; line-height:1; letter-spacing:-.035em; font-weight:700; color:var(--ink); }}
 .ih-src {{ margin:12px 0 0; font-size:14.5px; color:var(--desc); }}
@@ -597,6 +603,7 @@ a, .find button, .v3d-bar button, .figtabs button {{ transition:color .2s, backg
   .side {{ border-left:0; padding-left:0; border-top:4px solid var(--ink); margin-top:20px; }}
   .sticky-side .side-in {{ position:static; max-height:none; overflow:visible; }}
   .side-only-issue {{ display:none; }}
+  .side:not(:has(.sd:not(.side-only-issue))) {{ display:none; }}   /* nothing left in it on a narrow screen */
 }}
 @media (max-width:860px) {{
   :root {{ --pad:18px; }}
@@ -637,7 +644,17 @@ a, .find button, .v3d-bar button, .figtabs button {{ transition:color .2s, backg
   .art {{ grid-template-columns:minmax(0,1fr); gap:14px; }}
   .ih-date {{ font-size:56px; }}
   .ih-kpis {{ grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }}
-  .ih-nav b, .issue-nav b {{ font-size:13.5px; }}
+  .ih-top {{ display:block; }}
+  .ih-nav {{ margin-top:22px; }}
+  .ih-nav, .issue-nav {{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }}
+  /* two lines: arrow and what it is, then the date */
+  .ib {{ display:flex; flex-wrap:wrap; align-items:baseline; gap:4px 8px; padding:11px 12px; font-size:11.5px; letter-spacing:.02em; }}
+  .ib b {{ flex-basis:100%; font-size:13px; }}
+  .ib.next {{ justify-content:flex-end; text-align:right; }}
+  .ib.next .ar {{ order:1; }}
+  .ib.next b {{ order:2; }}
+  .issue-nav .up {{ grid-column:1 / -1; grid-row:2; justify-content:center; }}
+  .issue-nav .up b {{ flex-basis:auto; }}
   .intro4 div {{ grid-template-columns:minmax(0,1fr); gap:0; }}
   .mail-grid {{ grid-template-columns:minmax(0,1fr); gap:20px; }}
   .pr {{ grid-template-columns:minmax(0,1fr); }}
@@ -1400,15 +1417,18 @@ def reading_minutes(pick: dict) -> float:
 
 
 def issue_nav(prev_date: str | None, next_date: str | None, cls: str, top: bool = False) -> str:
-    """Previous / next issue, each named as such with its date (and, at the foot of a page, the way back to the top)."""
+    """Previous / next issue as buttons, each saying what it is and its date (and, at the foot of a page, the way back
+    to the top). With no newer issue (the latest), "Next issue" stays in its place, greyed, so the pair does not move."""
     def link(date, label, side):
+        ar = f'<span class="ar" aria-hidden="true">{"←" if side == "prev" else "→"}</span>'
         if not date:
-            return f'<span class="{side} none"></span>'
+            return f'<span class="ib {side} off" aria-disabled="true"><span class="t">{label}</span>{ar}</span>' if side == "next" else ""
         y, m, d, _ = date_parts(date)
-        return f'<a class="{side}" href="{date}.html"><span>{label}</span><b>{y}.{m:02d}.{d:02d}</b></a>'
-    mid = '<a class="up" href="../index.html"><span>FoldFeed</span><b>Top</b></a>' if top else ""
-    return (f'<nav class="{cls}" aria-label="ほかの号">{link(prev_date, "← Previous issue", "prev")}{mid}'
-            f'{link(next_date, "Next issue →", "next")}</nav>')
+        body = f'<span class="t">{label}</span><b>{y}.{m:02d}.{d:02d}</b>'
+        return f'<a class="ib {side}" href="{date}.html">' + (ar + body if side == "prev" else body + ar) + '</a>'
+    mid = '<a class="ib up" href="../index.html"><span class="t">FoldFeed</span><b>Top</b></a>' if top else ""
+    return (f'<nav class="{cls}" aria-label="ほかの号">{link(prev_date, "Previous issue", "prev")}{mid}'
+            f'{link(next_date, "Next issue", "next")}</nav>')
 
 
 def issue_head(date: str, number: int | None, picks: list, n_rest: int, prev_date: str | None, next_date: str | None,
@@ -1437,8 +1457,9 @@ def issue_head(date: str, number: int | None, picks: list, n_rest: int, prev_dat
     btns = "".join(f'<a class="lead-go{" alt" if key == "impact" else ""}" href="#{key}"><span class="tri" aria-hidden="true">▽</span>'
                    f'{label}<b>{n}</b></a>'
                    for key, label, n in (("new", "New Structure", len(new)), ("impact", "Notable Structure", len(hot))) if n)
-    return (f'<header class="ihead">{issue_nav(prev_date, next_date, "ih-nav")}'
-            f'<p class="ih-k">{kicker}</p><h1 class="ih-date">{y}.{m:02d}.{d:02d}</h1>{src}'
+    nav = issue_nav(prev_date, next_date, "ih-nav") if prev_date or next_date else ""
+    return (f'<header class="ihead"><div class="ih-top"><div><p class="ih-k">{kicker}</p>'
+            f'<h1 class="ih-date">{y}.{m:02d}.{d:02d}</h1>{src}</div>{nav}</div>'
             f'<div class="ih-fig"><div class="kpis ih-kpis">{kpis}</div>{bar}</div>'
             + (f'<div class="lead-btns">{btns}</div>' if btns else "") + '</header>')
 
@@ -1483,11 +1504,8 @@ def issue_page(date: str, prev_date: str | None, next_date: str | None,
     main.append(issue_nav(prev_date, next_date, "issue-nav", top=True))
     side = toc_side(picks, feature and feature["pmcid"]) if picks else ""   # the issue links and the search are elsewhere
     head = masthead(1)
-    span = f'{meta["index_from"]}〜{meta["index_date"]}' if meta.get("index_from") else meta["index_date"]
     from_nlm = meta.get("source") == pmcoa.SOURCE      # Europe PMC was not indexing: the papers came from NLM's PMC data
-    foot = colophon(f'<p>この号の対象：{"PMC" if from_nlm else "Europe PMC"} に {esc(span)} に登録されたオープンアクセス論文 '
-                    f'{meta["counts"]["parsed"]} 本のうち、新しい構造を報告した論文。</p>'
-                    + (f'<p>{esc(pmcoa.CREDIT)}</p>' if from_nlm else ""))
+    foot = colophon(f'<p>{esc(pmcoa.CREDIT)}</p>' if from_nlm else "")   # what the issue covers is on its first screen
     desc = "、".join(pk["target_label"] for _, pk in picks[:6])
     title = f"{jp_date(date)}号 · {brand.SITE_NAME}"
     return page(("［プレビュー］" if preview else "") + title, bar + head + shell("".join(main), side, sticky=True) + foot, depth=1,
