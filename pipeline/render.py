@@ -209,22 +209,25 @@ def thumbnail(cand: dict, pick: dict, theme: brand.Theme | None = None) -> str:
             f'viewBox="0 0 {THUMB_W} {THUMB_H}">{body}</svg>\n')
 
 
-def hero_figure(cand: dict, pick: dict, theme: brand.Theme | None = None) -> str:
+def hero_figure(cand: dict, pick: dict, theme: brand.Theme | None = None) -> tuple[str, dict | None]:
     """Today's Structure for the front page's first screen: the same PDB structure as the article's figure, large, with
-    its ligands but no labels or close-up (the article's figure follows right below). "" without a structure."""
+    its ligands but no labels or close-up (the article's figure follows right below), and the 3D viewer's starting
+    camera for the same view (the front page opens the 3D viewer on it). ("", None) without a structure."""
     th = theme or brand.THEME
     s = pick_structure(cand, pick)
     coords = pdb.coordinates(s["pdb_id"]) if s else None
     if not coords:
-        return ""
+        return "", None
     genes = {p["uniprot"]: p["gene"] for p in cand.get("proteins", []) if p.get("gene")}
+    probe: dict = {}
     body, _, _ = structure_svg.render(coords, {l["id"] for l in s.get("ligands") or []} - pdb.COMMON_ADDITIVES,
                                       0, 0, HERO_W, HERO_H, genes, margin=18, entity_colors=list(th.entities),
-                                      ligand_colors=structure_svg.LIGAND_PALETTE, bg=th.ground, topology=uniprot.topology)
+                                      ligand_colors=structure_svg.LIGAND_PALETTE, bg=th.ground, topology=uniprot.topology,
+                                      probe=probe)
     if not body:
-        return ""
+        return "", None
     return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{HERO_W}" height="{HERO_H}" '
-            f'viewBox="0 0 {HERO_W} {HERO_H}">{body}</svg>\n')
+            f'viewBox="0 0 {HERO_W} {HERO_H}">{body}</svg>\n'), probe.get("view")
 
 
 def chem_name(name: str | None) -> str:
@@ -281,7 +284,7 @@ def structure_figure(cand: dict, pick: dict, theme: brand.Theme | None = None) -
     """
     th = theme or brand.THEME
     s = pick_structure(cand, pick)
-    body, legend, lig_legend, site = "", [], [], None
+    body, legend, lig_legend, site, probe = "", [], [], None, {}
     if s:
         coords = pdb.coordinates(s["pdb_id"])
         if coords:
@@ -300,7 +303,6 @@ def structure_figure(cand: dict, pick: dict, theme: brand.Theme | None = None) -
             names, lig_labels, notes = _annotation_inputs(pick, lig_ids, pdb_names, site, prefer)
             band = 220 if (names or lig_labels or notes) else 0   # the most a side may give to its labels
             box_w = W - (INSET_W + 30) if inset_body else W
-            probe: dict = {}
             body, legend, lig_legend = structure_svg.render(
                 coords, lig_ids, 0, 0, box_w, H, genes, margin=26, entity_colors=ent_colors,
                 ligand_colors=structure_svg.LIGAND_PALETTE, bg=th.ground, notes=notes,
@@ -326,7 +328,7 @@ def structure_figure(cand: dict, pick: dict, theme: brand.Theme | None = None) -
     svg = (f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" '
            f'font-family="{FONT}">{base}{body}</svg>\n')
     pdb_names = {l["id"]: l.get("name") for l in (s or {}).get("ligands") or []}
-    info = {"pdb_id": s["pdb_id"] if s else None,
+    info = {"pdb_id": s["pdb_id"] if s else None, **({"view": probe["view"]} if body and s and probe.get("view") else {}),
             "legend": [{"color": col, "label": lab, "desc": desc if desc != lab else "", "entity": ent}
                        for col, lab, desc, ent in legend],
             "ligands": [{"id": lid, "label": ligand_name(lid, pdb_names.get(lid), pick), "color": col,
@@ -744,9 +746,13 @@ def main(argv=None) -> int:
     feature = read_json(d / "feature.json") if (d / "feature.json").exists() and len(picks) >= FEATURE_MIN else None
     for cand, pick in picks:   # the front page's large picture: Today's Structure only
         hero_path = fig_dir / f"{cand['pmcid']}-hero.svg"
-        hero = hero_figure(cand, pick) if feature and feature.get("pmcid") == cand["pmcid"] else ""
+        hero, view = hero_figure(cand, pick) if feature and feature.get("pmcid") == cand["pmcid"] else ("", None)
         if hero:
             hero_path.write_text(hero, encoding="utf-8")
+            if view:
+                infos[cand["pmcid"]]["hero_view"] = view
+                (fig_dir / f"{cand['pmcid']}.json").write_text(json.dumps(infos[cand["pmcid"]], ensure_ascii=False, indent=1)
+                                                               + "\n", encoding="utf-8")
         elif hero_path.exists():
             hero_path.unlink()
     (d / "README.md").write_text(issue_md(meta, picks, infos, load_impact(d), feature), encoding="utf-8")

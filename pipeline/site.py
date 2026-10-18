@@ -79,7 +79,7 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .shell {{ display:grid; grid-template-columns:minmax(0,1fr) var(--side); gap:0 56px; align-items:stretch; }}
 .main {{ min-width:0; padding-bottom:30px; }}
 .side {{ border-left:1px solid var(--hair); padding-left:32px; padding-top:40px; padding-bottom:30px; }}
-.sticky-side .side-in {{ position:sticky; top:20px; max-height:calc(100vh - 40px); overflow-y:auto; scrollbar-width:thin; }}
+.sticky-side .side-in {{ position:sticky; top:96px; max-height:calc(100vh - 116px); overflow-y:auto; scrollbar-width:thin; }}
 .sd {{ margin:0 0 28px; }}
 .sd + .sd {{ padding-top:24px; border-top:1px solid var(--hair); }}
 .sd .label {{ padding-top:0; margin-bottom:10px; }}
@@ -180,7 +180,7 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .margin dd {{ margin:2px 0 0; overflow-wrap:anywhere; }}
 .margin .pdb {{ display:block; }}
 .margin .first {{ margin-top:16px; }}
-.margin .sticky {{ position:sticky; top:24px; }}
+.margin .sticky {{ position:sticky; top:96px; }}
 .kicker {{ font-family:var(--mono); font-size:11.5px; letter-spacing:.06em; color:var(--mute); margin:0 0 10px; line-height:1.7; }}
 .kicker b {{ color:var(--ink); font-weight:600; }}
 .art h2 {{ font-family:var(--latin); font-size:25px; line-height:1.38; letter-spacing:-0.005em; margin:0 0 24px;
@@ -216,6 +216,8 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .v3d:not(.loading) .loading-only, .v3d.loading .off-only, .v3d.loading .on-only {{ display:none; }}
 .v3d-msg {{ margin:8px 0 0; font-family:var(--mono); font-size:12px; color:var(--acc-ink); }}
 .v3d .msp-state-snapshot-viewport-controls {{ display:none; }}
+.v3d .msp-layout-standard {{ border:0 !important; }}
+.lead-3d .msp-viewport-controls {{ display:none; }}
 .figtabs {{ display:flex; gap:22px; margin:0 0 8px; font-family:var(--mono); font-size:12.5px; }}
 .figtabs button {{ font:inherit; letter-spacing:.04em; background:none; border:0; border-bottom:2px solid transparent; padding:2px 0 4px;
                    color:var(--mute); cursor:pointer; }}
@@ -325,8 +327,23 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .row[hidden], .pr[hidden], .pg[hidden] {{ display:none; }}
 .hero .v3d-bar {{ margin-top:10px; }}
 
-/* MENU: a round button at the right of the masthead; the list drops below it */
+/* MENU: a round button at the top right that stays there while the page scrolls; the list drops below it. Once the
+   masthead has scrolled away, the logo and the name come back small at the top left. Whatever sticks while scrolling
+   (an article's margin, an issue's contents) stays below them (top: 96px). */
+@media (prefers-reduced-motion:no-preference) {{ html {{ scroll-behavior:smooth; }} }}
 .vol {{ display:flex; align-items:center; gap:22px; }}
+.menu-slot {{ display:block; width:142px; height:50px; }}
+.fixbar {{ position:fixed; top:0; left:0; right:0; z-index:1000; pointer-events:none; }}
+.fb-row {{ display:flex; justify-content:space-between; align-items:center; padding-top:30px; }}
+.fb-logo {{ pointer-events:auto; display:flex; align-items:center; gap:10px; padding:6px 14px 6px 8px; margin-left:-8px;
+            background:var(--ground); opacity:0; visibility:hidden; transition:opacity .18s, visibility .18s; }}
+.fb-logo img {{ width:34px; height:34px; display:block; }}
+.fb-logo span {{ font-family:var(--latin); font-size:27px; line-height:1; letter-spacing:-0.02em; font-weight:700; color:var(--ink); }}
+.fb-logo:hover {{ text-decoration:none; }}
+.scrolled .fb-logo {{ opacity:1; visibility:visible; }}
+.fixbar .menu {{ pointer-events:auto; margin-left:auto; }}
+.fixbar .menu summary {{ background:var(--ground); padding:0 0 0 12px; border-radius:25px; }}
+.today, .art, .ihead {{ scroll-margin-top:96px; }}
 .menu {{ position:relative; }}
 .menu summary {{ list-style:none; display:flex; align-items:center; gap:14px; cursor:pointer; user-select:none;
                  font-family:var(--mono); font-size:13px; letter-spacing:.16em; color:var(--ink); }}
@@ -356,9 +373,17 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .lead-go:hover {{ background:var(--acc-ink); color:#fff; text-decoration:none; }}
 .lead-art {{ display:block; margin-right:calc(-1 * var(--pad) + 24px); }}
 .lead-art img {{ display:block; width:100%; height:auto; max-height:min(640px, calc(100vh - 170px)); object-fit:contain; }}
+.lead-3d .v3d-view, .lead-3d.on .v3d-view, .lead-3d.loading .v3d-view {{ aspect-ratio:1000/780; max-height:min(640px, calc(100vh - 210px));
+                                                                         margin:0 auto; }}
+.lead-3d .fig {{ height:100%; object-fit:contain; }}
+.lead-3d.loading .v3d-wait {{ inset:auto 0 0 auto; background:transparent; align-items:flex-end; padding:0 4px 4px; gap:0;
+                               font-size:11.5px; color:var(--mute); }}
+.lead-3d.loading .v3d-wait b, .lead-3d.loading .v3d-wait .secs {{ display:none; }}
+.lead-3d .v3d-bar {{ justify-content:flex-end; margin-top:6px; }}
+.lead-3d .v3d-bar .help {{ flex-basis:auto; }}
 
 /* Today's Structure on the front page, in the order of the editor's layout: name, headline, figure, four lines, links */
-.today {{ padding:46px 0 54px; border-bottom:4px solid var(--ink); scroll-margin-top:8px; }}
+.today {{ padding:46px 0 54px; border-bottom:4px solid var(--ink); }}
 .today-k {{ margin:0; display:flex; flex-wrap:wrap; align-items:baseline; gap:6px 22px; }}
 .today-k .lb {{ font-family:var(--mono); font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:var(--acc-ink); font-weight:700; }}
 .today-k .tg {{ font-family:var(--sans); font-size:24px; font-weight:500; color:var(--ink); letter-spacing:.01em; }}
@@ -459,6 +484,11 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
   :root {{ --pad:18px; }}
   .mast-row {{ position:relative; }}
   .vol {{ position:absolute; right:0; top:0; }}
+  .menu-slot {{ width:118px; height:44px; }}
+  .fb-row {{ padding-top:31px; }}
+  .fb-logo img {{ width:30px; height:30px; }}
+  .fb-logo span {{ font-size:23px; }}
+  .lead-3d .v3d-bar {{ justify-content:flex-start; }}
   .menu .mb {{ width:44px; height:44px; }}
   .menu .mt {{ font-size:12px; }}
   .lead-h {{ font-size:17px; line-height:1.85; }}
@@ -584,6 +614,13 @@ def menu_html(up: str) -> str:
 
 
 MENU_SCRIPT = r"""
+(function () {
+  var word = document.querySelector('.mast .word');
+  if (!word || !('IntersectionObserver' in window)) return;
+  new IntersectionObserver(function (es) {
+    document.body.classList.toggle('scrolled', !es[0].isIntersecting && es[0].boundingClientRect.top < 0);
+  }).observe(word);
+})();
 document.addEventListener('click', function (e) {
   document.querySelectorAll('details.menu[open]').forEach(function (d) {
     if (!d.contains(e.target) || e.target.closest('.menu-list a')) d.removeAttribute('open');
@@ -593,14 +630,17 @@ document.addEventListener('click', function (e) {
 
 
 def masthead(depth: int, right: str = "") -> str:
-    """The wordmark row inside the page width, with the MENU button on the right; the double rule under it spans the
-    whole window."""
+    """The wordmark row inside the page width; the double rule under it spans the whole window. The MENU button stays
+    where it is at the top right while the page scrolls, and once the wordmark has scrolled away a small one (logo and
+    name only) takes its place at the top left (.fixbar)."""
     up = "../" * depth
     return (f'<header class="mast"><div class="wrap"><div class="mast-row">'
             f'<div class="brand"><a class="word" href="{up}index.html"><img src="{up}assets/logo-mark.svg" alt="">'
             f'<span class="name">{esc(brand.SITE_NAME)}</span></a>'
             f'<p class="tag">{esc(TAGLINE)}</p></div>'
-            f'<div class="vol">{right}{menu_html(up)}</div></div></div><div class="rules"></div></header>')
+            f'<div class="vol">{right}<span class="menu-slot"></span></div></div></div><div class="rules"></div></header>'
+            f'<div class="fixbar"><div class="wrap fb-row"><a class="fb-logo" href="{up}index.html" aria-hidden="true" tabindex="-1">'
+            f'<img src="{up}assets/logo-mark.svg" alt=""><span>{esc(brand.SITE_NAME)}</span></a>{menu_html(up)}</div></div>')
 
 
 def shell(main: str, side: str, sticky: bool = False) -> str:
@@ -718,9 +758,11 @@ def legend_html(info: dict) -> str:
     return f'<div class="legend">{groups}</div>' if groups else ""
 
 
-def viewer_bar(info: dict, up: str) -> tuple[str, str, str]:
-    """Attributes for .v3d, the "loading" overlay and the button bar (3D viewer, loaded on demand by assets/viewer.js)."""
+def viewer_bar(info: dict, up: str, view: dict | None = None) -> tuple[str, str, str]:
+    """Attributes for .v3d, the "loading" overlay and the button bar (3D viewer, loaded on demand by assets/viewer.js).
+    The viewer starts from the figure's own view (info["view"], or `view`): the same side up, membrane proteins upright."""
     pdb = info.get("pdb_id")
+    view = view or info.get("view")
     ents = [{"id": x["entity"], "color": x["color"]} for x in info.get("legend", []) if x.get("entity")]
     if not pdb or not ents:
         return "", "", ""
@@ -728,7 +770,8 @@ def viewer_bar(info: dict, up: str) -> tuple[str, str, str]:
              "sites": x.get("sites", [])} for x in info.get("ligands", [])]
     site = (info.get("site") or {}).get("ligand", "")
     attrs = (f' data-pdb="{esc(pdb)}" data-assets="{up}assets" data-site="{esc(site)}"'
-             f' data-ents="{esc(json.dumps(ents))}" data-ligs="{esc(json.dumps(ligs, ensure_ascii=False))}"')
+             f' data-ents="{esc(json.dumps(ents))}" data-ligs="{esc(json.dumps(ligs, ensure_ascii=False))}"'
+             + (f' data-view="{esc(json.dumps(view))}"' if view else ""))
     wait = ('<div class="v3d-wait" role="status" aria-live="polite"><b>3D を読み込んでいます</b>'
             '<span class="step"></span><span class="secs"></span></div>')
     focus = ('<button type="button" data-v3d="site" class="on-only">結合部位へ（押すたびに次へ）</button>'
@@ -937,20 +980,32 @@ def feature_of(feature: dict | None, picks: list) -> tuple[int, dict, dict] | No
 
 def lead_html(feature: dict | None, picks: list, date: str, root: Path, fig_base: str) -> str:
     """The first screen of the front page: what the site is (three lines), the button down to Today's Structure, and
-    a large picture. The picture is assets/hero.(svg|png|webp|jpg) when the editor has made one, otherwise Today's
-    Structure itself, drawn without labels (pipeline.render: <pmcid>-hero.svg)."""
+    on the right Today's Structure in the 3D viewer, opened by itself on a wide screen. Until Mol* has loaded (and on
+    a phone, where it opens only when asked) the same structure is shown as a drawing from the same view
+    (pipeline.render: <pmcid>-hero.svg)."""
     lines = "".join(f'<span>{esc(t)}</span>' for t in LEAD)
     go = ('<a class="lead-go" href="#today"><span class="tri" aria-hidden="true">▽</span>'
           'Picked up: Today’s Structure</a>') if feature_of(feature, picks) else ""
-    art = ""
-    own = next((p for p in (ROOT / "assets").glob("hero.*") if p.suffix in (".svg", ".png", ".webp", ".jpg")), None)
     hit = feature_of(feature, picks)
-    if own:
-        art = f'<img src="assets/{esc(own.name)}" alt="">'
-    elif hit and (root / date / "figures" / f"{hit[1]['pmcid']}-hero.svg").exists():
-        art = (f'<img src="{fig_base}/{date}/{esc(hit[1]["pmcid"])}-hero.svg" '
-               f'alt="構造図：{esc(hit[2].get("target_en") or hit[2]["target_label"])}">')
-    art_html = f'<a class="lead-art" href="#today" tabindex="-1">{art}</a>' if art else ""
+    art_html = ""
+    if hit and (root / date / "figures" / f"{hit[1]['pmcid']}-hero.svg").exists():
+        pm, pk = hit[1]["pmcid"], hit[2]
+        fd = root / date / "figures"
+        info = read_json(fd / f"{pm}.json") if (fd / f"{pm}.json").exists() else {}
+        attrs, wait, _ = viewer_bar(info, "", info.get("hero_view"))
+        img = (f'<img class="fig" src="{fig_base}/{date}/{esc(pm)}-hero.svg" '
+               f'alt="構造図：{esc(pk.get("target_en") or pk["target_label"])}">')
+        if attrs:   # opens by itself on a wide screen (assets/viewer.js); the drawing stands in until it has loaded
+            bar = ('<div class="v3d-bar"><button type="button" class="go off-only" data-v3d="open">3D で動かす</button>'
+                   '<button type="button" data-v3d="reset" class="on-only">最初の向きに戻す</button>'
+                   '<span class="help on-only">ドラッグで回転 · Ctrl（Mac は ⌘）＋ホイールで拡大 · クリックで周囲のアミノ酸</span>'
+                   '</div><p class="v3d-msg" hidden></p>')
+            wait = ('<div class="v3d-wait" role="status" aria-live="polite"><b>3D を読み込んでいます</b>'
+                    '<span class="step"></span><span class="secs"></span></div>')
+            art_html = (f'<div class="lead-art"><div class="v3d lead-3d" data-auto="wide"{attrs}><div class="v3d-view">{img}'
+                        f'<div class="v3d-canvas"></div>{wait}</div>{bar}</div></div>')
+        else:
+            art_html = f'<a class="lead-art" href="#today" tabindex="-1">{img}</a>'
     return (f'<section class="lead"><div class="wrap lead-grid"><div class="lead-text">'
             f'<h1 class="lead-h">{lines}</h1>{go}</div>{art_html}</div></section>')
 
@@ -1422,8 +1477,6 @@ def build(preview_root: Path | None = None) -> int:
     (SITE_DIR / "issues").mkdir()
     for name in ("logo.svg", "logo-mark.svg", "viewer.js"):
         shutil.copy(ROOT / "assets" / name, SITE_DIR / "assets" / name)
-    for own in (ROOT / "assets").glob("hero.*"):     # the front page's picture, when the editor has made one
-        shutil.copy(own, SITE_DIR / "assets" / own.name)
     LATEST["date"] = next((d for d in issues if load_issue(d, ISSUES_DIR)[1]), None)
     shutil.copytree(ROOT / "assets" / "vendor", SITE_DIR / "assets" / "vendor")
     related = related_articles(library(issues))

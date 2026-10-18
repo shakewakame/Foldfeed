@@ -464,6 +464,20 @@ def _upright(center: tuple, normal: tuple, pts: list[tuple]):
     return _frame(center, x, normal)
 
 
+def camera_view(proj, center: tuple, qs: list[tuple]) -> dict:
+    """The 3D viewer's starting view for the view a projector draws: looking at the middle of the drawn points `qs`
+    from the viewer's side, with the picture's up as up. {"target", "dir" (from the target toward the camera), "up",
+    "half" ([half width, half height] in Å)}: assets/viewer.js sets the distance for its canvas's shape."""
+    o = proj(center)
+    axes = [tuple(proj(tuple(center[i] + (1.0 if i == k else 0.0) for i in range(3)))[c] - o[c] for k in range(3))
+            for c in range(3)]                       # rows: the picture's x, y and z directions in model coordinates
+    xs, ys = [q[0] - o[0] for q in qs], [q[1] - o[1] for q in qs]
+    cx, cy = (min(xs) + max(xs)) / 2, (min(ys) + max(ys)) / 2
+    target = [center[i] + axes[0][i] * cx + axes[1][i] * cy for i in range(3)]
+    return {"target": [round(c, 2) for c in target], "dir": [round(c, 4) for c in axes[2]],
+            "up": [round(c, 4) for c in axes[1]], "half": [round((max(xs) - min(xs)) / 2, 1), round((max(ys) - min(ys)) / 2, 1)]}
+
+
 def _frame(center: tuple, x: tuple, y: tuple):
     """Projector onto the right-handed frame x (right), y (up), z = x × y (toward the viewer)."""
     z = (x[1] * y[2] - x[2] * y[1], x[2] * y[0] - x[0] * y[2], x[0] * y[1] - x[1] * y[0])
@@ -949,6 +963,8 @@ def render(cif_gz: bytes, ligand_ids: set[str], x0: float, y0: float, w: float, 
     xs, ys, zs = [q[0] for q in allq + ligq], [q[1] for q in allq + ligq], [q[2] for q in allq]
     span_x, span_y = max(xs) - min(xs) or 1, max(ys) - min(ys) or 1
     zmin, zmax = min(zs), max(zs)
+    if probe is not None:     # the 3D viewer starts from this same view
+        probe["view"] = camera_view(proj, center, allq + ligq)
 
     def layout(bl: float, br: float, bt: float = 0, bb: float = 0):
         bw, bh = w - bl - br, h - bt - bb

@@ -11,6 +11,11 @@
  * with the amino acids around it drawn as sticks. Those sticks take the colour of the chain they belong to
  * (carbon only; N, O, S keep the usual element colours), so ribbon and sticks match.
  * "結合部位へ" calls the same focus function on one ligand copy at a time, and goes to the next on every press.
+ *
+ * The camera starts from the figure's own view (data-view: MolViewSpec camera target / position / up), so the 3D
+ * structure first appears as drawn, membrane proteins with their outside up. The front page's .v3d[data-auto] opens
+ * by itself on a wide screen and stays open while the reader opens another one; over it the mouse wheel scrolls the
+ * page (Ctrl / ⌘ + wheel zooms), so the first screen does not trap the scroll.
  */
 (function () {
   "use strict";
@@ -20,7 +25,8 @@
   var NEUTRAL = "#8A93A0";
   var TIMEOUT = 120;    // seconds before a load is given up
   var loading = null;   // promise for Mol* itself
-  var current = null;   // the open viewer: { box, viewer, ms }
+  var current = null;   // the box the reader opened (one at a time; the front page's own viewer is apart)
+  var WIDE = "(min-width: 1121px)";
 
   function load(base) {
     if (loading) return loading;
@@ -47,7 +53,7 @@
 
   function hex(c) { return parseInt(c.replace("#", ""), 16); }
 
-  function spec(url, format, ents, ligs) {
+  function spec(url, format, ents, ligs, view) {
     var kids = [];
     ents.forEach(function (e) {
       kids.push({ kind: "component", params: { selector: { label_entity_id: String(e.id) } }, children: [
@@ -65,11 +71,22 @@
       kids.push({ kind: "component", params: { selector: selector }, children: [
         { kind: "representation", params: { type: "ball_and_stick" }, children: colors }] });
     });
-    return { metadata: { version: "1" }, root: { kind: "root", children: [
-      { kind: "canvas", params: { background_color: GROUND } },
+    var top = [{ kind: "canvas", params: { background_color: GROUND } },
       { kind: "download", params: { url: url }, children: [
         { kind: "parse", params: { format: format }, children: [
-          { kind: "structure", params: { type: "model" }, children: kids }] }] }] } };
+          { kind: "structure", params: { type: "model" }, children: kids }] }] }];
+    if (view) top.push({ kind: "camera", params: view });
+    return { metadata: { version: "1" }, root: { kind: "root", children: top } };
+  }
+
+  /* Camera for the figure's view (data-view: target, dir toward the camera, up, half extents in Å), far enough back
+     for the drawn structure to fill this canvas (Mol*'s field of view: 45° vertical). */
+  function cameraFor(view, el) {
+    if (!view || !view.dir) return null;
+    var aspect = (el.clientWidth / el.clientHeight) || 2;
+    var d = Math.max(view.half[1], view.half[0] / aspect) / Math.tan(Math.PI / 8) * 1.2;
+    return { target: view.target, up: view.up,
+             position: view.target.map(function (c, i) { return c + view.dir[i] * d; }) };
   }
 
   function structureOf(plugin) {
@@ -115,7 +132,7 @@
   }
 
   function focusSite(box, step) {
-    var S = current.ms.lib.structure, plugin = current.viewer.plugin, P = S.StructureProperties;
+    var S = box._cur.ms.lib.structure, plugin = box._cur.viewer.plugin, P = S.StructureProperties;
     var sites = sitesOf(box);
     if (!sites.length) return;
     var i = (step + sites.length) % sites.length, s = sites[i];
@@ -144,10 +161,11 @@
   function stop(box) {
     box._token = (box._token || 0) + 1;                 // anything still loading for this box is now stale
     if (box._timer) { clearInterval(box._timer); box._timer = null; }
-    if (current && current.box === box) {
-      try { current.viewer.dispose(); } catch (e) { /* already gone */ }
-      current = null;
+    if (box._cur) {
+      try { box._cur.viewer.dispose(); } catch (e) { /* already gone */ }
+      box._cur = null;
     }
+    if (current === box) current = null;
     box.querySelector(".v3d-canvas").innerHTML = "";
     box.classList.remove("on", "loading");
     delete box.dataset.at;
@@ -156,14 +174,18 @@
   }
 
   function open(box) {
-    if (current) stop(current.box);
+    var auto = !!box.dataset.auto;
+    if (!auto && current && current !== box) stop(current);
     var pdb = box.dataset.pdb, base = box.dataset.assets;
     var ents = JSON.parse(box.dataset.ents || "[]"), ligs = JSON.parse(box.dataset.ligs || "[]");
+    var view = box.dataset.view ? JSON.parse(box.dataset.view) : null;
+    var canvasBox = box.querySelector(".v3d-view");
     var url = box.dataset.url || "https://models.rcsb.org/" + pdb + ".bcif";
     var format = box.dataset.url ? "mmcif" : "bcif";
     if (!hasWebGL()) { say(box, "この端末では 3D 表示（WebGL）を使えない。RCSB のページで開ける。"); return; }
     say(box, "");
     stop(box);
+    if (!auto) current = box;
     var token = box._token, started = Date.now();
     var step = box.querySelector(".v3d-wait .step"), secs = box.querySelector(".v3d-wait .secs");
     function stage(text) { step.textContent = text; }
@@ -191,7 +213,11 @@
         viewportShowAnimation: false, viewportBackgroundColor: GROUND
       }).then(function (viewer) {
         if (!alive()) { try { viewer.dispose(); } catch (e) { /* ignore */ } return null; }
-        current = { box: box, viewer: viewer, ms: ms };
+        box._cur = { viewer: viewer, ms: ms, view: view };
+        if (auto) {
+          try { viewer.plugin.canvas3d.setProps({ camera: { helper: { axes: { name: "off", params: {} } } } }); }
+          catch (e) { /* the axes are a nicety */ }
+        }
         try {
           viewer.plugin.canvas3d.setProps({ postprocessing: {
             occlusion: { name: "on", params: { multiScale: { name: "off", params: {} }, radius: 5, bias: 0.8,
@@ -199,12 +225,20 @@
               transparentThreshold: 0.4 } } } });
         } catch (e) { /* depth shading is a nicety */ }
         stage("3/3　PDB " + pdb + " の座標を RCSB から取得して描画中");
-        return viewer.loadMvsData(JSON.stringify(spec(url, format, ents, ligs)), "mvsj").then(function () {
+        var cam = cameraFor(view, canvasBox);
+        // keep the figure's framing: without this Mol* backs off to fit the bounding sphere once the structure is drawn
+        if (cam) {
+          try { viewer.plugin.canvas3d.setProps({ camera: { manualReset: true } }); } catch (e) { /* framing is a nicety */ }
+        }
+        return viewer.loadMvsData(JSON.stringify(spec(url, format, ents, ligs, cam)), "mvsj").then(function () {
+          // MolViewSpec turns the camera the figure's way but then backs off to the bounding sphere (an animated move
+          // right after loading); once that has run, come in to the figure's framing
+          if (cam) setTimeout(function () { if (alive() && box._cur) viewer.plugin.canvas3d.camera.setState(cam, 0); }, 700);
           return matchFocusColours(ms, viewer, ents, ligs).catch(function () { /* default colours are still usable */ });
         });
       });
     }).then(function () {
-      if (!alive() || !current) return;
+      if (!alive() || !box._cur) return;
       clearInterval(box._timer);
       box._timer = null;
       box.classList.remove("loading");
@@ -227,15 +261,32 @@
     var act = b.dataset.v3d;
     if (act === "open") open(box);
     else if (act === "close") { stop(box); say(box, ""); }
-    else if (current && current.box === box && box.classList.contains("on")) {
+    else if (box._cur && box.classList.contains("on")) {
       if (act === "site") focusSite(box, box.dataset.at === undefined ? 0 : Number(box.dataset.at) + 1);
       else if (act === "reset") {
-        current.viewer.plugin.managers.structure.focus.clear();
-        current.viewer.plugin.managers.camera.reset();
+        var plugin = box._cur.viewer.plugin, cam = cameraFor(box._cur.view, box.querySelector(".v3d-view"));
+        plugin.managers.structure.focus.clear();
+        if (cam && plugin.canvas3d) {
+          // the whole structure's sphere again (focusing on a site narrowed it, and with it the clipping)
+          var bs = plugin.canvas3d.boundingSphereVisible;
+          if (bs && bs.radius) { cam.radius = bs.radius; cam.radiusMax = bs.radius; }
+          plugin.canvas3d.camera.setState(cam, 300);
+        } else plugin.managers.camera.reset();
         delete box.dataset.at;
         var now = box.querySelector(".v3d-now");
         if (now) now.textContent = "";
       }
     }
   });
+
+  /* The front page's viewer: opened by itself on a wide screen, once the page has loaded. The wheel scrolls the page
+     unless Ctrl / ⌘ is held (then Mol* zooms): captured on the box before it reaches the canvas. */
+  function autostart() {
+    [].forEach.call(document.querySelectorAll(".v3d[data-auto]"), function (box) {
+      box.addEventListener("wheel", function (ev) { if (!ev.ctrlKey && !ev.metaKey) ev.stopPropagation(); }, true);
+      if (window.matchMedia && window.matchMedia(WIDE).matches && hasWebGL()) open(box);
+    });
+  }
+  if (document.readyState === "complete") setTimeout(autostart, 50);
+  else window.addEventListener("load", function () { setTimeout(autostart, 50); });
 })();
