@@ -190,6 +190,7 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .ptitle {{ margin:14px 0 26px; font-family:var(--latin); font-size:16.5px; line-height:1.5; color:var(--ink2); }}
 .ptitle .pl {{ margin-right:12px; font-family:var(--mono); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--mute); }}
 .art-4 {{ margin-top:22px; }}
+.nopdb {{ margin:0 0 8px; padding:10px 16px; border-left:3px solid var(--acc); font-size:15px; line-height:1.8; color:var(--ink2); }}
 .art .reads {{ margin-top:22px; }}
 
 /* figures: transparent, on the page ground; the legend and a 3D viewer follow */
@@ -788,6 +789,7 @@ MENU_SCRIPT = r"""
   var head = document.querySelector('.mast');
   if (!head) return;
   var last = window.scrollY, lead = document.querySelector('.lead');
+  var jumped = false;   // after an in-page link down, the first-screen rule no longer holds the header (until back at the top)
   function firstScreen() {
     return (lead ? lead.getBoundingClientRect().bottom + window.scrollY : window.innerHeight) - head.offsetHeight;
   }
@@ -798,7 +800,8 @@ MENU_SCRIPT = r"""
   }
   window.addEventListener('scroll', function () {
     var y = window.scrollY, d = y - last;
-    if (y < firstScreen()) away(false);
+    if (y < head.offsetHeight) jumped = false;
+    if (y < firstScreen() && !jumped) away(false);
     else if (d > 4) away(true);
     else if (d < -4) away(false);
     last = y;
@@ -810,7 +813,9 @@ MENU_SCRIPT = r"""
     if (!t) return;
     e.preventDefault();
     var y = t.getBoundingClientRect().top + window.scrollY;
-    var top = y > window.scrollY ? y - 16 : y - head.offsetHeight - 16;
+    var down = y > window.scrollY;
+    var top = down ? y - 16 : y - head.offsetHeight - 16;
+    if (down) { jumped = true; away(true); }
     var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     window.scrollTo({ top: Math.max(0, top), behavior: calm ? 'auto' : 'smooth' });
     if (history.replaceState) history.replaceState(null, '', '#' + id);
@@ -999,7 +1004,7 @@ def margin_html(cand: dict, pick: dict, n: int, impact_type: str | None = None) 
     elif cand["kind"] == "new_map_only" and cand.get("emdb_ids"):
         pdb_dd = "".join(f'<a class="pdb" href="https://www.ebi.ac.uk/emdb/{esc(e)}">{esc(e)}</a>' for e in cand["emdb_ids"][:6])
     else:
-        pdb_dd = "—" if hot else "補足資料に記載"
+        pdb_dd = "—" if hot else "本文に記載なし"
     pdb_label = "EMDB" if not own and cand["kind"] == "new_map_only" else ("PDB（使用）" if hot else "PDB")
     prots = cand.get("proteins", [])
     uni = ", ".join(f'<a href="https://www.uniprot.org/uniprotkb/{esc(p["uniprot"])}">{esc(p.get("gene") or p["uniprot"])}</a>'
@@ -1132,6 +1137,15 @@ def related_html(items: list[dict], up: str) -> str:
     return f'<h3>Related Articles</h3><ul class="rel">{lis}</ul>'
 
 
+def no_pdb_note(cand: dict) -> str:
+    """For a paper whose text names no PDB ID (it says the structures were deposited, but the IDs are elsewhere or not
+    yet given): the article is written all the same, without a figure, and opens by saying so (the owner, 2026-10-18)."""
+    if cand["kind"] != "new_structure_ids_unlisted" or cand.get("own_structures"):
+        return ""
+    return ('<p class="nopdb">論文の本文から PDB ID にたどり着けなかったため、構造を PDB と照合できず、'
+            '構造図は載せていません。</p>')
+
+
 def article_html(cand: dict, pick: dict, date: str, n: int, root: Path, fig_base: str,
                  impact_type: str | None = None, up: str = "../", related: list[dict] | None = None) -> str:
     lic = esc((cand.get("license") or "ライセンス不明").upper())
@@ -1149,7 +1163,7 @@ def article_html(cand: dict, pick: dict, date: str, n: int, root: Path, fig_base
             f'<h2 class="art-h">{esc(pick["headline"])}</h2>'
             f'<p class="subhead">{esc(pick.get("subhead") or "")}</p>'
             f'<p class="ptitle"><span class="pl">Paper</span><span lang="en">{esc(cand["title"])}</span></p>'
-            f'{figures_html(cand, pick, date, root, fig_base, up)}'
+            f'{figures_html(cand, pick, date, root, fig_base, up) or no_pdb_note(cand)}'
             f'{intro_html(pick)}{paper_link(cand)}'
             f'<h3>Highlights</h3>{hls}{lab}{related_html(related or [], up)}</div>')
     return f'<article class="art" id="a{n}">{margin_html(cand, pick, n, impact_type)}{text}</article>'
@@ -1194,7 +1208,7 @@ def thumb_html(cand: dict, pick: dict, date: str, root: Path, fig_base: str, hre
                 f'alt="構造図：{esc(pick["target_label"])}" loading="lazy"></a>')
     own = cand["own_structures"]
     why = ("PDB 公開待ち" if own and not any(x["status"] == "released" for x in own)
-           else "PDB ID は補足資料" if cand["kind"] == "new_structure_ids_unlisted"
+           else "PDB ID が本文にない" if cand["kind"] == "new_structure_ids_unlisted"
            else "EMDB マップのみ" if cand["kind"] == "new_map_only" else "構造図なし")
     return f'<a class="thumb none" href="{href}">{why}</a>'
 
@@ -1215,7 +1229,7 @@ def facts(cand: dict, pick: dict) -> dict:
     elif cand["kind"] == "new_map_only" and cand.get("emdb_ids"):
         pdb = cand["emdb_ids"][0]
     else:
-        pdb = "公開待ち" if own else ("—" if hot else "補足資料")
+        pdb = "公開待ち" if own else ("—" if hot else "本文に記載なし")
     prots = cand.get("proteins", [])
     return {"target": pick.get("target_en") or pick["target_label"], "method": method or "—", "res": res or "—", "pdb": pdb,
             "pdb_id": shown["pdb_id"] if shown else None,

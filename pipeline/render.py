@@ -45,7 +45,7 @@ def not_covered(meta: dict, picked: set) -> list[dict]:
 
 KIND_JA = {
     "new_structure": "新しい構造",
-    "new_structure_ids_unlisted": "新しい構造（ID は補足資料）",
+    "new_structure_ids_unlisted": "新しい構造（PDB ID が本文にない）",
     "new_map_only": "新しいマップ（EMDB）",
 }
 
