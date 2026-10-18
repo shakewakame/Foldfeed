@@ -1,0 +1,1931 @@
+{
+  "issue_date": "2026-10-17",
+  "index_date": "2026-10-16",
+  "health": {
+    "fresh_oa": 3361,
+    "baseline": 601.5,
+    "days": 14,
+    "threshold": 60,
+    "status": "ok"
+  },
+  "generated_at": "2026-10-17T00:15:41+00:00",
+  "query": "(\"cryo-EM\" OR \"cryoEM\" OR \"cryo-electron microscopy\" OR \"cryo-electron tomography\" OR \"subtomogram\" OR \"crystal structure\" OR \"X-ray crystallography\" OR \"crystallographic\" OR \"NMR structure\" OR \"solution structure\") AND (\"Protein Data Bank\" OR \"PDB\" OR \"wwPDB\" OR \"EMDB\" OR \"accession code\" OR \"accession codes\") AND OPEN_ACCESS:y AND NOT SRC:PPR AND FIRST_IDATE:[2026-10-16 TO 2026-10-16]",
+  "impact_query": "(\"AlphaFold\" OR \"RoseTTAFold\" OR \"ESMFold\" OR \"structure prediction\" OR \"protein design\" OR \"de novo design\" OR \"designed protein\" OR \"binder design\" OR \"ProteinMPNN\" OR \"RFdiffusion\" OR \"structure-based drug design\" OR \"structure-guided\" OR \"structure-based\" OR \"co-crystal structure\" OR \"cocrystal structure\" OR \"mechanism\") AND (\"crystal structure\" OR \"cryo-EM\" OR \"cryo-electron microscopy\" OR \"NMR structure\" OR \"Protein Data Bank\") AND (\"protein\" OR \"enzyme\" OR \"receptor\" OR \"antibody\" OR \"peptide\" OR \"RNA\") AND OPEN_ACCESS:y AND NOT SRC:PPR AND FIRST_IDATE:[2026-10-16 TO 2026-10-16]",
+  "counts": {
+    "hits": 8,
+    "parsed": 25,
+    "new_structure": 2,
+    "new_structure_ids_unlisted": 0,
+    "new_map_only": 1,
+    "uses_existing": 8,
+    "no_ids": 14,
+    "impact_search_parsed": 17,
+    "impact_pool": 22
+  },
+  "candidates": [
+    {
+      "pmcid": "PMC13646831",
+      "pmid": "42847245",
+      "doi": "10.1093/nar/gkag941",
+      "title": "Establishing the molecular basis for MDA5 mutation-linked autoimmunity",
+      "journal": "Nucleic Acids Research",
+      "journal_abbrev": "Nucleic Acids Res",
+      "authors": "Xu L, Jang H, Chung K, Guo R, Pan A, Pyle AM.",
+      "pub_date": "2026-09-01",
+      "index_date": "2026-10-16",
+      "license": "cc by",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "AbstractMelanoma differentiation-associated protein 5 (MDA5), a member of the RIG-I-like receptor family, is a cytoplasmic sensor essential for innate antiviral immunity. MDA5 distinguishes viral RNA from host RNA in part through its ATP hydrolysis activity, which promotes filament turnover on shorter endogenous double-stranded RNAs (dsRNAs). Here, we show that the gain-of-function T331I disease-linked mutation within the ATP-binding pocket disrupts this balance, resulting in constitutive interferon signaling. Through a combination of cryo-electron microscopy (cryoEM), biochemical assays, and cellular analyses, we reveal the extensive network of interactions that precisely position ATP for catalysis in the wild-type MDA5 ATP-binding pocket and also demonstrate that the T331I mutation impairs ATPase activity, thereby stabilizing MDA5–dsRNA complexes and leading to aberrant immune activation. These findings elucidate how MDA5 ATPase activity regulates antiviral specificity and prevents autoimmunity by controlling filament stability and downstream signaling, offering a mechanistic molecular explanation for disease pathogenesis.",
+      "kind": "new_structure",
+      "own_structures": [
+        {
+          "pdb_id": "9Y4J",
+          "status": "released",
+          "title": "CryoEM Structure of human MDA5 with dsRNA (one protein subunit on dsRNA)",
+          "method": "ELECTRON MICROSCOPY",
+          "resolution": 2.81,
+          "release_date": "2026-09-09",
+          "deposit_date": "2025-09-03",
+          "citation_doi": null,
+          "citation_pmid": null,
+          "citation_title": "Unraveling the molecular basis for MDA5 T331I disease-linked mutation",
+          "polymers": [
+            {
+              "description": "Interferon-induced helicase C domain-containing protein 1",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9BYX4"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "RNA 13mer",
+              "type": "RNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "in vitro transcription vector pT7-Fluc(deltai)"
+              ]
+            },
+            {
+              "description": "RNA 13mer",
+              "type": "RNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "in vitro transcription vector pT7-Fluc(deltai)"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "ANP",
+              "name": "PHOSPHOAMINOPHOSPHONIC ACID-ADENYLATE ESTER"
+            }
+          ],
+          "evidence": "entry without a published citation, listed in the deposition statement"
+        },
+        {
+          "pdb_id": "9Y4L",
+          "status": "released",
+          "title": "CryoEM Structure of human MDA5 in complex with dsRNA (two protein subunits on dsRNA)",
+          "method": "ELECTRON MICROSCOPY",
+          "resolution": 2.96,
+          "release_date": "2026-09-09",
+          "deposit_date": "2025-09-03",
+          "citation_doi": null,
+          "citation_pmid": null,
+          "citation_title": "Unraveling the molecular basis for MDA5 T331I disease-linked mutation",
+          "polymers": [
+            {
+              "description": "RNA (30-MER)",
+              "type": "RNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "in vitro transcription vector pT7-Fluc(deltai)"
+              ]
+            },
+            {
+              "description": "RNA (30-MER)",
+              "type": "RNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "in vitro transcription vector pT7-Fluc(deltai)"
+              ]
+            },
+            {
+              "description": "Interferon-induced helicase C domain-containing protein 1",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9BYX4"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "ANP",
+              "name": "PHOSPHOAMINOPHOSPHONIC ACID-ADENYLATE ESTER"
+            }
+          ],
+          "evidence": "entry without a published citation, listed in the deposition statement"
+        },
+        {
+          "pdb_id": "9Q60",
+          "status": "released",
+          "title": "CryoEM Structure of human MDA5 disease-linked mutant T331I with dsRNA (one protein subunit on dsRNA)",
+          "method": "ELECTRON MICROSCOPY",
+          "resolution": 3.12,
+          "release_date": "2026-09-16",
+          "deposit_date": "2025-08-21",
+          "citation_doi": null,
+          "citation_pmid": null,
+          "citation_title": "Unraveling the molecular basis for MDA5 T331I disease-linked mutation",
+          "polymers": [
+            {
+              "description": "RNA-13mer",
+              "type": "RNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "RNA-13mer",
+              "type": "RNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "Interferon-induced helicase C domain-containing protein 1",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9BYX4"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "ATP",
+              "name": "ADENOSINE-5'-TRIPHOSPHATE"
+            }
+          ],
+          "evidence": "entry without a published citation, listed in the deposition statement"
+        },
+        {
+          "pdb_id": "9Q5W",
+          "status": "released",
+          "title": "CryoEM Structure of human MDA5 T331I mutant in complex with dsRNA",
+          "method": "ELECTRON MICROSCOPY",
+          "resolution": 3.21,
+          "release_date": "2026-09-16",
+          "deposit_date": "2025-08-21",
+          "citation_doi": null,
+          "citation_pmid": null,
+          "citation_title": "Unraveling the molecular basis for MDA5 T331I disease-linked mutation",
+          "polymers": [
+            {
+              "description": "Interferon-induced helicase C domain-containing protein 1",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9BYX4"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "RNA (29-MER)",
+              "type": "RNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "RNA (29-MER)",
+              "type": "RNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "ATP",
+              "name": "ADENOSINE-5'-TRIPHOSPHATE"
+            }
+          ],
+          "evidence": "entry without a published citation, listed in the deposition statement"
+        }
+      ],
+      "cited_pdb_ids": [],
+      "emdb_ids": [
+        "EMD-72484",
+        "EMD-72485",
+        "EMD-72284",
+        "EMD-72244",
+        "EMD-72243",
+        "EMD-72285"
+      ],
+      "proteins": [
+        {
+          "uniprot": "Q9BYX4",
+          "gene": "IFIH1",
+          "synonyms": [
+            "MDA5",
+            "RH116"
+          ],
+          "name": "Interferon-induced helicase C domain-containing protein 1",
+          "organism": "Homo sapiens",
+          "prior_pdb_count": 9,
+          "first_structure": false
+        }
+      ],
+      "score": 59
+    },
+    {
+      "pmcid": "PMC13662703",
+      "pmid": "42885379",
+      "doi": "10.21203/rs.3.rs-9488000/v1",
+      "title": "Symmetry-breaking antibody binding reveals extensive capsid malleability in pandemic human norovirus",
+      "journal": "Research Square",
+      "journal_abbrev": "Res Sq",
+      "authors": "Apostol C, Anish R, Pham S, Ettayebi K, Dave J, Neill F, Bok M, Sankaran B, Crawford S, Atmar R, Crowe J, Parreño V, Estes M, Prasad B.",
+      "pub_date": "2026-09-21",
+      "index_date": "2026-10-16",
+      "license": "cc by",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "AbstractVirus capsids are metastable assemblies with an exquisite balance between stability and flexibility, obligatory for entry, infectivity, and immune escape. Yet, the extent to which human viruses exploit capsid plasticity and how that consequently shapes antigenic landscapes remains poorly understood. Human noroviruses (HuNoVs) are the leading cause of acute viral gastroenteritis worldwide1. GII.4 HuNoVs have been evolving epochally, driving most global pandemics, and since 2012, GII.4 Sydney has been the dominant variant2,3. The major capsid protein VP1 is central to infectivity and immune recognition4, and VP1-based virus-like particles (VLPs) are considered promising vaccine candidates5–9. Yet, how the icosahedral HuNoV capsid responds to antibody pressure at the atomic level is still unclear. Here, we present the first atomic structure of GII.4 Sydney capsid determined by cryo-EM, revealing the structural features that likely contribute to its sustained dominance. Using focused refinement10,11, we uncovered the remarkable capsid plasticity in response to symmetry-breaking binding of neutralizing and non-neutralizing antibodies. VP1 adopts 11 distinct conformational modalities to accommodate asymmetric antibody binding, and antibody-disrupted VLPs reassemble into smaller particles with five additional VP1 states. This previously unrecognized extent of conformational adaptability provides key insights for designing next-generation VLP- or mRNA-based vaccines targeting HuNoV infections.",
+      "kind": "new_structure",
+      "own_structures": [
+        {
+          "pdb_id": "12QZ",
+          "status": "unreleased",
+          "evidence": "cited by the paper but not yet released (on hold until publication)"
+        },
+        {
+          "pdb_id": "13KF",
+          "status": "unreleased",
+          "evidence": "cited by the paper but not yet released (on hold until publication)"
+        },
+        {
+          "pdb_id": "13KG",
+          "status": "unreleased",
+          "evidence": "cited by the paper but not yet released (on hold until publication)"
+        },
+        {
+          "pdb_id": "12TF",
+          "status": "unreleased",
+          "evidence": "cited by the paper but not yet released (on hold until publication)"
+        },
+        {
+          "pdb_id": "12TW",
+          "status": "unreleased",
+          "evidence": "cited by the paper but not yet released (on hold until publication)"
+        },
+        {
+          "pdb_id": "12TX",
+          "status": "unreleased",
+          "evidence": "cited by the paper but not yet released (on hold until publication)"
+        },
+        {
+          "pdb_id": "12TY",
+          "status": "unreleased",
+          "evidence": "cited by the paper but not yet released (on hold until publication)"
+        },
+        {
+          "pdb_id": "12TZ",
+          "status": "unreleased",
+          "evidence": "cited by the paper but not yet released (on hold until publication)"
+        },
+        {
+          "pdb_id": "12UA",
+          "status": "unreleased",
+          "evidence": "cited by the paper but not yet released (on hold until publication)"
+        },
+        {
+          "pdb_id": "12UB",
+          "status": "unreleased",
+          "evidence": "cited by the paper but not yet released (on hold until publication)"
+        },
+        {
+          "pdb_id": "12UC",
+          "status": "unreleased",
+          "evidence": "cited by the paper but not yet released (on hold until publication)"
+        },
+        {
+          "pdb_id": "12UD",
+          "status": "unreleased",
+          "evidence": "cited by the paper but not yet released (on hold until publication)"
+        },
+        {
+          "pdb_id": "12TV",
+          "status": "unreleased",
+          "evidence": "cited by the paper but not yet released (on hold until publication)"
+        },
+        {
+          "pdb_id": "12TU",
+          "status": "unreleased",
+          "evidence": "cited by the paper but not yet released (on hold until publication)"
+        },
+        {
+          "pdb_id": "12TP",
+          "status": "unreleased",
+          "evidence": "cited by the paper but not yet released (on hold until publication)"
+        },
+        {
+          "pdb_id": "12TQ",
+          "status": "unreleased",
+          "evidence": "cited by the paper but not yet released (on hold until publication)"
+        },
+        {
+          "pdb_id": "12TR",
+          "status": "unreleased",
+          "evidence": "cited by the paper but not yet released (on hold until publication)"
+        },
+        {
+          "pdb_id": "12TS",
+          "status": "unreleased",
+          "evidence": "cited by the paper but not yet released (on hold until publication)"
+        },
+        {
+          "pdb_id": "12TT",
+          "status": "unreleased",
+          "evidence": "cited by the paper but not yet released (on hold until publication)"
+        },
+        {
+          "pdb_id": "12PG",
+          "status": "unreleased",
+          "evidence": "cited by the paper but not yet released (on hold until publication)"
+        },
+        {
+          "pdb_id": "12UE",
+          "status": "unreleased",
+          "evidence": "cited by the paper but not yet released (on hold until publication)"
+        }
+      ],
+      "cited_pdb_ids": [
+        "7MRY",
+        "6OUU",
+        "7JIE",
+        "6IS5",
+        "8G0W"
+      ],
+      "emdb_ids": [
+        "EMD-76702",
+        "EMD-77106",
+        "EMD-77107",
+        "EMD-76740",
+        "EMD-76756",
+        "EMD-76757",
+        "EMD-76758",
+        "EMD-76759",
+        "EMD-76760",
+        "EMD-76761",
+        "EMD-76762",
+        "EMD-76763",
+        "EMD-76764",
+        "EMD-76755",
+        "EMD-76754",
+        "EMD-76749",
+        "EMD-76750",
+        "EMD-76751",
+        "EMD-76752",
+        "EMD-76753"
+      ],
+      "proteins": [],
+      "score": 55
+    },
+    {
+      "pmcid": "PMC13639035",
+      "pmid": "42834059",
+      "doi": "10.1038/s41467-026-78090-y",
+      "title": "Quasi-continuous cotranslational compaction and folding of a multidomain protein",
+      "journal": "Nature Communications",
+      "journal_abbrev": "Nat Commun",
+      "authors": "Mitsikosta S, Westerfield JM, Pardo-Avila F, Levitt M, von Heijne G, Metola A.",
+      "pub_date": "2026-10-05",
+      "index_date": "2026-10-16",
+      "license": "cc by",
+      "pub_types": [
+        "research support, non-u.s. gov't",
+        "research-article",
+        "journal article",
+        "research support, n.i.h., extramural"
+      ],
+      "abstract": "AbstractMost proteins start to fold cotranslationally as they come off the ribosome. So far, studies of cotranslational folding have focused mainly on small, single-domain proteins. Here, we have used Force Profile Analysis to study the cotranslational folding of Firefly Luciferase, a complex 550-residue protein composed of an N-terminal domain (NTD) encompassing two split Rossmann folds (RF-1, RF-2) and a β-roll, and a flexibly attached C-terminal domain (CTD). The folding process is characterized by a quasi-continuous series of compaction/folding steps that generate intermediate-size pulling forces on the nascent chain, punctuated by a prominent high-force event that represents the folding of the RF-2 domain, and a few low-force instances that likely indicate the formation of distinct folding intermediates. Trigger Factor interacts extensively with the nascent chain when the central part of RF-2 and the early parts of the CTD are synthesized. Our analysis uncovers a cotranslational compaction/folding process that is rich in detail and not just a simple succession of a few distinct, cooperative folding transitions.Subject terms: Protein folding, Computational biophysics, Cryoelectron microscopy, Single-molecule biophysics",
+      "kind": "new_map_only",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "3JBU",
+        "5DV9",
+        "5WYS"
+      ],
+      "emdb_ids": [
+        "EMD-56368",
+        "EMD-56453",
+        "EMD-56462"
+      ],
+      "proteins": [],
+      "score": 35
+    },
+    {
+      "pmcid": "PMC13662702",
+      "pmid": "42885366",
+      "doi": "10.64898/2026.10.07.26364649",
+      "title": "Advancing genetic pathogenicity prediction with three-dimensional proteoform-phenotype analysis",
+      "journal": "medRxiv",
+      "journal_abbrev": null,
+      "authors": "Sun Y, Velez G, Li A, Kumar A, Vu J, Phillips C, Rasmussen D, Oh J, Costa M, Tsang S, Sun Y, Bassuk A, Mahajan V.",
+      "pub_date": "2026-10-09",
+      "index_date": "2026-10-16",
+      "license": null,
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "AbstractAscertaining the pathogenicity and clinical relevance of genetic mutations is a longstanding challenge across human disease. This is particularly relevant for genes with many variants of unknown significance (VUS), such as PRPH2-retinopathy, where complex variable phenotype patterns and limited genotype correlations hinder application of precision-medicine therapies. Recent AI-based pathogenicity tools, while powerful, may be limited by insufficient mechanistic or phenotypic training data. We established a three-dimensional proteoform-phenotype analysis framework by combining AI-generated protein structural models with clinical genomics data, in which expert consensus adjudicates model outputs through a human-in-the-loop AI approach, to evaluate 46 curated pathogenic missense variants against a background VUS pool. The framework was prospectively validated using an independently evaluated clinical patient cohort. This analysis resolved spatial biophysical signatures corresponding to distinct clinical phenotypes (i.e., retinitis pigmentosa, macular dystrophy, and pattern dystrophy) as well as complex blended presentations. Leveraging these confirmed structural signatures, we prioritized high-risk VUS. This mechanism-resolved framework can be extended to other therapeutically actionable genes to identify novel causal variants and improve diagnosis, prognosis, and better select rare, eligible patients for emerging molecular gene therapy trials.Keywords: PRPH2, peripherin-2, AlphaFold, inherited renal disease, genotype-phenotype",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "7ZW1"
+      ],
+      "emdb_ids": [],
+      "cited_structures": [
+        {
+          "pdb_id": "7ZW1",
+          "status": "released",
+          "title": "Human PRPH2-ROM1 hetero-dimer",
+          "method": "ELECTRON MICROSCOPY",
+          "resolution": 3.7,
+          "release_date": "2022-11-16",
+          "deposit_date": "2022-05-17",
+          "citation_doi": "10.1126/sciadv.add3677",
+          "citation_pmid": "36351012",
+          "citation_title": "Cryo-EM structures of peripherin-2 and ROM1 suggest multiple roles in photoreceptor membrane morphogenesis.",
+          "polymers": [
+            {
+              "description": "Peripherin-2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P23942"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "Rod outer segment membrane protein 1",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q03395"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "Nanobody",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Lama"
+              ]
+            }
+          ],
+          "ligands": []
+        }
+      ],
+      "impact": {
+        "score": 4,
+        "types": [
+          "ai_design",
+          "mechanism"
+        ],
+        "validation": [],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [
+        {
+          "uniprot": "P23942",
+          "gene": "PRPH2",
+          "synonyms": [
+            "PRPH",
+            "RDS",
+            "TSPAN22"
+          ],
+          "name": "Peripherin-2",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "Q03395",
+          "gene": "ROM1",
+          "synonyms": [
+            "TSPAN23"
+          ],
+          "name": "Rod outer segment membrane protein 1",
+          "organism": "Homo sapiens"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13663481",
+      "pmid": null,
+      "doi": "10.1021/acs.jcim.6c01952",
+      "title": "From Closed to Mighty: How GTP-Induced Allosteric Dynamics, Dimerization, and Membrane Binding Transform a Bacterial Dynamin-like Protein",
+      "journal": "Journal of Chemical Information and Modeling",
+      "journal_abbrev": "J Chem Inf Model",
+      "authors": "Schumann W, Bundschuh B, Loschwitz J, Strodel B.",
+      "pub_date": "2026-10-16",
+      "index_date": "2026-10-16",
+      "license": "cc by",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "AbstractDynamins, crucial GTPases involved in membrane remodeling, play key roles in processes like endocytosis and membrane fission. While their importance is well-established, the precise dynamics of their conformational changes remain unclear. This study investigates the bacterial dynamin-like protein (BDLP) from Nostoc punctiforme, which undergoes a dramatic closed-to-open transition upon GTP binding. Using standard and enhanced all-atom molecular dynamics simulations, we map this transition, revealing a complex energetic landscape. The initial barrier arises from disruption of salt bridges formed by the GTPase domain with the trunk and paddle, setting off the main hinge motion. Subsequent conformational changes involve further hinge motions and lateral shearing to minimize electrostatic forces. Notably, GTP binding accelerates the transition by 5 orders of magnitude through an allosteric mechanism. Our multiscale simulations of 37.1 μs accumulated simulation time show that BDLP dimerization and membrane binding are necessary to initiate the stabilization of the open conformation. These findings provide crucial insights into BDLP’s membrane remodeling mechanism, advancing our understanding of dynamin dynamics.",
+      "source": "impact_search",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "2J69",
+        "2W6D"
+      ],
+      "emdb_ids": [],
+      "cited_structures": [
+        {
+          "pdb_id": "2J69",
+          "status": "released",
+          "title": "Bacterial dynamin-like protein BDLP",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 3.0,
+          "release_date": "2006-12-04",
+          "deposit_date": "2006-09-26",
+          "citation_doi": "10.1038/nature05312",
+          "citation_pmid": "17122778",
+          "citation_title": "A Bacterial Dynamin-Like Protein",
+          "polymers": [
+            {
+              "description": "BACTERIAL DYNAMIN-LIKE PROTEIN",
+              "type": "Protein",
+              "uniprot_ids": [
+                "B2IZD3"
+              ],
+              "organisms": [
+                "NOSTOC PUNCTIFORME"
+              ]
+            }
+          ],
+          "ligands": []
+        },
+        {
+          "pdb_id": "2W6D",
+          "status": "released",
+          "title": "BACTERIAL DYNAMIN-LIKE PROTEIN LIPID TUBE BOUND",
+          "method": "ELECTRON MICROSCOPY",
+          "resolution": 9.0,
+          "release_date": "2009-12-22",
+          "deposit_date": "2008-12-18",
+          "citation_doi": "10.1016/j.cell.2009.11.003",
+          "citation_pmid": "20064379",
+          "citation_title": "Structure of a Bacterial Dynamin-Like Protein Lipid Tube Provides a Mechanism for Assembly and Membrane Curving.",
+          "polymers": [
+            {
+              "description": "DYNAMIN FAMILY PROTEIN",
+              "type": "Protein",
+              "uniprot_ids": [
+                "B2IZD3"
+              ],
+              "organisms": [
+                "NOSTOC PUNCTIFORME"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "GDP",
+              "name": "GUANOSINE-5'-DIPHOSPHATE"
+            },
+            {
+              "id": "CPL",
+              "name": "1-PALMITOYL-2-LINOLEOYL-SN-GLYCERO-3-PHOSPHOCHOLINE"
+            }
+          ]
+        }
+      ],
+      "impact": {
+        "score": 3,
+        "types": [
+          "mechanism"
+        ],
+        "validation": [],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [
+        {
+          "uniprot": "B2IZD3",
+          "gene": null,
+          "synonyms": [],
+          "name": "Bacterial dynamin-like protein",
+          "organism": "Nostoc punctiforme (strain ATCC 29133 / PCC 73102)"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13654827",
+      "pmid": "42860372",
+      "doi": "10.1111/jcmm.71396",
+      "title": "Molecular Dynamics Reveals a Glycan Conformation Underlying IDUA Dysfunction in Attenuated MPS I",
+      "journal": "Journal of Cellular and Molecular Medicine",
+      "journal_abbrev": "J Cell Mol Med",
+      "authors": "Papadopoulos M, Bonapace G, Taglietti L, Ferla B, Rizzi R, Pitaro M, Concolino D, Alberga D, Mangiatordi G.",
+      "pub_date": "2026-10-01",
+      "index_date": "2026-10-16",
+      "license": "cc by",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "ABSTRACTMucopolysaccharidosis Type I (MPS I) is a rare autosomal recessive lysosomal storage disorder caused by mutations in α‐ʟ‐iduronidase (IDUA) enzyme, a glycosylated hydrolase responsible for glycosaminoglycan (GAG) degradation. Pathogenic variants are associated with a broad clinical spectrum, from severe Hurler syndrome to attenuated Scheie phenotype. The missense mutations L490P and P533R cause attenuated‐intermediate MPS I, retaining residual enzyme activity. To investigate the structural mechanisms underlying these phenotypes, we performed all‐atom molecular dynamics simulations –18 trajectories of 1.6 μs each– comparing wild type IDUA with L490P and P533R mutants at pH 7.5 and 4.5, mimicking the endoplasmic reticulum (ER) and lysosomal microenvironments, respectively. Backbone root‐mean‐square deviation and fluctuation analyses indicated that the overall protein fold was maintained across conditions; however, we identified a pH‐dependent restricted conformational flexibility of the N372‐linked glycan in both mutants. Cluster analysis performed on the obtained trajectories showed that both mutations affect the conformation of this glycan. Hydrogen bond analysis further revealed that P533R induces aberrant, persistent glycan–protein interactions, providing a possible structural explanation for reduced IDUA activity and, therefore, GAG processing. Our findings, supported by in vitro data, propose glycan conformational restriction as a possible new molecular mechanism that underpins enzymatic dysfunction in attenuated MPS I, opening new avenues for structure‐informed therapeutic strategies.",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "4KGL"
+      ],
+      "emdb_ids": [],
+      "cited_structures": [
+        {
+          "pdb_id": "4KGL",
+          "status": "released",
+          "title": "Crystal structure of human alpha-L-iduronidase complex with [2R,3R,4R,5S]-2-carboxy-3,4,5-trihydroxy-piperidine",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 2.701,
+          "release_date": "2013-09-18",
+          "deposit_date": "2013-04-29",
+          "citation_doi": "10.1038/nchembio.1357",
+          "citation_pmid": "24036510",
+          "citation_title": "Insights into mucopolysaccharidosis I from the structure and action of alpha-L-iduronidase.",
+          "polymers": [
+            {
+              "description": "Alpha-L-iduronidase",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P35475"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "IDJ",
+              "name": "(2R,3R,4R,5S)-3,4,5-trihydroxypiperidine-2-carboxylic acid"
+            }
+          ]
+        }
+      ],
+      "impact": {
+        "score": 5,
+        "types": [
+          "mechanism"
+        ],
+        "validation": [
+          "in vitro",
+          "mutant"
+        ],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [
+        {
+          "uniprot": "P35475",
+          "gene": "IDUA",
+          "synonyms": [],
+          "name": "Alpha-L-iduronidase",
+          "organism": "Homo sapiens"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13652328",
+      "pmid": "42832573",
+      "doi": "10.1371/journal.pntd.0014742",
+      "title": "Novel inhibitors against Cryptosporidium parvum through blocking its energy metabolism",
+      "journal": "PLOS Neglected Tropical Diseases",
+      "journal_abbrev": "PLoS Negl Trop Dis",
+      "authors": "Xu C, Ji Y, Sha Q, Li K.",
+      "pub_date": "2026-10-05",
+      "index_date": "2026-10-16",
+      "license": "cc by",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "Through systematic structural optimization and modification of anti-Cryptosporidium parvum compound NSC158011 (N-1-naphthalenyl-2-(phenylthiol) ethane thioamide), we constructed a virtual compound library comprising 1,440 derivatives, and 29 derivatives were selected via molecular docking for chemical synthesis. Among them, eight derivatives exhibited significant inhibitory effects on LDH compared with NSC158011. In vitro examination found that two derivatives could markedly reduce the number of C. parvum in cells while exhibiting reduced toxicity. In vivo studies in model animals (IFN-γ knockout mouse) and native animals (calves) further validated the derivatives’ potent anti-parasitic effects and their ability to alleviate intestinal villus atrophy caused by parasitic infections. Further investigations revealed that compound treatment was associated with upregulated expression of intestinal tight junction proteins (ZO-1, Occludin, Claudin-1) and downregulated the expression level of inflammatory protein Caspase-1. Analysis of the gut microbiota and metabolomics in calves indicated that treatment significantly restored the abundance of beneficial flora and regulated key metabolites, including isocitric acid and ornithine. The two derivatives identified in this study represent promising lead compounds for further development as anti-cryptosporidiosis agents, with potential relevance to livestock production and public health.",
+      "source": "impact_search",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "4ND5",
+        "1I0Z"
+      ],
+      "emdb_ids": [],
+      "cited_structures": [
+        {
+          "pdb_id": "4ND5",
+          "status": "released",
+          "title": "Crystal structure of the lactate dehydrogenase from cryptosporidium parvum",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 2.1,
+          "release_date": "2014-12-17",
+          "deposit_date": "2013-10-25",
+          "citation_doi": "10.1016/j.ijbiomac.2014.12.019",
+          "citation_pmid": "25542170",
+          "citation_title": "Biochemical and structural characterization of Cryptosporidium parvum Lactate dehydrogenase.",
+          "polymers": [
+            {
+              "description": "Lactate dehydrogenase, adjacent gene encodes predicted malate dehydrogenase",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q5CYZ2"
+              ],
+              "organisms": [
+                "Cryptosporidium parvum"
+              ]
+            }
+          ],
+          "ligands": []
+        },
+        {
+          "pdb_id": "1I0Z",
+          "status": "released",
+          "title": "HUMAN HEART L-LACTATE DEHYDROGENASE H CHAIN, TERNARY COMPLEX WITH NADH AND OXAMATE",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 2.1,
+          "release_date": "2001-03-28",
+          "deposit_date": "2001-01-30",
+          "citation_doi": "10.1002/1097-0134(20010501)43:2<175::aid-prot1029>3.0.co;2-#",
+          "citation_pmid": "11276087",
+          "citation_title": "Structural basis for altered activity of M- and H-isozyme forms of human lactate dehydrogenase.",
+          "polymers": [
+            {
+              "description": "L-LACTATE DEHYDROGENASE H CHAIN",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P07195"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "OXM",
+              "name": "OXAMIC ACID"
+            },
+            {
+              "id": "NAI",
+              "name": "1,4-DIHYDRONICOTINAMIDE ADENINE DINUCLEOTIDE"
+            }
+          ]
+        }
+      ],
+      "impact": {
+        "score": 3,
+        "types": [
+          "drug"
+        ],
+        "validation": [
+          "in vitro",
+          "in vivo"
+        ],
+        "low": [
+          "molecular docking"
+        ],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [
+        {
+          "uniprot": "P07195",
+          "gene": "LDHB",
+          "synonyms": [],
+          "name": "L-lactate dehydrogenase B chain",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "Q5CYZ2",
+          "gene": null,
+          "synonyms": [],
+          "name": "L-lactate dehydrogenase",
+          "organism": "Cryptosporidium parvum (strain Iowa II)"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13641065",
+      "pmid": "42837290",
+      "doi": "10.1093/hmg/ddag103",
+      "title": "Parkinson’s disease-associated LRRK2 risk variant, G2385R, enhances Rab substrate phosphorylation and impairs neuronal integrity",
+      "journal": "Human Molecular Genetics",
+      "journal_abbrev": "Hum Mol Genet",
+      "authors": "Nguyen APT, Moser R, Bryant N, Cunningham LA, Worden EJ, Moore DJ.",
+      "pub_date": "2026-09-01",
+      "index_date": "2026-10-16",
+      "license": "cc by-nc",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "AbstractMutations in the LRRK2 gene are the most frequent cause of familial Parkinson’s disease (PD) whereas common variants are associated with an increased risk for sporadic PD. LRRK2 encodes a multi-domain protein displaying two functional enzymatic activities: GTPase and kinase. In addition to familial mutations, several common LRRK2 coding variants have been associated with PD risk in different ethnic populations. Little is known about how these coding variants modulate the risk of developing PD. In this study, we aimed to evaluate the properties of a collection of LRRK2 coding risk variants (A419V, N551K, R1398H, R1628P, M1646T, S1647T, G2385R). With the exception of G2385R, we find that coding risk variants have minimal impact on LRRK2 protein levels, GTP-binding, LRRK2 phosphorylation, and subcellular localization in human cells and primary neurons. G2385R LRRK2 exhibits reduced phosphorylation at Ser910/Ser935 and Ser1292, consistent with diminished kinase activity. Notably, however, LRRK2 variants associated with increased PD risk (R1628P, M1646T, and G2385R) significantly elevate the levels of LRRK2-mediated Rab10 phosphorylation by >two-fold in cells. In contrast, LRRK2 variants associated with reduced PD risk (N551K, R1398H, and N551K-R1398H) do not alter pRab10 levels. The G2385R LRRK2 variant significantly inhibits neurite outgrowth in primary cortical neurons compared to wild-type LRRK2. Our study indicates that LRRK2-dependent Rab phosphorylation represents a relevant readout of PD risk induced by LRRK2 variants and demonstrates that the G2385R variant creates a hyperactive kinase that can impair neuronal integrity at comparable levels to the effects of G2019S LRRK2.",
+      "source": "impact_search",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "7LHW",
+        "7LHT"
+      ],
+      "emdb_ids": [],
+      "cited_structures": [
+        {
+          "pdb_id": "7LHW",
+          "status": "released",
+          "title": "Structure of the LRRK2 monomer",
+          "method": "ELECTRON MICROSCOPY",
+          "resolution": 3.7,
+          "release_date": "2021-06-16",
+          "deposit_date": "2021-01-26",
+          "citation_doi": "10.1016/j.cell.2021.05.004",
+          "citation_pmid": "34107286",
+          "citation_title": "Structural analysis of the full-length human LRRK2.",
+          "polymers": [
+            {
+              "description": "Leucine-rich repeat serine/threonine-protein kinase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q5S007"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "ATP",
+              "name": "ADENOSINE-5'-TRIPHOSPHATE"
+            },
+            {
+              "id": "GDP",
+              "name": "GUANOSINE-5'-DIPHOSPHATE"
+            }
+          ]
+        },
+        {
+          "pdb_id": "7LHT",
+          "status": "released",
+          "title": "Structure of the LRRK2 dimer",
+          "method": "ELECTRON MICROSCOPY",
+          "resolution": 3.5,
+          "release_date": "2021-06-16",
+          "deposit_date": "2021-01-26",
+          "citation_doi": "10.1016/j.cell.2021.05.004",
+          "citation_pmid": "34107286",
+          "citation_title": "Structural analysis of the full-length human LRRK2.",
+          "polymers": [
+            {
+              "description": "Leucine-rich repeat serine/threonine-protein kinase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q5S007"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "GDP",
+              "name": "GUANOSINE-5'-DIPHOSPHATE"
+            },
+            {
+              "id": "ATP",
+              "name": "ADENOSINE-5'-TRIPHOSPHATE"
+            }
+          ]
+        }
+      ],
+      "impact": {
+        "score": 2,
+        "types": [],
+        "validation": [],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [
+        {
+          "uniprot": "Q5S007",
+          "gene": "LRRK2",
+          "synonyms": [
+            "PARK8"
+          ],
+          "name": "Leucine-rich repeat serine/threonine-protein kinase 2",
+          "organism": "Homo sapiens"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13664539",
+      "pmid": null,
+      "doi": "10.3390/cancers18193074",
+      "title": "Re-Evaluating Multi-Kinase Inhibitors Targeting FGFR and VEGFR Pathways for Combined Therapy in Colorectal Cancer: A Preclinical Study",
+      "journal": "Cancers",
+      "journal_abbrev": "Cancers (Basel)",
+      "authors": "Boichuk S, Gessel T, Dunaev P, Galyautdinova A, Egorova E, Kopnin P, Andriutsa N, Galembikova A.",
+      "pub_date": "2026-09-22",
+      "index_date": "2026-10-16",
+      "license": "cc by",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "Simple SummaryGiven that overexpression and increased activity of ATP-binding cassette (ABC) transporters contribute to multidrug resistance (MDR) in human malignancies, there is an urgent need to develop novel, effective therapies that overcome MDR and increase chemotherapy response rates. We show here that some FGFR and VEGFR inhibitors can effectively potentiate the cytotoxic and anti-proliferative activity of certain chemotherapeutic agents, including topoisomerase II inhibitor Doxorubicin and antimetabolite 5-Fluorouracil, against colorectal cancer cells (CRCs) via targeting ABC transporters, thereby providing novel therapeutic avenues for treating CRCs that progress despite standard conventional therapies.",
+      "source": "impact_search",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "7A6E",
+        "6FEQ"
+      ],
+      "emdb_ids": [],
+      "cited_structures": [
+        {
+          "pdb_id": "7A6E",
+          "status": "released",
+          "title": "Nanodisc reconstituted human ABCB1 in complex with MRK16 Fab and tariquidar",
+          "method": "ELECTRON MICROSCOPY",
+          "resolution": 3.6,
+          "release_date": "2020-10-14",
+          "deposit_date": "2020-08-25",
+          "citation_doi": "10.1073/pnas.2010264117",
+          "citation_pmid": "33020312",
+          "citation_title": "Cryo-EM structures reveal distinct mechanisms of inhibition of the human multidrug transporter ABCB1.",
+          "polymers": [
+            {
+              "description": "MRK16 Fab-fragment heavy chain",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "MRK16 Fab-fragment light chain",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "Multidrug resistance protein 1",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P08183"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "R1H",
+              "name": "tariquidar"
+            }
+          ]
+        },
+        {
+          "pdb_id": "6FEQ",
+          "status": "released",
+          "title": "Structure of inhibitor-bound ABCG2",
+          "method": "ELECTRON MICROSCOPY",
+          "resolution": 3.6,
+          "release_date": "2018-04-11",
+          "deposit_date": "2018-01-03",
+          "citation_doi": "10.1038/s41594-018-0049-1",
+          "citation_pmid": "29610494",
+          "citation_title": "Structural basis of small-molecule inhibition of human multidrug transporter ABCG2.",
+          "polymers": [
+            {
+              "description": "5D3(Fab) heavy chain variable domain",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "5D3(Fab) light chain variable domain",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "ATP-binding cassette sub-family G member 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UNQ0"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "D6T",
+              "name": "~{N}-[5-[1-[4-[2-[6-methoxy-7-[2-[2-(2-methoxyethoxy)ethoxy]ethoxy]-3,4-dihydro-1~{H}-isoquinolin-2-yl]ethyl]phenyl]-1,2,3-triazol-4-yl]-2-propanoyl-phenyl]quinoline-2-carboxamide"
+            }
+          ]
+        }
+      ],
+      "impact": {
+        "score": 3,
+        "types": [
+          "drug"
+        ],
+        "validation": [],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [
+        {
+          "uniprot": "P08183",
+          "gene": "ABCB1",
+          "synonyms": [
+            "MDR1",
+            "PGY1"
+          ],
+          "name": "ATP-dependent translocase ABCB1",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "Q9UNQ0",
+          "gene": "ABCG2",
+          "synonyms": [
+            "ABCP",
+            "BCRP",
+            "BCRP1",
+            "MXR"
+          ],
+          "name": "Broad substrate specificity ATP-binding cassette transporter ABCG2",
+          "organism": "Homo sapiens"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13656267",
+      "pmid": "42866468",
+      "doi": "10.1021/acsmedchemlett.6c00282",
+      "title": "The Water-Soluble [60]Fullerene Derivatives as Binders of SARS-CoV‑2 Proteins",
+      "journal": "ACS Medicinal Chemistry Letters",
+      "journal_abbrev": "ACS Med Chem Lett",
+      "authors": "Malarz K, Marforio T, Gawecki R, Dreszer D, Calvaresi M, Serda M.",
+      "pub_date": "2026-10-16",
+      "index_date": "2026-10-16",
+      "license": "cc by",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "Water-soluble fullerene derivatives represent emerging molecular nanomaterials for antiviral drug discovery, yet their target selectivity against SARS-CoV-2 proteins remains insufficiently defined. Here, four functionalized [60]­fullerenes, C60(OH)24, C60ser, C60ALA, and C60Trp, were evaluated as binders of key SARS-CoV-2 targets involved in viral entry and replication: spike glycoprotein, papain-like protease, 3CL main protease, and RNA-dependent RNA polymerase. Microscale thermophoresis revealed distinct target-dependent binding profiles governed by fullerene functionalization. The C60Trp fullerene was the most active derivative, binding Spike with nanomolar affinity (Kd = 94.8 nM) and showing micromolar affinity toward papain-like protease and 3CL main protease. Docking and molecular dynamics simulations supported the preferential interaction of C60Trp with the spike protein cavity through combined fullerene cage complementarity and polar interactions with lysine and arginine residues. The tested derivatives showed low cytotoxicity in A549 cells, and C60Trp was efficiently internalized. These findings identify tryptophan-functionalized [60]­fullerene as a promising multivalent scaffold for SARS-CoV-2 protein targeting.",
+      "source": "impact_search",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "7CMD",
+        "7OVZ",
+        "7FCD",
+        "8DZ2"
+      ],
+      "emdb_ids": [],
+      "cited_structures": [
+        {
+          "pdb_id": "7CMD",
+          "status": "released",
+          "title": "Crystal structure of the SARS-CoV-2 PLpro with GRL0617",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 2.59,
+          "release_date": "2020-09-02",
+          "deposit_date": "2020-07-27",
+          "citation_doi": "10.1016/j.apsb.2020.08.014",
+          "citation_pmid": "32895623",
+          "citation_title": "Crystal structure of SARS-CoV-2 papain-like protease.",
+          "polymers": [
+            {
+              "description": "Non-structural protein 3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0DTD1"
+              ],
+              "organisms": [
+                "Severe acute respiratory syndrome coronavirus 2"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "TTT",
+              "name": "5-amino-2-methyl-N-[(1R)-1-naphthalen-1-ylethyl]benzamide"
+            }
+          ]
+        },
+        {
+          "pdb_id": "7OVZ",
+          "status": "released",
+          "title": "SOLUTION NMR STRUCTURE OF MAXIMIN 1 IN 50% TRIFLUOROETHANOL",
+          "method": "SOLUTION NMR",
+          "resolution": null,
+          "release_date": "2021-10-13",
+          "deposit_date": "2021-06-15",
+          "citation_doi": "10.1002/psc.3370",
+          "citation_pmid": "34569121",
+          "citation_title": "Biophysical study of the structure and dynamics of the antimicrobial peptide maximin 1.",
+          "polymers": [
+            {
+              "description": "Maximin-1",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P83080"
+              ],
+              "organisms": [
+                "Bombina maxima"
+              ]
+            }
+          ],
+          "ligands": []
+        },
+        {
+          "pdb_id": "7FCD",
+          "status": "released",
+          "title": "Structure of the SARS-CoV-2 A372T spike glycoprotein (open)",
+          "method": "ELECTRON MICROSCOPY",
+          "resolution": 3.9,
+          "release_date": "2022-01-26",
+          "deposit_date": "2021-07-14",
+          "citation_doi": "10.1038/s41422-021-00600-y",
+          "citation_pmid": "35017654",
+          "citation_title": "Loss of Spike N370 glycosylation as an important evolutionary event for the enhanced infectivity of SARS-CoV-2.",
+          "polymers": [
+            {
+              "description": "Spike glycoprotein",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0DTC2"
+              ],
+              "organisms": [
+                "Severe acute respiratory syndrome coronavirus 2"
+              ]
+            }
+          ],
+          "ligands": []
+        },
+        {
+          "pdb_id": "8DZ2",
+          "status": "released",
+          "title": "Crystal Structure of SARS-CoV-2 Main protease in complex with Nirmatrelvir",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 2.129,
+          "release_date": "2022-10-05",
+          "deposit_date": "2022-08-06",
+          "citation_doi": "10.1016/j.jbc.2023.103004",
+          "citation_pmid": "36775130",
+          "citation_title": "Structural basis of nirmatrelvir and ensitrelvir activity against naturally occurring polymorphisms of the SARS-CoV-2 main protease.",
+          "polymers": [
+            {
+              "description": "3C-like proteinase nsp5",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0DTD1"
+              ],
+              "organisms": [
+                "Severe acute respiratory syndrome coronavirus 2"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "4WI",
+              "name": "(1R,2S,5S)-N-{(1E,2S)-1-imino-3-[(3S)-2-oxopyrrolidin-3-yl]propan-2-yl}-6,6-dimethyl-3-[3-methyl-N-(trifluoroacetyl)-L-valyl]-3-azabicyclo[3.1.0]hexane-2-carboxamide"
+            }
+          ]
+        }
+      ],
+      "impact": {
+        "score": 3,
+        "types": [
+          "drug"
+        ],
+        "validation": [],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [
+        {
+          "uniprot": "P0DTC2",
+          "gene": "S",
+          "synonyms": [],
+          "name": "Spike glycoprotein",
+          "organism": "Severe acute respiratory syndrome coronavirus 2"
+        },
+        {
+          "uniprot": "P0DTD1",
+          "gene": "rep",
+          "synonyms": [],
+          "name": "Replicase polyprotein 1ab",
+          "organism": "Severe acute respiratory syndrome coronavirus 2"
+        },
+        {
+          "uniprot": "P83080",
+          "gene": null,
+          "synonyms": [],
+          "name": "Maximins 1/H1",
+          "organism": "Bombina maxima"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13660097",
+      "pmid": "42870258",
+      "doi": "10.1186/s12934-026-03083-x",
+      "title": "Whole-cell surface-display system in attenuated Salmonella Enteritidis for slide microagglutination-based antibody detection",
+      "journal": "Microbial Cell Factories",
+      "journal_abbrev": "Microb Cell Fact",
+      "authors": "Sernaque-Aguilar Y, Rios-Matos D, Poma-Acevedo A, Zimic-Sheen A, Belén-Balta M, Choque-Guevara R, Montesinos-Millán R, Salguedo-Bohorquez M, Isasi-Rivas G, Montalván-Avalos A, Ygnacio-Aguirre F, Ticona J, Fernández-Sánchez M, Fernández-Díaz M, Zimic M.",
+      "pub_date": "2026-01-01",
+      "index_date": "2026-10-16",
+      "license": "cc by",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "BackgroundMicroagglutination is a sensitive, rapid, and cost-effective serological assay widely used for disease diagnosis and surveillance in animals and humans. However, it traditionally relies on culturing live pathogenic bacteria as antigens, posing biosafety risks and limiting its application primarily to bacterial pathogens. Bacterial surface display technology offers a promising alternative by enabling the presentation of heterologous proteins or peptides on the bacterial surface, avoiding the need to culture the target pathogen, simplifying antigen preparation, and enabling potential diagnostic applications for non-bacterial pathogens. Despite these advantages, integration of this technology with slide-based microagglutination assays has not yet been evaluated. In this proof-of-concept, we evaluated a surface display platform in attenuated Salmonella Enteritidis for antibody detection by slide microagglutination, using the nucleocapsid (N) protein of Infectious Bronchitis Virus (IBV) as a model antigen.ResultsThe IBV N protein was fused to the N-terminal anchor domain of the ice nucleation protein (INP) and cloned into pET-28a. The resulting INP_N fusion protein was expressed in attenuated Salmonella Enteritidis, and its surface exposure was evaluated by immunofluorescence and flow cytometry on non-permeabilized cells, with flow cytometry indicating a surface display efficiency of 96.5%. Slide microagglutination was performed using 50 hen sera and inactivated Salmonella Enteritidis cells presenting surface-exposed N protein. This assay identified all positive sera and 20 of 25 negative sera, showing substantial agreement with the reference ELISA (κ = 0.8), with preliminary estimates of 100% sensitivity (95% CI, 87–100%) and 80% specificity (95% CI, 61–91%). No cross-reactivity was observed with commercial antisera against pathogens unrelated to IBV.ConclusionsThe attenuated Salmonella surface-display platform integrated into a slide microagglutination assay showed preliminary feasibility for antibody detection under the conditions evaluated. This approach does not require live pathogen cultivation, specialized equipment, antigen purification, or chemical conjugation steps. However, further optimization is needed to improve the platform’s display efficiency and enhance specificity without compromising sensitivity. In addition, evaluation using a larger and more diverse sample set, including field samples, is required to further assess the performance and potential applicability of the assay.Supplementary InformationThe online version contains supplementary material available at https://doi.org/10.1186/s12934-026-03083-x.",
+      "source": "impact_search",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "2GEC",
+        "2GE7"
+      ],
+      "emdb_ids": [],
+      "cited_structures": [
+        {
+          "pdb_id": "2GEC",
+          "status": "released",
+          "title": "Structure of the N-terminal domain of avian infectious bronchitis virus nucleocapsid protein (strain Gray) in a novel dimeric arrangement",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 1.3,
+          "release_date": "2006-06-27",
+          "deposit_date": "2006-03-19",
+          "citation_doi": "10.1128/jvi.00157-06",
+          "citation_pmid": "16775348",
+          "citation_title": "X-ray structures of the N- and C-terminal domains of a coronavirus nucleocapsid protein: implications for nucleocapsid formation.",
+          "polymers": [
+            {
+              "description": "Nucleocapsid protein",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P32923"
+              ],
+              "organisms": [
+                "Infectious bronchitis virus"
+              ]
+            }
+          ],
+          "ligands": []
+        },
+        {
+          "pdb_id": "2GE7",
+          "status": "released",
+          "title": "Structure of the C-terminal dimerization domain of infectious bronchitis virus nucleocapsid protein",
+          "method": "X-RAY DIFFRACTION",
+          "resolution": 2.0,
+          "release_date": "2006-06-27",
+          "deposit_date": "2006-03-18",
+          "citation_doi": "10.1128/jvi.00157-06",
+          "citation_pmid": "16775348",
+          "citation_title": "X-ray structures of the N- and C-terminal domains of a coronavirus nucleocapsid protein: implications for nucleocapsid formation.",
+          "polymers": [
+            {
+              "description": "Nucleocapsid protein",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P32923"
+              ],
+              "organisms": [
+                "Infectious bronchitis virus"
+              ]
+            }
+          ],
+          "ligands": []
+        }
+      ],
+      "impact": {
+        "score": 4,
+        "types": [
+          "drug"
+        ],
+        "validation": [
+          "assay"
+        ],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [
+        {
+          "uniprot": "P32923",
+          "gene": "N",
+          "synonyms": [],
+          "name": "Nucleoprotein",
+          "organism": "Avian infectious bronchitis virus (strain Gray)"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13658893",
+      "pmid": "42864749",
+      "doi": "10.1002/advs.78215",
+      "title": "A Dual‐Functional Nanoplatform Targeting the dsDNA–cGAS Axis to Mitigate Disc Degeneration and Aberrant Innervation",
+      "journal": "Advanced Science",
+      "journal_abbrev": "Advanced science",
+      "authors": "He Z, Chen T, Liu Z, Huang X, Jiang R, Liu Y, Xu B, Li Y, Zhao K, Yan H, Zhou L, Liu C, Li Q.",
+      "pub_date": "2026-10-12",
+      "index_date": "2026-10-16",
+      "license": "cc by",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "ABSTRACTPathological sensory nerve ingrowth into degenerated intervertebral discs contributes to discogenic pain, yet strategies that concurrently mitigate disc degeneration and pathological innervation remain limited. Here, we found that senescent nucleus pulposus (NP) cells accumulated and released double‐stranded DNA (dsDNA), which reinforced NP cell senescence and matrix catabolism. The accumulated dsDNA also activated cGAS–STING signaling, increased Netrin‐1 expression, and promoted neuronal migration and neurite outgrowth. Guided by these findings, we developed RU@PEI‐ZIF, a dual‐functional nanoplatform combining PEI‐mediated dsDNA scavenging with ZIF‐8‐mediated delivery of the cGAS inhibitor RU.521. RU@PEI‐ZIF displayed dsDNA‐binding capacity, cytocompatibility, and pH‐responsive RU.521 release. In senescent NP cells, RU@PEI‐ZIF reduced extracellular and cytosolic dsDNA, attenuated cGAS–STING‐associated inflammatory and neurotrophic signaling, and reduced NP cell‐mediated neuronal migration and neurite outgrowth. In an animal model of disc degeneration, intradiscal RU@PEI‐ZIF reduced disc degeneration, NP cell senescence, pathological sensory innervation, and pain hypersensitivity. These findings support RU@PEI‐ZIF as a dual‐action nanotherapeutic strategy targeting both disc degeneration and pathological innervation.",
+      "source": "impact_search",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "cited_structures": [],
+      "impact": {
+        "score": 3,
+        "types": [
+          "method"
+        ],
+        "validation": [],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13663553",
+      "pmid": null,
+      "doi": "10.3390/biology15191680",
+      "title": "Effect of Nano- and Microparticulate Fermented Fish Protein Hydrolysate Diets on Growth, Digestive Function, Intestinal Development, and Gene Expression in Common Carp (Cyprinus carpio) Larvae",
+      "journal": "Biology",
+      "journal_abbrev": "Biology (Basel)",
+      "authors": "Noor Z, Ahmad Lodhi F, Younas W, Ullah Khan F, Hassan Z, Rizwan M, Ullah S, Khan F, Bari F, Islam M.",
+      "pub_date": "2026-09-22",
+      "index_date": "2026-10-16",
+      "license": "cc by",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "Simple SummaryThe larval period is an important and very sensitive stage in the culture of freshwater fish, where the young digestive system and low enzymatic activity in the larvae may limit the efficient use of conventional formulated feeds, which can lead to poorer growth performance and survival. In this study, we developed micro- and nano-sized diets using fermented ingredients and fish protein hydrolysates and evaluated their effects on common carp larvae stages. Among the tested diets, the nano-particulate fermented feed produced the best results by improving growth, survival, digestive enzyme activity, intestinal development, and the expression of genes associated with growth and immunity. The smaller particle size likely enhanced nutrient availability and absorption, allowing larvae to utilize nutrients more efficiently during early development. These findings suggest that nano-particulate fermented diets can provide a practical and sustainable feeding strategy to improve larval quality, increase survival, and enhance production efficiency in common carp aquaculture. This approach may also benefit the culture of other freshwater fish species during early development.",
+      "source": "impact_search",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "cited_structures": [],
+      "impact": {
+        "score": 3,
+        "types": [
+          "method"
+        ],
+        "validation": [],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13645374",
+      "pmid": "42847083",
+      "doi": "10.1007/s11263-026-02802-6",
+      "title": "From Unsupervised to Zero-Shot: 3D Domain Adaptation for Cryo-Electron Tomography Segmentation",
+      "journal": "International journal of computer vision",
+      "journal_abbrev": "Int J Comput Vis",
+      "authors": "Li H, Li X, Wang H, Shi J, Chen H, Du B, Barthelemy J, Kihara D, Shen J, Xu M.",
+      "pub_date": "2026-04-07",
+      "index_date": "2026-10-16",
+      "license": "cc by",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "AbstractWith the refinement of 3D imaging modality, cryo-electron tomography (cryo-ET) has emerged as a powerful technique for the structural analysis of macromolecular complexes at near-atomic resolution. Recent advancements in volumetric segmentation methods applied to cryo-ET datasets have garnered significant attention within the biomedical sector. However, existing methods rely heavily on manually labeled data, which demands highly specialized expertise, making fully supervised approaches less feasible for cryo-ET images. To address this, a number of unsupervised domain adaptation (UDA) techniques have been developed to improve segmentation network performance using unlabeled data. Nevertheless, directly applying these methods to cryo-ET image segmentation presents two major challenges: 1) the source dataset, usually obtained through simulation, contains a fixed level of noise, while the target dataset, being directly collected from raw-data from the real-world scenario, has unpredictable noise levels; 2) the source data used for training typically consists of known macromolecules, in contrast, the target domain data are often unknown, causing the model to be biased towards those known macromolecules, leading to a domain shift problem. To address such challenges, in this paper, we introduce a voxel-wise unsupervised domain adaptation approach, termed Vox-UDA, specifically for cryo-ET subtomogram segmentation. Vox-UDA incorporates a noise generation module to simulate target-like noises in the source dataset for cross-noise level adaptation, and a denoised pseudo-labeling strategy based on the improved bilateral filter to alleviate the domain shift problem. Additionally, we further consider a scenario that is more in line with the real world, where the target (experimental) dataset might not be accessible during training or has a very small sample size, and we present a voxel-wise zero-shot domain adaptation (ZSDA) approach, named Vox-ZSDA. In Vox-ZSDA, we introduce a self-supervised graph learning strategy to eliminate any dependency on the target data, accompanied by a dynamic graph contrastive learning technique to enhance the model’s sensitivity to macromolecular structures to boost the segmentation performance. More importantly, we construct the first UDA and ZSDA cryo-ET subtomogram segmentation benchmark on three experimental datasets. Extensive experimental results on multiple benchmarks and newly curated real-world datasets demonstrate the superiority of our proposed approach compared to state-of-the-art UDA and ZSDA methods.Keywords: 3D image segmentation, Unsupervised domain adaptation, Zero-shot domain adaptation, Cryo-Electron Tomography, Graph Learning",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "cited_structures": [],
+      "impact": {
+        "score": 3,
+        "types": [
+          "method"
+        ],
+        "validation": [],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13665437",
+      "pmid": null,
+      "doi": "10.3390/ijms27198455",
+      "title": "Misoprostol in Refractory Neuralgic Pain: From Clinical Neurology to an EP-Receptor Hypothesis of Pharmacodynamic Persistence",
+      "journal": "International Journal of Molecular Sciences",
+      "journal_abbrev": "Int J Mol Sci",
+      "authors": "Bukowy R, Rusciano D, Gagliano C, Toro M.",
+      "pub_date": "2026-09-22",
+      "index_date": "2026-10-16",
+      "license": "cc by",
+      "pub_types": [
+        "other"
+      ],
+      "abstract": "This hypothesis originated from the first author’s personal experience in adult neurology, in which selected refractory cranial or postherpetic neuralgias occasionally appeared to improve rapidly after off-label misoprostol. The original records are unavailable; these physician recollections are not efficacy data and serve only as the hypothesis generator. Independent published precedents are limited to small uncontrolled reports in multiple-sclerosis-associated trigeminal neuralgia. A further recollection was that perceived benefit often waned after several weeks at conventional daily exposure, whereas lower or intermittent exposure sometimes appeared to remain useful for longer; this observation is likewise unverifiable and does not define a therapeutic dose. Misoprostol is rapidly converted to misoprostol acid (plasma half-life of 20–40 min). We ask whether a brief, reversible exposure could produce pharmacodynamic persistence, defined here as a reproducible pain-relevant effect that outlasts measurable drug exposure, through EP-receptor trafficking, compartmentalized GPCR signaling, or downstream cellular changes. The model also predicts that the concentration–response relationship may be non-monotonic: increasing or repeated exposure could attenuate or reverse a favorable effect by recruiting opposing EP pathways or adaptive receptor/cellular responses. No direct evidence shows that misoprostol produces such persistence in neural tissue, and PGE2/EP signaling can also be pronociceptive. Receptor-resolved concentration–response and pulse-washout experiments must therefore separately demonstrate receptor signaling, persistent cellular change, altered neuronal excitability, and ultimately blinded analgesic benefit. Neuropathic corneal pain is considered only a secondary mechanistic model. No evidence-based dose can currently be recommended.",
+      "source": "impact_search",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "cited_structures": [],
+      "impact": {
+        "score": 2,
+        "types": [],
+        "validation": [],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13642264",
+      "pmid": "42838973",
+      "doi": "10.1038/s41467-026-78050-6",
+      "title": "Near-atomistic simulations reveal the molecular principles that control chromatin structure and phase separation",
+      "journal": "Nature Communications",
+      "journal_abbrev": "Nat Commun",
+      "authors": "Russell K, Chen Y, Espinosa JR, Farré-Gil D, Zhou H, Maristany MJ, Perez-Lopez JI, Huertas J, Orozco M, Rosen MK, Collepardo-Guevara R.",
+      "pub_date": "2026-10-03",
+      "index_date": "2026-10-16",
+      "license": "cc by",
+      "pub_types": [
+        "research support, non-u.s. gov't",
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "Understanding how chromatin’s physicochemical properties shape its emergent organization is central to deciphering genome function. To address this, we present OpenCGChromatin, a high-performance coarse-grained model that achieves near-atomistic simulations of chromatin systems an order of magnitude larger than previously possible, spanning biomolecular condensates and fibers tens of kilobases in length. OpenCGChromatin simulations independently predict, from physicochemical principles, the linker-DNA-dependent chromatin structures observed by cryo-ET and the relative thermodynamic stability of condensates inferred from biochemical assays. Crucially, OpenCGChromatin resolves histone-tail dynamics and interaction networks that remain inaccessible experimentally, explaining how linker-DNA length controls histone tail accessibility and the resulting multiscale structure of chromatin condensates. Extending simulations to 108-nucleosome fibers shows that acetylation disrupts chromatin compaction in a pattern-specific manner by weakening key tail-mediated interactions, with H4K16 and H3K9 emerging as the most energetically disruptive modifications. These results position OpenCGChromatin as a powerful framework for linking molecular detail to emergent chromatin organization.",
+      "source": "impact_search",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "cited_structures": [],
+      "impact": {
+        "score": 6,
+        "types": [
+          "method"
+        ],
+        "validation": [
+          "assay"
+        ],
+        "low": [],
+        "journal": true,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13650799",
+      "pmid": "42852606",
+      "doi": "10.1002/jbt.71129",
+      "title": "Network Pharmacology‐Based Prediction and In Vivo Validation of Fumonisin B1‐Induced Liver Injury and Early Fibrosis",
+      "journal": "Journal of Biochemical and Molecular Toxicology",
+      "journal_abbrev": "J Biochem Mol Toxicol",
+      "authors": "Li N, Sun W, Liu X, Liu X, Xie Y, Xu H, Xu L, Zang J, Zhang L, Wu L, Shao K.",
+      "pub_date": "2026-10-01",
+      "index_date": "2026-10-16",
+      "license": "cc by-nc-nd",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "ABSTRACTFumonisin B1 (FB1) is a widespread mycotoxin contaminating food and feed, exhibiting severe hepatotoxicity. This study aimed to systematically investigate the underlying molecular mechanisms of FB1‐induced liver injury and early liver fibrosis by combining network pharmacology with an in vivo animal model. First, network pharmacology and molecular docking were utilized to screen the core targets and key signaling pathways of FB1‐induced hepatotoxicity. Subsequently, an in vivo C57BL/6 mouse model was established via intragastric administration of FB1 (5 mg/kg/day for 28 days). Serum levels of liver function and fibrosis markers (ALT, AST, HA, LN, PCIII, CIV) were measured. Histopathological changes and collagen deposition in liver tissues were evaluated using HE and Masson's trichrome staining. The relative mRNA expression of inflammation‐ (TNF‐α, IL‐1β, IL‐6) and fibrosis‐related core genes (TGF‐β1, α‐SMA, COL1A1) was quantified by qPCR. Network pharmacology predicted that inflammatory responses and fibrosis‐related pathways are central to FB1 hepatotoxicity. In vivo experiments confirmed that FB1 exposure significantly elevated serum ALT and AST levels, as well as the four indices of liver fibrosis (p < 0.001). Histopathology revealed severe hepatocyte necrosis, inflammatory cell infiltration, and massive deposition of blue‐stained collagen fibers. Furthermore, qPCR results demonstrated that FB1 significantly upregulated the expression of pro‐inflammatory cytokines, strongly activated the TGF‐β1 signaling pathway, and promoted the high expression of the hepatic stellate cell (HSC) activation marker (α‐SMA) and extracellular matrix (COL1A1). In conclusion, FB1 drives the pathogenesis of early liver fibrosis by inducing sustained hepatic inflammation and activating the TGF‐β1 signaling pathway, which promotes HSC activation and excessive extracellular matrix deposition. This study provides a vital theoretical basis for elucidating the target‐organ toxicity mechanisms of mycotoxins and identifying potential interventions.",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "cited_structures": [],
+      "impact": {
+        "score": -5,
+        "types": [
+          "drug",
+          "mechanism"
+        ],
+        "validation": [
+          "in vivo"
+        ],
+        "low": [
+          "molecular docking",
+          "network pharmacology"
+        ],
+        "journal": false,
+        "exp_structure": false,
+        "flags": [
+          "実験構造の手がかりなし"
+        ]
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13661623",
+      "pmid": "42869906",
+      "doi": "10.1038/s41467-026-77693-9",
+      "title": "PKM2 AP: a micropeptide inhibits vascular calcification via molecular glue-mediated ubiquitination of PKM2",
+      "journal": "Nature Communications",
+      "journal_abbrev": "Nat Commun",
+      "authors": "Wang M, Cheng J, Ma L, Yang J, Gao C, Fang X, Ma L, Fu X, Lin A, Ying S, Lin W, Yang Y.",
+      "pub_date": "2026-01-01",
+      "index_date": "2026-10-16",
+      "license": "cc by-nc-nd",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "AbstractChronic kidney disease (CKD) is a major global public health challenge, and cardiovascular complications such as vascular calcification (VC) are crucial in CKD-related mortality. Emerging evidence shows that open reading frames (ORFs) within non-coding genomic regions can encode micropeptides, but their roles in VC progression remain largely unexplored. In this study, we identify a 40-amino acid micropeptide, termed PKM2 AP, encoded by an ORF2-containing intron-retaining transcript derived from the LINC01139 locus. PKM2 AP localizes to both mitochondrial and cytoplasmic compartments and interacts with pyruvate kinase M2 (PKM2), thereby promoting its ubiquitination-dependent degradation. Mechanistically, PKM2 AP functions as a molecular glue that facilitates the recruitment of the E3 ubiquitin ligase STUB1 to PKM2, leading to stabilization of the PKM2–PKM2 AP–STUB1 ternary complex and enhanced PKM2 degradation. Functionally, PKM2 AP-mediated PKM2 degradation suppresses aerobic glycolysis and lactate production, thereby attenuating osteogenic transition and VC progression. In vivo administration of PKM2 AP and genetic knock-in of ORF2 both alleviate vascular calcification phenotypes in mouse models. Collectively, our findings identify a VC-associated micropeptide functioning through a molecular glue-like mechanism and provide a potential therapeutic strategy for vascular calcification.Subject terms: Calcification, Long non-coding RNAs, Mechanisms of disease",
+      "source": "impact_search",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "cited_structures": [],
+      "impact": {
+        "score": 7,
+        "types": [
+          "drug",
+          "mechanism"
+        ],
+        "validation": [
+          "in vivo"
+        ],
+        "low": [],
+        "journal": true,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13664881",
+      "pmid": null,
+      "doi": "10.3390/ijms27198673",
+      "title": "Recombinant Antigen for Newcastle Disease Virus Vaccine Focusing on Currently Circulating Virus Variants",
+      "journal": "International Journal of Molecular Sciences",
+      "journal_abbrev": "Int J Mol Sci",
+      "authors": "Umarova E, Ryabchevskaya E, Granovskiy D, Evtushenko E, Kovalenko A, Boravleva E, Gambaryan A, Matveeva I, Nikitin N, Karpova O.",
+      "pub_date": "2026-09-28",
+      "index_date": "2026-10-16",
+      "license": "cc by",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "AbstractNewcastle disease virus (NDV) causes a highly contagious avian infection and is characterised by its high genetic diversity and mutation rate. Currently applied vaccines are based on NDV genotypes I and II, which are considerably distinct from the circulating pathogenic genotypes, of which genotype VII is predominant, and therefore, they may not provide complete protection for birds or stop virus transmission. This work is a proof-of-concept study aiming to develop a genotype VII-focused recombinant antigen for a vaccine targeting relevant NDV strains. The research primarily focuses on novel antigen design based on the bioinformatics analysis of recent circulating isolates. Haemagglutinin-neuraminidase (HN) is one of the two main NDV antigens. Two HN fragments (“1”—341–368 aa and “2”—239–257 aa) were selected due to the presence of linear neutralising epitopes. An approach focusing on using a number of selected-fragment variants simultaneously was applied for the first time. The resulting antigen Castle1 encompasses the sequence diversity of most circulating isolates. Preliminary immunological evaluation showed that antibodies from Castle1-immunised animals possessed haemagglutination inhibition activity and interacted with NDV of genotypes I and VII. That makes Castle1 a promising antigen for the further development of a vaccine for preventing ongoing and incoming NDV outbreaks.Keywords: Newcastle disease virus, recombinant antigen, Newcastle disease virus genotype VII",
+      "source": "impact_search",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "cited_structures": [],
+      "impact": {
+        "score": 1,
+        "types": [
+          "drug"
+        ],
+        "validation": [],
+        "low": [
+          "bioinformatics analysis"
+        ],
+        "journal": false,
+        "exp_structure": true,
+        "flags": [
+          "計算のみの可能性（bioinformatics analysis）"
+        ]
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13656017",
+      "pmid": "42866252",
+      "doi": "10.1039/d6sc02032a",
+      "title": "Syndirella: synthesis-directed fragment elaboration enables extensive and cost-effective binding site exploration beyond catalog compounds",
+      "journal": "Chemical Science",
+      "journal_abbrev": "Chem Sci",
+      "authors": "Fieseler K, Winokan M, Morrone J, Deane C, von Delft F, Thompson W.",
+      "pub_date": "2026-10-16",
+      "index_date": "2026-10-16",
+      "license": "cc by",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "AbstractFragment screens provide an information-rich starting point for designing derivative compounds in structure-based drug discovery. However, derivatives in the fragment-to-hit stage are typically designed from only one or a few fragments, risking premature convergence on an unproductive series and dramatically limiting exploration of the binding site's interaction opportunities. This is avoidable by exploring a broad, chemically diverse set of scaffolds and elaborations spanning interactions revealed across many fragments, as well as those not yet observed. Conventional catalog procurement makes this breadth of testing prohibitively expensive for early discovery. In-house high-throughput (HT) synthesis can raise interaction productivity, the number of unique predicted protein–ligand interactions achievable within a given budget, by lowering the cost per compound, including labor and consumables, yet no design tool exists for this purpose. We introduce Syndirella (Synthesis Directed Elaborations), which presents a candidate elaboration space around input fragment-derived scaffolds, constrained to HT-compatible reactions and catalog reactants, for cost-effective sampling of many scaffolds' elaborations in a single experimental cycle. Applied to three viral protein targets, Syndirella designs demonstrated pharmacophore diversity, recapitulating known fragment interactions, identifying novel functionally relevant ones, and accessing chemical space absent from commercial catalogs. A companion paper details validation on a calcium-binding protein, yielding crystallographic structures and measurable binding, with in-house synthesis achieving a 71% cost reduction over catalog purchasing, labor and consumables included. Reactant rather than product procurement gives potentially 2.5 times as many accessible compounds and higher interaction productivity for the same budget. Syndirella is most impactful for structure-enabled campaigns with fragment-bound crystal structures, robust HT chemistry, and assays compatible with crude reaction mixtures, and is available at https://github.com/oxpig/syndirella.",
+      "source": "impact_search",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "cited_structures": [],
+      "impact": {
+        "score": 4,
+        "types": [
+          "method",
+          "drug"
+        ],
+        "validation": [
+          "assay",
+          "crystal structure"
+        ],
+        "low": [
+          "pharmacophore"
+        ],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13653985",
+      "pmid": "42861096",
+      "doi": "10.1016/j.nbas.2026.100169",
+      "title": "The DentoNeural Axis: A Piezo channel-mediated mechanosensory pathway linking tooth loss to cognitive decline",
+      "journal": "Aging Brain",
+      "journal_abbrev": "Aging Brain",
+      "authors": "",
+      "pub_date": "2026-01-01",
+      "index_date": "2026-10-16",
+      "license": "cc by-nc-nd",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "AbstractBackgroundTwo independent meta-analyses—one of 18 cohort studies (n = 356,297) and one dose-response analysis of 14 longitudinal studies (n = 34,074)—demonstrate dose-dependent associations between tooth loss and dementia. The latter reported hazard ratio (HR) 1.48 (95% CI 1.18–1.87) for cognitive impairment and HR 1.28 (95% CI 1.09–1.49) for dementia; the former reported relative risk (RR) 1.20 and 1.15 for the same outcomes. The 2024 Lancet Commission expanded modifiable dementia risk factors to 14 yet omitted oral health. The mechanism remains unknown.The hypothesisWe propose the “DentoNeural Axis”—a Piezo2-mediated mechanosensory pathway connecting periodontal ligament to hippocampal function. Tooth loss removes pulp and periodontal innervation, while periosteal and mucosal afferents persist, potentially disrupting dual neuromodulatory pathways: (1) Piezo2+ trigeminal neurons → paraventricular nucleus (PVN) → dopaminergic signaling, and (2) Tac1 (substance P)-expressing neurons → locus coeruleus → noradrenergic signaling. Both pathways converge on hippocampus to regulate brain-derived neurotrophic factor (BDNF) and synaptic plasticity.Evidence integrationThis synthesis integrates Piezo channel discovery (2010), Piezo2 immunolocalization in the human periodontal ligament (2024), and trigeminal–locus coeruleus–hippocampal pathways supported by animal models and human MRI evidence linking tooth loss to hippocampal atrophy in mild periodontitis. This hypothesis relies primarily on animal data; human mechanistic validation remains a gap.ImplicationsIf validated, tooth preservation could join hearing aids as sensory-based dementia prevention. This model may explain the “Implant Paradox”—why dental implants, lacking Piezo2-expressing periodontal ligament, may provide incomplete neuroprotection despite restoring mastication.Keywords: DentoNeural Axis, Piezo2, Tooth loss, Dementia, Periodontal ligament",
+      "source": "impact_search",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "cited_structures": [],
+      "impact": {
+        "score": 4,
+        "types": [
+          "drug",
+          "mechanism"
+        ],
+        "validation": [],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13652538",
+      "pmid": "42852653",
+      "doi": "10.7554/elife.109450",
+      "title": "The structural context of mutations in proteins predicts their effect on antibiotic resistance",
+      "journal": "eLife",
+      "journal_abbrev": "Elife",
+      "authors": "Green AG, Tasmin M, Vargas R, Farhat MR.",
+      "pub_date": "2026-10-09",
+      "index_date": "2026-10-16",
+      "license": "cc by",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "AbstractIn Mycobacterium tuberculosis, a prevalent and deadly pathogen, resistance to antibiotics evolves primarily through non-synonymous mutations in proteins. Sequence-based analyses can uncover the genetic basis of antibiotic resistance, but these methods focus on primary sequence and often neglect other biological signals, such as protein structural information. We hypothesize that integrating the structural context of mutations improves the prediction of effects on function and phenotype. We curate high-confidence structural annotations for the M. tuberculosis proteome from 1350 crystallography and 2337 AlphaFold predictions, and mutations from over 31,000 M. tuberculosis isolates. We demonstrate that mutations in proteins known to cause resistance are clustered in 3D space, even in proteins where inactivating mutations at any position are thought to cause resistance. We find over 450 proteins in the M. tuberculosis proteome that display signals of clustered mutations, many of which have a known relationship with antibiotic resistance. We show that a supervised classifier trained on 3D distance to known resistance sites alone has an F1 score of 96.5% at classifying mutations as resistance-conferring on a held-out test set. This work demonstrates that protein structure provides useful information for categorizing which variants may cause antibiotic resistance, even when the majority of structures are AI-predicted.Research organism: Mycobacterium tuberculosis, Other",
+      "source": "impact_search",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "cited_structures": [],
+      "impact": {
+        "score": 5,
+        "types": [
+          "ai_design"
+        ],
+        "validation": [],
+        "low": [],
+        "journal": true,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13654186",
+      "pmid": "42861167",
+      "doi": "10.1002/exp2.70236",
+      "title": "Transforming the Landscape of Drug Innovation in AI Era: AlphaFold 3 and Beyond",
+      "journal": "Exploration",
+      "journal_abbrev": "Exploration (Beijing)",
+      "authors": "He S, Zhou L, Wang X, Li C, Jiang C, Tuan R, Li Z.",
+      "pub_date": "2026-10-11",
+      "index_date": "2026-10-16",
+      "license": "cc by",
+      "pub_types": [
+        "other"
+      ],
+      "abstract": "ABSTRACTThe traditional drug discovery and development (DDD) pipeline has long been characterized by inefficiency and high costs. The rapid evolution of artificial intelligence (AI), especially AI‐based toolkits for protein structure and interaction prediction, exemplified by AlphaFold 3 (AF3), promises to reshape the landscape of drug innovation. AF3 advances structural biology by predicting protein structures and their interactions with a range of biomolecules, including nucleic acids, small‐molecule ligands, and ions, potentially changing the conventional DDD paradigm, although prediction accuracy varies substantially across these categories. This perspective examines the impact of AF3 on drug target identification and validation, hit identification, lead optimization, and personalized clinical decision‐making, while addressing the technical challenges, ethical considerations, and governance implications. Solutions to overcome current limitations are proposed to advance the development of novel therapeutics.",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "cited_structures": [],
+      "impact": {
+        "score": -1,
+        "types": [
+          "method",
+          "ai_design",
+          "drug"
+        ],
+        "validation": [],
+        "low": [],
+        "journal": false,
+        "exp_structure": false,
+        "flags": [
+          "実験構造の手がかりなし"
+        ]
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13659236",
+      "pmid": "42866951",
+      "doi": "10.1093/nar/gkag972",
+      "title": "ZBP1 specifically binds pre-formed Z-RNA, limiting its potential pool of nucleic acid ligands compared to ADAR1",
+      "journal": "Nucleic Acids Research",
+      "journal_abbrev": "Nucleic Acids Res",
+      "authors": "",
+      "pub_date": "2026-10-13",
+      "index_date": "2026-10-16",
+      "license": "cc by",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "AbstractZBP1 senses foreign nucleic acids in the unusual, left-handed Z-conformation via binding through its Zα1 and Zα2 domains and initiates cell death pathways that enable viral clearance. dsDNA and dsRNA can adopt Z-conformations; however, both typically require chemical modifications or protein binding to induce Z-form conversion and stabilization. ZBP1 has been previously shown to bind and convert B-DNA to the Z-conformation and was assumed to be able to convert A-RNA as well, despite the lack of experimental validation. Here, we use NMR and other biophysical and biochemical experiments to characterize the Z-DNA and Z-RNA binding properties of ZBP1’s Zα1 and Zα2 domains. While ZBP1’s Zα domains are able to convert and stabilize unmodified dsDNA in the Z-conformation, they are incapable of flipping unmodified (CpG)n repeat dsRNA. ZBP1’s Zα domains require dsRNAs with Z-promoting chemical modifications to be able to bind and stabilize the Z-conformation. These results contrast with ADAR1’s Zα domain, which can bind and flip both dsDNA and dsRNA into the Z-conformation, potentially indicating finely tuned competition between ADAR1 and ZBP1 for pro-survival and pro-death outcomes, respectively. This work highlights the functional variability of Zα domains and narrows down potential physiological substrates of ZBP1 in infection and disease.",
+      "source": "impact_search",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "cited_structures": [],
+      "impact": {
+        "score": 6,
+        "types": [
+          "drug"
+        ],
+        "validation": [
+          "nmr"
+        ],
+        "low": [],
+        "journal": true,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13658451",
+      "pmid": "42871378",
+      "doi": "10.3389/fbioe.2026.1949512",
+      "title": "Zona pellucida-inspired smart viral vectors: a biomimetic platform for multi-modal immune evasion and triple-stimuli responsive gene delivery",
+      "journal": "Frontiers in Bioengineering and Biotechnology",
+      "journal_abbrev": "Front Bioeng Biotechnol",
+      "authors": "Xu Z, Luo X, Li Y, Qian J, Xu G.",
+      "pub_date": "2026-10-16",
+      "index_date": "2026-10-16",
+      "license": "cc by",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "AbstractPre-existing immunity and off-target toxicity limit the clinical translation of adeno-associated virus (AAV) vectors. Herein, we present a Zona Pellucida-inspired Smart Viral Vector (ZP-SVV) platform as a biomimetic design hypothesis that repurposes the evolutionarily optimized architecture of ZP glycoproteins to engineer intelligent viral vector surfaces. The system integrates a self-assembling ZP glycoprotein coating—covalently crosslinked filamentous meshes formed via ZP-N/ZP-C domain polymerization, yielding a tunable glycan shield with defined inter-filament pores—with a triple-stimuli responsive architecture of protease-sensitive linkers, pH-gated histidine-rich domains, and redox-sensitive disulfide bonds that releases payload only after sequential triggering, and with multi-modal immune evasion that pairs dense glycan shielding with extracellular matrix mimicry to evade humoral and cellular immune surveillance while preserving receptor accessibility. This biomimetic design is intended to enhance safety and efficiency relative to conventional PEGylation or membrane-wrapping strategies, with theoretical modeling predicting potentially improved tumor accumulation and controlled intracellular release. Presented as a testable design framework rather than a validated therapy, the ZP-SVV platform offers a new paradigm for rational vector engineering in reproductive medicine and oncolytic virotherapy.Keywords: biomimetic gene delivery, controlled release, immune evasion, smart viral vectors, triple-stimuli responsive, zona pellucida",
+      "source": "impact_search",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "cited_structures": [],
+      "impact": {
+        "score": 4,
+        "types": [
+          "method",
+          "drug"
+        ],
+        "validation": [],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [],
+      "score": 0
+    }
+  ],
+  "note": "Europe PMC が回復した後の索引で、PMC フォールバックの 10-12〜10-16 号に入っていた論文は除いた"
+}

@@ -1,0 +1,61 @@
+{
+ "pdb_id": "9Y4J",
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "MDA5（RNA センサー）",
+   "desc": "Interferon-induced helicase C domain-containing protein 1",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "dsRNA（二本鎖RNA）",
+   "desc": "RNA 13mer",
+   "entity": "2"
+  },
+  {
+   "color": "#5F9296",
+   "label": "RNA 13mer",
+   "desc": "",
+   "entity": "3"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "ANP",
+   "label": "AMPPNP",
+   "color": "#C23B8E",
+   "desc": "Phosphoaminophosphonic Acid-Adenylate Ester",
+   "entity": [
+    "4"
+   ],
+   "sites": [
+    [
+     "D",
+     "1101"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "ANP",
+  "residues": [
+   "Q307",
+   "L308",
+   "R309",
+   "Q312",
+   "P330",
+   "T331",
+   "G332",
+   "S333",
+   "G334",
+   "K335",
+   "T336",
+   "R337",
+   "E376"
+  ],
+  "polar": 11,
+  "neighbours": [],
+  "label": "AMPPNP"
+ }
+}
