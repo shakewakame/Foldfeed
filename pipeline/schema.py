@@ -17,7 +17,7 @@ LAB_NOTE_FIELDS = {
 # The article's short introduction, four lines in this order (the page shows the label, then the text).
 # Each line is short on purpose and says only what the paper says; each needs a verbatim quote in summary.evidence.
 SUMMARY_FIELDS = {
-    "question": "これまでの疑問・課題",
+    "question": "疑問・課題",
     "approach": "アプローチ",
     "result": "結果",
     "learned": "わかったこと",
@@ -69,7 +69,7 @@ EXAMPLE = {
     "target_label": "標的の短い表記（例：RyR1（ウサギ骨格筋））",
     "target_en": "標的の英語表記（52字以内。サイトの TARGET 欄に出る。例：RyR1 (rabbit skeletal muscle)）",
     "summary": {
-        "question": "これまでの疑問・課題（80字以内）：論文が「分かっていなかった」と書いていること",
+        "question": "疑問・課題（80字以内）：論文が「分かっていなかった」と書いていること",
         "approach": "アプローチ（80字以内）：何をどう調べたか",
         "result": "結果（90字以内）：得られた観察・数値",
         "learned": "わかったこと（100字以内）：その結果から論文が結論していること（著者が推測なら推測と書く）",

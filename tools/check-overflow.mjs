@@ -18,7 +18,7 @@ for (const w of [340, 360, 375, 390, 414]) {
   for (let url of pages) {
     if (url.endsWith('/latest')) {              // the newest issue page linked from the front page
       await p.goto(base + '/index.html', { waitUntil: 'load' });
-      url = '/' + await p.evaluate(() => document.querySelector('.sec-more a').getAttribute('href'));
+      url = '/' + await p.evaluate(() => document.querySelector('.ix-all').getAttribute('href'));
     }
     await p.goto(base + url, { waitUntil: 'load' });
     await p.waitForTimeout(300);
