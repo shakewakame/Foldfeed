@@ -58,8 +58,8 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .kicker a {{ text-decoration:underline; text-decoration-color:var(--acc); }}
 .wrap {{ max-width:1600px; margin:0 auto; padding:0 var(--pad); }}
 .mk {{ color:var(--acc-ink); font-weight:700; }}
-.label {{ margin:0; font-family:var(--mono); font-size:12px; letter-spacing:.14em; font-weight:500;
-          color:var(--mute); text-transform:uppercase; padding-top:6px; }}
+.label {{ margin:0; font-family:var(--mono); font-size:14px; letter-spacing:.12em; font-weight:700;
+          color:var(--ink2); text-transform:uppercase; padding-top:6px; }}
 .label a {{ text-decoration:none; }}
 
 /* masthead: a heavy rule over a thin one, running the full width of the window */
@@ -80,7 +80,7 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .shell {{ display:grid; grid-template-columns:minmax(0,1fr) var(--side); gap:0 56px; align-items:stretch; }}
 .main {{ min-width:0; padding-bottom:30px; }}
 .side {{ border-left:1px solid var(--hair); padding-left:32px; padding-top:40px; padding-bottom:30px; }}
-.sticky-side .side-in {{ position:sticky; top:calc(var(--head) + 16px); max-height:calc(100vh - var(--head) - 32px); overflow-y:auto; scrollbar-width:thin; }}
+.sticky-side .side-in {{ position:sticky; top:calc(var(--headnow) + 16px); max-height:calc(100vh - var(--headnow) - 32px); overflow-y:auto; scrollbar-width:thin; }}
 .sd {{ margin:0 0 28px; }}
 .sd + .sd {{ padding-top:24px; border-top:1px solid var(--hair); }}
 .sd .label {{ padding-top:0; margin-bottom:10px; }}
@@ -106,9 +106,10 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 /* contents: one table row per article: number, headline + supplement, TARGET / METHOD / RES., the real structure, PDB */
 .toc {{ margin-top:48px; }}
 .ix-h {{ display:flex; justify-content:space-between; align-items:baseline; gap:16px; border-top:1px solid var(--ink);
-         padding-top:12px; }}
-.ix-h .label {{ padding-top:0; }}
-.ix-h span {{ font-family:var(--mono); font-size:12px; letter-spacing:.08em; color:var(--mute); }}
+         padding-top:14px; margin-bottom:4px; }}
+.ix-h .label {{ padding-top:0; font-family:var(--latin); font-size:26px; letter-spacing:.01em; text-transform:none;
+               font-weight:700; color:var(--ink); line-height:1.4; }}
+.ix-h span {{ font-family:var(--mono); font-size:13px; letter-spacing:.08em; color:var(--mute); }}
 .ix-h.hot {{ margin-top:44px; }}
 .rows {{ list-style:none; margin:0; padding:0; }}
 .row {{ display:grid; grid-template-columns:60px minmax(0,1fr) 220px 168px 112px; grid-template-areas:"no rt rf th rp";
@@ -181,7 +182,7 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .margin dd {{ margin:2px 0 0; overflow-wrap:anywhere; }}
 .margin .pdb {{ display:block; }}
 .margin .first {{ margin-top:16px; }}
-.margin .sticky {{ position:sticky; top:calc(var(--head) + 20px); }}
+.margin .sticky {{ position:sticky; top:calc(var(--headnow) + 20px); }}
 .kicker {{ font-family:var(--mono); font-size:11.5px; letter-spacing:.06em; color:var(--mute); margin:0 0 10px; line-height:1.7; }}
 .kicker b {{ color:var(--ink); font-weight:600; }}
 .art h2 {{ font-family:var(--latin); font-size:25px; line-height:1.38; letter-spacing:-0.005em; margin:0 0 24px;
@@ -328,11 +329,15 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .row[hidden], .pr[hidden], .pg[hidden] {{ display:none; }}
 .hero .v3d-bar {{ margin-top:10px; }}
 
-/* The header (wordmark, MENU, the double rule) stays at the top of the window while the page scrolls; anchors land
-   below it and whatever sticks while scrolling (an article's margin, an issue's contents) stays below it (--head). */
-@media (prefers-reduced-motion:no-preference) {{ html {{ scroll-behavior:smooth; }} }}
-html {{ scroll-padding-top:calc(var(--head) + 12px); }}
+/* The header (wordmark, MENU, the double rule) slides away while the reader scrolls down and comes back as soon as
+   they scroll up; on the first screen it always stays (HEAD_SCRIPT). Whatever sticks while scrolling (an article's
+   margin, an issue's contents) sits under the header when it is there (--headnow). */
+@media (prefers-reduced-motion:no-preference) {{ html {{ scroll-behavior:smooth; }} .mast {{ transition:transform .25s ease; }} }}
+html {{ scroll-padding-top:16px; }}
+body {{ --headnow:var(--head); }}
+body.head-away {{ --headnow:0px; }}
 .mast {{ position:sticky; top:0; z-index:1000; background:var(--ground); }}
+.mast.away {{ transform:translateY(-100%); }}
 .vol {{ display:flex; align-items:center; gap:22px; }}
 .menu {{ position:relative; }}
 .menu summary {{ list-style:none; display:flex; align-items:center; gap:14px; cursor:pointer; user-select:none;
@@ -369,17 +374,20 @@ html {{ scroll-padding-top:calc(var(--head) + 12px); }}
 
 /* Today's Structure on the front page, in the order of the editor's layout: name, headline, figure, four lines, links */
 .today {{ padding:46px 0 54px; border-bottom:4px solid var(--ink); }}
+.today-sec {{ margin:0 0 22px; padding-bottom:14px; border-bottom:1px solid var(--ink); font-family:var(--latin); font-size:40px;
+              line-height:1.2; font-weight:700; letter-spacing:-0.005em; color:var(--ink); }}
+.today-sec .pu {{ display:block; margin-bottom:6px; font-family:var(--mono); font-size:15px; letter-spacing:.2em;
+                  text-transform:uppercase; font-weight:700; color:var(--acc-ink); }}
 .today-k {{ margin:0; display:flex; flex-wrap:wrap; align-items:baseline; gap:6px 22px; }}
-.today-k .lb {{ font-family:var(--mono); font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:var(--acc-ink); font-weight:700; }}
-.today-k .tg {{ font-family:var(--sans); font-size:24px; font-weight:500; color:var(--ink); letter-spacing:.01em; }}
-.today-k .dt {{ font-family:var(--mono); font-size:12.5px; color:var(--mute); }}
-.today-h {{ margin:14px 0 0; font-size:38px; line-height:1.4; font-weight:700; color:var(--ink); text-wrap:balance; }}
+.today-k .tg {{ font-family:var(--sans); font-size:28px; font-weight:500; color:var(--ink); letter-spacing:.01em; line-height:1.4; }}
+.today-k .dt {{ font-family:var(--mono); font-size:13px; color:var(--mute); }}
+.today-h {{ margin:12px 0 0; font-size:34px; line-height:1.42; font-weight:700; color:var(--ink); text-wrap:balance; }}
 .today-sub {{ margin:10px 0 0; font-size:18px; line-height:1.75; color:var(--desc); }}
 .today-fig {{ margin-top:22px; }}
 .today-fig .v3d-bar {{ margin-top:10px; }}
 .today-4 {{ margin:26px 0 0; max-width:1120px; }}
 .today-4 div {{ display:grid; grid-template-columns:150px minmax(0,1fr); gap:16px; padding:7px 0; }}
-.today-4 dt {{ font-size:13px; color:var(--mute); padding-top:5px; letter-spacing:.04em; }}
+.today-4 dt {{ font-size:15px; font-weight:700; color:var(--ink2); padding-top:3px; letter-spacing:.04em; }}
 .today-4 dd {{ margin:0; font-size:16px; line-height:1.85; color:var(--ink2); }}
 .reads {{ display:flex; flex-wrap:wrap; gap:14px 18px; margin-top:28px; }}
 .reads a {{ display:block; padding:12px 22px 11px; min-width:260px; border:1px solid var(--ink); }}
@@ -478,11 +486,14 @@ html {{ scroll-padding-top:calc(var(--head) + 12px); }}
   .lead-go {{ margin-top:22px; font-size:13.5px; }}
   .lead-art img {{ max-height:none; }}
   .today {{ padding:32px 0 40px; }}
-  .today-k .tg {{ font-size:19px; }}
+  .today-sec {{ font-size:29px; margin-bottom:16px; }}
+  .today-sec .pu {{ font-size:13px; }}
+  .today-k .tg {{ font-size:21px; }}
+  .ix-h .label {{ font-size:21px; }}
   .today-h {{ font-size:26px; }}
   .today-sub {{ font-size:15.5px; }}
   .today-4 div {{ grid-template-columns:minmax(0,1fr); gap:0; padding:6px 0; }}
-  .today-4 dt {{ padding-top:0; font-size:12px; }}
+  .today-4 dt {{ padding-top:0; font-size:13.5px; }}
   .today-4 dd {{ font-size:15px; }}
   .reads a {{ min-width:0; flex:1 1 100%; }}
   .part h2 {{ font-size:23px; }}
@@ -610,6 +621,40 @@ def menu_html(up: str) -> str:
 
 
 MENU_SCRIPT = r"""
+(function () {
+  /* The header: away while scrolling down, back on scrolling up, always there on the first screen. In-page links land
+     at the top when the page goes down (the header slides away) and just under the header when it goes up. */
+  var head = document.querySelector('.mast');
+  if (!head) return;
+  var last = window.scrollY, lead = document.querySelector('.lead');
+  function firstScreen() {
+    return (lead ? lead.getBoundingClientRect().bottom + window.scrollY : window.innerHeight) - head.offsetHeight;
+  }
+  function away(on) {
+    if (on && document.querySelector('details.menu[open]')) return;
+    head.classList.toggle('away', on);
+    document.body.classList.toggle('head-away', on);
+  }
+  window.addEventListener('scroll', function () {
+    var y = window.scrollY, d = y - last;
+    if (y < firstScreen()) away(false);
+    else if (d > 4) away(true);
+    else if (d < -4) away(false);
+    last = y;
+  }, { passive: true });
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="#"]');
+    var id = a && a.getAttribute('href').slice(1);
+    var t = id && document.getElementById(id);
+    if (!t) return;
+    e.preventDefault();
+    var y = t.getBoundingClientRect().top + window.scrollY;
+    var top = y > window.scrollY ? y - 16 : y - head.offsetHeight - 16;
+    var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: Math.max(0, top), behavior: calm ? 'auto' : 'smooth' });
+    if (history.replaceState) history.replaceState(null, '', '#' + id);
+  });
+})();
 document.addEventListener('click', function (e) {
   document.querySelectorAll('details.menu[open]').forEach(function (d) {
     if (!d.contains(e.target) || e.target.closest('.menu-list a')) d.removeAttribute('open');
@@ -1063,10 +1108,10 @@ def today_html(feature: dict | None, picks: list, date: str, root: Path, fig_bas
     rows = "".join(f'<div><dt>{label}</dt><dd>{esc(pk["summary"][k])}</dd></div>'
                    for k, label in TODAY_FIELDS.items() if pk["summary"].get(k))
     return (f'<section class="today" id="today"><div class="wrap">'
-            f'<p class="today-k"><span class="lb">Today’s Structure</span>'
-            f'<span class="tg">{esc(pk.get("target_en") or pk["target_label"])}</span>'
+            f'<h2 class="today-sec"><span class="pu">Pick up</span>Today’s Structure</h2>'
+            f'<p class="today-k"><span class="tg">{esc(pk.get("target_en") or pk["target_label"])}</span>'
             f'<span class="dt">{m}月{d}日（{wd}）号 · {pad(n)}{(" · " + first) if first else ""}</span></p>'
-            f'<h2 class="today-h"><a href="{href}">{esc(pk["headline"])}</a></h2>'
+            f'<h3 class="today-h"><a href="{href}">{esc(pk["headline"])}</a></h3>'
             f'<p class="today-sub">{esc(pk.get("subhead") or "")}</p>'
             f'<div class="today-fig">{feature_figure(cand, pk, date, root, fig_base, href, up)}</div>'
             f'<dl class="today-4">{rows}</dl>{read_links(cand, href)}</div></section>')
