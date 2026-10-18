@@ -52,7 +52,8 @@
    "E705",
    "Y732"
   ],
-  "polar": 3,
+  "hbonds": 4,
+  "pi": 0,
   "neighbours": [],
   "label": "カイニン酸"
  }

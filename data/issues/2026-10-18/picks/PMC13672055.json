@@ -4,6 +4,7 @@
   "headline": "ATPがNLRP6の各ドメインを束ねて、活性化を抑える",
   "subhead": "ヒトNLRP6単量体の2つの構造から、別のポケットに入るATPと酸性ループが阻害状態を支えると示した。",
   "target_label": "ヒトNLRP6（炎症の感知因子）",
+  "target_en": "Human NLRP6 (inflammasome sensor)",
   "summary": {
     "question": "NLRP6が、どのような構造で抑えられた状態に保たれているかは分かっていなかった。",
     "approach": "ヒトNLRP6単量体を、ATP結合型と非結合型の2状態でクライオ電顕により解析し、変異体を細胞で調べた。",

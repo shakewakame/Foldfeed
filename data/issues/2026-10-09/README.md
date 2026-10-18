@@ -20,11 +20,11 @@
 
 | # | 標的 | 手法・分解能 | 見出し |
 |---|---|---|---|
-| 1 | RyR1（ウサギ骨格筋） | クライオ電顕・2.14–3.18 Å（16 構造） | ダントロレンは、ATPやADPと積み重なってRyR1に結合する |
-| 2 | DNA-PK–ヌクレオソーム複合体 | クライオ電顕・3.80–4.11 Å（5 構造） | Kuはヌクレオソームの末端で、約2巻き分のDNAをほどく |
-| 3 | GPR84–Gi（ヒト） | クライオ電顕・3.03 Å | CF3基が2つの残基を押しのけ、β-アレスチンの動員を抑える |
-| 4 | 大腸菌MscL（WT・G22S） | クライオ電顕・3.46–3.68 Å（2 構造） | G22S変異体でもMscLは閉じたままで、違いは動態に現れた |
-| 5 | 赤痢菌IpaD–抗体Fab | クライオ電顕・3.30–3.40 Å（2 構造） | IpaDへの結合部位で、抗体の溶血への効果が分かれる |
+| 1 | RyR1（ウサギ骨格筋） | Cryo-EM・2.14–3.18 Å（16 構造） | ダントロレンは、ATPやADPと積み重なってRyR1に結合する |
+| 2 | DNA-PK–ヌクレオソーム複合体 | Cryo-EM・3.80–4.11 Å（5 構造） | Kuはヌクレオソームの末端で、約2巻き分のDNAをほどく |
+| 3 | GPR84–Gi（ヒト） | Cryo-EM・3.03 Å | CF3基が2つの残基を押しのけ、β-アレスチンの動員を抑える |
+| 4 | 大腸菌MscL（WT・G22S） | Cryo-EM・3.46–3.68 Å（2 構造） | G22S変異体でもMscLは閉じたままで、違いは動態に現れた |
+| 5 | 赤痢菌IpaD–抗体Fab | Cryo-EM・3.30–3.40 Å（2 構造） | IpaDへの結合部位で、抗体の溶血への効果が分かれる |
 
 > この号は AI が論文本文から作成した**レビュー用の下書き**です。数値・ID・リガンドは PDB / UniProt から取得し、AI の記述には本文からの引用を付けています。
 
@@ -39,10 +39,6 @@
 ![構造図：RyR1（ウサギ骨格筋）](figures/PMC13642953.svg)
 
 <sub>色（順に）：RyR1（リアノジン受容体 1）　スティック：ADP、ダントロレン（U1C）</sub>
-
-![結合部位：ダントロレン](figures/PMC13642953-site.svg)
-
-<sub>ダントロレンの結合部位。4 Å 以内の残基：L874, A875, I878, Y920, N921, M924, S925, T928, G992, H993, W996, R1020, N1035。点線は 3.3 Å 以内の N・O の組（3 組）</sub>
 
 **ダントロレンは、ATPやADPと積み重なってRyR1に結合する**
 
@@ -123,22 +119,22 @@ MH誘発物質4CmCはコアソレノイド中心の隠れたポケットでQ4020
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [9ZND](https://www.rcsb.org/structure/9ZND) | クライオ電顕 | 3.09 Å | 2026-09-16 | Homo sapiens, Oryctolagus cuniculus | U1C, 43M, ATP, CFF, CPS |
-| [9ZLF](https://www.rcsb.org/structure/9ZLF) | クライオ電顕 | 2.71 Å | 2026-09-16 | Oryctolagus cuniculus | U1C, ATP |
-| [9ZN6](https://www.rcsb.org/structure/9ZN6) | クライオ電顕 | 2.58 Å | 2026-09-16 | Homo sapiens, Oryctolagus cuniculus | ADP, U1C, 43M, CFF |
-| [9ZLH](https://www.rcsb.org/structure/9ZLH) | クライオ電顕 | 2.14 Å | 2026-09-16 | Oryctolagus cuniculus | ADP, U1C |
-| [9ZN7](https://www.rcsb.org/structure/9ZN7) | クライオ電顕 | 2.23 Å | 2026-09-16 | Homo sapiens, Oryctolagus cuniculus | ADP, ATP |
-| [9ZKD](https://www.rcsb.org/structure/9ZKD) | クライオ電顕 | 2.32 Å | 2026-09-16 | Oryctolagus cuniculus | ADP |
-| [9ZN8](https://www.rcsb.org/structure/9ZN8) | クライオ電顕 | 2.57 Å | 2026-09-16 | Homo sapiens, Oryctolagus cuniculus | ATP |
-| [9ZKC](https://www.rcsb.org/structure/9ZKC) | クライオ電顕 | 2.66 Å | 2026-09-16 | Oryctolagus cuniculus | — |
-| [9ZK8](https://www.rcsb.org/structure/9ZK8) | クライオ電顕 | 3.18 Å | 2026-09-16 | Oryctolagus cuniculus | ADP |
-| [9ZN9](https://www.rcsb.org/structure/9ZN9) | クライオ電顕 | 2.77 Å | 2026-09-16 | Homo sapiens, Oryctolagus cuniculus | 43M, CFF, ATP |
-| [9ZL7](https://www.rcsb.org/structure/9ZL7) | クライオ電顕 | 2.77 Å | 2026-09-16 | Oryctolagus cuniculus | 43M, ATP |
-| [9ZNA](https://www.rcsb.org/structure/9ZNA) | クライオ電顕 | 2.37 Å | 2026-09-16 | Homo sapiens, Oryctolagus cuniculus | 43M, ADP, PLC, CFF |
-| [9ZLC](https://www.rcsb.org/structure/9ZLC) | クライオ電顕 | 2.52 Å | 2026-09-16 | Oryctolagus cuniculus | ADP |
-| [9ZK9](https://www.rcsb.org/structure/9ZK9) | クライオ電顕 | 3.09 Å | 2026-09-16 | Oryctolagus cuniculus | — |
-| [9ZKA](https://www.rcsb.org/structure/9ZKA) | クライオ電顕 | 2.64 Å | 2026-09-16 | Oryctolagus cuniculus | — |
-| [9ZKE](https://www.rcsb.org/structure/9ZKE) | クライオ電顕 | 2.96 Å | 2026-09-16 | Oryctolagus cuniculus | ATP, KVR |
+| [9ZND](https://www.rcsb.org/structure/9ZND) | Cryo-EM | 3.09 Å | 2026-09-16 | Homo sapiens, Oryctolagus cuniculus | U1C, 43M, ATP, CFF, CPS |
+| [9ZLF](https://www.rcsb.org/structure/9ZLF) | Cryo-EM | 2.71 Å | 2026-09-16 | Oryctolagus cuniculus | U1C, ATP |
+| [9ZN6](https://www.rcsb.org/structure/9ZN6) | Cryo-EM | 2.58 Å | 2026-09-16 | Homo sapiens, Oryctolagus cuniculus | ADP, U1C, 43M, CFF |
+| [9ZLH](https://www.rcsb.org/structure/9ZLH) | Cryo-EM | 2.14 Å | 2026-09-16 | Oryctolagus cuniculus | ADP, U1C |
+| [9ZN7](https://www.rcsb.org/structure/9ZN7) | Cryo-EM | 2.23 Å | 2026-09-16 | Homo sapiens, Oryctolagus cuniculus | ADP, ATP |
+| [9ZKD](https://www.rcsb.org/structure/9ZKD) | Cryo-EM | 2.32 Å | 2026-09-16 | Oryctolagus cuniculus | ADP |
+| [9ZN8](https://www.rcsb.org/structure/9ZN8) | Cryo-EM | 2.57 Å | 2026-09-16 | Homo sapiens, Oryctolagus cuniculus | ATP |
+| [9ZKC](https://www.rcsb.org/structure/9ZKC) | Cryo-EM | 2.66 Å | 2026-09-16 | Oryctolagus cuniculus | — |
+| [9ZK8](https://www.rcsb.org/structure/9ZK8) | Cryo-EM | 3.18 Å | 2026-09-16 | Oryctolagus cuniculus | ADP |
+| [9ZN9](https://www.rcsb.org/structure/9ZN9) | Cryo-EM | 2.77 Å | 2026-09-16 | Homo sapiens, Oryctolagus cuniculus | 43M, CFF, ATP |
+| [9ZL7](https://www.rcsb.org/structure/9ZL7) | Cryo-EM | 2.77 Å | 2026-09-16 | Oryctolagus cuniculus | 43M, ATP |
+| [9ZNA](https://www.rcsb.org/structure/9ZNA) | Cryo-EM | 2.37 Å | 2026-09-16 | Homo sapiens, Oryctolagus cuniculus | 43M, ADP, PLC, CFF |
+| [9ZLC](https://www.rcsb.org/structure/9ZLC) | Cryo-EM | 2.52 Å | 2026-09-16 | Oryctolagus cuniculus | ADP |
+| [9ZK9](https://www.rcsb.org/structure/9ZK9) | Cryo-EM | 3.09 Å | 2026-09-16 | Oryctolagus cuniculus | — |
+| [9ZKA](https://www.rcsb.org/structure/9ZKA) | Cryo-EM | 2.64 Å | 2026-09-16 | Oryctolagus cuniculus | — |
+| [9ZKE](https://www.rcsb.org/structure/9ZKE) | Cryo-EM | 2.96 Å | 2026-09-16 | Oryctolagus cuniculus | ATP, KVR |
 
 - [P0DP23](https://www.uniprot.org/uniprotkb/P0DP23) CALM1 Calmodulin-1 — *Homo sapiens* （既存の PDB 構造 335 件）
 - [P11716](https://www.uniprot.org/uniprotkb/P11716) RYR1 Ryanodine receptor 1 — *Oryctolagus cuniculus* （既存の PDB 構造 145 件）
@@ -264,11 +260,11 @@ DNA-PKcsはリンカーが短い基質で連結を促進した（N-12で約7倍�
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [9ZMM](https://www.rcsb.org/structure/9ZMM) | クライオ電顕 | 3.89 Å | 2026-09-16 | Homo sapiens, Xenopus laevis | — |
-| [9ZNC](https://www.rcsb.org/structure/9ZNC) | クライオ電顕 | 3.93 Å | 2026-09-16 | Homo sapiens, Xenopus laevis | — |
-| [9ZP0](https://www.rcsb.org/structure/9ZP0) | クライオ電顕 | 4.11 Å | 2026-09-16 | Homo sapiens, Xenopus laevis | — |
-| [9ZP9](https://www.rcsb.org/structure/9ZP9) | クライオ電顕 | 3.88 Å | 2026-09-16 | Homo sapiens, Xenopus laevis | — |
-| [9ZOB](https://www.rcsb.org/structure/9ZOB) | クライオ電顕 | 3.80 Å | 2026-09-16 | Homo sapiens, Xenopus laevis | — |
+| [9ZMM](https://www.rcsb.org/structure/9ZMM) | Cryo-EM | 3.89 Å | 2026-09-16 | Homo sapiens, Xenopus laevis | — |
+| [9ZNC](https://www.rcsb.org/structure/9ZNC) | Cryo-EM | 3.93 Å | 2026-09-16 | Homo sapiens, Xenopus laevis | — |
+| [9ZP0](https://www.rcsb.org/structure/9ZP0) | Cryo-EM | 4.11 Å | 2026-09-16 | Homo sapiens, Xenopus laevis | — |
+| [9ZP9](https://www.rcsb.org/structure/9ZP9) | Cryo-EM | 3.88 Å | 2026-09-16 | Homo sapiens, Xenopus laevis | — |
+| [9ZOB](https://www.rcsb.org/structure/9ZOB) | Cryo-EM | 3.80 Å | 2026-09-16 | Homo sapiens, Xenopus laevis | — |
 
 - [A0A1L8FQ56](https://www.uniprot.org/uniprotkb/A0A1L8FQ56) LOC121398078 Histone H2B — *Xenopus laevis* （PDB で初めての構造）
 - [A0A310TTQ1](https://www.uniprot.org/uniprotkb/A0A310TTQ1) LOC121398065 Histone H3 — *Xenopus laevis* （既存の PDB 構造 65 件）
@@ -318,10 +314,6 @@ DNA-PKcsはリンカーが短い基質で連結を促進した（N-12で約7倍�
 ![構造図：GPR84–Gi（ヒト）](figures/PMC13642346.svg)
 
 <sub>色（順に）：GPR84（受容体） / Gαi1（G タンパク質 α） / Gβ1（G タンパク質 β） / Gγ2（G タンパク質 γ） / scFv16（抗体断片）　スティック：OX04529（A1CKT）</sub>
-
-![結合部位：OX04529](figures/PMC13642346-site.svg)
-
-<sub>OX04529の結合部位。4 Å 以内の残基：L100, F101, N104, I108, V165, T167, S169, R172, M183, Y186, Y332, F335, L336, A356, T359, W360。点線は 3.3 Å 以内の N・O の組（2 組）</sub>
 
 **CF3基が2つの残基を押しのけ、β-アレスチンの動員を抑える**
 
@@ -387,7 +379,7 @@ Leu336AlaとPhe187Ala変異は、OX04529によるβ-アレスチン動員を回�
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [9PT4](https://www.rcsb.org/structure/9PT4) | クライオ電顕 | 3.03 Å | 2026-07-22 | Homo sapiens, Mus musculus | A1CKT |
+| [9PT4](https://www.rcsb.org/structure/9PT4) | Cryo-EM | 3.03 Å | 2026-07-22 | Homo sapiens, Mus musculus | A1CKT |
 
 - [P59768](https://www.uniprot.org/uniprotkb/P59768) GNG2 Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-2 — *Homo sapiens* （既存の PDB 構造 1322 件）
 - [P62873](https://www.uniprot.org/uniprotkb/P62873) GNB1 Guanine nucleotide-binding protein G(I)/G(S)/G(T) subunit beta-1 — *Homo sapiens* （既存の PDB 構造 1332 件）
@@ -511,8 +503,8 @@ Leu336AlaとPhe187Ala変異は、OX04529によるβ-アレスチン動員を回�
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [9TIU](https://www.rcsb.org/structure/9TIU) | クライオ電顕 | 3.68 Å | 2026-09-09 | Escherichia coli | — |
-| [9TIV](https://www.rcsb.org/structure/9TIV) | クライオ電顕 | 3.46 Å | 2026-09-09 | Escherichia coli | — |
+| [9TIU](https://www.rcsb.org/structure/9TIU) | Cryo-EM | 3.68 Å | 2026-09-09 | Escherichia coli | — |
+| [9TIV](https://www.rcsb.org/structure/9TIV) | Cryo-EM | 3.46 Å | 2026-09-09 | Escherichia coli | — |
 
 - [P0A742](https://www.uniprot.org/uniprotkb/P0A742) mscL Large-conductance mechanosensitive channel — *Escherichia coli (strain K12)* （既存の PDB 構造 5 件）
 
@@ -623,8 +615,8 @@ IpaDへの結合部位が機能を分ける。溶血を抑えるD13r.34とD02-F2
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [9ZRT](https://www.rcsb.org/structure/9ZRT) | クライオ電顕 | 3.30 Å | 2026-09-16 | Macaca mulatta, Shigella flexneri | — |
-| [9ZRS](https://www.rcsb.org/structure/9ZRS) | クライオ電顕 | 3.40 Å | 2026-09-16 | Macaca mulatta, Shigella flexneri | — |
+| [9ZRT](https://www.rcsb.org/structure/9ZRT) | Cryo-EM | 3.30 Å | 2026-09-16 | Macaca mulatta, Shigella flexneri | — |
+| [9ZRS](https://www.rcsb.org/structure/9ZRS) | Cryo-EM | 3.40 Å | 2026-09-16 | Macaca mulatta, Shigella flexneri | — |
 
 - [P18013](https://www.uniprot.org/uniprotkb/P18013) ipaD Invasin IpaD — *Shigella flexneri* （既存の PDB 構造 13 件）
 

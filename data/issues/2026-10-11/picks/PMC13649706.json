@@ -4,6 +4,7 @@
   "headline": "基質とATPで構造が切り替わる、結核菌のガラクタン輸送体",
   "subhead": "3つの状態をクライオ電顕で解析。ゲートヘリックスの動きが輸送のカギを握る",
   "target_label": "WzmWzt（結核菌）",
+  "target_en": "WzmWzt (M. tuberculosis)",
   "summary": {
     "question": "ABC輸送体のWzmWztは、結核菌の細胞壁の材料になる糖鎖（ガラクタン）を膜の向こう側へ運ぶ。その運び方は未解明だった。",
     "approach": "基質とみられる分子が結合した状態、ATPが結合した状態など、WzmWztの3つの姿をクライオ電顕で調べた。",

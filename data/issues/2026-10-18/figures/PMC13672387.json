@@ -348,7 +348,8 @@
    "Y728",
    "F731"
   ],
-  "polar": 3,
+  "hbonds": 3,
+  "pi": 2,
   "neighbours": [
    "chlorophyll a isomer",
    "クロロフィル a"

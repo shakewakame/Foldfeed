@@ -55,7 +55,8 @@
    "Y265",
    "W266"
   ],
-  "polar": 12,
+  "hbonds": 13,
+  "pi": 0,
   "neighbours": [],
   "label": "ManNAc-6-P"
  }

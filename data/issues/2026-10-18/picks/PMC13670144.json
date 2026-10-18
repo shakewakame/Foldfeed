@@ -4,6 +4,7 @@
   "headline": "AIE蛍光色素は、タンパク質に結びつくと環の回転が止まって光る",
   "subhead": "ペプチドをつないだAIE分子とhPin1-WWドメインの複合体を、NMRの溶液構造で解析した",
   "target_label": "hPin1-WWドメイン＋AIEペプチドF11",
+  "target_en": "Human Pin1 WW domain + AIE peptide F11",
   "summary": {
     "question": "AIE（凝集誘起発光）リガンドがタンパク質に結合した複合体の構造は、これまで報告されていなかった。",
     "approach": "hPin1-WWの結合配列をつないだAIEペプチドを作り、蛍光滴定で結合を調べ、遊離状態と複合体の溶液NMR構造を決めた。",
@@ -11,48 +12,90 @@
     "learned": "芳香環がタンパク質表面に固定されて動きが制限されるため、結合すると蛍光が強くなる。",
     "evidence": {
       "question": [
-        {"quote": "However, so far, the structure of an AIE-ligand:protein complex has not been published.", "section": "Introduction"}
+        {
+          "quote": "However, so far, the structure of an AIE-ligand:protein complex has not been published.",
+          "section": "Introduction"
+        }
       ],
       "approach": [
-        {"quote": "While an AIE fluorophore with two conjugated peptides shows an enhanced fluorescence increase upon protein binding, a one-armed derivative enabled us to solve the structures of the free AIE-peptide and its complex.", "section": "Abstract"}
+        {
+          "quote": "While an AIE fluorophore with two conjugated peptides shows an enhanced fluorescence increase upon protein binding, a one-armed derivative enabled us to solve the structures of the free AIE-peptide and its complex.",
+          "section": "Abstract"
+        }
       ],
       "result": [
-        {"quote": "In the absence of a protein, the AIE-peptide conjugate shows a curled-up conformation that still allows rotation of the aromatic rings of the AIE-core, thus resulting in low auto-fluorescence.", "section": "Abstract"},
-        {"quote": "Residue F25 of hPin1-WW rotates into the centre of the C-shape, forming face-to-edge π–π interactions with the central and distal aromatic rings of the AIE-core (Fig. 4b).", "section": "NMR solution structure of F11 bound to hPin1-WW"}
+        {
+          "quote": "In the absence of a protein, the AIE-peptide conjugate shows a curled-up conformation that still allows rotation of the aromatic rings of the AIE-core, thus resulting in low auto-fluorescence.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Residue F25 of hPin1-WW rotates into the centre of the C-shape, forming face-to-edge π–π interactions with the central and distal aromatic rings of the AIE-core (Fig. 4b).",
+          "section": "NMR solution structure of F11 bound to hPin1-WW"
+        }
       ],
       "learned": [
-        {"quote": "The aromatic rings of the AIE-core form additional contacts with the protein surface, which restricts their motions and thus results in the observed fluorescence increase.", "section": "Abstract"}
+        {
+          "quote": "The aromatic rings of the AIE-core form additional contacts with the protein surface, which restricts their motions and thus results in the observed fluorescence increase.",
+          "section": "Abstract"
+        }
       ],
       "open": [
-        {"quote": "Each protein:AIE-peptide system will require optimization of the linker length between AIE and peptide recognition sequence to allow the AIE to reach its ideal spot on the protein surface.", "section": "Conclusions"}
+        {
+          "quote": "Each protein:AIE-peptide system will require optimization of the linker length between AIE and peptide recognition sequence to allow the AIE to reach its ideal spot on the protein surface.",
+          "section": "Conclusions"
+        }
       ]
     }
   },
-  "categories": ["enzyme", "other"],
+  "categories": [
+    "enzyme",
+    "other"
+  ],
   "highlights": [
     {
       "tag": "機構の解明",
       "text": "遊離のF11では、ペプチドがらせん状にAIEコアの上に巻き付き、プロリン環が芳香環とCH–π相互作用をつくる。近位の環は回転できるため、単独では蛍光が弱い。結合したF11は伸びた形になるが、最初のペプチド結合はcis型のままである。",
       "evidence": [
-        {"quote": "The peptide arm is curled up in a helical fashion above the aromatic core, such that the hydrophobic proline ring interacts with the proximal (closest to the peptide) and central aromatic rings.", "section": "Solution structure of AIE-peptide F11 with one peptide arm"},
-        {"quote": "The AIE-peptide F11 is draped over the saddle-shaped top of the central hPin1-WW β-sheet and no longer in a curled-up conformation; however, the first peptide bond remains in cis conformation.", "section": "NMR solution structure of F11 bound to hPin1-WW"}
+        {
+          "quote": "The peptide arm is curled up in a helical fashion above the aromatic core, such that the hydrophobic proline ring interacts with the proximal (closest to the peptide) and central aromatic rings.",
+          "section": "Solution structure of AIE-peptide F11 with one peptide arm"
+        },
+        {
+          "quote": "The AIE-peptide F11 is draped over the saddle-shaped top of the central hPin1-WW β-sheet and no longer in a curled-up conformation; however, the first peptide bond remains in cis conformation.",
+          "section": "NMR solution structure of F11 bound to hPin1-WW"
+        }
       ]
     },
     {
       "tag": "新しい結合部位",
       "text": "AIEコアはC字形のままβシートの上に載り、F25が中央に入り込んでコアと接触する。R14はカチオン–π相互作用でコアを支え、M15の側鎖は既知のhPin1-WW構造にない上向きの形で、トリアゾール環の方を向く。",
       "evidence": [
-        {"quote": "Residue R14 is also involved in stabilizing the aromatic AIE-core of F11 by cation–π interactions.", "section": "NMR solution structure of F11 bound to hPin1-WW"},
-        {"quote": "Residue M15 displays a conformation that is unique among all known hPin1-WW structures (apo and peptide-bound).", "section": "NMR solution structure of F11 bound to hPin1-WW"}
+        {
+          "quote": "Residue R14 is also involved in stabilizing the aromatic AIE-core of F11 by cation–π interactions.",
+          "section": "NMR solution structure of F11 bound to hPin1-WW"
+        },
+        {
+          "quote": "Residue M15 displays a conformation that is unique among all known hPin1-WW structures (apo and peptide-bound).",
+          "section": "NMR solution structure of F11 bound to hPin1-WW"
+        }
       ]
     },
     {
       "tag": "手法の工夫",
       "text": "クリック反応でペプチドをAIEコアにつなぐと、さまざまなペプチド結合タンパク質向けの直接読み出しプローブにできる。2本腕のF21–F24は蛍光の増加がF11より5〜9倍大きく、リンカーは短いほうが凝集しにくい。著者は、F11のKDが対照ペプチドより小さくならなかった点も注意している。",
       "evidence": [
-        {"quote": "Coupling of peptides to the AIE-core via click chemistry offers a convenient system to pair the AIE properties with a multitude of peptides to target a variety of peptide-binding proteins.", "section": "Conclusions"},
-        {"quote": "The fluorescence amplitude of F11 (with one peptide) upon protein binding was 5–9-fold lower compared to that of the two-armed fluorophores.", "section": "Aggregation-induced emission enhancement (AIEE) for the quantitative characterisation of protein binding via direct read-out"},
-        {"quote": "Interestingly, the binding affinity does not improve but rather the KD slightly increases for the AIE-peptides compared to the native control peptide P0", "section": "Conclusions"}
+        {
+          "quote": "Coupling of peptides to the AIE-core via click chemistry offers a convenient system to pair the AIE properties with a multitude of peptides to target a variety of peptide-binding proteins.",
+          "section": "Conclusions"
+        },
+        {
+          "quote": "The fluorescence amplitude of F11 (with one peptide) upon protein binding was 5–9-fold lower compared to that of the two-armed fluorophores.",
+          "section": "Aggregation-induced emission enhancement (AIEE) for the quantitative characterisation of protein binding via direct read-out"
+        },
+        {
+          "quote": "Interestingly, the binding affinity does not improve but rather the KD slightly increases for the AIE-peptides compared to the native control peptide P0",
+          "section": "Conclusions"
+        }
       ]
     }
   ],
@@ -63,11 +106,26 @@
     "sample_prep": "AIEペプチドと、Cu(I)触媒のクリック反応でカップリング。",
     "data_collection": "15N標識hPin1-WWにAIEペプチドを加えたNMR滴定と、蛍光滴定でKDを求めた。",
     "evidence": [
-      {"quote": "Peptides P1–P6 with an N-terminal azido-homoalanine (Aha) residue were synthesized via standard solid phase peptide synthesis using FMOC chemistry, deprotected and purified by HPLC.", "section": "Synthesis"},
-      {"quote": "The TFA ions were exchanged with chloride to avoid possible interference of protein binding by trifluoroacetate (TFA) ions present after HPLC purification.", "section": "Synthesis"},
-      {"quote": "Recognition of the pThr-Pro motif in F11 and F21–F24 by the hPin1-WW domain was confirmed by NMR, titrating peptide-conjugated AIE fluorophores to 15N-labelled hPin1-WW", "section": "Aggregation-induced emission enhancement (AIEE) for the quantitative characterisation of protein binding via direct read-out"}
+      {
+        "quote": "Peptides P1–P6 with an N-terminal azido-homoalanine (Aha) residue were synthesized via standard solid phase peptide synthesis using FMOC chemistry, deprotected and purified by HPLC.",
+        "section": "Synthesis"
+      },
+      {
+        "quote": "The TFA ions were exchanged with chloride to avoid possible interference of protein binding by trifluoroacetate (TFA) ions present after HPLC purification.",
+        "section": "Synthesis"
+      },
+      {
+        "quote": "Recognition of the pThr-Pro motif in F11 and F21–F24 by the hPin1-WW domain was confirmed by NMR, titrating peptide-conjugated AIE fluorophores to 15N-labelled hPin1-WW",
+        "section": "Aggregation-induced emission enhancement (AIEE) for the quantitative characterisation of protein binding via direct read-out"
+      }
     ]
   },
-  "keywords": ["AIE", "凝集誘起発光", "hPin1-WW", "溶液NMR", "蛍光プローブ"],
+  "keywords": [
+    "AIE",
+    "凝集誘起発光",
+    "hPin1-WW",
+    "溶液NMR",
+    "蛍光プローブ"
+  ],
   "editor_notes": "PDB 29KP（遊離F11）・29KQ（hPin1-WW複合体）は未公開。実験条件の詳細（NMR測定など）は補足資料にあり、本文パケットには含まれない。論文は「AIEリガンドとタンパク質の初の溶液NMR構造」と明言しているが、見出しには使っていない。"
 }

@@ -4,6 +4,7 @@
   "headline": "ランダムな環状ペプチドから、細胞内で働くKeap1阻害剤を得た",
   "subhead": "15,360種から選んで改良し、Keap1との結晶構造で結合の仕方を確かめた",
   "target_label": "Keap1 Kelchドメイン（ヒト）",
+  "target_en": "Human Keap1 Kelch domain",
   "summary": {
     "question": "事前にリガンドの情報がない標的に、細胞膜を通る環状ペプチドをゼロから作るのは難しかった。",
     "approach": "Keap1とNrf2の結合を妨げる分子を15,360種のランダムな環状ペプチドから探し、3回の改良を重ねた。",

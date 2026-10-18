@@ -66,7 +66,8 @@
    "I322",
    "Y326"
   ],
-  "polar": 1,
+  "hbonds": 1,
+  "pi": 1,
   "neighbours": [],
   "label": "ロフェンタニル"
  }

@@ -45,7 +45,8 @@
    "R650",
    "D655"
   ],
-  "polar": 8,
+  "hbonds": 12,
+  "pi": 1,
   "neighbours": [],
   "label": "ATP"
  }

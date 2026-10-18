@@ -65,7 +65,8 @@
    "L241",
    "I245"
   ],
-  "polar": 0,
+  "hbonds": 0,
+  "pi": 0,
   "neighbours": [],
   "label": "DHA（C22:6）"
  }

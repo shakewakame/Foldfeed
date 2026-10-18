@@ -4,6 +4,7 @@
   "headline": "拮抗薬は別の場所に結合し、MRGPRX4の作動薬の結合を妨げる",
   "subhead": "クライオ電顕の3状態で、拮抗薬の結合に伴いE247が作動薬のリン酸の結合部位へ入り込んでいた",
   "target_label": "MRGPRX4（ヒト、かゆみ受容体）",
+  "target_en": "Human MRGPRX4 (itch receptor)",
   "summary": {
     "question": "胆汁酸によるかゆみを伝えるMRGPRX4が阻害される仕組みは分かっておらず、拮抗薬結合型の構造も未報告だった。",
     "approach": "作動薬DEX-P・拮抗薬cmpd54-4を結合した状態とリガンドなし（apo）の3状態をクライオ電顕で解析した。",

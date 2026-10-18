@@ -4,6 +4,7 @@
   "headline": "IgLON5抗体は二量体を壊さず、受容体の集合を促しうる",
   "subhead": "患者の抗体Fabとの複合体を3.7 Åで解析し、第2Igドメインへの結合を示した",
   "target_label": "IgLON5とFab2513（ヒト）",
+  "target_en": "Human IgLON5–Fab 2513",
   "summary": {
     "question": "神経の接着分子IgLON5への自己抗体がどう結合し病気に関わるかは、よく分かっていなかった。",
     "approach": "患者の記憶B細胞から高親和性のIgG4抗体を単離し、そのFabとIgLON5の複合体をクライオ電顕で解析した。",

@@ -5,6 +5,7 @@
   "headline": "アベルマブの結合面は、HDX-MSと固体NMRでも結晶構造と一致した",
   "subhead": "既存の5GRJと比べて確かめ、PD-L1のC末端の保護も見えた",
   "target_label": "PD-L1・アベルマブ（ヒト）",
+  "target_en": "Human PD-L1 · avelumab",
   "method_label": "HDX-MS・固体NMR（既存の5GRJと比較）",
   "summary": {
     "question": "抗体は大きく柔らかいため、標的との複合体の高分解能の構造は得にくい。",

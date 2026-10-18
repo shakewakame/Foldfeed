@@ -54,7 +54,8 @@
    "I910",
    "D911"
   ],
-  "polar": 2,
+  "hbonds": 2,
+  "pi": 1,
   "neighbours": [],
   "label": "ロギノリシブ"
  }

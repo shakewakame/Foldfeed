@@ -4,6 +4,7 @@
   "headline": "歯周病菌のMfa線毛は、プロテアーゼによる鎖の交換でつながる",
   "subhead": "重合したMfa1の線維を3.0 Åのクライオ電顕で解析し、Ca2+の結合も確かめた",
   "target_label": "Mfa1線毛（P. gingivalis）",
+  "target_en": "Mfa1 fimbriae (P. gingivalis)",
   "summary": {
     "question": "歯周病菌の短い線毛であるMfa線毛の構造と、組み立ての仕組みは不明だった。",
     "approach": "組換えMfa1を酵素RgpBで試験管内で重合させ、できた線維をクライオ電顕で解析した。",

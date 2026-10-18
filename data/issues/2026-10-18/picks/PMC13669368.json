@@ -4,6 +4,7 @@
   "headline": "OCTN1の外向き・内向きの構造から、阻害薬メベンダゾールを見いだした",
   "subhead": "ヒトOCTN1のapo型とエルゴチオネン結合型をクライオ電顕で解き、構造に基づく仮想スクリーニングで阻害剤を探した",
   "target_label": "ヒトOCTN1（SLC22A4）",
+  "target_en": "Human OCTN1 (SLC22A4)",
   "summary": {
     "question": "OCTN1が基質を認識して運ぶ仕組みは、構造の面からはよく分かっていなかった。",
     "approach": "ヒトOCTN1のapo型とエルゴチオネン（ET）結合型をクライオ電顕で解析し、構造をもとに阻害剤を探した。",

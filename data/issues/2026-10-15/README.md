@@ -8,8 +8,8 @@
 
 | # | 標的 | 手法・分解能 | 見出し |
 |---|---|---|---|
-| 1 | PfRIPR（熱帯熱マラリア原虫） | X線結晶構造解析 / クライオ電顕・2.20–3.40 Å（5 構造） | 増殖を抑える抗体は、マラリア原虫PfRIPRの尾部を折り曲げる |
-| 2 | IgLON5とFab2513（ヒト） | クライオ電顕・3.50–3.70 Å（2 構造） | IgLON5抗体は二量体を壊さず、受容体の集合を促しうる |
+| 1 | PfRIPR（熱帯熱マラリア原虫） | Cryo-EM / X-ray・2.20–3.40 Å（5 構造） | 増殖を抑える抗体は、マラリア原虫PfRIPRの尾部を折り曲げる |
+| 2 | IgLON5とFab2513（ヒト） | Cryo-EM・3.50–3.70 Å（2 構造） | IgLON5抗体は二量体を壊さず、受容体の集合を促しうる |
 
 > この号は AI が論文本文から作成した**レビュー用の下書き**です。数値・ID・リガンドは PDB / UniProt から取得し、AI の記述には本文からの引用を付けています。
 
@@ -113,11 +113,11 @@ MAD8-2はRP.012の阻害を打ち消し（約16%、RP.012単独は46%）、C末�
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [9TUW](https://www.rcsb.org/structure/9TUW) | X線結晶構造解析 | 2.20 Å | 2026-07-08 | Homo sapiens, Mus musculus, Plasmodium falciparum 3D7 | — |
-| [9TUX](https://www.rcsb.org/structure/9TUX) | X線結晶構造解析 | 2.25 Å | 2026-07-08 | Homo sapiens, Plasmodium falciparum 3D7 | — |
-| [9TUY](https://www.rcsb.org/structure/9TUY) | X線結晶構造解析 | 2.80 Å | 2026-07-08 | Homo sapiens, Plasmodium falciparum 3D7 | — |
-| [9TUZ](https://www.rcsb.org/structure/9TUZ) | クライオ電顕 | 3.40 Å | 2026-07-08 | Homo sapiens, Plasmodium falciparum 3D7 | — |
-| [9TV0](https://www.rcsb.org/structure/9TV0) | クライオ電顕 | 2.80 Å | 2026-07-22 | Plasmodium falciparum 3D7 | — |
+| [9TUW](https://www.rcsb.org/structure/9TUW) | X-ray | 2.20 Å | 2026-07-08 | Homo sapiens, Mus musculus, Plasmodium falciparum 3D7 | — |
+| [9TUX](https://www.rcsb.org/structure/9TUX) | X-ray | 2.25 Å | 2026-07-08 | Homo sapiens, Plasmodium falciparum 3D7 | — |
+| [9TUY](https://www.rcsb.org/structure/9TUY) | X-ray | 2.80 Å | 2026-07-08 | Homo sapiens, Plasmodium falciparum 3D7 | — |
+| [9TUZ](https://www.rcsb.org/structure/9TUZ) | Cryo-EM | 3.40 Å | 2026-07-08 | Homo sapiens, Plasmodium falciparum 3D7 | — |
+| [9TV0](https://www.rcsb.org/structure/9TV0) | Cryo-EM | 2.80 Å | 2026-07-22 | Plasmodium falciparum 3D7 | — |
 
 - [O97302](https://www.uniprot.org/uniprotkb/O97302) RIPR Rh5-interacting protein — *Plasmodium falciparum (isolate 3D7)* （既存の PDB 構造 5 件）
 - [P0DOX5](https://www.uniprot.org/uniprotkb/P0DOX5)  Immunoglobulin gamma-1 heavy chain — *Homo sapiens* （既存の PDB 構造 108 件）
@@ -252,8 +252,8 @@ Fabは残基163–205にわたる第2Igドメインの面をはさみ込むよ�
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [29CP](https://www.rcsb.org/structure/29CP) | クライオ電顕 | 3.70 Å | 2026-09-02 | Homo sapiens | — |
-| [29IN](https://www.rcsb.org/structure/29IN) | クライオ電顕 | 3.50 Å | 2026-09-02 | Homo sapiens | — |
+| [29CP](https://www.rcsb.org/structure/29CP) | Cryo-EM | 3.70 Å | 2026-09-02 | Homo sapiens | — |
+| [29IN](https://www.rcsb.org/structure/29IN) | Cryo-EM | 3.50 Å | 2026-09-02 | Homo sapiens | — |
 
 - [A6NGN9](https://www.uniprot.org/uniprotkb/A6NGN9) IGLON5 IgLON family member 5 — *Homo sapiens* （既存の PDB 構造 2 件）
 

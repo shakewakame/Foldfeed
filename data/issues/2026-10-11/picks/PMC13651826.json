@@ -4,6 +4,7 @@
   "headline": "Ro60ペプチドは、HLA-DR3の上で3つの残基をTCRに向ける",
   "subhead": "自己抗原ペプチドと結合したHLA-DR3の初の結晶構造（2.87 Å）。TCRを組み込んだTregは抑制力が約2倍に",
   "target_label": "HLA-DR3–Ro60ペプチド（ヒト）",
+  "target_en": "Human HLA-DR3–Ro60 peptide",
   "summary": {
     "question": "シェーグレン病では、HLA-DR3が自己抗原Ro60の断片をT細胞に見せる。しかしその結合の構造は、これまで分かっていなかった。",
     "approach": "Ro60ペプチドを結合したHLA-DR3の結晶構造を決め、Ro60に反応するTCR（T細胞の受容体）を組み込んだ制御性T細胞（Treg）も作った。",

@@ -4,6 +4,7 @@
   "headline": "Pit2から切り出されたペプチドが、カビのGPCRを活性化する",
   "subhead": "Pit2の結晶構造で、リガンドのペプチドは二量体の芯に隠れていた",
   "target_label": "Pit2（トウモロコシ黒穂病菌）",
+  "target_en": "Pit2 (Ustilago maydis)",
   "summary": {
     "question": "菌類のGPCR（細胞外の信号を受け取る7回膜貫通型の受容体）は、リガンドも活性化の仕組みもよく分かっていない。",
     "approach": "黒穂病菌のGpe1を酵母に発現させて活性化を測り、Pit2の結晶構造とAlphaFold3のモデルで結合を調べた。",

@@ -20,11 +20,11 @@
 
 | # | 標的 | 手法・分解能 | 見出し |
 |---|---|---|---|
-| 1 | MDA5（IFIH1）–dsRNA | クライオ電顕・2.81–3.21 Å（4 構造） | T331Iは、短いdsRNAでも安定なフィラメントを作る |
-| 2 | MERS-CoVスパイク–DPP4 | クライオ電顕・2.88–3.44 Å（7 構造） | MERS-CoVスパイクの活性化を、時間を追って捉えた |
-| 3 | グリシンリボスイッチ（コレラ菌） | クライオ電顕・2.86–3.27 Å（2 構造） | Mg²⁺とグリシンは、リボスイッチの折りたたみを協調して支える |
-| 4 | SIRT2／SIRT5（ペプチド複合体） | X線結晶構造解析・1.45–2.80 Å（2 構造） | サーチュインは、N-メチル化されたアシルリジンを外せない |
-| 5 | PoOMT1（Paeonia ostii） | X線結晶構造解析・1.83–2.28 Å（3 構造） | PoOMT1のT字型ポケットは、2種類の基質を受け入れる |
+| 1 | MDA5（IFIH1）–dsRNA | Cryo-EM・2.81–3.21 Å（4 構造） | T331Iは、短いdsRNAでも安定なフィラメントを作る |
+| 2 | MERS-CoVスパイク–DPP4 | Cryo-EM・2.88–3.44 Å（7 構造） | MERS-CoVスパイクの活性化を、時間を追って捉えた |
+| 3 | グリシンリボスイッチ（コレラ菌） | Cryo-EM・2.86–3.27 Å（2 構造） | Mg²⁺とグリシンは、リボスイッチの折りたたみを協調して支える |
+| 4 | SIRT2／SIRT5（ペプチド複合体） | X-ray・1.45–2.80 Å（2 構造） | サーチュインは、N-メチル化されたアシルリジンを外せない |
+| 5 | PoOMT1（Paeonia ostii） | X-ray・1.83–2.28 Å（3 構造） | PoOMT1のT字型ポケットは、2種類の基質を受け入れる |
 | 6 | ピキサントロン–AP部位DNA | NMR＋拘束MD、結晶 2.5 Å | ピキサントロンは脱塩基部位と結合し、2種類の異性体を生じる |
 
 > この号は AI が論文本文から作成した**レビュー用の下書き**です。数値・ID・リガンドは PDB / UniProt から取得し、AI の記述には本文からの引用を付けています。
@@ -40,10 +40,6 @@
 ![構造図：MDA5（IFIH1）–dsRNA](figures/PMC13646831.svg)
 
 <sub>色（順に）：MDA5（IFIH1） / dsRNA 鎖 1 / dsRNA 鎖 2　スティック：AMP-PNP（ANP）</sub>
-
-![結合部位：AMP-PNP](figures/PMC13646831-site.svg)
-
-<sub>AMP-PNPの結合部位。4 Å 以内の残基：Q307, L308, R309, Q312, P330, T331, G332, S333, G334, K335, T336, R337, E376。点線は 3.3 Å 以内の N・O の組（11 組）</sub>
 
 **T331Iは、短いdsRNAでも安定なフィラメントを作る**
 
@@ -114,10 +110,10 @@ T331Iのフィラメントはサブユニット間のねじれ角がほぼ一定
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [9Y4J](https://www.rcsb.org/structure/9Y4J) | クライオ電顕 | 2.81 Å | 2026-09-09 | Homo sapiens, in vitro transcription vector pT7-Fluc(deltai) | ANP |
-| [9Y4L](https://www.rcsb.org/structure/9Y4L) | クライオ電顕 | 2.96 Å | 2026-09-09 | Homo sapiens, in vitro transcription vector pT7-Fluc(deltai) | ANP |
-| [9Q60](https://www.rcsb.org/structure/9Q60) | クライオ電顕 | 3.12 Å | 2026-09-16 | Homo sapiens, synthetic construct | ATP |
-| [9Q5W](https://www.rcsb.org/structure/9Q5W) | クライオ電顕 | 3.21 Å | 2026-09-16 | Homo sapiens, synthetic construct | ATP |
+| [9Y4J](https://www.rcsb.org/structure/9Y4J) | Cryo-EM | 2.81 Å | 2026-09-09 | Homo sapiens, in vitro transcription vector pT7-Fluc(deltai) | ANP |
+| [9Y4L](https://www.rcsb.org/structure/9Y4L) | Cryo-EM | 2.96 Å | 2026-09-09 | Homo sapiens, in vitro transcription vector pT7-Fluc(deltai) | ANP |
+| [9Q60](https://www.rcsb.org/structure/9Q60) | Cryo-EM | 3.12 Å | 2026-09-16 | Homo sapiens, synthetic construct | ATP |
+| [9Q5W](https://www.rcsb.org/structure/9Q5W) | Cryo-EM | 3.21 Å | 2026-09-16 | Homo sapiens, synthetic construct | ATP |
 
 - [Q9BYX4](https://www.uniprot.org/uniprotkb/Q9BYX4) IFIH1 Interferon-induced helicase C domain-containing protein 1 — *Homo sapiens* （既存の PDB 構造 9 件）
 
@@ -238,13 +234,13 @@ T331Iのフィラメントはサブユニット間のねじれ角がほぼ一定
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [22FY](https://www.rcsb.org/structure/22FY) | クライオ電顕 | 3.24 Å | 2026-09-02 | Middle East respiratory syndrome-related coronavirus | — |
-| [22DX](https://www.rcsb.org/structure/22DX) | クライオ電顕 | 3.29 Å | 2026-09-02 | Homo sapiens, Middle East respiratory syndrome-related coronavirus (isolate United Kingdom/H123990006/2012) | — |
-| [22DY](https://www.rcsb.org/structure/22DY) | クライオ電顕 | 3.35 Å | 2026-09-02 | Homo sapiens, Middle East respiratory syndrome-related coronavirus (isolate United Kingdom/H123990006/2012) | — |
-| [22DZ](https://www.rcsb.org/structure/22DZ) | クライオ電顕 | 3.01 Å | 2026-09-02 | Middle East respiratory syndrome-related coronavirus (isolate United Kingdom/H123990006/2012) | — |
-| [22EA](https://www.rcsb.org/structure/22EA) | クライオ電顕 | 3.44 Å | 2026-09-02 | Homo sapiens, Middle East respiratory syndrome-related coronavirus (isolate United Kingdom/H123990006/2012) | — |
-| [22EB](https://www.rcsb.org/structure/22EB) | クライオ電顕 | 2.88 Å | 2026-09-02 | Homo sapiens, Middle East respiratory syndrome-related coronavirus | — |
-| [22EC](https://www.rcsb.org/structure/22EC) | クライオ電顕 | 3.23 Å | 2026-09-02 | Betacoronavirus England 1 | — |
+| [22FY](https://www.rcsb.org/structure/22FY) | Cryo-EM | 3.24 Å | 2026-09-02 | Middle East respiratory syndrome-related coronavirus | — |
+| [22DX](https://www.rcsb.org/structure/22DX) | Cryo-EM | 3.29 Å | 2026-09-02 | Homo sapiens, Middle East respiratory syndrome-related coronavirus (isolate United Kingdom/H123990006/2012) | — |
+| [22DY](https://www.rcsb.org/structure/22DY) | Cryo-EM | 3.35 Å | 2026-09-02 | Homo sapiens, Middle East respiratory syndrome-related coronavirus (isolate United Kingdom/H123990006/2012) | — |
+| [22DZ](https://www.rcsb.org/structure/22DZ) | Cryo-EM | 3.01 Å | 2026-09-02 | Middle East respiratory syndrome-related coronavirus (isolate United Kingdom/H123990006/2012) | — |
+| [22EA](https://www.rcsb.org/structure/22EA) | Cryo-EM | 3.44 Å | 2026-09-02 | Homo sapiens, Middle East respiratory syndrome-related coronavirus (isolate United Kingdom/H123990006/2012) | — |
+| [22EB](https://www.rcsb.org/structure/22EB) | Cryo-EM | 2.88 Å | 2026-09-02 | Homo sapiens, Middle East respiratory syndrome-related coronavirus | — |
+| [22EC](https://www.rcsb.org/structure/22EC) | Cryo-EM | 3.23 Å | 2026-09-02 | Betacoronavirus England 1 | — |
 
 - [K9N5Q8](https://www.uniprot.org/uniprotkb/K9N5Q8) S Spike glycoprotein — *Middle East respiratory syndrome-related coronavirus (isolate United Kingdom/H123990006/2012)* （既存の PDB 構造 64 件）
 - [P27487](https://www.uniprot.org/uniprotkb/P27487) DPP4 Dipeptidyl peptidase 4 — *Homo sapiens* （既存の PDB 構造 116 件）
@@ -289,10 +285,6 @@ T331Iのフィラメントはサブユニット間のねじれ角がほぼ一定
 ![構造図：グリシンリボスイッチ（コレラ菌）](figures/PMC13648278.svg)
 
 <sub>色（順に）：グリシンリボスイッチ（RNA）　スティック：グリシン（GLY）</sub>
-
-![結合部位：グリシン](figures/PMC13648278-site.svg)
-
-<sub>グリシンの結合部位。4 Å 以内の残基：G66, A68, G69, A70, U80, U81, C82, A83。点線は 3.3 Å 以内の N・O の組（7 組）</sub>
 
 **Mg²⁺とグリシンは、リボスイッチの折りたたみを協調して支える**
 
@@ -364,8 +356,8 @@ RNAだけの2.9 Å構造。折りたたんだ分子の割合は、Mg²⁺のみ�
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [9N3I](https://www.rcsb.org/structure/9N3I) | クライオ電顕 | 2.86 Å | 2026-07-29 | Vibrio cholerae | GLY |
-| [9N3J](https://www.rcsb.org/structure/9N3J) | クライオ電顕 | 3.27 Å | 2026-08-05 | Vibrio cholerae | — |
+| [9N3I](https://www.rcsb.org/structure/9N3I) | Cryo-EM | 2.86 Å | 2026-07-29 | Vibrio cholerae | GLY |
+| [9N3J](https://www.rcsb.org/structure/9N3J) | Cryo-EM | 3.27 Å | 2026-08-05 | Vibrio cholerae | — |
 
 #### 実験メモ
 
@@ -475,8 +467,8 @@ SIRT2–ミリストイル-N-メチルリジンペプチド複合体（1.45 Å�
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [30KD](https://www.rcsb.org/structure/30KD) | X線結晶構造解析 | 1.45 Å | 2026-09-30 | Homo sapiens, synthetic construct | BTB |
-| [30KE](https://www.rcsb.org/structure/30KE) | X線結晶構造解析 | 2.80 Å | 2026-09-30 | Homo sapiens, synthetic construct | NAD |
+| [30KD](https://www.rcsb.org/structure/30KD) | X-ray | 1.45 Å | 2026-09-30 | Homo sapiens, synthetic construct | BTB |
+| [30KE](https://www.rcsb.org/structure/30KE) | X-ray | 2.80 Å | 2026-09-30 | Homo sapiens, synthetic construct | NAD |
 | 30KU | — | — | 公開待ち | — | — |
 
 - [Q8IXJ6](https://www.uniprot.org/uniprotkb/Q8IXJ6) SIRT2 NAD-dependent protein deacetylase sirtuin-2 — *Homo sapiens* （既存の PDB 構造 79 件）
@@ -518,10 +510,6 @@ SIRT2–ミリストイル-N-メチルリジンペプチド複合体（1.45 Å�
 ![構造図：PoOMT1（Paeonia ostii）](figures/PMC13646271.svg)
 
 <sub>色（順に）：PoOMT1（O-メチルトランスフェラーゼ）　スティック：4′-ヒドロキシアセトフェノン（AC6）、SAH</sub>
-
-![結合部位：4′-ヒドロキシアセトフェノン](figures/PMC13646271-site.svg)
-
-<sub>4′-ヒドロキシアセトフェノンの結合部位。4 Å 以内の残基：L117, L120, N121, L126, F153, Y154, F168, M172, W259, H262, N263, L315, M316。点線は 3.3 Å 以内の N・O の組（4 組）</sub>
 
 **PoOMT1のT字型ポケットは、2種類の基質を受け入れる**
 
@@ -598,9 +586,9 @@ Region D（L117・F312・L315）をTrpに置換すると、2′-OHを持つ基�
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [9WAZ](https://www.rcsb.org/structure/9WAZ) | X線結晶構造解析 | 2.03 Å | 2026-06-24 | Paeonia ostii | SAH |
-| [9WBA](https://www.rcsb.org/structure/9WBA) | X線結晶構造解析 | 1.83 Å | 2026-08-26 | Paeonia ostii | SAH, AC6 |
-| [9WB6](https://www.rcsb.org/structure/9WB6) | X線結晶構造解析 | 2.28 Å | 2026-06-24 | Paeonia ostii | SAH, A1EVU |
+| [9WAZ](https://www.rcsb.org/structure/9WAZ) | X-ray | 2.03 Å | 2026-06-24 | Paeonia ostii | SAH |
+| [9WBA](https://www.rcsb.org/structure/9WBA) | X-ray | 1.83 Å | 2026-08-26 | Paeonia ostii | SAH, AC6 |
+| [9WB6](https://www.rcsb.org/structure/9WB6) | X-ray | 2.28 Å | 2026-06-24 | Paeonia ostii | SAH, A1EVU |
 
 #### 実験メモ
 

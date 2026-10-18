@@ -5,6 +5,7 @@
   "subhead": "RY12ドメインがATP:ADP比のセンサーとして働く可能性がある（実証は今後）",
   "takeaway": "悪性高熱症の治療薬ダントロレンの結合部位をRyR1で原子レベルに特定した",
   "target_label": "RyR1（ウサギ骨格筋）",
+  "target_en": "RyR1 (rabbit skeletal muscle)",
   "summary": {
     "question": "ダントロレンと悪性高熱症の誘発物質が、RyR1のどこにどう結合するかは不明だった。",
     "approach": "ダントロレンや4CmCを結合したRyR1をクライオ電顕で解析し、機能も測った。",

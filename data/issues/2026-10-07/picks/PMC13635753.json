@@ -5,6 +5,7 @@
   "subhead": "全長のapo型とDNA結合型の構造を決定。Arg67の対がDNAの副溝に入り込む",
   "takeaway": "代謝物ManNAc-6-Pが3分子をまたいで四量体を固定し、DNA結合力は変えない",
   "target_label": "SpNanR（肺炎球菌）",
+  "target_en": "SpNanR (S. pneumoniae)",
   "summary": {
     "question": "NanRがシアル酸の代謝遺伝子をどう活性化するのか、分子レベルでは不明だった。",
     "approach": "代謝物の探索と解析に加え、apo型・代謝物結合型・DNA結合型の全長構造を決めた。",

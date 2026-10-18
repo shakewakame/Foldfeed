@@ -23,11 +23,11 @@
 
 | # | 標的 | 手法・分解能 | 見出し |
 |---|---|---|---|
-| 1 | ヒト繊毛の移行帯（ECT2L・DZANK1） | クライオ電顕・7.30–9.60 Å（2 構造） | ECT2LとDZANK1は、繊毛の根もとで微小管をつなぐ |
-| 2 | ヒトグルタミン合成酵素（GS） | クライオ電顕・1.95–2.27 Å（5 構造） | ヒトのグルタミン合成酵素は、産物で繊維になり働きを弱める |
-| 3 | BepA-BAM複合体（大腸菌） | クライオ電顕・3.23–6.40 Å（2 構造） | BepAはフタ状の部分を外膜に差し込み、BAMで活性化する |
-| 4 | ClpC NTD（黄色ブドウ球菌） | X線結晶構造解析・1.78–1.90 Å（2 構造） | 黄色ブドウ球菌ClpCを活性化する低分子が8種類見つかった |
-| 5 | Mfa1線毛（P. gingivalis） | クライオ電顕・2.99 Å | 歯周病菌のMfa線毛は、プロテアーゼによる鎖の交換でつながる |
+| 1 | ヒト繊毛の移行帯（ECT2L・DZANK1） | Cryo-ET・7.30–9.60 Å（2 構造） | ECT2LとDZANK1は、繊毛の根もとで微小管をつなぐ |
+| 2 | ヒトグルタミン合成酵素（GS） | Cryo-EM・1.95–2.27 Å（5 構造） | ヒトのグルタミン合成酵素は、産物で繊維になり働きを弱める |
+| 3 | BepA-BAM複合体（大腸菌） | Cryo-EM・3.23–6.40 Å（2 構造） | BepAはフタ状の部分を外膜に差し込み、BAMで活性化する |
+| 4 | ClpC NTD（黄色ブドウ球菌） | X-ray・1.78–1.90 Å（2 構造） | 黄色ブドウ球菌ClpCを活性化する低分子が8種類見つかった |
+| 5 | Mfa1線毛（P. gingivalis） | Cryo-EM・2.99 Å | 歯周病菌のMfa線毛は、プロテアーゼによる鎖の交換でつながる |
 
 > この号は AI が論文本文から作成した**レビュー用の下書き**です。数値・ID・リガンドは PDB / UniProt から取得し、AI の記述には本文からの引用を付けています。
 
@@ -128,8 +128,8 @@ ECT2LかDZANK1の機能喪失変異をもつ患者4人の細胞では、移行�
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [11YJ](https://www.rcsb.org/structure/11YJ) | クライオ電顕 | 7.30 Å | 2026-09-09 | Homo sapiens | GTP, GDP |
-| [11XU](https://www.rcsb.org/structure/11XU) | クライオ電顕 | 9.60 Å | 2026-09-09 | Homo sapiens | — |
+| [11YJ](https://www.rcsb.org/structure/11YJ) | Cryo-ET | 7.30 Å | 2026-09-09 | Homo sapiens | GTP, GDP |
+| [11XU](https://www.rcsb.org/structure/11XU) | Cryo-ET | 9.60 Å | 2026-09-09 | Homo sapiens | — |
 
 - [P63167](https://www.uniprot.org/uniprotkb/P63167) DYNLL1 Dynein light chain 1, cytoplasmic — *Homo sapiens* （既存の PDB 構造 21 件）
 - [P63208](https://www.uniprot.org/uniprotkb/P63208) SKP1 S-phase kinase-associated protein 1 — *Homo sapiens* （既存の PDB 構造 72 件）
@@ -181,10 +181,6 @@ ECT2LかDZANK1の機能喪失変異をもつ患者4人の細胞では、移行�
 ![構造図：ヒトグルタミン合成酵素（GS）](figures/PMC13657631.svg)
 
 <sub>色（順に）：GS（グルタミン合成）　スティック：ATP、グルタミン（GLN）</sub>
-
-![結合部位：グルタミン](figures/PMC13657631-site.svg)
-
-<sub>グルタミンの結合部位。4 Å 以内の残基：K52(C), C53(C), E55(C), E56, K52(S), C53(S), E55(S)。点線は 3.3 Å 以内の N・O の組（4 組）</sub>
 
 **ヒトのグルタミン合成酵素は、産物で繊維になり働きを弱める**
 
@@ -271,11 +267,11 @@ ECT2LかDZANK1の機能喪失変異をもつ患者4人の細胞では、移行�
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [9OTQ](https://www.rcsb.org/structure/9OTQ) | クライオ電顕 | 2.27 Å | 2025-07-02 | Homo sapiens | — |
-| [9OTM](https://www.rcsb.org/structure/9OTM) | クライオ電顕 | 2.19 Å | 2025-07-02 | Homo sapiens | ATP, GLN |
-| [9OTO](https://www.rcsb.org/structure/9OTO) | クライオ電顕 | 2.03 Å | 2025-07-02 | Homo sapiens | ADP |
-| [9OTN](https://www.rcsb.org/structure/9OTN) | クライオ電顕 | 2.11 Å | 2025-07-02 | Homo sapiens | ATP |
-| [9OTP](https://www.rcsb.org/structure/9OTP) | クライオ電顕 | 1.95 Å | 2025-07-02 | Homo sapiens | ADP |
+| [9OTQ](https://www.rcsb.org/structure/9OTQ) | Cryo-EM | 2.27 Å | 2025-07-02 | Homo sapiens | — |
+| [9OTM](https://www.rcsb.org/structure/9OTM) | Cryo-EM | 2.19 Å | 2025-07-02 | Homo sapiens | ATP, GLN |
+| [9OTO](https://www.rcsb.org/structure/9OTO) | Cryo-EM | 2.03 Å | 2025-07-02 | Homo sapiens | ADP |
+| [9OTN](https://www.rcsb.org/structure/9OTN) | Cryo-EM | 2.11 Å | 2025-07-02 | Homo sapiens | ATP |
+| [9OTP](https://www.rcsb.org/structure/9OTP) | Cryo-EM | 1.95 Å | 2025-07-02 | Homo sapiens | ADP |
 
 - [P15104](https://www.uniprot.org/uniprotkb/P15104) GLUL Glutamine synthetase — *Homo sapiens* （既存の PDB 構造 7 件）
 
@@ -405,8 +401,8 @@ bepAのランダム変異ライブラリーを、外膜が漏れるとピンク�
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [9SOW](https://www.rcsb.org/structure/9SOW) | クライオ電顕 | 3.23 Å | 2026-09-30 | Escherichia coli BW25113 | — |
-| [9SOX](https://www.rcsb.org/structure/9SOX) | クライオ電顕 | 6.40 Å | 2026-09-30 | Escherichia coli BW25113 | — |
+| [9SOW](https://www.rcsb.org/structure/9SOW) | Cryo-EM | 3.23 Å | 2026-09-30 | Escherichia coli BW25113 | — |
+| [9SOX](https://www.rcsb.org/structure/9SOX) | Cryo-EM | 6.40 Å | 2026-09-30 | Escherichia coli BW25113 | — |
 
 - [C3TPJ2](https://www.uniprot.org/uniprotkb/C3TPJ2) bamA Outer membrane protein assembly factor BamA — *Escherichia coli* （既存の PDB 構造 1 件）
 - [P0A903](https://www.uniprot.org/uniprotkb/P0A903) bamC Outer membrane protein assembly factor BamC — *Escherichia coli (strain K12)* （既存の PDB 構造 105 件）
@@ -458,10 +454,6 @@ bepAのランダム変異ライブラリーを、外膜が漏れるとピンク�
 ![構造図：ClpC NTD（黄色ブドウ球菌）](figures/PMC13657355.svg)
 
 <sub>色（順に）：ClpC（N末端ドメイン）　スティック：Cpd-8（A1JXU）</sub>
-
-![結合部位：Cpd-8](figures/PMC13657355-site.svg)
-
-<sub>Cpd-8の結合部位。4 Å 以内の残基：L2, F3, G4, R5, L6, L14, Y80, M92, A95, H100, N101, F102, V103。点線は 3.3 Å 以内の N・O の組（2 組）</sub>
 
 **黄色ブドウ球菌ClpCを活性化する低分子が8種類見つかった**
 
@@ -551,8 +543,8 @@ Cpd-10とCpd-41はMecA-mEOSの分解を妨げ、pArg1部位の変異体T7Dでは
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [9TXC](https://www.rcsb.org/structure/9TXC) | X線結晶構造解析 | 1.78 Å | 2026-09-16 | Staphylococcus aureus subsp. aureus NCTC 8325 | — |
-| [9TXD](https://www.rcsb.org/structure/9TXD) | X線結晶構造解析 | 1.90 Å | 2026-09-16 | Staphylococcus aureus subsp. aureus NCTC 8325 | A1JXU |
+| [9TXC](https://www.rcsb.org/structure/9TXC) | X-ray | 1.78 Å | 2026-09-16 | Staphylococcus aureus subsp. aureus NCTC 8325 | — |
+| [9TXD](https://www.rcsb.org/structure/9TXD) | X-ray | 1.90 Å | 2026-09-16 | Staphylococcus aureus subsp. aureus NCTC 8325 | A1JXU |
 
 - [Q2G0P5](https://www.uniprot.org/uniprotkb/Q2G0P5) clpC ATP-dependent Clp protease ATP-binding subunit ClpC — *Staphylococcus aureus (strain NCTC 8325 / PS 47)* （既存の PDB 構造 8 件）
 
@@ -682,7 +674,7 @@ Ca2+の結合部位を壊した変異体（DDNE/A）でも重合し、EDTA処理
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [21CO](https://www.rcsb.org/structure/21CO) | クライオ電顕 | 2.99 Å | 2026-07-08 | Porphyromonas gingivalis ATCC 33277 | — |
+| [21CO](https://www.rcsb.org/structure/21CO) | Cryo-EM | 2.99 Å | 2026-07-08 | Porphyromonas gingivalis ATCC 33277 | — |
 
 - [B2RHG1](https://www.uniprot.org/uniprotkb/B2RHG1) mfa1 Minor fimbrium subunit Mfa1 — *Porphyromonas gingivalis (strain ATCC 33277 / DSM 20709 / CIP 103683 / JCM 12257 / NCTC 11834 / 2561)* （既存の PDB 構造 2 件）
 

@@ -61,7 +61,8 @@
    "A352",
    "Y3"
   ],
-  "polar": 5,
+  "hbonds": 8,
+  "pi": 2,
   "neighbours": [],
   "label": "ヘム"
  }

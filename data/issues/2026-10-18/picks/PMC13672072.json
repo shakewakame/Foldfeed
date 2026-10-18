@@ -4,6 +4,7 @@
   "headline": "PRC1は4つのサブユニットを密に組み、E2酵素をヌクレオソーム上に置く",
   "subhead": "ヌクレオソーム結合型のヒトPRC1をクライオ電顕で解析し、PHC2を含む界面の働きを調べた",
   "target_label": "ヒトcPRC1（PRC1.4）",
+  "target_en": "Human cPRC1 (PRC1.4)",
   "summary": {
     "question": "PRC1全体の構造は未解明で、サブユニットの配置や触媒の連携は分かっていなかった。",
     "approach": "RING1B・BMI1・PHC2・CBX7とUBCH5Cを、H3K27me3ヌクレオソームに結合させてクライオ電顕で解析した。",

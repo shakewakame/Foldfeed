@@ -5,6 +5,7 @@
   "headline": "フルオロプロリンの立体が、NCBDの結合力を左右する",
   "subhead": "既存のNMR構造2KKJなどと比べ、19F NMRでヘリックスの向きを調べた",
   "target_label": "CBPのNCBD（マウス）",
+  "target_en": "Mouse CBP NCBD",
   "method_label": "19F NMR・NOE構造計算・ITC",
   "summary": {
     "question": "モルテングロビュール（折りたたみが緩く揺らぐ状態）のNCBDは、構造の詳細を調べにくい。",

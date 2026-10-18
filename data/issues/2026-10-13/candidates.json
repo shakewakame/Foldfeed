@@ -654,6 +654,7 @@
           "status": "released",
           "title": "STRUCTURE OF THE HUMAN 80S RIBOSOME",
           "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
           "resolution": 3.6,
           "release_date": "2015-06-10",
           "deposit_date": "2015-03-20",

@@ -4,6 +4,7 @@
   "headline": "Lidをループに置き換えると、Cas12aは非標的鎖だけを切る",
   "subhead": "Lid2変異体のクライオ電顕構造（2.5 Å）では、標的鎖を活性部位に装填する動きが妨げられていた",
   "target_label": "LbCas12a Lid2変異体",
+  "target_en": "LbCas12a Lid2 mutant",
   "summary": {
     "question": "Cas12aは1つのRuvCで両鎖を切るため、ニッカーゼへの改変は容易でなかった。",
     "approach": "大腸菌でLid領域の変異体を探し、Lid2を2.5 Åのクライオ電顕で解析した。",

@@ -23,12 +23,12 @@
 
 | # | 標的 | 手法・分解能 | 見出し |
 |---|---|---|---|
-| 1 | ヒトCLN8（Batten病タンパク質） | クライオ電顕・2.70–3.60 Å（3 構造） | CLN8は、BMPの材料LPGを立体を選んでつくる酵素だ |
-| 2 | DNAAF19–RUVBL1/2（ヒト） | クライオ電顕・3.37–3.47 Å（2 構造） | DNAAF19は、シャペロンRUVBL1/2に結合して働くらしい |
-| 3 | SaMurJ（黄色ブドウ球菌） | クライオ電顕・3.50–3.90 Å（4 構造） | 黄色ブドウ球菌のMurJの構造が、初めて明らかになった |
-| 4 | TASK-2（マウス） | クライオ電顕・2.62–3.22 Å（5 構造） | TASK-2は細胞内が酸性になると、ジッパー状の門と脂質で閉じる |
-| 5 | MRGPRX4（ヒト、かゆみ受容体） | クライオ電顕・2.84–2.98 Å（6 構造） | 拮抗薬は別の場所に結合し、MRGPRX4の作動薬の結合を妨げる |
-| 6 | Keap1 Kelchドメイン（ヒト） | X線結晶構造解析・1.70–2.35 Å（4 構造） | ランダムな環状ペプチドから、細胞内で働くKeap1阻害剤を得た |
+| 1 | ヒトCLN8（Batten病タンパク質） | Cryo-EM・2.70–3.60 Å（3 構造） | CLN8は、BMPの材料LPGを立体を選んでつくる酵素だ |
+| 2 | DNAAF19–RUVBL1/2（ヒト） | Cryo-EM・3.37–3.47 Å（2 構造） | DNAAF19は、シャペロンRUVBL1/2に結合して働くらしい |
+| 3 | SaMurJ（黄色ブドウ球菌） | Cryo-EM・3.50–3.90 Å（4 構造） | 黄色ブドウ球菌のMurJの構造が、初めて明らかになった |
+| 4 | TASK-2（マウス） | Cryo-EM・2.62–3.22 Å（5 構造） | TASK-2は細胞内が酸性になると、ジッパー状の門と脂質で閉じる |
+| 5 | MRGPRX4（ヒト、かゆみ受容体） | Cryo-EM・2.84–2.98 Å（6 構造） | 拮抗薬は別の場所に結合し、MRGPRX4の作動薬の結合を妨げる |
+| 6 | Keap1 Kelchドメイン（ヒト） | X-ray・1.70–2.35 Å（4 構造） | ランダムな環状ペプチドから、細胞内で働くKeap1阻害剤を得た |
 
 > この号は AI が論文本文から作成した**レビュー用の下書き**です。数値・ID・リガンドは PDB / UniProt から取得し、AI の記述には本文からの引用を付けています。
 
@@ -43,10 +43,6 @@
 ![構造図：ヒトCLN8（Batten病タンパク質）](figures/PMC13661276.svg)
 
 <sub>色（順に）：CLN8（アシル転移酵素）　スティック：DHA（C22:6）（HXA）、CoA（COA）</sub>
-
-![結合部位：DHA（C22:6）](figures/PMC13661276-site.svg)
-
-<sub>DHA（C22:6）の結合部位。4 Å 以内の残基：K95, A96, F134, H138, F141, A142, G145, F146, C149, G156, Y158, L159, T163, L222, L226, L233, F234, G237, L240, L241, I245</sub>
 
 **CLN8は、BMPの材料LPGを立体を選んでつくる酵素だ**
 
@@ -124,9 +120,9 @@ CLN8の産物であるS,S-LPGを補うと、CLN8欠損細胞とマウス肝臓�
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [9THK](https://www.rcsb.org/structure/9THK) | クライオ電顕 | 3.60 Å | 2026-07-29 | Homo sapiens | COA |
-| [9TKA](https://www.rcsb.org/structure/9TKA) | クライオ電顕 | 2.70 Å | 2026-07-29 | Homo sapiens | COA |
-| [9TK9](https://www.rcsb.org/structure/9TK9) | クライオ電顕 | 2.73 Å | 2026-07-29 | Homo sapiens | HXA, COA |
+| [9THK](https://www.rcsb.org/structure/9THK) | Cryo-EM | 3.60 Å | 2026-07-29 | Homo sapiens | COA |
+| [9TKA](https://www.rcsb.org/structure/9TKA) | Cryo-EM | 2.70 Å | 2026-07-29 | Homo sapiens | COA |
+| [9TK9](https://www.rcsb.org/structure/9TK9) | Cryo-EM | 2.73 Å | 2026-07-29 | Homo sapiens | HXA, COA |
 
 - [Q9UBY8](https://www.uniprot.org/uniprotkb/Q9UBY8) CLN8 Protein CLN8 — *Homo sapiens* （PDB で初めての構造）
 
@@ -176,10 +172,6 @@ CLN8の産物であるS,S-LPGを補うと、CLN8欠損細胞とマウス肝臓�
 ![構造図：DNAAF19–RUVBL1/2（ヒト）](figures/PMC13663681.svg)
 
 <sub>色（順に）：RUVBL1（シャペロン） / RUVBL2（シャペロン） / DNAAF19（組み立て因子） / DPCD（アダプター）　スティック：ADP</sub>
-
-![結合部位：ADP](figures/PMC13663681-site.svg)
-
-<sub>ADPの結合部位。4 Å 以内の残基：A24, H25, H27, G45, M46, V47, Q78, P79, G80, T81, G82, K83, T84, Y362, I370, L399, R400。点線は 3.3 Å 以内の N・O の組（25 組）</sub>
 
 **DNAAF19は、シャペロンRUVBL1/2に結合して働くらしい**
 
@@ -260,8 +252,8 @@ DPCDが結合したRUVBL2のサブユニットでは、ADPが減るか見えな�
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [29JR](https://www.rcsb.org/structure/29JR) | クライオ電顕 | 3.47 Å | 2026-09-23 | Homo sapiens | ADP |
-| [29KN](https://www.rcsb.org/structure/29KN) | クライオ電顕 | 3.37 Å | 2026-09-30 | Homo sapiens | ADP |
+| [29JR](https://www.rcsb.org/structure/29JR) | Cryo-EM | 3.47 Å | 2026-09-23 | Homo sapiens | ADP |
+| [29KN](https://www.rcsb.org/structure/29KN) | Cryo-EM | 3.37 Å | 2026-09-30 | Homo sapiens | ADP |
 
 - [Q8IW40](https://www.uniprot.org/uniprotkb/Q8IW40) DNAAF19 Dynein axonemal assembly factor 19 — *Homo sapiens* （既存の PDB 構造 1 件）
 - [Q9BVM2](https://www.uniprot.org/uniprotkb/Q9BVM2) DPCD Protein DPCD — *Homo sapiens* （PDB で初めての構造）
@@ -383,10 +375,10 @@ SaMurJは大腸菌のMurJと配列が17%しか同じでないが、コアの12�
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [11XX](https://www.rcsb.org/structure/11XX) | クライオ電顕 | 3.60 Å | 2026-09-16 | Staphylococcus aureus (strain NCTC 8325 / PS 47) | — |
-| [11XZ](https://www.rcsb.org/structure/11XZ) | クライオ電顕 | 3.50 Å | 2026-09-16 | Staphylococcus aureus (strain NCTC 8325 / PS 47) | — |
-| [11YA](https://www.rcsb.org/structure/11YA) | クライオ電顕 | 3.60 Å | 2026-09-16 | Staphylococcus aureus (strain NCTC 8325 / PS 47) | — |
-| [11XY](https://www.rcsb.org/structure/11XY) | クライオ電顕 | 3.90 Å | 2026-09-16 | Escherichia coli | — |
+| [11XX](https://www.rcsb.org/structure/11XX) | Cryo-EM | 3.60 Å | 2026-09-16 | Staphylococcus aureus (strain NCTC 8325 / PS 47) | — |
+| [11XZ](https://www.rcsb.org/structure/11XZ) | Cryo-EM | 3.50 Å | 2026-09-16 | Staphylococcus aureus (strain NCTC 8325 / PS 47) | — |
+| [11YA](https://www.rcsb.org/structure/11YA) | Cryo-EM | 3.60 Å | 2026-09-16 | Staphylococcus aureus (strain NCTC 8325 / PS 47) | — |
+| [11XY](https://www.rcsb.org/structure/11XY) | Cryo-EM | 3.90 Å | 2026-09-16 | Escherichia coli | — |
 
 - [P0AF16](https://www.uniprot.org/uniprotkb/P0AF16) murJ Lipid II flippase MurJ — *Escherichia coli (strain K12)* （既存の PDB 構造 7 件）
 - [Q2FXH6](https://www.uniprot.org/uniprotkb/Q2FXH6)  Polysaccharide biosynthesis protein, putative — *Staphylococcus aureus (strain NCTC 8325 / PS 47)* （PDB で初めての構造）
@@ -538,11 +530,11 @@ pH 6.5では、各サブユニットのTM4の241〜246番付近がほどけて�
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [10OY](https://www.rcsb.org/structure/10OY) | クライオ電顕 | 2.62 Å | 2026-10-07 | Homo sapiens, Mus musculus | — |
-| [10PB](https://www.rcsb.org/structure/10PB) | クライオ電顕 | 2.75 Å | 2026-10-07 | Homo sapiens, Mus musculus | — |
-| [10PF](https://www.rcsb.org/structure/10PF) | クライオ電顕 | 3.06 Å | 2026-10-07 | Homo sapiens, Mus musculus | A1C7A, OJ0 |
-| [10PC](https://www.rcsb.org/structure/10PC) | クライオ電顕 | 2.96 Å | 2026-10-07 | Homo sapiens, Mus musculus | — |
-| [10PD](https://www.rcsb.org/structure/10PD) | クライオ電顕 | 3.22 Å | 2026-10-07 | Mus musculus | — |
+| [10OY](https://www.rcsb.org/structure/10OY) | Cryo-EM | 2.62 Å | 2026-10-07 | Homo sapiens, Mus musculus | — |
+| [10PB](https://www.rcsb.org/structure/10PB) | Cryo-EM | 2.75 Å | 2026-10-07 | Homo sapiens, Mus musculus | — |
+| [10PF](https://www.rcsb.org/structure/10PF) | Cryo-EM | 3.06 Å | 2026-10-07 | Homo sapiens, Mus musculus | A1C7A, OJ0 |
+| [10PC](https://www.rcsb.org/structure/10PC) | Cryo-EM | 2.96 Å | 2026-10-07 | Homo sapiens, Mus musculus | — |
+| [10PD](https://www.rcsb.org/structure/10PD) | Cryo-EM | 3.22 Å | 2026-10-07 | Mus musculus | — |
 
 - [P02647](https://www.uniprot.org/uniprotkb/P02647) APOA1 Apolipoprotein A-I — *Homo sapiens* （既存の PDB 構造 31 件）
 - [Q9JK62](https://www.uniprot.org/uniprotkb/Q9JK62) Kcnk5 Potassium channel TASK2 — *Mus musculus* （既存の PDB 構造 2 件）
@@ -593,10 +585,6 @@ pH 6.5では、各サブユニットのTM4の241〜246番付近がほどけて�
 > — Results
 
 </details>
-
-![結合部位：cmpd54-4](figures/PMC13661610-site.svg)
-
-<sub>cmpd54-4の結合部位。4 Å 以内の残基：K96, V99, S100, T103, Y106, F107, E157, P180, V181, L184, F232, G233, L235, G236, A237, I239, Y240, Y254, M258。点線は 3.3 Å 以内の N・O の組（2 組）</sub>
 
 **拮抗薬は別の場所に結合し、MRGPRX4の作動薬の結合を妨げる**
 
@@ -677,12 +665,12 @@ pH 6.5では、各サブユニットのTM4の241〜246番付近がほどけて�
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [23CV](https://www.rcsb.org/structure/23CV) | クライオ電顕 | 2.97 Å | 2026-10-14 | Escherichia coli, Homo sapiens, Mus musculus | 3T5 |
-| [23CW](https://www.rcsb.org/structure/23CW) | クライオ電顕 | 2.88 Å | 2026-10-14 | Escherichia coli, Homo sapiens | 3T5 |
-| [23CX](https://www.rcsb.org/structure/23CX) | クライオ電顕 | 2.98 Å | 2026-10-14 | Escherichia coli, Homo sapiens, Mus musculus | A1E43 |
-| [23CY](https://www.rcsb.org/structure/23CY) | クライオ電顕 | 2.84 Å | 2026-10-14 | Escherichia coli, Homo sapiens | A1E43 |
-| [23CS](https://www.rcsb.org/structure/23CS) | クライオ電顕 | 2.89 Å | 2026-10-14 | Escherichia coli, Homo sapiens, Mus musculus | — |
-| [23CU](https://www.rcsb.org/structure/23CU) | クライオ電顕 | 2.93 Å | 2026-10-14 | Escherichia coli, Homo sapiens | — |
+| [23CV](https://www.rcsb.org/structure/23CV) | Cryo-EM | 2.97 Å | 2026-10-14 | Escherichia coli, Homo sapiens, Mus musculus | 3T5 |
+| [23CW](https://www.rcsb.org/structure/23CW) | Cryo-EM | 2.88 Å | 2026-10-14 | Escherichia coli, Homo sapiens | 3T5 |
+| [23CX](https://www.rcsb.org/structure/23CX) | Cryo-EM | 2.98 Å | 2026-10-14 | Escherichia coli, Homo sapiens, Mus musculus | A1E43 |
+| [23CY](https://www.rcsb.org/structure/23CY) | Cryo-EM | 2.84 Å | 2026-10-14 | Escherichia coli, Homo sapiens | A1E43 |
+| [23CS](https://www.rcsb.org/structure/23CS) | Cryo-EM | 2.89 Å | 2026-10-14 | Escherichia coli, Homo sapiens, Mus musculus | — |
+| [23CU](https://www.rcsb.org/structure/23CU) | Cryo-EM | 2.93 Å | 2026-10-14 | Escherichia coli, Homo sapiens | — |
 
 - [P0ABE7](https://www.uniprot.org/uniprotkb/P0ABE7) cybC Soluble cytochrome b562 — *Escherichia coli* （既存の PDB 構造 654 件）
 - [P59768](https://www.uniprot.org/uniprotkb/P59768) GNG2 Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-2 — *Homo sapiens* （既存の PDB 構造 1323 件）
@@ -809,10 +797,10 @@ Keap1に結合した直鎖ペプチド6のX線構造（1.70 Å）は、Nrf2が�
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [9IH9](https://www.rcsb.org/structure/9IH9) | X線結晶構造解析 | 1.70 Å | 2026-03-04 | Homo sapiens, synthetic construct | DHL |
-| [9QDU](https://www.rcsb.org/structure/9QDU) | X線結晶構造解析 | 2.35 Å | 2026-03-18 | Homo sapiens, synthetic construct | — |
-| [9QBS](https://www.rcsb.org/structure/9QBS) | X線結晶構造解析 | 1.95 Å | 2026-03-18 | Homo sapiens, synthetic construct | — |
-| [9QBT](https://www.rcsb.org/structure/9QBT) | X線結晶構造解析 | 2.33 Å | 2026-03-18 | Homo sapiens, synthetic construct | — |
+| [9IH9](https://www.rcsb.org/structure/9IH9) | X-ray | 1.70 Å | 2026-03-04 | Homo sapiens, synthetic construct | DHL |
+| [9QDU](https://www.rcsb.org/structure/9QDU) | X-ray | 2.35 Å | 2026-03-18 | Homo sapiens, synthetic construct | — |
+| [9QBS](https://www.rcsb.org/structure/9QBS) | X-ray | 1.95 Å | 2026-03-18 | Homo sapiens, synthetic construct | — |
+| [9QBT](https://www.rcsb.org/structure/9QBT) | X-ray | 2.33 Å | 2026-03-18 | Homo sapiens, synthetic construct | — |
 
 - [Q14145](https://www.uniprot.org/uniprotkb/Q14145) KEAP1 Kelch-like ECH-associated protein 1 — *Homo sapiens* （既存の PDB 構造 117 件）
 

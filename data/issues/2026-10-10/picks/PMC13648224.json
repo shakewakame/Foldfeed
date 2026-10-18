@@ -4,6 +4,7 @@
   "headline": "サーチュインは、N-メチル化されたアシルリジンを外せない",
   "subhead": "SIRT2とSIRT5の結晶構造では、基質の位置が乱れ、切断に向かない向きになっていた",
   "target_label": "SIRT2／SIRT5（ペプチド複合体）",
+  "target_en": "SIRT2 / SIRT5 (peptide complexes)",
   "summary": {
     "question": "ヒストンH4で見つかったN-アセチル-N-メチルリジンを、酵素で外せるかは不明だった。",
     "approach": "モデルペプチドを合成してHDACとサーチュインの活性を調べ、結晶構造も決めた。",

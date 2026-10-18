@@ -25,7 +25,7 @@
 
 | # | 標的 | 手法・分解能 | 見出し |
 |---|---|---|---|
-| 1 | ヒトPI3Kδ（p110δ） | X線結晶構造解析・2.75–2.97 Å（2 構造） | ロギノリシブは、PI3Kδ末端のヘリックスを安定化して阻害する |
+| 1 | ヒトPI3Kδ（p110δ） | X-ray・2.75–2.97 Å（2 構造） | ロギノリシブは、PI3Kδ末端のヘリックスを安定化して阻害する |
 | 2 | CBPのNCBD（マウス） | 19F NMR・NOE構造計算・ITC | フルオロプロリンの立体が、NCBDの結合力を左右する |
 | 3 | PD-L1・アベルマブ（ヒト） | HDX-MS・固体NMR（既存の5GRJと比較） | アベルマブの結合面は、HDX-MSと固体NMRでも結晶構造と一致した |
 
@@ -44,10 +44,6 @@
 ![構造図：ヒトPI3Kδ（p110δ）](figures/PMC13652804.svg)
 
 <sub>色（順に）：p110δ（触媒サブユニット） / p85α（調節サブユニット）　スティック：ロギノリシブ（QGU）</sub>
-
-![結合部位：ロギノリシブ](figures/PMC13652804-site.svg)
-
-<sub>ロギノリシブの結合部位。4 Å 以内の残基：M752, S754, P758, W760, I777, K779, Y813, I825, E826, V827, V828, S831, D832, T833, N836, M900, F908, I910, D911。点線は 3.3 Å 以内の N・O の組（2 組）</sub>
 
 **ロギノリシブは、PI3Kδ末端のヘリックスを安定化して阻害する**
 
@@ -131,8 +127,8 @@ CLL患者の細胞をex vivoで処理すると、ロギノリシブは高用量�
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [9T07](https://www.rcsb.org/structure/9T07) | X線結晶構造解析 | 2.75 Å | 2026-07-08 | Bos taurus, Homo sapiens | QGU |
-| [9T1P](https://www.rcsb.org/structure/9T1P) | X線結晶構造解析 | 2.97 Å | 2026-07-08 | Bos taurus, Homo sapiens | A1JS2 |
+| [9T07](https://www.rcsb.org/structure/9T07) | X-ray | 2.75 Å | 2026-07-08 | Bos taurus, Homo sapiens | QGU |
+| [9T1P](https://www.rcsb.org/structure/9T1P) | X-ray | 2.97 Å | 2026-07-08 | Bos taurus, Homo sapiens | A1JS2 |
 
 - [O00329](https://www.uniprot.org/uniprotkb/O00329) PIK3CD Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit delta isoform — *Homo sapiens* （既存の PDB 構造 18 件）
 - [P23727](https://www.uniprot.org/uniprotkb/P23727) PIK3R1 Phosphatidylinositol 3-kinase regulatory subunit alpha — *Bos taurus* （既存の PDB 構造 28 件）
@@ -270,8 +266,8 @@ P30の4R体だけが、中性のpHでアミロイドを作った。この変種�
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [2KKJ](https://www.rcsb.org/structure/2KKJ) | 溶液NMR | — | 2010-06-30 | Mus musculus | — |
-| [1KBH](https://www.rcsb.org/structure/1KBH) | 溶液NMR | — | 2002-02-06 | Homo sapiens, Mus musculus | — |
+| [2KKJ](https://www.rcsb.org/structure/2KKJ) | Solution NMR | — | 2010-06-30 | Mus musculus | — |
+| [1KBH](https://www.rcsb.org/structure/1KBH) | Solution NMR | — | 2002-02-06 | Homo sapiens, Mus musculus | — |
 
 - [P45481](https://www.uniprot.org/uniprotkb/P45481) Crebbp Histone lysine acetyltransferase CREBBP — *Mus musculus* （既存の PDB 構造 0 件）
 - [Q9Y6Q9](https://www.uniprot.org/uniprotkb/Q9Y6Q9) NCOA3 Nuclear receptor coactivator 3 — *Homo sapiens* （既存の PDB 構造 0 件）
@@ -403,7 +399,7 @@ PD-L1のC末端（K124〜Y134）の強い保護は、HDX-MSだけが示した。
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [5GRJ](https://www.rcsb.org/structure/5GRJ) | X線結晶構造解析 | 3.21 Å | 2016-11-02 | Homo sapiens | — |
+| [5GRJ](https://www.rcsb.org/structure/5GRJ) | X-ray | 3.21 Å | 2016-11-02 | Homo sapiens | — |
 
 - [Q9NZQ7](https://www.uniprot.org/uniprotkb/Q9NZQ7) CD274 Programmed cell death 1 ligand 1 — *Homo sapiens* （既存の PDB 構造 0 件）
 

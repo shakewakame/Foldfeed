@@ -17,10 +17,10 @@
 
 | # | 標的 | 手法・分解能 | 見出し |
 |---|---|---|---|
-| 1 | QatBC（大腸菌 QatABCD） | X線結晶構造解析・2.09–2.66 Å（2 構造） | QatBのN末端が、QatCの活性部位に入り込んでいた |
-| 2 | FlhAC A489E（サルモネラ） | X線結晶構造解析・2.90–3.28 Å（2 構造） | A489Eは塩橋網を組み換え、基質切り替えを助ける可能性がある |
-| 3 | HIV-1プロテアーゼ PRp51 | X線結晶構造解析・1.55 Å | HIVプロテアーゼでは、離れた置換が活性部位を広げる可能性がある |
-| 4 | ホタルルシフェラーゼ（翻訳中） | クライオ電顕・平均 2.3 Å（リボソーム–新生鎖複合体） | ホタルルシフェラーゼは、翻訳されながら少しずつ折りたたまれる |
+| 1 | QatBC（大腸菌 QatABCD） | X-ray・2.09–2.66 Å（2 構造） | QatBのN末端が、QatCの活性部位に入り込んでいた |
+| 2 | FlhAC A489E（サルモネラ） | X-ray・2.90–3.28 Å（2 構造） | A489Eは塩橋網を組み換え、基質切り替えを助ける可能性がある |
+| 3 | HIV-1プロテアーゼ PRp51 | X-ray・1.55 Å | HIVプロテアーゼでは、離れた置換が活性部位を広げる可能性がある |
+| 4 | ホタルルシフェラーゼ（翻訳中） | Cryo-EM・平均 2.3 Å（リボソーム–新生鎖複合体） | ホタルルシフェラーゼは、翻訳されながら少しずつ折りたたまれる |
 
 > この号は AI が論文本文から作成した**レビュー用の下書き**です。数値・ID・リガンドは PDB / UniProt から取得し、AI の記述には本文からの引用を付けています。
 
@@ -115,8 +115,8 @@ QatBのN末端を天然のまま得るため、Gly2のコドンをUlp1切断部�
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [9WVJ](https://www.rcsb.org/structure/9WVJ) | X線結晶構造解析 | 2.09 Å | 2026-09-16 | Escherichia coli | — |
-| [9X6C](https://www.rcsb.org/structure/9X6C) | X線結晶構造解析 | 2.66 Å | 2026-09-16 | Escherichia coli | ATP |
+| [9WVJ](https://www.rcsb.org/structure/9WVJ) | X-ray | 2.09 Å | 2026-09-16 | Escherichia coli | — |
+| [9X6C](https://www.rcsb.org/structure/9X6C) | X-ray | 2.66 Å | 2026-09-16 | Escherichia coli | ATP |
 
 - [A0A4Q0WMG2](https://www.uniprot.org/uniprotkb/A0A4Q0WMG2)  Uncharacterized protein — *Escherichia coli* （既存の PDB 構造 2 件）
 - [A0A6N2XJ30](https://www.uniprot.org/uniprotkb/A0A6N2XJ30)  Uncharacterized protein — *Citrobacter amalonaticus* （既存の PDB 構造 1 件）
@@ -228,8 +228,8 @@ Arg-386をAlaに置換した変異体は、FliH・FliIがあれば運動性と�
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [23TM](https://www.rcsb.org/structure/23TM) | X線結晶構造解析 | 3.28 Å | 2026-10-07 | Salmonella enterica subsp. enterica serovar Typhimurium | — |
-| [23TK](https://www.rcsb.org/structure/23TK) | X線結晶構造解析 | 2.90 Å | 2026-10-07 | Salmonella enterica subsp. enterica serovar Typhimurium | — |
+| [23TM](https://www.rcsb.org/structure/23TM) | X-ray | 3.28 Å | 2026-10-07 | Salmonella enterica subsp. enterica serovar Typhimurium | — |
+| [23TK](https://www.rcsb.org/structure/23TK) | X-ray | 2.90 Å | 2026-10-07 | Salmonella enterica subsp. enterica serovar Typhimurium | — |
 
 - [P40729](https://www.uniprot.org/uniprotkb/P40729) flhA Flagellar biosynthesis protein FlhA — *Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)* （既存の PDB 構造 12 件）
 
@@ -270,10 +270,6 @@ Arg-386をAlaに置換した変異体は、FliH・FliIがあれば運動性と�
 ![構造図：HIV-1プロテアーゼ PRp51](figures/PMC13638461.svg)
 
 <sub>色（順に）：HIV-1 プロテアーゼ　スティック：ダルナビル（017）</sub>
-
-![結合部位：ダルナビル](figures/PMC13638461-site.svg)
-
-<sub>ダルナビルの結合部位。4 Å 以内の残基：L23, D25, G27, A28, D29, D30, I47, G48, G49, I50, I82。点線は 3.3 Å 以内の N・O の組（2 組）</sub>
 
 **HIVプロテアーゼでは、離れた置換が活性部位を広げる可能性がある**
 
@@ -347,7 +343,7 @@ MDでは、活性部位容積が結晶構造の値から100 Å3以内に収ま�
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [9CTX](https://www.rcsb.org/structure/9CTX) | X線結晶構造解析 | 1.55 Å | 2024-08-07 | Human immunodeficiency virus 1 | 017 |
+| [9CTX](https://www.rcsb.org/structure/9CTX) | X-ray | 1.55 Å | 2024-08-07 | Human immunodeficiency virus 1 | 017 |
 
 - [O38893](https://www.uniprot.org/uniprotkb/O38893) pol HIV-1 retropepsin — *Human immunodeficiency virus type 1* （既存の PDB 構造 1 件）
 

@@ -4,6 +4,7 @@
   "headline": "ノロウイルスの殻は、抗体が結合すると形を変えて受け止める",
   "subhead": "流行株GII.4 Sydneyの殻をクライオ電顕で解析。抗体結合で殻タンパク質は11の構造をとる",
   "target_label": "ヒトノロウイルスGII.4 Sydney VP1",
+  "target_en": "Human norovirus GII.4 Sydney VP1",
   "summary": {
     "question": "ヒトノロウイルスの殻が、抗体の圧力にどう応えるかは原子レベルで分かっていなかった。",
     "approach": "流行株GII.4 SydneyのVLPと、抗体M6・Fab NORO-320の複合体をクライオ電顕と焦点を絞った精密化で解析した。",
@@ -11,43 +12,76 @@
     "learned": "VP1は抗体の非対称な結合に合わせて形を変える。この柔軟さは、ワクチン設計に関わると著者は述べている。",
     "evidence": {
       "question": [
-        {"quote": "Yet, how the icosahedral HuNoV capsid responds to antibody pressure at the atomic level is still unclear.", "section": "Abstract"}
+        {
+          "quote": "Yet, how the icosahedral HuNoV capsid responds to antibody pressure at the atomic level is still unclear.",
+          "section": "Abstract"
+        }
       ],
       "approach": [
-        {"quote": "Using asymmetric reconstructions and focused refinement procedures, we reveal the remarkable structural malleability of the capsids in response to binding of a human-derived neutralizing Fab, NORO-320, and a non-neutralizing llama-derived single domain nanobody (VHH) M6.", "section": "Introduction"}
+        {
+          "quote": "Using asymmetric reconstructions and focused refinement procedures, we reveal the remarkable structural malleability of the capsids in response to binding of a human-derived neutralizing Fab, NORO-320, and a non-neutralizing llama-derived single domain nanobody (VHH) M6.",
+          "section": "Introduction"
+        }
       ],
       "result": [
-        {"quote": "VP1 adopts 11 distinct conformational modalities to accommodate asymmetric antibody binding, and antibody-disrupted VLPs reassemble into smaller particles with five additional VP1 states.", "section": "Abstract"}
+        {
+          "quote": "VP1 adopts 11 distinct conformational modalities to accommodate asymmetric antibody binding, and antibody-disrupted VLPs reassemble into smaller particles with five additional VP1 states.",
+          "section": "Abstract"
+        }
       ],
       "learned": [
-        {"quote": "This previously unrecognized extent of conformational adaptability provides key insights for designing next-generation VLP- or mRNA-based vaccines targeting HuNoV infections.", "section": "Abstract"}
+        {
+          "quote": "This previously unrecognized extent of conformational adaptability provides key insights for designing next-generation VLP- or mRNA-based vaccines targeting HuNoV infections.",
+          "section": "Abstract"
+        }
       ]
     }
   },
-  "categories": ["pathogen", "immune"],
+  "categories": [
+    "pathogen",
+    "immune"
+  ],
   "highlights": [
     {
       "tag": "機構の解明",
       "text": "ウイルス様粒子（VLP、ウイルスの殻だけを人工的に作った粒子）のT=3粒子では、非中和ナノボディM6が結合するとP領域（殻から突き出た部分）が持ち上がり、A-B二量体で3通り、C-C二量体で3通りの結合様式が見えた。隣り合う二量体どうしの立体障害で、結合様式の組み合わせは限られる。",
       "evidence": [
-        {"quote": "Across all structures, the P-domains are raised above the shell to reveal the M6 epitope.", "section": "Results"},
-        {"quote": "We did not detect classes with both A-B dimers bound via A chains (from the 5-fold side), with both A-B dimers in double form, or with more than one double-bound dimer.", "section": "Results"}
+        {
+          "quote": "Across all structures, the P-domains are raised above the shell to reveal the M6 epitope.",
+          "section": "Results"
+        },
+        {
+          "quote": "We did not detect classes with both A-B dimers bound via A chains (from the 5-fold side), with both A-B dimers in double form, or with more than one double-bound dimer.",
+          "section": "Results"
+        }
       ]
     },
     {
       "tag": "機構の解明",
       "text": "M6を加えるとT=4粒子は壊れ、約30 nmの小さなT=1粒子に組み直された。T=4の殻は曲がりが大きく、M6が殻と衝突するためと著者は考えている。中和抗体のFab NORO-320では、T=3粒子が消えてT=1粒子が現れた。",
       "evidence": [
-        {"quote": "While the untreated sample contained an equal mix of T=3 and T=4 particles, addition of M6 completely destabilized the T=4 VLPs, giving rise to smaller, ~30 nm T=1 particles in a 2:1 ratio over the T=3 VLPs", "section": "Results"},
-        {"quote": "Thus, it is possible that the wider T=4 shell creates steric clashes upon M6 binding, leading to T=4 particle disassembly (Fig. 4C).", "section": "Results"}
+        {
+          "quote": "While the untreated sample contained an equal mix of T=3 and T=4 particles, addition of M6 completely destabilized the T=4 VLPs, giving rise to smaller, ~30 nm T=1 particles in a 2:1 ratio over the T=3 VLPs",
+          "section": "Results"
+        },
+        {
+          "quote": "Thus, it is possible that the wider T=4 shell creates steric clashes upon M6 binding, leading to T=4 particle disassembly (Fig. 4C).",
+          "section": "Results"
+        }
       ]
     },
     {
       "tag": "新しい結合部位",
       "text": "流行株GII.4 SydneyのT=3粒子（2.84 Å）は、2002年株で見つかっていた金属イオンの結合密度を欠く。イオンを配位する残基のうち2つ（L459Q、H460Y）が置き換わっており、pHや金属イオン、EDTAを変えても粒子径は変わらなかった。",
       "evidence": [
-        {"quote": "However, a closer inspection of the region corresponding to the metal binding pocket in GII.4 HOV showed no significant density attributable to ion binding (Fig. 1C).", "section": "Results"},
-        {"quote": "Sequence comparison between the Sydney and HOV strains revealed mutation of two of the four ion-coordinating residues, L459Q and H460Y", "section": "Results"}
+        {
+          "quote": "However, a closer inspection of the region corresponding to the metal binding pocket in GII.4 HOV showed no significant density attributable to ion binding (Fig. 1C).",
+          "section": "Results"
+        },
+        {
+          "quote": "Sequence comparison between the Sydney and HOV strains revealed mutation of two of the four ion-coordinating residues, L459Q and H460Y",
+          "section": "Results"
+        }
       ]
     }
   ],
@@ -58,12 +92,31 @@
     "sample_prep": "酸化グラフェン付きQuantifoil R1.2/1.3グリッド、Vitrobotで2.5秒ブロット。抗体はVLPに4倍のモル比で混合。",
     "data_collection": "Titan Krios G3＋K2 Summit。cryoSPARCで解析し、対称性を展開して二量体ごとに粒子を差し引いて3D分類。",
     "evidence": [
-      {"quote": "VLPs were produced in a baculovirus expression system using open reading frame 2 (ORF2) + ORF3+ untranslated region (UTR) sequences for different HuNoV strains.", "section": "Materials and methods"},
-      {"quote": "Only crystals containing M6 bound to GII.3 P-domain, but not GII.4 Sydney, produced good diffraction data used for structural determination.", "section": "Results"},
-      {"quote": "Aliquots (4 μl) were applied to graphene oxide-coated 1.2/1.3 holey carbon-coated copper grids (Quantifoil R1.2/1.3, 200 mesh, Cu) and incubated for 10 s.", "section": "Materials and methods"},
-      {"quote": "Cryo-EM imaging was performed on a Titan Krios G3 TEM (Thermo Fisher Scientific) operating at 300 keV equipped with a post-column BioQuantum Energy Filter.", "section": "Materials and methods"}
+      {
+        "quote": "VLPs were produced in a baculovirus expression system using open reading frame 2 (ORF2) + ORF3+ untranslated region (UTR) sequences for different HuNoV strains.",
+        "section": "Materials and methods"
+      },
+      {
+        "quote": "Only crystals containing M6 bound to GII.3 P-domain, but not GII.4 Sydney, produced good diffraction data used for structural determination.",
+        "section": "Results"
+      },
+      {
+        "quote": "Aliquots (4 μl) were applied to graphene oxide-coated 1.2/1.3 holey carbon-coated copper grids (Quantifoil R1.2/1.3, 200 mesh, Cu) and incubated for 10 s.",
+        "section": "Materials and methods"
+      },
+      {
+        "quote": "Cryo-EM imaging was performed on a Titan Krios G3 TEM (Thermo Fisher Scientific) operating at 300 keV equipped with a post-column BioQuantum Energy Filter.",
+        "section": "Materials and methods"
+      }
     ]
   },
-  "keywords": ["ノロウイルス", "VP1", "VLP", "ナノボディ", "Fab", "ワクチン"],
+  "keywords": [
+    "ノロウイルス",
+    "VP1",
+    "VLP",
+    "ナノボディ",
+    "Fab",
+    "ワクチン"
+  ],
   "editor_notes": "Research Square のプレプリント形式の記録（査読前の可能性）。PDB は未公開（12QZ ほか多数）。著者は GII.4 Sydney の初の原子構造と明言しているが、見出しには使っていない。"
 }

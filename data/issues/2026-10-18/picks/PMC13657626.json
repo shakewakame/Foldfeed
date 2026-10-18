@@ -4,6 +4,7 @@
   "headline": "共折りたたみAIは、Mac1に結合する薬の形を半数以上当てる",
   "subhead": "未公開のMac1–リガンド結晶構造551個で、AF3・Boltz-2・Chai-1を評価した",
   "target_label": "SARS-CoV-2 NSP3 マクロドメイン（Mac1）",
+  "target_en": "SARS-CoV-2 NSP3 macrodomain (Mac1)",
   "summary": {
     "question": "共折りたたみ法の評価は、訓練データとの独立性が確かめにくく、テスト用の構造数も足りなかった。",
     "approach": "訓練の締め切り日より後にX線で決めた551個のMac1–リガンド構造を使い、3つの共折りたたみ法とDOCK3.7を比べた。",
@@ -11,47 +12,86 @@
     "learned": "共折りたたみは既知リガンドの配置と序列付けに強い。ドッキングの候補選別では、ドッキングより優れるとは言えなかった。",
     "evidence": {
       "question": [
-        {"quote": "While deep-learning co-folding methods can help address these challenges, their evaluation has been hampered by the difficulties in assessing independence from training data and insufficiently large test sets.", "section": "Abstract"}
+        {
+          "quote": "While deep-learning co-folding methods can help address these challenges, their evaluation has been hampered by the difficulties in assessing independence from training data and insufficiently large test sets.",
+          "section": "Abstract"
+        }
       ],
       "approach": [
-        {"quote": "Here, we test the ability of co-folding methods to predict the structures of 551 ligands, 489 of which are of sufficient quality for evaluation, bound to the SARS-CoV-2 NSP3 macrodomain (Mac1) that were determined after the training cutoff dates.", "section": "Abstract"}
+        {
+          "quote": "Here, we test the ability of co-folding methods to predict the structures of 551 ligands, 489 of which are of sufficient quality for evaluation, bound to the SARS-CoV-2 NSP3 macrodomain (Mac1) that were determined after the training cutoff dates.",
+          "section": "Abstract"
+        }
       ],
       "result": [
-        {"quote": "AlphaFold3 (AF3), Boltz-2, and Chai-1 each reproduced >50% of the Mac1 ligand poses to better than 2 Å root-mean-square deviation of experiment.", "section": "Abstract"},
-        {"quote": "we did not find that common conformational rearrangements, including peptide flip and a large loop opening, were recapitulated by the co-folding prediction.", "section": "Abstract"}
+        {
+          "quote": "AlphaFold3 (AF3), Boltz-2, and Chai-1 each reproduced >50% of the Mac1 ligand poses to better than 2 Å root-mean-square deviation of experiment.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "we did not find that common conformational rearrangements, including peptide flip and a large loop opening, were recapitulated by the co-folding prediction.",
+          "section": "Abstract"
+        }
       ],
       "learned": [
-        {"quote": "Conversely, when the more homogeneous benchmark of true ligands was replaced by a diverse set of docked molecules, composed of what would turn out to be hundreds of true ligands and thousands of false positives, the co-folding methods did no better than docking and often did worse.", "section": "Discussion"}
+        {
+          "quote": "Conversely, when the more homogeneous benchmark of true ligands was replaced by a diverse set of docked molecules, composed of what would turn out to be hundreds of true ligands and thousands of false positives, the co-folding methods did no better than docking and often did worse.",
+          "section": "Discussion"
+        }
       ],
       "open": [
-        {"quote": "Even though the prospective docking hit lists included thousands of diverse molecules, they still represent only three targets, and so offer a limited view of molecular recognition.", "section": "Discussion"}
+        {
+          "quote": "Even though the prospective docking hit lists included thousands of diverse molecules, they still represent only three targets, and so offer a limited view of molecular recognition.",
+          "section": "Discussion"
+        }
       ]
     }
   },
-  "categories": ["enzyme", "pathogen"],
+  "categories": [
+    "enzyme",
+    "pathogen"
+  ],
   "highlights": [
     {
       "tag": "手法の工夫",
       "text": "論文は、約1 Åの分解能でX線構造を決めたMac1–リガンド複合体のうち、未公開だった551個を評価用に用意した。AF3とChai-1は約70%、Boltz-2は53%、DOCK3.7は40%のリガンドを2 Å未満の誤差で再現した。",
       "evidence": [
-        {"quote": "From our internal dataset, we identified 551 ligands where we determined X-ray structures that have not been disclosed previously (Figure 1a, Supplementary file 1).", "section": "Results"},
-        {"quote": "Using the field standard, 2 Å cutoff for correct predictions, AF3 and Chai-1 predicted roughly 70% of the ligands correctly.", "section": "Results"}
+        {
+          "quote": "From our internal dataset, we identified 551 ligands where we determined X-ray structures that have not been disclosed previously (Figure 1a, Supplementary file 1).",
+          "section": "Results"
+        },
+        {
+          "quote": "Using the field standard, 2 Å cutoff for correct predictions, AF3 and Chai-1 predicted roughly 70% of the ligands correctly.",
+          "section": "Results"
+        }
       ]
     },
     {
       "tag": "機構の解明",
       "text": "実験で見られたペプチド主鎖の反転（twisted）の19例のうちAF3が当てたのは4例、約8 Åのループの開き（open）の20例では0例だった。それでもリガンドの位置は低いRMSDで当たっており、AIは詳細な物理ではなく結合の型を学んでいるらしい。",
       "evidence": [
-        {"quote": "We observed that only 4/19 twisted states and 0/20 open states were correctly predicted by AF3.", "section": "Results"},
-        {"quote": "This result suggests that co-folding reliably recapitulates dominant ligand-binding interactions even in the absence of accurate protein conformational modeling", "section": "Results"}
+        {
+          "quote": "We observed that only 4/19 twisted states and 0/20 open states were correctly predicted by AF3.",
+          "section": "Results"
+        },
+        {
+          "quote": "This result suggests that co-folding reliably recapitulates dominant ligand-binding interactions even in the absence of accurate protein conformational modeling",
+          "section": "Results"
+        }
       ]
     },
     {
       "tag": "創薬・モダリティ",
       "text": "AmpC、σ2受容体、ドーパミンD4受容体の大規模ドッキングで実験的に調べた候補のうち、偽陽性から真のリガンドを選ぶ力は、AF3ではドッキングに及ばなかった。Boltz-2の親和性予測はドッキングと同程度だった。ただし候補はもともとドッキングで選ばれており、著者はこれがドッキングに有利に働いたと述べている。",
       "evidence": [
-        {"quote": "AF3 ligand pose confidence values did not separate true ligands from high-scoring false positives as effectively as docking scores or Boltz-2 affinity predictions did.", "section": "Abstract"},
-        {"quote": "An important caveat is that the hit lists were composed of molecules prioritized by docking in the first place, giving it an advantage on these particular sets.", "section": "Results"}
+        {
+          "quote": "AF3 ligand pose confidence values did not separate true ligands from high-scoring false positives as effectively as docking scores or Boltz-2 affinity predictions did.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "An important caveat is that the hit lists were composed of molecules prioritized by docking in the first place, giving it an advantage on these particular sets.",
+          "section": "Results"
+        }
       ]
     }
   ],
@@ -62,10 +102,23 @@
     "sample_prep": "P43結晶形のMac1結晶にリガンドを2.5〜20 mMでソーキング。",
     "data_collection": "PanDDAのevent mapにリガンドをCootで構築し、phenix.refineで精密化。",
     "evidence": [
-      {"quote": "Ligands were soaked into SARS-CoV-2 Mac1 crystals at nominal conentrations ranging from 2.5-20 mM using the P43 crystal form Schuller et al., 2021.", "section": "Methods"},
-      {"quote": "We modeled ligands into PanDDA event maps (Pearce et al., 2017) using ligand coordinates and restraints generated with phenix.elbow (Moriarty et al., 2009).", "section": "Methods"}
+      {
+        "quote": "Ligands were soaked into SARS-CoV-2 Mac1 crystals at nominal conentrations ranging from 2.5-20 mM using the P43 crystal form Schuller et al., 2021.",
+        "section": "Methods"
+      },
+      {
+        "quote": "We modeled ligands into PanDDA event maps (Pearce et al., 2017) using ligand coordinates and restraints generated with phenix.elbow (Moriarty et al., 2009).",
+        "section": "Methods"
+      }
     ]
   },
-  "keywords": ["共折りたたみ", "AlphaFold3", "Boltz-2", "Chai-1", "Mac1", "ドッキング"],
+  "keywords": [
+    "共折りたたみ",
+    "AlphaFold3",
+    "Boltz-2",
+    "Chai-1",
+    "Mac1",
+    "ドッキング"
+  ],
   "editor_notes": "新しい構造は、Mac1とリガンド551個のX線構造（約1 Å）。本文に挙がる新規PDBはAVI-5083(15JC)・AVI-3363(15CH)・AVI-4129(15DE)・AVI-4225(15DX)で、いずれも未公開。551個の全IDは補足ファイルにあり、本文では確認できない。Mac1の初構造ではない（既存の構造が多数ある）。"
 }

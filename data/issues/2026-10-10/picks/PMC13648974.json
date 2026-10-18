@@ -4,6 +4,7 @@
   "headline": "MERS-CoVスパイクの活性化を、時間を追って捉えた",
   "subhead": "受容体DPP4と1〜120時間反応させ、融合後のS2を3.23 Åで解析した",
   "target_label": "MERS-CoVスパイク–DPP4",
+  "target_en": "MERS-CoV spike–DPP4",
   "summary": {
     "question": "受容体結合が膜融合にどう結びつくのかは、構造的に不明だった。",
     "approach": "スパイクとDPP4を一定時間反応させ、各時点の構造をクライオ電顕で決めた。",

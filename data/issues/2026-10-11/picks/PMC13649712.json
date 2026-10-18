@@ -4,6 +4,7 @@
   "headline": "体内時計のPER1とPER2は、WDR5の別々の場所に結合する",
   "subhead": "PER2はCRYと取り合う場所に、PER1は別の場所に結合する。PER2側を結晶構造で確認した",
   "target_label": "WDR5–PER2 WBMペプチド（マウス）",
+  "target_en": "Mouse WDR5–PER2 WBM peptide",
   "summary": {
     "question": "体内時計で遺伝子の働きを抑えるPER1・PER2の複合体に、WDR5が見つかっていた。その役割は不明だった。",
     "approach": "WDR5とPER1・PER2の結合の強さを測り、WDR5とPER2の短いペプチドの結晶構造を決めた。",

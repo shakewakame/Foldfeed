@@ -4,6 +4,7 @@
   "headline": "ECT2LとDZANK1は、繊毛の根もとで微小管をつなぐ",
   "subhead": "気道細胞の中で構造を直接解析し、2遺伝子の変異は原発性線毛運動異常症の原因になる",
   "target_label": "ヒト繊毛の移行帯（ECT2L・DZANK1）",
+  "target_en": "Human ciliary transition zone (ECT2L, DZANK1)",
   "summary": {
     "question": "繊毛の根もとの関門である移行帯の分子構成と、運動性繊毛の病気との関係は、よく分かっていなかった。",
     "approach": "ヒトの気道細胞を凍結して薄く削り、その場のクライオ電子線トモグラフィーとサブトモグラム平均で調べた。",

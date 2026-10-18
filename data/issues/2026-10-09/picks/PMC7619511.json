@@ -5,6 +5,7 @@
   "subhead": "赤痢菌IpaDと抗体Fabの複合体。遠位ドメインに結合すると溶血を抑え、N末端ドメインでは高めた",
   "takeaway": "IpaDの結合部位の違いが、抗体が毒性を抑えるか高めるかを分ける",
   "target_label": "赤痢菌IpaD–抗体Fab",
+  "target_en": "Shigella IpaD–antibody Fab",
   "summary": {
     "question": "赤痢菌のワクチンは未承認で、免疫の構造的・分子的な決め手が分かっていなかった。",
     "approach": "サルの赤痢集団感染の検体から抗体を単離し、IpaDとの複合体をクライオ電顕で解析した。",

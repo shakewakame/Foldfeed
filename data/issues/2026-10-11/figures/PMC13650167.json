@@ -96,7 +96,8 @@
    "E390",
    "F530"
   ],
-  "polar": 11,
+  "hbonds": 16,
+  "pi": 3,
   "neighbours": [
    "BeF3"
   ],

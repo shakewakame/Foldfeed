@@ -4,6 +4,7 @@
   "headline": "CLN8は、BMPの材料LPGを立体を選んでつくる酵素だ",
   "subhead": "クライオ電顕で活性部位を示し、Batten病の変異は酵素活性を弱めた",
   "target_label": "ヒトCLN8（Batten病タンパク質）",
+  "target_en": "Human CLN8 (Batten disease protein)",
   "summary": {
     "question": "Batten病の原因タンパク質CLN8が、リソソームの脂質BMPの合成で何をするかは不明だった。",
     "approach": "精製CLN8の酵素反応と、アポ型およびアシルCoA存在下のクライオ電顕構造を調べた。",

@@ -4,6 +4,7 @@
   "headline": "DNA修復の複合体に、Pol λはBRCTとN末端で取り付く",
   "subhead": "Pol λとPNKPは同じ複合体の中で協力して、切れた末端を整える",
   "target_label": "NHEJ短距離複合体＋Pol λ（ヒト）",
+  "target_en": "Human NHEJ short-range complex + Pol λ",
   "summary": {
     "question": "切れたDNAの末端は、そのままではつなげないことがある。末端を整える酵素が修復の中核複合体にどう組み込まれるかは不明だった。",
     "approach": "修復の中核複合体にPol λが結合した状態をクライオ電顕で解析し、Pol λとPNKPの働きを試験管内で調べた。",

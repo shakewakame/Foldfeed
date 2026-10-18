@@ -57,7 +57,8 @@
    "R1020",
    "N1035"
   ],
-  "polar": 3,
+  "hbonds": 4,
+  "pi": 2,
   "neighbours": [
    "ADP"
   ],

@@ -4,6 +4,7 @@
   "headline": "DNAAF19は、シャペロンRUVBL1/2に結合して働くらしい",
   "subhead": "クライオ電顕でRUVBL1/2の環にDNAAF19とDPCDが結合する様子を示した",
   "target_label": "DNAAF19–RUVBL1/2（ヒト）",
+  "target_en": "Human DNAAF19–RUVBL1/2",
   "summary": {
     "question": "繊毛を動かすダイニンアームの組み立てでDNAAF19がどう働くかは、不明だった。",
     "approach": "マウス組織でDNAAF19の相互作用相手を調べ、タンパク質の組み立てを助けるRUVBL1/2との複合体をクライオ電顕で解析した。",

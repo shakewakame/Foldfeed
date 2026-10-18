@@ -4,6 +4,7 @@
   "headline": "PoOMT1のT字型ポケットは、2種類の基質を受け入れる",
   "subhead": "ボタンの根の4′-O-メチル基転移酵素。触媒三残基はHis262・Asn263・Gln324だった",
   "target_label": "PoOMT1（Paeonia ostii）",
+  "target_en": "PoOMT1 (Paeonia ostii)",
   "summary": {
     "question": "ペオノールの生合成の後半を担う酵素は未同定で、構造も機構も不明だった。",
     "approach": "トランスクリプトームとメタボロームでPoOMT1を同定し、複合体の結晶構造と変異体で調べた。",

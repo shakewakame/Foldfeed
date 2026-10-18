@@ -57,7 +57,8 @@
    "L315",
    "M316"
   ],
-  "polar": 4,
+  "hbonds": 4,
+  "pi": 0,
   "neighbours": [
    "SAH"
   ],

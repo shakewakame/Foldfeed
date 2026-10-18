@@ -8,7 +8,7 @@
 
 | # | 標的 | 手法・分解能 | 見出し |
 |---|---|---|---|
-| 1 | Pit2（トウモロコシ黒穂病菌） | X線結晶構造解析・2.35 Å | Pit2から切り出されたペプチドが、カビのGPCRを活性化する |
+| 1 | Pit2（トウモロコシ黒穂病菌） | X-ray・2.35 Å | Pit2から切り出されたペプチドが、カビのGPCRを活性化する |
 
 > この号は AI が論文本文から作成した**レビュー用の下書き**です。数値・ID・リガンドは PDB / UniProt から取得し、AI の記述には本文からの引用を付けています。
 
@@ -106,7 +106,7 @@ Gpe1に似た担子菌の受容体群で、TM3のR133とTM6のN246・N247が保�
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [9RXK](https://www.rcsb.org/structure/9RXK) | X線結晶構造解析 | 2.35 Å | 2026-07-22 | Mycosarcoma maydis, Streptococcus | — |
+| [9RXK](https://www.rcsb.org/structure/9RXK) | X-ray | 2.35 Å | 2026-07-22 | Mycosarcoma maydis, Streptococcus | — |
 
 - [A0A0D1EAR7](https://www.uniprot.org/uniprotkb/A0A0D1EAR7) PIT2 Secreted effector PIT2 — *Mycosarcoma maydis* （PDB で初めての構造）
 - [P19909](https://www.uniprot.org/uniprotkb/P19909) spg Immunoglobulin G-binding protein G — *Streptococcus sp. group G* （既存の PDB 構造 91 件）

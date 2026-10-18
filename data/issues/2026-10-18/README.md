@@ -22,20 +22,20 @@
 
 | # | 標的 | 手法・分解能 | 見出し |
 |---|---|---|---|
-| 1 | ヒト繊毛の移行帯（二連微小管） | クライオ電顕・7.30–9.60 Å（2 構造） | ECT2LとDZANK1の欠損が、繊毛基部の連結を壊しPCDを起こす |
-| 2 | ヒトOCTN1（SLC22A4） | クライオ電顕・3.11–3.37 Å（2 構造） | OCTN1の外向き・内向きの構造から、阻害薬メベンダゾールを見いだした |
-| 3 | ヒトNHA1（SLC9B1） | クライオ電顕・3.64 Å | ヒトNHA1の内向き構造は、エレベーター型の輸送を裏づける |
-| 4 | ワクシニアウイルスD13（足場） | クライオ電顕・2.56–3.70 Å（8 構造） | A17の末端ペプチドが、D13の棒状集合体を足場の格子に組み替える |
-| 5 | GluA2–γ2（AMPA受容体） | クライオ電顕・2.93–4.36 Å（10 構造） | 部分作動薬が、AMPA受容体の開く前の中間状態をとらえた |
-| 6 | ヒトNLRP6（炎症の感知因子） | クライオ電顕・3.69–3.79 Å（2 構造） | ATPがNLRP6の各ドメインを束ねて、活性化を抑える |
-| 7 | ヒトcPRC1（PRC1.4） | クライオ電顕・2.74 Å | PRC1は4つのサブユニットを密に組み、E2酵素をヌクレオソーム上に置く |
-| 8 | タウ線維（AD・VT患者脳） | クライオ電顕・2.92–3.61 Å（8 構造） | ポリユビキチンの位置が動くと、タウ線維の原線維間の接合面がずれる |
-| 9 | β2AR（ヒト）二量体 | クライオ電顕・2.50 Å | AP-7-168は分子糊としてβ2ARを二量体にし、アレスチンを遮る |
+| 1 | ヒト繊毛の移行帯（二連微小管） | Cryo-ET・7.30–9.60 Å（2 構造） | ECT2LとDZANK1の欠損が、繊毛基部の連結を壊しPCDを起こす |
+| 2 | ヒトOCTN1（SLC22A4） | Cryo-EM・3.11–3.37 Å（2 構造） | OCTN1の外向き・内向きの構造から、阻害薬メベンダゾールを見いだした |
+| 3 | ヒトNHA1（SLC9B1） | Cryo-EM・3.64 Å | ヒトNHA1の内向き構造は、エレベーター型の輸送を裏づける |
+| 4 | ワクシニアウイルスD13（足場） | Cryo-EM・2.56–3.70 Å（8 構造） | A17の末端ペプチドが、D13の棒状集合体を足場の格子に組み替える |
+| 5 | GluA2–γ2（AMPA受容体） | Cryo-EM・2.93–4.36 Å（10 構造） | 部分作動薬が、AMPA受容体の開く前の中間状態をとらえた |
+| 6 | ヒトNLRP6（炎症の感知因子） | Cryo-EM・3.69–3.79 Å（2 構造） | ATPがNLRP6の各ドメインを束ねて、活性化を抑える |
+| 7 | ヒトcPRC1（PRC1.4） | Cryo-EM・2.74 Å | PRC1は4つのサブユニットを密に組み、E2酵素をヌクレオソーム上に置く |
+| 8 | タウ線維（AD・VT患者脳） | Cryo-EM・2.92–3.61 Å（8 構造） | ポリユビキチンの位置が動くと、タウ線維の原線維間の接合面がずれる |
+| 9 | β2AR（ヒト）二量体 | Cryo-EM・2.50 Å | AP-7-168は分子糊としてβ2ARを二量体にし、アレスチンを遮る |
 | 10 | ヒトノロウイルスGII.4 Sydney VP1 | PDB 公開待ち | ノロウイルスの殻は、抗体が結合すると形を変えて受け止める |
 | 11 | AsCas12a（ΨDNAガイド） | PDB 公開待ち | DNAガイドのCas12aは、DNAのヘアピンでPAM認識を真似る |
 | 12 | SARS-CoV-2 NSP3 マクロドメイン（Mac1） | PDB 公開待ち | 共折りたたみAIは、Mac1に結合する薬の形を半数以上当てる |
-| 13 | 光化学系I単量体（T. vestitus） | クライオ電顕・1.74 Å | 光合成の光化学系Iの単量体を、温度と界面活性剤で作る |
-| 14 | β-ガラクトシダーゼ・GroEL（大腸菌） | クライオ電顕・1.90–3.70 Å（2 構造） | 乾いたタンパク質は、レーザーで氷を溶かすと水を取り戻して元に近づく |
+| 13 | 光化学系I単量体（T. vestitus） | Cryo-EM・1.74 Å | 光合成の光化学系Iの単量体を、温度と界面活性剤で作る |
+| 14 | β-ガラクトシダーゼ・GroEL（大腸菌） | Cryo-EM・1.90–3.70 Å（2 構造） | 乾いたタンパク質は、レーザーで氷を溶かすと水を取り戻して元に近づく |
 | 15 | hPin1-WWドメイン＋AIEペプチドF11 | PDB 公開待ち | AIE蛍光色素は、タンパク質に結びつくと環の回転が止まって光る |
 | 16 | μOR–Gi 複合体（マウス・ヒト） | 一分子FRET・GTP代謝回転（既存のGi・μOR構造を使用） | オピオイドの効力は、Gαドメインの開きやすさに表れる |
 
@@ -146,8 +146,8 @@ PCDが疑われる489人の解析で、ECT2L変異を持つ3人とDZANK1変異�
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [11YJ](https://www.rcsb.org/structure/11YJ) | クライオ電顕 | 7.30 Å | 2026-09-09 | Homo sapiens | GTP, GDP |
-| [11XU](https://www.rcsb.org/structure/11XU) | クライオ電顕 | 9.60 Å | 2026-09-09 | Homo sapiens | — |
+| [11YJ](https://www.rcsb.org/structure/11YJ) | Cryo-ET | 7.30 Å | 2026-09-09 | Homo sapiens | GTP, GDP |
+| [11XU](https://www.rcsb.org/structure/11XU) | Cryo-ET | 9.60 Å | 2026-09-09 | Homo sapiens | — |
 
 - [P63167](https://www.uniprot.org/uniprotkb/P63167) DYNLL1 Dynein light chain 1, cytoplasmic — *Homo sapiens* （既存の PDB 構造 21 件）
 - [P63208](https://www.uniprot.org/uniprotkb/P63208) SKP1 S-phase kinase-associated protein 1 — *Homo sapiens* （既存の PDB 構造 72 件）
@@ -300,8 +300,8 @@ ET結合型の構造を使った承認薬の仮想スクリーニングで、駆
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [9WTY](https://www.rcsb.org/structure/9WTY) | クライオ電顕 | 3.11 Å | 2026-09-23 | Homo sapiens | — |
-| [9WTX](https://www.rcsb.org/structure/9WTX) | クライオ電顕 | 3.37 Å | 2026-09-23 | Homo sapiens | LW8 |
+| [9WTY](https://www.rcsb.org/structure/9WTY) | Cryo-EM | 3.11 Å | 2026-09-23 | Homo sapiens | — |
+| [9WTX](https://www.rcsb.org/structure/9WTX) | Cryo-EM | 3.37 Å | 2026-09-23 | Homo sapiens | LW8 |
 
 - [Q9H015](https://www.uniprot.org/uniprotkb/Q9H015) SLC22A4 Solute carrier family 22 member 4 — *Homo sapiens* （PDB で初めての構造）
 
@@ -437,7 +437,7 @@ NHA1は2つの鎖がTM0とTM8で組み合わさったダイマーで、各鎖は
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [21MW](https://www.rcsb.org/structure/21MW) | クライオ電顕 | 3.64 Å | 2026-09-30 | Homo sapiens | — |
+| [21MW](https://www.rcsb.org/structure/21MW) | Cryo-EM | 3.64 Å | 2026-09-30 | Homo sapiens | — |
 
 - [Q4ZJI4](https://www.uniprot.org/uniprotkb/Q4ZJI4) SLC9B1 Sodium/hydrogen exchanger 9B1 — *Homo sapiens* （PDB で初めての構造）
 
@@ -567,14 +567,14 @@ A17が結合する底の空洞は、リファンピシンの結合部位でも�
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [9USX](https://www.rcsb.org/structure/9USX) | クライオ電顕 | 2.88 Å | 2026-08-05 | Orthopoxvirus vaccinia | — |
-| [9USY](https://www.rcsb.org/structure/9USY) | クライオ電顕 | 3.70 Å | 2026-08-05 | Orthopoxvirus vaccinia | — |
-| [9USU](https://www.rcsb.org/structure/9USU) | クライオ電顕 | 2.90 Å | 2026-08-05 | Orthopoxvirus vaccinia | — |
-| [9USV](https://www.rcsb.org/structure/9USV) | クライオ電顕 | 3.20 Å | 2026-08-05 | Orthopoxvirus vaccinia | — |
-| [9USW](https://www.rcsb.org/structure/9USW) | クライオ電顕 | 3.10 Å | 2026-08-05 | Orthopoxvirus vaccinia | — |
-| [9USZ](https://www.rcsb.org/structure/9USZ) | クライオ電顕 | 2.56 Å | 2026-08-05 | Orthopoxvirus vaccinia | — |
-| [9UT0](https://www.rcsb.org/structure/9UT0) | クライオ電顕 | 3.63 Å | 2026-08-05 | Orthopoxvirus vaccinia | — |
-| [26FE](https://www.rcsb.org/structure/26FE) | クライオ電顕 | 3.04 Å | 2026-08-05 | Orthopoxvirus vaccinia | — |
+| [9USX](https://www.rcsb.org/structure/9USX) | Cryo-EM | 2.88 Å | 2026-08-05 | Orthopoxvirus vaccinia | — |
+| [9USY](https://www.rcsb.org/structure/9USY) | Cryo-EM | 3.70 Å | 2026-08-05 | Orthopoxvirus vaccinia | — |
+| [9USU](https://www.rcsb.org/structure/9USU) | Cryo-EM | 2.90 Å | 2026-08-05 | Orthopoxvirus vaccinia | — |
+| [9USV](https://www.rcsb.org/structure/9USV) | Cryo-EM | 3.20 Å | 2026-08-05 | Orthopoxvirus vaccinia | — |
+| [9USW](https://www.rcsb.org/structure/9USW) | Cryo-EM | 3.10 Å | 2026-08-05 | Orthopoxvirus vaccinia | — |
+| [9USZ](https://www.rcsb.org/structure/9USZ) | Cryo-EM | 2.56 Å | 2026-08-05 | Orthopoxvirus vaccinia | — |
+| [9UT0](https://www.rcsb.org/structure/9UT0) | Cryo-EM | 3.63 Å | 2026-08-05 | Orthopoxvirus vaccinia | — |
+| [26FE](https://www.rcsb.org/structure/26FE) | Cryo-EM | 3.04 Å | 2026-08-05 | Orthopoxvirus vaccinia | — |
 
 - [P68440](https://www.uniprot.org/uniprotkb/P68440) OPG125 Scaffold protein OPG125 — *Vaccinia virus (strain Western Reserve)* （既存の PDB 構造 20 件）
 - [Q76ZR4](https://www.uniprot.org/uniprotkb/Q76ZR4) OPG125 Scaffold protein OPG125 — *Vaccinia virus (strain Ankara)* （PDB で初めての構造）
@@ -619,10 +619,6 @@ A17が結合する底の空洞は、リファンピシンの結合部位でも�
 ![構造図：GluA2–γ2（AMPA受容体）](figures/PMC13672095.svg)
 
 <sub>色（順に）：GluA2–γ2（AMPA 受容体）　スティック：カイニン酸（KAI）</sub>
-
-![結合部位：カイニン酸](figures/PMC13672095-site.svg)
-
-<sub>カイニン酸の結合部位。4 Å 以内の残基：Y450, P478, T480, R485, L650, G653, S654, T655, T686, E705, Y732。点線は 3.3 Å 以内の N・O の組（3 組）</sub>
 
 **部分作動薬が、AMPA受容体の開く前の中間状態をとらえた**
 
@@ -706,16 +702,16 @@ A17が結合する底の空洞は、リファンピシンの結合部位でも�
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [11VV](https://www.rcsb.org/structure/11VV) | クライオ電顕 | 2.93 Å | 2026-09-23 | Mus musculus, Rattus norvegicus | — |
-| [11VZ](https://www.rcsb.org/structure/11VZ) | クライオ電顕 | 3.98 Å | 2026-09-23 | Mus musculus, Rattus norvegicus | KAI |
-| [11WB](https://www.rcsb.org/structure/11WB) | クライオ電顕 | 3.55 Å | 2026-09-23 | Mus musculus, Rattus norvegicus | NWD, SPD |
-| [11WC](https://www.rcsb.org/structure/11WC) | クライオ電顕 | 4.02 Å | 2026-09-23 | Mus musculus, Rattus norvegicus | NWD |
-| [11WA](https://www.rcsb.org/structure/11WA) | クライオ電顕 | 4.36 Å | 2026-09-23 | Mus musculus, Rattus norvegicus | NWD |
-| [11VX](https://www.rcsb.org/structure/11VX) | クライオ電顕 | 3.37 Å | 2026-09-23 | Mus musculus, Rattus norvegicus | FWD, SPD |
-| [11VW](https://www.rcsb.org/structure/11VW) | クライオ電顕 | 3.84 Å | 2026-09-23 | Mus musculus, Rattus norvegicus | FWD, SPD |
-| [11VY](https://www.rcsb.org/structure/11VY) | クライオ電顕 | 3.47 Å | 2026-09-23 | Mus musculus, Rattus norvegicus | IWD, SPD |
-| [11WE](https://www.rcsb.org/structure/11WE) | クライオ電顕 | 3.58 Å | 2026-09-23 | Mus musculus, Rattus norvegicus | GLU |
-| [11WD](https://www.rcsb.org/structure/11WD) | クライオ電顕 | 3.69 Å | 2026-09-23 | Mus musculus, Rattus norvegicus | GLU |
+| [11VV](https://www.rcsb.org/structure/11VV) | Cryo-EM | 2.93 Å | 2026-09-23 | Mus musculus, Rattus norvegicus | — |
+| [11VZ](https://www.rcsb.org/structure/11VZ) | Cryo-EM | 3.98 Å | 2026-09-23 | Mus musculus, Rattus norvegicus | KAI |
+| [11WB](https://www.rcsb.org/structure/11WB) | Cryo-EM | 3.55 Å | 2026-09-23 | Mus musculus, Rattus norvegicus | NWD, SPD |
+| [11WC](https://www.rcsb.org/structure/11WC) | Cryo-EM | 4.02 Å | 2026-09-23 | Mus musculus, Rattus norvegicus | NWD |
+| [11WA](https://www.rcsb.org/structure/11WA) | Cryo-EM | 4.36 Å | 2026-09-23 | Mus musculus, Rattus norvegicus | NWD |
+| [11VX](https://www.rcsb.org/structure/11VX) | Cryo-EM | 3.37 Å | 2026-09-23 | Mus musculus, Rattus norvegicus | FWD, SPD |
+| [11VW](https://www.rcsb.org/structure/11VW) | Cryo-EM | 3.84 Å | 2026-09-23 | Mus musculus, Rattus norvegicus | FWD, SPD |
+| [11VY](https://www.rcsb.org/structure/11VY) | Cryo-EM | 3.47 Å | 2026-09-23 | Mus musculus, Rattus norvegicus | IWD, SPD |
+| [11WE](https://www.rcsb.org/structure/11WE) | Cryo-EM | 3.58 Å | 2026-09-23 | Mus musculus, Rattus norvegicus | GLU |
+| [11WD](https://www.rcsb.org/structure/11WD) | Cryo-EM | 3.69 Å | 2026-09-23 | Mus musculus, Rattus norvegicus | GLU |
 
 - [O88602](https://www.uniprot.org/uniprotkb/O88602) Cacng2 Voltage-dependent calcium channel gamma-2 subunit — *Mus musculus* （既存の PDB 構造 41 件）
 - [P19491](https://www.uniprot.org/uniprotkb/P19491) Gria2 Glutamate receptor 2 — *Rattus norvegicus* （既存の PDB 構造 342 件）
@@ -769,10 +765,6 @@ A17が結合する底の空洞は、リファンピシンの結合部位でも�
 ![構造図：ヒトNLRP6（炎症の感知因子）](figures/PMC13672055.svg)
 
 <sub>色（順に）：NLRP6（センサー）　スティック：ATP</sub>
-
-![結合部位：ATP](figures/PMC13672055-site.svg)
-
-<sub>ATPの結合部位。4 Å 以内の残基：A329, A330, P331, A383, H539, V541, L542, R545, E611, E613, L619, E620, Y623, V649, R650, D655。点線は 3.3 Å 以内の N・O の組（8 組）</sub>
 
 **ATPがNLRP6の各ドメインを束ねて、活性化を抑える**
 
@@ -862,8 +854,8 @@ NLRP3の阻害剤MCC950は、NLRP3で似た位置に結合するが、この再�
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [9OK7](https://www.rcsb.org/structure/9OK7) | クライオ電顕 | 3.79 Å | 2026-08-12 | Homo sapiens | — |
-| [9OK8](https://www.rcsb.org/structure/9OK8) | クライオ電顕 | 3.69 Å | 2026-08-12 | Homo sapiens | ATP |
+| [9OK7](https://www.rcsb.org/structure/9OK7) | Cryo-EM | 3.79 Å | 2026-08-12 | Homo sapiens | — |
+| [9OK8](https://www.rcsb.org/structure/9OK8) | Cryo-EM | 3.69 Å | 2026-08-12 | Homo sapiens | ATP |
 
 - [P59044](https://www.uniprot.org/uniprotkb/P59044) NLRP6 NACHT, LRR and PYD domains-containing protein 6 — *Homo sapiens* （既存の PDB 構造 2 件）
 
@@ -987,7 +979,7 @@ BMI1のRAWULドメインがUBCH5Cの背面に位置し、RING1Bとの複合面�
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [28OE](https://www.rcsb.org/structure/28OE) | クライオ電顕 | 2.74 Å | 2026-09-16 | Homo sapiens, Xenopus | — |
+| [28OE](https://www.rcsb.org/structure/28OE) | Cryo-EM | 2.74 Å | 2026-09-16 | Homo sapiens, Xenopus | — |
 
 - [A0A1B8Y854](https://www.uniprot.org/uniprotkb/A0A1B8Y854)  Histone H2B — *Xenopus tropicalis* （既存の PDB 構造 2 件）
 - [A0A310TTQ1](https://www.uniprot.org/uniprotkb/A0A310TTQ1) LOC121398065 Histone H3 — *Xenopus laevis* （既存の PDB 構造 69 件）
@@ -1113,14 +1105,14 @@ K48結合型の二ユビキチンに結合する小分子ユビスタチンBで�
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [10LN](https://www.rcsb.org/structure/10LN) | クライオ電顕 | 2.92 Å | 2026-09-02 | Homo sapiens | — |
-| [10NO](https://www.rcsb.org/structure/10NO) | クライオ電顕 | 2.96 Å | 2026-09-02 | Homo sapiens | — |
-| [10NP](https://www.rcsb.org/structure/10NP) | クライオ電顕 | 3.51 Å | 2026-09-02 | Homo sapiens | — |
-| [10NQ](https://www.rcsb.org/structure/10NQ) | クライオ電顕 | 3.61 Å | 2026-09-02 | Homo sapiens | — |
-| [10MR](https://www.rcsb.org/structure/10MR) | クライオ電顕 | 3.14 Å | 2026-09-02 | Homo sapiens | — |
-| [10NR](https://www.rcsb.org/structure/10NR) | クライオ電顕 | 3.37 Å | 2026-09-02 | Homo sapiens | — |
-| [10MS](https://www.rcsb.org/structure/10MS) | クライオ電顕 | 3.24 Å | 2026-09-02 | Homo sapiens | — |
-| [10NT](https://www.rcsb.org/structure/10NT) | クライオ電顕 | 3.05 Å | 2026-09-02 | Homo sapiens | — |
+| [10LN](https://www.rcsb.org/structure/10LN) | Cryo-EM | 2.92 Å | 2026-09-02 | Homo sapiens | — |
+| [10NO](https://www.rcsb.org/structure/10NO) | Cryo-EM | 2.96 Å | 2026-09-02 | Homo sapiens | — |
+| [10NP](https://www.rcsb.org/structure/10NP) | Cryo-EM | 3.51 Å | 2026-09-02 | Homo sapiens | — |
+| [10NQ](https://www.rcsb.org/structure/10NQ) | Cryo-EM | 3.61 Å | 2026-09-02 | Homo sapiens | — |
+| [10MR](https://www.rcsb.org/structure/10MR) | Cryo-EM | 3.14 Å | 2026-09-02 | Homo sapiens | — |
+| [10NR](https://www.rcsb.org/structure/10NR) | Cryo-EM | 3.37 Å | 2026-09-02 | Homo sapiens | — |
+| [10MS](https://www.rcsb.org/structure/10MS) | Cryo-EM | 3.24 Å | 2026-09-02 | Homo sapiens | — |
+| [10NT](https://www.rcsb.org/structure/10NT) | Cryo-EM | 3.05 Å | 2026-09-02 | Homo sapiens | — |
 
 - [P10636](https://www.uniprot.org/uniprotkb/P10636) MAPT Microtubule-associated protein tau — *Homo sapiens* （既存の PDB 構造 299 件）
 
@@ -1159,10 +1151,6 @@ K48結合型の二ユビキチンに結合する小分子ユビスタチンBで�
 ![構造図：β2AR（ヒト）二量体](figures/PMC13645619.svg)
 
 <sub>色（順に）：β2AR（受容体）　スティック：エイコサン（LFA）、BI-167107（P0G）、AP-7-168（A1CNS）</sub>
-
-![結合部位：AP-7-168](figures/PMC13645619-site.svg)
-
-<sub>AP-7-168の結合部位。4 Å 以内の残基：E122(A), V157, V206(A), E122(B), C125, V126, V129, V206(B), V210, I214。点線は 3.3 Å 以内の N・O の組（2 組）</sub>
 
 **AP-7-168は分子糊としてβ2ARを二量体にし、アレスチンを遮る**
 
@@ -1236,7 +1224,7 @@ AP-7-168は、2分子が互いに積み重なる形でTM3・4・5が作る空間
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [9Q3L](https://www.rcsb.org/structure/9Q3L) | クライオ電顕 | 2.50 Å | 2026-08-19 | Homo sapiens | A1CNS, P0G, LFA |
+| [9Q3L](https://www.rcsb.org/structure/9Q3L) | Cryo-EM | 2.50 Å | 2026-08-19 | Homo sapiens | A1CNS, P0G, LFA |
 
 - [P07550](https://www.uniprot.org/uniprotkb/P07550) ADRB2 Beta-2 adrenergic receptor — *Homo sapiens* （既存の PDB 構造 148 件）
 
@@ -1615,10 +1603,6 @@ AmpC、σ2受容体、ドーパミンD4受容体の大規模ドッキングで�
 
 <sub>色（順に）：PsaA（反応中心） / PsaB（反応中心） / PsaC（Fe-S 中心） / PsaD / PsaE / PsaF / PsaI / PsaJ / PsaK / PsaM / 4.8K タンパク質　スティック：クロロフィル a（CLA）、phylloquinone（PQN）、beta-carotene（BCR）、[4Fe-4S]（SF4）、chlorophyll a isomer（CL0）</sub>
 
-![結合部位：クロロフィル a](figures/PMC13672387-site.svg)
-
-<sub>クロロフィル aの結合部位。4 Å 以内の残基：L650, L654, W655, T437, L438, Y441, V526, A529, L532, W596, F599, W626, L631, S635, I639, F657, H661, W664, F720, Y724, T727, Y728, F731。点線は 3.3 Å 以内の N・O の組（3 組）</sub>
-
 **光合成の光化学系Iの単量体を、温度と界面活性剤で作る**
 
 単量体の光化学系Iをクライオ電顕で高分解能に解析し、脂質や界面活性剤の配置を示した
@@ -1694,7 +1678,7 @@ BDMで精製した三量体を、1%のC12E8と60°Cで30分処理すると、ほ
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [9QFP](https://www.rcsb.org/structure/9QFP) | クライオ電顕 | 1.74 Å | 2026-09-30 | Thermosynechococcus vestitus BP-1 | PQN, CL0, SF4, BCR, CLA |
+| [9QFP](https://www.rcsb.org/structure/9QFP) | Cryo-EM | 1.74 Å | 2026-09-30 | Thermosynechococcus vestitus BP-1 | PQN, CL0, SF4, BCR, CLA |
 
 - [P0A401](https://www.uniprot.org/uniprotkb/P0A401) psaF Photosystem I reaction center subunit III — *Thermosynechococcus vestitus (strain NIES-2133 / IAM M-273 / BP-1)* （既存の PDB 構造 18 件）
 - [P0A403](https://www.uniprot.org/uniprotkb/P0A403) psaM Photosystem I reaction center subunit XII — *Thermosynechococcus vestitus (strain NIES-2133 / IAM M-273 / BP-1)* （既存の PDB 構造 18 件）
@@ -1814,8 +1798,8 @@ GroELは着地すると高さが約24%、直径が約7%縮んだが、レーザ�
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [9HKI](https://www.rcsb.org/structure/9HKI) | クライオ電顕 | 1.90 Å | 2025-12-17 | Escherichia coli | — |
-| [9HLM](https://www.rcsb.org/structure/9HLM) | クライオ電顕 | 3.70 Å | 2025-12-17 | Escherichia coli | — |
+| [9HKI](https://www.rcsb.org/structure/9HKI) | Cryo-EM | 1.90 Å | 2025-12-17 | Escherichia coli | — |
+| [9HLM](https://www.rcsb.org/structure/9HLM) | Cryo-EM | 3.70 Å | 2025-12-17 | Escherichia coli | — |
 
 - [P00722](https://www.uniprot.org/uniprotkb/P00722) lacZ Beta-galactosidase — *Escherichia coli (strain K12)* （既存の PDB 構造 85 件）
 
@@ -1966,10 +1950,6 @@ AIEコアはC字形のままβシートの上に載り、F25が中央に入り�
 
 <sub>色（順に）：Gαi1（G タンパク質 α） / Gβ1（G タンパク質 β） / Gγ2（G タンパク質 γ） / scFv16（抗体断片） / μオピオイド受容体　スティック：ロフェンタニル（EID）</sub>
 
-![結合部位：ロフェンタニル](figures/PMC13672048-site.svg)
-
-<sub>ロフェンタニルの結合部位。4 Å 以内の残基：N127, W133, V143, I144, D147, Y148, M151, V236, W293, H297, W318, I322, Y326。点線は 3.3 Å 以内の N・O の組（1 組）</sub>
-
 **オピオイドの効力は、Gαドメインの開きやすさに表れる**
 
 既存の構造を使い、一分子FRETでμOR–Gi複合体のAHDの動きを測った。強い作動薬ほど開きが速い
@@ -2040,9 +2020,9 @@ GTP に似せた GMP・PPi を加えると、AHD は短命な中間の FRET 状�
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [1GP2](https://www.rcsb.org/structure/1GP2) | X線結晶構造解析 | 2.30 Å | 1997-02-12 | Bos taurus, Rattus norvegicus | GDP |
-| [7L0Q](https://www.rcsb.org/structure/7L0Q) | クライオ電顕 | 4.30 Å | 2021-01-06 | Homo sapiens, Rattus norvegicus | — |
-| [7T2H](https://www.rcsb.org/structure/7T2H) | クライオ電顕 | 3.20 Å | 2022-12-07 | Homo sapiens, Mus musculus | EID |
+| [1GP2](https://www.rcsb.org/structure/1GP2) | X-ray | 2.30 Å | 1997-02-12 | Bos taurus, Rattus norvegicus | GDP |
+| [7L0Q](https://www.rcsb.org/structure/7L0Q) | Cryo-EM | 4.30 Å | 2021-01-06 | Homo sapiens, Rattus norvegicus | — |
+| [7T2H](https://www.rcsb.org/structure/7T2H) | Cryo-EM | 3.20 Å | 2022-12-07 | Homo sapiens, Mus musculus | EID |
 
 - [P10824](https://www.uniprot.org/uniprotkb/P10824) Gnai1 Guanine nucleotide-binding protein G(i) subunit alpha-1 — *Rattus norvegicus* （既存の PDB 構造 0 件）
 - [P20068](https://www.uniprot.org/uniprotkb/P20068) Nts Neurotensin/neuromedin N — *Rattus norvegicus* （既存の PDB 構造 0 件）

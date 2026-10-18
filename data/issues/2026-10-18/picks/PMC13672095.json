@@ -4,6 +4,7 @@
   "headline": "部分作動薬が、AMPA受容体の開く前の中間状態をとらえた",
   "subhead": "時間分解クライオ電顕でGluA2–γ2の4つの状態を解析し、ドメインの閉じ角約17°が分かれ道だと示した。",
   "target_label": "GluA2–γ2（AMPA受容体）",
+  "target_en": "AMPA receptor GluA2–γ2",
   "summary": {
     "question": "AMPA受容体が開く前の中間体である前活性状態は、構造がよく分かっていなかった。",
     "approach": "部分作動薬またはGluを加えて素早く凍結する時間分解クライオ電顕で、GluA2–γ2の状態の集まりを調べた。",

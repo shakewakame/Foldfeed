@@ -4,7 +4,8 @@
   "headline": "強光と高温でPSIIはアンテナを失い、重炭酸イオンも抜ける",
   "subhead": "シロイヌナズナのPSIIを2.74 Åで解析。D1のHis252が内側を向き、自己切断を招く可能性がある",
   "target_label": "PSII C2S2（シロイヌナズナ）",
-  "method_label": "クライオ電顕・全体 2.74 Å",
+  "target_en": "PSII C2S2 (Arabidopsis)",
+  "method_label": "Cryo-EM・全体 2.74 Å",
   "summary": {
     "question": "強い光や高温は、光合成で水を分解するタンパク質複合体PSIIを傷める。その傷が構造のどこに出るかを知りたかった。",
     "approach": "単離したPSII（C2S2型）に強い光と高温を与えてクライオ電顕で解析し、弱い光で凍らせた既存の構造と比べた。",

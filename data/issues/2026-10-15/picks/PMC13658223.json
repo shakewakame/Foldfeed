@@ -4,6 +4,7 @@
   "headline": "増殖を抑える抗体は、マラリア原虫PfRIPRの尾部を折り曲げる",
   "subhead": "抗体4種との複合体を解析し、折れ曲がりを起こさない抗体は増殖を抑えなかった",
   "target_label": "PfRIPR（熱帯熱マラリア原虫）",
+  "target_en": "PfRIPR (P. falciparum)",
   "summary": {
     "question": "赤血球への侵入に必須な複合体の中心因子PfRIPRに、抗体がどう結合して侵入を防ぐのかは、構造がなく不明だった。",
     "approach": "ヒト由来3種とマウス由来1種の抗体とPfRIPR断片の複合体を、X線結晶構造とクライオ電顕で解析した。",

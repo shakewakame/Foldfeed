@@ -5,6 +5,7 @@
   "subhead": "GPR84–Gi複合体の構造。Leu336AlaとPhe187Alaの変異で動員が回復した",
   "takeaway": "リガンド置換基の立体的な大きさでGPR84のバイアスを設計できる",
   "target_label": "GPR84–Gi（ヒト）",
+  "target_en": "Human GPR84–Gi",
   "summary": {
     "question": "GPCRのバイアスアゴニストを合理的に設計するには、機構の理解が足りなかった。",
     "approach": "OX04529とGPR84–Gi複合体のクライオ電顕構造を決め、MDと変異体で検証した。",

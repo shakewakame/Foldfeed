@@ -4,6 +4,7 @@
   "headline": "黄色ブドウ球菌のMurJの構造が、初めて明らかになった",
   "subhead": "外向きと内向きの2状態をクライオ電顕で解析し、大腸菌のMurJと同じ型の動きを示した",
   "target_label": "SaMurJ（黄色ブドウ球菌）",
+  "target_en": "SaMurJ (S. aureus)",
   "summary": {
     "question": "外膜をもたない単膜細菌のMurJ（脂質IIの輸送体）は、配列の違いが大きく、構造が未解析だった。",
     "approach": "黄色ブドウ球菌のMurJ（SaMurJ）を、ナノボディやBRIL融合を使ってクライオ電顕で解析し、大腸菌MurJと比べた。",

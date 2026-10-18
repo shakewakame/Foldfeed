@@ -4,6 +4,7 @@
   "headline": "T331Iは、短いdsRNAでも安定なフィラメントを作る",
   "subhead": "ATPの配置が乱れて加水分解が止まる様子を、クライオ電顕で見た",
   "target_label": "MDA5（IFIH1）–dsRNA",
+  "target_en": "MDA5 (IFIH1)–dsRNA",
   "summary": {
     "question": "MDA5変異T331Iが、なぜ恒常的なインターフェロン応答を起こすのか不明だった。",
     "approach": "クライオ電顕に、酵素・細胞の実験を組み合わせて、変異体のATP結合ポケットを調べた。",

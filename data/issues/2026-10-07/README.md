@@ -20,10 +20,10 @@
 
 | # | 標的 | 手法・分解能 | 見出し |
 |---|---|---|---|
-| 1 | ヒトPARP2–HPF1／ヌクレオソーム | クライオ電顕・全体 2.8 Å | PARP2は、ヌクレオソームの2周にまたがって切断を認識する |
-| 2 | SpNanR（肺炎球菌） | X線結晶構造解析・2.01–2.99 Å（4 構造） | 肺炎球菌のNanRは、代謝物が四量体をつなぎとめて安定化する |
+| 1 | ヒトPARP2–HPF1／ヌクレオソーム | Cryo-EM・全体 2.8 Å | PARP2は、ヌクレオソームの2周にまたがって切断を認識する |
+| 2 | SpNanR（肺炎球菌） | X-ray・2.01–2.99 Å（4 構造） | 肺炎球菌のNanRは、代謝物が四量体をつなぎとめて安定化する |
 | 3 | LbCas12a Lid2変異体 | PDB 公開待ち | Lidをループに置き換えると、Cas12aは非標的鎖だけを切る |
-| 4 | 大腸菌NNT（PntA/PntB） | クライオ電顕・2.74–3.85 Å（9 構造） | NNTは基質の結合でdIIIを外し、プロトン通路を切り替える |
+| 4 | 大腸菌NNT（PntA/PntB） | Cryo-EM・2.74–3.85 Å（9 構造） | NNTは基質の結合でdIIIを外し、プロトン通路を切り替える |
 
 > この号は AI が論文本文から作成した**レビュー用の下書き**です。数値・ID・リガンドは PDB / UniProt から取得し、AI の記述には本文からの引用を付けています。
 
@@ -148,10 +148,6 @@ WGRドメインが上側のDNAジャイアで切断を認識し、HDのArg296と
 
 <sub>色（順に）：SpNanR（転写調節因子）　スティック：ManNAc-6-P（BMX）</sub>
 
-![結合部位：ManNAc-6-P](figures/PMC13635753-site.svg)
-
-<sub>ManNAc-6-Pの結合部位。4 Å 以内の残基：D160, W164, T132, G133, S134, S135, S179, L180, S181, T184, Y229, R148, Y265, W266。点線は 3.3 Å 以内の N・O の組（12 組）</sub>
-
 **肺炎球菌のNanRは、代謝物が四量体をつなぎとめて安定化する**
 
 全長のapo型とDNA結合型の構造を決定。Arg67の対がDNAの副溝に入り込む
@@ -231,10 +227,10 @@ ManNAc-6-Pは1分子で3つのプロトマーにまたがって結合し（リ�
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [8V5F](https://www.rcsb.org/structure/8V5F) | X線結晶構造解析 | 2.55 Å | 2024-12-04 | Streptococcus pneumoniae | — |
-| [8TX9](https://www.rcsb.org/structure/8TX9) | X線結晶構造解析 | 2.01 Å | 2024-09-11 | Streptococcus pneumoniae | BMX |
-| [8V4V](https://www.rcsb.org/structure/8V4V) | X線結晶構造解析 | 2.95 Å | 2024-12-04 | Streptococcus pneumoniae | BMX |
-| [9DQN](https://www.rcsb.org/structure/9DQN) | X線結晶構造解析 | 2.99 Å | 2025-08-20 | Streptococcus pneumoniae, synthetic construct | — |
+| [8V5F](https://www.rcsb.org/structure/8V5F) | X-ray | 2.55 Å | 2024-12-04 | Streptococcus pneumoniae | — |
+| [8TX9](https://www.rcsb.org/structure/8TX9) | X-ray | 2.01 Å | 2024-09-11 | Streptococcus pneumoniae | BMX |
+| [8V4V](https://www.rcsb.org/structure/8V4V) | X-ray | 2.95 Å | 2024-12-04 | Streptococcus pneumoniae | BMX |
+| [9DQN](https://www.rcsb.org/structure/9DQN) | X-ray | 2.99 Å | 2025-08-20 | Streptococcus pneumoniae, synthetic construct | — |
 
 - [A0A064C3N8](https://www.uniprot.org/uniprotkb/A0A064C3N8) ybbH MurR/RpiR family transcriptional regulator — *Streptococcus pneumoniae* （PDB で初めての構造）
 - [A0A0H2ZPE9](https://www.uniprot.org/uniprotkb/A0A0H2ZPE9)  Phosphosugar-binding transcriptional regulator, putative — *Streptococcus pneumoniae serotype 2 (strain D39 / NCTC 7466)* （PDB で初めての構造）
@@ -397,10 +393,6 @@ Lid2変異体のクライオ電顕構造（2.5 Å）では、標的鎖を活性�
 
 <sub>色（順に）：PntA（NNT α サブユニット） / PntB（NNT β サブユニット）　スティック：NADP+（NAP）</sub>
 
-![結合部位：NADP+](figures/PMC13635403-site.svg)
-
-<sub>NADP+の結合部位。4 Å 以内の残基：A212, D213, P215, V216, M263, R265, G316, A320, V347, G349, G389, A390, N391, D392, T393, M409, F423, K424, R425, Y431, D450, A451。点線は 3.3 Å 以内の N・O の組（15 組）</sub>
-
 **NNTは基質の結合でdIIIを外し、プロトン通路を切り替える**
 
 全長の大腸菌NNTを複数の状態で解析。阻害剤パルミトイルCoAはapoに近い状態で固定する
@@ -480,15 +472,15 @@ dIIIの着脱がプロトン通路の開閉と連動する。さらに外れた2
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [9UUY](https://www.rcsb.org/structure/9UUY) | クライオ電顕 | 3.85 Å | 2026-05-27 | Escherichia coli K-12 | — |
-| [9UV7](https://www.rcsb.org/structure/9UV7) | クライオ電顕 | 3.43 Å | 2026-05-27 | Escherichia coli K-12 | — |
-| [9UV2](https://www.rcsb.org/structure/9UV2) | クライオ電顕 | 2.83 Å | 2026-05-27 | Escherichia coli K-12 | — |
-| [9WWS](https://www.rcsb.org/structure/9WWS) | クライオ電顕 | 2.74 Å | 2026-09-30 | Escherichia coli K-12 | NAP |
-| [9WWU](https://www.rcsb.org/structure/9WWU) | クライオ電顕 | 3.42 Å | 2026-09-30 | Escherichia coli K-12 | NAP |
-| [9WWV](https://www.rcsb.org/structure/9WWV) | クライオ電顕 | 3.38 Å | 2026-09-30 | Escherichia coli K-12 | NAD |
-| [9UV3](https://www.rcsb.org/structure/9UV3) | クライオ電顕 | 2.88 Å | 2026-05-27 | Escherichia coli K-12 | COA |
-| [9UVB](https://www.rcsb.org/structure/9UVB) | クライオ電顕 | 3.23 Å | 2026-05-27 | Escherichia coli K-12 | — |
-| [9WWW](https://www.rcsb.org/structure/9WWW) | クライオ電顕 | 3.81 Å | 2026-09-30 | Escherichia coli K-12 | NDP |
+| [9UUY](https://www.rcsb.org/structure/9UUY) | Cryo-EM | 3.85 Å | 2026-05-27 | Escherichia coli K-12 | — |
+| [9UV7](https://www.rcsb.org/structure/9UV7) | Cryo-EM | 3.43 Å | 2026-05-27 | Escherichia coli K-12 | — |
+| [9UV2](https://www.rcsb.org/structure/9UV2) | Cryo-EM | 2.83 Å | 2026-05-27 | Escherichia coli K-12 | — |
+| [9WWS](https://www.rcsb.org/structure/9WWS) | Cryo-EM | 2.74 Å | 2026-09-30 | Escherichia coli K-12 | NAP |
+| [9WWU](https://www.rcsb.org/structure/9WWU) | Cryo-EM | 3.42 Å | 2026-09-30 | Escherichia coli K-12 | NAP |
+| [9WWV](https://www.rcsb.org/structure/9WWV) | Cryo-EM | 3.38 Å | 2026-09-30 | Escherichia coli K-12 | NAD |
+| [9UV3](https://www.rcsb.org/structure/9UV3) | Cryo-EM | 2.88 Å | 2026-05-27 | Escherichia coli K-12 | COA |
+| [9UVB](https://www.rcsb.org/structure/9UVB) | Cryo-EM | 3.23 Å | 2026-05-27 | Escherichia coli K-12 | — |
+| [9WWW](https://www.rcsb.org/structure/9WWW) | Cryo-EM | 3.81 Å | 2026-09-30 | Escherichia coli K-12 | NDP |
 
 - [P07001](https://www.uniprot.org/uniprotkb/P07001) pntA NAD(P) transhydrogenase subunit alpha — *Escherichia coli (strain K12)* （既存の PDB 構造 6 件）
 - [P0AB67](https://www.uniprot.org/uniprotkb/P0AB67) pntB NAD(P) transhydrogenase subunit beta — *Escherichia coli (strain K12)* （既存の PDB 構造 3 件）

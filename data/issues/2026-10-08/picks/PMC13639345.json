@@ -5,6 +5,7 @@
   "subhead": "サルモネラのFlhAC A489E抑制変異体の結晶構造。Arg-386周辺の塩橋網が変わっていた",
   "takeaway": "A489EがArg-386の塩橋網を組み換え、FlhAC環の状態遷移を起こしやすくする",
   "target_label": "FlhAC A489E（サルモネラ）",
+  "target_en": "FlhAC A489E (Salmonella)",
   "summary": {
     "question": "鞭毛のIII型分泌装置が基質特異性を切り替える構造的な仕組みは不明だった。",
     "approach": "FlhAC(A489E)を結晶構造解析し、FlhBとの結合をAlphaFold3で予測した。",

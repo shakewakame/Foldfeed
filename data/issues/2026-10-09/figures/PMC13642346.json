@@ -69,7 +69,8 @@
    "T359",
    "W360"
   ],
-  "polar": 2,
+  "hbonds": 3,
+  "pi": 0,
   "neighbours": [],
   "label": "OX04529"
  }

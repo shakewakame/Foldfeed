@@ -5,6 +5,7 @@
   "headline": "オピオイドの効力は、Gαドメインの開きやすさに表れる",
   "subhead": "既存の構造を使い、一分子FRETでμOR–Gi複合体のAHDの動きを測った。強い作動薬ほど開きが速い",
   "target_label": "μOR–Gi 複合体（マウス・ヒト）",
+  "target_en": "μOR–Gi complex (mouse, human)",
   "method_label": "一分子FRET・GTP代謝回転（既存のGi・μOR構造を使用）",
   "ga_pdb_id": "7T2H",
   "summary": {

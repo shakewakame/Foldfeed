@@ -5,6 +5,7 @@
   "subhead": "全長の大腸菌NNTを複数の状態で解析。阻害剤パルミトイルCoAはapoに近い状態で固定する",
   "takeaway": "NADP(H)が結合するとdIIIが膜ドメインから外れ、プロトン通路の開く向きが反転する",
   "target_label": "大腸菌NNT（PntA/PntB）",
+  "target_en": "E. coli NNT (PntA/PntB)",
   "summary": {
     "question": "全長の大腸菌NNTの構造と、状態の変化は分かっていなかった。",
     "approach": "全長の大腸菌NNTを、apo・基質結合・阻害剤結合の状態でクライオ電顕で解析した。",

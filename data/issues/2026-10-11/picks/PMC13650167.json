@@ -4,6 +4,7 @@
   "headline": "結核菌のRhoは、天然変性のNIDで転写停止の目印を選ぶ",
   "subhead": "NIDを欠くと、Rhoが見つけるRut部位は1759か所から47か所に減った",
   "target_label": "Rho（結核菌）",
+  "target_en": "Rho (M. tuberculosis)",
   "summary": {
     "question": "Rhoは、RNAのRut部位に取りついて転写を止める。結核菌のRhoに特有の大きなNIDドメインの役割は不明だった。",
     "approach": "配列を網羅的に探す実験（Helicase-SELEX）で結核菌ゲノム全体のRut部位を探し、NMRとクライオ電顕でNIDの状態を調べた。",

@@ -5,6 +5,7 @@
   "subhead": "阻害剤はDNA結合面を固めており、PARP2がクロマチンに捕捉される理由の説明になりうる",
   "takeaway": "PARP2はDNA 2周分をまたいで切断を捉え、阻害剤はDNA結合面を固める",
   "target_label": "ヒトPARP2–HPF1／ヌクレオソーム",
+  "target_en": "Human PARP2–HPF1 / nucleosome",
   "summary": {
     "question": "クロマチンの狭い構造の中で、PARP2が一本鎖切断をどう認識するかは不明だった。",
     "approach": "一本鎖切断を入れたヌクレオソームとPARP2・HPF1の複合体を、クライオ電顕で解析した。",
@@ -121,7 +122,7 @@
     "PARP阻害剤",
     "オラパリブ"
   ],
-  "method_label": "クライオ電顕・全体 2.8 Å",
+  "method_label": "Cryo-EM・全体 2.8 Å",
   "ligand_label": "オラパリブ、タラゾパリブ、EB-47",
   "editor_notes": "PDB/EMDB の ID は補足資料（Table S5）にのみ記載されており、構造データ表と構造図は空欄。ヒストンはショウジョウバエ由来。",
   "categories": [

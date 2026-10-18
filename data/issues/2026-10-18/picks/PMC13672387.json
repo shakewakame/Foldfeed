@@ -4,6 +4,7 @@
   "headline": "光合成の光化学系Iの単量体を、温度と界面活性剤で作る",
   "subhead": "単量体の光化学系Iをクライオ電顕で高分解能に解析し、脂質や界面活性剤の配置を示した",
   "target_label": "光化学系I単量体（T. vestitus）",
+  "target_en": "Photosystem I monomer (T. vestitus)",
   "summary": {
     "question": "光化学系Iの単量体を、活性を保ったまま大量に得る方法と、高分解能の構造が必要だった。",
     "approach": "三量体を界面活性剤C12E8と高温で単量体にし、クライオ電顕で構造を決め、分光法と小角中性子散乱で調べた。",

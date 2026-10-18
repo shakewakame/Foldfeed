@@ -5,6 +5,7 @@
   "subhead": "DNA-PKcsがKuを内側へ押し込む中間状態も、クライオ電顕で捉えた",
   "takeaway": "DNA-PKcsはKuがヌクレオソームの壁を越えるのを助け、NHEJ開始を可能にする",
   "target_label": "DNA-PK–ヌクレオソーム複合体",
+  "target_en": "DNA-PK–nucleosome complex",
   "summary": {
     "question": "Ku・DNA-PKcsは約28 bpの遊離DNAを要するが、クロマチンでは得にくい。DNA-PKcsの役割は不明だった。",
     "approach": "ヌクレオソーム上での連結反応を測り、Ku・DNA-PKcsとの複合体をクライオ電顕で解析した。",

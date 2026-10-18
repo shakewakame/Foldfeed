@@ -61,7 +61,8 @@
    "D450",
    "A451"
   ],
-  "polar": 15,
+  "hbonds": 18,
+  "pi": 1,
   "neighbours": [],
   "label": "NADP+"
  }

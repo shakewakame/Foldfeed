@@ -54,7 +54,8 @@
    "R337",
    "E376"
   ],
-  "polar": 11,
+  "hbonds": 14,
+  "pi": 4,
   "neighbours": [],
   "label": "AMPPNP"
  }

@@ -5,6 +5,7 @@
   "subhead": "抗ファージ防御系QatBCの結晶構造。挿入部に変異を入れると防御が弱まった",
   "takeaway": "QatBのN末端ループがQueC型酵素QatCの活性部位に入り込み、基質候補となる",
   "target_label": "QatBC（大腸菌 QatABCD）",
+  "target_en": "QatBC (E. coli QatABCD)",
   "summary": {
     "question": "QatABCDの作用機構と、特徴的な構成要素QatCの機能は不明だった。",
     "approach": "QatBC複合体のapo型とATP結合型を結晶構造解析し、変異体の抗ファージ活性を調べた。",

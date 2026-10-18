@@ -20,8 +20,8 @@
 
 | # | 標的 | 手法・分解能 | 見出し |
 |---|---|---|---|
-| 1 | MDA5（ヒト） | クライオ電顕・2.81–3.21 Å（4 構造） | MDA5のT331I変異は、ATPを分解できず自己免疫につながる |
-| 2 | ホタルルシフェラーゼ（FLuc） | 力プロファイル解析・クライオ電顕（リボソーム複合体、平均 2.3 Å） | ホタルルシフェラーゼは、翻訳中に少しずつ縮んで折りたたまれる |
+| 1 | MDA5（ヒト） | Cryo-EM・2.81–3.21 Å（4 構造） | MDA5のT331I変異は、ATPを分解できず自己免疫につながる |
+| 2 | ホタルルシフェラーゼ（FLuc） | 力プロファイル解析・Cryo-EM（リボソーム複合体、平均 2.3 Å） | ホタルルシフェラーゼは、翻訳中に少しずつ縮んで折りたたまれる |
 | 3 | ZBP1のZαドメイン（ヒト） | NMR・CD・ITC | ZBP1は、できあがったZ型RNAにだけ結合する |
 
 > この号は AI が論文本文から作成した**レビュー用の下書き**です。数値・ID・リガンドは PDB / UniProt から取得し、AI の記述には本文からの引用を付けています。
@@ -39,10 +39,6 @@
 ![構造図：MDA5（ヒト）](figures/PMC13646831.svg)
 
 <sub>色（順に）：MDA5（RNA センサー） / dsRNA（二本鎖RNA） / RNA 13mer　スティック：AMPPNP（ANP）</sub>
-
-![結合部位：AMPPNP](figures/PMC13646831-site.svg)
-
-<sub>AMPPNPの結合部位。4 Å 以内の残基：Q307, L308, R309, Q312, P330, T331, G332, S333, G334, K335, T336, R337, E376。点線は 3.3 Å 以内の N・O の組（11 組）</sub>
 
 **MDA5のT331I変異は、ATPを分解できず自己免疫につながる**
 
@@ -104,10 +100,10 @@ ATPを加えると、野生型のフィラメントは短いdsRNA上でほぼ壊
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [9Y4J](https://www.rcsb.org/structure/9Y4J) | クライオ電顕 | 2.81 Å | 2026-09-09 | Homo sapiens, in vitro transcription vector pT7-Fluc(deltai) | ANP |
-| [9Y4L](https://www.rcsb.org/structure/9Y4L) | クライオ電顕 | 2.96 Å | 2026-09-09 | Homo sapiens, in vitro transcription vector pT7-Fluc(deltai) | ANP |
-| [9Q60](https://www.rcsb.org/structure/9Q60) | クライオ電顕 | 3.12 Å | 2026-09-16 | Homo sapiens, synthetic construct | ATP |
-| [9Q5W](https://www.rcsb.org/structure/9Q5W) | クライオ電顕 | 3.21 Å | 2026-09-16 | Homo sapiens, synthetic construct | ATP |
+| [9Y4J](https://www.rcsb.org/structure/9Y4J) | Cryo-EM | 2.81 Å | 2026-09-09 | Homo sapiens, in vitro transcription vector pT7-Fluc(deltai) | ANP |
+| [9Y4L](https://www.rcsb.org/structure/9Y4L) | Cryo-EM | 2.96 Å | 2026-09-09 | Homo sapiens, in vitro transcription vector pT7-Fluc(deltai) | ANP |
+| [9Q60](https://www.rcsb.org/structure/9Q60) | Cryo-EM | 3.12 Å | 2026-09-16 | Homo sapiens, synthetic construct | ATP |
+| [9Q5W](https://www.rcsb.org/structure/9Q5W) | Cryo-EM | 3.21 Å | 2026-09-16 | Homo sapiens, synthetic construct | ATP |
 
 - [Q9BYX4](https://www.uniprot.org/uniprotkb/Q9BYX4) IFIH1 Interferon-induced helicase C domain-containing protein 1 — *Homo sapiens* （既存の PDB 構造 9 件）
 

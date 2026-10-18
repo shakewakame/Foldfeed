@@ -57,7 +57,8 @@
    "S195",
    "K29"
   ],
-  "polar": 2,
+  "hbonds": 3,
+  "pi": 0,
   "neighbours": [],
   "label": "LLG3の脂質（推定）"
  },

@@ -5,6 +5,7 @@
   "headline": "ZBP1は、できあがったZ型RNAにだけ結合する",
   "subhead": "NMR・CD・ITCで調べると、無修飾のRNAをZ型に変換できなかった",
   "target_label": "ZBP1のZαドメイン（ヒト）",
+  "target_en": "Human ZBP1 Zα domain",
   "method_label": "NMR・CD・ITC",
   "summary": {
     "question": "ZBP1はADAR1と同様にA型RNAをZ型に変換できると考えられてきたが、実験での確認はなかった。",

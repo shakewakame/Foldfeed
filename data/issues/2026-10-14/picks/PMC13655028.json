@@ -4,6 +4,7 @@
   "headline": "BepAはフタ状の部分を外膜に差し込み、BAMで活性化する",
   "subhead": "BAM複合体と結合したBepAのクライオ電顕構造で、α6-lidが外膜に入り、AI-plugが外れていた",
   "target_label": "BepA-BAM複合体（大腸菌）",
+  "target_en": "E. coli BepA–BAM complex",
   "summary": {
     "question": "亜鉛を使う分解酵素M48ファミリーは自己阻害プラグで不活性に保たれるが、プラグが外れる仕組みは不明だった。",
     "approach": "変異体のスクリーニングと生化学で調べ、基質が停滞したBAMに結合したBepAをクライオ電顕で解析した。",

@@ -76,7 +76,8 @@
    "L399",
    "R400"
   ],
-  "polar": 25,
+  "hbonds": 26,
+  "pi": 0,
   "neighbours": [],
   "label": "ADP"
  }

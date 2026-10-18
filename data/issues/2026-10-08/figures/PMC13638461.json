@@ -40,7 +40,8 @@
    "I50",
    "I82"
   ],
-  "polar": 2,
+  "hbonds": 6,
+  "pi": 0,
   "neighbours": [],
   "label": "ダルナビル"
  }

@@ -41,7 +41,8 @@
    "C82",
    "A83"
   ],
-  "polar": 7,
+  "hbonds": 10,
+  "pi": 0,
   "neighbours": [],
   "label": "グリシン"
  }

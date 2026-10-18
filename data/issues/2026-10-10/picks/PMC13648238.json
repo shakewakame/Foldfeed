@@ -4,6 +4,7 @@
   "headline": "ピキサントロンは脱塩基部位と結合し、2種類の異性体を生じる",
   "subhead": "NMR構造では、どちらの異性体もDNAに挿入され、向かいのシトシンを押し出す",
   "target_label": "ピキサントロン–AP部位DNA",
+  "target_en": "Pixantrone–AP-site DNA",
   "summary": {
     "question": "ピキサントロンは、DNAの脱塩基部位と2種類の位置異性体を作ると予想された。",
     "approach": "NMRに基づく分子動力学計算で構造を求め、結晶構造も決めた。",

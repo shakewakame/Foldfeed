@@ -4,6 +4,7 @@
   "headline": "ECT2LとDZANK1の欠損が、繊毛基部の連結を壊しPCDを起こす",
   "subhead": "ヒト繊毛基部の二連微小管をその場でクライオ電子線トモグラフィーにより解析し、隣どうしをつなぐ連結構造の成分を特定した",
   "target_label": "ヒト繊毛の移行帯（二連微小管）",
+  "target_en": "Human ciliary transition zone (doublet microtubules)",
   "summary": {
     "question": "繊毛の根元にある移行帯の分子構造とタンパク質の構成は、運動性繊毛病との関わりも含めて、よく分かっていなかった。",
     "approach": "ヒトの多繊毛上皮細胞をクライオ電子線トモグラフィーでその場解析し、患者の遺伝子変異と照らし合わせた。",

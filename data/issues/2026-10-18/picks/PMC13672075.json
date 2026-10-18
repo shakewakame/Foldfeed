@@ -4,6 +4,7 @@
   "headline": "ポリユビキチンの位置が動くと、タウ線維の原線維間の接合面がずれる",
   "subhead": "ADとVTの患者脳のタウ線維をクライオ電顕で解析し、ユビスタチンBの処理でVT Ia型の接合面が変わった",
   "target_label": "タウ線維（AD・VT患者脳）",
+  "target_en": "Tau filaments (AD and VT patient brains)",
   "summary": {
     "question": "タウ線維の核（コア）の外側にある密度が線維の安定性に与える影響は、よく分かっていなかった。",
     "approach": "AD・VT患者脳のタウ線維を解析し、ユビスタチンBでポリユビキチンの極性を変えてクライオ電顕で比べた。",

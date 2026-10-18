@@ -42,7 +42,8 @@
    "F102",
    "V103"
   ],
-  "polar": 2,
+  "hbonds": 2,
+  "pi": 0,
   "neighbours": [],
   "label": "Cpd-8"
  }

@@ -21,13 +21,13 @@
 
 | # | 標的 | 手法・分解能 | 見出し |
 |---|---|---|---|
-| 1 | WzmWzt（結核菌） | クライオ電顕・2.61–2.91 Å（3 構造） | 基質とATPで構造が切り替わる、結核菌のガラクタン輸送体 |
-| 2 | HLA-DR3–Ro60ペプチド（ヒト） | X線結晶構造解析・2.87 Å | Ro60ペプチドは、HLA-DR3の上で3つの残基をTCRに向ける |
-| 3 | NsRufO（P450） | X線結晶構造解析・1.59 Å | P450酵素RufOのニトロ化には、基質のヒスチジンが欠かせない |
-| 4 | NHEJ短距離複合体＋Pol λ（ヒト） | クライオ電顕・7.23 Å | DNA修復の複合体に、Pol λはBRCTとN末端で取り付く |
-| 5 | Rho（結核菌） | クライオ電顕・3.15–3.40 Å（2 構造） | 結核菌のRhoは、天然変性のNIDで転写停止の目印を選ぶ |
-| 6 | WDR5–PER2 WBMペプチド（マウス） | X線結晶構造解析・1.38–1.85 Å（2 構造） | 体内時計のPER1とPER2は、WDR5の別々の場所に結合する |
-| 7 | PSII C2S2（シロイヌナズナ） | クライオ電顕・全体 2.74 Å | 強光と高温でPSIIはアンテナを失い、重炭酸イオンも抜ける |
+| 1 | WzmWzt（結核菌） | Cryo-EM・2.61–2.91 Å（3 構造） | 基質とATPで構造が切り替わる、結核菌のガラクタン輸送体 |
+| 2 | HLA-DR3–Ro60ペプチド（ヒト） | X-ray・2.87 Å | Ro60ペプチドは、HLA-DR3の上で3つの残基をTCRに向ける |
+| 3 | NsRufO（P450） | X-ray・1.59 Å | P450酵素RufOのニトロ化には、基質のヒスチジンが欠かせない |
+| 4 | NHEJ短距離複合体＋Pol λ（ヒト） | Cryo-EM・7.23 Å | DNA修復の複合体に、Pol λはBRCTとN末端で取り付く |
+| 5 | Rho（結核菌） | Cryo-EM・3.15–3.40 Å（2 構造） | 結核菌のRhoは、天然変性のNIDで転写停止の目印を選ぶ |
+| 6 | WDR5–PER2 WBMペプチド（マウス） | X-ray・1.38–1.85 Å（2 構造） | 体内時計のPER1とPER2は、WDR5の別々の場所に結合する |
+| 7 | PSII C2S2（シロイヌナズナ） | Cryo-EM・全体 2.74 Å | 強光と高温でPSIIはアンテナを失い、重炭酸イオンも抜ける |
 
 > この号は AI が論文本文から作成した**レビュー用の下書き**です。数値・ID・リガンドは PDB / UniProt から取得し、AI の記述には本文からの引用を付けています。
 
@@ -57,10 +57,6 @@
 > — Results
 
 </details>
-
-![結合部位：LLG3の脂質（推定）](figures/PMC13649706-site.svg)
-
-<sub>LLG3の脂質（推定）の結合部位。4 Å 以内の残基：R45, R48, W55, I56, A59, T62, P191, L192, S195, K29。点線は 3.3 Å 以内の N・O の組（2 組）</sub>
 
 **基質とATPで構造が切り替わる、結核菌のガラクタン輸送体**
 
@@ -150,9 +146,9 @@ TMD中央の空洞にはDDM分子が2つ入った中間的な状態も捉えた�
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [25IN](https://www.rcsb.org/structure/25IN) | クライオ電顕 | 2.91 Å | 2026-10-07 | Mycobacterium tuberculosis H37Rv | A1E8P |
-| [25IO](https://www.rcsb.org/structure/25IO) | クライオ電顕 | 2.78 Å | 2026-10-07 | Mycobacterium tuberculosis H37Rv | ATP |
-| [25IP](https://www.rcsb.org/structure/25IP) | クライオ電顕 | 2.61 Å | 2026-10-07 | Mycobacterium tuberculosis H37Rv | A1E8P, ATP |
+| [25IN](https://www.rcsb.org/structure/25IN) | Cryo-EM | 2.91 Å | 2026-10-07 | Mycobacterium tuberculosis H37Rv | A1E8P |
+| [25IO](https://www.rcsb.org/structure/25IO) | Cryo-EM | 2.78 Å | 2026-10-07 | Mycobacterium tuberculosis H37Rv | ATP |
+| [25IP](https://www.rcsb.org/structure/25IP) | Cryo-EM | 2.61 Å | 2026-10-07 | Mycobacterium tuberculosis H37Rv | A1E8P, ATP |
 
 - [P72047](https://www.uniprot.org/uniprotkb/P72047) rfbE Probable O-antigen/lipopolysaccharide transport ATP-binding protein ABC transporter RfbE — *Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)* （PDB で初めての構造）
 - [P72049](https://www.uniprot.org/uniprotkb/P72049) rfbD Probable O-antigen/lipopolysaccharide transport integral membrane protein ABC transporter RfbD — *Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)* （PDB で初めての構造）
@@ -280,7 +276,7 @@ HLA-DR3は発現収量が低く、Ro60ペプチドの直接発現は約0.3 mg/L�
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [9YZ3](https://www.rcsb.org/structure/9YZ3) | X線結晶構造解析 | 2.87 Å | 2026-09-09 | Homo sapiens | — |
+| [9YZ3](https://www.rcsb.org/structure/9YZ3) | X-ray | 2.87 Å | 2026-09-09 | Homo sapiens | — |
 
 - [P01903](https://www.uniprot.org/uniprotkb/P01903) HLA-DRA HLA class II histocompatibility antigen, DR alpha chain — *Homo sapiens* （既存の PDB 構造 142 件）
 - [P10155](https://www.uniprot.org/uniprotkb/P10155) RO60 RNA-binding protein RO60 — *Homo sapiens* （PDB で初めての構造）
@@ -323,10 +319,6 @@ HLA-DR3は発現収量が低く、Ro60ペプチドの直接発現は約0.3 mg/L�
 ![構造図：NsRufO（P450）](figures/PMC13651536.svg)
 
 <sub>色（順に）：NsRufO（P450） / ペプチド（5 残基）　スティック：ヘム（HEM）</sub>
-
-![結合部位：ヘム](figures/PMC13651536-site.svg)
-
-<sub>ヘムの結合部位。4 Å 以内の残基：L83, Q84, H91, R95, I146, F233, A236, G237, V240, P241, F244, L277, P282, V283, L286, R288, G338, F339, G340, S343, H344, C346, L347, G348, A352, Y3。点線は 3.3 Å 以内の N・O の組（5 組）</sub>
 
 **P450酵素RufOのニトロ化には、基質のヒスチジンが欠かせない**
 
@@ -410,7 +402,7 @@ NsRufOの基質結合型構造（1.59 Å）では、Tyr-3とHis-5がヘムの真
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [22YX](https://www.rcsb.org/structure/22YX) | X線結晶構造解析 | 1.59 Å | 2026-08-12 | Nonomuraea solani, synthetic construct | HEM |
+| [22YX](https://www.rcsb.org/structure/22YX) | X-ray | 1.59 Å | 2026-08-12 | Nonomuraea solani, synthetic construct | HEM |
 
 - [A0A1H6EVJ0](https://www.uniprot.org/uniprotkb/A0A1H6EVJ0)  Cytochrome P450 — *Nonomuraea solani* （PDB で初めての構造）
 
@@ -529,7 +521,7 @@ Pol λのBRCTドメインはKu70/80のブリッジをまたいで結合し、N�
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [9OX8](https://www.rcsb.org/structure/9OX8) | クライオ電顕 | 7.23 Å | 2026-07-01 | Homo sapiens | — |
+| [9OX8](https://www.rcsb.org/structure/9OX8) | Cryo-EM | 7.23 Å | 2026-07-01 | Homo sapiens | — |
 
 - [P12956](https://www.uniprot.org/uniprotkb/P12956) XRCC6 DNA repair protein Ku70 — *Homo sapiens* （既存の PDB 構造 64 件）
 - [P13010](https://www.uniprot.org/uniprotkb/P13010) XRCC5 DNA repair protein Ku80 — *Homo sapiens* （既存の PDB 構造 67 件）
@@ -576,10 +568,6 @@ Pol λのBRCTドメインはKu70/80のブリッジをまたいで結合し、N�
 ![構造図：Rho（結核菌）](figures/PMC13650167.svg)
 
 <sub>色（順に）：Rho（転写終結因子）　スティック：ADP、BeF3（BEF）</sub>
-
-![結合部位：ADP](figures/PMC13650167-site.svg)
-
-<sub>ADPの結合部位。4 Å 以内の残基：T540, R541, K542, P355, K356, A357, G358, K359, T360, T361, E390, F530。点線は 3.3 Å 以内の N・O の組（11 組）</sub>
 
 **結核菌のRhoは、天然変性のNIDで転写停止の目印を選ぶ**
 
@@ -666,8 +654,8 @@ M495L置換を入れるとRhoが57 bpのRNA–DNAレポーター二重鎖を巻�
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [31HX](https://www.rcsb.org/structure/31HX) | クライオ電顕 | 3.15 Å | 2026-09-30 | Mycobacterium tuberculosis | ADP, BEF |
-| [31HY](https://www.rcsb.org/structure/31HY) | クライオ電顕 | 3.40 Å | 2026-09-30 | Mycobacterium tuberculosis | BEF, ADP |
+| [31HX](https://www.rcsb.org/structure/31HX) | Cryo-EM | 3.15 Å | 2026-09-30 | Mycobacterium tuberculosis | ADP, BEF |
+| [31HY](https://www.rcsb.org/structure/31HY) | Cryo-EM | 3.40 Å | 2026-09-30 | Mycobacterium tuberculosis | BEF, ADP |
 
 - [P9WHF2](https://www.uniprot.org/uniprotkb/P9WHF2) rho Transcription termination factor Rho — *Mycobacterium tuberculosis (strain CDC 1551 / Oshkosh)* （PDB で初めての構造）
 
@@ -797,8 +785,8 @@ WDR5のWIN部位阻害剤（Inh-4、Inh-5）はPER1–WDR5複合体を部分的�
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [8OK1](https://www.rcsb.org/structure/8OK1) | X線結晶構造解析 | 1.38 Å | 2024-04-03 | Mus musculus | — |
-| [8OKF](https://www.rcsb.org/structure/8OKF) | X線結晶構造解析 | 1.85 Å | 2024-04-10 | Mus musculus | 144 |
+| [8OK1](https://www.rcsb.org/structure/8OK1) | X-ray | 1.38 Å | 2024-04-03 | Mus musculus | — |
+| [8OKF](https://www.rcsb.org/structure/8OKF) | X-ray | 1.85 Å | 2024-04-10 | Mus musculus | 144 |
 
 - [O54943](https://www.uniprot.org/uniprotkb/O54943) Per2 Period circadian protein homolog 2 — *Mus musculus* （既存の PDB 構造 3 件）
 - [P08515](https://www.uniprot.org/uniprotkb/P08515)  Glutathione S-transferase class-mu 26 kDa isozyme — *Schistosoma japonicum* （既存の PDB 構造 68 件）

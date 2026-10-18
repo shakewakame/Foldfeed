@@ -4,6 +4,7 @@
   "headline": "MDA5のT331I変異は、ATPを分解できず自己免疫につながる",
   "subhead": "短いdsRNAにもフィラメントが残り、インターフェロン応答が続く",
   "target_label": "MDA5（ヒト）",
+  "target_en": "Human MDA5",
   "summary": {
     "question": "疾患に関わるMDA5のT331I変異が、なぜ常にインターフェロンのシグナルを出すのかは不明だった。",
     "approach": "細胞のレポーター実験、ATPase測定、短い112 bp dsRNAとの複合体のクライオ電顕で野生型と比べた。",
