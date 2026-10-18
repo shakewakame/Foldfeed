@@ -131,7 +131,7 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .row h3 {{ margin:0; font-family:var(--sans); font-size:21px; line-height:1.5; font-weight:700; color:var(--ink); text-wrap:balance; }}
 .row .sub {{ margin:3px 0 0; font-family:var(--sans); font-size:14px; line-height:1.8; color:var(--desc); }}
 .row .rm {{ margin:5px 0 0; font-family:var(--mono); font-size:11px; color:var(--mute); line-height:1.6; }}
-.thumb {{ display:block; border:1px solid var(--hair); }}
+.thumb {{ display:block; }}
 .thumb img {{ display:block; width:100%; height:auto; }}
 .thumb.none {{ aspect-ratio:3/2; display:flex; align-items:center; justify-content:center;
                font-family:var(--mono); font-size:11px; color:var(--mute); text-align:center; padding:8px; }}
@@ -171,7 +171,10 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .part::before {{ content:""; position:absolute; left:0; right:0; top:0; border-top:4px solid var(--ink); }}
 .part::after {{ content:""; position:absolute; left:0; right:0; top:7px; border-top:1px solid var(--ink); }}
 .part h2 {{ margin:8px 0 4px; display:flex; align-items:baseline; gap:16px; }}
-.part h2 span {{ font-family:var(--mono); font-size:12px; font-weight:500; color:var(--mute); letter-spacing:.08em; }}
+.part h2 {{ justify-content:space-between; }}
+.ixm, .ix-h .ixm {{ margin-left:auto; text-align:right; font-family:var(--mono); font-size:14px; font-weight:400; letter-spacing:.04em;
+        color:var(--ink2); white-space:nowrap; }}
+.ixm b, .ix-h .ixm b {{ margin-left:18px; font-weight:700; color:var(--ink); }}
 .part p {{ margin:0; color:var(--desc); font-size:14px; max-width:760px; }}
 .part + .art {{ margin-top:18px; }}
 .part + .art::before {{ display:none; }}
@@ -385,6 +388,7 @@ body.head-away {{ --headnow:0px; }}
 .lead-h {{ margin:0; font-family:var(--serif); font-weight:400; font-size:clamp(18px, 1.72vw, 30px); line-height:1.8;
            color:var(--ink); letter-spacing:.02em; }}
 .lead-h span {{ display:block; white-space:nowrap; }}
+html, body {{ overflow-x:clip; }}   /* a guard: nothing may widen the page sideways (see docs/decisions.md) */
 .lead-go {{ display:inline-flex; align-items:center; gap:12px; margin-top:34px; padding:14px 24px 14px 20px;
             background:var(--ink); color:#fff; font-family:var(--mono); font-size:14.5px; letter-spacing:.06em; }}
 .lead-go .tri {{ font-size:13px; }}
@@ -616,7 +620,11 @@ a, .chip, .find button, .v3d-bar button, .figtabs button {{ transition:color .2s
   .vol {{ position:absolute; right:0; top:0; }}
   .menu .mb {{ width:44px; height:44px; }}
   .menu .mt {{ font-size:12px; }}
-  .lead-h {{ font-size:17px; line-height:1.85; }}
+  .lead-h {{ font-size:min(17px, calc((100vw - 40px) / 21.8)); line-height:1.85; letter-spacing:0; }}
+  .lead-h span {{ white-space:normal; }}
+  .ix-h, .part h2 {{ flex-wrap:wrap; row-gap:4px; }}
+  .ixm, .ix-h .ixm {{ font-size:12px; }}
+  .ixm b, .ix-h .ixm b {{ margin-left:10px; }}
   .lead-go {{ margin-top:22px; font-size:13.5px; }}
   .lead-btns {{ margin-top:22px; }}
   .about-grid {{ grid-template-columns:minmax(0,1fr); gap:30px; }}
@@ -1223,7 +1231,7 @@ def contents_html(picks: list, date: str, root: Path, fig_base: str, href_base: 
                                 feat=mark and c["pmcid"] == featured)
                        for c, pk in items if mark or c["pmcid"] != featured)
         if body:
-            out += (f'<div class="ix-h{cls}"><h2 class="label">{PARTS[key][0]}</h2><span>{len(items)} 本</span></div>'
+            out += (f'<div class="ix-h{cls}"><h2 class="label">{PARTS[key][0]}</h2>{issue_meta(date, len(items))}</div>'
                     f'<ol class="rows">{body}</ol>')
     return out
 
@@ -1246,8 +1254,8 @@ def lead_html(feature: dict | None, picks: list, date: str, root: Path, fig_base
     lines = "".join(f'<span style="--i:{i}">{esc(t)}</span>' for i, t in enumerate(LEAD))
     go = (('<a class="lead-go" href="#today"><span class="tri" aria-hidden="true">▽</span>'
            'Picked up: Today’s Structure</a>') if feature_of(feature, picks) else "")
-    go = (f'<div class="lead-btns">{go}<a class="lead-go alt" href="#about"><span class="tri" aria-hidden="true">▽</span>'
-          f'About FoldFeed</a></div>')
+    go = (f'<div class="lead-btns"><a class="lead-go alt" href="#about"><span class="tri" aria-hidden="true">▽</span>'
+          f'About FoldFeed</a>{go}</div>')   # in the order of the page
     hit = feature_of(feature, picks)
     art_html = ""
     if hit and (root / date / "figures" / f"{hit[1]['pmcid']}-hero.svg").exists():
@@ -1334,9 +1342,15 @@ def today_html(feature: dict | None, picks: list, date: str, root: Path, fig_bas
 TODAY_FIELDS = {"question": "疑問・課題", "approach": "アプローチ", "result": "結果", "learned": "わかったこと"}
 
 
-def part_html(key: str, count: int) -> str:
+def issue_meta(date: str, count: int) -> str:
+    """'Issue of 2026.10.18  15 Articles', right-aligned beside a New / Notable Structure heading."""
+    y, m, d, _ = date_parts(date)
+    return (f'<span class="ixm">Issue of {y}.{m:02d}.{d:02d}<b>{count} {"Article" if count == 1 else "Articles"}</b></span>')
+
+
+def part_html(key: str, count: int, date: str) -> str:
     title, note = PARTS[key]
-    return f'<section class="part" id="{key}"><h2>{title}<span>{count} 本</span></h2></section>'
+    return f'<section class="part" id="{key}"><h2>{title}{issue_meta(date, count)}</h2></section>'
 
 
 def counts_text(n_new: int, n_hot: int, sep: str = "<br>") -> str:
@@ -1412,7 +1426,7 @@ def issue_page(date: str, prev_date: str | None, next_date: str | None,
     for n, (cand, pk) in enumerate(picks, 1):
         hot = render.is_impact(pk)
         if n == 1 or hot != render.is_impact(picks[n - 2][1]):
-            main.append(part_html("impact" if hot else "new", n_hot if hot else len(picks) - n_hot))
+            main.append(part_html("impact" if hot else "new", n_hot if hot else len(picks) - n_hot, date))
         main.append(article_html(cand, pk, date, n, root, fig_base, types.get(cand["pmcid"]), "../",
                                  (related or {}).get((date, n))))
     if rest:
@@ -1445,7 +1459,7 @@ ABOUT = (   # the front page's About FoldFeed, in polite Japanese (the owner's w
      "新しく登録された査読済みのオープンアクセス論文の中から、構造生物学の論文を毎日ピックアップしてご紹介します。"),
     ("紹介する論文",
      "新しい構造（PDB・EMDB に登録された構造）を報告した論文は、すべてご紹介します。そのほか、既存の構造を使って"
-     "仕組みの解明や創薬に迫った注目の研究を、1 日 5 本までご紹介します。記事が 3 本以上ある日は、その中の 1 本を"
+     "仕組みの解明や創薬に迫った注目の研究を、1 日 3 本までご紹介します。記事が 3 本以上ある日は、その中の 1 本を"
      "Today’s Structure として大きく取り上げます。"),
     ("記事のつくり",
      "各記事では、論文が明らかにしたことを日本語で短くまとめ、構造図と結合部位の拡大図、実験条件のメモを添えています。"
@@ -1500,7 +1514,8 @@ def about_html(issues: list[str], lib: list[dict]) -> str:
     infographic, see numbers_html) and every journal the papers came from, as bars. All numbers are computed from the
     data; a paper that came back in a later issue counts once."""
     journals = journal_counts(issues)
-    rows = "".join(f'<div><dt>{esc(k)}</dt><dd>{esc(v)}</dd></div>' for k, v in ABOUT)
+    rows = "".join(f'<div><dt>{esc(k)}</dt><dd>{"<br>".join(esc(x) + "。" for x in v.split("。") if x)}</dd></div>'
+                   for k, v in ABOUT)
     most = max([c for _, c in journals] + [1])
     jl = "".join(f'<li style="--i:{i}"><span class="jn">{esc(n)}</span><span class="c">{c}</span>'
                  f'<span class="bar" aria-hidden="true"><i style="--v:{c / most:.3f}"></i></span></li>'
@@ -1684,7 +1699,7 @@ def home(issues: list[str]) -> str:
         main.append(f'<section class="sec past"><div class="ix-h"><h2 class="label">Past Issues</h2><span>{len(past)} 号</span></div>'
                     f'<ol>{"".join(items)}</ol></section>')
     main.append(mail_html())
-    side = sd("Article Search", find_form()) + mine_html(lib)
+    side = mine_html(lib)   # the search is in Browse by Protein Type, right in the page
     return page(f"{brand.SITE_NAME}（{brand.SITE_NAME_EN}）",
                 masthead(0) + top + shell("".join(main), side)
                 + colophon(f'<p>{esc(pmcoa.CREDIT)}</p>' if load_issue(latest, ISSUES_DIR)[0].get("source") == pmcoa.SOURCE else ""),

@@ -244,6 +244,7 @@
       if (!alive() || !box._cur) return;
       // a download that failed still resolves, with nothing drawn: treat it as a failure, not an empty viewer
       if (!structureOf(box._cur.viewer.plugin)) { fail(); return; }
+      if (auto) spin(box);
       clearInterval(box._timer);
       box._timer = null;
       box.classList.remove("loading");
@@ -283,6 +284,28 @@
       }
     }
   });
+
+  /* The front page's viewer turns slowly about the screen's vertical axis (the membrane normal for a membrane protein,
+     drawn outside up), about one turn in 40 s, so the structure shows all round. It stops while the viewer is out of
+     sight (no work for a canvas nobody sees) and for readers who asked for reduced motion; dragging still works. */
+  var SPIN = 0.025;   // turns per second
+  function setSpin(box, on) {
+    if (!box._cur) return;
+    try {
+      box._cur.viewer.plugin.canvas3d.setProps({ trackball: { animate: on
+        ? { name: "spin", params: { speed: SPIN, axis: [0, -1, 0] } } : { name: "off", params: {} } } });
+    } catch (e) { /* turning is a nicety */ }
+  }
+  function spin(box) {
+    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    setTimeout(function () {                      // after the camera has settled on the figure's view
+      if (!box._cur) return;
+      setSpin(box, true);
+      if ("IntersectionObserver" in window) {
+        new IntersectionObserver(function (es) { setSpin(box, es[0].isIntersecting); }).observe(box);
+      }
+    }, 1200);
+  }
 
   /* The front page's viewer: opened by itself on a wide screen, once the page has loaded. The wheel scrolls the page
      unless Ctrl / ⌘ is held (then Mol* zooms): captured on the box before it reaches the canvas. */

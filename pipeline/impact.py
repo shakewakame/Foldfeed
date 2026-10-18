@@ -18,9 +18,15 @@ Two stages:
 
 from __future__ import annotations
 
-MAX_PER_DAY = 5
-THRESHOLD = 7            # total score (out of 10) needed to be selected
+# 2026-10-18 (owner): aim for 1-3 Notable Structure articles a day. Until then the line was 7 points and at most 5 a
+# day, which picked 0-2 (0.7 a day on average over 10-12..10-18): the threshold goes down to 6, with two guards so
+# that the extra papers are not the weak ones that sat at 6 (single-system follow-ups, and papers whose "structure"
+# was an MD / docking / QM-MM model built on a PDB entry): novelty must be at least 2 and the structure criterion is
+# stricter (see RUBRIC). Applies to the issues from 2026-10-19 on; earlier issues keep what was chosen.
+MAX_PER_DAY = 3
+THRESHOLD = 6            # total score (out of 10) needed to be selected
 SHORTLIST = 10           # papers the writer reads in full and scores
+MIN_SCORED = 5           # score at least this many (when the pool has that many) so a quiet day is not skipped unread
 
 TYPES = {
     "mechanism": "既存構造で機構を解明",
@@ -33,11 +39,11 @@ TYPES = {
 RUBRIC = {
     "novelty": (3, "何が初めてか。新しい機構・新しい能力・初めての実証を論文が示している（3＝分野の定説を変える／2＝明確に新しい／1＝既知の延長）"),
     "reach": (3, "誰に効くか。構造生物学の他の研究者が使える・考え方が変わる範囲（3＝分野全体／2＝大きなタンパク質ファミリーや広く使われる系／1＝その系だけ）"),
-    "structure": (2, "実験で決めた構造（X 線・クライオ電顕・NMR。既存の PDB 構造を含む）で結論を確かめているか（2＝実験構造なしでは結論が成り立たない／1＝実験構造で一部を確かめた／0＝MD・予測・ドッキングなど計算モデルだけ。0 点は選ばない）"),
+    "structure": (2, "実験で決めた構造（X 線・クライオ電顕・NMR。既存の PDB 構造を含む）で結論を確かめているか（2＝実験構造なしでは結論が成り立たない／1＝実験構造で一部を確かめた（測った結果が既存構造の上で直接説明される、自前の NMR・HDX・架橋などの構造データがある）／0＝MD・予測・ドッキング・QM/MM など計算モデルだけ。既存の PDB 構造を MD やドッキングの出発点に使っただけなら 0。0 点は選ばない）"),
     "support": (2, "裏付けの強さ（2＝独立した実験で検証：変異体・機能測定・既存手法との比較など／1＝一部の検証のみ／0＝計算のみで実験的検証なし）"),
 }
 MAX_TOTAL = sum(m for m, _ in RUBRIC.values())
-REQUIRED = {"structure": 1}  # minimum per criterion for a paper to be selected
+REQUIRED = {"structure": 1, "novelty": 2}  # minimum per criterion for a paper to be selected
 
 # Not selected regardless of score (the writer records the reason).
 EXCLUSIONS = [
