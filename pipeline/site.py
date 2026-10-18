@@ -371,6 +371,12 @@ body.head-away {{ --headnow:0px; }}
 .lead-3d .v3d-view, .lead-3d.on .v3d-view, .lead-3d.loading .v3d-view {{ aspect-ratio:1000/780; max-height:min(640px, calc(100vh - 210px));
                                                                          margin:0 auto; }}
 .lead-3d .fig {{ height:100%; object-fit:contain; }}
+.lead-wait {{ display:none; position:absolute; inset:0; margin:0; align-items:center; justify-content:center;
+              font-family:var(--mono); font-size:14px; letter-spacing:.12em; color:var(--mute); }}
+@media (min-width:1121px) {{
+  .js .lead-3d:not(.on):not(.failed) .fig {{ visibility:hidden; }}
+  .js .lead-3d:not(.on):not(.failed) .lead-wait {{ display:flex; }}
+}}
 
 /* Today's Structure on the front page, in the order of the editor's layout: name, headline, figure, four lines, links */
 .today {{ padding:46px 0 54px; border-bottom:4px solid var(--ink); }}
@@ -380,7 +386,8 @@ body.head-away {{ --headnow:0px; }}
                   text-transform:uppercase; font-weight:700; color:var(--acc-ink); }}
 .today-k {{ margin:0; display:flex; flex-wrap:wrap; align-items:baseline; gap:6px 22px; }}
 .today-k .tg {{ font-family:var(--sans); font-size:28px; font-weight:500; color:var(--ink); letter-spacing:.01em; line-height:1.4; }}
-.today-k .dt {{ font-family:var(--mono); font-size:13px; color:var(--mute); }}
+.today-k .dt {{ margin-left:auto; text-align:right; font-family:var(--mono); font-size:14px; letter-spacing:.04em; color:var(--ink2); }}
+.today-k .dt b {{ margin-left:18px; font-weight:700; color:var(--ink); }}
 .today-h {{ margin:12px 0 0; font-size:34px; line-height:1.42; font-weight:700; color:var(--ink); text-wrap:balance; }}
 .today-sub {{ margin:10px 0 0; font-size:18px; line-height:1.75; color:var(--desc); }}
 .today-fig {{ margin-top:22px; }}
@@ -593,6 +600,7 @@ def page(title: str, body: str, depth: int, description: str = DESCRIPTION, noin
          viewer: bool = False, script: str = "") -> str:
     up = "../" * depth
     return (f'<!doctype html><html lang="ja"><head><meta charset="utf-8">'
+            f'<script>document.documentElement.className += " js";</script>'
             f'<meta name="viewport" content="width=device-width, initial-scale=1">'
             f'<title>{esc(title)}</title>'
             + ('<meta name="robots" content="noindex">' if noindex else "") +
@@ -1028,9 +1036,9 @@ def feature_of(feature: dict | None, picks: list) -> tuple[int, dict, dict] | No
 
 def lead_html(feature: dict | None, picks: list, date: str, root: Path, fig_base: str) -> str:
     """The first screen of the front page: what the site is (three lines), the button down to Today's Structure, and
-    on the right Today's Structure in the 3D viewer, opened by itself on a wide screen, with no text around it. Until
-    Mol* has loaded (and on a phone, where it is not opened) the same structure is shown as a drawing from the same
-    view (pipeline.render: <pmcid>-hero.svg)."""
+    on the right Today's Structure in the 3D viewer, opened by itself on a wide screen, with no text around it but
+    "読み込み中" while it loads. On a phone (where it is not opened) and when it cannot load, the same structure is
+    shown as a drawing from the same view (pipeline.render: <pmcid>-hero.svg)."""
     lines = "".join(f'<span>{esc(t)}</span>' for t in LEAD)
     go = ('<a class="lead-go" href="#today"><span class="tri" aria-hidden="true">▽</span>'
           'Picked up: Today’s Structure</a>') if feature_of(feature, picks) else ""
@@ -1043,10 +1051,10 @@ def lead_html(feature: dict | None, picks: list, date: str, root: Path, fig_base
         attrs, _, _ = viewer_bar(info, "", info.get("hero_view"))
         img = (f'<img class="fig" src="{fig_base}/{date}/{esc(pm)}-hero.svg"{wh(fd / f"{pm}-hero.svg")} '
                f'alt="構造図：{esc(pk.get("target_en") or pk["target_label"])}">')
-        if attrs:   # opens by itself on a wide screen (assets/viewer.js); the drawing stands in until it has loaded.
-            # No buttons, no help, no loading text here: just the structure.
+        if attrs:   # opens by itself on a wide screen (assets/viewer.js). While it loads, only "読み込み中" shows; the
+            # drawing is for a phone (where it does not open) and for a browser that cannot load it. No buttons, no help.
             art_html = (f'<div class="lead-art"><div class="v3d lead-3d" data-auto="wide"{attrs}><div class="v3d-view">{img}'
-                        f'<div class="v3d-canvas"></div></div></div></div>')
+                        f'<div class="v3d-canvas"></div><p class="lead-wait" aria-live="polite">読み込み中</p></div></div></div>')
         else:
             art_html = f'<a class="lead-art" href="#today" tabindex="-1">{img}</a>'
     return (f'<section class="lead"><div class="wrap lead-grid"><div class="lead-text">'
@@ -1103,14 +1111,14 @@ def today_html(feature: dict | None, picks: list, date: str, root: Path, fig_bas
         return ""
     n, cand, pk = hit
     href = f"{href_base}#a{n}"
-    _, m, d, wd = date_parts(date)
+    y, m, d, _ = date_parts(date)
     first = '<span class="mk">PDB 初構造</span>' if facts(cand, pk)["first"] else ""
     rows = "".join(f'<div><dt>{label}</dt><dd>{esc(pk["summary"][k])}</dd></div>'
                    for k, label in TODAY_FIELDS.items() if pk["summary"].get(k))
     return (f'<section class="today" id="today"><div class="wrap">'
             f'<h2 class="today-sec"><span class="pu">Pick up</span>Today’s Structure</h2>'
             f'<p class="today-k"><span class="tg">{esc(pk.get("target_en") or pk["target_label"])}</span>'
-            f'<span class="dt">{m}月{d}日（{wd}）号 · {pad(n)}{(" · " + first) if first else ""}</span></p>'
+            f'<span class="dt">{(first + " · ") if first else ""}Issue of {y}.{m:02d}.{d:02d}<b>Number {pad(n)}</b></span></p>'
             f'<h3 class="today-h"><a href="{href}">{esc(pk["headline"])}</a></h3>'
             f'<p class="today-sub">{esc(pk.get("subhead") or "")}</p>'
             f'<div class="today-fig">{feature_figure(cand, pk, date, root, fig_base, href, up)}</div>'

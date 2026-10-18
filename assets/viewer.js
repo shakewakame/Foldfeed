@@ -14,8 +14,8 @@
  *
  * The camera starts from the figure's own view (data-view: MolViewSpec camera target / position / up), so the 3D
  * structure first appears as drawn, membrane proteins with their outside up. The front page's .v3d[data-auto] opens
- * by itself on a wide screen and stays open while the reader opens another one; it has no buttons or messages (if
- * it cannot load, the drawing simply stays). Over it the mouse wheel scrolls the page (Ctrl / ⌘ + wheel zooms), so
+ * by itself on a wide screen and stays open while the reader opens another one; it has no buttons or messages, only
+ * "読み込み中" while it loads (if it cannot load, it gets the class "failed" and the page shows the drawing). Over it the mouse wheel scrolls the page (Ctrl / ⌘ + wheel zooms), so
  * the first screen does not trap the scroll.
  */
 (function () {
@@ -184,7 +184,7 @@
     var canvasBox = box.querySelector(".v3d-view");
     var url = box.dataset.url || "https://models.rcsb.org/" + pdb + ".bcif";
     var format = box.dataset.url ? "mmcif" : "bcif";
-    if (!hasWebGL()) { say(box, "この端末では 3D 表示（WebGL）を使えない。RCSB のページで開ける。"); return; }
+    if (!hasWebGL()) { box.classList.add("failed"); say(box, "この端末では 3D 表示（WebGL）を使えない。RCSB のページで開ける。"); return; }
     say(box, "");
     stop(box);
     if (!auto) current = box;
@@ -199,6 +199,7 @@
     function fail() {
       if (box._token !== token) return;
       stop(box);
+      box.classList.add("failed");                     // the front page's viewer shows its drawing instead
       say(box, "3D 表示を読み込めなかった（RCSB に接続できない、通信が遅すぎる、または古いブラウザ）。RCSB のページで開ける。");
     }
     function alive() { return box._token === token; }
@@ -241,6 +242,8 @@
       });
     }).then(function () {
       if (!alive() || !box._cur) return;
+      // a download that failed still resolves, with nothing drawn: treat it as a failure, not an empty viewer
+      if (!structureOf(box._cur.viewer.plugin)) { fail(); return; }
       clearInterval(box._timer);
       box._timer = null;
       box.classList.remove("loading");
@@ -286,7 +289,9 @@
   function autostart() {
     [].forEach.call(document.querySelectorAll(".v3d[data-auto]"), function (box) {
       box.addEventListener("wheel", function (ev) { if (!ev.ctrlKey && !ev.metaKey) ev.stopPropagation(); }, true);
-      if (window.matchMedia && window.matchMedia(WIDE).matches && hasWebGL()) open(box);
+      if (!(window.matchMedia && window.matchMedia(WIDE).matches)) return;
+      if (hasWebGL()) open(box);
+      else box.classList.add("failed");
     });
   }
   if (document.readyState === "complete") setTimeout(autostart, 50);
