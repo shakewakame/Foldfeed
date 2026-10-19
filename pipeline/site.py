@@ -40,6 +40,7 @@ LATEST = {"date": None}   # the newest issue with articles (the global navigatio
 THUMBS_PER_ISSUE = 8   # structures shown for each issue in a list of issues
 CAROUSEL_PAGE = 6   # structures at a time on an issue's first screen (3 x 2); more turn over every CAROUSEL_SECONDS
 CAROUSEL_SECONDS = 8
+BROWSE_THUMBS = 3   # structures on each Browse tile, the newest
 FACETS = {"cats": [], "topics": [], "methods": [], "parts": []}   # the header search's suggestions with counts, set by build()
 
 CHART_NEW, CHART_UPD, CHART_HOT = "#2F5DA8", "#1F8A70", "#C8442A"   # 藍 / 青緑 / 朱 for New Structure, Structure Update,
@@ -55,8 +56,8 @@ CSS = f"""
   --latin:Georgia,"Times New Roman","Noto Serif JP",serif;
   --sans:"Noto Sans JP","Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",Meiryo,sans-serif;
   --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
-  --col:240px; --side:320px; --pad:clamp(24px,6vw,96px); --head:156px; --navh:52px;
-  --sec:96px;   /* the space between sections, which replaces the rules between them */
+  --col:240px; --side:320px; --pad:clamp(24px,8.5vw,168px); --head:156px; --navh:52px;
+  --sec:112px;   /* the space between sections, which replaces the rules between them */
   --rule:#B3BAC4;   /* the thin rule under a section heading */
 }}
 * {{ box-sizing:border-box; }}
@@ -67,7 +68,7 @@ a {{ color:inherit; text-decoration:none; text-underline-offset:3px; }}
 h2, h3, .headline, .subhead, .sub {{ word-break:auto-phrase; line-break:strict; }}
 a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-color:var(--acc); }}
 .kicker a {{ text-decoration:underline; text-decoration-color:var(--acc); }}
-.wrap {{ max-width:1600px; margin:0 auto; padding:0 var(--pad); }}
+.wrap {{ max-width:1680px; margin:0 auto; padding:0 var(--pad); }}
 .mk {{ color:var(--acc-ink); font-weight:700; }}
 .label {{ margin:0; font-family:var(--mono); font-size:14px; letter-spacing:.12em; font-weight:700;
           color:var(--ink2); text-transform:uppercase; padding-top:6px; }}
@@ -280,15 +281,16 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .find button {{ font:inherit; font-family:var(--mono); font-size:13px; padding:10px 18px; border:1px solid var(--ink);
                 background:var(--ink); color:#fff; cursor:pointer; border-radius:0; }}
 .find button:hover {{ background:var(--acc-ink); border-color:var(--acc-ink); }}
-.cats {{ list-style:none; margin:12px 0 0; padding:0; display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:0 40px; }}
-.cats a {{ display:flex; justify-content:space-between; align-items:baseline; gap:12px; padding:10px 0; font-family:var(--sans);
-           font-size:15px; border-bottom:1px solid var(--hair); }}
-.cats .c {{ font-family:var(--mono); font-size:12px; color:var(--mute); }}
 .mail-grid {{ display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,1fr); gap:48px; margin-top:16px; align-items:start; }}
 .mail p {{ margin:0 0 8px; font-size:15px; color:var(--desc); }}
 .mail ul {{ margin:6px 0 0; padding-left:1.3em; font-size:14.5px; color:var(--desc); }}
 .mail .soon {{ font-family:var(--mono); font-size:12px; letter-spacing:.06em; color:var(--acc-ink); }}
 .mail form {{ display:flex; gap:8px; }}
+.mail input {{ flex:1; min-width:0; font:inherit; font-family:var(--sans); font-size:14.5px; padding:10px 12px; border:1px solid var(--ink);
+               background:transparent; border-radius:0; }}
+.mail button {{ font:inherit; font-family:var(--mono); font-size:13px; padding:10px 18px; border:1px solid var(--ink); background:var(--ink);
+                color:#fff; border-radius:0; }}
+.list-page.mail {{ min-height:52vh; }}
 .mail input:disabled, .mail button:disabled {{ opacity:.5; cursor:not-allowed; }}
 
 
@@ -568,7 +570,7 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
 .part h2 .hd {{ margin-left:16px; font-family:var(--latin); font-weight:400; color:var(--mute); }}
 .shell.solo {{ grid-template-columns:minmax(0,1fr); }}
 /* an issue page: its contents sidebar sits close to the right edge of the window */
-.wrap.sticky-side {{ max-width:none; padding-left:max(var(--pad), calc((100vw - 1600px) / 2 + var(--pad)));
+.wrap.sticky-side {{ max-width:none; padding-left:max(var(--pad), calc((100vw - 1680px) / 2 + var(--pad)));
                      padding-right:clamp(16px, 2vw, 32px); }}
 .about-dl dd .s {{ display:block; text-wrap:balance; }}
 .about-dl dd .w {{ white-space:nowrap; }}
@@ -654,6 +656,24 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
 .pickup .reads {{ margin-top:26px; gap:12px; }}
 .pickup .reads a {{ min-width:0; flex:1 1 220px; }}
 .today + .toc {{ margin-top:var(--sec); }}
+
+/* Browse: a tile for each way in, the newest structures of it on top */
+.bt-sec + .bt-sec, .lp-lead + .bt-sec {{ margin-top:88px; }}
+.bt-h {{ position:relative; margin:0 0 22px; font-family:var(--latin); font-size:22px; font-weight:700; color:var(--ink); }}
+.bt-h::before {{ content:""; position:absolute; left:0; top:-26px; width:36px; border-top:4px solid var(--ink); }}
+.bt-grid {{ list-style:none; margin:0; padding:0; display:grid; gap:56px 36px; }}
+.bt-grid.lg {{ grid-template-columns:repeat(3, minmax(0,1fr)); }}
+.bt-grid.sm {{ grid-template-columns:repeat(4, minmax(0,1fr)); gap:48px 32px; }}
+.bt a {{ display:block; color:var(--ink); text-decoration:none; }}
+.bt-th {{ display:grid; grid-template-columns:repeat({BROWSE_THUMBS}, minmax(0,1fr)); gap:6px; }}
+.bt-th img {{ display:block; width:100%; height:auto; transition:transform .4s cubic-bezier(.2,.8,.2,1); }}
+.bt a:hover img {{ transform:scale(1.06); }}
+.bt-n {{ display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-top:12px; font-family:var(--sans);
+         font-size:16px; font-weight:700; line-height:1.5; }}
+.bt-grid.lg .bt-n {{ font-family:var(--latin); font-size:21px; }}
+.bt a:hover .bt-n {{ color:var(--acc-ink); }}
+.bt-c {{ flex:none; font-family:var(--mono); font-size:12px; font-weight:400; color:var(--mute); }}
+.bt-d {{ display:block; margin-top:4px; font-size:14px; line-height:1.75; color:var(--desc); }}
 
 /* a list of issues (Back Issues, Past Issues): the date, the parts with their counts, a strip of the structures */
 .iss-list {{ list-style:none; margin:0; padding:0; }}
@@ -797,6 +817,8 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
   .ih-parts b {{ padding-left:8px; }}
   .cards.md {{ grid-template-columns:repeat(2, minmax(0,1fr)); }}
   .cards.sm {{ grid-template-columns:repeat(3, minmax(0,1fr)); }}
+  .bt-grid.lg {{ grid-template-columns:repeat(2, minmax(0,1fr)); }}
+  .bt-grid.sm {{ grid-template-columns:repeat(3, minmax(0,1fr)); }}
   .pickup {{ grid-template-columns:minmax(0,1fr); gap:24px; }}
   .iss {{ grid-template-columns:170px 220px minmax(0,1fr); gap:0 24px; }}
   .lead-grid {{ grid-template-columns:minmax(0,1fr); min-height:0; gap:26px; padding-top:30px; }}
@@ -809,7 +831,7 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
   .side:not(:has(.sd:not(.side-only-issue))) {{ display:none; }}   /* nothing left in it on a narrow screen */
 }}
 @media (max-width:860px) {{
-  :root {{ --pad:18px; --sec:64px; }}
+  :root {{ --pad:22px; --sec:76px; }}
   :root {{ --head:118px; }}
   .mast {{ padding-top:14px; }}
   .rules {{ margin-top:10px; }}
@@ -862,6 +884,9 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
   .vol .rl {{ display:none; }}
   .cards.md {{ grid-template-columns:minmax(0,1fr); gap:60px; }}
   .cards.sm {{ grid-template-columns:repeat(2, minmax(0,1fr)); gap:48px 16px; }}
+  .bt-grid.lg {{ grid-template-columns:minmax(0,1fr); gap:44px; }}
+  .bt-grid.sm {{ grid-template-columns:repeat(2, minmax(0,1fr)); gap:36px 16px; }}
+  .bt-n {{ font-size:14.5px; }}
   .card h3 {{ font-size:15px; }}
   .card.md h3 {{ font-size:18px; }}
   .card.sm .cs {{ font-size:12.5px; line-height:1.7; }}
@@ -1082,7 +1107,7 @@ MENU_SCRIPT = r"""
   if (calm || !('IntersectionObserver' in window)) return;
   root.classList.add('anim');
   var SEL = '.ix-h, .about-dl > div, .about-side, .about .jl, .about > .wrap > .about-sub, .pickup, '
-          + '.today-4 > div, .reads, .cards > li, .cats, .iss-list > li, .find, .mail-grid, .shell:not(.sticky-side) .side .sd, '
+          + '.today-4 > div, .reads, .cards > li, .bt, .iss-list > li, .find, .mail-grid, .shell:not(.sticky-side) .side .sd, '
           + '.ihead, .part, .art, .rest, .pp-head, .pg .pr, .queue li';
   var els = [].slice.call(document.querySelectorAll(SEL));
   var seen = new Map();
@@ -1273,15 +1298,16 @@ LATER_SCRIPT = r"""
 """
 
 
-NAV = (("latest", "Latest Issue"), ("new", "New Structure"), ("update", "Structure Update"),
-       ("impact", "Structure-Based Study"), ("back", "Back Issues"), ("about", "About"))
+# the parts (New Structure, ...) are the first row of Browse: eight places and the search do not fit in one row
+NAV = (("latest", "Latest Issue"), ("browse", "Browse"), ("back", "Back Issues"), ("news", "Newsletters & Alerts"),
+       ("about", "About"))
 
 
 def nav_links(up: str, current: str | None = None) -> list[tuple[str, str, bool]]:
     """(label, href, is the current page) of the global navigation, also the MENU on a phone."""
     latest = f'{up}issues/{LATEST["date"]}.html' if LATEST["date"] else f"{up}index.html"
-    href = {"latest": latest, "new": f"{up}new.html", "update": f"{up}update.html", "impact": f"{up}study.html",
-            "back": f"{up}issues.html", "about": f"{up}index.html#about"}
+    href = {"latest": latest, "browse": f"{up}browse.html", "back": f"{up}issues.html", "news": f"{up}newsletter.html",
+            "about": f"{up}index.html#about"}
     return [(label, href[k], k == current) for k, label in NAV]
 
 
@@ -2231,28 +2257,66 @@ def category_counts(lib: list[dict]) -> list[tuple[str, int]]:
     return [(k, v) for k, v in counts.items() if v]
 
 
-def cats_html(lib: list[dict], up: str = "") -> str:
-    items = "".join(f'<li><a href="{up}proteins.html#c-{k}"><span>{esc(CATEGORIES[k])}</span><span class="c">{v}</span></a></li>'
-                    for k, v in sorted(category_counts(lib), key=lambda kv: (-kv[1], list(CATEGORIES).index(kv[0]))))
-    return f'<ul class="cats">{items}</ul>'
-
-
-def mail_html() -> str:
-    return ('<section class="sec mail" id="mail"><div class="ix-h"><h2 class="label">Newsletter</h2>'
+def newsletter_page() -> str:
+    """Newsletters & Alerts (newsletter.html): what is planned; not working yet (TODO.md)."""
+    main = ('<div class="wrap list-page mail"><div class="ix-h"><h1 class="label">Newsletters &amp; Alerts</h1>'
             '<span class="soon">準備中</span></div><div class="mail-grid"><div>'
             '<ul><li>毎朝の号の知らせ（New Structure・Structure Update・Structure-Based Study）</li><li>週のまとめ</li>'
             '<li>気になるタンパク質のアラート（UniProt ID を登録）</li></ul></div><div>'
             '<form aria-disabled="true" onsubmit="return false"><input type="email" placeholder="メールアドレス" disabled '
             'aria-label="メールアドレス（準備中）"><button type="button" disabled>登録（準備中）</button></form>'
-            '</div></div></section>')
+            '</div></div></div>')
+    return page(f"Newsletters & Alerts · {brand.SITE_NAME}", masthead(0, current="news") + main + colophon(), depth=0,
+                description="FoldFeed のメール配信とアラート（準備中）。")
+
+
+def browse_page(lib: list[dict]) -> str:
+    """Browse (browse.html): every way into the articles, as tiles that show the newest structures of each: the parts
+    (their own pages), the kinds of protein, of research and the methods (the search page, filtered). The header
+    search's suggestions offer the same ways in, small; here they are seen whole."""
+    def thumbs(rows):
+        out, seen = "", set()
+        for r in rows:
+            pm = r["cand"]["pmcid"]
+            if pm in seen or not (ISSUES_DIR / r["date"] / "figures" / f"{pm}-thumb.svg").exists():
+                continue
+            seen.add(pm)
+            out += f'<img src="figures/{r["date"]}/{esc(pm)}-thumb.svg" width="600" height="400" alt="" loading="lazy">'
+            if len(seen) == BROWSE_THUMBS:
+                break
+        return out
+
+    def tiles(items, size):
+        return f'<ol class="bt-grid {size}">' + "".join(
+            f'<li class="bt"><a href="{href}"><span class="bt-th">{thumbs(rows)}</span>'
+            f'<span class="bt-n">{esc(name)}<span class="bt-c">{n_articles(len(rows))}</span></span>'
+            + (f'<span class="bt-d">{esc(note)}</span>' if note else "") + '</a></li>'
+            for name, href, rows, note in items if rows) + '</ol>'
+
+    def group(title, body):
+        return f'<section class="bt-sec"><h2 class="bt-h">{title}</h2>{body}</section>'
+
+    parts = [(PARTS[k][0], PART_PAGES[k], [r for r in lib if r["part"] == k], PARTS[k][1]) for k in PARTS]
+    cats = sorted(((CATEGORIES[k], f"proteins.html?cat={k}", [r for r in lib if k in r["cats"]], "") for k in CATEGORIES),
+                  key=lambda t: -len(t[2]))
+    topics = [(TOPICS[k], f"proteins.html?topic={k}", [r for r in lib if k in r["topics"]], "") for k in TOPICS]
+    methods = [(m, f"proteins.html?method={m}", [r for r in lib if m in r["method"]], "") for m in METHOD_FACETS]
+    main = (f'<div class="wrap list-page"><div class="ix-h"><h1 class="label">Browse</h1>'
+            f'<span class="ixm"><b>{n_articles(len(lib))}</b></span></div>'
+            f'<p class="lp-lead">これまでの記事を、部・タンパク質の種類・研究の種類・手法から探せます。'
+            f'言葉で探すときは <a href="proteins.html">Article Search</a> へ。</p>'
+            + group("Part", tiles(parts, "lg")) + group("Protein Type", tiles(cats, "sm"))
+            + group("Research Type", tiles(topics, "sm")) + group("Method", tiles(methods, "sm")) + '</div>')
+    return page(f"Browse · {brand.SITE_NAME}", masthead(0, current="browse") + main + colophon(), depth=0,
+                description="FoldFeed の記事を、部・タンパク質の種類・研究の種類・手法から探す。")
 
 
 def home(issues: list[str]) -> str:
     """The front page. First screen: what the site is, in three lines, and Today's Structure in 3D. Right under it the
     latest issue as cards, in three sizes (Picked up Today's Structure the largest, then New Structure, then the other
     two parts), so what came out today is seen at a glance before anything is read (the owner's request, 2026-10-19).
-    Then the archive by kind of protein, the latest past issues, About FoldFeed (the global navigation reaches it from
-    every page) and (not yet working) a place for the mailing list."""
+    Then the latest past issues and About FoldFeed. Browse and Newsletters & Alerts are pages of their own, in the
+    global navigation (2026-10-19)."""
     latest = next((d for d in issues if load_issue(d, ISSUES_DIR)[1]), issues[0])  # newest issue that has articles
     past = [d for d in issues if d != latest]
     _, picks, _ = load_issue(latest, ISSUES_DIR)
@@ -2260,10 +2324,7 @@ def home(issues: list[str]) -> str:
     feature = load_feature(latest, ISSUES_DIR, picks)
     lib = library(issues)
     main = [today_html(feature, picks, latest, ISSUES_DIR, "figures", href),
-            f'<section class="toc">{contents_html(picks, latest, ISSUES_DIR, "figures", href, feature and feature["pmcid"])}</section>',
-            f'<section class="sec"><div class="ix-h"><h2 class="label">Browse by Protein Type</h2>'
-            f'<a class="soon" href="proteins.html">一覧へ</a></div>'
-            f'{cats_html(lib)}</section>']
+            f'<section class="toc">{contents_html(picks, latest, ISSUES_DIR, "figures", href, feature and feature["pmcid"])}</section>']
     if past:
         number = {d: len(issues) - i for i, d in enumerate(issues)}
         rows = "".join(issue_row(d, number[d], ISSUES_DIR, "figures", "issues/") for d in past[:PAST_ON_HOME])
@@ -2273,7 +2334,7 @@ def home(issues: list[str]) -> str:
     side = ""   # no sidebar: the search is in the header (2026-10-19), the interests were dropped (2026-10-18)
     return page(brand.SITE_NAME,
                 masthead(0) + lead_html(feature, picks, latest, ISSUES_DIR, "figures") + shell("".join(main), side)
-                + about_html(issues, lib) + f'<div class="wrap">{mail_html()}</div>'
+                + about_html(issues, lib)
                 + colophon(f'<p>{esc(pmcoa.CREDIT)}</p>' if load_issue(latest, ISSUES_DIR)[0].get("source") == pmcoa.SOURCE else ""),
                 depth=0, viewer=True)
 
@@ -2335,7 +2396,7 @@ def part_page(key: str, issues: list[str]) -> str:
                       f'<ol class="cards {CARD_SIZE[key]}">{cards}</ol>')
     main = (f'<div class="wrap list-page"><div class="ix-h"><h1 class="label">{title}</h1>'
             f'<span class="ixm"><b>{n_articles(total)}</b></span></div><p class="lp-lead">{esc(note)}</p>{"".join(groups)}</div>')
-    return page(f"{title} · {brand.SITE_NAME}", masthead(0, current=key) + main + colophon(), depth=0,
+    return page(f"{title} · {brand.SITE_NAME}", masthead(0, current="browse") + main + colophon(), depth=0,
                 description=f"FoldFeed の {title}：{note}")
 
 
@@ -2578,6 +2639,8 @@ def build(preview_root: Path | None = None) -> int:
     (SITE_DIR / "proteins.html").write_text(proteins_page(issues), encoding="utf-8")
     (SITE_DIR / "later.html").write_text(later_page(), encoding="utf-8")
     (SITE_DIR / "issues.html").write_text(issues_page(issues), encoding="utf-8")
+    (SITE_DIR / "browse.html").write_text(browse_page(lib), encoding="utf-8")
+    (SITE_DIR / "newsletter.html").write_text(newsletter_page(), encoding="utf-8")
     for key, name in PART_PAGES.items():
         (SITE_DIR / name).write_text(part_page(key, issues), encoding="utf-8")
     (SITE_DIR / "search.json").write_text(json.dumps(search_index(lib), ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
