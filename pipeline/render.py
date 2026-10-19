@@ -128,9 +128,11 @@ PART_KEYS = ("new", "update", "impact")
 PART_NAMES = {"new": "New Structure", "update": "Structure Update", "impact": "Structure-Based Study"}
 
 
-def ordered(picks: list) -> list:
-    """The articles in page order: part by part, in rank order within each."""
-    return [p for items in sections(picks).values() for p in items]
+def ordered(picks: list, featured: str | None = None) -> list:
+    """The articles in page order: Today's Structure first when there is one (it is No. 01 everywhere: the front page,
+    the issue page, this README), then part by part, in rank order within each."""
+    rest = [p for items in sections(picks).values() for p in items]
+    return [p for p in rest if p[0]["pmcid"] == featured] + [p for p in rest if p[0]["pmcid"] != featured]
 
 
 def part_of(cand: dict, pick: dict) -> str:
@@ -667,7 +669,7 @@ def feature_md(feature: dict | None, picks: list[tuple[dict, dict]]) -> list[str
     """今日の一本 for the review README: which article, why, what the picker weighed."""
     if not feature:
         return []
-    by_id = {c["pmcid"]: (n, c, pk) for n, (c, pk) in enumerate(ordered(picks), 1)}
+    by_id = {c["pmcid"]: (n, c, pk) for n, (c, pk) in enumerate(ordered(picks, feature.get("pmcid")), 1)}
     if feature.get("pmcid") not in by_id:
         return []
     n, cand, pick = by_id[feature["pmcid"]]
@@ -704,14 +706,17 @@ def issue_md(meta: dict, picks: list[tuple[dict, dict]], infos: dict | None = No
             + "（New Structure：構造が初めて解かれたタンパク質。Structure Update：既知のタンパク質の新しい構造。"
               "Structure-Based Study：既存の構造を使った注目の研究）", ""] if picks else []
     out += feature_md(feature, picks)
+    featured = (feature or {}).get("pmcid")
     if picks:
-        out += contents_table(ordered(picks))
+        out += contents_table(ordered(picks, featured))
     out += ["> この号は AI が論文本文から作成した**レビュー用の下書き**です。"
             "数値・ID・リガンドは PDB / UniProt から取得し、AI の記述には本文からの引用を付けています。", "", "---", ""]
     n = 0
-    for k, items in parts.items():
+    groups = [("Picked up Today's Structure", [p for p in picks if p[0]["pmcid"] == featured])]
+    groups += [(PART_NAMES[k], [p for p in items if p[0]["pmcid"] != featured]) for k, items in parts.items()]
+    for title, items in groups:
         if items:
-            out += [f"# {PART_NAMES[k]}", ""]
+            out += [f"# {title}", ""]
         for cand, pick in items:
             n += 1
             out += article_md(cand, pick, n, (infos or {}).get(cand["pmcid"]))

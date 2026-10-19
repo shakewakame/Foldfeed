@@ -38,6 +38,8 @@ TAGLINE = "構造生物学者のための情報収集サポートサイト"
 LEAD = ("新着の査読済みオープンアクセス論文から、", "構造生物学の論文を、", "毎日ピックアップして紹介")
 LATEST = {"date": None}   # the newest issue with articles (the global navigation's "Latest Issue"), set by build()
 THUMBS_PER_ISSUE = 8   # structures shown for each issue in a list of issues
+CAROUSEL_PAGE = 6   # structures at a time on an issue's first screen (3 x 2); more turn over every CAROUSEL_SECONDS
+CAROUSEL_SECONDS = 8
 FACETS = {"cats": [], "topics": [], "methods": [], "parts": []}   # the header search's suggestions with counts, set by build()
 
 CHART_NEW, CHART_UPD, CHART_HOT = "#2F5DA8", "#1F8A70", "#C8442A"   # 藍 / 青緑 / 朱 for New Structure, Structure Update,
@@ -53,7 +55,7 @@ CSS = f"""
   --latin:Georgia,"Times New Roman","Noto Serif JP",serif;
   --sans:"Noto Sans JP","Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",Meiryo,sans-serif;
   --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
-  --col:240px; --side:320px; --pad:clamp(24px,6vw,96px); --head:156px;
+  --col:240px; --side:320px; --pad:clamp(24px,6vw,96px); --head:156px; --navh:52px;
   --sec:96px;   /* the space between sections, which replaces the rules between them */
   --rule:#B3BAC4;   /* the thin rule under a section heading */
 }}
@@ -296,11 +298,10 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
    they scroll up; on the first screen it always stays (HEAD_SCRIPT). Whatever sticks while scrolling (an article's
    margin, an issue's contents) sits under the header when it is there (--headnow). */
 @media (prefers-reduced-motion:no-preference) {{ html {{ scroll-behavior:smooth; }} .mast {{ transition:transform .25s ease; }} }}
-html {{ scroll-padding-top:16px; }}
-body {{ --headnow:var(--head); }}
-body.head-away {{ --headnow:0px; }}
-.mast {{ position:sticky; top:0; z-index:1000; background:var(--ground); }}
-.mast.away {{ transform:translateY(-100%); }}
+html {{ scroll-padding-top:calc(var(--navh) + 16px); }}
+body {{ --headnow:var(--navh); }}
+.mast {{ background:var(--ground); }}
+.gnav {{ position:sticky; top:0; z-index:1000; background:var(--ground); }}
 .vol {{ display:flex; align-items:center; gap:22px; }}
 .menu {{ position:relative; }}
 .menu summary {{ list-style:none; display:flex; align-items:center; gap:14px; cursor:pointer; user-select:none;
@@ -496,8 +497,7 @@ a, .find button, .v3d-bar button, .figtabs button {{ transition:color .2s, backg
 .rel .why {{ font-family:var(--mono); font-size:11.5px; color:var(--acc-ink); }}
 
 /* an issue page's first screen: the issue (one date, large), the figures of the day and the bar of its articles */
-.ihead {{ padding:40px 0 10px; }}
-.ih-top {{ display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-end; gap:20px 32px; }}
+.ihead {{ padding:32px 0 10px; }}
 /* the neighbouring issues as buttons: arrow, what it is, its date; the missing one (no newer issue yet) stays, greyed */
 .ih-nav, .issue-nav {{ display:flex; flex-wrap:wrap; gap:12px; }}
 .ib {{ display:inline-flex; align-items:baseline; gap:10px; padding:12px 18px; font-family:var(--mono); font-size:13px;
@@ -514,29 +514,53 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
 .issue-nav a.up:hover {{ background:var(--acc-ink); }}
 .ih-k {{ margin:0; font-family:var(--mono); font-size:14px; letter-spacing:.14em; text-transform:uppercase;
          color:var(--acc-ink); font-weight:700; }}
-.ih-date {{ margin:4px 0 0; font-family:var(--latin); font-size:92px; line-height:1; letter-spacing:-.035em; font-weight:700; color:var(--ink); }}
+.ih-date {{ margin:4px 0 0; font-family:var(--latin); font-size:clamp(56px, 5.2vw, 84px); line-height:1; letter-spacing:-.035em; font-weight:700; color:var(--ink); }}
 .ih-src {{ margin:12px 0 0; font-size:14.5px; color:var(--desc); }}
-.ih-fig {{ position:relative; margin-top:30px; padding-top:22px; border-top:1px solid var(--hair); }}
-.ih-kpis {{ grid-template-columns:repeat(5,minmax(0,1fr)); }}
-.kl i {{ display:inline-block; width:10px; height:10px; border-radius:2px; margin-right:7px; vertical-align:baseline; }}
+.kl i {{ display:inline-block; flex:none; width:10px; height:10px; border-radius:2px; margin-right:8px; }}
 .kl .sw-n {{ background:{CHART_NEW}; }}
 .kl .sw-u {{ background:{CHART_UPD}; }}
 .kl .sw-h {{ background:{CHART_HOT}; }}
-/* the day's structures in a row on an issue's first screen, each underlined in its part's colour */
-.ih-strip {{ display:grid; grid-template-columns:repeat(var(--n), minmax(0, 150px)); gap:10px; margin-top:26px; }}
-.ih-strip a {{ display:block; min-width:0; padding-bottom:6px; border-bottom:4px solid {CHART_NEW};
-               transition:opacity .6s ease calc(var(--i) * 45ms + 200ms), transform .6s cubic-bezier(.2,.8,.2,1) calc(var(--i) * 45ms + 200ms); }}
-.ih-strip a.u {{ border-color:{CHART_UPD}; }}
-.ih-strip a.h {{ border-color:{CHART_HOT}; }}
-.ih-strip img {{ display:block; width:100%; height:auto; transition:transform .4s cubic-bezier(.2,.8,.2,1); }}
-.ih-strip a:hover img, .ih-strip a:focus-visible img {{ transform:scale(1.1); }}
-.ih-strip a:focus-visible {{ outline:2px solid var(--acc); outline-offset:2px; }}
-.ih-strip .no {{ display:block; aspect-ratio:3/2; border:1px solid var(--hair); }}
-.anim .ihead:not(.in) .ih-strip a {{ opacity:0; transform:translateY(10px); }}
-.ih-fig .tip {{ position:absolute; z-index:5; pointer-events:none; padding:6px 10px; background:var(--ink); color:#fff;
-                font-family:var(--sans); font-size:12.5px; max-width:420px; }}
-.ih-fig .tip[hidden] {{ display:none; }}
-.ihead .lead-btns {{ margin-top:26px; }}
+/* an issue's first screen: how much (left), what (right) */
+.ih-grid {{ display:grid; grid-template-columns:minmax(0,34fr) minmax(0,66fr); gap:0 56px; align-items:start; }}
+.ih-big {{ display:flex; gap:40px; margin-top:28px; padding-top:22px; border-top:1px solid var(--hair); }}
+.ih-big .kv {{ font-size:60px; font-weight:700; }}
+.ih-big .kv small {{ font-size:18px; margin:0 3px; }}
+.ih-big .kl {{ font-size:14px; }}
+.ih-parts {{ display:flex; flex-direction:column; gap:2px; margin:18px 0 0; max-width:300px; }}
+.ih-parts a {{ display:flex; align-items:center; padding:3px 0; color:var(--ink2); text-decoration:none; }}
+.ih-parts a:hover {{ color:var(--acc-ink); }}
+.ih-parts b {{ margin-left:auto; padding-left:16px; font-family:var(--mono); color:var(--ink); }}
+.ih-left .ih-nav {{ margin-top:26px; }}
+.ih-left .ib {{ padding:9px 14px; font-size:12px; }}
+.ihc-head {{ display:flex; align-items:center; gap:18px; padding-bottom:10px; margin-bottom:16px; border-bottom:1px solid var(--rule); }}
+.ihc-t {{ margin:0; font-family:var(--latin); font-size:22px; font-weight:700; color:var(--ink); }}
+.ihc-ctl {{ display:none; align-items:center; gap:10px; font-family:var(--mono); font-size:13px; color:var(--ink2); }}
+.ihc.paged .ihc-ctl {{ display:flex; }}
+.ihc-ctl button {{ width:34px; height:30px; font:inherit; color:var(--ink); background:transparent; border:1px solid var(--ink);
+                   border-radius:0; cursor:pointer; transition:background-color .2s, color .2s; }}
+.ihc-ctl button:hover {{ background:var(--ink); color:#fff; }}
+.ihc-toc {{ margin-left:auto; display:inline-flex; align-items:center; gap:10px; padding:8px 14px; background:var(--ink); color:#fff;
+            font-family:var(--mono); font-size:12.5px; letter-spacing:.06em; text-decoration:none; transition:background-color .25s; }}
+.ihc-toc:hover {{ background:var(--acc-ink); color:#fff; text-decoration:none; }}
+.ihc-grid {{ list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px 24px;
+             transition:opacity .22s ease; }}
+.ihc-grid.out {{ opacity:0; }}
+.ihc-grid > li[hidden] {{ display:none; }}
+.ihc-grid a {{ display:block; text-decoration:none; color:var(--ink); }}
+.ihc-grid .thumb.none {{ border:1px solid var(--hair); }}
+.ihc-grid img {{ display:block; }}
+.ihc-grid img, .ihc-grid .thumb.none {{ width:100%; height:auto; aspect-ratio:3/2; transition:transform .4s cubic-bezier(.2,.8,.2,1); }}
+.ihc-grid a:hover img {{ transform:scale(1.05); }}
+.ihc-grid .cno {{ font-size:24px; }}
+.ihc-grid .ctg {{ margin-top:6px; font-size:15.5px; }}
+.ihc-grid .ct {{ display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; min-height:2.8em; }}
+.ihc-grid a:hover .ct b {{ color:var(--acc-ink); }}
+.ihc-bar {{ display:none; height:2px; margin-top:14px; background:var(--hair); }}
+.ihc.paged:not(.manual) .ihc-bar {{ display:block; }}
+.ihc-bar i {{ display:block; height:100%; background:var(--ink); transform-origin:left; transform:scaleX(0); }}
+.ihc-bar.run i {{ animation:ihc-run {CAROUSEL_SECONDS}s linear forwards; }}
+.ihc.hold .ihc-bar i {{ animation-play-state:paused; }}
+@keyframes ihc-run {{ to {{ transform:scaleX(1); }} }}
 .lead-go b {{ margin-left:12px; font-weight:700; }}
 .toc-sub {{ display:flex; flex-wrap:wrap; gap:12px; align-items:baseline; margin:22px 0 2px; font-family:var(--mono); font-size:13px;
             letter-spacing:.1em; text-transform:uppercase; color:var(--ink2); }}
@@ -569,12 +593,15 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
 
 /* the global navigation: one row of the main places under the header's double rule, small capitals; the current page
    in vermilion. A phone has the same places in the MENU, and only there is the MENU */
-.gnav-in {{ display:flex; gap:34px; padding:11px 0 10px; border-bottom:1px solid var(--hair); overflow-x:auto; white-space:nowrap;
-            scrollbar-width:none; }}
-.gnav-in::-webkit-scrollbar {{ display:none; }}
-.gnav a {{ font-family:var(--mono); font-size:12.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink2); text-decoration:none; }}
-.gnav a:hover {{ color:var(--acc-ink); text-decoration:none; }}
-.gnav a[aria-current] {{ color:var(--acc-ink); font-weight:700; }}
+.gnav-in {{ display:flex; align-items:center; gap:28px; padding:8px 0; border-bottom:1px solid var(--hair); }}
+.gnav-links {{ flex:none; display:flex; gap:34px; min-width:0; overflow-x:auto; white-space:nowrap; scrollbar-width:none; }}
+.gnav-links::-webkit-scrollbar {{ display:none; }}
+.gnav .hs {{ flex:0 1 340px; max-width:340px; }}
+.gnav .hs-q {{ padding:6px 12px; font-size:13px; line-height:1.5; }}
+.gnav .hs-pop {{ top:calc(100% + 9px); }}   /* hangs from the navigation's rule */
+.gnav-links a {{ font-family:var(--mono); font-size:12.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink2); text-decoration:none; }}
+.gnav-links a:hover {{ color:var(--acc-ink); text-decoration:none; }}
+.gnav-links a[aria-current] {{ color:var(--acc-ink); font-weight:700; }}
 @media (min-width:861px) {{ .menu {{ display:none; }} }}
 
 /* cards: the structure leads, then number and target, headline, the one-line supplement. No frame, no shadow: the
@@ -585,15 +612,25 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
 .cards.sm {{ grid-template-columns:repeat(4, minmax(0,1fr)); gap:44px 32px; }}
 .card {{ min-width:0; }}
 .card .thumb.none {{ border:1px solid var(--hair); }}
-.ck {{ display:flex; align-items:baseline; gap:10px; margin:12px 0 0; font-family:var(--mono); font-size:12px; line-height:1.6;
-       color:var(--ink2); }}
-.ck .cn {{ flex:none; color:var(--acc-ink); font-weight:700; }}
-.ck .ct {{ min-width:0; overflow-wrap:anywhere; }}
-.ck .later.sm {{ margin:0 0 0 auto; flex:none; align-self:center; }}
-.cmk {{ margin:6px 0 0; font-family:var(--mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--acc-ink);
-        font-weight:700; }}
-.card h3 {{ margin:6px 0 0; font-family:var(--sans); font-size:16.5px; line-height:1.55; font-weight:700; color:var(--ink); text-wrap:pretty; }}
-.card.md h3 {{ font-size:19.5px; }}
+.cfig {{ position:relative; }}
+/* the article's number, large, at the figure's top left (the same face as the number beside each article) */
+.cno {{ position:absolute; left:0; top:0; padding:0 10px 4px 0; background:var(--ground); font-family:var(--latin);
+        font-size:26px; line-height:1; letter-spacing:-0.01em; color:var(--acc-ink); pointer-events:none; }}
+.card.md .cno {{ font-size:32px; }}
+.pickup .cno {{ font-size:44px; }}
+/* the target, the line a reader scans for: the protein's name bold, the organism lighter */
+.ctg {{ display:flex; align-items:flex-start; gap:12px; margin:12px 0 0; font-family:var(--latin); font-size:17px; line-height:1.4;
+        color:var(--ink); }}
+.ctg .ct {{ min-width:0; overflow-wrap:anywhere; }}
+.ctg b {{ font-weight:700; }}
+.ctg .org {{ color:var(--ink2); }}
+.card.md .ctg {{ font-size:19.5px; }}
+.ctg .later.sm {{ margin:2px 0 0 auto; flex:none; }}
+.ck {{ display:flex; align-items:center; gap:10px; margin:0; font-family:var(--mono); font-size:13px; line-height:1.6;
+       color:var(--ink2); letter-spacing:.04em; }}
+.ck .later.sm {{ margin:0 0 0 auto; flex:none; }}
+.card h3 {{ margin:8px 0 0; font-family:var(--sans); font-size:16px; line-height:1.55; font-weight:700; color:var(--ink); text-wrap:pretty; }}
+.card.md h3 {{ font-size:18px; }}
 .cs {{ margin:6px 0 0; font-family:var(--sans); font-size:13.5px; line-height:1.75; color:var(--desc); }}
 .card.md .cs {{ font-size:14.5px; }}
 .cards + .ix-h {{ margin-top:var(--sec); }}
@@ -601,8 +638,7 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
 .pickup {{ display:grid; grid-template-columns:minmax(0,7fr) minmax(0,5fr); gap:0 52px; align-items:center; }}
 .pk-fig {{ display:block; overflow:hidden; }}
 .pk-fig img {{ display:block; width:100%; height:auto; transition:transform .5s cubic-bezier(.2,.8,.2,1); }}
-.pk-t .ck {{ margin-top:0; font-size:13px; }}
-.pk-tg {{ margin:10px 0 0; font-family:var(--sans); font-size:20px; font-weight:500; line-height:1.45; color:var(--ink); }}
+.pickup .pk-tg {{ margin:12px 0 0; font-size:24px; }}
 .pk-h {{ margin:12px 0 0; font-size:32px; line-height:1.42; font-weight:700; color:var(--ink); text-wrap:balance; }}
 .pk-s {{ margin:12px 0 0; font-size:17px; line-height:1.8; color:var(--desc); }}
 .pickup .reads {{ margin-top:26px; gap:12px; }}
@@ -737,12 +773,19 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
   .side {{ padding-left:26px; }}
   .margin .no {{ font-size:64px; }}
 }}
-@media (min-width:861px) and (max-width:1300px) {{
-  .mast .hs ~ .vol, .mast .brand {{ flex:none; }}
-  .mast-row:has(.hs) .tag {{ display:none; }}
+@media (min-width:861px) and (max-width:1000px) {{
+  .gnav-links {{ gap:14px; }}
+  .gnav-links a {{ font-size:11px; letter-spacing:.03em; }}
 }}
 @media (max-width:1120px) {{
-  .gnav-in {{ gap:22px; }}
+  .gnav-in {{ gap:20px; }}
+  .gnav-links {{ gap:18px; }}
+  .gnav-links a {{ font-size:11.5px; letter-spacing:.06em; }}
+  .gnav .hs {{ flex:1 1 220px; min-width:120px; }}
+  /* an issue's first screen in one column: how much, then what */
+  .ih-grid {{ grid-template-columns:minmax(0,1fr); gap:30px; }}
+  .ih-parts {{ flex-direction:row; flex-wrap:wrap; gap:4px 22px; max-width:none; }}
+  .ih-parts b {{ padding-left:8px; }}
   .cards.md {{ grid-template-columns:repeat(2, minmax(0,1fr)); }}
   .cards.sm {{ grid-template-columns:repeat(3, minmax(0,1fr)); }}
   .pickup {{ grid-template-columns:minmax(0,1fr); gap:24px; }}
@@ -790,24 +833,36 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
   .tag {{ padding-left:0; border-left:0; flex-basis:100%; font-size:13px; }}
   .mast-row {{ flex-wrap:wrap; align-items:flex-start; }}
   .vol {{ text-align:left; gap:14px; }}
-  /* the search opens under the wordmark from its button; Read Later is in the MENU */
-  .js .hs {{ display:none; }}
-  .hs, .js .mast.hs-on .hs {{ display:block; flex:1 1 100%; max-width:none; margin:12px 0 0; }}
+  /* a phone: the header stays at the top and goes while scrolling down; the navigation's places are in the MENU, and
+     its search opens from the header's button as a sheet under the header. Read Later is in the MENU */
+  html {{ scroll-padding-top:16px; }}
+  body {{ --headnow:var(--head); }}
+  body.head-away {{ --headnow:0px; }}
+  .mast {{ position:sticky; top:0; z-index:1000; }}
+  .mast.away {{ transform:translateY(-100%); }}
+  .js .gnav {{ display:none; }}
+  .gnav {{ position:static; }}
+  .gnav-in {{ flex-wrap:wrap; gap:10px; }}
+  .gnav .hs {{ flex:1 1 100%; max-width:none; }}
+  .gnav .hs-q {{ padding:11px 14px; font-size:16px; }}
+  .js .mast.hs-on + .gnav {{ display:block; position:fixed; left:0; right:0; top:var(--headnow); z-index:999;
+                             max-height:calc(100vh - var(--headnow)); overflow-y:auto; border-bottom:1px solid var(--ink); }}
+  .js .mast.hs-on + .gnav .gnav-links {{ display:none; }}
   .js .hs-open {{ display:inline-block; }}
-  .hs-pop {{ position:static; width:auto; max-height:calc(100vh - 200px); padding:16px; }}   /* opens right under the box */
+  .hs-pop {{ position:static; width:auto; padding:16px; }}   /* opens right under the box */
   .vol .rl {{ display:none; }}
-  .gnav {{ display:none; }}
   .cards.md {{ grid-template-columns:minmax(0,1fr); gap:40px; }}
   .cards.sm {{ grid-template-columns:repeat(2, minmax(0,1fr)); gap:30px 16px; }}
   .card h3 {{ font-size:15px; }}
   .card.md h3 {{ font-size:18px; }}
   .card.sm .cs {{ font-size:12.5px; line-height:1.7; }}
-  /* a small card on a phone: the number and Read Later on one line, the target under them */
-  .card.sm .ck {{ flex-wrap:wrap; gap:4px 8px; font-size:11px; }}
-  .card.sm .ck .ct {{ order:3; flex-basis:100%; }}
-  .card.sm .ck .later.sm {{ order:2; padding:2px 8px; font-size:11.5px; }}
+  /* a small card on a phone: Read Later over the target */
+  .card.sm .ctg {{ flex-direction:column-reverse; gap:6px; font-size:15px; }}
+  .card.sm .ctg .later.sm {{ margin:0; padding:2px 8px; font-size:11.5px; }}
+  .card.sm .cno {{ font-size:22px; }}
+  .card.md .ctg {{ font-size:18px; }}
   .pk-h {{ font-size:24px; }}
-  .pk-tg {{ font-size:16.5px; }}
+  .pickup .pk-tg {{ font-size:19px; }}
   .pk-s {{ font-size:15.5px; }}
   .iss {{ grid-template-columns:minmax(0,1fr); gap:10px; }}
   .iss-n {{ flex-direction:row; flex-wrap:wrap; gap:4px 18px; }}
@@ -819,10 +874,15 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
   .lp-h {{ font-size:16px; }}
   .art {{ grid-template-columns:minmax(0,1fr); gap:14px; }}
   .ih-date {{ font-size:56px; }}
-  .ih-kpis {{ grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }}
-  .ih-strip {{ grid-template-columns:repeat(5, minmax(0,1fr)); gap:10px 8px; }}
-  .ih-top {{ display:block; }}
-  .ih-nav {{ margin-top:22px; }}
+  .ih-big .kv {{ font-size:48px; }}
+  .ihc-grid {{ grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px 16px; }}
+  .ih-left .ih-nav {{ display:none; }}   /* the same buttons are at the foot of the page */
+  .ih-big {{ margin-top:22px; padding-top:18px; }}
+  .ihc-head {{ flex-wrap:wrap; gap:10px 14px; }}
+  .ihc-t {{ font-size:19px; }}
+  .ihc-toc {{ padding:6px 10px; font-size:12px; }}
+  .ihc-ctl {{ order:3; flex-basis:100%; }}
+  .ihc-grid .ctg {{ font-size:14px; }}
   .ih-nav, .issue-nav {{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }}
   /* two lines: arrow and what it is, then the date */
   .ib {{ display:flex; flex-wrap:wrap; align-items:baseline; gap:4px 8px; padding:11px 12px; font-size:11.5px; letter-spacing:.02em; }}
@@ -967,9 +1027,11 @@ MENU_SCRIPT = r"""
     var t = id && document.getElementById(id);
     if (!t) return;
     e.preventDefault();
-    var y = t.getBoundingClientRect().top + window.scrollY;
+    var y = 0;   // where it is laid out (offsetTop): a block still rising into place (.rv) is drawn lower than that
+    for (var el = t; el; el = el.offsetParent) y += el.offsetTop;
     var down = y > window.scrollY;
-    var top = down ? y - 16 : y - head.offsetHeight - 16;
+    var nav = document.querySelector('.gnav'), pinned = nav && getComputedStyle(nav).position === 'sticky' ? nav.offsetHeight : 0;
+    var top = pinned ? y - pinned - 16 : down ? y - 16 : y - head.offsetHeight - 16;   // a wide screen: under the navigation
     if (down) { jumped = true; away(true); }
     var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     window.scrollTo({ top: Math.max(0, top), behavior: calm ? 'auto' : 'smooth' });
@@ -1046,7 +1108,7 @@ MENU_SCRIPT = r"""
 (function () {
   /* the papers-per-issue chart and an issue's bar of articles: one tooltip, on hover and on keyboard focus (the values
      are also in the page: the table, the article list) */
-  [].forEach.call(document.querySelectorAll('.ppi, .ih-fig'), function (fig) {
+  [].forEach.call(document.querySelectorAll('.ppi'), function (fig) {
     var tip = fig.querySelector('.tip');
     if (!tip) return;
     function show(c) {
@@ -1155,7 +1217,11 @@ SEARCH_SCRIPT = r"""
     var on = !mast.classList.contains('hs-on');
     mast.classList.toggle('hs-on', on);
     btn.setAttribute('aria-expanded', on ? 'true' : 'false');
-    if (on) q.focus(); else open(false);
+    if (on) {
+      var sheet = f.closest('.gnav');
+      if (sheet) sheet.style.top = Math.max(0, mast.getBoundingClientRect().bottom) + 'px';
+      q.focus();
+    } else open(false);
   });
 })();
 """
@@ -1209,16 +1275,19 @@ def nav_links(up: str, current: str | None = None) -> list[tuple[str, str, bool]
     return [(label, href[k], k == current) for k, label in NAV]
 
 
-def global_nav(up: str, current: str | None = None) -> str:
+def global_nav(up: str, current: str | None = None, find: str = "") -> str:
     """The global navigation: one row of the site's main places under the header's double rule (small capitals, the
-    current page in vermilion). On a phone it is in the MENU instead."""
+    current page in vermilion) with the search at its right end. While the page scrolls this row stays at the top of
+    the window and the header above it goes. On a phone the places are in the MENU and the search opens from its
+    button (the row is not shown)."""
     links = "".join(f'<a href="{h}"{" aria-current=page" if cur else ""}>{esc(t)}</a>' for t, h, cur in nav_links(up, current))
-    return f'<nav class="gnav" aria-label="サイトの主な場所"><div class="wrap"><div class="gnav-in">{links}</div></div></nav>'
+    return (f'<nav class="gnav" aria-label="サイトの主な場所"><div class="wrap"><div class="gnav-in">'
+            f'<div class="gnav-links">{links}</div>{find}</div></div></nav>')
 
 
 def masthead(depth: int, right: str = "", search: bool = True, current: str | None = None) -> str:
-    """The wordmark row inside the page width, the search (search_form) and MENU (a phone only) on the right; the double
-    rule under it spans the whole window, the global navigation (global_nav) runs under the rule. The whole header stays at the top of the window while the page scrolls. On a phone the
+    """The wordmark row inside the page width, Read Later and MENU (a phone only) on the right; the double rule under it
+    spans the whole window; under the rule the global navigation with the search (global_nav, search_form). The whole header stays at the top of the window while the page scrolls. On a phone the
     search opens from a button under the wordmark row. "Read Later N" shows once the reader has saved an article."""
     up = "../" * depth
     find = search_form(up) if search else ""
@@ -1227,9 +1296,9 @@ def masthead(depth: int, right: str = "", search: bool = True, current: str | No
     return (f'<header class="mast"><div class="wrap"><div class="mast-row">'
             f'<div class="brand"><a class="word" href="{up}index.html"><img src="{up}assets/logo-mark.svg" alt="">'
             f'<span class="name">{esc(brand.SITE_NAME)}</span></a>'
-            f'<p class="tag">{esc(TAGLINE)}</p></div>{find}'
-            f'<div class="vol">{right}{later}{open_btn}{menu_html(up)}</div></div></div><div class="rules"></div>'
-            f'{global_nav(up, current)}</header>')
+            f'<p class="tag">{esc(TAGLINE)}</p></div>'
+            f'<div class="vol">{right}{later}{open_btn}{menu_html(up)}</div></div></div><div class="rules"></div></header>'
+            f'{global_nav(up, current, find)}')
 
 
 def later_button(pmcid: str, small: bool = False) -> str:
@@ -1483,7 +1552,8 @@ def article_html(cand: dict, pick: dict, date: str, n: int, root: Path, fig_base
 # ---------- pages ----------
 
 def load_issue(date: str, root: Path = ISSUES_DIR) -> tuple[dict, list[tuple[dict, dict]], dict[str, str]]:
-    """Meta, the articles in page order (new structures, then 注目の構造), and each 注目の構造's type."""
+    """Meta, the articles in page order (Today's Structure first, then part by part; render.ordered), and each
+    Structure-Based Study's type. An article's number on every page is its place in this order."""
     d = root / date
     meta = read_json(d / "candidates.json")
     cands = {c["pmcid"]: c for c in meta["candidates"]}
@@ -1491,7 +1561,9 @@ def load_issue(date: str, root: Path = ISSUES_DIR) -> tuple[dict, list[tuple[dic
              if pk.get("pmcid") in cands]
     picks.sort(key=lambda cp: cp[1].get("rank", 99))
     types = {s["pmcid"]: s.get("type") for s in render.load_impact(d).get("scored", [])}
-    return meta, render.ordered(picks), types
+    fpath = d / "feature.json"
+    featured = read_json(fpath).get("pmcid") if fpath.exists() and len(picks) >= FEATURE_MIN else None
+    return meta, render.ordered(picks, featured), types
 
 
 PARTS = {
@@ -1500,6 +1572,22 @@ PARTS = {
     "impact": ("Structure-Based Study", "既存の構造を使って仕組みの解明や創薬に迫った注目の研究。"),
 }
 PART_CLS = {"new": "n", "update": "u", "impact": "h"}   # the colour of a part in the charts, the bar and the swatches
+
+
+PICK_TITLE = "Picked up Today’s Structure"
+
+
+def page_groups(picks: list, featured: str | None) -> list[tuple[str, list]]:
+    """The articles in their groups, in page order: the pick ("pick", No. 01) on its own, then each part without it.
+    Empty groups are left out."""
+    groups = [("pick", [p for p in picks if p[0]["pmcid"] == featured])]
+    groups += [(k, [p for p in items if p[0]["pmcid"] != featured]) for k, items in render.sections(picks).items()]
+    return [(k, v) for k, v in groups if v]
+
+
+def numbers(picks: list) -> dict[str, int]:
+    """Each article's number (its place in the page order load_issue gives)."""
+    return {c["pmcid"]: n for n, (c, _) in enumerate(picks, 1)}
 
 
 def load_feature(date: str, root: Path, picks: list) -> dict | None:
@@ -1517,11 +1605,15 @@ def thumb_html(cand: dict, pick: dict, date: str, root: Path, fig_base: str, hre
     if (root / date / "figures" / f"{pm}-thumb.svg").exists():
         return (f'<a class="thumb" href="{href}"><img src="{fig_base}/{date}/{esc(pm)}-thumb.svg" width="600" height="400" '
                 f'alt="構造図：{esc(pick["target_label"])}" loading="lazy"></a>')
+    return f'<a class="thumb none" href="{href}">{no_figure(cand)}</a>'
+
+
+def no_figure(cand: dict) -> str:
+    """Why an article has no structure figure, in the place of its figure."""
     own = cand["own_structures"]
-    why = ("PDB 公開待ち" if own and not any(x["status"] == "released" for x in own)
-           else "PDB ID が本文にない" if cand["kind"] == "new_structure_ids_unlisted"
-           else "EMDB マップのみ" if cand["kind"] == "new_map_only" else "構造図なし")
-    return f'<a class="thumb none" href="{href}">{why}</a>'
+    return ("PDB 公開待ち" if own and not any(x["status"] == "released" for x in own)
+            else "PDB ID が本文にない" if cand["kind"] == "new_structure_ids_unlisted"
+            else "EMDB マップのみ" if cand["kind"] == "new_map_only" else "構造図なし")
 
 
 def facts(cand: dict, pick: dict) -> dict:
@@ -1551,15 +1643,25 @@ def facts(cand: dict, pick: dict) -> dict:
 CARD_SIZE = {"new": "md", "update": "sm", "impact": "sm"}   # New Structure a size up from the other two parts
 
 
-def card_html(cand: dict, pick: dict, n: int, date: str, root: Path, fig_base: str, href: str, size: str = "sm",
-              label: str = "") -> str:
-    """A card of an index: the structure (the figure leads), the article's number and target, the headline and its
-    one-line supplement, and Read Later. Nothing else: the facts and the four lines are in the article."""
+TRAILING_NOTE = re.compile(r"^(.*\S)\s*(\([^()]*\))$")
+
+
+def target_html(pick: dict) -> str:
+    """The target's English name, its name in bold and a closing parenthesis (the organism, mostly) in a lighter tone,
+    so the protein's name is what the eye catches."""
     target = pick.get("target_en") or pick["target_label"]
-    mark = f'<p class="cmk">{label}</p>' if label else ""
-    return (f'<li class="card {size}">{thumb_html(cand, pick, date, root, fig_base, href)}'
-            f'<p class="ck"><span class="cn">{pad(n)}</span><span class="ct">{esc(target)}</span>{later_button(cand["pmcid"], True)}</p>'
-            f'{mark}<h3><a href="{href}">{esc(pick["headline"])}</a></h3>'
+    m = TRAILING_NOTE.match(target)
+    return f'<b>{esc(m.group(1))}</b> <span class="org">{esc(m.group(2))}</span>' if m else f"<b>{esc(target)}</b>"
+
+
+def card_html(cand: dict, pick: dict, n: int, date: str, root: Path, fig_base: str, href: str, size: str = "sm") -> str:
+    """A card of an index: the structure (the figure leads) with the article's number large at its top left, the
+    target (it is often the name that tells a reader "this is mine"), the headline and its one-line supplement, and
+    Read Later. Nothing else: the facts and the four lines are in the article."""
+    return (f'<li class="card {size}"><div class="cfig">{thumb_html(cand, pick, date, root, fig_base, href)}'
+            f'<span class="cno" aria-hidden="true">{pad(n)}</span></div>'
+            f'<p class="ctg"><span class="ct">{target_html(pick)}</span>{later_button(cand["pmcid"], True)}</p>'
+            f'<h3><a href="{href}">{esc(pick["headline"])}</a></h3>'
             f'<p class="cs">{esc(pick.get("subhead") or "")}</p></li>')
 
 
@@ -1568,29 +1670,29 @@ HOME_PARTS = {"new": "Today’s New Structure", "update": "Today’s Structure U
 
 def contents_html(picks: list, date: str, root: Path, fig_base: str, href_base: str = "",
                   featured: str | None = None, mark: bool = False) -> str:
-    """The issue as cards, part by part (New Structure a size larger), so what was reported shows at a glance.
+    """The issue as cards, group by group (New Structure a size larger), so what was reported shows at a glance.
 
-    On the front page the article shown as Picked up Today's Structure is not repeated here (it keeps its number, so
-    the numbers may skip one); on an issue page (mark=True) it stays among the cards, marked.
+    On an issue page (mark=True) the pick has its own group first; on the front page it is the large card above and
+    not repeated here. Either way the numbers run 01, 02, ... without a gap.
     """
-    number = {c["pmcid"]: n for n, (c, _) in enumerate(render.ordered(picks), 1)}
+    number = numbers(picks)
     out = ""
-    for key, items in render.sections(picks).items():
-        cards = "".join(card_html(c, pk, number[c["pmcid"]], date, root, fig_base, f'{href_base}#a{number[c["pmcid"]]}',
-                                  CARD_SIZE[key], "Today’s Structure" if mark and c["pmcid"] == featured else "")
-                        for c, pk in items if mark or c["pmcid"] != featured)
-        if not cards:
+    for key, items in page_groups(picks, featured):
+        if key == "pick" and not mark:
             continue
-        if mark:   # an issue page: the contents, under one heading (the articles follow under each part's heading)
-            out += (f'<h3 class="toc-sub">{PARTS[key][0]}<span>{len(items)}</span></h3>'
-                    f'<ol class="cards {CARD_SIZE[key]}">{cards}</ol>')
+        size = "md" if key == "pick" else CARD_SIZE[key]
+        cards = "".join(card_html(c, pk, number[c["pmcid"]], date, root, fig_base, f'{href_base}#a{number[c["pmcid"]]}', size)
+                        for c, pk in items)
+        if mark:   # an issue page: the contents, under one heading (the articles follow under each group's heading)
+            title = PICK_TITLE if key == "pick" else PARTS[key][0]
+            out += f'<h3 class="toc-sub">{title}<span>{len(items)}</span></h3><ol class="cards {size}">{cards}</ol>'
         else:   # the front page: the way to the whole issue sits beside the first heading
             y, m, d, _ = date_parts(date)
             go = (f'<a class="ix-all" href="{href_base}">{y}.{m:02d}.{d:02d}のすべての解説記事一覧'
                   f'<span class="arr" aria-hidden="true">→</span></a>') if not out else ""
             out += (f'<div class="ix-h{" hot" if out else ""}" id="{key}-list"><h2 class="label">{HOME_PARTS[key]}</h2>'
                     f'<span class="ixm"><b>{n_articles(len(items))}</b></span>{go}</div>'
-                    f'<ol class="cards {CARD_SIZE[key]}">{cards}</ol>')
+                    f'<ol class="cards {size}">{cards}</ol>')
     if mark and out:
         out = f'<div class="ix-h"><h2 class="label">Contents</h2><span class="ixm"><b>{n_articles(len(picks))}</b></span></div>' + out
     return out
@@ -1619,10 +1721,8 @@ def lead_html(feature: dict | None, picks: list, date: str, root: Path, fig_base
     go = (('<a class="lead-go" href="#today"><span class="tri" aria-hidden="true">▽</span>'
            'Picked up: Today’s Structure</a>') if feature_of(feature, picks) else "")
     picked = (feature or {}).get("pmcid") if feature_of(feature, picks) else None
-    # a part whose only article is the pick has no cards of its own: its button goes to the pick
-    more = "".join(f'<a class="lead-go alt" href="#{"today" if all(c["pmcid"] == picked for c, _ in items) else key + "-list"}">'
-                   f'<span class="tri" aria-hidden="true">▽</span>{PARTS[key][0]}<b>{len(items)}</b></a>'
-                   for key, items in render.sections(picks).items() if items)
+    more = "".join(f'<a class="lead-go alt" href="#{key}-list"><span class="tri" aria-hidden="true">▽</span>{PARTS[key][0]}'
+                   f'<b>{len(items)}</b></a>' for key, items in page_groups(picks, picked) if key != "pick")
     go = (f'<div class="lead-btns">{go}{more}<a class="lead-go alt" href="#about"><span class="tri" aria-hidden="true">▽</span>'
           f'About FoldFeed</a></div>')   # in the order of the page
     hit = feature_of(feature, picks)
@@ -1683,18 +1783,18 @@ def today_html(feature: dict | None, picks: list, date: str, root: Path, fig_bas
                f'alt="{alt}"></picture></a>')
     else:
         fig = thumb_html(cand, pk, date, root, fig_base, href)
+    fig = f'<div class="cfig">{fig}<span class="cno" aria-hidden="true">{pad(n)}</span></div>'
     return (f'<section class="today" id="today"><div class="ix-h"><h2 class="label">Picked up Today’s Structure</h2></div>'
             f'<article class="pickup">{fig}<div class="pk-t">'
-            f'<p class="ck"><span class="cn">{pad(n)}</span><span class="ct">{PARTS[render.part_of(cand, pk)][0]}</span>'
-            f'{later_button(pm, True)}</p>'
-            f'<p class="pk-tg">{esc(pk.get("target_en") or pk["target_label"])}</p>'
+            f'<p class="ck"><span class="ct">{PARTS[render.part_of(cand, pk)][0]}</span>{later_button(pm, True)}</p>'
+            f'<p class="pk-tg ctg">{target_html(pk)}</p>'
             f'<h3 class="pk-h"><a href="{href}">{esc(pk["headline"])}</a></h3>'
             f'<p class="pk-s">{esc(pk.get("subhead") or "")}</p>{read_links(cand, href)}</div></article></section>')
 
 
 def part_html(key: str, count: int, date: str) -> str:
     """An issue page's 'New Structure 2026.10.18' heading over its articles, with how many on the right."""
-    title, note = PARTS[key]
+    title = PICK_TITLE if key == "pick" else PARTS[key][0]
     y, m, d, _ = date_parts(date)
     return (f'<section class="part" id="{key}"><h2>{title}<span class="hd">{y}.{m:02d}.{d:02d}</span>'
             f'<span class="ixm"><b>{n_articles(count)}</b></span></h2></section>')
@@ -1703,13 +1803,12 @@ def part_html(key: str, count: int, date: str) -> str:
 def toc_side(picks: list, featured: str | None) -> str:
     """The sidebar of an issue page (beside the articles): the way back to the top of the issue, then every article,
     grouped, each a link to its anchor."""
-    number = {c["pmcid"]: n for n, (c, _) in enumerate(render.ordered(picks), 1)}
+    number = numbers(picks)
     out = ""
-    for key, items in render.sections(picks).items():
-        if items:
-            links = "".join(f'<a href="#a{number[c["pmcid"]]}"><b>{pad(number[c["pmcid"]])}</b>'
-                            f'<span>{esc(pk["headline"])}</span></a>' for c, pk in items)
-            out += f'<h3>{PARTS[key][0]}</h3>{links}'
+    for key, items in page_groups(picks, featured):
+        links = "".join(f'<a href="#a{number[c["pmcid"]]}"><b>{pad(number[c["pmcid"]])}</b>'
+                        f'<span>{esc(pk["headline"])}</span></a>' for c, pk in items)
+        out += f'<h3>{PICK_TITLE if key == "pick" else PARTS[key][0]}</h3>{links}'
     up = '<a class="sd-up" href="#issue-top"><span aria-hidden="true">↑</span> Top of This Issue</a>'
     return sd("In This Issue", f'{up}<div class="sd-toc">{out}</div>', "side-only-issue")
 
@@ -1754,50 +1853,107 @@ def issue_nav(prev_date: str | None, next_date: str | None, cls: str, top: bool 
 
 def issue_head(date: str, number: int | None, picks: list, prev_date: str | None, next_date: str | None,
                index_date: str | None = None, index_from: str | None = None, nature: bool = False,
-               root: Path = ISSUES_DIR, fig_base: str = "../figures") -> str:
-    """The first screen of an issue page: which issue it is (the date, once, large), how many articles, how many of them
-    New Structure, Structure Update and Structure-Based Study, and about how long reading them all takes, as figures that
-    count up; then the day's structures in a row, in the order of the issue, each underlined in its part's colour and a
-    link to its article (so what was reported is seen on the first screen), with buttons down to the contents and the
-    parts, and the neighbouring issues."""
+               root: Path = ISSUES_DIR, fig_base: str = "../figures", featured: str | None = None) -> str:
+    """The first screen of an issue page, in the order the owner asked for (2026-10-19). On the left, which issue it is
+    (the date, large), then how much there is to read, large (articles, minutes), then the parts, small (links down to
+    them), and the neighbouring issues. On the right the day's structures, each its figure, number and target and a link
+    to its article, six at a time: more turn over every CAROUSEL_SECONDS (CAROUSEL_SCRIPT), with the page shown (1 / 3),
+    buttons back and on, a pause while the pointer or the keyboard is on them, no more turning once the reader has
+    turned a page, and none for a reader who asked for less motion. Without JavaScript all of them are shown."""
     y, m, d, _ = date_parts(date)
-    parts = render.sections(picks)
     mins = [reading_minutes(pk) for _, pk in picks]
     total = max(1, round(sum(mins))) if picks else 0
     kicker = (f"Issue No. {number}" if number else "Preview") + f" · {WEEKDAY_EN[datetime.date(y, m, d).weekday()]}"
     # (the papers not written up are listed at the foot of the page, under Not Covered, not counted here)
     src = (f'<p class="ih-src">{index_span(index_date, index_from)}に論文データベースへ登録された論文'
            + ('と、同じ日に Nature 系の雑誌で出版された論文' if nature else '') + 'から</p>') if index_date else ""
-    tiles = [("Articles", len(picks), "")] + [(PARTS[k][0], len(v), PART_CLS[k]) for k, v in parts.items()]
-    kpis = "".join(f'<div class="kpi"><span class="kl">{f"<i class=sw-{c}></i>" if c else ""}{k}</span>'
-                   f'<span class="kv" data-count="{v}">{v}</span></div>' for k, v, c in tiles)
-    kpis += (f'<div class="kpi"><span class="kl">Reading time</span><span class="kv"><small>約 </small>'
-             f'<span data-count="{total}">{total}</span><small> 分</small></span></div>') if picks else ""
-    def tile(n, c, pk, t):
+    big = (f'<div class="ih-big"><div class="kpi"><span class="kv" data-count="{len(picks)}">{len(picks)}</span>'
+           f'<span class="kl">Articles</span></div><div class="kpi"><span class="kv"><small>約</small><span data-count="{total}">'
+           f'{total}</span><small>分</small></span><span class="kl">Reading time</span></div></div>') if picks else ""
+    # the parts (kinds of article; the pick counts in its own), small; each a link to its articles
+    shown = {k for k, _ in page_groups(picks, featured)}
+    parts = "".join(f'<a href="#{k if k in shown else "pick"}"><i class="sw-{PART_CLS[k]}"></i>{PARTS[k][0]}<b>{len(v)}</b></a>'
+                    for k, v in render.sections(picks).items() if v)
+    parts = f'<p class="ih-parts kl">{parts}</p>' if parts else ""
+    nav = issue_nav(prev_date, next_date, "ih-nav") if prev_date or next_date else ""
+    left = f'<div class="ih-left"><p class="ih-k">{kicker}</p><h1 class="ih-date">{y}.{m:02d}.{d:02d}</h1>{src}{big}{parts}{nav}</div>'
+    if not picks:
+        return f'<header class="ihead" id="issue-top"><div class="ih-grid">{left}</div></header>'
+    cards = ""
+    for n, (c, pk) in enumerate(picks, 1):
         pm = c["pmcid"]
         img = (f'<img src="{fig_base}/{date}/{esc(pm)}-thumb.svg" width="600" height="400" alt="" loading="lazy">'
-               if (root / date / "figures" / f"{pm}-thumb.svg").exists() else '<span class="no"></span>')
-        return (f'<a class="{PART_CLS[render.part_of(c, pk)]}" href="#a{n}" style="--i:{n - 1}" '
-                f'data-tip="{pad(n)} · {esc(pk["headline"])} · 約\u00a0{max(1, round(t))}\u00a0分" aria-label="{pad(n)} {esc(pk["headline"])}">{img}</a>')
-    strip = (f'<div class="ih-strip" style="--n:{len(picks)}">'
-             f'{"".join(tile(n, c, pk, t) for n, ((c, pk), t) in enumerate(zip(picks, mins), 1))}</div>'
-             f'<div class="tip" hidden></div>') if picks else ""
-    btns = "".join(f'<a class="lead-go" href="#{key}"><span class="tri" aria-hidden="true">▽</span>{label}'
-                   + (f'<b>{n}</b>' if key != "contents" else "") + '</a>'
-                   for key, label, n in (("contents", "Contents", len(picks)),
-                                         *((k, PARTS[k][0], len(v)) for k, v in parts.items())) if n)
-    nav = issue_nav(prev_date, next_date, "ih-nav") if prev_date or next_date else ""
-    return (f'<header class="ihead" id="issue-top"><div class="ih-top"><div><p class="ih-k">{kicker}</p>'
-            f'<h1 class="ih-date">{y}.{m:02d}.{d:02d}</h1>{src}</div>{nav}</div>'
-            f'<div class="ih-fig"><div class="kpis ih-kpis">{kpis}</div>{strip}</div>'
-            + (f'<div class="lead-btns">{btns}</div>' if btns else "") + '</header>')
+               if (root / date / "figures" / f"{pm}-thumb.svg").exists() else f'<span class="thumb none">{no_figure(c)}</span>')
+        cards += (f'<li data-page="{(n - 1) // CAROUSEL_PAGE}"><a href="#a{n}"><span class="cfig">{img}'
+                  f'<span class="cno" aria-hidden="true">{pad(n)}</span></span>'
+                  f'<span class="ctg"><span class="ct">{target_html(pk)}</span></span>'
+                  f'<span class="sr">{esc(pk["headline"])}</span></a></li>')
+    pages = (len(picks) - 1) // CAROUSEL_PAGE + 1
+    ctl = ('<div class="ihc-ctl"><button class="ihc-prev" type="button" aria-label="前の構造">←</button>'
+           f'<span class="ihc-n" aria-live="polite">1 / {pages}</span>'
+           '<button class="ihc-next" type="button" aria-label="次の構造">→</button></div>') if pages > 1 else ""
+    right = (f'<section class="ihc" data-pages="{pages}" aria-label="この号の構造"><div class="ihc-head">'
+             f'<h2 class="ihc-t">Today’s Structures</h2>{ctl}'
+             f'<a class="ihc-toc" href="#contents"><span class="tri" aria-hidden="true">▽</span>Contents</a></div>'
+             f'<ol class="ihc-grid">{cards}</ol>'
+             + ('<div class="ihc-bar" aria-hidden="true"><i></i></div>' if pages > 1 else "") + '</section>')
+    return f'<header class="ihead" id="issue-top"><div class="ih-grid">{left}{right}</div></header>'
+
+
+CAROUSEL_SCRIPT = r"""
+(function () {
+  /* An issue's first screen: its structures six at a time. A page turns when the line under them has run (8 s), not
+     while the pointer or the keyboard is on them, never again once the reader has turned a page (buttons, a swipe),
+     and not at all for a reader who asked for less motion. */
+  var c = document.querySelector('.ihc');
+  if (!c) return;
+  var pages = +c.getAttribute('data-pages');
+  if (pages < 2) return;
+  var items = [].slice.call(c.querySelectorAll('.ihc-grid > li')), grid = c.querySelector('.ihc-grid'),
+      n = c.querySelector('.ihc-n'), bar = c.querySelector('.ihc-bar'), cur = 0;
+  var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches, auto = !calm;
+  c.classList.add('paged');
+  if (!auto) c.classList.add('manual');
+  function run() {
+    if (!auto) return;
+    bar.classList.remove('run'); void bar.offsetWidth; bar.classList.add('run');
+  }
+  function show(p) {
+    cur = (p + pages) % pages;
+    items.forEach(function (li) { li.hidden = +li.getAttribute('data-page') !== cur; });
+    n.textContent = (cur + 1) + ' / ' + pages;
+    run();
+  }
+  function turn(p, byHand) {
+    if (byHand) { auto = false; c.classList.add('manual'); bar.classList.remove('run'); }
+    if (calm) return show(p);
+    grid.classList.add('out');
+    setTimeout(function () { show(p); grid.classList.remove('out'); }, 220);
+  }
+  bar.addEventListener('animationend', function () { if (auto) turn(cur + 1); });
+  c.querySelector('.ihc-prev').addEventListener('click', function () { turn(cur - 1, true); });
+  c.querySelector('.ihc-next').addEventListener('click', function () { turn(cur + 1, true); });
+  c.addEventListener('mouseenter', function () { c.classList.add('hold'); });
+  c.addEventListener('mouseleave', function () { c.classList.remove('hold'); });
+  c.addEventListener('focusin', function () { c.classList.add('hold'); });
+  c.addEventListener('focusout', function (e) { if (!c.contains(e.relatedTarget)) c.classList.remove('hold'); });
+  var x0 = null;
+  grid.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+  grid.addEventListener('touchend', function (e) {
+    if (x0 === null) return;
+    var dx = e.changedTouches[0].clientX - x0;
+    x0 = null;
+    if (Math.abs(dx) > 40) turn(cur + (dx < 0 ? 1 : -1), true);
+  });
+  show(0);
+})();
+"""
 
 
 def issue_page(date: str, prev_date: str | None, next_date: str | None,
                root: Path = ISSUES_DIR, preview: bool = False, number: int | None = None,
                related: dict | None = None) -> str:
     meta, picks, types = load_issue(date, root)
-    counts = {k: len(v) for k, v in render.sections(picks).items()}
     picked = {pk["pmcid"] for _, pk in picks}
     rest = render.not_covered(meta, picked)
     fig_base = "figures" if preview else "../figures"
@@ -1808,21 +1964,21 @@ def issue_page(date: str, prev_date: str | None, next_date: str | None,
                 if pr.get("url") else "")
         bar = f'<div class="preview-bar">プレビュー（未公開）{link} · <a href="index.html">確認待ちの一覧</a></div>'
     # the first screen and the contents run the full width; the sidebar starts with the articles
-    top = [issue_head(date, number, picks, prev_date, next_date, meta.get("index_date"), meta.get("index_from"),
-                      bool((meta.get("springer") or {}).get("read")), root, fig_base)]
     feature = load_feature(date, root, picks) if picks else None
+    top = [issue_head(date, number, picks, prev_date, next_date, meta.get("index_date"), meta.get("index_from"),
+                      bool((meta.get("springer") or {}).get("read")), root, fig_base, feature and feature["pmcid"])]
     if picks:
-        # the issue page lists every article, today's pick included (marked); the front page is where it is shown large
         top.append(f'<section class="toc" id="contents">{contents_html(picks, date, root, fig_base, "", feature and feature["pmcid"], mark=True)}</section>')
     else:
         top.append('<section class="part"><h2>No Articles</h2></section>')
     main = []
-    for n, (cand, pk) in enumerate(picks, 1):
-        part = render.part_of(cand, pk)
-        if n == 1 or part != render.part_of(*picks[n - 2]):
-            main.append(part_html(part, counts[part], date))
-        main.append(article_html(cand, pk, date, n, root, fig_base, types.get(cand["pmcid"]), "../",
-                                 (related or {}).get((date, n))))
+    number = numbers(picks)
+    for key, items in page_groups(picks, feature and feature["pmcid"]):
+        main.append(part_html(key, len(items), date))
+        for cand, pk in items:
+            n = number[cand["pmcid"]]
+            main.append(article_html(cand, pk, date, n, root, fig_base, types.get(cand["pmcid"]), "../",
+                                     (related or {}).get((date, n))))
     if rest:
         items = "".join(f'<li><a href="{doi_url(x)}">{esc(x["title"])}</a> — <i>{esc(x["journal_abbrev"] or x["journal"])}</i>'
                         f'（{esc(render.KIND_JA[x["kind"]])}）</li>' for x in rest)
@@ -1836,7 +1992,7 @@ def issue_page(date: str, prev_date: str | None, next_date: str | None,
     title = f"{brand.SITE_NAME} {date.replace('-', '')}"   # "FoldFeed 20261018" (the owner's naming, 2026-10-18)
     body = f'<div class="wrap issue-top">{"".join(top)}</div>' + shell("".join(main), side, sticky=True)
     return page(("［プレビュー］" if preview else "") + title, bar + head + body + foot, depth=1,
-                description=f"{jp_date(date)}の新しい構造：{desc}", noindex=preview, viewer=True)
+                description=f"{jp_date(date)}の新しい構造：{desc}", noindex=preview, viewer=True, script=CAROUSEL_SCRIPT)
 
 
 ABOUT = (   # the front page's About FoldFeed, in polite Japanese (the owner's wording request, 2026-10-18)
@@ -2110,7 +2266,7 @@ def issue_row(date: str, number: int, root: Path, fig_base: str, href_base: str)
     counts = "".join(f'<span><i class="sw-{PART_CLS[k]}"></i>{PARTS[k][0]}<b>{len(v)}</b></span>'
                      for k, v in render.sections(picks).items() if v) or "<span>記事なし</span>"
     thumbs = ""
-    for c, pk in render.ordered(picks)[:THUMBS_PER_ISSUE]:
+    for c, pk in picks[:THUMBS_PER_ISSUE]:
         if (root / date / "figures" / f'{c["pmcid"]}-thumb.svg').exists():
             thumbs += (f'<img src="{fig_base}/{date}/{esc(c["pmcid"])}-thumb.svg" width="600" height="400" '
                        f'alt="{esc(pk.get("target_en") or pk["target_label"])}" loading="lazy">')
@@ -2143,7 +2299,7 @@ def part_page(key: str, issues: list[str]) -> str:
     groups, total = [], 0
     for date in issues:
         _, picks, _ = load_issue(date, ISSUES_DIR)
-        number = {c["pmcid"]: n for n, (c, _) in enumerate(render.ordered(picks), 1)}
+        number = numbers(picks)
         items = render.sections(picks)[key] if picks else []
         if not items:
             continue
