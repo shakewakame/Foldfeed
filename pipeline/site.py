@@ -610,7 +610,7 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
 .cards {{ list-style:none; margin:0; padding:0; display:grid; gap:48px 40px; }}
 .cards.md {{ grid-template-columns:repeat(3, minmax(0,1fr)); }}
 .cards.sm {{ grid-template-columns:repeat(4, minmax(0,1fr)); gap:44px 32px; }}
-.card {{ min-width:0; }}
+.card {{ min-width:0; display:flex; flex-direction:column; }}   /* Read Later sits at the foot of the row */
 .card .thumb.none {{ border:1px solid var(--hair); }}
 .cfig {{ position:relative; }}
 /* the article's number, large, at the figure's top left (the same face as the number beside each article) */
@@ -623,9 +623,10 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
         color:var(--ink); }}
 .ctg .ct {{ min-width:0; overflow-wrap:anywhere; }}
 .ctg b {{ font-weight:700; }}
-.ctg .org {{ color:var(--ink2); }}
+.ctg .org {{ display:inline-block; color:var(--ink2); }}   /* the parenthesis moves to the next line whole */
 .card.md .ctg {{ font-size:19.5px; }}
-.ctg .later.sm {{ margin:2px 0 0 auto; flex:none; }}
+.cact {{ margin:auto 0 0; padding-top:14px; }}
+.cact .later.sm {{ margin:0; }}
 .ck {{ display:flex; align-items:center; gap:10px; margin:0; font-family:var(--mono); font-size:13px; line-height:1.6;
        color:var(--ink2); letter-spacing:.04em; }}
 .ck .later.sm {{ margin:0 0 0 auto; flex:none; }}
@@ -857,8 +858,8 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
   .card.md h3 {{ font-size:18px; }}
   .card.sm .cs {{ font-size:12.5px; line-height:1.7; }}
   /* a small card on a phone: Read Later over the target */
-  .card.sm .ctg {{ flex-direction:column-reverse; gap:6px; font-size:15px; }}
-  .card.sm .ctg .later.sm {{ margin:0; padding:2px 8px; font-size:11.5px; }}
+  .card.sm .ctg {{ font-size:15px; }}
+  .card.sm .cact .later.sm {{ padding:3px 9px; font-size:11.5px; }}
   .card.sm .cno {{ font-size:22px; }}
   .card.md .ctg {{ font-size:18px; }}
   .pk-h {{ font-size:24px; }}
@@ -1656,13 +1657,14 @@ def target_html(pick: dict) -> str:
 
 def card_html(cand: dict, pick: dict, n: int, date: str, root: Path, fig_base: str, href: str, size: str = "sm") -> str:
     """A card of an index: the structure (the figure leads) with the article's number large at its top left, the
-    target (it is often the name that tells a reader "this is mine"), the headline and its one-line supplement, and
-    Read Later. Nothing else: the facts and the four lines are in the article."""
+    target (it is often the name that tells a reader "this is mine") on a line of its own, the headline and its one-line
+    supplement, and Read Later at the foot (in line with the cards beside it). Nothing else: the facts and the four
+    lines are in the article."""
     return (f'<li class="card {size}"><div class="cfig">{thumb_html(cand, pick, date, root, fig_base, href)}'
             f'<span class="cno" aria-hidden="true">{pad(n)}</span></div>'
-            f'<p class="ctg"><span class="ct">{target_html(pick)}</span>{later_button(cand["pmcid"], True)}</p>'
+            f'<p class="ctg"><span class="ct">{target_html(pick)}</span></p>'
             f'<h3><a href="{href}">{esc(pick["headline"])}</a></h3>'
-            f'<p class="cs">{esc(pick.get("subhead") or "")}</p></li>')
+            f'<p class="cs">{esc(pick.get("subhead") or "")}</p><p class="cact">{later_button(cand["pmcid"], True)}</p></li>')
 
 
 HOME_PARTS = {"new": "Today’s New Structure", "update": "Today’s Structure Update", "impact": "Today’s Structure-Based Study"}
