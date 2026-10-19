@@ -607,10 +607,10 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
 /* cards: the structure leads, then number and target, headline, the one-line supplement. No frame, no shadow: the
    figures stand on the page ground, the grid and the space keep them apart. Three sizes: the pick, New Structure,
    the other two parts */
-.cards {{ list-style:none; margin:0; padding:0; display:grid; gap:48px 40px; }}
+.cards {{ list-style:none; margin:0; padding:0; display:grid; gap:80px 48px; }}
 .cards.md {{ grid-template-columns:repeat(3, minmax(0,1fr)); }}
-.cards.sm {{ grid-template-columns:repeat(4, minmax(0,1fr)); gap:44px 32px; }}
-.card {{ min-width:0; display:flex; flex-direction:column; }}   /* Read Later sits at the foot of the row */
+.cards.sm {{ grid-template-columns:repeat(4, minmax(0,1fr)); gap:68px 32px; }}
+.card {{ min-width:0; }}
 .card .thumb.none {{ border:1px solid var(--hair); }}
 .cfig {{ position:relative; }}
 /* the article's number, large, at the figure's top left (the same face as the number beside each article) */
@@ -626,20 +626,22 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
 .ctg .org {{ display:inline-block; color:var(--mute); }}   /* the parenthesis moves to the next line whole */
 .card.md .ctg {{ font-size:16px; }}
 /* the target (Georgia, smaller, a lighter ink) and the headline under it (Noto Sans, larger, the darkest ink) */
-.cpart {{ display:flex; align-items:center; margin:12px 0 0; font-family:var(--mono); font-size:11.5px; letter-spacing:.06em;
+.crow {{ display:flex; align-items:center; justify-content:space-between; gap:12px; margin:14px 0 0; }}
+.crow .later.sm {{ flex:none; margin:0; }}
+.cpart {{ display:flex; align-items:center; margin:0; font-family:var(--mono); font-size:11.5px; letter-spacing:.06em;
           color:var(--ink2); }}
 .cpart b {{ color:var(--acc-ink); }}
 .cpart .sep {{ margin:0 7px; color:var(--mute); }}
-.cpart + .ctg {{ margin-top:6px; }}
+.crow + .ctg {{ margin-top:8px; }}
 .toc-cards h3, .toc-cards .cs {{ display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }}
-.cact {{ margin:auto 0 0; padding-top:14px; }}
+.cact {{ margin:12px 0 0; }}
 .cact .later.sm {{ margin:0; }}
 .ck {{ display:flex; align-items:center; gap:10px; margin:0; font-family:var(--mono); font-size:13px; line-height:1.6;
        color:var(--ink2); letter-spacing:.04em; }}
 .ck .later.sm {{ margin:0 0 0 auto; flex:none; }}
-.card h3 {{ margin:6px 0 0; font-family:var(--sans); font-size:16.5px; line-height:1.55; font-weight:700; color:var(--ink); text-wrap:pretty; }}
+.card h3 {{ margin:5px 0 0; font-family:var(--sans); font-size:16.5px; line-height:1.55; font-weight:700; color:var(--ink); text-wrap:pretty; }}
 .card.md h3 {{ font-size:19px; }}
-.cs {{ margin:6px 0 0; font-family:var(--sans); font-size:13.5px; line-height:1.75; color:var(--desc); }}
+.cs {{ margin:5px 0 0; font-family:var(--sans); font-size:13.5px; line-height:1.75; color:var(--desc); }}
 .card.md .cs {{ font-size:14.5px; }}
 .cards + .ix-h {{ margin-top:var(--sec); }}
 /* the pick: the largest card, its own figure on the left, the words and the ways on to the right */
@@ -858,8 +860,8 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
   .js .hs-open {{ display:inline-block; }}
   .hs-pop {{ position:static; width:auto; padding:16px; }}   /* opens right under the box */
   .vol .rl {{ display:none; }}
-  .cards.md {{ grid-template-columns:minmax(0,1fr); gap:40px; }}
-  .cards.sm {{ grid-template-columns:repeat(2, minmax(0,1fr)); gap:30px 16px; }}
+  .cards.md {{ grid-template-columns:minmax(0,1fr); gap:60px; }}
+  .cards.sm {{ grid-template-columns:repeat(2, minmax(0,1fr)); gap:48px 16px; }}
   .card h3 {{ font-size:15px; }}
   .card.md h3 {{ font-size:18px; }}
   .card.sm .cs {{ font-size:12.5px; line-height:1.7; }}
@@ -1666,13 +1668,17 @@ def card_html(cand: dict, pick: dict, n: int, date: str, root: Path, fig_base: s
               label: str = "") -> str:
     """A card of an index: the structure (the figure leads) with the article's number large at its top left, the
     target (it is often the name that tells a reader "this is mine") on a line of its own, the headline and its one-line
-    supplement, and Read Later at the foot (in line with the cards beside it). Nothing else: the facts and the four
-    lines are in the article."""
+    supplement, and Read Later: at the right end of the group line when the card has one (an issue's contents), else
+    right under the supplement. Nothing else: the facts and the four lines are in the article. The cards are kept
+    apart by space alone: little inside a card, much more between rows (the owner wants no rules)."""
+    later = later_button(cand["pmcid"], True)
+    head = f'<div class="crow">{label}{later}</div>' if label else ""
+    foot = "" if label else f'<p class="cact">{later}</p>'
     return (f'<li class="card {size}"><div class="cfig">{thumb_html(cand, pick, date, root, fig_base, href)}'
-            f'<span class="cno" aria-hidden="true">{pad(n)}</span></div>{label}'
+            f'<span class="cno" aria-hidden="true">{pad(n)}</span></div>{head}'
             f'<p class="ctg"><span class="ct">{target_html(pick)}</span></p>'
             f'<h3><a href="{href}">{esc(pick["headline"])}</a></h3>'
-            f'<p class="cs">{esc(pick.get("subhead") or "")}</p><p class="cact">{later_button(cand["pmcid"], True)}</p></li>')
+            f'<p class="cs">{esc(pick.get("subhead") or "")}</p>{foot}</li>')
 
 
 HOME_PARTS = {"new": "Today’s New Structure", "update": "Today’s Structure Update", "impact": "Today’s Structure-Based Study"}
