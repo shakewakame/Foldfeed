@@ -619,19 +619,26 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
 .card.md .cno {{ font-size:32px; }}
 .pickup .cno {{ font-size:44px; }}
 /* the target, the line a reader scans for: the protein's name bold, the organism lighter */
-.ctg {{ display:flex; align-items:flex-start; gap:12px; margin:12px 0 0; font-family:var(--latin); font-size:17px; line-height:1.4;
-        color:var(--ink); }}
+.ctg {{ display:flex; align-items:flex-start; gap:12px; margin:12px 0 0; font-family:var(--latin); font-size:15px; line-height:1.4;
+        color:var(--ink2); }}
 .ctg .ct {{ min-width:0; overflow-wrap:anywhere; }}
 .ctg b {{ font-weight:700; }}
-.ctg .org {{ display:inline-block; color:var(--ink2); }}   /* the parenthesis moves to the next line whole */
-.card.md .ctg {{ font-size:19.5px; }}
+.ctg .org {{ display:inline-block; color:var(--mute); }}   /* the parenthesis moves to the next line whole */
+.card.md .ctg {{ font-size:16px; }}
+/* the target (Georgia, smaller, a lighter ink) and the headline under it (Noto Sans, larger, the darkest ink) */
+.cpart {{ display:flex; align-items:center; margin:12px 0 0; font-family:var(--mono); font-size:11.5px; letter-spacing:.06em;
+          color:var(--ink2); }}
+.cpart b {{ color:var(--acc-ink); }}
+.cpart .sep {{ margin:0 7px; color:var(--mute); }}
+.cpart + .ctg {{ margin-top:6px; }}
+.toc-cards h3, .toc-cards .cs {{ display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }}
 .cact {{ margin:auto 0 0; padding-top:14px; }}
 .cact .later.sm {{ margin:0; }}
 .ck {{ display:flex; align-items:center; gap:10px; margin:0; font-family:var(--mono); font-size:13px; line-height:1.6;
        color:var(--ink2); letter-spacing:.04em; }}
 .ck .later.sm {{ margin:0 0 0 auto; flex:none; }}
-.card h3 {{ margin:8px 0 0; font-family:var(--sans); font-size:16px; line-height:1.55; font-weight:700; color:var(--ink); text-wrap:pretty; }}
-.card.md h3 {{ font-size:18px; }}
+.card h3 {{ margin:6px 0 0; font-family:var(--sans); font-size:16.5px; line-height:1.55; font-weight:700; color:var(--ink); text-wrap:pretty; }}
+.card.md h3 {{ font-size:19px; }}
 .cs {{ margin:6px 0 0; font-family:var(--sans); font-size:13.5px; line-height:1.75; color:var(--desc); }}
 .card.md .cs {{ font-size:14.5px; }}
 .cards + .ix-h {{ margin-top:var(--sec); }}
@@ -639,7 +646,7 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
 .pickup {{ display:grid; grid-template-columns:minmax(0,7fr) minmax(0,5fr); gap:0 52px; align-items:center; }}
 .pk-fig {{ display:block; overflow:hidden; }}
 .pk-fig img {{ display:block; width:100%; height:auto; transition:transform .5s cubic-bezier(.2,.8,.2,1); }}
-.pickup .pk-tg {{ margin:12px 0 0; font-size:24px; }}
+.pickup .pk-tg {{ margin:12px 0 0; font-size:22px; }}
 .pk-h {{ margin:12px 0 0; font-size:32px; line-height:1.42; font-weight:700; color:var(--ink); text-wrap:balance; }}
 .pk-s {{ margin:12px 0 0; font-size:17px; line-height:1.8; color:var(--desc); }}
 .pickup .reads {{ margin-top:26px; gap:12px; }}
@@ -670,7 +677,6 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
 .list-page .toc-sub {{ margin-top:0; margin-bottom:18px; }}
 .list-page .cards + .toc-sub {{ margin-top:72px; }}
 .toc-sub a {{ color:var(--ink); }}
-.toc .toc-sub {{ margin-bottom:18px; }}
 
 /* the header search: one plain box; focused, a panel drops down with the ways in (kinds of protein, kinds of research,
    methods, parts) and, once something is typed, the matching articles. No shadow: an ink frame on the page ground. */
@@ -858,10 +864,11 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
   .card.md h3 {{ font-size:18px; }}
   .card.sm .cs {{ font-size:12.5px; line-height:1.7; }}
   /* a small card on a phone: Read Later over the target */
-  .card.sm .ctg {{ font-size:15px; }}
+  .card.sm .ctg {{ font-size:14px; }}
   .card.sm .cact .later.sm {{ padding:3px 9px; font-size:11.5px; }}
   .card.sm .cno {{ font-size:22px; }}
-  .card.md .ctg {{ font-size:18px; }}
+  .card.md .ctg {{ font-size:15.5px; }}
+  .toc-cards .thumb img, .toc-cards .thumb.none {{ max-height:210px; object-fit:contain; }}
   .pk-h {{ font-size:24px; }}
   .pickup .pk-tg {{ font-size:19px; }}
   .pk-s {{ font-size:15.5px; }}
@@ -1655,13 +1662,14 @@ def target_html(pick: dict) -> str:
     return f'<b>{esc(m.group(1))}</b> <span class="org">{esc(m.group(2))}</span>' if m else f"<b>{esc(target)}</b>"
 
 
-def card_html(cand: dict, pick: dict, n: int, date: str, root: Path, fig_base: str, href: str, size: str = "sm") -> str:
+def card_html(cand: dict, pick: dict, n: int, date: str, root: Path, fig_base: str, href: str, size: str = "sm",
+              label: str = "") -> str:
     """A card of an index: the structure (the figure leads) with the article's number large at its top left, the
     target (it is often the name that tells a reader "this is mine") on a line of its own, the headline and its one-line
     supplement, and Read Later at the foot (in line with the cards beside it). Nothing else: the facts and the four
     lines are in the article."""
     return (f'<li class="card {size}"><div class="cfig">{thumb_html(cand, pick, date, root, fig_base, href)}'
-            f'<span class="cno" aria-hidden="true">{pad(n)}</span></div>'
+            f'<span class="cno" aria-hidden="true">{pad(n)}</span></div>{label}'
             f'<p class="ctg"><span class="ct">{target_html(pick)}</span></p>'
             f'<h3><a href="{href}">{esc(pick["headline"])}</a></h3>'
             f'<p class="cs">{esc(pick.get("subhead") or "")}</p><p class="cact">{later_button(cand["pmcid"], True)}</p></li>')
@@ -1670,33 +1678,39 @@ def card_html(cand: dict, pick: dict, n: int, date: str, root: Path, fig_base: s
 HOME_PARTS = {"new": "Today’s New Structure", "update": "Today’s Structure Update", "impact": "Today’s Structure-Based Study"}
 
 
+def part_label(cand: dict, pick: dict, featured: str | None) -> str:
+    """Which group an article is in, over its card: its part's colour and name, "Picked up" first for the pick."""
+    key = render.part_of(cand, pick)
+    pick_mark = '<b>Picked up</b><span class="sep">·</span>' if cand["pmcid"] == featured else ""
+    return f'<p class="cpart kl"><i class="sw-{PART_CLS[key]}"></i>{pick_mark}{PARTS[key][0]}</p>'
+
+
 def contents_html(picks: list, date: str, root: Path, fig_base: str, href_base: str = "",
                   featured: str | None = None, mark: bool = False) -> str:
-    """The issue as cards, group by group (New Structure a size larger), so what was reported shows at a glance.
-
-    On an issue page (mark=True) the pick has its own group first; on the front page it is the large card above and
-    not repeated here. Either way the numbers run 01, 02, ... without a gap.
+    """The issue as cards. On an issue page (mark=True) every article in one even grid, in the issue's order, each
+    card saying which group it is in (Picked up, New Structure, ...), its headline and supplement two lines at most
+    (the owner's request, 2026-10-19). On the front page, group by group in sizes (New Structure a size larger), the
+    pick being the large card above and not repeated here. Either way the numbers run 01, 02, ... without a gap.
     """
     number = numbers(picks)
+    if mark:
+        cards = "".join(card_html(c, pk, number[c["pmcid"]], date, root, fig_base, f'{href_base}#a{number[c["pmcid"]]}', "md",
+                                  part_label(c, pk, featured)) for c, pk in picks)
+        return (f'<div class="ix-h"><h2 class="label">Contents</h2><span class="ixm"><b>{n_articles(len(picks))}</b></span></div>'
+                f'<ol class="cards md toc-cards">{cards}</ol>') if picks else ""
     out = ""
     for key, items in page_groups(picks, featured):
-        if key == "pick" and not mark:
+        if key == "pick":
             continue
-        size = "md" if key == "pick" else CARD_SIZE[key]
+        size = CARD_SIZE[key]
         cards = "".join(card_html(c, pk, number[c["pmcid"]], date, root, fig_base, f'{href_base}#a{number[c["pmcid"]]}', size)
                         for c, pk in items)
-        if mark:   # an issue page: the contents, under one heading (the articles follow under each group's heading)
-            title = PICK_TITLE if key == "pick" else PARTS[key][0]
-            out += f'<h3 class="toc-sub">{title}<span>{len(items)}</span></h3><ol class="cards {size}">{cards}</ol>'
-        else:   # the front page: the way to the whole issue sits beside the first heading
-            y, m, d, _ = date_parts(date)
-            go = (f'<a class="ix-all" href="{href_base}">{y}.{m:02d}.{d:02d}のすべての解説記事一覧'
-                  f'<span class="arr" aria-hidden="true">→</span></a>') if not out else ""
-            out += (f'<div class="ix-h{" hot" if out else ""}" id="{key}-list"><h2 class="label">{HOME_PARTS[key]}</h2>'
-                    f'<span class="ixm"><b>{n_articles(len(items))}</b></span>{go}</div>'
-                    f'<ol class="cards {size}">{cards}</ol>')
-    if mark and out:
-        out = f'<div class="ix-h"><h2 class="label">Contents</h2><span class="ixm"><b>{n_articles(len(picks))}</b></span></div>' + out
+        y, m, d, _ = date_parts(date)   # the way to the whole issue sits beside the first heading
+        go = (f'<a class="ix-all" href="{href_base}">{y}.{m:02d}.{d:02d}のすべての解説記事一覧'
+              f'<span class="arr" aria-hidden="true">→</span></a>') if not out else ""
+        out += (f'<div class="ix-h{" hot" if out else ""}" id="{key}-list"><h2 class="label">{HOME_PARTS[key]}</h2>'
+                f'<span class="ixm"><b>{n_articles(len(items))}</b></span>{go}</div>'
+                f'<ol class="cards {size}">{cards}</ol>')
     return out
 
 
@@ -1746,10 +1760,12 @@ def lead_html(feature: dict | None, picks: list, date: str, root: Path, fig_base
             f'<h1 class="lead-h">{lines}</h1>{go}</div>{art_html}</div></section>')
 
 
-def paper_button(cand: dict) -> str:
+def paper_button(cand: dict, note: bool = True) -> str:
+    """The way to the paper; on an article page with the journal under it (the front page has the button alone)."""
     journal = cand.get("journal_abbrev") or cand.get("journal") or "掲載誌"
+    small = f'<small>{esc(journal)} · 英語 · 外部サイト</small>' if note else ""
     return (f'<a class="read-paper" href="{doi_url(cand)}" rel="noopener"><b>原著論文を開く</b><span class="arr" aria-hidden="true">↗</span>'
-            f'<small>{esc(journal)} · 英語 · 外部サイト</small></a>')
+            f'{small}</a>')
 
 
 def paper_link(cand: dict) -> str:
@@ -1758,11 +1774,11 @@ def paper_link(cand: dict) -> str:
 
 
 def read_links(cand: dict, href: str) -> str:
-    """The two ways on from a summary, told apart by who wrote it, in which language and where it lives: FoldFeed's
-    article (Japanese, on this site) and the paper itself (English, on the journal's site)."""
+    """The two ways on from Picked up Today's Structure: FoldFeed's article and the paper itself (the owner asked for
+    the buttons without the small lines under them, 2026-10-19)."""
     return (f'<div class="reads">'
-            f'<a class="read-art" href="{href}"><b>解説記事を読む</b><span class="arr" aria-hidden="true">→</span>'
-            f'<small>FoldFeed の日本語の解説（このサイト）</small></a>{paper_button(cand)}</div>')
+            f'<a class="read-art" href="{href}"><b>解説記事を読む</b><span class="arr" aria-hidden="true">→</span></a>'
+            f'{paper_button(cand, note=False)}</div>')
 
 
 def today_html(feature: dict | None, picks: list, date: str, root: Path, fig_base: str, href_base: str = "") -> str:
