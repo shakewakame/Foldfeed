@@ -37,10 +37,12 @@ DESCRIPTION = "新着の査読済みオープンアクセス論文から、構�
 TAGLINE = "構造生物学者のための情報収集サポートサイト"
 LEAD = ("新着の査読済みオープンアクセス論文から、", "構造生物学の論文を、", "毎日ピックアップして紹介")
 LATEST = {"date": None}   # the newest issue with articles (the global navigation's "Latest Issue"), set by build()
+NAV_INFO = {"groups": [], "articles": 0, "recent": []}   # what the navigation's dropdowns list, set by build()
 THUMBS_PER_ISSUE = 8   # structures shown for each issue in a list of issues
 CAROUSEL_PAGE = 6   # structures at a time on an issue's first screen (3 x 2); more turn over every CAROUSEL_SECONDS
 CAROUSEL_SECONDS = 8
 BROWSE_THUMBS = 3   # structures on each Browse tile, the newest
+BROWSE_GROUPS = (("part", "Part"), ("protein", "Protein Type"), ("research", "Research Type"), ("method", "Method"))
 FACETS = {"cats": [], "topics": [], "methods": [], "parts": []}   # the header search's suggestions with counts, set by build()
 
 CHART_NEW, CHART_UPD, CHART_HOT = "#2F5DA8", "#1F8A70", "#C8442A"   # 藍 / 青緑 / 朱 for New Structure, Structure Update,
@@ -326,6 +328,8 @@ body {{ --headnow:var(--navh); }}
 .menu-list a::before {{ content:""; position:absolute; inset:0; z-index:-1; background:var(--ink); transform:scaleX(0);
                        transform-origin:right; transition:transform .28s cubic-bezier(.2,.8,.2,1); }}
 .menu-list a:hover, .menu-list a:focus-visible {{ color:#fff; text-decoration:none; }}
+.menu-list small {{ display:block; margin-top:1px; font-family:var(--sans); font-size:11.5px; color:var(--mute); }}
+.menu-list a:hover small, .menu-list a:focus-visible small {{ color:#C9D1DD; }}
 .menu-list a:hover::before, .menu-list a:focus-visible::before {{ transform:scaleX(1); }}
 .menu-list {{ isolation:isolate; }}
 .js .menu-list {{ opacity:0; transform:translateY(-12px) scaleY(.94); transform-origin:top right;
@@ -350,6 +354,16 @@ html, body {{ overflow-x:clip; }}   /* a guard: nothing may widen the page sidew
 .lead-go {{ display:inline-flex; align-items:center; gap:12px; margin-top:34px; padding:14px 24px 14px 20px;
             background:var(--ink); color:#fff; font-family:var(--mono); font-size:14.5px; letter-spacing:.06em; }}
 .lead-go .tri {{ font-size:13px; }}
+.lead-k {{ margin:0 0 22px; font-family:var(--mono); font-size:13px; letter-spacing:.06em; color:var(--ink2); }}
+.lead-k b {{ color:var(--ink); }}
+.lead-k span {{ margin-left:16px; color:var(--acc-ink); font-weight:700; letter-spacing:.1em; text-transform:uppercase; }}
+/* under the first screen's structure: what it is, small and quiet */
+.lead-cap {{ display:flex; flex-wrap:wrap; justify-content:center; align-items:baseline; gap:2px 12px; margin:10px 0 0; padding:0 24px; text-decoration:none;
+             color:var(--ink2); }}
+.lead-cap .k {{ font-family:var(--mono); font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--acc-ink); }}
+.lead-cap .h {{ font-family:var(--sans); font-size:14.5px; line-height:1.6; }}
+.lead-cap:hover {{ text-decoration:none; }}
+.lead-cap:hover .h {{ color:var(--acc-ink); }}
 .lead-btns {{ display:flex; flex-wrap:wrap; gap:12px 14px; margin-top:34px; }}
 .lead-btns .lead-go {{ margin-top:0; }}
 .lead-go.alt {{ background:transparent; color:var(--ink); box-shadow:inset 0 0 0 1px var(--ink); }}
@@ -461,8 +475,8 @@ a, .find button, .v3d-bar button, .figtabs button {{ transition:color .2s, backg
                             transition-duration:.01ms !important; transition-delay:0ms !important; }}
 }}
 .lead-art {{ display:block; margin-right:calc(-1 * var(--pad) + 24px); }}
-.lead-art img {{ display:block; width:100%; height:auto; max-height:min(640px, calc(100vh - 170px)); object-fit:contain; }}
-.lead-3d .v3d-view, .lead-3d.on .v3d-view, .lead-3d.loading .v3d-view {{ aspect-ratio:1000/780; max-height:min(640px, calc(100vh - 210px));
+.lead-art img {{ display:block; width:100%; height:auto; max-height:min(620px, calc(100vh - var(--head) - 90px)); object-fit:contain; }}
+.lead-3d .v3d-view, .lead-3d.on .v3d-view, .lead-3d.loading .v3d-view {{ aspect-ratio:1000/780; max-height:min(620px, calc(100vh - var(--head) - 110px));
                                                                          margin:0 auto; }}
 .lead-3d .fig {{ height:100%; object-fit:contain; }}
 .lead-wait {{ display:none; position:absolute; inset:0; margin:0; align-items:center; justify-content:center;
@@ -596,14 +610,31 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
 /* the global navigation: one row of the main places under the header's double rule, small capitals; the current page
    in vermilion. A phone has the same places in the MENU, and only there is the MENU */
 .gnav-in {{ display:flex; align-items:center; gap:28px; padding:8px 0; border-bottom:1px solid var(--hair); }}
-.gnav-links {{ flex:none; display:flex; gap:34px; min-width:0; overflow-x:auto; white-space:nowrap; scrollbar-width:none; }}
+.gnav-links {{ flex:none; display:flex; gap:34px; min-width:0; white-space:nowrap; }}
 .gnav-links::-webkit-scrollbar {{ display:none; }}
 .gnav .hs {{ flex:0 1 340px; max-width:340px; }}
 .gnav .hs-q {{ padding:6px 12px; font-size:13px; line-height:1.5; }}
 .gnav .hs-pop {{ top:calc(100% + 9px); }}   /* hangs from the navigation's rule */
-.gnav-links a {{ font-family:var(--mono); font-size:12.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink2); text-decoration:none; }}
-.gnav-links a:hover {{ color:var(--acc-ink); text-decoration:none; }}
-.gnav-links a[aria-current] {{ color:var(--acc-ink); font-weight:700; }}
+.gn-item {{ position:relative; }}
+.gn-a {{ display:block; padding:6px 0; font-family:var(--mono); font-size:12.5px; letter-spacing:.1em; text-transform:uppercase;
+         color:var(--ink2); text-decoration:none; }}
+.gn-item:hover .gn-a, .gn-a:focus-visible {{ color:var(--acc-ink); text-decoration:none; }}
+.gn-a[aria-current] {{ color:var(--acc-ink); font-weight:700; }}
+/* a place's dropdown: what it is (Japanese, the first line), then what it holds; hangs from the navigation's rule */
+.gn-pop {{ position:absolute; left:-22px; top:calc(100% + 8px); z-index:1100; width:340px; box-sizing:border-box; padding:16px 22px 14px;
+           background:var(--ground); border:1px solid var(--ink); border-top:0; white-space:normal;
+           opacity:0; visibility:hidden; transform:translateY(-6px);
+           transition:opacity .18s ease, transform .18s ease, visibility 0s linear .18s; }}
+.gn-item:hover .gn-pop, .gn-item:focus-within .gn-pop {{ opacity:1; visibility:visible; transform:none;
+           transition:opacity .2s ease .08s, transform .2s cubic-bezier(.2,.8,.2,1) .08s, visibility 0s linear .08s; }}
+.gn-item:last-child .gn-pop {{ left:auto; right:-22px; }}
+.gn-d {{ margin:0 0 10px; padding-bottom:10px; border-bottom:1px solid var(--hair); font-family:var(--sans); font-size:13.5px;
+         line-height:1.75; color:var(--ink); }}
+.gn-pop ul {{ list-style:none; margin:0; padding:0; }}
+.gn-pop li a {{ display:flex; justify-content:space-between; gap:16px; padding:5px 0; font-family:var(--sans); font-size:14px;
+                line-height:1.5; color:var(--ink2); text-decoration:none; }}
+.gn-pop li a:hover, .gn-pop li a:focus-visible {{ color:var(--acc-ink); text-decoration:none; }}
+.gn-pop li span {{ font-family:var(--mono); font-size:12px; color:var(--mute); }}
 @media (min-width:861px) {{ .menu {{ display:none; }} }}
 
 /* cards: the structure leads, then number and target, headline, the one-line supplement. No frame, no shadow: the
@@ -804,12 +835,12 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
 }}
 @media (min-width:861px) and (max-width:1000px) {{
   .gnav-links {{ gap:14px; }}
-  .gnav-links a {{ font-size:11px; letter-spacing:.03em; }}
+  .gn-a {{ font-size:11px; letter-spacing:.03em; }}
 }}
 @media (max-width:1120px) {{
   .gnav-in {{ gap:20px; }}
   .gnav-links {{ gap:18px; }}
-  .gnav-links a {{ font-size:11.5px; letter-spacing:.06em; }}
+  .gn-a {{ font-size:11.5px; letter-spacing:.06em; }}
   .gnav .hs {{ flex:1 1 220px; min-width:120px; }}
   /* an issue's first screen in one column: how much, then what */
   .ih-grid {{ grid-template-columns:minmax(0,1fr); gap:30px; }}
@@ -1025,8 +1056,10 @@ def page(title: str, body: str, depth: int, description: str = DESCRIPTION, noin
 def menu_html(up: str) -> str:
     """MENU, on a phone (where the global navigation does not fit): a round button that opens the same places, the top
     and Read Later (a <details>, so it works without JavaScript)."""
-    items = (("Top", f"{up}index.html"), *((t, h) for t, h, _ in nav_links(up)), ("Read Later", f"{up}later.html"))
-    links = "".join(f'<a href="{h}">{esc(t)}{"<b class=rl-n></b>" if h.endswith("later.html") else ""}</a>' for t, h in items)
+    items = (("Top", f"{up}index.html", ""), *((t, h, NAV_NOTE[k][1]) for (t, h, _), (k, _) in zip(nav_links(up), NAV)),
+             ("Read Later", f"{up}later.html", "保存した記事"))
+    links = "".join(f'<a href="{h}">{esc(t)}{"<b class=rl-n></b>" if h.endswith("later.html") else ""}'
+                    + (f'<small>{esc(note)}</small>' if note else "") + '</a>' for t, h, note in items)
     return (f'<details class="menu"><summary><span class="mt">MENU</span>'
             f'<span class="mb" aria-hidden="true"><i></i><i></i><i></i></span></summary>'
             f'<nav class="menu-list" aria-label="サイト内のページ">{links}</nav></details>')
@@ -1057,8 +1090,9 @@ MENU_SCRIPT = r"""
     last = y;
   }, { passive: true });
   document.addEventListener('click', function (e) {
-    var a = e.target.closest && e.target.closest('a[href^="#"]');
-    var id = a && a.getAttribute('href').slice(1);
+    var a = e.target.closest && e.target.closest('a[href*="#"]');   // "#x", or this page's own address with "#x"
+    if (!a || a.pathname !== location.pathname || a.host !== location.host) return;
+    var id = a.hash.slice(1);
     var t = id && document.getElementById(id);
     if (!t) return;
     e.preventDefault();
@@ -1311,12 +1345,53 @@ def nav_links(up: str, current: str | None = None) -> list[tuple[str, str, bool]
     return [(label, href[k], k == current) for k, label in NAV]
 
 
+# what each place of the navigation is, in Japanese (the labels are English): the first line of its dropdown, and a
+# short form under it in the phone's MENU
+NAV_NOTE = {
+    "latest": ("最新号（{date} 号・{n} 本）の解説記事を読めます。", "最新号の解説記事"),
+    "browse": ("これまでの記事を、部・タンパク質の種類・研究の種類・手法から探せます。", "分類から記事を探す"),
+    "back": ("これまでに出た号を、新しい順に一覧できます。", "これまでの号"),
+    "news": ("新しい号のお知らせや、気になるタンパク質の新着をメールで受け取れます（準備中）。", "メールのお知らせ（準備中）"),
+    "about": ("FoldFeed がどんなサイトか、記事の作り方や掲載のタイミングをご紹介します。", "このサイトについて"),
+}
+
+
+def nav_items(key: str, up: str) -> list[tuple[str, str, str]]:
+    """(label, href, count) of a place's dropdown."""
+    latest = f'{up}issues/{LATEST["date"]}.html' if LATEST["date"] else f"{up}index.html"
+    if key == "latest":
+        return [("Contents", f"{latest}#contents", str(NAV_INFO["articles"]))] + [
+            (PICK_TITLE if k == "pick" else PARTS[k][0], f"{latest}#{k}", str(n)) for k, n in NAV_INFO["groups"]]
+    if key == "browse":
+        return ([(PARTS[k][0], f"{up}{PART_PAGES[k]}", "") for k in PARTS]
+                + [(t, f"{up}browse.html#{a}", "") for a, t in BROWSE_GROUPS[1:]] + [("Article Search", f"{up}proteins.html", "")])
+    if key == "back":
+        return [(f"{y}.{m:02d}.{d:02d}", f"{up}issues/{date}.html", n_articles(n))
+                for date, n in NAV_INFO["recent"] for y, m, d, _ in [date_parts(date)]] + [("すべての号", f"{up}issues.html", "")]
+    if key == "news":
+        return [("毎朝の号のお知らせ", f"{up}newsletter.html", ""), ("週のまとめ", f"{up}newsletter.html", ""),
+                ("タンパク質アラート", f"{up}newsletter.html", "")]
+    return [("About FoldFeed", f"{up}index.html#about", ""), ("FoldFeed in Numbers", f"{up}index.html#numbers", ""),
+            ("Journals", f"{up}index.html#journals", "")]
+
+
+def nav_note(key: str) -> str:
+    date = LATEST["date"] or ""
+    return NAV_NOTE[key][0].format(date=date.replace("-", "."), n=NAV_INFO["articles"])
+
+
 def global_nav(up: str, current: str | None = None, find: str = "") -> str:
     """The global navigation: one row of the site's main places under the header's double rule (small capitals, the
-    current page in vermilion) with the search at its right end. While the page scrolls this row stays at the top of
+    current page in vermilion) with the search at its right end. Under the pointer or the keyboard a place drops down
+    what it holds, its first line saying in Japanese what the place is (the labels are English; NAV_NOTE). While the page scrolls this row stays at the top of
     the window and the header above it goes. On a phone the places are in the MENU and the search opens from its
     button (the row is not shown)."""
-    links = "".join(f'<a href="{h}"{" aria-current=page" if cur else ""}>{esc(t)}</a>' for t, h, cur in nav_links(up, current))
+    links = ""
+    for (t, h, cur), (key, _) in zip(nav_links(up, current), NAV):
+        items = "".join(f'<li><a href="{ih}">{esc(it)}' + (f'<span>{esc(c)}</span>' if c else "") + '</a></li>'
+                        for it, ih, c in nav_items(key, up))
+        links += (f'<div class="gn-item"><a class="gn-a" href="{h}"{" aria-current=page" if cur else ""}>{esc(t)}</a>'
+                  f'<div class="gn-pop"><p class="gn-d">{esc(nav_note(key))}</p><ul>{items}</ul></div></div>')
     return (f'<nav class="gnav" aria-label="サイトの主な場所"><div class="wrap"><div class="gnav-in">'
             f'<div class="gnav-links">{links}</div>{find}</div></div></nav>')
 
@@ -1760,12 +1835,15 @@ def feature_of(feature: dict | None, picks: list) -> tuple[int, dict, dict] | No
     return None
 
 
-def lead_html(feature: dict | None, picks: list, date: str, root: Path, fig_base: str) -> str:
+def lead_html(feature: dict | None, picks: list, date: str, root: Path, fig_base: str, number: int | None = None) -> str:
     """The first screen of the front page: what the site is (three lines), the button down to Today's Structure, and
     on the right Today's Structure in the 3D viewer, opened by itself on a wide screen, with no text around it but
     "読み込み中" while it loads. On a phone (where it is not opened) and when it cannot load, the same structure is
     shown as a drawing from the same view (pipeline.render: <pmcid>-hero.svg)."""
     lines = "".join(f'<span style="--i:{i}">{esc(t)}</span>' for i, t in enumerate(LEAD))
+    y, m, d, wd = date_parts(date)
+    updated = (f'<p class="lead-k">最終更新 <b>{y}.{m:02d}.{d:02d}</b>（{wd}）'
+               + (f'<span>Issue No. {number}</span>' if number else "") + '</p>')
     go = (('<a class="lead-go" href="#today"><span class="tri" aria-hidden="true">▽</span>'
            'Picked up: Today’s Structure</a>') if feature_of(feature, picks) else "")
     picked = (feature or {}).get("pmcid") if feature_of(feature, picks) else None
@@ -1782,14 +1860,17 @@ def lead_html(feature: dict | None, picks: list, date: str, root: Path, fig_base
         attrs, _, _ = viewer_bar(info, "", info.get("hero_view"))
         img = (f'<img class="fig" src="{fig_base}/{date}/{esc(pm)}-hero.svg"{wh(fd / f"{pm}-hero.svg")} '
                f'alt="構造図：{esc(pk.get("target_en") or pk["target_label"])}">')
+        # under the structure, small: what it is (the pick's headline), a way down to it
+        cap = (f'<a class="lead-cap" href="#today"><span class="k">Picked up Today’s Structure</span>'
+               f'<span class="h">{esc(pk["headline"])}</span></a>')
         if attrs:   # opens by itself on a wide screen (assets/viewer.js). While it loads, only "読み込み中" shows; the
             # drawing is for a phone (where it does not open) and for a browser that cannot load it. No buttons, no help.
             art_html = (f'<div class="lead-art"><div class="v3d lead-3d" data-auto="wide"{attrs}><div class="v3d-view">{img}'
-                        f'<div class="v3d-canvas"></div><p class="lead-wait" aria-live="polite">読み込み中</p></div></div></div>')
+                        f'<div class="v3d-canvas"></div><p class="lead-wait" aria-live="polite">読み込み中</p></div></div>{cap}</div>')
         else:
-            art_html = f'<a class="lead-art" href="#today" tabindex="-1">{img}</a>'
+            art_html = f'<div class="lead-art"><a href="#today" tabindex="-1">{img}</a>{cap}</div>'
     return (f'<section class="lead"><div class="wrap lead-grid"><div class="lead-text">'
-            f'<h1 class="lead-h">{lines}</h1>{go}</div>{art_html}</div></section>')
+            f'{updated}<h1 class="lead-h">{lines}</h1>{go}</div>{art_html}</div></section>')
 
 
 def paper_button(cand: dict, note: bool = True) -> str:
@@ -2141,8 +2222,8 @@ def about_html(issues: list[str], lib: list[dict]) -> str:
     return (f'<section class="about" id="about"><div class="wrap">'
             f'<div class="ix-h"><h2 class="label">About FoldFeed</h2></div>'
             f'<div class="about-grid"><dl class="about-dl">{rows}</dl>'
-            f'<div class="about-side"><h3 class="about-sub">FoldFeed in Numbers</h3>{numbers_html(issues, lib)}</div></div>'
-            f'<h3 class="about-sub">Journals<span>論文数</span></h3><ul class="jl">{jl}</ul></div></section>')
+            f'<div class="about-side"><h3 class="about-sub" id="numbers">FoldFeed in Numbers</h3>{numbers_html(issues, lib)}</div></div>'
+            f'<h3 class="about-sub" id="journals">Journals<span>論文数</span></h3><ul class="jl">{jl}</ul></div></section>')
 
 
 METHOD_WORDS = (("クライオ", "cryo-em cryoem"), ("X線", "x-ray crystallography"), ("NMR", "nmr"))
@@ -2294,7 +2375,8 @@ def browse_page(lib: list[dict]) -> str:
             for name, href, rows, note in items if rows) + '</ol>'
 
     def group(title, body):
-        return f'<section class="bt-sec"><h2 class="bt-h">{title}</h2>{body}</section>'
+        anchor = dict((t, a) for a, t in BROWSE_GROUPS)[title]
+        return f'<section class="bt-sec" id="{anchor}"><h2 class="bt-h">{title}</h2>{body}</section>'
 
     parts = [(PARTS[k][0], PART_PAGES[k], [r for r in lib if r["part"] == k], PARTS[k][1]) for k in PARTS]
     cats = sorted(((CATEGORIES[k], f"proteins.html?cat={k}", [r for r in lib if k in r["cats"]], "") for k in CATEGORIES),
@@ -2333,7 +2415,8 @@ def home(issues: list[str]) -> str:
                     f'<ol class="iss-list">{rows}</ol></section>')
     side = ""   # no sidebar: the search is in the header (2026-10-19), the interests were dropped (2026-10-18)
     return page(brand.SITE_NAME,
-                masthead(0) + lead_html(feature, picks, latest, ISSUES_DIR, "figures") + shell("".join(main), side)
+                masthead(0) + lead_html(feature, picks, latest, ISSUES_DIR, "figures", len(issues) - issues.index(latest))
+                + shell("".join(main), side)
                 + about_html(issues, lib)
                 + colophon(f'<p>{esc(pmcoa.CREDIT)}</p>' if load_issue(latest, ISSUES_DIR)[0].get("source") == pmcoa.SOURCE else ""),
                 depth=0, viewer=True)
@@ -2626,6 +2709,11 @@ def build(preview_root: Path | None = None) -> int:
     shutil.copytree(ROOT / "assets" / "vendor", SITE_DIR / "assets" / "vendor")
     lib = library(issues)
     FACETS.update(facets(lib))
+    if LATEST["date"]:
+        _, lp, _ = load_issue(LATEST["date"], ISSUES_DIR)
+        lf = load_feature(LATEST["date"], ISSUES_DIR, lp)
+        NAV_INFO.update(articles=len(lp), groups=[(k, len(v)) for k, v in page_groups(lp, lf and lf["pmcid"])])
+    NAV_INFO["recent"] = [(d, len(load_issue(d, ISSUES_DIR)[1])) for d in issues if d != LATEST["date"]][:5]
     related = related_articles(lib)
     for i, date in enumerate(issues):
         prev_date = issues[i + 1] if i + 1 < len(issues) else None
