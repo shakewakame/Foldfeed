@@ -480,7 +480,14 @@ a, .find button, .v3d-bar button, .figtabs button {{ transition:color .2s, backg
 .read-paper:hover .arr {{ transform:translate(3px,-3px); }}
 .thumb {{ overflow:hidden; }}
 .thumb img {{ transition:transform .5s cubic-bezier(.2,.8,.2,1); }}
-.card:hover .thumb img, .pickup:hover .pk-fig img, .rel a:hover .thumb img {{ transform:scale(1.04); }}
+.rel a:hover .thumb img {{ transform:scale(1.04); }}
+/* under the pointer a structure lifts off the page: up a little, its shadow longer and softer */
+.card .thumb, .pk-fig, .ihc-grid .cfig, .bt-th {{ overflow:visible; }}
+.card .thumb img, .pk-fig img, .ihc-grid img, .bt-th img {{ filter:var(--fig-shadow, none);
+     transition:transform .45s cubic-bezier(.2,.8,.2,1), filter .45s cubic-bezier(.2,.8,.2,1); }}
+.card:hover .thumb img, .pickup:hover .pk-fig img, .ihc-grid a:hover img, .bt a:hover img {{ transform:translateY(-6px);
+     filter:drop-shadow(4px 10px 9px rgba(0,0,0,.22)); }}
+.pickup:hover .pk-fig img {{ filter:none; }}   /* its labels and close-up frame are part of the image */
 .card h3 a, .pk-h a {{ background:linear-gradient(currentColor,currentColor) left bottom / 0 1px no-repeat;
                          transition:background-size .35s cubic-bezier(.2,.8,.2,1), color .2s; }}
 .card:hover h3 a, .pickup:hover .pk-h a {{ background-size:100% 1px; text-decoration:none; }}
@@ -572,15 +579,12 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
 .ihc-toc {{ margin-left:auto; display:inline-flex; align-items:center; gap:10px; padding:8px 14px; background:var(--ink); color:#fff;
             font-family:var(--mono); font-size:12.5px; letter-spacing:.06em; text-decoration:none; transition:background-color .25s; }}
 .ihc-toc:hover {{ background:var(--acc-ink); color:#fff; text-decoration:none; }}
-.ihc-grid {{ list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px 24px;
-             transition:opacity .22s ease; }}
-.ihc-grid.out {{ opacity:0; }}
+.ihc-grid {{ list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px 24px; }}
 .ihc-grid > li[hidden] {{ display:none; }}
 .ihc-grid a {{ display:block; text-decoration:none; color:var(--ink); }}
 .ihc-grid .thumb.none {{ border:1px solid var(--hair); }}
 .ihc-grid img {{ display:block; }}
 .ihc-grid img, .ihc-grid .thumb.none {{ width:100%; height:auto; aspect-ratio:3/2; transition:transform .4s cubic-bezier(.2,.8,.2,1); }}
-.ihc-grid a:hover img {{ transform:scale(1.05); }}
 .ihc-grid .cno {{ font-size:24px; }}
 .ihc-grid .ctg {{ margin-top:6px; font-size:15.5px; }}
 .ihc-grid .ct {{ display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; min-height:2.8em; }}
@@ -634,6 +638,15 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
          color:var(--ink2); text-decoration:none; }}
 .gn-item:hover .gn-a, .gn-a:focus-visible {{ color:var(--acc-ink); text-decoration:none; }}
 .gn-a[aria-current] {{ color:var(--acc-ink); font-weight:700; }}
+/* a line on the navigation's rule: grows under the current place as the page opens, and under a place being opened */
+.gnav-links {{ align-self:stretch; }}
+.gn-item {{ display:flex; align-items:center; }}
+.gn-item::after {{ content:""; position:absolute; left:0; right:0; bottom:-9px; height:2px; background:var(--ink2); transform:scaleX(0);
+                   transform-origin:left; transition:transform .35s cubic-bezier(.2,.8,.2,1); }}
+.gn-item:hover::after, .gn-item:focus-within::after {{ transform:scaleX(1); }}
+.gn-item:has(.gn-a[aria-current])::after {{ background:var(--acc-ink); transform:scaleX(1); }}
+.anim .gn-item:has(.gn-a[aria-current])::after {{ animation:grow .7s cubic-bezier(.2,.8,.2,1) .25s both; }}
+@keyframes grow {{ from {{ transform:scaleX(0); }} to {{ transform:scaleX(1); }} }}
 /* the chevron that says a place opens; it turns up while its dropdown is open */
 .gn-a {{ display:flex; align-items:center; gap:8px; }}
 .gn-v {{ width:6px; height:6px; margin-top:-3px; border-right:1.5px solid currentColor; border-bottom:1.5px solid currentColor;
@@ -717,7 +730,6 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
 .bt a {{ display:block; color:var(--ink); text-decoration:none; }}
 .bt-th {{ display:grid; grid-template-columns:repeat({BROWSE_THUMBS}, minmax(0,1fr)); gap:6px; }}
 .bt-th img {{ display:block; width:100%; height:auto; transition:transform .4s cubic-bezier(.2,.8,.2,1); }}
-.bt a:hover img {{ transform:scale(1.06); }}
 .bt-n {{ display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-top:12px; font-family:var(--sans);
          font-size:16px; font-weight:700; line-height:1.5; }}
 .bt-grid.lg .bt-n {{ font-family:var(--latin); font-size:21px; }}
@@ -790,17 +802,20 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
 
 /* Read Later: the header link (shown once something is saved, with how many) and the button on each article.
    The button needs JavaScript (the list is kept in the browser), so without it there is none. */
-.vol .rl {{ display:inline-flex; align-items:center; gap:9px; font-family:var(--mono); font-size:13px; letter-spacing:.08em;
+.gnav .rl {{ flex:none; display:inline-flex; align-items:center; gap:9px; font-family:var(--mono); font-size:12.5px; letter-spacing:.08em;
             color:var(--ink); text-decoration:none; white-space:nowrap; }}
 .lp-row.off {{ opacity:.45; }}
 .lp-row {{ transition:opacity .3s; }}
-.vol .rl[hidden] {{ display:none; }}
-.vol .rl:hover {{ color:var(--acc-ink); }}
+.gnav .rl[hidden] {{ display:none; }}
+.gnav .rl:hover {{ color:var(--acc-ink); text-decoration:none; }}
 .rl-n {{ display:inline-flex; align-items:center; justify-content:center; min-width:24px; height:24px; box-sizing:border-box; padding:0 7px;
          border-radius:12px; background:var(--acc-ink); color:#fff; font-size:12px; font-weight:700; letter-spacing:0; }}
 .rl-n:empty {{ display:none; }}
 .menu-list .rl-n {{ margin-left:12px; vertical-align:1px; }}
-.rl.pop .rl-n, .later.pop .lt {{ animation:tick .4s cubic-bezier(.2,.8,.2,1); }}
+.rl.pop .rl-n, .later.pop .lt, .menu summary.pop .mb {{ animation:tick .4s cubic-bezier(.2,.8,.2,1); }}
+@keyframes arrive {{ 12%, 55% {{ color:var(--acc-ink); }} }}
+.arrive {{ animation:arrive 1.9s ease; }}
+.fly-dot {{ position:fixed; z-index:2000; width:12px; height:12px; border-radius:50%; background:var(--acc-ink); pointer-events:none; }}
 @keyframes tick {{ 0% {{ transform:scale(.8); }} 55% {{ transform:scale(1.12); }} 100% {{ transform:none; }} }}
 .later {{ display:none; align-items:center; font:inherit; font-family:var(--sans); font-size:13.5px; font-weight:700; line-height:1.5;
           padding:7px 14px; color:var(--ink); background:transparent; border:1px solid var(--ink); border-radius:0; cursor:pointer;
@@ -853,13 +868,16 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
   .margin .no {{ font-size:64px; }}
 }}
 @media (min-width:861px) and (max-width:1000px) {{
-  .gnav-links {{ gap:14px; }}
+  .gnav .gnav-in {{ gap:14px; }}
+  .gnav .gnav-in .hs {{ min-width:90px; }}
+  .gnav .gnav-links {{ gap:14px; }}
   .gn-a {{ font-size:11px; letter-spacing:.03em; }}
 }}
 @media (max-width:1120px) {{
   .gnav-in {{ gap:20px; }}
   .gnav-links {{ gap:18px; }}
   .gn-a {{ font-size:11.5px; letter-spacing:.06em; }}
+  .gnav .rl-t {{ position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); }}   /* the count alone, its name read out */
   .gnav .hs {{ flex:1 1 220px; min-width:120px; }}
   /* an issue's first screen in one column: how much, then what */
   .ih-grid {{ grid-template-columns:minmax(0,1fr); gap:30px; }}
@@ -931,7 +949,6 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
   .js .mast.hs-on + .gnav .gnav-links {{ display:none; }}
   .js .hs-open {{ display:inline-block; }}
   .hs-pop {{ position:static; width:auto; padding:16px; }}   /* opens right under the box */
-  .vol .rl {{ display:none; }}
   .cards.md {{ grid-template-columns:minmax(0,1fr); gap:60px; }}
   .cards.sm {{ grid-template-columns:repeat(2, minmax(0,1fr)); gap:48px 16px; }}
   .bt-grid.lg {{ grid-template-columns:minmax(0,1fr); gap:44px; }}
@@ -1124,6 +1141,29 @@ MENU_SCRIPT = r"""
     var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     window.scrollTo({ top: Math.max(0, top), behavior: calm ? 'auto' : 'smooth' });
     if (history.replaceState) history.replaceState(null, '', '#' + id);
+    whenStill(function () { arrive(t); });
+  });
+  function whenStill(f) {   // once the page has stopped scrolling
+    var y = -1, same = 0;
+    (function tick() {
+      if (window.scrollY === y) same++; else { same = 0; y = window.scrollY; }
+      if (same > 5) f(); else requestAnimationFrame(tick);
+    })();
+  }
+  function arrive(t) {   // light what was arrived at for a moment: an article's number, else the heading
+    var el = t.matches('.art') ? t.querySelector('.margin .no') : t.querySelector('h1, h2, .label') || t;
+    if (!el) return;
+    el.classList.remove('arrive'); void el.offsetWidth; el.classList.add('arrive');
+    setTimeout(function () { el.classList.remove('arrive'); }, 2000);
+  }
+  window.addEventListener('load', function () {   // from another page with "#x": under the navigation, then lit
+    var t = location.hash && document.getElementById(location.hash.slice(1));
+    if (!t) return;
+    var y = 0, nav = document.querySelector('.gnav'), pinned = nav && getComputedStyle(nav).position === 'sticky' ? nav.offsetHeight : 0;
+    for (var el = t; el; el = el.offsetParent) y += el.offsetTop;
+    window.scrollTo({ top: Math.max(0, y - pinned - 16), behavior: 'instant' });
+    if (y > head.offsetHeight) { jumped = true; away(true); }
+    whenStill(function () { arrive(t); });
   });
 })();
 (function () {
@@ -1171,14 +1211,15 @@ MENU_SCRIPT = r"""
     el.classList.add('rv');
   });
   function countUp(el) {
-    var to = +el.getAttribute('data-count'), t0 = null, dur = 1200;
+    // an issue's first screen: after its block has risen into place, and slower, so the count is seen
+    var issue = !!el.closest('.ihead'), to = +el.getAttribute('data-count'), t0 = null, dur = issue ? 1700 : 1200;
     function f(t) {
       t0 = t0 || t;
-      var p = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - p, 3);
+      var p = Math.min(1, (t - t0) / dur), e = issue ? (p < .5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2) : 1 - Math.pow(1 - p, 3);
       el.textContent = Math.round(to * e);
       if (p < 1) requestAnimationFrame(f);
     }
-    requestAnimationFrame(f);
+    setTimeout(function () { requestAnimationFrame(f); }, issue ? 450 : 0);
   }
   var counts = [].slice.call(document.querySelectorAll('[data-count]'));
   counts.forEach(function (el) { el.textContent = '0'; });
@@ -1342,8 +1383,28 @@ LATER_SCRIPT = r"""
     store(ids);
     paint();
     b.classList.remove('pop'); void b.offsetWidth; b.classList.add('pop');
-    [].forEach.call(document.querySelectorAll('.rl'), function (a) { a.classList.remove('pop'); void a.offsetWidth; a.classList.add('pop'); });
+    var saved = ids.indexOf(id) >= 0;
+    function bump() {
+      [].forEach.call(document.querySelectorAll('.rl, .menu summary'), function (a) { a.classList.remove('pop'); void a.offsetWidth; a.classList.add('pop'); });
+    }
+    if (saved) fly(b, bump); else bump();
   });
+  function fly(from, done) {   // a small dot from the button to Read Later in the navigation (the MENU on a phone)
+    var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var to = [].filter.call(document.querySelectorAll('.gnav .rl, .menu summary'), function (el) { return el.offsetParent; })[0];
+    var r = to && to.getBoundingClientRect(), s = from.getBoundingClientRect();
+    if (calm || !r || r.bottom < 0 || r.top > innerHeight || !document.body.animate) return done();
+    var dot = document.createElement('span');
+    dot.className = 'fly-dot';
+    dot.style.left = (s.left + s.width / 2 - 6) + 'px';
+    dot.style.top = (s.top + s.height / 2 - 6) + 'px';
+    document.body.appendChild(dot);
+    var dx = r.left + r.width - 14 - (s.left + s.width / 2), dy = r.top + r.height / 2 - (s.top + s.height / 2);
+    dot.animate([{ transform: 'translate(0,0) scale(1)', opacity: 1 },
+                 { transform: 'translate(' + dx * .5 + 'px,' + (dy * .5 - 60) + 'px) scale(1.15)', opacity: 1, offset: .5 },
+                 { transform: 'translate(' + dx + 'px,' + dy + 'px) scale(.5)', opacity: .9 }],
+                { duration: 620, easing: 'cubic-bezier(.4,0,.2,1)' }).onfinish = function () { dot.remove(); done(); };
+  }
   window.addEventListener('storage', function (e) { if (e.key === KEY) { ids = load(); paint(); } });
   window.FFLater = { get: function () { return ids.slice(); }, set: function (v) { ids = v; store(ids); paint(); } };
   paint();
@@ -1413,22 +1474,23 @@ def global_nav(up: str, current: str | None = None, find: str = "") -> str:
                   f'<span class="gn-v" aria-hidden="true"></span></a>'
                   f'<div class="gn-pop"><p class="gn-d">{esc(nav_note(key))}</p><ul>{items}</ul></div></div>')
     return (f'<nav class="gnav" aria-label="サイトの主な場所"><div class="wrap"><div class="gnav-in">'
-            f'<div class="gnav-links">{links}</div>{find}</div></div></nav>')
+            f'<div class="gnav-links">{links}</div>{find}'
+            f'<a class="rl" href="{up}later.html" title="Read Later" hidden><span class="rl-t">Read Later</span><b class="rl-n"></b></a>'
+            f'</div></div></nav>')
 
 
 def masthead(depth: int, right: str = "", search: bool = True, current: str | None = None) -> str:
-    """The wordmark row inside the page width, Read Later and MENU (a phone only) on the right; the double rule under it
-    spans the whole window; under the rule the global navigation with the search (global_nav, search_form). The whole header stays at the top of the window while the page scrolls. On a phone the
+    """The wordmark row inside the page width, MENU (a phone only) on the right; the double rule under it spans the
+    whole window; under the rule the global navigation with the search and Read Later (global_nav, search_form). The whole header stays at the top of the window while the page scrolls. On a phone the
     search opens from a button under the wordmark row. "Read Later N" shows once the reader has saved an article."""
     up = "../" * depth
     find = search_form(up) if search else ""
     open_btn = '<button class="hs-open" type="button" aria-label="記事を探す">検索</button>' if search else ""
-    later = f'<a class="rl" href="{up}later.html" hidden>Read Later<b class="rl-n"></b></a>'
     return (f'<header class="mast"><div class="wrap"><div class="mast-row">'
             f'<div class="brand"><a class="word" href="{up}index.html"><img src="{up}assets/logo-mark.svg" alt="">'
             f'<span class="name">{esc(brand.SITE_NAME)}</span></a>'
             f'<p class="tag">{esc(TAGLINE)}</p></div>'
-            f'<div class="vol">{right}{later}{open_btn}{menu_html(up)}</div></div></div><div class="rules"></div></header>'
+            f'<div class="vol">{right}{open_btn}{menu_html(up)}</div></div></div><div class="rules"></div></header>'
             f'{global_nav(up, current, find)}')
 
 
@@ -1833,7 +1895,7 @@ def contents_html(picks: list, date: str, root: Path, fig_base: str, href_base: 
         cards = "".join(card_html(c, pk, number[c["pmcid"]], date, root, fig_base, f'{href_base}#a{number[c["pmcid"]]}', size)
                         for c, pk in items)
         y, m, d, _ = date_parts(date)   # the way to the whole issue sits beside the first heading
-        go = (f'<a class="ix-all" href="{href_base}">{y}.{m:02d}.{d:02d}のすべての解説記事一覧'
+        go = (f'<a class="ix-all" href="{href_base}">{m}.{d} 号の全 {len(picks)} 本を読む'
               f'<span class="arr" aria-hidden="true">→</span></a>') if not out else ""
         out += (f'<div class="ix-h{" hot" if out else ""}" id="{key}-list"><h2 class="label">{HOME_PARTS[key]}</h2>'
                 f'<span class="ixm"><b>{n_articles(len(items))}</b></span>{go}</div>'
@@ -2027,7 +2089,7 @@ def issue_head(date: str, number: int | None, picks: list, prev_date: str | None
            f'{total}</span><small>分</small></span><span class="kl">Reading time</span></div></div>') if picks else ""
     # the parts (kinds of article; the pick counts in its own), small; each a link to its articles
     shown = {k for k, _ in page_groups(picks, featured)}
-    parts = "".join(f'<a href="#{k if k in shown else "pick"}"><i class="sw-{PART_CLS[k]}"></i>{PARTS[k][0]}<b>{len(v)}</b></a>'
+    parts = "".join(f'<a href="#{k if k in shown else "pick"}"><i class="sw-{PART_CLS[k]}"></i>{PARTS[k][0]}<b data-count="{len(v)}">{len(v)}</b></a>'
                     for k, v in render.sections(picks).items() if v)
     parts = f'<p class="ih-parts kl">{parts}</p>' if parts else ""
     nav = issue_nav(prev_date, next_date, "ih-nav") if prev_date or next_date else ""
@@ -2079,11 +2141,23 @@ CAROUSEL_SCRIPT = r"""
     n.textContent = (cur + 1) + ' / ' + pages;
     run();
   }
-  function turn(p, byHand) {
+  function shownItems() { return items.filter(function (li) { return !li.hidden; }); }
+  function turn(p, byHand) {   // the six go one after another and the next six come in the same way
     if (byHand) { auto = false; c.classList.add('manual'); bar.classList.remove('run'); }
-    if (calm) return show(p);
-    grid.classList.add('out');
-    setTimeout(function () { show(p); grid.classList.remove('out'); }, 220);
+    if (calm || !grid.animate) return show(p);
+    var old = shownItems(), last;
+    old.forEach(function (li, k) {
+      last = li.animate([{ opacity: 1, transform: 'none' }, { opacity: 0, transform: 'translateY(-10px)' }],
+                        { duration: 220, delay: k * 45, easing: 'ease-in', fill: 'forwards' });
+    });
+    last.onfinish = function () {
+      old.forEach(function (li) { li.getAnimations().forEach(function (a) { a.cancel(); }); });
+      show(p);
+      shownItems().forEach(function (li, k) {
+        li.animate([{ opacity: 0, transform: 'translateY(14px)' }, { opacity: 1, transform: 'none' }],
+                   { duration: 420, delay: k * 60, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'backwards' });
+      });
+    };
   }
   bar.addEventListener('animationend', function () { if (auto) turn(cur + 1); });
   c.querySelector('.ihc-prev').addEventListener('click', function () { turn(cur - 1, true); });
