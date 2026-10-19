@@ -1,0 +1,127 @@
+{
+  "pmcid": "PMC13671523",
+  "rank": 3,
+  "headline": "口蹄疫ウイルスは、VP3の2残基の変異で抗体を逃れる",
+  "subhead": "ブタ抗体pO18-29との複合体をクライオ電顕で解析し、結合の差を示した",
+  "target_label": "口蹄疫ウイルス O/Cathay型",
+  "target_en": "FMDV O/Cathay topotype + porcine antibody pO18-29",
+  "summary": {
+    "question": "O/Cathay型の口蹄疫ウイルスが抗体を逃れて変わっていく構造的な理由は、よく分かっていなかった。",
+    "approach": "ブタ由来の中和抗体7種で抗原領域を調べ、pO18-29のscFvと古い株・新しい変異株のカプシドの複合体をクライオ電顕で解析した。",
+    "result": "2.24 Åと2.34 Åの再構成で、抗体の結合面は似ていた。VP3の73番と134番の残基の相互作用が、新しい株で弱まっていた。",
+    "learned": "V73KとK134Tの置換が、疎水性の接触と水素結合・塩橋の網を乱し、中和からの逃避を起こすと論文は結論している。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "However, the structural basis underlying this divergence remains poorly defined.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "using a panel of seven porcine-derived neutralizing monoclonal antibodies (pnAbs), we mapped two antigenic regions with crucial determinants responsible for neutralization escape in recent O/Cathay variants.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "We resolved cryo-EM structures of the pO18-29 single-chain variable fragment (scFv) in complex with capsids from the ancient strain O/HN/CHA/93 (FMDV-OHN–pO18-29) and the recent variant O/18074 (FMDV-O18–pO18-29), respectively.",
+          "section": "Cryo-EM complex structures of virus-antibody revealed novel antigenic regions on VP3"
+        }
+      ],
+      "result": [
+        {
+          "quote": "The final reconstructions reached resolutions of 2.24 Å for FMDV-OHN–pO18-29 and 2.34 Å for FMDV-O18–pO18-29, as estimated by the 0.143 FSC criterion",
+          "section": "Cryo-EM complex structures of virus-antibody revealed novel antigenic regions on VP3"
+        },
+        {
+          "quote": "In contrast, these interactions were substantially weakened in the O/18074 complex due to the V73K and K134T substitutions",
+          "section": "Synergistic mutations at positions 73 (V → K) and 134 (K → T) on VP3"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "mutations at positions 73 (V → K) and 134 (K → T) on VP3 mediated neutralization escape in O/Cathay variants via disruption of hydrophobic interaction as well as the hydrogen bonds and salt bridge networks.",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Escape mutations selected in vitro may not fully recapitulate those arising during natural infection",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "immune",
+    "pathogen"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "古い株（O/HN/CHA/93）では、VP3のV73が抗体のHCDR3ループと深い疎水性の接触を作り、K134は水素結合と塩橋を作る。新しい変異株（O/18074）ではV73KでV73の接触が消え、K134Tで塩橋が作れなくなる。",
+      "evidence": [
+        {
+          "quote": "This hydrophobic contact was abolished in O/18074 due to the V73K substitution (Fig 5F), resulting in destabilization of the antibody-capsid interface.",
+          "section": "Cryo-EM complex structures of virus-antibody revealed novel antigenic regions on VP3"
+        },
+        {
+          "quote": "VP3 residue K134 in O/HN/CHA/93 formed both hydrogen bonds and salt bridges with pO18-29",
+          "section": "Cryo-EM complex structures of virus-antibody revealed novel antigenic regions on VP3"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "抗体が結合するウイルス表面の領域（フットプリント）は、2つの株でほぼ同じだった。逃避は結合面の大きな変化ではなく、疎水性と静電的な相互作用の細かな組み替えで起こる。",
+      "evidence": [
+        {
+          "quote": "neutralization escape in the O/18074 variant is driven by subtle remodeling of hydrophobic and electrostatic interactions, leading to reduced interfacial stability without altering the overall antigenic footprint.",
+          "section": "Cryo-EM complex structures of virus-antibody revealed novel antigenic regions on VP3"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "VP1のRGDモチーフの2つ後ろの残基（149番、Q→H）の変化は、3種の抗体とワクチン接種血清による中和に影響した。このVP1の149番とVP3の73・134番は、ワクチン株の更新を考えるときの監視の目印になると著者は述べている。",
+      "evidence": [
+        {
+          "quote": "the identification of VP1 residue 149 (RGD + 2) and VP3 residues 73 and 134 as critical determinants of neutralization escape provides clear targets for monitoring antigenic drift in the field",
+          "section": "Discussion"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "抗体の重鎖・軽鎖遺伝子を合成し、CHO-S細胞に共導入して発現した。",
+    "construct": "pO18-29はscFvとして使った。",
+    "purification": "精製したウイルス粒子を使った。",
+    "sample_prep": "ウイルス粒子とscFvをモル比1:240で混ぜ、Quantifoilグリッドに塗布してVitrobot Mark IVで凍結した。",
+    "data_collection": "Titan Krios G3i（300 kV）とK3検出器で撮影し、cryoSPARCで再構成した。",
+    "evidence": [
+      {
+        "quote": "Purified FMDV O/HN/CHA/93 146S and O/18074 146S particles were individually incubated with scFv at a molar ratio of 1:240 in a volume of 10 μl for 10–60 mins at 4˚C.",
+        "section": "Cryo-EM sample preparation, data collection and three-dimensional reconstruction"
+      },
+      {
+        "quote": "Cryo-EM data were collected on a Titan Krios G3i transmission electron microscope (Thermo Fisher Scientific) operated at 300 kV",
+        "section": "Cryo-EM sample preparation, data collection and three-dimensional reconstruction"
+      }
+    ]
+  },
+  "keywords": [
+    "口蹄疫ウイルス",
+    "抗原変異",
+    "ブタ抗体"
+  ],
+  "editor_notes": "PDBは23IT（古い株O/HN/CHA/93）と23IU（変異株O/18074）。タンパク質のUniProt対応がエントリ間でずれている。ブタ抗体のVL/VH（鎖1・2）は未対応。VP1の149番の影響は変異ウイルスの中和試験で示され、構造は解いていない。V73/K134の役割の検証は組換えウイルスで行われている。legend_labelsの順序は未確認（render後に見直す）。",
+  "legend_labels": [
+    "VP1（カプシド）",
+    "VP2（カプシド）",
+    "VP3（カプシド）",
+    "VP4（カプシド）",
+    "pO18-29 重鎖",
+    "pO18-29 軽鎖"
+  ],
+  "method_label": "Cryo-EM・2.24 Å",
+  "ga_pdb_id": "23IU"
+}

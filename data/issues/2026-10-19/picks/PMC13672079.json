@@ -1,0 +1,124 @@
+{
+  "pmcid": "PMC13672079",
+  "rank": 6,
+  "headline": "膜に入れる装置と抜き出す装置が、小胞体で向かい合って複合体を作る",
+  "subhead": "EMC と Spf1 のクライオ電顕構造で、基質の入口が膜の中で隣り合い、ATP の状態で動くことが分かった",
+  "target_label": "EMC:Spf1 複合体（出芽酵母）",
+  "target_en": "EMC:Spf1 complex (S. cerevisiae)",
+  "summary": {
+    "question": "膜タンパク質を膜へ入れる装置と、誤って入ったものを抜く装置が、小胞体でどう連携するかは分かっていなかった。",
+    "approach": "酵母の EMC と Spf1 を昆虫細胞で作り、クライオ電顕で解析した。ATP 類似体を加えた状態や変異体も調べた。",
+    "result": "EMC 3.8 Å、Spf1 4.2 Å の構造を得た。EMC の挿入口と Spf1 の溝は、膜内で向かい合っていた。",
+    "learned": "2 つの装置は役割を保ったまま安定に会合し、Spf1 の ATP サイクルが両者の境界面と細胞質側の入口を変える。",
+    "open": "どの基質をどの部位で扱うかをどう調節するかは、今後の課題とされている。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "How membrane protein insertion and quality control machineries are coordinated within the ER membrane remains poorly understood.",
+          "section": "Main"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "we obtained large homogeneous amounts of the yeast complex by recombinant production in insect cells and a tandem affinity purification followed by SEC",
+          "section": "Results"
+        },
+        {
+          "quote": "we determined cryo-EM structures of the complex in the presence of the ATP analog ATPγS to a global resolution of 3.8 Å",
+          "section": "Results"
+        }
+      ],
+      "result": [
+        {
+          "quote": "This allowed us to determine the structure of the complex by cryo-EM to a global resolution of 3.8 Å for the EMC and 4.2 Å for Spf1",
+          "section": "Results"
+        },
+        {
+          "quote": "In the EMC:Spf1 complex structure, these two experimentally validated sites for substrate engagement are positioned directly opposite of each other within the membrane",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "It juxtaposes structurally distinct insertion and extraction machineries within a stable assembly while preserving their individual activities.",
+          "section": "Discussion"
+        },
+        {
+          "quote": "reveal that the ATPase cycle of Spf1 remodels the interface between the two machineries and alters cytoplasmic accessibility of both substrate-binding cavities",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "It will now be important to analyze how engagement of the different sites is regulated to ultimately govern the fate of diverse membrane protein clients in different organisms.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "transporter",
+    "regulation"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "EMC の挿入口（Emc3・4・6 の親水性の溝）と Spf1 の基質結合の溝が、膜の中で互いに向き合い、漏斗状の空間を作っていた。幅は小胞体内腔側で 25 Å、細胞質側で 50 Å である。",
+      "evidence": [
+        {
+          "quote": "This arrangement creates a large intramembrane space between the two proteins that resembles a funnel spanning the whole transmembrane region, with a width of 25 Å at the ER lumenal and 50 Å at the cytoplasmic sides",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "新しい結合部位",
+      "text": "2 つの装置は主に小胞体内腔側の「ルーメナルドック」（約 424 Å2）で接する。Emc7 と Emc10 の変異や Spf1 の E1087A で会合が弱まるが、Spf1 自身の働きは保たれた。",
+      "evidence": [
+        {
+          "quote": "This ‘lumenal dock’ buries around 424 Å2 of surface area (366 Å2 with Emc10, 58 Å2 with Emc7)",
+          "section": "Results"
+        },
+        {
+          "quote": "Taken together, our mutational analysis indicates that disruption of the EMC:Spf1 interface weakens the association between the two machineries but leaves core functions of Spf1 intact.",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "ATPγS を加えた状態では、Spf1 のアーム領域が EMC の細胞質側の蓋につながり、2 つの空洞への入口をふさぐ。AlF4− の状態ではアームは見えず、Spf1 は EMC の側へ約 10 Å 寄る（AlF4− の構造は 6.8 Å と低分解能）。",
+      "evidence": [
+        {
+          "quote": "Comparison of the nucleotide states revealed substantial repositioning of Spf1 relative to the EMC, with the transmembrane core and cytoplasmic domains of Spf1 shifting by approximately 10 Å toward the EMC after ATP hydrolysis",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "Hi5 昆虫細胞にバキュロウイルスを共感染させ、3 日間発現。",
+    "construct": "Emc5 に TwinStrep II タグ、複合体の精製に FLAG タグを使用。",
+    "purification": "1.5% ジギトニンで可溶化し、StrepTactin と抗 FLAG のタンデム親和精製後、Superose 6 でサイズ排除。",
+    "sample_prep": "ATPγS 試料は 2 mM ATPγS と氷上 30 分。AlF4− 試料は ADP、NaF、AlF3 と氷上でインキュベート。Vitrobot Mark IV で凍結。",
+    "data_collection": "アポ型は 300 kV・0.8222 Å/pixel で撮影。内在性 EMC は Glacios 200 kV。",
+    "evidence": [
+      {
+        "quote": "Membranes were solubilized by adding purified digitonin to a final concentration of 1.5% (w/v) and rotated for 3 h.",
+        "section": "Methods"
+      },
+      {
+        "quote": "For the EMC:Spf1ATPγS sample, the purified protein was concentrated to 4.5 mg ml−1 and preincubated with 2 mM ATPγS (Jena Bioscience) for 30 min on ice.",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "EMC",
+    "Spf1",
+    "ATP13A1",
+    "膜タンパク質の挿入"
+  ],
+  "editor_notes": "PDB 34BQ・34BR は公開待ち（構造図なし）。EMC・Spf1 は単独の構造が既にあり、新しいのは複合体。E1-P 状態（EMD-54635、6.8 Å）と内在性複合体（8.7 Å）は低分解能で、PDB はアポと E1-ATP の 2 つ。ヒト複合体は AlphaFold 3 のモデルで、実験構造ではない。ファイルの拡張子など本文に無い数値は未使用。",
+  "method_label": "Cryo-EM・EMC 3.8 Å／Spf1 4.2 Å"
+}

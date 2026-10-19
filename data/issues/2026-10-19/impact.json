@@ -1,0 +1,181 @@
+{
+ "screened": 97,
+ "scored": [
+  {
+   "pmcid": "PMC13668671",
+   "type": "ai_design",
+   "scores": {
+    "novelty": 3,
+    "reach": 2,
+    "structure": 1,
+    "support": 2
+   },
+   "selected": true,
+   "reason": "AI 設計のタンパク質集合体を RNA 運搬体に仕立て、細胞・マウス・ブタで機能を示した。クライオ ET で集合体の大きさを実測したが原子レベルの構造は決めていない（structure 1）。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "By combining natural protein domains with synthetic protein assemblies, we create more than 100 bottom-up RNA transfer vehicles with unique sizes and shapes.",
+      "section": "Abstract"
+     },
+     {
+      "quote": "Our work demonstrates how proteins created by generative artificial intelligence can be harnessed for the rational engineering of RNA transport systems with the desired properties by overcoming the limitations of natural protein diversity.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "These vehicles surpass the RNA transfer efficiency of widely used delivery vehicles by several orders of magnitude.",
+      "section": "Abstract"
+     }
+    ],
+    "structure": [
+     {
+      "quote": "Cryo-ET analysis revealed dozens of protein structures within these vesicles, with a typical diameter of 22 ± 1.4 nm (Extended Data Fig. 6a,b); this was consistent with the expected STV-C8 assemblies, although the precise atomic organization of the assembly could not be resolved.",
+      "section": "Results"
+     }
+    ],
+    "support": [
+     {
+      "quote": "We show the in vivo biodistribution of one of these vehicles in a mouse at near-single-cell resolution, confirm its safety, and use it to perform a gene-editing treatment strategy for Duchenne muscular dystrophy in patient-derived cells and a pig.",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13669308",
+   "type": "drug",
+   "scores": {
+    "novelty": 2,
+    "reach": 2,
+    "structure": 0,
+    "support": 2
+   },
+   "selected": false,
+   "reason": "SPT 阻害薬の作用機序を遺伝学・代謝解析で示したが、結合部位は既存構造に基づくモデルのみで、実験構造による確認がない（structure 0）。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "These findings validate SPT as a promising target and introduce a structurally distinct sphingolipid biosynthesis inhibitor with therapeutic potential.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "This fungicidal compound has novel antifungal activity against multiple Candida species and fluconazole-resistant isolates.",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "The mode of action was confirmed by experimental evolution, yielding a resistant strain with a non-synonymous mutation in the SPT-encoding gene, LCB2.",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13672804",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 2,
+    "reach": 2,
+    "structure": 0,
+    "support": 2
+   },
+   "selected": false,
+   "reason": "再構成レプリソームの生化学研究で、構造データは使っていない（structure 0）。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "This study defines the initial response of the eukaryotic replisome to araA and araC and may have implications for how resistance arises against them, and other nucleoside analogue chemotherapeutics, in the clinic.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "Removal of ara analogues from nascent strands by DNA polymerase proofreading is likely the primary resistance mechanism against these drugs since a template-embedded analogue can be bypassed by the replisome.",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "Pol δ replaces the canonical leading-strand DNA polymerase, Pol ε, to synthesise and proofread nascent leading strands in vitro and in vivo",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13672366",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 2,
+    "reach": 2,
+    "structure": 0,
+    "support": 2
+   },
+   "selected": false,
+   "reason": "再構成実験による生化学研究。既存のクライオ電顕構造は重ね合わせに使っただけで結論を支えていない（structure 0）。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "These findings suggest a model in which the human replisome has evolved to simplify synchronization while maintaining replication speed and pave the way for a better understanding of its communication with other cellular processes.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "In the human replisome, Pol α is recruited distributively to the CMG helicase for priming and transiently slows leading-strand synthesis by Pol ε, thereby directly coupling lagging-strand initiation to replisome progression.",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "Nevertheless, efficient recycling mechanisms of Pol δ maintain synchronization by prioritizing OF synthesis over MOF, resulting in prolonged accumulation of unligated OF intermediates without affecting leading-strand synthesis.",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13670019",
+   "type": "method",
+   "scores": {
+    "novelty": 1,
+    "reach": 1,
+    "structure": 1,
+    "support": 1
+   },
+   "selected": false,
+   "reason": "HasR 部分ドメインの精製法。自前の NMR・HDX はあるが新規性は低い。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "A GST‐His dual‐affinity strategy enabled efficient purification of the construct, whereas His6‐tag alone resulted in insoluble protein and HLT‐tag fusions suffered from non‐specific proteolysis.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "Together, these results establish a generalizable workflow for producing soluble receptor domains from membrane proteins",
+      "section": "Abstract"
+     }
+    ],
+    "structure": [
+     {
+      "quote": "adopting well‐folded conformations as confirmed by circular dichroism, NMR spectroscopy, and mass spectrometry",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "a finding further supported by hydrogen/deuterium exchange mass spectrometry",
+      "section": "Abstract"
+     }
+    ]
+   }
+  }
+ ]
+}

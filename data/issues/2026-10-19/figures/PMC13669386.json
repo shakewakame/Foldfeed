@@ -1,0 +1,33 @@
+{
+ "pdb_id": "9YNB",
+ "view": {
+  "target": [
+   151.22,
+   150.54,
+   156.81
+  ],
+  "dir": [
+   -0.4544,
+   -0.8442,
+   0.2843
+  ],
+  "up": [
+   -0.8557,
+   0.5024,
+   0.1242
+  ],
+  "half": [
+   62.2,
+   36.7
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "PdpC（T6SSエフェクター）",
+   "desc": "T6SS effector protein PdpC",
+   "entity": "1"
+  }
+ ],
+ "ligands": []
+}

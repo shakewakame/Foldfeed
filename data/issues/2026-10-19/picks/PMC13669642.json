@@ -1,0 +1,131 @@
+{
+  "pmcid": "PMC13669642",
+  "rank": 8,
+  "headline": "活性部位のふたが緩むと、ChdCは酸化に弱くなる",
+  "subhead": "H117A変異体のX線構造とMD・速度論から、ふたのループが入口を守る役割を調べた",
+  "target_label": "ChdC H117A（リステリア）",
+  "target_en": "ChdC H117A (L. monocytogenes)",
+  "summary": {
+    "question": "コプロヘム脱炭酸酵素（ChdC）の活性部位は柔軟なループでおおわれているが、その生理的な役割は十分に調べられていなかった。",
+    "approach": "リステリア菌ChdCのループにあるH117をアラニンに替え、MD、CD、速度論、シアン化物の結合測定、X線結晶構造解析で調べた。",
+    "result": "変異体ではループの揺らぎが増え、コプロヘムとシアン化物が速く結合した。一方、過酸化水素にはより傷つきやすく、色素の退色が目立った。",
+    "learned": "H117は隣のS116との水素結合でループを安定させ、補基質の過酸化水素が酸化の標的に届くのを調節していると考えられる。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Its importance has not been fully studied but given its position it is assumed to provide steric hinderance for substrates or potential inhibitors to pass.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "This study aims to investigate its physiological role by introducing a histidine‐to‐alanine mutation located on the loop of ChdC from Listeria monocytogenes.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Using simulations and X‐ray crystallography, we show evidence that the loop is originally stabilized by a hydrogen bond between S116 and the mutated H117.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "Taken together, these results indicate that the H117A mutation leads to increased loop flexibility and a broader conformational ensemble relative to the WT simulation.",
+          "section": "Results"
+        },
+        {
+          "quote": "The bleaching effect is more pronounced for H117A, as can be seen from the fact that the peak at 410 nm does not appear before spectral decline dominates (Fig. 7C).",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "The higher accessibility also results in a higher susceptibility to damage from oxidative cosubstrates like H2O2, suggesting the loop in its wild‐type conformation plays a key biological role in regulating the transfer of cosubstrates towards the main substrate coproheme.",
+          "section": "Abstract"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "enzyme",
+    "pathogen"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "野生型の結晶構造では、S116の水酸基がH117の側鎖に向いて極性接触を作っている。H117Aではこの相手がなくなり、S116の向きが変わっていた。MDでもこの水素結合が93%の頻度で見られた。",
+      "evidence": [
+        {
+          "quote": "In the WT structure, a polar contact is predicted between H117 and S116, with S116's hydroxyl group being oriented towards Nδ1 on H117's side chain.",
+          "section": "Results"
+        },
+        {
+          "quote": "the same hydrogen bond occurs with a frequency of 93.31%",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "コプロヘムの結合は、野生型では中間状態を経る二段階だが、H117Aでは中間状態のない一段階になった。シアン化物の結合も変異体のほうが速く、単一の指数関数で表せた。ループが緩むと入口が広がることを示す。",
+      "evidence": [
+        {
+          "quote": "In contrast in the H117A variant, no spectral signatures indicative of an intermediate state are present.",
+          "section": "Results"
+        },
+        {
+          "quote": "The variant with the smaller alanine residue on the flexible loop does not interfere with the incoming cyanide compared to the WT",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "ChdCはグラム陽性菌に固有の酵素で、将来の抗菌薬の標的になりうると著者は述べる。ふたのループが入口を守る仕組みは、阻害剤の設計でも考慮すべき点になりうる。",
+      "evidence": [
+        {
+          "quote": "ChdC is a valuable target for enzymatic research, as it is unique to Gram‐positive bacteria, a group containing a plethora of pathogenic organisms and might prove to be a suitable target for future antibiotics [6].",
+          "section": "Introduction"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "大腸菌 BL21 Gold で発現し、0.1 mM IPTG で 18°C 一晩誘導した。",
+    "construct": "LmChdC を His タグと HRV3C 切断部位つきの pETM11 に入れ、H117A は部位特異的変異で作った。",
+    "purification": "HisTrap で捕捉してプロテアーゼで切り、コプロヘムを加えてゲルろ過で精製した。",
+    "sample_prep": "シアン化物を 1 mM 加えた状態で、シッティングドロップ蒸気拡散法により結晶化した。",
+    "data_collection": "ESRF の ID30A3（MASSIF-3）でデータを集め、AlphaFold の予測モデルを使って分子置換で解いた。",
+    "evidence": [
+      {
+        "quote": "Finally, the plasmids were transformed into Escherichia coli BL21 Gold for recombinant expression.",
+        "section": "Materials and methods"
+      },
+      {
+        "quote": "The cleaved product was reconstituted by adding a molar surplus of coproheme (Fe‐coproporphyrin III from Frontier Scientific, Logan, Utah, USA), dissolved in 10 mm NaOH.",
+        "section": "Materials and methods"
+      },
+      {
+        "quote": "Crystallographic screening was performed with coproheme reconstituted LmChdC H117A, (stored at 200 μm in 50 mm phosphate buffer, pH 7, 200 mm NaCl), preincubated with cyanide to prevent unwanted substrate conversion.",
+        "section": "Materials and methods"
+      },
+      {
+        "quote": "Molecular replacement was done by Phaser 2.8.3 with an AlphaFold prediction as an input model [30].",
+        "section": "Materials and methods"
+      }
+    ]
+  },
+  "keywords": [
+    "ChdC",
+    "ヘム合成",
+    "コプロヘム"
+  ],
+  "editor_notes": "変異体 H117A の構造（PDB 9T54, 2.19 Å）で、野生型 6FXJ など既存構造がある（初構造ではない）。ループが見えるのは5鎖中2鎖のみ。MD は 50 ns と短く、既存モデル 4WWS に基づく。結晶は双晶（fraction 0.14）で、解像度を 2.2 Å で打ち切っている。H117 が遠位塩基として働くかは、著者は『有意な役割は見られなかった』と書く。",
+  "ga_pdb_id": "9T54",
+  "legend_labels": [
+    "ChdC（コプロヘム脱炭酸酵素）"
+  ],
+  "ligand_names": {
+    "FEC": "コプロヘム"
+  },
+  "site_ligand": "FEC"
+}

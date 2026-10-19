@@ -1,0 +1,111 @@
+{
+  "pmcid": "PMC13676316",
+  "rank": 9,
+  "headline": "第VIII因子は、膜に斜めに刺さって固定される",
+  "subhead": "分岐脂質のナノディスクとリポソームでクライオ電顕構造を解き、C2 ドメインが主なアンカーだと示した",
+  "target_label": "第VIII因子（ヒト）",
+  "target_en": "Human coagulation factor VIII (FVIII)",
+  "summary": {
+    "question": "凝固因子 FVIII が膜とどう結合するかは、構造の面で分かっていない部分だった。",
+    "approach": "メチル化した分岐脂質でナノディスクとリポソームを作り、全長 FVIII をクライオ電顕で解析した。",
+    "result": "膜上の FVIII を 3.46 Å（ナノディスク）と 3.56 Å（リポソーム）で得た。C ドメインが斜めに浅く挿入していた。",
+    "learned": "C2 ドメインが主なアンカー、C1 が補助の係留として働く。この配置が C2 変異の重症度を説明するという。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "the structural basis of the procofactor–membrane interface remains poorly defined",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "We used methylated branched lipids to compensate for membrane planarity and used cryoelectron microscopy to solve the structure of FVIII bound to lipids.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "We resolved the cryoelectron microscopy structure of procofactor FVIII on nanodiscs and liposomes lipid membranes at 3.46 and 3.56 Å, respectively.",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Structural analysis reveals a definitive tilted docking orientation where both C domains mediate shallow interfacial insertion, with the C2 domain acting as the primary anchor and the C1 domain serving as a secondary tether.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "This spatial arrangement structurally explains the high clinical severity of C2 interface mutations compared with more moderate C1 surface mutations.",
+          "section": "Abstract"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "immune",
+    "other"
+  ],
+  "highlights": [
+    {
+      "tag": "手法の工夫",
+      "text": "分岐したメチル基をもつ脂質（DPhPC・DPhPS）は、脂質の詰まりを乱して疎水性の隙間を作る。曲がった膜に似た環境がナノディスク上にでき、FVIII の挿入を高分解能で捉えられた。",
+      "evidence": [
+        {
+          "quote": "The 4 methyl groups on the phytanoyl chains provide a permanent steric hindrance that disrupts regular lipid packing",
+          "section": "Results and Discussion"
+        },
+        {
+          "quote": "Methylated branched lipids enable rapid, high-resolution characterization of membrane-associated clotting factors.",
+          "section": "Abstract"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "C2 の疎水性スパイク（Met2199/Phe2200 と Leu2251/Leu2252）が 3〜4 Å だけ膜に差し込まれ、C1 の Lys2092/Phe2093 が補助する。C2 スパイクの変異は重症に、C1 側の変異は中程度になりやすいと説明される。",
+      "evidence": [
+        {
+          "quote": "The structures reveal the FVIII-C2 domain as the primary membrane anchor with 2 prominent hydrophobic spikes: Met2199/Phe2200 and Leu2251/Leu2252, mediating a shallow interfacial insertion (3–4 Å) toward the hydrophobic core of the membrane.",
+          "section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "斜めの向きは、プロトロンビナーゼ複合体の FVa と重なる。著者は、この非対称な配置が FIXa や FX を迎える足場になると考えている。",
+      "evidence": [
+        {
+          "quote": "Alignment of our lipid-bound FVIII model with the membrane-binding C domains of FVa from the only reported membrane-bound prothrombinase complex (PDB 9CTH) [28] reveals a striking spatial overlap.",
+          "section": "Results and Discussion"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "市販の全長組換えヒト FVIII（Kogenate FS）を使用。",
+    "construct": null,
+    "purification": "サイズ排除クロマトグラフィー（Superdex 200 increase）でバッファー交換。",
+    "sample_prep": "DPhPC:DPhPS = 80:20 のナノディスク（MSP1D1）に FVIII を混ぜ、Vitrobot Mark IV で凍結。",
+    "data_collection": "Glacios 200 keV で撮影し、cryoSPARC v5.0.1 で解析。",
+    "evidence": [
+      {
+        "quote": "NDs were reconstituted using membrane scaffold protein 1D1 (Cat M6574; Millipore sigma), with a DPhPC:DPhPS molar ratio of 80:20",
+        "section": "Methods"
+      },
+      {
+        "quote": "Data collection was performed on Glacios 200 keV cryo-TEM. Single-particle analysis was performed in cryoSPARC v5.0.1 [15].",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "第VIII因子",
+    "ナノディスク",
+    "血友病A"
+  ],
+  "editor_notes": "リポソーム側（12JV）は分解能が低く、主鎖トレースのみ。B ドメインはほぼ無秩序で地図に入っていない。FVIII は既に 27 件の PDB 構造があり初構造ではない（新しいのは膜結合状態）。著者は 'first high-resolution' などと書くが、記事では使っていない。",
+  "ga_pdb_id": "12JP",
+  "legend_labels": [
+    "第VIII因子（凝固因子）"
+  ]
+}

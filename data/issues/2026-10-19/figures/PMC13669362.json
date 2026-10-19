@@ -1,0 +1,106 @@
+{
+ "pdb_id": "9KY0",
+ "view": {
+  "target": [
+   159.31,
+   159.71,
+   187.29
+  ],
+  "dir": [
+   0.9907,
+   0.136,
+   0.0
+  ],
+  "up": [
+   0.0002,
+   -0.0014,
+   1.0
+  ],
+  "half": [
+   56.8,
+   81.9
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "B0AT1（アミノ酸輸送体）",
+   "desc": "Sodium-dependent neutral amino acid transporter B(0)AT1",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "ACE2（相手タンパク質）",
+   "desc": "Angiotensin-converting enzyme 2",
+   "entity": "2"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "A1L6W",
+   "label": "化合物3",
+   "color": "#C23B8E",
+   "desc": "(~{E})-~{N}-[2-oxidanylidene-2-(3-oxidanylidenepiperazin-1-yl)ethyl]-3-[4-(trifluoromethyl)phenyl]prop-2-enamide",
+   "entity": [
+    "5"
+   ],
+   "sites": [
+    [
+     "P",
+     "702"
+    ],
+    [
+     "R",
+     "702"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "A1L6W",
+  "residues": [
+   "V55",
+   "W56",
+   "R57",
+   "Y60",
+   "Y128",
+   "L234",
+   "V317",
+   "V320",
+   "V321",
+   "G395",
+   "T396",
+   "L398",
+   "A399",
+   "F403",
+   "F420",
+   "M423",
+   "D486"
+  ],
+  "hbonds": 3,
+  "pi": 0,
+  "neighbours": [],
+  "label": "化合物3"
+ },
+ "hero_view": {
+  "target": [
+   159.31,
+   159.71,
+   187.29
+  ],
+  "dir": [
+   0.9907,
+   0.136,
+   0.0
+  ],
+  "up": [
+   0.0002,
+   -0.0014,
+   1.0
+  ],
+  "half": [
+   56.8,
+   81.9
+  ]
+ }
+}

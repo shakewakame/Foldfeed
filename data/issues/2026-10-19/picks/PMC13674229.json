@@ -1,0 +1,127 @@
+{
+  "pmcid": "PMC13674229",
+  "rank": 1,
+  "headline": "放線菌の酵素AshAは、ヒスチジンを2位で硫黄化する",
+  "subhead": "1.11 Åの結晶構造で、ヒスチジンの向きが反応位置を決めると示した",
+  "target_label": "AshA（放線菌）",
+  "target_en": "AshA (Amycolatopsis keratiniphila)",
+  "summary": {
+    "question": "チオヒスチジン類の化学的な広がりや、他の生合成酵素との組み合わせは、ほとんど分かっていなかった。",
+    "approach": "NHISS酵素の周辺遺伝子を探索し、ATP-grasp酵素との組を再構成した。AshAはX線結晶構造解析も行った。",
+    "result": "2-チオヒスチジンを含む2種類のジペプチドを見つけた。AshAはヒスチジンをイミダゾール2位で硫黄化した。",
+    "learned": "AshAの活性部位はヒスチジンの向きを変え、2位の炭素を触媒Tyrに向ける。2-チオヒスチジンは遺伝子にコードされた部品として使われる。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "These TSIs, which include ergothioneine, are ubiquitous, but little is known about the broader TSI chemical space or co-occurrence with other biosynthetic enzymes.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here, we use NHISSs as a bioinformatic hook to identify a widespread family of biosynthetic gene clusters that encode a combination of NHISS and ATP-grasp enzymes.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "sought to define the structural basis of AshA’s unexpected reactivity by solving its X-ray crystal structure in complex with histidine, which we refined at 1.11 Å resolution",
+          "section": "X-ray Crystal Structure of AshA"
+        }
+      ],
+      "result": [
+        {
+          "quote": "This search strategy enabled the discovery of two 2-thiohistidine-containing dipeptide natural products, one of which we isolated from the original microbial host.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "indicating that the cysteine sulfoxide is installed at the 2-carbon of the imidazole ring",
+          "section": "Actinothioneine, a Novel Thiohistidine Dipeptide"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "the active site of AshA reorients histidine such that the imidazole 2-carbon is positioned toward the catalytic Tyr residue",
+          "section": "X-ray Crystal Structure of AshA"
+        },
+        {
+          "quote": "The main finding from this work is that 2-thiohistidine is a genetically encoded building block that can be incorporated into dipeptides.",
+          "section": "Conclusion"
+        }
+      ],
+      "open": [
+        {
+          "quote": "additional structural determinants must contribute to the observed regioselectivity for each NHISS subfamily.",
+          "section": "X-ray Crystal Structure of AshA"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "enzyme"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "AshAの活性部位では、ヒスチジンの骨格が回った向きで結合し、イミダゾールの2位の炭素が触媒Tyr（Y493）の側に来る。この向きは水素結合のネットワークで保たれ、OvoAの5位での反応と異なる位置選択性を説明する。",
+      "evidence": [
+        {
+          "quote": "In contrast to the NHISS enzymes OvoA and OvsA, which catalyze C–S/Se bond formation at the 5-carbon of histidine, the active site of AshA reorients histidine such that the imidazole 2-carbon is positioned toward the catalytic Tyr residue",
+          "section": "X-ray Crystal Structure of AshA"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "カルボキシ基に結合するR120とT231が2位での反応に役立つらしいが、OvoAにも同じ残基があるため、これだけでは十分でない。他の構造要素も位置選択性に関わると考えられる。",
+      "evidence": [
+        {
+          "quote": "these comparisons suggest that while these carboxylate-binding contacts may be necessary to enable the reaction at the 2-carbon, they are not sufficient on their own",
+          "section": "X-ray Crystal Structure of AshA"
+        }
+      ]
+    },
+    {
+      "tag": "新しい結合部位",
+      "text": "ATP-grasp酵素AshBは、2-チオヒスチジンをC末端側に持つジペプチド（Phe–2-チオヒスチジン、actinothioneine）を作る。近縁のTgiBはGluを選び、thioglutineを作る。thioglutineは放線菌の培養から単離された。",
+      "evidence": [
+        {
+          "quote": "thus establishing thioglutine as a novel Glu–2-thiohistidine dipeptide natural product and the first modified TSI isolated from the original microbial host.",
+          "section": "Thioglutine, a Thiohistidine Natural Product Isolated from a Streptomycete"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "組換え酵素を精製して試験管内で再構成した。AshABを大腸菌で過剰発現するとactinothioneineができた。",
+    "construct": "C末端のメチルトランスフェラーゼ領域は電子密度がなく、短くなった酵素が結晶化したと考えられる。",
+    "purification": "NHISSの一部はN末端Hisタグ付きで発現し、IMACで精製した。",
+    "sample_prep": "チオール産物はモノブロモビマン（mBBr）で誘導体化してHR-MSで検出した。",
+    "data_collection": null,
+    "evidence": [
+      {
+        "quote": "Notably, no electron density was observed for this domain, and it could not be accommodated within the crystal lattice, suggesting that a truncated version of the enzyme was crystallized.",
+        "section": "X-ray Crystal Structure of AshA"
+      },
+      {
+        "quote": "The products were derivatized with monobromobimane (mBBr), a thiol- and selenol-selective reagent that adds a hydrophobic chromophore for enhanced detection and chromatography of the otherwise highly polar product.",
+        "section": "Actinothioneine, a Novel Thiohistidine Dipeptide"
+      },
+      {
+        "quote": "overexpression of ashAB in E. coli resulted in formation of actinothioneine, demonstrating the products of these enzymes in vivo",
+        "section": "Actinothioneine, a Novel Thiohistidine Dipeptide"
+      }
+    ]
+  },
+  "keywords": [
+    "AshA",
+    "チオヒスチジン",
+    "ATP-grasp"
+  ],
+  "editor_notes": "構造は9PHY（ヒスチジン複合体）のみ。C末端のメチルトランスフェラーゼ領域は見えていない。構造に関する記述はAshAだけで、ATP-graspの構造はない。本文は途中で切れているため後半（thioglutine以降の一部）は未確認。",
+  "legend_labels": [
+    "AshA（硫黄化酵素）"
+  ],
+  "ligand_names": {
+    "HIS": "ヒスチジン"
+  },
+  "ligand_label": "ヒスチジン"
+}

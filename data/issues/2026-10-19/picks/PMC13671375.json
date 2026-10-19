@@ -1,0 +1,118 @@
+{
+  "pmcid": "PMC13671375",
+  "rank": 10,
+  "headline": "土壌細菌のGH176酵素は、コウジビオースのα-1,2結合を切る",
+  "subhead": "ループを短くして結晶化し、基質との複合体を1.79 Åで解いた",
+  "target_label": "A8F5グルコシダーゼ（GH176）",
+  "target_en": "A8F5 glucosidase (A. humicola, GH176)",
+  "summary": {
+    "question": "α-1,2結合のグルコシド結合を切る酵素は少なく、GH176ファミリーもほとんど調べられていなかった。",
+    "approach": "土壌細菌から酵素を見つけ、柔軟なループが結晶化を妨げたため、ループを短くした変異体で複合体の結晶構造を解いた。",
+    "result": "コウジビオース、コウジトリオース、セラギノースとの複合体を1.79〜1.83 Åで決めた。基質は−1と+1のサブサイトで認識されていた。",
+    "learned": "GH176の酵素が、既知のコウジビオース加水分解酵素（GH65）とは別の構造の枠組みでα-1,2結合を切ることが分かった。",
+    "open": "コウジビオースの認識は+1サブサイトで完全には安定せず、さらなる進化的な調整が必要かもしれない。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "While enzymes that process α-1,4- and α-1,6-linkages in starch or glycogen are well-characterized, those acting on less common bonds, such as α-1,2-glucosidic linkages, remain largely underexplored.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "To circumvent crystallization obstacles caused by high loop flexibility and translational non-crystallographic symmetry, we engineered a loop-truncated variant.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "Furthermore, we determined the complex structures in complex with kojitriose and selaginose at resolutions of 1.83 Å and 1.80 Å, respectively (Table S2).",
+          "section": "Substrate recognition and reaction mechanism"
+        },
+        {
+          "quote": "The crystal structure of the Δloop1 D427N mutant in complex with kojibiose was determined at 1.79 Å resolution (Table S2).",
+          "section": "Substrate recognition and reaction mechanism"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "These findings revealed that the GH176 enzyme recognizes and hydrolyses α-1,2-glucosidic bonds through a structural framework distinct from that of the previously known clan GH-L GH65 kojibiose hydrolase",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "This suggests that further tuning through molecular evolution may be required for A8F5 glucosidase to more strictly recognize and hydrolyze kojibiose",
+          "section": "Conclusion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "enzyme"
+  ],
+  "highlights": [
+    {
+      "tag": "手法の工夫",
+      "text": "野生型の結晶は並進の非結晶学的対称（tNCS）が強く、複合体の結晶がうまく得られなかった。長い柔軟なループ1を短くした変異体（Δloop1）にするとtNCSが消え、基質複合体の高分解能構造が得られた。",
+      "evidence": [
+        {
+          "quote": "Notably, no significant tNCS was detected in the Δloop1 crystal (maximum Patterson peak height of ∼4.8%, p = 0.95), indicating that shortening the long flexible loop effectively reduced packing degeneracy and favored a more rigidly ordered crystal lattice.",
+          "section": "Loop deletion construct"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "(α/α)6バレル折りたたみをもつ酵素で、D427が触媒酸、E611が触媒塩基と推定された。D287は−1サブサイトのグルコースのC4・C6の水酸基を認識する。逆転型の加水分解機構が提案されている。",
+      "evidence": [
+        {
+          "quote": "D427 and E611 in A8F5 glucosidase were suggested to be the catalytic acid and base residues, respectively",
+          "section": "Overall structure"
+        },
+        {
+          "quote": "The catalytic base residue (E611) activates a nucleophilic water molecule, which attacks the anomeric C1 carbon of the nonreducing-end glucoside at subsite −1.",
+          "section": "Substrate recognition and reaction mechanism"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "AlphaFold3の予測では、ループ3と4が活性部位に蓋をする。このため基質の入る穴が狭く、長いコウジペンタオースへの活性が低いことと合う。ループ3は結晶構造では見えていないため、この部分は予測に基づく。",
+      "evidence": [
+        {
+          "quote": "This narrow substrate-binding pocket environment aligns well with the experimental data showing that the activity of A8F5 glucosidase toward kojipentaose is significantly lower than its activity toward shorter substrates (Fig. 1B).",
+          "section": "Structural comparison with another GH176 enzyme"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "大腸菌でHisタグ付きタンパク質として発現した。結晶化用にはpET28aで N末端Hisタグにした。",
+    "construct": "ループ1を短くしたΔloop1変異体と、触媒酸を置換したD427N変異体を使った。",
+    "purification": null,
+    "sample_prep": "シッティングドロップ蒸気拡散法で結晶化した（リザーバー：0.1 M酢酸ナトリウム pH 5.1、34% 1,2-プロパンジオール）。",
+    "data_collection": null,
+    "evidence": [
+      {
+        "quote": "For preparation of a protein sample for crystallization with an N-terminal His6-tag, the expression vector was changed to pET28a (Novagen)",
+        "section": "Experimental procedures"
+      },
+      {
+        "quote": "Crystallization was performed using the sitting-drop vapor-diffusion method by mixing equal volumes (0.5 μl each) of a protein solution (15 mg/ml WT A8F5 glucosidase or 10 mg/ml Δloop1)",
+        "section": "Experimental procedures"
+      }
+    ]
+  },
+  "keywords": [
+    "GH176",
+    "コウジビオース",
+    "α-1,2-グルコシダーゼ"
+  ],
+  "editor_notes": "PDBは24AI（コウジビオース）・24AZ（コウジトリオース）・24IL（セラギノース）・24IR（Δloop1 apo）・24IS（グルコース）。基質（糖）はPDB上のリガンドIDとして出ないため、結合部位の拡大図は付けていない（site_ligandを空にした）。野生型の結晶構造は1.90 Å。TgAMY（7VMA）との比較で、既報の「α-1,6の枝切り酵素」という性格づけと食い違うと著者は述べている。",
+  "legend_labels": [
+    "A8F5グルコシダーゼ"
+  ],
+  "site_ligand": "",
+  "ga_pdb_id": "24AI"
+}

@@ -1,0 +1,123 @@
+{
+  "pmcid": "PMC13673511",
+  "rank": 7,
+  "headline": "カルコンイソメラーゼは、基質アナログの向きを少しずつ変える",
+  "subhead": "フロレチン結合型の2.0 Å結晶構造で、8分子が異なる姿勢を示した",
+  "target_label": "MtCHI-I（タルウマゴヤシ）",
+  "target_en": "MtCHI-I (Medicago truncatula)",
+  "summary": {
+    "question": "カルコンイソメラーゼ（CHI）が、環化に必要な基質の形の組み替えを酵素の動きで助けているのか、実験的な証拠が足りなかった。",
+    "approach": "環化できない基質アナログのフロレチンをCHIの結晶に浸し、2.0 Åで構造を解いた。結合と阻害は熱シフト測定と酵素速度論で調べた。",
+    "result": "非対称単位の8分子で活性部位の形が少しずつ違い、フロレチンも8通りの姿勢を取った。フロレチンは競合阻害剤として働いた。",
+    "learned": "8つの姿勢は、基質が環化直前の形へ近づく過程を表すと著者は解釈している。CHIは動的な構造の集まりとして働くという考えを支持する。",
+    "open": "先行モデルはタイプ2のCHIに基づくが、この研究が調べたのはタイプ1だけで、結果をそのままタイプ2に当てはめられない。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "A persistent question has been whether the enzyme uses protein dynamics to facilitate conformational rearrangements of substrates within the active site.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "CHI from Medicago truncatula was crystallized with phloretin, a flexible substrate analogue that cannot undergo cyclization, and solved to 2.0‐Å resolution.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Differential scanning fluorimetry combined with mutational analysis and enzyme kinetics further confirms that phloretin binds to the enzyme active site, and that it acts as a competitive inhibitor of CHI.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "The crystal structure possesses eight protein molecules per asymmetric unit, revealing different active site conformations that accommodate different bound conformers of phloretin.",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Overall, this work supports a catalytic model in which the CHI enzyme operates as a dynamic ensemble of structures necessary to facilitate catalytic substrate rearrangements.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "The eight MtCHI‐I‐phloretin structures reveal a possible trajectory of the dynamic enzyme‐substrate complexes leading to substrate cyclization.",
+          "section": "Results"
+        }
+      ],
+      "open": [
+        {
+          "quote": "One notable limitation of the present work is that previous models of CHI, such as the one used by Hur and colleagues, were based upon evidence from a Type‐2 CHI, whereas the present work examines only a Type‐1 CHI",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "enzyme"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "環化する原子どうし（フロレチンの2′Oと C3）の距離は、最も伸びた姿勢で3.98 Å、環化に最も近い姿勢で3.09 Åだった。触媒に働くアルギニンR37が水素結合でフロレチンの位置を決め、距離が縮むのを助けているように見える。",
+      "evidence": [
+        {
+          "quote": "In the pose called “mol. D,” the phloretin (Ph)2′O‐(Ph)C3 interatomic distance is 3.98 Å, revealing a relatively extended conformation (Figure 4A).",
+          "section": "Results"
+        },
+        {
+          "quote": "The phloretin conformation that best approximates the near attack, cyclization‐productive conformer occurs in mol. B, which measures the smallest interatomic distance between (Ph)2′O‐(Ph)C3, of 3.09 Å (Figure 4A).",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "実験Tips",
+      "text": "結晶構造で見えた水素結合を、変異体の熱シフト測定で確かめた。T49A・R37K・S193Aでは結合が弱まり、Y107Fは野生型とほぼ同じだった。フロレチンの阻害定数Kiは32 μMで、熱シフトから求めたKdとよく合った。",
+      "evidence": [
+        {
+          "quote": "These results confirm that the H‐bonds between phloretin and the sidechain atoms of Ser193, Arg37, and Thr49, observed in the MtCHI‐I‐phloretin crystal structure, are also important for solution binding.",
+          "section": "Results"
+        },
+        {
+          "quote": "From the enzyme inhibition experiments, the inhibitory constant, Ki value, averaged from the three inhibitor concentrations, is calculated to be 32 ± 4 μM.",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "大腸菌 BL21 DE3-pRIL で発現し、20°C で一晩誘導した。",
+    "construct": "pET-21b にタルウマゴヤシの MtCHI-I（UniProt B7FJK3）を入れた。",
+    "purification": "Ni 親和性、陰イオン交換、ゲルろ過で精製した。",
+    "sample_prep": "アポ型の結晶を、20 mM フロレチンを含む溶液に1週間浸した。",
+    "data_collection": "ALS のビームライン 8.2.1・8.2.2 で 100 K で回折データを集め、4DOI を探索モデルに分子置換で解いた。",
+    "evidence": [
+      {
+        "quote": "A pET‐21b protein expression plasmid containing the gene for M. truncatula , MtCHI‐I (UniProt: B7FJK3), was transformed into BL21 DE3‐pRIL cells (Agilent Technologies).",
+        "section": "Methods"
+      },
+      {
+        "quote": "Finally, the MtCHI‐I crystals were soaked for 1 week in the reservoir solution also containing 20‐mM phloretin.",
+        "section": "Methods"
+      },
+      {
+        "quote": "solved by molecular replacement in space group P32 using the program PHASER (McCoy et al. 2007), and using a search model derived from the structure of Arabidopsis thaliana CHI (PDB:4DOI)",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "カルコンイソメラーゼ",
+    "フロレチン",
+    "フラボノイド"
+  ],
+  "editor_notes": "PDB は拡張 ID 形式（本文 38KF = pdb_000038KF）。生成物 naringenin 結合型（Burke 2019）が既にあり初構造ではない。Rfree 0.29 とやや高く、双晶・擬対称あり。8姿勢を『環化への軌跡』とするのは著者の解釈（本文 a possible trajectory）。最後の段落の 'first structural evidence' は著者の自己評価なので記事には使っていない。",
+  "ga_pdb_id": "38KF",
+  "legend_labels": [
+    "CHI（カルコンイソメラーゼ）"
+  ],
+  "ligand_names": {
+    "G50": "フロレチン"
+  },
+  "site_ligand": "G50"
+}
