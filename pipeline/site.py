@@ -919,7 +919,7 @@ MENU_SCRIPT = r"""
   }
   window.addEventListener('scroll', function () {
     var y = window.scrollY, d = y - last;
-    if (y < head.offsetHeight) jumped = false;
+    if (y < head.offsetHeight && d < 0) jumped = false;   // back at the top by scrolling up (not the first step of a jump down)
     if (y < firstScreen() && !jumped) away(false);
     else if (d > 4) away(true);
     else if (d < -4) away(false);
