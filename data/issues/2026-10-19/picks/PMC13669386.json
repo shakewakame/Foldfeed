@@ -1,0 +1,113 @@
+{
+  "pmcid": "PMC13669386",
+  "rank": 2,
+  "headline": "野兎病菌のPdpCは、タツノオトシゴ形の新しい折りたたみをもつ",
+  "subhead": "3.4 Åのクライオ電顕構造で5つのドメインを示し、PI(3)Pへの結合を調べた",
+  "target_label": "PdpC（野兎病菌）",
+  "target_en": "PdpC (F. tularensis subsp. novicida)",
+  "summary": {
+    "question": "野兎病菌のT6SSエフェクターが、細胞内での増殖をどう助けるのかは、よく分かっていなかった。",
+    "approach": "PdpCをクライオ電顕で解析した。宿主のリン脂質への結合と、別のFPIタンパク質PdpEとの相互作用も調べた。",
+    "result": "3.4 Åの構造は、5つのドメインからなるタツノオトシゴ形だった。PdpCはPI(3)Pなど一部のリン脂質に選択的に結合した。",
+    "learned": "中央の本体ドメイン（CBD）だけでPI(3)PとPdpEの両方に結合できる。PdpCが初期ファゴソームの膜に運ばれる仕組みの手がかりになると著者は考えている。",
+    "open": "N末端ドメインは凝集しやすく調べられず、構造の約200残基の「口」ドメインも見えていない。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Although PdpC has been implicated in phagosomal escape and virulence, its molecular architecture and mechanistic role remain poorly understood.",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "By cryogenic electron microscopy (cryoEM), we determined the atomic structure of recombinantly produced Francisella PdpC at 3.4 Å resolution, revealing a seahorse-like monomeric architecture composed of five domains.",
+          "section": "Introduction"
+        }
+      ],
+      "result": [
+        {
+          "quote": "These results demonstrate that PdpC binds selectively to a subset of phospholipids, including PI(3)P, a hallmark lipid of early endosomal and phagosomal membranes.",
+          "section": "PdpC selectively binds phospholipids"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Strikingly, the CBD alone is sufficient for the two key biochemical activities we identified: selective binding to host phospholipids—most prominently PI(3)P—and direct interaction with PdpE.",
+          "section": "Discussion"
+        }
+      ],
+      "open": [
+        {
+          "quote": "a central ~200-residue region corresponding to the mouth domain lacked interpretable density, likely due to conformational flexibility, and could not be modeled.",
+          "section": "Domain organization and inter-domain interactions of PdpC"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "pathogen"
+  ],
+  "highlights": [
+    {
+      "tag": "初構造",
+      "text": "PdpCは長さ約120 Å、幅約80 Åの単量体で、N末端のIg様β サンドイッチ、α ヘリックスだけでできた中央の本体ドメイン、「口」ドメイン、くさびドメイン、C末端の尾部からなる。DALIで相同な構造は見つからず、AlphaFoldの予測も実測と大きく違っていた。",
+      "evidence": [
+        {
+          "quote": "The 3.4 Å cryoEM structure reveals a highly elongated, seahorse-shaped monomer with a completely novel fold—no structural homologs were identified by DALI, and AlphaFold predictions failed to anticipate the observed architecture.",
+          "section": "Discussion"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "PdpCはPI(3)P、PI(3,5)P2、スルファチド、カルジオリピンに強く結合した。PI(3)Pは初期ファゴソームの細胞質側にある脂質で、PdpCをファゴソームの膜につなぎ留めるのに役立つ可能性がある。",
+      "evidence": [
+        {
+          "quote": "the selective binding of PdpC to PI(3)P may serve to anchor PdpC to the Francisella phagosome, thereby exerting its (still unknown) enzymatic or disruptive actions locally rather than diffusely throughout the cell",
+          "section": "Discussion"
+        }
+      ]
+    },
+    {
+      "tag": "実験Tips",
+      "text": "大腸菌ではなく野兎病菌（F. novicida）で作ったPdpCは、金属結合タンパク質FPM13が混ざり、ドーナツ形の粒子しか見えなかった。FPM13を欠く株で発現し、グラフェンオキシド膜のグリッドを使うと撮影できた。",
+      "evidence": [
+        {
+          "quote": "Ultimately, graphene oxide (GO)-coated grids enabled cryoEM imaging and reconstruction of PdpC reported in this study.",
+          "section": "CryoEM reveals a seahorse-shaped architecture of PdpC from F. novicida"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "His6-FLAGタグ付きPdpCをΔFPM13株のF. novicidaで発現し、T6SSを誘導するため5% KClを加えた。",
+    "construct": "全長PdpC（1325残基）。部分構築物のCBD-ALFAは可溶だったが、N末端ドメインは凝集した。",
+    "purification": "ニッケル樹脂とサイズ排除クロマトグラフィーで精製した（約150 kDa）。",
+    "sample_prep": "通常のグリッドでは粒子が見えず、グラフェンオキシド膜のグリッドを使った。",
+    "data_collection": "粒子の配向の偏りとS/N比の低さのため、spIsoNetで3D再構成を改善した。",
+    "evidence": [
+      {
+        "quote": "To obtain homogeneous PdpC for structural characterization, we produced the tagged protein in a ΔFPM13 background with supplementation of 5% KCl10 to induce T6SS formation.",
+        "section": "CryoEM reveals a seahorse-shaped architecture of PdpC from F. novicida"
+      },
+      {
+        "quote": "Due to the low signal-to-noise ratio and severe preferred orientation of the particles, we employed spIsoNet28 during data processing to improve 3D reconstruction quality.",
+        "section": "CryoEM reveals a seahorse-shaped architecture of PdpC from F. novicida"
+      },
+      {
+        "quote": "The NTD was highly prone to aggregation, preventing reliable biochemical analysis.",
+        "section": "CBD of PdpC interacts with phospholipids and PdpE"
+      }
+    ]
+  },
+  "keywords": [
+    "PdpC",
+    "T6SS",
+    "野兎病菌"
+  ],
+  "editor_notes": "PDB 9YNB（3.4 Å）。論文はタグ付きタンパク質を使ったことを限界として挙げている。PdpEとの相互作用はプルダウンで調べたもので、複合体の構造はない。「ファゴソーム破壊」などの機構はモデル（Fig. 5）で、論文はPdpCの酵素活性を示していない。",
+  "legend_labels": [
+    "PdpC（T6SSエフェクター）"
+  ],
+  "method_label": "Cryo-EM・3.4 Å"
+}

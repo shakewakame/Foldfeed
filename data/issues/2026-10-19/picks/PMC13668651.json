@@ -1,0 +1,102 @@
+{
+  "pmcid": "PMC13668651",
+  "rank": 14,
+  "headline": "結合した場で薬を切り離す、取り込み不要の運搬法",
+  "subhead": "リンカーをFAPのTyr745の近くに置いて放出させ、FAPI部分の結合をクライオ電顕で調べた",
+  "target_label": "FAP（線維芽細胞活性化タンパク質）",
+  "target_en": "Fibroblast activation protein (FAP)",
+  "summary": {
+    "question": "薬物複合体は細胞内への取り込みに頼って薬を放出するため、取り込まれにくい標的では効きにくかった。",
+    "approach": "標的に結合した場で、結合ポケット内の求核残基がリンカーを切って薬を放出する BTR 戦略を、PhoPEx 化学で作った。",
+    "result": "FAP を標的にした複合体は、取り込み依存型より腫瘍内の MMAE 曝露が5.9倍高く、複数の腫瘍モデルでほぼ完全に退縮した。",
+    "learned": "FAP の Tyr745 が反応の鍵となる求核残基だった。結合だけで薬を放出する枠組みが、標的の範囲を広げる可能性がある。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "For poorly internalizing targets, drug conjugates dissociate and clear rapidly, limiting efficacy.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "we introduce a binding-to-release (BTR) strategy that decouples drug release from endocytosis by positioning an electrophile for direct cleavage by a proximal nucleophilic residue within the binding pocket.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "the FAP-BTR-SMDC achieved 5.9-fold higher monomethyl auristatin E exposure (AUC0–120 h) in tumours than internalization-dependent FAP-ITR-SMDC",
+          "section": "Abstract"
+        },
+        {
+          "quote": "This biodistribution increased the maximum tolerated dose and led to near-complete tumour regression in various tumour models.",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "we optimized the PhoPEx linker and identified Tyr745 as the key nucleophilic residue for the proximity-induced reaction.",
+          "section": "Discussion"
+        },
+        {
+          "quote": "This work establishes a framework that overcomes the internalization barrier, broadening the target scope for therapeutic and diagnostic conjugates.",
+          "section": "Abstract"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "protease",
+    "other"
+  ],
+  "highlights": [
+    {
+      "tag": "創薬・モダリティ",
+      "text": "Tyr745 をフェニルアラニンに置き換えると、共有結合の効率が下がり、薬の放出速度は野生型 FAP より63%低くなった。",
+      "evidence": [
+        {
+          "quote": "Mutation of Tyr745 to phenylalanine (Phe) (Supplementary Fig. 4) reduced covalent binding efficiency",
+          "section": "Results"
+        },
+        {
+          "quote": "the payload release rate decreased by 63% compared with that of wild-type FAP (Fig. 2j).",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "クライオ電顕の密度マップでは FAPI の標的結合部分だけが見え、DOTA と MMAE は柔軟で密度がなかった。分子動力学と合わせ、反応する P 原子は Tyr745 の近くにあるとされた。",
+      "evidence": [
+        {
+          "quote": "The cryo-EM density map showed electron density (blue mesh) for the FAPI targeting head bound to FAP, whereas the DOTA and MMAE moieties exhibited high flexibility and thus lacked well-defined density.",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": null,
+    "construct": null,
+    "purification": null,
+    "sample_prep": "FAP（0.4 mg/ml）を20倍モル過剰の FAPI-oMe-MMAE と4°Cで2時間反応させ、酸化グラフェン被覆グリッドで調製した。",
+    "data_collection": null,
+    "evidence": [
+      {
+        "quote": "For single-particle cryo-EM analysis, FAP protein at a concentration of 0.4 mg ml−1 was incubated with a 20-fold molar excess of enantiomerically pure FAPI-oMe-MMAE for 2 h at 4 °C.",
+        "section": "Methods"
+      },
+      {
+        "quote": "The resulting complex was then prepared for cryo-EM using graphene-oxide-coated grids.",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "FAP",
+    "PhoPEx",
+    "薬物複合体"
+  ],
+  "method_label": "Cryo-EM",
+  "editor_notes": "Nature 論文で、中心は化学と動物実験。クライオ電顕は FAPI の結合部分の密度確認に使われ（EMD-81933 が候補に出るが本文に分解能の記載なし）、補足情報にある。PDB ID は本文にない。本記事は構造が補助的なため、Structure Update の末尾に回すのが妥当。"
+}

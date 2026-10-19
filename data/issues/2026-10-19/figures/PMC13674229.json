@@ -1,0 +1,71 @@
+{
+ "pdb_id": "9PHY",
+ "view": {
+  "target": [
+   -2.03,
+   -3.02,
+   17.0
+  ],
+  "dir": [
+   0.6457,
+   0.177,
+   0.7428
+  ],
+  "up": [
+   -0.5645,
+   -0.5445,
+   0.6204
+  ],
+  "half": [
+   27.8,
+   31.6
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "AshA（硫黄化酵素）",
+   "desc": "Sulfoxide synthase AshA",
+   "entity": "1"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "HIS",
+   "label": "ヒスチジン",
+   "color": "#C23B8E",
+   "desc": "Histidine",
+   "entity": [
+    "3"
+   ],
+   "sites": [
+    [
+     "C",
+     "802"
+    ],
+    [
+     "D",
+     "803"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "HIS",
+  "residues": [
+   "H224",
+   "I227",
+   "H228",
+   "Y493",
+   "F496",
+   "F527",
+   "Y528"
+  ],
+  "hbonds": 3,
+  "pi": 0,
+  "neighbours": [
+   "ヒスチジン"
+  ],
+  "label": "ヒスチジン"
+ }
+}

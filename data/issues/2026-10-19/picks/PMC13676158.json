@@ -1,0 +1,115 @@
+{
+  "pmcid": "PMC13676158",
+  "rank": 5,
+  "headline": "ε サブユニットが形を変えながら、ATP 合成酵素の中から抜け出す",
+  "subhead": "アシネトバクターの F1-ATPase を6状態で捉え、ε の C 末端ドメインの動きを示した",
+  "target_label": "AbF1-ATPase（A. baumannii）",
+  "target_en": "A. baumannii F1-ATPase",
+  "summary": {
+    "question": "ATP 合成と加水分解を切り替える ε サブユニットの C 末端が、どう動くのかは未解決だった。",
+    "approach": "F1-ATPase に ADP とリン酸を加えてクライオ電顕で解析し、標的 MD シミュレーションで補った。",
+    "result": "ε の C 末端ドメインの形が異なる 6 状態を 2.88〜3.13 Å で得た。",
+    "learned": "α3β3 の触媒部位と中心軸の動きに合わせ、ε の C 末端が伸びた形から折りたたまれた形へ移ると考えられる。",
+    "open": "ε が伸びた形に戻る条件については、議論が続いている。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "A previously unresolved question concerning the ATP hydrolysis inhibitory C‐terminus of subunit ε has been how the transition from an ε e to the ε c form occurs",
+          "section": "Results"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here we report cryo‐electron microscopy (cryo‐EM) structures of an ATP synthesizing AbF1‐ATPase, supported by molecular dynamics (MD) simulations",
+          "section": "Introduction"
+        }
+      ],
+      "result": [
+        {
+          "quote": "In total, six conformations of AbF1‐ATPase were resolved via cryo‐EM (Figure 1B)",
+          "section": "Results"
+        },
+        {
+          "quote": "an extended εCTD (C1a and C1b at 3.13 and 3.04 Å resolution), a partially extended εCTD (C2a and C2b at 3.05 and 2.95 Å resolution) as well as the outer transition states 1 and 2 of εCTD, called C3a and C3b at 3.08 and 2.88 Å resolution",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "The resolved intermediate states of the ε subunit reveal its role as a molecular gear, regulating ATP synthesis while simultaneously inhibiting ATP hydrolysis, essential for the pathogen to prevent wastage of ATP.",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Factors governing the transition from the ε c to the ε e state remain a matter of debate",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "enzyme",
+    "pathogen"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "ε の C 末端ドメインは、長い 1 本のヘリックスから 3 本、さらに 2 本の短いヘリックスへと形を変え、触媒部位の外へ出ていく。この途中の状態が初めて野生型の酵素で見えた。",
+      "evidence": [
+        {
+          "quote": "Comparison of the AbF1‐ATPase states C1 and C2a reveals the transition from an extended α‐helix (ε91–125) into three smaller helices formed by residues ε91–98, ε102–108 and ε120–131",
+          "section": "Results"
+        },
+        {
+          "quote": "While only an extended εCTD conformation could be observed in the WT AbF‐ATP synthase [4] and AbF1‐ATPase [9, 14], this is the first time that several conformations of stalk subunit ε could be observed in the entire WT AbF1‐ATPase.",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "ADP とリン酸を加えると、触媒部位の β サブユニットが 24° 外へ振れ、ε との相互作用が切れる。これが ε の動きの引き金になると考えられる。",
+      "evidence": [
+        {
+          "quote": "the C‐terminus of β DP of conformer C1b, including the critical 377DIIAILGMDE386‐loop (homologous to the E. coli DELSEED motif) that contributes to the angular velocity of rotary subunit γ [31, 32], swings outwards by 24°",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "ε の C 末端ヘリックスが γ から順に外れる段階があり、著者はここを分子糊で固定すれば ATP 合成を妨げられると提案している。A. baumannii の γ–ε の配列はヒトと大きく異なるという。",
+      "evidence": [
+        {
+          "quote": "By anchoring both εCTD helices to γ's Rossman‐fold via a molecular glue as observed in CELMoD, a class of molecular glues [49], the critical transition step for ATP synthesis would be blocked.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "野生型 AbF1-ATPase を先行研究と同じ方法で精製。",
+    "construct": null,
+    "purification": null,
+    "sample_prep": "1.5 mg/mL の酵素を 12 μM ADP、24 μM MgCl2、24 μM KH2PO4 と混ぜ、Vitrobot Mark IV で急速凍結。",
+    "data_collection": "300 kV Titan、K3 検出器で 5093 ムービーを取得し、cryoSPARC で処理。",
+    "evidence": [
+      {
+        "quote": "The purified enzyme was concentrated to 1.7 mg/mL and was then incubated with 12 μM ADP, 24 μM MgCl2, and 24 μM KH2PO4 to mimic the ATP synthesis assay [9, 11].",
+        "section": "Materials and Methods"
+      },
+      {
+        "quote": "from which 5093 movies were collected in super‐resolution mode with 40 frames per movie.",
+        "section": "Materials and Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "F1-ATPase",
+    "Acinetobacter baumannii",
+    "ε サブユニット"
+  ],
+  "editor_notes": "PDB 24DH〜24DN は公開待ち（構造図なし）。EMDB ID は本文にあるがマップ公開は未確認。MD は標的 MD（TMD）で、クライオ電顕の状態をつなぐ補助。基準は ATP 合成が起きたとする点（ADP＋Pi 添加）を著者が主張。「新しいパラダイム」などの強い言葉は使っていない。",
+  "method_label": "Cryo-EM・2.88〜3.13 Å"
+}

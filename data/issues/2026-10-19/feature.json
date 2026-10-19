@@ -1,0 +1,4 @@
+{"pmcid": "PMC13669362", "axes": ["structure", "drug"],
+ "reason": "阻害剤が外向き開口型にだけ現れるポケットに結合して輸送体を固定する様式を、クライオ電顕で示し、その構造から化合物を改良してPKUモデルマウスで効果を確かめた。",
+ "evidence": [{"quote": "Structure-guided inhibitor design targeting this pocket produced a potent B0AT1 inhibitor that locks the transporter in an outward-occluded state and blocks transport.", "section": "Abstract"}],
+ "considered": [{"pmcid": "PMC13674496", "note": "酵母ALASの基質結合に伴う動きは明快だが、創薬への直結が弱く、B0AT1を優先した。"}, {"pmcid": "PMC13672079", "note": "EMC:Spf1複合体は構造が未公開で図を出せない。"}]}

@@ -1,0 +1,148 @@
+{
+  "pmcid": "PMC13669362",
+  "rank": 11,
+  "headline": "B0AT1阻害剤は、輸送体を外向きの閉じた状態に固定する",
+  "subhead": "クライオ電顕で設計した阻害剤が、PKUモデルマウスの血中Pheを下げた",
+  "target_label": "ヒトB0AT1（SLC6A19）",
+  "target_en": "Human B0AT1 (SLC6A19)–ACE2",
+  "summary": {
+    "question": "フェニルケトン尿症（PKU）では血中のPheが高くなる。B0AT1の阻害で下げられるが、アロステリック阻害剤の効き方と最適化の構造的な根拠は不十分だった。",
+    "approach": "B0AT1の外向き・内向きのクライオ電顕構造と、阻害剤3種との複合体を解き、構造をもとに化合物を改良した。最適化した化合物はPKUモデルマウスに経口投与した。",
+    "result": "化合物3は、ヒトB0AT1に対してIC50 513 nM、マウスに対して295 nMだった。投与4時間後、尿中のPhe排泄が増え、血漿のPheが下がった。",
+    "learned": "阻害剤は外向き開口型にだけ現れる、基質部位から約17 Å離れたポケットに結合し、輸送体を外向き閉塞型に固定して輸送を止めると考えられる。",
+    "open": "マウスでPheが下がったのが腸での吸収と腎での再吸収のどちらによるのかは、この実験では区別できない。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "However, in vivo efficacy of B0AT1 allosteric inhibitors has been reported, although the structural basis for their activity and optimization remains incompletely understood.",
+          "section": "Introduction"
+        },
+        {
+          "quote": "Inhibiting B0AT1 enhances Phe excretion, offering a therapeutic strategy for phenylketonuria (PKU).",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Using cryo-EM, we determined human B0AT1 structures in outward- and inward-open states, revealing an allosteric pocket ~17 Å from the substrate site",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Structure-guided inhibitor design targeting this pocket produced a potent B0AT1 inhibitor that locks the transporter in an outward-occluded state and blocks transport.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "The resulting compound 3 exhibited improved potency against both human and mouse B0AT1, with minimal species difference (IC50: 513 nM for hB0AT1, 295 nM for mB0AT1; Fig. 2e).",
+          "section": "Results"
+        },
+        {
+          "quote": "In 12-week-old male Pahenu2 mice, compound 3 treatment significantly increased urinary Phe excretion and concomitantly reduced plasma Phe concentrations 4 h after dosing (Fig. 4b, c).",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Inhibitors bind to the outward-open conformation and stabilize an outward-occluded-like state, thereby preventing the transition to the inward-open conformation and blocking the transport cycle.",
+          "section": "Results"
+        }
+      ],
+      "open": [
+        {
+          "quote": "However, the present experiments do not allow discrimination between these potentially independent processes.",
+          "section": "Results"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "transporter"
+  ],
+  "highlights": [
+    {
+      "tag": "創薬・モダリティ",
+      "text": "シンロミド（化合物1）はヒトB0AT1を阻害したがマウスにはほとんど効かず、動物試験ができなかった。ベンゼン環にCF₃基を加えるなどした化合物2を経て、ピペラジノン基を足した化合物3は、ヒトとマウスの両方にサブマイクロモルで効いた。",
+      "evidence": [
+        {
+          "quote": "Because of the low inhibitory activity of compound 1 against mouse B0AT1, in vivo efficacy testing in mice is not feasible.",
+          "section": "Results"
+        },
+        {
+          "quote": "To this end, we replaced the dimethylamino group of compound 2 with a piperazinone moiety.",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "新しい結合部位",
+      "text": "阻害剤は細胞外側のアロステリック部位に結合する。化合物1はLeu52を基質部位側に倒し、水分子を介した相互作用を作った。化合物2と3はTrp56の主鎖と水素結合し、Leu52はapoに近い向きに戻った。",
+      "evidence": [
+        {
+          "quote": "In the compound 1-bound structure, Leu52 flipped toward the canonical substrate-binding site, effectively occluding the cavity.",
+          "section": "Results"
+        },
+        {
+          "quote": "As a result, the Leu52 side chain reverted to its apo-like conformation, occluding the canonical substrate-binding site",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "化合物3はPheの取り込みに対して競合阻害を示したが、結合部位は基質部位とは別の場所にある。Na⁺が多い条件で結合量が増え、Na⁺が外向き構造を安定化して阻害剤を結合しやすくしていると著者は考えている。",
+      "evidence": [
+        {
+          "quote": "Compound 3 increased the Km for d5-Phe without affecting Vmax, indicating competitive inhibition",
+          "section": "Results"
+        },
+        {
+          "quote": "Together, these findings indicate that Na⁺ is not essential for inhibitor binding but promotes the outward-open conformation, thereby facilitating inhibitor access to the allosteric pocket.",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "野生型は FreeStyle 293-F 細胞で B0AT1 と ACE2 を一過性に共発現した。",
+    "construct": "野生型は不安定なため ACE2 と共発現し、内向き構造用には安定化変異体（sB0AT1）と Fab#54 を使った。",
+    "purification": "FLAG と Strep のアフィニティー精製後、Superose 6 のゲルろ過で精製した。",
+    "sample_prep": "精製した B0AT1-ACE2 を化合物（0.5 mM）と氷上で1時間混ぜてグリッドを作った。",
+    "data_collection": "Titan Krios G3i（300 kV、K3 検出器）で撮影し、対称性展開と局所分類で単量体の分解能を上げた。",
+    "evidence": [
+      {
+        "quote": "Mammalian FreeStyle 293-F cells (ThermoFisher Scientific, Waltham, USA) were grown and maintained in FreeStyle 293 Expression Medium",
+        "section": "Methods"
+      },
+      {
+        "quote": "As wild-type B0AT1 is prone to aggregation, stabilized B0AT1 was designed.",
+        "section": "Methods"
+      },
+      {
+        "quote": "The purified wild-type B0AT1-ACE2 protein was incubated with compounds 1, 2, and 3 (0.5 mM) and incubated for 1 h on ice.",
+        "section": "Methods"
+      },
+      {
+        "quote": "The sample grids were loaded onto a Titan Krios G3i transmission electron microscope (Thermo Fisher Scientific) operating at 300 kV",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "B0AT1",
+    "SLC6A19",
+    "フェニルケトン尿症"
+  ],
+  "editor_notes": "既存の B0AT1-ACE2 構造（6M17・6M18）と、同じ部位に結合するシンロミド類縁体の先行報告（JX98）がある。この論文の新しさは、化合物1〜3との複合体、内向きの apo 構造（Fab 複合体 9LSZ）、マウスでの in vivo 効果。化合物3は経口投与でPheが下がるが、膜透過性は低い（Caco-2 24.2×10⁻⁷ cm/s）と著者が書く。legend_labels の順は PDB の entity 順（ACE2→B0AT1）の想定で、描画後に確認が必要。",
+  "ga_pdb_id": "9KY0",
+  "legend_labels": [
+    "B0AT1（アミノ酸輸送体）",
+    "ACE2（相手タンパク質）"
+  ],
+  "ligand_names": {
+    "A1L6W": "化合物3",
+    "A1L6V": "化合物2",
+    "A1L6U": "シンロミド（化合物1）"
+  },
+  "site_ligand": "A1L6W"
+}

@@ -1,0 +1,120 @@
+{
+ "pmcid": "PMC13668671",
+ "section": "impact",
+ "rank": 1,
+ "headline": "AIが設計したタンパク質で、RNA運搬体を作った",
+ "subhead": "設計集合体100種超を試し、STV-C8が運搬効率で既存の運搬体を上回った。構造はクライオETで大きさを確認",
+ "target_label": "STV-C8（AI設計の集合体）",
+ "target_en": "STV-C8 (AI-designed protein assembly)",
+ "method_label": "Cryo-ET・細胞/マウス/ブタでの機能評価（AI設計の集合体）",
+ "summary": {
+  "question": "ウイルスのカプシドは似た形に収束しており、進化の枠に縛られない RNA 運搬体が作れるかが問われた。",
+  "approach": "AI で設計した対称な集合体と天然ドメインを組み合わせ、100 種超の RNA 運搬体（STV）を作って運搬効率を調べた。",
+  "result": "STV-C8 は RNA 運搬効率が広く使われる運搬体を桁違いに上回り、マウスで安全性を示し、ブタでも遺伝子編集に使えた。",
+  "learned": "生成 AI が作ったタンパク質を、天然に縛られない RNA 輸送系の部品として使えることが示された。",
+  "open": "現在の設計手法は動的なタンパク質や酵素活性の設計が苦手だと論文は述べている。",
+  "evidence": {
+   "question": [
+    {
+     "quote": "Most viruses rely on large supramolecular protein capsids composed of thousands of subunits, which self-assemble mostly into icosahedral or helical symmetries to enclose and protect their genome1,2,9,10.",
+     "section": "Main"
+    }
+   ],
+   "approach": [
+    {
+     "quote": "By combining natural protein domains with synthetic protein assemblies, we create more than 100 bottom-up RNA transfer vehicles with unique sizes and shapes.",
+     "section": "Abstract"
+    }
+   ],
+   "result": [
+    {
+     "quote": "These vehicles surpass the RNA transfer efficiency of widely used delivery vehicles by several orders of magnitude.",
+     "section": "Abstract"
+    },
+    {
+     "quote": "We show the in vivo biodistribution of one of these vehicles in a mouse at near-single-cell resolution, confirm its safety, and use it to perform a gene-editing treatment strategy for Duchenne muscular dystrophy in patient-derived cells and a pig.",
+     "section": "Abstract"
+    }
+   ],
+   "learned": [
+    {
+     "quote": "Our work demonstrates how proteins created by generative artificial intelligence can be harnessed for the rational engineering of RNA transport systems with the desired properties by overcoming the limitations of natural protein diversity.",
+     "section": "Abstract"
+    }
+   ],
+   "open": [
+    {
+     "quote": "The vehicles created here represent an ideal use case for current protein design methods, which are very effective in creating static, symmetric structures but limited in their ability to generate dynamic proteins or enzymatic activities3,5,38.",
+     "section": "Discussion"
+    }
+   ]
+  }
+ },
+ "categories": [
+  "other",
+  "nucleic"
+ ],
+ "highlights": [
+  {
+   "tag": "手法の工夫",
+   "text": "天然ドメインと AI 設計の集合体を組み合わせ、100 種超の運搬体を同じ評価系で比べた。",
+   "evidence": [
+    {
+     "quote": "By combining natural protein domains with synthetic protein assemblies, we create more than 100 bottom-up RNA transfer vehicles with unique sizes and shapes.",
+     "section": "Abstract"
+    }
+   ]
+  },
+  {
+   "tag": "創薬・モダリティ",
+   "text": "運搬効率は広く使われる運搬体を桁違いに上回り、マウスでの分布と安全性、ブタでの遺伝子編集まで示された。",
+   "evidence": [
+    {
+     "quote": "These vehicles surpass the RNA transfer efficiency of widely used delivery vehicles by several orders of magnitude.",
+     "section": "Abstract"
+    },
+    {
+     "quote": "We show the in vivo biodistribution of one of these vehicles in a mouse at near-single-cell resolution, confirm its safety, and use it to perform a gene-editing treatment strategy for Duchenne muscular dystrophy in patient-derived cells and a pig.",
+     "section": "Abstract"
+    }
+   ]
+  },
+  {
+   "tag": "機構の解明",
+   "text": "クライオ ET で小胞内に直径約 22 nm の集合体が見えた。原子レベルの構造は決められておらず、予測モデルと大きさが合うことを確かめた段階である。",
+   "evidence": [
+    {
+     "quote": "Cryo-ET analysis revealed dozens of protein structures within these vesicles, with a typical diameter of 22 ± 1.4 nm (Extended Data Fig. 6a,b); this was consistent with the expected STV-C8 assemblies, although the precise atomic organization of the assembly could not be resolved.",
+     "section": "Results"
+    }
+   ]
+  }
+ ],
+ "lab_notes": {
+  "expression": "HEK293T 細胞にプラスミドを導入し、上清の小胞を回収",
+  "construct": null,
+  "purification": "上清をショ糖クッションで超遠心して濃縮",
+  "sample_prep": "小胞を 10^9 粒子/µL に希釈し、Quantifoil グリッドに載せて急速凍結",
+  "data_collection": "Titan Krios G4・ピクセルサイズ 1.63 Å・−60°〜60° のチルト系列",
+  "evidence": [
+   {
+    "quote": "Seeded producer cells were transfected with plasmids encoding STV-C8 and EGFP-PP7 in 10-cm dishes coated with poly-l-lysine (Sigma-Aldrich).",
+    "section": "Methods"
+   },
+   {
+    "quote": "Filtered supernatant was added to a cushion of 20% (w/v) sucrose (Sigma-Aldrich) in PBS.",
+    "section": "Methods"
+   },
+   {
+    "quote": "Tilt series were acquired at a magnification of ×81,000, corresponding to a pixel size of 1.63 Å, from −60° to 60°, at 2° tilt increments and using a dose-symmetric tilt scheme.",
+    "section": "Methods"
+   }
+  ]
+ },
+ "keywords": [
+  "RFdiffusion",
+  "RNA 運搬体",
+  "AI 設計"
+ ],
+ "editor_notes": "実験構造は小胞内の集合体のクライオ ET（原子分解能なし）。原子モデルは AlphaFold3 予測との大きさの照合のみ。構造 1 点の境界例。PDB 図はなし。"
+}

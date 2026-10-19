@@ -1,0 +1,109 @@
+{
+  "pmcid": "PMC13675652",
+  "rank": 13,
+  "headline": "毒素は、免疫タンパク質と融合すると作れる",
+  "subhead": "毒性が強く作れなかった3種の毒素を作製し、PT9は1.5 Åの結晶構造で折りたたみを調べた",
+  "target_label": "多型毒素 PT9–PIM9（細菌）",
+  "target_en": "Polymorphic toxin PT9–PIM9 (bacterial)",
+  "summary": {
+    "question": "毒性が強い細菌の毒素は、大腸菌などで組換え発現できず、生化学的な解析が進まなかった。",
+    "approach": "毒素を、自身の免疫タンパク質（毒素を中和する相手）と共有結合でつなぎ、発現中の毒性を抑えて精製した。",
+    "result": "3つの毒素ファミリーを作製できた。精製・再折りたたみした PT9 は、免疫タンパク質との複合体を1.5 Åの結晶構造で決めた。",
+    "learned": "PT9 の活性は不明だが、変性後も折りたたまれた構造に戻ることが構造で示された。PT7 と PT8 は核酸分解活性を保った。",
+    "open": "精製した毒素を細胞の外から加えたときの抗菌活性は、まだ分かっていない。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "However, their intrinsic toxicity often prevents recombinant expression in microbial hosts, limiting biochemical and functional characterization.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here, we present a modular platform for the recombinant production of highly toxic bacterial proteins based on covalent fusion of polymorphic toxins (PTs) to their cognate immunity proteins (PIMs), enabling transient toxin neutralization during expression.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "This strategy enabled recombinant production and purification of three previously refractory toxin families, PT7, PT8 and PT9.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "The crystal structure of the PT9‐PIM9 complex was determined at 1.5 Å resolution (Figure 6C; Table S1).",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Thus, although the molecular activity of PT9 remains unknown, these structural data demonstrate the recovery of a folded PT9 conformation following denaturation and refolding.",
+          "section": "Results"
+        },
+        {
+          "quote": "Purified PT7 and PT8 retained nuclease activity following denaturation and refolding",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "whether the purified proteins can enter bacterial cells and exert antimicrobial activity when applied extracellularly remains unknown.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "pathogen",
+    "nucleic"
+  ],
+  "highlights": [
+    {
+      "tag": "手法の工夫",
+      "text": "毒素を免疫タンパク質と融合して発現し、後で切り離す。さらに細胞内でプロテアーゼに切らせ、精製を4工程から2工程に減らした。",
+      "evidence": [
+        {
+          "quote": "reducing purification from four steps to two and increasing the recovered yield of PT9 from approximately 1–2 mg/L to ~4 mg/L.",
+          "section": "Abstract"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "再折りたたみした PT9 は、AlphaFold の予測モデルとよく一致した（61個の Cα で RMSD 0.67 Å）。免疫タンパク質 PIM9 とも再び複合体を作った。",
+      "evidence": [
+        {
+          "quote": "Refolded PT9 adopted a well‐defined structure that closely matched the AlphaFold‐predicted model (RMSD 0.67 Å over 61 Cα atoms, Figure 6D).",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": null,
+    "construct": null,
+    "purification": "固定化した毒素を、変性緩衝液を Tris 緩衝液に徐々に置き換えてカラム上で再折りたたみした。",
+    "sample_prep": "PT9–PIM9 複合体を 7 mg/ml で、シッティングドロップ蒸気拡散法により 20°C で結晶化した。",
+    "data_collection": "ESRF の ID30A-3 ビームラインで 100 K の回折データを収集した。",
+    "evidence": [
+      {
+        "quote": "Refolding of immobilized PTs was achieved by gradually replacing the denaturing buffer with Tris buffer directly on the column.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Crystallization of the PT9‐PIM9 complex was performed by the vapour‐diffusion sitting‐drop method at 20°C using a purified complex concentrated to 7 mg ml−1 in 20 mM Tris–HCl, pH 7.5, 100 mM NaCl.",
+        "section": "Methods"
+      },
+      {
+        "quote": "X‐ray diffraction data were collected at 100 K at beamline ID30A‐3 of the European Synchrotron Radiation Facility (ESRF), Grenoble, France.",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "多型毒素",
+    "免疫タンパク質",
+    "組換え発現"
+  ],
+  "method_label": "X-ray・1.5 Å",
+  "editor_notes": "構造は PT9–PIM9 複合体の結晶構造（PDB は未公開、候補では 33ZJ とされる）。論文の主題は発現プラットフォームで、構造は折りたたみの確認という補助的な位置づけ。PT9 の活性は不明。"
+}

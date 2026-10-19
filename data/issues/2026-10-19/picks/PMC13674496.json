@@ -1,0 +1,143 @@
+{
+  "pmcid": "PMC13674496",
+  "rank": 4,
+  "headline": "酵母ALASは、基質を受けて下半分ごと動く",
+  "subhead": "グリシン結合型とスクシニルCoA結合型のX線構造で、ヘム合成の最初の酵素の動きを捉えた",
+  "target_label": "ALAS（出芽酵母）",
+  "target_en": "ALAS (S. cerevisiae)",
+  "summary": {
+    "question": "ヘム合成の最初の酵素ALASは、真核生物に特有の領域を持つが、基質と結合した状態の構造は細菌のものしか分かっていなかった。",
+    "approach": "酵母ALASをグリシンまたはスクシニルCoAと共結晶化してX線構造を決め、MD、変異体の酵素測定、酵母株の代謝測定を組み合わせた。",
+    "result": "グリシン結合型では下半分が上半分に対して剛体のように動き、スクシニルCoA結合型では蝶番の部分が秩序化した。",
+    "learned": "蝶番を介した下半分の動きが触媒の開始に関わり、活性の調節に使われている。活性の入口にあるGateの配列を替えると、酵素の活性が増減した。",
+    "open": "酵母のヘム合成で、ALAを増やしてもプロトポルフィリンIXが比例して増えない理由には、さらなる検討が要る。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Currently, the only published structures of an ALAS enzyme bound to substrate are from Rhodobacter capsulatus ALAS (rcALAS), which lacks these important eukaryote-specific domains (36).",
+          "section": "INTRODUCTION"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here, we used x-ray crystallography and molecular dynamics simulations to elucidate the structure and dynamics of Saccharomyces cerevisiae ALAS (scALAS) upon substrate binding.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Last, we engineered multiple scALAS variant strains, establishing the connection between in vitro mechanisms and cellular heme metabolism.",
+          "section": "INTRODUCTION"
+        }
+      ],
+      "result": [
+        {
+          "quote": "Overlaying the six scALAS-Gly protomers using the upper lobe (residues 124 to 387) shows that the lower lobe moves as a rigid body toward the active site to varying degrees (Fig. 3A).",
+          "section": "RESULTS"
+        },
+        {
+          "quote": "Five of six scALAS-sCoA protomers contain an ordered Ct-ext Hinge;",
+          "section": "RESULTS"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Thus, glycine binding triggers a concerted movement of the scALAS lower lobe to modulate active site accessibility for catalysis.",
+          "section": "RESULTS"
+        },
+        {
+          "quote": "Our comprehensive biophysical, biochemical, and computational data establish that the Gate is a motif that can be exploited to disrupt scALAS conformational behavior and thus enzyme function.",
+          "section": "RESULTS"
+        }
+      ],
+      "open": [
+        {
+          "quote": "This conclusion raises intriguing questions about the fate of excess metabolic intermediates, providing compelling avenues for future investigation.",
+          "section": "DISCUSSION"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "enzyme"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "グリシンが結合した酵素の6分子では、下半分が上半分に対して剛体のように動く度合いが分子ごとに違っていた。2つの半分をつなぐC末端側の蝶番（Ct-ext Hinge）が乱れていて、これが下半分の動きを可能にしている。スクシニルCoAが結合すると蝶番は秩序化し、動きが安定した。",
+      "evidence": [
+        {
+          "quote": "This conformational sampling is paired with flexibility and crystallographic disorder at the beginning of the Ct-ext, which effectively serves as a hinge connecting the two lobes (Fig. 3B).",
+          "section": "RESULTS"
+        },
+        {
+          "quote": "This distinct disorder-to-order transition enables the Ct-ext to bridge the two ALAS lobes and act as a hinge controlling lower lobe movement.",
+          "section": "RESULTS"
+        }
+      ]
+    },
+    {
+      "tag": "新しい結合部位",
+      "text": "スクシニルCoAは細菌の酵素とは違う向きで活性部位に入り、Gate頂点の保存されたスレオニン（T452）ではなくP451の主鎖と水素結合していた。この違いのため、Gateと保存されたN末端のヘリックスとの相互作用が失われている。",
+      "evidence": [
+        {
+          "quote": "Instead, in the scALAS-sCoA structure, there is a hydrogen bond between the main chain of P451 and the sCoA pantetheine moiety.",
+          "section": "RESULTS"
+        },
+        {
+          "quote": "For example, the sCoA orientation in scALAS ablates the interaction between the Gate and a conserved N-terminal α helix (Fig. 2D).",
+          "section": "RESULTS"
+        }
+      ]
+    },
+    {
+      "tag": "実験Tips",
+      "text": "Gateを細菌型にした変異体はALAの放出が約2倍になり、ヒト型にした変異体は活性が下がった。酵母に組み込むと、細胞内のALA産生も同じ傾向を示した。一方、ヘムの量は変わらず、フェロケラターゼが全体の律速段階だと著者は結論している。",
+      "evidence": [
+        {
+          "quote": "Specifically, scALASB demonstrates a twofold increase in the rate of ALA product release compared with WT scALAS, while the activity of scALASH correspondingly declines (Fig. 4C).",
+          "section": "RESULTS"
+        },
+        {
+          "quote": "However, by strategically targeting the scALAS Gate, we found that ferrochelatase is the ultimate bottleneck in heme biosynthesis in yeast.",
+          "section": "DISCUSSION"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": null,
+    "construct": "残基58〜548（ミトコンドリア移行配列を除く）を結晶化に使った。",
+    "purification": null,
+    "sample_prep": "酵素を基質（グリシン50 mMまたはスクシニルCoA 1 mM）と1時間混ぜてから、ハンギングドロップ蒸気拡散法で結晶化した。",
+    "data_collection": "NSLS-II の AMX ビームラインで回折データを集め、5TXR を探索モデルに分子置換で解いた。",
+    "evidence": [
+      {
+        "quote": "The construct used for crystallization (residues 58 to 548) lacks the mitochondrial targeting sequence",
+        "section": "RESULTS"
+      },
+      {
+        "quote": "The corresponding dilutions were incubated with 50 mM glycine or 1 mM sCoA at room temperature (∼25°C) for 1 hour.",
+        "section": "MATERIALS AND METHODS"
+      },
+      {
+        "quote": "Molecular replacement was performed in PHASER using one subunit of Hem1 apoenzyme (Protein Data Bank 5TXR, chain B) as the search model",
+        "section": "MATERIALS AND METHODS"
+      }
+    ]
+  },
+  "keywords": [
+    "ALAS",
+    "ヘム合成",
+    "Gate"
+  ],
+  "editor_notes": "PDB 9DZ7・9DZO は未発表エントリ扱い（citation なし）だが、本文の寄託番号と一致。5TXR（apo）が既にあるため初構造とは書いていない（候補では first_structure=False）。スクシニルCoAの尾部は柔軟で、本文は『一部の分子のみ結合』と記す。MD は補助的。",
+  "ga_pdb_id": "9DZ7",
+  "legend_labels": [
+    "scALAS（ALA合成酵素）"
+  ],
+  "ligand_names": {
+    "PLG": "ピリドキシル-グリシン",
+    "SCA": "スクシニルCoA",
+    "PLP": "PLP（補酵素）"
+  },
+  "site_ligand": "PLG"
+}

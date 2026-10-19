@@ -1,0 +1,115 @@
+{
+  "pmcid": "PMC13669508",
+  "rank": 12,
+  "headline": "Fab の VH だけで WT1 ペプチド提示を見分ける抗体を設計した",
+  "subhead": "Fab–pMHC の結晶構造から VH 単独の抗体を設計し、T 細胞エンゲージャーとして働くことを確かめた",
+  "target_label": "WT1 ペプチド/HLA-A*02（ヒト）",
+  "target_en": "WT1 RMF peptide/HLA-A*02:01 with Q2L Fab",
+  "summary": {
+    "question": "pMHC を標的にする TCR 様抗体は、ペプチドが小さいため交差反応を避けるのが難しい。",
+    "approach": "Q2L Fab–RMF/HLA-A*02 の結晶構造から、トラスツズマブ由来の VH 骨格に結合部位を移して設計した。",
+    "result": "設計した VH は RMF/HLA-A*02 に 81 nM で結合し、対照の pMHC には結合しなかった。2 価型は 0.37 nM だった。",
+    "learned": "VH 単独でもペプチドに焦点を当てた TCR 様抗体を作れ、2 価の T 細胞エンゲージャーにもできると著者は結論している。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Developing TCR-like antibodies with negligible cross-reactivity is challenging.",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Starting from the crystal structure of a Fab antibody bound to RMF/HLA-A*02, we repurposed the soluble trastuzumab-derived VH scaffold to bind RMF/HLA-A*02.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "The monovalent construct bound selectively to RMF/HLA-A*02 with 81 nM affinity",
+          "section": "Abstract"
+        },
+        {
+          "quote": "The bivalent construct exhibited a dramatically increased apparent binding affinity of 0.37 nM.",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "These results demonstrate a viable strategy to develop high-specificity, peptide-focused TCR-like VH domain antibodies that can be readily extended into potent bivalent TCEs for pMHC-targeted therapeutics.",
+          "section": "Abstract"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "immune"
+  ],
+  "highlights": [
+    {
+      "tag": "新しい結合部位",
+      "text": "Q2L Fab の結晶構造（3.03 Å）では VL が VH から離れ、VH がペプチドを広く、HLA とは 6 残基だけで触れていた。この VH だけで結合できるという着想の元になった。",
+      "evidence": [
+        {
+          "quote": "First, VH extensively contacts the bound RMF peptide while making limited contacts with only 6 HLA-A*02:01 residues (Fig. 1B, bottom).",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "HSA ドメインIII を融合すると溶液中で単量体になり、親和性は変わらなかった（76.4 → 81.4 nM）。2 価型の T 細胞エンゲージャーは、1 価型よりずっと効率よく標的細胞を殺した。",
+      "evidence": [
+        {
+          "quote": "the bivalent TCE induced antigen-dependent cytotoxicity much more effectively than the monovalent TCE",
+          "section": "Abstract"
+        },
+        {
+          "quote": "comparable KD values for αRMF_VH and HSADIII-αRMF_VH (76.4 and 81.4 nM, respectively)",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "手法の工夫",
+      "text": "設計した VH と RMF/HLA-A*02 の複合体は結晶構造ではなく、Chai-1 の予測モデルで評価されている。設計の検証は結合測定と細胞実験が中心である。",
+      "evidence": [
+        {
+          "quote": "The predicted αRMF_VH/RMF/HLA-A*02 model closely matched the Q2L VH/RMF/HLA-A*02 crystal structure",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "VH とその融合体は大腸菌 BL21(DE3) RIPL、Q2L-Fab は CHO-S 細胞で発現。",
+    "construct": null,
+    "purification": "Ni-NTA とサイズ排除クロマトグラフィー。pMHC は変性した HLA と β2M のリフォールディングで調製。",
+    "sample_prep": "Q2L-Fab/RMF/HLA-A*02（8 mg/mL）を PEG 5000 MME、Tacsimate、Hepes を含む溶液で蒸気拡散法により結晶化。",
+    "data_collection": "Pohang Accelerator Laboratory のビームライン 5C で回折データを収集。",
+    "evidence": [
+      {
+        "quote": "Optimized crystallization conditions for Q2L-Fab/RMF/HLA-A*02 were established by hanging-drop vapor diffusion at 20 °C",
+        "section": "Materials and Methods"
+      },
+      {
+        "quote": "X-ray diffraction data were collected at beamline 5C of Pohang Accelerator Laboratory (Korea) and processed with HKL2000 [29].",
+        "section": "Materials and Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "TCR 様抗体",
+    "WT1",
+    "HLA-A*02",
+    "T 細胞エンゲージャー"
+  ],
+  "editor_notes": "自前の構造は Q2L Fab–RMF/HLA-A*02 の結晶構造（9VSO、3.03 Å）だけ。論文の中心は計算設計と機能評価で、設計した VH の複合体構造は未決定。Abstract の 81 nM と本文の 76 nM は単量体／融合体の違い。legend_labels は PDB の鎖の順（WT1 ペプチド・β2M・HLA・軽鎖・重鎖）を仮定したので render 後に要確認。",
+  "ga_pdb_id": "9VSO",
+  "legend_labels": [
+    "Q2L Fab 重鎖",
+    "Q2L Fab 軽鎖",
+    "HLA-A*02（MHC）",
+    "β2M（MHC 軽鎖）",
+    "WT1 ペプチド（抗原）"
+  ]
+}

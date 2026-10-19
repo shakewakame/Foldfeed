@@ -1,0 +1,57 @@
+{
+ "pdb_id": "24AI",
+ "view": {
+  "target": [
+   6.57,
+   21.86,
+   27.19
+  ],
+  "dir": [
+   -0.9993,
+   0.008,
+   -0.0377
+  ],
+  "up": [
+   -0.0306,
+   0.4298,
+   0.9024
+  ],
+  "half": [
+   52.3,
+   33.4
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "A8F5グルコシダーゼ",
+   "desc": "alpha-1,2-glucosidase",
+   "entity": "1"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "PGO",
+   "label": "s-1,2-propanediol",
+   "color": "#C23B8E",
+   "desc": "S-1,2-Propanediol",
+   "entity": [
+    "5"
+   ],
+   "sites": [
+    [
+     "G",
+     "703"
+    ],
+    [
+     "K",
+     "701"
+    ],
+    [
+     "L",
+     "702"
+    ]
+   ]
+  }
+ ]
+}
