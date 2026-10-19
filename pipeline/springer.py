@@ -216,7 +216,8 @@ def discover(days: list[str], skip_dois: set[str]) -> dict:
                 out["impact"].append((m, parsed))
         if complete:
             out["days"].append(day)
-        print(f"Springer Nature {day}: {len(items)} articles in {len(JOURNALS)} journals, {len(oa)} open access read"
+        print(f"Springer Nature {day}: {len(items)} articles in {len(JOURNALS)} journals, {len(oa)} open access tried, "
+              f"{len(out['read'].get(day, []))} with full text in the API"
               f"{'' if complete else ' (some failed: the day is not marked covered)'}", file=sys.stderr)
     return out
 

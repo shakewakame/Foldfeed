@@ -27,7 +27,7 @@ import unicodedata
 from . import impact
 from .common import cached, issue_dir, read_json
 from .schema import (CATEGORIES, FEATURE_AXES, FEATURE_MIN, FEATURE_REASON_LIMIT, FIGURE_TITLE_LIMIT, LAB_NOTE_FIELDS,
-                     LIMITS, SUMMARY_FIELDS, SUMMARY_OPTIONAL, TAGS)
+                     LIMITS, SUMMARY_FIELDS, SUMMARY_OPTIONAL, TAGS, TOPICS)
 
 NEW_KINDS = ("new_structure", "new_structure_ids_unlisted", "new_map_only")
 
@@ -87,6 +87,11 @@ def check_pick(pick: dict, cand: dict | None, corpus: str | None) -> tuple[list[
         errors.append("target_en must be in English (no Japanese)")
     for f in ALL_SUMMARY:
         length(f"summary.{f}", (pick.get("summary") or {}).get(f), f"summary.{f}")
+    topics = pick.get("topics")
+    if topics is not None:
+        bad = [t for t in topics if t not in TOPICS] if isinstance(topics, list) else ["(not a list)"]
+        if bad or len(topics) > 3:
+            errors.append(f"topics must be 0-3 of {', '.join(TOPICS)}; got {topics}")
     cats = pick.get("categories") or []
     if not 1 <= len(cats) <= 3:
         errors.append(f"categories must have 1-3 items, has {len(cats)}")

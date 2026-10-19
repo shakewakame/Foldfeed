@@ -268,6 +268,11 @@ MD・構造予測・ドッキングだけが根拠の論文は入れない（オ
   - `categories`（1〜3 個）：タンパク質の種類。`pipeline/schema.py` の `CATEGORIES` から選ぶ
     （kinase・protease・receptor・channel・transporter・enzyme・nucleic・chromatin・translation・regulation・immune・pathogen・
     photosynthesis・other）。ホームの「タンパク質の種類から探す」と `proteins.html` に使われる。迷ったら主役のタンパク質の働きで選ぶ。
+  - `topics`（任意、0〜3 個）：研究の種類。`pipeline/schema.py` の `TOPICS` から選ぶ（design デノボデザイン・drug 創薬・阻害剤・
+    antibody 抗体・ナノボディ・ai AI・構造予測・membrane 膜タンパク質・dynamics 構造変化・中間状態・insitu in situ・トモグラフィー・
+    method 手法の開発）。ヘッダーの検索の「Research Type」に使われる。**書かなければサイトが題名・要旨・記事の文から自動で付ける**ので、
+    自動の判定がずれるとき（例：AlphaFold を道具として使っただけなのに「AI」になる、設計したタンパク質なのに「デノボデザイン」が付かない）だけ書く。
+    書くと自動の判定は使われない（`[]` で「なし」）。論文が主題にしていることだけを選ぶ
   - `highlights`（1〜3 個、各 200 字）：「読みどころ」として出る。タグは `初構造・新しい結合部位・機構の解明・創薬・モダリティ・手法の工夫・実験Tips`
     だが、画面には表示しない（内部の分類。将来の絞り込み用）
   - `lab_notes`（各 160 字）：Methods に書いてあることだけ。書いていない項目は `null`

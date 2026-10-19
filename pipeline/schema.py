@@ -45,6 +45,20 @@ CATEGORIES = {
     "other": "その他",
 }
 
+# What kind of research an article is, besides the kind of protein (the search's second axis; a structural biologist
+# asked for "de novo design" and the like, 2026-10-19). Optional "topics" in a pick, from these keys; without it the site
+# derives them from the paper's title and abstract and the article's text (site.topics_of).
+TOPICS = {
+    "design": "デノボデザイン",
+    "drug": "創薬・阻害剤",
+    "antibody": "抗体・ナノボディ",
+    "ai": "AI・構造予測",
+    "membrane": "膜タンパク質",
+    "dynamics": "構造変化・中間状態",
+    "insitu": "in situ・トモグラフィー",
+    "method": "手法の開発",
+}
+
 # field: (required, max characters)
 LIMITS = {
     "headline": (True, 36),

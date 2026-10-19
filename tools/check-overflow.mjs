@@ -9,7 +9,7 @@
 import { chromium } from 'playwright-core';
 
 const base = process.argv[2] || 'http://127.0.0.1:8765';
-const pages = ['/index.html', '/proteins.html', '/issues/' + (process.argv[3] || 'latest')];
+const pages = ['/index.html', '/proteins.html', '/later.html', '/issues/' + (process.argv[3] || 'latest')];
 const executablePath = process.env.CHROME || '/opt/pw-browsers/chromium-1194/chrome-linux/chrome';
 const browser = await chromium.launch({ executablePath, args: ['--no-sandbox'] });
 let bad = 0;
