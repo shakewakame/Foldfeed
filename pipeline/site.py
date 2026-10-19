@@ -368,9 +368,23 @@ html, body {{ overflow-x:clip; }}   /* a guard: nothing may widen the page sidew
 .lead-btns .lead-go {{ margin-top:0; }}
 .lead-go.alt {{ background:transparent; color:var(--ink); box-shadow:inset 0 0 0 1px var(--ink); }}
 .lead-go.alt:hover {{ background:var(--ink); color:#fff; }}
+.lead .lead-go {{ font-family:var(--sans); font-size:15.5px; font-weight:700; letter-spacing:.02em; padding:15px 26px 15px 24px; }}
+.lead .lead-go:not(.alt) {{ font-size:16.5px; padding:16px 28px 16px 26px; }}
+.lead .lead-go .arr {{ font-family:var(--mono); transition:transform .3s cubic-bezier(.2,.8,.2,1); }}
+.lead .lead-go.alt:hover .arr {{ transform:translateX(5px); }}
+.lead-parts {{ display:flex; flex-wrap:wrap; align-items:center; gap:6px 22px; margin:24px 0 0; font-size:14px; }}
+.lead-parts .t {{ font-family:var(--mono); font-size:11.5px; letter-spacing:.1em; color:var(--mute); }}
+.lead-parts a {{ display:inline-flex; align-items:center; color:var(--ink2); text-decoration:underline; text-decoration-color:var(--hair);
+                 text-underline-offset:4px; }}
+.lead-parts a:hover {{ color:var(--acc-ink); text-decoration-color:var(--acc); }}
+.lead-parts b {{ margin-left:7px; font-family:var(--mono); color:var(--ink); }}
+.lead-about {{ display:inline-flex; gap:8px; margin-top:16px; font-family:var(--mono); font-size:12.5px; letter-spacing:.04em; color:var(--ink2);
+               text-decoration:underline; text-decoration-color:var(--hair); text-underline-offset:4px; }}
+.lead-about:hover {{ color:var(--acc-ink); text-decoration-color:var(--acc); }}
 
 /* About FoldFeed, right under the first screen */
 .about {{ padding:var(--sec) 0 0; }}
+.about-page .about {{ padding-top:40px; padding-bottom:var(--sec); }}
 .about-grid {{ display:grid; grid-template-columns:minmax(0,64fr) minmax(0,36fr); gap:48px; margin-top:22px; align-items:start; }}
 .about-dl {{ margin:0; }}
 .about-dl div {{ display:grid; grid-template-columns:136px minmax(0,1fr); gap:16px; padding:10px 0; border-top:1px solid var(--hair); }}
@@ -620,6 +634,11 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
          color:var(--ink2); text-decoration:none; }}
 .gn-item:hover .gn-a, .gn-a:focus-visible {{ color:var(--acc-ink); text-decoration:none; }}
 .gn-a[aria-current] {{ color:var(--acc-ink); font-weight:700; }}
+/* the chevron that says a place opens; it turns up while its dropdown is open */
+.gn-a {{ display:flex; align-items:center; gap:8px; }}
+.gn-v {{ width:6px; height:6px; margin-top:-3px; border-right:1.5px solid currentColor; border-bottom:1.5px solid currentColor;
+         transform:rotate(45deg); transition:transform .28s cubic-bezier(.2,.8,.2,1), margin .28s cubic-bezier(.2,.8,.2,1); opacity:.7; }}
+.gn-item:hover .gn-v, .gn-item:focus-within .gn-v {{ transform:rotate(-135deg); margin-top:3px; opacity:1; }}
 /* a place's dropdown: what it is (Japanese, the first line), then what it holds; hangs from the navigation's rule */
 .gn-pop {{ position:absolute; left:-22px; top:calc(100% + 8px); z-index:1100; width:340px; box-sizing:border-box; padding:16px 22px 14px;
            background:var(--ground); border:1px solid var(--ink); border-top:0; white-space:normal;
@@ -1341,7 +1360,7 @@ def nav_links(up: str, current: str | None = None) -> list[tuple[str, str, bool]
     """(label, href, is the current page) of the global navigation, also the MENU on a phone."""
     latest = f'{up}issues/{LATEST["date"]}.html' if LATEST["date"] else f"{up}index.html"
     href = {"latest": latest, "browse": f"{up}browse.html", "back": f"{up}issues.html", "news": f"{up}newsletter.html",
-            "about": f"{up}index.html#about"}
+            "about": f"{up}about.html"}
     return [(label, href[k], k == current) for k, label in NAV]
 
 
@@ -1371,8 +1390,8 @@ def nav_items(key: str, up: str) -> list[tuple[str, str, str]]:
     if key == "news":
         return [("毎朝の号のお知らせ", f"{up}newsletter.html", ""), ("週のまとめ", f"{up}newsletter.html", ""),
                 ("タンパク質アラート", f"{up}newsletter.html", "")]
-    return [("About FoldFeed", f"{up}index.html#about", ""), ("FoldFeed in Numbers", f"{up}index.html#numbers", ""),
-            ("Journals", f"{up}index.html#journals", "")]
+    return [("About FoldFeed", f"{up}about.html#about", ""), ("FoldFeed in Numbers", f"{up}about.html#numbers", ""),
+            ("Journals", f"{up}about.html#journals", "")]
 
 
 def nav_note(key: str) -> str:
@@ -1390,7 +1409,8 @@ def global_nav(up: str, current: str | None = None, find: str = "") -> str:
     for (t, h, cur), (key, _) in zip(nav_links(up, current), NAV):
         items = "".join(f'<li><a href="{ih}">{esc(it)}' + (f'<span>{esc(c)}</span>' if c else "") + '</a></li>'
                         for it, ih, c in nav_items(key, up))
-        links += (f'<div class="gn-item"><a class="gn-a" href="{h}"{" aria-current=page" if cur else ""}>{esc(t)}</a>'
+        links += (f'<div class="gn-item"><a class="gn-a" href="{h}"{" aria-current=page" if cur else ""}>{esc(t)}'
+                  f'<span class="gn-v" aria-hidden="true"></span></a>'
                   f'<div class="gn-pop"><p class="gn-d">{esc(nav_note(key))}</p><ul>{items}</ul></div></div>')
     return (f'<nav class="gnav" aria-label="サイトの主な場所"><div class="wrap"><div class="gnav-in">'
             f'<div class="gnav-links">{links}</div>{find}</div></div></nav>')
@@ -1844,13 +1864,17 @@ def lead_html(feature: dict | None, picks: list, date: str, root: Path, fig_base
     y, m, d, wd = date_parts(date)
     updated = (f'<p class="lead-k">最終更新 <b>{y}.{m:02d}.{d:02d}</b>（{wd}）'
                + (f'<span>Issue No. {number}</span>' if number else "") + '</p>')
-    go = (('<a class="lead-go" href="#today"><span class="tri" aria-hidden="true">▽</span>'
-           'Picked up: Today’s Structure</a>') if feature_of(feature, picks) else "")
+    # what a visitor should do next, by weight (the owner's choice, 2026-10-19): see today's structures (the one primary
+    # button), or go straight to the whole issue; the breakdown is information, so text; About is for first-timers
     picked = (feature or {}).get("pmcid") if feature_of(feature, picks) else None
-    more = "".join(f'<a class="lead-go alt" href="#{key}-list"><span class="tri" aria-hidden="true">▽</span>{PARTS[key][0]}'
-                   f'<b>{len(items)}</b></a>' for key, items in page_groups(picks, picked) if key != "pick")
-    go = (f'<div class="lead-btns">{go}{more}<a class="lead-go alt" href="#about"><span class="tri" aria-hidden="true">▽</span>'
-          f'About FoldFeed</a></div>')   # in the order of the page
+    shown = {k for k, _ in page_groups(picks, picked)}
+    go = ('<div class="lead-btns"><a class="lead-go" href="#today">今日の構造を見る<span class="tri" aria-hidden="true">▽</span></a>'
+          f'<a class="lead-go alt" href="issues/{date}.html">{m}.{d} 号の全 {len(picks)} 本を読む'
+          f'<span class="arr" aria-hidden="true">→</span></a></div>')
+    parts = "".join(f'<a href="#{k + "-list" if k in shown else "today"}"><i class="sw-{PART_CLS[k]}"></i>{PARTS[k][0]}<b>{len(v)}</b></a>'
+                    for k, v in render.sections(picks).items() if v)
+    go += (f'<p class="lead-parts kl"><span class="t">今日の内訳</span>{parts}</p>' if parts else "")
+    go += '<a class="lead-about" href="#about">はじめての方へ：FoldFeed について<span aria-hidden="true">▽</span></a>'
     hit = feature_of(feature, picks)
     art_html = ""
     if hit and (root / date / "figures" / f"{hit[1]['pmcid']}-hero.svg").exists():
@@ -1890,7 +1914,7 @@ def read_links(cand: dict, href: str) -> str:
     """The two ways on from Picked up Today's Structure: FoldFeed's article and the paper itself (the owner asked for
     the buttons without the small lines under them, 2026-10-19)."""
     return (f'<div class="reads">'
-            f'<a class="read-art" href="{href}"><b>解説記事を読む</b><span class="arr" aria-hidden="true">→</span></a>'
+            f'<a class="read-art" href="{href}"><b>詳しい解説を読む</b><span class="arr" aria-hidden="true">→</span></a>'
             f'{paper_button(cand, note=False)}</div>')
 
 
@@ -2203,7 +2227,7 @@ TIMING_NATURE = ("掲載のタイミング",
                  "出版の翌日に|ご紹介します。")
 
 
-def about_html(issues: list[str], lib: list[dict]) -> str:
+def about_html(issues: list[str], lib: list[dict], own_page: bool = False) -> str:
     """About FoldFeed, right under the first screen: what the site is (polite Japanese), FoldFeed in Numbers (an
     infographic, see numbers_html) and every journal the papers came from, as bars. All numbers are computed from the
     data; a paper that came back in a later issue counts once."""
@@ -2220,7 +2244,7 @@ def about_html(issues: list[str], lib: list[dict]) -> str:
                  f'<span class="bar" aria-hidden="true"><i style="--v:{c / most:.3f}"></i></span></li>'
                  for i, (n, c) in enumerate(journals))
     return (f'<section class="about" id="about"><div class="wrap">'
-            f'<div class="ix-h"><h2 class="label">About FoldFeed</h2></div>'
+            f'<div class="ix-h"><{"h1" if own_page else "h2"} class="label">About FoldFeed</{"h1" if own_page else "h2"}></div>'
             f'<div class="about-grid"><dl class="about-dl">{rows}</dl>'
             f'<div class="about-side"><h3 class="about-sub" id="numbers">FoldFeed in Numbers</h3>{numbers_html(issues, lib)}</div></div>'
             f'<h3 class="about-sub" id="journals">Journals<span>論文数</span></h3><ul class="jl">{jl}</ul></div></section>')
@@ -2336,6 +2360,13 @@ def category_counts(lib: list[dict]) -> list[tuple[str, int]]:
         for c in set(r["cats"]):
             counts[c if c in counts else "other"] += 1
     return [(k, v) for k, v in counts.items() if v]
+
+
+def about_page(issues: list[str], lib: list[dict]) -> str:
+    """About (about.html): what the site is, in numbers, and its journals, as on the front page; the place where more
+    about how FoldFeed works and who makes it will go (TODO.md)."""
+    return page(f"About · {brand.SITE_NAME}", masthead(0, current="about") + f'<div class="about-page">{about_html(issues, lib, True)}</div>'
+                + colophon(), depth=0, description="FoldFeed がどんなサイトか、記事の作り方と掲載のタイミング。")
 
 
 def newsletter_page() -> str:
@@ -2729,6 +2760,7 @@ def build(preview_root: Path | None = None) -> int:
     (SITE_DIR / "issues.html").write_text(issues_page(issues), encoding="utf-8")
     (SITE_DIR / "browse.html").write_text(browse_page(lib), encoding="utf-8")
     (SITE_DIR / "newsletter.html").write_text(newsletter_page(), encoding="utf-8")
+    (SITE_DIR / "about.html").write_text(about_page(issues, lib), encoding="utf-8")
     for key, name in PART_PAGES.items():
         (SITE_DIR / name).write_text(part_page(key, issues), encoding="utf-8")
     (SITE_DIR / "search.json").write_text(json.dumps(search_index(lib), ensure_ascii=False, separators=(",", ":")), encoding="utf-8")

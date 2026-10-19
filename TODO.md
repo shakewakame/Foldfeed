@@ -42,6 +42,13 @@
 - [ ] 自動公開への切り替え（`config/editorial.json` の `review_required` を false に）
 - [ ] RSS
 - [x] ホームに分類（タンパク質の種類）と検索（`proteins.html`）、メール登録の置き場（準備中）を作った（2026-10-14）
+- [ ] **About のページ（`about.html`）を充実させ、信頼できるサイトに仕上げる**（2026-10-19：ページを作り、いまはホームの About と同じ内容）
+  - [ ] 運営者・編集者（誰が作り、誰が確認しているか）と連絡先
+  - [ ] 記事の作り方の詳しい説明：AI が書く部分、データベース（PDB・UniProt）から取る部分、本文の引用で機械的に確かめている部分、編集者の確認
+  - [ ] 選ぶ基準：New Structure・Structure Update・Structure-Based Study の分け方、Structure-Based Study の採点、Today’s Structure の選び方
+  - [ ] 誤りを見つけたときの訂正の方針と、訂正の記録
+  - [ ] データの出典とライセンス（Europe PMC・PMC・Springer Nature・PDB・UniProt、図の描き方と転載の条件）
+  - [ ] 更新履歴（サイトの変更・方針の変更）
 - [ ] **Newsletters & Alerts の中身を作る**（2026-10-19：ナビに項目を置き、`newsletter.html` は「準備中」の枠だけ。ホームの Newsletter の欄はここへ移した）
   - [ ] メール配信の外部サービスを選び、登録フォームを `newsletter.html` に入れる（購読者のデータは公開リポジトリに置かない）
   - [ ] 毎朝の号の知らせ（New Structure・Structure Update・Structure-Based Study の本数と見出し）
