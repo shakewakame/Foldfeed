@@ -970,7 +970,7 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
   .toc-cards .thumb img, .toc-cards .thumb.none {{ max-height:210px; object-fit:contain; }}
   .pk-h {{ font-size:24px; }}
   .pickup .pk-tg {{ font-size:19px; }}
-  .pk-fig img {{ filter:var(--fig-shadow); }}   /* the thumbnail, without labels, on a phone */
+  :root {{ --fig-shadow:none; --fig-shadow-up:none; }}   /* no shadows on a phone (the owner's choice, 2026-10-20) */
   .pk-s {{ font-size:15.5px; }}
   .iss {{ grid-template-columns:minmax(0,1fr); gap:10px; }}
   .iss-n {{ flex-direction:row; flex-wrap:wrap; gap:4px 18px; }}

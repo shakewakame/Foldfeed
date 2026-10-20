@@ -26,9 +26,9 @@ THUMB_W, THUMB_H = 600, 400  # list thumbnail (3:2); same PDB structure, thinned
 HERO_W, HERO_H = 1000, 780   # Today's Structure drawn large, without labels, for the front page's first screen
 # The structure casts a soft shadow down and to the right (the owner's choice, 2026-10-20: PowerPoint's shadow with
 # black at 40%, blur 3 pt, angle 45°, distance 2 pt = 2.67 px; 1.89 px right and down, blurred by 4 px). Drawn into the
-# labelled figures on the molecule only, sized for how large each is shown (the article figure at about 0.65 of its
-# width, the phone figure at about 0.54); the site puts the same shadow on the unlabelled pictures (thumbnails, the
-# first screen's drawing) in CSS.
+# labelled figures on the molecule only, sized for how large the figure is shown (at about 0.65 of its width); the
+# site puts the same shadow on the unlabelled pictures (thumbnails, the first screen's drawing) in CSS. A phone shows
+# no shadows (the owner's choice, 2026-10-20): its figures (-m.svg, -compare-m.svg) are drawn without one.
 SHADOW_ID = "mol-shadow"
 
 
@@ -459,7 +459,7 @@ def structure_figure_mobile(cand: dict, pick: dict, theme: brand.Theme | None = 
         ligand_colors=structure_svg.LIGAND_PALETTE, bg=th.ground, notes=notes,
         labels={"entities": names, "ligands": lig_labels}, bands=(M_BAND, M_BAND), band_mode="topbottom",
         site_xyz=tuple(inset["center"]) if inset else None, ink=th.ink, hl_color=th.accent, probe=probe, font=M_FONT,
-        topology=uniprot.topology, shadow=SHADOW_ID)
+        topology=uniprot.topology)
     total = oh
     if inset_body:
         y = oh + 46
@@ -481,7 +481,7 @@ def structure_figure_mobile(cand: dict, pick: dict, theme: brand.Theme | None = 
             body += interaction_key(site, M_W, y + M_INSET_H + 34, 21, th.ink)
             total += 44
     return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{M_W}" height="{total}" viewBox="0 0 {M_W} {total}" '
-            f'font-family="{FONT}">{shadow_defs(0.54)}{body}</svg>\n')
+            f'font-family="{FONT}">{body}</svg>\n')
 
 
 def _compare_inputs(cand: dict, pick: dict):
@@ -526,11 +526,11 @@ def compare_figure_mobile(cand: dict, pick: dict, theme: brand.Theme | None = No
     body, _ = structure_svg.compare(
         panels, 0, 0, M_W, h, align, focus, mark, genes, entity_colors=list(th.entities),
         ligand_colors=structure_svg.LIGAND_PALETTE, bg=th.ground, ink=th.ink, hl_color=th.accent, names=None,
-        font=M_FONT, vertical=True, gap=30, topology=uniprot.topology, shadow=SHADOW_ID)
+        font=M_FONT, vertical=True, gap=30, topology=uniprot.topology)
     if not body:
         return ""
     return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{M_W}" height="{h}" viewBox="0 0 {M_W} {h}" '
-            f'font-family="{FONT}">{shadow_defs(0.54)}{body}</svg>\n')
+            f'font-family="{FONT}">{body}</svg>\n')
 
 
 def compare_figure(cand: dict, pick: dict, theme: brand.Theme | None = None) -> tuple[str, dict]:
