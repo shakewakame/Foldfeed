@@ -59,7 +59,7 @@ CSS = f"""
   --sans:"Noto Sans JP","Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",Meiryo,sans-serif;
   --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
   --col:240px; --side:320px; --pad:clamp(24px,8.5vw,168px); --head:156px; --navh:52px;
-  --fig-shadow:drop-shadow(2.83px 2.83px 4px rgba(0,0,0,.40));
+  --fig-shadow:drop-shadow(1.89px 1.89px 4px rgba(0,0,0,.40));
   --fig-shadow-up:drop-shadow(4.5px 8px 7px rgba(0,0,0,.30));   /* lifted under the pointer: farther, softer */
   --sec:112px;   /* the space between sections, which replaces the rules between them */
   --rule:#B3BAC4;   /* the thin rule under a section heading */
@@ -485,7 +485,7 @@ a, .find button, .v3d-bar button, .figtabs button {{ transition:color .2s, backg
 .rel a:hover .thumb img {{ transform:scale(1.04); }}
 /* under the pointer a structure lifts off the page: up a little, its shadow longer and softer */
 /* every structure casts a soft shadow down and to the right (the owner's choice, 2026-10-20: PowerPoint's black 40%,
-   blur 3 pt, 45°, distance 3 pt). The labelled figures carry it in the file, on the molecule only (pipeline.render);
+   blur 3 pt, 45°, distance 2 pt). The labelled figures carry it in the file, on the molecule only (pipeline.render);
    the pictures without labels get it here, the same in pixels whatever their size */
 .thumb, .pk-fig, .ihc-grid .cfig, .bt-th, .iss-th, .lp-fig {{ overflow:visible; }}
 .thumb img, .ihc-grid img, .bt-th img, .iss-th img, .lp-fig img, .lead-art img {{ filter:var(--fig-shadow); }}

@@ -25,7 +25,7 @@ M_W, M_OVERVIEW_H, M_INSET_H, M_COMPARE_H, M_BAND, M_FONT = 640, 640, 380, 460, 
 THUMB_W, THUMB_H = 600, 400  # list thumbnail (3:2); same PDB structure, thinned to THUMB_POINTS residues
 HERO_W, HERO_H = 1000, 780   # Today's Structure drawn large, without labels, for the front page's first screen
 # The structure casts a soft shadow down and to the right (the owner's choice, 2026-10-20: PowerPoint's shadow with
-# black at 40%, blur 3 pt, angle 45°, distance 3 pt = 4 px; 2.83 px right and down, blurred by 4 px). Drawn into the
+# black at 40%, blur 3 pt, angle 45°, distance 2 pt = 2.67 px; 1.89 px right and down, blurred by 4 px). Drawn into the
 # labelled figures on the molecule only, sized for how large each is shown (the article figure at about 0.65 of its
 # width, the phone figure at about 0.54); the site puts the same shadow on the unlabelled pictures (thumbnails, the
 # first screen's drawing) in CSS.
@@ -33,9 +33,9 @@ SHADOW_ID = "mol-shadow"
 
 
 def shadow_defs(shown: float) -> str:
-    """The shadow filter for a figure drawn `shown` times its size on the page (so it measures 2.83 px / 4 px there)."""
+    """The shadow filter for a figure drawn `shown` times its size on the page (so it measures 1.89 px / 4 px there)."""
     return (f'<defs><filter id="{SHADOW_ID}" x="-5%" y="-5%" width="115%" height="115%">'
-            f'<feDropShadow dx="{2.83 / shown:.2f}" dy="{2.83 / shown:.2f}" stdDeviation="{2 / shown:.2f}" '
+            f'<feDropShadow dx="{1.89 / shown:.2f}" dy="{1.89 / shown:.2f}" stdDeviation="{2 / shown:.2f}" '
             f'flood-color="#000" flood-opacity=".40"/></filter></defs>')
 THUMB_POINTS = 900
 
