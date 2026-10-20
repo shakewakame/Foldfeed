@@ -59,6 +59,8 @@ CSS = f"""
   --sans:"Noto Sans JP","Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",Meiryo,sans-serif;
   --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
   --col:240px; --side:320px; --pad:clamp(24px,8.5vw,168px); --head:156px; --navh:52px;
+  --fig-shadow:drop-shadow(2.83px 2.83px 4px rgba(0,0,0,.40));
+  --fig-shadow-up:drop-shadow(4.5px 8px 7px rgba(0,0,0,.30));   /* lifted under the pointer: farther, softer */
   --sec:112px;   /* the space between sections, which replaces the rules between them */
   --rule:#B3BAC4;   /* the thin rule under a section heading */
 }}
@@ -482,12 +484,15 @@ a, .find button, .v3d-bar button, .figtabs button {{ transition:color .2s, backg
 .thumb img {{ transition:transform .5s cubic-bezier(.2,.8,.2,1); }}
 .rel a:hover .thumb img {{ transform:scale(1.04); }}
 /* under the pointer a structure lifts off the page: up a little, its shadow longer and softer */
-.card .thumb, .pk-fig, .ihc-grid .cfig, .bt-th {{ overflow:visible; }}
-.card .thumb img, .pk-fig img, .ihc-grid img, .bt-th img {{ filter:var(--fig-shadow, none);
+/* every structure casts a soft shadow down and to the right (the owner's choice, 2026-10-20: PowerPoint's black 40%,
+   blur 3 pt, 45°, distance 3 pt). The labelled figures carry it in the file, on the molecule only (pipeline.render);
+   the pictures without labels get it here, the same in pixels whatever their size */
+.thumb, .pk-fig, .ihc-grid .cfig, .bt-th, .iss-th, .lp-fig {{ overflow:visible; }}
+.thumb img, .ihc-grid img, .bt-th img, .iss-th img, .lp-fig img, .lead-art img {{ filter:var(--fig-shadow); }}
+.card .thumb img, .pk-fig img, .ihc-grid img, .bt-th img {{
      transition:transform .45s cubic-bezier(.2,.8,.2,1), filter .45s cubic-bezier(.2,.8,.2,1); }}
-.card:hover .thumb img, .pickup:hover .pk-fig img, .ihc-grid a:hover img, .bt a:hover img {{ transform:translateY(-6px);
-     filter:drop-shadow(4px 10px 9px rgba(0,0,0,.22)); }}
-.pickup:hover .pk-fig img {{ filter:none; }}   /* its labels and close-up frame are part of the image */
+.card:hover .thumb img, .pickup:hover .pk-fig img, .ihc-grid a:hover img, .bt a:hover img {{ transform:translateY(-6px); }}
+.card:hover .thumb img, .ihc-grid a:hover img, .bt a:hover img {{ filter:var(--fig-shadow-up); }}
 .card h3 a, .pk-h a {{ background:linear-gradient(currentColor,currentColor) left bottom / 0 1px no-repeat;
                          transition:background-size .35s cubic-bezier(.2,.8,.2,1), color .2s; }}
 .card:hover h3 a, .pickup:hover .pk-h a {{ background-size:100% 1px; text-decoration:none; }}
@@ -965,6 +970,7 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
   .toc-cards .thumb img, .toc-cards .thumb.none {{ max-height:210px; object-fit:contain; }}
   .pk-h {{ font-size:24px; }}
   .pickup .pk-tg {{ font-size:19px; }}
+  .pk-fig img {{ filter:var(--fig-shadow); }}   /* the thumbnail, without labels, on a phone */
   .pk-s {{ font-size:15.5px; }}
   .iss {{ grid-template-columns:minmax(0,1fr); gap:10px; }}
   .iss-n {{ flex-direction:row; flex-wrap:wrap; gap:4px 18px; }}

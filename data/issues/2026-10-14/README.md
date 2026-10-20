@@ -6,6 +6,8 @@
 
 出典：この号の論文情報と全文は、米国国立医学図書館（NLM）の PMC オープンアクセスデータセット（AWS Open Data）から取得した。
 
+**New Structure 1 本** · **Structure Update 4 本**（New Structure：構造が初めて解かれたタンパク質。Structure Update：既知のタンパク質の新しい構造。Structure-Based Study：既存の構造を使った注目の研究）
+
 ## Today's Structure（今日の一本）
 
 **1｜ECT2LとDZANK1は、繊毛の根もとで微小管をつなぐ**（ヒト繊毛の移行帯（ECT2L・DZANK1））
@@ -33,6 +35,8 @@
 
 ---
 
+# Picked up Today's Structure
+
 ## 1｜ヒト繊毛の移行帯（ECT2L・DZANK1）
 
 ### In situ structure of the human ciliary transition zone links linker defects to primary ciliary dyskinesia
@@ -47,7 +51,7 @@
 
 気道細胞の中で構造を直接解析し、2遺伝子の変異は原発性線毛運動異常症の原因になる
 
-- **これまでの疑問・課題**：繊毛の根もとの関門である移行帯の分子構成と、運動性繊毛の病気との関係は、よく分かっていなかった。
+- **疑問・課題**：繊毛の根もとの関門である移行帯の分子構成と、運動性繊毛の病気との関係は、よく分かっていなかった。
 - **アプローチ**：ヒトの気道細胞を凍結して薄く削り、その場のクライオ電子線トモグラフィーとサブトモグラム平均で調べた。
 - **結果**：移行帯の二連微小管を6.9–7.3 Åで解き、9つのタンパク質を同定した。連結部の主役はECT2LとDZANK1だった。
 - **わかったこと**：ECT2LかDZANK1の機能喪失変異が原発性線毛運動異常症を起こし、移行帯の欠陥と運動性繊毛の病気が直接結びついた。
@@ -56,7 +60,7 @@
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > The ciliary transition zone (TZ) regulates ciliary proteome composition, yet its molecular architecture, protein content, and contribution to motile ciliopathies remain poorly defined.  
-> — これまでの疑問・課題／Abstract
+> — 疑問・課題／Abstract
 
 > We applied in situ cryo-electron tomography and subtomogram averaging to human multiciliated epithelial cells.  
 > — アプローチ／Abstract
@@ -172,6 +176,8 @@ ECT2LかDZANK1の機能喪失変異をもつ患者4人の細胞では、移行�
 
 ---
 
+# Structure Update
+
 ## 2｜ヒトグルタミン合成酵素（GS）
 
 ### Product-stabilized filamentation by human glutamine synthetase allosterically tunes metabolic activity
@@ -186,7 +192,7 @@ ECT2LかDZANK1の機能喪失変異をもつ患者4人の細胞では、移行�
 
 時間分解クライオ電顕で、繊維の接合面にグルタミンが入ることを確認した
 
-- **これまでの疑問・課題**：ヒトのグルタミン合成酵素（GS）は、数時間かかる転写や分解より速く、どう調節されるのか。
+- **疑問・課題**：ヒトのグルタミン合成酵素（GS）は、数時間かかる転写や分解より速く、どう調節されるのか。
 - **アプローチ**：GSをクライオ電顕で解析し、時間分解実験、酵素反応速度、変異体、細胞の増殖試験で調べた。
 - **結果**：グルタミンが2つの10量体の接合面に結合して繊維を安定化し、アンモニアのKMは約3倍に上がった。
 - **わかったこと**：繊維化で活性部位のE305ループが乱れ、産物が増えるほど酵素が弱まる負のフィードバックになると考えられる。
@@ -195,10 +201,10 @@ ECT2LかDZANK1の機能喪失変異をもつ患者4人の細胞では、移行�
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > However, regulation via these processes would require hours to achieve appreciable changes in intracellular GS concentrations.  
-> — これまでの疑問・課題／Introduction
+> — 疑問・課題／Introduction
 
 > These observations led us to ask how human GS activity could be regulated on the timescales required to adapt to dynamic changes in nutrient availability.  
-> — これまでの疑問・課題／Introduction
+> — 疑問・課題／Introduction
 
 > Here, we used a combination of cryo-electron microscopy (cryo-EM), enzymology, and cell proliferation assays, to discover a regulatory mechanism that incorporates both feedback inhibition and filamentation.  
 > — アプローチ／Introduction
@@ -326,7 +332,7 @@ ECT2LかDZANK1の機能喪失変異をもつ患者4人の細胞では、移行�
 
 BAM複合体と結合したBepAのクライオ電顕構造で、α6-lidが外膜に入り、AI-plugが外れていた
 
-- **これまでの疑問・課題**：亜鉛を使う分解酵素M48ファミリーは自己阻害プラグで不活性に保たれるが、プラグが外れる仕組みは不明だった。
+- **疑問・課題**：亜鉛を使う分解酵素M48ファミリーは自己阻害プラグで不活性に保たれるが、プラグが外れる仕組みは不明だった。
 - **アプローチ**：変異体のスクリーニングと生化学で調べ、基質が停滞したBAMに結合したBepAをクライオ電顕で解析した。
 - **結果**：BepAのα6-lidのループは長いヘリックスになって外膜に差し込まれ、AI-plugは活性部位の亜鉛から外れていた。
 - **わかったこと**：α6-lidが外膜に刺さってBepAをBAMに固定し、AI-plugを外すことで、必要な場所とときだけ酵素が働くと考えられる。
@@ -335,7 +341,7 @@ BAM複合体と結合したBepAのクライオ電顕構造で、α6-lidが外膜
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > Members of the widespread M48 metalloprotease family are kept inactive by an autoinhibitory plug that blocks catalytic water activation, but how this plug is released remained elusive.  
-> — これまでの疑問・課題／Abstract
+> — 疑問・課題／Abstract
 
 > Here, using genetic, biochemical and cryo-EM approaches, we discover the activation mechanism of BepA, a quality-control protease that preserves outer membrane integrity by surveilling the β-barrel assembly machinery (BAM) in Gram-negative bacteria. Our cryo-EM analysis of BepA engaged with a stalled BAM-substrate assembly complex  
 > — アプローチ／Abstract
@@ -459,7 +465,7 @@ bepAのランダム変異ライブラリーを、外膜が漏れるとピンク�
 
 結晶構造でCpd-8が疎水性の溝に入ることを確認し、他の化合物の結合部位は計算と変異で絞り込んだ
 
-- **これまでの疑問・課題**：細菌のタンパク質分解装置を動かすClpCについて、黄色ブドウ球菌のClpCを調節する低分子は報告されていなかった。
+- **疑問・課題**：細菌のタンパク質分解装置を動かすClpCについて、黄色ブドウ球菌のClpCを調節する低分子は報告されていなかった。
 - **アプローチ**：約11万の低分子ライブラリーをスクリーニングし、結晶構造・ドッキング・変異体で結合部位を調べた。
 - **結果**：8化合物がClpCのATP分解を2.2〜4.9倍に高めた。作用部位はN末端ドメイン（NTD）とみられ、Cpd-8は疎水性の溝に結合した（1.90 Å）。
 - **わかったこと**：疎水性の溝とpArg1ポケット（リン酸化アルギニンの結合部位）は低分子で狙える調節部位だが、細胞での毒性はClpC/ClpPに依存しなかった。
@@ -468,7 +474,7 @@ bepAのランダム変異ライブラリーを、外膜が漏れるとピンク�
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > However, no chemical modulators of S. aureus ClpC have been described.  
-> — これまでの疑問・課題／Abstract
+> — 疑問・課題／Abstract
 
 > To identify compounds that activate the S. aureus ClpC/ClpP protease, we conducted a high-throughput screen using a chemically diverse library of approximately 110,000 small molecules (Figure S1).  
 > — アプローチ／Results
@@ -596,7 +602,7 @@ Cpd-10とCpd-41はMecA-mEOSの分解を妨げ、pArg1部位の変異体T7Dでは
 
 重合したMfa1の線維を3.0 Åのクライオ電顕で解析し、Ca2+の結合も確かめた
 
-- **これまでの疑問・課題**：歯周病菌の短い線毛であるMfa線毛の構造と、組み立ての仕組みは不明だった。
+- **疑問・課題**：歯周病菌の短い線毛であるMfa線毛の構造と、組み立ての仕組みは不明だった。
 - **アプローチ**：組換えMfa1を酵素RgpBで試験管内で重合させ、できた線維をクライオ電顕で解析した。
 - **結果**：切断で解放された鎖が隣のサブユニットの溝に入り、元の鎖と入れ替わっていた。Ca2+も結合部位に残っていた。
 - **わかったこと**：Mfa線毛もFim線毛と同じく、プロテアーゼによる鎖の交換で組み上がることが確かめられた。
@@ -605,7 +611,7 @@ Cpd-10とCpd-41はMecA-mEOSの分解を妨げ、pArg1部位の変異体T7Dでは
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > The functional polymerized structure of the Fim pilus is known, whereas the structure and assembly mechanism of the Mfa pilus remain unclear.  
-> — これまでの疑問・課題／Abstract
+> — 疑問・課題／Abstract
 
 > Here, we show the structure of the polymerized recombinant Mfa1 stalk pilin determined by cryo-electron microscopy at 3.0 Å resolution.  
 > — アプローチ／Abstract

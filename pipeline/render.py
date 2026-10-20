@@ -24,6 +24,19 @@ MAX_LABELS = 8  # leader-line labels on one figure (entities); ligands get their
 M_W, M_OVERVIEW_H, M_INSET_H, M_COMPARE_H, M_BAND, M_FONT = 640, 640, 380, 460, 190, 1.3  # the phone version
 THUMB_W, THUMB_H = 600, 400  # list thumbnail (3:2); same PDB structure, thinned to THUMB_POINTS residues
 HERO_W, HERO_H = 1000, 780   # Today's Structure drawn large, without labels, for the front page's first screen
+# The structure casts a soft shadow down and to the right (the owner's choice, 2026-10-20: PowerPoint's shadow with
+# black at 40%, blur 3 pt, angle 45°, distance 3 pt = 4 px; 2.83 px right and down, blurred by 4 px). Drawn into the
+# labelled figures on the molecule only, sized for how large each is shown (the article figure at about 0.65 of its
+# width, the phone figure at about 0.54); the site puts the same shadow on the unlabelled pictures (thumbnails, the
+# first screen's drawing) in CSS.
+SHADOW_ID = "mol-shadow"
+
+
+def shadow_defs(shown: float) -> str:
+    """The shadow filter for a figure drawn `shown` times its size on the page (so it measures 2.83 px / 4 px there)."""
+    return (f'<defs><filter id="{SHADOW_ID}" x="-5%" y="-5%" width="115%" height="115%">'
+            f'<feDropShadow dx="{2.83 / shown:.2f}" dy="{2.83 / shown:.2f}" stdDeviation="{2 / shown:.2f}" '
+            f'flood-color="#000" flood-opacity=".40"/></filter></defs>')
 THUMB_POINTS = 900
 
 METHOD_LABEL = {   # the METHOD column: short English names, as structural biologists write them
@@ -348,7 +361,7 @@ def structure_figure(cand: dict, pick: dict, theme: brand.Theme | None = None) -
                 ligand_colors=structure_svg.LIGAND_PALETTE, bg=th.ground, notes=notes,
                 labels={"entities": names, "ligands": lig_labels}, bands=(band, band),
                 site_xyz=tuple(inset["center"]) if inset else None, ink=th.ink, hl_color=th.accent, probe=probe,
-                topology=uniprot.topology)
+                topology=uniprot.topology, shadow=SHADOW_ID)
             if inset_body:
                 body += _inset(inset_body, inset, probe.get("site"), pick, th, ligand_name(
                     site["ligand"], pdb_names.get(site["ligand"]), pick))
@@ -364,7 +377,7 @@ def structure_figure(cand: dict, pick: dict, theme: brand.Theme | None = None) -
         body = "".join(text_block([t], W / 2, H / 2 + dy, size_, th.muted, wt)
                        .replace("<text ", '<text text-anchor="middle" ', 1)
                        for t, dy, size_, wt in ((msg, -10, 28, 600), (sub, 34, 19, 400)) if t)
-    base = f'<rect width="{W}" height="{H}" fill="{ground}"/>' if ground else ""
+    base = f'<rect width="{W}" height="{H}" fill="{ground}"/>' if ground else shadow_defs(0.65)
     svg = (f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" '
            f'font-family="{FONT}">{base}{body}</svg>\n')
     pdb_names = {l["id"]: l.get("name") for l in (s or {}).get("ligands") or []}
@@ -446,7 +459,7 @@ def structure_figure_mobile(cand: dict, pick: dict, theme: brand.Theme | None = 
         ligand_colors=structure_svg.LIGAND_PALETTE, bg=th.ground, notes=notes,
         labels={"entities": names, "ligands": lig_labels}, bands=(M_BAND, M_BAND), band_mode="topbottom",
         site_xyz=tuple(inset["center"]) if inset else None, ink=th.ink, hl_color=th.accent, probe=probe, font=M_FONT,
-        topology=uniprot.topology)
+        topology=uniprot.topology, shadow=SHADOW_ID)
     total = oh
     if inset_body:
         y = oh + 46
@@ -468,7 +481,7 @@ def structure_figure_mobile(cand: dict, pick: dict, theme: brand.Theme | None = 
             body += interaction_key(site, M_W, y + M_INSET_H + 34, 21, th.ink)
             total += 44
     return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{M_W}" height="{total}" viewBox="0 0 {M_W} {total}" '
-            f'font-family="{FONT}">{body}</svg>\n')
+            f'font-family="{FONT}">{shadow_defs(0.54)}{body}</svg>\n')
 
 
 def _compare_inputs(cand: dict, pick: dict):
@@ -513,11 +526,11 @@ def compare_figure_mobile(cand: dict, pick: dict, theme: brand.Theme | None = No
     body, _ = structure_svg.compare(
         panels, 0, 0, M_W, h, align, focus, mark, genes, entity_colors=list(th.entities),
         ligand_colors=structure_svg.LIGAND_PALETTE, bg=th.ground, ink=th.ink, hl_color=th.accent, names=None,
-        font=M_FONT, vertical=True, gap=30, topology=uniprot.topology)
+        font=M_FONT, vertical=True, gap=30, topology=uniprot.topology, shadow=SHADOW_ID)
     if not body:
         return ""
     return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{M_W}" height="{h}" viewBox="0 0 {M_W} {h}" '
-            f'font-family="{FONT}">{body}</svg>\n')
+            f'font-family="{FONT}">{shadow_defs(0.54)}{body}</svg>\n')
 
 
 def compare_figure(cand: dict, pick: dict, theme: brand.Theme | None = None) -> tuple[str, dict]:
@@ -532,11 +545,11 @@ def compare_figure(cand: dict, pick: dict, theme: brand.Theme | None = None) -> 
     body, info = structure_svg.compare(
         panels, 0, 0, W, H, align, focus, mark, genes, entity_colors=list(th.entities),
         ligand_colors=structure_svg.LIGAND_PALETTE, bg=th.ground, ink=th.ink, hl_color=th.accent, names=names,
-        topology=uniprot.topology)
+        topology=uniprot.topology, shadow=SHADOW_ID)
     if not body:
         return "", {}
     svg = (f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" '
-           f'font-family="{FONT}">{body}</svg>\n')
+           f'font-family="{FONT}">{shadow_defs(0.65)}{body}</svg>\n')
     return svg, {"panels": [{"pdb": pn["pdb"].upper(), "title": pn["title"]} for pn in pick["compare"]["panels"]],
                  "distance": info.get("distance")}
 

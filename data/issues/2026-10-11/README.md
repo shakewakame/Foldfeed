@@ -4,6 +4,8 @@
 
 **今日の新しい構造：7 本**　Europe PMC に 2026-10-10 に登録されたオープンアクセス論文 22 本のうち、新しい構造を報告した論文は 7 本。すべて紹介する。
 
+**New Structure 4 本** · **Structure Update 3 本**（New Structure：構造が初めて解かれたタンパク質。Structure Update：既知のタンパク質の新しい構造。Structure-Based Study：既存の構造を使った注目の研究）
+
 ## Today's Structure（今日の一本）
 
 **1｜基質とATPで構造が切り替わる、結核菌のガラクタン輸送体**（WzmWzt（結核菌））
@@ -24,14 +26,16 @@
 | 1 | WzmWzt（結核菌） | Cryo-EM・2.61–2.91 Å（3 構造） | 基質とATPで構造が切り替わる、結核菌のガラクタン輸送体 |
 | 2 | HLA-DR3–Ro60ペプチド（ヒト） | X-ray・2.87 Å | Ro60ペプチドは、HLA-DR3の上で3つの残基をTCRに向ける |
 | 3 | NsRufO（P450） | X-ray・1.59 Å | P450酵素RufOのニトロ化には、基質のヒスチジンが欠かせない |
-| 4 | NHEJ短距離複合体＋Pol λ（ヒト） | Cryo-EM・7.23 Å | DNA修復の複合体に、Pol λはBRCTとN末端で取り付く |
-| 5 | Rho（結核菌） | Cryo-EM・3.15–3.40 Å（2 構造） | 結核菌のRhoは、天然変性のNIDで転写停止の目印を選ぶ |
+| 4 | Rho（結核菌） | Cryo-EM・3.15–3.40 Å（2 構造） | 結核菌のRhoは、天然変性のNIDで転写停止の目印を選ぶ |
+| 5 | NHEJ短距離複合体＋Pol λ（ヒト） | Cryo-EM・7.23 Å | DNA修復の複合体に、Pol λはBRCTとN末端で取り付く |
 | 6 | WDR5–PER2 WBMペプチド（マウス） | X-ray・1.38–1.85 Å（2 構造） | 体内時計のPER1とPER2は、WDR5の別々の場所に結合する |
 | 7 | PSII C2S2（シロイヌナズナ） | Cryo-EM・全体 2.74 Å | 強光と高温でPSIIはアンテナを失い、重炭酸イオンも抜ける |
 
 > この号は AI が論文本文から作成した**レビュー用の下書き**です。数値・ID・リガンドは PDB / UniProt から取得し、AI の記述には本文からの引用を付けています。
 
 ---
+
+# Picked up Today's Structure
 
 ## 1｜WzmWzt（結核菌）
 
@@ -62,7 +66,7 @@
 
 3つの状態をクライオ電顕で解析。ゲートヘリックスの動きが輸送のカギを握る
 
-- **これまでの疑問・課題**：ABC輸送体のWzmWztは、結核菌の細胞壁の材料になる糖鎖（ガラクタン）を膜の向こう側へ運ぶ。その運び方は未解明だった。
+- **疑問・課題**：ABC輸送体のWzmWztは、結核菌の細胞壁の材料になる糖鎖（ガラクタン）を膜の向こう側へ運ぶ。その運び方は未解明だった。
 - **アプローチ**：基質とみられる分子が結合した状態、ATPが結合した状態など、WzmWztの3つの姿をクライオ電顕で調べた。
 - **結果**：基質が結合した状態ではゲートヘリックスが上向きに伸び、ATPが結合すると約40 Å下向きに動いて、2つのWztが合わさって二量体になった。
 - **わかったこと**：基質が結合するとゲートヘリックスが伸び、二量体になる準備が整う。ATPで二量体になると基質の居場所がつぶれ、基質は膜の通路へ押し出されると考えられる。
@@ -71,10 +75,10 @@
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > Cross-membrane translocation of LLG is energetically unfavorable and is therefore catalyzed by WzmWzt, a prominent member of the polysaccharide ABC transporter sub-family.  
-> — これまでの疑問・課題／Abstract
+> — 疑問・課題／Abstract
 
 > However, due to the complex chemical structure of the natural LLP substrates and the existence of detergent micelles or phospholipids used in nanodisc reconstitution, the molecular basis of natural bacterial LLP recognition by these ABC transporters, in particular the transmembrane domains (TMDs), remains largely unresolved.  
-> — これまでの疑問・課題／Introduction
+> — 疑問・課題／Introduction
 
 > Notably, densities suggestive of the mycobacterial-derived LLG substrates were observed in the structure of WzmWztMtb, indicating that the substrate may bind through two Wzm and two Wzt subunits.  
 > — アプローチ／Abstract
@@ -181,6 +185,8 @@ TMD中央の空洞にはDDM分子が2つ入った中間的な状態も捉えた�
 
 ---
 
+# New Structure
+
 ## 2｜HLA-DR3–Ro60ペプチド（ヒト）
 
 ### Tregs transduced with a Ro60-reactive TCR have increased immunosuppressive functions in Sjögren’s disease
@@ -195,7 +201,7 @@ TMD中央の空洞にはDDM分子が2つ入った中間的な状態も捉えた�
 
 自己抗原ペプチドと結合したHLA-DR3の初の結晶構造（2.87 Å）。TCRを組み込んだTregは抑制力が約2倍に
 
-- **これまでの疑問・課題**：シェーグレン病では、HLA-DR3が自己抗原Ro60の断片をT細胞に見せる。しかしその結合の構造は、これまで分かっていなかった。
+- **疑問・課題**：シェーグレン病では、HLA-DR3が自己抗原Ro60の断片をT細胞に見せる。しかしその結合の構造は、これまで分かっていなかった。
 - **アプローチ**：Ro60ペプチドを結合したHLA-DR3の結晶構造を決め、Ro60に反応するTCR（T細胞の受容体）を組み込んだ制御性T細胞（Treg）も作った。
 - **結果**：ペプチドは標準的な向きで結合し、P2・P5・P8の3つの残基が外に出てTCRと接する位置にあった。
 - **わかったこと**：このTCRを組み込んだTregは、Ro60に反応する炎症を、通常のTregより約2倍強く抑えた。
@@ -204,10 +210,10 @@ TMD中央の空洞にはDDM分子が2つ入った中間的な状態も捉えた�
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > This allele is particularly efficient at presenting peptides derived from the Ro autoantigen  
-> — これまでの疑問・課題／Introduction
+> — 疑問・課題／Introduction
 
 > Notably, this is the first structure of HLA-DR3 bound to an autoantigenic peptide, as previous structural data have been limited to complexes with CLIP peptides.  
-> — これまでの疑問・課題／Results
+> — 疑問・課題／Results
 
 > Using this optimized platform, we determined the crystal structure of HLA-DR3 bound to the immunodominant Ro60369–383 peptide (PDB 9YZ3) at 2.87 Å resolution (R_work 23.7%, R_free 29.9%).  
 > — アプローチ／Results
@@ -324,7 +330,7 @@ HLA-DR3は発現収量が低く、Ro60ペプチドの直接発現は約0.3 mg/L�
 
 抗生物質ルフォマイシンの合成で、His-5を介したプロトンの受け渡しが関わる可能性がある
 
-- **これまでの疑問・課題**：P450酵素RufOは、ペプチド中のチロシンにニトロ基を付ける。この珍しい反応がどう進むのかは、はっきりしていなかった。
+- **疑問・課題**：P450酵素RufOは、ペプチド中のチロシンにニトロ基を付ける。この珍しい反応がどう進むのかは、はっきりしていなかった。
 - **アプローチ**：基質ペプチドを変えて反応を調べ、分子動力学とQM/MM計算を行い、基質が結合したNsRufOの結晶構造も決めた。
 - **結果**：基質ペプチド中のヒスチジン（His-5）が、ニトロ化を効率よく進めるのに必要だった。
 - **わかったこと**：His-5を経由してプロトンを受け渡す経路が、計算で見つかった。これが副産物の硝酸の生成を避けるのに役立つ可能性がある。
@@ -333,10 +339,10 @@ HLA-DR3は発現収量が低く、Ro60ペプチドの直接発現は約0.3 mg/L�
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > During the biosynthesis of the peptide antibiotic rufomycin, the cytochrome P450 (P450) enzyme RufO catalyzes the aromatic nitration of a tyrosine residue in a ribosomal pentapeptide that serves as a precursor for nonribosomal peptide synthesis.  
-> — これまでの疑問・課題／Abstract
+> — 疑問・課題／Abstract
 
 > Thus, the underlying mechanisms that allow these two homologous P450s to catalyze different chemistry remain elusive.  
-> — これまでの疑問・課題／Introduction
+> — 疑問・課題／Introduction
 
 > To understand the mechanism of this unusual P450-mediated reaction, a series of pentapeptides were tested as substrates alongside molecular dynamics simulations and quantum mechanics/molecular mechanics (QM/MM, ONIOM approach) calculations.  
 > — アプローチ／Abstract
@@ -426,7 +432,137 @@ NsRufOの基質結合型構造（1.59 Å）では、Tyr-3とHis-5がヘムの真
 
 ---
 
-## 4｜NHEJ短距離複合体＋Pol λ（ヒト）
+## 4｜Rho（結核菌）
+
+### An intrinsically disordered domain of transcription terminator Rho governs genome-wide Rho utilization (Rut) site selection in Mycobacterium tuberculosis
+
+*Nucleic Acids Research*（2026-10-09） · [論文](https://doi.org/10.1093/nar/gkag973) · ライセンス: cc by-nc
+
+![構造図：Rho（結核菌）](figures/PMC13650167.svg)
+
+<sub>色（順に）：Rho（転写終結因子）　スティック：ADP、BeF3（BEF）</sub>
+
+**結核菌のRhoは、天然変性のNIDで転写停止の目印を選ぶ**
+
+NIDを欠くと、Rhoが見つけるRut部位は1759か所から47か所に減った
+
+- **疑問・課題**：Rhoは、RNAのRut部位に取りついて転写を止める。結核菌のRhoに特有の大きなNIDドメインの役割は不明だった。
+- **アプローチ**：配列を網羅的に探す実験（Helicase-SELEX）で結核菌ゲノム全体のRut部位を探し、NMRとクライオ電顕でNIDの状態を調べた。
+- **結果**：Rut部位は全長のRhoで1759か所、NIDを欠くRhoでは47か所だった。NIDは決まった形をとらない（天然変性）ドメインだった。
+- **わかったこと**：決まった形をもたないNIDが、二次構造をもつRut部位をつかまえるのに重要とみられる。
+- **残された課題**：MtbRhoとRNAポリメラーゼの相互作用が一過性か安定か、NIDが関わるかは、実験で確かめる必要がある。
+
+<details><summary>この紹介文の根拠（論文本文）</summary>
+
+> RDTT relies on the ATP-dependent Rho helicase, which engages nascent transcripts at loosely defined, C > G-biased Rho utilization (Rut) sites to dismantle transcription complexes.  
+> — 疑問・課題／Abstract
+
+> In Mycobacterium tuberculosis, Rho features a unique, large N-terminal insertion domain (NID) of uncertain function.  
+> — 疑問・課題／Abstract
+
+> Using enzymatic Helicase-SELEX screening, we identified 1759 putative Rut sites across the M. tuberculosis genome with wild-type Rho (MtbRho) but only 47 with a NID-deleted variant (ΔNID-MtbRho), demonstrating NID’s importance for productive substrate recruitment.  
+> — アプローチ／Abstract
+
+> Complementary RDTT assays, affinity measurements, solution NMR, and cryogenic electron microscopy analyses show that the NID is intrinsically disordered, yet critical for engaging Rut sites with substantial secondary structure.  
+> — アプローチ／Abstract
+
+> Using enzymatic Helicase-SELEX screening, we identified 1759 putative Rut sites across the M. tuberculosis genome with wild-type Rho (MtbRho) but only 47 with a NID-deleted variant (ΔNID-MtbRho), demonstrating NID’s importance for productive substrate recruitment.  
+> — 結果／Abstract
+
+> Complementary RDTT assays, affinity measurements, solution NMR, and cryogenic electron microscopy analyses show that the NID is intrinsically disordered, yet critical for engaging Rut sites with substantial secondary structure.  
+> — 結果／Abstract
+
+> Complementary RDTT assays, affinity measurements, solution NMR, and cryogenic electron microscopy analyses show that the NID is intrinsically disordered, yet critical for engaging Rut sites with substantial secondary structure.  
+> — わかったこと／Abstract
+
+> Collectively, our data demonstrate that the NID of MtbRho is an intrinsically disordered domain (IDR) critical for the efficient recognition and utilization of genuine Rut sites across the mycobacterial transcriptome.  
+> — わかったこと／Introduction
+
+> Moreover, the nature of the interaction between MtbRho and MtbRNAP—whether transient or stable, stabilized or not by the NID—remains to be experimentally determined. ### The NID is an intrinsically disordered domain and remains dynamically flexible upon RNA binding Two main scenarios could explain why the N-terminal domain (NTD; residues 1–221, including the NID) is unresolved in the cryo-EM structure of MtbRho [37].  
+> — 残された課題／Results and discussion
+
+</details>
+
+<sub>分類：DNA・RNA に関わるもの</sub>
+
+#### 読みどころ
+
+NIDを欠くと、H-SELEXで拾えるRut部位が1759から47に激減する。NID欠失Rhoは二次構造が安定なRNAをほとんど結合できず、NIDが構造化RNAの捕捉に働くと考えられる。
+
+<details><summary>根拠（論文本文）</summary>
+
+> we identified 1759 significant Rut peaks with FL MtbRho (hereafter FL-Rut peaks) and only 47 significant Rut peaks with ΔNID-MtbRho  
+> — Results and discussion
+
+> the maximal fraction of RNA bound by ΔNID-MtbRho depends on the predicted structural stability of the RNA  
+> — Results and discussion
+
+</details>
+
+NMRでNIDは広い範囲で化学シフトが狭く、天然変性領域であることが示された。RNAを加えても折りたたまれず、基質RNAとADP-BeF3存在下の全長Rhoのクライオ電顕（2クラス）でもNIDに秩序のある密度は見えなかった。ヘキサマーがRNAを引き込む様子はクラスIIで示唆された。
+
+<details><summary>根拠（論文本文）</summary>
+
+> Crucially, we detected no ordered density for the NID in either class, indicating that the NID does not adopt a folded conformation in the context of the FL MtbRho hexamer, even in the presence of RNA.  
+> — Results and discussion
+
+> This narrow chemical-shift dispersion is characteristic of a highly flexible, intrinsically disordered protein lacking secondary or tertiary structure  
+> — Results and discussion
+
+</details>
+
+M495L置換を入れるとRhoが57 bpのRNA–DNAレポーター二重鎖を巻き戻せ、H-SELEXが成立する。ただし著者は、この変異が下流の段階に及ぼすアロステリックな影響を完全には除外できないと述べている。
+
+<details><summary>根拠（論文本文）</summary>
+
+> Without this substitution, the enzyme indeed cannot unwind the 57-bp reporter RNA–DNA duplex used in H-SELEX  
+> — Results and discussion
+
+> we cannot formally rule out allosteric effects impacting subsequent steps along the duplex unwinding reaction pathway  
+> — Limitations of the study
+
+</details>
+
+#### 構造データ
+
+| PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
+|---|---|---|---|---|---|
+| [31HX](https://www.rcsb.org/structure/31HX) | Cryo-EM | 3.15 Å | 2026-09-30 | Mycobacterium tuberculosis | ADP, BEF |
+| [31HY](https://www.rcsb.org/structure/31HY) | Cryo-EM | 3.40 Å | 2026-09-30 | Mycobacterium tuberculosis | BEF, ADP |
+
+- [P9WHF2](https://www.uniprot.org/uniprotkb/P9WHF2) rho Transcription termination factor Rho — *Mycobacterium tuberculosis (strain CDC 1551 / Oshkosh)* （PDB で初めての構造）
+
+#### 実験メモ
+
+- **発現系**：大腸菌Rosetta-IIで過剰発現（pET28b系）。NMR試料は15N/13C標識の最少培地。
+- **コンストラクト**：MtbRho全長とΔNID（NID 76–219欠失）。いずれもM495L置換入りとタグなし。
+- **精製**：Ni-NTA → SP Sepharose → トロンビンでHisタグ切断、再度Ni-NTA/ベンズアミジン。
+- **結晶化／グリッド作製**：4 µM Rho、16 µM pstC1 RNA、270 µM ADP-BeF3。UltrAufoil 1.2/1.3、Vitrobot IV 10°C・湿度95%、ブロット4秒。
+- **データ収集・解析**：Titan Krios G4＋Falcon 4i、22,095ムービー、総線量39.18 e⁻/Å²。cryoSPARC 4.5で処理。
+
+<details><summary>根拠（論文本文）</summary>
+
+> overexpressed in E. coli Rosetta-II cells (Novagen) harboring the pET28b-MtbRho or pET28b-ΔMtbRho plasmid  
+> — Materials and methods
+
+> A reaction mixture containing 4 µM FL MtbRho and 16 μM pstC1 RNA in 25 μl EM buffer  
+> — Materials and methods
+
+> After blotting for 4 s with a filter paper, grids were plunge-frozen in liquid ethane using a Vitrobot Mark IV (FEI) with 95% chamber humidity at 10°C.  
+> — Materials and methods
+
+> Twenty-two thousand ninety-five movies were collected with a total electron dose of 39.18 e−/Å2  
+> — Materials and methods
+
+</details>
+
+> 📝 編集者への確認事項：candidatesのfirst_structureはtrueだが、本文は既報のMtbRho構造（ref 37）と比較しており、初構造とは書いていない。記事ではNIDが天然変性であることの実験的実証として扱った。
+
+---
+
+# Structure Update
+
+## 5｜NHEJ短距離複合体＋Pol λ（ヒト）
 
 ### End processing in NHEJ by Polymerase λ and PNKP is coordinated during short-range synapsis
 
@@ -440,7 +576,7 @@ NsRufOの基質結合型構造（1.59 Å）では、Tyr-3とHis-5がヘムの真
 
 Pol λとPNKPは同じ複合体の中で協力して、切れた末端を整える
 
-- **これまでの疑問・課題**：切れたDNAの末端は、そのままではつなげないことがある。末端を整える酵素が修復の中核複合体にどう組み込まれるかは不明だった。
+- **疑問・課題**：切れたDNAの末端は、そのままではつなげないことがある。末端を整える酵素が修復の中核複合体にどう組み込まれるかは不明だった。
 - **アプローチ**：修復の中核複合体にPol λが結合した状態をクライオ電顕で解析し、Pol λとPNKPの働きを試験管内で調べた。
 - **結果**：2つのPol λがBRCTドメインでKu70/80に結合し、N末端はXRCC4–LigIVの近くにあった。Pol λとPNKPは同じ複合体の中で末端を処理した。
 - **わかったこと**：中核の複合体は安定した足場になり、酵素が出入りして末端を整える。末端処理は切れ目を保持している間に繰り返し起こる、というモデルを示した。
@@ -449,10 +585,10 @@ Pol λとPNKPは同じ複合体の中で協力して、切れた末端を整え�
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > NHEJ is capable of repairing a variety of damaged DNA, employing various accessory end-processing factors to resolve chemically blocked ends, trim overhangs, and fill gaps in order to achieve directly ligatable DNA ends.  
-> — これまでの疑問・課題／Abstract
+> — 疑問・課題／Abstract
 
 > Single-molecule studies in Xenopus egg extracts indicate that at least certain end-processing events occur during short-range synapsis19, but the molecular details underlying these processes’ coordination with the core NHEJ machinery remain unclear, particularly in terms of the structural accommodation of the accessory factors within the large protein-DNA complexes that mediate repair.  
-> — これまでの疑問・課題／Introduction
+> — 疑問・課題／Introduction
 
 > To investigate the molecular mechanisms underlying end-processing, we determine the cryo-EM structure of the NHEJ specific polymerase Pol λ bound to the short-range synaptic complex, detailing the mode of its recruitment to the complex as well as a putative model for its activity.  
 > — アプローチ／Abstract
@@ -559,134 +695,6 @@ Pol λのBRCTドメインはKu70/80のブリッジをまたいで結合し、N�
 
 ---
 
-## 5｜Rho（結核菌）
-
-### An intrinsically disordered domain of transcription terminator Rho governs genome-wide Rho utilization (Rut) site selection in Mycobacterium tuberculosis
-
-*Nucleic Acids Research*（2026-10-09） · [論文](https://doi.org/10.1093/nar/gkag973) · ライセンス: cc by-nc
-
-![構造図：Rho（結核菌）](figures/PMC13650167.svg)
-
-<sub>色（順に）：Rho（転写終結因子）　スティック：ADP、BeF3（BEF）</sub>
-
-**結核菌のRhoは、天然変性のNIDで転写停止の目印を選ぶ**
-
-NIDを欠くと、Rhoが見つけるRut部位は1759か所から47か所に減った
-
-- **これまでの疑問・課題**：Rhoは、RNAのRut部位に取りついて転写を止める。結核菌のRhoに特有の大きなNIDドメインの役割は不明だった。
-- **アプローチ**：配列を網羅的に探す実験（Helicase-SELEX）で結核菌ゲノム全体のRut部位を探し、NMRとクライオ電顕でNIDの状態を調べた。
-- **結果**：Rut部位は全長のRhoで1759か所、NIDを欠くRhoでは47か所だった。NIDは決まった形をとらない（天然変性）ドメインだった。
-- **わかったこと**：決まった形をもたないNIDが、二次構造をもつRut部位をつかまえるのに重要とみられる。
-- **残された課題**：MtbRhoとRNAポリメラーゼの相互作用が一過性か安定か、NIDが関わるかは、実験で確かめる必要がある。
-
-<details><summary>この紹介文の根拠（論文本文）</summary>
-
-> RDTT relies on the ATP-dependent Rho helicase, which engages nascent transcripts at loosely defined, C > G-biased Rho utilization (Rut) sites to dismantle transcription complexes.  
-> — これまでの疑問・課題／Abstract
-
-> In Mycobacterium tuberculosis, Rho features a unique, large N-terminal insertion domain (NID) of uncertain function.  
-> — これまでの疑問・課題／Abstract
-
-> Using enzymatic Helicase-SELEX screening, we identified 1759 putative Rut sites across the M. tuberculosis genome with wild-type Rho (MtbRho) but only 47 with a NID-deleted variant (ΔNID-MtbRho), demonstrating NID’s importance for productive substrate recruitment.  
-> — アプローチ／Abstract
-
-> Complementary RDTT assays, affinity measurements, solution NMR, and cryogenic electron microscopy analyses show that the NID is intrinsically disordered, yet critical for engaging Rut sites with substantial secondary structure.  
-> — アプローチ／Abstract
-
-> Using enzymatic Helicase-SELEX screening, we identified 1759 putative Rut sites across the M. tuberculosis genome with wild-type Rho (MtbRho) but only 47 with a NID-deleted variant (ΔNID-MtbRho), demonstrating NID’s importance for productive substrate recruitment.  
-> — 結果／Abstract
-
-> Complementary RDTT assays, affinity measurements, solution NMR, and cryogenic electron microscopy analyses show that the NID is intrinsically disordered, yet critical for engaging Rut sites with substantial secondary structure.  
-> — 結果／Abstract
-
-> Complementary RDTT assays, affinity measurements, solution NMR, and cryogenic electron microscopy analyses show that the NID is intrinsically disordered, yet critical for engaging Rut sites with substantial secondary structure.  
-> — わかったこと／Abstract
-
-> Collectively, our data demonstrate that the NID of MtbRho is an intrinsically disordered domain (IDR) critical for the efficient recognition and utilization of genuine Rut sites across the mycobacterial transcriptome.  
-> — わかったこと／Introduction
-
-> Moreover, the nature of the interaction between MtbRho and MtbRNAP—whether transient or stable, stabilized or not by the NID—remains to be experimentally determined. ### The NID is an intrinsically disordered domain and remains dynamically flexible upon RNA binding Two main scenarios could explain why the N-terminal domain (NTD; residues 1–221, including the NID) is unresolved in the cryo-EM structure of MtbRho [37].  
-> — 残された課題／Results and discussion
-
-</details>
-
-<sub>分類：DNA・RNA に関わるもの</sub>
-
-#### 読みどころ
-
-NIDを欠くと、H-SELEXで拾えるRut部位が1759から47に激減する。NID欠失Rhoは二次構造が安定なRNAをほとんど結合できず、NIDが構造化RNAの捕捉に働くと考えられる。
-
-<details><summary>根拠（論文本文）</summary>
-
-> we identified 1759 significant Rut peaks with FL MtbRho (hereafter FL-Rut peaks) and only 47 significant Rut peaks with ΔNID-MtbRho  
-> — Results and discussion
-
-> the maximal fraction of RNA bound by ΔNID-MtbRho depends on the predicted structural stability of the RNA  
-> — Results and discussion
-
-</details>
-
-NMRでNIDは広い範囲で化学シフトが狭く、天然変性領域であることが示された。RNAを加えても折りたたまれず、基質RNAとADP-BeF3存在下の全長Rhoのクライオ電顕（2クラス）でもNIDに秩序のある密度は見えなかった。ヘキサマーがRNAを引き込む様子はクラスIIで示唆された。
-
-<details><summary>根拠（論文本文）</summary>
-
-> Crucially, we detected no ordered density for the NID in either class, indicating that the NID does not adopt a folded conformation in the context of the FL MtbRho hexamer, even in the presence of RNA.  
-> — Results and discussion
-
-> This narrow chemical-shift dispersion is characteristic of a highly flexible, intrinsically disordered protein lacking secondary or tertiary structure  
-> — Results and discussion
-
-</details>
-
-M495L置換を入れるとRhoが57 bpのRNA–DNAレポーター二重鎖を巻き戻せ、H-SELEXが成立する。ただし著者は、この変異が下流の段階に及ぼすアロステリックな影響を完全には除外できないと述べている。
-
-<details><summary>根拠（論文本文）</summary>
-
-> Without this substitution, the enzyme indeed cannot unwind the 57-bp reporter RNA–DNA duplex used in H-SELEX  
-> — Results and discussion
-
-> we cannot formally rule out allosteric effects impacting subsequent steps along the duplex unwinding reaction pathway  
-> — Limitations of the study
-
-</details>
-
-#### 構造データ
-
-| PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
-|---|---|---|---|---|---|
-| [31HX](https://www.rcsb.org/structure/31HX) | Cryo-EM | 3.15 Å | 2026-09-30 | Mycobacterium tuberculosis | ADP, BEF |
-| [31HY](https://www.rcsb.org/structure/31HY) | Cryo-EM | 3.40 Å | 2026-09-30 | Mycobacterium tuberculosis | BEF, ADP |
-
-- [P9WHF2](https://www.uniprot.org/uniprotkb/P9WHF2) rho Transcription termination factor Rho — *Mycobacterium tuberculosis (strain CDC 1551 / Oshkosh)* （PDB で初めての構造）
-
-#### 実験メモ
-
-- **発現系**：大腸菌Rosetta-IIで過剰発現（pET28b系）。NMR試料は15N/13C標識の最少培地。
-- **コンストラクト**：MtbRho全長とΔNID（NID 76–219欠失）。いずれもM495L置換入りとタグなし。
-- **精製**：Ni-NTA → SP Sepharose → トロンビンでHisタグ切断、再度Ni-NTA/ベンズアミジン。
-- **結晶化／グリッド作製**：4 µM Rho、16 µM pstC1 RNA、270 µM ADP-BeF3。UltrAufoil 1.2/1.3、Vitrobot IV 10°C・湿度95%、ブロット4秒。
-- **データ収集・解析**：Titan Krios G4＋Falcon 4i、22,095ムービー、総線量39.18 e⁻/Å²。cryoSPARC 4.5で処理。
-
-<details><summary>根拠（論文本文）</summary>
-
-> overexpressed in E. coli Rosetta-II cells (Novagen) harboring the pET28b-MtbRho or pET28b-ΔMtbRho plasmid  
-> — Materials and methods
-
-> A reaction mixture containing 4 µM FL MtbRho and 16 μM pstC1 RNA in 25 μl EM buffer  
-> — Materials and methods
-
-> After blotting for 4 s with a filter paper, grids were plunge-frozen in liquid ethane using a Vitrobot Mark IV (FEI) with 95% chamber humidity at 10°C.  
-> — Materials and methods
-
-> Twenty-two thousand ninety-five movies were collected with a total electron dose of 39.18 e−/Å2  
-> — Materials and methods
-
-</details>
-
-> 📝 編集者への確認事項：candidatesのfirst_structureはtrueだが、本文は既報のMtbRho構造（ref 37）と比較しており、初構造とは書いていない。記事ではNIDが天然変性であることの実験的実証として扱った。
-
----
-
 ## 6｜WDR5–PER2 WBMペプチド（マウス）
 
 ### Role of PER-WDR5 interactions in the mammalian circadian clock
@@ -701,7 +709,7 @@ M495L置換を入れるとRhoが57 bpのRNA–DNAレポーター二重鎖を巻�
 
 PER2はCRYと取り合う場所に、PER1は別の場所に結合する。PER2側を結晶構造で確認した
 
-- **これまでの疑問・課題**：体内時計で遺伝子の働きを抑えるPER1・PER2の複合体に、WDR5が見つかっていた。その役割は不明だった。
+- **疑問・課題**：体内時計で遺伝子の働きを抑えるPER1・PER2の複合体に、WDR5が見つかっていた。その役割は不明だった。
 - **アプローチ**：WDR5とPER1・PER2の結合の強さを測り、WDR5とPER2の短いペプチドの結晶構造を決めた。
 - **結果**：PER2はWBMという短い配列で、PER1は主にWINという別の配列でWDR5に結合した。PER1のほうが約15倍強く結合する。
 - **わかったこと**：PER2の結合場所はCRYの結合面と重なるので、WDR5とCRYは取り合いになる。PER1はWDR5とCRYの両方と同時に複合体をつくれる。
@@ -710,10 +718,10 @@ PER2はCRYと取り合う場所に、PER1は別の場所に結合する。PER2�
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > The MLL1 complex component WDR5 was also found in a repressive PER complex.  
-> — これまでの疑問・課題／Abstract
+> — 疑問・課題／Abstract
 
 > While WDR5 is a well characterized MLL1 complex component, its role in repressive PER containing complexes of the mammalian circadian clock is unknown.  
-> — これまでの疑問・課題／Introduction
+> — 疑問・課題／Introduction
 
 > Here we show that WDR5 directly binds to the CRY binding domain (CBD) regions of PER1 and PER2.  
 > — アプローチ／Abstract
@@ -829,7 +837,7 @@ WDR5のWIN部位阻害剤（Inh-4、Inh-5）はPER1–WDR5複合体を部分的�
 
 シロイヌナズナのPSIIを2.74 Åで解析。D1のHis252が内側を向き、自己切断を招く可能性がある
 
-- **これまでの疑問・課題**：強い光や高温は、光合成で水を分解するタンパク質複合体PSIIを傷める。その傷が構造のどこに出るかを知りたかった。
+- **疑問・課題**：強い光や高温は、光合成で水を分解するタンパク質複合体PSIIを傷める。その傷が構造のどこに出るかを知りたかった。
 - **アプローチ**：単離したPSII（C2S2型）に強い光と高温を与えてクライオ電顕で解析し、弱い光で凍らせた既存の構造と比べた。
 - **結果**：アンテナなどのサブユニットが外れ、電子を受け取る側の非ヘム鉄まわりに損傷があり、重炭酸イオンも失われていた。
 - **わかったこと**：D1のHis252が動き、セリンプロテアーゼ（タンパク質を切る酵素）に似た3残基の組ができて、D1を自ら切断させる可能性がある。
@@ -838,13 +846,13 @@ WDR5のWIN部位阻害剤（Inh-4、Inh-5）はPER1–WDR5複合体を部分的�
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > Photosystem II (PS II) is a large membrane-bound pigment-protein complex responsible for extracting electrons and protons from water during photosynthesis and releasing molecular oxygen into the atmosphere.  
-> — これまでの疑問・課題／Abstract
+> — 疑問・課題／Abstract
 
 > While light is required to drive the photochemical reactions, high light and high temperature can be damaging to PS II.  
-> — これまでの疑問・課題／Abstract
+> — 疑問・課題／Abstract
 
 > Our aim is to gain structural insight into the photoprotection and photodamage processes in PSII.  
-> — これまでの疑問・課題／Introduction
+> — 疑問・課題／Introduction
 
 > To gain insight into potential structural consequences of such conditions, we performed an exploratory study where isolated PS II complexes (C2S2) from Arabidopsis thaliana were exposed to high light and elevated temperature and employed cryo-electron microscopy for structural determination.  
 > — アプローチ／Abstract

@@ -897,7 +897,7 @@ def render(cif_gz: bytes, ligand_ids: set[str], x0: float, y0: float, w: float, 
            entity_colors: list[str] | None = None, ligand_colors: list[str] | None = None,
            max_points: int = MAX_TRACE_POINTS, bg: str = "#FFFFFF",
            notes: list[dict] | None = None, labels: dict | None = None, bands: tuple[float, float] = (0, 0),
-           site_xyz: tuple | None = None, ink: str = "#1B2638", hl_color: str = HIGHLIGHT,
+           site_xyz: tuple | None = None, ink: str = "#1B2638", hl_color: str = HIGHLIGHT, shadow: str = "",
            probe: dict | None = None, font: float = 1.0, band_mode: str = "sides", topology=None,
            ) -> tuple[str, list[tuple[str, str, str]], list[tuple[str, str]]]:
     """SVG fragment for the box (x0, y0, w, h), a legend [(colour, label, description)] per polymer
@@ -1075,6 +1075,8 @@ def render(cif_gz: bytes, ligand_ids: set[str], x0: float, y0: float, w: float, 
     parts.sort(key=lambda p: p[0])
     width = max(1.8, min(7.0, 0.5 * scale))
     out = "".join(s for _, s in parts) + _sticks(lig_atoms, ligq, sx, width)
+    if shadow:   # the molecule casts the shadow; the labels and the site circle drawn after it do not
+        out = f'<g filter="url(#{shadow})">{out}</g>'
     legend = [(color[e], m["entities"].get(e, f"entity {e}"), m["descriptions"].get(e, ""), e) for e in entity_order]
     lig_entities: dict[str, set] = defaultdict(set)
     lig_sites: dict[str, list] = defaultdict(list)  # every copy of the ligand: [label_asym_id, auth_seq_id]
@@ -1141,7 +1143,7 @@ def compare(panels: list[dict], x0: float, y0: float, w: float, h: float, align:
             mark: dict | None = None, gene_names: dict[str, str] | None = None, entity_colors: list[str] | None = None,
             ligand_colors: list[str] | None = None, bg: str = "#FFFFFF", ink: str = "#1B2638",
             hl_color: str = HIGHLIGHT, gap: float = 36, names: list | None = None,
-            font: float = 1.0, vertical: bool = False, topology=None) -> tuple[str, dict]:
+            font: float = 1.0, vertical: bool = False, topology=None, shadow: str = "") -> tuple[str, dict]:
     """Two (or more) structures of the same assembly side by side, superposed on one polymer entity, with the
     same view, the stretch `focus` in the accent colour and, when `mark` is given, an arrow from where one
     residue sits in the first panel to where it sits in the next.
@@ -1291,6 +1293,8 @@ def compare(panels: list[dict], x0: float, y0: float, w: float, h: float, align:
         for a_ in lig:
             a_["ccol"] = ccol[a_["inst"][2]]
         body = "".join(s_ for _, s_ in parts) + _sticks(lig, ligq, sx, max(1.8, min(6.0, 0.5 * scale)))
+        if shadow:
+            body = f'<g filter="url(#{shadow})">{body}</g>'
         extra = ""
         hit = [(sx(r["q"]), r["q"][2]) for _, v in runs3 for r in v if r.get("hl")]
         if hit:

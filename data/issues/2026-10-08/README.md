@@ -4,6 +4,8 @@
 
 **今日の新しい構造：4 本**　Europe PMC に 2026-10-07 に登録されたオープンアクセス論文 33 本のうち、新しい構造を報告した論文は 4 本。すべて紹介する。
 
+**Structure Update 4 本**（New Structure：構造が初めて解かれたタンパク質。Structure Update：既知のタンパク質の新しい構造。Structure-Based Study：既存の構造を使った注目の研究）
+
 ## Today's Structure（今日の一本）
 
 **1｜QatBのN末端が、QatCの活性部位に入り込んでいた**（QatBC（大腸菌 QatABCD））
@@ -26,6 +28,8 @@
 
 ---
 
+# Picked up Today's Structure
+
 ## 1｜QatBC（大腸菌 QatABCD）
 
 ### Structural and functional insights into QueC-family protein in QatABCD anti-phage system
@@ -40,7 +44,7 @@
 
 抗ファージ防御系QatBCの結晶構造。挿入部に変異を入れると防御が弱まった
 
-- **これまでの疑問・課題**：QatABCDの作用機構と、特徴的な構成要素QatCの機能は不明だった。
+- **疑問・課題**：QatABCDの作用機構と、特徴的な構成要素QatCの機能は不明だった。
 - **アプローチ**：QatBC複合体のapo型とATP結合型を結晶構造解析し、変異体の抗ファージ活性を調べた。
 - **結果**：QatBのN末端ループがQatCの触媒中心に入り込む。この部分や触媒残基は防御に必須だった。
 - **わかったこと**：QatCはCap9と同様に、タンパク質を修飾する酵素とみられる。
@@ -49,7 +53,7 @@
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > However, the mechanism of QatABCD, even the function of QatC in this system, remains unclear.  
-> — これまでの疑問・課題／Abstract
+> — 疑問・課題／Abstract
 
 > Crystal structures of the QatBC complex in apo and ATP-bound form support a shared role for QueC-family proteins in targeting protein substrates for N-terminal modification as in type IV CBASS.  
 > — アプローチ／Abstract
@@ -149,6 +153,8 @@ QatBのN末端を天然のまま得るため、Gly2のコドンをUlp1切断部�
 
 ---
 
+# Structure Update
+
 ## 2｜FlhAC A489E（サルモネラ）
 
 ### Structural basis for substrate specificity switching revealed by the FlhA(A489E) suppressor mutation
@@ -163,7 +169,7 @@ QatBのN末端を天然のまま得るため、Gly2のコドンをUlp1切断部�
 
 サルモネラのFlhAC A489E抑制変異体の結晶構造。Arg-386周辺の塩橋網が変わっていた
 
-- **これまでの疑問・課題**：鞭毛のIII型分泌装置が基質特異性を切り替える構造的な仕組みは不明だった。
+- **疑問・課題**：鞭毛のIII型分泌装置が基質特異性を切り替える構造的な仕組みは不明だった。
 - **アプローチ**：FlhAC(A489E)を結晶構造解析し、FlhBとの結合をAlphaFold3で予測した。
 - **結果**：A489EはArg-386とGlu-483周辺の塩橋網を組み換え、α2ヘリックスの位置が少しずれた。
 - **わかったこと**：この変化が、基質特異性の切り替えに伴う構造変化の障壁を下げる可能性がある。
@@ -171,7 +177,7 @@ QatBのN末端を天然のまま得るため、Gly2のコドンをUlp1切断部�
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > This process is regulated by the coordinated actions of FliK, FlhB, and FlhA, but the structural mechanism underlying substrate specificity switching remains unclear.  
-> — これまでの疑問・課題／Abstract
+> — 疑問・課題／Abstract
 
 > Here, we determined the crystal structures of the C-terminal cytoplasmic domain of FlhA(FlhAC) carrying the A489E substitution, which partially restores motility of the cleavage-defective flhB(P270A) mutant.  
 > — アプローチ／Abstract
@@ -275,7 +281,7 @@ Arg-386をAlaに置換した変異体は、FliH・FliIがあれば運動性と�
 
 14置換のPRp51とダルナビルの結晶構造では差が小さく、違いはMDで現れた
 
-- **これまでの疑問・課題**：耐性置換は主要と副次に分けられるが、この二分類に明確な定義はなかった。
+- **疑問・課題**：耐性置換は主要と副次に分けられるが、この二分類に明確な定義はなかった。
 - **アプローチ**：14置換のPRp51とダルナビルの複合体を結晶構造解析し、分子動力学（MD）で調べた。
 - **結果**：野生型との差は、残基間距離も活性部位の容積も、ダルナビル複合体の方がGRL142複合体より大きかった。
 - **わかったこと**：近い置換と離れた置換が協調して働く。主要・副次の二分類は単純すぎる可能性がある。
@@ -283,7 +289,7 @@ Arg-386をAlaに置換した変異体は、FliH・FliIがあれば運動性と�
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > However, no precise definitions of such two categories exist.  
-> — これまでの疑問・課題／Abstract
+> — 疑問・課題／Abstract
 
 > Herein, using X-ray crystallography and molecular dynamics (MD) simulations we examined the structural basis of antiviral resistance of HIVDRVRp51, an HIV-1 variant that has three proximal (V32I, V82I, I84V) and eleven distal substitutions (L10I/I15V/K20R/L24I/L33F/M36I/ M46L/ I54M/L63P/K70Q/L89M) in the protease region (PRp51), and has high resistance against a protease inhibitor darunavir (DRV), but not against another protease inhibitor GRL142.  
 > — アプローチ／Abstract
@@ -389,7 +395,7 @@ MDでは、活性部位容積が結晶構造の値から100 Å3以内に収ま�
 
 力プロファイル解析とクライオ電顕（平均2.3 Å）で、リボソーム上の新生鎖を追った
 
-- **これまでの疑問・課題**：共翻訳フォールディングの研究は、小さな単一ドメインのタンパク質に偏っていた。
+- **疑問・課題**：共翻訳フォールディングの研究は、小さな単一ドメインのタンパク質に偏っていた。
 - **アプローチ**：力プロファイル解析で、550残基のホタルルシフェラーゼの折りたたみを追った。
 - **結果**：中程度の力を生む圧縮・折りたたみが連なり、RF-2ドメインの折りたたみで大きな力が出た。
 - **わかったこと**：折りたたみは、少数の協同的な段階が順に進むだけの単純な過程ではなかった。
@@ -397,7 +403,7 @@ MDでは、活性部位容積が結晶構造の値から100 Å3以内に収ま�
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > So far, studies of cotranslational folding have focused mainly on small, single-domain proteins.  
-> — これまでの疑問・課題／Abstract
+> — 疑問・課題／Abstract
 
 > Here, we have used Force Profile Analysis to study the cotranslational folding of Firefly Luciferase, a complex 550-residue protein composed of an N-terminal domain (NTD) encompassing two split Rossmann folds (RF-1, RF-2) and a β-roll, and a flexibly attached C-terminal domain (CTD).  
 > — アプローチ／Abstract

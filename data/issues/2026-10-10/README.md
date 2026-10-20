@@ -4,9 +4,11 @@
 
 **今日の新しい構造：6 本**　Europe PMC に 2026-10-09 に登録されたオープンアクセス論文 61 本のうち、新しい構造を報告した論文は 6 本。すべて紹介する。
 
+**Structure Update 6 本**（New Structure：構造が初めて解かれたタンパク質。Structure Update：既知のタンパク質の新しい構造。Structure-Based Study：既存の構造を使った注目の研究）
+
 ## Today's Structure（今日の一本）
 
-**2｜MERS-CoVスパイクの活性化を、時間を追って捉えた**（MERS-CoVスパイク–DPP4）
+**1｜MERS-CoVスパイクの活性化を、時間を追って捉えた**（MERS-CoVスパイク–DPP4）
 
 選んだ理由（構造生物学・生命科学・創薬）：受容体と反応させる時間を変えた複数の状態を並べ、スパイクが融合型へ移る道筋を捉えた。抗ウイルス戦略の足場になると著者は述べる。
 
@@ -20,8 +22,8 @@
 
 | # | 標的 | 手法・分解能 | 見出し |
 |---|---|---|---|
-| 1 | MDA5（IFIH1）–dsRNA | Cryo-EM・2.81–3.21 Å（4 構造） | T331Iは、短いdsRNAでも安定なフィラメントを作る |
-| 2 | MERS-CoVスパイク–DPP4 | Cryo-EM・2.88–3.44 Å（7 構造） | MERS-CoVスパイクの活性化を、時間を追って捉えた |
+| 1 | MERS-CoVスパイク–DPP4 | Cryo-EM・2.88–3.44 Å（7 構造） | MERS-CoVスパイクの活性化を、時間を追って捉えた |
+| 2 | MDA5（IFIH1）–dsRNA | Cryo-EM・2.81–3.21 Å（4 構造） | T331Iは、短いdsRNAでも安定なフィラメントを作る |
 | 3 | グリシンリボスイッチ（コレラ菌） | Cryo-EM・2.86–3.27 Å（2 構造） | Mg²⁺とグリシンは、リボスイッチの折りたたみを協調して支える |
 | 4 | SIRT2／SIRT5（ペプチド複合体） | X-ray・1.45–2.80 Å（2 構造） | サーチュインは、N-メチル化されたアシルリジンを外せない |
 | 5 | PoOMT1（Paeonia ostii） | X-ray・1.83–2.28 Å（3 構造） | PoOMT1のT字型ポケットは、2種類の基質を受け入れる |
@@ -31,124 +33,9 @@
 
 ---
 
-## 1｜MDA5（IFIH1）–dsRNA
+# Picked up Today's Structure
 
-### Establishing the molecular basis for MDA5 mutation-linked autoimmunity
-
-*Nucleic Acids Research*（2026-10-08） · [論文](https://doi.org/10.1093/nar/gkag941) · ライセンス: cc by
-
-![構造図：MDA5（IFIH1）–dsRNA](figures/PMC13646831.svg)
-
-<sub>色（順に）：MDA5（IFIH1） / dsRNA 鎖 1 / dsRNA 鎖 2　スティック：AMP-PNP（ANP）</sub>
-
-**T331Iは、短いdsRNAでも安定なフィラメントを作る**
-
-ATPの配置が乱れて加水分解が止まる様子を、クライオ電顕で見た
-
-- **これまでの疑問・課題**：MDA5変異T331Iが、なぜ恒常的なインターフェロン応答を起こすのか不明だった。
-- **アプローチ**：クライオ電顕に、酵素・細胞の実験を組み合わせて、変異体のATP結合ポケットを調べた。
-- **結果**：T331IはATPase活性を損ない、MDA5–dsRNA複合体が安定化していた。
-- **わかったこと**：ATPaseがフィラメントの安定性を調節し、自己免疫を防いでいる。
-
-<details><summary>この紹介文の根拠（論文本文）</summary>
-
-> While these results are notable, the actual molecular mechanism underlying constitutive MDA5 T331I signaling remains unclear.  
-> — これまでの疑問・課題／Introduction
-
-> Here, we show that the gain-of-function T331I disease-linked mutation within the ATP-binding pocket disrupts this balance, resulting in constitutive interferon signaling.  
-> — これまでの疑問・課題／Abstract
-
-> Through a combination of cryo-electron microscopy (cryoEM), biochemical assays, and cellular analyses, we reveal the extensive network of interactions that precisely position ATP for catalysis in the wild-type MDA5 ATP-binding pocket and also demonstrate that the T331I mutation impairs ATPase activity, thereby stabilizing MDA5–dsRNA complexes and leading to aberrant immune activation.  
-> — アプローチ／Abstract
-
-> Through a combination of cryo-electron microscopy (cryoEM), biochemical assays, and cellular analyses, we reveal the extensive network of interactions that precisely position ATP for catalysis in the wild-type MDA5 ATP-binding pocket and also demonstrate that the T331I mutation impairs ATPase activity, thereby stabilizing MDA5–dsRNA complexes and leading to aberrant immune activation.  
-> — 結果／Abstract
-
-> These findings elucidate how MDA5 ATPase activity regulates antiviral specificity and prevents autoimmunity by controlling filament stability and downstream signaling, offering a mechanistic molecular explanation for disease pathogenesis.  
-> — わかったこと／Abstract
-
-</details>
-
-<sub>分類：免疫（抗体・MHC・TCR・自然免疫）・DNA・RNA に関わるもの</sub>
-
-#### 読みどころ
-
-T331IはポリI:Cの存在下でもATPase活性が検出されなかった。野生型のフィラメントはATPを加えると速やかに解離するが、T331Iの短いフィラメントはATP存在下でも安定だった。
-
-<details><summary>根拠（論文本文）</summary>
-
-> However, the T331I mutant displayed no detectable ATPase activity in the presence of poly (I:C)  
-> — Results
-
-> In contrast, the short filaments formed by T331I on dsRNA112 were stable even in the presence of ATP, and no evidence of filament disassembly was observed  
-> — Results
-
-</details>
-
-野生型ではArg309とArg337がATPのアデニン塩基を挟むが、T331IではATPが外側にずれてこのスタッキングが崩れ、P-ループとγリン酸の極性接触も失われる。DECHモチーフと水分子の連携も外れ、加水分解の障害と整合する。
-
-<details><summary>根拠（論文本文）</summary>
-
-> in the T331I mutant this stacking geometry is disrupted due to an outward shift of the ATP, resulting in altered positioning of Arg337  
-> — Results
-
-> the single water molecule identified in the mutant structure is no longer associated with Asp443 and Glu444 of the DECH motif  
-> — Results
-
-</details>
-
-T331Iのフィラメントはサブユニット間のねじれ角がほぼ一定（約71.5°）で、野生型は79.8〜82.3°とばらつく。サブユニット間の界面も野生型より424 Å²大きく、フィラメントが硬く安定化していると解釈される。
-
-<details><summary>根拠（論文本文）</summary>
-
-> the monomer–monomer interface area between the two subunits is 1264 Å² in the DiT331I/dsRNA complex, which is 424 Å² larger than that of the DiMDA5/dsRNA complex  
-> — Results
-
-</details>
-
-#### 構造データ
-
-| PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
-|---|---|---|---|---|---|
-| [9Y4J](https://www.rcsb.org/structure/9Y4J) | Cryo-EM | 2.81 Å | 2026-09-09 | Homo sapiens, in vitro transcription vector pT7-Fluc(deltai) | ANP |
-| [9Y4L](https://www.rcsb.org/structure/9Y4L) | Cryo-EM | 2.96 Å | 2026-09-09 | Homo sapiens, in vitro transcription vector pT7-Fluc(deltai) | ANP |
-| [9Q60](https://www.rcsb.org/structure/9Q60) | Cryo-EM | 3.12 Å | 2026-09-16 | Homo sapiens, synthetic construct | ATP |
-| [9Q5W](https://www.rcsb.org/structure/9Q5W) | Cryo-EM | 3.21 Å | 2026-09-16 | Homo sapiens, synthetic construct | ATP |
-
-- [Q9BYX4](https://www.uniprot.org/uniprotkb/Q9BYX4) IFIH1 Interferon-induced helicase C domain-containing protein 1 — *Homo sapiens* （既存の PDB 構造 9 件）
-
-#### 実験メモ
-
-- **発現系**：CARD欠失MDA5とT331Iを大腸菌Rosetta (DE3)で0.2 mM IPTG、16 °C・16時間誘導。
-- **コンストラクト**：N末端297残基（CARD）を除いたヒトMDA5をpET-SUMOにクローン。
-- **精製**：Ni、SUMOプロテアーゼ、ヘパリンHP、Superdex 200 (16/600)。
-- **結晶化／グリッド作製**：5 µMタンパク質と0.2 µMの112 bp dsRNAを2 mM AMPPNPまたはATP存在下、4 °Cで一晩インキュベート。QuantiFoil UltraAu R2/2に4 µL、Vitrobotで凍結。
-- **データ収集・解析**：Titan Krios（K3）で野生型5,640枚、T331I 5,990枚、cryoSPARC v4.0。
-
-<details><summary>根拠（論文本文）</summary>
-
-> while both MDA5 (∆CARDs) and the MDA5 T331I mutant were grown at 16°C for 16 h after isopropyl β-D-1-thiogalactopyranoside (IPTG) induction  
-> — Materials and methods
-
-> The N-terminal 297 residues were removed from both protein constructs to reconstitute wild-type MDA5/dsRNA112 or T331I/dsRNA112 complexes.  
-> — Materials and methods
-
-> The protein was further purified by ion exchange with HiTrap Heparin HP column (GE Healthcare) and by size exclusion with HiLoad Superdex 200 (16/600) columns (GE Healthcare).  
-> — Materials and methods
-
-> The protein–dsRNA complexes were first assembled by the incubation of 5 µM proteins and 0.2 µM dsRNAs at 4°C overnight  
-> — Materials and methods
-
-> For MDA5/dsRNA112/AMPPNP complex, 5640 micrographs were collected.  
-> — Materials and methods
-
-</details>
-
-> 📝 編集者への確認事項：T331I側の構造はATP結合で、野生型はAMPPNP結合。条件が異なる点は比較の注意点（著者はATP/AMPPNPで同様のねじれ角を報告）。9Q60・9Q5W のリガンドは ATP と登録されている。Tetra複合体のマップは EMDB のみで PDB の座標は Di・Mono。
-
----
-
-## 2｜MERS-CoVスパイク–DPP4
+## 1｜MERS-CoVスパイク–DPP4
 
 ### Receptor-induced activation of MERS-CoV spike revealed by time-course cryo-EM
 
@@ -162,7 +49,7 @@ T331Iのフィラメントはサブユニット間のねじれ角がほぼ一定
 
 受容体DPP4と1〜120時間反応させ、融合後のS2を3.23 Åで解析した
 
-- **これまでの疑問・課題**：受容体結合が膜融合にどう結びつくのかは、構造的に不明だった。
+- **疑問・課題**：受容体結合が膜融合にどう結びつくのかは、構造的に不明だった。
 - **アプローチ**：スパイクとDPP4を一定時間反応させ、各時点の構造をクライオ電顕で決めた。
 - **結果**：RBDが開くほどS1–S2の結びつきが弱まり、融合後のS2構造も得られた。
 - **わかったこと**：MERS-CoVのスパイクはSARS-CoV-2より柔軟で、融合が起こりやすい性質と整合する。
@@ -171,7 +58,7 @@ T331Iのフィラメントはサブユニット間のねじれ角がほぼ一定
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > However, how receptor binding is structurally coupled to membrane fusion has remained unclear.  
-> — これまでの疑問・課題／Abstract
+> — 疑問・課題／Abstract
 
 > Here, using cryo–electron microscopy, we determined structures of MERS-CoV spike-DPP4 complexes at defined incubation times, capturing a series of conformational states spanning prefusion, receptor-bound, and postfusion conformations.  
 > — アプローチ／Abstract
@@ -276,6 +163,125 @@ T331Iのフィラメントはサブユニット間のねじれ角がほぼ一定
 
 ---
 
+# Structure Update
+
+## 2｜MDA5（IFIH1）–dsRNA
+
+### Establishing the molecular basis for MDA5 mutation-linked autoimmunity
+
+*Nucleic Acids Research*（2026-10-08） · [論文](https://doi.org/10.1093/nar/gkag941) · ライセンス: cc by
+
+![構造図：MDA5（IFIH1）–dsRNA](figures/PMC13646831.svg)
+
+<sub>色（順に）：MDA5（IFIH1） / dsRNA 鎖 1 / dsRNA 鎖 2　スティック：AMP-PNP（ANP）</sub>
+
+**T331Iは、短いdsRNAでも安定なフィラメントを作る**
+
+ATPの配置が乱れて加水分解が止まる様子を、クライオ電顕で見た
+
+- **疑問・課題**：MDA5変異T331Iが、なぜ恒常的なインターフェロン応答を起こすのか不明だった。
+- **アプローチ**：クライオ電顕に、酵素・細胞の実験を組み合わせて、変異体のATP結合ポケットを調べた。
+- **結果**：T331IはATPase活性を損ない、MDA5–dsRNA複合体が安定化していた。
+- **わかったこと**：ATPaseがフィラメントの安定性を調節し、自己免疫を防いでいる。
+
+<details><summary>この紹介文の根拠（論文本文）</summary>
+
+> While these results are notable, the actual molecular mechanism underlying constitutive MDA5 T331I signaling remains unclear.  
+> — 疑問・課題／Introduction
+
+> Here, we show that the gain-of-function T331I disease-linked mutation within the ATP-binding pocket disrupts this balance, resulting in constitutive interferon signaling.  
+> — 疑問・課題／Abstract
+
+> Through a combination of cryo-electron microscopy (cryoEM), biochemical assays, and cellular analyses, we reveal the extensive network of interactions that precisely position ATP for catalysis in the wild-type MDA5 ATP-binding pocket and also demonstrate that the T331I mutation impairs ATPase activity, thereby stabilizing MDA5–dsRNA complexes and leading to aberrant immune activation.  
+> — アプローチ／Abstract
+
+> Through a combination of cryo-electron microscopy (cryoEM), biochemical assays, and cellular analyses, we reveal the extensive network of interactions that precisely position ATP for catalysis in the wild-type MDA5 ATP-binding pocket and also demonstrate that the T331I mutation impairs ATPase activity, thereby stabilizing MDA5–dsRNA complexes and leading to aberrant immune activation.  
+> — 結果／Abstract
+
+> These findings elucidate how MDA5 ATPase activity regulates antiviral specificity and prevents autoimmunity by controlling filament stability and downstream signaling, offering a mechanistic molecular explanation for disease pathogenesis.  
+> — わかったこと／Abstract
+
+</details>
+
+<sub>分類：免疫（抗体・MHC・TCR・自然免疫）・DNA・RNA に関わるもの</sub>
+
+#### 読みどころ
+
+T331IはポリI:Cの存在下でもATPase活性が検出されなかった。野生型のフィラメントはATPを加えると速やかに解離するが、T331Iの短いフィラメントはATP存在下でも安定だった。
+
+<details><summary>根拠（論文本文）</summary>
+
+> However, the T331I mutant displayed no detectable ATPase activity in the presence of poly (I:C)  
+> — Results
+
+> In contrast, the short filaments formed by T331I on dsRNA112 were stable even in the presence of ATP, and no evidence of filament disassembly was observed  
+> — Results
+
+</details>
+
+野生型ではArg309とArg337がATPのアデニン塩基を挟むが、T331IではATPが外側にずれてこのスタッキングが崩れ、P-ループとγリン酸の極性接触も失われる。DECHモチーフと水分子の連携も外れ、加水分解の障害と整合する。
+
+<details><summary>根拠（論文本文）</summary>
+
+> in the T331I mutant this stacking geometry is disrupted due to an outward shift of the ATP, resulting in altered positioning of Arg337  
+> — Results
+
+> the single water molecule identified in the mutant structure is no longer associated with Asp443 and Glu444 of the DECH motif  
+> — Results
+
+</details>
+
+T331Iのフィラメントはサブユニット間のねじれ角がほぼ一定（約71.5°）で、野生型は79.8〜82.3°とばらつく。サブユニット間の界面も野生型より424 Å²大きく、フィラメントが硬く安定化していると解釈される。
+
+<details><summary>根拠（論文本文）</summary>
+
+> the monomer–monomer interface area between the two subunits is 1264 Å² in the DiT331I/dsRNA complex, which is 424 Å² larger than that of the DiMDA5/dsRNA complex  
+> — Results
+
+</details>
+
+#### 構造データ
+
+| PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
+|---|---|---|---|---|---|
+| [9Y4J](https://www.rcsb.org/structure/9Y4J) | Cryo-EM | 2.81 Å | 2026-09-09 | Homo sapiens, in vitro transcription vector pT7-Fluc(deltai) | ANP |
+| [9Y4L](https://www.rcsb.org/structure/9Y4L) | Cryo-EM | 2.96 Å | 2026-09-09 | Homo sapiens, in vitro transcription vector pT7-Fluc(deltai) | ANP |
+| [9Q60](https://www.rcsb.org/structure/9Q60) | Cryo-EM | 3.12 Å | 2026-09-16 | Homo sapiens, synthetic construct | ATP |
+| [9Q5W](https://www.rcsb.org/structure/9Q5W) | Cryo-EM | 3.21 Å | 2026-09-16 | Homo sapiens, synthetic construct | ATP |
+
+- [Q9BYX4](https://www.uniprot.org/uniprotkb/Q9BYX4) IFIH1 Interferon-induced helicase C domain-containing protein 1 — *Homo sapiens* （既存の PDB 構造 9 件）
+
+#### 実験メモ
+
+- **発現系**：CARD欠失MDA5とT331Iを大腸菌Rosetta (DE3)で0.2 mM IPTG、16 °C・16時間誘導。
+- **コンストラクト**：N末端297残基（CARD）を除いたヒトMDA5をpET-SUMOにクローン。
+- **精製**：Ni、SUMOプロテアーゼ、ヘパリンHP、Superdex 200 (16/600)。
+- **結晶化／グリッド作製**：5 µMタンパク質と0.2 µMの112 bp dsRNAを2 mM AMPPNPまたはATP存在下、4 °Cで一晩インキュベート。QuantiFoil UltraAu R2/2に4 µL、Vitrobotで凍結。
+- **データ収集・解析**：Titan Krios（K3）で野生型5,640枚、T331I 5,990枚、cryoSPARC v4.0。
+
+<details><summary>根拠（論文本文）</summary>
+
+> while both MDA5 (∆CARDs) and the MDA5 T331I mutant were grown at 16°C for 16 h after isopropyl β-D-1-thiogalactopyranoside (IPTG) induction  
+> — Materials and methods
+
+> The N-terminal 297 residues were removed from both protein constructs to reconstitute wild-type MDA5/dsRNA112 or T331I/dsRNA112 complexes.  
+> — Materials and methods
+
+> The protein was further purified by ion exchange with HiTrap Heparin HP column (GE Healthcare) and by size exclusion with HiLoad Superdex 200 (16/600) columns (GE Healthcare).  
+> — Materials and methods
+
+> The protein–dsRNA complexes were first assembled by the incubation of 5 µM proteins and 0.2 µM dsRNAs at 4°C overnight  
+> — Materials and methods
+
+> For MDA5/dsRNA112/AMPPNP complex, 5640 micrographs were collected.  
+> — Materials and methods
+
+</details>
+
+> 📝 編集者への確認事項：T331I側の構造はATP結合で、野生型はAMPPNP結合。条件が異なる点は比較の注意点（著者はATP/AMPPNPで同様のねじれ角を報告）。9Q60・9Q5W のリガンドは ATP と登録されている。Tetra複合体のマップは EMDB のみで PDB の座標は Di・Mono。
+
+---
+
 ## 3｜グリシンリボスイッチ（コレラ菌）
 
 ### Structural basis for Mg²⁺–glycine synergy in the tandem glycine riboswitch revealed by cryo-EM
@@ -290,7 +296,7 @@ T331Iのフィラメントはサブユニット間のねじれ角がほぼ一定
 
 RNAだけの2.9 Å構造。折りたたんだ分子の割合は、Mg²⁺のみで約1/3、グリシン追加で約2/3
 
-- **これまでの疑問・課題**：リボスイッチは構造の不均一性が機能に欠かせず、そのため構造解析が難しかった。
+- **疑問・課題**：リボスイッチは構造の不均一性が機能に欠かせず、そのため構造解析が難しかった。
 - **アプローチ**：グリシンリボスイッチのタンデムアプタマーを、条件を変えてクライオ電顕で調べた。
 - **結果**：Mg²⁺だけでは約1/3、グリシンを加えると約2/3の粒子が完全に折りたたまれていた。
 - **わかったこと**：グリシンとMg²⁺は協同的に働き、折りたたみを安定化する。
@@ -299,7 +305,7 @@ RNAだけの2.9 Å構造。折りたたんだ分子の割合は、Mg²⁺のみ�
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > Conformational heterogeneity is fundamental to riboswitch functionality, yet this same attribute makes structural characterization of these mRNA elements challenging.  
-> — これまでの疑問・課題／Abstract
+> — 疑問・課題／Abstract
 
 > Here, we use cryo-electron microscopy to characterize different structural populations of the glycine riboswitch tandem aptamers, and molecular dynamics simulations to support the observed ligand orientation in the holo state.  
 > — アプローチ／Abstract
@@ -401,7 +407,7 @@ RNAだけの2.9 Å構造。折りたたんだ分子の割合は、Mg²⁺のみ�
 
 SIRT2とSIRT5の結晶構造では、基質の位置が乱れ、切断に向かない向きになっていた
 
-- **これまでの疑問・課題**：ヒストンH4で見つかったN-アセチル-N-メチルリジンを、酵素で外せるかは不明だった。
+- **疑問・課題**：ヒストンH4で見つかったN-アセチル-N-メチルリジンを、酵素で外せるかは不明だった。
 - **アプローチ**：モデルペプチドを合成してHDACとサーチュインの活性を調べ、結晶構造も決めた。
 - **結果**：N-メチル化したペプチドは、どちらの酵素族でも検出できる脱アセチル化を受けなかった。
 - **わかったこと**：N-メチル化が基質の位置決めを乱し、切断される結合の向きがずれるためと考えられる。
@@ -410,7 +416,7 @@ SIRT2とSIRT5の結晶構造では、基質の位置が乱れ、切断に向か�
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > The recent discovery of N-acetyl-N-methyl lysine (KAcMe) on histone H4 showed that both marks can coexist on the same lysine side chain, raising the question of whether this dual modification is enzymatically reversible.  
-> — これまでの疑問・課題／Abstract
+> — 疑問・課題／Abstract
 
 > Here, we synthesized model peptides containing N-acyl lysine or N-acyl-N-methyl lysine residues and tested their processing by Zn2+-dependent HDACs and NAD+-dependent sirtuins.  
 > — アプローチ／Abstract
@@ -515,7 +521,7 @@ SIRT2–ミリストイル-N-メチルリジンペプチド複合体（1.45 Å�
 
 ボタンの根の4′-O-メチル基転移酵素。触媒三残基はHis262・Asn263・Gln324だった
 
-- **これまでの疑問・課題**：ペオノールの生合成の後半を担う酵素は未同定で、構造も機構も不明だった。
+- **疑問・課題**：ペオノールの生合成の後半を担う酵素は未同定で、構造も機構も不明だった。
 - **アプローチ**：トランスクリプトームとメタボロームでPoOMT1を同定し、複合体の結晶構造と変異体で調べた。
 - **結果**：触媒三残基His-Asn-Glnと、T字型の基質結合ポケットが見つかった。
 - **わかったこと**：ポケットの形が、4′-OHへの位置選択性と、2種類の基質を受け入れる性質を支える。
@@ -523,10 +529,10 @@ SIRT2–ミリストイル-N-メチルリジンペプチド複合体（1.45 Å�
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > Paeonol, the medicinal indicator component of the traditional Chinese medicine ‘Mudanpi’, has an incompletely elucidated biosynthetic pathway, particularly its post-modification steps.  
-> — これまでの疑問・課題／Abstract
+> — 疑問・課題／Abstract
 
 > The specific OMT responsible for paeonol biosynthesis has not been characterized, and its enzymatic properties, protein structure, and catalytic mechanism remain unknown.  
-> — これまでの疑問・課題／Introduction
+> — 疑問・課題／Introduction
 
 > Here, using integrated transcriptomic and metabolomic analyses, we identify a key dual-substrate 4′-O-methyltransferase, PoOMT1, in Paeonia ostii.  
 > — アプローチ／Abstract
@@ -630,7 +636,7 @@ Region D（L117・F312・L315）をTrpに置換すると、2′-OHを持つ基�
 
 NMR構造では、どちらの異性体もDNAに挿入され、向かいのシトシンを押し出す
 
-- **これまでの疑問・課題**：ピキサントロンは、DNAの脱塩基部位と2種類の位置異性体を作ると予想された。
+- **疑問・課題**：ピキサントロンは、DNAの脱塩基部位と2種類の位置異性体を作ると予想された。
 - **アプローチ**：NMRに基づく分子動力学計算で構造を求め、結晶構造も決めた。
 - **結果**：二本鎖では異性体R aが優勢で、どちらも3′側にインターカレートした。
 - **わかったこと**：向かいのシトシンとの水素結合が、生成比と挿入の深さの違いを説明しうる。
@@ -639,7 +645,7 @@ NMR構造では、どちらの異性体もDNAに挿入され、向かいのシ�
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > The nitrogen atom in the PIX aza-anthracenedione ring renders the two side-chain amines nonequivalent, and predicts the formation of regioisomeric Schiff base conjugates with AP sites in DNA, referred to as regioisomers A and B and designated as R a and R b (Chart ).  
-> — これまでの疑問・課題／Introduction
+> — 疑問・課題／Introduction
 
 > Structures of reduced R a and R b conjugates from molecular dynamics calculations restrained by 1H NOESY data in 5′-d­(C1A2G3A4C5T6 X 7A8G9A10C11T12)-3′:5′-d­(A13G14T15C16T17C18A19G20T21C22T23G24)-3′, X = reduced PIX-AP site conjugate, showed that both regioisomers intercalated on the 3′ side of base pair T6/A19, displacing C18 into the major groove, with R a less intercalated than R b.  
 > — アプローチ／Abstract

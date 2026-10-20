@@ -6,6 +6,8 @@
 
 出典：この号の論文情報と全文は、米国国立医学図書館（NLM）の PMC オープンアクセスデータセット（AWS Open Data）から取得した。
 
+**New Structure 3 本** · **Structure Update 3 本**（New Structure：構造が初めて解かれたタンパク質。Structure Update：既知のタンパク質の新しい構造。Structure-Based Study：既存の構造を使った注目の研究）
+
 ## Today's Structure（今日の一本）
 
 **1｜CLN8は、BMPの材料LPGを立体を選んでつくる酵素だ**（ヒトCLN8（Batten病タンパク質））
@@ -34,6 +36,8 @@
 
 ---
 
+# Picked up Today's Structure
+
 ## 1｜ヒトCLN8（Batten病タンパク質）
 
 ### The Batten disease protein CLN8 is a stereospecific acyltransferase in bis(monoacylglycero)phosphate biosynthesis
@@ -48,7 +52,7 @@
 
 クライオ電顕で活性部位を示し、Batten病の変異は酵素活性を弱めた
 
-- **これまでの疑問・課題**：Batten病の原因タンパク質CLN8が、リソソームの脂質BMPの合成で何をするかは不明だった。
+- **疑問・課題**：Batten病の原因タンパク質CLN8が、リソソームの脂質BMPの合成で何をするかは不明だった。
 - **アプローチ**：精製CLN8の酵素反応と、アポ型およびアシルCoA存在下のクライオ電顕構造を調べた。
 - **結果**：CLN8はS,S型のGPGに最もよくアシル基を移し、構造ではH138の隣にアシル鎖が見えた。
 - **わかったこと**：S,S型GPGからリゾホスファチジルグリセロール（LPG）をつくる立体特異的な酵素で、LPGはBMPの材料になる。
@@ -57,7 +61,7 @@
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > However, the role of CLN8 in this pathway has remained unclear.  
-> — これまでの疑問・課題／Abstract
+> — 疑問・課題／Abstract
 
 > Cryo-electron microscopy structures define the CLN8 active site and support a ping-pong acyl transfer mechanism.  
 > — アプローチ／Abstract
@@ -163,6 +167,8 @@ CLN8の産物であるS,S-LPGを補うと、CLN8欠損細胞とマウス肝臓�
 
 ---
 
+# New Structure
+
 ## 2｜DNAAF19–RUVBL1/2（ヒト）
 
 ### DNAAF19–RUVBL1/2 complex recruits multiple adaptors to promote dynein arm assembly
@@ -177,7 +183,7 @@ CLN8の産物であるS,S-LPGを補うと、CLN8欠損細胞とマウス肝臓�
 
 クライオ電顕でRUVBL1/2の環にDNAAF19とDPCDが結合する様子を示した
 
-- **これまでの疑問・課題**：繊毛を動かすダイニンアームの組み立てでDNAAF19がどう働くかは、不明だった。
+- **疑問・課題**：繊毛を動かすダイニンアームの組み立てでDNAAF19がどう働くかは、不明だった。
 - **アプローチ**：マウス組織でDNAAF19の相互作用相手を調べ、タンパク質の組み立てを助けるRUVBL1/2との複合体をクライオ電顕で解析した。
 - **結果**：DNAAF19はRUVBL1/2の環のRUVBL2に結合し、DPCDも同じ環のRUVBL2に5コピー結合していた。
 - **わかったこと**：DNAAF19はRUVBL1/2やDPCDとともに共シャペロン複合体として働き、ダイニンアームの組み立てを助けると提案された。
@@ -186,7 +192,7 @@ CLN8の産物であるS,S-LPGを補うと、CLN8欠損細胞とマウス肝臓�
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > However, recent cryoelectron microscopy (cryo-EM) structures of ciliary axonemes have not revealed the presence of DNAAF19, leaving its role in dynein arm assembly unclear  
-> — これまでの疑問・課題／Introduction
+> — 疑問・課題／Introduction
 
 > we characterized the protein–protein interaction network of mouse Dnaaf19 using SF-TAP affinity purification followed by mass spectrometry  
 > — アプローチ／Results
@@ -297,7 +303,7 @@ DPCDが結合したRUVBL2のサブユニットでは、ADPが減るか見えな�
 
 外向きと内向きの2状態をクライオ電顕で解析し、大腸菌のMurJと同じ型の動きを示した
 
-- **これまでの疑問・課題**：外膜をもたない単膜細菌のMurJ（脂質IIの輸送体）は、配列の違いが大きく、構造が未解析だった。
+- **疑問・課題**：外膜をもたない単膜細菌のMurJ（脂質IIの輸送体）は、配列の違いが大きく、構造が未解析だった。
 - **アプローチ**：黄色ブドウ球菌のMurJ（SaMurJ）を、ナノボディやBRIL融合を使ってクライオ電顕で解析し、大腸菌MurJと比べた。
 - **結果**：SaMurJの外向き型（3.6 Å）と内向き型（3.5 Å）が決まり、全体の折れ畳みは大腸菌MurJと同じ型だった。
 - **わかったこと**：SaMurJも2つの状態を行き来する交互アクセス機構で脂質IIを運ぶと考えられる。
@@ -306,10 +312,10 @@ DPCDが結合したRUVBL2のサブユニットでは、ADPが減るか見えな�
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > While MurJ from diderm bacteria has been structurally resolved in multiple conformational states, its monoderm homolog remains uncharacterized.  
-> — これまでの疑問・課題／Abstract
+> — 疑問・課題／Abstract
 
 > Monoderm MurJ homologs exhibit substantial sequence divergence yet retain the same lipid II flipping function and are promising antibiotic targets.  
-> — これまでの疑問・課題／Abstract
+> — 疑問・課題／Abstract
 
 > As an alternative, we used the ALFA-tag system (26), appending the ALFA peptide to the C-terminus of SaMurJ (SaMurJALFA) (Fig. S2A) and forming a complex with an anti-ALFA-tag nanobody (26) (Fig. S2B).  
 > — アプローチ／Results
@@ -420,6 +426,8 @@ SaMurJは大腸菌のMurJと配列が17%しか同じでないが、コアの12�
 
 ---
 
+# Structure Update
+
 ## 4｜TASK-2（マウス）
 
 ### Mechanisms of intracellular pH gating and local anesthetic inhibition of the two-pore domain K+ channel TASK-2
@@ -446,7 +454,7 @@ SaMurJは大腸菌のMurJと配列が17%しか同じでないが、コアの12�
 
 5つのクライオ電顕構造で解析。麻酔薬ブピバカインは脂質と同じ部位に入る
 
-- **これまでの疑問・課題**：細胞内のpHで開閉するカリウムチャネルTASK-2が、細胞内側でどう閉じ、麻酔薬にどう阻害されるかは不明だった。
+- **疑問・課題**：細胞内のpHで開閉するカリウムチャネルTASK-2が、細胞内側でどう閉じ、麻酔薬にどう阻害されるかは不明だった。
 - **アプローチ**：マウスTASK-2の野生型、変異体、ブピバカイン存在下の構造をクライオ電顕で解析し、電気生理で確かめた。
 - **結果**：酸性ではTM4がZゲートを作り、空洞に脂質が入る。ブピバカインは高pHで、脂質と重なる位置に結合した。
 - **わかったこと**：細胞内側のpH感知はZゲートと脂質ブロックの2段で働き、ブピバカインも同じ空洞を塞ぐと考えられる。
@@ -455,10 +463,10 @@ SaMurJは大腸菌のMurJと配列が17%しか同じでないが、コアの12�
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > Despite its importance, the molecular mechanisms controlling its intracellular gating and inhibition have remained unclear.  
-> — これまでの疑問・課題／Abstract
+> — 疑問・課題／Abstract
 
 > However, the contribution of lipids to gating TASK-2 and the precise intracellular gating mechanism are unclear  
-> — これまでの疑問・課題／Introduction
+> — 疑問・課題／Introduction
 
 > We use cryoelectron microscopy and electrophysiology to address these questions.  
 > — アプローチ／Abstract
@@ -590,7 +598,7 @@ pH 6.5では、各サブユニットのTM4の241〜246番付近がほどけて�
 
 クライオ電顕の3状態で、拮抗薬の結合に伴いE247が作動薬のリン酸の結合部位へ入り込んでいた
 
-- **これまでの疑問・課題**：胆汁酸によるかゆみを伝えるMRGPRX4が阻害される仕組みは分かっておらず、拮抗薬結合型の構造も未報告だった。
+- **疑問・課題**：胆汁酸によるかゆみを伝えるMRGPRX4が阻害される仕組みは分かっておらず、拮抗薬結合型の構造も未報告だった。
 - **アプローチ**：作動薬DEX-P・拮抗薬cmpd54-4を結合した状態とリガンドなし（apo）の3状態をクライオ電顕で解析した。
 - **結果**：拮抗薬は作動薬と別の部位に結合し、細胞外ループ2のW158が外へ回って窪みができた。細胞外ループ3のE247は作動薬の結合部位へ入っていた。
 - **わかったこと**：拮抗薬は作動薬と結合部位を奪い合うのではなく、細胞外側の構造を変えて作動薬の結合を立体的に妨げると考えられる。
@@ -599,10 +607,10 @@ pH 6.5では、各サブユニットのTM4の241〜246番付近がほどけて�
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > Although Mas-related G protein-coupled receptor X4 (MRGPRX4) has recently been identified as a key mediator of bile acid-induced pruritus, the structural mechanisms underlying its inhibition remain poorly understood, hindering the development of therapeutic antagonists.  
-> — これまでの疑問・課題／Abstract
+> — 疑問・課題／Abstract
 
 > Most importantly, an antagonist-bound structure has yet to be reported, posing a key obstacle to the development of MRGPRX4-targeted antipruritic drugs.  
-> — これまでの疑問・課題／Introduction
+> — 疑問・課題／Introduction
 
 > Here, we report the cryo-electron microscopy structures of MRGPRX4 in three distinct states: agonist-bound state, antagonist-bound state, and apo state.  
 > — アプローチ／Abstract
@@ -725,7 +733,7 @@ pH 6.5では、各サブユニットのTM4の241〜246番付近がほどけて�
 
 15,360種から選んで改良し、Keap1との結晶構造で結合の仕方を確かめた
 
-- **これまでの疑問・課題**：事前にリガンドの情報がない標的に、細胞膜を通る環状ペプチドをゼロから作るのは難しかった。
+- **疑問・課題**：事前にリガンドの情報がない標的に、細胞膜を通る環状ペプチドをゼロから作るのは難しかった。
 - **アプローチ**：Keap1とNrf2の結合を妨げる分子を15,360種のランダムな環状ペプチドから探し、3回の改良を重ねた。
 - **結果**：最良のペプチド30はKi 53 nMでKeap1に結合し、細胞のレポーターアッセイで用量依存的に働いた。
 - **わかったこと**：電荷を持たない小さなペプチドが、Nrf2とは別の接触でKeap1に結合し、細胞内で結合を阻害できた。
@@ -734,7 +742,7 @@ pH 6.5では、各サブユニットのTM4の241〜246番付近がほどけて�
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > However, developing such compounds de novo without prior information about lead structures such as natural ligands or fragments remains a notable challenge.  
-> — これまでの疑問・課題／Abstract
+> — 疑問・課題／Abstract
 
 > By screening 15,360 fully random cyclic peptides, we were able to identify an inhibitor of the E3 ligase adaptor Keap1 and its substrate Nrf2.  
 > — アプローチ／Abstract
@@ -849,7 +857,7 @@ Keap1に結合した直鎖ペプチド6のX線構造（1.70 Å）は、Nrf2が�
 
 ## 注目の構造の採点（112 本を確認し、3 本を採点）
 
-基準は `pipeline/impact.py`（10 点満点、7 点以上から最大 5 本）。
+基準は `pipeline/impact.py`（10 点満点、6 点以上から最大 3 本）。
 
 | 選定 | 論文 | 種類 | novelty | reach | structure | support | 計 | 理由 |
 |---|---|---|---|---|---|---|---|---|
@@ -869,6 +877,6 @@ Keap1に結合した直鎖ペプチド6のX線構造（1.70 Å）は、Nrf2が�
 - [Structural basis of the gating mechanism of the large-conductance mechanosensitive channel from Escherichia coli](https://doi.org/10.1038/s41467-026-76193-0) — *Nat Commun*（新しい構造：28OA, 28OB, 28OC）
 - [A single amino acid mutation alters substrate specificity towards l-glucose in a bacterial l-galactose dehydrogenase](https://doi.org/10.1016/j.bbrep.2026.102819) — *Biochem Biophys Rep*（新しい構造：26WE）
 - [Small molecule inhibition of voltage dependent anion channel 1 reroutes mitochondrial metabolite flux](https://doi.org/10.1016/j.mocell.2026.100369) — *Mol Cells*（新しい構造：9PFZ）
-- [Reply to Cantwell Chater and Shahsavar: Clarifying PDB deposition records and local model interpretation in GlyT2 structures](https://doi.org/10.1073/pnas.2621667123) — *Proc Natl Acad Sci U S A*（新しい構造（ID は補足資料））
-- [Structural insights into the exosite-mediated activation of factor IX by factor XIa using cryogenic electron microscopy](https://doi.org/10.1016/j.jtha.2026.08.015) — *J Thromb Haemost*（新しい構造（ID は補足資料））
+- [Reply to Cantwell Chater and Shahsavar: Clarifying PDB deposition records and local model interpretation in GlyT2 structures](https://doi.org/10.1073/pnas.2621667123) — *Proc Natl Acad Sci U S A*（新しい構造（PDB ID が本文にない））
+- [Structural insights into the exosite-mediated activation of factor IX by factor XIa using cryogenic electron microscopy](https://doi.org/10.1016/j.jtha.2026.08.015) — *J Thromb Haemost*（新しい構造（PDB ID が本文にない））
 - [Reversible Dimerization of Cytochrome Oxidase in Detergent Solution as Detected by Dynamic Light Scattering](https://doi.org/10.3390/ijms27198744) — *Int J Mol Sci*（新しいマップ（EMDB））

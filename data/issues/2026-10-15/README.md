@@ -6,6 +6,8 @@
 
 出典：この号の論文情報と全文は、米国国立医学図書館（NLM）の PMC オープンアクセスデータセット（AWS Open Data）から取得した。
 
+**Structure Update 2 本**（New Structure：構造が初めて解かれたタンパク質。Structure Update：既知のタンパク質の新しい構造。Structure-Based Study：既存の構造を使った注目の研究）
+
 | # | 標的 | 手法・分解能 | 見出し |
 |---|---|---|---|
 | 1 | PfRIPR（熱帯熱マラリア原虫） | Cryo-EM / X-ray・2.20–3.40 Å（5 構造） | 増殖を抑える抗体は、マラリア原虫PfRIPRの尾部を折り曲げる |
@@ -14,6 +16,8 @@
 > この号は AI が論文本文から作成した**レビュー用の下書き**です。数値・ID・リガンドは PDB / UniProt から取得し、AI の記述には本文からの引用を付けています。
 
 ---
+
+# Structure Update
 
 ## 1｜PfRIPR（熱帯熱マラリア原虫）
 
@@ -29,7 +33,7 @@
 
 抗体4種との複合体を解析し、折れ曲がりを起こさない抗体は増殖を抑えなかった
 
-- **これまでの疑問・課題**：赤血球への侵入に必須な複合体の中心因子PfRIPRに、抗体がどう結合して侵入を防ぐのかは、構造がなく不明だった。
+- **疑問・課題**：赤血球への侵入に必須な複合体の中心因子PfRIPRに、抗体がどう結合して侵入を防ぐのかは、構造がなく不明だった。
 - **アプローチ**：ヒト由来3種とマウス由来1種の抗体とPfRIPR断片の複合体を、X線結晶構造とクライオ電顕で解析した。
 - **結果**：増殖阻害抗体RP.012は、EGF6とEGF7の間で尾部を曲げていた。非阻害のMAD8-739では曲がらなかった。
 - **わかったこと**：PfRIPRの尾部が侵入の際に形を変える必要があり、RP.012はその動きを妨げる可能性がある。
@@ -38,10 +42,10 @@
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > Few monoclonal antibodies (mAbs) have been identified and, with no structures of mAbs bound to PfRIPR, we do not understand how they block invasion, limiting our ability to rationally design the most effective vaccine immunogen based on PfRIPR.  
-> — これまでの疑問・課題／Introduction
+> — 疑問・課題／Introduction
 
 > PfRIPR is the largest and one of the least understood components of PfPCRCR.  
-> — これまでの疑問・課題／Introduction
+> — 疑問・課題／Introduction
 
 > We structurally characterised four PfRIPR tail-binding antibodies in complex with PfRIPR fragments.  
 > — アプローチ／Abstract
@@ -174,7 +178,7 @@ MAD8-2はRP.012の阻害を打ち消し（約16%、RP.012単独は46%）、C末�
 
 患者の抗体Fabとの複合体を3.7 Åで解析し、第2Igドメインへの結合を示した
 
-- **これまでの疑問・課題**：神経の接着分子IgLON5への自己抗体がどう結合し病気に関わるかは、よく分かっていなかった。
+- **疑問・課題**：神経の接着分子IgLON5への自己抗体がどう結合し病気に関わるかは、よく分かっていなかった。
 - **アプローチ**：患者の記憶B細胞から高親和性のIgG4抗体を単離し、そのFabとIgLON5の複合体をクライオ電顕で解析した。
 - **結果**：Fabは第2Igドメインに結合し、二量体の反対側の面に1つずつ付く。二量体の構造は保たれた。
 - **わかったこと**：抗体は二量体を壊さず、隣り合う二量体を橋渡しして受容体を集めると考えられる。
@@ -183,7 +187,7 @@ MAD8-2はRP.012の阻害を打ち消し（約16%、RP.012単独は46%）、C末�
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > Despite its severe clinical manifestations, the molecular basis of antibody recognition and its contribution to disease pathogenesis is poorly understood.  
-> — これまでの疑問・課題／Abstract
+> — 疑問・課題／Abstract
 
 > We isolate a human monoclonal IgG4 antibody that binds IgLON5 with high affinity and determine the structure of its Fab in complex with IgLON5 using cryo–electron microscopy.  
 > — アプローチ／Abstract
@@ -302,7 +306,7 @@ Fabは残基163–205にわたる第2Igドメインの面をはさみ込むよ�
 
 ## 注目の構造の採点（43 本を確認し、5 本を採点）
 
-基準は `pipeline/impact.py`（10 点満点、7 点以上から最大 5 本）。
+基準は `pipeline/impact.py`（10 点満点、6 点以上から最大 3 本）。
 
 | 選定 | 論文 | 種類 | novelty | reach | structure | support | 計 | 理由 |
 |---|---|---|---|---|---|---|---|---|
@@ -323,5 +327,5 @@ Fabは残基163–205にわたる第2Igドメインの面をはさみ込むよ�
 - [Development of GuaB Inhibitors to Treat Mycobacterium tuberculosis Infection](https://doi.org/10.1021/acsinfecdis.6c00350) — *ACS Infect Dis*（新しい構造：12LG）
 - [PXL: a nucleic acid-binding module of the promyelocytic leukemia protein](https://doi.org/10.1093/nar/gkag966) — *Nucleic Acids Res*（新しい構造：10TH）
 - [Structural organization of TAM receptor ectodomains](https://doi.org/10.1042/bcj20260584) — *Biochem J*（新しい構造：37NT）
-- [A novel multifunctional starch debranching enzyme from Myxococcus sp. V11](https://doi.org/10.1007/s00253-026-13961-4) — *Appl Microbiol Biotechnol*（新しい構造（ID は補足資料））
-- [Bioinformatic prediction, qCLASH, and AlphaFold3 reveal non-overlapping layers of the miR-214-3p–mRNA interactome](https://doi.org/10.3389/fgene.2026.1924314) — *Front Genet*（新しい構造（ID は補足資料））
+- [A novel multifunctional starch debranching enzyme from Myxococcus sp. V11](https://doi.org/10.1007/s00253-026-13961-4) — *Appl Microbiol Biotechnol*（新しい構造（PDB ID が本文にない））
+- [Bioinformatic prediction, qCLASH, and AlphaFold3 reveal non-overlapping layers of the miR-214-3p–mRNA interactome](https://doi.org/10.3389/fgene.2026.1924314) — *Front Genet*（新しい構造（PDB ID が本文にない））

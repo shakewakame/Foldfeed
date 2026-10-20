@@ -6,6 +6,8 @@
 
 出典：この号の論文情報と全文は、米国国立医学図書館（NLM）の PMC オープンアクセスデータセット（AWS Open Data）から取得した。
 
+**New Structure 1 本**（New Structure：構造が初めて解かれたタンパク質。Structure Update：既知のタンパク質の新しい構造。Structure-Based Study：既存の構造を使った注目の研究）
+
 | # | 標的 | 手法・分解能 | 見出し |
 |---|---|---|---|
 | 1 | Pit2（トウモロコシ黒穂病菌） | X-ray・2.35 Å | Pit2から切り出されたペプチドが、カビのGPCRを活性化する |
@@ -13,6 +15,8 @@
 > この号は AI が論文本文から作成した**レビュー用の下書き**です。数値・ID・リガンドは PDB / UniProt から取得し、AI の記述には本文からの引用を付けています。
 
 ---
+
+# New Structure
 
 ## 1｜Pit2（トウモロコシ黒穂病菌）
 
@@ -28,7 +32,7 @@
 
 Pit2の結晶構造で、リガンドのペプチドは二量体の芯に隠れていた
 
-- **これまでの疑問・課題**：菌類のGPCR（細胞外の信号を受け取る7回膜貫通型の受容体）は、リガンドも活性化の仕組みもよく分かっていない。
+- **疑問・課題**：菌類のGPCR（細胞外の信号を受け取る7回膜貫通型の受容体）は、リガンドも活性化の仕組みもよく分かっていない。
 - **アプローチ**：黒穂病菌のGpe1を酵母に発現させて活性化を測り、Pit2の結晶構造とAlphaFold3のモデルで結合を調べた。
 - **結果**：Pit2由来のWWFGFTGSLでGpe1が活性化した（EC50は80 nM）。このペプチドはPit2二量体の界面に埋まっていた。
 - **わかったこと**：Pit2はペプチドを二量体の中に隠し、宿主のプロテアーゼが切ると放出されてGpe1を活性化すると考えられる。
@@ -37,7 +41,7 @@ Pit2の結晶構造で、リガンドのペプチドは二量体の芯に隠れ�
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > although the repertoire of ligands and activation mechanisms remains poorly understood  
-> — これまでの疑問・課題／Introduction
+> — 疑問・課題／Introduction
 
 > We elucidate the crystal structure of Pit2 and model the complex formed by Gpe1 and the Pit2-derived peptide.  
 > — アプローチ／Abstract

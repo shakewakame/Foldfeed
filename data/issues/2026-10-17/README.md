@@ -2,9 +2,9 @@
 
 # 2026-10-17 号
 
-**今日の新しい構造：3 本**　Europe PMC に 2026-10-16 に登録されたオープンアクセス論文 25 本のうち、新しい構造を報告した論文は 3 本。うち 3 本を紹介する（残りは末尾に一覧）。
+**今日の新しい構造：3 本**　Europe PMC に 2026-10-16 に登録されたオープンアクセス論文 25 本のうち、新しい構造を報告した論文は 3 本。すべて紹介する。
 
-**注目の構造：1 本**（新しい構造ではないが、実験で決めた構造で確かめた注目の研究）
+**Structure Update 2 本** · **Structure-Based Study 1 本**（New Structure：構造が初めて解かれたタンパク質。Structure Update：既知のタンパク質の新しい構造。Structure-Based Study：既存の構造を使った注目の研究）
 
 ## Today's Structure（今日の一本）
 
@@ -28,7 +28,7 @@
 
 ---
 
-# 新しい構造
+# Picked up Today's Structure
 
 ## 1｜MDA5（ヒト）
 
@@ -44,7 +44,7 @@
 
 短いdsRNAにもフィラメントが残り、インターフェロン応答が続く
 
-- **これまでの疑問・課題**：疾患に関わるMDA5のT331I変異が、なぜ常にインターフェロンのシグナルを出すのかは不明だった。
+- **疑問・課題**：疾患に関わるMDA5のT331I変異が、なぜ常にインターフェロンのシグナルを出すのかは不明だった。
 - **アプローチ**：細胞のレポーター実験、ATPase測定、短い112 bp dsRNAとの複合体のクライオ電顕で野生型と比べた。
 - **結果**：T331I変異体はATPase活性が検出されず、ATPを加えても短いdsRNA上のフィラメントが壊れなかった。
 - **わかったこと**：ATP加水分解が止まるとフィラメントが外れず、自己のdsRNAでも免疫が過剰に活性化すると考えられる。
@@ -52,7 +52,7 @@
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > While these results are notable, the actual molecular mechanism underlying constitutive MDA5 T331I signaling remains unclear.  
-> — これまでの疑問・課題／Introduction
+> — 疑問・課題／Introduction
 
 > Through a combination of cryo-electron microscopy (cryoEM), biochemical assays, and cellular analyses, we reveal the extensive network of interactions that precisely position ATP for catalysis in the wild-type MDA5 ATP-binding pocket  
 > — アプローチ／Abstract
@@ -132,6 +132,8 @@ ATPを加えると、野生型のフィラメントは短いdsRNA上でほぼ壊
 
 ---
 
+# Structure Update
+
 ## 2｜ホタルルシフェラーゼ（FLuc）
 
 ### Quasi-continuous cotranslational compaction and folding of a multidomain protein
@@ -144,7 +146,7 @@ ATPを加えると、野生型のフィラメントは短いdsRNA上でほぼ壊
 
 力プロファイル解析で550残基の折りたたみを5残基刻みで追い、TFの影響も調べた
 
-- **これまでの疑問・課題**：小さな単一ドメインのタンパク質が中心で、大きな多ドメインの翻訳中の折りたたみは調べられていなかった。
+- **疑問・課題**：小さな単一ドメインのタンパク質が中心で、大きな多ドメインの翻訳中の折りたたみは調べられていなかった。
 - **アプローチ**：550残基のFLucについて、力プロファイル解析で新生鎖が引く力を5残基刻みで測り、シャペロンTFの影響も調べた。
 - **結果**：中くらいの力の増減が連続し、RF-2ドメインの折りたたみで高い力のピークが出た。TFは新生鎖と広く相互作用した。
 - **わかったこと**：翻訳中の折りたたみは、少数の協同的な段階の連続ではなく、準連続的な縮みと折りたたみの積み重ねだと考えられる。
@@ -153,7 +155,7 @@ ATPを加えると、野生型のフィラメントは短いdsRNA上でほぼ壊
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > So far, studies of cotranslational folding have focused mainly on small, single-domain proteins.  
-> — これまでの疑問・課題／Abstract
+> — 疑問・課題／Abstract
 
 > Here, we have used Force Profile Analysis to study the cotranslational folding of Firefly Luciferase, a complex 550-residue protein  
 > — アプローチ／Abstract
@@ -238,7 +240,7 @@ TFを加えると、N＝165〜205残基付近でfFLが平均0.25ほど下がっ�
 
 ---
 
-# 注目の構造（新しい構造以外。実験で決めた構造で確かめた研究）
+# Structure-Based Study
 
 ## 3｜ZBP1のZαドメイン（ヒト）
 
@@ -250,7 +252,7 @@ TFを加えると、N＝165〜205残基付近でfFLが平均0.25ほど下がっ�
 
 NMR・CD・ITCで調べると、無修飾のRNAをZ型に変換できなかった
 
-- **これまでの疑問・課題**：ZBP1はADAR1と同様にA型RNAをZ型に変換できると考えられてきたが、実験での確認はなかった。
+- **疑問・課題**：ZBP1はADAR1と同様にA型RNAをZ型に変換できると考えられてきたが、実験での確認はなかった。
 - **アプローチ**：ZBP1のZα1・Zα2ドメインと核酸の結合を、NMR・CD・ITCなどで調べた。
 - **結果**：二本鎖DNAはZ型にできたが、無修飾の(CpG)n RNAはZ型に変換できなかった。
 - **わかったこと**：ZBP1が感知するZ型RNAは、すでにZ型になりやすいものに限られる可能性がある。
@@ -259,7 +261,7 @@ NMR・CD・ITCで調べると、無修飾のRNAをZ型に変換できなかっ�
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > ZBP1 has been previously shown to bind and convert B-DNA to the Z-conformation and was assumed to be able to convert A-RNA as well, despite the lack of experimental validation.  
-> — これまでの疑問・課題／Abstract
+> — 疑問・課題／Abstract
 
 > Here, we use NMR and other biophysical and biochemical experiments to characterize the Z-DNA and Z-RNA binding properties of ZBP1’s Zα1 and Zα2 domains.  
 > — アプローチ／Abstract
@@ -328,14 +330,10 @@ ZBP1は無修飾のRNAをZ型に変換できず、A型に近い形で結合し�
 
 ## 注目の構造の採点（22 本を確認し、1 本を採点）
 
-基準は `pipeline/impact.py`（10 点満点、7 点以上から最大 5 本）。
+基準は `pipeline/impact.py`（10 点満点、6 点以上から最大 3 本）。
 
 | 選定 | 論文 | 種類 | novelty | reach | structure | support | 計 | 理由 |
 |---|---|---|---|---|---|---|---|---|
 | ◯ | PMC13659236 ZBP1 specifically binds pre-formed Z-RNA, limiting its poten | 既存構造で機構を解明 | 2 | 2 | 1 | 2 | 7 | NMR・CD・ITCで、ZBP1がZ型RNAへの変換能を持たないことを示した。結晶構造は決めていないが、NMRで結合様式を実験的に確かめた。 |
 
 <sub>novelty：何が初めてか / reach：誰に効くか / structure：実験で決めた構造（X 線・クライオ電顕・NMR / support：裏付けの強さ（2＝独立した実験で検証：変異体・機能測定・既存手法との比較など／1＝一部の検証のみ／0＝計算のみで実験的検証なし）</sub>
-
-## 記事にしていない新しい構造
-
-- [Symmetry-breaking antibody binding reveals extensive capsid malleability in pandemic human norovirus](https://doi.org/10.21203/rs.3.rs-9488000/v1) — *Res Sq*（新しい構造：12QZ, 13KF, 13KG, 12TF）

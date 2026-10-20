@@ -6,11 +6,11 @@
 
 出典：この号の論文情報と全文は、米国国立医学図書館（NLM）の PMC オープンアクセスデータセット（AWS Open Data）から取得した。
 
-**注目の構造：1 本**（新しい構造ではないが、実験で決めた構造で確かめた注目の研究）
+**New Structure 5 本** · **Structure Update 10 本** · **Structure-Based Study 1 本**（New Structure：構造が初めて解かれたタンパク質。Structure Update：既知のタンパク質の新しい構造。Structure-Based Study：既存の構造を使った注目の研究）
 
 ## Today's Structure（今日の一本）
 
-**5｜部分作動薬が、AMPA受容体の開く前の中間状態をとらえた**（GluA2–γ2（AMPA受容体））
+**1｜部分作動薬が、AMPA受容体の開く前の中間状態をとらえた**（GluA2–γ2（AMPA受容体））
 
 選んだ理由（構造生物学・生命科学）：AMPA受容体が開く前の中間状態を、部分作動薬と時分割クライオ電顕で複数の状態として捉え、ゲーティング経路を構造で示した。
 
@@ -22,13 +22,13 @@
 
 | # | 標的 | 手法・分解能 | 見出し |
 |---|---|---|---|
-| 1 | ヒト繊毛の移行帯（二連微小管） | Cryo-ET・7.30–9.60 Å（2 構造） | ECT2LとDZANK1の欠損が、繊毛基部の連結を壊しPCDを起こす |
-| 2 | ヒトOCTN1（SLC22A4） | Cryo-EM・3.11–3.37 Å（2 構造） | OCTN1の外向き・内向きの構造から、阻害薬メベンダゾールを見いだした |
-| 3 | ヒトNHA1（SLC9B1） | Cryo-EM・3.64 Å | ヒトNHA1の内向き構造は、エレベーター型の輸送を裏づける |
-| 4 | ワクシニアウイルスD13（足場） | Cryo-EM・2.56–3.70 Å（8 構造） | A17の末端ペプチドが、D13の棒状集合体を足場の格子に組み替える |
-| 5 | GluA2–γ2（AMPA受容体） | Cryo-EM・2.93–4.36 Å（10 構造） | 部分作動薬が、AMPA受容体の開く前の中間状態をとらえた |
-| 6 | ヒトNLRP6（炎症の感知因子） | Cryo-EM・3.69–3.79 Å（2 構造） | ATPがNLRP6の各ドメインを束ねて、活性化を抑える |
-| 7 | ヒトcPRC1（PRC1.4） | Cryo-EM・2.74 Å | PRC1は4つのサブユニットを密に組み、E2酵素をヌクレオソーム上に置く |
+| 1 | GluA2–γ2（AMPA受容体） | Cryo-EM・2.93–4.36 Å（10 構造） | 部分作動薬が、AMPA受容体の開く前の中間状態をとらえた |
+| 2 | ヒト繊毛の移行帯（二連微小管） | Cryo-ET・7.30–9.60 Å（2 構造） | ECT2LとDZANK1の欠損が、繊毛基部の連結を壊しPCDを起こす |
+| 3 | ヒトOCTN1（SLC22A4） | Cryo-EM・3.11–3.37 Å（2 構造） | OCTN1の外向き・内向きの構造から、阻害薬メベンダゾールを見いだした |
+| 4 | ヒトNHA1（SLC9B1） | Cryo-EM・3.64 Å | ヒトNHA1の内向き構造は、エレベーター型の輸送を裏づける |
+| 5 | ワクシニアウイルスD13（足場） | Cryo-EM・2.56–3.70 Å（8 構造） | A17の末端ペプチドが、D13の棒状集合体を足場の格子に組み替える |
+| 6 | ヒトcPRC1（PRC1.4） | Cryo-EM・2.74 Å | PRC1は4つのサブユニットを密に組み、E2酵素をヌクレオソーム上に置く |
+| 7 | ヒトNLRP6（炎症の感知因子） | Cryo-EM・3.69–3.79 Å（2 構造） | ATPがNLRP6の各ドメインを束ねて、活性化を抑える |
 | 8 | タウ線維（AD・VT患者脳） | Cryo-EM・2.92–3.61 Å（8 構造） | ポリユビキチンの位置が動くと、タウ線維の原線維間の接合面がずれる |
 | 9 | β2AR（ヒト）二量体 | Cryo-EM・2.50 Å | AP-7-168は分子糊としてβ2ARを二量体にし、アレスチンを遮る |
 | 10 | ヒトノロウイルスGII.4 Sydney VP1 | PDB 公開待ち | ノロウイルスの殻は、抗体が結合すると形を変えて受け止める |
@@ -43,9 +43,157 @@
 
 ---
 
-# 新しい構造
+# Picked up Today's Structure
 
-## 1｜ヒト繊毛の移行帯（二連微小管）
+## 1｜GluA2–γ2（AMPA受容体）
+
+### Pre-activation and gating pathway of AMPA receptors revealed by full and partial agonists
+
+*Nature Structural & Molecular Biology*（2026-09-09） · [論文](https://doi.org/10.1038/s41594-026-01882-9) · ライセンス: cc by-nc-nd
+
+![構造図：GluA2–γ2（AMPA受容体）](figures/PMC13672095.svg)
+
+<sub>色（順に）：GluA2–γ2（AMPA 受容体）　スティック：カイニン酸（KAI）</sub>
+
+**部分作動薬が、AMPA受容体の開く前の中間状態をとらえた**
+
+時間分解クライオ電顕でGluA2–γ2の4つの状態を解析し、ドメインの閉じ角約17°が分かれ道だと示した。
+
+- **疑問・課題**：AMPA受容体が開く前の中間体である前活性状態は、構造がよく分かっていなかった。
+- **アプローチ**：部分作動薬またはGluを加えて素早く凍結する時間分解クライオ電顕で、GluA2–γ2の状態の集まりを調べた。
+- **結果**：リガンド結合ドメイン（LBD）の閉じが約17°を超えると開状態か脱感作状態に進み、それより小さいと前活性状態にとどまった。
+- **わかったこと**：前活性状態のゲートは閉と開の中間の形をとるが、孔は閉じたままで、イオンと水は通さない。
+- **残された課題**：この方法では4つのサブコンダクタンス状態すべての構造は得られず、より速い時間分解クライオ電顕などが助けになるとされる。
+
+<details><summary>この紹介文の根拠（論文本文）</summary>
+
+> While the terminal apo, open and desensitized states have been structurally characterized, the intermediate pre-active state has remained an enigma.  
+> — 疑問・課題／Abstract
+
+> Here we use different partial agonists and time-resolved cryo-electron microscopy (cryo-EM) to capture a structural ensemble of GluA2–γ2 AMPAR complexes in the closed apo, pre-active, open and desensitized states.  
+> — アプローチ／Abstract
+
+> Binding of partial agonists to the ligand-binding domain (LBD) results in different extents of LBD clamshell closure, with closures exceeding a threshold of ~17° resulting in the open and desensitized states and smaller closures stabilizing the pre-active state.  
+> — 結果／Abstract
+
+> The pre-active state has a distinct gate conformation intermediate between the other two discrete states, completely open and closed.  
+> — わかったこと／Abstract
+
+> Despite these changes during pre-activation, the gate region remains narrow, keeping the pore sealed for conductance of water and ions.  
+> — わかったこと／Results
+
+> One limitation of our cryo-EM approach is that it does not reveal structures of all four subconductance states bound to full or partial agonists.  
+> — 残された課題／Discussion
+
+> Faster time-resolved cryo-EM, experimentation with different agonist concentrations and larger structural datasets will likely help to describe iGluR gating in more detail.  
+> — 残された課題／Discussion
+
+</details>
+
+<sub>分類：イオンチャネル・GPCR・受容体</sub>
+
+#### 読みどころ
+
+前活性状態ではLBDの上側（D1）の二量体界面が保たれたまま下側（D2）だけが離れる（S635間で24 Å、apoは17 Å）。前活性状態は、開状態と脱感作状態に分かれる分岐点にあたる。
+
+<details><summary>根拠（論文本文）</summary>
+
+> Because of the intact D1–D1 interfaces, pre-activation results in separation of the D2 lobes in each LBD dimer, measured as a distance between S635 Cα atoms (24 Å in GluA2–γ2KA-PreActive compared to 17 Å in GluA2–γ2Apo).  
+> — Results
+
+> Pre-activation, therefore, represents an intermediate bifurcation point in the AMPAR gating pathway  
+> — Results
+
+</details>
+
+室温で作動薬を加えてから2.5秒以内に凍結した。KAは前活性状態だけ、IWは開状態だけ、NOWは3つの状態を示し、作動薬ごとに状態の分布が違った。
+
+<details><summary>根拠（論文本文）</summary>
+
+> with the time between the agonist application and plunging shorter than 2.5 s  
+> — Results
+
+> IW favored only the open state and KA only the pre-active state. NOW revealed all three states  
+> — Results
+
+</details>
+
+単一チャネル記録では、どの部分作動薬でもGluと同様に4段階のコンダクタンスが見られた。MDでは前活性状態で水が通らず、開状態では孔に水が行き来した。
+
+<details><summary>根拠（論文本文）</summary>
+
+> Despite widely different probabilities of O1–O4, the measurable values of conductance for each of these states were strikingly similar between Glu and all partial agonists  
+> — Results
+
+> Notably, the gate region remained largely dehydrated and no water conductance was observed during simulations of GluA2–γ2KA-PreActive and GluA2–γ2NOW-PreActive  
+> — Results
+
+> In contrast, for all open-state structures, the pore remained continuously hydrated throughout the entire simulation trajectories  
+> — Results
+
+</details>
+
+#### 構造データ
+
+| PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
+|---|---|---|---|---|---|
+| [11VV](https://www.rcsb.org/structure/11VV) | Cryo-EM | 2.93 Å | 2026-09-23 | Mus musculus, Rattus norvegicus | — |
+| [11VZ](https://www.rcsb.org/structure/11VZ) | Cryo-EM | 3.98 Å | 2026-09-23 | Mus musculus, Rattus norvegicus | KAI |
+| [11WB](https://www.rcsb.org/structure/11WB) | Cryo-EM | 3.55 Å | 2026-09-23 | Mus musculus, Rattus norvegicus | NWD, SPD |
+| [11WC](https://www.rcsb.org/structure/11WC) | Cryo-EM | 4.02 Å | 2026-09-23 | Mus musculus, Rattus norvegicus | NWD |
+| [11WA](https://www.rcsb.org/structure/11WA) | Cryo-EM | 4.36 Å | 2026-09-23 | Mus musculus, Rattus norvegicus | NWD |
+| [11VX](https://www.rcsb.org/structure/11VX) | Cryo-EM | 3.37 Å | 2026-09-23 | Mus musculus, Rattus norvegicus | FWD, SPD |
+| [11VW](https://www.rcsb.org/structure/11VW) | Cryo-EM | 3.84 Å | 2026-09-23 | Mus musculus, Rattus norvegicus | FWD, SPD |
+| [11VY](https://www.rcsb.org/structure/11VY) | Cryo-EM | 3.47 Å | 2026-09-23 | Mus musculus, Rattus norvegicus | IWD, SPD |
+| [11WE](https://www.rcsb.org/structure/11WE) | Cryo-EM | 3.58 Å | 2026-09-23 | Mus musculus, Rattus norvegicus | GLU |
+| [11WD](https://www.rcsb.org/structure/11WD) | Cryo-EM | 3.69 Å | 2026-09-23 | Mus musculus, Rattus norvegicus | GLU |
+
+- [O88602](https://www.uniprot.org/uniprotkb/O88602) Cacng2 Voltage-dependent calcium channel gamma-2 subunit — *Mus musculus* （既存の PDB 構造 41 件）
+- [P19491](https://www.uniprot.org/uniprotkb/P19491) Gria2 Glutamate receptor 2 — *Rattus norvegicus* （既存の PDB 構造 342 件）
+
+#### 実験メモ
+
+- **発現系**：BacMam 系で HEK 293 GnTI− 細胞に発現。
+- **コンストラクト**：ラット GluA2flip（Q586）とマウス γ2（L207 で切断）の融合体。C 末端にトロンビン切断部位、eGFP、Strep-II。
+- **精製**：1% ジギトニンで可溶化し、ストレプトアビジン樹脂 → トロンビンでタグ除去 → Superose 6 Increase でサイズ排除。
+- **結晶化／グリッド作製**：UltrAuFoil R1.2/1.3 の 300 メッシュ金グリッド。部分作動薬 250 μM（Glu は 1 mM）を加えて 2.5 秒以内に自作の装置で凍結。
+- **データ収集・解析**：Titan Krios（300 kV）、Gatan K3。cryoSPARC v4.4 で処理。
+
+<details><summary>根拠（論文本文）</summary>
+
+> The fusion construct GluA2–γ2 was prepared by introducing a GT linker between a modified rat GluA2flip subunit (UniProt P19491) with Q at the Q/R-site (Q586), which was previously called GluA2*20 and mouse γ2 C-terminally truncated after L207 (ref. 30).  
+> — Methods
+
+> The P1 and P2 virus were produced in Sf9 cells (Gibco, 12659017) and added to HEK 293 GnTI− cells (American Type Culture Collection, CRL-3022) at 37 °C and 7% CO2.  
+> — Methods
+
+> solubilized for 3 h in 150 mM NaCl, 20 mM Tris-HCl pH 8.0 and 1% digitonin  
+> — Methods
+
+> injection onto a Superose 6 Increase 10/300 GL size-exclusion chromatography column (Cytiva)  
+> — Methods
+
+> UltrAuFoil R 1.2/1.3, 300-mesh gold grids (EM Sciences) were used for sample preparation.  
+> — Methods
+
+> Immediately after agonist application, the sample was blotted for 1.5 s and plunge-frozen into liquid ethane within 2.5 s of partial agonist application.  
+> — Methods
+
+> Grids were imaged on a Titan Krios transmission EM instrument (Thermo Fisher Scientific) at 300 kV equipped with a Gatan K3 (Gatan) direct electron detection camera.  
+> — Methods
+
+> Data were processed using cryoSPARC v.4.4.  
+> — Methods
+
+</details>
+
+> 📝 編集者への確認事項：本論文は 10 個の構造（apo、KA、NOW、FW、IW、Glu 結合の各状態）を報告。記事の中心は KA の前活性状態（11VZ）で、ga_pdb_id に指定。著者自身が、ミセル中の TMD や気液界面の影響、人工膜での単一チャネル記録の限界を述べている。MD は定性的な補強と著者が書いている。
+
+---
+
+# New Structure
+
+## 2｜ヒト繊毛の移行帯（二連微小管）
 
 ### In situ structure of the human ciliary transition zone links linker defects to primary ciliary dyskinesia
 
@@ -59,7 +207,7 @@
 
 ヒト繊毛基部の二連微小管をその場でクライオ電子線トモグラフィーにより解析し、隣どうしをつなぐ連結構造の成分を特定した
 
-- **これまでの疑問・課題**：繊毛の根元にある移行帯の分子構造とタンパク質の構成は、運動性繊毛病との関わりも含めて、よく分かっていなかった。
+- **疑問・課題**：繊毛の根元にある移行帯の分子構造とタンパク質の構成は、運動性繊毛病との関わりも含めて、よく分かっていなかった。
 - **アプローチ**：ヒトの多繊毛上皮細胞をクライオ電子線トモグラフィーでその場解析し、患者の遺伝子変異と照らし合わせた。
 - **結果**：移行帯の二連微小管を6.9〜7.3 Åで再構成して9種のタンパク質を同定し、連結部はECT2LとDZANK1が担っていた。
 - **わかったこと**：ECT2LまたはDZANK1の機能喪失変異は原発性線毛運動不全症（PCD）を起こす。移行帯の連結の欠陥が運動性繊毛病の原因になる。
@@ -68,7 +216,7 @@
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > The ciliary transition zone (TZ) regulates ciliary proteome composition, yet its molecular architecture, protein content, and contribution to motile ciliopathies remain poorly defined.  
-> — これまでの疑問・課題／Abstract
+> — 疑問・課題／Abstract
 
 > We applied in situ cryo-electron tomography and subtomogram averaging to human multiciliated epithelial cells.  
 > — アプローチ／Abstract
@@ -190,7 +338,7 @@ PCDが疑われる489人の解析で、ECT2L変異を持つ3人とDZANK1変異�
 
 ---
 
-## 2｜ヒトOCTN1（SLC22A4）
+## 3｜ヒトOCTN1（SLC22A4）
 
 ### Structural and mechanistic insights into OCTN1-mediated transport and cancer cell proliferation
 
@@ -204,7 +352,7 @@ PCDが疑われる489人の解析で、ECT2L変異を持つ3人とDZANK1変異�
 
 ヒトOCTN1のapo型とエルゴチオネン結合型をクライオ電顕で解き、構造に基づく仮想スクリーニングで阻害剤を探した
 
-- **これまでの疑問・課題**：OCTN1が基質を認識して運ぶ仕組みは、構造の面からはよく分かっていなかった。
+- **疑問・課題**：OCTN1が基質を認識して運ぶ仕組みは、構造の面からはよく分かっていなかった。
 - **アプローチ**：ヒトOCTN1のapo型とエルゴチオネン（ET）結合型をクライオ電顕で解析し、構造をもとに阻害剤を探した。
 - **結果**：apo型は外向き（3.11 Å）、ET結合型は内向き（3.37 Å）だった。メベンダゾール（MBZ）はKD 2.48 nMで結合し、ET輸送を約60%抑えた。
 - **わかったこと**：OCTN1はNa⁺と共役して輸送する。MBZは、がん細胞の増殖を、OCTN1を介して抑えるとみられる。
@@ -213,7 +361,7 @@ PCDが疑われる489人の解析で、ECT2L変異を持つ3人とDZANK1変異�
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > Despite its physiological and clinical relevance, the structural mechanisms underlying substrate recognition and transport by OCTN1 have remained poorly understood.  
-> — これまでの疑問・課題／Abstract
+> — 疑問・課題／Abstract
 
 > Here, we present cryo-EM structures of human OCTN1 in both apo and ET-bound states, revealing the binding site of ET and elucidating conformational changes essential for sodium-dependent substrate transport.  
 > — アプローチ／Abstract
@@ -339,7 +487,7 @@ ET結合型の構造を使った承認薬の仮想スクリーニングで、駆
 
 ---
 
-## 3｜ヒトNHA1（SLC9B1）
+## 4｜ヒトNHA1（SLC9B1）
 
 ### Cryo-EM structure of human Na+/H+ exchanger NHA1 in an inward-open conformation
 
@@ -353,7 +501,7 @@ ET結合型の構造を使った承認薬の仮想スクリーニングで、駆
 
 精子の運動に関わるNa⁺/H⁺交換体を3.6 Åで解析し、モデルした外向き状態との比較でコア領域の動きを調べた
 
-- **これまでの疑問・課題**：精子の運動と男性の生殖能力に関わるNHA1の、構造と輸送の仕組みは分かっていなかった。
+- **疑問・課題**：精子の運動と男性の生殖能力に関わるNHA1の、構造と輸送の仕組みは分かっていなかった。
 - **アプローチ**：ヒトNHA1の全長をクライオ電顕で解析し、モデルした外向き状態と比べて、変異体のNa⁺輸送も測った。
 - **結果**：3.6 Åの内向き構造が得られた。外向きと比べ、コア領域がダイマー領域に対して細胞質側へ大きく動いていた。
 - **わかったこと**：この動きはエレベーター型の輸送機構を支持する。D258・D259・E453などの残基が、状態の切り替えと輸送に関わるらしい。
@@ -362,7 +510,7 @@ ET結合型の構造を使った承認薬の仮想スクリーニングで、駆
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > Despite its physiological importance, the structural and mechanistic basis of NHA1 function has remained elusive.  
-> — これまでの疑問・課題／Abstract
+> — 疑問・課題／Abstract
 
 > Structural comparison with the modeled NHA1 in an outward-open state reveals dramatic conformational changes in the core domain  
 > — アプローチ／Introduction
@@ -475,7 +623,7 @@ NHA1は2つの鎖がTM0とTM8で組み合わさったダイマーで、各鎖は
 
 ---
 
-## 4｜ワクシニアウイルスD13（足場）
+## 5｜ワクシニアウイルスD13（足場）
 
 ### Structural transition of the immature poxvirus scaffold from preassembly to the scaffold lattice
 
@@ -489,7 +637,7 @@ NHA1は2つの鎖がTM0とTM8で組み合わさったダイマーで、各鎖は
 
 足場タンパク質D13の2種類の集合体をクライオ電顕で解析し、棒状から格子への移行を示した。
 
-- **これまでの疑問・課題**：未成熟ウイルス粒子の足場がどう組み上がるかは、粒子の形が不規則で、よく分かっていなかった。
+- **疑問・課題**：未成熟ウイルス粒子の足場がどう組み上がるかは、粒子の形が不規則で、よく分かっていなかった。
 - **アプローチ**：試験管内で作らせたD13（足場タンパク質）の2種類の集合体を、クライオ電顕とトモグラフィーで解析した。
 - **結果**：足場様粒子（SLP）は2.9 Å、棒状のtwisterは3.9 Åで解析。A17のN末端ペプチドを加えるとtwisterがSLPに変わった。
 - **わかったこと**：A17の末端がD13の底の空洞に入ると、棒状の事前集合体が不安定になり、足場の形成が始まると著者は提案している。
@@ -498,7 +646,7 @@ NHA1は2つの鎖がTM0とTM8で組み合わさったダイマーで、各鎖は
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > the molecular mechanisms underlying scaffold assembly remain poorly understood due to the transient and pleomorphic nature of IVs  
-> — これまでの疑問・課題／Introduction
+> — 疑問・課題／Introduction
 
 > Here, we present single-particle cryo-electron microscopy and cryo-electron tomography structures of two distinct in vitro assemblies of the vaccinia virus scaffold protein D13 that recapitulate oligomeric states previously observed in situ.  
 > — アプローチ／Abstract
@@ -610,90 +758,84 @@ A17が結合する底の空洞は、リファンピシンの結合部位でも�
 
 ---
 
-## 5｜GluA2–γ2（AMPA受容体）
+## 6｜ヒトcPRC1（PRC1.4）
 
-### Pre-activation and gating pathway of AMPA receptors revealed by full and partial agonists
+### Cryo-EM structure, enzymatic activity and genome targeting of canonical PRC1
 
-*Nature Structural & Molecular Biology*（2026-09-09） · [論文](https://doi.org/10.1038/s41594-026-01882-9) · ライセンス: cc by-nc-nd
+*Nature Structural & Molecular Biology*（2026-09-14） · [論文](https://doi.org/10.1038/s41594-026-01885-6) · ライセンス: cc by
 
-![構造図：GluA2–γ2（AMPA受容体）](figures/PMC13672095.svg)
+![構造図：ヒトcPRC1（PRC1.4）](figures/PMC13672072.svg)
 
-<sub>色（順に）：GluA2–γ2（AMPA 受容体）　スティック：カイニン酸（KAI）</sub>
+<sub>色（順に）：PHC2（サブユニット） / CBX7（サブユニット） / RING1B（E3） / BMI1（サブユニット） / UBCH5C（E2） / ヒストン H3 / ヒストン H4 / ヒストン H2A / ヒストン H2B / DNA（一方の鎖） / DNA（相補鎖）</sub>
 
-**部分作動薬が、AMPA受容体の開く前の中間状態をとらえた**
+**PRC1は4つのサブユニットを密に組み、E2酵素をヌクレオソーム上に置く**
 
-時間分解クライオ電顕でGluA2–γ2の4つの状態を解析し、ドメインの閉じ角約17°が分かれ道だと示した。
+ヌクレオソーム結合型のヒトPRC1をクライオ電顕で解析し、PHC2を含む界面の働きを調べた
 
-- **これまでの疑問・課題**：AMPA受容体が開く前の中間体である前活性状態は、構造がよく分かっていなかった。
-- **アプローチ**：部分作動薬またはGluを加えて素早く凍結する時間分解クライオ電顕で、GluA2–γ2の状態の集まりを調べた。
-- **結果**：リガンド結合ドメイン（LBD）の閉じが約17°を超えると開状態か脱感作状態に進み、それより小さいと前活性状態にとどまった。
-- **わかったこと**：前活性状態のゲートは閉と開の中間の形をとるが、孔は閉じたままで、イオンと水は通さない。
-- **残された課題**：この方法では4つのサブコンダクタンス状態すべての構造は得られず、より速い時間分解クライオ電顕などが助けになるとされる。
+- **疑問・課題**：PRC1全体の構造は未解明で、サブユニットの配置や触媒の連携は分かっていなかった。
+- **アプローチ**：RING1B・BMI1・PHC2・CBX7とUBCH5Cを、H3K27me3ヌクレオソームに結合させてクライオ電顕で解析した。
+- **結果**：2.7 Åの構造で、4つのサブユニットがβシートでつながる密な構造をとり、UBCH5Cの位置を決めていた。
+- **わかったこと**：PHC2は複合体の組み立てと酵素活性をつなぎ、ショウジョウバエのPhのSAMドメインは標的遺伝子への集合に必要だった。
+- **残された課題**：PHC2とUBCH5Cの相互作用が生体内でH2A修飾に寄与するかは、今後の変異体解析で調べる必要がある。
 
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
-> While the terminal apo, open and desensitized states have been structurally characterized, the intermediate pre-active state has remained an enigma.  
-> — これまでの疑問・課題／Abstract
+> However, how cPRC1 subunits are arranged within an intact complex, how the holocomplex engages nucleosomes and how catalytic activity is coordinated in this context have remained unresolved, as a structure of a PRC1 holocomplex has so far been lacking.  
+> — 疑問・課題／Main
 
-> Here we use different partial agonists and time-resolved cryo-electron microscopy (cryo-EM) to capture a structural ensemble of GluA2–γ2 AMPAR complexes in the closed apo, pre-active, open and desensitized states.  
-> — アプローチ／Abstract
+> Here, we used single-particle cryo-electron microscopy (cryo-EM) to determine the structure of human cPRC1, comprising RING1B, BMI1, PHC2 and CBX7, bound to a mononucleosome in complex with the ubiquitin-conjugating enzyme UBCH5C.  
+> — アプローチ／Main
 
-> Binding of partial agonists to the ligand-binding domain (LBD) results in different extents of LBD clamshell closure, with closures exceeding a threshold of ~17° resulting in the open and desensitized states and smaller closures stabilizing the pre-active state.  
-> — 結果／Abstract
+> The final reconstruction reached a global resolution of 2.7 Å, enabling unambiguous fitting of the nucleosome core, previously determined structures of individual PRC1 domains and UBCH5C  
+> — 結果／Results
 
-> The pre-active state has a distinct gate conformation intermediate between the other two discrete states, completely open and closed.  
-> — わかったこと／Abstract
+> An extended intermolecular β‑sheet network stabilizes interactions between the four PRC1 subunits, forming the architectural core of the complex  
+> — 結果／Results
 
-> Despite these changes during pre-activation, the gate region remains narrow, keeping the pore sealed for conductance of water and ions.  
-> — わかったこと／Results
+> PHC2 in humans and Ph in Drosophila, thus, act as a central link of complex assembly, enzymatic activity and genomic targeting of PRC1.  
+> — わかったこと／Main
 
-> One limitation of our cryo-EM approach is that it does not reveal structures of all four subconductance states bound to full or partial agonists.  
-> — 残された課題／Discussion
-
-> Faster time-resolved cryo-EM, experimentation with different agonist concentrations and larger structural datasets will likely help to describe iGluR gating in more detail.  
+> Whether the PHC2/Ph–UBCH5C interaction contributes to PRC1-mediated H2A monoubiquitination in vivo remains to be determined by analyzing separation-of-function mutants that selectively disrupt this interaction.  
 > — 残された課題／Discussion
 
 </details>
 
-<sub>分類：イオンチャネル・GPCR・受容体</sub>
+<sub>分類：クロマチン・ヒストン・酵素（その他）</sub>
 
 #### 読みどころ
 
-前活性状態ではLBDの上側（D1）の二量体界面が保たれたまま下側（D2）だけが離れる（S635間で24 Å、apoは17 Å）。前活性状態は、開状態と脱感作状態に分かれる分岐点にあたる。
+BMI1のRAWULドメインがUBCH5Cの背面に位置し、RING1Bとの複合面でUBCH5C R15を挟む。従来はUBCH5CがRING1Bのみと結合するとされていた。さらにPHC2もUBCH5Cに近接し、PHC2のLLVGモチーフをアラニンに置換すると活性が2倍超低下した。
 
 <details><summary>根拠（論文本文）</summary>
 
-> Because of the intact D1–D1 interfaces, pre-activation results in separation of the D2 lobes in each LBD dimer, measured as a distance between S635 Cα atoms (24 Å in GluA2–γ2KA-PreActive compared to 17 Å in GluA2–γ2Apo).  
+> In contrast, our structure reveals that BMI1 also directly contributes to UBCH5C engagement and further suggests a potential interface between PHC2 and UBCH5C (Fig. 3a).  
 > — Results
 
-> Pre-activation, therefore, represents an intermediate bifurcation point in the AMPAR gating pathway  
+> the PRC1(PHC24A) mutant complex exhibited more than a twofold reduction in E3 ligase activity toward H2A monoubiquitination compared to wild-type (WT) PRC1  
 > — Results
 
 </details>
 
-室温で作動薬を加えてから2.5秒以内に凍結した。KAは前活性状態だけ、IWは開状態だけ、NOWは3つの状態を示し、作動薬ごとに状態の分布が違った。
+4サブユニット版のPRC1は10分でH2AK119のモノユビキチン化がほぼ完了し、RING1B–BMI1二量体より活性が高かった。ショウジョウバエのPh（PHC2の相同分子）のSAMドメインは、複合体の形成には不要だが、標的遺伝子での局在とH2Aのユビキチン化に必要だった。
 
 <details><summary>根拠（論文本文）</summary>
 
-> with the time between the agonist application and plunging shorter than 2.5 s  
+> In time-course assays, PRC1 catalyzed near-complete H2AK119 monoubiquitination within 10 min, followed by the appearance of diubiquitinated H2A at later time points  
 > — Results
 
-> IW favored only the open state and KA only the pre-active state. NOW revealed all three states  
+> Thus, although V5–PhΔSAM retains the capacity to assemble into PRC1 (Fig. 4h), it fails to recruit the complex to PREs.  
 > — Results
 
 </details>
 
-単一チャネル記録では、どの部分作動薬でもGluと同様に4段階のコンダクタンスが見られた。MDでは前活性状態で水が通らず、開状態では孔に水が行き来した。
+ビオチン化ヌクレオソームをストレプトアビジン単層のグリッドに結合させて撮影した。UBCH5Cがないと複合体の上部が大きく揺らぎ、UBCH5Cの存在で安定化した。CBX7のクロモドメインは分解能が足りず、モデルに含められなかった。
 
 <details><summary>根拠（論文本文）</summary>
 
-> Despite widely different probabilities of O1–O4, the measurable values of conductance for each of these states were strikingly similar between Glu and all partial agonists  
+> The sample was applied to streptavidin‑coated grids (Extended Data Fig. 2a) and analyzed by single‑particle cryo‑EM.  
 > — Results
 
-> Notably, the gate region remained largely dehydrated and no water conductance was observed during simulations of GluA2–γ2KA-PreActive and GluA2–γ2NOW-PreActive  
-> — Results
-
-> In contrast, for all open-state structures, the pore remained continuously hydrated throughout the entire simulation trajectories  
+> Lastly, we note that the conformation of the upper lobe of PRC1 is stabilized in the presence of UBCH5C.  
 > — Results
 
 </details>
@@ -702,61 +844,49 @@ A17が結合する底の空洞は、リファンピシンの結合部位でも�
 
 | PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
 |---|---|---|---|---|---|
-| [11VV](https://www.rcsb.org/structure/11VV) | Cryo-EM | 2.93 Å | 2026-09-23 | Mus musculus, Rattus norvegicus | — |
-| [11VZ](https://www.rcsb.org/structure/11VZ) | Cryo-EM | 3.98 Å | 2026-09-23 | Mus musculus, Rattus norvegicus | KAI |
-| [11WB](https://www.rcsb.org/structure/11WB) | Cryo-EM | 3.55 Å | 2026-09-23 | Mus musculus, Rattus norvegicus | NWD, SPD |
-| [11WC](https://www.rcsb.org/structure/11WC) | Cryo-EM | 4.02 Å | 2026-09-23 | Mus musculus, Rattus norvegicus | NWD |
-| [11WA](https://www.rcsb.org/structure/11WA) | Cryo-EM | 4.36 Å | 2026-09-23 | Mus musculus, Rattus norvegicus | NWD |
-| [11VX](https://www.rcsb.org/structure/11VX) | Cryo-EM | 3.37 Å | 2026-09-23 | Mus musculus, Rattus norvegicus | FWD, SPD |
-| [11VW](https://www.rcsb.org/structure/11VW) | Cryo-EM | 3.84 Å | 2026-09-23 | Mus musculus, Rattus norvegicus | FWD, SPD |
-| [11VY](https://www.rcsb.org/structure/11VY) | Cryo-EM | 3.47 Å | 2026-09-23 | Mus musculus, Rattus norvegicus | IWD, SPD |
-| [11WE](https://www.rcsb.org/structure/11WE) | Cryo-EM | 3.58 Å | 2026-09-23 | Mus musculus, Rattus norvegicus | GLU |
-| [11WD](https://www.rcsb.org/structure/11WD) | Cryo-EM | 3.69 Å | 2026-09-23 | Mus musculus, Rattus norvegicus | GLU |
+| [28OE](https://www.rcsb.org/structure/28OE) | Cryo-EM | 2.74 Å | 2026-09-16 | Homo sapiens, Xenopus | — |
 
-- [O88602](https://www.uniprot.org/uniprotkb/O88602) Cacng2 Voltage-dependent calcium channel gamma-2 subunit — *Mus musculus* （既存の PDB 構造 41 件）
-- [P19491](https://www.uniprot.org/uniprotkb/P19491) Gria2 Glutamate receptor 2 — *Rattus norvegicus* （既存の PDB 構造 342 件）
+- [A0A1B8Y854](https://www.uniprot.org/uniprotkb/A0A1B8Y854)  Histone H2B — *Xenopus tropicalis* （既存の PDB 構造 2 件）
+- [A0A310TTQ1](https://www.uniprot.org/uniprotkb/A0A310TTQ1) LOC121398065 Histone H3 — *Xenopus laevis* （既存の PDB 構造 69 件）
+- [B0QYP2](https://www.uniprot.org/uniprotkb/B0QYP2) CBX7 Chromobox 7 — *Homo sapiens* （PDB で初めての構造）
+- [P35226](https://www.uniprot.org/uniprotkb/P35226) BMI1 Polycomb complex protein BMI-1 — *Homo sapiens* （既存の PDB 構造 24 件）
+- [P62798](https://www.uniprot.org/uniprotkb/P62798)  Histone H4 — *Xenopus borealis* （既存の PDB 構造 4 件）
+- [Q4R5N4](https://www.uniprot.org/uniprotkb/Q4R5N4) UBE2D3 Ubiquitin-conjugating enzyme E2 D3 — *Macaca fascicularis* （PDB で初めての構造）
+- [Q6AZJ8](https://www.uniprot.org/uniprotkb/Q6AZJ8) LOC494591 Histone H2A — *Xenopus laevis* （既存の PDB 構造 96 件）
+- [Q8IXK0](https://www.uniprot.org/uniprotkb/Q8IXK0) PHC2 Polyhomeotic-like protein 2 — *Homo sapiens* （PDB で初めての構造）
+- [Q99496](https://www.uniprot.org/uniprotkb/Q99496) RNF2 E3 ubiquitin-protein ligase RING2 — *Homo sapiens* （既存の PDB 構造 27 件）
 
 #### 実験メモ
 
-- **発現系**：BacMam 系で HEK 293 GnTI− 細胞に発現。
-- **コンストラクト**：ラット GluA2flip（Q586）とマウス γ2（L207 で切断）の融合体。C 末端にトロンビン切断部位、eGFP、Strep-II。
-- **精製**：1% ジギトニンで可溶化し、ストレプトアビジン樹脂 → トロンビンでタグ除去 → Superose 6 Increase でサイズ排除。
-- **結晶化／グリッド作製**：UltrAuFoil R1.2/1.3 の 300 メッシュ金グリッド。部分作動薬 250 μM（Glu は 1 mM）を加えて 2.5 秒以内に自作の装置で凍結。
-- **データ収集・解析**：Titan Krios（300 kV）、Gatan K3。cryoSPARC v4.4 で処理。
+- **発現系**：RING1B・BMI1・CBX7・PHC2をTrichoplusia ni HighFive昆虫細胞で共発現。
+- **コンストラクト**：ヒトの全長配列。PHC2のSAMドメインにL307E;L311E置換を入れてオリゴマー化を防いだ。
+- **精製**：Ni-NTA、Strep-Tactin、タグ除去後に陽イオン交換とサイズ排除クロマトグラフィー。
+- **結晶化／グリッド作製**：5′ビオチン化ヌクレオソーム（H3Kc27me3）を、ストレプトアビジン単層で覆ったQuantifoil R2/2金グリッドに結合させ、Vitrobot Mark IV（4℃、湿度96%）で凍結。
+- **データ収集・解析**：Titan Krios（300 kV）とGatan K3、SerialEMで収集。cryoSPARC 4.7.0で解析し、2.7 Å（FSC 0.143）。
 
 <details><summary>根拠（論文本文）</summary>
 
-> The fusion construct GluA2–γ2 was prepared by introducing a GT linker between a modified rat GluA2flip subunit (UniProt P19491) with Q at the Q/R-site (Q586), which was previously called GluA2*20 and mouse γ2 C-terminally truncated after L207 (ref. 30).  
+> PRC1 subunits (RING1B, BMI1, PHC2 and CBX7) were coexpressed in Trichoplusia ni HighFive insect cells  
 > — Methods
 
-> The P1 and P2 virus were produced in Sf9 cells (Gibco, 12659017) and added to HEK 293 GnTI− cells (American Type Culture Collection, CRL-3022) at 37 °C and 7% CO2.  
+> The PHC2 SAM domain was mutated to contain L307E;L311E substitutions to disrupt SAM-domain-mediated oligomerization.  
 > — Methods
 
-> solubilized for 3 h in 150 mM NaCl, 20 mM Tris-HCl pH 8.0 and 1% digitonin  
+> Quantifoil R2/2 gold grids coated with a streptavidin monolayer were prepared as previously described57,58.  
 > — Methods
 
-> injection onto a Superose 6 Increase 10/300 GL size-exclusion chromatography column (Cytiva)  
-> — Methods
-
-> UltrAuFoil R 1.2/1.3, 300-mesh gold grids (EM Sciences) were used for sample preparation.  
-> — Methods
-
-> Immediately after agonist application, the sample was blotted for 1.5 s and plunge-frozen into liquid ethane within 2.5 s of partial agonist application.  
-> — Methods
-
-> Grids were imaged on a Titan Krios transmission EM instrument (Thermo Fisher Scientific) at 300 kV equipped with a Gatan K3 (Gatan) direct electron detection camera.  
-> — Methods
-
-> Data were processed using cryoSPARC v.4.4.  
+> Data were acquired on a Titan Krios transmission EM instrument (FEI) operated at 300 kV and equipped with a Gatan K3 direct electron detector in counting mode.  
 > — Methods
 
 </details>
 
-> 📝 編集者への確認事項：本論文は 10 個の構造（apo、KA、NOW、FW、IW、Glu 結合の各状態）を報告。記事の中心は KA の前活性状態（11VZ）で、ga_pdb_id に指定。著者自身が、ミセル中の TMD や気液界面の影響、人工膜での単一チャネル記録の限界を述べている。MD は定性的な補強と著者が書いている。
+> 📝 編集者への確認事項：カテゴリは chromatin と enzyme。論文は PHC2・CBX7・UBCH5C について初構造とは明言していない（見出しに「初」は使っていない）。パケットは Methods 途中まで読めており、Extended Data は未確認。
 
 ---
 
-## 6｜ヒトNLRP6（炎症の感知因子）
+# Structure Update
+
+## 7｜ヒトNLRP6（炎症の感知因子）
 
 ### Structural mechanisms for ATP-mediated inhibition of human NLRP6 inflammasome
 
@@ -770,7 +900,7 @@ A17が結合する底の空洞は、リファンピシンの結合部位でも�
 
 ヒトNLRP6単量体の2つの構造から、別のポケットに入るATPと酸性ループが阻害状態を支えると示した。
 
-- **これまでの疑問・課題**：NLRP6が、どのような構造で抑えられた状態に保たれているかは分かっていなかった。
+- **疑問・課題**：NLRP6が、どのような構造で抑えられた状態に保たれているかは分かっていなかった。
 - **アプローチ**：ヒトNLRP6単量体を、ATP結合型と非結合型の2状態でクライオ電顕により解析し、変異体を細胞で調べた。
 - **結果**：ATPは通常のATP結合部位とは別のポケットに入り、NACHTの各ドメインとLRRをつないで縮めていた。
 - **わかったこと**：ATPの結合やNBDの相互作用を壊すと活性化が進み、NLRP6はATPなどの協同で自己抑制されている。
@@ -779,7 +909,7 @@ A17が結合する底の空洞は、リファンピシンの結合部位でも�
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > However, how NLRP6 is maintained in an inhibited structure is unknown.  
-> — これまでの疑問・課題／Abstract
+> — 疑問・課題／Abstract
 
 > Here we report two cryogenic-electron microscopy structures of human NLRP6 monomer in the adenosine-5′-triphosphate (ATP)/NBD-bound (twisted conformation) and unbound (extended conformation) states.  
 > — アプローチ／Abstract
@@ -893,132 +1023,6 @@ NLRP3の阻害剤MCC950は、NLRP3で似た位置に結合するが、この再�
 
 ---
 
-## 7｜ヒトcPRC1（PRC1.4）
-
-### Cryo-EM structure, enzymatic activity and genome targeting of canonical PRC1
-
-*Nature Structural & Molecular Biology*（2026-09-14） · [論文](https://doi.org/10.1038/s41594-026-01885-6) · ライセンス: cc by
-
-![構造図：ヒトcPRC1（PRC1.4）](figures/PMC13672072.svg)
-
-<sub>色（順に）：PHC2（サブユニット） / CBX7（サブユニット） / RING1B（E3） / BMI1（サブユニット） / UBCH5C（E2） / ヒストン H3 / ヒストン H4 / ヒストン H2A / ヒストン H2B / DNA（一方の鎖） / DNA（相補鎖）</sub>
-
-**PRC1は4つのサブユニットを密に組み、E2酵素をヌクレオソーム上に置く**
-
-ヌクレオソーム結合型のヒトPRC1をクライオ電顕で解析し、PHC2を含む界面の働きを調べた
-
-- **これまでの疑問・課題**：PRC1全体の構造は未解明で、サブユニットの配置や触媒の連携は分かっていなかった。
-- **アプローチ**：RING1B・BMI1・PHC2・CBX7とUBCH5Cを、H3K27me3ヌクレオソームに結合させてクライオ電顕で解析した。
-- **結果**：2.7 Åの構造で、4つのサブユニットがβシートでつながる密な構造をとり、UBCH5Cの位置を決めていた。
-- **わかったこと**：PHC2は複合体の組み立てと酵素活性をつなぎ、ショウジョウバエのPhのSAMドメインは標的遺伝子への集合に必要だった。
-- **残された課題**：PHC2とUBCH5Cの相互作用が生体内でH2A修飾に寄与するかは、今後の変異体解析で調べる必要がある。
-
-<details><summary>この紹介文の根拠（論文本文）</summary>
-
-> However, how cPRC1 subunits are arranged within an intact complex, how the holocomplex engages nucleosomes and how catalytic activity is coordinated in this context have remained unresolved, as a structure of a PRC1 holocomplex has so far been lacking.  
-> — これまでの疑問・課題／Main
-
-> Here, we used single-particle cryo-electron microscopy (cryo-EM) to determine the structure of human cPRC1, comprising RING1B, BMI1, PHC2 and CBX7, bound to a mononucleosome in complex with the ubiquitin-conjugating enzyme UBCH5C.  
-> — アプローチ／Main
-
-> The final reconstruction reached a global resolution of 2.7 Å, enabling unambiguous fitting of the nucleosome core, previously determined structures of individual PRC1 domains and UBCH5C  
-> — 結果／Results
-
-> An extended intermolecular β‑sheet network stabilizes interactions between the four PRC1 subunits, forming the architectural core of the complex  
-> — 結果／Results
-
-> PHC2 in humans and Ph in Drosophila, thus, act as a central link of complex assembly, enzymatic activity and genomic targeting of PRC1.  
-> — わかったこと／Main
-
-> Whether the PHC2/Ph–UBCH5C interaction contributes to PRC1-mediated H2A monoubiquitination in vivo remains to be determined by analyzing separation-of-function mutants that selectively disrupt this interaction.  
-> — 残された課題／Discussion
-
-</details>
-
-<sub>分類：クロマチン・ヒストン・酵素（その他）</sub>
-
-#### 読みどころ
-
-BMI1のRAWULドメインがUBCH5Cの背面に位置し、RING1Bとの複合面でUBCH5C R15を挟む。従来はUBCH5CがRING1Bのみと結合するとされていた。さらにPHC2もUBCH5Cに近接し、PHC2のLLVGモチーフをアラニンに置換すると活性が2倍超低下した。
-
-<details><summary>根拠（論文本文）</summary>
-
-> In contrast, our structure reveals that BMI1 also directly contributes to UBCH5C engagement and further suggests a potential interface between PHC2 and UBCH5C (Fig. 3a).  
-> — Results
-
-> the PRC1(PHC24A) mutant complex exhibited more than a twofold reduction in E3 ligase activity toward H2A monoubiquitination compared to wild-type (WT) PRC1  
-> — Results
-
-</details>
-
-4サブユニット版のPRC1は10分でH2AK119のモノユビキチン化がほぼ完了し、RING1B–BMI1二量体より活性が高かった。ショウジョウバエのPh（PHC2の相同分子）のSAMドメインは、複合体の形成には不要だが、標的遺伝子での局在とH2Aのユビキチン化に必要だった。
-
-<details><summary>根拠（論文本文）</summary>
-
-> In time-course assays, PRC1 catalyzed near-complete H2AK119 monoubiquitination within 10 min, followed by the appearance of diubiquitinated H2A at later time points  
-> — Results
-
-> Thus, although V5–PhΔSAM retains the capacity to assemble into PRC1 (Fig. 4h), it fails to recruit the complex to PREs.  
-> — Results
-
-</details>
-
-ビオチン化ヌクレオソームをストレプトアビジン単層のグリッドに結合させて撮影した。UBCH5Cがないと複合体の上部が大きく揺らぎ、UBCH5Cの存在で安定化した。CBX7のクロモドメインは分解能が足りず、モデルに含められなかった。
-
-<details><summary>根拠（論文本文）</summary>
-
-> The sample was applied to streptavidin‑coated grids (Extended Data Fig. 2a) and analyzed by single‑particle cryo‑EM.  
-> — Results
-
-> Lastly, we note that the conformation of the upper lobe of PRC1 is stabilized in the presence of UBCH5C.  
-> — Results
-
-</details>
-
-#### 構造データ
-
-| PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
-|---|---|---|---|---|---|
-| [28OE](https://www.rcsb.org/structure/28OE) | Cryo-EM | 2.74 Å | 2026-09-16 | Homo sapiens, Xenopus | — |
-
-- [A0A1B8Y854](https://www.uniprot.org/uniprotkb/A0A1B8Y854)  Histone H2B — *Xenopus tropicalis* （既存の PDB 構造 2 件）
-- [A0A310TTQ1](https://www.uniprot.org/uniprotkb/A0A310TTQ1) LOC121398065 Histone H3 — *Xenopus laevis* （既存の PDB 構造 69 件）
-- [B0QYP2](https://www.uniprot.org/uniprotkb/B0QYP2) CBX7 Chromobox 7 — *Homo sapiens* （PDB で初めての構造）
-- [P35226](https://www.uniprot.org/uniprotkb/P35226) BMI1 Polycomb complex protein BMI-1 — *Homo sapiens* （既存の PDB 構造 24 件）
-- [P62798](https://www.uniprot.org/uniprotkb/P62798)  Histone H4 — *Xenopus borealis* （既存の PDB 構造 4 件）
-- [Q4R5N4](https://www.uniprot.org/uniprotkb/Q4R5N4) UBE2D3 Ubiquitin-conjugating enzyme E2 D3 — *Macaca fascicularis* （PDB で初めての構造）
-- [Q6AZJ8](https://www.uniprot.org/uniprotkb/Q6AZJ8) LOC494591 Histone H2A — *Xenopus laevis* （既存の PDB 構造 96 件）
-- [Q8IXK0](https://www.uniprot.org/uniprotkb/Q8IXK0) PHC2 Polyhomeotic-like protein 2 — *Homo sapiens* （PDB で初めての構造）
-- [Q99496](https://www.uniprot.org/uniprotkb/Q99496) RNF2 E3 ubiquitin-protein ligase RING2 — *Homo sapiens* （既存の PDB 構造 27 件）
-
-#### 実験メモ
-
-- **発現系**：RING1B・BMI1・CBX7・PHC2をTrichoplusia ni HighFive昆虫細胞で共発現。
-- **コンストラクト**：ヒトの全長配列。PHC2のSAMドメインにL307E;L311E置換を入れてオリゴマー化を防いだ。
-- **精製**：Ni-NTA、Strep-Tactin、タグ除去後に陽イオン交換とサイズ排除クロマトグラフィー。
-- **結晶化／グリッド作製**：5′ビオチン化ヌクレオソーム（H3Kc27me3）を、ストレプトアビジン単層で覆ったQuantifoil R2/2金グリッドに結合させ、Vitrobot Mark IV（4℃、湿度96%）で凍結。
-- **データ収集・解析**：Titan Krios（300 kV）とGatan K3、SerialEMで収集。cryoSPARC 4.7.0で解析し、2.7 Å（FSC 0.143）。
-
-<details><summary>根拠（論文本文）</summary>
-
-> PRC1 subunits (RING1B, BMI1, PHC2 and CBX7) were coexpressed in Trichoplusia ni HighFive insect cells  
-> — Methods
-
-> The PHC2 SAM domain was mutated to contain L307E;L311E substitutions to disrupt SAM-domain-mediated oligomerization.  
-> — Methods
-
-> Quantifoil R2/2 gold grids coated with a streptavidin monolayer were prepared as previously described57,58.  
-> — Methods
-
-> Data were acquired on a Titan Krios transmission EM instrument (FEI) operated at 300 kV and equipped with a Gatan K3 direct electron detector in counting mode.  
-> — Methods
-
-</details>
-
-> 📝 編集者への確認事項：カテゴリは chromatin と enzyme。論文は PHC2・CBX7・UBCH5C について初構造とは明言していない（見出しに「初」は使っていない）。パケットは Methods 途中まで読めており、Extended Data は未確認。
-
----
-
 ## 8｜タウ線維（AD・VT患者脳）
 
 ### Repositioning of polyubiquitin alters the pathologic tau filament structure
@@ -1033,7 +1037,7 @@ BMI1のRAWULドメインがUBCH5Cの背面に位置し、RING1Bとの複合面�
 
 ADとVTの患者脳のタウ線維をクライオ電顕で解析し、ユビスタチンBの処理でVT Ia型の接合面が変わった
 
-- **これまでの疑問・課題**：タウ線維の核（コア）の外側にある密度が線維の安定性に与える影響は、よく分かっていなかった。
+- **疑問・課題**：タウ線維の核（コア）の外側にある密度が線維の安定性に与える影響は、よく分かっていなかった。
 - **アプローチ**：AD・VT患者脳のタウ線維を解析し、ユビスタチンBでポリユビキチンの極性を変えてクライオ電顕で比べた。
 - **結果**：処理したVTでは未処理で見えない6種の線維が現れ、VT Ia型は減少した。弱い密度は正電荷の残基の側へ移った。
 - **わかったこと**：コアの外側の要素（翻訳後修飾など）が、タウ線維の構造と安定性に影響しうることが示唆された。
@@ -1042,7 +1046,7 @@ ADとVTの患者脳のタウ線維をクライオ電顕で解析し、ユビス�
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > The effect of these extra densities on the stability of tau filaments is not well understood.  
-> — これまでの疑問・課題／Main
+> — 疑問・課題／Main
 
 > Chemical modulation of the polarity of polyubiquitin adjacent to the tau core with the small molecule ubistatin B resulted in the repositioning of poorly structured densities toward positively charged residues on the highly structured core filament  
 > — アプローチ／Abstract
@@ -1156,7 +1160,7 @@ K48結合型の二ユビキチンに結合する小分子ユビスタチンBで�
 
 2分子のAP-7-168がTM3・4・5の間に収まって2つの受容体を結びつける様子を、クライオ電顕で捉えた
 
-- **これまでの疑問・課題**：β2ARを偏って阻害する化合物AP-7-168が、どのような分子機構で働くのかは分かっていなかった。
+- **疑問・課題**：β2ARを偏って阻害する化合物AP-7-168が、どのような分子機構で働くのかは分かっていなかった。
 - **アプローチ**：AP-7-168を結合させたβ2ARをクライオ電顕で解析し、生化学・生物物理の実験と細胞での二量体化の測定を組み合わせた。
 - **結果**：2分子のAP-7-168がTM3・4・5が作る空間に収まり、受容体2つをつないでいた（2.5 Å）。細胞でも二量体化が起きた。
 - **わかったこと**：二量体は隣の受容体との立体障害でGRKやβアレスチンの結合を妨げる一方、Gタンパク質は受け入れうると考えられる。
@@ -1164,7 +1168,7 @@ K48結合型の二ユビキチンに結合する小分子ユビスタチンBで�
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > Despite these promising findings, the molecular mechanism by which AP modulates β2AR function remains unclear, posing a considerable obstacle to the further development and optimization of AP as a therapeutic agent.  
-> — これまでの疑問・課題／Main
+> — 疑問・課題／Main
 
 > Here, using cryo-EM combined with various biochemical and biophysical approaches, we demonstrate that AP functions as a molecular glue by stabilizing a β2AR homodimer, which in turn alters the downstream signalling behaviours.  
 > — アプローチ／Main
@@ -1267,7 +1271,7 @@ AP-7-168は、2分子が互いに積み重なる形でTM3・4・5が作る空間
 
 流行株GII.4 Sydneyの殻をクライオ電顕で解析。抗体結合で殻タンパク質は11の構造をとる
 
-- **これまでの疑問・課題**：ヒトノロウイルスの殻が、抗体の圧力にどう応えるかは原子レベルで分かっていなかった。
+- **疑問・課題**：ヒトノロウイルスの殻が、抗体の圧力にどう応えるかは原子レベルで分かっていなかった。
 - **アプローチ**：流行株GII.4 SydneyのVLPと、抗体M6・Fab NORO-320の複合体をクライオ電顕と焦点を絞った精密化で解析した。
 - **結果**：結合部位の違いで、殻タンパク質VP1は11通りの構造をとった。壊れた粒子は小さな粒子に組み直された。
 - **わかったこと**：VP1は抗体の非対称な結合に合わせて形を変える。この柔軟さは、ワクチン設計に関わると著者は述べている。
@@ -1275,7 +1279,7 @@ AP-7-168は、2分子が互いに積み重なる形でTM3・4・5が作る空間
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > Yet, how the icosahedral HuNoV capsid responds to antibody pressure at the atomic level is still unclear.  
-> — これまでの疑問・課題／Abstract
+> — 疑問・課題／Abstract
 
 > Using asymmetric reconstructions and focused refinement procedures, we reveal the remarkable structural malleability of the capsids in response to binding of a human-derived neutralizing Fab, NORO-320, and a non-neutralizing llama-derived single domain nanobody (VHH) M6.  
 > — アプローチ／Introduction
@@ -1394,7 +1398,7 @@ M6を加えるとT=4粒子は壊れ、約30 nmの小さなT=1粒子に組み直�
 
 ΨDNAガイドとRNA標的に結合したAsCas12aを、クライオ電顕で解析した
 
-- **これまでの疑問・課題**：Cas12aがDNAのガイドを受け入れながらRNAを認識する仕組みは、構造として分かっていなかった。
+- **疑問・課題**：Cas12aがDNAのガイドを受け入れながらRNAを認識する仕組みは、構造として分かっていなかった。
 - **アプローチ**：AsCas12aをΨDNAガイドと40ヌクレオチドの標的RNAに結合させ、クライオ電顕で構造を決めた。
 - **結果**：ΨDNAのヘアピンは、PAM近傍の二本鎖がつく位置でPIDとWEDドメインに結合し、スペーサーはRNAとの二重鎖を作っていた。
 - **わかったこと**：ΨDNAの構造が、通常のガイドが作る空間の手がかりを再現するため、Cas12aはDNAガイドでRNAを認識できる。
@@ -1402,7 +1406,7 @@ M6を加えるとT=4粒子は壊れ、約30 nmの小さなT=1粒子に組み直�
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > However, how Cas12a structurally accommodates a DNA guide while recognizing an RNA substrate remained unknown.  
-> — これまでの疑問・課題／Main
+> — 疑問・課題／Main
 
 > Here, we determined the cryo-electron microscopy (cryo-EM) structure of Acidaminococcus sp. Cas12a (AsCas12a) bound to a ΨDNA guide and RNA target at 3.18-Å resolution  
 > — アプローチ／Main
@@ -1501,7 +1505,7 @@ PAM類似部位の配列を変えても活性は残る。プリンに富むAGAT�
 
 未公開のMac1–リガンド結晶構造551個で、AF3・Boltz-2・Chai-1を評価した
 
-- **これまでの疑問・課題**：共折りたたみ法の評価は、訓練データとの独立性が確かめにくく、テスト用の構造数も足りなかった。
+- **疑問・課題**：共折りたたみ法の評価は、訓練データとの独立性が確かめにくく、テスト用の構造数も足りなかった。
 - **アプローチ**：訓練の締め切り日より後にX線で決めた551個のMac1–リガンド構造を使い、3つの共折りたたみ法とDOCK3.7を比べた。
 - **結果**：3つの共折りたたみ法はいずれも半数超のリガンドを2 Å未満の誤差で再現した。ペプチドの反転や大きなループの開きは再現できなかった。
 - **わかったこと**：共折りたたみは既知リガンドの配置と序列付けに強い。ドッキングの候補選別では、ドッキングより優れるとは言えなかった。
@@ -1509,7 +1513,7 @@ PAM類似部位の配列を変えても活性は残る。プリンに富むAGAT�
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > While deep-learning co-folding methods can help address these challenges, their evaluation has been hampered by the difficulties in assessing independence from training data and insufficiently large test sets.  
-> — これまでの疑問・課題／Abstract
+> — 疑問・課題／Abstract
 
 > Here, we test the ability of co-folding methods to predict the structures of 551 ligands, 489 of which are of sufficient quality for evaluation, bound to the SARS-CoV-2 NSP3 macrodomain (Mac1) that were determined after the training cutoff dates.  
 > — アプローチ／Abstract
@@ -1607,7 +1611,7 @@ AmpC、σ2受容体、ドーパミンD4受容体の大規模ドッキングで�
 
 単量体の光化学系Iをクライオ電顕で高分解能に解析し、脂質や界面活性剤の配置を示した
 
-- **これまでの疑問・課題**：光化学系Iの単量体を、活性を保ったまま大量に得る方法と、高分解能の構造が必要だった。
+- **疑問・課題**：光化学系Iの単量体を、活性を保ったまま大量に得る方法と、高分解能の構造が必要だった。
 - **アプローチ**：三量体を界面活性剤C12E8と高温で単量体にし、クライオ電顕で構造を決め、分光法と小角中性子散乱で調べた。
 - **結果**：PsaL以外のサブユニットが見えた。SQD分子1個と、リング状に並ぶ16個のβDMが見つかった。
 - **わかったこと**：この単量体の構造は溶液中でも保たれていた。三量体との比較から、失われた赤色クロロフィルの割り当てを著者は示唆している。
@@ -1615,7 +1619,7 @@ AmpC、σ2受容体、ドーパミンD4受容体の大規模ドッキングで�
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > Here, we present a novel protocol for producing large quantities of nearly intact and active T. vestitus mPSI from purified, active tPSI.  
-> — これまでの疑問・課題／Introduction
+> — 疑問・課題／Introduction
 
 > Here, we have developed a novel protocol to obtain large amounts of intact, active mPSI from Thermosynechococcus vestitus (Tv) by dissociating highly purified tPSI using the detergent octaethylene glycol monododecyl ether (C12E8) at elevated temperatures.  
 > — アプローチ／Abstract
@@ -1733,7 +1737,7 @@ BDMで精製した三量体を、1%のC12E8と60°Cで30分処理すると、ほ
 
 ソフトランディングしたβ-ガラクトシダーゼを、30 µsのレーザー融解で再水和して解析した
 
-- **これまでの疑問・課題**：ソフトランディングでは試料が乾燥し、タンパク質が縮んだ形でしか観察できなかった。
+- **疑問・課題**：ソフトランディングでは試料が乾燥し、タンパク質が縮んだ形でしか観察できなかった。
 - **アプローチ**：着地させたタンパク質に非晶質の氷を重ね、30 µsのレーザーパルスで氷を一瞬溶かして再水和し、GroELとβ-ガラクトシダーゼを調べた。
 - **結果**：再水和した粒子は幅広い形の集団になった。一部の粒子は、天然に近い形に戻った。
 - **わかったこと**：著者は、融解の時間を延ばすなどの方法で全粒子を再水和できるとみており、ソフトランディングによる日常的な試料調製が近づくと述べている。
@@ -1741,7 +1745,7 @@ BDMで精製した三量体を、1%のC12E8と60°Cで30分処理すると、ほ
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > However, only compacted configurations are observed after soft-landing since the proteins are dehydrated in the process.  
-> — これまでの疑問・課題／Abstract
+> — 疑問・課題／Abstract
 
 > Here, we deposit a layer of amorphous ice onto the sample and briefly flash melt it to rehydrate the soft-landed proteins.  
 > — アプローチ／Abstract
@@ -1838,7 +1842,7 @@ GroELは着地すると高さが約24%、直径が約7%縮んだが、レーザ�
 
 ペプチドをつないだAIE分子とhPin1-WWドメインの複合体を、NMRの溶液構造で解析した
 
-- **これまでの疑問・課題**：AIE（凝集誘起発光）リガンドがタンパク質に結合した複合体の構造は、これまで報告されていなかった。
+- **疑問・課題**：AIE（凝集誘起発光）リガンドがタンパク質に結合した複合体の構造は、これまで報告されていなかった。
 - **アプローチ**：hPin1-WWの結合配列をつないだAIEペプチドを作り、蛍光滴定で結合を調べ、遊離状態と複合体の溶液NMR構造を決めた。
 - **結果**：遊離のF11はペプチドが芳香環の上に巻き付く。結合すると伸びて、hPin1-WWのF25などが芳香環に接触した。
 - **わかったこと**：芳香環がタンパク質表面に固定されて動きが制限されるため、結合すると蛍光が強くなる。
@@ -1846,7 +1850,7 @@ GroELは着地すると高さが約24%、直径が約7%縮んだが、レーザ�
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > However, so far, the structure of an AIE-ligand:protein complex has not been published.  
-> — これまでの疑問・課題／Introduction
+> — 疑問・課題／Introduction
 
 > While an AIE fluorophore with two conjugated peptides shows an enhanced fluorescence increase upon protein binding, a one-armed derivative enabled us to solve the structures of the free AIE-peptide and its complex.  
 > — アプローチ／Abstract
@@ -1936,7 +1940,7 @@ AIEコアはC字形のままβシートの上に載り、F25が中央に入り�
 
 ---
 
-# 注目の構造（新しい構造以外。実験で決めた構造で確かめた研究）
+# Structure-Based Study
 
 ## 16｜μOR–Gi 複合体（マウス・ヒト）
 
@@ -1954,7 +1958,7 @@ AIEコアはC字形のままβシートの上に載り、F25が中央に入り�
 
 既存の構造を使い、一分子FRETでμOR–Gi複合体のAHDの動きを測った。強い作動薬ほど開きが速い
 
-- **これまでの疑問・課題**：オピオイド受容体に結合した作動薬の効果が、結びついた G タンパク質にどう伝わるかは分かっていなかった。
+- **疑問・課題**：オピオイド受容体に結合した作動薬の効果が、結びついた G タンパク質にどう伝わるかは分かっていなかった。
 - **アプローチ**：既存の構造を使い、Gαi の 2 か所を蛍光標識して、一分子 FRET で α ヘリックスドメイン（AHD）の開閉を測った。
 - **結果**：効力の高い作動薬ほど AHD が開いた状態（低 FRET）にいる割合が高く、GTP 代謝回転と R2 = 0.97 で相関した。
 - **わかったこと**：受容体のリガンドは 70 Å 以上離れた結合部位から G タンパク質の形を調節し、効力を決める一因になると示唆される。
@@ -1963,7 +1967,7 @@ AIEコアはC字形のままβシートの上に載り、F25が中央に入り�
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > Although orthosteric ligands are known to modulate GPCR conformation, how these effects propagate to the bound G protein remains unclear.  
-> — これまでの疑問・課題／Abstract
+> — 疑問・課題／Abstract
 
 > Using single-molecule Förster resonance energy transfer imaging, we monitored AHD motions in Gi proteins coupled to the μ-opioid receptor across different ligand- and nucleotide-bound states.  
 > — アプローチ／Abstract
@@ -2074,7 +2078,7 @@ GTP に似せた GMP・PPi を加えると、AHD は短命な中間の FRET 状�
 
 ## 注目の構造の採点（43 本を確認し、10 本を採点）
 
-基準は `pipeline/impact.py`（10 点満点、7 点以上から最大 5 本）。
+基準は `pipeline/impact.py`（10 点満点、6 点以上から最大 3 本）。
 
 | 選定 | 論文 | 種類 | novelty | reach | structure | support | 計 | 理由 |
 |---|---|---|---|---|---|---|---|---|
@@ -2093,5 +2097,5 @@ GTP に似せた GMP・PPi を加えると、AHD は短命な中間の FRET 状�
 
 ## 記事にしていない新しい構造
 
-- [Site-selective Au(III)-mediated metalloenzyme conjugations](https://doi.org/10.1016/j.chempr.2026.103241) — *Chem*（新しい構造（ID は補足資料））
-- [The MODNAP benchmark set for modeling ribose-based modified nucleic acid and nucleic acid–protein complexes: a case study with AlphaFold 3](https://doi.org/10.1093/nar/gkag999) — *Nucleic Acids Res*（新しい構造（ID は補足資料））
+- [Site-selective Au(III)-mediated metalloenzyme conjugations](https://doi.org/10.1016/j.chempr.2026.103241) — *Chem*（新しい構造（PDB ID が本文にない））
+- [The MODNAP benchmark set for modeling ribose-based modified nucleic acid and nucleic acid–protein complexes: a case study with AlphaFold 3](https://doi.org/10.1093/nar/gkag999) — *Nucleic Acids Res*（新しい構造（PDB ID が本文にない））

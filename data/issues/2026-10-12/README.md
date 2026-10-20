@@ -6,7 +6,7 @@
 
 出典：この号の論文情報と全文は、米国国立医学図書館（NLM）の PMC オープンアクセスデータセット（AWS Open Data）から取得した。
 
-**注目の構造：2 本**（新しい構造ではないが、実験で決めた構造で確かめた注目の研究）
+**Structure Update 1 本** · **Structure-Based Study 2 本**（New Structure：構造が初めて解かれたタンパク質。Structure Update：既知のタンパク質の新しい構造。Structure-Based Study：既存の構造を使った注目の研究）
 
 ## Today's Structure（今日の一本）
 
@@ -33,7 +33,7 @@
 
 ---
 
-# 新しい構造
+# Picked up Today's Structure
 
 ## 1｜ヒトPI3Kδ（p110δ）
 
@@ -49,7 +49,7 @@
 
 結晶構造ではkα12は見えず、MDとHDX-MSでイデラリシブとの違いが現れた
 
-- **これまでの疑問・課題**：PI3Kのアイソフォームは触媒部位が似ていて選択的に阻害しにくく、ロギノリシブの結合様式がイデラリシブと違うかが課題だった。
+- **疑問・課題**：PI3Kのアイソフォームは触媒部位が似ていて選択的に阻害しにくく、ロギノリシブの結合様式がイデラリシブと違うかが課題だった。
 - **アプローチ**：ロギノリシブとの結晶構造（2.75 Å）に、分子動力学（MD）と水素重水素交換質量分析（HDX-MS）を組み合わせた。
 - **結果**：結晶ではkα12の電子密度が得られなかった。HDX-MSでkα12が交換から守られたのは、ロギノリシブ結合時だけだった。
 - **わかったこと**：ロギノリシブはkα12の塩基性残基との相互作用で不活性型を安定化し、δ型への選択性にも関わると著者は考えている。
@@ -58,10 +58,10 @@
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > Achieving high selectivity among PI3K isoforms remains challenging due to the conserved catalytic site.  
-> — これまでの疑問・課題／Introduction
+> — 疑問・課題／Introduction
 
 > We therefore hypothesized that the binding mode of roginolisib to PI3Kδ might be unique, potentially accounting for its distinct safety profile observed in the clinic.  
-> — これまでの疑問・課題／Introduction
+> — 疑問・課題／Introduction
 
 > Using a combination of X-ray crystallography, molecular dynamics simulations, and hydrogen-deuterium exchange mass spectrometry, we describe the mechanism driving roginolisib’s potent and isoform-selective inhibition of PI3Kδ.  
 > — アプローチ／Abstract
@@ -164,7 +164,7 @@ CLL患者の細胞をex vivoで処理すると、ロギノリシブは高用量�
 
 ---
 
-# 注目の構造（新しい構造以外。実験で決めた構造で確かめた研究）
+# Structure-Based Study
 
 ## 2｜CBPのNCBD（マウス）
 
@@ -182,7 +182,7 @@ CLL患者の細胞をex vivoで処理すると、ロギノリシブは高用量�
 
 既存のNMR構造2KKJなどと比べ、19F NMRでヘリックスの向きを調べた
 
-- **これまでの疑問・課題**：モルテングロビュール（折りたたみが緩く揺らぐ状態）のNCBDは、構造の詳細を調べにくい。
+- **疑問・課題**：モルテングロビュール（折りたたみが緩く揺らぐ状態）のNCBDは、構造の詳細を調べにくい。
 - **アプローチ**：ループの2か所のプロリンを、立体が逆の4-フルオロプロリン（4R・4S）に置き換え、19F NMRなどで調べた。
 - **結果**：NOEによる構造計算で3本のヘリックスの向きが変種ごとに異なり、AD-ACTRとの結合力も変わった。
 - **わかったこと**：炭素4位の立体の反転だけで、ヘリックスの向きと結合力が変わった。プロリンは離れた部位の動きの連動を調節しうる。
@@ -191,7 +191,7 @@ CLL患者の細胞をex vivoで処理すると、ロギノリシブは高用量�
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > However, due to multiple conformations existing in dynamic equilibrium on a wide range of timescales, the detailed structural characterization of molten‐globules remains challenging.  
-> — これまでの疑問・課題／Introduction
+> — 疑問・課題／Introduction
 
 > To assess the specific role of prolines in the conformational dynamics of the NCBD, we used a chemical biology approach combining NMR with the site‐specific incorporation of stereoisomeric 4‐(R)‐ and 4‐(S)‐fluoroprolines within both loops of NCBD (Figure 1A).  
 > — アプローチ／Introduction
@@ -315,7 +315,7 @@ P30の4R体だけが、中性のpHでアミロイドを作った。この変種�
 
 既存の5GRJと比べて確かめ、PD-L1のC末端の保護も見えた
 
-- **これまでの疑問・課題**：抗体は大きく柔らかいため、標的との複合体の高分解能の構造は得にくい。
+- **疑問・課題**：抗体は大きく柔らかいため、標的との複合体の高分解能の構造は得にくい。
 - **アプローチ**：全長のアベルマブとPD-L1の複合体を、HDX-MS（重水素の取り込みの測定）と固体NMRで調べ、既存の5GRJと比べた。
 - **結果**：HDX-MSと固体NMRは、5GRJの結合面と一致した。HDX-MSでは、PD-L1のC末端にも強い保護が見られた。
 - **わかったこと**：アベルマブと融合タンパク質は同じ結合面でPD-L1に結合する。C末端の保護は、一過性の効果か構築物に特有の挙動かもしれない。
@@ -324,7 +324,7 @@ P30の4R体だけが、中性のpHでアミロイドを作った。この変種�
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > In particular, antibodies are large but very flexible macromolecules, and these features prevent the acquisition of high‐resolution structures of their complexes with target proteins.  
-> — これまでの疑問・課題／Introduction
+> — 疑問・課題／Introduction
 
 > In this study, we introduce an integration of solid‐state nuclear magnetic resonance (SSNMR) and hydrogen–deuterium exchange mass spectrometry (HDX‐MS) to explore the interaction between Avelumab and the programmed cell death‐ligand 1 (PD‐L1).  
 > — アプローチ／Abstract
@@ -437,7 +437,7 @@ PD-L1のC末端（K124〜Y134）の強い保護は、HDX-MSだけが示した。
 
 ## 注目の構造の採点（21 本を確認し、2 本を採点）
 
-基準は `pipeline/impact.py`（10 点満点、7 点以上から最大 5 本）。
+基準は `pipeline/impact.py`（10 点満点、6 点以上から最大 3 本）。
 
 | 選定 | 論文 | 種類 | novelty | reach | structure | support | 計 | 理由 |
 |---|---|---|---|---|---|---|---|---|

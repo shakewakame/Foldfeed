@@ -4,6 +4,8 @@
 
 **今日の新しい構造：4 本**　Europe PMC に 2026-10-06 に登録されたオープンアクセス論文 25 本のうち、新しい構造を報告した論文は 4 本。すべて紹介する。
 
+**New Structure 1 本** · **Structure Update 3 本**（New Structure：構造が初めて解かれたタンパク質。Structure Update：既知のタンパク質の新しい構造。Structure-Based Study：既存の構造を使った注目の研究）
+
 ## Today's Structure（今日の一本）
 
 **1｜PARP2は、ヌクレオソームの2周にまたがって切断を認識する**（ヒトPARP2–HPF1／ヌクレオソーム）
@@ -29,6 +31,8 @@
 
 ---
 
+# Picked up Today's Structure
+
 ## 1｜ヒトPARP2–HPF1／ヌクレオソーム
 
 ### Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping
@@ -41,7 +45,7 @@
 
 阻害剤はDNA結合面を固めており、PARP2がクロマチンに捕捉される理由の説明になりうる
 
-- **これまでの疑問・課題**：クロマチンの狭い構造の中で、PARP2が一本鎖切断をどう認識するかは不明だった。
+- **疑問・課題**：クロマチンの狭い構造の中で、PARP2が一本鎖切断をどう認識するかは不明だった。
 - **アプローチ**：一本鎖切断を入れたヌクレオソームとPARP2・HPF1の複合体を、クライオ電顕で解析した。
 - **結果**：WGRドメインが切断部位に、ヘリカルドメインとHPF1が反対側のDNAに結合し、DNAの2周にまたがる。
 - **わかったこと**：この結合様式が、遊離DNAよりヌクレオソーム上の切断を好む理由を説明する。
@@ -50,7 +54,7 @@
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > Single-strand DNA breaks are among the most frequent forms of DNA damage, yet how PARP2 recognizes these lesions within the constrained geometry of chromatin remains unclear.  
-> — これまでの疑問・課題／Abstract
+> — 疑問・課題／Abstract
 
 > Here we use cryogenic electron microscopy (cryo-EM) to determine structures of PARP2 and HPF1 bound to nucleosomes containing a site-specific single-strand break (SSB) at superhelical location + 5.3.  
 > — アプローチ／Abstract
@@ -138,6 +142,8 @@ WGRドメインが上側のDNAジャイアで切断を認識し、HDのArg296と
 
 ---
 
+# New Structure
+
 ## 2｜SpNanR（肺炎球菌）
 
 ### Mechanism of NanR transcriptional activation of sialic acid metabolism in Streptococcus pneumoniae
@@ -152,7 +158,7 @@ WGRドメインが上側のDNAジャイアで切断を認識し、HDのArg296と
 
 全長のapo型とDNA結合型の構造を決定。Arg67の対がDNAの副溝に入り込む
 
-- **これまでの疑問・課題**：NanRがシアル酸の代謝遺伝子をどう活性化するのか、分子レベルでは不明だった。
+- **疑問・課題**：NanRがシアル酸の代謝遺伝子をどう活性化するのか、分子レベルでは不明だった。
 - **アプローチ**：代謝物の探索と解析に加え、apo型・代謝物結合型・DNA結合型の全長構造を決めた。
 - **結果**：代謝物が結合すると四量体が安定化するが、DNAへの親和性は変わらない。
 - **わかったこと**：DNA結合ドメインが糖イソメラーゼドメインと構造的に連動しないためと説明される。
@@ -161,10 +167,10 @@ WGRドメインが上側のDNAジャイアで切断を認識し、HDのArg296と
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > In Streptococcus pneumoniae, the RpiR transcriptional regulator NanR (SpNanR) senses sialic acid in the environment and upregulates transcription of the nan and sia A operons to increase uptake and metabolism of sialic acid.  
-> — これまでの疑問・課題／Abstract
+> — 疑問・課題／Abstract
 
 > The molecular basis of this activation is unknown.  
-> — これまでの疑問・課題／Abstract
+> — 疑問・課題／Abstract
 
 > We identify the effector that binds SpNanR to regulate expression of the nan and siaA operons.  
 > — アプローチ／Introduction
@@ -266,6 +272,8 @@ ManNAc-6-Pは1分子で3つのプロトマーにまたがって結合し（リ�
 
 ---
 
+# Structure Update
+
 ## 3｜LbCas12a Lid2変異体
 
 ### Size and sequence variation of the Lid of the Cas12a nuclease domain results in a nickase phenotype
@@ -278,7 +286,7 @@ ManNAc-6-Pは1分子で3つのプロトマーにまたがって結合し（リ�
 
 Lid2変異体のクライオ電顕構造（2.5 Å）では、標的鎖を活性部位に装填する動きが妨げられていた
 
-- **これまでの疑問・課題**：Cas12aは1つのRuvCで両鎖を切るため、ニッカーゼへの改変は容易でなかった。
+- **疑問・課題**：Cas12aは1つのRuvCで両鎖を切るため、ニッカーゼへの改変は容易でなかった。
 - **アプローチ**：大腸菌でLid領域の変異体を探し、Lid2を2.5 Åのクライオ電顕で解析した。
 - **結果**：Lid2ではαヘリックス状のLidが置き換わり、非標的鎖だけを切るニッカーゼになった。
 - **わかったこと**：作り替えたLidが非標的鎖を活性部位に保ち、標的鎖の切断に必要な動きを妨げるとみられる。
@@ -287,7 +295,7 @@ Lid2変異体のクライオ電顕構造（2.5 Å）では、標的鎖を活性�
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > Because Cas12a nucleases have a single nuclease domain (RuvC) that cuts both strands, it is not straightforward to engineer a nickase [6].  
-> — これまでの疑問・課題／Introduction
+> — 疑問・課題／Introduction
 
 > We describe an unbiased in vivo screen in Escherichia coli to identify LbCas12a nickase variants.  
 > — アプローチ／Abstract
@@ -397,7 +405,7 @@ Lid2変異体のクライオ電顕構造（2.5 Å）では、標的鎖を活性�
 
 全長の大腸菌NNTを複数の状態で解析。阻害剤パルミトイルCoAはapoに近い状態で固定する
 
-- **これまでの疑問・課題**：全長の大腸菌NNTの構造と、状態の変化は分かっていなかった。
+- **疑問・課題**：全長の大腸菌NNTの構造と、状態の変化は分かっていなかった。
 - **アプローチ**：全長の大腸菌NNTを、apo・基質結合・阻害剤結合の状態でクライオ電顕で解析した。
 - **結果**：apoでは2つのdIIIが膜ドメインに張り付き、基質が結合すると外れて通路の向きが変わる。
 - **わかったこと**：dIIIの位置が、プロトン通路の開閉と触媒サイクルを左右する。
@@ -406,7 +414,7 @@ Lid2変異体のクライオ電顕構造（2.5 Å）では、標的鎖を活性�
 <details><summary>この紹介文の根拠（論文本文）</summary>
 
 > Although the structures of isolated (dI)2 and (dI)2(dIII) complexes of E. coli transhydrogenase (EcTH) have been reported,21,31 the architecture and conformational landscape of the full-length enzyme have remained unknown despite extensive biochemical investigation.  
-> — これまでの疑問・課題／Introduction
+> — 疑問・課題／Introduction
 
 > Here we present cryo-EM structures of full-length Escherichia coli transhydrogenase in apo, substrate-bound, and inhibitor-bound states.  
 > — アプローチ／Abstract
