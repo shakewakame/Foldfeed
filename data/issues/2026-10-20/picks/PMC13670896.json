@@ -1,0 +1,167 @@
+{
+  "pmcid": "PMC13670896",
+  "rank": 1,
+  "section": "impact",
+  "headline": "ナノボディで見分ける、β1ARがリガンドごとに取る形",
+  "subhead": "既存のX線構造を手がかりに、ネイティブMSでリガンド特異的な状態を測った",
+  "target_label": "β1アドレナリン受容体（シチメンチョウ）",
+  "target_en": "Beta-1 adrenergic receptor (Meleagris gallopavo)",
+  "summary": {
+    "question": "リガンドごとの効き方の違いが、受容体の細胞内側の形とどう結びつくかは、静的な構造だけでは分からなかった。",
+    "approach": "ネイティブMSでβ1ARと活性型ナノボディの複合体を定量し、CDRを入れ替えた変異体と蛍光測定も加えた。",
+    "result": "複合体の量は cAMP 応答と相関し（r=0.88〜0.95）、Nb6B9 は弱い作動薬でも Nb80 より多く複合体を作った。",
+    "learned": "Nb6B9 は完全作動薬が作る活性型とは異なる、リガンド特異的な形を認識する。CDR1 と CDR3 が鍵で、TM5・TM6 付近が関わるとみられる。",
+    "open": "他の受容体、完全な三量体Gタンパク質、アレスチン、天然の脂質環境への拡張が今後の課題として挙げられている。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "High-resolution structural studies reveal discrete, ligand-stabilized states, but these static snapshots do not fully capture the dynamic processes underlying GPCR activation and ligand efficacy.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "we established a native mass spectrometry (nMS) platform to probe ligand-induced conformational heterogeneity at the GPCR intracellular interface.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "we utilized Nb6B9 chimeras with exchanged complementarity-determining regions (CDRs)",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Monobromobimane (mBBr) was used to covalently label Cys6.27 at the cytoplasmic end of TM6 in β1AR",
+          "section": "Results and Discussion"
+        }
+      ],
+      "result": [
+        {
+          "quote": "significant positive correlations were observed across all active-state nanobodies",
+          "section": "Results and Discussion"
+        },
+        {
+          "quote": "Compared with Nb80, its parental nanobody derived through directed evolution, Nb6B9 displayed substantially greater complex formation under selected weak-agonist and antagonist treatment",
+          "section": "Results and Discussion"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "These interactions indicate that Nb6B9 recognizes ligand-specific conformations distinct from active states induced by full agonists.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "identified CDR1 and CDR3 as the primary drivers for ligand-specific recognition, implicating the involvement of receptor transmembrane motifs TM5 and TM6 in this conformational diversity",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Future applications could extend this platform to other receptor types, full heterotrimeric G proteins, arrestins, and native lipid environments",
+          "section": "Conclusion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "receptor"
+  ],
+  "topics": [
+    "antibody",
+    "membrane",
+    "method"
+  ],
+  "highlights": [
+    {
+      "tag": "手法の工夫",
+      "text": "ネイティブMSで受容体とナノボディの複合体の量を直接数え、10種のリガンドでの量を既報の cAMP 応答と照らした。Nb80・Nb71・Nb6B9 のどれでも正の相関が出て、測定値がリガンドの効力を反映すると確かめられた。",
+      "evidence": [
+        {
+          "quote": "broadly correlated with previously reported cAMP responses, providing validation of the quantitative nMS readout",
+          "section": "Introduction"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "Nb6B9 の CDR を Nb80 の配列に戻すと、CDR1 または CDR3 では弱い作動薬での複合体が25%以上減り、CDR2 では約25%増えた。既存の複合体構造では、CDR3 のループが細胞内の空洞に深く入り TM5・TM6 と接する。",
+      "evidence": [
+        {
+          "quote": "reversion of CDR1 or CDR3 significantly reduced β1AR-nanobody complex formation by more than 25%",
+          "section": "Results and Discussion"
+        },
+        {
+          "quote": "reversion of CDR2 markedly increased complex formation for cluster 2 ligands by approximately 25%",
+          "section": "Results and Discussion"
+        },
+        {
+          "quote": "with the CDR3 loop inserting deeply into the transducer-binding cavity and forming extensive interactions with TM5 and TM6",
+          "section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "サルブタモールの二つの鏡像異性体は Nb6B9 との複合体の作りやすさが異なり、EC50 は (R) 体 9.1 μM、(S) 体 45.1 μM だった。既存の (R)-サルブタモール複合体では、β位のヒドロキシ基が TM3・TM7 の残基と2.6〜3.3 Å で接する。(S) 体ではこの距離が3.6〜5.3 Å に広がると見積もられている。",
+      "evidence": [
+        {
+          "quote": "(R)-salbutamol (EC50 9.1 μM, 95% CI: 6.6–13.3 μM) exhibited a significantly lower EC50 than (S)-salbutamol (EC50 45.1 μM, 95% CI: 33.0–72.8 μM)",
+          "section": "Results and Discussion"
+        },
+        {
+          "quote": "forming contacts of approximately 2.6–3.3 Å",
+          "section": "Results and Discussion"
+        },
+        {
+          "quote": "increasing the corresponding distances to approximately 3.6–5.3 Å",
+          "section": "Results and Discussion"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "熱安定化したシチメンチョウβ1ARを Sf9 昆虫細胞で発現。",
+    "construct": "残基45–243と272–367。N・C末端と ICL3 の大部分を欠く。",
+    "purification": "DDM で可溶化し TALON で精製。ネイティブMS用に界面活性剤 G1 へ交換。",
+    "sample_prep": "受容体を100 μM のリガンドと氷上で30分処理してナノボディと混ぜた。",
+    "data_collection": "Q-Exactive UHMR Orbitrap で測定。",
+    "evidence": [
+      {
+        "quote": "for expression in Sf9 insect cells (Invitrogen, Carlsbad, CA) cultured in Sf-900 III SFM medium",
+        "section": "Experimental Section"
+      },
+      {
+        "quote": "The construct comprises residues 45–243 and 272–367, corresponding to N- and C-terminal truncations and deletion of most of ICL3.",
+        "section": "Experimental Section"
+      },
+      {
+        "quote": "buffer-exchanged into 200 mM ammonium acetate containing 2× the critical micelle concentration of custom-synthesized detergent G1",
+        "section": "Experimental Section"
+      },
+      {
+        "quote": "all ligand-treated samples were prepared by incubating purified β1AR with each ligand at a final concentration of 100 μM for 30 min on ice prior to complex assembly",
+        "section": "Experimental Section"
+      },
+      {
+        "quote": "Receptor–nanobody complexes under ligand treatment were characterized by nMS using a Q-Exactive UHMR Orbitrap mass spectrometer",
+        "section": "Experimental Section"
+      }
+    ]
+  },
+  "keywords": [
+    "β1AR",
+    "ネイティブMS",
+    "ナノボディ"
+  ],
+  "editor_notes": "新しい構造ではない。構造は既存の 6H7M・6H7L・4GPO などを比較・解釈に使っただけ。図は 6H7M（Nb6B9・サルブタモール複合体）。測定は自前のnMSと蛍光で、structure 1 と評価。",
+  "ga_pdb_id": "6H7M",
+  "method_label": "Native MS・Fluorescence",
+  "ligand_label": "サルブタモール",
+  "legend_labels": [
+    "チオレドキシン（融合タンパク質）",
+    "β1AR（受容体）",
+    "Nb6B9（ナノボディ）"
+  ],
+  "ligand_names": {
+    "68H": "サルブタモール"
+  },
+  "site_ligand": "68H"
+}

@@ -1,0 +1,169 @@
+{
+ "pdb_id": "9S2C",
+ "view": {
+  "target": [
+   159.97,
+   164.39,
+   155.41
+  ],
+  "dir": [
+   -0.9912,
+   0.0831,
+   0.103
+  ],
+  "up": [
+   -0.0865,
+   0.1826,
+   -0.9794
+  ],
+  "half": [
+   41.7,
+   65.7
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "Cdr1（排出ポンプ）",
+   "desc": "Pleiotropic ABC efflux transporter of multiple drugs CDR1",
+   "entity": "1"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "ATP",
+   "label": "ATP",
+   "color": "#C23B8E",
+   "desc": "Adenosine-5'-Triphosphate",
+   "entity": [
+    "2"
+   ],
+   "sites": [
+    [
+     "B",
+     "1601"
+    ]
+   ]
+  },
+  {
+   "id": "VO4",
+   "label": "バナジン酸",
+   "color": "#2F9E57",
+   "desc": "Vanadate Ion",
+   "entity": [
+    "3"
+   ],
+   "sites": [
+    [
+     "C",
+     "1602"
+    ]
+   ]
+  },
+  {
+   "id": "ADP",
+   "label": "ADP",
+   "color": "#7A52C7",
+   "desc": "Adenosine-5'-Diphosphate",
+   "entity": [
+    "5"
+   ],
+   "sites": [
+    [
+     "E",
+     "1604"
+    ]
+   ]
+  },
+  {
+   "id": "ERG",
+   "label": "エルゴステロール",
+   "color": "#D6A21E",
+   "desc": "Ergosterol",
+   "entity": [
+    "6"
+   ],
+   "sites": [
+    [
+     "F",
+     "1605"
+    ],
+    [
+     "G",
+     "1606"
+    ],
+    [
+     "H",
+     "1607"
+    ],
+    [
+     "I",
+     "1608"
+    ],
+    [
+     "J",
+     "1609"
+    ],
+    [
+     "K",
+     "1610"
+    ],
+    [
+     "L",
+     "1611"
+    ],
+    [
+     "M",
+     "1612"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "ADP",
+  "residues": [
+   "T288",
+   "R296",
+   "V298",
+   "S299",
+   "E302",
+   "V866",
+   "I875",
+   "A894",
+   "G896",
+   "A897",
+   "G898",
+   "K899",
+   "T900",
+   "T901",
+   "M912"
+  ],
+  "hbonds": 16,
+  "pi": 1,
+  "neighbours": [
+   "バナジン酸"
+  ],
+  "label": "ADP"
+ },
+ "hero_view": {
+  "target": [
+   159.97,
+   164.39,
+   155.41
+  ],
+  "dir": [
+   -0.9912,
+   0.0831,
+   0.103
+  ],
+  "up": [
+   -0.0865,
+   0.1826,
+   -0.9794
+  ],
+  "half": [
+   41.7,
+   65.7
+  ]
+ }
+}

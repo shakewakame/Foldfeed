@@ -1,0 +1,349 @@
+{
+ "screened": 62,
+ "scored": [
+  {
+   "pmcid": "PMC13670896",
+   "type": "method",
+   "scores": {
+    "novelty": 2,
+    "reach": 2,
+    "structure": 1,
+    "support": 2
+   },
+   "selected": true,
+   "reason": "ネイティブ質量分析とナノボディで、リガンドごとのβ1ARの細胞内側の状態の違いを数値化し、弱いアゴニストの状態を Nb6B9 だけが捉えると示した。自前の質量分析・蛍光測定とキメラで確かめ、既存の結晶構造の上で CDR の役割を解釈している。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "Notably, leveraging the quantitative capacity of nMS, we uncovered distinct propensities of two highly similar nanobodies, Nb80 and Nb6B9, and showed that Nb6B9 engages weak-agonist-stabilized receptor states more effectively than Nb80.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "G protein-coupled receptors (GPCRs) are central physiological signal transducers and represent a primary class of therapeutic targets.",
+      "section": "Abstract"
+     }
+    ],
+    "structure": [
+     {
+      "quote": "To gain structural insights, we utilized Nb6B9 chimeras with exchanged complementarity-determining regions (CDRs) and identified CDR1 and CDR3 as the primary drivers for ligand-specific recognition, implicating the involvement of receptor transmembrane motifs TM5 and TM6 in this conformational diversity.",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "These results suggest that ligand-dependent complex formation measured by nMS broadly reflects the reported β1AR signaling efficacy, supporting the use of active-state nanobodies as biophysical probes of ligand-dependent receptor activation.",
+      "section": "Results and Discussion"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13674592",
+   "type": "method",
+   "scores": {
+    "novelty": 2,
+    "reach": 2,
+    "structure": 2,
+    "support": 1
+   },
+   "selected": true,
+   "reason": "Fab に金ナノ粒子を剛直に結合させ、脳スライスのクライオ ET で AMPA 受容体の位置と脱感作時の形を調べる手法。実験のクライオ ET が結論の中心。本文が未公開で要旨のみの評価（support 1）。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "Here we attach AuNPs to Fab antibody fragments via cysteine residues on defined elements of secondary structure and show that the AuNPs are rigidly bound to the Fab.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "However, resolving smaller complexes and molecules is challenging and presents a roadblock to the broad application of cryo-ET.",
+      "section": "Abstract"
+     }
+    ],
+    "structure": [
+     {
+      "quote": "We use these Fab-AuNP conjugates to locate AMPA receptors and probe their conformation upon desensitization with sub nanometer resolution in tomograms derived from brain slice lamella.",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "By harnessing small, homogeneous AuNPs with precise conjugation to a Fab, we have developed reagents that enable direct investigation of conformational states of previously unidentifiable biomolecules and complexes in tomograms.",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13674267",
+   "type": "drug",
+   "scores": {
+    "novelty": 2,
+    "reach": 1,
+    "structure": 1,
+    "support": 2
+   },
+   "selected": true,
+   "reason": "脳に入り GBA2 だけを共有結合で止める初の阻害剤を、細胞とマウスで示した。細菌の相同体 TxGH116 との結晶構造で共有結合を確かめた（structure 1、選択性の説明は MD）。GBA2 という一つの系の成果で reach は 1。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "Here, we report the development of the first brain-penetrant, covalent inhibitor that selectively inactivates GBA2 in vivo.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "Together, these results establish β-d-Araf cyclitol aziridine 5 as a versatile inhibitor for selective, covalent GBA2 inhibition, well suited to dissect GBA2 biology in vivo, particularly in neurological lysosomal storage disorders.",
+      "section": "Abstract"
+     }
+    ],
+    "structure": [
+     {
+      "quote": "The structure revealed that compound 5 reacts with the enzyme, forming a covalent bond between Glu441 and the C1 atom of the β-d-Araf N-alkylaziridine 5",
+      "section": "Results"
+     }
+    ],
+    "support": [
+     {
+      "quote": "Both methods revealed a clear dose-dependent inhibition of GBA2, with near-complete inhibition at 25 nmol in brain, liver, kidney and spleen.",
+      "section": "Results"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13670219",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 2,
+    "reach": 1,
+    "structure": 1,
+    "support": 2
+   },
+   "selected": false,
+   "reason": "EPR・IR・光分解でニトロゲナーゼへの CO 結合を E1 状態と整理した。ただし根拠は分光とQM/MMで、X 線・クライオ電顕・NMR による構造の確認はなく（structure 1 は自前の分光データに対する最大限の評価）、同点の 6 点では GBA2 の論文を優先した。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "We find that CO binds predominantly at the E1 state, whereas EPR-active species correspond to CO-bound E2 states.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "Nitrogenase drives biological nitrogen fixation through an eight-step cycle, in which “n” electrons and protons are accumulated across the En catalytic states.",
+      "section": "Abstract"
+     }
+    ],
+    "structure": [
+     {
+      "quote": "Here, we combine static and stopped-flow IR, EPR spectroscopy, photolysis, and quantum mechanical/molecular mechanical (QM/MM) calculations, supported by non-negative matrix factorization (NMF), to investigate CO binding under varying electron flux, varying CO pressure, and H2 pressure.",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "We find that CO binds predominantly at the E1 state, whereas EPR-active species correspond to CO-bound E2 states.",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13670894",
+   "type": "method",
+   "scores": {
+    "novelty": 2,
+    "reach": 2,
+    "structure": 0,
+    "support": 2
+   },
+   "selected": false,
+   "reason": "分割した Cas12a の活性化装置で一塩基多型を見分ける設計だが、実験は FRET・EMSA・切断アッセイで、構造は AlphaFold3 と既存の 8Y04 の引用のみ（structure 0）。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "The resulting split-duplex architecture provides an ultraspecific platform for resolving single-nucleotide polymorphisms in the PAM-less DNA strand.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "CRISPR-Cas12a is a programmable RNA-guided endonuclease whose activation by double-stranded DNA normally depends on the recognition of an adjacent protospacer-adjacent motif (PAM), which constrains target selection in diagnostic applications.",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "FRET, electrophoretic mobility shift, fluorescence polarization, and functional assays indicate that either fragment can associate with Cas12a, but that robust productive activation requires the PAM-containing Pp duplex together with the Pd duplex.",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13669308",
+   "type": "drug",
+   "scores": {
+    "novelty": 2,
+    "reach": 1,
+    "structure": 0,
+    "support": 2
+   },
+   "selected": false,
+   "reason": "SPT を標的とする新しい抗真菌化合物を遺伝学・代謝解析・耐性変異で示したが、結合部位は既存の酵母 SPT 構造（8C80）に基づくホモロジーモデルのみで、実験構造の確認がない（structure 0）。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "These findings validate SPT as a promising target and introduce a structurally distinct sphingolipid biosynthesis inhibitor with therapeutic potential.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "The global rise in fungal infections, driven by expanding at-risk populations and growing antifungal resistance, highlights the need for new therapies.",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "The mode of action was confirmed by experimental evolution, yielding a resistant strain with a non-synonymous mutation in the SPT-encoding gene, LCB2.",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13669341",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 2,
+    "reach": 2,
+    "structure": 0,
+    "support": 1
+   },
+   "selected": false,
+   "reason": "トリヌクレオソームの全原子 MD を既存のクライオ ET マップに当てはめる手法。MD が中心で、マップは先行研究のもの。自前の実験構造がない（structure 0）。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "The results reveal that tri-nucleosome models can be successfully used for fitting and the near-atomistic interpretation of cryo-ET density maps of native human chromatin.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "Dynamics and physical state of chromatin are crucial in regulating gene expression, DNA replication, and repair.",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "Notably, the distributions of MD-generated structural parameters of tri-nucleosomes were found to be in strong agreement with those of experimental condensed chromatin arrays.",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13669394",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 2,
+    "reach": 1,
+    "structure": 0,
+    "support": 2
+   },
+   "selected": false,
+   "reason": "Ang II がアンチトロンビンを活性化するという機構をマウスで示したが、結合様式は AlphaFold3 と MD で、既存の 1TB6 は図示のみ。実験構造がない（structure 0）。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "These results identify Ang II as a key coagulation regulator with heparin-like function, suggesting that targeting Ang II-coagulation pathway could be a novel strategy to mitigate cerebral bleeding.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "Hypertension has paradoxical prothrombotic-hemorrhagic predisposition toward cerebral infarction and intracerebral hemorrhage (ICH), but the mechanism remains poorly understood.",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "Conversely, anti-Ang II monoclonal antibody promoted coagulation, aggravating thrombus formation and alleviating ICH.",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC7619568",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 2,
+    "reach": 1,
+    "structure": 0,
+    "support": 2
+   },
+   "selected": false,
+   "reason": "Cav3.1 がロイシンセンサーだと示したが、結合部位は既存のクライオ電顕構造（6KZO）へのドッキングと変異体で、ドッキングの出発点に使っただけ（structure 0）。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "Here we show that Cacna1g, encoding for the T-type voltage-gated calcium channel Cav3.1, is enriched in hypothalamic leucine-sensing neurons and mediates neuronal leucine sensing.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "Last, we show that pharmacological activation of mediobasal hypothalamic Cav3.1 promotes weight loss in diet-induced obese mice and potentiates the weight loss response to anorectic agents such as liraglutide.",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "Genetic deletion of Cacna1g in POMC neurons abolishes the appetite- and weight-suppressive effects of high protein feeding.",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13674506",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 2,
+    "reach": 1,
+    "structure": 0,
+    "support": 2
+   },
+   "selected": false,
+   "reason": "HAPSTR1 が HUWE1 をクロマチンに呼ぶという経路を CRISPR スクリーンで示したが、結合面は AlphaFold3 のモデルのみ（structure 0）。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "We show that HAPSTR1 recruits the E3 ligase HUWE1 to the chromatin, keeping the chromatin-associated proteome in check, and is itself turned over by HUWE1 during cell cycle progression.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "Our findings uncover protein networks exhibiting synthetic lethality with ubiquitin signaling blockade and highlight vulnerabilities of actively proliferating cells to proteostatic imbalance at the chromatin.",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "Structural modeling of the HAPSTR1/HUWE1 complex, supported by mutational analysis, demonstrates that loss of HUWE1 binding renders HAPSTR1 unable to support cellular proliferation when ubiquitin signaling is suppressed.",
+      "section": "Abstract"
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,170 @@
+{
+  "pmcid": "PMC7619301",
+  "rank": 1,
+  "headline": "動原体の酵素KKT23は、トリパノソーマのH2Aをアセチル化する",
+  "subhead": "酵素ドメインの結晶構造はGCN5に最も近く、KKT23を減らすとH2Aのアセチル化が下がった",
+  "target_label": "KKT23（トリパノソーマ）",
+  "target_en": "KKT23 (T. brucei)",
+  "summary": {
+    "question": "動原体のタンパク質KKT23はアセチル基転移酵素ドメインを持つが、その機能も構造も分かっていなかった。",
+    "approach": "酵素ドメインをX線結晶構造解析とNMRで調べ、ヒストンのアセチル化を試験管内とKKT23を減らした細胞で調べた。",
+    "result": "酵素ドメインはヒトGCN5に近く（RMSD 1.2 Å）、H2A C末端の尾部のK119など5か所をアセチル化した。",
+    "learned": "KKT23はGCN5に似た構造の酵素で、トリパノソーマのH2A C末端の尾部のアセチル化の一部はKKT23に依存する。",
+    "open": "H2AのK115・K119・K120を修飾する酵素や、KKT23によるアセチル化の意義は今後の課題だ。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "KKT23 is a constitutively localized kinetochore protein containing a C-terminal acetyltransferase domain of unknown function.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "The function or structure of KKT23 remains unknown.",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here, using X-ray crystallography and nuclear magnetic resonance (NMR) spectroscopy, we have determined the structure and dynamics of the KKT23 acetyl-transferase domain from Trypanosoma brucei",
+          "section": "Abstract"
+        },
+        {
+          "quote": "We find that KKT23 can acetylate the C-terminal tail of histone H2A and that knockdown of KKT23 results in decreased H2A acetylation levels in T. brucei.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "The structural alignment between KKT23125−348 and human GCN5 revealed a remarkable similarity, with a root-mean-square deviation (RMSD) of 1.2 Å (114–114 Cα atoms)",
+          "section": "Results"
+        },
+        {
+          "quote": "We found that lysine residues on the C-terminal tail of H2A were robustly acetylated (K119, K120, K122, K125, and K128)",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "These results show that the hyperacetylation of the histone H2A C-terminal tail partly depends on KKT23 in vivo.",
+          "section": "Results"
+        },
+        {
+          "quote": "Taken together, our structural characterization reveals that KKT23 has an acetyltransferase fold with the closest structural similarity to GCN5 histone acetyltransferases.",
+          "section": "Results"
+        }
+      ],
+      "open": [
+        {
+          "quote": "It will be important to identify which acetyltransferase(s) are responsible for the H2A C-terminal acetylation in the future.",
+          "section": "Discussion"
+        },
+        {
+          "quote": "It will also be important to reveal the functional significance of histone H2A acetylation by KKT23.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "enzyme",
+    "chromatin"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "酵素ドメインに最も近い構造はヒトGCN5のヒストンアセチル基転移酵素ドメインだった。KKT23にはGNATの基本の折りたたみにない余分のα7とβ8があり、キネトプラスト間で保存されている。",
+      "evidence": [
+        {
+          "quote": "Notable differences between the two structures include the additional α-helix (α7) and β-strand (β8) in the crystal structure of KKT23125−348, which are highly conserved among kinetoplastids but are not part of the consensus GNAT domain fold (Figures 4A and S6)",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "KKT23はトリパノソーマのヌクレオソームのH2A C末端の尾部を強くアセチル化したが、ヒトのヌクレオソームでは信号が見えなかった。GCN5がH3・H4を主に修飾するのとは基質の好みが異なる。",
+      "evidence": [
+        {
+          "quote": "but not when H. sapiens nucleosomes were used, suggesting that KKT23 is specific toward T. brucei nucleosomes",
+          "section": "Results"
+        },
+        {
+          "quote": "KKT23 therefore has different substrate specificity compared to GCN5 acetyltransferases in other eukaryotes that are known to preferentially acetylate histones H3 and H4 but not H2A.",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "N末端領域（残基2–70）の結晶構造は2.7 Åで、短いヘリックス3本からなる。DALI検索で明らかな類似構造は見つからなかった。この領域だけでKKT22との結合に十分らしい。",
+      "evidence": [
+        {
+          "quote": "The structure comprises three short helices between residues 22–33, 36–49, and 54–62.",
+          "section": "Results"
+        },
+        {
+          "quote": "Based on the observation that the N-terminal region of KKT23 is sufficient to interact with KKT22 in this assay",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "酵素ドメインとN末端領域は大腸菌BL21(DE3)で発現した。KKT22・KKT3との共発現はSf9昆虫細胞で行った。",
+    "construct": "全長では結晶が得られず、酵素ドメイン（125–348、アセチルCoA存在下）とN末端領域（2–70）を結晶化した。",
+    "purification": "TALONでHisタグ付きを精製し、TEVでタグを切った後、イオン交換とゲルろ過で精製した。",
+    "sample_prep": "酵素ドメインは4 °CでアセチルCoAを加えて結晶化した。N末端領域の結晶は18 °Cで40日後に現れた。",
+    "data_collection": "Diamond Light SourceのI03・I04で回折データを集めた。NMRは750 MHzで測定した。",
+    "evidence": [
+      {
+        "quote": "Protein expression was induced with 0.2 mM IPTG and was continued for ~16 h at 20°C.",
+        "section": "Methods"
+      },
+      {
+        "quote": "these proteins were co-expressed in insect cells (Sf9) and pulled down using FLAG-KKT23",
+        "section": "Results"
+      },
+      {
+        "quote": "However, no crystal for the full-length protein was obtained.",
+        "section": "Results"
+      },
+      {
+        "quote": "To cleave off the His-tag, samples were incubated with TEV protease in 1:50 w/w ratio overnight",
+        "section": "Methods"
+      },
+      {
+        "quote": "The samples were then further purified using ion exchange and size exclusion chromatography.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Crystals appeared after 40 days.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Native crystals of Trypanosoma brucei KKT23125-348 (14.5 mg/mL) were grown at 4°C",
+        "section": "Methods"
+      },
+      {
+        "quote": "X-ray diffraction data from selenomethionine crystals of Trypanosoma brucei KKT23125-348 were collected at the I03 beamline at the Diamond Light Source",
+        "section": "Methods"
+      },
+      {
+        "quote": "All NMR spectra were acquired using a 750 MHz spectrometer",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "KKT23",
+    "GCN5",
+    "ヒストンH2A",
+    "動原体"
+  ],
+  "editor_notes": "新しい構造は9EVQ（天然、1.75 Å）・9F5Q（SeMet）・9EVR（N末端、2.7 Å）。結晶構造の全体にはリガンドとしてアセチルCoAが入る。AlphaFold2・AlphaFold-Multimerの予測は補助で、結論の根拠にはしていない。KKT22との相互作用は断片のプルダウンで示され、複合体の構造はない。Methodsの後半（MS・ChIP-seq）は読み飛ばした。",
+  "legend_labels": [
+    "KKT23（アセチル基転移酵素）"
+  ],
+  "ligand_names": {
+    "ACO": "アセチルCoA"
+  },
+  "ligand_label": "アセチルCoA"
+}

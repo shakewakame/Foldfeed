@@ -1,0 +1,142 @@
+{
+  "pmcid": "PMC13674267",
+  "rank": 3,
+  "section": "impact",
+  "headline": "GBA2だけを止める、脳に届く共有結合型阻害剤",
+  "subhead": "N-アルキルアジリジン5はマウス脳のGBA2を阻害し、細菌相同体との結晶構造で共有結合を確かめた",
+  "target_label": "GBA2（ヒト）／TxGH116（細菌）",
+  "target_en": "GBA2 (human) / TxGH116 (T. xylanolyticum)",
+  "summary": {
+    "question": "GBA2 だけを選んで止める阻害剤がなく、GCS や GBA1 との働きの違いを分けて調べられなかった。",
+    "approach": "環状アジリジンなどのライブラリーを合成し、酵素・培養細胞・マウスで調べた。細菌相同体との結晶構造も得た。",
+    "result": "化合物5は GBA2 を選択的に阻害し、マウスの脳・肝・腎・脾で25 nmol でほぼ完全だった。GBA1 と GCS は阻害されなかった。",
+    "learned": "脳に届き GBA2 だけを共有結合で止める最初の阻害剤になる。選択性は反応しやすい配置を取りやすいためと、MD と速度論から推定される。",
+    "open": "GBA2 の活性と脂質の恒常性、神経炎症の関係を調べることが、今後の課題として挙げられている。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "yet the lack of highly selective chemical inhibitors has hindered efforts to disentangle its function from that of glucosylceramide synthase (GCS) and lysosomal glucosylceramidase (GBA1)",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "we designed and synthesized a focused library of electrophile-bearing cyclitols, including epoxides, cyclic sulfates, and a diverse set of N-alkyl aziridines.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "a crystal structure of compound 5 in complex with TxGH116 was obtained",
+          "section": "Results"
+        }
+      ],
+      "result": [
+        {
+          "quote": "Both methods revealed a clear dose-dependent inhibition of GBA2, with near-complete inhibition at 25 nmol in brain, liver, kidney and spleen.",
+          "section": "Results"
+        },
+        {
+          "quote": "No significant inhibition of GBA1 or GCS was observed under any tested conditions",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Notably, octyl-alkyne aziridine 5 selectively inhibited GBA2 in mouse brain, representing the first covalent GBA2 inhibitor with demonstrated in vivo activity and brain permeability.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "These observations suggest that the GBA2 selectivity of 5 arises from its greater tendency to adopt a reaction-competent binding mode in GBA2 than in GBA1.",
+          "section": "Results"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Such approaches will help elucidate the relationship between GBA2 activity, lipid homeostasis and neuroinflammation.",
+          "section": "Conclusion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "enzyme"
+  ],
+  "topics": [
+    "drug"
+  ],
+  "highlights": [
+    {
+      "tag": "創薬・モダリティ",
+      "text": "化合物5（オクチルアルキン鎖）の見かけの IC50 は GBA2 で319 nM、組換えヒト GBA1 で8470 nM と、20倍を超える選択性を示した。N-ブチル体4は高濃度でしか GBA1 を阻害しなかった。",
+      "evidence": [
+        {
+          "quote": "octyl-alkyne 5 showed excellent inhibition potency and over 20x selectivity for GBA2 over GBA1, with apparent IC50 values of 319 nm for GBA2 and 8470 nm for rhGBA1",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "細菌の相同体 TxGH116 との結晶構造で、5 は Glu441 と C1 位で共有結合を作った。既存の 8R1M（N-アジドオクチル体）と水素結合網は似るが、N-アルキル鎖は第4メチレンから先で逆向きに延びる。",
+      "evidence": [
+        {
+          "quote": "forming a covalent bond between Glu441 and the C1 atom of the β-d-Araf N-alkylaziridine 5",
+          "section": "Results"
+        },
+        {
+          "quote": "The substituents on the cyclopentane ring 5 produce hydrogen bonding networks with the enzyme active site similar to those observed in the crystal structure of TxGH116 with N-azido-octyl aziridine 6 (PDB: 8R1M)",
+          "section": "Results"
+        },
+        {
+          "quote": "beyond the fourth methylene, the chains diverge and point in opposite directions toward the protein surface",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "共有結合で不活性化する速さの指標 k_inact/K_i は、GBA1 が GBA2 より大幅に低かった。MD（計算）では、GBA2 の方が求核残基に向いた反応しやすい配置を取りやすかった。",
+      "evidence": [
+        {
+          "quote": "this ratio is markedly lower than that observed for GBA2",
+          "section": "Results"
+        },
+        {
+          "quote": "the aziridine warhead frequently samples prereactive",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "GBA2・GBA3 は GBA1/GBA2 ノックアウト HEK293T 細胞に過剰発現させたライセートで測定。",
+    "construct": "結晶構造は、ヒト GBA2 と活性部位が似る細菌相同体 TxGH116 で解いた。",
+    "purification": null,
+    "sample_prep": null,
+    "data_collection": null,
+    "evidence": [
+      {
+        "quote": "we tested GBA1 inhibition with recombinant human GBA1 (rhGBA1, imiglucerase) and GBA2 or GBA3 in lysates of GBA1/GBA2 knockout HEK293T cells in which we overexpressed GBA2 or GBA3",
+        "section": "Results"
+      },
+      {
+        "quote": "TxGH116 is a bacterial homologue from Thermoanaerobacterium xylanolyticum that shares homology with human GBA2",
+        "section": "Results"
+      }
+    ]
+  },
+  "keywords": [
+    "GBA2",
+    "共有結合阻害剤",
+    "アジリジン"
+  ],
+  "editor_notes": "著者が化合物5と TxGH116 の結晶構造を新たに得ているが、PDB ID が本文になく candidates の own_structures は空。図は既存の 8R1M（同じ酵素の N-アジドオクチル体）で描く。新しい構造（Structure Update）として扱うか親の判断に委ねる。選択性の説明は MD（計算）で、実験構造の裏付けは共有結合の確認まで。Methods・SI は本文にない。",
+  "ga_pdb_id": "8R1M",
+  "method_label": "X-ray・cABPP・マウス",
+  "legend_labels": [
+    "TxGH116（GBA2 の細菌相同体）"
+  ],
+  "ligand_names": {
+    "XHR": "N-アジドオクチルアジリジン（8R1M）"
+  },
+  "ligand_label": "N-アジドオクチルアジリジン（8R1M）"
+}

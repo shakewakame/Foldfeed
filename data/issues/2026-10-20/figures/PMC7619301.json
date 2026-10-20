@@ -1,0 +1,87 @@
+{
+ "pdb_id": "9EVQ",
+ "view": {
+  "target": [
+   -17.19,
+   -9.32,
+   7.24
+  ],
+  "dir": [
+   0.424,
+   -0.7542,
+   -0.5014
+  ],
+  "up": [
+   -0.17,
+   -0.6101,
+   0.7739
+  ],
+  "half": [
+   28.0,
+   38.1
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "KKT23（アセチル基転移酵素）",
+   "desc": "N-acetyltransferase domain-containing protein",
+   "entity": "1"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "ACO",
+   "label": "アセチルCoA",
+   "color": "#C23B8E",
+   "desc": "Acetyl Coenzyme *A",
+   "entity": [
+    "2"
+   ],
+   "sites": [
+    [
+     "C",
+     "401"
+    ],
+    [
+     "D",
+     "401"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "ACO",
+  "residues": [
+   "S172",
+   "Q180",
+   "P181",
+   "L132",
+   "L134",
+   "Q174",
+   "F175",
+   "P237",
+   "L238",
+   "F239",
+   "A240",
+   "T241",
+   "K246",
+   "K247",
+   "H248",
+   "G249",
+   "F250",
+   "G251",
+   "R252",
+   "A278",
+   "P280",
+   "F281",
+   "W282",
+   "H284",
+   "R333"
+  ],
+  "hbonds": 24,
+  "pi": 1,
+  "neighbours": [],
+  "label": "アセチルCoA"
+ }
+}

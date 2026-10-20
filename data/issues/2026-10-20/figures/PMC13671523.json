@@ -1,0 +1,63 @@
+{
+ "pdb_id": "23IT",
+ "view": {
+  "target": [
+   150.14,
+   134.12,
+   184.75
+  ],
+  "dir": [
+   -0.0661,
+   0.912,
+   0.4048
+  ],
+  "up": [
+   0.4748,
+   0.3856,
+   -0.7911
+  ],
+  "half": [
+   49.9,
+   38.7
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "VP1（キャプシド）",
+   "desc": "VP1 of capsid protein",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "VP2（キャプシド）",
+   "desc": "VP2 of capsid protein",
+   "entity": "2"
+  },
+  {
+   "color": "#5F9296",
+   "label": "VP3（キャプシド）",
+   "desc": "VP3 of capsid protein",
+   "entity": "3"
+  },
+  {
+   "color": "#A5707A",
+   "label": "VP4（キャプシド）",
+   "desc": "VP4 of capsid protein",
+   "entity": "4"
+  },
+  {
+   "color": "#7C8AA8",
+   "label": "pO18-29 重鎖（VH）",
+   "desc": "pO18-29 VH",
+   "entity": "5"
+  },
+  {
+   "color": "#8A9A5B",
+   "label": "pO18-29 軽鎖（VL）",
+   "desc": "pO18-29 VL",
+   "entity": "6"
+  }
+ ],
+ "ligands": []
+}

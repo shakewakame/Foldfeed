@@ -1,0 +1,79 @@
+{
+ "pdb_id": "8R1M",
+ "view": {
+  "target": [
+   -0.47,
+   -12.68,
+   -46.79
+  ],
+  "dir": [
+   0.9957,
+   -0.003,
+   -0.0923
+  ],
+  "up": [
+   0.0922,
+   -0.0278,
+   0.9954
+  ],
+  "half": [
+   43.4,
+   53.1
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "TxGH116（GBA2 の細菌相同体）",
+   "desc": "Glucosylceramidase",
+   "entity": "1"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "XHR",
+   "label": "N-アジドオクチルアジリジン（8R1M）",
+   "color": "#C23B8E",
+   "desc": "(1R,2R,3R,4S)-4-[8-(azanyldiazenyl)octylamino]-3-(hydroxymethyl)cyclopentane-1,2-diol",
+   "entity": [
+    "5"
+   ],
+   "sites": [
+    [
+     "H",
+     "906"
+    ],
+    [
+     "K",
+     "903"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "XHR",
+  "residues": [
+   "Y62",
+   "E441",
+   "Y445",
+   "T450",
+   "D452",
+   "V453",
+   "H507",
+   "Y523",
+   "W525",
+   "W531",
+   "T591",
+   "D593",
+   "W732",
+   "E777",
+   "R786",
+   "Y790",
+   "R792"
+  ],
+  "hbonds": 10,
+  "pi": 0,
+  "neighbours": [],
+  "label": "N-アジドオクチルアジリジン（8R1M）"
+ }
+}

@@ -1,0 +1,176 @@
+{
+  "pmcid": "SN-s44318-026-00920-y",
+  "rank": 3,
+  "headline": "Cdr1は、ATPの加水分解後にCヘリックスをピストン状に引き込む",
+  "subhead": "クライオ電顕と3D変動解析で、ポンプが開く動きとイトラコナゾールの収まり方を捉えた",
+  "target_label": "Cdr1（C. glabrata）",
+  "target_en": "Cdr1 (Candida glabrata)",
+  "summary": {
+    "question": "カンジダのアゾール耐性に関わる排出ポンプCdr1が、ATPの力でどう働くのか、構造の面は分かっていなかった。",
+    "approach": "C. glabrata Cdr1を、ATP-Mg²⁺・イトラコナゾール・バナジン酸の有無でクライオ電顕により解析し、3D変動解析も行った。",
+    "result": "加水分解したATPのγ-リン酸からCヘリックスが約4 Å後退し、TMH-1の動きなどで薬剤結合部位が開いた。",
+    "learned": "Cヘリックスの引き込みが、3D変動解析で最初に見える動きで、薬剤結合部位が開く動きにつながる。",
+    "open": "このCヘリックスの機構がABCトランスポーター全体で共通かは、まだ推測の段階だ。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Despite its clinical relevance, the structural basis for its ATP-driven efflux pump function remains elusive.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "We present four high-resolution cryo-EM structures of Candida glabrata Cdr1 obtained in the absence and presence of ATP-Mg²⁺, itraconazole, and vanadate, capturing distinct nucleotide- and substrate-occupancy states.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Additional low-population cryo-EM conformers were unveiled by 3D variability analysis",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "The motion shows a 4 Å piston-like retraction of the C-helix from the γ-phosphate/vanadate of the hydrolyzed ATP.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "This causes the nearby transmembrane helix-1 (TMH-1) to open the drug-binding site via lateral displacement and unwinding of the inner-leaflet region of TMH-2.",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "the retraction of H-8 from the catalytic center represents the earliest structurally detectable conformational change of CgCdr1 in this deformation sampled",
+          "section": "Results"
+        },
+        {
+          "quote": "This causes the nearby transmembrane helix-1 (TMH-1) to open the drug-binding site via lateral displacement and unwinding of the inner-leaflet region of TMH-2.",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "it is tempting to speculate whether this mechanism is conserved amongst the whole family or a specificity of PDR-like transporters.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "transporter",
+    "pathogen"
+  ],
+  "topics": [
+    "membrane",
+    "dynamics"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "ADP-バナジン酸結合型から開いた型へ移る間に、NBD-1のCヘリックス（H-8）が約4 Å、ピストンのように後ろへ動く。このときほかの変化は小さく、その後にNBD全体が約10°回る。順序は実際の反応経路ではない。",
+      "evidence": [
+        {
+          "quote": "a rigid 3.8-Å retraction of the H-8 helix is observed, from the vanadate towards the back of the NBD in a piston-like motion",
+          "section": "Results"
+        },
+        {
+          "quote": "Remarkably, this displacement occurs with minimal conformational changes elsewhere in the protein.",
+          "section": "Results"
+        },
+        {
+          "quote": "While 3DVA analysis does not represent a true reaction coordinate",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "新しい結合部位",
+      "text": "イトラコナゾール1分子が、n字型に折れ曲がって薬剤結合部位に収まる。TMH-2の2巻きがほどけて場所ができ、全体の構造は大きく変わらない（RMSD 0.5 Å）。ただしリガンドの密度は周りより不鮮明だった。",
+      "evidence": [
+        {
+          "quote": "ITC adopted an n-shaped conformation with the triazolone ring positioned near the bottom of the DBS.",
+          "section": "Results"
+        },
+        {
+          "quote": "The ITC structures in the absence or presence of vanadate were almost identical to the [s0|ncATP | cADP-Mg] state with an overall RMSD of 0.5 Å",
+          "section": "Results"
+        },
+        {
+          "quote": "Densities for ITC were not as clear as nearby amino-acid residues",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "触媒をしない側のヌクレオチド結合部位（ncNBS）には、開いた型にも閉じた型にもATPが結合していた。結合は強く（KD 0.3 µM）、輸送のサイクルを通じて結合し続けると考えられる。",
+      "evidence": [
+        {
+          "quote": "ATP bound the ncNBS with very high affinity (KD of 0.3 µM)",
+          "section": "Results"
+        },
+        {
+          "quote": "The present data also revealed that ATP remains bound to the ncNBS throughout the entire transport cycle",
+          "section": "Discussion"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "出芽酵母の膜タンパク質発現系でC. glabrata Cdr1を過剰発現した。",
+    "construct": "C末端にHis6タグを付けたCgCdr1（UniProt Q6FK23）。",
+    "purification": "界面活性剤PCCとDCOD9bで抽出し、Ni-NTAカラムとSuperose 6のゲルろ過で精製した。",
+    "sample_prep": "5 mM ATP-Mg2+（イトラコナゾールは30 µM）を30分反応させ、1 mMオルトバナジン酸を加えてグリッドに載せた。",
+    "data_collection": "ATP・バナジン酸の試料はTitan Krios（300 kV、K3）で撮影し、cryoSPARC v4で処理した。3D変動解析は4 Åに低域通過して行った。",
+    "evidence": [
+      {
+        "quote": "CgCdr1 was overexpressed in a S. cerevisiae membrane protein expression system",
+        "section": "Results"
+      },
+      {
+        "quote": "was cloned with a C-terminal hexa-histidine tag integrated at the PDR5 locus",
+        "section": "Methods"
+      },
+      {
+        "quote": "CgCDR1 encodes the protein sequence referenced as Q6FK23 in the Uniprot protein database",
+        "section": "Methods"
+      },
+      {
+        "quote": "CgCdr1 was subsequently extracted and purified using a mixture of trans-PCC-α-M (PCC) (Hovers et al, 40) and dicarboxylate oside 9b (DCOD9b)",
+        "section": "Results"
+      },
+      {
+        "quote": "then loaded on a Superose 6 Increase 10/300 GL column",
+        "section": "Methods"
+      },
+      {
+        "quote": "pre-incubated with 5 mM ATP-Mg2+ and with or without 30 µM ITC for 30 min at 4 °C followed by addition of 1 mM orthovanadate for 30 min prior to applying it to the grid",
+        "section": "Methods"
+      },
+      {
+        "quote": "prior to high-end data acquisition on a Thermo Scientific Titan Krios at 300 kV equipped with a Gatan K3 direct electron detector",
+        "section": "Methods"
+      },
+      {
+        "quote": "were subjected to 3DVA after filtering at 4-Å resolution",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "Cdr1",
+    "アゾール耐性",
+    "ABCトランスポーター",
+    "イトラコナゾール"
+  ],
+  "editor_notes": "PDBは5件（9S4T apo、9S2H 開いた型、9S2C 閉じた型、9S4U・9S4S イトラコナゾール）で、いずれも原稿内の引用はなく寄託文に記載。要旨は4つの構造と書く。Pdr5やC. albicans Cdr1の構造は既にあり、C. glabrataのCdr1では初めてという位置づけ（first_claimは付けていない）。3D変動解析の順序は反応経路ではないと著者が明記しており、本文もそれに従った。アンブレラサンプリングMDは補助。Appendix・図・Tableはpacketにない。",
+  "legend_labels": [
+    "Cdr1（排出ポンプ）"
+  ],
+  "ligand_names": {
+    "VO4": "バナジン酸",
+    "ERG": "エルゴステロール"
+  },
+  "ga_pdb_id": "9S2C",
+  "site_ligand": "ADP"
+}

@@ -1,0 +1,6 @@
+{"pmcid": "SN-s44318-026-00920-y", "axes": ["structure", "drug"],
+ "reason": "アゾール耐性に関わる排出ポンプCdr1の、ATP・薬剤結合状態の構造と、ATP加水分解に伴うCヘリックスの動きを示した。",
+ "evidence": [{"quote": "Azole resistance in Candida species is often caused by the overexpression of Cdr1.", "section": "Abstract"},
+  {"quote": "This causes the nearby transmembrane helix-1 (TMH-1) to open the drug-binding site via lateral displacement and unwinding of the inner-leaflet region of TMH-2.", "section": "Abstract"}],
+ "considered": [{"pmcid": "PMC13672361", "note": "ヒトNHA1の初の構造だが、外向き状態はホモロジーモデルで、動きの実験的な裏づけが弱い。"},
+  {"pmcid": "PMC7619301", "note": "KKT23の初構造と活性の両方を示したが、創薬への直結度でCdr1に譲った。"}]}
