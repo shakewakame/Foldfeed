@@ -357,6 +357,27 @@ def check_feature(feature: dict, picks: dict[str, dict]) -> list[str]:
     return errors
 
 
+def check_repeats(d, by_id: dict, cands: dict) -> list[str]:
+    """A paper is written up once: an article whose PMCID or DOI an earlier issue already wrote up is an error."""
+    earlier = {}
+    for other in sorted(p for p in d.parent.iterdir() if p.is_dir() and p.name < d.name):
+        if not (other / "candidates.json").exists():
+            continue
+        oc = {c["pmcid"]: c for c in read_json(other / "candidates.json")["candidates"]}
+        for path in (other / "picks").glob("*.json") if (other / "picks").exists() else []:
+            pm = read_json(path).get("pmcid")
+            earlier[pm] = other.name
+            if (oc.get(pm) or {}).get("doi"):
+                earlier[oc[pm]["doi"].lower()] = other.name
+    out = []
+    for pm in by_id:
+        doi = ((cands.get(pm) or {}).get("doi") or "").lower()
+        hit = earlier.get(pm) or (doi and earlier.get(doi))
+        if hit:
+            out.append(f"{pm}: already written up in the {hit} issue (a paper appears once; drop this article)")
+    return out
+
+
 def main(argv=None) -> int:
     argv = argv if argv is not None else sys.argv[1:]
     if len(argv) != 1:
@@ -399,6 +420,9 @@ def main(argv=None) -> int:
         for e in impact_errors:
             print(f"   error: {e}")
         failed |= bool(impact_errors)
+    for e in check_repeats(d, by_id, cands):
+        print(f"[NG] {e}")
+        failed = True
     written = {read_json(p).get("pmcid") for p in picks}
     missing = [c for c in cands.values()
                if c["kind"] in ("new_structure", "new_structure_ids_unlisted", "new_map_only") and c["pmcid"] not in written]

@@ -143,8 +143,9 @@ def catch_up_start(end: dt.date) -> dt.date:
 
 
 def already_listed(except_issues: set[str]) -> set[str]:
-    """PMCIDs that an earlier issue already considered (they are not offered again by a catch-up window).
-    The issues of the window itself (except_issues) are being written again and do not count."""
+    """PMCIDs that an earlier issue already considered: they are not offered again, by any route (a paper the PMC
+    Open Access fallback took reaches Europe PMC a day or two later; 10 papers of 2026-10-18/19 came again on 10-20).
+    The issues of a window itself (except_issues) are being written again and do not count."""
     return {c["pmcid"] for m in _issues() if m["issue_date"] not in except_issues for c in m["candidates"]}
 
 
@@ -155,8 +156,9 @@ def already_read(except_issues: set[str]) -> set[str]:
     for m in _issues():
         if m["issue_date"] in except_issues:
             continue
-        out |= {c["doi"] for c in m["candidates"] if c.get("doi")}
-        out |= set((m.get("springer") or {}).get("read", []))
+        out |= {c["doi"].lower() for c in m["candidates"] if c.get("doi")}
+        read = (m.get("springer") or {}).get("read", [])
+        out |= {d.lower() for ds in (read.values() if isinstance(read, dict) else [read]) for d in ds}
     return out
 
 
@@ -175,7 +177,7 @@ def run(index_date: str, issue_date: str, index_from: str | None = None, force: 
     days = (dt.date.fromisoformat(index_date) - dt.date.fromisoformat(index_from)).days + 1 if windowed else 1
     window_issues = ({str(issue_date_for(dt.date.fromisoformat(index_from) + dt.timedelta(days=k))) for k in range(days)}
                      if windowed else {issue_date})
-    listed = already_listed(window_issues) if (windowed or fallback) else set()
+    listed = already_listed(window_issues)
     seen_dois = already_read(window_issues)
     first = dt.date.fromisoformat(index_from or index_date)
     sn = springer.discover([str(first + dt.timedelta(days=k)) for k in range(days)], seen_dois)
@@ -201,11 +203,10 @@ def run(index_date: str, issue_date: str, index_from: str | None = None, force: 
     else:
         query = europepmc.build_query(index_date, index_from if windowed else None)
         raw = europepmc.search(query)
-        if windowed:
-            before = len(raw)
-            raw = [r for r in raw if r.get("pmcid") not in listed]
-            print(f"Window {index_from}..{index_date}: {before} hits, {before - len(raw)} already in an earlier issue",
-                  file=sys.stderr)
+        before = len(raw)
+        raw = [r for r in raw if r.get("pmcid") not in listed]
+        if before != len(raw):
+            print(f"{before} hits, {before - len(raw)} already in an earlier issue (by PMCID)", file=sys.stderr)
         print(f"Europe PMC: {len(raw)} hits for index date {index_from + '..' if windowed else ''}{index_date}", file=sys.stderr)
         metas, excluded = [], []
         for r in raw:
@@ -229,8 +230,14 @@ def run(index_date: str, issue_date: str, index_from: str | None = None, force: 
             print(f"  parse failed for {m['pmcid']}: {e}", file=sys.stderr)
             return m, None
 
+    def unseen(pairs):   # a fresh Europe PMC record may have no DOI yet: the full text's is checked too
+        kept = [(m, p) for m, p in pairs if not (p.get("doi") and p["doi"].lower() in seen_dois)]
+        if len(kept) != len(pairs):
+            print(f"  {len(pairs) - len(kept)} already in an earlier issue (by the DOI in the full text)", file=sys.stderr)
+        return kept
+
     with ThreadPoolExecutor(6) as ex:
-        loaded = [x for x in ex.map(load, metas) if x[1] is not None]
+        loaded = unseen([x for x in ex.map(load, metas) if x[1] is not None])
     print(f"Full text parsed: {len(loaded)}", file=sys.stderr)
     loaded += sn["main"]
     if sn["main"]:
@@ -258,7 +265,7 @@ def run(index_date: str, issue_date: str, index_from: str | None = None, force: 
     extra = sorted((m for m in extra if m["prescreen"]["score"] >= 1),
                    key=lambda m: -m["prescreen"]["score"])[:MAX_IMPACT_FULLTEXT]
     with ThreadPoolExecutor(6) as ex:
-        loaded_extra = [x for x in ex.map(load, extra) if x[1] is not None]
+        loaded_extra = unseen([x for x in ex.map(load, extra) if x[1] is not None])
     for m, _ in loaded_extra:
         del m["prescreen"]
     for m, p in sn["impact"]:          # the Springer Nature papers with the 注目の構造 words, pre-screened the same way
