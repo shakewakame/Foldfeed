@@ -1,0 +1,127 @@
+{
+ "pdb_id": "6H7M",
+ "view": {
+  "target": [
+   -22.8,
+   -33.85,
+   23.2
+  ],
+  "dir": [
+   0.17,
+   0.8629,
+   -0.476
+  ],
+  "up": [
+   -0.9393,
+   0.2879,
+   0.1864
+  ],
+  "half": [
+   48.7,
+   63.6
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "チオレドキシン（融合タンパク質）",
+   "desc": "Thioredoxin 1",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "β1AR（受容体）",
+   "desc": "Beta-1 adrenergic receptor",
+   "entity": "2"
+  },
+  {
+   "color": "#5F9296",
+   "label": "Nb6B9（ナノボディ）",
+   "desc": "Camelid antibody fragment Nb6B9",
+   "entity": "3"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "2CV",
+   "label": "hega-10",
+   "color": "#C23B8E",
+   "desc": "Hega-10",
+   "entity": [
+    "4"
+   ],
+   "sites": [
+    [
+     "G",
+     "501"
+    ],
+    [
+     "H",
+     "502"
+    ],
+    [
+     "I",
+     "503"
+    ],
+    [
+     "L",
+     "401"
+    ],
+    [
+     "M",
+     "402"
+    ],
+    [
+     "N",
+     "403"
+    ],
+    [
+     "O",
+     "404"
+    ]
+   ]
+  },
+  {
+   "id": "68H",
+   "label": "サルブタモール",
+   "color": "#2F9E57",
+   "desc": "Salbutamol",
+   "entity": [
+    "5"
+   ],
+   "sites": [
+    [
+     "J",
+     "504"
+    ],
+    [
+     "P",
+     "405"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "68H",
+  "residues": [
+   "W117",
+   "T118",
+   "D121",
+   "V122",
+   "V125",
+   "F201",
+   "Y207",
+   "S211",
+   "S215",
+   "F306",
+   "F307",
+   "N310",
+   "N329",
+   "Y333"
+  ],
+  "hbonds": 9,
+  "pi": 1,
+  "neighbours": [],
+  "label": "サルブタモール"
+ }
+}

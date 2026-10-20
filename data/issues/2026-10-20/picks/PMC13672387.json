@@ -1,0 +1,148 @@
+{
+  "pmcid": "PMC13672387",
+  "rank": 7,
+  "headline": "T. vestitusの単量体PSIを、1.8 Åのクライオ電顕で解いた",
+  "subhead": "三量体をC12E8と加温で単量体にし、PsaL以外の11サブユニットと脂質、界面活性剤の層を確認した",
+  "target_label": "単量体PSI（T. vestitus）",
+  "target_en": "Monomeric photosystem I (T. vestitus)",
+  "summary": {
+    "question": "天然のPSI周辺の脂質が、さまざまなオリゴマー状態をつくる際に果たす役割は、よく分かっていなかった。",
+    "approach": "精製した三量体をC12E8と加温で単量体にして大量に調製し、クライオ電顕・分光・SANSで調べた。",
+    "result": "PsaL以外の11サブユニット、91個のChl a、脂質7個、βDM 16個が見え、水分子も1183個を数えた。",
+    "learned": "T. vestitusのPSIで初めてSQDを検出した。第2のCa2+部位のMg2+や、708 nm吸収に関わる赤色Chl B7も示した。",
+    "open": "Cyt c6の結合は、密度がぼやけてモデルを作れず、構造としては解けていない。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "However, the role of endogenous and peripheral lipids in and around the native PSI complex in the formation of its various oligomeric forms under different environmental conditions remains largely unclear",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here, we have developed a novel protocol to obtain large amounts of intact, active mPSI from Thermosynechococcus vestitus (Tv) by dissociating highly purified tPSI using the detergent octaethylene glycol monododecyl ether (C12E8) at elevated temperatures.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "A total of 11 protein subunits could be identified in the structure, whereby only the subunit important for trimerisation, PsaL, is not detected",
+          "section": "ßDM mPSI cryo-EM structure"
+        },
+        {
+          "quote": "the cryo-EM map revealed 1183 water molecules, 19 β-carotenes (ß-Car), 91 chlorophyll a (Chl a) molecules, seven lipids",
+          "section": "ßDM mPSI cryo-EM structure"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "In addition, we could detect SQD for the first time in Tv PSI as well as a Mg2+ at the second Ca2+ binding site and relate the red Chl B7 to the absorption peak at 708 nm.",
+          "section": "Conclusions and outlook"
+        }
+      ],
+      "open": [
+        {
+          "quote": "This density did not allow model building and could not be improved by local refinement, likely due to the small size of Cyt c6 (10 kDa) and to its high mobility.",
+          "section": "Binding of Cyt c6 to mPSI"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "photosynthesis"
+  ],
+  "topics": [
+    "membrane"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "電子伝達鎖の2本の枝を比べると、三量体ではA枝のほうが柔らかいが、単量体では両方の枝が同程度に剛直だった。",
+      "evidence": [
+        {
+          "quote": "the A-branch is more flexible than the B-branch in tPSI, whereas both branches are equally rigid in mPSI",
+          "section": "Resolution, B-factor and ETC of our mPSI"
+        }
+      ]
+    },
+    {
+      "tag": "新しい結合部位",
+      "text": "膜内の疎水部の周りに、βDM 16分子が二重層状に並ぶ。PsaXの新しいSQDは、5つのアミノ酸残基とβDM 1分子に配位される。",
+      "evidence": [
+        {
+          "quote": "Surprisingly, we revealed a large number of detergent molecules with 16 ßDM arranged in a bilayer structure around the peripheral hydrophobic transmembrane region of mPSI",
+          "section": "Lipid and detergent molecules"
+        },
+        {
+          "quote": "Moreover, we identified a new SQD molecule (SQD-101), which is coordinated by five amino acid residues",
+          "section": "Lipid and detergent molecules"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "単量体では第2のCa2+結合部位が緩衝液にさらされ、Ca2+を含まずMg2+を含む緩衝液のため、Mg2+が入っていた。",
+      "evidence": [
+        {
+          "quote": "In contrast to tPSI, the Ca2+ binding site in our mPSI is now accessible to the surrounding buffer solution, which contains no Ca2+, but Mg2+ instead.",
+          "section": "Ca2+/Mg2+ – binding sites within the mPSI structure"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "Cyt c6は大腸菌で組換え発現した（C末端6×Hisタグ付き）。三量体PSIはT. vestitus BP1から精製した。",
+    "construct": null,
+    "purification": "βDM精製の三量体を1% C12E8、60 °C、30分で処理すると、約90%が単量体になった。10〜35%のショ糖密度勾配で分けた。",
+    "sample_prep": "Quantifoil R 1.2/1.3 Cuグリッドに2.5 mM Chl aの試料4 µLをのせ、Vitrobot Mark IVで凍結した。",
+    "data_collection": "Titan Krios G3（300 kV、K3）で22,001ムービーを撮影し、CryoSPARCで処理した。",
+    "evidence": [
+      {
+        "quote": "The used Cyt c6 contained a C-terminal 6xHis-tag and was expressed heterologously in Escherichia coli",
+        "section": "Cyt c6 purification"
+      },
+      {
+        "quote": "With ßDM-purified tPSI, the highest yield of ~ 90% mPSI was achieved at 60 °C for 30 min, 1% of C12E8.",
+        "section": "Monomerisation of tPSI to mPSI"
+      },
+      {
+        "quote": "the PSI solution was loaded onto a sucrose gradient with 10–35% (w/v) sucrose in sucrose buffer",
+        "section": "Monomerisation of tPSI to mPSI"
+      },
+      {
+        "quote": "Quantifoil R 1.2/1.3 300 Cu grids were glow-discharged in a Pelco easiGlow (20 mA, 60 s, 0.4 mbar of residual ambient air, negative polarity) before application of 4 µL of mPSI at 2.5 mM Chl a on the carbon film side.",
+        "section": "Cryo-EM specimen preparation and screening"
+      },
+      {
+        "quote": "A total of 22 001 movies were collected on a Titan Krios G3 operated at 300 kV and equipped with a Gatan K3 BioQuantum detector.",
+        "section": "Cryo-EM data collection of mPSI"
+      }
+    ]
+  },
+  "keywords": [
+    "光化学系I",
+    "単量体PSI",
+    "SQD"
+  ],
+  "editor_notes": "構造は9QFP（PDB の分解能 1.74 Å、論文は 1.8 Å と記載）。T. vestitus PSI は既に多数の構造があり初構造ではない（論文は「単量体PSIでこれまでで最高分解能」と書く）。Cyt c6 を加えた別の再構成（EMD-57205）は PDB 未登録で、密度のみ。「初めて」は論文が「Tv PSI で SQD を初めて検出」と書くところだけ使用。legend_labels は render 前のため未設定（11 サブユニットあるので親側で render 後に必要なら追加）。",
+  "ligand_names": {
+    "CLA": "クロロフィルa",
+    "PQN": "フィロキノン",
+    "SF4": "Fe4S4クラスター",
+    "BCR": "β-カロテン"
+  },
+  "ligand_label": "クロロフィルa、フィロキノン、β-カロテン",
+  "legend_labels": [
+    "PsaA（反応中心）",
+    "PsaB（反応中心）",
+    "PsaC（Fe-S 中心）",
+    "PsaD（Fd 結合）",
+    "PsaE（Fd 結合）",
+    "PsaF（Cyt c6 結合）",
+    "PsaI",
+    "PsaJ",
+    "PsaK",
+    "PsaM",
+    "4.8K タンパク質"
+  ]
+}

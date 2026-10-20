@@ -1,0 +1,90 @@
+{
+  "pmcid": "PMC13674592",
+  "rank": 2,
+  "section": "impact",
+  "headline": "Fabに金粒子を固定し、脳切片のAMPA受容体を位置づける",
+  "subhead": "クライオETで、金ナノ粒子付きFabを目印に脱感作時の形をサブナノメートルで調べた",
+  "target_label": "AMPA受容体（脳切片）",
+  "target_en": "AMPA receptor (brain slice lamella)",
+  "summary": {
+    "question": "金ナノ粒子は柔らかいリンカーで標的につなぐため、粒子の位置が標的の位置を直接は示さなかった。",
+    "approach": "Fab 抗体断片の二次構造の定まった部位のシステインに金ナノ粒子を結合させ、脳切片のラメラのトモグラムで調べた。",
+    "result": "金ナノ粒子は Fab に剛直に結合していた。この Fab-AuNP で AMPA 受容体の位置を決められた。",
+    "learned": "小さく均一な金ナノ粒子を Fab に正確に結合させると、これまで同定できなかった分子の立体配座の状態をトモグラムで調べられる。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "As a result, the position of the AuNP does not directly define the location of the target.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here we attach AuNPs to Fab antibody fragments via cysteine residues on defined elements of secondary structure",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "show that the AuNPs are rigidly bound to the Fab",
+          "section": "Abstract"
+        },
+        {
+          "quote": "We use these Fab-AuNP conjugates to locate AMPA receptors and probe their conformation upon desensitization",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "we have developed reagents that enable direct investigation of conformational states of previously unidentifiable biomolecules and complexes in tomograms",
+          "section": "Abstract"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "channel"
+  ],
+  "topics": [
+    "insitu",
+    "antibody",
+    "method"
+  ],
+  "highlights": [
+    {
+      "tag": "手法の工夫",
+      "text": "金ナノ粒子を、Fab の二次構造の定まった部位のシステインに結合させる。粒子が Fab に剛直に固定されるので、粒子の位置から標的の位置を直接読める。",
+      "evidence": [
+        {
+          "quote": "Here we attach AuNPs to Fab antibody fragments via cysteine residues on defined elements of secondary structure and show that the AuNPs are rigidly bound to the Fab.",
+          "section": "Abstract"
+        }
+      ]
+    },
+    {
+      "tag": "手法の工夫",
+      "text": "脳スライスから作ったラメラのトモグラムで AMPA 受容体の位置を決め、脱感作したときの配座をサブナノメートルの分解能で調べた。",
+      "evidence": [
+        {
+          "quote": "We use these Fab-AuNP conjugates to locate AMPA receptors and probe their conformation upon desensitization with sub nanometer resolution in tomograms derived from brain slice lamella.",
+          "section": "Abstract"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": null,
+    "construct": null,
+    "purification": null,
+    "sample_prep": null,
+    "data_collection": null,
+    "evidence": []
+  },
+  "keywords": [
+    "クライオET",
+    "金ナノ粒子",
+    "AMPA受容体"
+  ],
+  "editor_notes": "bioRxiv のプレプリントで、packet は要旨のみ（全文は PDF で未公開）。要旨に基づいて書いたため、Methods・図の詳細は未確認。PDB・EMDB の ID は不明で図なし。",
+  "method_label": "Cryo-ET・Fab-AuNP"
+}

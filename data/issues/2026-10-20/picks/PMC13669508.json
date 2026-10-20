@@ -1,0 +1,159 @@
+{
+  "pmcid": "PMC13669508",
+  "rank": 10,
+  "headline": "ペプチドを狙うVH抗体を、Fabの構造から設計した",
+  "subhead": "Fabとpeptide–MHCの結晶構造をもとに、トラスツズマブ由来VHへ結合部位を移し81 nMで結合した",
+  "target_label": "WT1ペプチド/HLA-A*02とVH抗体",
+  "target_en": "WT1 RMF peptide/HLA-A*02 and TCR-like VH antibody",
+  "summary": {
+    "question": "HLAにも当たるFabでは交差反応を抑えにくく、ペプチドを狙う単一ドメイン抗体が求められていた。",
+    "approach": "Fab–RMF/HLA-A*02の結晶構造を解き、可溶なトラスツズマブ由来VHに結合部位を移して設計した。",
+    "result": "結晶構造でVHはペプチドに広く接し、HLAとは6残基としか接しなかった。設計VHは81 nMで結合した。",
+    "learned": "ペプチドを中心に認識するTCR様VH抗体を作る道筋が示され、二価のT細胞エンゲージャーにも展開できた。",
+    "open": "単独のαRMF_VHは約30%が二量体になり、親水性の置換で改善できる可能性がある。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Developing TCR-like antibodies with negligible cross-reactivity is challenging.",
+          "section": "Introduction"
+        },
+        {
+          "quote": "the large antigen-binding surface of a Fab may also engage conserved HLA surfaces, potentially increasing cross-reactivity with nontarget pMHC complexes.",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "We determined the crystal structure of the Q2L-Fab bound to RMF/HLA-A*02 at a 3.0-Å resolution (Table 1).",
+          "section": "Results"
+        },
+        {
+          "quote": "Starting from the crystal structure of a Fab antibody bound to RMF/HLA-A*02, we repurposed the soluble trastuzumab-derived VH scaffold to bind RMF/HLA-A*02.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "VH extensively contacts the bound RMF peptide while making limited contacts with only 6 HLA-A*02:01 residues",
+          "section": "Results"
+        },
+        {
+          "quote": "The monovalent construct bound selectively to RMF/HLA-A*02 with 81 nM affinity",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "These results demonstrate a viable strategy to develop high-specificity, peptide-focused TCR-like VH domain antibodies that can be readily extended into potent bivalent TCEs for pMHC-targeted therapeutics.",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Further hydrophilic substitutions at exposed hydrophobic sites, such as those on the VL-facing surface in the Fab, may provide a rational strategy to improve the developability of αRMF_VH as an isolated sdAb.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "immune"
+  ],
+  "topics": [
+    "design",
+    "antibody"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "結晶構造ではVLがVHから離れ、VHがペプチドに広く接し、HLAとの接触は6残基にとどまる。VHのTrp47がHLAのα2ヘリックスの上に載り、ドッキングの足場になりうると著者は考える。",
+      "evidence": [
+        {
+          "quote": "First, VH extensively contacts the bound RMF peptide while making limited contacts with only 6 HLA-A*02:01 residues (Fig. 1B, bottom).",
+          "section": "Results"
+        },
+        {
+          "quote": "Second, the indole ring of Trp47 is positioned atop one of the “wall-forming” α-helices (α2) of the HLA-A*02:01, suggesting a potential anchoring role for pMHC docking (Fig. 1C).",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "手法の工夫",
+      "text": "Q2L VHはCHO細胞で可溶性の凝集体になった。そこでCDR3Hと2残基を可溶なトラスツズマブVHに移し、Rosettaで緩和した。αRMF_VHは元の配列に対して7点の変異と4残基の欠失をもつ。結晶構造は予測モデルでなく、Q2L VHのもの。",
+      "evidence": [
+        {
+          "quote": "However, the VH domain (residues 1 to 115) was expressed in Chinese hamster ovary (CHO) cells as a soluble aggregate (Fig. S2).",
+          "section": "Results"
+        },
+        {
+          "quote": "This design, referred to as αRMF_VH, contains a total of 7 point mutations and a 4-residue deletion relative to the original Tra VH sequence (Fig. 2B).",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "HSAドメインIIIの両端にαRMF_VHをつけた二価体は、見かけのKDが0.37 nMで、THP-1細胞を殺すEC50は単価体の6.76 pMに対して0.92 pMだった。HLA-A*02陰性のHL-60細胞は殺さなかった。",
+      "evidence": [
+        {
+          "quote": "Both monovalent and bivalent TCEs induced robust, concentration-dependent killing of THP-1 cells, with EC50 values of 6.76 and 0.92 pM, respectively, while showing no notable cytotoxicity against HL-60 cells",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "αRMF_VHは大腸菌BL21(DE3) RIPLでC末端8×Hisタグ付きで発現し、Q2L-FabはCHO-S細胞で発現した。",
+    "construct": "αRMF_VHとヒト血清アルブミンのドメインIII（残基384–585）の融合体を作った。",
+    "purification": "Ni-NTAアフィニティ後、Superdex 75でサイズ排除クロマトグラフィーを行った。",
+    "sample_prep": "Q2L-Fab/RMF/HLA-A*02（8 mg/ml）を、ハンギングドロップ蒸気拡散法（20℃）で、PEG 5000 MMEなどの溶液で結晶化した。",
+    "data_collection": "ポハン加速器研究所の5Cでデータを集め、AlphaFold-Multimer予測モデルと3PHJを探索モデルに分子置換で解いた。",
+    "evidence": [
+      {
+        "quote": "The plasmid was transformed into Escherichia coli BL21 (DE3) RIPL cells (Novagen).",
+        "section": "Materials and Methods"
+      },
+      {
+        "quote": "transfected into CHO-S cells (Gibco) at 6 × 106 cells/ml using ExpiFectamine CHO (Gibco)",
+        "section": "Materials and Methods"
+      },
+      {
+        "quote": "Fusion constructs of αRMF_VH and human serum albumin domain III (residues 384 to 585; HSADIII) were similarly cloned.",
+        "section": "Materials and Methods"
+      },
+      {
+        "quote": "followed by size-exclusion chromatography using a HiLoad 26/60 Superdex 75 column (Cytiva) equilibrated with PBS",
+        "section": "Materials and Methods"
+      },
+      {
+        "quote": "Q2L-Fab/RMF/HLA-A*02 crystals were obtained using the protein sample (8 mg/ml) and a reservoir solution composed of 8% (w/v) PEG 5000 MME, 5% (v/v) Tacsimate (pH 7.0), and 100 mM Hepes (pH 7.0).",
+        "section": "Materials and Methods"
+      },
+      {
+        "quote": "X-ray diffraction data were collected at beamline 5C of Pohang Accelerator Laboratory (Korea) and processed with HKL2000",
+        "section": "Materials and Methods"
+      },
+      {
+        "quote": "Structures were determined by molecular replacement using an AlphaFold-Multimer-predicted model of Q2L-Fab and the crystal structure of RMF/HLA-A*02 (Protein Data Bank [PDB] entry: 3PHJ)",
+        "section": "Materials and Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "TCR様抗体",
+    "WT1",
+    "HLA-A*02",
+    "VHドメイン",
+    "T細胞エンゲージャー"
+  ],
+  "ga_pdb_id": "9VSO",
+  "legend_labels": [
+    "Q2L Fab 重鎖（VH）",
+    "Q2L Fab 軽鎖（VL）",
+    "HLA-A*02:01（MHC）",
+    "β2ミクログロブリン",
+    "RMFペプチド（WT1）"
+  ],
+  "editor_notes": "新しい構造は9VSO（Q2L-Fab/RMF/HLA-A*02、3.03 Å、公開済み）。設計したαRMF_VH自体の結晶構造はなく、αRMF_VH/RMF/HLA-A*02はChai-1の予測モデル。論文の中心は設計と細胞・TCEでの評価。legend_labels は candidates の polymer 順（重鎖・軽鎖・HLA・β2M・ペプチド）で書いたので、render で legend の順と数を要確認。9VSOのHLA（Q53Z42）の既存構造は多数あり新規タンパク質ではない。"
+}

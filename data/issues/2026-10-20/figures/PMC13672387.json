@@ -1,0 +1,380 @@
+{
+ "pdb_id": "9QFP",
+ "view": {
+  "target": [
+   171.57,
+   166.42,
+   173.03
+  ],
+  "dir": [
+   -0.0004,
+   -1.0,
+   -0.0016
+  ],
+  "up": [
+   -0.9999,
+   0.0004,
+   -0.0109
+  ],
+  "half": [
+   74.6,
+   49.7
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "PsaA（反応中心）",
+   "desc": "Photosystem I P700 chlorophyll a apoprotein A1",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "PsaB（反応中心）",
+   "desc": "Photosystem I P700 chlorophyll a apoprotein A2",
+   "entity": "2"
+  },
+  {
+   "color": "#5F9296",
+   "label": "PsaC（Fe-S 中心）",
+   "desc": "Photosystem I iron-sulfur center",
+   "entity": "3"
+  },
+  {
+   "color": "#A5707A",
+   "label": "PsaD（Fd 結合）",
+   "desc": "Photosystem I reaction center subunit II",
+   "entity": "4"
+  },
+  {
+   "color": "#7C8AA8",
+   "label": "PsaE（Fd 結合）",
+   "desc": "Photosystem I reaction center subunit IV",
+   "entity": "5"
+  },
+  {
+   "color": "#8A9A5B",
+   "label": "PsaF（Cyt c6 結合）",
+   "desc": "Photosystem I reaction center subunit III",
+   "entity": "6"
+  },
+  {
+   "color": "#9C7B55",
+   "label": "PsaI",
+   "desc": "Photosystem I reaction center subunit VIII",
+   "entity": "7"
+  },
+  {
+   "color": "#6E6E8E",
+   "label": "PsaJ",
+   "desc": "Photosystem I reaction center subunit IX",
+   "entity": "8"
+  },
+  {
+   "color": "#2a3f62",
+   "label": "PsaK",
+   "desc": "Photosystem I reaction center subunit PsaK",
+   "entity": "9"
+  },
+  {
+   "color": "#8d7034",
+   "label": "PsaM",
+   "desc": "Photosystem I reaction center subunit XII",
+   "entity": "10"
+  },
+  {
+   "color": "#426669",
+   "label": "4.8K タンパク質",
+   "desc": "Photosystem I 4.8K protein",
+   "entity": "11"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "CLA",
+   "label": "クロロフィルa",
+   "color": "#C23B8E",
+   "desc": "Chlorophyll A",
+   "entity": [
+    "13"
+   ],
+   "sites": [
+    [
+     "P",
+     "805"
+    ],
+    [
+     "Q",
+     "806"
+    ],
+    [
+     "R",
+     "807"
+    ],
+    [
+     "S",
+     "808"
+    ],
+    [
+     "T",
+     "809"
+    ],
+    [
+     "U",
+     "810"
+    ],
+    [
+     "V",
+     "811"
+    ],
+    [
+     "W",
+     "812"
+    ],
+    [
+     "X",
+     "813"
+    ],
+    [
+     "Y",
+     "814"
+    ],
+    [
+     "Z",
+     "815"
+    ],
+    [
+     "AA",
+     "816"
+    ],
+    [
+     "BA",
+     "817"
+    ],
+    [
+     "CA",
+     "818"
+    ],
+    [
+     "DA",
+     "819"
+    ],
+    [
+     "EA",
+     "820"
+    ],
+    [
+     "FA",
+     "821"
+    ],
+    [
+     "GA",
+     "822"
+    ],
+    [
+     "HA",
+     "823"
+    ],
+    [
+     "IA",
+     "824"
+    ],
+    [
+     "JA",
+     "825"
+    ],
+    [
+     "KA",
+     "826"
+    ],
+    [
+     "LA",
+     "827"
+    ],
+    [
+     "MA",
+     "828"
+    ]
+   ]
+  },
+  {
+   "id": "PQN",
+   "label": "フィロキノン",
+   "color": "#2F9E57",
+   "desc": "Phylloquinone",
+   "entity": [
+    "14"
+   ],
+   "sites": [
+    [
+     "VA",
+     "837"
+    ],
+    [
+     "TC",
+     "823"
+    ]
+   ]
+  },
+  {
+   "id": "BCR",
+   "label": "β-カロテン",
+   "color": "#7A52C7",
+   "desc": "Beta-Carotene",
+   "entity": [
+    "15"
+   ],
+   "sites": [
+    [
+     "WA",
+     "838"
+    ],
+    [
+     "XA",
+     "839"
+    ],
+    [
+     "YA",
+     "840"
+    ],
+    [
+     "ZA",
+     "841"
+    ],
+    [
+     "AB",
+     "842"
+    ],
+    [
+     "UB",
+     "862"
+    ],
+    [
+     "YB",
+     "802"
+    ],
+    [
+     "ZB",
+     "803"
+    ],
+    [
+     "SC",
+     "822"
+    ],
+    [
+     "UC",
+     "824"
+    ],
+    [
+     "VC",
+     "825"
+    ],
+    [
+     "WC",
+     "826"
+    ],
+    [
+     "AE",
+     "202"
+    ],
+    [
+     "BE",
+     "203"
+    ],
+    [
+     "EE",
+     "206"
+    ],
+    [
+     "IE",
+     "103"
+    ],
+    [
+     "JE",
+     "104"
+    ],
+    [
+     "ME",
+     "103"
+    ],
+    [
+     "PE",
+     "101"
+    ]
+   ]
+  },
+  {
+   "id": "SF4",
+   "label": "Fe4S4クラスター",
+   "color": "#D6A21E",
+   "desc": "Iron/Sulfur Cluster",
+   "entity": [
+    "17"
+   ],
+   "sites": [
+    [
+     "EB",
+     "846"
+    ],
+    [
+     "XD",
+     "1001"
+    ],
+    [
+     "YD",
+     "1002"
+    ]
+   ]
+  },
+  {
+   "id": "CL0",
+   "label": "chlorophyll a isomer",
+   "color": "#178F8F",
+   "desc": "Chlorophyll A Isomer",
+   "entity": [
+    "18"
+   ],
+   "sites": [
+    [
+     "FB",
+     "847"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "CLA",
+  "residues": [
+   "L650",
+   "L654",
+   "W655",
+   "T437",
+   "L438",
+   "Y441",
+   "V526",
+   "A529",
+   "L532",
+   "W596",
+   "F599",
+   "W626",
+   "L631",
+   "S635",
+   "I639",
+   "F657",
+   "H661",
+   "W664",
+   "F720",
+   "Y724",
+   "T727",
+   "Y728",
+   "F731"
+  ],
+  "hbonds": 3,
+  "pi": 2,
+  "neighbours": [
+   "chlorophyll a isomer",
+   "クロロフィルa"
+  ],
+  "label": "クロロフィルa"
+ }
+}

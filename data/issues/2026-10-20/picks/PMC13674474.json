@@ -1,0 +1,141 @@
+{
+  "pmcid": "PMC13674474",
+  "rank": 8,
+  "headline": "植物のTSKは、H3.1の修飾を3か所で読み分ける",
+  "subhead": "K27acとK4me1を収めたTPRドメインの結晶構造と、TONSL変異のDNA修復への影響を調べた",
+  "target_label": "TSK/TONSL（TPRドメイン）",
+  "target_en": "TSK/TONSL TPR domain (C. unshiu, X. laevis, human)",
+  "summary": {
+    "question": "TONSLがヒストンH3.1に結合することが、DNA修復に必要かどうかは分かっていなかった。",
+    "approach": "ミカンTSKのTPRドメインとH3.1ペプチドの結合を変異と修飾で調べ、修飾ペプチドとの結晶構造も解いた。",
+    "result": "K27acはHis243とArg209との水素結合で収まり、K4me1は結合を強めた。変異Asp364Hisは修復を戻せなかった。",
+    "learned": "TPRドメインは複数の修飾を読み分けてH3.1に結合し、この結合はTONSLのDNA修復機能に関わる。",
+    "open": "K4me1を選ぶ性質は、植物のTSKに固有かもしれない。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "How TONSL distinguishes normal postreplicative chromatin from damaged chromatin and whether its interaction with H3.1 is needed for the DNA repair functions of TONSL remains unknown.",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "we first mutated 19 CuTPRTSK residues near histone H3.1 binding sites and measured several mutants’ binding affinity",
+          "section": "Results"
+        },
+        {
+          "quote": "we crystalized CuTPRTSK in complex with an H3.1K27ac peptide and solved its structure by molecular replacement",
+          "section": "Results"
+        }
+      ],
+      "result": [
+        {
+          "quote": "the acetyl carbonyl group makes hydrogen bonds with the imidazole and guanidium groups of His243 and Arg209, respectively.",
+          "section": "Results"
+        },
+        {
+          "quote": "While K4 di- and trimethylation negatively affect CuTPRTSK binding, mono-methylation enhances it",
+          "section": "Results"
+        },
+        {
+          "quote": "the SD mutant Asp364His (corresponding to XlTPRTONSL Asp363His), which does not bind histone H3.1, fails to rescue the phenotype",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Overall, our findings reveal that interactions between histone H3.1 and the TPR domains of TSK/TONSL are regulated by multiple PTMs and are functionally relevant for their DNA repair functions.",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Owing to the different orientations between CuTPRTSK and Xl/HsTPRTONSL C-terminal lobes, this selectivity may be specific to the plant homologs.",
+          "section": "Results"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "chromatin",
+    "regulation"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "H3.1のK27は、メチル化されると結合できなくなるが、アセチル化では結合が変わらない。結晶構造では、アセチル基がHis243とArg209と水素結合し、この2つの側鎖が向きを変えて入口が開くことで収まると考えられる。",
+      "evidence": [
+        {
+          "quote": "While mono-, di-, and trimethylation of K27 prevent CuTPRTSK binding to histone H3.1 (Fig. 3C), acetylation (H3.1K27ac) and crotonylation (H3.1K27cr) have no impact (Fig. 3C).",
+          "section": "Results"
+        },
+        {
+          "quote": "Reorientation of the His243 and Arg209 side chains enables the opening of that region of CuTPRTSK, which likely accommodates K27ac binding (Fig. 3E).",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "新しい結合部位",
+      "text": "C末端ローブのポケットはK4を受け止め、モノメチル化で結合が強まり、ジ・トリメチル化で弱まる。K4me1の結晶構造では、ポケットに大きな再配置はなく、Tyr467やAsp179が少し動く。",
+      "evidence": [
+        {
+          "quote": "CuTPRTSK does not undergo major rearrangement in this pocket when occupied by K4me1 instead of K4",
+          "section": "Results"
+        },
+        {
+          "quote": "While K4 di- and trimethylation negatively affect CuTPRTSK binding, mono-methylation enhances it",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "ヒトの病気（sponastrime dysplasia）にみられる変異のうちAsp364Hisは、H3.1に結合せず、DNA損傷の目印γH2A.Xの増加を抑えられない。結合するのに修復を戻せない変異もあり、TPRドメインにはまだ分かっていない働きがあると考えられる。",
+      "evidence": [
+        {
+          "quote": "Furthermore, mutations that bind to H3.1 but still fail to efficiently rescue the function of TONSL in response to DNA damage suggest that its TPR domain has additional yet undefined activities.",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "CuTPRTSK(1-530)は、TEVで切れるHisタグ付きで過剰発現した。",
+    "construct": "結晶化には、C末端を40残基欠いたCuTPRTSKΔを使った。",
+    "purification": "TEV切断後、Superdex 75でサイズ排除クロマトグラフィーを行った。",
+    "sample_prep": "CuTPRTSKΔ（20 mg/mL）にペプチドを1:5で加え、25%プロパンジオールなどの母液で蒸気拡散法により結晶化した。",
+    "data_collection": "APSの21-ID-Dで2つのデータセットを集め、7T7Tを探索モデルに分子置換で解いた。",
+    "evidence": [
+      {
+        "quote": "CuTPRTSK(1-530) or a 40-residue C-terminal truncation of the construct (CuTPRTSKΔ) was overexpressed as a TEV-cleavable His-tagged protein",
+        "section": "Methods"
+      },
+      {
+        "quote": "CuTPRTSK was concentrated and further purified by size exclusion chromatography (SEC) using a Superdex 75 (S75) column",
+        "section": "Methods"
+      },
+      {
+        "quote": "CuTPRTSKΔ (20 mg/mL) was incubated with H3.1K27ac or H3.1K4me1K27ac peptides (corresponding to residues 1 to 45) at a 1:5 CuTPRTSKΔ:peptide molar ratio, and complexes were crystallized by vapor diffusion using a mother liquor composed of 25% 1,2-propanediol, 5% glycerol, and 0.1 M Na/K phosphate (pH 6.0).",
+        "section": "Crystallography"
+      },
+      {
+        "quote": "Two full datasets were collected using the 21-ID-D beamline of the Life Science-Collaborative Access Team at the Advanced Photon Source Synchrotron.",
+        "section": "Crystallography"
+      },
+      {
+        "quote": "determined by molecular replacement using CuTPRTSKΔ (PDB ID: 7T7T)",
+        "section": "Crystallography"
+      }
+    ]
+  },
+  "keywords": [
+    "TONSL",
+    "TSK",
+    "ヒストンH3.1",
+    "K27ac",
+    "K4me1"
+  ],
+  "method_label": "X-ray",
+  "editor_notes": "PDB 38NQ・38NR（CuTPRTSKΔ/H3.1K27ac、/H3.1K4me1K27ac）は本文のData availabilityにあるが未公開（candidatesでunreleased）。分解能は表S7にあり本文にないため method_label は X-ray のみ。TSKのTPRはPDB 7T7Tですでに構造があり新規タンパク質ではない（Structure Update が妥当、first_claimなし）。ヒト・アフリカツメガエルTONSLはAlphaFold3モデルとHDX-MSで、結晶構造はミカンTSKのみ。K4me1の選択性は植物TSK固有の可能性があると著者が書いている。"
+}

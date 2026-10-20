@@ -1,0 +1,99 @@
+{
+ "pdb_id": "38KF",
+ "view": {
+  "target": [
+   11.45,
+   50.82,
+   16.92
+  ],
+  "dir": [
+   0.1152,
+   -0.545,
+   -0.8305
+  ],
+  "up": [
+   0.8082,
+   -0.4347,
+   0.3974
+  ],
+  "half": [
+   57.9,
+   60.5
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "CHI（カルコン異性化酵素）",
+   "desc": "Chalcone-flavonone isomerase family protein",
+   "entity": "1"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "G50",
+   "label": "phloretin",
+   "color": "#C23B8E",
+   "desc": "3-(4-Hydroxyphenyl)-1-(2,4,6-Trihydroxyphenyl)Propan-1-One",
+   "entity": [
+    "2"
+   ],
+   "sites": [
+    [
+     "I",
+     "301"
+    ],
+    [
+     "J",
+     "301"
+    ],
+    [
+     "K",
+     "301"
+    ],
+    [
+     "L",
+     "301"
+    ],
+    [
+     "M",
+     "301"
+    ],
+    [
+     "N",
+     "301"
+    ],
+    [
+     "O",
+     "301"
+    ],
+    [
+     "P",
+     "301"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "G50",
+  "residues": [
+   "R37",
+   "F48",
+   "T49",
+   "I51",
+   "V96",
+   "L102",
+   "Q106",
+   "Y107",
+   "K110",
+   "V111",
+   "S193",
+   "M194",
+   "V200"
+  ],
+  "hbonds": 5,
+  "pi": 1,
+  "neighbours": [],
+  "label": "phloretin"
+ }
+}

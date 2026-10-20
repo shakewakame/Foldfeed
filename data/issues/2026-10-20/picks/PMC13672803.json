@@ -1,0 +1,134 @@
+{
+  "pmcid": "PMC13672803",
+  "rank": 5,
+  "headline": "ワクシニアウイルスの足場D13は、A17ペプチドで棒状から格子へ移る",
+  "subhead": "試験管内の2種類の集合体をクライオ電顕で解き、足場ができる前段階からの転換を示した",
+  "target_label": "D13（ワクシニアウイルス）",
+  "target_en": "D13 scaffold protein (vaccinia virus)",
+  "summary": {
+    "question": "未成熟ウイルス粒子の足場がどう組み上がるかは、粒子が一過性で形も多様なため、よく分かっていなかった。",
+    "approach": "ワクシニアウイルスの足場タンパク質D13を試験管内で2種類の集合体にし、クライオ電顕とクライオ電子線トモグラフィーで解析した。",
+    "result": "足場様粒子の格子は2.9 Åで解けた。棒状のtwisterにA17のN末端ペプチドを加えると、足場様粒子に変わった。",
+    "learned": "A17のN末端ペプチドがD13の底の空洞に入り込むと、前段階の構造が崩れて足場の形成が始まると、著者は提案している。",
+    "open": "膜に埋め込んだ全長A17を使って組み立てを再現することが、次に必要な段階として挙げられている。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "However, the molecular mechanisms underlying scaffold assembly remain poorly understood due to the transient and pleomorphic nature of IVs",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here, we present single-particle cryo-electron microscopy and cryo-electron tomography structures of two distinct in vitro assemblies of the vaccinia virus scaffold protein D13 that recapitulate oligomeric states previously observed in situ.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "We analyzed the images of lattice patches of the SLP, yielding a 3D reconstruction at 2.9 Å resolution",
+          "section": "Cryo-EM structure of scaffold-like particle"
+        },
+        {
+          "quote": "this led to a structural transformation into SLPs, strongly supporting the role of A17 in reorganizing the D13 arrangement",
+          "section": "Molecular mechanism of transition from twister to scaffold"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "We propose that this interaction destabilizes the pre-assembly conformation and initiates scaffold formation upon viral membrane recruitment",
+          "section": "Abstract"
+        },
+        {
+          "quote": "triggered by the docking of the N-terminal peptide of the viral membrane protein A17 into the base cavity of D13",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "reconstituting this assembly process in vitro using full-length A17 embedded in lipid bilayers or liposomes will be a crucial next step",
+          "section": "Molecular mechanism of transition from twister to scaffold"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "pathogen"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "足場の前段階にあたるtwisterは、D13三量体6個でできた六角形の環が2枚向かい合う構造だった。環どうしは約19.3°回って軸がそろわない。底の空洞にもN末端と考えられる密度があり、縦方向のつながりがN末端の入れ替わり（ドメイン交換）による可能性が示された。",
+      "evidence": [
+        {
+          "quote": "Interestingly, the rings are slightly rotated relative to each other by approximately 19.3°, precluding axial alignment",
+          "section": "Cryo-electron tomography of two in vitro D13 assembly products"
+        },
+        {
+          "quote": "indicating potential vertical intertrimeric domain swapping of the N-terminus of D13",
+          "section": "Cryo-EM structure of the twister assembly"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "twisterにA17の先頭16残基のペプチドを加えると、足場様粒子に変わった。底の空洞のフェニルアラニンが並ぶ溝のそばにペプチド由来とみられる密度が見えたが、ペプチドの構造は追えず、原子モデルは作れなかった。",
+      "evidence": [
+        {
+          "quote": "Although the cryo-EM maps were insufficient to trace peptide structure, pronounced map density (marked by asterisks in Fig. 5) is symmetrically arranged adjacent to the groove formed by sequential phenylalanine residues (F486, F168, and F487) within the base cavity.",
+          "section": "Molecular mechanism of transition from twister to scaffold"
+        }
+      ]
+    },
+    {
+      "tag": "実験Tips",
+      "text": "N末端にeGFPを付けて、N末端が底の空洞に入れないようにしても、足場様粒子はできた。構造はHis6付きD13のものと区別できず、違いは底の空洞が空いている点だけだった。",
+      "evidence": [
+        {
+          "quote": "eGFP-D13 consistently formed SLPs, the structure of which remains indistinguishable from the SLPs produced from His6-tagged D13, except that the base cavity is unoccupied",
+          "section": "Cryo-EM structure of scaffold-like particle"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "D13は大腸菌BL21(DE3)で発現した。eGFP-D13だけRosetta(DE3)で発現した。",
+    "construct": "全長D13（1-551）と、N末端17残基を欠くD13（18-551）をpPROEX-HTaに入れた。",
+    "purification": "Ni-NTAのIMACで精製した。His6付きD13以外はTEVプロテアーゼでタグを外し、ゲルろ過で仕上げた。",
+    "sample_prep": "高塩（500 mM NaCl）のD13三量体を150 mM NaClに透析して集合体を作った。",
+    "data_collection": "足場様粒子はKrios G4（300 kV）とK3検出器で撮影し、cryoSPARCで処理した。",
+    "evidence": [
+      {
+        "quote": "The genes encoding both the wild type and mutant D13 in the pPROEX-HTa vector were expressed in Escherichia coli BL21 (DE3) cells, whereas eGFP-D13 was expressed in Rosetta (DE3) cells.",
+        "section": "Protein expression and purification"
+      },
+      {
+        "quote": "The genes encoding full-length D13 (D131-551) and the N-terminal truncation mutant (D1318-551) of Western Reserve strain vaccinia virus were inserted into the pPROEX-HTa vector",
+        "section": "Cloning"
+      },
+      {
+        "quote": "With the exception of the His6-tagged D13 construct, N-terminal His6 tags were removed by tobacco etch virus (TEV) protease digestion.",
+        "section": "Protein expression and purification"
+      },
+      {
+        "quote": "Lowering the NaCl concentration to 150 mM yielded two distinct D13 assembly products.",
+        "section": "Cryo-electron tomography of two in vitro D13 assembly products"
+      },
+      {
+        "quote": "Movie data were collected on a 300 kV Krios G4 TEM (TFS) equipped with a K3 BioContinuum direct electron detector (Gatan).",
+        "section": "Cryo-electron microscopy"
+      }
+    ]
+  },
+  "keywords": [
+    "D13",
+    "ワクシニアウイルス",
+    "足場タンパク質",
+    "A17"
+  ],
+  "editor_notes": "8エントリ（9USX・9USY・9USU・9USV・9USW・9USZ・9UT0・26FE）。D13には既存の構造が多数あり（UniProt P68440は先行PDB 20件）、初構造ではなく新しい集合状態の構造。A17ペプチドはマップ上の密度のみで原子モデルがない（UniProt Q76ZR4が初構造扱いになるのはこのため）。ga_pdb_id は足場様粒子の9USX。本文は Methods の途中（Cryo-ET 処理以降）まで確認。",
+  "ga_pdb_id": "9USX",
+  "legend_labels": [
+    "D13（足場タンパク質）"
+  ]
+}

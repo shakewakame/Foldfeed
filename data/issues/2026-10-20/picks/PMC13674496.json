@@ -1,0 +1,147 @@
+{
+  "pmcid": "PMC13674496",
+  "rank": 6,
+  "headline": "酵母のALA合成酵素は、基質に応じて下のローブを動かす",
+  "subhead": "グリシン結合型とスクシニルCoA結合型の結晶構造で、Gateとヒンジの動きを示した",
+  "target_label": "ALAS（出芽酵母）",
+  "target_en": "ALAS (S. cerevisiae)",
+  "summary": {
+    "question": "ALAS相同体は配列が約70%似るのに調節が異なる。その分子的な理由はよく分かっていなかった。",
+    "approach": "酵母ALAS（scALAS）をグリシンまたはスクシニルCoA（sCoA）と共結晶化し、MDと変異体で調べた。",
+    "result": "グリシン結合型（2.49 Å）では下のローブが剛体として動き、sCoA結合型（2.69 Å）ではGateとヒンジが固まった。",
+    "learned": "触媒の開始で、下のローブが静的な上のローブに対して動く。Gateを置換すると活性が増減した。",
+    "open": "ヒトALAS2のGate変異が貧血（XLSA）を起こす仕組みに、確かな説明はまだない。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Despite sharing approximately 70% sequence similarity, ALAS homologs exhibit distinct expression and regulatory mechanisms.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "However, the molecular basis for their functional divergence remains poorly understood.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "we determined the cocrystal structure of scALAS in the presence of glycine to 2.49-Å resolution",
+          "section": "Glycine binding promotes protein dynamics to initiate catalysis in scALAS"
+        },
+        {
+          "quote": "we also determined the 2.69-Å resolution cocrystal structure of scALAS in the presence of its second substrate, sCoA",
+          "section": "scALAS uniquely positions sCoA for catalysis"
+        }
+      ],
+      "result": [
+        {
+          "quote": "shows that the lower lobe moves as a rigid body toward the active site to varying degrees",
+          "section": "scALAS uses a C-terminal hinge to access distinct enzyme conformations"
+        },
+        {
+          "quote": "the scALAS-sCoA model also exhibits enhanced rigidity in the Gate and Ct-ext Hinge",
+          "section": "scALAS uses a C-terminal hinge to access distinct enzyme conformations"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Our scALAS co-crystal structures identify a mechanism where catalytic initiation triggers the enzyme’s lower lobe",
+          "section": "Discussion"
+        },
+        {
+          "quote": "our work demonstrates that targeted Gate mutations can modulate ALAS activity in either direction",
+          "section": "Discussion"
+        }
+      ],
+      "open": [
+        {
+          "quote": "To date, there is no definitive explanation for how these Gate mutations lead to XLSA.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "enzyme"
+  ],
+  "topics": [
+    "dynamics"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "グリシン結合型の6つのプロトマーを上のローブで重ねると、下のローブが活性部位側へ剛体として様々な程度に動く。Gateの頂点にあるT452は、PLGの方向に3 Å動く。",
+      "evidence": [
+        {
+          "quote": "shows that the lower lobe moves as a rigid body toward the active site to varying degrees",
+          "section": "scALAS uses a C-terminal hinge to access distinct enzyme conformations"
+        },
+        {
+          "quote": "Specifically, T452 in the Gate translates 3 Å toward the PLG ligand.",
+          "section": "scALAS uses a C-terminal hinge to access distinct enzyme conformations"
+        }
+      ]
+    },
+    {
+      "tag": "新しい結合部位",
+      "text": "sCoAは細菌型ALASと違う向きで結合する。Gateの保存されたThrではなく、P451の主鎖がsCoAのパンテテイン部分と水素結合する。",
+      "evidence": [
+        {
+          "quote": "Instead, in the scALAS-sCoA structure, there is a hydrogen bond between the main chain of P451 and the sCoA pantetheine moiety.",
+          "section": "scALAS uniquely positions sCoA for catalysis"
+        },
+        {
+          "quote": "Notably, scALAS uses a fundamentally different interaction mechanism that does not involve the conserved threonine",
+          "section": "scALAS uniquely positions sCoA for catalysis"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "Gateを細菌型（scALASB）やヒト型（scALASH）に置換した変異体は、活性が逆方向に変わる。scALASBは生成物ALAの放出速度が2倍になり、scALASHは活性が下がる。",
+      "evidence": [
+        {
+          "quote": "Specifically, scALASB demonstrates a twofold increase in the rate of ALA product release compared with WT scALAS, while the activity of scALASH correspondingly declines",
+          "section": "Gate dynamics couple substrate interaction and catalytic efficiency"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": null,
+    "construct": "結晶化には残基58〜548を使った。ミトコンドリアへの輸送配列は含まない。",
+    "purification": null,
+    "sample_prep": "酵素を50 mMグリシンまたは1 mM sCoAと室温で1時間混ぜてから、吊り滴蒸気拡散法で共結晶化した。",
+    "data_collection": "NSLS-IIの17-ID-1 AMXで回折データを集め、5TXRのapo酵素を探索モデルに分子置換した。",
+    "evidence": [
+      {
+        "quote": "The construct used for crystallization (residues 58 to 548) lacks the mitochondrial targeting sequence",
+        "section": "Glycine binding promotes protein dynamics to initiate catalysis in scALAS"
+      },
+      {
+        "quote": "The corresponding dilutions were incubated with 50 mM glycine or 1 mM sCoA at room temperature (∼25°C) for 1 hour.",
+        "section": "scALAS and substrate co-crystallization"
+      },
+      {
+        "quote": "Native diffraction datasets were collected at the 17-ID-1 AMX beamline at the National Synchrotron Light Source II",
+        "section": "Data collection, structure determination, and refinement"
+      },
+      {
+        "quote": "Molecular replacement was performed in PHASER using one subunit of Hem1 apoenzyme (Protein Data Bank 5TXR, chain B) as the search model",
+        "section": "Data collection, structure determination, and refinement"
+      }
+    ]
+  },
+  "keywords": [
+    "ALAS",
+    "ヘム合成",
+    "Gateループ"
+  ],
+  "editor_notes": "構造は9DZ7（グリシン結合型、2.49 Å）と9DZO（sCoA結合型、2.69 Å）。UniProt P09950にはapo構造（5TXR など）が既にあり、初構造ではない。論文は「基質結合型で公表済みなのは細菌 R. capsulatus の ALAS だけ」と書いている。ga_pdb_id は既定（9DZ7）。図の凡例は render 前のため未確認。",
+  "legend_labels": [
+    "ALAS（ヘム合成酵素）"
+  ],
+  "ligand_names": {
+    "PLG": "ピリドキシル-グリシン"
+  },
+  "ligand_label": "ピリドキシル-グリシン"
+}
