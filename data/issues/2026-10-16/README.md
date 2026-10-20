@@ -44,6 +44,8 @@
 
 *Nature Cell Biology*（2026-09-15） · [論文](https://doi.org/10.1038/s41556-026-02061-0) · ライセンス: cc by
 
+筆頭著者：Pradeep K. Sheokand（University of Cambridge, UK）　責任著者：Kasparas Petkevicius（University of Cambridge, UK）
+
 ![構造図：ヒトCLN8（Batten病タンパク質）](figures/PMC13661276.svg)
 
 <sub>色（順に）：CLN8（アシル転移酵素）　スティック：DHA（C22:6）（HXA）、CoA（COA）</sub>
@@ -175,6 +177,8 @@ CLN8の産物であるS,S-LPGを補うと、CLN8欠損細胞とマウス肝臓�
 
 *Proceedings of the National Academy of Sciences of the United States of America*（2026-10-06） · [論文](https://doi.org/10.1073/pnas.2612755123) · ライセンス: cc by
 
+筆頭著者：Mafalda de Almeida Gomes（University College London, United Kingdom）　責任著者：Hannah M. Mitchison（University College London, United Kingdom）、Takashi Ochi（University of Leeds, United Kingdom）
+
 ![構造図：DNAAF19–RUVBL1/2（ヒト）](figures/PMC13663681.svg)
 
 <sub>色（順に）：RUVBL1（シャペロン） / RUVBL2（シャペロン） / DNAAF19（組み立て因子） / DPCD（アダプター）　スティック：ADP</sub>
@@ -294,6 +298,8 @@ DPCDが結合したRUVBL2のサブユニットでは、ADPが減るか見えな�
 ### Structures of the lipid II flippase from the monoderm pathogen Staphylococcus aureus
 
 *The Journal of Biological Chemistry*（2026-09-06） · [論文](https://doi.org/10.1016/j.jbc.2026.113516) · ライセンス: cc by
+
+筆頭著者：Yancheng E. Li（California Institute of Technology, USA）　責任著者：William M. Clemons（California Institute of Technology, USA）
 
 ![構造図：SaMurJ（黄色ブドウ球菌）](figures/PMC13661225.svg)
 
@@ -433,6 +439,8 @@ SaMurJは大腸菌のMurJと配列が17%しか同じでないが、コアの12�
 ### Mechanisms of intracellular pH gating and local anesthetic inhibition of the two-pore domain K+ channel TASK-2
 
 *Proceedings of the National Academy of Sciences of the United States of America*（2026-10-08） · [論文](https://doi.org/10.1073/pnas.2604873123) · ライセンス: cc by
+
+筆頭著者：Trevor Docter（University of California Berkeley）　責任著者：Stephen G. Brohawn（University of California Berkeley）
 
 ![構造図：TASK-2（マウス）](figures/PMC13663809.svg)
 
@@ -577,6 +585,8 @@ pH 6.5では、各サブユニットのTM4の241〜246番付近がほどけて�
 ### Structural insights into the ligand modulation of MRGPRX4 conformational plasticity
 
 *Cell Discovery*（2026-10-13） · [論文](https://doi.org/10.1038/s41421-026-00929-x) · ライセンス: cc by
+
+筆頭著者：Mengna Zhang（University of Science and Technology of China）　責任著者：Minghu Song, Chunyu Wang（Hefei Comprehensive National Science Center, China）、He Chen（Tianjin Medical University, China） ほか 1 名
 
 ![構造図：MRGPRX4（ヒト、かゆみ受容体）](figures/PMC13661610.svg)
 
@@ -724,6 +734,8 @@ pH 6.5では、各サブユニットのTM4の241〜246番付近がほどけて�
 ### Generation of membrane-permeable cyclic peptides inhibiting protein–protein interaction
 
 *Nature Chemical Biology*（2026-06-01） · [論文](https://doi.org/10.1038/s41589-026-02237-7) · ライセンス: cc by
+
+筆頭著者：Xinjian Ji（École Polytechnique Fédérale de Lausanne (EPFL), Switzerland）　責任著者：Christian Heinis（École Polytechnique Fédérale de Lausanne (EPFL), Switzerland）
 
 ![構造図：Keap1 Kelchドメイン（ヒト）](figures/PMC13661285.svg)
 

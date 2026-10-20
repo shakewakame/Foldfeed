@@ -36,6 +36,8 @@
 
 *Nature Communications*（2026-01-01） · [論文](https://doi.org/10.1038/s41467-026-77369-4) · ライセンス: cc by-nc-nd
 
+筆頭著者：Zirui Gao（Beijing University of Chemical Technology, China）　責任著者：Yi Zhang（Beijing University of Chemical Technology, China）
+
 ![構造図：QatBC（大腸菌 QatABCD）](figures/PMC13639016.svg)
 
 <sub>色（順に）：QatC（QueC 型タンパク質） / QatB</sub>
@@ -161,6 +163,8 @@ QatBのN末端を天然のまま得るため、Gly2のコドンをUlp1切断部�
 
 *Biophysics and Physicobiology*（2026-01-01） · [論文](https://doi.org/10.2142/biophysico.bppb-v23.0030) · ライセンス: cc by-nc-sa
 
+筆頭著者：Motoshi Sakai（The University of Osaka, Japan）　責任著者：Tohru Minamino（The University of Osaka, Japan）
+
 ![構造図：FlhAC A489E（サルモネラ）](figures/PMC13639345.svg)
 
 <sub>色（順に）：FlhAC（A489E 変異体）</sub>
@@ -272,6 +276,8 @@ Arg-386をAlaに置換した変異体は、FliH・FliIがあれば運動性と�
 ### Distal amino-acid substitutions contribute to HIV protease inhibitor resistance as directly as proximal amino-acid substitutions
 
 *Scientific Reports*（2026-01-01） · [論文](https://doi.org/10.1038/s41598-026-64620-7) · ライセンス: cc by
+
+筆頭著者：Debananda Das（National Institutes of Health, USA）　責任著者：Debananda Das, Hiroaki Mitsuya（National Institutes of Health, USA）
 
 ![構造図：HIV-1プロテアーゼ PRp51](figures/PMC13638461.svg)
 
@@ -388,6 +394,8 @@ MDでは、活性部位容積が結晶構造の値から100 Å3以内に収ま�
 ### Quasi-continuous cotranslational compaction and folding of a multidomain protein
 
 *Nature Communications*（2026-01-01） · [論文](https://doi.org/10.1038/s41467-026-78090-y) · ライセンス: cc by
+
+筆頭著者：Spyridoula Mitsikosta（Stockholm University, Sweden）　責任著者：Gunnar von Heijne, Ane Metola（Stockholm University, Sweden）
 
 ![構造図：ホタルルシフェラーゼ（翻訳中）](figures/PMC13639035.svg)
 

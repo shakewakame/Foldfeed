@@ -25,6 +25,8 @@
 
 *Nature Communications*（2026-08-24） · [論文](https://doi.org/10.1038/s41467-026-77069-z) · ライセンス: cc by
 
+筆頭著者：Brendan Farrell（University of Oxford, UK）　責任著者：Joshua Tan（National Institutes of Health, USA）、Matthew K. Higgins（University of Oxford, UK）
+
 ![構造図：PfRIPR（熱帯熱マラリア原虫）](figures/PMC13658223.svg)
 
 <sub>色（順に）：PfRIPR（抗体の標的） / RP.012（重鎖） / RP.012（軽鎖）</sub>
@@ -169,6 +171,8 @@ MAD8-2はRP.012の阻害を打ち消し（約16%、RP.012単独は46%）、C末�
 ### Structural basis of IgLON5 autoantibody recognition in autoimmune encephalitis
 
 *Nature Communications*（2026-09-11） · [論文](https://doi.org/10.1038/s41467-026-77812-6) · ライセンス: cc by
+
+筆頭著者：Angelique Roux（Lausanne University Hospital and University of Lausanne, Switzerland）　責任著者：Laurent Perez（Lausanne University Hospital and University of Lausanne, Switzerland）
 
 ![構造図：IgLON5とFab2513（ヒト）](figures/PMC13658817.svg)
 

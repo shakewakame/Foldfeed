@@ -172,8 +172,15 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 /* an article opens as Today's Structure does on the front page: headline, supplement, then the paper's own title */
 .art .art-h {{ margin:0; font-size:30px; line-height:1.45; font-weight:700; color:var(--ink); text-wrap:balance; }}
 .art .subhead {{ margin:10px 0 0; font-size:17.5px; line-height:1.75; color:var(--desc); }}
-.ptitle {{ margin:14px 0 26px; font-family:var(--latin); font-size:16.5px; line-height:1.5; color:var(--ink2); }}
-.ptitle .pl {{ margin-right:12px; font-family:var(--mono); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--mute); }}
+/* the paper's title, then who it comes from: labels in one column, so the three lines read as one block */
+.pmeta {{ margin:14px 0 26px; }}
+.pmeta p {{ display:grid; grid-template-columns:118px minmax(0,1fr); margin:0; font-family:var(--latin); line-height:1.5; }}
+.pmeta p + p {{ margin-top:5px; }}
+.ptitle {{ font-size:16.5px; color:var(--ink2); }}
+.pmeta .pl {{ padding-top:.35em; font-family:var(--mono); font-size:10.5px; line-height:1.4; letter-spacing:.1em; text-transform:uppercase; color:var(--mute); }}
+.ppl {{ font-size:15px; color:var(--ink2); }}
+.ppl .pa {{ font-size:13.5px; color:var(--mute); }}
+.ppl .ja {{ font-family:var(--sans); }}
 .art-4 {{ margin-top:22px; }}
 .nopdb {{ margin:0 0 8px; padding:10px 16px; border-left:3px solid var(--acc); font-size:15px; line-height:1.8; color:var(--ink2); }}
 .art .reads {{ margin-top:22px; }}
@@ -1012,6 +1019,11 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
   .art .art-h {{ font-size:23px; }}
   .art .subhead {{ font-size:15.5px; }}
   .ptitle {{ font-size:15px; }}
+  .pmeta p {{ display:block; }}
+  .pmeta p + p {{ margin-top:10px; }}
+  .pmeta .pl {{ display:block; padding:0; margin-bottom:1px; }}
+  .ppl {{ font-size:14px; }}
+  .ppl .pa {{ font-size:12.5px; }}
   .site dl {{ grid-template-columns:minmax(0,1fr); }}
   .lab div {{ grid-template-columns:92px 1fr; }}
   .legend {{ grid-template-columns:minmax(0,1fr); }}
@@ -1724,6 +1736,21 @@ def no_pdb_note(cand: dict) -> str:
             '構造図は載せていません。</p>')
 
 
+AUTHOR_LABEL = {"first": "First author", "corresp": "Corresponding"}
+
+
+def authors_html(cand: dict) -> str:
+    """The first and corresponding authors under the paper's title, so the reader sees which group it comes from."""
+    rows = []
+    for key, groups, more in render.author_rows(cand):
+        who = ", ".join(f'<span class="pn">{esc(", ".join(names))}</span>' + (f' <span class="pa">({esc(aff)})</span>' if aff else "")
+                        for names, aff in groups) or '<span class="pa ja">筆頭著者と同じ</span>'
+        if more:
+            who += f' <span class="pa ja">ほか {more} 名</span>'
+        rows.append(f'<p class="ppl"><span class="pl">{AUTHOR_LABEL[key]}</span><span lang="en">{who}</span></p>')
+    return "".join(rows)
+
+
 def article_html(cand: dict, pick: dict, date: str, n: int, root: Path, fig_base: str,
                  impact_type: str | None = None, up: str = "../", related: list[dict] | None = None) -> str:
     lic = esc((cand.get("license") or "ライセンス不明").upper())
@@ -1741,7 +1768,8 @@ def article_html(cand: dict, pick: dict, date: str, n: int, root: Path, fig_base
             f'{later_button(cand["pmcid"])}</div>'
             f'<h2 class="art-h">{esc(pick["headline"])}</h2>'
             f'<p class="subhead">{esc(pick.get("subhead") or "")}</p>'
-            f'<p class="ptitle"><span class="pl">Paper</span><span lang="en">{esc(cand["title"])}</span></p>'
+            f'<div class="pmeta"><p class="ptitle"><span class="pl">Paper</span><span lang="en">{esc(cand["title"])}</span></p>'
+            f'{authors_html(cand)}</div>'
             f'{figures_html(cand, pick, date, root, fig_base, up) or no_pdb_note(cand)}'
             f'{intro_html(pick)}{paper_link(cand)}'
             f'<h3>Highlights</h3>{hls}{lab}{related_html(related or [], up)}</div>')
@@ -2252,6 +2280,14 @@ ABOUT = (   # the front page's About FoldFeed, in polite Japanese (the owner's w
      "構造図は、|PDB の座標から|描いています。"
      "紹介文は AI が|論文本文をもとに作成し、|内容ごとに|論文本文の該当箇所を|引用したうえで、|編集者が確認してから|"
      "公開しています。"),
+    ("著作権と出典",   # facts only (the owner's request, 2026-10-20): what is used under which terms, not "no problems"
+     "ご紹介する論文は、|全文が無料で読める|オープンアクセス論文です。"
+     "その多くは、|CC BY などの|クリエイティブ・コモンズ・ライセンスで|公開されています。"
+     "記事の文章は、|論文の転載や翻訳ではなく、|論文の内容をもとに|日本語で新しく書いたものです。"
+     "論文の文章は、|根拠として|短い英文を引用するにとどめ、|「原文」と明示しています。"
+     "各記事には、|雑誌名とライセンス、|原著論文へのリンクを|載せています。"
+     "構造図は、|論文の図を|転載したものではありません。"
+     "PDB のデータ（CC0）と|UniProt のデータ（CC BY 4.0）を、|それぞれのライセンスに従って|使っています。"),
 )
 
 

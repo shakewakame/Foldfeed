@@ -42,6 +42,8 @@
 
 *The EMBO Journal*（2026-10-19） · [論文](https://doi.org/10.1038/s44318-026-00920-y) · ライセンス: cc by
 
+筆頭著者：Jorgaq Pata（IBCP, France）　責任著者：Vincent Chaptal, Pierre Falson（IBCP, France）
+
 ![構造図：Cdr1（C. glabrata）](figures/SN-s44318-026-00920-y.svg)
 
 <sub>色（順に）：Cdr1（排出ポンプ）　スティック：ATP、バナジン酸（VO4）、ADP、エルゴステロール（ERG）</sub>
@@ -190,6 +192,8 @@ ADP-バナジン酸結合型から開いた型へ移る間に、NBD-1のCヘリ�
 
 *Structure (London, England : 1993)*（2024-11-22） · [論文](https://doi.org/10.1016/j.str.2024.10.031) · ライセンス: cc by
 
+筆頭著者：Patryk Ludzia（University of Oxford, UK）　責任著者：Christina Redfield, Bungo Akiyoshi（University of Oxford, UK）
+
 ![構造図：KKT23（トリパノソーマ）](figures/PMC7619301.svg)
 
 <sub>色（順に）：KKT23（アセチル基転移酵素）　スティック：アセチルCoA（ACO）</sub>
@@ -336,6 +340,8 @@ N末端領域（残基2–70）の結晶構造は2.7 Åで、短いヘリック�
 
 *Science Advances*（2026-10-16） · [論文](https://doi.org/10.1126/sciadv.aeh3827) · ライセンス: cc by-nc
 
+筆頭著者：Hossein Davarinejad（University of Ottawa, Canada）　責任著者：Amélie Fradet-Turcotte（Université Laval, Canada）、Jean-François Couture（University of Ottawa, Canada）
+
 ![構造図：TSK/TONSL（TPRドメイン）](figures/PMC13674474.svg)
 
 **植物のTSKは、H3.1の修飾を3か所で読み分ける**
@@ -458,6 +464,8 @@ C末端ローブのポケットはK4を受け止め、モノメチル化で結�
 ### Native Mass Spectrometry Reveals Ligand-Specific Conformational Heterogeneity of the β1‑Adrenergic Receptor Using Nanobody Probes
 
 *Analytical Chemistry*（2026-10-19） · [論文](https://doi.org/10.1021/acs.analchem.6c04571) · ライセンス: cc by
+
+筆頭著者：Yi-Quan Wang（Academia Sinica, Taiwan）　責任著者：Hsin-Yung Yen（Academia Sinica, Taiwan）
 
 ![構造図：β1アドレナリン受容体（シチメンチョウ）](figures/PMC13670896.svg)
 
@@ -605,6 +613,8 @@ Nb6B9 の CDR を Nb80 の配列に戻すと、CDR1 または CDR3 では弱い�
 
 *bioRxiv*（2026-09-22） · [論文](https://doi.org/10.64898/2026.09.18.752772) · ライセンス: cc by
 
+筆頭著者：Cathy J Spangler
+
 **Fabに金粒子を固定し、脳切片のAMPA受容体を位置づける**
 
 クライオETで、金ナノ粒子付きFabを目印に脱感作時の形をサブナノメートルで調べた
@@ -668,6 +678,8 @@ Nb6B9 の CDR を Nb80 の配列に戻すと、CDR1 または CDR3 では弱い�
 ### β‑d‑Arabinofuranose-configured Cyclitol Aziridines as Selective, Brain-penetrant Covalent GBA2 Inhibitors
 
 *Journal of the American Chemical Society*（2026-10-19） · [論文](https://doi.org/10.1021/jacs.6c09754) · ライセンス: cc by
+
+筆頭著者：Rob F Lammers（Leiden University, The Netherlands）　責任著者：Marta Artola（Leiden University, The Netherlands）
 
 ![構造図：GBA2（ヒト）／TxGH116（細菌）](figures/PMC13674267.svg)
 

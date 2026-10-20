@@ -385,7 +385,23 @@
           "first_structure": false
         }
       ],
-      "score": 60
+      "score": 60,
+      "people": {
+        "first": {
+          "name": "Brendan Farrell",
+          "aff": "University of Oxford, UK"
+        },
+        "corresp": [
+          {
+            "name": "Joshua Tan",
+            "aff": "National Institutes of Health, USA"
+          },
+          {
+            "name": "Matthew K. Higgins",
+            "aff": "University of Oxford, UK"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13658822",
@@ -658,7 +674,19 @@
           "first_structure": false
         }
       ],
-      "score": 52
+      "score": 52,
+      "people": {
+        "first": {
+          "name": "Angelique Roux",
+          "aff": "Lausanne University Hospital and University of Lausanne, Switzerland"
+        },
+        "corresp": [
+          {
+            "name": "Laurent Perez",
+            "aff": "Lausanne University Hospital and University of Lausanne, Switzerland"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13660411",

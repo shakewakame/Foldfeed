@@ -41,6 +41,8 @@
 
 *Nature Communications*（2026-10-09） · [論文](https://doi.org/10.1038/s41467-026-77424-0) · ライセンス: cc by
 
+筆頭著者：Oscar Vadas（University of Geneva, Switzerland）　責任著者：Gerhard Hummer（Max Planck Institute of Biophysics, Germany）
+
 ![構造図：ヒトPI3Kδ（p110δ）](figures/PMC13652804.svg)
 
 <sub>色（順に）：p110δ（触媒サブユニット） / p85α（調節サブユニット）　スティック：ロギノリシブ（QGU）</sub>
@@ -171,6 +173,8 @@ CLL患者の細胞をex vivoで処理すると、ロギノリシブは高用量�
 ### Distinct Molten‐Globule Conformations in an Interacting Protein Domain Resolved by 19F NMR of Fluoroproline Residues
 
 *Angewandte Chemie (International Ed. in English)*（2026-08-22） · [論文](https://doi.org/10.1002/anie.4052471) · ライセンス: cc by-nc-nd
+
+筆頭著者：Abir Ben Bouzayene（University of Strasbourg, France）　責任著者：Vladimir Torbeev, Bruno Kieffer（University of Strasbourg, France）
 
 ![構造図：CBPのNCBD（マウス）](figures/PMC13653584.svg)
 
@@ -304,6 +308,8 @@ P30の4R体だけが、中性のpHでアミロイドを作った。この変種�
 ### Characterization of Full‐Length Antibody Complexes Through HDX‐Mass Spectrometry Coupled With NMR Spectroscopy: New Insight Into Avelumab/PD‐L1 Interaction
 
 *Angewandte Chemie (International Ed. in English)*（2026-08-22） · [論文](https://doi.org/10.1002/anie.1540355) · ライセンス: cc by
+
+筆頭著者：Francesca Sacco（University of Florence, Italy）　責任著者：Julian Langer（Max Planck Institute of Biophysics, Germany）、Marco Fragai（University of Florence, Italy）
 
 ![構造図：PD-L1・アベルマブ（ヒト）](figures/PMC13653614.svg)
 

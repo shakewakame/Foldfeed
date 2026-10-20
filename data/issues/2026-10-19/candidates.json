@@ -90,7 +90,19 @@
           "first_structure": true
         }
       ],
-      "score": 91
+      "score": 91,
+      "people": {
+        "first": {
+          "name": "Marissa L. Abbott",
+          "aff": "Princeton University, United States"
+        },
+        "corresp": [
+          {
+            "name": "Mohammad R. Seyedsayamdost",
+            "aff": "Princeton University, United States"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13671523",
@@ -310,7 +322,31 @@
           "first_structure": true
         }
       ],
-      "score": 87
+      "score": 87,
+      "people": {
+        "first": {
+          "name": "Fengjuan Li",
+          "aff": "Lanzhou University, China"
+        },
+        "corresp": [
+          {
+            "name": "Pinghua Li",
+            "aff": "Lanzhou University, China"
+          },
+          {
+            "name": "Zengjun Lu",
+            "aff": "Lanzhou University, China"
+          },
+          {
+            "name": "Dongsheng Lei",
+            "aff": "Lanzhou University, China"
+          },
+          {
+            "name": "Kun Li",
+            "aff": "Lanzhou University, China"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13669386",
@@ -375,7 +411,23 @@
           "first_structure": true
         }
       ],
-      "score": 81
+      "score": 81,
+      "people": {
+        "first": {
+          "name": "Xiaoyu Liu",
+          "aff": "Central China Normal University"
+        },
+        "corresp": [
+          {
+            "name": "Marcus A. Horwitz",
+            "aff": "University of California, Los Angeles (UCLA), USA"
+          },
+          {
+            "name": "Z. Hong Zhou",
+            "aff": "University of California, Los Angeles (UCLA), USA"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13671375",
@@ -550,7 +602,23 @@
       ],
       "emdb_ids": [],
       "proteins": [],
-      "score": 65
+      "score": 65,
+      "people": {
+        "first": {
+          "name": "Ryota Yasukochi",
+          "aff": "The University of Tokyo, Japan"
+        },
+        "corresp": [
+          {
+            "name": "Hikaru Watanabe",
+            "aff": "Nagase Viita CO, LTD, Japan"
+          },
+          {
+            "name": "Shinya Fushinobu",
+            "aff": "The University of Tokyo, Japan"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13674496",
@@ -665,7 +733,19 @@
           "first_structure": false
         }
       ],
-      "score": 62
+      "score": 62,
+      "people": {
+        "first": {
+          "name": "Jenny U. Tran",
+          "aff": "Vanderbilt University School of Medicine, USA"
+        },
+        "corresp": [
+          {
+            "name": "Breann L. Brown",
+            "aff": "Vanderbilt University School of Medicine, USA"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13673511",
@@ -732,7 +812,19 @@
           "first_structure": false
         }
       ],
-      "score": 61
+      "score": 61,
+      "people": {
+        "first": {
+          "name": "Jason R. Burke",
+          "aff": "California State University San Bernardino, USA"
+        },
+        "corresp": [
+          {
+            "name": "Jason R. Burke",
+            "aff": "California State University San Bernardino, USA"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13669642",
@@ -813,7 +905,19 @@
           "first_structure": false
         }
       ],
-      "score": 61
+      "score": 61,
+      "people": {
+        "first": {
+          "name": "Nikolaus Falb",
+          "aff": "BOKU University, Austria"
+        },
+        "corresp": [
+          {
+            "name": "Stefan Hofbauer",
+            "aff": "BOKU University, Austria"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13669362",
@@ -1272,7 +1376,27 @@
           "first_structure": false
         }
       ],
-      "score": 60
+      "score": 60,
+      "people": {
+        "first": {
+          "name": "Takuya Imazu",
+          "aff": "Mitsubishi Tanabe Pharma Co, Ltd, Japan"
+        },
+        "corresp": [
+          {
+            "name": "Takuya Imazu",
+            "aff": "Mitsubishi Tanabe Pharma Co, Ltd, Japan"
+          },
+          {
+            "name": "Osamu Nureki",
+            "aff": "The University of Tokyo, Japan"
+          },
+          {
+            "name": "Ikuko Miyaguchi",
+            "aff": "Mitsubishi Tanabe Pharma Co, Ltd, Japan"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13676158",
@@ -1333,7 +1457,19 @@
       ],
       "emdb_ids": [],
       "proteins": [],
-      "score": 55
+      "score": 55,
+      "people": {
+        "first": {
+          "name": "Khoa C M Le",
+          "aff": "Nanyang Technological University, Republic of Singapore"
+        },
+        "corresp": [
+          {
+            "name": "Gerhard Grüber",
+            "aff": "Nanyang Technological University, Republic of Singapore"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13672079",
@@ -1382,7 +1518,27 @@
         "EMD-54648"
       ],
       "proteins": [],
-      "score": 52
+      "score": 52,
+      "people": {
+        "first": {
+          "name": "Carolin J. Klose",
+          "aff": "Technical University of Munich, Germany"
+        },
+        "corresp": [
+          {
+            "name": "Carolin J. Klose",
+            "aff": "Technical University of Munich, Germany"
+          },
+          {
+            "name": "Brenda A. Schulman",
+            "aff": "Technical University of Munich, Germany"
+          },
+          {
+            "name": "Matthias J. Feige",
+            "aff": "Technical University of Munich, Germany"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13676316",
@@ -1490,7 +1646,19 @@
           "first_structure": false
         }
       ],
-      "score": 52
+      "score": 52,
+      "people": {
+        "first": {
+          "name": "Bassem M Mohammed",
+          "aff": "Saint Louis University School of Medicine, USA"
+        },
+        "corresp": [
+          {
+            "name": "Bassem M Mohammed",
+            "aff": "Saint Louis University School of Medicine, USA"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13669508",
@@ -1607,7 +1775,23 @@
           "first_structure": false
         }
       ],
-      "score": 51
+      "score": 51,
+      "people": {
+        "first": {
+          "name": "Tae-Sung Oh",
+          "aff": "Therazyne, Inc, Republic of Korea"
+        },
+        "corresp": [
+          {
+            "name": "Bo-Seong Jeong",
+            "aff": "Therazyne, Inc, Republic of Korea"
+          },
+          {
+            "name": "Byung-Ha Oh",
+            "aff": "Therazyne, Inc, Republic of Korea"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13669040",
@@ -1666,7 +1850,19 @@
       "cited_pdb_ids": [],
       "emdb_ids": [],
       "proteins": [],
-      "score": 51
+      "score": 51,
+      "people": {
+        "first": {
+          "name": "Rina Fraenkel",
+          "aff": "The Hebrew University of Jerusalem, Israel"
+        },
+        "corresp": [
+          {
+            "name": "Netanel Tzarum",
+            "aff": "The Hebrew University of Jerusalem, Israel"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13672277",
@@ -1718,7 +1914,19 @@
         "EMD-81933"
       ],
       "proteins": [],
-      "score": 35
+      "score": 35,
+      "people": {
+        "first": {
+          "name": "Zihao Wen",
+          "aff": "Peking University, China"
+        },
+        "corresp": [
+          {
+            "name": "Zhibo Liu",
+            "aff": "Peking University, China"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13672209",
@@ -4447,7 +4655,27 @@
           "organism": "Rattus norvegicus"
         }
       ],
-      "score": 5
+      "score": 5,
+      "people": {
+        "first": {
+          "name": "Maren Kirstin Schuhmacher",
+          "aff": "Helmholtz Munich, Germany"
+        },
+        "corresp": [
+          {
+            "name": "Christoph Gruber",
+            "aff": "Helmholtz Munich, Germany"
+          },
+          {
+            "name": "Florian Giesert",
+            "aff": "Helmholtz Munich, Germany"
+          },
+          {
+            "name": "Wolfgang Wurst",
+            "aff": "Helmholtz Munich, Germany"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13669357",

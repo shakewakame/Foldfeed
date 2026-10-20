@@ -598,6 +598,42 @@ def quote_block(evidence: list) -> list[str]:
     return out + ["</details>", ""]
 
 
+CORRESP_SHOWN = 3   # corresponding authors named in an article's opening; the rest are counted
+
+
+def author_rows(cand: dict) -> list[tuple[str, list[tuple[list[str], str]], int]]:
+    """Who the paper comes from, for an article's opening: [("first" | "corresp", [(names, affiliation)…], more)…],
+    names grouped by affiliation in the paper's order. The corresponding row has no groups when the first author is
+    the only corresponding author ('筆頭著者と同じ'), and is left out when the paper marks none."""
+    people = cand.get("people") or {}
+    first = people.get("first")
+    if not first:
+        return []
+
+    def grouped(ps):
+        out = {}
+        for p in ps:
+            out.setdefault(p.get("aff") or "", []).append(p["name"])
+        return [(names, aff) for aff, names in out.items()]
+    rows = [("first", grouped([first]), 0)]
+    corresp = list({p["name"]: p for p in people.get("corresp") or []}.values())
+    if [p["name"] for p in corresp] == [first["name"]]:
+        rows.append(("corresp", [], 0))
+    elif corresp:
+        rows.append(("corresp", grouped(corresp[:CORRESP_SHOWN]), max(0, len(corresp) - CORRESP_SHOWN)))
+    return rows
+
+
+def author_text(cand: dict) -> str:
+    """The author rows as one Markdown line: '筆頭著者：A（所属）　責任著者：B, C（所属）'."""
+    label = {"first": "筆頭著者", "corresp": "責任著者"}
+    parts = []
+    for key, groups, more in author_rows(cand):
+        who = "、".join(", ".join(names) + (f"（{aff}）" if aff else "") for names, aff in groups) or "筆頭著者と同じ"
+        parts.append(f"{label[key]}：{who}" + (f" ほか {more} 名" if more else ""))
+    return "　".join(parts)
+
+
 def article_md(cand: dict, pick: dict, n: int, info: dict | None = None) -> list[str]:
     doi = f"https://doi.org/{cand['doi']}" if cand.get("doi") else f"https://europepmc.org/article/PMC/{cand['pmcid']}"
     s = pick["summary"]
@@ -611,6 +647,8 @@ def article_md(cand: dict, pick: dict, n: int, info: dict | None = None) -> list
     out = [f"## {n}｜{pick['target_label']}", "",
            f"### {cand['title']}", "",
            f"*{cand['journal']}*（{cand['pub_date']}） · [論文]({doi}) · ライセンス: {cand.get('license') or '不明'}", ""]
+    if author_text(cand):
+        out += [author_text(cand), ""]
     if info is None or info.get("pdb_id") or not is_impact(pick):
         used = "（論文が使った既存の構造）" if is_impact(pick) else ""
         out += [f"![構造図：{pick['target_label']}](figures/{cand['pmcid']}.svg)", ""] + ([f"<sub>PDB {info['pdb_id']}{used}</sub>", ""] if used and info else [])

@@ -101,7 +101,19 @@
           "first_structure": false
         }
       ],
-      "score": 86
+      "score": 86,
+      "people": {
+        "first": {
+          "name": "Gabriel Mendoza-Rojas",
+          "aff": "Heinrich-Heine University Düsseldorf, Germany"
+        },
+        "corresp": [
+          {
+            "name": "Florian Altegoer",
+            "aff": "Heinrich-Heine University Düsseldorf, Germany"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13654475",

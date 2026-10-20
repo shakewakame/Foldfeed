@@ -43,6 +43,8 @@
 
 *Nature Communications*（2026-01-01） · [論文](https://doi.org/10.1038/s41467-026-78496-8) · ライセンス: cc by-nc-nd
 
+筆頭著者：Chuancun Wei（ShanghaiTech University, China）　責任著者：Rainer Kalscheuer（Heinrich Heine University Düsseldorf, Germany）、Gurdyal S. Besra（University of Birmingham, UK）、Lu Zhang（ShanghaiTech University, China）
+
 ![構造図：WzmWzt（結核菌）](figures/PMC13649706.svg)
 
 <sub>色（順に）：Wzm（膜貫通） / Wzt（ATP 結合）　スティック：LLG3の脂質（推定）（A1E8P）</sub>
@@ -193,6 +195,8 @@ TMD中央の空洞にはDDM分子が2つ入った中間的な状態も捉えた�
 
 *iScience*（2026-09-28） · [論文](https://doi.org/10.1016/j.isci.2026.117642) · ライセンス: cc by
 
+筆頭著者：Zhi Feng Sherman Lim（Monash University, Australia）　責任著者：Joshua D. Ooi（Monash University, Australia）
+
 ![構造図：HLA-DR3–Ro60ペプチド（ヒト）](figures/PMC13651826.svg)
 
 <sub>色（順に）：HLA-DRα鎖 / HLA-DRβ鎖（DRB1） / Ro60 ペプチド</sub>
@@ -322,6 +326,8 @@ HLA-DR3は発現収量が低く、Ro60ペプチドの直接発現は約0.3 mg/L�
 
 *Journal of the American Chemical Society*（2026-10-10） · [論文](https://doi.org/10.1021/jacs.6c05584) · ライセンス: cc by
 
+筆頭著者：Alicia M Kirk（The University of Queensland, Australia）　責任著者：Alicia M Kirk（The University of Queensland, Australia）、Max J Cryle（Monash University, Australia）、Marc Garcia-Borràs（Universitat de Girona, Spain）
+
 ![構造図：NsRufO（P450）](figures/PMC13651536.svg)
 
 <sub>色（順に）：NsRufO（P450） / ペプチド（5 残基）　スティック：ヘム（HEM）</sub>
@@ -437,6 +443,8 @@ NsRufOの基質結合型構造（1.59 Å）では、Tyr-3とHis-5がヘムの真
 ### An intrinsically disordered domain of transcription terminator Rho governs genome-wide Rho utilization (Rut) site selection in Mycobacterium tuberculosis
 
 *Nucleic Acids Research*（2026-10-09） · [論文](https://doi.org/10.1093/nar/gkag973) · ライセンス: cc by-nc
+
+筆頭著者：Thuy Duong Do（Université d’Orléans, France）　責任著者：Marc Boudvillain（Université d’Orléans, France）
 
 ![構造図：Rho（結核菌）](figures/PMC13650167.svg)
 
@@ -567,6 +575,8 @@ M495L置換を入れるとRhoが57 bpのRNA–DNAレポーター二重鎖を巻�
 ### End processing in NHEJ by Polymerase λ and PNKP is coordinated during short-range synapsis
 
 *Nature Communications*（2026-01-01） · [論文](https://doi.org/10.1038/s41467-026-77503-2) · ライセンス: cc by
+
+筆頭著者：Alex Vogt（Northwestern University, USA）　責任著者：Yuan He（Johns Hopkins University, USA）
 
 ![構造図：NHEJ短距離複合体＋Pol λ（ヒト）](figures/PMC13649775.svg)
 
@@ -701,6 +711,8 @@ Pol λのBRCTドメインはKu70/80のブリッジをまたいで結合し、N�
 
 *Nature Communications*（2026-01-01） · [論文](https://doi.org/10.1038/s41467-026-77583-0) · ライセンス: cc by
 
+筆頭著者：Arne Börgel（Johannes Gutenberg-University Mainz, Germany）　責任著者：Jürgen A. Ripperger（University of Fribourg, Switzerland）、Eva Wolf（Johannes Gutenberg-University Mainz, Germany）
+
 ![構造図：WDR5–PER2 WBMペプチド（マウス）](figures/PMC13649712.svg)
 
 <sub>色（順に）：WDR5（GST 融合体）</sub>
@@ -830,6 +842,8 @@ WDR5のWIN部位阻害剤（Inh-4、Inh-5）はPER1–WDR5複合体を部分的�
 ### Effects of high light and elevated temperature on the structure of photosystem II isolated from Arabidopsis thaliana
 
 *Photosynthesis Research*（2026-01-01） · [論文](https://doi.org/10.1007/s11120-026-01238-w) · ライセンス: cc by
+
+筆頭著者：Jack Forsman（Umeå University, Sweden）　責任著者：Jack Forsman, Wolfgang P Schröder（Umeå University, Sweden）、Johannes Messinger（Uppsala University, Sweden）
 
 ![構造図：PSII C2S2（シロイヌナズナ）](figures/PMC13649839.svg)
 

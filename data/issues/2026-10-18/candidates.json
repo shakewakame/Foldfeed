@@ -126,7 +126,39 @@
           "first_structure": true
         }
       ],
-      "score": 87
+      "score": 87,
+      "people": {
+        "first": {
+          "name": "Binghong Xu",
+          "aff": "Tianjin University, China"
+        },
+        "corresp": [
+          {
+            "name": "Binghong Xu",
+            "aff": "Tianjin University, China"
+          },
+          {
+            "name": "Sai Shi",
+            "aff": "Tianjin University, China"
+          },
+          {
+            "name": "Cheng Zhu",
+            "aff": "Tianjin University, China"
+          },
+          {
+            "name": "Sheng Ye",
+            "aff": "Tianjin University, China"
+          },
+          {
+            "name": "Zhiyong Lou",
+            "aff": "Institute of Tsinghua University, China"
+          },
+          {
+            "name": "Yaxin Wang",
+            "aff": "Tianjin University, China"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13672803",
@@ -406,7 +438,19 @@
           "first_structure": true
         }
       ],
-      "score": 85
+      "score": 85,
+      "people": {
+        "first": {
+          "name": "Yeontae Jang",
+          "aff": "Sungkyunkwan University, Republic of Korea"
+        },
+        "corresp": [
+          {
+            "name": "Jaekyung Hyun",
+            "aff": "Sungkyunkwan University, Republic of Korea"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13672361",
@@ -481,7 +525,19 @@
           "first_structure": true
         }
       ],
-      "score": 81
+      "score": 81,
+      "people": {
+        "first": {
+          "name": "Bingjie Tang",
+          "aff": "The Hong Kong University of Science and Technology, China"
+        },
+        "corresp": [
+          {
+            "name": "Shangyu Dang",
+            "aff": "The Hong Kong University of Science and Technology, China"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13672072",
@@ -743,7 +799,23 @@
           "first_structure": false
         }
       ],
-      "score": 81
+      "score": 81,
+      "people": {
+        "first": {
+          "name": "Maria Ciapponi",
+          "aff": "Max-Planck Institute of Biochemistry, Germany"
+        },
+        "corresp": [
+          {
+            "name": "Jacques Bonnet",
+            "aff": "Max-Planck Institute of Biochemistry, Germany"
+          },
+          {
+            "name": "Jürg Müller",
+            "aff": "Max-Planck Institute of Biochemistry, Germany"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13645619",
@@ -831,7 +903,23 @@
           "first_structure": false
         }
       ],
-      "score": 61
+      "score": 61,
+      "people": {
+        "first": {
+          "name": "Jiemin Shen",
+          "aff": "Stanford University School of Medicine, USA"
+        },
+        "corresp": [
+          {
+            "name": "Jun Xu",
+            "aff": "Stanford University School of Medicine, USA"
+          },
+          {
+            "name": "Brian K. Kobilka",
+            "aff": "Stanford University School of Medicine, USA"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13672387",
@@ -1112,7 +1200,27 @@
           "first_structure": false
         }
       ],
-      "score": 61
+      "score": 61,
+      "people": {
+        "first": {
+          "name": "Jelena Boyka",
+          "aff": "Humboldt-Universität zu Berlin, Germany"
+        },
+        "corresp": [
+          {
+            "name": "Frank Müh",
+            "aff": "Johannes Kepler University Linz, Austria"
+          },
+          {
+            "name": "Athina Zouni",
+            "aff": "Humboldt-Universität zu Berlin, Germany"
+          },
+          {
+            "name": "Cecilia Blikstad",
+            "aff": "Uppsala University, Sweden"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13672095",
@@ -1556,7 +1664,19 @@
           "first_structure": false
         }
       ],
-      "score": 60
+      "score": 60,
+      "people": {
+        "first": {
+          "name": "Thomas P Newton",
+          "aff": "Columbia University, USA"
+        },
+        "corresp": [
+          {
+            "name": "Alexander I Sobolevsky",
+            "aff": "Columbia University, USA"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13672294",
@@ -1653,7 +1773,19 @@
           "first_structure": false
         }
       ],
-      "score": 57
+      "score": 57,
+      "people": {
+        "first": {
+          "name": "Sarah V Barrass",
+          "aff": "Ecole Polytechnique Fédérale de Lausanne (EPFL), Switzerland"
+        },
+        "corresp": [
+          {
+            "name": "Ulrich J Lorenz",
+            "aff": "Ecole Polytechnique Fédérale de Lausanne (EPFL), Switzerland"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13672055",
@@ -1753,7 +1885,19 @@
           "first_structure": false
         }
       ],
-      "score": 57
+      "score": 57,
+      "people": {
+        "first": {
+          "name": "Zhen Cui",
+          "aff": "Washington University School of Medicine, USA"
+        },
+        "corresp": [
+          {
+            "name": "Chen Shen",
+            "aff": "Washington University School of Medicine, USA"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13672075",
@@ -2053,7 +2197,19 @@
           "first_structure": false
         }
       ],
-      "score": 55
+      "score": 55,
+      "people": {
+        "first": {
+          "name": "Ryohei Watanabe",
+          "aff": "Perelman School of Medicine at the University of Pennsylvania, USA"
+        },
+        "corresp": [
+          {
+            "name": "Edward B. Lee",
+            "aff": "Perelman School of Medicine at the University of Pennsylvania, USA"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13662703",
@@ -2208,7 +2364,19 @@
         "EMD-76753"
       ],
       "proteins": [],
-      "score": 55
+      "score": 55,
+      "people": {
+        "first": {
+          "name": "Carmen V Apostol",
+          "aff": "Baylor College of Medicine, USA"
+        },
+        "corresp": [
+          {
+            "name": "B V Venkataram Prasad",
+            "aff": "Baylor College of Medicine, USA"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13657626",
@@ -2255,7 +2423,23 @@
       ],
       "emdb_ids": [],
       "proteins": [],
-      "score": 54
+      "score": 54,
+      "people": {
+        "first": {
+          "name": "Jongbin Kim",
+          "aff": "University of California, San Francisco, United States"
+        },
+        "corresp": [
+          {
+            "name": "Brian K Shoichet",
+            "aff": "University of California, San Francisco, United States"
+          },
+          {
+            "name": "James S Fraser",
+            "aff": "University of California, San Francisco, United States"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13670144",
@@ -2288,7 +2472,23 @@
       "cited_pdb_ids": [],
       "emdb_ids": [],
       "proteins": [],
-      "score": 52
+      "score": 52,
+      "people": {
+        "first": {
+          "name": "Daniel Seifert",
+          "aff": "University of Duisburg-Essen"
+        },
+        "corresp": [
+          {
+            "name": "Jens Voskuhl",
+            "aff": "University of Duisburg-Essen"
+          },
+          {
+            "name": "Christine Beuck",
+            "aff": "University of Duisburg-Essen"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13672045",
@@ -2320,7 +2520,23 @@
         "EMD-76860"
       ],
       "proteins": [],
-      "score": 51
+      "score": 51,
+      "people": {
+        "first": {
+          "name": "Rodrigo Fregoso Ocampo",
+          "aff": "University of Texas at Austin, USA"
+        },
+        "corresp": [
+          {
+            "name": "Piyush K Jain",
+            "aff": "University of Florida, USA"
+          },
+          {
+            "name": "David W Taylor",
+            "aff": "University of Texas at Austin, USA"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13662807",
@@ -5426,7 +5642,23 @@
           "organism": "Bos taurus"
         }
       ],
-      "score": 5
+      "score": 5,
+      "people": {
+        "first": {
+          "name": "Jonathan C. Deutsch",
+          "aff": "University of Illinois Urbana-Champaign, USA"
+        },
+        "corresp": [
+          {
+            "name": "Brian K. Kobilka",
+            "aff": "Stanford University, USA"
+          },
+          {
+            "name": "Rabindra V. Shivnaraine",
+            "aff": "Stanford University, USA"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13669652",

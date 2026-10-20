@@ -50,6 +50,8 @@
 
 *Communications Biology*（2026-06-25） · [論文](https://doi.org/10.1038/s42003-026-10535-y) · ライセンス: cc by
 
+筆頭著者：Takuya Imazu（Mitsubishi Tanabe Pharma Co, Ltd, Japan）　責任著者：Takuya Imazu, Ikuko Miyaguchi（Mitsubishi Tanabe Pharma Co, Ltd, Japan）、Osamu Nureki（The University of Tokyo, Japan）
+
 ![構造図：ヒトB0AT1（SLC6A19）](figures/PMC13669362.svg)
 
 <sub>色（順に）：B0AT1（アミノ酸輸送体） / ACE2（相手タンパク質）　スティック：化合物3（A1L6W）</sub>
@@ -186,6 +188,8 @@
 
 *Journal of the American Chemical Society*（2026-10-01） · [論文](https://doi.org/10.1021/jacs.6c03714) · ライセンス: cc by
 
+筆頭著者：Marissa L. Abbott（Princeton University, United States）　責任著者：Mohammad R. Seyedsayamdost（Princeton University, United States）
+
 ![構造図：AshA（放線菌）](figures/PMC13674229.svg)
 
 <sub>色（順に）：AshA（硫黄化酵素）　スティック：ヒスチジン（HIS）</sub>
@@ -293,6 +297,8 @@ ATP-grasp酵素AshBは、2-チオヒスチジンをC末端側に持つジペプ�
 
 *Communications Biology*（2026-06-25） · [論文](https://doi.org/10.1038/s42003-026-10543-y) · ライセンス: cc by
 
+筆頭著者：Xiaoyu Liu（Central China Normal University）　責任著者：Marcus A. Horwitz, Z. Hong Zhou（University of California, Los Angeles (UCLA), USA）
+
 ![構造図：PdpC（野兎病菌）](figures/PMC13669386.svg)
 
 <sub>色（順に）：PdpC（T6SSエフェクター）</sub>
@@ -395,6 +401,8 @@ PdpCはPI(3)P、PI(3,5)P2、スルファチド、カルジオリピンに強く�
 ### Structural basis of antigenic drift in FMDV O/Cathay topotype variants revealed by porcine-derived single B-cell neutralizing antibodies
 
 *PLOS Pathogens*（2026-10-15） · [論文](https://doi.org/10.1371/journal.ppat.1014650) · ライセンス: cc by
+
+筆頭著者：Fengjuan Li（Lanzhou University, China）　責任著者：Pinghua Li, Zengjun Lu, Dongsheng Lei（Lanzhou University, China） ほか 1 名
 
 ![構造図：口蹄疫ウイルス O/Cathay型](figures/PMC13671523.svg)
 
@@ -507,6 +515,8 @@ VP1のRGDモチーフの2つ後ろの残基（149番、Q→H）の変化は、3�
 ### Substrate-bound structures of yeast ALA synthase reveal protein dynamics initiating heme biosynthesis
 
 *Science Advances*（2026-10-16） · [論文](https://doi.org/10.1126/sciadv.aef7768) · ライセンス: cc by-nc
+
+筆頭著者：Jenny U. Tran（Vanderbilt University School of Medicine, USA）　責任著者：Breann L. Brown（Vanderbilt University School of Medicine, USA）
 
 ![構造図：ALAS（出芽酵母）](figures/PMC13674496.svg)
 
@@ -628,6 +638,8 @@ Gateを細菌型にした変異体はALAの放出が約2倍になり、ヒト型
 
 *The FASEB Journal*（2026-10-17） · [論文](https://doi.org/10.1096/fj.202602735r) · ライセンス: cc by-nc-nd
 
+筆頭著者：Khoa C M Le（Nanyang Technological University, Republic of Singapore）　責任著者：Gerhard Grüber（Nanyang Technological University, Republic of Singapore）
+
 ![構造図：AbF1-ATPase（A. baumannii）](figures/PMC13676158.svg)
 
 **ε サブユニットが形を変えながら、ATP 合成酵素の中から抜け出す**
@@ -732,6 +744,8 @@ ADP とリン酸を加えると、触媒部位の β サブユニットが 24° 
 ### Structural basis of an endoplasmic reticulum EMC:Spf1 insertase–dislocase complex
 
 *Nature Structural & Molecular Biology*（2026-10-13） · [論文](https://doi.org/10.1038/s41594-026-01883-8) · ライセンス: cc by
+
+筆頭著者：Carolin J. Klose（Technical University of Munich, Germany）　責任著者：Carolin J. Klose, Brenda A. Schulman, Matthias J. Feige（Technical University of Munich, Germany）
 
 ![構造図：EMC:Spf1 複合体（出芽酵母）](figures/PMC13672079.svg)
 
@@ -842,6 +856,8 @@ ATPγS を加えた状態では、Spf1 のアーム領域が EMC の細胞質側
 
 *Plant Direct*（2026-10-16） · [論文](https://doi.org/10.1002/pld3.70200) · ライセンス: cc by-nc-nd
 
+筆頭著者：Jason R. Burke（California State University San Bernardino, USA）　責任著者：筆頭著者と同じ
+
 ![構造図：MtCHI-I（タルウマゴヤシ）](figures/PMC13673511.svg)
 
 <sub>色（順に）：CHI（カルコンイソメラーゼ）　スティック：フロレチン（G50）</sub>
@@ -947,6 +963,8 @@ ATPγS を加えた状態では、Spf1 のアーム領域が EMC の細胞質側
 ### Unraveling the active site cover of coproheme decarboxylase from Listeria monocytogenes
 
 *The Febs Journal*（2026-05-06） · [論文](https://doi.org/10.1111/febs.70575) · ライセンス: cc by
+
+筆頭著者：Nikolaus Falb（BOKU University, Austria）　責任著者：Stefan Hofbauer（BOKU University, Austria）
 
 ![構造図：ChdC H117A（リステリア）](figures/PMC13669642.svg)
 
@@ -1062,6 +1080,8 @@ ChdCはグラム陽性菌に固有の酵素で、将来の抗菌薬の標的に�
 
 *Journal of thrombosis and haemostasis : JTH*（2026-05-26） · [論文](https://doi.org/10.1016/j.jtha.2026.05.021) · ライセンス: cc by
 
+筆頭著者：Bassem M Mohammed（Saint Louis University School of Medicine, USA）　責任著者：筆頭著者と同じ
+
 ![構造図：第VIII因子（ヒト）](figures/PMC13676316.svg)
 
 <sub>色（順に）：第VIII因子（凝固因子）</sub>
@@ -1163,6 +1183,8 @@ C2 の疎水性スパイク（Met2199/Phe2200 と Leu2251/Leu2252）が 3〜4 Å
 ### Discovery and structural analysis of glycoside hydrolase family 176 α-1,2 glucosidase from Arthrobacter humicola A8F5
 
 *The Journal of Biological Chemistry*（2026-09-08） · [論文](https://doi.org/10.1016/j.jbc.2026.113530) · ライセンス: cc by
+
+筆頭著者：Ryota Yasukochi（The University of Tokyo, Japan）　責任著者：Hikaru Watanabe（Nagase Viita CO, LTD, Japan）、Shinya Fushinobu（The University of Tokyo, Japan）
 
 ![構造図：A8F5グルコシダーゼ（GH176）](figures/PMC13671375.svg)
 
@@ -1270,6 +1292,8 @@ AlphaFold3の予測では、ループ3と4が活性部位に蓋をする。こ�
 
 *Computational and Structural Biotechnology Journal*（2026-10-15） · [論文](https://doi.org/10.34133/csbj.0236) · ライセンス: cc by
 
+筆頭著者：Tae-Sung Oh（Therazyne, Inc, Republic of Korea）　責任著者：Bo-Seong Jeong, Byung-Ha Oh（Therazyne, Inc, Republic of Korea）
+
 ![構造図：WT1 ペプチド/HLA-A*02（ヒト）](figures/PMC13669508.svg)
 
 <sub>色（順に）：Q2L Fab 重鎖 / Q2L Fab 軽鎖 / HLA-A*02（MHC） / β2M（MHC 軽鎖） / WT1 ペプチド（抗原）</sub>
@@ -1373,6 +1397,8 @@ HSA ドメインIII を融合すると溶液中で単量体になり、親和性
 
 *Microbial Biotechnology*（2026-10-16） · [論文](https://doi.org/10.1111/1751-7915.70453) · ライセンス: cc by
 
+筆頭著者：Rina Fraenkel（The Hebrew University of Jerusalem, Israel）　責任著者：Netanel Tzarum（The Hebrew University of Jerusalem, Israel）
+
 ![構造図：多型毒素 PT9–PIM9（細菌）](figures/PMC13675652.svg)
 
 **毒素は、免疫タンパク質と融合すると作れる**
@@ -1467,6 +1493,8 @@ HSA ドメインIII を融合すると溶液中で単量体になり、親和性
 
 *Nature*（2026-08-26） · [論文](https://doi.org/10.1038/s41586-026-10971-0) · ライセンス: cc by-nc-nd
 
+筆頭著者：Zihao Wen（Peking University, China）　責任著者：Zhibo Liu（Peking University, China）
+
 ![構造図：FAP（線維芽細胞活性化タンパク質）](figures/PMC13668651.svg)
 
 **結合した場で薬を切り離す、取り込み不要の運搬法**
@@ -1554,6 +1582,8 @@ Tyr745 をフェニルアラニンに置き換えると、共有結合の効率�
 ### Creating bottom-up RNA transfer vehicles from synthetic protein assemblies
 
 *Nature*（2026-09-02） · [論文](https://doi.org/10.1038/s41586-026-10952-3) · ライセンス: cc by
+
+筆頭著者：Maren Kirstin Schuhmacher（Helmholtz Munich, Germany）　責任著者：Christoph Gruber, Florian Giesert, Wolfgang Wurst（Helmholtz Munich, Germany）
 
 **AIが設計したタンパク質で、RNA運搬体を作った**
 

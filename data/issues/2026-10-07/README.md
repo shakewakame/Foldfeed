@@ -39,6 +39,8 @@
 
 *Nucleic Acids Research*（2026-10-05） · [論文](https://doi.org/10.1093/nar/gkag939) · ライセンス: cc by
 
+筆頭著者：Chathuni Jayathilake（Case Western Reserve University, United States）　責任著者：Tae Hun Kim（Case Western Reserve University, United States）
+
 ![構造図：ヒトPARP2–HPF1／ヌクレオソーム](figures/PMC13635751.svg)
 
 **PARP2は、ヌクレオソームの2周にまたがって切断を認識する**
@@ -149,6 +151,8 @@ WGRドメインが上側のDNAジャイアで切断を認識し、HDのArg296と
 ### Mechanism of NanR transcriptional activation of sialic acid metabolism in Streptococcus pneumoniae
 
 *Nucleic Acids Research*（2026-10-05） · [論文](https://doi.org/10.1093/nar/gkag953) · ライセンス: cc by
+
+筆頭著者：David M Wood（University of Canterbury, New Zealand）　責任著者：Renwick C J Dobson, Christopher R Horne（University of Canterbury, New Zealand）
 
 ![構造図：SpNanR（肺炎球菌）](figures/PMC13635753.svg)
 
@@ -280,6 +284,8 @@ ManNAc-6-Pは1分子で3つのプロトマーにまたがって結合し（リ�
 
 *Nucleic Acids Research*（2026-10-05） · [論文](https://doi.org/10.1093/nar/gkag934) · ライセンス: cc by
 
+筆頭著者：Ricardo Villegas Warren（Wageningen University & Research, Netherlands）　責任著者：John van der Oost（Wageningen University & Research, Netherlands）
+
 ![構造図：LbCas12a Lid2変異体](figures/PMC13635745.svg)
 
 **Lidをループに置き換えると、Cas12aは非標的鎖だけを切る**
@@ -396,6 +402,8 @@ Lid2変異体のクライオ電顕構造（2.5 Å）では、標的鎖を活性�
 ### Structures of multiple states of the nicotinamide nucleotide transhydrogenase from Escherichia coli
 
 *iScience*（2026-09-24） · [論文](https://doi.org/10.1016/j.isci.2026.117657) · ライセンス: cc by
+
+筆頭著者：Jiao Li（University of Science and Technology of China）　責任著者：Jiao Li, Kai Zhang（University of Science and Technology of China）、Robert B Gennis（University of Illinois at Urbana-Champaign, USA） ほか 1 名
 
 ![構造図：大腸菌NNT（PntA/PntB）](figures/PMC13635403.svg)
 

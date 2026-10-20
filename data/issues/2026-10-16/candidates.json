@@ -162,7 +162,19 @@
           "first_structure": true
         }
       ],
-      "score": 88
+      "score": 88,
+      "people": {
+        "first": {
+          "name": "Pradeep K. Sheokand",
+          "aff": "University of Cambridge, UK"
+        },
+        "corresp": [
+          {
+            "name": "Kasparas Petkevicius",
+            "aff": "University of Cambridge, UK"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13663681",
@@ -359,7 +371,23 @@
           "first_structure": false
         }
       ],
-      "score": 87
+      "score": 87,
+      "people": {
+        "first": {
+          "name": "Mafalda de Almeida Gomes",
+          "aff": "University College London, United Kingdom"
+        },
+        "corresp": [
+          {
+            "name": "Hannah M. Mitchison",
+            "aff": "University College London, United Kingdom"
+          },
+          {
+            "name": "Takashi Ochi",
+            "aff": "University of Leeds, United Kingdom"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13661225",
@@ -520,7 +548,19 @@
           "first_structure": true
         }
       ],
-      "score": 84
+      "score": 84,
+      "people": {
+        "first": {
+          "name": "Yancheng E. Li",
+          "aff": "California Institute of Technology, USA"
+        },
+        "corresp": [
+          {
+            "name": "William M. Clemons",
+            "aff": "California Institute of Technology, USA"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13661285",
@@ -721,7 +761,19 @@
           "first_structure": false
         }
       ],
-      "score": 64
+      "score": 64,
+      "people": {
+        "first": {
+          "name": "Xinjian Ji",
+          "aff": "École Polytechnique Fédérale de Lausanne (EPFL), Switzerland"
+        },
+        "corresp": [
+          {
+            "name": "Christian Heinis",
+            "aff": "École Polytechnique Fédérale de Lausanne (EPFL), Switzerland"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13661529",
@@ -1029,7 +1081,19 @@
           "first_structure": false
         }
       ],
-      "score": 60
+      "score": 60,
+      "people": {
+        "first": {
+          "name": "Trevor Docter",
+          "aff": "University of California Berkeley"
+        },
+        "corresp": [
+          {
+            "name": "Stephen G. Brohawn",
+            "aff": "University of California Berkeley"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13661610",
@@ -1413,7 +1477,31 @@
           "first_structure": false
         }
       ],
-      "score": 60
+      "score": 60,
+      "people": {
+        "first": {
+          "name": "Mengna Zhang",
+          "aff": "University of Science and Technology of China"
+        },
+        "corresp": [
+          {
+            "name": "Minghu Song",
+            "aff": "Hefei Comprehensive National Science Center, China"
+          },
+          {
+            "name": "He Chen",
+            "aff": "Tianjin Medical University, China"
+          },
+          {
+            "name": "Chunyu Wang",
+            "aff": "Hefei Comprehensive National Science Center, China"
+          },
+          {
+            "name": "Can Cao",
+            "aff": "University of Science and Technology of China"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13667928",

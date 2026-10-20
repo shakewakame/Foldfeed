@@ -138,7 +138,23 @@
           "first_structure": false
         }
       ],
-      "score": 63
+      "score": 63,
+      "people": {
+        "first": {
+          "name": "Sebastian Hilscher",
+          "aff": "Martin-Luther-University Halle-Wittenberg, Germany"
+        },
+        "corresp": [
+          {
+            "name": "Mike Schutkowski",
+            "aff": "Martin-Luther-University Halle-Wittenberg, Germany"
+          },
+          {
+            "name": "Cordelia Schiene-Fischer",
+            "aff": "Martin-Luther-University Halle-Wittenberg, Germany"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13646271",
@@ -265,7 +281,27 @@
       ],
       "emdb_ids": [],
       "proteins": [],
-      "score": 63
+      "score": 63,
+      "people": {
+        "first": {
+          "name": "Xiaoxiao Zhang",
+          "aff": "Northwest A&F University, China"
+        },
+        "corresp": [
+          {
+            "name": "Juan Guo",
+            "aff": "China Academy of Chinese Medical Sciences"
+          },
+          {
+            "name": "Yanlong Zhang",
+            "aff": "Northwest A&F University, China"
+          },
+          {
+            "name": "Wei Huang",
+            "aff": "Hubei University of Chinese Medicine, China"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13646831",
@@ -501,7 +537,23 @@
           "first_structure": false
         }
       ],
-      "score": 59
+      "score": 59,
+      "people": {
+        "first": {
+          "name": "Ling Xu",
+          "aff": "Yale University, United States"
+        },
+        "corresp": [
+          {
+            "name": "Ling Xu",
+            "aff": "Yale University, United States"
+          },
+          {
+            "name": "Anna Marie Pyle",
+            "aff": "Yale University, United States"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13648278",
@@ -587,7 +639,19 @@
         "EMD-48852"
       ],
       "proteins": [],
-      "score": 57
+      "score": 57,
+      "people": {
+        "first": {
+          "name": "Nathan Jespersen",
+          "aff": "Los Alamos National Laboratory, USA"
+        },
+        "corresp": [
+          {
+            "name": "Karissa Y. Sanbonmatsu",
+            "aff": "Los Alamos National Laboratory, USA"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13648974",
@@ -874,7 +938,19 @@
           "first_structure": false
         }
       ],
-      "score": 55
+      "score": 55,
+      "people": {
+        "first": {
+          "name": "Yajie Wang",
+          "aff": "Fudan University, China"
+        },
+        "corresp": [
+          {
+            "name": "Lei Sun",
+            "aff": "Fudan University, China"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13648238",
@@ -899,7 +975,19 @@
       ],
       "emdb_ids": [],
       "proteins": [],
-      "score": 40
+      "score": 40,
+      "people": {
+        "first": {
+          "name": "Yizhi Fu",
+          "aff": "Vanderbilt University, United States"
+        },
+        "corresp": [
+          {
+            "name": "Michael P. Stone",
+            "aff": "Vanderbilt University, United States"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13646716",

@@ -289,7 +289,7 @@ def run(index_date: str, issue_date: str, index_from: str | None = None, force: 
         m["journal"] = p["journal"] or m["journal"]  # publisher's capitalisation
         m["title"] = p["title"] or html.unescape(m["title"])  # Europe PMC titles carry escaped markup
         c = {**m, **classify(m, p, released, holdings),
-             "emdb_ids": p["emdb_ids"], "abstract": p["abstract"] or m["abstract"]}
+             "emdb_ids": p["emdb_ids"], "abstract": p["abstract"] or m["abstract"], "people": p.get("people") or {}}
         if c["kind"] not in NEW_KINDS:
             # Facts for a possible 注目の構造 article: the structures it used, and the pre-screen hints.
             c["cited_structures"] = [released[pid] for pid in c["cited_pdb_ids"] if pid in released][:10]

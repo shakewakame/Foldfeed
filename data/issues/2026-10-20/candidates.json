@@ -212,7 +212,23 @@
           "first_structure": true
         }
       ],
-      "score": 93
+      "score": 93,
+      "people": {
+        "first": {
+          "name": "Patryk Ludzia",
+          "aff": "University of Oxford, UK"
+        },
+        "corresp": [
+          {
+            "name": "Christina Redfield",
+            "aff": "University of Oxford, UK"
+          },
+          {
+            "name": "Bungo Akiyoshi",
+            "aff": "University of Oxford, UK"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13674229",
@@ -533,7 +549,23 @@
           "first_structure": true
         }
       ],
-      "score": 90
+      "score": 90,
+      "people": {
+        "first": {
+          "name": "Jorgaq Pata",
+          "aff": "IBCP, France"
+        },
+        "corresp": [
+          {
+            "name": "Vincent Chaptal",
+            "aff": "IBCP, France"
+          },
+          {
+            "name": "Pierre Falson",
+            "aff": "IBCP, France"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13676158",
@@ -634,7 +666,23 @@
       ],
       "emdb_ids": [],
       "proteins": [],
-      "score": 52
+      "score": 52,
+      "people": {
+        "first": {
+          "name": "Hossein Davarinejad",
+          "aff": "University of Ottawa, Canada"
+        },
+        "corresp": [
+          {
+            "name": "Amélie Fradet-Turcotte",
+            "aff": "Université Laval, Canada"
+          },
+          {
+            "name": "Jean-François Couture",
+            "aff": "University of Ottawa, Canada"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13672277",
@@ -5749,7 +5797,19 @@
           "organism": "Homo sapiens"
         }
       ],
-      "score": 5
+      "score": 5,
+      "people": {
+        "first": {
+          "name": "Yi-Quan Wang",
+          "aff": "Academia Sinica, Taiwan"
+        },
+        "corresp": [
+          {
+            "name": "Hsin-Yung Yen",
+            "aff": "Academia Sinica, Taiwan"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13670034",
@@ -7637,7 +7697,19 @@
           "organism": "Thermoanaerobacterium xylanolyticum (strain ATCC 49914 / DSM 7097 / LX-11)"
         }
       ],
-      "score": 5
+      "score": 5,
+      "people": {
+        "first": {
+          "name": "Rob F Lammers",
+          "aff": "Leiden University, The Netherlands"
+        },
+        "corresp": [
+          {
+            "name": "Marta Artola",
+            "aff": "Leiden University, The Netherlands"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13674577",
@@ -8098,7 +8170,14 @@
         "flags": []
       },
       "proteins": [],
-      "score": 0
+      "score": 0,
+      "people": {
+        "first": {
+          "name": "Cathy J Spangler",
+          "aff": ""
+        },
+        "corresp": []
+      }
     },
     {
       "pmcid": "PMC13673352",

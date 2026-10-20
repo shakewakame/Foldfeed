@@ -50,6 +50,8 @@
 
 *Nature Structural & Molecular Biology*（2026-09-09） · [論文](https://doi.org/10.1038/s41594-026-01882-9) · ライセンス: cc by-nc-nd
 
+筆頭著者：Thomas P Newton（Columbia University, USA）　責任著者：Alexander I Sobolevsky（Columbia University, USA）
+
 ![構造図：GluA2–γ2（AMPA受容体）](figures/PMC13672095.svg)
 
 <sub>色（順に）：GluA2–γ2（AMPA 受容体）　スティック：カイニン酸（KAI）</sub>
@@ -197,6 +199,8 @@
 ### Structural and mechanistic insights into OCTN1-mediated transport and cancer cell proliferation
 
 *Nature Communications*（2026-09-14） · [論文](https://doi.org/10.1038/s41467-026-77727-2) · ライセンス: cc by-nc-nd
+
+筆頭著者：Binghong Xu（Tianjin University, China）　責任著者：Binghong Xu, Sai Shi, Cheng Zhu（Tianjin University, China） ほか 3 名
 
 ![構造図：ヒトOCTN1（SLC22A4）](figures/PMC13669368.svg)
 
@@ -347,6 +351,8 @@ ET結合型の構造を使った承認薬の仮想スクリーニングで、駆
 
 *Nature Communications*（2026-09-15） · [論文](https://doi.org/10.1038/s41467-026-77811-7) · ライセンス: cc by-nc-nd
 
+筆頭著者：Bingjie Tang（The Hong Kong University of Science and Technology, China）　責任著者：Shangyu Dang（The Hong Kong University of Science and Technology, China）
+
 ![構造図：ヒトNHA1（SLC9B1）](figures/PMC13672361.svg)
 
 <sub>色（順に）：NHA1（Na+/H+ 交換体）</sub>
@@ -483,6 +489,8 @@ NHA1は2つの鎖がTM0とTM8で組み合わさったダイマーで、各鎖は
 
 *Nature Communications*（2026-09-15） · [論文](https://doi.org/10.1038/s41467-026-77815-3) · ライセンス: cc by-nc-nd
 
+筆頭著者：Yeontae Jang（Sungkyunkwan University, Republic of Korea）　責任著者：Jaekyung Hyun（Sungkyunkwan University, Republic of Korea）
+
 ![構造図：ワクシニアウイルスD13（足場）](figures/PMC13672803.svg)
 
 <sub>色（順に）：D13（足場）</sub>
@@ -618,6 +626,8 @@ A17が結合する底の空洞は、リファンピシンの結合部位でも�
 
 *Nature Structural & Molecular Biology*（2026-09-14） · [論文](https://doi.org/10.1038/s41594-026-01885-6) · ライセンス: cc by
 
+筆頭著者：Maria Ciapponi（Max-Planck Institute of Biochemistry, Germany）　責任著者：Jacques Bonnet, Jürg Müller（Max-Planck Institute of Biochemistry, Germany）
+
 ![構造図：ヒトcPRC1（PRC1.4）](figures/PMC13672072.svg)
 
 <sub>色（順に）：PHC2（サブユニット） / CBX7（サブユニット） / RING1B（E3） / BMI1（サブユニット） / UBCH5C（E2） / ヒストン H3 / ヒストン H4 / ヒストン H2A / ヒストン H2B / DNA（一方の鎖） / DNA（相補鎖）</sub>
@@ -745,6 +755,8 @@ BMI1のRAWULドメインがUBCH5Cの背面に位置し、RING1Bとの複合面�
 ### Structural mechanisms for ATP-mediated inhibition of human NLRP6 inflammasome
 
 *Nature Structural & Molecular Biology*（2026-09-08） · [論文](https://doi.org/10.1038/s41594-026-01878-5) · ライセンス: cc by-nc-nd
+
+筆頭著者：Zhen Cui（Washington University School of Medicine, USA）　責任著者：Chen Shen（Washington University School of Medicine, USA）
 
 ![構造図：ヒトNLRP6（炎症の感知因子）](figures/PMC13672055.svg)
 
@@ -883,6 +895,8 @@ NLRP3の阻害剤MCC950は、NLRP3で似た位置に結合するが、この再�
 
 *Nature Structural & Molecular Biology*（2026-08-31） · [論文](https://doi.org/10.1038/s41594-026-01879-4) · ライセンス: cc by-nc-nd
 
+筆頭著者：Ryohei Watanabe（Perelman School of Medicine at the University of Pennsylvania, USA）　責任著者：Edward B. Lee（Perelman School of Medicine at the University of Pennsylvania, USA）
+
 ![構造図：タウ線維（AD・VT患者脳）](figures/PMC13672075.svg)
 
 <sub>色（順に）：タウ（MAPT）</sub>
@@ -1006,6 +1020,8 @@ K48結合型の二ユビキチンに結合する小分子ユビスタチンBで�
 
 *Nature*（2026-08-19） · [論文](https://doi.org/10.1038/s41586-026-10892-y) · ライセンス: cc by-nc-nd
 
+筆頭著者：Jiemin Shen（Stanford University School of Medicine, USA）　責任著者：Jun Xu, Brian K. Kobilka（Stanford University School of Medicine, USA）
+
 ![構造図：β2AR（ヒト）二量体](figures/PMC13645619.svg)
 
 <sub>色（順に）：β2AR（受容体）　スティック：エイコサン（LFA）、BI-167107（P0G）、AP-7-168（A1CNS）</sub>
@@ -1118,6 +1134,8 @@ AP-7-168は、2分子が互いに積み重なる形でTM3・4・5が作る空間
 ### Symmetry-breaking antibody binding reveals extensive capsid malleability in pandemic human norovirus
 
 *Research Square*（2026-09-21） · [論文](https://doi.org/10.21203/rs.3.rs-9488000/v1) · ライセンス: cc by
+
+筆頭著者：Carmen V Apostol（Baylor College of Medicine, USA）　責任著者：B V Venkataram Prasad（Baylor College of Medicine, USA）
 
 ![構造図：ヒトノロウイルスGII.4 Sydney VP1](figures/PMC13662703.svg)
 
@@ -1246,6 +1264,8 @@ M6を加えるとT=4粒子は壊れ、約30 nmの小さなT=1粒子に組み直�
 
 *Nature Structural & Molecular Biology*（2026-09-09） · [論文](https://doi.org/10.1038/s41594-026-01894-5) · ライセンス: cc by-nc-nd
 
+筆頭著者：Rodrigo Fregoso Ocampo（University of Texas at Austin, USA）　責任著者：Piyush K Jain（University of Florida, USA）、David W Taylor（University of Texas at Austin, USA）
+
 ![構造図：AsCas12a（ΨDNAガイド）](figures/PMC13672045.svg)
 
 **DNAガイドのCas12aは、DNAのヘアピンでPAM認識を真似る**
@@ -1353,6 +1373,8 @@ PAM類似部位の配列を変えても活性は残る。プリンに富むAGAT�
 
 *eLife*（2026-10-12） · [論文](https://doi.org/10.7554/elife.110475) · ライセンス: cc by
 
+筆頭著者：Jongbin Kim（University of California, San Francisco, United States）　責任著者：Brian K Shoichet, James S Fraser（University of California, San Francisco, United States）
+
 ![構造図：SARS-CoV-2 NSP3 マクロドメイン（Mac1）](figures/PMC13657626.svg)
 
 **共折りたたみAIは、Mac1に結合する薬の形を半数以上当てる**
@@ -1456,6 +1478,8 @@ AmpC、σ2受容体、ドーパミンD4受容体の大規模ドッキングで�
 ### High-resolution structure of monomeric photosystem I from Thermosynechococcus vestitus
 
 *Photosynthesis Research*（2026-10-15） · [論文](https://doi.org/10.1007/s11120-026-01237-x) · ライセンス: cc by
+
+筆頭著者：Jelena Boyka（Humboldt-Universität zu Berlin, Germany）　責任著者：Frank Müh（Johannes Kepler University Linz, Austria）、Athina Zouni（Humboldt-Universität zu Berlin, Germany）、Cecilia Blikstad（Uppsala University, Sweden）
 
 ![構造図：光化学系I単量体（T. vestitus）](figures/PMC13672387.svg)
 
@@ -1583,6 +1607,8 @@ BDMで精製した三量体を、1%のC12E8と60°Cで30分処理すると、ほ
 
 *Nature Communications*（2026-09-15） · [論文](https://doi.org/10.1038/s41467-026-77723-6) · ライセンス: cc by
 
+筆頭著者：Sarah V Barrass（Ecole Polytechnique Fédérale de Lausanne (EPFL), Switzerland）　責任著者：Ulrich J Lorenz（Ecole Polytechnique Fédérale de Lausanne (EPFL), Switzerland）
+
 ![構造図：β-ガラクトシダーゼ・GroEL（大腸菌）](figures/PMC13672294.svg)
 
 <sub>色（順に）：β-ガラクトシダーゼ</sub>
@@ -1689,6 +1715,8 @@ GroELは着地すると高さが約24%、直径が約7%縮んだが、レーザ�
 ### Solution structure of a peptide-conjugated aggregation-induced-emission (AIE) fluorophore bound to a protein
 
 *RSC Chemical Biology*（2026-10-15） · [論文](https://doi.org/10.1039/d6cb00109b) · ライセンス: cc by
+
+筆頭著者：Daniel Seifert（University of Duisburg-Essen）　責任著者：Jens Voskuhl, Christine Beuck（University of Duisburg-Essen）
 
 ![構造図：hPin1-WWドメイン＋AIEペプチドF11](figures/PMC13670144.svg)
 
@@ -1801,6 +1829,8 @@ AIEコアはC字形のままβシートの上に載り、F25が中央に入り�
 ### Ligand-dependent G protein dynamics underlying opioid efficacy
 
 *Nature Structural & Molecular Biology*（2026-10-13） · [論文](https://doi.org/10.1038/s41594-026-01893-6) · ライセンス: cc by-nc-nd
+
+筆頭著者：Jonathan C. Deutsch（University of Illinois Urbana-Champaign, USA）　責任著者：Brian K. Kobilka, Rabindra V. Shivnaraine（Stanford University, USA）
 
 ![構造図：μOR–Gi 複合体（マウス・ヒト）](figures/PMC13672048.svg)
 

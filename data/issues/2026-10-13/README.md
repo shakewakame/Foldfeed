@@ -24,6 +24,8 @@
 
 *Nature Communications*（2026-10-09） · [論文](https://doi.org/10.1038/s41467-026-78428-6) · ライセンス: cc by
 
+筆頭著者：Gabriel Mendoza-Rojas（Heinrich-Heine University Düsseldorf, Germany）　責任著者：Florian Altegoer（Heinrich-Heine University Düsseldorf, Germany）
+
 ![構造図：Pit2（トウモロコシ黒穂病菌）](figures/PMC13652807.svg)
 
 <sub>色（順に）：GB1（融合タグ） / Pit2（分泌エフェクター）</sub>

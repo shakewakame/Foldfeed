@@ -40,6 +40,8 @@
 
 *Nature Communications*（2026-01-01） · [論文](https://doi.org/10.1038/s41467-026-76519-y) · ライセンス: cc by-nc-nd
 
+筆頭著者：Kookjoo Kim（Columbia University Irving Medical Center, USA）　責任著者：Oliver B Clarke（Columbia University Irving Medical Center, USA）
+
 ![構造図：RyR1（ウサギ骨格筋）](figures/PMC13642953.svg)
 
 <sub>色（順に）：RyR1（リアノジン受容体 1）　スティック：ADP、ダントロレン（U1C）</sub>
@@ -183,6 +185,8 @@ MH誘発物質4CmCはコアソレノイド中心の隠れたポケットでQ4020
 
 *Nature Communications*（2026-01-01） · [論文](https://doi.org/10.1038/s41467-026-77534-9) · ライセンス: cc by
 
+筆頭著者：Weifeng Lu（Johns Hopkins University, USA）　責任著者：Yuan He（Johns Hopkins University, USA）
+
 ![構造図：DNA-PK–ヌクレオソーム複合体](figures/PMC13642939.svg)
 
 <sub>色（順に）：DNA-PKcs（PRKDC） / 未同定のペプチド / Ku70（XRCC6） / Ku80（XRCC5） / ヒストン H3 / ヒストン H4 / ヒストン H2A / ヒストン H2B / DNA 鎖 1 / DNA 鎖 2</sub>
@@ -319,6 +323,8 @@ DNA-PKcsはリンカーが短い基質で連結を促進した（N-12で約7倍�
 
 *Nature Communications*（2026-01-01） · [論文](https://doi.org/10.1038/s41467-026-77312-7) · ライセンス: cc by
 
+筆頭著者：Pinqi Wang（University of Oxford, UK）　責任著者：Graeme Milligan（University of Glasgow, UK）、Cheng Zhang（University of Pittsburgh, USA）、Irina G. Tikhonova（Queen’s University Belfast, UK） ほか 1 名
+
 ![構造図：GPR84–Gi（ヒト）](figures/PMC13642346.svg)
 
 <sub>色（順に）：GPR84（受容体） / Gαi1（G タンパク質 α） / Gβ1（G タンパク質 β） / Gγ2（G タンパク質 γ） / scFv16（抗体断片）　スティック：OX04529（A1CKT）</sub>
@@ -430,6 +436,8 @@ Leu336AlaとPhe187Ala変異は、OX04529によるβ-アレスチン動員を回�
 ### Atomic structure and dynamics of the mechanosensitive channel MscL from Escherichia coli by cryo-EM and solid-state NMR
 
 *Science Advances*（2026-10-09） · [論文](https://doi.org/10.1126/sciadv.aei0096) · ライセンス: cc by-nc
+
+筆頭著者：Taoran Xiao（Leibniz-Forschungsinstitut für Molekulare Pharmakologie (FMP), Germany）　責任著者：Adam Lange（Leibniz-Forschungsinstitut für Molekulare Pharmakologie (FMP), Germany）
 
 ![構造図：大腸菌MscL（WT・G22S）](figures/PMC13644787.svg)
 
@@ -551,6 +559,8 @@ Leu336AlaとPhe187Ala変異は、OX04529によるβ-アレスチン動員を回�
 ### Multifunctional antibody responses from a primate Shigella outbreak inform vaccine design
 
 *Science translational medicine*（2026-09-02） · [論文](https://doi.org/10.1126/scitranslmed.aef7084) · ライセンス: cc by
+
+筆頭著者：Robert M. Gallant（IAVI Neutralizing Antibody Center, USA）　責任著者：Saverio V. Capuano（University of Wisconsin-Madison, USA）、Hayden R. Schmidt（IAVI Neutralizing Antibody Center, USA）
 
 ![構造図：赤痢菌IpaD–抗体Fab](figures/PMC7619511.svg)
 

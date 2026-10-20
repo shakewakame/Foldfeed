@@ -91,7 +91,27 @@
           "first_structure": true
         }
       ],
-      "score": 91
+      "score": 91,
+      "people": {
+        "first": {
+          "name": "Alicia M Kirk",
+          "aff": "The University of Queensland, Australia"
+        },
+        "corresp": [
+          {
+            "name": "Alicia M Kirk",
+            "aff": "The University of Queensland, Australia"
+          },
+          {
+            "name": "Max J Cryle",
+            "aff": "Monash University, Australia"
+          },
+          {
+            "name": "Marc Garcia-Borràs",
+            "aff": "Universitat de Girona, Spain"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13649706",
@@ -275,7 +295,27 @@
           "first_structure": true
         }
       ],
-      "score": 88
+      "score": 88,
+      "people": {
+        "first": {
+          "name": "Chuancun Wei",
+          "aff": "ShanghaiTech University, China"
+        },
+        "corresp": [
+          {
+            "name": "Rainer Kalscheuer",
+            "aff": "Heinrich Heine University Düsseldorf, Germany"
+          },
+          {
+            "name": "Gurdyal S. Besra",
+            "aff": "University of Birmingham, UK"
+          },
+          {
+            "name": "Lu Zhang",
+            "aff": "ShanghaiTech University, China"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13650167",
@@ -384,7 +424,19 @@
           "first_structure": true
         }
       ],
-      "score": 87
+      "score": 87,
+      "people": {
+        "first": {
+          "name": "Thuy Duong Do",
+          "aff": "Université d’Orléans, France"
+        },
+        "corresp": [
+          {
+            "name": "Marc Boudvillain",
+            "aff": "Université d’Orléans, France"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13651826",
@@ -489,7 +541,19 @@
           "first_structure": false
         }
       ],
-      "score": 81
+      "score": 81,
+      "people": {
+        "first": {
+          "name": "Zhi Feng Sherman Lim",
+          "aff": "Monash University, Australia"
+        },
+        "corresp": [
+          {
+            "name": "Joshua D. Ooi",
+            "aff": "Monash University, Australia"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13649712",
@@ -615,7 +679,23 @@
           "first_structure": false
         }
       ],
-      "score": 62
+      "score": 62,
+      "people": {
+        "first": {
+          "name": "Arne Börgel",
+          "aff": "Johannes Gutenberg-University Mainz, Germany"
+        },
+        "corresp": [
+          {
+            "name": "Jürgen A. Ripperger",
+            "aff": "University of Fribourg, Switzerland"
+          },
+          {
+            "name": "Eva Wolf",
+            "aff": "Johannes Gutenberg-University Mainz, Germany"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13649839",
@@ -644,7 +724,27 @@
       "cited_pdb_ids": [],
       "emdb_ids": [],
       "proteins": [],
-      "score": 51
+      "score": 51,
+      "people": {
+        "first": {
+          "name": "Jack Forsman",
+          "aff": "Umeå University, Sweden"
+        },
+        "corresp": [
+          {
+            "name": "Jack Forsman",
+            "aff": "Umeå University, Sweden"
+          },
+          {
+            "name": "Wolfgang P Schröder",
+            "aff": "Umeå University, Sweden"
+          },
+          {
+            "name": "Johannes Messinger",
+            "aff": "Uppsala University, Sweden"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13649775",
@@ -850,7 +950,19 @@
           "first_structure": false
         }
       ],
-      "score": 51
+      "score": 51,
+      "people": {
+        "first": {
+          "name": "Alex Vogt",
+          "aff": "Northwestern University, USA"
+        },
+        "corresp": [
+          {
+            "name": "Yuan He",
+            "aff": "Johns Hopkins University, USA"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13652343",

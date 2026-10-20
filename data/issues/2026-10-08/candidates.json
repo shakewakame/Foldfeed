@@ -135,7 +135,19 @@
           "first_structure": false
         }
       ],
-      "score": 62
+      "score": 62,
+      "people": {
+        "first": {
+          "name": "Zirui Gao",
+          "aff": "Beijing University of Chemical Technology, China"
+        },
+        "corresp": [
+          {
+            "name": "Yi Zhang",
+            "aff": "Beijing University of Chemical Technology, China"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13638461",
@@ -204,7 +216,23 @@
           "first_structure": false
         }
       ],
-      "score": 61
+      "score": 61,
+      "people": {
+        "first": {
+          "name": "Debananda Das",
+          "aff": "National Institutes of Health, USA"
+        },
+        "corresp": [
+          {
+            "name": "Debananda Das",
+            "aff": "National Institutes of Health, USA"
+          },
+          {
+            "name": "Hiroaki Mitsuya",
+            "aff": "National Institutes of Health, USA"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13639345",
@@ -293,7 +321,19 @@
           "first_structure": false
         }
       ],
-      "score": 52
+      "score": 52,
+      "people": {
+        "first": {
+          "name": "Motoshi Sakai",
+          "aff": "The University of Osaka, Japan"
+        },
+        "corresp": [
+          {
+            "name": "Tohru Minamino",
+            "aff": "The University of Osaka, Japan"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13639035",
@@ -324,7 +364,23 @@
         "EMD-56462"
       ],
       "proteins": [],
-      "score": 35
+      "score": 35,
+      "people": {
+        "first": {
+          "name": "Spyridoula Mitsikosta",
+          "aff": "Stockholm University, Sweden"
+        },
+        "corresp": [
+          {
+            "name": "Gunnar von Heijne",
+            "aff": "Stockholm University, Sweden"
+          },
+          {
+            "name": "Ane Metola",
+            "aff": "Stockholm University, Sweden"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13638577",

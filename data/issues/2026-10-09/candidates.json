@@ -704,7 +704,19 @@
           "first_structure": false
         }
       ],
-      "score": 85
+      "score": 85,
+      "people": {
+        "first": {
+          "name": "Weifeng Lu",
+          "aff": "Johns Hopkins University, USA"
+        },
+        "corresp": [
+          {
+            "name": "Yuan He",
+            "aff": "Johns Hopkins University, USA"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13642953",
@@ -1506,7 +1518,19 @@
           "first_structure": false
         }
       ],
-      "score": 65
+      "score": 65,
+      "people": {
+        "first": {
+          "name": "Kookjoo Kim",
+          "aff": "Columbia University Irving Medical Center, USA"
+        },
+        "corresp": [
+          {
+            "name": "Oliver B Clarke",
+            "aff": "Columbia University Irving Medical Center, USA"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13642346",
@@ -1643,7 +1667,31 @@
           "first_structure": false
         }
       ],
-      "score": 56
+      "score": 56,
+      "people": {
+        "first": {
+          "name": "Pinqi Wang",
+          "aff": "University of Oxford, UK"
+        },
+        "corresp": [
+          {
+            "name": "Graeme Milligan",
+            "aff": "University of Glasgow, UK"
+          },
+          {
+            "name": "Cheng Zhang",
+            "aff": "University of Pittsburgh, USA"
+          },
+          {
+            "name": "Irina G. Tikhonova",
+            "aff": "Queen’s University Belfast, UK"
+          },
+          {
+            "name": "Angela J. Russell",
+            "aff": "University of Oxford, UK"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13644787",
@@ -1738,7 +1786,19 @@
           "first_structure": false
         }
       ],
-      "score": 52
+      "score": 52,
+      "people": {
+        "first": {
+          "name": "Taoran Xiao",
+          "aff": "Leibniz-Forschungsinstitut für Molekulare Pharmakologie (FMP), Germany"
+        },
+        "corresp": [
+          {
+            "name": "Adam Lange",
+            "aff": "Leibniz-Forschungsinstitut für Molekulare Pharmakologie (FMP), Germany"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC7619511",
@@ -1874,7 +1934,23 @@
           "first_structure": false
         }
       ],
-      "score": 52
+      "score": 52,
+      "people": {
+        "first": {
+          "name": "Robert M. Gallant",
+          "aff": "IAVI Neutralizing Antibody Center, USA"
+        },
+        "corresp": [
+          {
+            "name": "Saverio V. Capuano",
+            "aff": "University of Wisconsin-Madison, USA"
+          },
+          {
+            "name": "Hayden R. Schmidt",
+            "aff": "IAVI Neutralizing Antibody Center, USA"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13642728",

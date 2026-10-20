@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import re
+import unicodedata
 import xml.etree.ElementTree as ET
 
 XLINK = "{http://www.w3.org/1999/xlink}href"
@@ -66,6 +67,149 @@ def _walk_sections(sec, depth, out):
         _walk_sections(child, depth + 1, out)
 
 
+INSTITUTE_STRONG = re.compile(r"univ|大学|polytechn|[ée]cole|\beth\b|technische|hochschule|\w \s*medical school", re.I)
+INSTITUTE = re.compile(r"institut|hospital|hôpital|ospedale|clinic|college|academ|cent(?:er|re|ro)\b|foundation|"
+                       r"max planck|helmholtz|leibniz|fraunhofer|riken|cnrs|inserm|embl|\bnih\b|\binc\b|\bltd\b|gmbh|\bA/S\b|研究所|センター", re.I)
+INSTITUTE_WEAK = re.compile(r"laborator|school|facility|agency|council", re.I)
+SYSTEM = re.compile(r"(?i)(?:the )?(?:university of (?:california|texas|massachusetts|illinois|maryland|colorado|"
+                    r"north carolina|wisconsin|missouri|nebraska|tennessee|alabama|hawai.?i|london)|"
+                    r"(?:state|city) university of new york)")
+COUNTRY = re.compile(r"(?i)\b(united states(?: of america)?|usa|united kingdom|uk|(?:the )?netherlands|(?:republic of )?korea|"
+                     r"south korea|(?:republic of )?singapore|hong kong|taiwan|china|japan|germany|france|italy|spain|"
+                     r"switzerland|belgium|sweden|denmark|norway|finland|austria|poland|czech republic|israel|india|"
+                     r"australia|new zealand|canada|brazil|mexico|argentina|chile|portugal|ireland|russia|t[üu]rkiye|"
+                     r"turkey|iran|saudi arabia|egypt|south africa|thailand|malaysia|indonesia|vietnam|pakistan|"
+                     r"bangladesh|algeria|tunisia|morocco|nigeria|hungary|greece|croatia|slovenia|slovakia|estonia|"
+                     r"lithuania|latvia|luxembourg|iceland|qatar|united arab emirates|kenya|colombia|peru|philippines|"
+                     r"sri lanka|nepal|ukraine|romania|bulgaria|serbia)\s*$")
+DEPARTMENT = re.compile(r"^(?:the\s+)?(?:department|dept\b|division|faculty|graduate school|school of|section|unit\b|"
+                        r"program|laboratory (?:of|for)|key laboratory|state key|center for|centre for)", re.I)
+
+
+def _segments(text: str) -> list:
+    """Comma-separated parts, with a company suffix ('Schrödinger, Inc.') kept on its name."""
+    out = []
+    for x in re.split(r"[,;]", re.sub(r"\s+", " ", text)):
+        x = x.strip(" .;,")
+        if out and re.fullmatch(r"(?i)inc|llc|ltd|gmbh|a/s|s\.?a|s\.?l|ag|co|plc|b\.?v", x):
+            out[-1] += ", " + x
+        elif x:
+            out.append(x)
+    return out
+
+
+def _short_aff(aff) -> str:
+    """'Princeton University, USA' out of an affiliation: the institution (not the department) and the country."""
+    full = _text(aff)
+    label = aff.find("label")
+    if label is not None and full.startswith(_text(label)):
+        full = full[len(_text(label)):]
+    insts = list(aff.iter("institution"))
+    named = [i for i in insts if (i.get("content-type") or "").lower() == "org-name"]
+    insts = [_text(i) for i in named or insts
+             if (i.get("content-type") or "").lower() not in ("dept", "department", "org-division")]
+    parts = [re.sub(r"(?i)^affiliated with\s+", "", x) for x in _segments(", ".join(insts) if insts else full)]
+
+    def score(x):
+        n = 4 if INSTITUTE_STRONG.search(x) else 3 if INSTITUTE.search(x) else 1 if INSTITUTE_WEAK.search(x) else 0
+        return n - (2 if DEPARTMENT.search(x) else 0) - (5 if re.search(r"\d{3}|@", x) else 0)
+    at = max(reversed(range(len(parts))), key=lambda i: score(parts[i]), default=None)
+    name = parts[at] if at is not None else ""
+    # 'University of California, San Francisco': a multi-campus system is named with its campus
+    if at is not None and SYSTEM.fullmatch(name) and at + 1 < len(parts) and not score(parts[at + 1]) \
+            and not COUNTRY.search(parts[at + 1]):
+        name += ", " + parts[at + 1]
+    country = aff.find(".//country")
+    country = _text(country).strip(" .,;") if country is not None else ""
+    if not country:
+        tail = (_segments(full)[-1:] or [""])[0]
+        known = COUNTRY.search(tail)
+        if known:
+            country = known.group(1)
+        elif tail != name and len(tail) < 30 and not re.search(r"\d|@|\.\w", tail):
+            country = tail
+    if country and country.lower() not in name.lower():
+        name = f"{name}, {country}" if name else country
+    return name[:120]
+
+
+def _fold(text: str, umlaut: bool = False) -> str:
+    """Lower-case ASCII letters only: 'Grüber' -> 'gruber' (or 'grueber' with umlaut=True)."""
+    if umlaut:
+        text = text.translate(str.maketrans({"ä": "ae", "ö": "oe", "ü": "ue", "Ä": "Ae", "Ö": "Oe", "Ü": "Ue", "ß": "ss"}))
+    text = unicodedata.normalize("NFKD", text)
+    return re.sub(r"[^a-z]", "", "".join(ch for ch in text if not unicodedata.combining(ch)).lower())
+
+
+def _named(note: str, emails: list, people_: list) -> list:
+    """The authors a correspondence note names, for papers that do not link the note to anyone: an author whose
+    surname is a word of the note, or whose name is an email's local part ('jiao.li', 'r-gennis', 'zhujiapeng').
+    A surname two authors share counts only with the given name or its initial beside it."""
+    words = {_fold(w) for w in re.findall(r"[^\W\d_]+(?:[-'’][^\W\d_]+)*", note)}
+    locals_ = [(_fold(e.split("@")[0]), _fold(e.split("@")[0], True)) for e in emails]
+    found = []
+    for i, (given, sur) in enumerate(people_):
+        g, inits = _fold(given), "".join(w[0] for w in re.findall(r"[^\W\d_]+", given)).lower()
+        forms = {v for u in (False, True) for v in (_fold(sur, u),)} - {""}
+        shared = sum(1 for _, s in people_ if _fold(s) == _fold(sur)) > 1
+        by_word = any(f in words for f in forms) and (not shared or g in words or
+                                                      re.search(rf"\b{re.escape(given[:1])}\.?\s*{re.escape(sur)}", note))
+        by_mail = any(loc in {g + f, f + g, inits + f, f + inits, (inits[:1] + f), (f + inits[:1])} or
+                      (len(f) >= 5 and f in loc and not shared)
+                      for f in forms for pair in locals_ for loc in pair if loc)
+        if by_word or by_mail:
+            found.append(i)
+    return found
+
+
+def people(root) -> dict:
+    """The first author and the corresponding authors, each {"name", "aff"}: aff is the institution and country of
+    their first affiliation. Corresponding authors are the ones the paper marks: corresp="yes", or an xref to a
+    <corresp> or correspondence footnote; when it links nobody, the authors that note names (_named). {} when the
+    paper lists no authors; "corresp" is [] when nothing marks one."""
+    meta = root.find(".//article-meta")
+    meta = meta if meta is not None else root
+    affs = {a.get("id"): a for a in meta.iter("aff") if a.get("id")}
+    notes = [c for c in meta.iter("corresp")]
+    for n in meta.iter("author-notes"):
+        notes += [f for f in n.iter("fn") if re.search(r"(?i)correspond|to whom", _text(f)) or
+                  (f.get("fn-type") == "corresp") or re.match(r"(?i)cor", f.get("id") or "")]
+    note_ids = {n.get("id") for n in notes if n.get("id")}
+    contribs = [c for g in meta.iter("contrib-group") if g.get("content-type") in (None, "author", "authors")
+                for c in g.findall("contrib") if (c.get("contrib-type") or "author") == "author"]
+
+    def names(c):
+        sur, given = c.find(".//name/surname"), c.find(".//name/given-names")
+        return (_text(given) if given is not None else "", _text(sur) if sur is not None else "")
+
+    def person(c):
+        name = " ".join(x for x in names(c) if x)
+        if not name:
+            sn = c.find(".//string-name")
+            sn = sn if sn is not None else c.find("collab")
+            name = _text(sn) if sn is not None else ""
+        own = c.find("aff")
+        ref = next((affs[r] for x in c.iter("xref") if x.get("ref-type") == "aff"
+                    for r in (x.get("rid") or "").split() if r in affs), None)
+        aff = own if own is not None else ref if ref is not None else (next(iter(affs.values())) if len(affs) == 1 else None)
+        return {"name": re.sub(r"\s+", " ", name).strip(), "aff": _short_aff(aff) if aff is not None else ""}
+
+    def marked(c):
+        return c.get("corresp") == "yes" or any(
+            x.get("ref-type") == "corresp" or set((x.get("rid") or "").split()) & note_ids for x in c.iter("xref"))
+
+    found = [(c, person(c)) for c in contribs]
+    found = [(c, p) for c, p in found if p["name"]]
+    if not found:
+        return {}
+    corresp = [p for c, p in found if marked(c)]
+    if not corresp and notes:
+        text = " ".join(_text(n) for n in notes)
+        emails = [_text(e) for n in notes for e in n.iter("email")]
+        corresp = [found[i][1] for i in _named(text, emails, [names(c) for c, _ in found])]
+    return {"first": found[0][1], "corresp": corresp}
+
+
 def parse(xml: str) -> dict:
     root = ET.fromstring(xml)
     title_el = root.find(".//article-meta/title-group/article-title")
@@ -123,6 +267,7 @@ def parse(xml: str) -> dict:
         "data_availability": "\n\n".join(dict.fromkeys(data_avail)),
         "figure_captions": captions,
         "tables": tables,
+        "people": people(root),
         **ids,
     }
 

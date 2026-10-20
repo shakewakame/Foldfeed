@@ -22,6 +22,8 @@
 
 *Nucleic Acids Research*（2026-10-13） · [論文](https://doi.org/10.1093/nar/gkag972) · ライセンス: cc by
 
+筆頭著者：Jeffrey B Krall（University of Colorado Anschutz Medical Campus, United States）　責任著者：Beat Vögeli（University of Colorado Anschutz Medical Campus, United States）
+
 **ZBP1は、できあがったZ型RNAにだけ結合する**
 
 NMR・CD・ITCで調べると、無修飾のRNAをZ型に変換できなかった

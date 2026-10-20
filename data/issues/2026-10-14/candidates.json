@@ -347,7 +347,23 @@
           "first_structure": false
         }
       ],
-      "score": 87
+      "score": 87,
+      "people": {
+        "first": {
+          "name": "Haixia Zhou",
+          "aff": "Harvard Medical School, USA"
+        },
+        "corresp": [
+          {
+            "name": "Heymut Omran",
+            "aff": "University Children’s Hospital Münster, Germany"
+          },
+          {
+            "name": "Alan Brown",
+            "aff": "Harvard Medical School, USA"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13657631",
@@ -551,7 +567,19 @@
           "first_structure": false
         }
       ],
-      "score": 65
+      "score": 65,
+      "people": {
+        "first": {
+          "name": "Eric Greene",
+          "aff": "University of California San Francisco, United States"
+        },
+        "corresp": [
+          {
+            "name": "James S Fraser",
+            "aff": "University of California San Francisco, United States"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13657355",
@@ -649,7 +677,19 @@
           "first_structure": false
         }
       ],
-      "score": 62
+      "score": 62,
+      "people": {
+        "first": {
+          "name": "Timo Jenne",
+          "aff": "Center for Molecular Biology of Heidelberg University (ZMBH), Germany"
+        },
+        "corresp": [
+          {
+            "name": "Axel Mogk",
+            "aff": "Center for Molecular Biology of Heidelberg University (ZMBH), Germany"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13655128",
@@ -1102,7 +1142,27 @@
           "first_structure": false
         }
       ],
-      "score": 52
+      "score": 52,
+      "people": {
+        "first": {
+          "name": "Henri Voedts",
+          "aff": "WEL Research Institute, Belgium"
+        },
+        "corresp": [
+          {
+            "name": "Seung Hyun Cho",
+            "aff": "WEL Research Institute, Belgium"
+          },
+          {
+            "name": "Han Remaut",
+            "aff": "Vrije Universiteit Brussel, Belgium"
+          },
+          {
+            "name": "Jean-François Collet",
+            "aff": "WEL Research Institute, Belgium"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13653941",
@@ -1247,7 +1307,23 @@
           "first_structure": false
         }
       ],
-      "score": 51
+      "score": 51,
+      "people": {
+        "first": {
+          "name": "Satoshi Shibata",
+          "aff": "Okinawa Institute of Science and Technology Graduate University, Japan"
+        },
+        "corresp": [
+          {
+            "name": "Satoshi Shibata",
+            "aff": "Okinawa Institute of Science and Technology Graduate University, Japan"
+          },
+          {
+            "name": "Matthias Wolf",
+            "aff": "Okinawa Institute of Science and Technology Graduate University, Japan"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13655263",

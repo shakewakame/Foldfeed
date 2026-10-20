@@ -194,7 +194,23 @@
           "first_structure": true
         }
       ],
-      "score": 94
+      "score": 94,
+      "people": {
+        "first": {
+          "name": "David M Wood",
+          "aff": "University of Canterbury, New Zealand"
+        },
+        "corresp": [
+          {
+            "name": "Renwick C J Dobson",
+            "aff": "University of Canterbury, New Zealand"
+          },
+          {
+            "name": "Christopher R Horne",
+            "aff": "University of Canterbury, New Zealand"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13635403",
@@ -601,7 +617,31 @@
           "first_structure": false
         }
       ],
-      "score": 60
+      "score": 60,
+      "people": {
+        "first": {
+          "name": "Jiao Li",
+          "aff": "University of Science and Technology of China"
+        },
+        "corresp": [
+          {
+            "name": "Jiao Li",
+            "aff": "University of Science and Technology of China"
+          },
+          {
+            "name": "Kai Zhang",
+            "aff": "University of Science and Technology of China"
+          },
+          {
+            "name": "Robert B Gennis",
+            "aff": "University of Illinois at Urbana-Champaign, USA"
+          },
+          {
+            "name": "Jiapeng Zhu",
+            "aff": "The First Affiliated Hospital of Anhui Medical University, China"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13635745",
@@ -634,7 +674,19 @@
         "EMD-66115"
       ],
       "proteins": [],
-      "score": 51
+      "score": 51,
+      "people": {
+        "first": {
+          "name": "Ricardo Villegas Warren",
+          "aff": "Wageningen University & Research, Netherlands"
+        },
+        "corresp": [
+          {
+            "name": "John van der Oost",
+            "aff": "Wageningen University & Research, Netherlands"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13635751",
@@ -662,7 +714,19 @@
       ],
       "emdb_ids": [],
       "proteins": [],
-      "score": 40
+      "score": 40,
+      "people": {
+        "first": {
+          "name": "Chathuni Jayathilake",
+          "aff": "Case Western Reserve University, United States"
+        },
+        "corresp": [
+          {
+            "name": "Tae Hun Kim",
+            "aff": "Case Western Reserve University, United States"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13635308",

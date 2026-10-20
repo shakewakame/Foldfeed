@@ -151,7 +151,19 @@
           "first_structure": false
         }
       ],
-      "score": 57
+      "score": 57,
+      "people": {
+        "first": {
+          "name": "Oscar Vadas",
+          "aff": "University of Geneva, Switzerland"
+        },
+        "corresp": [
+          {
+            "name": "Gerhard Hummer",
+            "aff": "Max Planck Institute of Biophysics, Germany"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13653627",
@@ -392,7 +404,23 @@
           "organism": "Homo sapiens"
         }
       ],
-      "score": 5
+      "score": 5,
+      "people": {
+        "first": {
+          "name": "Francesca Sacco",
+          "aff": "University of Florence, Italy"
+        },
+        "corresp": [
+          {
+            "name": "Julian Langer",
+            "aff": "Max Planck Institute of Biophysics, Germany"
+          },
+          {
+            "name": "Marco Fragai",
+            "aff": "University of Florence, Italy"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13653116",
@@ -802,7 +830,23 @@
           "organism": "Homo sapiens"
         }
       ],
-      "score": 5
+      "score": 5,
+      "people": {
+        "first": {
+          "name": "Abir Ben Bouzayene",
+          "aff": "University of Strasbourg, France"
+        },
+        "corresp": [
+          {
+            "name": "Vladimir Torbeev",
+            "aff": "University of Strasbourg, France"
+          },
+          {
+            "name": "Bruno Kieffer",
+            "aff": "University of Strasbourg, France"
+          }
+        ]
+      }
     },
     {
       "pmcid": "PMC13653633",

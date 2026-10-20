@@ -41,6 +41,8 @@
 
 *PLOS Pathogens*（2026-10-01） · [論文](https://doi.org/10.1371/journal.ppat.1014545.r004) · ライセンス: cc by
 
+筆頭著者：Yajie Wang（Fudan University, China）　責任著者：Lei Sun（Fudan University, China）
+
 ![構造図：MERS-CoVスパイク–DPP4](figures/PMC13648974.svg)
 
 <sub>色（順に）：MERS-CoV スパイク（S）</sub>
@@ -171,6 +173,8 @@
 
 *Nucleic Acids Research*（2026-10-08） · [論文](https://doi.org/10.1093/nar/gkag941) · ライセンス: cc by
 
+筆頭著者：Ling Xu（Yale University, United States）　責任著者：Ling Xu, Anna Marie Pyle（Yale University, United States）
+
 ![構造図：MDA5（IFIH1）–dsRNA](figures/PMC13646831.svg)
 
 <sub>色（順に）：MDA5（IFIH1） / dsRNA 鎖 1 / dsRNA 鎖 2　スティック：AMP-PNP（ANP）</sub>
@@ -288,6 +292,8 @@ T331Iのフィラメントはサブユニット間のねじれ角がほぼ一定
 
 *Npj Structural Biology*（2026-01-01） · [論文](https://doi.org/10.1038/s44511-026-00002-y) · ライセンス: cc by
 
+筆頭著者：Nathan Jespersen（Los Alamos National Laboratory, USA）　責任著者：Karissa Y. Sanbonmatsu（Los Alamos National Laboratory, USA）
+
 ![構造図：グリシンリボスイッチ（コレラ菌）](figures/PMC13648278.svg)
 
 <sub>色（順に）：グリシンリボスイッチ（RNA）　スティック：グリシン（GLY）</sub>
@@ -398,6 +404,8 @@ RNAだけの2.9 Å構造。折りたたんだ分子の割合は、Mg²⁺のみ�
 ### Structural and Enzymatic Basis for Impaired Deacylation of N‑Acyl‑N‑Methyl Lysine Residues
 
 *Biochemistry*（2026-10-09） · [論文](https://doi.org/10.1021/acs.biochem.6c00508) · ライセンス: cc by
+
+筆頭著者：Sebastian Hilscher（Martin-Luther-University Halle-Wittenberg, Germany）　責任著者：Mike Schutkowski, Cordelia Schiene-Fischer（Martin-Luther-University Halle-Wittenberg, Germany）
 
 ![構造図：SIRT2／SIRT5（ペプチド複合体）](figures/PMC13648224.svg)
 
@@ -512,6 +520,8 @@ SIRT2–ミリストイル-N-メチルリジンペプチド複合体（1.45 Å�
 ### Structural insights into a dual-substrate O-methyltransferase reveal the enzymatic mechanism of parallel paeonol biosynthesis
 
 *Nature Communications*（2026-01-01） · [論文](https://doi.org/10.1038/s41467-026-77639-1) · ライセンス: cc by-nc-nd
+
+筆頭著者：Xiaoxiao Zhang（Northwest A&F University, China）　責任著者：Juan Guo（China Academy of Chinese Medical Sciences）、Yanlong Zhang（Northwest A&F University, China）、Wei Huang（Hubei University of Chinese Medicine, China）
 
 ![構造図：PoOMT1（Paeonia ostii）](figures/PMC13646271.svg)
 
@@ -629,6 +639,8 @@ Region D（L117・F312・L315）をTrpに置換すると、2′-OHを持つ基�
 ### Characterization of Regioisomeric Conjugates Arising from Pixantrone at AP Sites in DNA
 
 *Biochemistry*（2026-10-09） · [論文](https://doi.org/10.1021/acs.biochem.6c00116) · ライセンス: cc by
+
+筆頭著者：Yizhi Fu（Vanderbilt University, United States）　責任著者：Michael P. Stone（Vanderbilt University, United States）
 
 ![構造図：ピキサントロン–AP部位DNA](figures/PMC13648238.svg)
 

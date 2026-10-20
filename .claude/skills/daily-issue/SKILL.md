@@ -77,6 +77,9 @@ AI が書く文章の主張には、論文本文からの逐語引用を必ず�
    - **Structure-Based Study**：手順 5b で選ぶ、既存の構造を使った研究（`"section": "impact"`、1 日最大 3 本）。
    - タンパク質を UniProt に対応づけられない論文（PDB が未公開、ID が本文にない）で、論文が「初めての構造」と書いているときだけ、
      その逐語引用を `first_claim` に書く（New Structure になる。`pipeline/schema.py`）。書いていなければ Structure Update。
+   **記事の冒頭の著者（First author・Corresponding と所属）もサイトが自動で出す**（`collect` が全文 XML から
+   `candidates.json` の `people` に保存。2026-10-20）。紹介文に著者名や所属は書かない。PR では号の README の
+   「筆頭著者：…　責任著者：…」の行を見て、所属が学科名だけになっていないかなど明らかな崩れがあれば PR の本文に書く。
 
 5. **記事を書く**：論文ごとに `.cache/packets/<PMCID>.md` を**全体に目を通して**から
    `data/issues/$ISSUE/picks/<PMCID>.json` を書く。形式は `pipeline/schema.py` の `EXAMPLE`、

@@ -43,6 +43,8 @@
 
 *Science (New York, N.Y.)*（2026-09-10） · [論文](https://doi.org/10.1126/science.aei5957) · ライセンス: tdm
 
+筆頭著者：Haixia Zhou（Harvard Medical School, USA）　責任著者：Heymut Omran（University Children’s Hospital Münster, Germany）、Alan Brown（Harvard Medical School, USA）
+
 ![構造図：ヒト繊毛の移行帯（ECT2L・DZANK1）](figures/PMC13650764.svg)
 
 <sub>色（順に）：ECT2L（連結部の主成分） / SKP1（F-box結合） / DYNLL1（ダイニン軽鎖） / DZANK1（連結部の橋渡し）</sub>
@@ -184,6 +186,8 @@ ECT2LかDZANK1の機能喪失変異をもつ患者4人の細胞では、移行�
 
 *eLife*（2026-10-12） · [論文](https://doi.org/10.7554/elife.108336) · ライセンス: cc by
 
+筆頭著者：Eric Greene（University of California San Francisco, United States）　責任著者：James S Fraser（University of California San Francisco, United States）
+
 ![構造図：ヒトグルタミン合成酵素（GS）](figures/PMC13657631.svg)
 
 <sub>色（順に）：GS（グルタミン合成）　スティック：ATP、グルタミン（GLN）</sub>
@@ -324,6 +328,8 @@ ECT2LかDZANK1の機能喪失変異をもつ患者4人の細胞では、移行�
 
 *Nature Communications*（2026-09-09） · [論文](https://doi.org/10.1038/s41467-026-77559-0) · ライセンス: cc by-nc-nd
 
+筆頭著者：Henri Voedts（WEL Research Institute, Belgium）　責任著者：Seung Hyun Cho, Jean-François Collet（WEL Research Institute, Belgium）、Han Remaut（Vrije Universiteit Brussel, Belgium）
+
 ![構造図：BepA-BAM複合体（大腸菌）](figures/PMC13655028.svg)
 
 <sub>色（順に）：BamA（外膜バレル） / BamB（付属リポタンパク質） / BamC（付属リポタンパク質） / BamD（付属リポタンパク質） / BamE（付属リポタンパク質） / BepA（プロテアーゼ） / 停滞した基質（OMP）</sub>
@@ -456,6 +462,8 @@ bepAのランダム変異ライブラリーを、外膜が漏れるとピンク�
 ### Small-molecule activators of the Staphylococcus aureus ClpC/ClpP AAA+ protease
 
 *iScience*（2026-09-22） · [論文](https://doi.org/10.1016/j.isci.2026.117738) · ライセンス: cc by
+
+筆頭著者：Timo Jenne（Center for Molecular Biology of Heidelberg University (ZMBH), Germany）　責任著者：Axel Mogk（Center for Molecular Biology of Heidelberg University (ZMBH), Germany）
 
 ![構造図：ClpC NTD（黄色ブドウ球菌）](figures/PMC13657355.svg)
 
@@ -593,6 +601,8 @@ Cpd-10とCpd-41はMecA-mEOSの分解を妨げ、pArg1部位の変異体T7Dでは
 ### Cryo-EM structure of the native assembled Mfa type V pilus from the periodontal pathogen Porphyromonas gingivalis
 
 *Communications Biology*（2026-06-24） · [論文](https://doi.org/10.1038/s42003-026-10515-2) · ライセンス: cc by-nc-nd
+
+筆頭著者：Satoshi Shibata（Okinawa Institute of Science and Technology Graduate University, Japan）　責任著者：Satoshi Shibata, Matthias Wolf（Okinawa Institute of Science and Technology Graduate University, Japan）
 
 ![構造図：Mfa1線毛（P. gingivalis）](figures/PMC13655056.svg)
 
