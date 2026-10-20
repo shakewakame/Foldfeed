@@ -1,120 +1,113 @@
 # 候補一覧 2026-10-18（Europe PMC 索引日 2026-10-17）
 
-検索ヒット 52 件 → 本文解析 60 件 → 新しい構造 15 件（ID が補足資料のみ 2 件、マップのみ 0 件、既存構造の利用 28 件、ID なし 15 件）
+検索ヒット 52 件 → 本文解析 59 件 → 新しい構造 14 件（ID が補足資料のみ 2 件、マップのみ 0 件、既存構造の利用 28 件、ID なし 15 件）
 
-## 1. In situ structure of the human ciliary transition zone links linker defects to primary ciliary dyskinesia
-- PMC13650764 / Science / 公開 2026-10-15 / tdm / score 87
-- 構造: 11YJ（ELECTRON MICROSCOPY 7.30 Å / リガンド: GTP, GDP）; 11XU（ELECTRON MICROSCOPY 9.60 Å）
-- タンパク質: DYNLL1, SKP1, TUBB4B, ECT2L【初構造】, MAP9【初構造】, TUBA1A, CAPSL【初構造】, CEP41【初構造】 ほか 3 件
-
-The ciliary transition zone (TZ) regulates ciliary proteome composition, yet its molecular architecture, protein content, and contribution to motile ciliopathies remain poorly defined. We applied in situ cryo-electron tomography and subtomogram averaging to human multiciliated epithelial cells. This approach resolved TZ-specific doublet microtubules at subnanometer resolution and identified nine constituent proteins. We found that ECT2L and DZANK1 form the major linker complexes between adjacent TZ doublet microtubules. Biallelic loss-of-function variants in either gene cause primary ciliary dyskinesia. ECT2L and DZANK1 deficiency disrupted TZ architecture, caused microtubular abnormalities and bulbous ciliary tips, and impaired mucociliary clearance. These findings establish a direct genetic link between TZ defects and human motile ciliopathies and illustrate how in situ structural biol
-
-## 2. Structural and mechanistic insights into OCTN1-mediated transport and cancer cell proliferation
+## 1. Structural and mechanistic insights into OCTN1-mediated transport and cancer cell proliferation
 - PMC13669368 / Nat Commun / 公開 2026-09-14 / cc by-nc-nd / score 87
 - 構造: 9WTY（ELECTRON MICROSCOPY 3.11 Å）; 9WTX（ELECTRON MICROSCOPY 3.37 Å / リガンド: LW8）
 - タンパク質: SLC22A4【初構造】
 
 The Novel Organic Cation Transporter 1 (OCTN1) facilitates the uptake of endogenous metabolites and therapeutic drugs across diverse tissues. Recognized as a key transporter for the antioxidant ergothioneine (ET), OCTN1 also mediates the cellular entry and release of various cationic compounds. Dysregulation of OCTN1 has been implicated in cancer progression and drug interaction. In non-neuronal systems, OCTN1-mediated acetylcholine (ACh) transport has been implicated in promoting cancer progression by enhancing tumor cell proliferation and invasion. Despite its physiological and clinical relevance, the structural mechanisms underlying substrate recognition and transport by OCTN1 have remained poorly understood. Here, we present cryo-EM structures of human OCTN1 in both apo and ET-bound states, revealing the binding site of ET and elucidating conformational changes essential for sodium-d
 
-## 3. Structural transition of the immature poxvirus scaffold from preassembly to the scaffold lattice
+## 2. Structural transition of the immature poxvirus scaffold from preassembly to the scaffold lattice
 - PMC13672803 / Nat Commun / 公開 2026-09-15 / cc by-nc-nd / score 85
 - 構造: 9USX（ELECTRON MICROSCOPY 2.88 Å）; 9USY（ELECTRON MICROSCOPY 3.70 Å）; 9USU（ELECTRON MICROSCOPY 2.90 Å）; 9USV（ELECTRON MICROSCOPY 3.20 Å）; 9USW（ELECTRON MICROSCOPY 3.10 Å）; 9USZ（ELECTRON MICROSCOPY 2.56 Å）; 9UT0（ELECTRON MICROSCOPY 3.63 Å）; 26FE（ELECTRON MICROSCOPY 3.04 Å）
 - タンパク質: OPG125, OPG125【初構造】
 
 During poxvirus morphogenesis, the external scaffold defines the shape and size of immature virions. However, its structural characterization has been hindered by the pleomorphic nature of authentic virus particles. Here, we present single-particle cryo-electron microscopy and cryo-electron tomography structures of two distinct in vitro assemblies of the vaccinia virus scaffold protein D13 that recapitulate oligomeric states previously observed in situ. These structures reveal a dramatic transition from rod-like oligomers, representing a pre-assembly state, to a fully formed scaffold, triggered by the docking of the N-terminal peptide of the viral membrane protein A17 into the base cavity of D13. We propose that this interaction destabilizes the pre-assembly conformation and initiates scaffold formation upon viral membrane recruitment, ultimately leading to the formation of immature viri
 
-## 4. Cryo-EM structure of human Na+/H+ exchanger NHA1 in an inward-open conformation
+## 3. Cryo-EM structure of human Na+/H+ exchanger NHA1 in an inward-open conformation
 - PMC13672361 / Nat Commun / 公開 2026-09-15 / cc by-nc-nd / score 81
 - 構造: 21MW（ELECTRON MICROSCOPY 3.64 Å）
 - タンパク質: SLC9B1【初構造】
 
 The human Na+/H+ exchanger NHA1 (SLC9B1) plays a critical role in sperm motility and male fertility by regulating intracellular pH through its sodium-proton antiport activity. Despite its physiological importance, the structural and mechanistic basis of NHA1 function has remained elusive. Here, we present the cryo-EM structure of human NHA1 at 3.6 Å resolution, captured in an inward-open conformation. Structural comparisons with modeled outward-open states reveal substantial conformational changes in the core domain, supporting an elevator-like transport mechanism. Additionally, several key residues are identified that modify their interaction patterns, likely aiding in the conformational switches necessary for substrate transport. Their contribution to substrate transport is further supported by mutagenesis and sodium transport assays, providing insights into the molecular mechanism of 
 
-## 5. Cryo-EM structure, enzymatic activity and genome targeting of canonical PRC1
+## 4. Cryo-EM structure, enzymatic activity and genome targeting of canonical PRC1
 - PMC13672072 / Nat Struct Mol Biol / 公開 2026-09-14 / cc by / score 81
 - 構造: 28OE（ELECTRON MICROSCOPY 2.74 Å）
 - タンパク質: A0A1B8Y854, LOC121398065, CBX7【初構造】, BMI1, P62798, UBE2D3【初構造】, LOC494591, PHC2【初構造】 ほか 1 件
 
 Canonical Polycomb repressive complex 1 (cPRC1) preserves cell fate decisions by repressing aberrant transcription of developmental regulator genes. We report the cryo-electron microscopy structure of the human cPRC1 holocomplex assembled from RING1B, BMI1, PHC2 and CBX7 bound to an H3K27me3-modified mononucleosome together with the ubiquitin-conjugating enzyme UBCH5C. cPRC1 adopts a compact, highly integrated architecture in which the subunits RING1B, BMI1 and PHC2 form an extended interface that positions UBCH5C on the nucleosome to enable efficient monoubiquitination of histone H2A at K119. This organization is conserved in Drosophila, where mutational analyses identify the PHC2 ortholog Polyhomeotic (Ph) as a central scaffold and targeting factor. The Ph HD domain is required for complex assembly, whereas the Ph SAM domain is dispensable for assembly but essential for cPRC1 recruitme
 
-## 6. A biased allosteric modulator is a molecular glue for β2AR dimerization
+## 5. A biased allosteric modulator is a molecular glue for β2AR dimerization
 - PMC13645619 / Nature / 公開 2026-08-19 / cc by-nc-nd / score 61
 - 構造: 9Q3L（ELECTRON MICROSCOPY 2.50 Å / リガンド: A1CNS, P0G, LFA）
 - タンパク質: ADRB2
 
 Family A G-protein-coupled receptors (GPCRs) are typically described as monomers, yet growing evidence suggests that they can form dimers with distinct signalling properties1–3. However, the mechanisms and therapeutic potential of such dimerization remain poorly understood. Here we show that AP-7-168, an optimized derivative of a β-arrestin-biased negative allosteric modulator of the β2-adrenergic receptor (β2AR) that sustains bronchorelaxation in cell and tissue models4, functions as a molecular glue to stabilize β2AR homodimerization. Cryogenic electron microscopy structures reveal a unique binding mode in which two AP-7-168 molecules pack within a pocket formed by transmembrane helices 3, 4 and 5 of two protomers, stabilizing a dimeric conformation that selectively prevents β-arrestin coupling. In cells, AP-7-168 robustly stabilizes β2AR dimerization and drives enlarged nanocluster fo
 
-## 7. High-resolution structure of monomeric photosystem I from Thermosynechococcus vestitus
+## 6. High-resolution structure of monomeric photosystem I from Thermosynechococcus vestitus
 - PMC13672387 / Photosynth Res / 公開 2026-10-15 / cc by / score 61
 - 構造: 9QFP（ELECTRON MICROSCOPY 1.74 Å / リガンド: PQN, CL0, SF4, BCR, CLA）
 - タンパク質: psaF, psaM, psaA, psaB, psaC, psaD, psaE, psaK ほか 3 件
 
 Photosystem I (PSI) exists in trimeric (tPSI) and monomeric (mPSI) forms within the thylakoid membrane of cyanobacteria. PSI functions as a light-driven electron pump, enabling the transfer of electrons from cytochrome c6 (Cyt c6) or plastocyanin to ferredoxin. Here, we have developed a novel protocol to obtain large amounts of intact, active mPSI from Thermosynechococcus vestitus (Tv) by dissociating highly purified tPSI using the detergent octaethylene glycol monododecyl ether (C12E8) at elevated temperatures. We analysed the stability of the protein-detergent complex employing a combination of spectroscopic methods, such as fluorescence at 77 K and circular dichroism (CD), and investigated the detergent’s influence on delipidation and monomerisation. We determined the structure of mPSI to a resolution of 1.8 Å using cryogenic electron microscopy (cryo-EM). This structure retains all s
 
-## 8. Pre-activation and gating pathway of AMPA receptors revealed by full and partial agonists
+## 7. Pre-activation and gating pathway of AMPA receptors revealed by full and partial agonists
 - PMC13672095 / Nat Struct Mol Biol / 公開 2026-09-09 / cc by-nc-nd / score 60
 - 構造: 11VV（ELECTRON MICROSCOPY 2.93 Å）; 11VZ（ELECTRON MICROSCOPY 3.98 Å / リガンド: KAI）; 11WB（ELECTRON MICROSCOPY 3.55 Å / リガンド: NWD, SPD）; 11WC（ELECTRON MICROSCOPY 4.02 Å / リガンド: NWD）; 11WA（ELECTRON MICROSCOPY 4.36 Å / リガンド: NWD）; 11VX（ELECTRON MICROSCOPY 3.37 Å / リガンド: FWD, SPD）; 11VW（ELECTRON MICROSCOPY 3.84 Å / リガンド: FWD, SPD）; 11VY（ELECTRON MICROSCOPY 3.47 Å / リガンド: IWD, SPD）; 11WE（ELECTRON MICROSCOPY 3.58 Å / リガンド: GLU）; 11WD（ELECTRON MICROSCOPY 3.69 Å / リガンド: GLU）
 - タンパク質: Cacng2, Gria2
 
 AMPA receptors (AMPARs) mediate fast excitatory neurotransmission. Gating of AMPARs starts with agonist binding and transition into a non-conducting pre-active state, followed by transition into conducting open or non-conducting desensitized states. While the terminal apo, open and desensitized states have been structurally characterized, the intermediate pre-active state has remained an enigma. Compared to full agonist glutamate, partial agonists reduce the maximal occupancy of the open state and increase the probability of the pre-active state occurrence. Here we use different partial agonists and time-resolved cryo-electron microscopy (cryo-EM) to capture a structural ensemble of GluA2–γ2 AMPAR complexes in the closed apo, pre-active, open and desensitized states. Binding of partial agonists to the ligand-binding domain (LBD) results in different extents of LBD clamshell closure, with
 
-## 9. Cryo-EM sample preparation with soft-landing and laser flash melting
+## 8. Cryo-EM sample preparation with soft-landing and laser flash melting
 - PMC13672294 / Nat Commun / 公開 2026-09-15 / cc by / score 57
 - 構造: 9HKI（ELECTRON MICROSCOPY 1.90 Å）; 9HLM（ELECTRON MICROSCOPY 3.70 Å）
 - タンパク質: lacZ
 
 The preparation of cryo-EM samples by soft-landing mass spectrometry promises to significantly simplify sample optimization, which has remained an important bottleneck in single-particle cryo-electron microscopy (cryo‑EM). However, only compacted configurations are observed after soft-landing since the proteins are dehydrated in the process. Here, we deposit a layer of amorphous ice onto the sample and briefly flash melt it to rehydrate the soft-landed proteins. Melting with a 30 µs laser pulse creates a broad ensemble of partially rehydrated structures. However, a subset of particles returns to a configuration close to the native state. This allows us to propose strategies to fully rehydrate the entire ensemble and brings routine sample preparation by soft-landing mass spectrometry within reach.
 
-## 10. Structural mechanisms for ATP-mediated inhibition of human NLRP6 inflammasome
+## 9. Structural mechanisms for ATP-mediated inhibition of human NLRP6 inflammasome
 - PMC13672055 / Nat Struct Mol Biol / 公開 2026-09-08 / cc by-nc-nd / score 57
 - 構造: 9OK7（ELECTRON MICROSCOPY 3.79 Å）; 9OK8（ELECTRON MICROSCOPY 3.69 Å / リガンド: ATP）
 - タンパク質: NLRP6
 
 Inflammasomes ignite innate immune defense in response to infectious pathogens and noninfectious dangers, primarily through sensors composed of nucleotide-binding domain (NBD), leucine-rich repeat (LRR)-containing (NLR) family proteins. NLRP6 is an inflammasome sensor that plays critical roles in regulating intestinal inflammation, and its overactivation is linked to autoinflammatory diseases such as inflammatory bowel disease. However, how NLRP6 is maintained in an inhibited structure is unknown. Here we report two cryogenic-electron microscopy structures of human NLRP6 monomer in the adenosine-5′-triphosphate (ATP)/NBD-bound (twisted conformation) and unbound (extended conformation) states. The ATP-binding event connects and compacts the NACHT subdomains and the LRR domain, thus maintaining NLRP6 in an inhibitory conformation. NBD interacts directly with helical domain 1, winged-helix 
 
-## 11. Repositioning of polyubiquitin alters the pathologic tau filament structure
+## 10. Repositioning of polyubiquitin alters the pathologic tau filament structure
 - PMC13672075 / Nat Struct Mol Biol / 公開 2026-08-31 / cc by-nc-nd / score 55
 - 構造: 10LN（ELECTRON MICROSCOPY 2.92 Å）; 10NO（ELECTRON MICROSCOPY 2.96 Å）; 10NP（ELECTRON MICROSCOPY 3.51 Å）; 10NQ（ELECTRON MICROSCOPY 3.61 Å）; 10MR（ELECTRON MICROSCOPY 3.14 Å）; 10NR（ELECTRON MICROSCOPY 3.37 Å）; 10MS（ELECTRON MICROSCOPY 3.24 Å）; 10NT（ELECTRON MICROSCOPY 3.05 Å）
 - タンパク質: MAPT
 
 Structurally diverse tau filaments form proteinaceous aggregates in a heterogeneous group of neurodegenerative diseases called tauopathies. The factors extrinsic to the highly ordered core structure that influence tau filament stability are not well understood. Here, we found that polyubiquitinated tau filaments from Alzheimer disease and vacuolar tauopathy human brain tissue exhibit distinct seeding patterns in mice, in association with differences in tau filament ultrastructure determined by cryo-electron microscopy. Chemical modulation of the polarity of polyubiquitin adjacent to the tau core with the small molecule ubistatin B resulted in the repositioning of poorly structured densities toward positively charged residues on the highly structured core filament, leading to shifting of the protofilament–protofilament interface of certain vacuolar tauopathy tau filaments. These results s
 
-## 12. Symmetry-breaking antibody binding reveals extensive capsid malleability in pandemic human norovirus
+## 11. Symmetry-breaking antibody binding reveals extensive capsid malleability in pandemic human norovirus
 - PMC13662703 / None / 公開 2026-09-21 / cc by / score 55
 - 構造: 12QZ（未公開）; 13KF（未公開）; 13KG（未公開）; 12TF（未公開）; 12TW（未公開）; 12TX（未公開）; 12TY（未公開）; 12TZ（未公開）; 12UA（未公開）; 12UB（未公開）; 12UC（未公開）; 12UD（未公開）; 12TV（未公開）; 12TU（未公開）; 12TP（未公開）; 12TQ（未公開）; 12TR（未公開）; 12TS（未公開）; 12TT（未公開）; 12PG（未公開）; 12UE（未公開）
 - タンパク質: （UniProt 未対応）
 
 Virus capsids are metastable assemblies with an exquisite balance between stability and flexibility, obligatory for entry, infectivity, and immune escape. Yet, the extent to which human viruses exploit capsid plasticity and how that consequently shapes antigenic landscapes remains poorly understood. Human noroviruses (HuNoVs) are the leading cause of acute viral gastroenteritis worldwide1. GII.4 HuNoVs have been evolving epochally, driving most global pandemics, and since 2012, GII.4 Sydney has been the dominant variant2,3. The major capsid protein VP1 is central to infectivity and immune recognition4, and VP1-based virus-like particles (VLPs) are considered promising vaccine candidates5–9. Yet, how the icosahedral HuNoV capsid responds to antibody pressure at the atomic level is still unclear. Here, we present the first atomic structure of GII.4 Sydney capsid determined by cryo-EM, reve
 
-## 13. Large-scale prospective evaluation of co-folding across hundreds of Mac1–ligand complexes and three virtual screens
+## 12. Large-scale prospective evaluation of co-folding across hundreds of Mac1–ligand complexes and three virtual screens
 - PMC13657626 / Elife / 公開 2026-10-12 / cc by / score 54
 - 構造: 15JC（未公開）; 15CH（未公開）; 15DE（未公開）; 15DX（未公開）
 - タンパク質: （UniProt 未対応）
 
 Accurate prediction of ligand-bound protein complexes and ranking them by affinity are central problems in drug discovery. While deep-learning co-folding methods can help address these challenges, their evaluation has been hampered by the difficulties in assessing independence from training data and insufficiently large test sets. Here, we test the ability of co-folding methods to predict the structures of 551 ligands, 489 of which are of sufficient quality for evaluation, bound to the SARS-CoV-2 NSP3 macrodomain (Mac1) that were determined after the training cutoff dates. AlphaFold3 (AF3), Boltz-2, and Chai-1 each reproduced >50% of the Mac1 ligand poses to better than 2 Å root-mean-square deviation of experiment. Despite the potential for co-folding to describe protein conformational changes that stabilize ligand binding, we did not find that common conformational rearrangements, inclu
 
-## 14. Solution structure of a peptide-conjugated aggregation-induced-emission (AIE) fluorophore bound to a protein
+## 13. Solution structure of a peptide-conjugated aggregation-induced-emission (AIE) fluorophore bound to a protein
 - PMC13670144 / RSC Chem Biol / 公開 2026-10-15 / cc by / score 52
 - 構造: 29KP（未公開）; 29KQ（未公開）
 - タンパク質: （UniProt 未対応）
 
 Here, we present a class of peptide-conjugated fluorophores based on aromatic thioethers with aggregation-induced emission (AIE) properties for specific recognition of small proteins and also the first solution NMR structure of an AIE ligand specifically bound to a protein. Binding of the hPin1-WW domain as a model protein resulted in a significant fluorescence increase, making these AIE-peptide fluorophores suitable as direct readout probes for specific protein interactions. Autofluorescence and protein-binding properties were elucidated as a function of peptide length and fluorophore concentration. While an AIE fluorophore with two conjugated peptides shows an enhanced fluorescence increase upon protein binding, a one-armed derivative enabled us to solve the structures of the free AIE-peptide and its complex. In the absence of a protein, the AIE-peptide conjugate shows a curled-up conf
 
-## 15. Architecture of a DNA-guided Cas12a
+## 14. Architecture of a DNA-guided Cas12a
 - PMC13672045 / Nat Struct Mol Biol / 公開 2026-09-09 / cc by-nc-nd / score 51
 - 構造: 12YR（未公開）
 - タンパク質: （UniProt 未対応）
 
 CRISPR–Cas systems have largely been restricted to RNA-guided nucleases. Here, we present the cryo-electron microscopy structure of Acidaminococcus sp. Cas12a bound to a pseudo-DNA (ΨDNA) guide and RNA target, revealing how Cas12a can accomplish DNA-guided RNA recognition. The ΨDNA hairpin bridges the recognition and nuclease lobes, mimicking a PAM-proximal duplex and positioning the spacer to allow formation of a canonical RNA–DNA heteroduplex along the recognition lobe. This provides a structural framework for its activity and provides a potential blueprint for future engineering.
 
-## 16. Site-selective Au(III)-mediated metalloenzyme conjugations
+## 15. Site-selective Au(III)-mediated metalloenzyme conjugations
 - PMC13662807 / Chem / 公開 2026-09-11 / tdm / score 40
 - 構造: 寄託の記載あり（ID は補足資料のみ）
 - タンパク質: （UniProt 未対応）
 
 SUMMARYHerein, we introduce an operationally simple approach for the direct covalent modification of metalloenzymes via Au(III)-mediated S-arylation chemistry. Using a model class of rubredoxin metalloenzymes containing Fe or Ni tetrathiolate active site, we demonstrate site-selective installation of diverse abiotic functional groups by targeting a single solvent-exposed cysteine residue distal to the metal center. The bioconjugation proceeds under mild aqueous conditions, rapidly, and in quantitative yields, while preserving the structural and functional integrity of the enzyme. Detailed structural studies, including the first reported X-ray crystal structure of a cysteine-arylated metalloprotein, illuminate a clear preference for regioselective arylation at solvent-exposed cysteine residues, offering a blueprint for predictable and programmable bioconjugation in complex biomolecules. F
 
-## 17. The MODNAP benchmark set for modeling ribose-based modified nucleic acid and nucleic acid–protein complexes: a case study with AlphaFold 3
+## 16. The MODNAP benchmark set for modeling ribose-based modified nucleic acid and nucleic acid–protein complexes: a case study with AlphaFold 3
 - PMC13669634 / Nucleic Acids Res / 公開 2026-10-15 / cc by / score 40
 - 構造: 寄託の記載あり（ID は補足資料のみ）
 - タンパク質: （UniProt 未対応）

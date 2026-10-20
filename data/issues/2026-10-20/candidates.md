@@ -1,6 +1,6 @@
 # 候補一覧 2026-10-20（Europe PMC 索引日 2026-10-19）
 
-検索ヒット 68 件 → 本文解析 79 件 → 新しい構造 15 件（ID が補足資料のみ 2 件、マップのみ 0 件、既存構造の利用 46 件、ID なし 16 件）
+検索ヒット 68 件 → 本文解析 69 件 → 新しい構造 5 件（ID が補足資料のみ 2 件、マップのみ 0 件、既存構造の利用 46 件、ID なし 16 件）
 
 ## 1. The kinetoplastid kinetochore protein KKT23 acetyltransferase is a structural homolog of GCN5 that acetylates the histone H2A C-terminal tail
 - PMC7619301 / Structure / 公開 2024-11-22 / cc by / score 93
@@ -23,98 +23,28 @@ Natural products have been paramount in inspiring novel chemistry as well as pro
 
 AbstractAzole resistance in Candida species is often caused by the overexpression of Cdr1. Despite its clinical relevance, the structural basis for its ATP-driven efflux pump function remains elusive. We present four high-resolution cryo-EM structures of Candida glabrata Cdr1 obtained in the absence and presence of ATP-Mg²⁺, itraconazole, and vanadate, capturing distinct nucleotide- and substrate-occupancy states. Additional low-population cryo-EM conformers were unveiled by 3D variability analysis, offering a detailed view of structural transitions linked with ATP-hydrolysis. The motion shows a 4 Å piston-like retraction of the C-helix from the γ-phosphate/vanadate of the hydrolyzed ATP. This causes the nearby transmembrane helix-1 (TMH-1) to open the drug-binding site via lateral displacement and unwinding of the inner-leaflet region of TMH-2. A reverse ‘squeeze-and-push’ motion of TMH
 
-## 4. Structural basis of antigenic drift in FMDV O/Cathay topotype variants revealed by porcine-derived single B-cell neutralizing antibodies
-- PMC13671523 / PLoS Pathog / 公開 2026-10-01 / cc by / score 87
-- 構造: 23IT（ELECTRON MICROSCOPY 2.24 Å）; 23IU（ELECTRON MICROSCOPY 2.34 Å）
-- タンパク質: A0A1C6ZW38【初構造】, A0A1C6ZW66, A0A1P8DYS7, J9PGT1, Q00574【初構造】
-
-The porcinophilic O/Cathay topotype variants of foot-and-mouth disease virus (FMDV) continuously accumulated mutations over time and produced antigenic drift, leading to diminished serum neutralization and compromised vaccine efficacy. However, the structural basis underlying this divergence remains poorly defined. Herein, we observed that the newly emerging O/Cathay variants in China exhibited marked neutralization escape from porcine immune sera. Furthermore, using a panel of seven porcine-derived neutralizing monoclonal antibodies (pnAbs), we mapped two antigenic regions with crucial determinants responsible for neutralization escape in recent O/Cathay variants. The charge change at +2 residue (Q → H/R) downstream of the conserved RGD receptor-binding motif on VP1, which modulates sensitivity to multiple pnAbs (pO18-34, pO18-40 and pO18-43) and vaccine-induced sera. Cryo-electron micr
-
-## 5. Structural transition of the immature poxvirus scaffold from preassembly to the scaffold lattice
-- PMC13672803 / Nat Commun / 公開 2026-01-01 / cc by-nc-nd / score 85
-- 構造: 9USX（ELECTRON MICROSCOPY 2.88 Å）; 9USY（ELECTRON MICROSCOPY 3.70 Å）; 9USU（ELECTRON MICROSCOPY 2.90 Å）; 9USV（ELECTRON MICROSCOPY 3.20 Å）; 9USW（ELECTRON MICROSCOPY 3.10 Å）; 9USZ（ELECTRON MICROSCOPY 2.56 Å）; 9UT0（ELECTRON MICROSCOPY 3.63 Å）; 26FE（ELECTRON MICROSCOPY 3.04 Å）
-- タンパク質: OPG125, OPG125【初構造】
-
-During poxvirus morphogenesis, the external scaffold defines the shape and size of immature virions. However, its structural characterization has been hindered by the pleomorphic nature of authentic virus particles. Here, we present single-particle cryo-electron microscopy and cryo-electron tomography structures of two distinct in vitro assemblies of the vaccinia virus scaffold protein D13 that recapitulate oligomeric states previously observed in situ. These structures reveal a dramatic transition from rod-like oligomers, representing a pre-assembly state, to a fully formed scaffold, triggered by the docking of the N-terminal peptide of the viral membrane protein A17 into the base cavity of D13. We propose that this interaction destabilizes the pre-assembly conformation and initiates scaffold formation upon viral membrane recruitment, ultimately leading to the formation of immature viri
-
-## 6. Cryo-EM structure of human Na+/H+ exchanger NHA1 in an inward-open conformation
-- PMC13672361 / Nat Commun / 公開 2026-01-01 / cc by-nc-nd / score 81
-- 構造: 21MW（ELECTRON MICROSCOPY 3.64 Å）
-- タンパク質: SLC9B1【初構造】
-
-AbstractThe human Na+/H+ exchanger NHA1 (SLC9B1) plays a critical role in sperm motility and male fertility by regulating intracellular pH through its sodium-proton antiport activity. Despite its physiological importance, the structural and mechanistic basis of NHA1 function has remained elusive. Here, we present the cryo-EM structure of human NHA1 at 3.6 Å resolution, captured in an inward-open conformation. Structural comparisons with modeled outward-open states reveal substantial conformational changes in the core domain, supporting an elevator-like transport mechanism. Additionally, several key residues are identified that modify their interaction patterns, likely aiding in the conformational switches necessary for substrate transport. Their contribution to substrate transport is further supported by mutagenesis and sodium transport assays, providing insights into the molecular mecha
-
-## 7. Substrate-bound structures of yeast ALA synthase reveal protein dynamics initiating heme biosynthesis
-- PMC13674496 / Sci Adv / 公開 2026-10-16 / cc by-nc / score 62
-- 構造: 9DZ7（X-RAY DIFFRACTION 2.49 Å / リガンド: PLG）; 9DZO（X-RAY DIFFRACTION 2.69 Å / リガンド: PLP, SCA）
-- タンパク質: HEM1
-
-Heme is an essential prosthetic group involved in multiple biological processes in nearly all organisms. Heme biosynthesis is initiated by the pyridoxal 5′-phosphate–dependent enzyme aminolevulinic acid synthase (ALAS). Mutations in ALAS cause multiple hematological diseases. Despite sharing approximately 70% sequence similarity, ALAS homologs exhibit distinct expression and regulatory mechanisms. However, the molecular basis for their functional divergence remains poorly understood. Here, we used x-ray crystallography and molecular dynamics simulations to elucidate the structure and dynamics of Saccharomyces cerevisiae ALAS (scALAS) upon substrate binding. We identified critical conformational changes that occur during catalysis, regulating enzyme activity and protein-protein interactions specific to eukaryotic heme synthesis. Using evolution-guided engineering, we generated scALAS vari
-
-## 8. High-resolution structure of monomeric photosystem I from Thermosynechococcus vestitus
-- PMC13672387 / Photosynth Res / 公開 2026-01-01 / cc by / score 61
-- 構造: 9QFP（ELECTRON MICROSCOPY 1.74 Å / リガンド: CLA, PQN, BCR, SF4, CL0）
-- タンパク質: psaF, psaM, psaA, psaB, psaC, psaD, psaE, psaK ほか 3 件
-
-Photosystem I (PSI) exists in trimeric (tPSI) and monomeric (mPSI) forms within the thylakoid membrane of cyanobacteria. PSI functions as a light-driven electron pump, enabling the transfer of electrons from cytochrome c6 (Cyt c6) or plastocyanin to ferredoxin. Here, we have developed a novel protocol to obtain large amounts of intact, active mPSI from Thermosynechococcus vestitus (Tv) by dissociating highly purified tPSI using the detergent octaethylene glycol monododecyl ether (C12E8) at elevated temperatures. We analysed the stability of the protein-detergent complex employing a combination of spectroscopic methods, such as fluorescence at 77 K and circular dichroism (CD), and investigated the detergent’s influence on delipidation and monomerisation. We determined the structure of mPSI to a resolution of 1.8 Å using cryogenic electron microscopy (cryo-EM). This structure retains all s
-
-## 9. Snapshots From the Catalytic Landscape of Chalcone Isomerase
-- PMC13673511 / Plant Direct / 公開 2026-10-01 / cc by-nc-nd / score 61
-- 構造: 38KF（X-RAY DIFFRACTION 2.00 Å / リガンド: G50）
-- タンパク質: 11445536
-
-ABSTRACTChalcone isomerase (CHI) catalyzes the cyclization of three‐ring scaffolds of flavonoids, a class of plant‐based natural products important for nutrition and disease prevention. A persistent question has been whether the enzyme uses protein dynamics to facilitate conformational rearrangements of substrates within the active site. To help resolve this question, CHI from Medicago truncatula was crystallized with phloretin, a flexible substrate analogue that cannot undergo cyclization, and solved to 2.0‐Å resolution. The crystal structure possesses eight protein molecules per asymmetric unit, revealing different active site conformations that accommodate different bound conformers of phloretin. Together, the structural snapshots depict a series of coordinated, dynamic chemical interactions that lower barriers to substrate rearrangements approaching bond formation. Differential scann
-
-## 10. Cryo-EM sample preparation with soft-landing and laser flash melting
-- PMC13672294 / Nat Commun / 公開 2026-01-01 / cc by / score 57
-- 構造: 9HKI（ELECTRON MICROSCOPY 1.90 Å）; 9HLM（ELECTRON MICROSCOPY 3.70 Å）
-- タンパク質: lacZ
-
-AbstractThe preparation of cryo-EM samples by soft-landing mass spectrometry promises to significantly simplify sample optimization, which has remained an important bottleneck in single-particle cryo-electron microscopy (cryo‑EM). However, only compacted configurations are observed after soft-landing since the proteins are dehydrated in the process. Here, we deposit a layer of amorphous ice onto the sample and briefly flash melt it to rehydrate the soft-landed proteins. Melting with a 30 µs laser pulse creates a broad ensemble of partially rehydrated structures. However, a subset of particles returns to a configuration close to the native state. This allows us to propose strategies to fully rehydrate the entire ensemble and brings routine sample preparation by soft-landing mass spectrometry within reach.Subject terms: Cryoelectron microscopy, Mass spectrometry
-
-## 11. Structural Snapshots of F1 ‐ATPase Catalysis in Drug Resistant Acinetobacter baumannii Reveal Novel Therapeutic Targets
+## 4. Structural Snapshots of F1 ‐ATPase Catalysis in Drug Resistant Acinetobacter baumannii Reveal Novel Therapeutic Targets
 - PMC13676158 / FASEB J / 公開 2026-10-17 / cc by-nc-nd / score 55
 - 構造: 24DH（未公開）; 24DJ（未公開）; 24DK（未公開）; 24DL（未公開）; 24DM（未公開）; 24DN（未公開）
 - タンパク質: （UniProt 未対応）
 
 ABSTRACTGram‐negative Acinetobacter baumannii , one of the most critical priority pathogens, has developed multiple defense mechanisms, including upregulation of drug efflux pumps powered by the proton‐motive force (pmf) or ATP. As a nonfermenting bacterium, it relies on oxidative phosphorylation, in which the F‐ATP synthase, composed of an F1‐ATPase (α 3:β 3:γ:ε) and FO‐domain (a:b 2 :c 10), synthesizes ATP, the cell's currency of life. Here, we present cryo‐electron microscopy structures of the F1‐ATPase captured during ATP synthesis, revealing concerted conformational changes within the α 3:β 3‐catalytic head that trigger structural transitions of subunit ε and twisting of the γ:ε central stalk, coupled with spontaneous ATP formation. Molecular dynamics simulations validate and expand the ensemble of structural rearrangements underlying the rotary mechanism. The resolved intermediate 
 
-## 12. Solution structure of a peptide-conjugated aggregation-induced-emission (AIE) fluorophore bound to a protein
-- PMC13670144 / RSC Chem Biol / 公開 2026-10-19 / cc by / score 52
-- 構造: 29KP（未公開）; 29KQ（未公開）
-- タンパク質: （UniProt 未対応）
-
-AbstractHere, we present a class of peptide-conjugated fluorophores based on aromatic thioethers with aggregation-induced emission (AIE) properties for specific recognition of small proteins and also the first solution NMR structure of an AIE ligand specifically bound to a protein. Binding of the hPin1-WW domain as a model protein resulted in a significant fluorescence increase, making these AIE-peptide fluorophores suitable as direct readout probes for specific protein interactions. Autofluorescence and protein-binding properties were elucidated as a function of peptide length and fluorophore concentration. While an AIE fluorophore with two conjugated peptides shows an enhanced fluorescence increase upon protein binding, a one-armed derivative enabled us to solve the structures of the free AIE-peptide and its complex. In the absence of a protein, the AIE-peptide conjugate shows a curled
-
-## 13. TONSL/TONSOKU binding to histone H3.1 is required for DNA repair
+## 5. TONSL/TONSOKU binding to histone H3.1 is required for DNA repair
 - PMC13674474 / Sci Adv / 公開 2026-10-16 / cc by-nc / score 52
 - 構造: 38NQ（未公開）; 38NR（未公開）
 - タンパク質: （UniProt 未対応）
 
 AbstractIn plants, TONSOKU (TSK) regulates heterochromatic DNA replication and genome stability by preferentially binding histone H3.1 over its close homolog, histone H3.3. The structure of this interaction showed that a shallow pocket in TSK’s poly-tetratricopeptide repeat (TPRTSK) domain discriminates between the variants but did not report the importance of additional interactions underlying its binding to histone H3.1. In this study, we identify additional binding pockets that are important for histone H3.1 binding and TSK-like (TONSL)–dependent DNA repair. Consistently, sponastrime dysplasia-linked mutations in the TPR domain of TONSL impair histone H3.1 binding and fail to rescue TONSL’s DNA repair function in human cells. TPRTSK binding is highly regulated by posttranslational modifications (PTMs) on histone H3.1. Unexpectedly, TPRTSK contains two additional pockets that cooperate
 
-## 14. Computational Design of a TCR-like Human VH Domain Antibody That Specifically Recognizes a WT1-Derived Peptide Presented by Class I Major Histocompatibility Complex
-- PMC13669508 / Comput Struct Biotechnol J / 公開 2026-10-19 / cc by / score 51
-- 構造: 9VSO（X-RAY DIFFRACTION 3.03 Å）
-- タンパク質: WT1, B2M, HLA-A
-
-T cell receptor (TCR)-like antibodies that recognize a peptide–major histocompatibility complex (pMHC) can enable precise targeting of cancer cells, but developing single-domain binders with high specificity and affinity is challenging. Here, we report the computational design and experimental validation of a TCR-like human heavy chain variable (VH) domain antibody that specifically recognizes the Wilms’ tumor 1 protein (WT1)-derived peptide RMFPNAPYL presented by HLA-A*02:01/β2-microglobulin (RMF/HLA-A*02). Starting from the crystal structure of a Fab antibody bound to RMF/HLA-A*02, we repurposed the soluble trastuzumab-derived VH scaffold to bind RMF/HLA-A*02. The resulting VH domain, αRMF_VH, spans all 9 peptide residues and showed no binding to a control pMHC with a different peptide. Fusion of 1 or 2 αRMF_VH molecules to human serum albumin domain III yielded monovalent and bivalent
-
-## 15. Modular Platform for Recombinant Production of Highly Toxic Bacterial Proteins
-- PMC13675652 / Microb Biotechnol / 公開 2026-10-01 / cc by / score 51
-- 構造: 33ZJ（未公開）
-- タンパク質: （UniProt 未対応）
-
-ABSTRACTBacterial protein toxins constitute a vast, largely untapped reservoir of potent bioactive molecules for antimicrobial discovery and biotechnology. However, their intrinsic toxicity often prevents recombinant expression in microbial hosts, limiting biochemical and functional characterization. Here, we present a modular platform for the recombinant production of highly toxic bacterial proteins based on covalent fusion of polymorphic toxins (PTs) to their cognate immunity proteins (PIMs), enabling transient toxin neutralization during expression. This strategy enabled recombinant production and purification of three previously refractory toxin families, PT7, PT8 and PT9. We further streamlined the workflow by introducing intracellular protease‐mediated cleavage of the toxin‐immunity fusion, reducing purification from four steps to two and increasing the recovered yield of PT9 from 
-
-## 16. Network pharmacology–driven identification of PTP1β and rational design of simufilam-based allosteric inhibitors for neuroprotection in Alzheimer’s disease
+## 6. Network pharmacology–driven identification of PTP1β and rational design of simufilam-based allosteric inhibitors for neuroprotection in Alzheimer’s disease
 - PMC13672277 / 3 Biotech / 公開 2026-10-15 / cc by / score 40
 - 構造: 寄託の記載あり（ID は補足資料のみ）
 - タンパク質: （UniProt 未対応）
 
 AbstractAlzheimer’s disease (AD) is a progressive neurodegenerative disorder that predominantly affects elderly people and is characterized by cognitive decline and dementia. Protein tyrosine phosphatase-1B (PTP1B) is known to modulate pro-inflammatory mediators, and its overexpression in the brain has been implicated in AD-associated neuroinflammation. This study explores the mechanism of A20, A26, and co-crystal-designed compound targeting non-competitive allosteric PTP1B enzyme inhibition for AD therapy using network pharmacology and computational studies. Protein-protein interaction was designed for 128 active targets by STRING database and Cytoscape software. Further, active target-associated pathways analysed using ClueGO plugin Cytoscape software and the Reactome online public domain server. The non-competitive allosteric PTP1B inhibition through the design of Simufilam derivative
 
-## 17. The MODNAP benchmark set for modeling ribose-based modified nucleic acid and nucleic acid–protein complexes: a case study with AlphaFold 3
+## 7. The MODNAP benchmark set for modeling ribose-based modified nucleic acid and nucleic acid–protein complexes: a case study with AlphaFold 3
 - PMC13669634 / Nucleic Acids Res / 公開 2026-10-15 / cc by / score 40
 - 構造: 寄託の記載あり（ID は補足資料のみ）
 - タンパク質: （UniProt 未対応）

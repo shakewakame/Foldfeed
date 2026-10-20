@@ -1,27 +1,13 @@
 # 候補一覧 2026-10-17（Europe PMC 索引日 2026-10-16）
 
-検索ヒット 8 件 → 本文解析 25 件 → 新しい構造 2 件（ID が補足資料のみ 0 件、マップのみ 1 件、既存構造の利用 8 件、ID なし 14 件）
+検索ヒット 8 件 → 本文解析 23 件 → 新しい構造 1 件（ID が補足資料のみ 0 件、マップのみ 0 件、既存構造の利用 8 件、ID なし 14 件）
 
-## 1. Establishing the molecular basis for MDA5 mutation-linked autoimmunity
-- PMC13646831 / Nucleic Acids Res / 公開 2026-09-01 / cc by / score 59
-- 構造: 9Y4J（ELECTRON MICROSCOPY 2.81 Å / リガンド: ANP）; 9Y4L（ELECTRON MICROSCOPY 2.96 Å / リガンド: ANP）; 9Q60（ELECTRON MICROSCOPY 3.12 Å / リガンド: ATP）; 9Q5W（ELECTRON MICROSCOPY 3.21 Å / リガンド: ATP）
-- タンパク質: IFIH1
-
-AbstractMelanoma differentiation-associated protein 5 (MDA5), a member of the RIG-I-like receptor family, is a cytoplasmic sensor essential for innate antiviral immunity. MDA5 distinguishes viral RNA from host RNA in part through its ATP hydrolysis activity, which promotes filament turnover on shorter endogenous double-stranded RNAs (dsRNAs). Here, we show that the gain-of-function T331I disease-linked mutation within the ATP-binding pocket disrupts this balance, resulting in constitutive interferon signaling. Through a combination of cryo-electron microscopy (cryoEM), biochemical assays, and cellular analyses, we reveal the extensive network of interactions that precisely position ATP for catalysis in the wild-type MDA5 ATP-binding pocket and also demonstrate that the T331I mutation impairs ATPase activity, thereby stabilizing MDA5–dsRNA complexes and leading to aberrant immune activati
-
-## 2. Symmetry-breaking antibody binding reveals extensive capsid malleability in pandemic human norovirus
+## 1. Symmetry-breaking antibody binding reveals extensive capsid malleability in pandemic human norovirus
 - PMC13662703 / Res Sq / 公開 2026-09-21 / cc by / score 55
 - 構造: 12QZ（未公開）; 13KF（未公開）; 13KG（未公開）; 12TF（未公開）; 12TW（未公開）; 12TX（未公開）; 12TY（未公開）; 12TZ（未公開）; 12UA（未公開）; 12UB（未公開）; 12UC（未公開）; 12UD（未公開）; 12TV（未公開）; 12TU（未公開）; 12TP（未公開）; 12TQ（未公開）; 12TR（未公開）; 12TS（未公開）; 12TT（未公開）; 12PG（未公開）; 12UE（未公開）
 - タンパク質: （UniProt 未対応）
 
 AbstractVirus capsids are metastable assemblies with an exquisite balance between stability and flexibility, obligatory for entry, infectivity, and immune escape. Yet, the extent to which human viruses exploit capsid plasticity and how that consequently shapes antigenic landscapes remains poorly understood. Human noroviruses (HuNoVs) are the leading cause of acute viral gastroenteritis worldwide1. GII.4 HuNoVs have been evolving epochally, driving most global pandemics, and since 2012, GII.4 Sydney has been the dominant variant2,3. The major capsid protein VP1 is central to infectivity and immune recognition4, and VP1-based virus-like particles (VLPs) are considered promising vaccine candidates5–9. Yet, how the icosahedral HuNoV capsid responds to antibody pressure at the atomic level is still unclear. Here, we present the first atomic structure of GII.4 Sydney capsid determined by cryo-
-
-## 3. Quasi-continuous cotranslational compaction and folding of a multidomain protein
-- PMC13639035 / Nat Commun / 公開 2026-10-05 / cc by / score 35
-- 構造: EMDB: EMD-56368, EMD-56453, EMD-56462
-- タンパク質: （UniProt 未対応）
-
-AbstractMost proteins start to fold cotranslationally as they come off the ribosome. So far, studies of cotranslational folding have focused mainly on small, single-domain proteins. Here, we have used Force Profile Analysis to study the cotranslational folding of Firefly Luciferase, a complex 550-residue protein composed of an N-terminal domain (NTD) encompassing two split Rossmann folds (RF-1, RF-2) and a β-roll, and a flexibly attached C-terminal domain (CTD). The folding process is characterized by a quasi-continuous series of compaction/folding steps that generate intermediate-size pulling forces on the nascent chain, punctuated by a prominent high-force event that represents the folding of the RF-2 domain, and a few low-force instances that likely indicate the formation of distinct folding intermediates. Trigger Factor interacts extensively with the nascent chain when the central pa
 
 # 注目の構造の候補（新しい構造以外）
 

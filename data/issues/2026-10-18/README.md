@@ -2,11 +2,11 @@
 
 # 2026-10-18 号
 
-**今日の新しい構造：17 本**　PMC に 2026-10-17 に登録されたオープンアクセス論文 60 本のうち、新しい構造を報告した論文は 17 本。うち 16 本を紹介する（残りは末尾に一覧）。
+**今日の新しい構造：16 本**　PMC に 2026-10-17 に登録されたオープンアクセス論文 59 本のうち、新しい構造を報告した論文は 16 本。うち 15 本を紹介する（残りは末尾に一覧）。
 
 出典：この号の論文情報と全文は、米国国立医学図書館（NLM）の PMC オープンアクセスデータセット（AWS Open Data）から取得した。
 
-**New Structure 5 本** · **Structure Update 10 本** · **Structure-Based Study 1 本**（New Structure：構造が初めて解かれたタンパク質。Structure Update：既知のタンパク質の新しい構造。Structure-Based Study：既存の構造を使った注目の研究）
+**New Structure 4 本** · **Structure Update 10 本** · **Structure-Based Study 1 本**（New Structure：構造が初めて解かれたタンパク質。Structure Update：既知のタンパク質の新しい構造。Structure-Based Study：既存の構造を使った注目の研究）
 
 ## Today's Structure（今日の一本）
 
@@ -23,21 +23,20 @@
 | # | 標的 | 手法・分解能 | 見出し |
 |---|---|---|---|
 | 1 | GluA2–γ2（AMPA受容体） | Cryo-EM・2.93–4.36 Å（10 構造） | 部分作動薬が、AMPA受容体の開く前の中間状態をとらえた |
-| 2 | ヒト繊毛の移行帯（二連微小管） | Cryo-ET・7.30–9.60 Å（2 構造） | ECT2LとDZANK1の欠損が、繊毛基部の連結を壊しPCDを起こす |
-| 3 | ヒトOCTN1（SLC22A4） | Cryo-EM・3.11–3.37 Å（2 構造） | OCTN1の外向き・内向きの構造から、阻害薬メベンダゾールを見いだした |
-| 4 | ヒトNHA1（SLC9B1） | Cryo-EM・3.64 Å | ヒトNHA1の内向き構造は、エレベーター型の輸送を裏づける |
-| 5 | ワクシニアウイルスD13（足場） | Cryo-EM・2.56–3.70 Å（8 構造） | A17の末端ペプチドが、D13の棒状集合体を足場の格子に組み替える |
-| 6 | ヒトcPRC1（PRC1.4） | Cryo-EM・2.74 Å | PRC1は4つのサブユニットを密に組み、E2酵素をヌクレオソーム上に置く |
-| 7 | ヒトNLRP6（炎症の感知因子） | Cryo-EM・3.69–3.79 Å（2 構造） | ATPがNLRP6の各ドメインを束ねて、活性化を抑える |
-| 8 | タウ線維（AD・VT患者脳） | Cryo-EM・2.92–3.61 Å（8 構造） | ポリユビキチンの位置が動くと、タウ線維の原線維間の接合面がずれる |
-| 9 | β2AR（ヒト）二量体 | Cryo-EM・2.50 Å | AP-7-168は分子糊としてβ2ARを二量体にし、アレスチンを遮る |
-| 10 | ヒトノロウイルスGII.4 Sydney VP1 | PDB 公開待ち | ノロウイルスの殻は、抗体が結合すると形を変えて受け止める |
-| 11 | AsCas12a（ΨDNAガイド） | PDB 公開待ち | DNAガイドのCas12aは、DNAのヘアピンでPAM認識を真似る |
-| 12 | SARS-CoV-2 NSP3 マクロドメイン（Mac1） | PDB 公開待ち | 共折りたたみAIは、Mac1に結合する薬の形を半数以上当てる |
-| 13 | 光化学系I単量体（T. vestitus） | Cryo-EM・1.74 Å | 光合成の光化学系Iの単量体を、温度と界面活性剤で作る |
-| 14 | β-ガラクトシダーゼ・GroEL（大腸菌） | Cryo-EM・1.90–3.70 Å（2 構造） | 乾いたタンパク質は、レーザーで氷を溶かすと水を取り戻して元に近づく |
-| 15 | hPin1-WWドメイン＋AIEペプチドF11 | PDB 公開待ち | AIE蛍光色素は、タンパク質に結びつくと環の回転が止まって光る |
-| 16 | μOR–Gi 複合体（マウス・ヒト） | 一分子FRET・GTP代謝回転（既存のGi・μOR構造を使用） | オピオイドの効力は、Gαドメインの開きやすさに表れる |
+| 2 | ヒトOCTN1（SLC22A4） | Cryo-EM・3.11–3.37 Å（2 構造） | OCTN1の外向き・内向きの構造から、阻害薬メベンダゾールを見いだした |
+| 3 | ヒトNHA1（SLC9B1） | Cryo-EM・3.64 Å | ヒトNHA1の内向き構造は、エレベーター型の輸送を裏づける |
+| 4 | ワクシニアウイルスD13（足場） | Cryo-EM・2.56–3.70 Å（8 構造） | A17の末端ペプチドが、D13の棒状集合体を足場の格子に組み替える |
+| 5 | ヒトcPRC1（PRC1.4） | Cryo-EM・2.74 Å | PRC1は4つのサブユニットを密に組み、E2酵素をヌクレオソーム上に置く |
+| 6 | ヒトNLRP6（炎症の感知因子） | Cryo-EM・3.69–3.79 Å（2 構造） | ATPがNLRP6の各ドメインを束ねて、活性化を抑える |
+| 7 | タウ線維（AD・VT患者脳） | Cryo-EM・2.92–3.61 Å（8 構造） | ポリユビキチンの位置が動くと、タウ線維の原線維間の接合面がずれる |
+| 8 | β2AR（ヒト）二量体 | Cryo-EM・2.50 Å | AP-7-168は分子糊としてβ2ARを二量体にし、アレスチンを遮る |
+| 9 | ヒトノロウイルスGII.4 Sydney VP1 | PDB 公開待ち | ノロウイルスの殻は、抗体が結合すると形を変えて受け止める |
+| 10 | AsCas12a（ΨDNAガイド） | PDB 公開待ち | DNAガイドのCas12aは、DNAのヘアピンでPAM認識を真似る |
+| 11 | SARS-CoV-2 NSP3 マクロドメイン（Mac1） | PDB 公開待ち | 共折りたたみAIは、Mac1に結合する薬の形を半数以上当てる |
+| 12 | 光化学系I単量体（T. vestitus） | Cryo-EM・1.74 Å | 光合成の光化学系Iの単量体を、温度と界面活性剤で作る |
+| 13 | β-ガラクトシダーゼ・GroEL（大腸菌） | Cryo-EM・1.90–3.70 Å（2 構造） | 乾いたタンパク質は、レーザーで氷を溶かすと水を取り戻して元に近づく |
+| 14 | hPin1-WWドメイン＋AIEペプチドF11 | PDB 公開待ち | AIE蛍光色素は、タンパク質に結びつくと環の回転が止まって光る |
+| 15 | μOR–Gi 複合体（マウス・ヒト） | 一分子FRET・GTP代謝回転（既存のGi・μOR構造を使用） | オピオイドの効力は、Gαドメインの開きやすさに表れる |
 
 > この号は AI が論文本文から作成した**レビュー用の下書き**です。数値・ID・リガンドは PDB / UniProt から取得し、AI の記述には本文からの引用を付けています。
 
@@ -193,152 +192,7 @@
 
 # New Structure
 
-## 2｜ヒト繊毛の移行帯（二連微小管）
-
-### In situ structure of the human ciliary transition zone links linker defects to primary ciliary dyskinesia
-
-*Science (New York, N.Y.)*（2026-10-15） · [論文](https://doi.org/10.1126/science.aei5957) · ライセンス: tdm
-
-![構造図：ヒト繊毛の移行帯（二連微小管）](figures/PMC13650764.svg)
-
-<sub>色（順に）：α-チューブリン / β-チューブリン / CFAP20（繊毛） / CEP41（繊毛） / CAPSL（繊毛） / MAP9（微小管結合） / ENKD1（繊毛）　スティック：GTP、GDP</sub>
-
-**ECT2LとDZANK1の欠損が、繊毛基部の連結を壊しPCDを起こす**
-
-ヒト繊毛基部の二連微小管をその場でクライオ電子線トモグラフィーにより解析し、隣どうしをつなぐ連結構造の成分を特定した
-
-- **疑問・課題**：繊毛の根元にある移行帯の分子構造とタンパク質の構成は、運動性繊毛病との関わりも含めて、よく分かっていなかった。
-- **アプローチ**：ヒトの多繊毛上皮細胞をクライオ電子線トモグラフィーでその場解析し、患者の遺伝子変異と照らし合わせた。
-- **結果**：移行帯の二連微小管を6.9〜7.3 Åで再構成して9種のタンパク質を同定し、連結部はECT2LとDZANK1が担っていた。
-- **わかったこと**：ECT2LまたはDZANK1の機能喪失変異は原発性線毛運動不全症（PCD）を起こす。移行帯の連結の欠陥が運動性繊毛病の原因になる。
-- **残された課題**：DZANK1のIg様ドメインとアンキリン反復の位置は不確かで、内側に伸びる弱い密度に当たる可能性がある。
-
-<details><summary>この紹介文の根拠（論文本文）</summary>
-
-> The ciliary transition zone (TZ) regulates ciliary proteome composition, yet its molecular architecture, protein content, and contribution to motile ciliopathies remain poorly defined.  
-> — 疑問・課題／Abstract
-
-> We applied in situ cryo-electron tomography and subtomogram averaging to human multiciliated epithelial cells.  
-> — アプローチ／Abstract
-
-> We hypothesized that loss-of-function variants in TZ linker components could cause primary ciliary dyskinesia (PCD).  
-> — アプローチ／Results
-
-> This approach resolved TZ-specific doublet microtubules at subnanometer resolution and identified nine constituent proteins.  
-> — 結果／Abstract
-
-> We found that ECT2L and DZANK1 form the major linker complexes between adjacent TZ doublet microtubules.  
-> — 結果／Abstract
-
-> composite map at 6.9–7.3 Å resolution  
-> — 結果／Results
-
-> Biallelic loss-of-function variants in either gene cause primary ciliary dyskinesia.  
-> — わかったこと／Abstract
-
-> These findings establish a direct genetic link between TZ defects and human motile ciliopathies  
-> — わかったこと／Abstract
-
-> The positions of N-terminal immunoglobulin-like and C-terminal ankyrin repeat domains of DZANK1 remain uncertain but may correspond to weak inward-projecting density from the TZ linker  
-> — 残された課題／Results
-
-</details>
-
-<sub>分類：その他・転写調節・シグナル伝達</sub>
-
-#### 読みどころ
-
-移行帯の連結は、ECT2L・SKP1・DZANK1・DYNLL1/2の複合体が直線状に並んだものだった。ECT2LはSKP1と2:2の四量体を作る。ECT2LのCUL1結合面は四量体の中で隠れており、活性のあるリガーゼにはならない可能性がある。
-
-<details><summary>根拠（論文本文）</summary>
-
-> We therefore conclude that a major component of the TZ linker is an ECT2L–SKP1 heterotetramer with 2:2 stoichiometry.  
-> — Results
-
-> These observations together indicate that TZ linkers are linear arrays of ECT2L–SKP1–DZANK1–DYNLL1/2 complexes  
-> — Results
-
-> ECT2L may therefore be another F-box protein that binds SKP1 without forming an active ligase  
-> — Results
-
-</details>
-
-PCDが疑われる489人の解析で、ECT2L変異を持つ3人とDZANK1変異を持つ1人が見つかった。患者由来の細胞では移行帯の連結が失われ、先端がふくらんだ繊毛が現れ、粒子の輸送速度が下がった。ECT2Lを欠くiPSC由来の細胞でも、同じふくらんだ先端が再現された。
-
-<details><summary>根拠（論文本文）</summary>
-
-> identified four unrelated individuals with predicted loss-of-function variants: three with distinct biallelic ECT2L variants  
-> — Results
-
-> Compared to healthy controls, mean transport velocities of fluorescent particles were significantly reduced in ECT2L-deficient cultures and showed no active transport in DZANK1-deficient cultures.  
-> — Results
-
-> Electron microscopy of ECT2L-KO cultures revealed widespread bulbous ciliary tips  
-> — Results
-
-</details>
-
-連結部の成分を決めるため、ヒトの1万6千余りのタンパク質に由来するAlphaFold2予測ドメイン2万8千余りを、分割した密度に網羅的に当てはめて探した。ECT2Lのドメインが上位に繰り返し現れた。
-
-<details><summary>根拠（論文本文）</summary>
-
-> we performed automated segmentation of the TZ linker density, followed by an unbiased screen to systematically fit a library of 28,142 AlphaFold2-predicted domains from 16,396 human proteins independently to each segmented density  
-> — Results
-
-> The screen repeatedly identified domains from epithelial cell transforming 2 like (ECT2L) as the top-scoring matches for five of six distinct segmented densities  
-> — Results
-
-</details>
-
-#### 構造データ
-
-| PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
-|---|---|---|---|---|---|
-| [11YJ](https://www.rcsb.org/structure/11YJ) | Cryo-ET | 7.30 Å | 2026-09-09 | Homo sapiens | GTP, GDP |
-| [11XU](https://www.rcsb.org/structure/11XU) | Cryo-ET | 9.60 Å | 2026-09-09 | Homo sapiens | — |
-
-- [P63167](https://www.uniprot.org/uniprotkb/P63167) DYNLL1 Dynein light chain 1, cytoplasmic — *Homo sapiens* （既存の PDB 構造 21 件）
-- [P63208](https://www.uniprot.org/uniprotkb/P63208) SKP1 S-phase kinase-associated protein 1 — *Homo sapiens* （既存の PDB 構造 72 件）
-- [P68371](https://www.uniprot.org/uniprotkb/P68371) TUBB4B Tubulin beta-4B chain — *Homo sapiens* （既存の PDB 構造 4 件）
-- [Q008S8](https://www.uniprot.org/uniprotkb/Q008S8) ECT2L Epithelial cell-transforming sequence 2 oncogene-like — *Homo sapiens* （PDB で初めての構造）
-- [Q49MG5](https://www.uniprot.org/uniprotkb/Q49MG5) MAP9 Microtubule-associated protein 9 — *Homo sapiens* （PDB で初めての構造）
-- [Q71U36](https://www.uniprot.org/uniprotkb/Q71U36) TUBA1A Tubulin alpha-1A chain — *Homo sapiens* （既存の PDB 構造 15 件）
-- [Q8WWF8](https://www.uniprot.org/uniprotkb/Q8WWF8) CAPSL Calcyphosin-like protein — *Homo sapiens* （PDB で初めての構造）
-- [Q9BYV8](https://www.uniprot.org/uniprotkb/Q9BYV8) CEP41 Centrosomal protein of 41 kDa — *Homo sapiens* （PDB で初めての構造）
-- [Q9H0I2](https://www.uniprot.org/uniprotkb/Q9H0I2) ENKD1 Enkurin domain-containing protein 1 — *Homo sapiens* （PDB で初めての構造）
-- [Q9NVP4](https://www.uniprot.org/uniprotkb/Q9NVP4) DZANK1 Double zinc ribbon and ankyrin repeat-containing protein 1 — *Homo sapiens* （PDB で初めての構造）
-- [Q9Y6A4](https://www.uniprot.org/uniprotkb/Q9Y6A4) CFAP20 Cilia- and flagella-associated protein 20 — *Homo sapiens* （既存の PDB 構造 2 件）
-
-#### 実験メモ
-
-- **発現系**：健常ドナーの鼻上皮細胞を気液界面（ALI）で3〜4週間培養し、繊毛を分化させた。
-- **結晶化／グリッド作製**：細胞を単離して Quantifoil R3.5/1 金グリッドにのせ、Vitrobot Mark IV で8秒ブロットして急速凍結。Aquilos 2 のFIBで厚さ約200 nmのラメラを作製。
-- **データ収集・解析**：Titan Krios＋Selectris＋Falcon4i。ピクセルサイズ2 Å、チルト−48°〜+48°（3°刻み）、総線量約150 e−/Å2。Warp、RELION5で平均化。
-
-<details><summary>根拠（論文本文）</summary>
-
-> Ciliation was observed 3–4 weeks after transition to ALI.  
-> — Methods
-
-> Grids were blotted from the back for 8 s with a blot force of 10 and 100% humidity before being plunged into liquid ethane cooled by liquid nitrogen.  
-> — Methods
-
-> FIB milling was performed in AutoTEM Cryo using stepwise decreasing currents as the lamellae were thinned (1.0 nA–30 pA; final thickness, ~200 nm).  
-> — Methods
-
-> Tilt series were collected on a 300-kV Titan Krios transmission electron microscope equipped with a Selectris energy filter and a Falcon4i detector  
-> — Methods
-
-> The cumulative electron dose per tilt series was ~150 e−/Å2.  
-> — Methods
-
-</details>
-
-> 📝 編集者への確認事項：PDB 11YJ（GTP/GDP つき）・11XU は 7〜10 Å級のサブトモグラム平均。ga_pdb_id は描画後に選び直してほしい。「繊毛」は論文の cilia の訳（PCD は原発性線毛運動不全症）。Methods の遺伝子検査・TEM 以降は読み切っていないが、本文の主張は Results・Discussion で確認した。
-
----
-
-## 3｜ヒトOCTN1（SLC22A4）
+## 2｜ヒトOCTN1（SLC22A4）
 
 ### Structural and mechanistic insights into OCTN1-mediated transport and cancer cell proliferation
 
@@ -487,7 +341,7 @@ ET結合型の構造を使った承認薬の仮想スクリーニングで、駆
 
 ---
 
-## 4｜ヒトNHA1（SLC9B1）
+## 3｜ヒトNHA1（SLC9B1）
 
 ### Cryo-EM structure of human Na+/H+ exchanger NHA1 in an inward-open conformation
 
@@ -623,7 +477,7 @@ NHA1は2つの鎖がTM0とTM8で組み合わさったダイマーで、各鎖は
 
 ---
 
-## 5｜ワクシニアウイルスD13（足場）
+## 4｜ワクシニアウイルスD13（足場）
 
 ### Structural transition of the immature poxvirus scaffold from preassembly to the scaffold lattice
 
@@ -758,7 +612,7 @@ A17が結合する底の空洞は、リファンピシンの結合部位でも�
 
 ---
 
-## 6｜ヒトcPRC1（PRC1.4）
+## 5｜ヒトcPRC1（PRC1.4）
 
 ### Cryo-EM structure, enzymatic activity and genome targeting of canonical PRC1
 
@@ -886,7 +740,7 @@ BMI1のRAWULドメインがUBCH5Cの背面に位置し、RING1Bとの複合面�
 
 # Structure Update
 
-## 7｜ヒトNLRP6（炎症の感知因子）
+## 6｜ヒトNLRP6（炎症の感知因子）
 
 ### Structural mechanisms for ATP-mediated inhibition of human NLRP6 inflammasome
 
@@ -1023,7 +877,7 @@ NLRP3の阻害剤MCC950は、NLRP3で似た位置に結合するが、この再�
 
 ---
 
-## 8｜タウ線維（AD・VT患者脳）
+## 7｜タウ線維（AD・VT患者脳）
 
 ### Repositioning of polyubiquitin alters the pathologic tau filament structure
 
@@ -1146,7 +1000,7 @@ K48結合型の二ユビキチンに結合する小分子ユビスタチンBで�
 
 ---
 
-## 9｜β2AR（ヒト）二量体
+## 8｜β2AR（ヒト）二量体
 
 ### A biased allosteric modulator is a molecular glue for β2AR dimerization
 
@@ -1259,7 +1113,7 @@ AP-7-168は、2分子が互いに積み重なる形でTM3・4・5が作る空間
 
 ---
 
-## 10｜ヒトノロウイルスGII.4 Sydney VP1
+## 9｜ヒトノロウイルスGII.4 Sydney VP1
 
 ### Symmetry-breaking antibody binding reveals extensive capsid malleability in pandemic human norovirus
 
@@ -1386,7 +1240,7 @@ M6を加えるとT=4粒子は壊れ、約30 nmの小さなT=1粒子に組み直�
 
 ---
 
-## 11｜AsCas12a（ΨDNAガイド）
+## 10｜AsCas12a（ΨDNAガイド）
 
 ### Architecture of a DNA-guided Cas12a
 
@@ -1493,7 +1347,7 @@ PAM類似部位の配列を変えても活性は残る。プリンに富むAGAT�
 
 ---
 
-## 12｜SARS-CoV-2 NSP3 マクロドメイン（Mac1）
+## 11｜SARS-CoV-2 NSP3 マクロドメイン（Mac1）
 
 ### Large-scale prospective evaluation of co-folding across hundreds of Mac1–ligand complexes and three virtual screens
 
@@ -1597,7 +1451,7 @@ AmpC、σ2受容体、ドーパミンD4受容体の大規模ドッキングで�
 
 ---
 
-## 13｜光化学系I単量体（T. vestitus）
+## 12｜光化学系I単量体（T. vestitus）
 
 ### High-resolution structure of monomeric photosystem I from Thermosynechococcus vestitus
 
@@ -1723,7 +1577,7 @@ BDMで精製した三量体を、1%のC12E8と60°Cで30分処理すると、ほ
 
 ---
 
-## 14｜β-ガラクトシダーゼ・GroEL（大腸菌）
+## 13｜β-ガラクトシダーゼ・GroEL（大腸菌）
 
 ### Cryo-EM sample preparation with soft-landing and laser flash melting
 
@@ -1830,7 +1684,7 @@ GroELは着地すると高さが約24%、直径が約7%縮んだが、レーザ�
 
 ---
 
-## 15｜hPin1-WWドメイン＋AIEペプチドF11
+## 14｜hPin1-WWドメイン＋AIEペプチドF11
 
 ### Solution structure of a peptide-conjugated aggregation-induced-emission (AIE) fluorophore bound to a protein
 
@@ -1942,7 +1796,7 @@ AIEコアはC字形のままβシートの上に載り、F25が中央に入り�
 
 # Structure-Based Study
 
-## 16｜μOR–Gi 複合体（マウス・ヒト）
+## 15｜μOR–Gi 複合体（マウス・ヒト）
 
 ### Ligand-dependent G protein dynamics underlying opioid efficacy
 
