@@ -1,0 +1,70 @@
+{
+  "pmcid": "PMC13678209",
+  "rank": 2,
+  "headline": "レムデシビルは、RdRPの移動と次の反応を100倍以上遅らせる",
+  "subhead": "EV71 RdRPの結晶構造と速度論で、セリン417が通り道をふさぐ様子を示した",
+  "target_label": "EV71 RdRP（エンテロウイルス71）",
+  "target_en": "Enterovirus A71 RdRP (S417G) elongation complex",
+  "summary": {
+    "question": "レムデシビル（RDV）は数ヌクレオチド後に反応を妨げるが、その正確な仕組みや効き方は不明だった。",
+    "approach": "EV71 RdRP の S417G 変異体の結晶構造、急速停止法による速度論、分子動力学シミュレーションを組み合わせた。",
+    "result": "RDV の移動と次の反応の合わせた速度はアデノシンの 100 分の 1 以下で、S417G 変異体ではこの差がほぼ消えた。",
+    "learned": "RDV の 1′-シアノ基とセリン417 のぶつかりが移動を妨げる。移動の段階での阻害は、核酸類似体の設計に使える戦略と論文は提案する。",
+    "evidence": {
+      "question": [
+        {"quote": "However, how effective is RDV nucleotide at the delayed intervention site and what is the precise mechanism of its primary intervention both remain to be clarified.", "section": "Introduction"}
+      ],
+      "approach": [
+        {"quote": "By combining X-ray crystallography, quench-flow kinetics, and molecular dynamics simulations, we show that the composite rate of RDV translocation from product strand position −3 to −4", "section": "Abstract"}
+      ],
+      "result": [
+        {"quote": "Strikingly, the r2 value is about 100-fold lower for the RDV-TP-derived WT EC14 (0.042 s−1 vs. 6.4 s−1), while the r1 value remains high (12.8 s−1).", "section": "Results"},
+        {"quote": "indicating that the S417G mutation almost eliminates the RDV-mediated site-specific translocation-related intervention.", "section": "Results"}
+      ],
+      "learned": [
+        {"quote": "Modeling a serine at this site leads to a steric clash of its side chain and the cyano group", "section": "Results"},
+        {"quote": "Our work demonstrates translocation-related intervention as an effective and broadly applicable polymerase intervention strategy in NA rational design.", "section": "Abstract"}
+      ]
+    }
+  },
+  "categories": ["nucleic", "pathogen", "enzyme"],
+  "topics": ["drug", "dynamics"],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "S417G 変異体の複合体で、RDV 由来のヌクレオチドが産物鎖の −4 位に結晶中で捉えられた。−3 位の移動前の状態や、−4 と −5 の間にある行き過ぎた状態も見え、RDV が自由エネルギーの地形を変えると考えられる。",
+      "evidence": [
+        {"quote": "The capture of both the C2S4 and C3S1o complexes suggests that the free-energy landscape is altered by the RDV nucleotide even when the side chain of the roadblock serine is replaced by a hydrogen of the engineered glycine.", "section": "Results"}
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "活性部位での阻害や連鎖停止とは別に、ポリメラーゼ上を動く途中で妨げる戦略を示した。ポリメラーゼと立体的にぶつかる位置があれば、核酸類似体の設計に使える可能性がある。",
+      "evidence": [
+        {"quote": "Any steric hindrance of an NA in the product strand by polymerase residues provides an opportunity of translocation-related intervention.", "section": "Discussion"}
+      ]
+    },
+    {
+      "tag": "手法の工夫",
+      "text": "結晶にヌクレオチドを浸して反応を進め、同じ結晶型から複数の反応段階の構造を得た。急速停止法の速度論で、移動を含む段階の速度を取り出した。",
+      "evidence": [
+        {"quote": "Crystal soaking trials were performed using the precipitant solution supplemented with 5 mM of each nucleotide [NTP(s) or RDV-TP] and 10 mM divalent metal ions (MgCl2 or MnCl2).", "section": "Methods"}
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "大腸菌 BL21(DE3)pCG1 で発現、0.5 mM IPTG で誘導",
+    "construct": "EV71 RdRP の S417G 変異体と野生型",
+    "purification": "ニッケル親和・陰イオン交換・ゲルろ過",
+    "sample_prep": "シッティングドロップ蒸気拡散（12 または 16 °C）。結晶に各 5 mM のヌクレオチドと 10 mM の 2 価金属を浸した",
+    "data_collection": "上海放射光施設 BL17U1・BL02U1 で 100 K、180° 以上を 0.2° 刻みで収集",
+    "evidence": [
+      {"quote": "the protein was expressed in Escherichia coli strain BL21(DE3)pCG1, induced by 0.5 mM IPTG, purified by sequentially passage through nickel-affinity, anion exchange, and gel filtration columns.", "section": "Methods"},
+      {"quote": "crystals were grown by sitting-drop vapor diffusion at 12 °C or 16 °C using 10 mg/ml EC samples.", "section": "Methods"},
+      {"quote": "X-ray diffraction data were collected at Shanghai Synchrotron Radiation Facility beamlines BL17U1 and BL02U1 (wavelength 0.9792 Å) at 100 K.", "section": "Methods"}
+    ]
+  },
+  "keywords": ["レムデシビル", "RdRP", "EV71", "転位"],
+  "ga_pdb_id": "21TK",
+  "editor_notes": "ga_pdb_id は 5 つの構造のうち 1.90 Å のもの。論文は S417G 変異体の結晶構造が中心（野生型は複合体が得られなかった）。MD の結果は本文では補助的に扱った。"
+}

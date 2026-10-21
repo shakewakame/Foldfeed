@@ -1,0 +1,247 @@
+{
+ "screened": 47,
+ "scored": [
+  {
+   "pmcid": "PMC13677679",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 2,
+    "reach": 2,
+    "structure": 1,
+    "support": 2
+   },
+   "selected": true,
+   "reason": "既存のクライオ電顕構造をもとに、D3Rだけが Gαi と共役しない理由を変異体・キメラで確かめた。D2様受容体の選択性という広い問いに答える。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "we characterize the G protein coupling of dopamine D2-like receptors and observe the striking inability of D3R to engage with Gαi proteins while effectively activating Gαo/z subtypes",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "Notably, ~11% of all marketed GPCR-targeting drugs act on dopamine receptors.",
+      "section": "Abstract"
+     }
+    ],
+    "structure": [
+     {
+      "quote": "An investigation of the recently published structure of D3R bound to the GαoA-subtype of G protein (PDB:9F33) revealed that G350 is positioned in close proximity to a negatively charged cavity on D3R",
+      "section": "Results"
+     }
+    ],
+    "support": [
+     {
+      "quote": "Applying orthogonal cell-based assays with wild-type G proteins in parental and ΔGαi/o/z cells, we conclusively establish that D3R does not activate Gαi proteins.",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13679085",
+   "type": "method",
+   "scores": {
+    "novelty": 2,
+    "reach": 2,
+    "structure": 1,
+    "support": 1
+   },
+   "selected": true,
+   "reason": "PELDOR で 17.3 nm の距離測定を示し、TRIM25 コイルドコイルの曲がりを溶液で測った。大型複合体の長距離拘束に使える手法の拡張。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "The longest measured mean distance of 17.3 nm is well beyond literature precedent, and our data predicts that 20 nm is within reach.",
+      "section": "Discussion"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "This study opens access to length scales typical for large protein assemblies and molecular machines",
+      "section": "Discussion"
+     }
+    ],
+    "structure": [
+     {
+      "quote": "Furthermore, TRIM25 featured a higher degree of curvature in solution than suggested by the crystal structure and structure prediction.",
+      "section": "Discussion"
+     }
+    ],
+    "support": [
+     {
+      "quote": "All the acquired data exhibits an SNR > 20 in less than 24 h",
+      "section": "Results"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13678254",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 1,
+    "reach": 1,
+    "structure": 1,
+    "support": 2
+   },
+   "selected": false,
+   "reason": "二状態の主張は MD が根拠で、NMR は S189A の選択性が変わらないことを確かめただけ。novelty 1 で基準未満。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "upon binding, MBD2 adopts two distinct stable conformations: a primary state closely resembling the X-ray crystal structure, and a secondary state of reduced affinity",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "critical epigenetic regulator that selectively binds methylated CpG dinucleotides",
+      "section": "Abstract"
+     }
+    ],
+    "structure": [
+     {
+      "quote": "Complementary NMR experiments confirm that S189A mutation does not alter mCpG selectivity",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "fluorescence polarization measurements reveal a reduced binding affinity, consistent with our MD simulations results",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13678009",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 2,
+    "reach": 1,
+    "structure": 0,
+    "support": 2
+   },
+   "selected": false,
+   "reason": "構造に基づく解析がなく（変異体と結合実験のみ）、structure が 0。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "an unexpected PCNA-independent mode mediated by its N-terminal region",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "bypasses UV-induced pyrimidine dimers and thereby confers tolerance to UV irradiation",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "displayed a diminished ability to rescue the UV sensitivity of Polη-deficient cells",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13679038",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 1,
+    "reach": 1,
+    "structure": 1,
+    "support": 2
+   },
+   "selected": false,
+   "reason": "ITC・NMR・MD で出会い複合体への塩の効果を調べた続報。1 つの系の話で novelty 1。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "simulations show that salt destabilizes the encounter complex intermediate, which primarily affects the association rate as measured by NMR",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "a mechanism that is likely common among other highly charged domains that bind IDPs",
+      "section": "Abstract"
+     }
+    ],
+    "structure": [
+     {
+      "quote": "Molecular dynamics and NMR experiments revealed that salt has little effect on the bound state structure.",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "Using isothermal titration calorimetry, we observed that salt enthalpically destabilizes the bound complex.",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13677808",
+   "type": "ai_design",
+   "scores": {
+    "novelty": 1,
+    "reach": 1,
+    "structure": 0,
+    "support": 1
+   },
+   "selected": false,
+   "reason": "機械学習による親和性予測の評価で、実験構造での確かめは共結晶との姿勢比較にとどまり structure 0。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "AEV‐PLIG performed poorly across most series",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "These results highlight both the promise in well‐characterized chemical space and limitations in the novel regions",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "despite experimental potency gains of up to 500x",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13679930",
+   "type": "ai_design",
+   "scores": {
+    "novelty": 1,
+    "reach": 1,
+    "structure": 0,
+    "support": 0
+   },
+   "selected": false,
+   "reason": "MD だけの研究で、実験による検証がない。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "TBM, but not AF3, successfully captures agonistic VUAA1-induced activation",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "Blocking Orco ex vivo and in vivo disrupts olfactory signalling, making it a promising target",
+      "section": "Abstract"
+     }
+    ]
+   }
+  }
+ ]
+}

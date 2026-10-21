@@ -1,0 +1,128 @@
+{
+  "pmcid": "PMC13677706",
+  "rank": 3,
+  "headline": "MRSAのβ-ラクタム耐性は、キナーゼStk1の阻害で弱まる",
+  "subhead": "Stk1と阻害剤GWXの結晶構造は、DFG-out型の不活性な状態を示した",
+  "target_label": "Stk1（黄色ブドウ球菌）",
+  "target_en": "Stk1 kinase (S. aureus)",
+  "summary": {
+    "question": "MRSA の広域 β-ラクタム耐性は BlaR1 のリン酸化に左右されるが、その担い手とリン酸化の役割を確かめる必要があった。",
+    "approach": "stk1 欠損株と阻害剤 GWX での耐性・mecA 誘導を調べ、Stk1 キナーゼドメインと GWX の複合体を結晶化した。",
+    "result": "Δstk1 では mecA の誘導が弱まり、β-ラクタムの MIC は 4 倍以上低下した。GWX は DFG-out 型の不活性な構造で結合した。",
+    "learned": "Stk1 を標的にすると、多くの MRSA を β-ラクタムに再び感受性にできる可能性がある。構造は阻害剤設計の手がかりになる。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "A prior study identified a key step in the activation of β-lactam resistance was the phosphorylation of the sensor-inducer protein BlaR1, following β-lactam detection27,28.",
+          "section": "Results"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "To investigate the molecular basis of Stk1 inhibition by GWX in further detail, we co-crystallized the protein-ligand complex and determined its structure through X-ray diffraction methods to 2.1 Å resolution",
+          "section": "Results"
+        },
+        {
+          "quote": "we deleted stk1 or stp1 from SF8300, a clinically isolated USA300 strain2 that contains an impaired MecR1-MecI regulatory pathway",
+          "section": "Results"
+        }
+      ],
+      "result": [
+        {
+          "quote": "qRT-PCR analysis revealed that exposure to nafcillin (Fig. 3a) or oxacillin (Supplementary Fig. S2a) led to a significantly attenuated induction of mecA transcription in Δstk1",
+          "section": "Results"
+        },
+        {
+          "quote": "In our structure of the kinase domain, Asp 151 of the DFG motif is pushed away from the active site cleft into the “DFG-out” conformation",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Our results demonstrate that targeting Stk1 can potentiate synthetic lethality to β-lactams in the majority of naturally isolated strains of MRSA.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "We additionally present the structural and kinetic basis for a Stk1-inhibitor complex that can enable rational design of Stk1-directed anti-MRSA therapeutics in the future.",
+          "section": "Abstract"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "kinase",
+    "pathogen"
+  ],
+  "topics": [
+    "drug"
+  ],
+  "highlights": [
+    {
+      "tag": "創薬・モダリティ",
+      "text": "既知のキナーゼ阻害剤 GWX は Stk1 に Kd 21.1 nM で結合し、ナフシリンと併用すると野生株の増殖が弱まった。Δstk1 では併用の上乗せがなく、効果は Stk1 の阻害によると読める。",
+      "evidence": [
+        {
+          "quote": "Δstk1 had similar growth patterns when treated with only nafcillin or with a combination of nafcillin and GWX, suggesting that the phenotype displayed above was specifically due to GWX-mediated inhibition of Stk1 function.",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "新しい結合部位",
+      "text": "GWX は Stk1 の活性部位の裂け目を占め、DFG モチーフが外向き（DFG-out）になる。Phe150 がアデニン結合部位でピラゾロピリジンとπスタッキングする。結合様式は、これまでのコンピュータ予測とは異なっていた。",
+      "evidence": [
+        {
+          "quote": "Instead, the preceding Phe150 lies in the adenine pocket and forms a pi-stacking interaction with the pyrazolopyridine moiety of the GWX ligand.",
+          "section": "Results"
+        },
+        {
+          "quote": "the GWX ligand binds in a fashion not predicted by prior in silico models35",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "解析した S. aureus ゲノム約 12.8 万件のうち、mecA 陽性の MRSA の多くは mecI を欠いて blaZ・blaI を持ち、mecA が BlaR1-BlaI 経路の制御下にあるとみられる。stk1 と stp1 はほぼ全株に保存されていた。",
+      "evidence": [
+        {
+          "quote": "Notably, we found stk1 and stp1, the two components of the eSTK1 pathway, to be conserved in 99.71% of our 127894 analyzed S. aureus entries (Fig. 1b).",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "大腸菌 BL21(DE3) で 1 mM IPTG・23 °C・16 時間誘導（N 末端 10×His タグ）",
+    "construct": "Stk1 キナーゼドメイン（残基 1–291）",
+    "purification": "Ni-NTA、トロンビンでタグ切断、Superdex 200 ゲルろ過",
+    "sample_prep": "9 mg/mL のタンパク質と 2 mM GWX、シッティングドロップ（22 °C）。結晶は 4 °C で育成",
+    "data_collection": "カナダ光源 CMCF-BM で 100 K。XDS・Aimless で処理し、既存の Stk1 構造で分子置換",
+    "evidence": [
+      {
+        "quote": "1 mM isopropyl-β-d-thiogalactopyranoside (IPTG) was added to the media to induce protein expression, and the culture was incubated for 16 h at 23 °C and 180 rpm.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Fractions containing the thrombin-cleaved Stk1 KD were concentrated using a 10 kDa MWCO Amicon Ultra centrifugal filter (Millipore Sigma).",
+        "section": "Methods"
+      },
+      {
+        "quote": "Data was collected at 100 K on the CMCF-BM (08B1) beam line with a Pilatus3 S 6 M X-ray detector (Dectris)",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "Stk1",
+    "MRSA",
+    "BlaR1",
+    "GW779439X"
+  ],
+  "ligand_label": "GWX（GW779439X）",
+  "ligand_names": {
+    "A1CYJ": "GWX"
+  },
+  "site_ligand": "A1CYJ",
+  "editor_notes": "BlaR1 のリン酸化が膜貫通状態を安定化するという要旨の主張は、本記事では扱っていない（構造と耐性の結果を中心にした）。構造は 1 エントリ（9YMT）。"
+}

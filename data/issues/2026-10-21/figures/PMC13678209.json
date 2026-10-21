@@ -1,0 +1,66 @@
+{
+ "pdb_id": "21TK",
+ "view": {
+  "target": [
+   8.18,
+   -12.88,
+   -19.89
+  ],
+  "dir": [
+   -0.5995,
+   0.1768,
+   0.7806
+  ],
+  "up": [
+   0.2317,
+   0.9719,
+   -0.0422
+  ],
+  "half": [
+   29.1,
+   28.8
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "Enterovirus 71 polymerase",
+   "desc": "",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "RNA (34-MER)",
+   "desc": "",
+   "entity": "2"
+  },
+  {
+   "color": "#5F9296",
+   "label": "RNA (5'-R(*UP*GP*UP*UP*CP*GP*AP*CP*GP*AP*G*(F86)P*G*(F86)P*GP*CP*CP*U)-3')",
+   "desc": "",
+   "entity": "3"
+  }
+ ],
+ "ligands": [],
+ "hero_view": {
+  "target": [
+   8.18,
+   -12.88,
+   -19.89
+  ],
+  "dir": [
+   -0.5995,
+   0.1768,
+   0.7806
+  ],
+  "up": [
+   0.2317,
+   0.9719,
+   -0.0422
+  ],
+  "half": [
+   29.1,
+   28.8
+  ]
+ }
+}

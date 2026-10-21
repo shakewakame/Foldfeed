@@ -1,0 +1,121 @@
+{
+  "pmcid": "PMC13677718",
+  "rank": 7,
+  "headline": "ドッキングで探したTAAR1作動薬を、構造で確かめた",
+  "subhead": "6,500万分子をドッキングし、2種の最適化化合物の複合体をクライオ電顕で決めた",
+  "target_label": "TAAR1（ヒト）",
+  "target_en": "Human TAAR1–Gs complex",
+  "summary": {
+    "question": "統合失調症の既存薬は副作用が出やすく、効き方にも個人差がある。新しい標的としてTAAR1が注目されている。",
+    "approach": "6,500万個の低分子をTAAR1の活性型構造にドッキングし、上位55個を実験で試して、有望な化合物を最適化した。",
+    "result": "55個中14個がアゴニストだった。最適化で1.5〜72 nMに達し、クライオ電顕の結合様式はドッキングの予測とほぼ一致した。",
+    "learned": "活性型構造へのドッキングはアゴニストの発見に偏った。3化合物はマウスの統合失調症モデルでPPIの障害を正常化した。",
+    "open": "他の行動表現型や、他の副作用は調べられておらず、今後の課題として残っている。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "These drugs often cause side effects and vary in effectiveness across patients.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "has emerged as a promising alternative target.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "we computationally dock 65 million molecules against the active state of TAAR1 and experimentally test 55 of those highly ranked.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "Three of these are optimized for activity and for pharmacokinetics (PK), reaching TAAR1 potencies from 1.5 to 72 nM.",
+          "section": "Introduction"
+        },
+        {
+          "quote": "Hit optimization yields nanomolar agonists whose docking-predicted poses are confirmed by cryo-EM.",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Targeting the active state of the receptor successfully biased toward agonist discovery.",
+          "section": "Discussion"
+        },
+        {
+          "quote": "All three potently normalize amphetamine-induced pre-pulse inhibition in mice, a model for schizophrenia, without catalepsy, a common side effect of traditional antipsychotics.",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Their potential effects on other behavioral phenotypes, as well as other adverse drug reactions, remain unexplored.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": ["receptor"],
+  "topics": ["drug", "membrane"],
+  "highlights": [
+    {
+      "tag": "創薬・モダリティ",
+      "text": "活性型の実験構造（8W8A）にドッキングして見つけたアゴニストは、既知のTAAR1リガンドと骨格が異なる。最適化で、低ナノモルの化合物まで強めた。",
+      "evidence": [
+        {
+          "quote": "Large library docking against TAAR1 followed by structure-based optimization revealed a series of low-nanomolar TAAR1 agonists with topologies unrelated to known ligands.",
+          "section": "Discussion"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "2つのアゴニスト複合体（3.12 Å・3.14 Å）では、芳香環が疎水性のポケットに収まり、アミンが D103 とイオン対を作る。この2点がドッキングの予測どおりに確かめられた。",
+      "evidence": [
+        {
+          "quote": "TAAR1 appears to recognize these agonists primarily through two ligand moieties: an aryl group that forms π-π and packing interactions with a sub-pocket formed by F2686.52, F186ECL2, I1043.33, and a cationic amine that ion-pairs with D1033.32.",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "手法の工夫",
+      "text": "AlphaFold2 モデルは結合ポケットが狭く、初期ヒット率は高かったが、最適化の余地が小さかった可能性がある。実験構造の広いポケットは、1.5 nM までの最適化を許した。",
+      "evidence": [
+        {
+          "quote": "the larger orthosteric site of the cryo-EM structure allowed us to optimize compounds into the 1.5 nM range",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "Hi5 昆虫細胞で TAAR1-miniGαs と Gβ1γ2 を発現",
+    "construct": null,
+    "purification": "LMNG・CHS で可溶化し、TALON、Nb35 の添加、Superose 6 のゲルろ過で精製",
+    "sample_prep": "Quantifoil 300 mesh Au R1.2/1.3 のグリッドに塗布し、Vitrobot Mark IV で急速凍結",
+    "data_collection": "Titan Krios（300 kV）と Falcon 4 で撮影し、cryoSPARC で解析",
+    "evidence": [
+      {
+        "quote": "The TAAR1 complexes with the discovered agonists were expressed in Hi5 insect cells (Invitrogen).",
+        "section": "Methods"
+      },
+      {
+        "quote": "The mixture was then purified by SEC using a Superose 6 10/300 GL column",
+        "section": "Methods"
+      },
+      {
+        "quote": "samples for Z1255382255 or Z8987197482 were applied individually to EM grids (Quantifoil, 300 mesh Au R1.2/1.3)",
+        "section": "Methods"
+      },
+      {
+        "quote": "Cryo-EM imaging was collected on a Titan Krios equipped with a Falcon 4 direct electron detection device at 300 kV",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": ["TAAR1", "ドッキング", "統合失調症"],
+  "ligand_names": {"A1EUA": "Z1255382255", "A1EUB": "Z8987197482"},
+  "editor_notes": "ドッキング・最適化・動物試験が中心の論文だが、クライオ電顕構造 2 本（9VZ3・9VZ2）を新たに決めているので新しい構造として扱った。legend_labels は render 後の凡例の順を見て決める。"
+}

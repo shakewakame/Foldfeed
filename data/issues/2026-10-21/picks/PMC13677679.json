@@ -1,0 +1,105 @@
+{
+  "pmcid": "PMC13677679",
+  "rank": 1,
+  "section": "impact",
+  "headline": "D3受容体はGαiと共役せず、Gαoを選ぶ",
+  "subhead": "キメラと変異体で、Gαのα5ヘリックスとICL2が選択性を決めると示した",
+  "target_label": "ドパミンD3受容体（ヒト）",
+  "target_en": "Dopamine D3 receptor (human)",
+  "summary": {
+    "question": "D3受容体がどの Gα と共役するかは、報告ごとに結果が食い違っていた。",
+    "approach": "野生型 G タンパク質を使う細胞アッセイと、Gα・受容体のキメラで調べた。",
+    "result": "D3R は Gαi を活性化せず、Gαo・Gαz を活性化した。決め手は Gα の α5 ヘリックスと D3R の ICL2 だった。",
+    "learned": "既存のクライオ電顕構造の解析では、立体障害と静電反発が Gαi との共役を妨げていると示唆された。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "In particular, the Gα protein coupling profile of D3R remains controversial",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Applying orthogonal cell-based assays with wild-type G proteins in parental and ΔGαi/o/z cells, we conclusively establish that D3R does not activate Gαi proteins.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "Further analysis of Gαi2:GαoA and D2R:D3R chimeras reveals that this selective inability is driven by molecular determinants located within the α5 helix of Gαi and ICL2 of D3R.",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Models of the receptor-G protein interaction, based on available cryo-EM structures30,33, suggest that steric clashes and electrostatic repulsion may be responsible for the inability of D3R to engage Gαi proteins.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "receptor"
+  ],
+  "topics": [],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "Gαi2 の末端を GαoA のものに替えたキメラと、D2R・D3R の細胞内ループを入れ替えたキメラで、選択性を決める領域を絞り込んだ。ICL3 は選択性に関わらなかった。",
+      "evidence": [
+        {
+          "quote": "We confirmed the importance of the interface between the C-terminal α5 helix of the Gα proteins and the ICL2 of D3R in defining the biased coupling of D3R toward Gαo, while we showed that the ICL3 does not contribute to this selectivity.",
+          "section": "Discussion"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "D3R–GαoA の構造（9F33）では、Gα 側の 350 番付近が D3R の負電荷の窪みに近い。Gαi では Asp になるため、静電反発が起きると考えられる。一つの残基だけでは説明できず、複数の残基の組み合わせが効く。",
+      "evidence": [
+        {
+          "quote": "An investigation of the recently published structure of D3R bound to the GαoA-subtype of G protein (PDB:9F33) revealed that G350 is positioned in close proximity to a negatively charged cavity on D3R",
+          "section": "Results"
+        },
+        {
+          "quote": "it is not a single residue responsible for the coupling preference exhibited by D3R, but rather a combinatorial effect of the different residues",
+          "section": "Discussion"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "海馬の急性スライスで選択的アゴニストとアンタゴニストを処理すると、内在のアデニル酸シクラーゼと cAMP の調節に違いが出た。",
+      "evidence": [
+        {
+          "quote": "treating hippocampal neurons in acute slices with selective agonists and antagonists reveals marked differences in their regulation of endogenous adenylyl cyclase and cAMP",
+          "section": "Abstract"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "HEK293T/17 細胞と、Gαi/o/z 欠損 HEK293A 細胞（ΔGαi/o/z）",
+    "construct": null,
+    "purification": null,
+    "sample_prep": null,
+    "data_collection": null,
+    "evidence": [
+      {
+        "quote": "HEK293T/17 cells were purchased from ATCC, while Gαi/o/z-deficient HEK293A cells (ΔGαi/o/z)",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "D3R",
+    "Gαo",
+    "GPCR"
+  ],
+  "method_label": "既存のクライオ電顕構造・nanoBRET・変異体",
+  "editor_notes": "既存の PDB 構造（9F33・8TZQ・7JVR）を使った解析。構造図は先頭の引用構造から描かれる。",
+  "ga_pdb_id": "9F33",
+  "ligand_names": {
+    "A1H9N": "FOB02-04A"
+  }
+}

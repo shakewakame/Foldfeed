@@ -1,0 +1,94 @@
+{
+ "pmcid": "PMC13679085",
+ "rank": 2,
+ "section": "impact",
+ "headline": "PELDORで、17.3 nmの距離を測れた",
+ "subhead": "重水素化と測定条件の最適化で、TRIM25 の曲がりを溶液で捉えた",
+ "target_label": "TRIM25 コイルドコイル",
+ "target_en": "TRIM25 coiled-coil domain",
+ "summary": {
+  "question": "10 nm を超える距離の PELDOR 測定は、これまでほとんど報告がなかった。",
+  "approach": "TRIM25 のコイルドコイルに複数のスピン標識を入れ、重水素化と条件の最適化で測った。",
+  "result": "通常条件で 10.5 nm、重水素化したタンパク質で 17.3 nm までの距離を得た。",
+  "learned": "TRIM25 は溶液中で、結晶構造や予測構造より強く曲がっていた。20 nm も測れそうだという。",
+  "evidence": {
+   "question": [
+    {
+     "quote": "Consequently, measurements of distances exceeding 8 nm are sparse in literature.",
+     "section": "Introduction"
+    }
+   ],
+   "approach": [
+    {
+     "quote": "By protein perdeuteration accurate distance measurements up to 17.3 nm were enabled.",
+     "section": "Abstract"
+    }
+   ],
+   "result": [
+    {
+     "quote": "We demonstrate distances up to 10.5 nm in TRIM25 reliably extracted from data obtained under standard sample conditions.",
+     "section": "Abstract"
+    }
+   ],
+   "learned": [
+    {
+     "quote": "Furthermore, TRIM25 featured a higher degree of curvature in solution than suggested by the crystal structure and structure prediction.",
+     "section": "Discussion"
+    }
+   ]
+  }
+ },
+ "categories": [
+  "enzyme",
+  "other"
+ ],
+ "topics": [
+  "method"
+ ],
+ "highlights": [
+  {
+   "tag": "手法の工夫",
+   "text": "タンパク質を重水素化すると位相記憶時間が 5〜8 倍延び、測れる時間窓が約 150 μs まで伸びた。",
+   "evidence": [
+    {
+     "quote": "This led to a ∼5–8 fold increase in T m which should translate into PDS traces with >100 μs length becoming accessible.",
+     "section": "Results"
+    }
+   ]
+  },
+  {
+   "tag": "機構の解明",
+   "text": "TRIM25 のコイルドコイルは、溶液中で結晶構造や予測構造より強く曲がっていた。",
+   "evidence": [
+    {
+     "quote": "TRIM25 featured a higher degree of curvature in solution than suggested by the crystal structure and structure prediction",
+     "section": "Discussion"
+    }
+   ]
+  }
+ ],
+ "lab_notes": {
+  "expression": null,
+  "construct": "TRIM25 の逆平行コイルドコイル（189–379 番）に切り詰め、もとのシステインを除いて、距離ごとに Cys 変異を入れた。",
+  "purification": null,
+  "sample_prep": null,
+  "data_collection": "100 μs の測定では 40 K・スピン濃度 40 μM が計算上の最適条件だった。",
+  "evidence": [
+   {
+    "quote": "The full length TRIM25 protein was truncated to cover only its antiparallel coiled coil domain within residues 189–379 and the native cysteine was removed",
+    "section": "Results"
+   },
+   {
+    "quote": "for 100 μs, 40 K and 40 μM spin concentration, is the calculated optimum",
+    "section": "Results"
+   }
+  ]
+ },
+ "keywords": [
+  "TRIM25",
+  "PELDOR",
+  "DEER"
+ ],
+ "method_label": "PELDOR/DEER（EPR）・既存の結晶構造 4LTB",
+ "editor_notes": "自前の EPR 距離データで既存の結晶構造（4LTB）を確かめた研究。structure 1 点。"
+}

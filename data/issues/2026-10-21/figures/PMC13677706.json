@@ -1,0 +1,96 @@
+{
+ "pdb_id": "9YMT",
+ "view": {
+  "target": [
+   25.71,
+   2.9,
+   15.71
+  ],
+  "dir": [
+   -0.0503,
+   0.1108,
+   0.9926
+  ],
+  "up": [
+   0.7483,
+   -0.6541,
+   0.1109
+  ],
+  "half": [
+   19.5,
+   29.9
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "Serine/Threonine Kinase",
+   "desc": "",
+   "entity": "1"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "A1CYJ",
+   "label": "GWX",
+   "color": "#C23B8E",
+   "desc": "(4M)-N-[4-(4-methylpiperazin-1-yl)-3-(trifluoromethyl)phenyl]-4-[(8R)-pyrazolo[1,5-b]pyridazin-3-yl]pyrimidin-2-amine",
+   "entity": [
+    "2"
+   ],
+   "sites": [
+    [
+     "B",
+     "301"
+    ],
+    [
+     "C",
+     "302"
+    ],
+    [
+     "D",
+     "303"
+    ]
+   ]
+  },
+  {
+   "id": "BEN",
+   "label": "benzamidine",
+   "color": "#2F9E57",
+   "desc": "Benzamidine",
+   "entity": [
+    "3"
+   ],
+   "sites": [
+    [
+     "E",
+     "304"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "A1CYJ",
+  "residues": [
+   "L16",
+   "G17",
+   "V24",
+   "A37",
+   "K39",
+   "M87",
+   "E88",
+   "Y89",
+   "I90",
+   "G92",
+   "E97",
+   "L140",
+   "F150"
+  ],
+  "hbonds": 6,
+  "pi": 2,
+  "neighbours": [
+   "GWX"
+  ],
+  "label": "GWX"
+ }
+}
