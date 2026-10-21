@@ -234,7 +234,7 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
               line-height:1.65; }}
 .legend i {{ display:block; width:14px; height:10px; align-self:center; }}
 .legend i.stick {{ height:4px; width:18px; border-radius:2px; transform:rotate(-24deg); }}
-.legend b {{ font-size:14.5px; font-weight:700; }}
+.legend b {{ font-size:14.5px; font-weight:700; overflow-wrap:anywhere; }}   /* a PDB entity name can be a whole RNA sequence */
 .legend b code {{ font-family:var(--mono); font-size:11px; font-weight:500; color:var(--mute); margin-left:8px; }}
 .legend .en {{ display:block; font-family:var(--mono); font-size:11.5px; color:var(--ink2); overflow-wrap:anywhere; }}
 .pdbnote {{ margin:8px 0 0; font-family:var(--mono); font-size:11.5px; color:var(--ink2); }}
