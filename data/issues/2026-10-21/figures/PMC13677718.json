@@ -1,0 +1,92 @@
+{
+ "pdb_id": "9VZ2",
+ "view": {
+  "target": [
+   95.9,
+   94.32,
+   101.85
+  ],
+  "dir": [
+   0.9996,
+   -0.028,
+   -0.0002
+  ],
+  "up": [
+   -0.0059,
+   -0.2021,
+   -0.9793
+  ],
+  "half": [
+   41.7,
+   57.4
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "Engineered miniG(s) subunit alpha isoforms short",
+   "desc": "",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "GNB1",
+   "desc": "Guanine nucleotide-binding protein G(I)/G(S)/G(T) subunit beta-1",
+   "entity": "2"
+  },
+  {
+   "color": "#5F9296",
+   "label": "GNG2",
+   "desc": "Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-2",
+   "entity": "3"
+  },
+  {
+   "color": "#A5707A",
+   "label": "Nanobody35",
+   "desc": "",
+   "entity": "4"
+  },
+  {
+   "color": "#7C8AA8",
+   "label": "TAAR1",
+   "desc": "Trace amine-associated receptor 1",
+   "entity": "5"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "A1EUB",
+   "label": "Z8987197482",
+   "color": "#C23B8E",
+   "desc": "(2~{R})-2-[(1~{S})-1,2,3,4-tetrahydronaphthalen-1-yl]pyrrolidine",
+   "entity": [
+    "6"
+   ],
+   "sites": [
+    [
+     "F",
+     "401"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "A1EUB",
+  "residues": [
+   "D103",
+   "I104",
+   "S107",
+   "V184",
+   "F186",
+   "T194",
+   "W264",
+   "F267",
+   "F268",
+   "Y294"
+  ],
+  "hbonds": 1,
+  "pi": 0,
+  "neighbours": [],
+  "label": "Z8987197482"
+ }
+}

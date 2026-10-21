@@ -1,0 +1,4 @@
+{"pmcid": "PMC13678209", "axes": ["structure", "drug"],
+ "reason": "レムデシビルが RdRP の移動を妨げる仕組みを、結晶構造と速度論で示した。核酸アナログ設計の新しい着眼点になる。",
+ "evidence": [{"quote": "Our work demonstrates translocation-related intervention as an effective and broadly applicable polymerase intervention strategy in NA rational design.", "section": "Abstract"}],
+ "considered": [{"pmcid": "PMC13678090", "note": "MGAT1 阻害剤の結晶構造。創薬の軸は強いが、がん免疫の部分は構造以外の解析が中心のため次点にした。"}]}

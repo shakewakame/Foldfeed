@@ -1,0 +1,101 @@
+{
+ "pdb_id": "9F33",
+ "view": {
+  "target": [
+   110.08,
+   137.68,
+   98.39
+  ],
+  "dir": [
+   0.3464,
+   0.9304,
+   0.12
+  ],
+  "up": [
+   0.7889,
+   -0.3581,
+   0.4994
+  ],
+  "half": [
+   54.3,
+   54.1
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "GNAO1",
+   "desc": "Guanine nucleotide-binding protein G(o) subunit alpha",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "Gnb1",
+   "desc": "Guanine nucleotide-binding protein G(I)/G(S)/G(T) subunit beta-1",
+   "entity": "2"
+  },
+  {
+   "color": "#5F9296",
+   "label": "GNG2",
+   "desc": "Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-2",
+   "entity": "3"
+  },
+  {
+   "color": "#A5707A",
+   "label": "Antibody scFv16",
+   "desc": "",
+   "entity": "4"
+  },
+  {
+   "color": "#7C8AA8",
+   "label": "DRD3",
+   "desc": "Green fluorescent protein,D(3) dopamine receptor",
+   "entity": "5"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "A1H9N",
+   "label": "FOB02-04A",
+   "color": "#C23B8E",
+   "desc": "N-[2-[(1R,2S)-2-[[(2S,5S)-2-(6-azanylpyridin-3-yl)-5-methyl-morpholin-4-yl]methyl]cyclopropyl]ethyl]-1H-indole-2-carboxamide",
+   "entity": [
+    "6"
+   ],
+   "sites": [
+    [
+     "F",
+     "501"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "A1H9N",
+  "residues": [
+   "H29",
+   "L89",
+   "E90",
+   "G93",
+   "G94",
+   "F106",
+   "D110",
+   "V111",
+   "C114",
+   "C181",
+   "S192",
+   "S193",
+   "S196",
+   "W342",
+   "F345",
+   "F346",
+   "Y365",
+   "T369",
+   "Y373"
+  ],
+  "hbonds": 3,
+  "pi": 0,
+  "neighbours": [],
+  "label": "FOB02-04A"
+ }
+}

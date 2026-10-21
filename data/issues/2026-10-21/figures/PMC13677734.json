@@ -1,0 +1,96 @@
+{
+ "pdb_id": "9PHV",
+ "view": {
+  "target": [
+   24.95,
+   -1.97,
+   7.61
+  ],
+  "dir": [
+   0.1755,
+   -0.9805,
+   0.0884
+  ],
+  "up": [
+   -0.3014,
+   0.032,
+   0.953
+  ],
+  "half": [
+   23.1,
+   31.6
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "KDM2A",
+   "desc": "Lysine-specific demethylase 2A",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "KDM2A",
+   "desc": "Lysine-specific demethylase 2A",
+   "entity": "2"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "AKG",
+   "label": "2OG",
+   "color": "#C23B8E",
+   "desc": "2-Oxoglutaric Acid",
+   "entity": [
+    "3"
+   ],
+   "sites": [
+    [
+     "C",
+     "601"
+    ]
+   ]
+  },
+  {
+   "id": "A1CIP",
+   "label": "183c",
+   "color": "#2F9E57",
+   "desc": "{6-[(3R,4R)-1-cyclobutyl-4-ethylpiperidine-3-carbonyl]-2-methoxynaphthalen-1-yl}acetonitrile",
+   "entity": [
+    "4"
+   ],
+   "sites": [
+    [
+     "D",
+     "602"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "A1CIP",
+  "residues": [
+   "Q116",
+   "I144",
+   "S145",
+   "Y199",
+   "L201",
+   "T209",
+   "D210",
+   "H212",
+   "V213",
+   "D214",
+   "F215",
+   "V220",
+   "N298",
+   "V320",
+   "F324"
+  ],
+  "hbonds": 1,
+  "pi": 4,
+  "neighbours": [
+   "2OG"
+  ],
+  "label": "183c"
+ }
+}

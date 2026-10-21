@@ -1,0 +1,123 @@
+{
+ "pdb_id": "9TSZ",
+ "view": {
+  "target": [
+   327.72,
+   277.26,
+   299.76
+  ],
+  "dir": [
+   0.8427,
+   0.4158,
+   -0.342
+  ],
+  "up": [
+   0.2542,
+   0.2525,
+   0.9336
+  ],
+  "half": [
+   105.4,
+   104.0
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "SMC2",
+   "desc": "Structural maintenance of chromosomes protein 2",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "NCAPD3",
+   "desc": "Condensin-2 complex subunit D3",
+   "entity": "2"
+  },
+  {
+   "color": "#5F9296",
+   "label": "NCAPH2",
+   "desc": "Condensin-2 complex subunit H2",
+   "entity": "3"
+  },
+  {
+   "color": "#A5707A",
+   "label": "NCAPG2",
+   "desc": "Condensin-2 complex subunit G2",
+   "entity": "4"
+  },
+  {
+   "color": "#7C8AA8",
+   "label": "SMC4",
+   "desc": "Structural maintenance of chromosomes protein 4",
+   "entity": "5"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "ADP",
+   "label": "ADP",
+   "color": "#C23B8E",
+   "desc": "Adenosine-5'-Diphosphate",
+   "entity": [
+    "6"
+   ],
+   "sites": [
+    [
+     "F",
+     "2000"
+    ],
+    [
+     "H",
+     "2000"
+    ]
+   ]
+  },
+  {
+   "id": "BEF",
+   "label": "BeF3",
+   "color": "#2F9E57",
+   "desc": "Beryllium Trifluoride Ion",
+   "entity": [
+    "7"
+   ],
+   "sites": [
+    [
+     "G",
+     "2001"
+    ],
+    [
+     "I",
+     "2001"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "ADP",
+  "residues": [
+   "K1079",
+   "E1084",
+   "S1086",
+   "K93",
+   "S94",
+   "N115",
+   "G116",
+   "G118",
+   "K119",
+   "S120",
+   "N121",
+   "V144",
+   "I146",
+   "N148",
+   "Q229",
+   "K1267"
+  ],
+  "hbonds": 12,
+  "pi": 2,
+  "neighbours": [
+   "BeF3"
+  ],
+  "label": "ADP"
+ }
+}

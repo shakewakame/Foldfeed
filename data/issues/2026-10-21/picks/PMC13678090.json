@@ -1,0 +1,78 @@
+{
+  "pmcid": "PMC13678090",
+  "rank": 1,
+  "headline": "MGAT1の阻害剤は、活性部位とは別のポケットに入る",
+  "subhead": "ヒトMGAT1の結晶構造から、肺がんの免疫回避に関わる酵素の新しい結合部位が見えた",
+  "target_label": "MGAT1（ヒト）",
+  "target_en": "Human MGAT1",
+  "summary": {
+    "question": "STK11 変異の肺がんは抗 PD-1 療法が効きにくく、新しい治療標的が必要だった。",
+    "approach": "CRISPR スクリーンで MGAT1 を見つけ、50 万化合物を探索して阻害剤を最適化し、結晶構造を解いた。",
+    "result": "最初のヒット（IC50 197 μM）は TNG-2673（0.043 μM）まで 1000 倍以上強まり、阻害剤は活性部位と別の穴に結合した。",
+    "learned": "MGAT1 の触媒活性が免疫回避に必要で、構造から創薬できる標的だと示された。阻害機構は活性部位との競合がない点から推定した段階である。",
+    "open": "天然の基質を高濃度で使えず、阻害機構を完全には決められていない。",
+    "evidence": {
+      "question": [
+        {"quote": "Checkpoint inhibitors are standard-of-care therapies for non-small cell lung cancer (NSCLC), but their efficacy is limited in tumors with STK11 mutations, highlighting the need for new therapeutic strategies.", "section": "Abstract"}
+      ],
+      "approach": [
+        {"quote": "Using purified human MGAT1 and a UDP-Glo glycosyltransferase assay, we established a tractable screening platform and performed a 500,000-compound biochemical high-throughput screen", "section": "Abstract"}
+      ],
+      "result": [
+        {"quote": "Subsequent medicinal chemistry optimization delivered progressively more potent analogs, including TNG-9333 (0.814 μM) and TNG-2673 (0.043 μM) and represented a >1000-fold improvement in biochemical potency from the starting hit.", "section": "Abstract"},
+        {"quote": "The structure of MGAT1 in complex with TNG-9333 revealed a novel binding site distinct from the active site (Fig. 5E).", "section": "Results"}
+      ],
+      "learned": [
+        {"quote": "Collectively, our work implicates N-glycosylation as a key mediator of immune evasion and establishes MGAT1 as a ligandable, structurally tractable target for small-molecule drug discovery.", "section": "Abstract"},
+        {"quote": "As such, the proposed allosteric mechanism is inferred solely from the lack of identifiable evidence of active-site interaction.", "section": "Results"}
+      ],
+      "open": [
+        {"quote": "Development of improved substrate reagents or alternative assay formats will be required to further resolve the molecular mechanism of MGAT1 inhibition.", "section": "Results"}
+      ]
+    }
+  },
+  "categories": ["enzyme", "immune"],
+  "topics": ["drug"],
+  "highlights": [
+    {
+      "tag": "新しい結合部位",
+      "text": "阻害剤 TNG-9333 は、基質 UDP-GlcNAc が入る活性部位ではなく、β ターン・α ヘリックス・C 末端でできた別のポケットに入る。UDP と同時に結合した三者複合体の構造も解かれた。",
+      "evidence": [
+        {"quote": "This pocket is formed by β-turn L407–R413, α-helix R391–L401, and the C-terminus of the protein.", "section": "Results"},
+        {"quote": "The ternary structure of MGAT1 in complex with TNG-9333 and UDP corroborated the SPR and DSF findings, demonstrating that the two molecules can simultaneously bind to distinct sites on MGAT1", "section": "Results"}
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "ヒト MGAT1 の初の結晶構造（apo・UDP・UDP-GlcNAc 結合型）で、UDP が結合するとループ（R316–F331）が覆いかぶさるように一部秩序化した。触媒に重要な可能性があると著者は述べる。",
+      "evidence": [
+        {"quote": "This loop folds over the ligand and is stabilized by direct interactions with UDP, suggesting a ligand-induced conformational change that may be important for catalysis.", "section": "Results"}
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "触媒に必要な D211 と D289 の変異体は活性を失い、野生型だけが腫瘍の免疫回避を回復させた。酵素活性そのものが阻害の狙いになる。",
+      "evidence": [
+        {"quote": "MGAT1 catalytic activity is thus critical for its function in protecting cancer cells from immune attack in vitro and in vivo, making it a suitable target for small-molecule drug development.", "section": "Results"}
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "Hi-5 昆虫細胞にバキュロウイルスで発現（27 °C・48 時間）",
+    "construct": "結晶化用は A104–N445（膜貫通ヘリックスなし）、His タグ付き",
+    "purification": null,
+    "sample_prep": "UDP 複合体は MnCl2 と UDP-glucose を加え、シッティングドロップ蒸気拡散（20 °C）。電子密度は UDP のみ",
+    "data_collection": "UDP 複合体は上海放射光 BL17U で 1.6 Å。ウサギ MGAT1（2AM3）で分子置換",
+    "evidence": [
+      {"quote": "His-TEV–MGAT1(T30–N445) was expressed in Hi-5 insect cells (Gibco #B85502) using baculovirus at 27 °C for 48 h.", "section": "Methods"},
+      {"quote": "The crystallographic construct comprised residues A104–N445 and lacked both the N-terminal transmembrane helix and an additional N-terminal helix.", "section": "Methods"},
+      {"quote": "Electron density supported UDP only, indicating hydrolysis of UDP-glucose during crystallization.", "section": "Methods"},
+      {"quote": "Diffraction data were collected to 1.6 Å resolution at the Shanghai Synchrotron Radiation Facility (beamline BL17U).", "section": "Methods"}
+    ]
+  },
+  "keywords": ["MGAT1", "STK11", "N-グリカン", "アロステリック阻害"],
+  "ligand_label": "TNG-9333・UDP",
+  "ligand_names": {"A1C1W": "TNG-9333"},
+  "ga_pdb_id": "9ZB2",
+  "editor_notes": "阻害機構の「アロステリック」は著者自身が推定と書いている。9ZB2 は UDP と TNG-9333 の三者複合体。"
+}

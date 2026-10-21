@@ -1,0 +1,95 @@
+{
+ "pdb_id": "9ZB2",
+ "view": {
+  "target": [
+   -4.75,
+   10.18,
+   46.39
+  ],
+  "dir": [
+   0.0373,
+   0.9143,
+   -0.4032
+  ],
+  "up": [
+   -0.1452,
+   0.4042,
+   0.9031
+  ],
+  "half": [
+   31.3,
+   49.0
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "MGAT1",
+   "desc": "Alpha-1,3-mannosyl-glycoprotein 2-beta-N-acetylglucosaminyltransferase",
+   "entity": "1"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "UDP",
+   "label": "UDP",
+   "color": "#C23B8E",
+   "desc": "Uridine-5'-Diphosphate",
+   "entity": [
+    "3"
+   ],
+   "sites": [
+    [
+     "D",
+     "502"
+    ],
+    [
+     "J",
+     "502"
+    ]
+   ]
+  },
+  {
+   "id": "A1C1W",
+   "label": "TNG-9333",
+   "color": "#2F9E57",
+   "desc": "N-[2-(aminomethyl)-6-(N-methylacetamido)pyridin-4-yl]-2-(cyclobutyloxy)quinoline-4-carboxamide",
+   "entity": [
+    "4"
+   ],
+   "sites": [
+    [
+     "E",
+     "503"
+    ],
+    [
+     "K",
+     "503"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "A1C1W",
+  "residues": [
+   "Y388",
+   "T389",
+   "G390",
+   "F394",
+   "G410",
+   "P412",
+   "P434",
+   "W437",
+   "E438",
+   "G439",
+   "Y440",
+   "D441",
+   "P442",
+   "W444"
+  ],
+  "hbonds": 2,
+  "pi": 1,
+  "neighbours": [],
+  "label": "TNG-9333"
+ }
+}

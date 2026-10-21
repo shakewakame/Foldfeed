@@ -1,0 +1,125 @@
+{
+ "pmcid": "PMC13677396",
+ "rank": 11,
+ "headline": "R2abは細胞壁とポリスチレンの両方に結合する",
+ "subhead": "溶液NMRで構造と動きを決め、結合面をPREと変異体で調べた",
+ "target_label": "R2ab（表皮ブドウ球菌）",
+ "target_en": "R2ab of autolysin AtlE (S. epidermidis)",
+ "summary": {
+  "question": "表皮ブドウ球菌の自己溶解酵素の R2ab 反復が、細胞壁やプラスチック表面にどう結合するかは未定義だった。",
+  "approach": "溶液NMRで R2ab の構造と運動を決め、ITC・NMR滴定・ポリスチレン粒子のPREで結合面を調べた。",
+  "result": "R2ab は R2b の C 末端側の面でポリスチレンに結合し、S776 と K779 が吸着に重要だった。",
+  "learned": "R2ab は細胞壁成分と人工表面の両方に結合する橋渡し役を果たすというモデルが支持される。",
+  "evidence": {
+   "question": [
+    {
+     "quote": "but the structural basis for how R2ab engages cell wall components and polystyrene surfaces, potentially simultaneously, remains undefined.",
+     "section": "Discussion"
+    }
+   ],
+   "approach": [
+    {
+     "quote": "Here, using nuclear magnetic resonance spectroscopy, we determined the solution structure and backbone dynamics of the R2ab domain.",
+     "section": "Abstract"
+    }
+   ],
+   "result": [
+    {
+     "quote": "R2ab engages polystyrene surfaces via a defined C-terminal interface on R2b, as revealed by PRE mapping, isothermal titration calorimetry, and mutational analyses.",
+     "section": "Abstract"
+    },
+    {
+     "quote": "Polar and charged residues (notably S776 and K779) play key roles in adsorption.",
+     "section": "Abstract"
+    }
+   ],
+   "learned": [
+    {
+     "quote": "These findings support a model in which R2ab acts as a molecular bridge, binding both cell wall components and abiotic surfaces.",
+     "section": "Abstract"
+    }
+   ]
+  }
+ },
+ "categories": [
+  "pathogen",
+  "other"
+ ],
+ "highlights": [
+  {
+   "tag": "機構の解明",
+   "text": "R2ab の溶液構造は2つの半開きβバレルからなる。ループ（RT・n-Src）に動きが大きい部分があり、リガンド結合に関わる可能性がある。",
+   "evidence": [
+    {
+     "quote": "The solution structure ensemble of 20 structures (PDB ID 7KWI) is tightly clustered, with an RMSD of 1.0 and 1.5 Å for ordered backbone and heavy atoms, respectively",
+     "section": "Results"
+    },
+    {
+     "quote": "Reduced hetNOE and generalized order parameter (S2) values reflect increased motions in the R2a RT and n-Src loops",
+     "section": "Results"
+    }
+   ]
+  },
+  {
+   "tag": "新しい結合部位",
+   "text": "ペプチドグリカン（PGN）は R2a と R2b にまたがる空洞に結合する。LTA とは同じ面を取り合わないため、両方を同時に認識できる可能性がある。",
+   "evidence": [
+    {
+     "quote": "PGN binds R2ab with micromolar affinity and is better fitted by a one-site model.",
+     "section": "Discussion"
+    },
+    {
+     "quote": "These observations indicate that LTA and PGN do not compete for the same binding surface on R2ab, an arrangement that could allow simultaneous engagement of both cell wall components during autolysin localization.",
+     "section": "Discussion"
+    }
+   ]
+  },
+  {
+   "tag": "手法の工夫",
+   "text": "スピンラベルしたポリスチレンナノ粒子を作り、PREで R2ab の吸着面を残基ごとに調べた。S776A・K779A 変異体は吸着が弱まり、バイオフィルムが増えた。",
+   "evidence": [
+    {
+     "quote": "we developed paramagnetically spin-labeled PSNPs (PSNP@TEMPO) to identify residue-level information about the orientation of R2ab as it binds to a polystyrene-like surface.",
+     "section": "Discussion"
+    },
+    {
+     "quote": "In contrast, both S776A and K779A mutants showed significantly higher S. epidermidis biofilm in comparison to either WT R2ab or tyrosine-mutated R2ab.",
+     "section": "Results"
+    }
+   ]
+  }
+ ],
+ "lab_notes": {
+  "expression": "大腸菌 BL21 Star (DE3) で発現。同位体標識は M9 最小培地。",
+  "construct": "R2ab 152 残基＋N 末端 6×His タグ（pET15b）。",
+  "purification": null,
+  "sample_prep": "NMR 試料は 0.5 mM、550 μl。",
+  "data_collection": "Bruker Avance III 600 MHz（クライオプローブ）ほかで測定。",
+  "evidence": [
+   {
+    "quote": "The R2ab containing pET15b plasmid was transformed into Escherichia coli BL21 Star (DE3) competent cells (Invitrogen) for expression.",
+    "section": "Methods"
+   },
+   {
+    "quote": "In this construct, the R2ab protein is composed of 152 residues with an additional N-terminal 6X His tag for purification.",
+    "section": "Methods"
+   },
+   {
+    "quote": "The final protein concentration was 0.5 mM in a total volume of 550 μl.",
+    "section": "Methods"
+   },
+   {
+    "quote": "The experiments were collected on a Bruker Avance III 600 MHz NMR spectrometer equipped with a cryoprobe at Mississippi State University.",
+    "section": "Methods"
+   }
+  ]
+ },
+ "keywords": [
+  "R2ab",
+  "AtlE",
+  "表皮ブドウ球菌",
+  "バイオフィルム"
+ ],
+ "method_label": "NMR",
+ "editor_notes": "本文に PDB 7KWI・BMRB 30821 と書かれているが、collect では PDB と照合できなかった（未公開の可能性）。図なし。解像度の概念がない NMR のため method_label は NMR のみ。"
+}

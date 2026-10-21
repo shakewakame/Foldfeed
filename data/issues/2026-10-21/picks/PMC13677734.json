@@ -1,0 +1,115 @@
+{
+  "pmcid": "PMC13677734",
+  "rank": 5,
+  "headline": "KDM2A阻害剤は、基質ペプチドの形をまねて結合する",
+  "subhead": "2OGを必要とする阻害剤183cとの複合体を、2.2 Åの結晶構造で解いた",
+  "target_label": "KDM2A（ヒト）",
+  "target_en": "Human KDM2A (lysine demethylase 2A)",
+  "summary": {
+    "question": "阻害剤 183c は特許に書かれていたが、KDM2A への結合のしかたは分かっていなかった。",
+    "approach": "示差走査蛍光法で結合を調べ、183c と 2OG を加えて KDM2A の結晶構造を決めた。",
+    "result": "183c は 2OG があるときだけ強く結合し、H3K36me2 基質が入るポケットを占めていた。",
+    "learned": "183c は 2OG に依存して基質をまねる阻害剤であり、KDM2A 阻害剤を改良する足場になる。",
+    "open": "細胞内の 2OG 濃度の変化が 183c への感受性に影響するかは、調べていない。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "While the compound’s inhibitory activity against KDM2B was reported, its binding mode remained undescribed.",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "we revised our structure determination strategy to include both 2OG and 183c in KDM2A crystal soaking experiments",
+          "section": "Results"
+        }
+      ],
+      "result": [
+        {
+          "quote": "demonstrating a strong dependency on 2OG for the binding of 183c to KDM2A",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "183c is best viewed as a 2OG-dependent substrate mimic that is mechanistically distinct from canonical cofactor-competitive JmjC inhibitors",
+          "section": "Discussion"
+        }
+      ],
+      "open": [
+        {
+          "quote": "While our current study did not directly test how changes in intracellular 2OG influence cellular or in vivo sensitivity to 183c",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "chromatin",
+    "enzyme"
+  ],
+  "topics": [
+    "drug"
+  ],
+  "highlights": [
+    {
+      "tag": "創薬・モダリティ",
+      "text": "183c のシクロブチルピペリジン部分は、基質ペプチドのジメチル化 Lys36 が入る小さなポケットに入っていた。",
+      "evidence": [
+        {
+          "quote": "the 1-cyclobutylpiperidine moiety of 183c is positioned within the same sub-pocket that accommodates the dimethylated lysine 36 side chain of the H3K36me2 peptide",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "183c は活性部位で 2OG の隣に位置し、2OG と弱い水素結合を作る。2OG が金属イオンとの不利な電荷の相互作用を和らげるらしい。",
+      "evidence": [
+        {
+          "quote": "the negatively charged 2OG molecule appears to shield an unfavorable charge interaction between the positively charged Ni2+ and the amino group of 183c",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "基質ペプチドが使う Ser145 などとの水素結合は 183c にはなく、論文は極性基を足して強める余地があると述べている。結晶は生理的な Fe2+ でなく Ni2+ を含む。",
+      "evidence": [
+        {
+          "quote": "Although the crystal structure was determined with Ni²⁺ rather than the physiological Fe²⁺, the overall ternary binding mode is expected to be preserved.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "大腸菌で NTD と CTD の 2 本のポリペプチドとして発現",
+    "construct": "触媒ドメイン（NTD：残基 2–383、CTD：残基 450–517）",
+    "purification": null,
+    "sample_prep": "結晶に 183c と 2OG を浸す（ソーキング）",
+    "data_collection": "APS 23-ID-C で収集。KDM2A の既存構造（PDB 2YU2）を用いた分子置換で解いた",
+    "evidence": [
+      {
+        "quote": "The catalytic domain of KDM2A used for crystallization was expressed in E. coli as two polypeptides referred to as the N-terminal domain (NTD) and the C-terminal domain (CTD).",
+        "section": "Methods"
+      },
+      {
+        "quote": "Single crystal X-ray diffraction data were collected at a wavelength of 1.4831 Å at beamline 23-ID-C at Advanced Photon Source, Argonne National Laboratory.",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "KDM2A",
+    "183c",
+    "2OG"
+  ],
+  "ligand_label": "183c（2OG 依存の阻害剤）",
+  "editor_notes": "ALT 陽性がん細胞での増殖・RNA-seq の記述は省いた。",
+  "ligand_names": {
+    "A1CIP": "183c",
+    "AKG": "2OG"
+  },
+  "site_ligand": "A1CIP"
+}

@@ -1,0 +1,116 @@
+{
+  "pmcid": "PMC13678007",
+  "rank": 8,
+  "headline": "酸化したMsrAは、C末端で活性部位にふたをする",
+  "subhead": "還元・中間体様・酸化の3状態を結晶構造で解き、Cys107とCys227のジスルフィド結合を見つけた",
+  "target_label": "MsrA（マウス）",
+  "target_en": "Methionine sulfoxide reductase A (mouse)",
+  "summary": {
+    "question": "哺乳類のMsrAが酸化と還元のなかで構造をどう調節されているかは、はっきりしていなかった。",
+    "approach": "マウスMsrAの還元型・中間体様・酸化型の結晶構造を決め、LC-MS/MS、MD、活性測定、Trxトラップ実験を組み合わせた。",
+    "result": "酸化型では Cys72–Cys218 に加えて予想外の Cys107–Cys227 ジスルフィドがあり、C末端ループを活性部位の上に固定していた。",
+    "learned": "著者らは、Cys72が触媒を担い、Cys107の組み替えとCys227へのTrxの侵入が基質の近づきやすさと再生を左右するというモデルを示す。",
+    "open": "この二重ジスルフィド状態が細胞内でどれほど存在するかは、まだ確かめられていない。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "but how mammalian MsrA is structurally regulated during oxidation and reductive recycling has remained unclear.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "We report three crystal structures of mouse MsrA (mMsrA) that capture distinct redox states",
+          "section": "Abstract"
+        },
+        {
+          "quote": "LC-MS/MS mapping, MD simulations, activity assays, and thioredoxin (Trx)-trapping experiments converge on a model",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "The oxidized structure resolves the canonical Cys72–Cys218 disulfide together with an unexpected Cys107–Cys227 pairing that locks a C-terminal loop into a cap over the active site.",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Cys72 drives catalysis, while Cys107-mediated disulfide rearrangement and Cys227-directed Trx entry gate substrate access and enzymatic regeneration",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "The cellular prevalence of the exact Cys72-Cys218/Cys107-Cys227 double-disulfide configuration remains to be established",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": ["enzyme"],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "1.6 Å の中間体様の構造では、触媒Cys72がβ-メルカプトエタノール（BME）と混合ジスルフィドを作り、隣のCys107がスルフェン酸になっていた。著者はX線の照射による酸化の寄与も考えている。",
+      "evidence": [
+        {
+          "quote": "The BTIL structure visualizes catalytic Cys72 as a mixed disulfide with β-mercaptoethanol (BME) alongside a sulfenic acid at Cys107, a configuration not previously observed.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "we consider the possibility that X-ray exposure contributed to the Cys107-SOH modification observed in the BTIL structure",
+          "section": "Discussion"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "酸化型では、C末端ループが活性部位の上に折り重なり、基質や小さなチオールが結合する場所にふたをする。還元型ではこのふたがなく、活性部位は溶媒に開いている。",
+      "evidence": [
+        {
+          "quote": "In our oxidized structure, the C-terminal loop folds over the active site pocket and forms a cap-like conformation at the site where methionine sulfoxide or small thiol molecules would bind.",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "Cys107をSerに変えても還元活性は保たれ、触媒には要らないと分かった。一方、Cys218とCys227を両方変えるとTrxによる再生活性は失われた。",
+      "evidence": [
+        {
+          "quote": "C107S showed DTT-dependent activity comparable to that of the wild-type protein and retained substantial Trx-dependent activity, indicating that Cys107 is dispensable for the catalytic reductase cycle.",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "大腸菌 Rosetta で全長mMsrAを発現（pET21a、1.0 mM IPTG、37 °C、4時間）",
+    "construct": null,
+    "purification": "Ni-NTA、イオン交換、Superdex 75 のゲルろ過で精製。酸化型は最後のゲルろ過で還元剤を除いた",
+    "sample_prep": "22 °C で蒸気拡散法。酸化型の結晶は3か月以上のインキュベーション後に得られた",
+    "data_collection": "Pohang Accelerator Laboratory で収集し、HKL-2000 で処理。1FVA を探索モデルに分子置換",
+    "evidence": [
+      {
+        "quote": "Full-length mMsrA was cloned into pET21a (Novagen).",
+        "section": "Materials and methods"
+      },
+      {
+        "quote": "Size exclusion chromatography was performed on a Superdex 75 column (GE Healthcare)",
+        "section": "Materials and methods"
+      },
+      {
+        "quote": "diffraction-quality crystals of oxidized form appeared only after incubation for more than 3 months",
+        "section": "Materials and methods"
+      },
+      {
+        "quote": "The mMsrA structures were solved by molecular replacement using MOLREP [23] and Phaser implemented in PHENIX [24], with bovine MsrA (PDB ID: 1FVA) as the search model.",
+        "section": "Materials and methods"
+      }
+    ]
+  },
+  "keywords": ["MsrA", "メチオニンスルホキシド還元酵素", "ジスルフィド"],
+  "method_label": "X-ray・1.6〜3.0 Å",
+  "editor_notes": "PDB ID（44ND・44NI・44NR）は未公開。ウシMsrA（1FVA）などの哺乳類の構造が既にあるため、first_claim は付けていない（Structure Update になる見込み）。論文は酸化型を哺乳類MsrAの酸化型として初の構造例と書くが、新規のタンパク質ではない。BTIL の Cys107-SOH は X 線照射の影響の可能性を著者が述べている。"
+}

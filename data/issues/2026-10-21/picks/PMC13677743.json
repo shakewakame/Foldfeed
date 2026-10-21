@@ -1,0 +1,125 @@
+{
+  "pmcid": "PMC13677743",
+  "rank": 9,
+  "headline": "亜鉛を運ぶATPaseは、N末端で輸送を抑えるらしい",
+  "subhead": "内向き型の結晶構造（3.6 Å）と変異体の活性測定から、取り込み経路とN末端の働きを探った",
+  "target_label": "MmCadA（亜鉛輸送ATPase）",
+  "target_en": "MmCadA (M. metallidurans)",
+  "summary": {
+    "question": "金属を運ぶPIB型ATPaseは亜鉛の恒常性に欠かせないが、分子レベルの仕組みはよく分かっていなかった。",
+    "approach": "亜鉛などを運ぶMmCadAを結晶化して内向き型の構造を決め、N末端を削った変異体の活性とMDで調べた。",
+    "result": "3.6 Å の構造では、CPC モチーフの C564 が、電気的に負に帯電した広い取り込み領域に直接さらされていた。",
+    "learned": "N末端は輸送を抑えつつ、金属が増えると抑制が外れるセンサーとして働くとみられる。ヒスチジンに富む部分が金属を渡すと著者は提案する。",
+    "open": "N末端は結晶構造で見えず、その働きは生化学実験とモデルから推定した。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Transition metal transporting P-type (PIB-) ATPase proteins are critical for this balance but remain poorly understood at the molecular level.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here, we present the inward-open structure of a dimeric zinc-transporting PIB-type ATPase, resolved at 3.6 Å resolution.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Moreover, the function of the N-terminus of MmCadA is studied using biochemical experiments",
+          "section": "Introduction"
+        }
+      ],
+      "result": [
+        {
+          "quote": "the structure reveals an electronegatively charged uptake region that directly exposes a metal-binding cysteine of the invariant CPC-motif.",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "the N-terminal tail, harboring two so-called metal binding domains (MBDs), auto-inhibits the ATPase core and serves as a metal-sensitive sensor, releasing inhibition when intracellular metal levels rise.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "We propose that a histidine-rich segment, positioned after the MBD closest to the core, donates ions to the CPC site.",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "As the N-terminus was unresolved in our structure, we opted to investigate its role using biochemical analysis",
+          "section": "Results"
+        }
+      ]
+    }
+  },
+  "categories": ["transporter"],
+  "topics": ["membrane"],
+  "highlights": [
+    {
+      "tag": "新しい結合部位",
+      "text": "金属の取り込みの門とされてきた M357 と F380 は、この負電荷の領域から遠く、構造は従来の漏斗モデルと合わない。著者は C564 が金属を受け取る役を担うと考えている。",
+      "evidence": [
+        {
+          "quote": "However, the proposed gate between M357 and F380 is located far from the electronegative metal uptake region, and thus the MmCadA structure appears inconsistent with the funnel hypothesis (Fig. 3B).",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "N末端を段階的に削った変異体はどれも活性を保った。N末端全体は輸送に必須ではないが、活性を調節している。先端側のMBD−2とヒスチジン部分を除くと、活性は2〜5倍に上がった。",
+      "evidence": [
+        {
+          "quote": "Collectively, these results indicate that the N-terminus as a whole preceding the ATPase core is not essential for transport function, but it clearly modulates transport activity.",
+          "section": "Results"
+        },
+        {
+          "quote": "increases the activity 2–5-fold relative to wild-type",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "手法の工夫",
+      "text": "近縁のPIB型ATPaseの構造では初期位相が得られなかったが、AlphaFoldのモデルを探索モデルにした分子置換で構造を決められた。クライオ電顕は試みたが実らなかった。",
+      "evidence": [
+        {
+          "quote": "the structure was determined using molecular replacement with a search model obtained using AlphaFold",
+          "section": "Results"
+        },
+        {
+          "quote": "we initially applied this method, but these efforts were fruitless.",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "大腸菌 BL21-CodonPlus(DE3) で発現（Strep タグ付き、0.5 mM IPTG、16 °C、20時間）",
+    "construct": null,
+    "purification": "C12E8 で可溶化し、StrepTactin XT と Superose 6 のゲルろ過で精製",
+    "sample_prep": "Pb酢酸・AMPPNP・MgCl2 を加え、18 °C で結晶化（30% Jeffamine、0.1 M クエン酸ナトリウム pH 5.2）",
+    "data_collection": "Swiss Light Source の X06SA ビームラインで収集し、XDS で処理",
+    "evidence": [
+      {
+        "quote": "The constructs were transformed into E. coli BL21-CodonPlus(DE3) cells",
+        "section": "Methods"
+      },
+      {
+        "quote": "For final purification and buffer exchange, 10 mg of concentrated protein was applied onto a Superose 6 size-exclusion column",
+        "section": "Methods"
+      },
+      {
+        "quote": "The highest-quality crystals were obtained from reservoirs containing 30% (v/v) Jeffamine and 0.1 M sodium citrate, pH 5.2.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Final diffraction data were collected at the Swiss Light Source (Switzerland) on the X06SA beamline.",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": ["P型ATPase", "亜鉛", "MmCadA"],
+  "method_label": "X-ray・3.6 Å",
+  "editor_notes": "PDB ID（9T44）は未公開。論文は E1 型の PIB-2 ATPase 構造としているが、このタンパク質の初の構造とは明言していないので first_claim は付けていない（Structure Update になる見込み）。結晶中で二量体を作るが、著者は界面が保存されず機能的な意味は小さいとみている。N末端の機構は MD と AlphaFold モデルを含む推定で、著者も His−1・His−2 の予測は低信頼と注記している。"
+}

@@ -1,0 +1,108 @@
+{
+ "pdb_id": "21RN",
+ "view": {
+  "target": [
+   180.63,
+   182.94,
+   170.68
+  ],
+  "dir": [
+   0.9512,
+   0.2924,
+   -0.0989
+  ],
+  "up": [
+   0.1228,
+   -0.0646,
+   0.9903
+  ],
+  "half": [
+   44.4,
+   55.8
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "mAb-A46 Fab Heavy chain",
+   "desc": "",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "mAb-A46 Fab Light chain",
+   "desc": "",
+   "entity": "2"
+  },
+  {
+   "color": "#5F9296",
+   "label": "mAb-A24 Fab Heavy chain",
+   "desc": "",
+   "entity": "3"
+  },
+  {
+   "color": "#A5707A",
+   "label": "mAb-A24 Fab Light chain",
+   "desc": "",
+   "entity": "4"
+  },
+  {
+   "color": "#7C8AA8",
+   "label": "Mpo",
+   "desc": "Myeloperoxidase light chain",
+   "entity": "5"
+  },
+  {
+   "color": "#8A9A5B",
+   "label": "Mpo",
+   "desc": "Myeloperoxidase",
+   "entity": "6"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "HEM",
+   "label": "ヘム",
+   "color": "#C23B8E",
+   "desc": "Protoporphyrin Ix Containing Fe",
+   "entity": [
+    "7"
+   ],
+   "sites": [
+    [
+     "G",
+     "801"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "HEM",
+  "residues": [
+   "M227",
+   "G230",
+   "Q231",
+   "D234",
+   "T238",
+   "L239",
+   "T240",
+   "R379",
+   "E382",
+   "M383",
+   "T469",
+   "F472",
+   "R473",
+   "G475",
+   "H476",
+   "I479",
+   "F547",
+   "L557",
+   "L560",
+   "R564"
+  ],
+  "hbonds": 10,
+  "pi": 0,
+  "neighbours": [],
+  "label": "ヘム"
+ }
+}
