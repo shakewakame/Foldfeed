@@ -39,6 +39,7 @@ LEAD = ("新着の査読済みオープンアクセス論文から、", "構造�
 LATEST = {"date": None}   # the newest issue with articles (the global navigation's "Latest Issue"), set by build()
 NAV_INFO = {"groups": [], "articles": 0, "recent": []}   # what the navigation's dropdowns list, set by build()
 THUMBS_PER_ISSUE = 8   # structures shown for each issue in a list of issues
+MORE_THUMBS = 6   # the issue's other structures under Picked up Today's Structure on the front page
 CAROUSEL_PAGE = 6   # structures at a time on an issue's first screen (3 x 2); more turn over every CAROUSEL_SECONDS
 CAROUSEL_SECONDS = 8
 BROWSE_THUMBS = 3   # structures on each Browse tile, the newest
@@ -380,7 +381,7 @@ html, body {{ overflow-x:clip; }}   /* a guard: nothing may widen the page sidew
 .lead .lead-go {{ font-family:var(--sans); font-size:15.5px; font-weight:700; letter-spacing:.02em; padding:15px 26px 15px 24px; }}
 .lead .lead-go:not(.alt) {{ font-size:16.5px; padding:16px 28px 16px 26px; }}
 .lead .lead-go .arr {{ font-family:var(--mono); transition:transform .3s cubic-bezier(.2,.8,.2,1); }}
-.lead .lead-go.alt:hover .arr {{ transform:translateX(5px); }}
+.lead .lead-go:hover .arr {{ transform:translateX(5px); }}
 .lead-parts {{ display:flex; flex-wrap:wrap; align-items:center; gap:6px 22px; margin:24px 0 0; font-size:14px; }}
 .lead-parts .t {{ font-family:var(--mono); font-size:11.5px; letter-spacing:.1em; color:var(--mute); }}
 .lead-parts a {{ display:inline-flex; align-items:center; color:var(--ink2); text-decoration:underline; text-decoration-color:var(--hair);
@@ -495,7 +496,7 @@ a, .find button, .v3d-bar button, .figtabs button {{ transition:color .2s, backg
    blur 3 pt, 45°, distance 2 pt). The labelled figures carry it in the file, on the molecule only (pipeline.render);
    the pictures without labels get it here, the same in pixels whatever their size */
 .thumb, .pk-fig, .ihc-grid .cfig, .bt-th, .iss-th, .lp-fig {{ overflow:visible; }}
-.thumb img, .ihc-grid img, .bt-th img, .iss-th img, .lp-fig img, .lead-art img {{ filter:var(--fig-shadow); }}
+.thumb img, .ihc-grid img, .bt-th img, .iss-th img, .mi-th img, .lp-fig img, .lead-art img {{ filter:var(--fig-shadow); }}
 .card .thumb img, .pk-fig img, .ihc-grid img, .bt-th img {{
      transition:transform .45s cubic-bezier(.2,.8,.2,1), filter .45s cubic-bezier(.2,.8,.2,1); }}
 .card:hover .thumb img, .pickup:hover .pk-fig img, .ihc-grid a:hover img, .bt a:hover img {{ transform:translateY(-6px); }}
@@ -730,7 +731,18 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
 .pk-s {{ margin:12px 0 0; font-size:17px; line-height:1.8; color:var(--desc); }}
 .pickup .reads {{ margin-top:26px; gap:12px; }}
 .pickup .reads a {{ min-width:0; flex:1 1 220px; }}
-.today + .toc {{ margin-top:var(--sec); }}
+/* the front page's way into the issue: its other structures, small, each a link to its article */
+.mi-th {{ list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat({MORE_THUMBS}, minmax(0,1fr)); gap:28px; }}
+.mi-th.more {{ grid-template-columns:repeat({MORE_THUMBS}, minmax(0,1fr)) 48px; }}
+.mi-th a {{ position:relative; display:block; color:var(--ink); text-decoration:none; }}
+.mi-th img {{ display:block; width:100%; height:auto; transition:transform .4s cubic-bezier(.2,.8,.2,1), filter .4s; }}
+.mi-th a:hover img {{ transform:translateY(-4px); filter:var(--fig-shadow-up); }}
+.mi-th .no {{ aspect-ratio:3/2; display:flex; align-items:center; justify-content:center; padding:8px; border:1px solid var(--hair);
+              font-family:var(--mono); font-size:11px; color:var(--mute); text-align:center; }}
+.mi-no {{ position:absolute; left:0; top:0; padding:0 8px 3px 0; background:var(--ground); font-family:var(--latin); font-size:22px;
+          line-height:1; color:var(--ink); }}   /* as a card's number: on the figure's top-left */
+.mi-more a {{ height:100%; display:flex; align-items:center; font-family:var(--mono); font-size:15px; color:var(--mute); }}
+.mi-more a:hover {{ color:var(--acc-ink); }}
 
 /* Browse: a tile for each way in, the newest structures of it on top */
 .bt-sec + .bt-sec, .lp-lead + .bt-sec {{ margin-top:88px; }}
@@ -983,6 +995,9 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
   .iss-n {{ flex-direction:row; flex-wrap:wrap; gap:4px 18px; }}
   .iss-n b {{ padding-left:8px; }}
   .iss-th {{ grid-template-columns:repeat(4, minmax(0,1fr)); }}
+  .mi-th, .mi-th.more {{ grid-template-columns:repeat(3, minmax(0,1fr)); gap:22px 14px; }}
+  .mi-no {{ font-size:17px; }}
+  .mi-more {{ grid-column:1 / -1; margin-top:-8px; }}   /* "+5" on a line of its own under the figures */
   .iss-d b {{ font-size:26px; }}
   .lp-row {{ grid-template-columns:110px minmax(0,1fr); gap:6px 16px; align-items:start; }}
   .lp-row .later {{ grid-column:2; justify-self:start; }}
@@ -1218,7 +1233,7 @@ MENU_SCRIPT = r"""
   if (calm || !('IntersectionObserver' in window)) return;
   root.classList.add('anim');
   var SEL = '.ix-h, .about-dl > div, .about-side, .about .jl, .about > .wrap > .about-sub, .pickup, '
-          + '.today-4 > div, .reads, .cards > li, .bt, .iss-list > li, .find, .mail-grid, .shell:not(.sticky-side) .side .sd, '
+          + '.today-4 > div, .reads, .cards > li, .mi-th > li, .bt, .iss-list > li, .find, .mail-grid, .shell:not(.sticky-side) .side .sd, '
           + '.ihead, .part, .art, .rest, .pp-head, .pg .pr, .queue li';
   var els = [].slice.call(document.querySelectorAll(SEL));
   var seen = new Map();
@@ -1898,7 +1913,6 @@ def card_html(cand: dict, pick: dict, n: int, date: str, root: Path, fig_base: s
             f'<p class="cs">{esc(pick.get("subhead") or "")}</p>{foot}</li>')
 
 
-HOME_PARTS = {"new": "Today’s New Structure", "update": "Today’s Structure Update", "impact": "Today’s Structure-Based Study"}
 
 
 def part_label(cand: dict, pick: dict, featured: str | None) -> str:
@@ -1908,33 +1922,41 @@ def part_label(cand: dict, pick: dict, featured: str | None) -> str:
     return f'<p class="cpart kl"><i class="sw-{PART_CLS[key]}"></i>{pick_mark}{PARTS[key][0]}</p>'
 
 
-def contents_html(picks: list, date: str, root: Path, fig_base: str, href_base: str = "",
-                  featured: str | None = None, mark: bool = False) -> str:
-    """The issue as cards. On an issue page (mark=True) every article in one even grid, in the issue's order, each
-    card saying which group it is in (Picked up, New Structure, ...), its headline and supplement two lines at most
-    (the owner's request, 2026-10-19). On the front page, group by group in sizes (New Structure a size larger), the
-    pick being the large card above and not repeated here. Either way the numbers run 01, 02, ... without a gap.
-    """
+def contents_html(picks: list, date: str, root: Path, fig_base: str, featured: str | None = None) -> str:
+    """An issue page's Contents: every article as a card in one even grid, in the issue's order, each card saying which
+    group it is in (Picked up, New Structure, ...), its headline and supplement two lines at most (the owner's request,
+    2026-10-19). The numbers run 01, 02, ... without a gap."""
     number = numbers(picks)
-    if mark:
-        cards = "".join(card_html(c, pk, number[c["pmcid"]], date, root, fig_base, f'{href_base}#a{number[c["pmcid"]]}', "md",
-                                  part_label(c, pk, featured)) for c, pk in picks)
-        return (f'<div class="ix-h"><h2 class="label">Contents</h2><span class="ixm"><b>{n_articles(len(picks))}</b></span></div>'
-                f'<ol class="cards md toc-cards">{cards}</ol>') if picks else ""
-    out = ""
-    for key, items in page_groups(picks, featured):
-        if key == "pick":
-            continue
-        size = CARD_SIZE[key]
-        cards = "".join(card_html(c, pk, number[c["pmcid"]], date, root, fig_base, f'{href_base}#a{number[c["pmcid"]]}', size)
-                        for c, pk in items)
-        y, m, d, _ = date_parts(date)   # the way to the whole issue sits beside the first heading
-        go = (f'<a class="ix-all" href="{href_base}">{m}.{d} 号の全 {len(picks)} 本を読む'
-              f'<span class="arr" aria-hidden="true">→</span></a>') if not out else ""
-        out += (f'<div class="ix-h{" hot" if out else ""}" id="{key}-list"><h2 class="label">{HOME_PARTS[key]}</h2>'
-                f'<span class="ixm"><b>{n_articles(len(items))}</b></span>{go}</div>'
-                f'<ol class="cards {size}">{cards}</ol>')
-    return out
+    cards = "".join(card_html(c, pk, number[c["pmcid"]], date, root, fig_base, f'#a{number[c["pmcid"]]}', "md",
+                              part_label(c, pk, featured)) for c, pk in picks)
+    return (f'<div class="ix-h"><h2 class="label">Contents</h2><span class="ixm"><b>{n_articles(len(picks))}</b></span></div>'
+            f'<ol class="cards md toc-cards">{cards}</ol>') if picks else ""
+
+
+def more_html(picks: list, date: str, root: Path, fig_base: str, href: str, featured: str | None) -> str:
+    """Under Picked up Today's Structure on the front page, the way into the issue (the owner's request, 2026-10-21: the
+    front page keeps the pick as a taste, what else came out is read on the issue page): the issue's other structures
+    as a strip of figures, each a link to its article, and the button to the whole issue."""
+    number = numbers(picks)
+    rest = [(c, pk) for c, pk in picks if c["pmcid"] != featured]
+    if not rest:
+        return ""
+    thumbs = ""
+    for c, pk in rest[:MORE_THUMBS]:
+        name = esc(pk.get("target_en") or pk["target_label"])
+        n = number[c["pmcid"]]
+        fig = (f'<img src="{fig_base}/{date}/{esc(c["pmcid"])}-thumb.svg" width="600" height="400" alt="{name}" loading="lazy">'
+               if (root / date / "figures" / f'{c["pmcid"]}-thumb.svg').exists() else f'<span class="no">{esc(no_figure(c))}</span>')
+        thumbs += (f'<li><a href="{href}#a{n}" title="{name}">{fig}<span class="mi-no" aria-hidden="true">{pad(n)}</span>'
+                   f'</a></li>')
+    more = len(rest) - MORE_THUMBS
+    if more > 0:
+        thumbs += f'<li class="mi-more"><a href="{href}">+{more}</a></li>'
+    _, m, d, _ = date_parts(date)
+    title = "More in This Issue" if featured else "This Issue"
+    return (f'<section class="sec more-iss"><div class="ix-h"><h2 class="label">{title}</h2>'
+            f'<a class="ix-all" href="{href}">{m}.{d} 号の全 {len(picks)} 本を読む<span class="arr" aria-hidden="true">→</span></a>'
+            f'</div><ol class="mi-th{" more" if more > 0 else ""}">{thumbs}</ol></section>')
 
 
 def n_articles(n: int) -> str:
@@ -1960,14 +1982,15 @@ def lead_html(feature: dict | None, picks: list, date: str, root: Path, fig_base
     y, m, d, wd = date_parts(date)
     updated = (f'<p class="lead-k">最終更新 <b>{y}.{m:02d}.{d:02d}</b>（{wd}）'
                + (f'<span>Issue No. {number}</span>' if number else "") + '</p>')
-    # what a visitor should do next, by weight (the owner's choice, 2026-10-19): see today's structures (the one primary
-    # button), or go straight to the whole issue; the breakdown is information, so text; About is for first-timers
+    # what a visitor should do next: see today's structures, on the issue page (the one button: the front page shows
+    # only the pick, 2026-10-21); the breakdown is information, so text, each part a way to it on the issue page;
+    # About is for first-timers
     picked = (feature or {}).get("pmcid") if feature_of(feature, picks) else None
-    shown = {k for k, _ in page_groups(picks, picked)}
-    go = ('<div class="lead-btns"><a class="lead-go" href="#today">今日の構造を見る<span class="tri" aria-hidden="true">▽</span></a>'
-          f'<a class="lead-go alt" href="issues/{date}.html">{m}.{d} 号の全 {len(picks)} 本を読む'
+    shown = {k for k, items in page_groups(picks, picked) if items}
+    issue = f"issues/{date}.html"
+    go = (f'<div class="lead-btns"><a class="lead-go" href="{issue}">今日の構造を見る'
           f'<span class="arr" aria-hidden="true">→</span></a></div>')
-    parts = "".join(f'<a href="#{k + "-list" if k in shown else "today"}"><i class="sw-{PART_CLS[k]}"></i>{PARTS[k][0]}<b>{len(v)}</b></a>'
+    parts = "".join(f'<a href="{issue}#{k if k in shown else "pick"}"><i class="sw-{PART_CLS[k]}"></i>{PARTS[k][0]}<b>{len(v)}</b></a>'
                     for k, v in render.sections(picks).items() if v)
     go += (f'<p class="lead-parts kl"><span class="t">今日の内訳</span>{parts}</p>' if parts else "")
     go += '<a class="lead-about" href="#about">はじめての方へ：FoldFeed について<span aria-hidden="true">▽</span></a>'
@@ -2231,7 +2254,7 @@ def issue_page(date: str, prev_date: str | None, next_date: str | None,
     top = [issue_head(date, number, picks, prev_date, next_date, meta.get("index_date"), meta.get("index_from"),
                       bool((meta.get("springer") or {}).get("read")), root, fig_base, feature and feature["pmcid"])]
     if picks:
-        top.append(f'<section class="toc" id="contents">{contents_html(picks, date, root, fig_base, "", feature and feature["pmcid"], mark=True)}</section>')
+        top.append(f'<section class="toc" id="contents">{contents_html(picks, date, root, fig_base, feature and feature["pmcid"])}</section>')
     else:
         top.append('<section class="part"><h2>No Articles</h2></section>')
     main = []
@@ -2286,7 +2309,8 @@ ABOUT = (   # the front page's About FoldFeed, in polite Japanese (the owner's w
      "記事の文章は、|論文の転載や翻訳ではなく、|論文の内容をもとに|日本語で新しく書いたものです。"
      "論文の文章は、|根拠として|短い英文を引用するにとどめ、|「原文」と明示しています。"
      "各記事には、|雑誌名とライセンス、|原著論文へのリンクを|載せています。"
-     "構造図は、|論文の図を|転載したものではありません。"
+     "論文の図や表は|載せていません。"
+     "論文の著作権は、|それぞれの著者または出版社にあります。"
      "PDB のデータ（CC0）と|UniProt のデータ（CC BY 4.0）を、|それぞれのライセンスに従って|使っています。"),
 )
 
@@ -2541,9 +2565,10 @@ def browse_page(lib: list[dict]) -> str:
 
 
 def home(issues: list[str]) -> str:
-    """The front page. First screen: what the site is, in three lines, and Today's Structure in 3D. Right under it the
-    latest issue as cards, in three sizes (Picked up Today's Structure the largest, then New Structure, then the other
-    two parts), so what came out today is seen at a glance before anything is read (the owner's request, 2026-10-19).
+    """The front page. First screen: what the site is, in three lines, the way to today's structures (the latest issue
+    page) and Today's Structure in 3D. Right under it Picked up Today's Structure, the one article shown in full as a
+    taste of the site, and the way into the issue with its other structures as small figures: what else came out is
+    seen and read on the issue page (the owner's request, 2026-10-21; the front page had every article as cards).
     Then the latest past issues and About FoldFeed. Browse and Newsletters & Alerts are pages of their own, in the
     global navigation (2026-10-19)."""
     latest = next((d for d in issues if load_issue(d, ISSUES_DIR)[1]), issues[0])  # newest issue that has articles
@@ -2553,7 +2578,7 @@ def home(issues: list[str]) -> str:
     feature = load_feature(latest, ISSUES_DIR, picks)
     lib = library(issues)
     main = [today_html(feature, picks, latest, ISSUES_DIR, "figures", href),
-            f'<section class="toc">{contents_html(picks, latest, ISSUES_DIR, "figures", href, feature and feature["pmcid"])}</section>']
+            more_html(picks, latest, ISSUES_DIR, "figures", href, feature and feature["pmcid"])]
     if past:
         number = {d: len(issues) - i for i, d in enumerate(issues)}
         rows = "".join(issue_row(d, number[d], ISSUES_DIR, "figures", "issues/") for d in past[:PAST_ON_HOME])

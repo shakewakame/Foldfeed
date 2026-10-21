@@ -1,0 +1,118 @@
+# 権利関係の調査：非営利（NC）ライセンスの論文と、広告・有料化
+
+2026-10-21 調査。将来の広告・有料化を見すえて、オーナーの依頼で調べた。**法律の専門家の確認ではない**。営利にする前に、
+一度弁護士（著作権に詳しい人）に、このメモと実際の記事を見てもらう。
+
+## 結論
+
+- NC（非営利）の条件が問題になるのは、**論文の表現（文章・図・表）を複製したり翻案したりするとき**だけ。
+  FoldFeed は、論文の**事実と発見を自分の言葉で書き**、**短い引用**を根拠として示し、**構造図は PDB のデータから描く**。
+  このやり方を守る限り、広告を出したり有料化したりしても、NC の論文を紹介すること自体は問題になりにくい。
+- そのかわり、**記事の文が論文の文の翻訳・言い換えになっていると**、NC の論文は営利のサイトで使えず、
+  ND（改変禁止）の論文は営利でなくても使えない使い方になる。書き方のルールで防ぐ（SKILL に明記した）。
+- 営利にするときに**必ず変えること**が 2 つある：Springer Nature の API（非営利の利用が前提）と、
+  GitHub Pages（オンラインのビジネスには使えない）。
+- **気になる点が 1 つ**：記事に出している「原文」の引用が多い（1 本あたり中央値 10 か所・約 230 語）。
+  引用は「自分の文が主、引用が従」であることが条件なので、営利にする前に、画面に出す引用を減らすのが安全（下の 4）。
+
+## 1. FoldFeed が論文から何をどう使っているか
+
+| 使うもの | 使い方 | 権利の扱い |
+|---|---|---|
+| 論文の全文（JATS XML） | 機械で読み、事実・ID・数値を取り出す。AI が読んで紹介文を書く | 日本の著作権法 30 条の 4（情報解析など、表現を味わうことを目的としない利用）。営利でも使える。CC 4.0 は、法律の例外が当てはまる使い方にはライセンスを適用しない（第 2 条 (a)(2)） |
+| 題名・雑誌名・著者名・所属・出版日 | 記事の冒頭に出す | 書誌の事実。出典の表示として必要なもの |
+| 記事の文章（見出し・紹介の 4 行・読みどころ・実験メモ） | 論文の発見を、日本語で新しく書く | 事実やアイデアは著作権で保護されない。ただし、元の文章の表現上の本質的な特徴がそのまま感じ取れるほど似ていれば翻案（下の 3） |
+| 「原文」の引用 | 記事の各行の根拠として、英文を短く示す | 32 条の引用。営利かどうかは要件にない。48 条で出所の明示が必要（論文へのリンク） |
+| 構造図・結合部位の拡大図・3D | PDB の座標から描く | PDB のデータは CC0。論文の図は使っていない |
+| PDB・EMDB・UniProt のデータ | 分解能・ID・タンパク質名など | PDB・EMDB は CC0、UniProt は CC BY 4.0（出典の表示が条件：About に書いた） |
+| 論文の図・表・要旨の全文 | **使っていない** | — |
+
+紹介した 80 本のライセンス（2026-10-21 時点）：CC BY 55・CC BY-NC-ND 19・CC BY-NC 4・CC BY-NC-SA 1・
+テキストマイニング用 1（Science、10/14 号。「テキストマイニングに使える。著作権法のフェアユースの範囲でも使える」）。
+**NC は 24 本、そのうち ND（改変禁止）は 19 本**。
+
+## 2. NC ライセンスの中身
+
+- CC BY-NC 4.0 の定義：NonCommercial とは「主として商業的な利益や金銭的な対価を目的としない、またはそれに向けられていない」こと
+  （*not primarily intended for or directed towards commercial advantage or monetary compensation*）。
+- ライセンスが関わるのは、**著作権者の許可が要る使い方**（複製・翻案・公衆送信など）だけ。引用やフェアユースなど、
+  法律の例外が当てはまる使い方には、ライセンスそのものが適用されない（4.0 の第 2 条 (a)(2)：
+  *where Exceptions and Limitations apply to Your use, this Public License does not apply*）。
+- 広告付きのサイトが「商業的」に当たるかは、CC 自身も線を引いていない。4.0 を作るときにも議論されたが、3.0 の定義のまま残した。
+  CC の 2009 年の調査では、作者・利用者とも、オンライン広告に結び付いた使い方は「商業的」寄りと受け止めていた。
+  **広告を出すサイトは、NC の作品を（許可の要る形で）使うと NC に反するおそれがある、と考えておく**。
+  有料会員の中で見せるのは、はっきり商業的。
+- ND（改変禁止）は、翻案したもの（翻訳・要約の一部）を共有すること自体を許さない。営利かどうかに関係ない。
+
+## 3. 要約が「翻案」になるのはどんなときか（日本の法律）
+
+- 翻案に当たるかは、元の作品の**表現上の本質的な特徴**を維持していて、それを**直接感じ取れる**かで決まる
+  （最高裁 平成 13 年 6 月 28 日〔江差追分事件〕）。事実やアイデアが同じなだけでは翻案ではない。
+- 新聞記事を英文に要約した抄録が翻案権の侵害とされた例がある（東京地裁 平成 6 年 2 月 18 日〔コムライン事件〕）。
+  記事を順に訳して縮めたもので、元の記事の構成や表現が残っていた。
+- AI が作った文章も、ふつうの文章と同じく「似ているか（類似性）」「元の作品に基づいているか（依拠性）」で判断する
+  （文化庁「AI と著作権に関する考え方について」2024 年 3 月）。AI に論文を読ませること自体は 30 条の 4 で認められるが、
+  出てきた文章が元の表現に似ていれば別。
+- FoldFeed の記事は、論文の結論・方法・数値を取り出して、決まった形（何を・どうやって・何が分かった・なぜ大事か）に
+  書き直している。要旨や段落を順に訳してはいない。**この書き方を守ることが、NC と ND の論文を紹介する前提になる**。
+
+## 4. 引用の量
+
+- 引用の条件（32 条、裁判例）：公表された作品であること、引用部分がはっきり区別されていること（FoldFeed は「原文」の印と引用符）、
+  自分の文が主で引用が従であること、引用の目的（批評・研究など）に必要な範囲であること、出所の明示（48 条）。
+- 記事に出している引用を数えた（80 本）：1 本あたり**中央値 10 か所・約 230 語（最大 17 か所・約 410 語）**。
+  記事の日本語の本文は約 750 字。論文の本文（約 1 万語）から見れば 2% ほどだが、記事の中では引用の量が本文に近い。
+  1 行ごとに根拠を示すという目的ははっきりしているが、量の点で「従」と言いにくくなる。
+- 営利にする前の案：根拠の引用は**データには全部残して機械で照合し続け**（verify）、**画面に出すのは 1 行に 1 つ、短いもの**にする。
+  あるいは、紹介の 4 行だけに出す。
+
+## 5. 論文と情報の取得元の条件
+
+| 取得元 | 条件（調べた範囲） | 営利にしたとき |
+|---|---|---|
+| Europe PMC（REST API） | 論文ごとのライセンスに従う。Europe PMC 自身は追加の制限を付けない（2017 年時点の記録。今の文面は未確認）。自動の取得は API と FTP で | 変更なし（論文ごとのライセンスに従う使い方をする） |
+| PMC（NLM、AWS のオープンデータ） | オープンアクセスの論文を「商用可（CC0・CC BY・CC BY-SA・CC BY-ND）」「非商用のみ（CC BY-NC・NC-SA・NC-ND）」「その他」に分けて配布。自動の取得は公式の経路（AWS・OAI-PMH・FTP など）だけ。出典の表示（この経路の号のフッター） | NC の論文の XML を読んで事実を取り出すのは情報解析（30 条の 4）。XML そのものは配布しない |
+| Springer Nature Open Access API | **非営利の利用は無料。商用の利用には別の契約が要る**とされる。ほかの API の条件では、テキストマイニングの結果を第三者に渡すのは非営利に限る、競合する製品を作らない、など | **止めるか、契約する**。止めると、Nature 系の全文公開の論文は PMC から約 1 か月後に入る（Nat Commun の中央値 34 日） |
+| PDB・EMDB | CC0 | 変更なし |
+| UniProt | CC BY 4.0（出典の表示） | 変更なし |
+| Mol*（3D ビューア） | MIT ライセンス | 変更なし |
+
+## 6. ホスティング
+
+GitHub Pages は、オンラインのビジネス・EC・主に商取引や SaaS のためのサイトには使えない。パスワードやカード番号の受け渡しにも
+使えない。広告だけなら禁止とは書かれていないが、**有料会員を作るときは別のホスティングに移す**。
+
+## 7. 営利にする前にやること
+
+1. 書き方のルールを守る（SKILL の「論文の文を訳して並べない」）。過去の記事も一度見直す（とくに ND の 19 本）。
+2. 画面に出す引用を減らす（上の 4）。
+3. 論文の図・表・要旨の全文は載せない（今も載せていない）。
+4. Springer Nature の API を止めるか、商用の契約をする。
+5. 有料にするのは**機能**（アラート・検索・データの書き出しなど）にし、記事そのものは無料のまま公開する。
+   NC の論文に基づく記事を有料の壁の中に入れない。
+6. 有料会員を作るなら、GitHub Pages から移す。
+7. 記事のライセンスの表示から、ライセンスの条文（CC の URL）へリンクする（CC BY の出典表示の作法。今は名前だけ）。
+8. 権利者・著者からの連絡窓口を About に置く（TODO：運営者と連絡先）。
+9. 権利とは別に必要になるもの：広告を出すならプライバシーポリシー（Cookie などで閲覧者の情報を外に送る扱い）、
+   有料化するなら特定商取引法の表示。
+10. 弁護士に一度見てもらう。
+
+## 出典
+
+- Creative Commons BY-NC-ND 4.0 Legal Code（NonCommercial の定義・第 2 条 (a)(2)）：https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode.en
+- SPDX：CC-BY-NC-4.0：https://spdx.org/licenses/CC-BY-NC-4.0
+- Creative Commons wiki「4.0/NonCommercial」（4.0 で定義を変えなかった経緯）：https://wiki.creativecommons.org/wiki/4.0/NonCommercial
+- Creative Commons「Defining Noncommercial」（2009 年の調査）：https://mirrors.creativecommons.org/defining-noncommercial/Defining_Noncommercial_fullreport.pdf
+- NCBI「PMC Open Access Subset」（ライセンスの 3 区分・自動取得の経路）：https://pmc.ncbi.nlm.nih.gov/tools/openftlist
+- Lantern「Data Sources」（Europe PMC の再利用の条件、2017 年の記録）：https://lantern.cottagelabs.com/sources
+- Springer Nature API Terms and conditions：https://dev.springernature.com/terms-conditions/
+- Springer Nature Support「Springer Nature Link API details」：https://support.springernature.com/en/support/solutions/articles/6000195668-springer-nature-link-api-details
+- Springer Nature「TDM and APIs: An introduction for information professionals」：https://www.springernature.com/gp/librarians/the-link/rd-blogpost/tdm-and-apis-intro-for-info-professionals/27337698
+- GitHub Docs「GitHub Pages limits」：https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits
+- 文化庁「AI と著作権について」：https://www.bunka.go.jp/seisaku/chosakuken/aiandcopyright.html
+- 北海道大学 知的財産法政策学研究（コムライン事件の位置づけ）：https://eprints.lib.hokudai.ac.jp/dspace/bitstream/2115/52377/3/41_02.pdf
+- 北海道大学 知的財産法政策学研究（引用の要件の学説・裁判例）：https://eprints.lib.hokudai.ac.jp/dspace/bitstream/2115/79637/1/ipl-57_02.pdf
+
+検証できなかったこと：この環境からは creativecommons.org・dev.springernature.com・pmc.ncbi.nlm.nih.gov・europepmc.org の
+ページを直接開けなかった（接続が許可されていない）。上の内容は検索結果に引かれた条文・説明による。
+Europe PMC の今の利用条件と、Springer Nature の API の条件の全文は、営利にする前に原文で確かめる。

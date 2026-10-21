@@ -50,7 +50,10 @@
   - [ ] データの出典とライセンス（Europe PMC・PMC・Springer Nature・PDB・UniProt、図の描き方と転載の条件）
     （2026-10-20：「著作権と出典」の欄を作り、論文のライセンス・記事の文章・引用・構造図・PDB と UniProt の条件を書いた。
     Europe PMC・PMC・Springer Nature の利用条件の詳しい説明はまだ）
-  - [ ] 営利にする（広告・有料化など）前に、NC（非営利）ライセンスの論文の扱いと Springer Nature の API の利用条件を確かめる
+  - [x] 営利にする（広告・有料化など）前に、NC（非営利）ライセンスの論文の扱いと Springer Nature の API の利用条件を確かめる
+    （2026-10-21：`docs/rights.md`）
+- [ ] **営利にする前のチェックリスト**（`docs/rights.md` の 7）：画面に出す引用を減らす、Springer Nature の API を止めるか契約、
+  有料会員なら GitHub Pages から移す、ライセンスの条文へのリンク、連絡窓口、プライバシーポリシー・特定商取引法の表示、弁護士の確認
   - [ ] 更新履歴（サイトの変更・方針の変更）
 - [ ] **Newsletters & Alerts の中身を作る**（2026-10-19：ナビに項目を置き、`newsletter.html` は「準備中」の枠だけ。ホームの Newsletter の欄はここへ移した）
   - [ ] メール配信の外部サービスを選び、登録フォームを `newsletter.html` に入れる（購読者のデータは公開リポジトリに置かない）
