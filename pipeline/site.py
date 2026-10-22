@@ -1019,10 +1019,15 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
   .lead-art {{ order:2; position:relative; z-index:0; margin:-22px calc(-1 * var(--pad) - 36vw) 0 calc(-1 * var(--pad) + 2vw);
                pointer-events:none; }}
   .lead-art .lead-cap, .lead-art .lead-upd, .lead-text .lead-upd {{ display:none; }}
-  .lead-mark {{ order:3; display:block; justify-self:start; max-width:70%; margin-top:-84px; color:var(--ink); text-decoration:none; }}
+  /* the structure a little paler, so the words over and beside it read clearly (the owner, 2026-10-25); a soft halo of
+     the ground keeps them off its lines */
+  .lead-art .v3d-view, .lead-art .lead-pic {{ opacity:.55; }}
+  .lead-h, .lead-mark {{ text-shadow:0 0 3px var(--ground), 0 0 10px var(--ground), 0 0 18px var(--ground); }}
+  .lead-mark {{ order:3; display:block; justify-self:start; max-width:100%; margin-top:-64px; color:var(--ink); text-decoration:none; }}
   .lead-mark:hover {{ text-decoration:none; }}
   .lead-mark .k {{ display:block; font-family:var(--mono); font-size:11px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--acc-ink); }}
-  .lead-mark b {{ display:block; margin-top:5px; font-family:var(--latin); font-size:28px; line-height:1.05; letter-spacing:-.01em; }}
+  .lead-mark b {{ display:block; margin-top:5px; font-family:var(--latin); font-size:clamp(24px, 7.4vw, 30px); line-height:1.05;
+                  letter-spacing:-.01em; white-space:nowrap; }}
   .lead-mark .t {{ display:block; margin-top:8px; font-size:13px; line-height:1.5; color:var(--desc); }}
   .lead .lead-btns, .lead-parts, .lead-about {{ display:none; }}
   .ix-h, .part h2 {{ flex-wrap:wrap; row-gap:4px; }}
@@ -2185,7 +2190,7 @@ def lead_html(feature: dict | None, picks: list, date: str, root: Path, fig_base
     # right (Issue of yy.mm.dd); the structure large between; the Picked up mark (Today's Structure, its target) at
     # the bottom left
     badge = f'<p class="lead-badge"><span>Issue of</span><b>{y % 100:02d}.{m:02d}.{d:02d}</b></p>'
-    mark = (f'<a class="lead-mark" href="#today"><span class="k">Picked up</span><b>Today’s<br>Structure</b>'
+    mark = (f'<a class="lead-mark" href="#today"><span class="k">Picked up</span><b>Today’s Structure</b>'
             f'<span class="t">{esc(hit[2]["target_label"])}</span></a>') if hit else ""
     art_html = ""
     if hit and (root / date / "figures" / f"{hit[1]['pmcid']}-hero.svg").exists():
