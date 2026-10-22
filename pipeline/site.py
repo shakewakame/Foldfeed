@@ -259,7 +259,6 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .lab div {{ display:grid; grid-template-columns:112px 1fr; gap:14px; padding:6px 0; border-bottom:1px dotted var(--hair); }}
 .lab dt {{ font-family:var(--mono); font-size:11px; color:var(--mute); padding-top:3px; }}
 .lab dd {{ margin:0; }}
-.lab-src {{ margin-top:10px; }}
 .rest {{ margin-top:var(--sec); }}
 .rest ul {{ margin:10px 0 0; padding-left:1.2em; font-size:14.5px; }}
 
@@ -1586,12 +1585,16 @@ FIRST_LABEL = "初めて構造が解かれたタンパク質"
 # ---------- one article ----------
 
 def quotes(evidence: list) -> str:
-    """The paper's own words behind one explanation: the label 原文 once, and beside it each quote with its section
-    (a quote wraps under itself, never under the label)."""
+    """The paper's own words behind one highlight, for reference: its shortest quote only, after the label 原文, with
+    its section (a quote wraps under itself, never under the label). A reader who wants the paper's words reads the
+    paper; every quote stays in the data and is still checked against the full text (pipeline.verify). The owner's
+    choice, 2026-10-22, also for the rights: the article's own text is the main part, the quotes are few
+    (docs/rights.md)."""
     if not evidence:
         return ""
-    qs = "".join(f'<p><i>“{esc(e["quote"])}”</i><span>{esc(e.get("section", ""))}</span></p>' for e in evidence)
-    return f'<div class="src"><b>原文</b><div class="qs">{qs}</div></div>'
+    e = min(evidence, key=lambda e: len(e["quote"]))
+    return (f'<div class="src"><b>原文</b><div class="qs"><p><i>“{esc(e["quote"])}”</i>'
+            f'<span>{esc(e.get("section", ""))}</span></p></div></div>')
 
 
 def margin_html(cand: dict, pick: dict, n: int, impact_type: str | None = None) -> str:
@@ -1776,8 +1779,7 @@ def article_html(cand: dict, pick: dict, date: str, n: int, root: Path, fig_base
     lab = ""
     if filled:
         rows = "".join(f"<div><dt>{esc(k)}</dt><dd>{esc(v)}</dd></div>" for k, v in filled)
-        ev = quotes(notes.get("evidence"))
-        lab = f'<h3>Lab Notes</h3><dl class="lab">{rows}</dl>' + (f'<div class="lab-src">{ev}</div>' if ev else "")
+        lab = f'<h3>Lab Notes</h3><dl class="lab">{rows}</dl>'   # its quotes are in the data, not on the page
     text = (f'<div class="text">'
             f'<div class="art-top"><p class="kicker"><b>{esc(cand["journal"] or cand["journal_abbrev"])}</b> · {esc(cand["pub_date"])} · {lic}</p>'
             f'{later_button(cand["pmcid"])}</div>'
@@ -2359,14 +2361,6 @@ def numbers_html(issues: list[str], lib: list[dict]) -> str:
     return f'<div class="kpis">{kpis}</div>{meter}{chart}'
 
 
-# 掲載のタイミング once the Nature journals are read the day after publication (pipeline/springer.py)
-TIMING_NATURE = ("掲載のタイミング",
-                 "論文は、|論文データベースに登録された|翌日にご紹介します。"
-                 "データベースに|論文が届く時期は、|雑誌によって異なります。"
-                 "Nature 系の雑誌は|出版からおよそ 1 か月後に届くため、|出版の時点で|全文が公開されている論文だけ、|"
-                 "出版の翌日に|ご紹介します。")
-
-
 def about_html(issues: list[str], lib: list[dict], own_page: bool = False) -> str:
     """About FoldFeed, right under the first screen: what the site is (polite Japanese), FoldFeed in Numbers (an
     infographic, see numbers_html) and every journal the papers came from, as bars. All numbers are computed from the
@@ -2375,10 +2369,8 @@ def about_html(issues: list[str], lib: list[dict], own_page: bool = False) -> st
     # one sentence per line; it may wrap only at the marked phrase boundaries, balanced over its lines
     def sentence(x: str) -> str:
         return "<wbr>".join(f'<span class=w>{esc(w)}</span>' for w in x.split("|"))
-    nature = any((load_issue(d, ISSUES_DIR)[0].get("springer") or {}).get("read") for d in issues)
-    about = [TIMING_NATURE if nature and k == "掲載のタイミング" else (k, v) for k, v in ABOUT]
     rows = "".join(f'<div><dt>{esc(k)}</dt><dd>{"".join(f"<span class=s>{sentence(x)}。</span>" for x in v.split("。") if x)}</dd></div>'
-                   for k, v in about)
+                   for k, v in ABOUT)
     most = max([c for _, c in journals] + [1])
     jl = "".join(f'<li style="--i:{i}"><span class="jn">{esc(n)}</span><span class="c">{c}</span>'
                  f'<span class="bar" aria-hidden="true"><i style="--v:{c / most:.3f}"></i></span></li>'
