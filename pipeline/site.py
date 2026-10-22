@@ -984,20 +984,23 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
 }}
 @media (max-width:860px) {{
   :root {{ --pad:22px; --sec:76px; }}
-  /* a phone: the header is one short row, so the first screen shows the content (the owner's memo, 2026-10-22) */
-  :root {{ --head:64px; }}
-  .mast {{ padding-top:10px; }}
-  .rules {{ margin-top:10px; }}
-  .mast-row {{ position:relative; flex-wrap:nowrap; align-items:center; gap:12px; }}
-  .vol {{ position:static; flex:none; gap:10px; }}
-  .menu .mb {{ width:36px; height:36px; gap:4px; }}
-  .menu .mb i {{ width:16px; }}
+  /* a phone: the header is one slim bar of the site's ink, after the page the owner sent (2026-10-24), made FoldFeed's:
+     the logo and FoldFeed in white on the left; on the right 探す (the mark and the word, no box) and MENU as a 朱
+     square. No double rule under it: the bar is the edge */
+  :root {{ --head:52px; }}
+  .mast {{ padding-top:0; background:var(--ink); }}
+  .rules {{ display:none; }}
+  .mast-row {{ position:relative; flex-wrap:nowrap; align-items:center; gap:12px; height:var(--head); }}
+  .vol {{ position:static; flex:none; gap:6px; }}
+  .menu .mb {{ width:40px; height:40px; gap:4px; border-radius:3px; background:var(--acc); }}
+  .menu summary:hover .mb, .menu summary:focus-visible .mb {{ background:var(--acc-ink); }}
+  .menu .mb i {{ width:17px; }}
   .menu.on .mb i:nth-child(1), html:not(.js) .menu[open] .mb i:nth-child(1) {{ transform:translateY(6px) rotate(45deg); }}
   .menu.on .mb i:nth-child(3), html:not(.js) .menu[open] .mb i:nth-child(3) {{ transform:translateY(-6px) rotate(-45deg); }}
   .menu .mt {{ position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); }}
-  .word {{ gap:9px; }}
-  .word img {{ width:30px; height:30px; }}
-  .word .name {{ font-size:24px; }}
+  .word {{ gap:9px; color:#fff; }}
+  .word img {{ width:28px; height:28px; border-radius:24%; outline:1.5px solid rgba(255,255,255,.85); outline-offset:1px; }}
+  .word .name {{ font-size:22px; color:#fff; }}
   .tag {{ display:none; }}
   /* a phone's first screen (the owner, 2026-10-24): the introduction top left in the serif of the first design, the
      issue's date top right, the structure large and past the right edge, the Picked up mark at the bottom left. The
@@ -1062,8 +1065,8 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
   .mast.away .menu {{ pointer-events:auto; }}
   /* MENU pulls the header down: a panel the width of the screen comes down from under the header's row */
   .menu {{ position:static; }}
-  .menu-list {{ position:fixed; left:0; right:0; top:0; z-index:-1; min-width:0; max-height:100vh; overflow-y:auto; box-sizing:border-box;
-               padding:calc(var(--head) + 4px) var(--pad) 22px; border:0; border-bottom:1px solid var(--ink); text-align:left; }}
+  .menu-list {{ position:fixed; left:0; right:0; top:var(--head); z-index:-1; min-width:0; max-height:calc(100vh - var(--head));
+               overflow-y:auto; box-sizing:border-box; padding:4px var(--pad) 22px; border:0; border-bottom:1px solid var(--ink); text-align:left; }}
   .menu-list a {{ padding:13px 0; font-size:16px; letter-spacing:.04em; border-top:1px solid var(--hair); }}
   .menu-list a:first-child {{ border-top:0; }}
   .menu-list a::before {{ display:none; }}
@@ -1096,8 +1099,10 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
                              max-height:calc(100vh - var(--headnow)); overflow-y:auto; border-bottom:1px solid var(--ink); }}
   .js .mast.hs-on + .gnav .gnav-links {{ display:none; }}
   .js .hs-open {{ display:inline-flex; }}
-  .hs-open {{ align-items:center; width:clamp(76px, 26vw, 150px); height:36px; padding:0 12px; font-family:var(--sans); font-size:13.5px;
-              letter-spacing:.04em; color:var(--mute); border-color:var(--ink2); }}   /* looks like the search box it opens */
+  .hs-open {{ align-items:center; height:40px; padding:0 10px; font-family:var(--sans); font-size:13px; font-weight:500;
+              letter-spacing:.06em; color:#fff; border:0; border-radius:3px; }}   /* the mark and the word, white on the bar */
+  .hs-open .ic {{ margin-right:6px; }}
+  .hs-open[aria-expanded="true"] {{ background:rgba(255,255,255,.14); color:#fff; }}
   .hs-pop {{ position:static; width:auto; padding:16px; }}   /* opens right under the box */
   .cards.md {{ grid-template-columns:minmax(0,1fr); gap:60px; }}
   .cards.sm {{ grid-template-columns:repeat(2, minmax(0,1fr)); gap:48px 16px; }}
@@ -1657,9 +1662,9 @@ def global_nav(up: str, current: str | None = None, find: str = "") -> str:
 def masthead(depth: int, right: str = "", search: bool = True, current: str | None = None) -> str:
     """The wordmark row inside the page width, MENU (a phone only) on the right; the double rule under it spans the
     whole window; under the rule the global navigation with the search and Read Later (global_nav, search_form). The
-    whole header stays at the top of the window while the page scrolls. On a phone the header is one short row (the
-    owner's memo, 2026-10-22): the logo and FoldFeed on the left; on the right a box that reads 探す, which opens the
-    search under the header, and a small MENU button. "Read Later N" shows once the reader has saved an article."""
+    whole header stays at the top of the window while the page scrolls. On a phone the header is one slim ink bar (the
+    owner, 2026-10-24): the logo and FoldFeed in white on the left; on the right 探す (opens the search under the bar)
+    and MENU, a 朱 square. "Read Later N" shows once the reader has saved an article."""
     up = "../" * depth
     find = search_form(up) if search else ""
     open_btn = f'<button class="hs-open" type="button" aria-label="記事を探す">{MAGNIFIER}探す</button>' if search else ""
