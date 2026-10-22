@@ -322,6 +322,7 @@ body {{ --headnow:var(--navh); }}
 .menu summary {{ list-style:none; display:flex; align-items:center; gap:14px; cursor:pointer; user-select:none;
                  font-family:var(--mono); font-size:13px; letter-spacing:.16em; color:var(--ink); }}
 .menu summary::-webkit-details-marker {{ display:none; }}
+.menu-dim {{ display:none; }}   /* a phone: the page dims behind the open MENU; a tap on it closes the MENU */
 .menu .mb {{ width:50px; height:50px; border-radius:50%; background:var(--ink); display:flex; flex-direction:column;
              align-items:center; justify-content:center; gap:5px; }}
 .menu .mb {{ transition:background .2s, transform .25s cubic-bezier(.2,.8,.2,1); }}
@@ -366,6 +367,7 @@ html, body {{ overflow-x:clip; }}   /* a guard: nothing may widen the page sidew
 .lead-go {{ display:inline-flex; align-items:center; gap:12px; margin-top:34px; padding:14px 24px 14px 20px;
             background:var(--ink); color:#fff; font-family:var(--mono); font-size:14.5px; letter-spacing:.06em; }}
 .lead-go .tri {{ font-size:13px; }}
+.lead-top, .lead-edge, .lead-line {{ display:none; }}   /* a phone's first screen only */
 .lead-upd {{ margin:8px 0 0; text-align:center; font-family:var(--mono); font-size:11.5px; letter-spacing:.06em; color:var(--mute); }}
 .lead-upd span {{ margin-left:12px; }}
 .lead-text .lead-upd {{ margin-top:22px; text-align:left; }}
@@ -484,10 +486,22 @@ html, body {{ overflow-x:clip; }}   /* a guard: nothing may widen the page sidew
                     to {{ opacity:1; transform:translate3d(1.5%, 0, 0) rotate(-3deg); }} }}
 @keyframes drift {{ from {{ transform:translate3d(1.5%, 0, 0) rotate(-3deg); }}
                   to {{ transform:translate3d(-2.5%, 2%, 0) rotate(3.5deg) scale(1.06); }} }}
-@media (max-width:860px) {{   /* the phone's first-screen structure: it swings in, then sways (never a full turn); the
-                                  page's scroll turns it a little more (LEAD_SCRIPT) */
+@keyframes slidein {{ from {{ opacity:0; transform:translateX(-18px); }} to {{ opacity:1; transform:none; }} }}
+@keyframes pop {{ 0% {{ opacity:0; transform:scale(.4); }} 70% {{ opacity:1; transform:scale(1.08); }} 100% {{ opacity:1; transform:none; }} }}
+@keyframes draw {{ from {{ stroke-dashoffset:1; }} to {{ stroke-dashoffset:0; }} }}
+@keyframes bandup {{ from {{ transform:translateY(46px); }} to {{ transform:none; }} }}
+@media (max-width:860px) {{   /* the phone's first screen comes in as a sequence; the structure then sways (never a full
+                                  turn) and the page's scroll turns it a little more (LEAD_SCRIPT) */
+  .anim .lead-mark {{ animation:slidein .7s cubic-bezier(.2,.7,.2,1) .1s both; }}
+  .anim .lead-badge {{ animation:pop .55s cubic-bezier(.2,.8,.2,1) .45s both; }}
   .anim .lead-art .fig {{ animation:comein 1.6s cubic-bezier(.2,.7,.2,1) .3s both, drift 6.5s ease-in-out 1.9s infinite alternate;
                           will-change:transform; }}
+  .anim .lead-band {{ animation:bandup .9s cubic-bezier(.2,.7,.2,1) .45s both; }}
+  .anim .lead-h span {{ animation-delay:calc(var(--i) * 130ms + 650ms); }}
+  .anim .lead-edge .sw {{ stroke-dasharray:1; animation:draw 1.1s cubic-bezier(.6,0,.2,1) 1.1s both; }}
+  .anim .lead-edge circle {{ transform-box:fill-box; transform-origin:center; animation:pop .45s cubic-bezier(.2,.8,.2,1) 2.1s both; }}
+  .anim .lead-line {{ animation:grow 1s cubic-bezier(.6,0,.2,1) 1.5s both; }}
+  .anim .lead-line::after {{ animation:pop .45s cubic-bezier(.2,.8,.2,1) 2.5s both; }}
 }}
 .lead-wait {{ animation:pulse 1.6s ease-in-out infinite; }}
 .v3d.loading .v3d-canvas, .v3d.on .v3d-canvas {{ transition:opacity .8s ease; }}
@@ -765,8 +779,9 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
 .flow-bar i.h {{ background:{CHART_HOT}; }}
 .flow-t {{ display:block; margin-top:12px; font-size:13.5px; line-height:1.6; color:var(--desc); }}
 .flow-parts {{ display:block; margin-top:8px; font-size:12.5px; line-height:1.5; color:var(--desc); }}
-.flow-parts > span {{ display:flex; align-items:center; white-space:nowrap; }}
-.flow-parts > span + span {{ margin-top:3px; }}
+.flow-parts > a {{ display:flex; align-items:center; width:max-content; white-space:nowrap; color:var(--desc); text-decoration:none; }}
+.flow-parts > a + a {{ margin-top:3px; }}
+.flow-parts > a:hover {{ color:var(--acc-ink); }}
 .flow-parts b {{ margin-left:8px; font-family:var(--mono); color:var(--ink); }}
 .flow figcaption {{ margin-top:26px; font-size:13.5px; }}
 .flow figcaption a {{ color:var(--ink2); text-decoration:underline; text-decoration-color:var(--hair); text-underline-offset:4px; }}
@@ -992,23 +1007,37 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
   .word img {{ width:30px; height:30px; }}
   .word .name {{ font-size:24px; }}
   .tag {{ display:none; }}
-  /* a phone's first screen (the owner's memo, 2026-10-22): what the site is, large, and the button to today's
-     structures; behind the button, large and past the screen's edge, Picked up Today's Structure, swaying slowly.
-     The breakdown and the way to About come after it */
+  /* a phone's first screen, after the page the owner sent as a reference (2026-10-24): on top the mark and the
+     issue's badge; the structure large and past the right edge; over its lower part a 藍 band with a curved top and
+     the introduction in bold white, a 朱 line running down to the band's edge, a white line under the words. It comes
+     in as a sequence (the mark, the badge, the structure, the band and its words, the lines). The breakdown is in
+     Concept on a phone; the way to About is not needed (Concept follows) */
   .lead {{ position:relative; overflow:clip; }}
-  .lead-grid {{ min-height:calc(100svh - var(--head)); padding-top:26px; padding-bottom:28px; gap:0; align-content:start; }}
+  .lead-grid {{ min-height:0; padding-top:18px; padding-bottom:0; gap:0; align-content:start; }}
   .lead-text {{ display:contents; }}
-  .lead-h, .lead-parts, .lead-about, .lead-text .lead-upd {{ position:relative; z-index:1; }}
-  .lead-h {{ order:2; font-size:clamp(22px, 6.4vw, 30px); line-height:1.5; letter-spacing:.01em; }}
+  .lead-top {{ order:1; position:relative; z-index:2; display:flex; justify-content:space-between; align-items:flex-start; gap:16px; }}
+  .lead-mark {{ display:block; max-width:64%; color:var(--ink); text-decoration:none; }}
+  .lead-mark:hover {{ text-decoration:none; }}
+  .lead-mark .k {{ display:block; font-family:var(--mono); font-size:11px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--acc-ink); }}
+  .lead-mark b {{ display:block; margin-top:5px; font-family:var(--latin); font-size:31px; line-height:1.02; letter-spacing:-.01em; }}
+  .lead-mark .t {{ display:block; margin-top:9px; font-size:13px; line-height:1.5; color:var(--desc); }}
+  .lead-badge {{ flex:none; margin:0; width:64px; padding:9px 0 8px; background:var(--acc); color:#fff; text-align:center; line-height:1; }}
+  .lead-badge span {{ display:block; font-family:var(--mono); font-size:9.5px; letter-spacing:.12em; text-transform:uppercase; }}
+  .lead-badge b {{ display:block; margin:4px 0 5px; font-family:var(--latin); font-size:28px; font-weight:700; }}
+  .lead-art {{ order:2; position:relative; z-index:0; margin:-72px calc(-1 * var(--pad) - 40vw) 0 calc(-1 * var(--pad) + 2vw);
+               pointer-events:none; }}
+  .lead-art .lead-cap, .lead-art .lead-upd, .lead-text .lead-upd {{ display:none; }}
+  .lead-band {{ order:3; position:relative; z-index:1; margin:-132px calc(-1 * var(--pad)) 0; padding:22px var(--pad) 46px;
+                background:{CHART_NEW}; color:#fff; }}
+  .lead-edge {{ display:block; position:absolute; left:0; bottom:calc(100% - 1px); width:100%; height:80px; overflow:visible; }}
+  .lead-edge .sw {{ fill:none; stroke:var(--acc); stroke-width:4; stroke-linecap:round; }}
+  .lead-edge circle {{ fill:var(--acc); }}
+  .lead-h {{ font-family:var(--sans); font-weight:700; color:#fff; font-size:clamp(22px, 6.6vw, 30px); line-height:1.42; letter-spacing:.02em; }}
   .lead-h span {{ white-space:normal; word-break:keep-all; }}
   .lead-h .sp {{ display:inline; }}
-  .lead .lead-btns {{ display:none; }}   /* a phone: today's structures are right below when scrolled (the owner, 2026-10-23) */
-  .lead-art {{ order:4; position:relative; z-index:0; margin:-6px calc(-1 * var(--pad) - 22vw) 0 calc(-1 * var(--pad) - 6vw);
-               pointer-events:none; }}
-  .lead-art .lead-cap {{ pointer-events:auto; }}
-  .lead-text .lead-upd {{ order:7; }}
-  .lead-parts {{ order:5; margin-top:6px; }}
-  .lead-about {{ order:6; justify-self:start; }}
+  .lead-line {{ display:block; position:relative; height:3px; margin:26px 16px 0 0; border-radius:2px; background:#fff; transform-origin:left; }}
+  .lead-line::after {{ content:""; position:absolute; right:-16px; top:50%; width:10px; height:10px; margin-top:-5px; border-radius:50%; background:#fff; }}
+  .lead .lead-btns, .lead-parts, .lead-about {{ display:none; }}
   .ix-h, .part h2 {{ flex-wrap:wrap; row-gap:4px; }}
   .ixm, .ix-h .ixm {{ font-size:12px; }}
   .ixm b, .ix-h .ixm b {{ margin-left:10px; }}
@@ -1027,8 +1056,6 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
   .art .v3d-view, .art .cmpfig, .pickup .cfig {{ margin-inline:calc(6px - var(--pad)); }}   /* labels keep off the very edge */
   .pickup .cno, .cards.md .cno {{ left:var(--pad); }}
   .lead-art .v3d-view {{ max-height:none; }}
-  .lead-cap {{ justify-content:flex-start; margin:-6px 0 0; padding:0 calc(var(--pad) + 22vw) 0 calc(var(--pad) + 6vw); }}
-  .lead-art .lead-upd {{ text-align:left; padding:0 calc(var(--pad) + 22vw) 0 calc(var(--pad) + 6vw); }}
   .today {{ padding-top:var(--sec); }}
   .ix-h .label, .part h2 {{ font-size:23px; }}
   .today-4 div {{ grid-template-columns:minmax(0,1fr); gap:0; padding:6px 0; }}
@@ -1059,10 +1086,23 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
   .menu-list a:hover, .menu-list a:focus-visible {{ color:var(--acc-ink); }}
   .menu-list a:hover small, .menu-list a:focus-visible small {{ color:var(--mute); }}
   .menu-list small {{ font-size:12px; margin-top:3px; }}
-  .js .menu-list {{ opacity:1; transform:translateY(-100%); transition:transform .45s cubic-bezier(.2,.8,.2,1); }}
+  .js .menu-list {{ opacity:1; transform:none; clip-path:inset(0 0 100% 0); transition:clip-path .55s cubic-bezier(.65,0,.25,1); }}
+  .js .menu.on .menu-list {{ clip-path:inset(0 0 0 0); }}
+  .menu-dim {{ display:block; position:fixed; left:0; right:0; top:var(--head); bottom:0; z-index:-2; background:rgba(27,38,56,.38);
+               opacity:0; pointer-events:none; transition:opacity .45s ease; }}
+  .menu.on .menu-dim {{ opacity:1; pointer-events:auto; }}
   .menu:not([open]) .menu-list {{ display:none; }}   /* a closed <details> would hold the panel in its own small box */
-  .js .menu.on .menu-list {{ transform:none; }}
-  .js .menu-list a {{ transform:translateY(-10px); }}
+  .js .menu-list a {{ transform:translateY(-14px); transition:opacity .35s ease, transform .5s cubic-bezier(.2,.8,.2,1), color .2s; }}
+  .js .menu.on .menu-list a:nth-child(1) {{ transition-delay:.12s; }}
+  .js .menu.on .menu-list a:nth-child(2) {{ transition-delay:.16s; }}
+  .js .menu.on .menu-list a:nth-child(3) {{ transition-delay:.2s; }}
+  .js .menu.on .menu-list a:nth-child(4) {{ transition-delay:.24s; }}
+  .js .menu.on .menu-list a:nth-child(5) {{ transition-delay:.28s; }}
+  .js .menu.on .menu-list a:nth-child(6) {{ transition-delay:.32s; }}
+  .js .menu.on .menu-list a:nth-child(7) {{ transition-delay:.36s; }}
+  /* a tap answers: buttons and the menu's places sink a little under the finger */
+  .reads a, .ix-all, .hs-open, .later, .mi-th a {{ transition-property:transform, color, background-color, opacity; }}
+  .reads a:active, .ix-all:active, .hs-open:active, .later:active, .mi-th a:active {{ transform:scale(.97); }}
   .js .gnav {{ display:none; }}
   .gnav {{ position:static; }}
   .gnav-in {{ flex-wrap:wrap; gap:10px; }}
@@ -1234,7 +1274,7 @@ def menu_html(up: str) -> str:
     links = "".join(f'<a href="{h}">{esc(t)}{"<b class=rl-n></b>" if h.endswith("later.html") else ""}'
                     + (f'<small>{esc(note)}</small>' if note else "") + '</a>' for t, h, note in items)
     return (f'<details class="menu"><summary><span class="mt">MENU</span>'
-            f'<span class="mb" aria-hidden="true"><i></i><i></i><i></i></span></summary>'
+            f'<span class="mb" aria-hidden="true"><i></i><i></i><i></i></span><span class="menu-dim" aria-hidden="true"></span></summary>'
             f'<nav class="menu-list" aria-label="サイト内のページ">{links}</nav></details>')
 
 
@@ -1322,7 +1362,7 @@ MENU_SCRIPT = r"""
         if (d.classList.contains('on')) return;
         d.open = false;
         window.dispatchEvent(new Event('scroll'));   // past the top again: only MENU
-      }, 460);
+      }, 560);
     }
   }
   [].forEach.call(document.querySelectorAll('details.menu'), function (d) {
@@ -2056,11 +2096,13 @@ def contents_html(picks: list, date: str, root: Path, fig_base: str, featured: s
             f'<ol class="cards md toc-cards">{cards}</ol>') if picks else ""
 
 
-def concept_html(meta: dict, picks: list, href: str) -> str:
+def concept_html(meta: dict, picks: list, href: str, featured: str | None = None) -> str:
     """Concept, right under the front page's first screen (the owner, 2026-10-23): what FoldFeed is, in its own words
     (ABOUT's first passage) and as a figure of the latest issue's day in numbers: the open-access papers the database
     took in that day, the ones read whole as structural biology, the ones written up (by part). The first number is
-    left out when the issue came from PMC's data (Europe PMC was not counting)."""
+    left out when the issue came from PMC's data (Europe PMC was not counting). Each part under the last number is a
+    way to that part of the issue page (on a phone the first screen has no breakdown: this is it, 2026-10-24)."""
+    shown = {k for k, items in page_groups(picks, featured) if items}
     _, m, d, _ = date_parts(meta["index_date"][:10])
     _, im, idd, _ = date_parts(meta["issue_date"])
     fresh = (meta.get("health") or {}).get("fresh_oa") if meta.get("source") != pmcoa.SOURCE else None
@@ -2075,8 +2117,9 @@ def concept_html(meta: dict, picks: list, href: str) -> str:
         w = math.log10(n + 1) / top if top else 1
         last = i == len(steps) - 1 and sections
         bar = ("".join(f'<i class="{PART_CLS[k]}" style="flex:{c}"></i>' for k, c in sections) if last else "<i></i>")
-        legend = ('<span class="flow-parts kl">' + "".join(f'<span><i class="sw-{PART_CLS[k]}"></i>{PARTS[k][0]}<b>{c}</b></span>'
-                                                        for k, c in sections) + '</span>' if last else "")
+        legend = ('<span class="flow-parts kl">' + "".join(f'<a href="{href}#{k if k in shown else "pick"}"><i class="sw-{PART_CLS[k]}"></i>'
+                                                           f'{PARTS[k][0]}<b>{c}</b></a>' for k, c in sections)
+                  + '</span>' if last else "")
         items += (f'<li><b data-count="{n}">{n:,}</b><span class="flow-bar" style="--w:{w:.3f}" aria-hidden="true">{bar}</span>'
                   f'<span class="flow-t">{"<br>".join(esc(x) for x in t.split("|"))}</span>{legend}</li>')
     text = next(v for k, v in ABOUT if k == "Concept")
@@ -2149,6 +2192,18 @@ def lead_html(feature: dict | None, picks: list, date: str, root: Path, fig_base
     go += (f'<p class="lead-parts kl"><span class="t">今日の内訳</span>{parts}</p>' if parts else "")
     go += '<a class="lead-about" href="#concept">はじめての方へ：FoldFeed について<span aria-hidden="true">▽</span></a>'
     hit = feature_of(feature, picks)
+    # a phone (the owner's reference, 2026-10-24): on top the mark (Picked up / Today's Structure / its target) and
+    # the issue's badge (number and date, in 朱); the structure large behind; then the introduction in a 藍 band with a
+    # curved top, a 朱 line with a dot running down to it, and a white line with a dot under the words
+    badge = (f'<p class="lead-badge" aria-label="{y}年{m}月{d}日更新、Issue No. {number}"><span>Issue</span><b>{number}</b>'
+             f'<span>{m}.{d:02d}</span></p>') if number else ""
+    mark = (f'<a class="lead-mark" href="#today"><span class="k">Picked up</span><b>Today’s<br>Structure</b>'
+            f'<span class="t">{esc(hit[2]["target_label"])}</span></a>') if hit else ""
+    top = f'<div class="lead-top">{mark}{badge}</div>' if mark or badge else ""
+    edge = (f'<svg class="lead-edge" viewBox="0 0 400 80" preserveAspectRatio="none" aria-hidden="true" focusable="false">'
+            f'<path class="bd" d="M0,66 C120,76 260,70 400,30 L400,81 L0,81 Z" fill="{CHART_NEW}"/>'
+            f'<path class="sw" d="M-6,26 C86,34 168,50 236,62" pathLength="1"/><circle cx="236" cy="62" r="4.6"/></svg>')
+    band = f'<div class="lead-band">{edge}<h1 class="lead-h">{lines}</h1><i class="lead-line" aria-hidden="true"></i></div>'
     art_html = ""
     if hit and (root / date / "figures" / f"{hit[1]['pmcid']}-hero.svg").exists():
         pm, pk = hit[1]["pmcid"], hit[2]
@@ -2166,8 +2221,8 @@ def lead_html(feature: dict | None, picks: list, date: str, root: Path, fig_base
                         f'<div class="v3d-canvas"></div><p class="lead-wait" aria-live="polite">読み込み中</p></div></div>{cap}{updated}</div>')
         else:
             art_html = f'<div class="lead-art"><a class="lead-pic" href="#today" tabindex="-1">{img}</a>{cap}{updated}</div>'
-    return (f'<section class="lead"><div class="wrap lead-grid"><div class="lead-text">'
-            f'<h1 class="lead-h">{lines}</h1>{go}{"" if art_html else updated}</div>{art_html}</div></section>')
+    return (f'<section class="lead"><div class="wrap lead-grid">{top}<div class="lead-text">'
+            f'{band}{go}{"" if art_html else updated}</div>{art_html}</div></section>')
 
 
 LEAD_SCRIPT = r"""
@@ -2750,7 +2805,7 @@ def home(issues: list[str]) -> str:
     feature = load_feature(latest, ISSUES_DIR, picks)
     lib = library(issues)
     meta = load_issue(latest, ISSUES_DIR)[0]
-    main = [concept_html(meta, picks, href),
+    main = [concept_html(meta, picks, href, feature and feature["pmcid"]),
             today_html(feature, picks, latest, ISSUES_DIR, "figures", href),
             more_html(picks, latest, ISSUES_DIR, "figures", href, feature and feature["pmcid"])]
     if past:
