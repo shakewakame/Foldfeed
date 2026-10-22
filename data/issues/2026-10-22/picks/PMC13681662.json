@@ -1,0 +1,151 @@
+{
+ "pmcid": "PMC13681662",
+ "rank": 1,
+ "headline": "VZVのカプシドは、ジスルフィド結合で安定化している",
+ "subhead": "B・Cカプシドをクライオ電顕で3.1 Åまで解き、ポータル頂点の違いも調べた",
+ "target_label": "VZV カプシド",
+ "target_en": "VZV B- and C-capsids (varicella-zoster virus)",
+ "summary": {
+  "question": "VZV カプシドはサブユニット間の結合が緩いのに熱に強く、その理由は分かっていなかった。",
+  "approach": "穏やかな条件で精製した B・C カプシドをクライオ電顕で調べ、ブロック単位の再構成と分類でポータル頂点も解いた。",
+  "result": "カプソメアは 3.1 Å、ポータル頂点は B で 4.8 Å・C で 4.5 Å。隣り合うヘキソン間に、ジスルフィド結合が見つかった。",
+  "learned": "ペントン周辺の結合は弱いが、ヘキソン間のジスルフィド結合などが高い熱安定性の理由とみられる。",
+  "open": "カプシドがポータルを核膜孔にどう結びつけるかは、まだ十分に分かっていない。",
+  "evidence": {
+   "question": [
+    {
+     "quote": "there is no clear understanding of the reasons for the VZV capsid's high thermal stability despite having relatively loose inter-subunit interactions",
+     "section": "Introduction"
+    }
+   ],
+   "approach": [
+    {
+     "quote": "we have determined the more precise detailed structures of the varicella-zoster virus (VZV) B- and C-capsid in icosahedral symmetry using a combination of block-based reconstruction and symmetry relaxation strategies.",
+     "section": "Abstract"
+    }
+   ],
+   "result": [
+    {
+     "quote": "Subsequent refinements with 5-fold symmetry yielded reconstructions with resolutions of 4.8 Å and 4.5 Å for B- and C-capsid portal vertexes, respectively",
+     "section": "Results"
+    },
+    {
+     "quote": "form a disulfide bond to stabilize the assembly unit triangle reported in HSV2 assembly process",
+     "section": "Results"
+    }
+   ],
+   "learned": [
+    {
+     "quote": "A detailed analysis of our structures of VZV reveals the plausible reason underlying the stability of the capsid.",
+     "section": "Results"
+    }
+   ],
+   "open": [
+    {
+     "quote": "how does the capsid recognize and dock its portal to NPC is not fully understood.",
+     "section": "Discussion"
+    }
+   ]
+  }
+ },
+ "categories": [
+  "pathogen"
+ ],
+ "highlights": [
+  {
+   "tag": "機構の解明",
+   "text": "ヘキソンの N-lasso の Cys と、隣のヘキソンの Cys がジスルフィド結合を作っていた。従来「非共有結合の鎖かたびら」とされていた部分である。",
+   "evidence": [
+    {
+     "quote": "However, the inter-hexon interaction is not a non-covalent chainmail as reported previously.",
+     "section": "Results"
+    },
+    {
+     "quote": "form a disulfide bond to stabilize the assembly unit triangle reported in HSV2 assembly process",
+     "section": "Results"
+    }
+   ]
+  },
+  {
+   "tag": "機構の解明",
+   "text": "ペントン周辺では二量体化の部分が無秩序になり、結合が弱まる。一方で、カプシドの床下にある疎水性のくぼみ3か所が Tri1 の N-archer で埋められ、HSV2 より 675 Å2 広い面積が埋まっている。",
+   "evidence": [
+    {
+     "quote": "the disorder of dimerization from Pen-MCP and P6 in VZV capsid weakens the hexon–penton interaction",
+     "section": "Results"
+    },
+    {
+     "quote": "three hydrophobic wounds under the capsid floor are found to be compensated with hydrophobic patches made of the N-archers of Tri1s",
+     "section": "Results"
+    }
+   ]
+  },
+  {
+   "tag": "機構の解明",
+   "text": "C-カプシドのポータル頂点では、テグメント複合体 PVAT が5つの成分でそろっていた。B-カプシドの PVAT は不完全だった。",
+   "evidence": [
+    {
+     "quote": "The PVAT of VZV C-capsid is composed of 5 components, including one copy of capsid vertex component 1 (CVC1)",
+     "section": "Results"
+    },
+    {
+     "quote": "Interestingly, compared to C-capsid PVAT, PVAT of B-capsid shows an incomplete structure.",
+     "section": "Results"
+    }
+   ]
+  }
+ ],
+ "lab_notes": {
+  "expression": "ヒト二倍体の SV-1 細胞に VZV を感染させて増殖。",
+  "construct": null,
+  "purification": "0.05% NP-40 で処理し、スクロース密度勾配で精製。B・C カプシドは完全には分けられなかった。",
+  "sample_prep": "3 μL を C-flat CF-2/1–3C に載せ、Vitrobot で 6 秒ブロットして液体エタンで凍結。",
+  "data_collection": "Titan Krios（300 kV）と K2 検出器。14,431 枚を記録し、RELION でブロック単位の再構成。",
+  "evidence": [
+   {
+    "quote": "SV-1 cells (human diploid cells) were infected with the VZV seed stock",
+    "section": "Methods"
+   },
+   {
+    "quote": "A discontinuous 20% and 60% sucrose gradient (w/v in PBS) was used to further purify the capsids.",
+    "section": "Methods"
+   },
+   {
+    "quote": "B- and C- capsids could not be completely separated under the mild conditions of the purification steps",
+    "section": "Results"
+   },
+   {
+    "quote": "Grids were blotted for 6 s with no blot force in 100% relative humidity for plunge-freezing (Vitrobot; FEI) in liquid ethane.",
+    "section": "Methods"
+   },
+   {
+    "quote": "Cryo-EM data sets were collected at 300 kV with a Titan Krios microscope (FEI).",
+    "section": "Methods"
+   },
+   {
+    "quote": "A total of 14,431 micrographs were recorded.",
+    "section": "Methods"
+   }
+  ]
+ },
+ "keywords": [
+  "VZV",
+  "カプシド",
+  "ポータル",
+  "水痘・帯状疱疹ウイルス"
+ ],
+ "editor_notes": "PDB は 8 件（カプソメアごとのブロック再構成）。図は既定の最高分解能 8X9Z。本文の Cys 番号は C46（本文）と C45（図の凡例）で食い違うため、残基番号は書いていない。本文は 'purified ... p-Oka' と 'vOka' が混在するため株名も書いていない。Discussion 末尾に VSV と読める誤記があるが採用していない。legend_labels は複合体のため render 後に確認してほしい。",
+ "legend_labels": [
+  "MCP（主要カプシド）",
+  "MCP（主要カプシド）",
+  "MCP（主要カプシド）",
+  "SCP（小カプシド）",
+  "CVC1（頂点）",
+  "CVC2（頂点）",
+  "CVC2（頂点）",
+  "デネディラーゼ（外被）",
+  "Tri2A（三量体）",
+  "Tri2A（三量体）",
+  "Tri1（三量体）"
+ ]
+}

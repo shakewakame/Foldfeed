@@ -1,0 +1,93 @@
+{
+ "pdb_id": "8X9Z",
+ "view": {
+  "target": [
+   211.43,
+   180.54,
+   138.49
+  ],
+  "dir": [
+   -0.3027,
+   -0.6613,
+   0.6863
+  ],
+  "up": [
+   -0.1135,
+   0.74,
+   0.6629
+  ],
+  "half": [
+   132.6,
+   108.1
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "MCP（主要カプシド）",
+   "desc": "Major capsid protein",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "MCP（主要カプシド）",
+   "desc": "Major capsid protein",
+   "entity": "2"
+  },
+  {
+   "color": "#5F9296",
+   "label": "MCP（主要カプシド）",
+   "desc": "Major capsid protein",
+   "entity": "3"
+  },
+  {
+   "color": "#A5707A",
+   "label": "SCP（小カプシド）",
+   "desc": "Small capsomere-interacting protein",
+   "entity": "4"
+  },
+  {
+   "color": "#7C8AA8",
+   "label": "CVC1（頂点）",
+   "desc": "CVC1",
+   "entity": "5"
+  },
+  {
+   "color": "#8A9A5B",
+   "label": "CVC2（頂点）",
+   "desc": "Capsid vertex component 2",
+   "entity": "6"
+  },
+  {
+   "color": "#9C7B55",
+   "label": "CVC2（頂点）",
+   "desc": "Capsid vertex component 2",
+   "entity": "7"
+  },
+  {
+   "color": "#6E6E8E",
+   "label": "デネディラーゼ（外被）",
+   "desc": "Large tegument protein deneddylase",
+   "entity": "8"
+  },
+  {
+   "color": "#2a3f62",
+   "label": "Tri2A（三量体）",
+   "desc": "Tri2A",
+   "entity": "9"
+  },
+  {
+   "color": "#8d7034",
+   "label": "Tri2A（三量体）",
+   "desc": "Tri2A",
+   "entity": "10"
+  },
+  {
+   "color": "#426669",
+   "label": "Tri1（三量体）",
+   "desc": "Tri1",
+   "entity": "11"
+  }
+ ],
+ "ligands": []
+}

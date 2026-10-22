@@ -1,0 +1,156 @@
+{
+ "pmcid": "PMC13681568",
+ "rank": 10,
+ "headline": "RV11抗体は、RSVのFタンパク質の2つの抗原部位にまたがる",
+ "subhead": "融合前のFと抗体scFvの結晶構造から、S443P耐性変異のしくみも説明できた",
+ "target_label": "RSV Fタンパク質＋RV11",
+ "target_en": "RSV prefusion F glycoprotein–RV11 scFv",
+ "summary": {
+  "question": "RSV の予防抗体はより強く効き、保存された部位を狙う新世代のものが求められている。",
+  "approach": "回復した小児の記憶 B 細胞から抗体を単離し、融合前 F との複合体を X 線結晶構造解析した。",
+  "result": "RV11 は融合前 F だけに結合し、3 分子の scFv が F 三量体の腰に付く。分解能は 2.9 Å だった。",
+  "learned": "RV11 は部位 IV と V にまたがる保存されたエピトープを認識する。S443 の水素結合が失われると耐性になる。",
+  "open": "マウスでの防御効果と耐性変異の探索は、RSV A 亜型でしか調べていない。",
+  "evidence": {
+   "question": [
+    {
+     "quote": "A new generation of RSV mAbs with higher specificity to pre-F conformation with higher potency and extended half-life are sought.",
+     "section": "Discussion"
+    }
+   ],
+   "approach": [
+    {
+     "quote": "Here we report the isolation of two neutralizing mAbs against RSV from convalescent children by prefusion form of fusion (F) glycoprotein as bait.",
+     "section": "Abstract"
+    },
+    {
+     "quote": "The crystal structure of RV11 bound to pre-F was determined at a resolution of 2.9 Å (Table S1).",
+     "section": "Results"
+    }
+   ],
+   "result": [
+    {
+     "quote": "In contrast, RV11 bound exclusively to the pre-F with an affinity of 8.4 nM (Figure 1A).",
+     "section": "Results"
+    },
+    {
+     "quote": "Overall, three RV11 scFv engage around the waist of an RSV pre-F trimer across two adjacent F protomers (Figure 4A).",
+     "section": "Results"
+    }
+   ],
+   "learned": [
+    {
+     "quote": "Crystal structure showed the RV11 bound to a conserved prefusion epitope across the antigenic sites IV and V of the F glycoprotein.",
+     "section": "Abstract"
+    },
+    {
+     "quote": "A proline mutation at residue 443 is expected to lose these H-bonds, which explains why the resistant mutants with S443P in F protein evaded neutralization by RV11 as described above.",
+     "section": "Results"
+    }
+   ],
+   "open": [
+    {
+     "quote": "First, the in vivo protection of RV11 was only tested for RSV A subtype.",
+     "section": "Discussion"
+    },
+    {
+     "quote": "Secondly, identification of variants resisted to RV11 neutralization was not performed for RSV B subtype strain.",
+     "section": "Discussion"
+    }
+   ]
+  }
+ },
+ "categories": [
+  "immune",
+  "pathogen"
+ ],
+ "topics": [
+  "antibody"
+ ],
+ "highlights": [
+  {
+   "tag": "創薬・モダリティ",
+   "text": "RV11 は A・B 両亜型を中和し、パリビズマブより臨床分離株で 7.1 倍（A）と 58.0 倍（B）強かった。マウスでも 6.3 倍の効力を示した。",
+   "evidence": [
+    {
+     "quote": "Compared to palivizumab, RV11 was 7.1- and 58.0-fold more potent in neutralizing these RSV A and B clinical strains (Figure 1D and 1E).",
+     "section": "Results"
+    },
+    {
+     "quote": "The EC90 value of RV11 was 1.5 μg/mL (serum level of mAb), which is 6.3-fold more efficacious than palivizumab (9.5 μg/mL)",
+     "section": "Results"
+    }
+   ]
+  },
+  {
+   "tag": "新しい結合部位",
+   "text": "重鎖は一方の F 分子の部位 IV に、軽鎖は隣の F 分子の部位 V に触れる。隣り合う 2 分子を架橋して、融合前から融合後への構造変化を妨げるのではと著者は考える。",
+   "evidence": [
+    {
+     "quote": "RV11 recognizes epitope at the junction region of pre-F, with its VH contacting site IV residues from one protomer and its VL mainly contacting site V residues from the neighboring protomer",
+     "section": "Results"
+    },
+    {
+     "quote": "The neutralization mechanism of RV11 may derive from its cross-linking of two protomers that inhibit conformational change required for virus-host membrane fusion during pre-to post–F transition.",
+     "section": "Discussion"
+    }
+   ]
+  },
+  {
+   "tag": "機構の解明",
+   "text": "逃避変異体はいずれも S443P を持つ。S443 は RV11 の CDR3 の D112・Y114 と水素結合を作る残基で、変異でこれが失われると説明される。S443 は報告された配列で 99.0% 以上保存されている。",
+   "evidence": [
+    {
+     "quote": "Notably, residue S443 from β19 of F glycoprotein forms two hydrogen bonds with residues D112 and Y114 from CDR3 of RV11 via its hydroxyl oxygen",
+     "section": "Results"
+    },
+    {
+     "quote": "Of note, the RV11-escape S443P mutation is not found, and the residue S443 is highly conserved (>99.0%) until May 2023.",
+     "section": "Results"
+    }
+   ]
+  }
+ ],
+ "lab_notes": {
+  "expression": "融合前 F は HEK293T で一過性発現。RV11 scFv は大腸菌の封入体から巻き戻した。",
+  "construct": "sc9-10 DS-Cav1（融合ペプチドを GS リンカーに置換）と RV11 scFv（VL-(GGGGS)4-VH）。",
+  "purification": "ニッケル親和性とゲルろ過。複合体は 1:2 で混ぜてゲルろ過した。",
+  "sample_prep": "10 または 5 mg/mL を 18℃ のシッティングドロップで結晶化した。",
+  "data_collection": "SSRF BL19U1 で測定。5K6C を探索モデルに分子置換で解いた。",
+  "evidence": [
+   {
+    "quote": "RSV F proteins were expressed by transient transfection of HEK293T cells.",
+    "section": "Methods"
+   },
+   {
+    "quote": "The RV11 scFv form was constructed as VL-(GGGGS)4-VH form and cloned into the pET21a expression vector",
+    "section": "Methods"
+   },
+   {
+    "quote": "For the RSV-pre-F/RV11 complex, RSV-pre-F was mixed with RV11-scFv at a stoichiometry of 1:2 and incubated on ice for 2 h.",
+    "section": "Methods"
+   },
+   {
+    "quote": "Diffraction-quality crystals of RSV-pre-F/RV11-scFv were obtained at 18 °C",
+    "section": "Methods"
+   },
+   {
+    "quote": "The RSV-pre-F/RV11-scFv dataset was collected at BL19U1.",
+    "section": "Methods"
+   }
+  ]
+ },
+ "keywords": [
+  "RSV",
+  "Fタンパク質",
+  "中和抗体",
+  "RV11",
+  "S443P"
+ ],
+ "legend_labels": [
+  "RSV F（融合タンパク質）",
+  "RV11 重鎖（抗体）",
+  "RV11 軽鎖（抗体）"
+ ],
+ "editor_notes": "PDB 8WSQ に論文の引用情報がなく、データ可用性の記述で対応づけた。凡例の順序は render 後に確認。"
+}

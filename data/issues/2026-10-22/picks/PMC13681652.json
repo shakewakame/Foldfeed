@@ -1,0 +1,135 @@
+{
+ "pmcid": "PMC13681652",
+ "rank": 8,
+ "headline": "レプチン受容体は、非対称な2:2と3:3の複合体をつくる",
+ "subhead": "ヒトのレプチン–LepRをクライオ電顕で3状態解析し、いずれも開いた形だった",
+ "target_label": "レプチン–LepR（ヒト）",
+ "target_en": "Human leptin–LepR complex",
+ "summary": {
+  "question": "レプチンが細胞表面で LepR とどう会合するかは議論が続き、複合体の構造も分かっていなかった。",
+  "approach": "ヒトのレプチンと LepR の細胞外領域を共発現して精製し、単粒子クライオ電顕で解析した。",
+  "result": "2:2 と 3:3 の複合体が同程度の頻度で見つかり、どれも非対称で開いた形だった（分解能 3.58〜3.88 Å）。",
+  "learned": "LepR は gp130 系の他の受容体と違う非対称な会合をとる。D3–D4 のねじれた硬い界面が原因と著者は推測する。",
+  "open": "2:2 と 3:3 は強さの違うシグナルを出すかもしれないと著者は提案するにとどまる。",
+  "evidence": {
+   "question": [
+    {
+     "quote": "The signaling assembly of leptin and LepR has long been debated.",
+     "section": "Introduction"
+    },
+    {
+     "quote": "However, the development of drugs targeting LepR has been hindered because the structure of the leptin–LepR complex remains unknown.",
+     "section": "Introduction"
+    }
+   ],
+   "approach": [
+    {
+     "quote": "To obtain the human leptin–LepR complex, the ECD of human LepR and leptin were constructed and co-expressed in HEK-293F cells (Figure 1A).",
+     "section": "Results"
+    }
+   ],
+   "result": [
+    {
+     "quote": "Both 2:2 and 3:3 stoichiometric assemblies were observed, and the complexes exhibited asymmetric open conformations.",
+     "section": "Abstract"
+    },
+    {
+     "quote": "we determined the structures of three distinct conformations of human leptin–LepR using cryo-electron microscopy at resolutions of 3.88, 3.77, and 3.58 Å.",
+     "section": "Abstract"
+    }
+   ],
+   "learned": [
+    {
+     "quote": "The asymmetric geometry of LepR is substantially distinct from that of other gp130 cytokine homologs, and that may be due to the twisted and rigid interface between the D3 and D4 domains.",
+     "section": "Abstract"
+    }
+   ],
+   "open": [
+    {
+     "quote": "Therefore, we propose that both the 2:2 and 3:3 stoichiometric complexes are functionally competent signaling assemblies but may exert different signaling intensities.",
+     "section": "Discussion"
+    }
+   ]
+  }
+ },
+ "categories": [
+  "receptor",
+  "immune"
+ ],
+ "highlights": [
+  {
+   "tag": "機構の解明",
+   "text": "3:3 の複合体は、2:2 の二量体に 3 組目のレプチン–LepR が加わった「手をつなぐ」形で、輪は閉じずに隙間が残る。隙間の幅は50.2 Å と 73.2 Å の 2 通りだった。",
+   "evidence": [
+    {
+     "quote": "Two of the three leptins were bound to two LepRs simultaneously, and the third was bound to one LepR, forming a “hand-in-hand” architecture.",
+     "section": "Results"
+    },
+    {
+     "quote": "The widths of the open gaps of the two distinct leptin–LepR trimer complexes were different (∼50.2 Å and ∼73.2 Å, respectively)",
+     "section": "Results"
+    }
+   ]
+  },
+  {
+   "tag": "機構の解明",
+   "text": "受容体に結合すると、遊離型のレプチンは AB ループなどが動く。αC' の A137 は最大 11 Å ずれ、低親和性の結合面の水素結合と連動していた。",
+   "evidence": [
+    {
+     "quote": "The position of residue A137 from αC’ in leptin was substantially shifted with a maximum distance of 11 Å after binding to the receptor.",
+     "section": "Results"
+    }
+   ]
+  },
+  {
+   "tag": "創薬・モダリティ",
+   "text": "LepR は IL-6 や LIF と似た向きでレプチンを受けるが、D3（IgD）と D4 の向きだけが他の受容体と大きく異なる。この界面の疎水性残基が硬い向きを保つ。",
+   "evidence": [
+    {
+     "quote": "Further comparative analysis revealed that the orientation of the LepR IgD (D3) to CRH2 (D4D5) was substantially distinct from that of gp130, LIFR, other gp130 family cytokine receptors, IL-23R, and GCSFR (Figure 4E)",
+     "section": "Results"
+    },
+    {
+     "quote": "which shaped the rigid orientation between D3 and D4 of the LepR (Figure 4F, Table S3).",
+     "section": "Results"
+    }
+   ]
+  }
+ ],
+ "lab_notes": {
+  "expression": "HEK293F 細胞で LepR 細胞外領域とレプチンを共発現。",
+  "construct": "LepR は 21〜839 残基で C 末端 His タグ付き。レプチンはタグなし。",
+  "purification": "His-Trap HP とゲルろ過（Superose 6 Increase）。",
+  "sample_prep": "約 0.5 mg/mL を Cu グリッドに載せ、Vitrobot Mark IV で急速凍結。",
+  "data_collection": "Titan Krios と K3 で撮影し、cryoSPARC で解析。",
+  "evidence": [
+   {
+    "quote": "The extracellular domain of LepR (GenBank: AAB09673.1, residues 21–839) fused with a C-terminal His tag was codon-optimized and cloned into the pEZTsp vector (pEZTsp-hLepR).",
+    "section": "Methods"
+   },
+   {
+    "quote": "hLepR and hleptin complex proteins were purified using His-Trap HP columns (GE Healthcare, Uppsala, Sweden) and a Superose 6 Increase 10/300 GL column",
+    "section": "Methods"
+   },
+   {
+    "quote": "The proteins were concentrated to ∼0.5 mg/mL for cryo-EM assay.",
+    "section": "Methods"
+   },
+   {
+    "quote": "The prepared cryogenic specimens were imaged using a Titan Krios transmission electron microscope equipped with a K3 direct electron detector",
+    "section": "Methods"
+   }
+  ]
+ },
+ "keywords": [
+  "レプチン",
+  "LepR",
+  "サイトカイン受容体",
+  "gp130"
+ ],
+ "legend_labels": [
+  "LepR（受容体）",
+  "レプチン（ホルモン）"
+ ],
+ "editor_notes": "LepR の NTD・CRH1・FnIII の一部は AlphaFold2 の予測を密度に当てはめたと本文にある。凡例の順序は render 後に確認。"
+}

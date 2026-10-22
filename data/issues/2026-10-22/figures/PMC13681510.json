@@ -1,0 +1,51 @@
+{
+ "pdb_id": "8X0K",
+ "view": {
+  "target": [
+   267.13,
+   265.51,
+   169.75
+  ],
+  "dir": [
+   -0.1768,
+   -0.8246,
+   0.5375
+  ],
+  "up": [
+   -0.3337,
+   0.5639,
+   0.7554
+  ],
+  "half": [
+   95.6,
+   90.7
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "キャプシド",
+   "desc": "Capsid protein",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "E2（外被糖タンパク質）",
+   "desc": "Spike glycoprotein E2",
+   "entity": "2"
+  },
+  {
+   "color": "#5F9296",
+   "label": "E1（外被糖タンパク質）",
+   "desc": "Spike glycoprotein E1",
+   "entity": "3"
+  },
+  {
+   "color": "#A5707A",
+   "label": "VLDLR（受容体）",
+   "desc": "Very low-density lipoprotein receptor",
+   "entity": "4"
+  }
+ ],
+ "ligands": []
+}

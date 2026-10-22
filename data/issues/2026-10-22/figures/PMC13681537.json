@@ -1,0 +1,45 @@
+{
+ "pdb_id": "8JRK",
+ "view": {
+  "target": [
+   -1.36,
+   -0.2,
+   21.07
+  ],
+  "dir": [
+   -0.5639,
+   -0.8253,
+   0.0315
+  ],
+  "up": [
+   0.0154,
+   0.0276,
+   0.9995
+  ],
+  "half": [
+   47.2,
+   36.9
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "HLA-DR α鎖（MHC-II）",
+   "desc": "HLA class II histocompatibility antigen, DR alpha chain",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "HLA-DR β鎖（MHC-II）",
+   "desc": "MHC class II histocompatibility antigen, DR-1 beta chain",
+   "entity": "2"
+  },
+  {
+   "color": "#5F9296",
+   "label": "結合ペプチド",
+   "desc": "ASN-ASP-ILE-LEU-SER-ARG-LEU-ASP-PRO-PRO-GLU-ALA-SER",
+   "entity": "3"
+  }
+ ],
+ "ligands": []
+}

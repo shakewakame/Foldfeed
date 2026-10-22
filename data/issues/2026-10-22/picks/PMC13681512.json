@@ -1,0 +1,166 @@
+{
+ "pmcid": "PMC13681512",
+ "rank": 9,
+ "headline": "効かなくなった抗体を、設計し直して復活させた",
+ "subhead": "etesevimab（CB6）を設計し直し、変異株のRBDとの複合体をクライオ電顕で確かめた",
+ "target_label": "CB6 抗体・SARS-CoV-2 RBD",
+ "target_en": "Etesevimab (CB6) mutant–SARS-CoV-2 RBD",
+ "summary": {
+  "question": "抗体 etesevimab（CB6）は、変異株の出現とともに効かなくなり、オミクロン株には効果を完全に失った。",
+  "approach": "Rosetta で CB6 の CDR を骨格と配列の両面から設計し、変異を1つずつ SPR で確かめてから組み合わせた。",
+  "result": "11 個の変異を入れた CB6-IV は KP.2 を含む試験したオミクロン株の RBD に結合し、擬似ウイルスも中和した。",
+  "learned": "クライオ電顕構造で CB6-IV は元の CB6 と同じエピトープに結合し、設計した変異の多くが RBD との相互作用を強めていた。",
+  "open": "BAADesign は結合エネルギーの予測に頼るため、全体に効く変異を見逃すことがある。",
+  "evidence": {
+   "question": [
+    {
+     "quote": "However, the mAb escaped from the variant of concern (VOC) ever since the emergence of Beta VOC, with a complete loss of efficacy against the Omicron subvariants.",
+     "section": "Abstract"
+    }
+   ],
+   "approach": [
+    {
+     "quote": "Here, we developed a broad-spectrum and affinity-mature antibody design (BAADesign) procedure to design CB6",
+     "section": "Abstract"
+    },
+    {
+     "quote": "we validated each mutation of CB6 step-by-step rather than combining them all at once",
+     "section": "Results"
+    }
+   ],
+   "result": [
+    {
+     "quote": "As expected, CB6-IV exhibited substantially increased binding affinity to all tested RBDs compared to CB6-III, with KD values ranging from 0.36 to 19.07 nM.",
+     "section": "Results"
+    },
+    {
+     "quote": "the CB6-IV exhibited broad and sensitive neutralizing activity against all tested PT and variant pseudoviruses",
+     "section": "Results"
+    }
+   ],
+   "learned": [
+    {
+     "quote": "suggesting that CB6-IV shares the same epitope with CB6",
+     "section": "Results"
+    },
+    {
+     "quote": "Taken together, almost all tested mutations in CB6 increased the interaction with the XBB.1.5 RBD and some also contributed to enhanced interaction with the PT RBD.",
+     "section": "Results"
+    }
+   ],
+   "open": [
+    {
+     "quote": "Its sequence design relies on predicting changes in binding energy, which may fail to identify beneficial mutations when the mutated residues influence overall binding rather than local interactions.",
+     "section": "Discussion"
+    }
+   ]
+  }
+ },
+ "categories": [
+  "immune",
+  "pathogen"
+ ],
+ "topics": [
+  "antibody",
+  "design"
+ ],
+ "highlights": [
+  {
+   "tag": "手法の工夫",
+   "text": "変異で生じる不利を、立体障害と相互作用の低下に分けた。立体障害には、CDR3 の H-Y102 や L-Y92 を欠失させて輪を作り直す骨格設計で対応した。",
+   "evidence": [
+    {
+     "quote": "Specifically, mutations at N460 (N460K), Q493 (Q493R), and Y505 (Y505H) caused steric hindrance with CB6 heavy chain (H) S56, Y102, and light chain (L) Y92, respectively.",
+     "section": "Results"
+    },
+    {
+     "quote": "To address the negative effect of steric hindrance, we deleted the residue H-Y102 or L-Y92 in the CB6 CDR3 and remodeled the CDR3 loop using the kinematic closure (KIC) method [34].",
+     "section": "Results"
+    }
+   ]
+  },
+  {
+   "tag": "機構の解明",
+   "text": "PT 型と XBB.1.5 の RBD との複合体は 3.02 Å と 2.49 Å で、CB6-IV は CB6 と同じ面に結合した。H-Y104 は PT RBD の K417 とわずかに衝突し、CB6-III が PT・Delta に弱かった理由を説明する。",
+   "evidence": [
+    {
+     "quote": "The Cryo-EM structures of the CB6-IV-PT RBD-S309-S304 and CB6-IV-XBB.1.5 RBD-S309-S304 complexes were resolved to 3.0 and 2.5 Å, respectively",
+     "section": "Results"
+    },
+    {
+     "quote": "Moreover, H-Y104 produces a slight steric clash with PT RBD K417, explaining why CB6-III displayed lower binding affinity to the PT and Delta RBDs than CB6",
+     "section": "Results"
+    }
+   ]
+  },
+  {
+   "tag": "創薬・モダリティ",
+   "text": "CB6-IV の CDR1・CDR2 の変異は、同じ結合様式をとる BD-604 や CC12.3 などにも移せた。CC12.3 は XBB・EG.5・BA.2.86 の RBD に結合するようになった。",
+   "evidence": [
+    {
+     "quote": "Importantly, these mutations enabled CC12.3 to bind to the XBB, EG.5, and BA.2.86 RBDs, and BD-604 to EG.5.",
+     "section": "Results"
+    },
+    {
+     "quote": "These results suggest that mutations in CB6-IV CDR1 and CDR2 can be shared to help antibodies with the same binding mode increase neutralizing activity against Omicron subvariants.",
+     "section": "Results"
+    }
+   ]
+  }
+ ],
+ "lab_notes": {
+  "expression": "Fab と RBD は Expi293F 細胞で一過性発現（SPR 用の抗体は HEK293T の上清）。",
+  "construct": "RBD は spike 残基 319–541。Fab と RBD の C 末端に His タグ。",
+  "purification": "HisTrap HP のあと、HiLoad 16/600 Superdex 200PG でゲルろ過。",
+  "sample_prep": "CB6-IV・S309・S304 の Fab と RBD を氷上で一晩混ぜ、ゲルろ過で精製。0.5 mg/mL を Quantifoil Au 1.2/1.3 に載せ 3 秒ブロット。",
+  "data_collection": "300 kV Krios と Falcon 4、画素 0.85 Å。CryoSPARC で粒子を選び、最終 205,618 粒子（PT）・282,682 粒子（XBB.1.5）。",
+  "evidence": [
+   {
+    "quote": "The recombinant RBD and CB6-IV fab plasmids were transiently transfected into Expi293F cells for protein expression, and supernatants were collected 5 days posttransfection.",
+    "section": "Methods"
+   },
+   {
+    "quote": "the SARS-CoV-2 PT RBD (spike residues 319–541, GISAID: EPI_ISL_402119) were cloned into the pCAGGS vector with a C-terminal hexa-histidine (His) tag.",
+    "section": "Methods"
+   },
+   {
+    "quote": "underwent further purification by size-exclusion chromatography using a HiLoad 16/600 Superdex 200PG column",
+    "section": "Methods"
+   },
+   {
+    "quote": "Purified PT RBD or XBB.1.5 RBD proteins were mixed with CB6-IV, S309, and S304 fabs and incubated on ice overnight.",
+    "section": "Methods"
+   },
+   {
+    "quote": "blotted for 3 s at 4 °C and 100% humidity",
+    "section": "Methods"
+   },
+   {
+    "quote": "the grids were transferred to a 300 kV Krios electron microscope equipped with a Falcon 4 using AutoEMation",
+    "section": "Methods"
+   },
+   {
+    "quote": "a final selection of the most homogeneous 205,618 (282,682 for CB6-IV-XBB.1.5 RBD-S309-S304) particles were chosen for 3D auto-refinement",
+    "section": "Methods"
+   }
+  ]
+ },
+ "keywords": [
+  "etesevimab",
+  "CB6",
+  "BAADesign",
+  "SARS-CoV-2",
+  "オミクロン株"
+ ],
+ "ga_pdb_id": "8WPW",
+ "editor_notes": "PDB は 8WPY（PT RBD、3.02 Å）と 8WPW（XBB.1.5 RBD、2.49 Å）。複合体を大きくするため非競合の S309・S304 を加えた四者複合体。計算設計の論文だが、設計した抗体の実験構造（クライオ電顕）と SPR・中和試験が主題のため新しい構造として扱った。legend_labels は未設定（render 後に凡例の順を見て書く）。",
+ "legend_labels": [
+  "S309 重鎖（抗体）",
+  "S309 軽鎖（抗体）",
+  "CB6改変 重鎖（抗体）",
+  "CB6改変 軽鎖（抗体）",
+  "S304 重鎖（抗体）",
+  "S304 軽鎖（抗体）",
+  "Spike S1（RBD）"
+ ]
+}

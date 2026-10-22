@@ -1,0 +1,45 @@
+{
+ "pdb_id": "8JKH",
+ "view": {
+  "target": [
+   170.52,
+   169.05,
+   169.55
+  ],
+  "dir": [
+   -0.137,
+   -0.9801,
+   -0.1436
+  ],
+  "up": [
+   -0.3044,
+   0.1796,
+   -0.9355
+  ],
+  "half": [
+   76.4,
+   50.6
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "NS1",
+   "desc": "",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "4B8 重鎖（抗体）",
+   "desc": "the heavy chain of antibody 4B8",
+   "entity": "2"
+  },
+  {
+   "color": "#5F9296",
+   "label": "4B8 軽鎖（抗体）",
+   "desc": "the light chain of antibody 4B8",
+   "entity": "3"
+  }
+ ],
+ "ligands": []
+}

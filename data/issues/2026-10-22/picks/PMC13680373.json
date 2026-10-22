@@ -1,0 +1,135 @@
+{
+ "pmcid": "PMC13680373",
+ "section": "impact",
+ "rank": 1,
+ "headline": "阻害薬AS408は、βアドレナリン受容体の細胞内側を切り離す",
+ "subhead": "既存の構造を土台に、溶液NMRと変異体で調べた",
+ "target_label": "β1AR（七面鳥）",
+ "target_en": "β1-adrenergic receptor (β1AR, turkey)",
+ "summary": {
+  "question": "GPCRのアロステリック修飾薬が、受容体の状態の分布をどう変えるかはまだ十分に分かっていなかった。",
+  "approach": "既存の構造を土台に、E130の変異体と負のアロステリック修飾薬AS408を、機能測定・MD・溶液NMRで比べた。",
+  "result": "E130変異は活性の低い状態へ分布を寄せたが、AS408は細胞内側の面を薬の結合部位から切り離し、G タンパク質と結合しにくい配置にした。",
+  "learned": "2つは同程度にシグナルを下げても仕組みが異なり、AS408 は Gタンパク質と結合できない細胞内側の配置を作る。",
+  "evidence": {
+   "question": [
+    {
+     "quote": "yet the ways in which allosteric modulators reshape these equilibria remain incompletely understood.",
+     "section": "Abstract"
+    }
+   ],
+   "approach": [
+    {
+     "quote": "Here we characterise how changes to the allosteric signalling network influence the conformational dynamics of the β1-adrenergic receptor (β1AR) through mutations at the E1303.41 position or using the negative allosteric modulator, AS408.",
+     "section": "Abstract"
+    }
+   ],
+   "result": [
+    {
+     "quote": "E1303.41 mutations reduce agonist-stimulated signalling as a side chain-dependent rheostat, shifting receptor equilibria to populate states with weaker G protein affinities.",
+     "section": "Abstract"
+    },
+    {
+     "quote": "AS408 uncouples the intracellular region of β1AR from the influence of the orthosteric pocket and reduces G protein coupling by adoption of an alternative signalling-incompetent intracellular surface arrangement.",
+     "section": "Abstract"
+    }
+   ],
+   "learned": [
+    {
+     "quote": "Both act through a known transmembrane (TM)3-TM4-TM5 site, reducing signalling to similar extents, but through distinct molecular mechanisms as revealed by pharmacological assays, MD simulations, and solution nuclear magnetic resonance spectroscopy.",
+     "section": "Abstract"
+    }
+   ]
+  }
+ },
+ "categories": [
+  "receptor"
+ ],
+ "topics": [
+  "drug",
+  "dynamics",
+  "membrane"
+ ],
+ "highlights": [
+  {
+   "tag": "機構の解明",
+   "text": "E130 を疎水性や芳香族のアミノ酸に替えると、アゴニスト（受容体を活性化する薬）が結合していても活性状態の割合が下がった。活性の下がり方は側鎖の種類で段階的に変わった。",
+   "evidence": [
+    {
+     "quote": "Unlike β1AR-E, which favours occupation of the active state14, the hydrophobic E130X3.41 variants predominantly occupied the pre-active state as previously observed for isoprenaline-bound β1AR-W26 (Fig. 2c).",
+     "section": "Results"
+    }
+   ]
+  },
+  {
+   "tag": "創薬・モダリティ",
+   "text": "AS408 は G タンパク質経路のシグナルを下げる負のアロステリック修飾薬（NAM）と確かめられた。結合の強さは μM 程度で、アゴニストの効き方（効力）に左右されず作用した。",
+   "evidence": [
+    {
+     "quote": "For AS408, the log(αβ) is −3.2 ± 0.5, thereby confirming AS408 as a NAM at the β1AR.",
+     "section": "Results"
+    },
+    {
+     "quote": "Overall, AS408 acted as a NAM to generate a signalling deficient receptor independently of orthosteric ligand efficacy by uncoupling ligand binding from intracellular activation.",
+     "section": "Results"
+    }
+   ]
+  },
+  {
+   "tag": "機構の解明",
+   "text": "19F NMR では AS408 を加えると活性状態と前活性状態のシグナルが減り、これまで見られなかった位置に新しいピークが現れた。AS408 は既知のどの状態とも異なる細胞内側の配置を作ると考えられる。",
+   "evidence": [
+    {
+     "quote": "Interestingly, the position of the signal for the AS408-bound receptor did not match with any previously observed state, including the inactive state, suggesting β1AR adopted an alternative conformation in the presence of AS408.",
+     "section": "Results"
+    }
+   ]
+  }
+ ],
+ "lab_notes": {
+  "expression": "Sf9 昆虫細胞で発現し、LMNG で精製。",
+  "construct": "七面鳥 β1AR を熱安定化。N 末端・C 末端・IL3 を欠失。",
+  "purification": null,
+  "sample_prep": "NMR 試料は 13C メチルメチオニンまたは 19F で標識した受容体 20–60 μM。",
+  "data_collection": null,
+  "evidence": [
+   {
+    "quote": "Receptor was prepared in the apo form, with 1 mM isoprenaline (Sigma), or 1 mM propranolol (Sigma) to saturate in the ligand-bound receptor population and ensure changes to NMR spectra reflected conformational exchange of the ligand-bound states.",
+    "section": "Methods"
+   },
+   {
+    "quote": "NMR samples containing 13C-methyl-methionine labelled or 19F labelled β1AR at 20–60 μM in 20 mM TrisHCl, pH 8.0, 150 mM NaCl and 0.02% LMNG",
+    "section": "Methods"
+   },
+   {
+    "quote": "The N-terminus (Δ3-32), C-terminus (Δ368-483) and IL3 (Δ244-271) were truncated66.",
+    "section": "Methods"
+   },
+   {
+    "quote": "Spodoptera frugiperda (Sf9) cells (Thermofisher, 12659017) were transfected with pBacPAK8 plasmids",
+    "section": "Methods"
+   },
+   {
+    "quote": "lauryl maltose neopentyl glycol (LMNG)",
+    "section": "Methods"
+   }
+  ]
+ },
+ "keywords": [
+  "β1AR",
+  "AS408",
+  "アロステリック",
+  "NMR"
+ ],
+ "method_label": "NMR・MD・機能測定",
+ "ga_pdb_id": "2Y03",
+ "editor_notes": "既存の PDB 構造（2Y03・6OBA・7JJO）を土台にした研究で、新しい構造ではない。実験で決めた構造データは自前の NMR（19F・13C）。MD も使うが結論は NMR と機能測定で確かめている。",
+ "legend_labels": [
+  "β1AR（受容体）"
+ ],
+ "ligand_names": {
+  "5FW": "イソプレナリン",
+  "2CV": "HEGA-10"
+ },
+ "site_ligand": "5FW"
+}

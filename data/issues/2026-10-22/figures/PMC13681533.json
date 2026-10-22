@@ -1,0 +1,45 @@
+{
+ "pdb_id": "8KFA",
+ "view": {
+  "target": [
+   189.21,
+   187.52,
+   191.3
+  ],
+  "dir": [
+   -0.6087,
+   0.7934,
+   -0.0001
+  ],
+  "up": [
+   0.7934,
+   0.6087,
+   0.0001
+  ],
+  "half": [
+   79.3,
+   61.7
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "D48 重鎖（抗体）",
+   "desc": "D48 heavy chain",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "D48 軽鎖（抗体）",
+   "desc": "D48 light chain",
+   "entity": "2"
+  },
+  {
+   "color": "#5F9296",
+   "label": "gB（融合タンパク質）",
+   "desc": "Envelope glycoprotein B",
+   "entity": "3"
+  }
+ ],
+ "ligands": []
+}
