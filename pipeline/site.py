@@ -21,6 +21,7 @@ import argparse
 import datetime
 import html
 import json
+import math
 import re
 import shutil
 import sys
@@ -311,7 +312,7 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 /* The header (wordmark, MENU, the double rule) slides away while the reader scrolls down and comes back as soon as
    they scroll up; on the first screen it always stays (HEAD_SCRIPT). Whatever sticks while scrolling (an article's
    margin, an issue's contents) sits under the header when it is there (--headnow). */
-@media (prefers-reduced-motion:no-preference) {{ html {{ scroll-behavior:smooth; }} .mast {{ transition:transform .25s ease; }} }}
+@media (prefers-reduced-motion:no-preference) {{ html {{ scroll-behavior:smooth; }} }}
 html {{ scroll-padding-top:calc(var(--navh) + 16px); }}
 body {{ --headnow:var(--navh); }}
 .mast {{ background:var(--ground); }}
@@ -365,9 +366,9 @@ html, body {{ overflow-x:clip; }}   /* a guard: nothing may widen the page sidew
 .lead-go {{ display:inline-flex; align-items:center; gap:12px; margin-top:34px; padding:14px 24px 14px 20px;
             background:var(--ink); color:#fff; font-family:var(--mono); font-size:14.5px; letter-spacing:.06em; }}
 .lead-go .tri {{ font-size:13px; }}
-.lead-k {{ margin:0 0 22px; font-family:var(--mono); font-size:13px; letter-spacing:.06em; color:var(--ink2); }}
-.lead-k b {{ color:var(--ink); }}
-.lead-k span {{ margin-left:16px; color:var(--acc-ink); font-weight:700; letter-spacing:.1em; text-transform:uppercase; }}
+.lead-upd {{ margin:8px 0 0; text-align:center; font-family:var(--mono); font-size:11.5px; letter-spacing:.06em; color:var(--mute); }}
+.lead-upd span {{ margin-left:12px; }}
+.lead-text .lead-upd {{ margin-top:22px; text-align:left; }}
 /* under the first screen's structure: what it is, small and quiet */
 .lead-cap {{ display:flex; flex-wrap:wrap; justify-content:center; align-items:baseline; gap:2px 12px; margin:10px 0 0; padding:0 24px; text-decoration:none;
              color:var(--ink2); }}
@@ -479,9 +480,14 @@ html, body {{ overflow-x:clip; }}   /* a guard: nothing may widen the page sidew
 .anim .lead-h span {{ animation:rise .9s cubic-bezier(.2,.7,.2,1) both; animation-delay:calc(var(--i) * 140ms + 80ms); }}
 .anim .lead-btns {{ animation:rise .9s cubic-bezier(.2,.7,.2,1) .55s both; }}
 .anim .lead-art {{ animation:fadein 1.2s ease .2s both; }}
-@keyframes drift {{ from {{ transform:none; }} to {{ transform:translate3d(-2.5%, 1.5%, 0) rotate(-2.2deg) scale(1.035); }} }}
-@media (max-width:860px) {{   /* the phone's first-screen structure, alive but quiet: a slow sway, never a full turn */
-  .anim .lead-art .fig {{ animation:drift 11s ease-in-out 1.4s infinite alternate; will-change:transform; }}
+@keyframes comein {{ from {{ opacity:0; transform:translate3d(7%, 9%, 0) rotate(-10deg) scale(.84); }}
+                    to {{ opacity:1; transform:translate3d(1.5%, 0, 0) rotate(-3deg); }} }}
+@keyframes drift {{ from {{ transform:translate3d(1.5%, 0, 0) rotate(-3deg); }}
+                  to {{ transform:translate3d(-2.5%, 2%, 0) rotate(3.5deg) scale(1.06); }} }}
+@media (max-width:860px) {{   /* the phone's first-screen structure: it swings in, then sways (never a full turn); the
+                                  page's scroll turns it a little more (LEAD_SCRIPT) */
+  .anim .lead-art .fig {{ animation:comein 1.6s cubic-bezier(.2,.7,.2,1) .3s both, drift 6.5s ease-in-out 1.9s infinite alternate;
+                          will-change:transform; }}
 }}
 .lead-wait {{ animation:pulse 1.6s ease-in-out infinite; }}
 .v3d.loading .v3d-canvas, .v3d.on .v3d-canvas {{ transition:opacity .8s ease; }}
@@ -652,7 +658,7 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
 .gnav-links {{ flex:none; display:flex; gap:34px; min-width:0; white-space:nowrap; }}
 .gnav-links::-webkit-scrollbar {{ display:none; }}
 .gnav .hs {{ flex:0 1 340px; max-width:340px; }}
-.gnav .hs-q {{ padding:6px 12px; font-size:13px; line-height:1.5; }}
+.gnav .hs-q {{ padding:6px 12px 6px 34px; font-size:13px; line-height:1.5; }}
 .gnav .hs-pop {{ top:calc(100% + 9px); }}   /* hangs from the navigation's rule */
 .gn-item {{ position:relative; }}
 .gn-a {{ display:block; padding:6px 0; font-family:var(--mono); font-size:12.5px; letter-spacing:.1em; text-transform:uppercase;
@@ -731,7 +737,7 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
 .card.md .cs {{ font-size:14.5px; }}
 .cards + .ix-h {{ margin-top:var(--sec); }}
 /* the pick: the largest card, its own figure on the left, the words and the ways on to the right */
-.pickup {{ display:grid; grid-template-columns:minmax(0,7fr) minmax(0,5fr); gap:0 52px; align-items:center; }}
+.pickup {{ display:grid; grid-template-columns:minmax(0,7fr) minmax(0,5fr); gap:0 52px; align-items:start; }}
 .pk-fig {{ display:block; overflow:hidden; }}
 .pk-fig img {{ display:block; width:100%; height:auto; transition:transform .5s cubic-bezier(.2,.8,.2,1); }}
 .pickup .pk-tg {{ margin:12px 0 0; font-size:22px; }}
@@ -739,6 +745,41 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
 .pk-s {{ margin:12px 0 0; font-size:17px; line-height:1.8; color:var(--desc); }}
 .pickup .reads {{ margin-top:26px; gap:12px; }}
 .pickup .reads a {{ min-width:0; flex:1 1 220px; }}
+/* Concept, right under the first screen: the site in its words, and the day in numbers (thousands of new papers ->
+   the structural biology ones read whole -> the articles, by part) */
+.concept-grid {{ display:grid; grid-template-columns:minmax(0,5fr) minmax(0,7fr); gap:40px 72px; align-items:start; }}
+.concept-t {{ margin:0; font-size:17px; line-height:1.7; color:var(--ink2); }}
+.concept-t .s {{ display:block; text-wrap:balance; }}
+.concept-t .s + .s {{ margin-top:.75em; }}
+.concept-t .w {{ white-space:nowrap; }}
+.flow {{ margin:0; }}
+.flow ol {{ list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:0 40px; }}
+.flow li {{ position:relative; min-width:0; }}
+.flow li + li::before {{ content:"→"; position:absolute; left:-30px; top:14px; font-family:var(--mono); font-size:17px; color:var(--mute); }}
+.flow li > b {{ display:block; font-family:var(--latin); font-size:clamp(40px, 3.4vw, 58px); line-height:1; font-weight:700; color:var(--ink);
+          font-variant-numeric:tabular-nums; }}
+.flow-bar {{ display:flex; gap:2px; width:calc(var(--w) * 100%); height:6px; margin:14px 0 0; }}
+.flow-bar i {{ display:block; flex:1; background:var(--ink); }}
+.flow-bar i.n {{ background:{CHART_NEW}; }}
+.flow-bar i.u {{ background:{CHART_UPD}; }}
+.flow-bar i.h {{ background:{CHART_HOT}; }}
+.flow-t {{ display:block; margin-top:12px; font-size:13.5px; line-height:1.6; color:var(--desc); }}
+.flow-parts {{ display:block; margin-top:8px; font-size:12.5px; line-height:1.5; color:var(--desc); }}
+.flow-parts > span {{ display:flex; align-items:center; white-space:nowrap; }}
+.flow-parts > span + span {{ margin-top:3px; }}
+.flow-parts b {{ margin-left:8px; font-family:var(--mono); color:var(--ink); }}
+.flow figcaption {{ margin-top:26px; font-size:13.5px; }}
+.flow figcaption a {{ color:var(--ink2); text-decoration:underline; text-decoration-color:var(--hair); text-underline-offset:4px; }}
+.flow figcaption a:hover {{ color:var(--acc-ink); text-decoration-color:var(--acc); }}
+.flow figcaption .arr {{ margin-left:8px; font-family:var(--mono); }}
+.anim .flow-bar {{ transform-origin:left; transform:scaleX(0); transition:transform 1s cubic-bezier(.2,.8,.2,1) .25s; }}
+.anim .flow li.in .flow-bar, .anim .flow.in .flow-bar {{ transform:none; }}
+/* the pick's four lines on the front page (question, approach, result, learned) */
+.pk-4 {{ margin:22px 0 0; }}
+.pk-4 div {{ grid-template-columns:96px minmax(0,1fr); gap:12px; padding:6px 0; }}
+.pk-4 dt {{ font-size:13.5px; }}
+.pk-4 dd {{ font-size:15px; line-height:1.75; }}
+
 /* the front page's way into the issue: its other structures, small, each a link to its article */
 .mi-th {{ list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat({MORE_THUMBS}, minmax(0,1fr)); gap:28px; }}
 .mi-th.more {{ grid-template-columns:repeat({MORE_THUMBS}, minmax(0,1fr)) 48px; }}
@@ -800,6 +841,10 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
 .hs-q {{ display:block; width:100%; box-sizing:border-box; font:inherit; font-family:var(--sans); font-size:14.5px; padding:11px 14px;
          color:var(--ink); background:transparent; border:1px solid var(--ink); border-radius:0; }}
 .hs-q::placeholder {{ color:var(--mute); }}
+.hs-box {{ position:relative; display:block; }}
+.hs-box .ic {{ position:absolute; left:12px; top:50%; transform:translateY(-50%); color:var(--mute); pointer-events:none; }}
+.hs-box .hs-q {{ padding-left:36px; }}
+.hs-open .ic {{ flex:none; margin-right:8px; }}
 .hs-q:focus {{ outline:2px solid var(--acc); outline-offset:1px; }}
 .hs-pop {{ position:absolute; z-index:1100; top:calc(100% + 26px); right:0; width:max(100%, 640px); box-sizing:border-box;
            max-height:calc(100vh - var(--head) - 24px); overflow-y:auto; padding:20px 22px 18px; background:var(--ground);
@@ -953,15 +998,15 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
   .lead {{ position:relative; overflow:clip; }}
   .lead-grid {{ min-height:calc(100svh - var(--head)); padding-top:26px; padding-bottom:28px; gap:0; align-content:start; }}
   .lead-text {{ display:contents; }}
-  .lead-k, .lead-h, .lead-btns, .lead-parts, .lead-about {{ position:relative; z-index:1; }}
-  .lead-k {{ order:1; margin-bottom:16px; font-size:12px; }}
+  .lead-h, .lead-parts, .lead-about, .lead-text .lead-upd {{ position:relative; z-index:1; }}
   .lead-h {{ order:2; font-size:clamp(22px, 6.4vw, 30px); line-height:1.5; letter-spacing:.01em; }}
   .lead-h span {{ white-space:normal; word-break:keep-all; }}
   .lead-h .sp {{ display:inline; }}
-  .lead-btns {{ order:3; }}
-  .lead-art {{ order:4; position:relative; z-index:0; margin:-64px calc(-1 * var(--pad) - 22vw) 0 calc(-1 * var(--pad) - 6vw);
+  .lead .lead-btns {{ display:none; }}   /* a phone: today's structures are right below when scrolled (the owner, 2026-10-23) */
+  .lead-art {{ order:4; position:relative; z-index:0; margin:-6px calc(-1 * var(--pad) - 22vw) 0 calc(-1 * var(--pad) - 6vw);
                pointer-events:none; }}
   .lead-art .lead-cap {{ pointer-events:auto; }}
+  .lead-text .lead-upd {{ order:7; }}
   .lead-parts {{ order:5; margin-top:6px; }}
   .lead-about {{ order:6; justify-self:start; }}
   .ix-h, .part h2 {{ flex-wrap:wrap; row-gap:4px; }}
@@ -983,6 +1028,7 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
   .pickup .cno, .cards.md .cno {{ left:var(--pad); }}
   .lead-art .v3d-view {{ max-height:none; }}
   .lead-cap {{ justify-content:flex-start; margin:-6px 0 0; padding:0 calc(var(--pad) + 22vw) 0 calc(var(--pad) + 6vw); }}
+  .lead-art .lead-upd {{ text-align:left; padding:0 calc(var(--pad) + 22vw) 0 calc(var(--pad) + 6vw); }}
   .today {{ padding-top:var(--sec); }}
   .ix-h .label, .part h2 {{ font-size:23px; }}
   .today-4 div {{ grid-template-columns:minmax(0,1fr); gap:0; padding:6px 0; }}
@@ -995,12 +1041,33 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
   body {{ --headnow:var(--head); }}
   body.head-away {{ --headnow:0px; }}
   .mast {{ position:sticky; top:0; z-index:1000; }}
-  .mast.away {{ transform:translateY(-100%); }}
+  /* past the top only MENU stays (the owner, 2026-10-23): the rest of the header fades out and lets the page through;
+     MENU brings it back */
+  .mast .brand, .mast .hs-open {{ transition:opacity .25s ease, transform .3s cubic-bezier(.2,.8,.2,1); }}
+  .mast .rules {{ transition:opacity .25s ease; }}
+  .mast.away {{ background:transparent; pointer-events:none; }}
+  .mast.away .brand, .mast.away .hs-open {{ opacity:0; transform:translateY(-10px); }}
+  .mast.away .rules {{ opacity:0; }}
+  .mast.away .menu {{ pointer-events:auto; }}
+  /* MENU pulls the header down: a panel the width of the screen comes down from under the header's row */
+  .menu {{ position:static; }}
+  .menu-list {{ position:fixed; left:0; right:0; top:0; z-index:-1; min-width:0; max-height:100vh; overflow-y:auto; box-sizing:border-box;
+               padding:calc(var(--head) + 4px) var(--pad) 22px; border:0; border-bottom:1px solid var(--ink); text-align:left; }}
+  .menu-list a {{ padding:13px 0; font-size:16px; letter-spacing:.04em; border-top:1px solid var(--hair); }}
+  .menu-list a:first-child {{ border-top:0; }}
+  .menu-list a::before {{ display:none; }}
+  .menu-list a:hover, .menu-list a:focus-visible {{ color:var(--acc-ink); }}
+  .menu-list a:hover small, .menu-list a:focus-visible small {{ color:var(--mute); }}
+  .menu-list small {{ font-size:12px; margin-top:3px; }}
+  .js .menu-list {{ opacity:1; transform:translateY(-100%); transition:transform .45s cubic-bezier(.2,.8,.2,1); }}
+  .menu:not([open]) .menu-list {{ display:none; }}   /* a closed <details> would hold the panel in its own small box */
+  .js .menu.on .menu-list {{ transform:none; }}
+  .js .menu-list a {{ transform:translateY(-10px); }}
   .js .gnav {{ display:none; }}
   .gnav {{ position:static; }}
   .gnav-in {{ flex-wrap:wrap; gap:10px; }}
   .gnav .hs {{ flex:1 1 100%; max-width:none; }}
-  .gnav .hs-q {{ padding:11px 14px; font-size:16px; }}
+  .gnav .hs-q {{ padding:11px 14px 11px 38px; font-size:16px; }}
   .js .mast.hs-on + .gnav {{ display:block; position:fixed; left:0; right:0; top:var(--headnow); z-index:999;
                              max-height:calc(100vh - var(--headnow)); overflow-y:auto; border-bottom:1px solid var(--ink); }}
   .js .mast.hs-on + .gnav .gnav-links {{ display:none; }}
@@ -1031,6 +1098,11 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
   .iss-n b {{ padding-left:8px; }}
   .iss-th {{ grid-template-columns:repeat(4, minmax(0,1fr)); }}
   .mi-th, .mi-th.more {{ grid-template-columns:repeat(3, minmax(0,1fr)); gap:22px 14px; }}
+  .concept-grid {{ grid-template-columns:minmax(0,1fr); gap:36px; }}
+  .concept-t {{ font-size:16px; }}
+  .flow ol {{ grid-template-columns:minmax(0,1fr); gap:34px; }}
+  .flow li + li::before {{ content:"↓"; position:static; display:block; margin:0 0 10px; }}
+  .flow li > b {{ font-size:44px; }}
   .mi-no {{ font-size:17px; }}
   .mi-more {{ grid-column:1 / -1; margin-top:-8px; }}   /* "+5" on a line of its own under the figures */
   .iss-d b {{ font-size:26px; }}
@@ -1169,9 +1241,11 @@ def menu_html(up: str) -> str:
 MENU_SCRIPT = r"""
 (function () {
   /* The header: away while scrolling down, back on scrolling up, always there on the first screen. In-page links land
-     at the top when the page goes down (the header slides away) and just under the header when it goes up. */
+     at the top when the page goes down (the header slides away) and just under the header when it goes up. On a phone
+     the header is away whenever the page is past its top, but for MENU, which stays (the owner, 2026-10-23). */
   var head = document.querySelector('.mast');
   if (!head) return;
+  var phone = window.matchMedia ? window.matchMedia('(max-width: 860px)') : { matches: false };
   var last = window.scrollY, lead = document.querySelector('.lead');
   var jumped = false;   // after an in-page link down, the first-screen rule no longer holds the header (until back at the top)
   function firstScreen() {
@@ -1184,6 +1258,7 @@ MENU_SCRIPT = r"""
   }
   window.addEventListener('scroll', function () {
     var y = window.scrollY, d = y - last;
+    if (phone.matches) { away(y > head.offsetHeight); last = y; return; }
     if (y < head.offsetHeight && d < 0) jumped = false;   // back at the top by scrolling up (not the first step of a jump down)
     if (y < firstScreen() && !jumped) away(false);
     else if (d > 4) away(true);
@@ -1201,7 +1276,7 @@ MENU_SCRIPT = r"""
     for (var el = t; el; el = el.offsetParent) y += el.offsetTop;
     var down = y > window.scrollY;
     var nav = document.querySelector('.gnav'), pinned = nav && getComputedStyle(nav).position === 'sticky' ? nav.offsetHeight : 0;
-    var top = pinned ? y - pinned - 16 : down ? y - 16 : y - head.offsetHeight - 16;   // a wide screen: under the navigation
+    var top = pinned ? y - pinned - 16 : down || phone.matches ? y - 16 : y - head.offsetHeight - 16;   // a wide screen: under the navigation
     if (down) { jumped = true; away(true); }
     var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     window.scrollTo({ top: Math.max(0, top), behavior: calm ? 'auto' : 'smooth' });
@@ -1236,12 +1311,18 @@ MENU_SCRIPT = r"""
      plain <details>. Closes on a click elsewhere, on a link in it, and on Escape. */
   function toggle(d, on) {
     clearTimeout(d._t);
+    var head = d.closest('.mast');
     if (on) {
+      if (head) { head.classList.remove('away'); document.body.classList.remove('head-away'); }   // MENU brings the header back
       d.open = true;
       requestAnimationFrame(function () { requestAnimationFrame(function () { d.classList.add('on'); }); });
     } else {
       d.classList.remove('on');
-      d._t = setTimeout(function () { if (!d.classList.contains('on')) d.open = false; }, 320);
+      d._t = setTimeout(function () {
+        if (d.classList.contains('on')) return;
+        d.open = false;
+        window.dispatchEvent(new Event('scroll'));   // past the top again: only MENU
+      }, 460);
     }
   }
   [].forEach.call(document.querySelectorAll('details.menu'), function (d) {
@@ -1264,7 +1345,7 @@ MENU_SCRIPT = r"""
   var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (calm || !('IntersectionObserver' in window)) return;
   root.classList.add('anim');
-  var SEL = '.ix-h, .about-dl > div, .about-side, .about .jl, .about > .wrap > .about-sub, .pickup, '
+  var SEL = '.ix-h, .about-dl > div, .about-side, .about .jl, .about > .wrap > .about-sub, .pickup, .concept-t, .flow li, '
           + '.today-4 > div, .reads, .cards > li, .mi-th > li, .bt, .iss-list > li, .find, .mail-grid, .shell:not(.sticky-side) .side .sd, '
           + '.ihead, .part, .art, .rest, .pp-head, .pg .pr, .queue li';
   var els = [].slice.call(document.querySelectorAll(SEL));
@@ -1281,7 +1362,7 @@ MENU_SCRIPT = r"""
     function f(t) {
       t0 = t0 || t;
       var p = Math.min(1, (t - t0) / dur), e = issue ? (p < .5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2) : 1 - Math.pow(1 - p, 3);
-      el.textContent = Math.round(to * e);
+      el.textContent = Math.round(to * e).toLocaleString('en-US');
       if (p < 1) requestAnimationFrame(f);
     }
     setTimeout(function () { requestAnimationFrame(f); }, issue ? 450 : 0);
@@ -1338,6 +1419,11 @@ TOPIC_EN = {"design": "de novo design designed protein", "drug": "drug discovery
 METHOD_FACETS = ("Cryo-EM", "X-ray", "NMR", "Cryo-ET")
 
 
+MAGNIFIER = ('<svg class="ic" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true" focusable="false">'
+             '<circle cx="6.8" cy="6.8" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/>'
+             '<path d="M10.5 10.5 14.5 14.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>')
+
+
 def search_form(up: str) -> str:
     """The header search: one box; focused, it drops down the ways in (kind of protein, kind of research, method, part)
     with how many articles each has, so the first screen stays plain until it is wanted. Typing narrows the suggestions
@@ -1352,8 +1438,8 @@ def search_form(up: str) -> str:
               + group("Method", [("method", m, m, n, m) for m, n in f["methods"]])
               + group("Part", [("part", k, PARTS[k][0], n, f"{PARTS[k][0]} {PARTS[k][1]}") for k, n in f["parts"]]))
     return (f'<form class="hs" action="{up}proteins.html" method="get" role="search" data-up="{up}">'
-            f'<input class="hs-q" type="search" name="q" autocomplete="off" placeholder="タンパク質・PDB ID・研究の種類で探す" '
-            f'aria-label="記事を探す" aria-expanded="false" aria-controls="hs-pop">'
+            f'<span class="hs-box">{MAGNIFIER}<input class="hs-q" type="search" name="q" autocomplete="off" '
+            f'placeholder="タンパク質・PDB ID・研究の種類で探す" aria-label="記事を探す" aria-expanded="false" aria-controls="hs-pop"></span>'
             f'<div class="hs-pop" id="hs-pop" hidden><div class="hs-res" hidden></div>{groups}'
             f'<a class="hs-all" href="{up}proteins.html">すべての記事から探す<span aria-hidden="true">→</span></a></div></form>')
 
@@ -1552,7 +1638,7 @@ def masthead(depth: int, right: str = "", search: bool = True, current: str | No
     search under the header, and a small MENU button. "Read Later N" shows once the reader has saved an article."""
     up = "../" * depth
     find = search_form(up) if search else ""
-    open_btn = '<button class="hs-open" type="button" aria-label="記事を探す">探す</button>' if search else ""
+    open_btn = f'<button class="hs-open" type="button" aria-label="記事を探す">{MAGNIFIER}探す</button>' if search else ""
     return (f'<header class="mast"><div class="wrap"><div class="mast-row">'
             f'<div class="brand"><a class="word" href="{up}index.html"><img src="{up}assets/logo-mark.svg" alt="">'
             f'<span class="name">{esc(brand.SITE_NAME)}</span></a>'
@@ -1757,17 +1843,17 @@ def figures_html(cand: dict, pick: dict, date: str, root: Path, fig_base: str, u
     return "".join(out)
 
 
-def intro_html(pick: dict) -> str:
+def intro_html(pick: dict, open_line: bool = True, cls: str = "art-4") -> str:
     """The article's short introduction: four lines (question, approach, result, learned) and, when the paper states
-    one, a fifth (what is still open)."""
+    one and open_line is set, a fifth (what is still open)."""
     s = pick["summary"]
     if "question" in s:
         rows = "".join(f'<div class="{k}"><dt>{label}</dt><dd>{esc(s[k])}</dd></div>'
-                       for k, label in {**SUMMARY_FIELDS, **SUMMARY_OPTIONAL}.items() if s.get(k))
+                       for k, label in {**SUMMARY_FIELDS, **(SUMMARY_OPTIONAL if open_line else {})}.items() if s.get(k))
     else:  # an issue written before the four-line introduction (e.g. an old pull request being previewed)
         rows = "".join(f'<div><dt>{label}</dt><dd>{esc(s.get(k, ""))}</dd></div>'
                        for k, label in (("background", "背景"), ("approach", "やったこと"), ("findings", "分かったこと")))
-    return f'<dl class="today-4 art-4">{rows}</dl>'   # the look of Today's Structure on the front page
+    return f'<dl class="today-4 {cls}">{rows}</dl>'   # the look of Today's Structure on the front page
 
 
 def related_html(items: list[dict], up: str) -> str:
@@ -1970,6 +2056,36 @@ def contents_html(picks: list, date: str, root: Path, fig_base: str, featured: s
             f'<ol class="cards md toc-cards">{cards}</ol>') if picks else ""
 
 
+def concept_html(meta: dict, picks: list, href: str) -> str:
+    """Concept, right under the front page's first screen (the owner, 2026-10-23): what FoldFeed is, in its own words
+    (ABOUT's first passage) and as a figure of the latest issue's day in numbers: the open-access papers the database
+    took in that day, the ones read whole as structural biology, the ones written up (by part). The first number is
+    left out when the issue came from PMC's data (Europe PMC was not counting)."""
+    _, m, d, _ = date_parts(meta["index_date"][:10])
+    _, im, idd, _ = date_parts(meta["issue_date"])
+    fresh = (meta.get("health") or {}).get("fresh_oa") if meta.get("source") != pmcoa.SOURCE else None
+    sections = [(k, len(v)) for k, v in render.sections(picks).items() if v]
+    steps = ([(fresh, f"{m}月{d}日に Europe PMC へ|登録されたオープンアクセス論文")] if fresh else []) + [
+        (len(meta["candidates"]), "構造生物学の論文として|全文を読んで確かめた"),
+        (len(picks), "記事にした")]
+    # under each number a bar, its length on a log scale (from thousands to ten); the last one in the parts' colours
+    top = math.log10(max(n for n, _ in steps) + 1)
+    items = ""
+    for i, (n, t) in enumerate(steps):
+        w = math.log10(n + 1) / top if top else 1
+        last = i == len(steps) - 1 and sections
+        bar = ("".join(f'<i class="{PART_CLS[k]}" style="flex:{c}"></i>' for k, c in sections) if last else "<i></i>")
+        legend = ('<span class="flow-parts kl">' + "".join(f'<span><i class="sw-{PART_CLS[k]}"></i>{PARTS[k][0]}<b>{c}</b></span>'
+                                                        for k, c in sections) + '</span>' if last else "")
+        items += (f'<li><b data-count="{n}">{n:,}</b><span class="flow-bar" style="--w:{w:.3f}" aria-hidden="true">{bar}</span>'
+                  f'<span class="flow-t">{"<br>".join(esc(x) for x in t.split("|"))}</span>{legend}</li>')
+    text = next(v for k, v in ABOUT if k == "Concept")
+    return (f'<section class="sec concept" id="concept"><div class="ix-h"><h2 class="label">Concept</h2></div>'
+            f'<div class="concept-grid"><p class="concept-t">{sentences(text)}</p>'
+            f'<figure class="flow"><ol>{items}</ol><figcaption><a href="{href}">{m}.{d:02d} の新着から {im}.{idd:02d} 号へ'
+            f'<span class="arr" aria-hidden="true">→</span></a></figcaption></figure></div></section>')
+
+
 def more_html(picks: list, date: str, root: Path, fig_base: str, href: str, featured: str | None) -> str:
     """Under Picked up Today's Structure on the front page, the way into the issue (the owner's request, 2026-10-21: the
     front page keeps the pick as a taste, what else came out is read on the issue page): the issue's other structures
@@ -2017,7 +2133,8 @@ def lead_html(feature: dict | None, picks: list, date: str, root: Path, fig_base
     shown as a drawing from the same view (pipeline.render: <pmcid>-hero.svg)."""
     lines = "".join(f'<span style="--i:{i}">{"<br class=sp>".join(esc(x) for x in t.split("|"))}</span>' for i, t in enumerate(LEAD))
     y, m, d, wd = date_parts(date)
-    updated = (f'<p class="lead-k">最終更新 <b>{y}.{m:02d}.{d:02d}</b>（{wd}）'
+    # when it was updated, quietly under the structure (the owner, 2026-10-23: above the introduction it stood out)
+    updated = (f'<p class="lead-upd">{y}.{m:02d}.{d:02d}（{wd}）更新'
                + (f'<span>Issue No. {number}</span>' if number else "") + '</p>')
     # what a visitor should do next: see today's structures, on the issue page (the one button: the front page shows
     # only the pick, 2026-10-21); the breakdown is information, so text, each part a way to it on the issue page;
@@ -2030,7 +2147,7 @@ def lead_html(feature: dict | None, picks: list, date: str, root: Path, fig_base
     parts = "".join(f'<a href="{issue}#{k if k in shown else "pick"}"><i class="sw-{PART_CLS[k]}"></i>{PARTS[k][0]}<b>{len(v)}</b></a>'
                     for k, v in render.sections(picks).items() if v)
     go += (f'<p class="lead-parts kl"><span class="t">今日の内訳</span>{parts}</p>' if parts else "")
-    go += '<a class="lead-about" href="#about">はじめての方へ：FoldFeed について<span aria-hidden="true">▽</span></a>'
+    go += '<a class="lead-about" href="#concept">はじめての方へ：FoldFeed について<span aria-hidden="true">▽</span></a>'
     hit = feature_of(feature, picks)
     art_html = ""
     if hit and (root / date / "figures" / f"{hit[1]['pmcid']}-hero.svg").exists():
@@ -2046,11 +2163,32 @@ def lead_html(feature: dict | None, picks: list, date: str, root: Path, fig_base
         if attrs:   # opens by itself on a wide screen (assets/viewer.js). While it loads, only "読み込み中" shows; the
             # drawing is for a phone (where it does not open) and for a browser that cannot load it. No buttons, no help.
             art_html = (f'<div class="lead-art"><div class="v3d lead-3d" data-auto="wide"{attrs}><div class="v3d-view">{img}'
-                        f'<div class="v3d-canvas"></div><p class="lead-wait" aria-live="polite">読み込み中</p></div></div>{cap}</div>')
+                        f'<div class="v3d-canvas"></div><p class="lead-wait" aria-live="polite">読み込み中</p></div></div>{cap}{updated}</div>')
         else:
-            art_html = f'<div class="lead-art"><a href="#today" tabindex="-1">{img}</a>{cap}</div>'
+            art_html = f'<div class="lead-art"><a class="lead-pic" href="#today" tabindex="-1">{img}</a>{cap}{updated}</div>'
     return (f'<section class="lead"><div class="wrap lead-grid"><div class="lead-text">'
-            f'{updated}<h1 class="lead-h">{lines}</h1>{go}</div>{art_html}</div></section>')
+            f'<h1 class="lead-h">{lines}</h1>{go}{"" if art_html else updated}</div>{art_html}</div></section>')
+
+
+LEAD_SCRIPT = r"""
+(function () {
+  /* A phone's first screen: Today's Structure turns a little and draws back as the page is scrolled, so the reader's
+     own scrolling moves it (it stays in its place: the text under it is never covered). Not on a wide screen (the 3D
+     viewer is there) and not for a reader who asked for less motion. */
+  var view = document.querySelector('.lead-art .v3d-view, .lead-art .lead-pic');
+  if (!view || !window.matchMedia || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var phone = matchMedia('(max-width: 860px)'), ticking = false;
+  function place() {
+    ticking = false;
+    var k = phone.matches ? Math.min(1, window.scrollY / (window.innerHeight * 0.8)) : 0;
+    view.style.transform = k ? 'rotate(' + (k * 16).toFixed(2) + 'deg) scale(' + (1 - k * 0.12).toFixed(3) + ')' : '';
+  }
+  window.addEventListener('scroll', function () {
+    if (!ticking) { ticking = true; requestAnimationFrame(place); }
+  }, { passive: true });
+  place();
+})();
+"""
 
 
 def paper_button(cand: dict, note: bool = True) -> str:
@@ -2076,9 +2214,9 @@ def read_links(cand: dict, href: str) -> str:
 
 def today_html(feature: dict | None, picks: list, date: str, root: Path, fig_base: str, href_base: str = "") -> str:
     """Picked up Today's Structure on the front page, the largest card: the article's own figure (overview and binding
-    site; its portrait version on a phone), its part and number, the target, the headline and supplement, and the ways on
-    (the article, the paper, Read Later). The four-line introduction is in the article; the reason it was picked is
-    for the pull request."""
+    site; its portrait version on a phone), its part and number, the target, the headline and supplement, the four
+    lines (question, approach, result, learned; the owner, 2026-10-23) and the ways on (the article, the paper, Read
+    Later). Highlights and Lab Notes are in the article; the reason it was picked is for the pull request."""
     hit = feature_of(feature, picks)
     if not hit:
         return ""
@@ -2101,7 +2239,8 @@ def today_html(feature: dict | None, picks: list, date: str, root: Path, fig_bas
             f'<p class="ck"><span class="ct">{PARTS[render.part_of(cand, pk)][0]}</span>{later_button(pm, True)}</p>'
             f'<p class="pk-tg ctg">{target_html(pk)}</p>'
             f'<h3 class="pk-h"><a href="{href}">{esc(pk["headline"])}</a></h3>'
-            f'<p class="pk-s">{esc(pk.get("subhead") or "")}</p>{read_links(cand, href)}</div></article></section>')
+            f'<p class="pk-s">{esc(pk.get("subhead") or "")}</p>{intro_html(pk, open_line=False, cls="pk-4")}'
+            f'{read_links(cand, href)}</div></article></section>')
 
 
 def part_html(key: str, count: int, date: str) -> str:
@@ -2322,7 +2461,7 @@ def issue_page(date: str, prev_date: str | None, next_date: str | None,
 ABOUT = (   # the front page's About FoldFeed, in polite Japanese (the owner's wording request, 2026-10-18)
     # One sentence per line. "|" marks where a sentence may wrap (between phrases), so a long sentence breaks into
     # even halves at a phrase boundary and no line is left with 「す。」 alone.
-    ("どんなサイトか",
+    ("Concept",   # was どんなサイトか (the owner, 2026-10-23); on the front page it is its own section (concept_html)
      "FoldFeed は、|構造生物学に携わる方のための|情報収集サポートサイトです。"
      "前日に|論文データベース（Europe PMC）へ|新しく登録された|査読済みの|オープンアクセス論文の中から、|"
      "構造生物学の論文を|毎日ピックアップして|ご紹介します。"),
@@ -2397,16 +2536,21 @@ def numbers_html(issues: list[str], lib: list[dict]) -> str:
     return f'<div class="kpis">{kpis}</div>{meter}{chart}'
 
 
-def about_html(issues: list[str], lib: list[dict], own_page: bool = False) -> str:
-    """About FoldFeed, right under the first screen: what the site is (polite Japanese), FoldFeed in Numbers (an
-    infographic, see numbers_html) and every journal the papers came from, as bars. All numbers are computed from the
-    data; a paper that came back in a later issue counts once."""
-    journals = journal_counts(issues)
-    # one sentence per line; it may wrap only at the marked phrase boundaries, balanced over its lines
+def sentences(text: str) -> str:
+    """An ABOUT passage: one sentence per line; a sentence may wrap only at the marked phrase boundaries ("|"),
+    balanced over its lines."""
     def sentence(x: str) -> str:
         return "<wbr>".join(f'<span class=w>{esc(w)}</span>' for w in x.split("|"))
-    rows = "".join(f'<div><dt>{esc(k)}</dt><dd>{"".join(f"<span class=s>{sentence(x)}。</span>" for x in v.split("。") if x)}</dd></div>'
-                   for k, v in ABOUT)
+    return "".join(f"<span class=s>{sentence(x)}。</span>" for x in text.split("。") if x)
+
+
+def about_html(issues: list[str], lib: list[dict], own_page: bool = False) -> str:
+    """About FoldFeed: what the site is (polite Japanese), FoldFeed in Numbers (an infographic, see numbers_html) and
+    every journal the papers came from, as bars. All numbers are computed from the data; a paper that came back in a
+    later issue counts once. On the front page Concept is left out: it has its own section near the top."""
+    journals = journal_counts(issues)
+    rows = "".join(f'<div><dt>{esc(k)}</dt><dd>{sentences(v)}</dd></div>'
+                   for k, v in ABOUT if own_page or k != "Concept")
     most = max([c for _, c in journals] + [1])
     jl = "".join(f'<li style="--i:{i}"><span class="jn">{esc(n)}</span><span class="c">{c}</span>'
                  f'<span class="bar" aria-hidden="true"><i style="--v:{c / most:.3f}"></i></span></li>'
@@ -2605,7 +2749,9 @@ def home(issues: list[str]) -> str:
     href = f"issues/{latest}.html"
     feature = load_feature(latest, ISSUES_DIR, picks)
     lib = library(issues)
-    main = [today_html(feature, picks, latest, ISSUES_DIR, "figures", href),
+    meta = load_issue(latest, ISSUES_DIR)[0]
+    main = [concept_html(meta, picks, href),
+            today_html(feature, picks, latest, ISSUES_DIR, "figures", href),
             more_html(picks, latest, ISSUES_DIR, "figures", href, feature and feature["pmcid"])]
     if past:
         number = {d: len(issues) - i for i, d in enumerate(issues)}
@@ -2619,7 +2765,7 @@ def home(issues: list[str]) -> str:
                 + shell("".join(main), side)
                 + about_html(issues, lib)
                 + colophon(f'<p>{esc(pmcoa.CREDIT)}</p>' if load_issue(latest, ISSUES_DIR)[0].get("source") == pmcoa.SOURCE else ""),
-                depth=0, viewer=True)
+                depth=0, viewer=True, script=LEAD_SCRIPT)
 
 
 PAST_ON_HOME = 5   # the latest past issues on the front page; all of them are on issues.html (Back Issues)
