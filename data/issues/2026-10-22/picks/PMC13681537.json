@@ -1,0 +1,139 @@
+{
+ "pmcid": "PMC13681537",
+ "rank": 4,
+ "headline": "AlphaFoldでMHC-IIの結合ペプチドを種を超えて予測",
+ "subhead": "予測ツールAF-predをコウモリMHC-IIの結晶構造と結合実験で検証した",
+ "target_label": "コウモリ MHC-II（EF）",
+ "target_en": "Bat MHC-II (Eptesicus fuscus) with peptides",
+ "summary": {
+  "question": "MHC-II は型が多様で、動物では結合ペプチドのデータも少なく、種をまたぐエピトープ予測は難しかった。",
+  "approach": "AlphaFold の予測構造をペプチドの保存された結合様式と照合して点数化する AF-pred を作り、結合実験と結晶構造で検証した。",
+  "result": "ウシ・ブタ・コウモリの41ペプチドでは、AUC は MixMHC2pred の 0.560 に対し AF2M-pred 0.744、AF3-pred 0.761 だった。",
+  "learned": "構造にもとづく AF-pred は、結合データが乏しい動物の MHC-II でも配列ベースの手法より予測できると著者らは結論している。",
+  "open": "AF-pred は、典型的でないペプチドの結合様式を正確に予測できない。",
+  "evidence": {
+   "question": [
+    {
+     "quote": "The high polymorphism of histocompatibility complex class II (MHC-II) alleles and limited immunopeptidomic data hinder pan-species epitope prediction.",
+     "section": "Abstract"
+    }
+   ],
+   "approach": [
+    {
+     "quote": "we developed a new tool, AF-prediction (AF-pred), with explicit quantitative criteria for MHC-II–restricted epitope prediction.",
+     "section": "Abstract"
+    }
+   ],
+   "result": [
+    {
+     "quote": "The ROC_area under the curve (ROC_AUC) values of the three tools are 0.560 for MixMHC2pred, 0.744 for AF2M-pred, and 0.761 for AF3-pred, respectively (Figure 4A).",
+     "section": "Results"
+    }
+   ],
+   "learned": [
+    {
+     "quote": "Compared with sequence-based tools, AF-pred demonstrates enhanced cross-species MHC-II binding prediction, with higher accuracy and interpretability",
+     "section": "Abstract"
+    }
+   ],
+   "open": [
+    {
+     "quote": "First, AF-pred cannot accurately predict noncanonical peptide–MHC-II binding modes.",
+     "section": "Discussion"
+    }
+   ]
+  }
+ },
+ "categories": [
+  "immune"
+ ],
+ "topics": [
+  "ai"
+ ],
+ "highlights": [
+  {
+   "tag": "機構の解明",
+   "text": "コウモリ MHC-II に結合した P1008 ペプチドの結晶には2分子が含まれ、P8–P9 付近で異なる2つの配置（M1・M2）が見えた。AF-pred の予測は M2 に近かった。",
+   "evidence": [
+    {
+     "quote": "The unit cell of the pBat_EF-NDIL crystal structure contains two molecules (M1 and M2).",
+     "section": "Results"
+    },
+    {
+     "quote": "The peptide conformations predicted by AF2M-pred and AF3-pred are consistent with that in M2, which represents the canonical MHC-II peptide binding conformation (Figure 5B).",
+     "section": "Results"
+    }
+   ]
+  },
+  {
+   "tag": "創薬・モダリティ",
+   "text": "予測にもとづいて改変したペプチドの結晶構造で、P9 の E が α76R・β57R の両方と塩橋を作る様子が予測どおりに見えた。二度目の変異では結合の強さが大きく増した。",
+   "evidence": [
+    {
+     "quote": "the crystal structure of pBat_EF-GASF illustrates that P9-E is capable of engaging in simultaneous salt bridge formations with both α76R and β57R within the EF domain, and this result is consistent with the prediction of AF-pred (Figure 7B).",
+     "section": "Results"
+    },
+    {
+     "quote": "Thermodynamic stability measurements of the complexes revealed a significant increase in binding affinity following the second mutation",
+     "section": "Results"
+    }
+   ]
+  },
+  {
+   "tag": "手法の工夫",
+   "text": "AF2M 版は同じペプチドの別の結合コア候補も示せたが、AF3 版は一つに収束した。6T3Y のような典型的でない結合様式は、どちらも外した。",
+   "evidence": [
+    {
+     "quote": "Notably, AF2M-pred can discover two different possible 9-aa-binding core regions in a peptide and rank them correctly (Figures 6 and 7B).",
+     "section": "Results"
+    },
+    {
+     "quote": "These results suggested that AF-pred might be too loyal to canonical binding modes and not capable of predicting noncanonical binding modes.",
+     "section": "Results"
+    }
+   ]
+  }
+ ],
+ "lab_notes": {
+  "expression": "大腸菌 BL21(DE3) で発現し、封入体をリフォールディングした。",
+  "construct": "MHC-II の α 鎖・β 鎖の細胞外領域。ペプチドをリンカーで β 鎖の 5′ 側につないだ。",
+  "purification": "ゲルろ過と陰イオン交換で精製。",
+  "sample_prep": "シッティングドロップ法。PGDS・GASF は 0.2 M 塩化カルシウム、20% PEG 3350、pH 5.1。",
+  "data_collection": "上海放射光施設 BL18U1/BL19U で測定。",
+  "evidence": [
+   {
+    "quote": "The constructed plasmids were transformed into Escherichia coli strain BL21(DE3)",
+    "section": "Methods"
+   },
+   {
+    "quote": "The ligand peptide was attached to the 5′ end of the β-chain via a linker (SGGGGSLVPRGSGGGGS)",
+    "section": "Methods"
+   },
+   {
+    "quote": "The complexes were further purified by gel filtration chromatography and anion-exchange chromatography",
+    "section": "Methods"
+   },
+   {
+    "quote": "pBat_EF-PGDS and pBat_EF-GASF crystals were grown as relatively thin slices in 0.2 M calcium chloride dihydrate, 20% w/v polyethylene glycol 3350, and a pH of 5.1.",
+    "section": "Methods"
+   },
+   {
+    "quote": "Diffraction data were collected at Beamline BL18U1/BL19U of the Shanghai Synchrotron Radiation Facility",
+    "section": "Methods"
+   }
+  ]
+ },
+ "keywords": [
+  "MHC-II",
+  "AlphaFold",
+  "AF-pred",
+  "コウモリ",
+  "エピトープ"
+ ],
+ "editor_notes": "AlphaFold 予測ツールの論文だが、コウモリ MHC-II とペプチドの結晶構造 3 件（8JR4・8JRJ・8JRK）を自前で決めているため新しい構造として書いた。UniProt の対応で A0AAT8XUA5 が初構造と判定された。構造のエンティティ順が不明なため legend_labels は未設定（render 後に確認してほしい）。",
+ "legend_labels": [
+  "HLA-DR α鎖（MHC-II）",
+  "HLA-DR β鎖（MHC-II）",
+  "結合ペプチド"
+ ]
+}

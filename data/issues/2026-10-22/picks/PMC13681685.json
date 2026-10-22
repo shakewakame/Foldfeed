@@ -1,0 +1,150 @@
+{
+ "pmcid": "PMC13681685",
+ "rank": 2,
+ "headline": "ジカウイルスNS1の外側の面を覆う抗体が見つかった",
+ "subhead": "5種の抗体との複合体をクライオ電顕で解析し、結合様式を2群に分けた",
+ "target_label": "ジカウイルス NS1",
+ "target_en": "ZIKV NS1–Fab complexes (Zika virus)",
+ "summary": {
+  "question": "ジカウイルス NS1 に対する抗体 3G2・4B8 は 別の抗体より強く感染を抑えるが、認識する場所は不明だった。",
+  "approach": "ヒト抗体5種の Fab と NS1 の複合体をクライオ電顕で解き、細胞や内皮細胞を使う実験で効果も調べた。",
+  "result": "3G2 と 4B8 は NS1 二量体の外側の面に結合した。残る3種はβラダー領域の末端に結合した。",
+  "learned": "結合する場所と防御の強さには対応があった。外側の面を覆う 3G2・4B8 は IgG でも Fab でも内皮の透過性亢進を完全に抑えた。",
+  "open": "分泌型 NS1 の四量体・六量体が病態に果たす役割は、今後の課題だ。",
+  "evidence": {
+   "question": [
+    {
+     "quote": "Although monoclonal antibodies (MAbs) 3G2 and 4B8 are more potent than MAb 4F10 in suppressing ZIKV infection in neonatal mice models, the epitopes are unclear.",
+     "section": "Abstract"
+    }
+   ],
+   "approach": [
+    {
+     "quote": "Herein, we determined the Cryo-electron microscopy (Cryo-EM) structures of ZIKV NS1 in complex with five human antibodies at 2.6–2.9 Å resolution.",
+     "section": "Abstract"
+    }
+   ],
+   "result": [
+    {
+     "quote": "Group I antibodies (3G2 and 4B8) recognize the previously unreported epitopes on the outer surface of the NS1 dimer.",
+     "section": "Abstract"
+    },
+    {
+     "quote": "Group II antibodies (4F10, 2E11, and 14G5) recognize common epitopes in the distal end of the β-ladder domain",
+     "section": "Abstract"
+    }
+   ],
+   "learned": [
+    {
+     "quote": "These findings elucidate the correlation between epitope recognition and protective efficacy of anti-NS1 antibodies",
+     "section": "Abstract"
+    },
+    {
+     "quote": "completely inhibited secreted form non-structural protein 1 (sNS1)-induced endothelial permeability via their immunoglobulin G (IgG) and Fab",
+     "section": "Abstract"
+    }
+   ],
+   "open": [
+    {
+     "quote": "The role of multimeric forms of secreted NS1, such as tetrameric and hexameric NS1, in viral replication and disease pathogenesis also remains to be studied.",
+     "section": "Discussion"
+    }
+   ]
+  }
+ },
+ "categories": [
+  "immune",
+  "pathogen"
+ ],
+ "highlights": [
+  {
+   "tag": "機構の解明",
+   "text": "3G2 は NS1 二量体の外側で、ウイング領域・コネクタ・βラダーの4か所にまたがって結合し、界面は 1198 Å2 に及ぶ。4B8 もほぼ同じ姿勢で結合する。",
+   "evidence": [
+    {
+     "quote": "As 3G2 and 4B8 bind at the outer surface of the NS1 tetramer with nearly identical poses, we classified them into Group I MAbs",
+     "section": "Results"
+    },
+    {
+     "quote": "According to calculations, the buried interface area between one 3G2 Fab and the dimeric NS1 is 1198 Å2.",
+     "section": "Results"
+    }
+   ]
+  },
+  {
+   "tag": "機構の解明",
+   "text": "βラダー末端に結合する3種のうち、ウイング領域にも接触する1種は複合体が安定だった。残る2種との複合体では NS1 四量体が崩れた。",
+   "evidence": [
+    {
+     "quote": "The structure of the tNS1-4F10 complex is more stable while the structures of the tNS1-2E11 and tNS1-14G5 complex are highly flexible in the Cryo-EM analysis.",
+     "section": "Results"
+    },
+    {
+     "quote": "For Fab 2E11 and 14G5, the NS1 tetramer structures are disrupted upon complex formation with these antibodies.",
+     "section": "Discussion"
+    }
+   ]
+  },
+  {
+   "tag": "創薬・モダリティ",
+   "text": "3G2 と 4B8 は他のフラビウイルスの NS1 とは交差反応せず、診断への利用が考えられる。Kd は 3G2 が 0.12 nM、4B8 が 0.80 nM だった。",
+   "evidence": [
+    {
+     "quote": "ELISA) results confirmed that 3G2 and 4B8 have no cross-reactivity with other flavivirus family members",
+     "section": "Results"
+    },
+    {
+     "quote": "dissociation constant [Kd] values of 3G2: 0.12±0.02 nM; the Kd values of 4B8: 0.80±0.33 nM",
+     "section": "Results"
+    }
+   ]
+  }
+ ],
+ "lab_notes": {
+  "expression": "全長 NS1（残基 3–352、GZ02 株）を Sf9 細胞のバキュロウイルス系で発現。",
+  "construct": "N 末端に gp64 シグナルペプチドと 6×His タグ。",
+  "purification": "金属アフィニティー、続いて Superdex 200 Increase でゲルろ過。",
+  "sample_prep": "Fab を NS1 四量体に 5:1 のモル比で氷上 30 分混ぜ、ゲルろ過で複合体を精製。",
+  "data_collection": "300 kV Titan Krios G3i と K3 検出器。RELION-3.1 で解析。",
+  "evidence": [
+   {
+    "quote": "NS1 proteins were produced by infecting suspension cultures of Sf9 cells for 60 h.",
+    "section": "Methods"
+   },
+   {
+    "quote": "with an N-terminal gp64 signal peptide followed by a 6× His-tag was synthesized",
+    "section": "Methods"
+   },
+   {
+    "quote": "Soluble NS1 was purified from cell supernatants by metal affinity chromatography",
+    "section": "Methods"
+   },
+   {
+    "quote": "Purified 3G2/4B8/4F10/2E11/14G5 Fab was incubated with ZIKV NS1 tetramer at a 5:1 molar ratio on ice for 30 min.",
+    "section": "Methods"
+   },
+   {
+    "quote": "datasets were collected on the 300 kV Titan Krios G3i (Thermo Fisher Scientific, Massachusetts, USA) equipped with a Gatan K3 Summit detector",
+    "section": "Methods"
+   },
+   {
+    "quote": "Cryo-EM data processing was performed using RELION-3.1.",
+    "section": "Methods"
+   }
+  ]
+ },
+ "keywords": [
+  "NS1",
+  "ジカウイルス",
+  "抗体",
+  "Fab",
+  "クライオ電顕"
+ ],
+ "ga_pdb_id": "8JKH",
+ "editor_notes": "5 つの PDB（8JKF・8JKH・8JQM・8JQN・8JQS）。構造図は 4B8 複合体（8JKH、2.64 Å）。legend_labels は未設定（render 後に凡例の順を見て書く）。本文に 4F10/4B10 の表記ゆれ、HPMEC/HBMEC の混在あり。",
+ "legend_labels": [
+  "NS1",
+  "4B8 重鎖（抗体）",
+  "4B8 軽鎖（抗体）"
+ ]
+}

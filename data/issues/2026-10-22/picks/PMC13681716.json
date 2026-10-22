@@ -1,0 +1,160 @@
+{
+ "pmcid": "PMC13681716",
+ "rank": 3,
+ "headline": "分節型フラビ様ウイルスのRdRpは亜鉛結合部位を欠く",
+ "subhead": "JMTVとALSVのRdRpの結晶構造は、典型的なフラビウイルスと似た形だった",
+ "target_label": "JMTV・ALSV の RdRp",
+ "target_en": "RdRp of Jingmen tick virus and Alongshan virus",
+ "summary": {
+  "question": "分節ゲノムをもつジンメンウイルスの RdRp は、フラビウイルスの NS5 と配列が約25%しか一致せず、構造が分からなかった。",
+  "approach": "JMTV と ALSV の RdRp ドメインを結晶構造解析し（2.6 Å・3.2 Å）、ゲノム 5′ 末端の RNA 配列の働きも調べた。",
+  "result": "3つのサブドメインからなる構造で、触媒モチーフ A–G は保存されていたが、亜鉛結合部位はなかった。",
+  "learned": "RdRp は典型的なフラビウイルスと似た仕組みで働くとみられる。5′ 末端の保存された8塩基は RdRp との結合と RNA 合成に必要だった。",
+  "open": "亜鉛結合部位を欠くことの影響は、まだ分かっていない。",
+  "evidence": {
+   "question": [
+    {
+     "quote": "shares limited amino acid sequence identity with that of flavivirus NS5 (about 25%)",
+     "section": "Introduction"
+    },
+    {
+     "quote": "the structural and functional features of RdRp are yet elusive, which greatly hampers the molecular understanding of genome replication in the segmented flaviviruses.",
+     "section": "Introduction"
+    }
+   ],
+   "approach": [
+    {
+     "quote": "Here, we determined the crystal structures of RNA-dependent RNA polymerase (RdRp) domains of JMTV and ALSV at 2.6 Å and 3.2 Å resolutions, respectively.",
+     "section": "Abstract"
+    }
+   ],
+   "result": [
+    {
+     "quote": "JMTV and ALSV RdRps can be divided into three subdomains and the catalytical Motif A-G are conserved like the typical flaviviruses, whereas the zinc-binding pockets are absent from the JMTV and ALSV RdRps.",
+     "section": "Abstract"
+    }
+   ],
+   "learned": [
+    {
+     "quote": "These results suggested that the RdRp of JMTV and ALSV would perform similar mechanism as flaviviruses RdRp to generate nascent RNA.",
+     "section": "Discussion"
+    },
+    {
+     "quote": "These results demonstrated that the conserved 8-nucleotide element at 5′-end of genome plays a critical role in RdRp–RNA interaction and RNA synthesis.",
+     "section": "Results"
+    }
+   ],
+   "open": [
+    {
+     "quote": "The consequence of lacking zinc-binding sites in JMTV and ALSV RdRps is still unclear, and further studies need to be performed.",
+     "section": "Results"
+    }
+   ]
+  }
+ },
+ "categories": [
+  "enzyme",
+  "pathogen"
+ ],
+ "highlights": [
+  {
+   "tag": "初構造",
+   "text": "JMTV と ALSV の RdRp は、指・掌・親指の3つのサブドメインをもつ右手型だった。ALSV の RdRp は、デングウイルスやダニ媒介脳炎ウイルスの RdRp と RMSD 2.4 Å で重なった。",
+   "evidence": [
+    {
+     "quote": "The RdRp domain displays a canonical right-hand conformation containing the fingers, palm, and thumb subdomains.",
+     "section": "Results"
+    },
+    {
+     "quote": "could be superimposed well with the RdRps of DENV and Tick-borne encephalitis virus (TBEV) from the Flavivirus genus, giving a RMSD of 2.4 Å",
+     "section": "Results"
+    }
+   ]
+  },
+  {
+   "tag": "機構の解明",
+   "text": "典型的なフラビウイルスの RdRp にある2つの亜鉛結合部位が、JMTV と ALSV にはない。デングウイルスで亜鉛を保持する残基は、ALSV では亜鉛を配位できない残基に置き換わっている。",
+   "evidence": [
+    {
+     "quote": "There are two conserved zinc ion binding sites in RdRps of typical flaviviruses, but JMTV and ALSV RdRps lack the binding pockets (Figure 5).",
+     "section": "Results"
+    },
+    {
+     "quote": "Those residues in ALSV RdRp could not provide electrons to Zn2+ for coordination.",
+     "section": "Results"
+    }
+   ]
+  },
+  {
+   "tag": "機構の解明",
+   "text": "ゲノム 5′ 末端の stem loop A の先端にある8塩基を変異させると、ALSV の RdRp は RNA を合成できず、RNA にも結合しなかった。野生型の RNA への KD は 0.16 μM だった。",
+   "evidence": [
+    {
+     "quote": "The ALSV RdRp could utilize the wild-type mini-genome as template to generate product in a de novo manner but failed to synthesize RNA when the SLA was mutated.",
+     "section": "Results"
+    },
+    {
+     "quote": "the ALSV RdRp could bind to the wild-type ALSV-5′-vRNA with a dissociation constant (KD) value of 0.16 μM but could not interact with the mutant ALSV-5′-vRNA",
+     "section": "Results"
+    }
+   ]
+  }
+ ],
+ "lab_notes": {
+  "expression": "大腸菌 BL21(DE3) で発現。Se 置換体は B834(DE3) で発現した。",
+  "construct": "ALSV RdRp は 294–914 残基。N 末端に His タグ。",
+  "purification": "HisTrap HP のあと、HiLoad 16/600 Superdex 200 で精製。",
+  "sample_prep": "シッティングドロップ蒸気拡散法。ALSV RdRp は 0.2 M クエン酸カリウム（pH 8.3）、20% PEG 3350。",
+  "data_collection": "SSRF BL17U で測定。JMTV は Se-SAD 法、ALSV は JMTV を鋳型にした分子置換で解いた。",
+  "evidence": [
+   {
+    "quote": "then the recombinant vector was transformed into E. coli BL21(DE3) competent cells",
+    "section": "Methods"
+   },
+   {
+    "quote": "JMTV NSP1 with L-Selenomethionine residues were expressed by E. coli B834 (DE3) competent cells.",
+    "section": "Methods"
+   },
+   {
+    "quote": "The JMTV RdRp (residues 295–914) and ALSV RdRp (residues 294–914) were constructed, expressed, and purified in the same way as the JMTV NSP1",
+    "section": "Methods"
+   },
+   {
+    "quote": "synthesized by Genewiz company (Genewiz, Suzhou, China) with a histidine tag at its N-terminus.",
+    "section": "Methods"
+   },
+   {
+    "quote": "The concentrated proteins were further purified using HiLoad 16/600 Superdex 200 PG",
+    "section": "Methods"
+   },
+   {
+    "quote": "crystals of ALSV RdRp were obtained in 0.2 M potassium citrate tribasic monohydrate (pH 8.3), 20% (w/v) PEG 3350",
+    "section": "Methods"
+   },
+   {
+    "quote": "were collected at the Shanghai Synchrotron Radiation Facility (SSRF) BL17U",
+    "section": "Methods"
+   },
+   {
+    "quote": "The JMTV RdRp structure was determined by the SAD method.",
+    "section": "Methods"
+   },
+   {
+    "quote": "The ALSV NSP1-RdRp structure was solved by the molecular replacement method using the structure of the JMTV RdRp domain as the search model with Phaser",
+    "section": "Methods"
+   }
+  ]
+ },
+ "keywords": [
+  "RdRp",
+  "JMTV",
+  "ALSV",
+  "フラビウイルス",
+  "ジンメンウイルス"
+ ],
+ "site_ligand": "",
+ "editor_notes": "PDB 上の唯一のリガンドは位相決定用のセレン原子（SE）なので、結合部位の拡大図は site_ligand を空にして出さない。8WU2（JMTV）は A0A4P2RZ45 の初構造。論文は 'first' と明言していないため、本文では「初めて」と書いていない。",
+ "legend_labels": [
+  "RdRp（RNA合成酵素）"
+ ]
+}

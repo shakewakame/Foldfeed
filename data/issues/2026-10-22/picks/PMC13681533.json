@@ -1,0 +1,137 @@
+{
+ "pmcid": "PMC13681533",
+ "rank": 11,
+ "headline": "HSV-1 gBに結合する抗体D48は、ドメインIIの軽鎖側に触れる",
+ "subhead": "gBとD48 Fabの3.04 Åクライオ電顕構造。DIIは他のヘルペスウイルスでも抗体の標的になる",
+ "target_label": "HSV-1 gB＋D48 Fab",
+ "target_en": "HSV-1 glycoprotein B–D48 Fab",
+ "summary": {
+  "question": "gB の抗体がウイルスをどう中和するのか、構造の基盤は分かっていなかった。",
+  "approach": "HSV-1 gB の細胞外領域と D48 Fab を HEK293F で発現して複合体を作り、クライオ電顕で解析した。",
+  "result": "gB 三量体の各分子に D48 Fab が 1 つずつ付き、主に軽鎖が DII ドメインと極性相互作用していた（3.04 Å）。",
+  "learned": "HCMV・EBV の gB 抗体も DII に結合し、融合前の gB でも抗体と衝突しない。DII は共通の抗原領域らしい。",
+  "evidence": {
+   "question": [
+    {
+     "quote": "While gB antibodies have been demonstrated to be effective in HSV neutralization [9], currently the structural basis for the antibody neutralization remains elusive",
+     "section": "Abstract"
+    }
+   ],
+   "approach": [
+    {
+     "quote": "To achieve this, we expressed the HSV-1 gB ectodomain and D48 Fab using the 293F expression system, yielding a stable complex (Figure S1A-S1B).",
+     "section": "Abstract"
+    }
+   ],
+   "result": [
+    {
+     "quote": "The complex displayed a trimeric configuration, with each gB bound to one D48 Fab along the central axis.",
+     "section": "Abstract"
+    },
+    {
+     "quote": "Specifically, D48 establishes polar interactions with the DII domain via its light chain (VL), encompassing an interface area of 462.6 Å2.",
+     "section": "Abstract"
+    }
+   ],
+   "learned": [
+    {
+     "quote": "revealing a potentially conserved antigenic domain gB DII, across the herpesvirus family, spanning pre- and post-fusion configurations.",
+     "section": "Abstract"
+    },
+    {
+     "quote": "with all three antibodies exhibiting superficial binding to pre-fusion gB DII domains devoid of structural conflict (Figure 1K).",
+     "section": "Abstract"
+    }
+   ]
+  }
+ },
+ "categories": [
+  "immune",
+  "pathogen"
+ ],
+ "topics": [
+  "antibody"
+ ],
+ "highlights": [
+  {
+   "tag": "新しい結合部位",
+   "text": "D48 の軽鎖の LCDR1・LCDR3・FR2 が gB の DII ドメインと水素結合や塩橋を作る。重鎖側には極性の接触がなく、疎水性残基のまとまりが支えると考えられる。",
+   "evidence": [
+    {
+     "quote": "Polar contacts, including hydrogen bonds (H-bonds) and salt bridges, were discovered within this interaction region (Figure 1G).",
+     "section": "Abstract"
+    },
+    {
+     "quote": "indicating potential hydrophobic interactions in stabilizing the D48 VH-HSV-1 gB interface (Figure S4).",
+     "section": "Abstract"
+    }
+   ]
+  },
+  {
+   "tag": "機構の解明",
+   "text": "接触残基を個別にアラニンへ置換すると、どの変異体でも D48 Fab への親和性が約 10 分の 1 に下がった。",
+   "evidence": [
+    {
+     "quote": "we introduced single-residue alanine mutants to disrupt polar contacts, resulting in an approximate 10-fold decrease in binding affinity (KD) across all mutants (Figures 1G and S3).",
+     "section": "Abstract"
+    }
+   ]
+  },
+  {
+   "tag": "創薬・モダリティ",
+   "text": "HCMV の SM5-1 と EBV の 3A3 も、gB の DII 表面に結合する。DII の配列には保存された残基があるが、3 種の抗体の接触残基は HSV-1・HCMV・EBV で同一ではなく、交差結合は限られると考えられる。",
+   "evidence": [
+    {
+     "quote": "We found that D48, SM5-1, and 3A3 each bind and extensively cover the superficial surface of the post-fusion DII domain of gB (Figure 1I).",
+     "section": "Abstract"
+    },
+    {
+     "quote": "However, no interaction residues of D48, SM5-1, and 3A3 were found to be identical across HSV-1, HCMV, and EBV, suggesting limited cross-herpesvirus binding capability of these antibodies.",
+     "section": "Abstract"
+    }
+   ]
+  }
+ ],
+ "lab_notes": {
+  "expression": "HEK293F 細胞で一過性発現（gB、D48 Fab、IgG1）。",
+  "construct": "gB は HSV-1 KOS の 31–730 残基で、C 末端に Twin-Strep と 8×His タグ。",
+  "purification": "gB と D48 Fab は Ni Sepharose、IgG1 は Protein A で精製。",
+  "sample_prep": "Quantifoil R2/1 の Au グリッドに 4 μL を載せ、Vitrobot Mark IV で凍結。",
+  "data_collection": "Titan Krios G3i と K3 で撮影し、cryoSPARC で解析（C3 対称）。",
+  "evidence": [
+   {
+    "quote": "the sequence of HSV-1 strain KOS gB 31–730 (gB730) [5] was cloned into the pcDNA3.1 mammalian expression vector fused with N-terminal TPA signal peptide and C-terminal Twin-Strep-tag plus 8∗His tag.",
+    "section": "Methods"
+   },
+   {
+    "quote": "All plasmids were expressed in HEK293F cells (ThermoFisher, Waltham, Massachusetts, USA) by transient transfection [17].",
+    "section": "Methods"
+   },
+   {
+    "quote": "The gB and D48 Fab were purified with Ni Sepharose resin (Cytiva, Shanghai, China) and D48 IgG1 was purified with Protein A Sepharose resin (Cytiva, Shanghai, China).",
+    "section": "Methods"
+   },
+   {
+    "quote": "holey-carbon Au grids (Quantifoil R2/1, 300 mesh) were glow discharged and 4 μL of samples were applied onto the front side of glow-discharged grids.",
+    "section": "Methods"
+   },
+   {
+    "quote": "Datasets of the HSV gB-D48 complex were collected on a 300-kV Titan Krios electron microscope G3i",
+    "section": "Methods"
+   }
+  ]
+ },
+ "keywords": [
+  "HSV-1",
+  "gB",
+  "D48",
+  "ヘルペスウイルス",
+  "中和抗体"
+ ],
+ "legend_labels": [
+  "D48 重鎖（抗体）",
+  "D48 軽鎖（抗体）",
+  "gB（融合タンパク質）"
+ ],
+ "editor_notes": "短報で Abstract が空のため、packet の Abstract 節に入っている導入・結果の文から引用した。凡例の順序（gB・軽鎖・重鎖）は render 後に確認。"
+}

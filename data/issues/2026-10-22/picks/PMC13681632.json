@@ -1,0 +1,148 @@
+{
+ "pmcid": "PMC13681632",
+ "rank": 12,
+ "headline": "HKU1のRBDは、未切断のTMPRSS2にも結合する",
+ "subhead": "2.4 Åの結晶構造で、RBDの向きとβ鎖の形が他の報告と異なっていた",
+ "target_label": "HKU1 RBD・TMPRSS2",
+ "target_en": "HCoV-HKU1A RBD–human TMPRSS2",
+ "summary": {
+  "question": "TMPRSS2 は HKU1 の受容体として見つかったばかりで、認識の仕組みを構造で調べる必要があった。",
+  "approach": "自己切断しない R255Q 変異の TMPRSS2 と HKU1A の RBD を昆虫細胞で作り、複合体の結晶構造を解いた。",
+  "result": "2.4 Å の構造で、界面は 1737 Å2。RBD の R517 や W515 などが TMPRSS2 のループ 1〜3 と接していた。",
+  "learned": "他の報告と比べて RBD の向きとβ10–β11 鎖の形が異なり、HKU1 の受容体結合には柔軟さがあると考えられる。",
+  "evidence": {
+   "question": [
+    {
+     "quote": "Transmembrane protease serine 2 (TMPRSS2) is a newly identified proteinaceous receptor for HCoV-HKU1",
+     "section": "Abstract"
+    }
+   ],
+   "approach": [
+    {
+     "quote": "To understand the mechanism of receptor recognition by HCoV-HKU1, we determined the crystal structure of viral RBD complexed with human TMPRSS2.",
+     "section": "Abstract"
+    },
+    {
+     "quote": "R255Q did not undergo autocleavage and also showed the highest protein yield compared to the other two mutants",
+     "section": "Abstract"
+    }
+   ],
+   "result": [
+    {
+     "quote": "The crystal structure of the HKU1A RBD-TMPRSS2 complex was determined at a resolution of 2.4 Å",
+     "section": "Abstract"
+    },
+    {
+     "quote": "The complex formation of TMPRSS2 and HKU1A RBD buries an accessible surface area of 1737 Å2.",
+     "section": "Abstract"
+    }
+   ],
+   "learned": [
+    {
+     "quote": "In comparison with these structures, HKU1A RBD solved in this study displays a noticeable difference in the conformation of β10-β11 strands",
+     "section": "Abstract"
+    },
+    {
+     "quote": "This suggests the plasticity and complexity of receptor binding by HCoV-HKU1.",
+     "section": "Abstract"
+    }
+   ]
+  }
+ },
+ "categories": [
+  "pathogen",
+  "protease"
+ ],
+ "highlights": [
+  {
+   "tag": "機構の解明",
+   "text": "RBD の向きは、報告済みの HKU1A–TMPRSS2 のクライオ電顕構造に対して 6.4°、HKU1B の結晶構造に対して 13.7° 回転している。",
+   "evidence": [
+    {
+     "quote": "HKU1A RBD undergoes rotation by 6.4° and 13.7°, respectively, compared to the Cryo-electron microscopy (Cryo-EM) structure of HKU1A RBD-TMPRSS2 complex (PDB code: 8VGT)",
+     "section": "Abstract"
+    }
+   ]
+  },
+  {
+   "tag": "機構の解明",
+   "text": "TMPRSS2 は未切断型で、ループ 1 の中心が切断型より約 4.6 Å 外側にずれている。このため G432 の主鎖 N と RBD の D529 の水素結合など、切断型では見られない接触が加わった。",
+   "evidence": [
+    {
+     "quote": "Compared to the active form, the center of loop 1 in the inactive TMPRSS2 was rotated outward and shifted about 4.6 Å (Figure 1F).",
+     "section": "Abstract"
+    },
+    {
+     "quote": "The backbone nitrogen of G432 of TMPRSS2 forms a hydrogen bond with D529 of RBD (Figure 1I).",
+     "section": "Abstract"
+    },
+    {
+     "quote": "G432 and N433 of cleaved TMPRSS2 have not been observed to interact with HKU1A RBD.",
+     "section": "Abstract"
+    }
+   ]
+  },
+  {
+   "tag": "新しい結合部位",
+   "text": "R517 は TMPRSS2 の V415 と水素結合し、D417 は RBD の H488 と塩橋を作る。この界面は、ワクチンや抗ウイルス薬の開発に使える情報になると著者は述べている。",
+   "evidence": [
+    {
+     "quote": "Here, we show that R517 is hydrogen-bonded to TMPRSS2 V415 (Figure 1G).",
+     "section": "Abstract"
+    },
+    {
+     "quote": "Reciprocally, D417 of TMPRSS2 forms a salt bridge interaction with H488 of HKU1A RBD (Figure 1G).",
+     "section": "Abstract"
+    },
+    {
+     "quote": "The interface between HCoV-HKU1 RBD and receptor also provides information for the development of vaccines and antivirals against HCoV-HKU1.",
+     "section": "Abstract"
+    }
+   ]
+  }
+ ],
+ "lab_notes": {
+  "expression": "RBD（残基 307–677）と TMPRSS2（残基 107–492）を Hi5 昆虫細胞で発現。",
+  "construct": "TMPRSS2 は自己切断を防ぐ R255Q 変異体。",
+  "purification": "Ni-NTA 親和性クロマトグラフィー、続いて Superdex 200 Increase でゲルろ過。",
+  "sample_prep": "RBD と TMPRSS2 を 1:1 で混ぜ、シッティングドロップ蒸気拡散法、18°C で結晶化。",
+  "data_collection": "上海放射光 BL18U で回折データを収集し、8S0N と 5GNB を鋳型に分子置換で解いた。",
+  "evidence": [
+   {
+    "quote": "TMPRSS2 (residues 107–492) and RBD (residues 307–677) of HCoV-HKU1 genome type A (HCoV-HKU1A) were both expressed in Hi5 insect cells.",
+    "section": "Abstract"
+   },
+   {
+    "quote": "Therefore, we used TMPRSS2 R255Q mutant for structural studies.",
+    "section": "Abstract"
+   },
+   {
+    "quote": "These proteins were purified by Ni-NTA affinity chromatography",
+    "section": "Abstract"
+   },
+   {
+    "quote": "HKU1A RBD-TMPRSS2 complex was formed via incubation of respective proteins at a 1:1 stoichiometry, and crystallized by the sitting-drop vapor diffusion method at 18°C",
+    "section": "Abstract"
+   },
+   {
+    "quote": "The diffraction data were collected at the Shanghai Synchrotron Radiation Facility beamline BL18U.",
+    "section": "Abstract"
+   },
+   {
+    "quote": "The structures were solved by molecular replacement in the Phaser program, using TMPRSS2 (PDB code: 8S0N) and HKU1A RBD (PDB code: 5GNB) as search models.",
+    "section": "Abstract"
+   }
+  ]
+ },
+ "keywords": [
+  "HKU1",
+  "TMPRSS2",
+  "RBD",
+  "コロナウイルス"
+ ],
+ "editor_notes": "短報（brief report）で本文は Abstract 節に集約されているため、引用の section は Abstract とした。PDB 9IZN（2.4 Å）。",
+ "legend_labels": [
+  "TMPRSS2（プロテアーゼ）",
+  "HKU1 S1（スパイク）"
+ ]
+}

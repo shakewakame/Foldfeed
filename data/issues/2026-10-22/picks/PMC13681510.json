@@ -1,0 +1,154 @@
+{
+ "pmcid": "PMC13681510",
+ "rank": 6,
+ "headline": "セムリキ森林熱ウイルスは受容体のLA3で捉えられる",
+ "subhead": "VLDLRのLA3がE1のDIIIに結合する様子を3.5 Åのクライオ電顕で示した",
+ "target_label": "SFV・VLDLR（ヒト）",
+ "target_en": "Semliki Forest virus with human VLDLR",
+ "summary": {
+  "question": "セムリキ森林熱ウイルス（SFV）と受容体 VLDLR の相互作用の詳しい仕組みは、ほとんど分かっていなかった。",
+  "approach": "SFV の粒子（VLP）と VLDLR の LA 反復のクライオ電顕構造を解いた。結合は BLI、変異体、他の生物種の受容体でも調べた。",
+  "result": "LA3 は E1 の DIII だけに結合し、HRV2 と VLDLR の結合様式に似ていた。LA を5つ連ねた LA33333 は解離が遅かった。",
+  "learned": "SFV は VLDLR の複数の LA 反復を使って結合を強める。ウマとカの受容体でも、使う LA は種ごとに異なっていた。",
+  "evidence": {
+   "question": [
+    {
+     "quote": "However, the detailed molecular mechanisms underlying the interaction between SFV and VLDLR remain largely unknown.",
+     "section": "Introduction"
+    }
+   ],
+   "approach": [
+    {
+     "quote": "Here, we report the cryo-electron microscopy (cryo-EM) structure of SFV in complex with human VLDLR (hVLDLR), which provides new insights into the molecular basis of SFV entry.",
+     "section": "Introduction"
+    },
+    {
+     "quote": "To validate the key binding sites, mutagenesis experiments were conducted.",
+     "section": "Introduction"
+    }
+   ],
+   "result": [
+    {
+     "quote": "The VLDLR-LA3 binds to SFV E1-DIII only, excluding E2, and exhibits no interaction with the glycan chain at Asn141 of E1.",
+     "section": "Results"
+    },
+    {
+     "quote": "Notably, the significantly slower dissociation rate observed for LA33333",
+     "section": "Results"
+    }
+   ],
+   "learned": [
+    {
+     "quote": "These results confirmed that SFV can bind to both equine ApoER2 and mosquito VLDLR through multiple LA repeats, achieving synergistic binding.",
+     "section": "Results"
+    },
+    {
+     "quote": "However, it is important to note that SFV utilizes distinct LAs for these bindings, thereby implying the involvement of different binding modes.",
+     "section": "Results"
+    }
+   ],
+   "open": [
+    {
+     "quote": "Determining whether all repeats are involved in binding is still an open question.",
+     "section": "Results"
+    }
+   ]
+  }
+ },
+ "categories": [
+  "pathogen",
+  "receptor"
+ ],
+ "topics": [
+  "membrane"
+ ],
+ "highlights": [
+  {
+   "tag": "新しい結合部位",
+   "text": "LA3 の W132、Q126 と Ca2+ を配位する酸性残基群が、E1-DIII の K345・K347・T348 などと結合する。E1-DIII に変異を入れると、結合は約30〜70倍弱まった。",
+   "evidence": [
+    {
+     "quote": "SFV interacts with LA3 residues Q126, W132, and the acidic cluster involved in Ca2+ coordination, which comprises D135, E137, and D139.",
+     "section": "Results"
+    },
+    {
+     "quote": "The individual residue substitutions K324A, K345A, K347A, and T348A each resulted in a significant reduction in the binding affinity of LA3, with a striking ∼30–70 fold decrease",
+     "section": "Results"
+    }
+   ]
+  },
+  {
+   "tag": "機構の解明",
+   "text": "VLDLR は他のアルファウイルスの受容体のようにスパイクの谷（canyon）には入らず、E1-DIII だけに結合する。同じ VLDLR が風邪ウイルスの HRV2 を捉える様式とよく似ている。",
+   "evidence": [
+    {
+     "quote": "However, the interaction between VLDLR and SFV deviates from this pattern as it occurs outside the canyon region, with only E1-DIII involved in the binding.",
+     "section": "Discussion"
+    },
+    {
+     "quote": "Surprisingly, the binding mode of VLDLR to SFV closely mirrors its interaction pattern with HRV2",
+     "section": "Results"
+    }
+   ]
+  },
+  {
+   "tag": "創薬・モダリティ",
+   "text": "LA1 は SFV に結合しないが、R44Q または T47P の1か所の置換で結合するようになった。LA3 の5連結体は、SFV と HRV の両方に使える阻害剤の候補になると論文は述べている。",
+   "evidence": [
+    {
+     "quote": "However, the R44Q or T47P substitution individually enabled LA1 to bind to E1-DIII.",
+     "section": "Results"
+    },
+    {
+     "quote": "presents a compelling candidate as a potent and versatile inhibitor for both SFV and HRV.",
+     "section": "Discussion"
+    }
+   ]
+  }
+ ],
+ "lab_notes": {
+  "expression": "SFV VLP は Expi293F 細胞で発現。LA 反復は MBP 融合で大腸菌に発現。",
+  "construct": "ヒト VLDLR LA3（残基 111–151）を mFc タグ付きで使用。",
+  "purification": "VLP は蔗糖クッションと密度勾配で精製。",
+  "sample_prep": "Quantifoil R 2/1 グリッドに 3 μl をのせ、Vitrobot Mark IV で凍結。",
+  "data_collection": "Titan Krios と K3、ブロック再構成で 2 回・5 回軸の領域を高分解能化。",
+  "evidence": [
+   {
+    "quote": "The Expi293F expression system was used to express the SFV VLP.",
+    "section": "SFV VLP Expression and Purification"
+   },
+   {
+    "quote": "The coding sequence of LA3 (residues 111–151) fused to mFc tag was also cloned into the pCAGGS plasmid.",
+    "section": "Gene Cloning"
+   },
+   {
+    "quote": "Initial purification was performed by ultracentrifugation through a 20% (w/v) sucrose cushion using a type 45Ti rotor at 110,000 g for 2.5 h at 4 °C.",
+    "section": "SFV VLP Expression and Purification"
+   },
+   {
+    "quote": "an aliquot of 3 μl solution was applied to glow-discharged Quantifiol R 2/1 holey carbon grids and subsequently vitrified using a Vitrobot Mark IV",
+    "section": "Cryo-EM Sample Preparation and Data Collection"
+   },
+   {
+    "quote": "To overcome the defocus gradient on the virions, two blocks for the viral icosahedral five-fold axis and two-fold axis were clipped out using block-based reconstruction",
+    "section": "Image Processing and 3D Reconstruction"
+   }
+  ]
+ },
+ "keywords": [
+  "セムリキ森林熱ウイルス",
+  "VLDLR",
+  "アルファウイルス",
+  "LA 反復",
+  "ウイルス受容体"
+ ],
+ "method_label": "Cryo-EM・3.5 Å",
+ "ga_pdb_id": "8X0K",
+ "legend_labels": [
+  "キャプシド",
+  "E2（外被糖タンパク質）",
+  "E1（外被糖タンパク質）",
+  "VLDLR（受容体）"
+ ],
+ "editor_notes": "PDB の entity の順が VLDLR・E1・E2・キャプシドかは render 後に要確認。LBD（LA1-8）複合体は密度が悪く、モデルは LA3 のみ（論文の記述）。PDB 8X0L・8X0M は 3 回・5 回軸のエントリ。"
+}

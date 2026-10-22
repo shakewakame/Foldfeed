@@ -1,0 +1,29 @@
+{
+ "pmcid": "SN-s41586-026-11184-1",
+ "axes": [
+  "structure",
+  "biology",
+  "drug"
+ ],
+ "reason": "ハンタウイルスのスパイクが受容体PCDH1を深い穴で捉える様子と、中和抗体4種の阻害の仕方を同じ構造から示した。",
+ "evidence": [
+  {
+   "quote": "PCDH1 asymmetrically engages a deep central pocket formed by four Gn protomers in the spike, explaining why only intact viral particles or soluble tetramers recognize it.",
+   "section": "Abstract"
+  },
+  {
+   "quote": "Structural and functional analyses of four neutralizing antibodies revealed that they block receptor binding through two distinct mechanisms",
+   "section": "Abstract"
+  }
+ ],
+ "considered": [
+  {
+   "pmcid": "PMC13681662",
+   "note": "VZVカプシドの3.1 Å構造は初構造で重要だが、創薬や生物学上の新しい機構の示し方では受容体認識と抗体の阻害を一度に示した論文に及ばなかった。"
+  },
+  {
+   "pmcid": "PMC13681685",
+   "note": "ZIKV NS1と抗体5種の複合体も有力だったが、受容体結合部位と阻害機構の両方を示す点でハンタウイルスの論文を選んだ。"
+  }
+ ]
+}

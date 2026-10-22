@@ -1,0 +1,139 @@
+{
+ "pmcid": "SN-s41586-026-11184-1",
+ "rank": 5,
+ "headline": "ハンタウイルスは棘の中央の穴で受容体を捉える",
+ "subhead": "アンデスウイルスのスパイクとPCDH1の複合体を2.6 Åのクライオ電顕で解いた",
+ "target_label": "ANDV スパイク・PCDH1",
+ "target_en": "Andes virus (ANDV) Gn–Gc spike with human PCDH1",
+ "summary": {
+  "question": "新世界ハンタウイルスは受容体 PCDH1 で細胞に入るが、その結合の構造的な仕組みは分かっていなかった。",
+  "approach": "可溶性のスパイク四量体を PCDH1 と共発現して精製し、クライオ電顕で解いた。変異体と深部変異スキャンで結合部位を調べた。",
+  "result": "PCDH1 の EC1 ドメインは、Gn 四分子がつくる中央の深い窪みに入り込んでいた。窪みは Fab が入るには狭かった。",
+  "learned": "PCDH1 はウイルス粒子の上のスパイクだけを認識する。抗体は窪みをふさぐか、かさ高さで受容体の接近を妨げて中和する。",
+  "evidence": {
+   "question": [
+    {
+     "quote": "New World hantaviruses, including Andes virus (ANDV), use the cell-surface receptor protocadherin-1 (PCDH1) to enter host cells1. However, the structural basis of this interaction remains unclear.",
+     "section": "Abstract"
+    }
+   ],
+   "approach": [
+    {
+     "quote": "we designed a soluble version of the ANDV spike tetramer by adding a hetero-octamerization domain at the C-terminal end of the Gn and Gc ectodomains",
+     "section": "PCDH1 stabilizes the (Gn–Gc)4 spike"
+    },
+    {
+     "quote": "Next, we used a deep-mutational scanning (DMS) approach to more comprehensively survey the sequence landscape of the spike–PCDH1 interaction.",
+     "section": "PCDH1 binds to a central spike pocket"
+    }
+   ],
+   "result": [
+    {
+     "quote": "The final model showed the EC1 domain deeply inserted into a pocket formed by four protomers of Gn",
+     "section": "PCDH1 binds to a central spike pocket"
+    },
+    {
+     "quote": "are incompatible with those of a Fab fragment (5 × 4 × 7 nm).",
+     "section": "Mechanistic basis of ANDV neutralization"
+    }
+   ],
+   "learned": [
+    {
+     "quote": "PCDH1 asymmetrically engages a deep central pocket formed by four Gn protomers in the spike, explaining why only intact viral particles or soluble tetramers recognize it.",
+     "section": "Abstract"
+    },
+    {
+     "quote": "they block receptor binding through two distinct mechanisms—occluding access to the PCDH1-binding site or sterically preventing receptor engagement.",
+     "section": "Abstract"
+    }
+   ]
+  }
+ },
+ "categories": [
+  "pathogen",
+  "immune",
+  "receptor"
+ ],
+ "topics": [
+  "antibody"
+ ],
+ "highlights": [
+  {
+   "tag": "新しい結合部位",
+   "text": "1個の受容体が4個のウイルス糖タンパク質と接する結合様式で、論文は、著者の知る限り他の外被ウイルスで見られていないとしている。EC1 は隣り合う2つの Gn と主に接触する。",
+   "evidence": [
+    {
+     "quote": "This mode of interaction, whereby one receptor molecule interacts with four viral glycoproteins, represents a binding mode that to our knowledge has not been observed in any enveloped virus",
+     "section": "PCDH1 binds to a central spike pocket"
+    }
+   ]
+  },
+  {
+   "tag": "機構の解明",
+   "text": "Gn の3つのループが結合部位をつくる。旧世界ハンタウイルス HTNV のスパイクにこの3ループを移すと、PCDH1 に弱く結合するようになった。",
+   "evidence": [
+    {
+     "quote": "Mutagenesis identified three Gn loops that shape the receptor-binding site and afford the transfer of PCDH1 binding from New World to Old World glycoproteins.",
+     "section": "Abstract"
+    },
+    {
+     "quote": "a chimeric rVSV-HTNV bearing all three receptor-binding loops from ANDV Gn, but not the GnH CD loop alone, could now bind to PCDH1, albeit relatively weakly.",
+     "section": "Structural basis of receptor use"
+    }
+   ]
+  },
+  {
+   "tag": "創薬・モダリティ",
+   "text": "中和抗体4種のうち、ANDV-5 と MIB22 は窪みを直接ふさぐ。ADI-65534 と ANDV-34 は窪みに入らず、IgG の定常領域による立体障害で競合すると考えられる。MIB22 と GnH の複合体は X 線で 3.1 Å に解かれた。",
+   "evidence": [
+    {
+     "quote": "We observed that ADI-65534 and ANDV-34 do not occlude access to the central pocket, suggesting that they compete with PCDH1 through a steric hindrance mechanism mediated by the antibody constant regions",
+     "section": "Mechanistic basis of ANDV neutralization"
+    },
+    {
+     "quote": "We therefore determined the crystal structure of an antibody fragment of MIB22 in a complex with ANDV GnH at a resolution of 3.1 Å",
+     "section": "Mechanistic basis of ANDV neutralization"
+    }
+   ]
+  }
+ ],
+ "lab_notes": {
+  "expression": "ショウジョウバエ S2 細胞で安定発現し、CdCl2 で誘導。",
+  "construct": "Gn・Gc の細胞外領域に人工の四量体化ドメイン HALC4_136 を分割して融合。",
+  "purification": "Strep-Tactin 親和、TALON、Superose6 のゲル濾過の順。",
+  "sample_prep": "0.34 mg/ml を UltrAufoil グリッドに 3 μl のせ、Vitrobot Mark IV で凍結。",
+  "data_collection": "Titan Krios と Falcon 4i、ピクセルサイズ 0.7455 Å。",
+  "evidence": [
+   {
+    "quote": "The octamerization sequence was derived from HALC4_136, a de novo tetramerization domain comprising three antiparallel helices per protomer20.",
+    "section": "PCDH1 stabilizes the (Gn–Gc)4 spike"
+   },
+   {
+    "quote": "Cultures of 1–3 l were grown in spinner flasks in medium supplemented with 1% penicillin–streptomycin antibiotics to approximately 107 cells per ml, and protein expression was induced with 4 μM CdCl2.",
+    "section": "Protein purification"
+   },
+   {
+    "quote": "Proteins were then purified by size-exclusion chromatography (SEC) on a 10/300 Superose6 Increase column (Cytiva) in 10 mM Tris pH 8.0, 100 mM NaCl.",
+    "section": "Protein purification"
+   },
+   {
+    "quote": "Frozen grids were imaged on the Titan Krios POLARIS (Synchrotron Soleil) system equipped with a FALCON 4i detector (Thermo Fisher Scientific)",
+    "section": "Cryo-EM grid preparation and data collection"
+   }
+  ]
+ },
+ "keywords": [
+  "ハンタウイルス",
+  "アンデスウイルス",
+  "PCDH1",
+  "中和抗体",
+  "糖タンパク質スパイク"
+ ],
+ "ga_pdb_id": "30XT",
+ "legend_labels": [
+  "Gn（糖タンパク質）",
+  "Gc（糖タンパク質）",
+  "PCDH1（受容体）"
+ ],
+ "editor_notes": "PDB の entity が Gn・Gc・PCDH1 の順かは render 後に figures/*.json の legend で要確認。窪みのサイズ（約 2.5 nm）や結合面積は本文にあるが、紹介文では使っていない。Fab が入らない根拠は本文の寸法比較。"
+}

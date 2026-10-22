@@ -1,0 +1,177 @@
+{
+ "screened": 29,
+ "scored": [
+  {
+   "pmcid": "PMC13680373",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 2,
+    "reach": 2,
+    "structure": 1,
+    "support": 2
+   },
+   "selected": true,
+   "reason": "既存の GPCR 研究の枠組みの上で、負のアロステリック修飾薬 AS408 が受容体の細胞内側を薬剤結合部位から切り離す仕組みを、溶液 NMR と変異体の機能測定で示した。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "AS408 uncouples the intracellular region of β1AR from the influence of the orthosteric pocket and reduces G protein coupling by adoption of an alternative signalling-incompetent intracellular surface arrangement.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "The advantages of allosteric modulators over traditional orthosteric agonists have positioned them as highly promising therapeutic agents.",
+      "section": "Abstract"
+     }
+    ],
+    "structure": [
+     {
+      "quote": "Both act through a known transmembrane (TM)3-TM4-TM5 site, reducing signalling to similar extents, but through distinct molecular mechanisms as revealed by pharmacological assays, MD simulations, and solution nuclear magnetic resonance spectroscopy.",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "E1303.41 mutations reduce agonist-stimulated signalling as a side chain-dependent rheostat, shifting receptor equilibria to populate states with weaker G protein affinities.",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "SN-s44318-026-00923-9",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 2,
+    "reach": 1,
+    "structure": 0,
+    "support": 2
+   },
+   "selected": false,
+   "reason": "A-box が Aurora A の活性化因子と同じ面に結合するという機構は新しいが、構造の根拠は AlphaFold3 のモデルと変異・結合実験で、実験で決めた構造がない（structure 0）。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "Here, we identify a phenylalanine-rich motif (A-box), present in PPP6R2 and PPP6R3 but absent from PPP6R1, that binds a surface on Aurora A overlapping those used by CEP192, TPX2 and TACC3.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "PP6 forms three holoenzymes defined by regulatory subunits PPP6R1–R3, yet how these confer substrate recognition and regulation is poorly understood.",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "Mutation of A-box phenylalanine residues disrupts Aurora A binding and T-loop dephosphorylation, elevating spindle-associated Aurora A activity, and enlarging mitotic spindles.",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "SN-s44318-026-00943-5",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 2,
+    "reach": 1,
+    "structure": 0,
+    "support": 2
+   },
+   "selected": false,
+   "reason": "DZIP3 を RIG-I の共センサーとする点は新しいが、構造データがなく細胞・生化学の研究（structure 0）。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "Here, we identify the RNA-binding E3 ubiquitin ligase DZIP3 as an innate immune sensor that couples viral RNA recognition to downstream immune signaling.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "Our findings establish DZIP3 as an innate immune co-sensor that integrates viral RNA detection with ubiquitin-mediated signaling, revealing a regulatory mechanism of RIG-I-MAVS-mediated antiviral immunity.",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "Consequently, DZIP3 depletion impairs host antiviral defense, whereas DZIP3 restricts infection by a broad range of RNA viruses.",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13681609",
+   "type": "ai_design",
+   "scores": {
+    "novelty": 2,
+    "reach": 1,
+    "structure": 0,
+    "support": 1
+   },
+   "selected": false,
+   "reason": "共有結合ペプチドの設計は新しいが、設計は docking と力場による予測で、設計した構造を X 線・クライオ電顕・NMR で確かめていない（structure 0）。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "Two peptides (15- and 16-mer peptides) were equipped with sulfonyl fluoride warheads bound with the conserved Y449 residue of RBD via the sulfur (VI) fluoride exchange (SuFEx) click chemistry.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "Our design approach greatly promotes the discovery of hyper-stable inhibitors against SARS-CoV-2 variants and other rapidly evolving viruses, potentially applicable to combat future viral outbreaks efficiently.",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "With permanent bonding and without dissociation, the two peptides blocked Omicron BA.2 pseudovirus infection with 50% inhibitory concentration (IC50) values of 1.07 μM and 1.56 μM, respectively.",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13682919",
+   "type": "method",
+   "scores": {
+    "novelty": 2,
+    "reach": 1,
+    "structure": 1,
+    "support": 1
+   },
+   "selected": false,
+   "reason": "T4SS 因子 TrhW の初の実験的な構造解析だが、SAXS による低分解能の形の情報にとどまる。合計 5 点で基準（6 点）に届かない。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "Together, these findings establish TrhW as a dynamic multidomain protein and provide the first experimental structural characterization of this conserved T4SS component, offering a framework for future studies investigating its role in IncHI1 conjugation.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "Type IV secretion systems (T4SSs) are multiprotein nanomachines that mediate conjugative DNA transfer and contribute to the dissemination of antimicrobial resistance genes.",
+      "section": "Abstract"
+     }
+    ],
+    "structure": [
+     {
+      "quote": "SEC-SAXS (small-angle x-ray scattering) showed that TrhW adopts an elongated, non-globular architecture with a radius of gyration of 44.6 Å and a maximum particle dimension of 160 Å.",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "Ab initio reconstructions, BilboMD, and ensemble optimization modeling demonstrated that the experimental scattering data are best described by an ensemble of interconverting conformations rather than a single static structure.",
+      "section": "Abstract"
+     }
+    ]
+   }
+  }
+ ]
+}

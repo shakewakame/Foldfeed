@@ -1,0 +1,49 @@
+{
+ "pdb_id": "8WU2",
+ "view": {
+  "target": [
+   17.61,
+   40.9,
+   89.38
+  ],
+  "dir": [
+   -0.2268,
+   -0.7921,
+   -0.5667
+  ],
+  "up": [
+   -0.6719,
+   -0.294,
+   0.6798
+  ],
+  "half": [
+   57.5,
+   38.3
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "RdRp（RNA合成酵素）",
+   "desc": "RNA polymerase",
+   "entity": "1"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "SE",
+   "label": "selenium atom",
+   "color": "#C23B8E",
+   "desc": "Selenium Atom",
+   "entity": [
+    "2"
+   ],
+   "sites": [
+    [
+     "C",
+     "1001"
+    ]
+   ]
+  }
+ ]
+}

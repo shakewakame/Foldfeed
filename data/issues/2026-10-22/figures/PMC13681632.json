@@ -1,0 +1,39 @@
+{
+ "pdb_id": "9IZN",
+ "view": {
+  "target": [
+   36.35,
+   -26.7,
+   90.14
+  ],
+  "dir": [
+   -0.0631,
+   -0.9889,
+   0.1343
+  ],
+  "up": [
+   -0.8463,
+   0.1244,
+   0.518
+  ],
+  "half": [
+   65.9,
+   34.7
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "TMPRSS2（プロテアーゼ）",
+   "desc": "Transmembrane protease serine 2",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "HKU1 S1（スパイク）",
+   "desc": "Spike protein S1",
+   "entity": "2"
+  }
+ ],
+ "ligands": []
+}

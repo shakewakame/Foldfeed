@@ -1,0 +1,120 @@
+{
+ "pmcid": "PMC13681648",
+ "rank": 7,
+ "headline": "ブタ心臓の呼吸鎖巨大複合体を5つの状態で捉えた",
+ "subhead": "複合体Iの活性・不活性と複合体IVの位置の対応をクライオ電顕で調べた",
+ "target_label": "MCI2III2IV2（ブタ心臓）",
+ "target_en": "Respiratory megacomplex I2III2IV2 (porcine heart)",
+ "summary": {
+  "question": "CI の活性化・不活性化が CIII の構造や CIV の位置にどう影響するかは、ほとんど分かっていなかった。",
+  "approach": "ブタ心臓から巨大複合体 MCI2III2IV2 を精製し、クライオ電顕で5つの立体配座を解いた。細胞では gSTED 顕微鏡で存在を確かめた。",
+  "result": "5状態のうち最高は 3.46 Å。両方の CI が不活性型の State 2 では、CIV が CIII に約 29 Å 近づいて結合した。",
+  "learned": "CI・CIII・CIV は互いの構造や位置に影響し合い、一つの酵素として働く可能性が強く示された。",
+  "open": "MCI2III2IV2 が細胞の中で果たす生物学的な役割は、まだよく分かっていない。",
+  "evidence": {
+   "question": [
+    {
+     "quote": "However, little is known about how CI activation or deactivation may influence the conformational changes in CIII or change the positions of CIV.",
+     "section": "Introduction"
+    }
+   ],
+   "approach": [
+    {
+     "quote": "To solve the structure of MCI2III2IV2, we optimized protein purification procedures from fresh porcine hearts to ensure that intact MCI2III2IV2 was sufficiently abundant for subsequent Cryo-EM analysis",
+     "section": "Results"
+    },
+    {
+     "quote": "High-resolution Cryo-EM imaging, combined with super-resolution gated stimulated emission depletion microscopy (gSTED), strongly supports the formation of MCI2III2IV2 in live cells.",
+     "section": "Abstract"
+    }
+   ],
+   "result": [
+    {
+     "quote": "Finally, we obtained five conformations of MCI2III2IV2, namely State 1, Mid 1, Mid 2, Mid 3, and State 2, with an overall resolution of 4.37, 3.46, 5.85, 4.51, and 3.58 Å, respectively",
+     "section": "Results"
+    },
+    {
+     "quote": "with CIV moving ∼29 Å inward and rotating ∼26°, while the matrix arm of CI moves ∼45 Å toward the complex exterior.",
+     "section": "Results"
+    }
+   ],
+   "learned": [
+    {
+     "quote": "Our data strongly suggest that CI, CIII, and CIV could mutually affect each other's conformation or position in MCI2III2IV2 and work together as a whole enzyme.",
+     "section": "Discussion"
+    }
+   ],
+   "open": [
+    {
+     "quote": "the biological role of MCI2III2IV2 remains largely unknown, and further study is needed",
+     "section": "Discussion"
+    }
+   ]
+  }
+ },
+ "categories": [
+  "photosynthesis",
+  "transporter"
+ ],
+ "topics": [
+  "dynamics",
+  "membrane"
+ ],
+ "highlights": [
+  {
+   "tag": "機構の解明",
+   "text": "2つの CI が活性型の State 1 から、不活性型の State 2 へ中間状態を経て移る経路が示された。State 2 では CIV が CIII に3か所で結合し、これまでの超複合体にない位置を取る。",
+   "evidence": [
+    {
+     "quote": "suggesting that MCI2III2IV2 shifts from the active state (State 1) to the deactive state (State 2) via the intermediates (Mid 1, Mid 2, and Mid 3)",
+     "section": "Results"
+    },
+    {
+     "quote": "The position of CIV in State 2 is different from that in any previously reported structures.",
+     "section": "Discussion"
+    }
+   ]
+  },
+  {
+   "tag": "機構の解明",
+   "text": "CI の2か所（NDUFB7 と NDUFB10）が、CIII の Rieske ドメインやシトクロム c の結合部位に働きかける足場になる可能性がある。State 1 から State 2 で、Rieske ドメインは b 状態から c1 状態へ移ると推測された。",
+   "evidence": [
+    {
+     "quote": "Consequently, NDUFB7A123 and NDUFB10A176 of CI may function as two anchor points to induce conformational changes in the CIII Rieske domain and Cyt.c binding site",
+     "section": "Results"
+    },
+    {
+     "quote": "It was thus reasonable to speculate that when MCI2III2IV2 shifts from State 1 to State 2, the Rieske domain of CIII changes from the “b” state to the “c1” state",
+     "section": "Results"
+    }
+   ]
+  },
+  {
+   "tag": "手法の工夫",
+   "text": "固定した細胞を gSTED 超解像顕微鏡で観察し、CI と CIV を標識して巨大複合体の粒子を見つけた。精製で壊れやすい複合体が、細胞の中にあることを示す手がかりになる。",
+   "evidence": [
+    {
+     "quote": "Our gSTED images undoubtedly demonstrate plenty of in situ MCI2III2IV2 particles in rapidly fixed cells mimicking living conditions.",
+     "section": "Introduction"
+    }
+   ]
+  }
+ ],
+ "lab_notes": {
+  "expression": null,
+  "construct": null,
+  "purification": null,
+  "sample_prep": null,
+  "data_collection": null,
+  "evidence": []
+ },
+ "keywords": [
+  "呼吸鎖",
+  "巨大複合体",
+  "複合体 I",
+  "シトクロム c 酸化酵素",
+  "クライオ電顕"
+ ],
+ "method_label": "Cryo-EM・全体 3.46 Å",
+ "editor_notes": "本文の Methods が packet になく、lab_notes は空。PDB 8GOQ など9件は未公開（保留中）のため図なし。論文は ‘State 1 が活性、State 2 が不活性’ を断定せず（Discussion）、機構は推測として書いた。"
+}

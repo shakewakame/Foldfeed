@@ -1,0 +1,39 @@
+{
+ "pdb_id": "8X85",
+ "view": {
+  "target": [
+   233.28,
+   234.61,
+   262.67
+  ],
+  "dir": [
+   -0.9685,
+   0.2423,
+   0.0573
+  ],
+  "up": [
+   0.2174,
+   0.9351,
+   -0.28
+  ],
+  "half": [
+   94.8,
+   68.9
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "LepR（受容体）",
+   "desc": "Leptin receptor",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "レプチン（ホルモン）",
+   "desc": "Leptin",
+   "entity": "2"
+  }
+ ],
+ "ligands": []
+}
