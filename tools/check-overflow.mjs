@@ -34,9 +34,18 @@ for (const w of [340, 360, 375, 390, 414]) {
           if (b.right > W + 0.5) { out.push('text "' + n.textContent.trim().slice(0, 24) + '" right=' + Math.round(b.right)); break; }
         }
       }
+      // a box may run past the edge inside a parent that clips it and itself fits (a phone's first-screen structure,
+      // large on purpose): that cannot widen the page or be scrolled to. Text is checked above all the same.
+      const clipped = e => {
+        for (let a = e.parentElement; a && a !== document.body; a = a.parentElement) {
+          const cs = getComputedStyle(a);
+          if (/clip|hidden/.test(cs.overflowX) && a.getBoundingClientRect().right <= W + 0.5) return true;
+        }
+        return false;
+      };
       document.querySelectorAll('body *').forEach(e => {
         const b = e.getBoundingClientRect();
-        if (b.width && b.right > W + 0.5) out.push(e.tagName.toLowerCase() + '.' + (typeof e.className === 'string' ? e.className : '') + ' right=' + Math.round(b.right));
+        if (b.width && b.right > W + 0.5 && !clipped(e)) out.push(e.tagName.toLowerCase() + '.' + (typeof e.className === 'string' ? e.className : '') + ' right=' + Math.round(b.right));
       });
       return { over: document.documentElement.scrollWidth - W, out: out.slice(0, 5) };
     });

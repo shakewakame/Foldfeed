@@ -35,7 +35,7 @@ SITE_DIR = ROOT / "site"
 TH = brand.THEME
 DESCRIPTION = "新着の査読済みオープンアクセス論文から、構造生物学論文を、毎日紹介するサイト。"
 TAGLINE = "構造生物学者のための情報収集サポートサイト"
-LEAD = ("新着の査読済みオープンアクセス論文から、", "構造生物学の論文を、", "毎日ピックアップして紹介")
+LEAD = ("新着の査読済み|オープンアクセス論文から、", "構造生物学の論文を、", "毎日ピックアップして紹介")   # "|": a phone's line break
 LATEST = {"date": None}   # the newest issue with articles (the global navigation's "Latest Issue"), set by build()
 NAV_INFO = {"groups": [], "articles": 0, "recent": []}   # what the navigation's dropdowns list, set by build()
 THUMBS_PER_ISSUE = 8   # structures shown for each issue in a list of issues
@@ -294,7 +294,8 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .find button:hover {{ background:var(--acc-ink); border-color:var(--acc-ink); }}
 .mail-grid {{ display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,1fr); gap:48px; margin-top:16px; align-items:start; }}
 .mail p {{ margin:0 0 8px; font-size:15px; color:var(--desc); }}
-.mail ul {{ margin:6px 0 0; padding-left:1.3em; font-size:14.5px; color:var(--desc); }}
+.mail ul {{ margin:6px 0 0; padding-left:1.3em; font-size:14.5px; line-height:1.65; color:var(--desc); }}
+.mail li + li {{ margin-top:12px; }}
 .mail .soon {{ font-family:var(--mono); font-size:12px; letter-spacing:.06em; color:var(--acc-ink); }}
 .mail form {{ display:flex; gap:8px; }}
 .mail input {{ flex:1; min-width:0; font:inherit; font-family:var(--sans); font-size:14.5px; padding:10px 12px; border:1px solid var(--ink);
@@ -359,6 +360,7 @@ body {{ --headnow:var(--navh); }}
 .lead-h {{ margin:0; font-family:var(--serif); font-weight:400; font-size:clamp(18px, 1.72vw, 30px); line-height:1.8;
            color:var(--ink); letter-spacing:.02em; }}
 .lead-h span {{ display:block; white-space:nowrap; }}
+.lead-h .sp {{ display:none; }}
 html, body {{ overflow-x:clip; }}   /* a guard: nothing may widen the page sideways (see docs/decisions.md) */
 .lead-go {{ display:inline-flex; align-items:center; gap:12px; margin-top:34px; padding:14px 24px 14px 20px;
             background:var(--ink); color:#fff; font-family:var(--mono); font-size:14.5px; letter-spacing:.06em; }}
@@ -396,10 +398,12 @@ html, body {{ overflow-x:clip; }}   /* a guard: nothing may widen the page sidew
 .about-page .about {{ padding-top:40px; padding-bottom:var(--sec); }}
 .about-grid {{ display:grid; grid-template-columns:minmax(0,64fr) minmax(0,36fr); gap:48px; margin-top:22px; align-items:start; }}
 .about-dl {{ margin:0; }}
-.about-dl div {{ display:grid; grid-template-columns:136px minmax(0,1fr); gap:16px; padding:10px 0; border-top:1px solid var(--hair); }}
+/* spacing outside the articles (the owner's memo, 2026-10-22): the lines of one sentence close together, sentences and
+   items clearly apart, so each reads as one piece */
+.about-dl div {{ display:grid; grid-template-columns:136px minmax(0,1fr); gap:16px; padding:24px 0; border-top:1px solid var(--hair); }}
 .about-dl div:first-child {{ border-top:0; padding-top:0; }}
 .about-dl dt {{ font-size:15px; font-weight:700; color:var(--ink2); padding-top:3px; }}
-.about-dl dd {{ margin:0; font-size:16px; line-height:1.95; color:var(--ink2); }}
+.about-dl dd {{ margin:0; font-size:16px; line-height:1.7; color:var(--ink2); }}
 .about-sub {{ margin:0 0 14px; font-family:var(--sans); font-size:17px; font-weight:700; color:var(--ink); display:flex;
               justify-content:space-between; align-items:baseline; }}
 .about-sub span {{ font-family:var(--mono); font-size:12.5px; font-weight:500; color:var(--mute); }}
@@ -475,6 +479,10 @@ html, body {{ overflow-x:clip; }}   /* a guard: nothing may widen the page sidew
 .anim .lead-h span {{ animation:rise .9s cubic-bezier(.2,.7,.2,1) both; animation-delay:calc(var(--i) * 140ms + 80ms); }}
 .anim .lead-btns {{ animation:rise .9s cubic-bezier(.2,.7,.2,1) .55s both; }}
 .anim .lead-art {{ animation:fadein 1.2s ease .2s both; }}
+@keyframes drift {{ from {{ transform:none; }} to {{ transform:translate3d(-2.5%, 1.5%, 0) rotate(-2.2deg) scale(1.035); }} }}
+@media (max-width:860px) {{   /* the phone's first-screen structure, alive but quiet: a slow sway, never a full turn */
+  .anim .lead-art .fig {{ animation:drift 11s ease-in-out 1.4s infinite alternate; will-change:transform; }}
+}}
 .lead-wait {{ animation:pulse 1.6s ease-in-out infinite; }}
 .v3d.loading .v3d-canvas, .v3d.on .v3d-canvas {{ transition:opacity .8s ease; }}
 .v3d.loading .v3d-canvas {{ opacity:0; }}
@@ -617,6 +625,7 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
 .wrap.sticky-side {{ max-width:none; padding-left:max(var(--pad), calc((100vw - 1680px) / 2 + var(--pad)));
                      padding-right:clamp(16px, 2vw, 32px); }}
 .about-dl dd .s {{ display:block; text-wrap:balance; }}
+.about-dl dd .s + .s {{ margin-top:.75em; }}
 .about-dl dd .w {{ white-space:nowrap; }}
 
 /* the article's four-line introduction: plain lines, one weight, no rules; the labels are quiet and sit beside the text */
@@ -758,7 +767,7 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
 .bt-grid.lg .bt-n {{ font-family:var(--latin); font-size:21px; }}
 .bt a:hover .bt-n {{ color:var(--acc-ink); }}
 .bt-c {{ flex:none; font-family:var(--mono); font-size:12px; font-weight:400; color:var(--mute); }}
-.bt-d {{ display:block; margin-top:4px; font-size:14px; line-height:1.75; color:var(--desc); }}
+.bt-d {{ display:block; margin-top:6px; font-size:14px; line-height:1.6; color:var(--desc); }}
 
 /* a list of issues (Back Issues, Past Issues): the date, the parts with their counts, a strip of the structures */
 .iss-list {{ list-style:none; margin:0; padding:0; }}
@@ -780,7 +789,7 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
 .iss-th .more {{ font-family:var(--mono); font-size:12px; color:var(--mute); }}
 .past .ix-h .ix-all {{ margin-left:auto; }}
 .list-page {{ padding-top:40px; padding-bottom:var(--sec); }}
-.lp-lead {{ margin:-6px 0 34px; font-size:15.5px; color:var(--desc); }}
+.lp-lead {{ margin:-6px 0 34px; font-size:15.5px; line-height:1.7; color:var(--desc); }}
 .list-page .toc-sub {{ margin-top:0; margin-bottom:18px; }}
 .list-page .cards + .toc-sub {{ margin-top:72px; }}
 .toc-sub a {{ color:var(--ink); }}
@@ -923,15 +932,38 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
 }}
 @media (max-width:860px) {{
   :root {{ --pad:22px; --sec:76px; }}
-  :root {{ --head:118px; }}
-  .mast {{ padding-top:14px; }}
+  /* a phone: the header is one short row, so the first screen shows the content (the owner's memo, 2026-10-22) */
+  :root {{ --head:64px; }}
+  .mast {{ padding-top:10px; }}
   .rules {{ margin-top:10px; }}
-  .mast-row {{ position:relative; }}
-  .vol {{ position:absolute; right:0; top:0; }}
-  .menu .mb {{ width:44px; height:44px; }}
-  .menu .mt {{ font-size:12px; }}
-  .lead-h {{ font-size:min(17px, calc((100vw - 40px) / 21.8)); line-height:1.85; letter-spacing:0; }}
-  .lead-h span {{ white-space:normal; }}
+  .mast-row {{ position:relative; flex-wrap:nowrap; align-items:center; gap:12px; }}
+  .vol {{ position:static; flex:none; gap:10px; }}
+  .menu .mb {{ width:36px; height:36px; gap:4px; }}
+  .menu .mb i {{ width:16px; }}
+  .menu.on .mb i:nth-child(1), html:not(.js) .menu[open] .mb i:nth-child(1) {{ transform:translateY(6px) rotate(45deg); }}
+  .menu.on .mb i:nth-child(3), html:not(.js) .menu[open] .mb i:nth-child(3) {{ transform:translateY(-6px) rotate(-45deg); }}
+  .menu .mt {{ position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); }}
+  .word {{ gap:9px; }}
+  .word img {{ width:30px; height:30px; }}
+  .word .name {{ font-size:24px; }}
+  .tag {{ display:none; }}
+  /* a phone's first screen (the owner's memo, 2026-10-22): what the site is, large, and the button to today's
+     structures; behind the button, large and past the screen's edge, Picked up Today's Structure, swaying slowly.
+     The breakdown and the way to About come after it */
+  .lead {{ position:relative; overflow:clip; }}
+  .lead-grid {{ min-height:calc(100svh - var(--head)); padding-top:26px; padding-bottom:28px; gap:0; align-content:start; }}
+  .lead-text {{ display:contents; }}
+  .lead-k, .lead-h, .lead-btns, .lead-parts, .lead-about {{ position:relative; z-index:1; }}
+  .lead-k {{ order:1; margin-bottom:16px; font-size:12px; }}
+  .lead-h {{ order:2; font-size:clamp(22px, 6.4vw, 30px); line-height:1.5; letter-spacing:.01em; }}
+  .lead-h span {{ white-space:normal; word-break:keep-all; }}
+  .lead-h .sp {{ display:inline; }}
+  .lead-btns {{ order:3; }}
+  .lead-art {{ order:4; position:relative; z-index:0; margin:-64px calc(-1 * var(--pad) - 22vw) 0 calc(-1 * var(--pad) - 6vw);
+               pointer-events:none; }}
+  .lead-art .lead-cap {{ pointer-events:auto; }}
+  .lead-parts {{ order:5; margin-top:6px; }}
+  .lead-about {{ order:6; justify-self:start; }}
   .ix-h, .part h2 {{ flex-wrap:wrap; row-gap:4px; }}
   .ixm, .ix-h .ixm {{ font-size:12px; }}
   .ixm b, .ix-h .ixm b {{ margin-left:10px; }}
@@ -941,20 +973,22 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
   .lead-btns .lead-go {{ justify-content:flex-start; }}
   .lead-go b {{ margin-left:auto; }}
   .about-grid {{ grid-template-columns:minmax(0,1fr); gap:30px; }}
-  .about-dl div {{ grid-template-columns:minmax(0,1fr); gap:2px; }}
+  .about-dl div {{ grid-template-columns:minmax(0,1fr); gap:8px; }}
   .about-dl dd {{ font-size:15px; }}
   .lead-art img {{ max-height:none; }}
+  /* a phone: the figures run the screen's full width (the owner's memo, 2026-10-22: wide margins beside a picture
+     make a phone's screen feel cramped); a card's number moves in with the text */
+  .cards.md .cfig {{ margin-inline:calc(-1 * var(--pad)); }}
+  .art .v3d-view, .art .cmpfig, .pickup .cfig {{ margin-inline:calc(6px - var(--pad)); }}   /* labels keep off the very edge */
+  .pickup .cno, .cards.md .cno {{ left:var(--pad); }}
+  .lead-art .v3d-view {{ max-height:none; }}
+  .lead-cap {{ justify-content:flex-start; margin:-6px 0 0; padding:0 calc(var(--pad) + 22vw) 0 calc(var(--pad) + 6vw); }}
   .today {{ padding-top:var(--sec); }}
   .ix-h .label, .part h2 {{ font-size:23px; }}
   .today-4 div {{ grid-template-columns:minmax(0,1fr); gap:0; padding:6px 0; }}
   .today-4 dt {{ padding-top:0; font-size:13.5px; }}
   .today-4 dd {{ font-size:15px; }}
   .reads a {{ min-width:0; flex:1 1 100%; }}
-  .word .name {{ font-size:32px; }}
-  .brand {{ flex-wrap:wrap; gap:8px 0; }}
-  .tag {{ padding-left:0; border-left:0; flex-basis:100%; font-size:13px; }}
-  .mast-row {{ flex-wrap:wrap; align-items:flex-start; }}
-  .vol {{ text-align:left; gap:14px; }}
   /* a phone: the header stays at the top and goes while scrolling down; the navigation's places are in the MENU, and
      its search opens from the header's button as a sheet under the header. Read Later is in the MENU */
   html {{ scroll-padding-top:16px; }}
@@ -970,7 +1004,9 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
   .js .mast.hs-on + .gnav {{ display:block; position:fixed; left:0; right:0; top:var(--headnow); z-index:999;
                              max-height:calc(100vh - var(--headnow)); overflow-y:auto; border-bottom:1px solid var(--ink); }}
   .js .mast.hs-on + .gnav .gnav-links {{ display:none; }}
-  .js .hs-open {{ display:inline-block; }}
+  .js .hs-open {{ display:inline-flex; }}
+  .hs-open {{ align-items:center; width:clamp(76px, 26vw, 150px); height:36px; padding:0 12px; font-family:var(--sans); font-size:13.5px;
+              letter-spacing:.04em; color:var(--mute); border-color:var(--ink2); }}   /* looks like the search box it opens */
   .hs-pop {{ position:static; width:auto; padding:16px; }}   /* opens right under the box */
   .cards.md {{ grid-template-columns:minmax(0,1fr); gap:60px; }}
   .cards.sm {{ grid-template-columns:repeat(2, minmax(0,1fr)); gap:48px 16px; }}
@@ -1046,11 +1082,8 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
   .v3d.hasm:not(.show-cmp) .fig.m:not(.cmp), .cmpfig.hasm .fig.m, .v3d.hasm.show-cmp .fig.cmp.m {{ display:block; }}
   .v3d.on .v3d-view, .v3d.loading .v3d-view {{ aspect-ratio:1 / 1.15; }}
 }}
-@media (max-width:400px) {{   /* wordmark, 検索 and the round MENU button on one line */
-  .word {{ gap:11px; }}
-  .word img {{ width:40px; height:40px; }}
-  .word .name {{ font-size:28px; }}
-  .js .mast-row:has(.hs-open) .menu .mt {{ position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); }}
+@media (max-width:360px) {{   /* the wordmark, 探す and MENU still on one line */
+  .word .name {{ font-size:22px; }}
 }}
 """
 
@@ -1513,11 +1546,13 @@ def global_nav(up: str, current: str | None = None, find: str = "") -> str:
 
 def masthead(depth: int, right: str = "", search: bool = True, current: str | None = None) -> str:
     """The wordmark row inside the page width, MENU (a phone only) on the right; the double rule under it spans the
-    whole window; under the rule the global navigation with the search and Read Later (global_nav, search_form). The whole header stays at the top of the window while the page scrolls. On a phone the
-    search opens from a button under the wordmark row. "Read Later N" shows once the reader has saved an article."""
+    whole window; under the rule the global navigation with the search and Read Later (global_nav, search_form). The
+    whole header stays at the top of the window while the page scrolls. On a phone the header is one short row (the
+    owner's memo, 2026-10-22): the logo and FoldFeed on the left; on the right a box that reads 探す, which opens the
+    search under the header, and a small MENU button. "Read Later N" shows once the reader has saved an article."""
     up = "../" * depth
     find = search_form(up) if search else ""
-    open_btn = '<button class="hs-open" type="button" aria-label="記事を探す">検索</button>' if search else ""
+    open_btn = '<button class="hs-open" type="button" aria-label="記事を探す">探す</button>' if search else ""
     return (f'<header class="mast"><div class="wrap"><div class="mast-row">'
             f'<div class="brand"><a class="word" href="{up}index.html"><img src="{up}assets/logo-mark.svg" alt="">'
             f'<span class="name">{esc(brand.SITE_NAME)}</span></a>'
@@ -1980,7 +2015,7 @@ def lead_html(feature: dict | None, picks: list, date: str, root: Path, fig_base
     on the right Today's Structure in the 3D viewer, opened by itself on a wide screen, with no text around it but
     "読み込み中" while it loads. On a phone (where it is not opened) and when it cannot load, the same structure is
     shown as a drawing from the same view (pipeline.render: <pmcid>-hero.svg)."""
-    lines = "".join(f'<span style="--i:{i}">{esc(t)}</span>' for i, t in enumerate(LEAD))
+    lines = "".join(f'<span style="--i:{i}">{"<br class=sp>".join(esc(x) for x in t.split("|"))}</span>' for i, t in enumerate(LEAD))
     y, m, d, wd = date_parts(date)
     updated = (f'<p class="lead-k">最終更新 <b>{y}.{m:02d}.{d:02d}</b>（{wd}）'
                + (f'<span>Issue No. {number}</span>' if number else "") + '</p>')
@@ -2041,7 +2076,7 @@ def read_links(cand: dict, href: str) -> str:
 
 def today_html(feature: dict | None, picks: list, date: str, root: Path, fig_base: str, href_base: str = "") -> str:
     """Picked up Today's Structure on the front page, the largest card: the article's own figure (overview and binding
-    site; the thumbnail on a phone), its part and number, the target, the headline and supplement, and the ways on
+    site; its portrait version on a phone), its part and number, the target, the headline and supplement, and the ways on
     (the article, the paper, Read Later). The four-line introduction is in the article; the reason it was picked is
     for the pull request."""
     hit = feature_of(feature, picks)
@@ -2053,8 +2088,9 @@ def today_html(feature: dict | None, picks: list, date: str, root: Path, fig_bas
     fd = root / date / "figures"
     alt = f'構造図：{esc(pk.get("target_en") or pk["target_label"])}'
     if (fd / f"{pm}.svg").exists():
-        small = (f'<source media="(max-width:860px)" srcset="{fig_base}/{date}/{esc(pm)}-thumb.svg">'
-                 if (fd / f"{pm}-thumb.svg").exists() else "")
+        # a phone: the article's portrait figure (labels and the binding site), not the first screen's drawing again
+        phone = f"{pm}-m.svg" if (fd / f"{pm}-m.svg").exists() else f"{pm}-thumb.svg" if (fd / f"{pm}-thumb.svg").exists() else ""
+        small = f'<source media="(max-width:860px)" srcset="{fig_base}/{date}/{esc(phone)}">' if phone else ""
         fig = (f'<a class="pk-fig" href="{href}"><picture>{small}<img src="{fig_base}/{date}/{esc(pm)}.svg"{wh(fd / f"{pm}.svg")} '
                f'alt="{alt}"></picture></a>')
     else:
