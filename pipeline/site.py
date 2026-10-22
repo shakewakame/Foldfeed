@@ -367,7 +367,7 @@ html, body {{ overflow-x:clip; }}   /* a guard: nothing may widen the page sidew
 .lead-go {{ display:inline-flex; align-items:center; gap:12px; margin-top:34px; padding:14px 24px 14px 20px;
             background:var(--ink); color:#fff; font-family:var(--mono); font-size:14.5px; letter-spacing:.06em; }}
 .lead-go .tri {{ font-size:13px; }}
-.lead-top, .lead-edge, .lead-line {{ display:none; }}   /* a phone's first screen only */
+.lead-badge, .lead-mark {{ display:none; }}   /* a phone's first screen only */
 .lead-upd {{ margin:8px 0 0; text-align:center; font-family:var(--mono); font-size:11.5px; letter-spacing:.06em; color:var(--mute); }}
 .lead-upd span {{ margin-left:12px; }}
 .lead-text .lead-upd {{ margin-top:22px; text-align:left; }}
@@ -487,21 +487,13 @@ html, body {{ overflow-x:clip; }}   /* a guard: nothing may widen the page sidew
 @keyframes drift {{ from {{ transform:translate3d(1.5%, 0, 0) rotate(-3deg); }}
                   to {{ transform:translate3d(-2.5%, 2%, 0) rotate(3.5deg) scale(1.06); }} }}
 @keyframes slidein {{ from {{ opacity:0; transform:translateX(-18px); }} to {{ opacity:1; transform:none; }} }}
-@keyframes pop {{ 0% {{ opacity:0; transform:scale(.4); }} 70% {{ opacity:1; transform:scale(1.08); }} 100% {{ opacity:1; transform:none; }} }}
-@keyframes draw {{ from {{ stroke-dashoffset:1; }} to {{ stroke-dashoffset:0; }} }}
-@keyframes bandup {{ from {{ transform:translateY(46px); }} to {{ transform:none; }} }}
-@media (max-width:860px) {{   /* the phone's first screen comes in as a sequence; the structure then sways (never a full
-                                  turn) and the page's scroll turns it a little more (LEAD_SCRIPT) */
-  .anim .lead-mark {{ animation:slidein .7s cubic-bezier(.2,.7,.2,1) .1s both; }}
-  .anim .lead-badge {{ animation:pop .55s cubic-bezier(.2,.8,.2,1) .45s both; }}
+@media (max-width:860px) {{   /* the phone's first screen comes in line by line, then the date, the structure (it swings
+                                  in, then sways, never a full turn; the scroll turns it a little more: LEAD_SCRIPT) and
+                                  the Picked up mark */
+  .anim .lead-badge {{ animation:fadein .8s ease .5s both; }}
+  .anim .lead-mark {{ animation:slidein .8s cubic-bezier(.2,.7,.2,1) 1.1s both; }}
   .anim .lead-art .fig {{ animation:comein 1.6s cubic-bezier(.2,.7,.2,1) .3s both, drift 6.5s ease-in-out 1.9s infinite alternate;
                           will-change:transform; }}
-  .anim .lead-band {{ animation:bandup .9s cubic-bezier(.2,.7,.2,1) .45s both; }}
-  .anim .lead-h span {{ animation-delay:calc(var(--i) * 130ms + 650ms); }}
-  .anim .lead-edge .sw {{ stroke-dasharray:1; animation:draw 1.1s cubic-bezier(.6,0,.2,1) 1.1s both; }}
-  .anim .lead-edge circle {{ transform-box:fill-box; transform-origin:center; animation:pop .45s cubic-bezier(.2,.8,.2,1) 2.1s both; }}
-  .anim .lead-line {{ animation:grow 1s cubic-bezier(.6,0,.2,1) 1.5s both; }}
-  .anim .lead-line::after {{ animation:pop .45s cubic-bezier(.2,.8,.2,1) 2.5s both; }}
 }}
 .lead-wait {{ animation:pulse 1.6s ease-in-out infinite; }}
 .v3d.loading .v3d-canvas, .v3d.on .v3d-canvas {{ transition:opacity .8s ease; }}
@@ -1007,36 +999,28 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
   .word img {{ width:30px; height:30px; }}
   .word .name {{ font-size:24px; }}
   .tag {{ display:none; }}
-  /* a phone's first screen, after the page the owner sent as a reference (2026-10-24): on top the mark and the
-     issue's badge; the structure large and past the right edge; over its lower part a 藍 band with a curved top and
-     the introduction in bold white, a 朱 line running down to the band's edge, a white line under the words. It comes
-     in as a sequence (the mark, the badge, the structure, the band and its words, the lines). The breakdown is in
-     Concept on a phone; the way to About is not needed (Concept follows) */
+  /* a phone's first screen (the owner, 2026-10-24): the introduction top left in the serif of the first design, the
+     issue's date top right, the structure large and past the right edge, the Picked up mark at the bottom left. The
+     breakdown is in Concept on a phone; the way to About is not needed (Concept follows) */
   .lead {{ position:relative; overflow:clip; }}
-  .lead-grid {{ min-height:0; padding-top:18px; padding-bottom:0; gap:0; align-content:start; }}
+  .lead-grid {{ position:relative; min-height:0; padding-top:24px; padding-bottom:4px; gap:0; align-content:start; }}
   .lead-text {{ display:contents; }}
-  .lead-top {{ order:1; position:relative; z-index:2; display:flex; justify-content:space-between; align-items:flex-start; gap:16px; }}
-  .lead-mark {{ display:block; max-width:64%; color:var(--ink); text-decoration:none; }}
-  .lead-mark:hover {{ text-decoration:none; }}
-  .lead-mark .k {{ display:block; font-family:var(--mono); font-size:11px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--acc-ink); }}
-  .lead-mark b {{ display:block; margin-top:5px; font-family:var(--latin); font-size:31px; line-height:1.02; letter-spacing:-.01em; }}
-  .lead-mark .t {{ display:block; margin-top:9px; font-size:13px; line-height:1.5; color:var(--desc); }}
-  .lead-badge {{ flex:none; margin:0; width:64px; padding:9px 0 8px; background:var(--acc); color:#fff; text-align:center; line-height:1; }}
-  .lead-badge span {{ display:block; font-family:var(--mono); font-size:9.5px; letter-spacing:.12em; text-transform:uppercase; }}
-  .lead-badge b {{ display:block; margin:4px 0 5px; font-family:var(--latin); font-size:28px; font-weight:700; }}
-  .lead-art {{ order:2; position:relative; z-index:0; margin:-72px calc(-1 * var(--pad) - 40vw) 0 calc(-1 * var(--pad) + 2vw);
-               pointer-events:none; }}
-  .lead-art .lead-cap, .lead-art .lead-upd, .lead-text .lead-upd {{ display:none; }}
-  .lead-band {{ order:3; position:relative; z-index:1; margin:-132px calc(-1 * var(--pad)) 0; padding:22px var(--pad) 46px;
-                background:{CHART_NEW}; color:#fff; }}
-  .lead-edge {{ display:block; position:absolute; left:0; bottom:calc(100% - 1px); width:100%; height:80px; overflow:visible; }}
-  .lead-edge .sw {{ fill:none; stroke:var(--acc); stroke-width:4; stroke-linecap:round; }}
-  .lead-edge circle {{ fill:var(--acc); }}
-  .lead-h {{ font-family:var(--sans); font-weight:700; color:#fff; font-size:clamp(22px, 6.6vw, 30px); line-height:1.42; letter-spacing:.02em; }}
+  .lead-h, .lead-mark, .lead-badge {{ position:relative; z-index:1; }}
+  .lead-h {{ order:1; font-size:clamp(22px, 6.4vw, 30px); line-height:1.5; letter-spacing:.01em; }}
   .lead-h span {{ white-space:normal; word-break:keep-all; }}
   .lead-h .sp {{ display:inline; }}
-  .lead-line {{ display:block; position:relative; height:3px; margin:26px 16px 0 0; border-radius:2px; background:#fff; transform-origin:left; }}
-  .lead-line::after {{ content:""; position:absolute; right:-16px; top:50%; width:10px; height:10px; margin-top:-5px; border-radius:50%; background:#fff; }}
+  .lead-badge {{ display:block; position:absolute; top:31px; right:var(--pad); margin:0; padding:6px 8px 5px; background:var(--acc);
+                 color:#fff; line-height:1; white-space:nowrap; }}
+  .lead-badge span {{ margin-right:5px; font-family:var(--mono); font-size:9px; letter-spacing:.1em; text-transform:uppercase; }}
+  .lead-badge b {{ font-family:var(--latin); font-size:14px; font-weight:700; letter-spacing:.02em; }}
+  .lead-art {{ order:2; position:relative; z-index:0; margin:-22px calc(-1 * var(--pad) - 36vw) 0 calc(-1 * var(--pad) + 2vw);
+               pointer-events:none; }}
+  .lead-art .lead-cap, .lead-art .lead-upd, .lead-text .lead-upd {{ display:none; }}
+  .lead-mark {{ order:3; display:block; justify-self:start; max-width:70%; margin-top:-84px; color:var(--ink); text-decoration:none; }}
+  .lead-mark:hover {{ text-decoration:none; }}
+  .lead-mark .k {{ display:block; font-family:var(--mono); font-size:11px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--acc-ink); }}
+  .lead-mark b {{ display:block; margin-top:5px; font-family:var(--latin); font-size:28px; line-height:1.05; letter-spacing:-.01em; }}
+  .lead-mark .t {{ display:block; margin-top:8px; font-size:13px; line-height:1.5; color:var(--desc); }}
   .lead .lead-btns, .lead-parts, .lead-about {{ display:none; }}
   .ix-h, .part h2 {{ flex-wrap:wrap; row-gap:4px; }}
   .ixm, .ix-h .ixm {{ font-size:12px; }}
@@ -2192,18 +2176,12 @@ def lead_html(feature: dict | None, picks: list, date: str, root: Path, fig_base
     go += (f'<p class="lead-parts kl"><span class="t">今日の内訳</span>{parts}</p>' if parts else "")
     go += '<a class="lead-about" href="#concept">はじめての方へ：FoldFeed について<span aria-hidden="true">▽</span></a>'
     hit = feature_of(feature, picks)
-    # a phone (the owner's reference, 2026-10-24): on top the mark (Picked up / Today's Structure / its target) and
-    # the issue's badge (number and date, in 朱); the structure large behind; then the introduction in a 藍 band with a
-    # curved top, a 朱 line with a dot running down to it, and a white line with a dot under the words
-    badge = (f'<p class="lead-badge" aria-label="{y}年{m}月{d}日更新、Issue No. {number}"><span>Issue</span><b>{number}</b>'
-             f'<span>{m}.{d:02d}</span></p>') if number else ""
+    # a phone (the owner, 2026-10-24): the introduction top left, in the serif of the first design; the issue's date top
+    # right (Issue of yy.mm.dd); the structure large between; the Picked up mark (Today's Structure, its target) at
+    # the bottom left
+    badge = f'<p class="lead-badge"><span>Issue of</span><b>{y % 100:02d}.{m:02d}.{d:02d}</b></p>'
     mark = (f'<a class="lead-mark" href="#today"><span class="k">Picked up</span><b>Today’s<br>Structure</b>'
             f'<span class="t">{esc(hit[2]["target_label"])}</span></a>') if hit else ""
-    top = f'<div class="lead-top">{mark}{badge}</div>' if mark or badge else ""
-    edge = (f'<svg class="lead-edge" viewBox="0 0 400 80" preserveAspectRatio="none" aria-hidden="true" focusable="false">'
-            f'<path class="bd" d="M0,66 C120,76 260,70 400,30 L400,81 L0,81 Z" fill="{CHART_NEW}"/>'
-            f'<path class="sw" d="M-6,26 C86,34 168,50 236,62" pathLength="1"/><circle cx="236" cy="62" r="4.6"/></svg>')
-    band = f'<div class="lead-band">{edge}<h1 class="lead-h">{lines}</h1><i class="lead-line" aria-hidden="true"></i></div>'
     art_html = ""
     if hit and (root / date / "figures" / f"{hit[1]['pmcid']}-hero.svg").exists():
         pm, pk = hit[1]["pmcid"], hit[2]
@@ -2221,8 +2199,8 @@ def lead_html(feature: dict | None, picks: list, date: str, root: Path, fig_base
                         f'<div class="v3d-canvas"></div><p class="lead-wait" aria-live="polite">読み込み中</p></div></div>{cap}{updated}</div>')
         else:
             art_html = f'<div class="lead-art"><a class="lead-pic" href="#today" tabindex="-1">{img}</a>{cap}{updated}</div>'
-    return (f'<section class="lead"><div class="wrap lead-grid">{top}<div class="lead-text">'
-            f'{band}{go}{"" if art_html else updated}</div>{art_html}</div></section>')
+    return (f'<section class="lead"><div class="wrap lead-grid">{badge}<div class="lead-text">'
+            f'<h1 class="lead-h">{lines}</h1>{go}{"" if art_html else updated}</div>{art_html}{mark}</div></section>')
 
 
 LEAD_SCRIPT = r"""
