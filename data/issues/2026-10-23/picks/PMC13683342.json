@@ -1,0 +1,156 @@
+{
+  "pmcid": "PMC13683342",
+  "rank": 8,
+  "headline": "ノロウイルスのNS3は、割れた座金型の六量体をつくる",
+  "subhead": "可溶型の六量体を2.9 Åで解き、膜を貫くRNA輸送体である可能性をモデルで示した",
+  "target_label": "NS3（ノロウイルス）",
+  "target_en": "Norovirus NS3 AAA+ ATPase hexamer",
+  "summary": {
+    "question": "ノロウイルスのNS3（AAA+ ATPase）は、構造も、複製や膜の再編での働きも分かっていなかった。",
+    "approach": "膜結合部を六量体化ドメインに置き換えた可溶型を作り、ATPγS結合状態を2.9 Åで解析した。さらにAlphaFold3で全長モデルを作った。",
+    "result": "六量体は割れた座金のような形で、6か所にATPγSが結合した。pore loopの変異の大半は、マウスノロウイルスの感染性を失わせた。",
+    "learned": "NS3は、膜をまたぐRNA輸送体として働く候補と考えられる。ただし可溶型はRNAをほどかず、RNA結合もATP分解と連動しなかった。",
+    "open": "NS3の輸送体としての働きは、全長で膜に埋め込まれた状態で調べる必要がある。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "However, the structure of NS3, and the mechanisms by which it contributes to genome replication and membrane remodeling, have remained unknown.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "We engineered a soluble, hexameric, and catalytically active form of NS3 and determined its cryo-EM structure in the presence of a nucleotide analogue at 2.9 Å resolution.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Using integrative modeling with AlphaFold3, supported by targeted mutagenesis, we generated a full-length, membrane-associated model in which NS3 forms a continuous conduit across the membrane.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "The structure adopts a split lock-washer architecture characteristic of AAA+ motors that operate via a hand-over-hand translocation mechanism.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "In our NS3 cryo-EM reconstruction, clear density corresponding to ATPγS is visible in all six nucleotide-binding sites",
+          "section": "Results"
+        },
+        {
+          "quote": "In line with our structural observations, most mutations completely abolished viral infectivity",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "This model supports a role for NS3 as a candidate membrane-spanning RNA translocase that may couple ATP hydrolysis to genome movement.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Collectively, these findings indicate that hex-NS3 binds single-stranded RNA in an oligomerization-dependent manner but lacks detectable RNA duplex unwinding activity under the conditions tested.",
+          "section": "Results"
+        }
+      ],
+      "open": [
+        {
+          "quote": "While technically challenging, future efforts to dissect the proposed translocase activity of NS3 and possible helicase activity, should focus on the full-length, membrane-embedded protein.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "enzyme",
+    "pathogen"
+  ],
+  "topics": [
+    "membrane"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "6つのサブユニットは右巻きのらせん状に並び、両端の間に約6.5 Åの隙間がある。AからEはATPγSをアルギニンフィンガーで捉えるが、継ぎ目にあるFはそれが外れ、ヌクレオチドのない状態に近い。",
+      "evidence": [
+        {
+          "quote": "The six subunits form a right-handed spiral with a rise of ~1.5 Å per protomer and a gap of ~6.5 Å between the topmost and bottommost subunits.",
+          "section": "Results"
+        },
+        {
+          "quote": "In contrast, subunit F adopts an apo-like conformation, as the arginine finger is displaced across the seam and does not engage the bound nucleotide",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "pore loop 2は、ssRNAが通れる直径約15 Åの中央の通路を作る。pore loopや触媒部位の残基は46本のNS3配列で保存され、変異は酵素活性とウイルスの感染性を損なった。論文は汎遺伝子型の抗ウイルス標的になりうるとしている。",
+      "evidence": [
+        {
+          "quote": "Pore loop 2 defines a central channel approximately 15 Å in diameter, sufficient to accommodate single-stranded RNA, into which the hydrophobic side chain of I242 projects.",
+          "section": "Results"
+        },
+        {
+          "quote": "Together with our mutational data, this supports their functional importance and highlights their potential as targets for pan-genotypic antiviral intervention",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "六量体化させた型はssRNAに結合したが、巻き戻し活性は検出されなかった。全長の膜貫通モデルは、AlphaFold3の入力にオレイン酸を加えて作った予測で、2本の膜貫通ヘリックスがRNAの通る孔を作るとされる。",
+      "evidence": [
+        {
+          "quote": "Collectively, these findings indicate that hex-NS3 binds single-stranded RNA in an oligomerization-dependent manner but lacks detectable RNA duplex unwinding activity under the conditions tested.",
+          "section": "Results"
+        },
+        {
+          "quote": "Indeed, supplementing the prediction with 50 oleic acid molecules resulted in markedly improved confidence for the NTD, with pLDDT values ranging from 70 to 100 for both HuNoV and MNV",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "大腸菌 Rosetta 2 (DE3) で発現。0.5 mM IPTG、18 °C で一晩。",
+    "construct": "GI 型NS3の62-363に、六量体化ドメイン cc-hex と MBP タグを付けた。",
+    "purification": "HisTrap、3C プロテアーゼでタグ除去、Superdex 200 のゲルろ過で精製。",
+    "sample_prep": "0.35 mg/ml を 1 mM ATPγS と混ぜ、カーボン膜付き Quantifoil R1.2/1.3 に塗布。Vitrobot Mark IV で凍結。",
+    "data_collection": "Glacios＋Falcon 4i で1010本の動画を取得。cryoSPARC で処理し、123,643粒子から C1 で再構成。",
+    "evidence": [
+      {
+        "quote": "NS3 proteins were expressed in E. coli Rosetta 2 (DE3) (Sigma-Aldrich).",
+        "section": "Methods"
+      },
+      {
+        "quote": "To obtain cleaved constructs, the samples were incubated with HRV type 14 3C protease (Sigma-Aldrich) overnight at 4 °C",
+        "section": "Methods"
+      },
+      {
+        "quote": "Cleaved hex-NS3 was diluted to 0.35 mg/ml in ATPase reaction buffer containing 1 mM ATPγS, on ice.",
+        "section": "Methods"
+      },
+      {
+        "quote": "A total of 1010 movies were collected at a nominal magnification of ×130,000 in EER format at 0.9 Å per pixel with a total dose of 50.5 electrons per Å2.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Five rounds of heterogeneous refinement yielded a well-defined reconstruction of the NS3 complex containing 123,643 particles.",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "NS3",
+    "ノロウイルス",
+    "AAA+ ATPase",
+    "SF3"
+  ],
+  "legend_labels": [
+    "NS3（ATPase）"
+  ],
+  "ligand_names": {
+    "AGS": "ATPγS"
+  },
+  "editor_notes": "全長の膜貫通モデルと RNA 通過の経路は AlphaFold3 の予測で、実験構造は可溶型（N 末端 61 残基を cc-hex に置換）の ATPγS 結合状態のみ。紹介文ではこの区別を保った。既存構造のある 2C 等の近縁タンパク質があるため first_structure は false（初構造とは書いていない）。論文は「SF3 の RNA ウイルス由来の機能的オリゴマーは未解明だった」と書くが、見出しでは使っていない。legend_labels は 1 エンティティ（NS3）と推定して書いた。"
+}

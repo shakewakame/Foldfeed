@@ -1,0 +1,99 @@
+{
+ "pdb_id": "9D0T",
+ "view": {
+  "target": [
+   181.65,
+   179.64,
+   187.68
+  ],
+  "dir": [
+   -0.98,
+   -0.1947,
+   0.0417
+  ],
+  "up": [
+   -0.1801,
+   0.9559,
+   0.2321
+  ],
+  "half": [
+   72.4,
+   65.6
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "α1（外輪）",
+   "desc": "Proteasome subunit alpha type-1",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "α2（外輪）",
+   "desc": "Proteasome subunit alpha type-2",
+   "entity": "2"
+  },
+  {
+   "color": "#5F9296",
+   "label": "α3（外輪）",
+   "desc": "Proteasome subunit alpha type-3",
+   "entity": "3"
+  },
+  {
+   "color": "#A5707A",
+   "label": "α4（外輪）",
+   "desc": "Proteasome subunit alpha type-4",
+   "entity": "4"
+  },
+  {
+   "color": "#7C8AA8",
+   "label": "α5（外輪）",
+   "desc": "Proteasome subunit alpha type-5",
+   "entity": "5"
+  },
+  {
+   "color": "#8A9A5B",
+   "label": "α6（外輪）",
+   "desc": "Proteasome subunit alpha type-6",
+   "entity": "6"
+  },
+  {
+   "color": "#9C7B55",
+   "label": "α7（外輪）",
+   "desc": "Probable proteasome subunit alpha type-7",
+   "entity": "7"
+  },
+  {
+   "color": "#6E6E8E",
+   "label": "β2（内輪）",
+   "desc": "Proteasome subunit beta type-2",
+   "entity": "8"
+  },
+  {
+   "color": "#2a3f62",
+   "label": "β3（内輪）",
+   "desc": "Proteasome subunit beta type-3",
+   "entity": "9"
+  },
+  {
+   "color": "#8d7034",
+   "label": "β4（内輪）",
+   "desc": "Proteasome subunit beta type-4",
+   "entity": "10"
+  },
+  {
+   "color": "#426669",
+   "label": "Blm10（キャップ）",
+   "desc": "Proteasome activator BLM10",
+   "entity": "11"
+  },
+  {
+   "color": "#744e55",
+   "label": "Ump1（成熟因子）",
+   "desc": "Proteasome maturation factor UMP1,Myosin light chain kinase 2, skeletal/cardiac muscle",
+   "entity": "12"
+  }
+ ],
+ "ligands": []
+}

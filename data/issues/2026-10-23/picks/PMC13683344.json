@@ -1,0 +1,155 @@
+{
+  "pmcid": "PMC13683344",
+  "rank": 5,
+  "headline": "DNMT1のCXXCは、CpGを捉えて自らの働きを抑える",
+  "subhead": "ヌクレオソームとの複合体のクライオ電顕構造で、CXXCがTRDへのDNAの接近を塞ぐ配置が見えた",
+  "target_label": "DNMT1・ヌクレオソーム",
+  "target_en": "Human DNMT1 with unmethylated nucleosome",
+  "summary": {
+    "question": "DNMT1が、CpGアイランド（CpGが多く低メチル化の領域）でメチル化を抑える仕組みは、不明だった。",
+    "approach": "CpGが未修飾のヌクレオソームとDNMT1断片の複合体をクライオ電顕で解いた。変異体の活性と、マウスES細胞のゲノムも調べた。",
+    "result": "CXXCは未修飾のCpGに結合し、標的認識ドメイン（TRD）へのDNAの接近を塞いでいた。結合を壊す変異体では、CpGアイランドのメチル化が増えた。",
+    "learned": "CXXCは未修飾のCpGを感知してDNMT1の活性を抑え、CpGアイランドの低メチル化を守る役割をもつ。分化の異常にも関わる。",
+    "open": "CpGアイランドにDNMT1が集まる仕組みの詳細は、まだ分かっていない。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "While DNMT1-mediated DNA methylation mainly occurs outside the active chromatin domains, such as CpG islands, how DNMT1 interplays with hypomethylated nucleosome environment to restrict CpG island methylation remains unclear.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "To assess impact of the hypomethylated nucleosome environment on DNMT1-mediated DNA methylation, we determined the structure of DNMT1 in complex with an H3Ub2-modified nucleosome core particle (NCP) harboring unmodified CpG sites, representing the product of UHRF1-catalyzed substrate.",
+          "section": "Introduction"
+        },
+        {
+          "quote": "Our integrated structural, biochemical and genomic analyses demonstrate that recognition of unmodified CpG within the NCP by the DNMT1 CXXC domain leads to an autoinhibitory conformation",
+          "section": "Introduction"
+        }
+      ],
+      "result": [
+        {
+          "quote": "On the other hand, the CXXC domain is positioned in a manner that blocks the target recognition domain of DNMT1 from accessing potential DNA substrates.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Furthermore, our whole-genome bisulfite-sequencing analysis reveals that introducing the CXXC-CpG interaction-defective DNMT1 mutation leads to substantial increase in CpG island methylation but not so much in overall genomic methylation",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Together, this study establishes a role for the CXXC domain in safeguarding the CpG island hypomethylation, vital to DNA methylation homeostasis during development.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "causing severe defects in transcriptional programming and stem cell differentiation",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "The exact mechanism behind the enrichment of DNMT1 in CGIs remains unclear.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "chromatin",
+    "enzyme"
+  ],
+  "topics": [
+    "dynamics"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "CXXCドメインは折れ曲がったヘアピン状で、ヌクレオソームの中心（ダイアド）のDNAを囲む。K683とQ684などの側鎖が水素結合をつくり、CpGの塩基を特異的に認識する。",
+      "evidence": [
+        {
+          "quote": "Notably, the CXXC domain adopts a bent-hairpin conformation to encircle nucleosomal DNA at the dyad",
+          "section": "Results"
+        },
+        {
+          "quote": "Of note, the sidechain amino group of CXXC residue K683 donates a hydrogen bond to the N7 atom of the CpG guanine",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "RFTSドメイン（触媒ドメインへのDNA結合を妨げる領域）がH3の近くに移って抑制が解けても、CXXCがCpGに結合しているためDNMT1は自己阻害の形のままだった。RFTSとCXXCがTRDを別々に塞ぐ多層の制御が示唆される。",
+      "evidence": [
+        {
+          "quote": "Despite the RFTS repositioning, DNMT1 in the DNMT1-umNCP complex remains in an autoinhibitory conformation owing to the CXXC-CpG interaction",
+          "section": "Results"
+        },
+        {
+          "quote": "suggesting that DNMT1 is regulated by a multi-layered autoinhibitory mechanism that at least involves the independent blockades of TRD by the RFTS and CXXC domains",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "K683A/Q684A変異体（MutKQ）は、ヌクレオソーム上の未メチルCpGがあるとき活性が上がった。マウスES細胞では、CpGアイランドのメチル化が増え、発生に関わる遺伝子の発現と分化が乱れた。",
+      "evidence": [
+        {
+          "quote": "Relative to WT DNMT1, the MutKQ mutant shows increased DNA methylation efficiency on nucleosomes with unmethylated linker CpG sites",
+          "section": "Results"
+        },
+        {
+          "quote": "Consistently, Gene Set Enrichment Analysis (GSEA) using MSigDB demonstrated that pathways fundamentally required for embryogenesis, axis specification, and lineage commitment were systematically downregulated or disrupted in the MutKQ cells at day 5",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "DNMT1 は大腸菌 BL21 DE3 (RIL) で発現。ヒストンも大腸菌で作り、H3 に K18/K23 のユビキチン、H4 に H4K20me3 の模倣を付けた。",
+    "construct": "ヒト DNMT1 の残基 351–1600。変異体は MutKQ（K683A/Q684A）と MutMHKKKQ。",
+    "purification": "Ni-NTA、陰イオン交換、TEV プロテアーゼでタグ除去、再度 Ni 親和、Superdex 200 のゲルろ過。",
+    "sample_prep": "DNMT1 とヌクレオソームを 3:1 で混合し、GraFix で架橋・精製。Quantifoil に塗布し Vitrobot Mark IV で凍結。",
+    "data_collection": "Titan Krios（K3）で 16,915 本の動画を取得し、cryoSPARC で処理した。",
+    "evidence": [
+      {
+        "quote": "The plasmid for DNMT1351–1600 was transformed into Escherichia coli BL21 DE3 (RIL) cells for expression.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Subsequently, the His6-MBP-tagged fusion protein was subjected to anion exchange chromatography on a HiTrap Q XL column (Cytiva), tag removal by Tobacco etch virus (TEV) protease, and a second-round nickel affinity chromatography.",
+        "section": "Methods"
+      },
+      {
+        "quote": "DNMT1351–1600 was mixed with the umNucDNA nucleosome in a molar ratio of 3:1 in a binding buffer containing 20 mM HEPES (pH 7.5), 50 mM NaCl, 5 mM DTT and 5% glycerol.",
+        "section": "Methods"
+      },
+      {
+        "quote": "A total of 16,915 movies were recorded at a nominal magnification of 81,000× in super-resolution mode with a pixel size of 1.1 Å per pixel",
+        "section": "Methods"
+      },
+      {
+        "quote": "The movies were motion-corrected and dose-weighted using the patch-based motion correction module in CryoSPARC",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "DNMT1",
+    "CXXC",
+    "CpGアイランド",
+    "ヌクレオソーム"
+  ],
+  "editor_notes": "PDB は 9Z07（3.19 Å、野生型）と 9MYS（3.93 Å、MutMHKKKQ 変異体）。いずれも primary citation 未登録で、寄託の記述から対応づけ。本文は野生型を 3.12 Å と書く（PDB と差あり）。紹介文には分解能を書いていない。legend_labels は複合体（DNMT1・ヒストン・DNA 2 本）の凡例順が render 前に不明なため未記入。lab_notes は野生型の条件。",
+  "legend_labels": [
+    "DNMT1（メチル化酵素）",
+    "ヒストン H2A",
+    "ヒストン H2B",
+    "ヒストン H3",
+    "ヒストン H4",
+    "DNA（149 bp）",
+    "DNA（149 bp）"
+  ]
+}

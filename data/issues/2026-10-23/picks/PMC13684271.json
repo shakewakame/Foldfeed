@@ -1,0 +1,161 @@
+{
+  "pmcid": "PMC13684271",
+  "rank": 7,
+  "headline": "スラミンは、Regnase-1の活性部位に結合する",
+  "subhead": "RNA分解酵素のPINドメインとの2.62 Å結晶構造で、Mg2+への配位とR283との相互作用を示した",
+  "target_label": "Regnase-1 PIN・スラミン（マウス）",
+  "target_en": "Mouse Regnase-1 PIN domain with suramin",
+  "summary": {
+    "question": "Regnase-1 を直接阻害する低分子は報告がなく、炎症応答を一時的に高める化学ツールがなかった。",
+    "approach": "404 化合物で RNA の置換を調べ、候補の suramin と PIN ドメインの複合体を X 線（2.62 Å）で解いた。",
+    "result": "suramin は RNA 結合を IC50 48 nM で阻害した。構造では各 PIN 分子の活性部位で Mg2+ に配位していた。",
+    "learned": "suramin は競合阻害剤とみられ、向かい合う分子の R283 が結合に重要だった。細胞では IL-6 を増やした。",
+    "open": "野生型 PIN での結合様式は、高分解能の構造解析が必要である。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "but no direct small-molecule inhibitors of Regnase-1 have been reported",
+          "section": "Introduction"
+        },
+        {
+          "quote": "a chemical inhibitor of Regnase-1 activity would be a valuable tool to perturb Regnase-1 function and transiently boost inflammatory responses",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "In vitro screening of 404 candidate molecules identified suramin",
+          "section": "Introduction"
+        },
+        {
+          "quote": "X-ray crystallographic analysis revealed that suramin bound directly to the Regnase-1 catalytic site, coordinating with the essential Mg2+ ion.",
+          "section": "Introduction"
+        }
+      ],
+      "result": [
+        {
+          "quote": "Suramin inhibited RNA binding with an IC50 of 48 nM (Fig. 2D), the lowest among all library compounds screened.",
+          "section": "Results and discussion"
+        },
+        {
+          "quote": "Suramin was bound with 1:1 stoichiometry within the active site of each PIN protomer, with clear electron density for its terminal sulfonate groups and coordination with the catalytic Mg2+ ion",
+          "section": "Results and discussion"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "the overall constant Vmax and concentration-dependent Km suggested a competitive inhibition mechanism",
+          "section": "Results and discussion"
+        },
+        {
+          "quote": "which demonstrates that residue R283 is critical for Regnase-1 binding to suramin",
+          "section": "Results and discussion"
+        },
+        {
+          "quote": "suramin increased IL-6 production and Il6 mRNA levels in stimulated MEFs",
+          "section": "Results and discussion"
+        }
+      ],
+      "open": [
+        {
+          "quote": "but future high-resolution structural studies are needed to answer this question definitively",
+          "section": "Results and discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "nucleic",
+    "immune"
+  ],
+  "topics": [
+    "drug"
+  ],
+  "highlights": [
+    {
+      "tag": "新しい結合部位",
+      "text": "suramin の末端のスルホン酸基は活性部位の Mg2+ に配位し、反対側の端は向かい合う PIN 分子の R283 と H284 に、水素結合や π–π スタッキングで結びつく。",
+      "evidence": [
+        {
+          "quote": "Interestingly, residues R283 and H284 from the opposing protomer interacted with the opposite end of suramin via hydrogen bonding and π–π stacking",
+          "section": "Results and discussion"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "R283A 変異体は RNA 結合も細胞での切断も野生型並みだったが、suramin による阻害には耐性を示した。量子化学（FMO）計算は結合の種類と場所を知る定性的な指標であり、結合エネルギーの定量値ではないと著者は断っている。",
+      "evidence": [
+        {
+          "quote": "However, only wild-type PIN was susceptible to suramin inhibition, whereas R283A PIN was resistant",
+          "section": "Results and discussion"
+        },
+        {
+          "quote": "the binding free energies should be considered as qualitative indicators of the interaction type and location, not as quantitative energetics",
+          "section": "Results and discussion"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "結晶構造を手がかりに、suramin の類縁体と新たに合成した骨格 SO802（IC50 4.3 µM）を調べた。阻害にはスルホン酸基の数と配置が効き、大阪大学の化合物ライブラリーのヒットにもスルホン酸基を持つものが多かった。",
+      "evidence": [
+        {
+          "quote": "Our scaffold SO802 inhibited Regnase-1 NPZC D141N with an IC50 of 4.3 µM",
+          "section": "Results and discussion"
+        },
+        {
+          "quote": "Notably, most University of Osaka Compound Library hits contained sulfonate groups",
+          "section": "Results and discussion"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "マウス Regnase-1 を大腸菌 Lemo21(DE3) で発現。",
+    "construct": "結晶化には PIN ドメイン（残基 134–305、D226N・D244N）を使用。",
+    "purification": "結晶化用の PIN はグリセロールを含まない緩衝液でゲル濾過した。",
+    "sample_prep": "シッティングドロップ蒸気拡散（20°C）。結晶を suramin 溶液に浸漬した（最終 1 mM）。",
+    "data_collection": "SPring-8 BL44XU で測定し、xds で処理。PDB 5h9v を初期モデルに Phenix で精密化した。",
+    "evidence": [
+      {
+        "quote": "Plasmids were transformed into bacteria Lemo21(DE3) (NEB).",
+        "section": "Expression and purification of Regnase-1"
+      },
+      {
+        "quote": "Regnase-1 PIN DDNN (residues 134–305; D226N, D244N)",
+        "section": "X-ray crystallography"
+      },
+      {
+        "quote": "Regnase-1 PIN protein for crystallization was size separated in the same buffer lacking glycerol.",
+        "section": "Expression and purification of Regnase-1"
+      },
+      {
+        "quote": "crystals were formed by sitting drop vapor diffusion at 20°C after 24–48 h",
+        "section": "X-ray crystallography"
+      },
+      {
+        "quote": "to a final concentration of 20% glycerol and 1 mM suramin",
+        "section": "X-ray crystallography"
+      },
+      {
+        "quote": "Diffraction data were collected at SPring-8 beamline BL44XU, and images were processed with xds",
+        "section": "X-ray crystallography"
+      },
+      {
+        "quote": "An initial model was built based on PDB ID: 5h9v",
+        "section": "X-ray crystallography"
+      }
+    ]
+  },
+  "keywords": [
+    "Regnase-1",
+    "suramin",
+    "RNase",
+    "PIN ドメイン",
+    "阻害剤"
+  ],
+  "method_label": "X-ray・2.62 Å",
+  "ligand_label": "suramin",
+  "editor_notes": "PDB 23KX は未公開のため図なし。構造は変異体（D226N・D244N）の PIN ドメインで、野生型結晶は低分解能で使えなかった。野生型での結合様式は未確認と著者が書いている。細胞での suramin の効果は多面的な可能性があると著者も述べている。"
+}

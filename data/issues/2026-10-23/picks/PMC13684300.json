@@ -1,0 +1,132 @@
+{
+ "rank": 2,
+ "headline": "タウの線維化は、V300付近の1か所から始まる",
+ "subhead": "既存のクライオ電顕構造を使い、NMRとEPRで結合の順を追った",
+ "target_label": "タウ（jR2R3-P301Lペプチド線維）",
+ "target_en": "Tau jR2R3-P301L peptide fibril",
+ "summary": {
+  "question": "タウが既存の線維の端にそろって積み重なる最初の接触点は、はっきりしていなかった。",
+  "approach": "既存のクライオ電顕構造（8V1N）をもつペプチド線維に、可溶性のペプチドを加え、NMRで残基ごとの結合の順を追った。",
+  "result": "V300の信号が最も速く消えた。V300にスピンラベルを付けると、線維の伸長が最も抑えられた。",
+  "learned": "結合は線維の表面の1つの支配的な接触点から始まる。水の放出しやすさがその特徴だと著者は考える。",
+  "open": "可溶性オリゴマーごとの水の性質の違いは、今後の課題だ。",
+  "evidence": {
+   "question": [
+    {
+     "quote": "Tau proteins must align and stack precisely with existing fibril ends to propagate pathology, yet the molecular signature that initiates and ensures this in-register alignment has been unclear.",
+     "section": "Abstract"
+    }
+   ],
+   "approach": [
+    {
+     "quote": "This study aims to directly track, with residue-level resolution, the time course of soluble jR2R3-P301L tau peptide association with preformed tau jR2R3-P301L fibril seeds upon mixing.",
+     "section": "Introduction"
+    }
+   ],
+   "result": [
+    {
+     "quote": "Site V300 is clearly a dominant interaction site with the highest decay rates, with α = 5.74 ± 0.78",
+     "section": "Results"
+    },
+    {
+     "quote": "Among the three spin-labeled variants, jR2R3-P301L labeled at site 300 in CR1 gave the lowest plateau ThT intensity (Fig. 4A), indicating the strongest inhibition of templated seeding when CR1 is blocked.",
+     "section": "Results"
+    }
+   ],
+   "learned": [
+    {
+     "quote": "Our work demonstrates that templated tau aggregation is governed by a single dominant pinning site whose defining signature is locally populated, release-prone hydration water that facilitates in-register stacking into seeding-competent fibrils.",
+     "section": "Discussion"
+    }
+   ],
+   "open": [
+    {
+     "quote": "how hydration varies across soluble oligomeric states is an important direction for future work.",
+     "section": "Discussion"
+    }
+   ]
+  }
+ },
+ "categories": [
+  "other"
+ ],
+ "topics": [
+  "dynamics"
+ ],
+ "highlights": [
+  {
+   "tag": "機構の解明",
+   "text": "1H-15N SOFAST-HMQC で、可溶性ペプチドが線維に付いて固定される順を残基ごとに追った。V300が最初で、L301・V306・I297が続き、I308・V309・V313は最も遅かった。",
+   "evidence": [
+    {
+     "quote": "2D contour spectra showed the peak volume of site V300 (red) decayed the fastest (Fig. 2B, contact region 1, CR1), followed progressively by contact region 2 (CR2) with L301 (light red), V306 (orange), and I297 (pink).",
+     "section": "Results"
+    }
+   ]
+  },
+  {
+   "tag": "機構の解明",
+   "text": "線維表面の水を、既存構造（8V1N）に基づくMDと、スピンラベルを使うODNP測定で調べた。ODNPでは、V300のある領域で動きの遅い構造化した水が最も多かった。MDによる解析は計算である。",
+   "evidence": [
+    {
+     "quote": "Among the three sites, klow is highest at site 300 in CR1 (1,477 ± 70 s–1M–1), above site 306 in CR2 (1,041 ± 189 s–1M–1) and site 314 in CR3 (957 ± 98 s–1M–1), indicating enhanced slow, structured water in CR1 on the fibril surface (Fig. 3D).",
+     "section": "Results"
+    }
+   ]
+  },
+  {
+   "tag": "創薬・モダリティ",
+   "text": "V300をスピンラベルで塞いでも結合は起きたが、その後の固定（ロック）と伸長が遅くなった。他の部位のラベルでは伸長が続いた。伸長を止める標的になりうる。",
+   "evidence": [
+    {
+     "quote": "Blocking site 300 thus leaves initial docking intact but kinetically impedes locking and elongation, consistent with the reduced fibril formation seen by ThT and TEM (Fig. 4 A and B).",
+     "section": "Results"
+    }
+   ]
+  }
+ ],
+ "lab_notes": {
+  "expression": null,
+  "construct": "VLIを13C/15Nで標識した19残基の合成ペプチド。",
+  "purification": null,
+  "sample_prep": "ペプチド50 µMをヘパリンと4:1で混ぜ、37 °Cで24時間以上振とうして線維化。超音波処理で種にした。",
+  "data_collection": "Bruker 600 MHz のNMRで 1H-15N SOFAST-HMQC を約16分ごとに取得。",
+  "evidence": [
+   {
+    "quote": "The peptides with 13C/15N isotope-enriched on valine, leucine, and isoleucine (13C/15N-VLI-jR2R3-P301L) were synthesized by the Peptide Synthesis Core at Northwestern University using the solid-phase synthesis method.",
+    "section": "Materials and Methods"
+   },
+   {
+    "quote": "and then diluted to 50 μM to be mixed with heparin at a 4:1 molar ratio to induce fibril formation.",
+    "section": "Materials and Methods"
+   },
+   {
+    "quote": "The mixture was shaken continuously at 200 rpm in an incubator at 37 °C for over 24 h.",
+    "section": "Materials and Methods"
+   },
+   {
+    "quote": "The total measurement time per 2D spectrum is 16 min with a number of scans (NS) of 16 and a recycle delay of 0.1 s.",
+    "section": "Materials and Methods"
+   },
+   {
+    "quote": "All solution NMR experiments were done at 25 °C using a Bruker Neo 600 MHz system with a QCI-F cryoprobe.",
+    "section": "Materials and Methods"
+   }
+  ]
+ },
+ "keywords": [
+  "タウ",
+  "線維化",
+  "NMR",
+  "EPR",
+  "水和水"
+ ],
+ "method_label": "NMR・EPR・ODNP・既存のクライオ電顕構造（MDを含む）",
+ "ga_pdb_id": "8V1N",
+ "legend_labels": [
+  "タウ（線維コア）"
+ ],
+ "editor_notes": "新しい構造ではなく、既存のクライオ電顕構造 8V1N（先行研究）の上で、自前のNMR・EPR・ODNPを行った研究。19残基のモデルペプチドでの結果で、全長タウや病気の線維でも同じかは未確認。水の解析にはMDを含む。ライセンスは CC BY-NC-ND のため、記事は事実のみを自分の言葉で書いた。",
+ "pmcid": "PMC13684300",
+ "section": "impact"
+}

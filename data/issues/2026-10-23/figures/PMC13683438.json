@@ -1,0 +1,94 @@
+{
+ "pdb_id": "36WN",
+ "view": {
+  "target": [
+   -3.29,
+   -21.88,
+   41.33
+  ],
+  "dir": [
+   0.17,
+   -0.9664,
+   0.1927
+  ],
+  "up": [
+   0.2763,
+   0.2344,
+   0.932
+  ],
+  "half": [
+   26.0,
+   30.9
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "ScMK（メバロン酸キナーゼ）",
+   "desc": "Mevalonate kinase",
+   "entity": "1"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "GRG",
+   "label": "GGPP",
+   "color": "#C23B8E",
+   "desc": "Geranylgeranyl Diphosphate",
+   "entity": [
+    "3"
+   ],
+   "sites": [
+    [
+     "C",
+     "501"
+    ]
+   ]
+  },
+  {
+   "id": "BGC",
+   "label": "グルコース",
+   "color": "#2F9E57",
+   "desc": "beta-D-glucopyranose",
+   "entity": [
+    "5"
+   ],
+   "sites": [
+    [
+     "E",
+     "503"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "GRG",
+  "residues": [
+   "L52",
+   "F54",
+   "I57",
+   "F59",
+   "F110",
+   "H111",
+   "A114",
+   "A115",
+   "L136",
+   "I142",
+   "G143",
+   "A144",
+   "G145",
+   "L146",
+   "G147",
+   "S148",
+   "S149",
+   "I152",
+   "L156"
+  ],
+  "hbonds": 6,
+  "pi": 0,
+  "neighbours": [
+   "グルコース"
+  ],
+  "label": "GGPP"
+ }
+}

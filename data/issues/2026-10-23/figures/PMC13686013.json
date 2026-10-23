@@ -1,0 +1,159 @@
+{
+ "pdb_id": "9WG6",
+ "view": {
+  "target": [
+   106.86,
+   107.4,
+   117.03
+  ],
+  "dir": [
+   -0.9499,
+   -0.1617,
+   0.2676
+  ],
+  "up": [
+   -0.2851,
+   0.0961,
+   -0.9537
+  ],
+  "half": [
+   41.2,
+   54.6
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "Gαs（G タンパク質）",
+   "desc": "Guanine nucleotide-binding protein G(s) subunit alpha isoforms short",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "Gβ1",
+   "desc": "Guanine nucleotide-binding protein G(I)/G(S)/G(T) subunit beta-1",
+   "entity": "2"
+  },
+  {
+   "color": "#5F9296",
+   "label": "Gγ2",
+   "desc": "Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-2",
+   "entity": "3"
+  },
+  {
+   "color": "#A5707A",
+   "label": "ナノボディ35",
+   "desc": "Nanobody35",
+   "entity": "4"
+  },
+  {
+   "color": "#7C8AA8",
+   "label": "D1 受容体",
+   "desc": "Beta-2 adrenergic receptor,D(1A) dopamine receptor,Engineered oplophorus-luciferin 2-monooxygenase catalytic subunit",
+   "entity": "5"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "LDP",
+   "label": "ドーパミン",
+   "color": "#C23B8E",
+   "desc": "L-Dopamine",
+   "entity": [
+    "6"
+   ],
+   "sites": [
+    [
+     "F",
+     "601"
+    ]
+   ]
+  },
+  {
+   "id": "A1EWF",
+   "label": "UNC9815",
+   "color": "#2F9E57",
+   "desc": "~{N}-(3-aminocarbonyl-6-~{tert}-butyl-1-benzothiophen-2-yl)pyridine-4-carboxamide",
+   "entity": [
+    "7"
+   ],
+   "sites": [
+    [
+     "G",
+     "602"
+    ]
+   ]
+  },
+  {
+   "id": "A1EV3",
+   "label": "BMS-A1",
+   "color": "#7A52C7",
+   "desc": "1-[(1~{S},3~{R},6~{R})-6-(1,3-benzodioxol-5-yl)-3-bicyclo[4.1.0]heptanyl]-4-[(2-bromanyl-5-chloranyl-phenyl)methyl]piperazine",
+   "entity": [
+    "8"
+   ],
+   "sites": [
+    [
+     "H",
+     "603"
+    ]
+   ]
+  },
+  {
+   "id": "G4C",
+   "label": "LY3154207",
+   "color": "#D6A21E",
+   "desc": "2-[2,6-bis(chloranyl)phenyl]-1-[(1S,3R)-3-(hydroxymethyl)-1-methyl-5-(3-methyl-3-oxidanyl-butyl)-3,4-dihydro-1H-isoquinolin-2-yl]ethanone",
+   "entity": [
+    "9"
+   ],
+   "sites": [
+    [
+     "I",
+     "604"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "A1EWF",
+  "residues": [
+   "T26",
+   "F29",
+   "L30",
+   "E85",
+   "D314",
+   "V315",
+   "W318",
+   "F319",
+   "A322"
+  ],
+  "hbonds": 0,
+  "pi": 0,
+  "neighbours": [
+   "BMS-A1"
+  ],
+  "label": "UNC9815"
+ },
+ "hero_view": {
+  "target": [
+   106.86,
+   107.4,
+   117.03
+  ],
+  "dir": [
+   -0.9499,
+   -0.1617,
+   0.2676
+  ],
+  "up": [
+   -0.2851,
+   0.0961,
+   -0.9537
+  ],
+  "half": [
+   41.2,
+   54.6
+  ]
+ }
+}

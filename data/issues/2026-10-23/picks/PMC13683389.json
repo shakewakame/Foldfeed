@@ -1,0 +1,141 @@
+{
+  "pmcid": "PMC13683389",
+  "rank": 13,
+  "headline": "ChAdOx1 ChikのVLPは、天然のウイルスに似ている",
+  "subhead": "VLPのクライオ電顕マップは4 Å、既報のウイルス粒子との相関は0.92",
+  "target_label": "CHIKV VLP（ChAdOx1 Chik）",
+  "target_en": "Chikungunya virus VLP (ChAdOx1 Chik-derived)",
+  "summary": {
+    "question": "ChAdOx1 Chik ワクチンの抗原が、本物のウイルス粒子に似た VLP を作るという仮説は、確かめる必要があった。",
+    "approach": "HEK293T 細胞で作った VLP を精製し、クライオ電顕の単粒子解析と糖鎖の LC-MS で、天然のウイルス粒子と比べた。",
+    "result": "局所再構成で E1–E2 三量体は 5.7 Å から 4 Å に上がり、既報のウイルス粒子マップとの相関係数は 0.92 だった。",
+    "learned": "VLP は T = 4 に並んだ 80 個の糖タンパク質三量体とカプシド層をもち、E1・E2 の糖鎖の位置も天然のウイルスと似ていた。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "we hypothesised that our clinically relevant ChAdOx1 Chik vaccine would similarly direct host cells to secrete the encoded structural polyprotein in the form of VLPs",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "we determined the cryo-EM structure of our CHIKV VLP by single particle analysis (Fig. 2a)",
+          "section": "Results"
+        },
+        {
+          "quote": "we analysed the glycosylation status of purified CHIKV VLPs by LC-MS",
+          "section": "Results"
+        }
+      ],
+      "result": [
+        {
+          "quote": "The localised reconstruction method was used to improve the resolution of the conventional icosahedral reconstruction of the E1–E2 trimers from 5.7 Å to 4 Å.",
+          "section": "Results"
+        },
+        {
+          "quote": "with a high cross-correlation coefficient of 0.92 (Fig. 2e)",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "showing the characteristic T = 4 arrangement of the 80 glycoprotein trimers made of E1 and E2 glycoproteins in addition to the capsid protein layer (Fig. 2b-d)",
+          "section": "Results"
+        },
+        {
+          "quote": "Additional densities corresponding to glycans are present in positions of E1 N141 and E2 N263 glycosylation sites similar to that of CHIKV virion structure reported earlier",
+          "section": "Results"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "pathogen"
+  ],
+  "highlights": [
+    {
+      "tag": "手法の工夫",
+      "text": "粒子全体の再構成は 5.7 Å だった。5 回軸と 3 回軸の周りの三量体を切り出す局所再構成で、どちらも約 4 Å にした。4 種のマップが EMDB に登録されている。",
+      "evidence": [
+        {
+          "quote": "resulting in the structures of trimer1 and trimer2 at 4.02-Å and 3.96-Å resolution",
+          "section": "Methods"
+        },
+        {
+          "quote": "have been deposited in the Electron Microscopy Data Bank (EMDB) under the accession codes EMD-54410, EMD-54411, EMD-54412 and EMD-54413",
+          "section": "Data availability"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "LC-MS では、E1 の N141 はハイブリッド型のみ、E2 の N263 は高マンノース型が主だった。著者は、この糖鎖は典型的なアルファウイルスの糖タンパク質と同様だと述べている。",
+      "evidence": [
+        {
+          "quote": "was occupied exclusively by hybrid-type glycosylation, whereas the N263 site on the E2 glycoprotein (N588 on sCHIKV) carried a mixture of predominantly high mannose glycans",
+          "section": "Results"
+        },
+        {
+          "quote": "the glycosylation of our CHIKV VLP antigen derived from the ChAdOx1 Chik vaccine is representative of typical alphavirus glycoprotein glycosylation",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "アジュバントなしの VLP 5 µg を 2 回接種すると、ウイルス血症のピークが約 2.0 log10 下がり、足の腫れも 5.75 から 5.18 mm2 に減った。1 回では約 0.4 log10 の低下だった。",
+      "evidence": [
+        {
+          "quote": "This corresponds to approximately 0.4 log10 and 2.0 log10 reduction in peak viremia compared with PBS controls.",
+          "section": "Results"
+        },
+        {
+          "quote": "the mean footpad area in PBS-vaccinated mice was 5.75 mm2, compared with 5.18 mm2 in the prime-boost CHIKV VLP group",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "HEK293T 細胞に PEI でトランスフェクションし、ローラーボトルで 4〜5 日培養。",
+    "construct": "構造ポリプロテイン sCHIKV（C-E3-E2-6K-E1）を、分泌シグナルなしで pHLsec に入れた。",
+    "purification": "PEG で沈殿させ、20–60% ショ糖密度勾配で精製。",
+    "sample_prep": "精製 VLP 3.5 µl をグロー放電したグリッドにのせ、Vitrobot Mark IV で 4 °C・湿度 100% で凍結。",
+    "data_collection": "Titan Krios と K2 Summit で撮影。RELION 3.1 で 20 面体対称の再構成をし、局所再構成で三量体を精密化。",
+    "evidence": [
+      {
+        "quote": "The large-scale transfection of CHIKV VLP was carried out in roller bottles using the standard PEI transfection of HEK293T cells",
+        "section": "Methods"
+      },
+      {
+        "quote": "To clone the transgenes into the pHLsec expression plasmid without its secretory signal, an EcoRI site was included in the forward primer",
+        "section": "Methods"
+      },
+      {
+        "quote": "secreted protein fractions were precipitated by using PEG virus precipitation kit (Abcam, ab 102538) according to the protocol from the manufacturer and loaded on a sucrose gradient 20-60% prepared by gradient master (BioComp Instruments).",
+        "section": "Methods"
+      },
+      {
+        "quote": "A 3.5-μl aliquot of purified VLP samples was applied to glow-discharged EM grids (UltraAuFoil, Quantifoil, or Lacey carbon grid, Ted Pella) and vitrified by plunge-freezing into liquid ethane using Vitrobot mark IV (Thermo Fisher Scientific) operated at 4 °C, 100% relative humidity.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Cryo-EM data were acquired on a 300-kV Titan Krios (Thermo Fisher Scientific) equipped with an energy filter and a direct electron detector (K2 summit; Gatan) in counting mode.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Localised reconstruction was performed to account for the flexibility of the E1-E2 layer",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "チクングニアウイルス",
+    "VLP",
+    "ChAdOx1 Chik",
+    "アルファウイルス",
+    "ワクチン"
+  ],
+  "method_label": "Cryo-EM・全体 5.7 Å／三量体 約4 Å",
+  "editor_notes": "EMDB のマップ（EMD-54410〜54413）のみで、PDB の原子モデルは本文に書かれていない。論文の糖鎖解析の記述に番号の揺れがある（Results は E1 N141・E2 N263、Discussion は E947・N271・N586）。紹介文は Results の記述に従った。論文の中心はワクチン免疫原性で、構造は VLP が天然ウイルスに似ていることの確認として報告されている。"
+}

@@ -1,0 +1,69 @@
+{
+ "pdb_id": "9Z07",
+ "view": {
+  "target": [
+   174.02,
+   173.91,
+   158.62
+  ],
+  "dir": [
+   -0.5419,
+   0.8271,
+   0.1492
+  ],
+  "up": [
+   0.8078,
+   0.5616,
+   -0.179
+  ],
+  "half": [
+   77.1,
+   55.4
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "DNMT1（メチル化酵素）",
+   "desc": "DNA (cytosine-5)-methyltransferase 1",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "ヒストン H2A",
+   "desc": "Histone H2A",
+   "entity": "2"
+  },
+  {
+   "color": "#5F9296",
+   "label": "ヒストン H2B",
+   "desc": "Histone H2B 1.1",
+   "entity": "3"
+  },
+  {
+   "color": "#A5707A",
+   "label": "ヒストン H3",
+   "desc": "Histone H3",
+   "entity": "4"
+  },
+  {
+   "color": "#7C8AA8",
+   "label": "ヒストン H4",
+   "desc": "Histone H4",
+   "entity": "5"
+  },
+  {
+   "color": "#8A9A5B",
+   "label": "DNA（149 bp）",
+   "desc": "Chain x DNA (149-MER)",
+   "entity": "6"
+  },
+  {
+   "color": "#9C7B55",
+   "label": "DNA（149 bp）",
+   "desc": "Chain Y DNA (149-MER)",
+   "entity": "7"
+  }
+ ],
+ "ligands": []
+}

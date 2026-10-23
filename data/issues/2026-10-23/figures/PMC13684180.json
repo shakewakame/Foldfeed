@@ -1,0 +1,39 @@
+{
+ "pdb_id": "38RH",
+ "view": {
+  "target": [
+   153.41,
+   145.28,
+   150.89
+  ],
+  "dir": [
+   -0.9773,
+   -0.2082,
+   0.0394
+  ],
+  "up": [
+   -0.1605,
+   0.8489,
+   0.5036
+  ],
+  "half": [
+   47.7,
+   52.3
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "DabA（炭酸脱水酵素）",
+   "desc": "Probable inorganic carbon transporter subunit DabA",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "複合体Ⅰ様サブユニット",
+   "desc": "NADH/Ubiquinone/plastoquinone (Complex I)",
+   "entity": "2"
+  }
+ ],
+ "ligands": []
+}

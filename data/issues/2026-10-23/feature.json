@@ -1,0 +1,4 @@
+{"pmcid": "PMC13686013", "axes": ["structure", "drug"],
+ "reason": "D1 受容体の 3 つの正のアロステリック部位に、別々の調節薬が同時に結合する構造を示し、併用でドーパミンの効力が 1000 倍超になることを測った。",
+ "evidence": [{"quote": "Our structures demonstrate the simultaneous binding of the chemically distinct PAMs (LY3154207, BMS-A1, and UNC9815/UNC10062) in three nonoverlapping pockets.", "section": "Abstract"}],
+ "considered": [{"pmcid": "PMC13684180", "note": "初構造で機構も見えるが、創薬への直結度で D1 受容体を上に置いた。"}, {"pmcid": "PMC13683438", "note": "5 種の阻害剤を 1 か所で受け止める仕組みが明快だが、酵母の酵素で波及が限られる。"}]}
