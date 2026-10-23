@@ -1,0 +1,154 @@
+{
+  "pmcid": "PMC13683441",
+  "rank": 3,
+  "headline": "アグマチンは、細菌の脱水素酵素のNADPH結合を34倍強める",
+  "subhead": "apo結晶構造とSAXSで、NADP+が加わると酵素が閉じた配置になることを示した",
+  "target_label": "CAPADH（B. fragilis・C. leptum）",
+  "target_en": "CAPADH (B. fragilis, C. leptum)",
+  "summary": {
+    "question": "細菌のスペルミジン合成は、プトレッシンから始まると考えられてきた。アグマチンを好む酵素がある理由は分かっていなかった。",
+    "approach": "アグマチンを使う脱水素酵素（CAPADH）を B. fragilis と C. leptum で、速度論・熱シフト・SAXS・apo 結晶構造で調べた。",
+    "result": "アグマチンでは kcat/Km がプトレッシンの 115 倍（B. fragilis）と 811 倍（C. leptum）になり、NADPH の結合は 34 倍強まった。",
+    "learned": "両酵素はアグマチンを初発基質とする CAPADH だった。アグマチンが構造変化を促して NADPH の結合を高める誘導適合が示唆された。",
+    "open": "アグマチン結合型の構造はなく、認識ループの役割は変異体解析で確かめる必要がある。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Putrescine has long been considered the initiating substrate for aspartate semialdehyde-dependent bacterial spermidine biosynthesis.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "This variation appears to be common, but the mechanistic basis for substrate preference was unknown.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here, we investigate the aspartate semialdehyde-dependent dehydrogenases from Bacteroides fragilis and Clostridium leptum using steady-state and transient-state kinetic assays, mass spectrometry, thermal shift protein stability assays, X-ray crystallography, small-angle X-ray scattering, and computational modeling.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "Indeed, the kcat/Km increased 115-fold for B. fragilis and 811-fold for C. leptum in comparison to putrescine.",
+          "section": "Results"
+        },
+        {
+          "quote": "Agmatine enhances NADPH binding affinity by 34-fold, whereas putrescine has a modest effect",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Both enzymes exhibit dramatically enhanced catalytic efficiency with agmatine, demonstrating that these homologs function as carboxyaminopropylagmatine dehydrogenases rather than carboxyspermidine dehydrogenases.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "These structural transitions, together with thermal stability measurements and transient-state binding assays, support an induced-fit mechanism in which agmatine promotes conformational rearrangements that enhance NADPH-binding.",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "mutagenesis studies are needed to confirm our hypothesis of substrate recognition.",
+          "section": "Results"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "enzyme"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "アグマチンがあると、NADPH の解離定数は 61 μM から 1.8 μM へ 34 倍下がった。プトレッシンは 2 mM でも NADPH の解離速度を 29 s−1 までしか下げなかった。",
+      "evidence": [
+        {
+          "quote": "Accordingly, the equilibrium value decreased 34-fold from KNADPH = 61 μM to KAgm:NADPH = 1.8 μM (Table 3).",
+          "section": "Results"
+        },
+        {
+          "quote": "but the off rate only decreases to 29 s−1 indicating 6-fold weaker NADPH binding",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "apo 型では NADPH の結合部位がふさがれていた。B. fragilis では β7-α8 ループの残基 174〜178 が結合溝に入り込み、C. leptum では L84・P85・N107 の位置が NADPH と衝突する。",
+      "evidence": [
+        {
+          "quote": "In the BfCAPADH-Apo structure, residues 174 to 178 of the β7-α8 loop are positioned within the NADPH binding channel, forming a hydrogen bond with G11, and must be displaced to allow the association of NADPH.",
+          "section": "Results"
+        },
+        {
+          "quote": "The NADPH binding site is still occluded, but by more subtle repositioning of L84, P85, and N107 that would cause steric clash with NADPH",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "SAXS の回転半径は B. fragilis の NADP+ 型 35.4 Å、apo 型 36.7 Å、C. leptum の apo 型 40.3 Å で、結晶構造の傾向と合った。NADP+ や NADPH があると両酵素は、より閉じた配置をとる。",
+      "evidence": [
+        {
+          "quote": "BfCAPADH-NADP+ forms a compact crystal structure with a SAXS Rg = 35.4 ± 0.2 Å, while BfCAPADH-Apo is more extended with a SAXS Rg = 36.7 ± 0.1 Å.",
+          "section": "Results"
+        },
+        {
+          "quote": "the presence of NADP+ or NADPH causes both proteins to adopt a more compact domain arrangement, and that the crystal structures are representative of the conformational trends observed in solution.",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": null,
+    "construct": null,
+    "purification": "CAPADH の発現・精製は既報の方法。SAXS 用にはニッケルアフィニティーの後にゲルろ過を追加した。",
+    "sample_prep": "シッティングドロップ、4 °C。B. fragilis は 4 mg/ml・クエン酸アンモニウム・PEG 3350、C. leptum は 5 mg/ml・LiCl・Tris・PEG 8000。",
+    "data_collection": "SSRL 12-1/12-2 で 100 K、XDS で処理。8DEB のチェーン A で分子置換。B. fragilis は B 因子が高く、平均 100 超の残基は除いた。",
+    "evidence": [
+      {
+        "quote": "The expression and purification of BfCAPADH (WP_005801052.1) and ClCAPADH (EDO61991.1) followed our previously published methods.",
+        "section": "Expression and purification of BfCAPADH, ClCAPADH, and BfCAPADC"
+      },
+      {
+        "quote": "A size exclusion chromatography purification step was added after nickel affinity chromatography as described previously (7).",
+        "section": "SAXS sample preparation and data analysis"
+      },
+      {
+        "quote": "All crystals were grown in sitting drop trays with a 1 μl: 1 μl ratio of protein and well solution at 4 °C.",
+        "section": "CAPADH crystallization"
+      },
+      {
+        "quote": "BfCAPADH crystals were grown using 4 mg/ml protein in a well solution of 0.15 M ammonium citrate dibasic and 22% PEG 3350.",
+        "section": "CAPADH crystallization"
+      },
+      {
+        "quote": "ClCAPADH crystals were grown using 5 mg/ml protein in a well solution of 0.85 M lithium chloride, 0.1 M Tris HCl pH 7.5, and 28% PEG 8000.",
+        "section": "CAPADH crystallization"
+      },
+      {
+        "quote": "The ClCAPADH structure was solved by molecular replacement using Phenix Phaser (24) with 8DEB, Chain A as a model.",
+        "section": "ClCAPADH data collection and structure determination"
+      },
+      {
+        "quote": "Residues with average B-factors >100 were removed even when apparent electron density was visible.",
+        "section": "BfCAPADH data collection and structure determination"
+      }
+    ]
+  },
+  "keywords": [
+    "スペルミジン",
+    "アグマチン",
+    "CAPADH",
+    "誘導適合",
+    "SAXS"
+  ],
+  "legend_labels": [
+    "CAPADH（脱水素酵素）"
+  ],
+  "editor_notes": "構造は apo 型 2 つ（C. leptum 9YQ9 2.5 Å、B. fragilis 36YL 2.91 Å）のみで、アグマチン結合部位は Boltz-2 の予測と配列比較による仮説（論文が変異体解析待ちと明記）。そのため記事ではアグマチンによる構造変化を「示唆」にとどめた。本文は PDB ID を「36GY」と誤記し、データ可用性の節と Table 4 では 36YL と 9YQ9 の対応が図の凡例と逆になっている（PDB 側の 9YQ9=C. leptum, 36YL=B. fragilis に従った）。Table 4 の B. fragilis の精密化分解能（1.94 Å）も本文の 2.91 Å と食い違う。C. leptum 酵素は PDB 初の構造（first_structure=true）なので New Structure に入る。"
+}

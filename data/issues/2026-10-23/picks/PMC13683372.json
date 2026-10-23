@@ -1,0 +1,166 @@
+{
+  "pmcid": "PMC13683372",
+  "rank": 4,
+  "headline": "Blm10とPba1は、並行する別の経路で働くらしい",
+  "subhead": "組み立て中間体5種をクライオ電顕で解き、両者の結合は排他的と分かった",
+  "target_label": "Blm10:13S（酵母）",
+  "target_en": "Blm10:13S proteasome intermediate (S. cerevisiae)",
+  "summary": {
+    "question": "Blm10 は組み立て中のプロテアソームにも結合するが、Pba1/Pba2 との順序は不明確で、中間体との複合体の構造もなかった。",
+    "approach": "酵母（pba1 欠失株）から中間体を精製し、5種の構造をクライオ電顕で解いた。プルダウンで Blm10 と Pba1/Pba2 が現れる時期も調べた。",
+    "result": "Blm10:13S は 2.84 Å で解け、Blm10 の C 末端が α5/α6 の溝に入っていた。両者とも早期と後期の中間体で検出された。",
+    "learned": "両者は同じ α5/α6 の溝を使い同時には結合できない。順番に交代するのではなく、並行する別の経路で働くと考えられる。",
+    "open": "Blm10 結合 CP の量が、成熟 CP をめぐる競合で決まるのか、この組み立て経路で決まるのかは、まだ分かっていない。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "The assembly process that leads to Blm10-CP proteasomes remains unresolved and Blm10 is present not only at mature proteasomes but also bound to assembly intermediates.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "there is no structure of Blm10 bound to an assembly intermediate, limiting our ability to understand the changes that occur during assembly",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "We identified and solved structures of five CP intermediate complexes by cryo-electron microscopy, two of which include Blm10.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Performing pulldowns from Pba4-tagged (early) and Ump1-tagged (late) yeast strains, we detected Pba1/Pba2 in both purifications (Fig. 6b).",
+          "section": "Results"
+        }
+      ],
+      "result": [
+        {
+          "quote": "Blm10:13S, comprising α1-α7, β2/β3/β4, and Ump1, was the most abundant complex and was resolved to 2.84 Å resolution",
+          "section": "Results"
+        },
+        {
+          "quote": "Blm10 adopts a hollow dome architecture, with its C-terminal HbYX motif inserted into the α5/α6 inter-subunit pocket",
+          "section": "Results"
+        },
+        {
+          "quote": "Thus, both Blm10 and Pba1 are present in early as well as late stages of CP assembly, which is consistent with parallel assembly pathways.",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "The binding of Blm10 and Pba1/Pba2 to an α-ring is mutually exclusive, and previous models have proposed that they bind sequentially",
+          "section": "Results"
+        },
+        {
+          "quote": "Instead, we propose a model whereby Blm10:13S, Pba1/2:13S, and capless13S represent intermediates in parallel pathways of CP assembly",
+          "section": "Discussion"
+        }
+      ],
+      "open": [
+        {
+          "quote": "It remains to be determined to what extent these are formed from competition between RP and Blm10 for mature CP binding versus being driven by this alternative assembly pathway directly.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "protease"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "Blm10 のドーム側面の開口は、Blm10:13S では 6.3 × 11 Å と、成熟 CP との複合体（約 14 × 23.2 Å）より狭い。Ump1 のない Blm10:α-ring では中間の大きさで、ドームは開閉すると考えられている。",
+      "evidence": [
+        {
+          "quote": "The Blm10 dome in Blm10:CP contains a large lateral opening measuring approximately 14 × 23.2 Å that is situated laterally above α2 and α3",
+          "section": "Results"
+        },
+        {
+          "quote": "The corresponding opening in Blm10:13S is substantially narrower, at 6.3 × 11 Å",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "Blm10 と Pba1 の HbYX モチーフは同じ溝に入る。Pba1 は Ump1 とも接するが、Blm10 は Ump1 から 34.9 Å 離れていて接しない。このため成熟後にも Blm10 が外れにくい構造上の理由になると論文は考えている。",
+      "evidence": [
+        {
+          "quote": "The HbYX motifs of Blm10 and Pba1 occupy the same α5/α6 inter-subunit pocket in CP",
+          "section": "Results"
+        },
+        {
+          "quote": "In contrast, Blm10 does not directly contact Ump1; the closest residue, A2143, lies 34.9 Å away (Fig. 5d).",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "α1・α2・α3・α4・α7 と Ump1 に β サブユニットが結合し、α5 と α6 を欠く中間体も見つかった。α リングが先にできるという通説に対し、少なくともこの欠失株では常にそうとは限らない。",
+      "evidence": [
+        {
+          "quote": "The identification of intermediates that have β subunits while lacking a complete α-ring was unexpected as the α-ring is generally thought to form first",
+          "section": "Results"
+        },
+        {
+          "quote": "Thus, at least in this pba1Δ background, we find evidence that assembly does not always proceed by formation of the α-ring first.",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "酵母の内在複合体を使用。Ump1 に TAP タグを付けた PBA1 欠失株から中間体を精製。",
+    "construct": null,
+    "purification": "IgG ビーズ、TEV 切断、カルモジュリン樹脂の 2 段階の TAP 精製。",
+    "sample_prep": "Quantifoil R 1.2/1.3 Cu 400 メッシュに 3 μL をのせ、Leica EM GP 2 で凍結。",
+    "data_collection": "Titan Krios G3i と K3 で 5,235 本の動画を収集。cryoSPARC 4.4.1 で処理し、5 種を再構成。",
+    "evidence": [
+      {
+        "quote": "we purified CP assembly intermediates by using a yeast strain with the CP chaperone Ump1 C-terminally TAP-tagged",
+        "section": "Results"
+      },
+      {
+        "quote": "Proteasome assembly intermediate purification was carried out by two step TAP purification method",
+        "section": "Assembly intermediate purification"
+      },
+      {
+        "quote": "Grids were vitrified in 100% liquid ethane using a Leica EM GP 2 plunge freezer (Leica Microsystems) with a blot time of 1 s or 3 s",
+        "section": "Cryo-EM sample preparation and data acquisition"
+      },
+      {
+        "quote": "A total of 5235 movies were collected using the EPU program (v.3.3.0; Thermo Fisher Scientific)",
+        "section": "Cryo-EM sample preparation and data acquisition"
+      },
+      {
+        "quote": "All cryo-EM data were processed using cryoSPARC (v.4.4.1)",
+        "section": "Cryo-EM image processing"
+      }
+    ]
+  },
+  "keywords": [
+    "プロテアソーム",
+    "Blm10",
+    "Pba1/Pba2",
+    "組み立て中間体",
+    "Ump1"
+  ],
+  "ga_pdb_id": "9D0T",
+  "editor_notes": "candidates.json の proteins で MYLK2 (A4IFM7) が first_structure=true だが、9D0T の Ump1 融合鎖に付いた別タンパク質（Myosin light chain kinase 2）の UniProt 対応で、論文の主題ではない。サイトの自動判定で New Structure になる可能性があるので確認してほしい（論文は初構造とは主張していない）。Blm10 と Pba1/Pba2 の並行経路は著者のモデル（propose/suggest）で、記事も推測の書き方にした。legend_labels は render 後に要設定（12 鎖の複合体）。",
+  "legend_labels": [
+    "α1（外輪）",
+    "α2（外輪）",
+    "α3（外輪）",
+    "α4（外輪）",
+    "α5（外輪）",
+    "α6（外輪）",
+    "α7（外輪）",
+    "β2（内輪）",
+    "β3（内輪）",
+    "β4（内輪）",
+    "Blm10（キャップ）",
+    "Ump1（成熟因子）"
+  ]
+}

@@ -1,0 +1,142 @@
+{
+ "rank": 1,
+ "headline": "高いpHのNMRで、タンパク質の水素結合を見分ける",
+ "subhead": "既存の構造をもつ10種で、残る信号が水素結合と約91%一致した",
+ "target_label": "ユビキチンなど10種のタンパク質",
+ "target_en": "Ubiquitin, CspA, SN and 7 other proteins",
+ "summary": {
+  "question": "NMRの構造決定に欠かせない水素結合を、不安定な構造で実験的に見分けるのは難しかった。",
+  "approach": "構造が既知の10種のタンパク質で、pH 10〜11のNMRにより約750か所のアミド水素（主鎖の水素）を調べた。",
+  "result": "高pHで残るアミド水素の信号は、既存の構造にある水素結合と約91%一致した。重水中の交換実験は約80%だった。",
+  "learned": "アミド水素の信号の消え方をpHごとに追うと、構造の中で最後まで水素結合が残る部分（フォルドン）も分かる。",
+  "evidence": {
+   "question": [
+    {
+     "quote": "Hydrogen bond restraints are critical for NMR structure determination, yet their experimental identification can be challenging for marginally stable structures affording insufficient exchange protection in D2O.",
+     "section": "Abstract"
+    }
+   ],
+   "approach": [
+    {
+     "quote": "We analyzed ~750 amide sites distributed across ten proteins with known structures.",
+     "section": "Abstract"
+    },
+    {
+     "quote": "As an alternative, we explored the use of NMR between pH 10 and 11, conditions that promote rapid exchange, for identifying backbone amide protons involved in H-bonds.",
+     "section": "Abstract"
+    }
+   ],
+   "result": [
+    {
+     "quote": "Survival of amide protons at high pH in standard 2D 1H–15N HSQC spectra for 15N-labeled proteins in H2O, or TOCSY for unlabeled proteins, identifies H-bonds with ~91% accuracy, exceeding the ~80% accuracy of traditional H/D exchange experiments in D2O.",
+     "section": "Abstract"
+    }
+   ],
+   "learned": [
+    {
+     "quote": "High-pH NMR experiments provide a sensitive, fast, and broadly applicable approach to map H-bonding.",
+     "section": "Abstract"
+    },
+    {
+     "quote": "Increasing the pH led to a progressive loss of native amide proton NMR signals",
+     "section": "Abstract"
+    }
+   ],
+   "open": [
+    {
+     "quote": "Particularly problematic are partially folded proteins and folding intermediates where H-bonds rarely persist long enough to afford detectable protection.",
+     "section": "Introduction"
+    }
+   ]
+  }
+ },
+ "categories": [
+  "other"
+ ],
+ "topics": [
+  "method"
+ ],
+ "highlights": [
+  {
+   "tag": "手法の工夫",
+   "text": "pH 10〜11ではアミド水素の交換が速く進み、水素結合で守られた水素の信号だけが残る。10種・約750か所で、残る信号と結晶・クライオ電顕の構造にある水素結合の一致率は約91%だった。",
+   "evidence": [
+    {
+     "quote": "The presence or absence of amide proton NMR signals between pH 10 and 11 can be used to ascertain H-bonds (protected amides) or the absence of H-bonds (unprotected amides) with ~91% accuracy.",
+     "section": "Results"
+    }
+   ]
+  },
+  {
+   "tag": "手法の工夫",
+   "text": "同じデータで従来の重水（D2O）中の交換実験は約80%だった。不安定な構造の水素結合は守られず見逃されやすい（偽陰性）ためで、高pHではこの見逃しが減った。",
+   "evidence": [
+    {
+     "quote": "The lower accuracy of the D2O isotope exchange method is due to a higher number of false negatives—amide protons that are H-bonded in marginally stable structure that offers insufficient protection to be detected in D2O.",
+     "section": "Discussion"
+    }
+   ]
+  },
+  {
+   "tag": "機構の解明",
+   "text": "球状のP22iDとCUS3iDでは、配列上は離れた6本のβストランドが作る逆平行βバレルが最後まで残った。信号が残るpHは、残基間の接触の多さと相関した（R=0.68と0.66、ユビキチンは0.45）。",
+   "evidence": [
+    {
+     "quote": "For the two related globular proteins P22iD and Cus3iD, the most persistent structure corresponds to the six β-strands that are not contiguous in the sequence but come together in the structure to form a conserved antiparallel β-barrel motif.",
+     "section": "Results"
+    },
+    {
+     "quote": "The R-values for correlations between the pH value at which amide protons are last observed and the number of Cα–Cα distance contacts in the structure <5 Å, were 0.68 for P22iD, 0.66 for CUS3iD, and somewhat lower at 0.45 for ubiquitin.",
+     "section": "Results"
+    }
+   ]
+  }
+ ],
+ "lab_notes": {
+  "expression": "ユビキチンなどは大腸菌で発現し、ユビキチンは15N標識。Aβ(40)は15N標識品を購入。",
+  "construct": null,
+  "purification": null,
+  "sample_prep": "濃度0.1〜1 mM、25 °C（キネシンneckは37 °C）。pHは1 N HClとNaOHの少量で調整。",
+  "data_collection": "1H–15N HSQC（標識なしはTOCSY）でpH滴定。水素結合は既存構造からHBPLUSで計算。",
+  "evidence": [
+   {
+    "quote": "Uniform 15N-isotope labeling of ubiquitin and its purification were done as previously described.",
+    "section": "Methods"
+   },
+   {
+    "quote": "15N-labeled Aβ(40) was from rPeptide (Watkinsville, GA).",
+    "section": "Methods"
+   },
+   {
+    "quote": "Unless otherwise noted all the NMR spectra in this study were obtained at a temperature of 25 °C, with protein concentrations ranging from 0.1 to 1 mM.",
+    "section": "Methods"
+   },
+   {
+    "quote": "The pH of samples contained in 1.5 mL Eppendorf centrifuge tubes was adjusted with small (0.3–3 μL) aliquots of 1 N HCl and NaOH stocks.",
+    "section": "Methods"
+   },
+   {
+    "quote": "H-bonds were calculated with the program HBPLUS",
+    "section": "Methods"
+   },
+   {
+    "quote": "NMR assignments at the various pH values employed in this study were extended with 2D titration experiments using 1H–15N HSQC",
+    "section": "Methods"
+   }
+  ]
+ },
+ "keywords": [
+  "高pH NMR",
+  "水素結合",
+  "フォルドン",
+  "ユビキチン"
+ ],
+ "method_label": "NMR・既存のX線／クライオ電顕構造との照合",
+ "ga_pdb_id": "1UBQ",
+ "legend_labels": [
+  "ユビキチン（検証用）"
+ ],
+ "editor_notes": "新しい構造ではなく、10種の既存PDB構造（1UBQ・3KIN・1MJC・1BBU・1STN・2ZTA・8I1V・8SKG・1G6X・1TM6）と自前のNMRを照合した方法論の論文。ライセンスは tdm（テキストマイニング用）のため、記事は事実のみを自分の言葉で書いた。構造図はユビキチン（1UBQ）で代表させている。",
+ "pmcid": "PMC13681069",
+ "section": "impact"
+}

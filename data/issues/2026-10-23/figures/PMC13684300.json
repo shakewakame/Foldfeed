@@ -1,0 +1,33 @@
+{
+ "pdb_id": "8V1N",
+ "view": {
+  "target": [
+   204.41,
+   204.15,
+   219.01
+  ],
+  "dir": [
+   0.0486,
+   0.0689,
+   0.9964
+  ],
+  "up": [
+   0.495,
+   -0.8681,
+   0.0359
+  ],
+  "half": [
+   26.6,
+   18.8
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "タウ（線維コア）",
+   "desc": "Microtubule-associated protein tau",
+   "entity": "1"
+  }
+ ],
+ "ligands": []
+}

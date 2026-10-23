@@ -1,0 +1,95 @@
+{
+ "pdb_id": "9R34",
+ "view": {
+  "target": [
+   137.72,
+   136.17,
+   130.85
+  ],
+  "dir": [
+   0.9888,
+   0.0203,
+   0.148
+  ],
+  "up": [
+   -0.1476,
+   -0.0197,
+   0.9888
+  ],
+  "half": [
+   49.8,
+   48.2
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "NS3（ATPase）",
+   "desc": "NTPase",
+   "entity": "1"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "AGS",
+   "label": "ATPγS",
+   "color": "#C23B8E",
+   "desc": "Phosphothiophosphoric Acid-Adenylate Ester",
+   "entity": [
+    "2"
+   ],
+   "sites": [
+    [
+     "G",
+     "401"
+    ],
+    [
+     "I",
+     "401"
+    ],
+    [
+     "K",
+     "401"
+    ],
+    [
+     "M",
+     "401"
+    ],
+    [
+     "O",
+     "401"
+    ],
+    [
+     "Q",
+     "401"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "AGS",
+  "residues": [
+   "P163",
+   "P164",
+   "G165",
+   "I166",
+   "G167",
+   "K168",
+   "T169",
+   "K170",
+   "N259",
+   "F307",
+   "K308",
+   "F311",
+   "H313",
+   "R154",
+   "P273",
+   "R276",
+   "R277"
+  ],
+  "hbonds": 14,
+  "pi": 2,
+  "neighbours": [],
+  "label": "ATPγS"
+ }
+}

@@ -1,0 +1,181 @@
+{
+  "pmcid": "PMC13683432",
+  "rank": 9,
+  "headline": "AAV2のVP1は、別の組み合わせでもインポーチンαに結合する",
+  "subhead": "BR2が主要・副次どちらの結合ポケットにも入ることを、結晶構造3つで示した",
+  "target_label": "AAV2 VP1・IMPα2",
+  "target_en": "AAV2 VP1 basic regions with mouse importin-α2",
+  "summary": {
+    "question": "AAV2 の核への移行にどの宿主インポーチンと VP1 のどの領域が関わるのかは、はっきりしていなかった。",
+    "approach": "VP1 の塩基性領域（BR1〜3）と IMPα2 の複合体の結晶構造を、野生型と BR1・BR3 変異体で解き、結合と核移行も測った。",
+    "result": "野生型では BR1 と BR3 が副次・主要ポケットに入った。BR1 変異体では BR2 が副次ポケットに、BR3 変異体では BR2 が主要ポケットに入った。",
+    "learned": "BR のうち2つが無傷なら IMPα に結合して核へ移行でき、1つだけでは足りない。VP1 の核移行シグナルは、組み合わせが1通りに決まっていない。",
+    "open": "ペプチドでの結果であり、これらの配置がウイルス粒子全体の核移行に効くかは、今後の課題とされている。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Despite this, neither the specific host importins (IMPs) involved nor the viral signals within that drive this process have been unequivocally identified.",
+          "section": "Introduction"
+        },
+        {
+          "quote": "It is there notable that the precise mechanisms governing its nuclear entry have remained unclear.",
+          "section": "Discussion"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here, we combine cellular, biophysical, structural, and computational modelling approaches to define the nuclear import mechanism of AAV2 VP1 at molecular resolution.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "we determined crystal structures of AAV2 VP1-BR peptides bearing alanine substitutions in either BR1 (mBR1: K123A/R124A) or BR3 (mBR3: R168A/K169A/R170A) in complex with mIMPα2.",
+          "section": "Results"
+        }
+      ],
+      "result": [
+        {
+          "quote": "The crystal structure of AAV2 VP1-BR in complex with mIMPα2 suggests that nuclear import of AAV2 VP1 is mediated by the IMPα/β1 heterodimer through recognition of a bipartite NLS formed by BR1 and BR3, which engage the minor and major binding sites of IMPα, respectively.",
+          "section": "Results"
+        },
+        {
+          "quote": "Notabley, BR2 is resolved in the minor binding site (Fig. 5A)",
+          "section": "Results"
+        },
+        {
+          "quote": "Conversely, in the AAV2 VP1-mBR3:mIMPα2 complex, BR2 occupies the major binding site",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Importantly, simultaneous mutation of any two BRs completely abrogated both IMPα binding and nuclear import (Fig. 4), indicating that AAV2 VP1 can utilize multiple combinations of BR segments to form a functional bipartite NLS.",
+          "section": "Discussion"
+        },
+        {
+          "quote": "AAV2 VP1 does not possess a single canonical bipartite NLS but instead utilizes a flexible, modular nuclear localization architecture",
+          "section": "Discussion"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Future studies should investigate how these alternative NLS arrangements influence nuclear entry of intact virions",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "pathogen",
+    "other"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "野生型の結晶構造では見えなかった BR2 が、BR1 変異体では副次ポケットに、BR3 変異体では主要ポケットに収まった。BR2 はどちらのポケットにも入れる。",
+      "evidence": [
+        {
+          "quote": "Notably, mutation of BR2, which is not resolved in the AAV2 VP1-BR:mIMPα2 crystal structure, also significantly reduced nuclear import",
+          "section": "Results"
+        },
+        {
+          "quote": "Notabley, BR2 is resolved in the minor binding site (Fig. 5A)",
+          "section": "Results"
+        },
+        {
+          "quote": "Conversely, in the AAV2 VP1-mBR3:mIMPα2 complex, BR2 occupies the major binding site",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "BR1・BR2・BR3 のどれか1つを置換しても、IMPα7 への結合は 4〜14 倍弱まるだけで、核移行も残った。2つを同時に置換すると、核移行は完全になくなった。",
+      "evidence": [
+        {
+          "quote": "Surprisingly, substitution of either BR1 or BR3 reduced, but did not abolish, nuclear accumulation of AAV2 VP1-GFP (Fig. 4, B and C).",
+          "section": "Results"
+        },
+        {
+          "quote": "FP assays showed that individual substitutions in BR1 (KD ∼518 nM, ∼10 fold reduction), BR2 (KD ∼740 nM, ∼14 fold reduction), or BR3 (KD ∼207 nM, ∼4 fold reduction) reduced, but did not eliminate binding to IMPα7",
+          "section": "Results"
+        },
+        {
+          "quote": "In contrast, simultaneous substitutions of two BRs (mBR1+2, mBR1+3, or mBR2+3) completely abolished nuclear import",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "BR2 と BR3 の組み合わせで足りることから、BR1 を持たない VP2 も核へ移行できる理由になると論文は考える。また BR を1つずつ調節してカプシドの核への移行を設計する道を示唆する。",
+      "evidence": [
+        {
+          "quote": "The demonstration that the BR2-BR3 combination is sufficient to mediate productive IMPα recognition indicates that VP2 retains a fully functional bipartite NLS despite lacking BR1.",
+          "section": "Discussion"
+        },
+        {
+          "quote": "offers new opportunities to engineer capsid nuclear targeting by modulating individual BRs rather than introducing entirely new localization signals",
+          "section": "Discussion"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "大腸菌 pLysS で自動誘導発現（23 °C、30〜38 時間）。VP1-BR と mIMPα2 を別々に発現。",
+    "construct": "VP1 の残基 115〜175（BR1〜3 を含む）を GST-TEV 融合で発現。IMPα は IBB ドメインを除いた ΔIBB。",
+    "purification": "溶解液を混ぜて HisTrap で精製し、TEV で GST を除いて Superdex 200 のゲルろ過にかけた。",
+    "sample_prep": "ハンギングドロップ蒸気拡散法。野生型は 0.7 M クエン酸ナトリウム、pH 6.5 で 2 日で結晶化。変異ペプチドは 3:1 のモル比で混合。",
+    "data_collection": "オーストラリアン・シンクロトロンの MX2 で収集。4OIH を探索モデルに Phaser で分子置換。",
+    "evidence": [
+      {
+        "quote": "AAV2 VP1-BR and mIMPα2 were individually overexpressed in E. coli pLysS cells using auto-induction method (64) at 23 °C, with shaking at 150 rpm for 30 to 38 h.",
+        "section": "Recombinant bacterial protein expression and purification"
+      },
+      {
+        "quote": "A gene fragment corresponding to residues 115 to 175 of VP1, encompassing BRs BR1-3",
+        "section": "Expression plasmids"
+      },
+      {
+        "quote": "IMPα constructs used for crystallization, fluorescence polarization (FP), and EMSAs lacked the N-terminal IMPβ1 binding (IBB) domain (ΔIBB).",
+        "section": "Expression plasmids"
+      },
+      {
+        "quote": "Eluted fractions were pooled and incubated overnight at 4 °C with TEV protease to remove the GST tag from AAV2 VP1-BR.",
+        "section": "Recombinant bacterial protein expression and purification"
+      },
+      {
+        "quote": "The sample was then subjected to size-exclusion chromatography using a HiLoad 26/600 Superdex 200 column",
+        "section": "Recombinant bacterial protein expression and purification"
+      },
+      {
+        "quote": "The AAV2 VP1-BR:mIMPα2 complex crystalized in a condition 0.7 M sodium citrate, 0.01 M DTT, 0.1 M Hepes (pH 6.5), yielding rod-shaped crystals after 2 days.",
+        "section": "Crystallization, data collection and structure determination of AAV2 VP1-BR:mIMPα2 complexes"
+      },
+      {
+        "quote": "AAV2 VP1-mBR1 and AAV2 VP1-mBR3 peptides were mixed with purified mIMPα2 at a 3:1 M ratio prior to crystallization.",
+        "section": "Crystallization, data collection and structure determination of AAV2 VP1-BR:mIMPα2 complexes"
+      },
+      {
+        "quote": "X-ray diffraction data were collected at the Australian Synchrotron on the MX2 beamline (66).",
+        "section": "Crystallization, data collection and structure determination of AAV2 VP1-BR:mIMPα2 complexes"
+      },
+      {
+        "quote": "Structures were solved by molecular replacement in Phaser (70) using the Protein Data Bank (PDB) entry 4OIH (54) as the search model.",
+        "section": "Crystallization, data collection and structure determination of AAV2 VP1-BR:mIMPα2 complexes"
+      }
+    ]
+  },
+  "keywords": [
+    "AAV2",
+    "VP1",
+    "インポーチンα",
+    "核局在シグナル",
+    "遺伝子治療ベクター"
+  ],
+  "ga_pdb_id": "23QB",
+  "editor_notes": "FoldX の結合エネルギーは、本文と Table 1 で値と単位（kcal/mol と kJ/mol）が食い違っているため記事では使っていない。論文の分解能は 2.3/2.6/2.1 Å、PDB は 2.25/2.6/2.15 Å で、記事は PDB の値を採用。『初めて示した』という著者の主張は記事に載せていない。mBR2 の構造はなく、BR2 の役割は変異体 2 構造と変異の機能測定からの推定。legend_labels は未設定（IMPα と VP1 ペプチドの 2 鎖、render 後に確認）。",
+  "legend_labels": [
+    "VP1（AAV2 カプシド）",
+    "インポーチンα（核輸送）"
+  ]
+}

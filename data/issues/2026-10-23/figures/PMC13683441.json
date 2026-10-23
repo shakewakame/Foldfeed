@@ -1,0 +1,33 @@
+{
+ "pdb_id": "9YQ9",
+ "view": {
+  "target": [
+   19.34,
+   45.94,
+   16.92
+  ],
+  "dir": [
+   -0.9811,
+   0.1921,
+   0.0228
+  ],
+  "up": [
+   0.1872,
+   0.9135,
+   0.3613
+  ],
+  "half": [
+   95.3,
+   45.9
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "CAPADH（脱水素酵素）",
+   "desc": "Saccharopine dehydrogenase",
+   "entity": "1"
+  }
+ ],
+ "ligands": []
+}

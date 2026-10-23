@@ -1,0 +1,163 @@
+{
+  "pmcid": "PMC13604635",
+  "rank": 12,
+  "headline": "YAPWW1はTAZWWより熱安定性が低い",
+  "subhead": "LATS2との1.03 Å結晶構造を解き、ペプチドの柔軟さと選択性の関係を探った",
+  "target_label": "YAPWW1・TAZWW（ヒト）",
+  "target_en": "Human YAPWW1 with LATS2 peptide (vs TAZWW)",
+  "summary": {
+    "question": "配列が似た YAPWW1 と TAZWW は、安定性やペプチドとの結合について十分に比べられていなかった。",
+    "approach": "単離した両ドメインを NanoDSF・CD・NMR で比べ、PPxY ペプチドの結合を SPR で測り、LATS2 との複合体を X 線で解いた。",
+    "result": "TAZWW の Tm は YAPWW1 より 8.3 °C 高かった。親和性の差は 2〜3 倍だが、SMAD7 では 4.4 倍だった。",
+    "learned": "柔軟な SMAD7 ペプチドは YAPWW1 を好み、ペプチドの柔軟さが選択性に関わる可能性がある。著者はこれを定性的な傾向と述べている。",
+    "open": "TAZWW とペプチドの複合体の実験構造はまだなく、MD は Boltz-2 のモデルから始めた。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Given that the properties of YAPWW1 and TAZWW have not been extensively compared (but see [27])",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Nano-differential scanning fluorimetry, circular dichroism, and NMR indicate that both isolated domains populate partially folded or exchanging states in solution, but TAZWW is more thermally stable and has a larger folded population.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Surface plasmon resonance measurements with PPxY peptides show micromolar affinities and generally modest differences between YAPWW1 and TAZWW",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Therefore, we have elucidated the structure of this complex using X-ray crystallography.",
+          "section": "Results and Discussion"
+        }
+      ],
+      "result": [
+        {
+          "quote": "with an 8.3 °C difference observed between the untagged proteins",
+          "section": "Results and Discussion"
+        },
+        {
+          "quote": "Indeed, we observe only a small difference in affinity between the two WW domains, approximately 2- to 3-fold (Table 2).",
+          "section": "Results and Discussion"
+        },
+        {
+          "quote": "A larger difference was observed for SMAD7, which binds 4.4-fold more strongly to YAPWW1 than to TAZWW (Table 3).",
+          "section": "Results and Discussion"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "The rigid LATS2 peptide binds with similar affinity to both WW domains, whereas the flexible SMAD7 shows higher affinity for YAPWW1",
+          "section": "Conclusions"
+        },
+        {
+          "quote": "These findings reflect qualitative trends, and are hence a plausible mechanistic framework linking WW domain stability to ligand conformational plasticity",
+          "section": "Conclusions"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Finally, although experimental structures of TAZWW-peptide complexes are not currently available",
+          "section": "Results and Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "regulation"
+  ],
+  "topics": [
+    "dynamics"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "LATS2 ペプチドは伸びた形で YAPWW1 に結合し、SMAD7 の Ω 型とは異なる。Arg512 と Trp199 は 3.5 Å 離れ、カチオン-π 相互作用の可能性がある。結晶に使ったのは Cys を Ser にした mLATS2 である。",
+      "evidence": [
+        {
+          "quote": "The SMAD7-bound form assumes an Ω-like shape, whereas bound mLATS2 adopts an extended conformation (Figure 4A).",
+          "section": "Results and Discussion"
+        },
+        {
+          "quote": "The guanidinium group of Arg512mLATS2 and the indole ring of Trp199YAP are positioned 3.5 Å apart potentially forming a cation-pi interaction (Figure 4B).",
+          "section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "YAPWW1 は 23 °C で 7 残基の NMR シグナルが構造の交換で消え、5 °C やペプチド結合で現れた。TAZWW では見えており、折りたたまれた割合が高いと考えられる。",
+      "evidence": [
+        {
+          "quote": "This observation suggests that at 23 °C these seven residues are in an intermediate exchange state on the NMR time scale between different conformations, which broadens the NMR signals beyond detection.",
+          "section": "Results and Discussion"
+        },
+        {
+          "quote": "These data are consistent with a model in which TAZWW is more stable than YAPWW1 at room temperature",
+          "section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "tag": "実験Tips",
+      "text": "SMAD7 の Ser212 を Pro にして硬くすると、TAZ/YAP の Kd 比は 4.4 から 2.3 に下がった。TAZWW 側の MD は Boltz-2 モデルから始めており、解釈に注意が要ると著者は述べている。",
+      "evidence": [
+        {
+          "quote": "As predicted, this rigidification reduces the difference in affinity, with the SPR-determined KdTAZ/KdYAP ratio dropping from 4.4 for wild-type SMAD7 to only 2.3 for 6 (Table 3).",
+          "section": "Results and Discussion"
+        },
+        {
+          "quote": "Because the TAZWW-bound simulations were initiated from Boltz-2 predicted complexes rather than experimentally determined structures",
+          "section": "Results and Discussion"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "大腸菌 NiCo21 (DE3) で 18 °C 一晩、IPTG で誘導。",
+    "construct": "YAPWW1（F165–Q209）。His-Lipoyl タグを TEV プロテアーゼで切る。",
+    "purification": "HisTrap、TEV 切断後の再 HisTrap、Superdex 75 のゲルろ過。",
+    "sample_prep": "3.6 mM YAPWW1 と 4 mM mLATS2 を、酢酸アンモニウムと PEG3350 を含む液で結晶化（20 °C）。",
+    "data_collection": "ESRF ID23-1 で測定。Phaser で分子置換し、phenix.refine で精密化。",
+    "evidence": [
+      {
+        "quote": "Protein expression was performed in the NiCo21 (DE3) E. coli strain at 18 °C overnight with 0.2 mM IPTG.",
+        "section": "Material and Methods"
+      },
+      {
+        "quote": "Genes encoding either YAPWW1 (F165-Q209) or TAZWW (Y118-P162) with an AMG N-terminal extension were fused at the N-terminus with a polyhistidine tag followed by a Lipoyl tag and a TEV-protease cleavage site",
+        "section": "Material and Methods"
+      },
+      {
+        "quote": "The clarified lysate was loaded onto a HisTrap HP column (Cytiva, Marlborough, MA, USA).",
+        "section": "Material and Methods"
+      },
+      {
+        "quote": "loaded onto a HiLoad Superdex 75 16/600 column",
+        "section": "Material and Methods"
+      },
+      {
+        "quote": "The final crystallization conditions were created by mixing 0.2 µL of the well solution containing 0.2 M ammonium acetate, 0.1 M Bis-Tris pH 6.5, and 25% (w/v) PEG3350 with 0.2 µL of the protein solution consisting of 3.6 mM YAPWW1 and 4 mM mLATS2 in 0.02 M Tris-HCl pH 8.0.",
+        "section": "Material and Methods"
+      },
+      {
+        "quote": "The crystals were measured at the ESRF (Grenoble, France) on beamline ID23-1.",
+        "section": "Material and Methods"
+      },
+      {
+        "quote": "The structure of YAPWW1 in complex with mLATS2 was solved by molecular replacement using Phaser 2.7.17 [35] and an unpublished in-house structure of YAP165–209 as the search model.",
+        "section": "Material and Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "YAP",
+    "TAZ",
+    "WW ドメイン",
+    "Hippo 経路",
+    "PPxY"
+  ],
+  "method_label": "X-ray・1.03 Å",
+  "editor_notes": "PDB ID は本文に「32dh」とあるが、Data availability に表記はなく PDB と照合できないため図なし（kind: new_structure_ids_unlisted）。結晶構造は YAPWW1 と LATS2 ペプチド（Cys を Ser にした mLATS2）の複合体で、YAPWW1 の SMAD7 複合体（PDB 2ltw）は既存。論文は「初めて」とは書いていないので first_claim なし。TAZWW 複合体は Boltz-2 モデルで、紹介文は実験で得た部分（結晶構造・NanoDSF・NMR・SPR）を中心に書いた。"
+}

@@ -1,0 +1,39 @@
+{
+ "pdb_id": "23QB",
+ "view": {
+  "target": [
+   -1.45,
+   20.27,
+   -1.57
+  ],
+  "dir": [
+   -0.9588,
+   -0.2801,
+   -0.0468
+  ],
+  "up": [
+   -0.1549,
+   0.6539,
+   -0.7405
+  ],
+  "half": [
+   46.9,
+   23.6
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "VP1（AAV2 カプシド）",
+   "desc": "Capsid protein VP1",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "インポーチンα（核輸送）",
+   "desc": "Importin subunit alpha-1",
+   "entity": "2"
+  }
+ ],
+ "ligands": []
+}
