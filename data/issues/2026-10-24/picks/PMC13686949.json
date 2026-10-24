@@ -1,0 +1,131 @@
+{
+  "pmcid": "PMC13686949",
+  "rank": 6,
+  "headline": "ヒト脳のtau線維の形は、マウス脳の中でそのまま受け継がれる",
+  "subhead": "アルツハイマー病と大脳皮質基底核変性症の線維をクライオ電顕で比べた",
+  "target_label": "tau線維（マウス脳）",
+  "target_en": "Tau filaments (mouse brain, AD- and CBD-seeded)",
+  "summary": {
+    "question": "プリオンのように、tau 線維の形（株）が別の個体の脳に伝わっても保たれるかは、実証されていなかった。",
+    "approach": "アルツハイマー病（AD）または大脳皮質基底核変性症（CBD）の脳から取ったtau線維を野生型マウスの脳に注入し、できた線維をクライオ電顕で調べた。",
+    "result": "マウス自身のtauが、AD種では3.6 Å、CBD種では3.4 Åの構造の線維をつくり、種のヒト線維と同じ構造だった。",
+    "learned": "tau線維は鋳型にそって増える性質（テンプレート播種）で株の構造を保ち、マウスは機構の研究に使える可能性がある。",
+    "open": "tau種の注入で臨床症状が出るか、毒性が別の段階で起こるかは分かっていない。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "However, a central pillar of the prion hypothesis, that strains retain their structural identity upon transmission, has not been demonstrated.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here we show that the injection of tau filaments from the brains of individuals with Alzheimer’s disease or corticobasal degeneration into the brains of wild-type mice leads to the seeded assembly of amyloid filaments made of mouse tau with the same structures as those of the seeds.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "In mice injected with AD seeds, most of the filaments (83%) were paired helical filaments (PHFs), for which we calculated a reconstruction to a resolution of 3.6 Å.",
+          "section": "Seeded filaments identical to the seeds"
+        },
+        {
+          "quote": "We reconstructed the singlets to a resolution of 3.4 Å.",
+          "section": "Seeded filaments identical to the seeds"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Thus, we show that, similar to prion strains, tau filaments propagate through templated seeding, and that the mouse is a suitable model to study the molecular mechanisms by which distinct tau folds drive disease-specific pathology in the brain.",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "It therefore remains unknown whether tau seed propagation and downstream toxicity occur in two separate phases, as has been suggested for prions38.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "pathogen",
+    "other"
+  ],
+  "topics": [
+    "dynamics"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "AD 種を注入したマウスでは線維の83%が対らせん状線維（PHF）だった。この構造はヒト AD 脳のアルツハイマー型の折りたたみと重なり、原子位置のずれ（RMSD）は0.906 Åだった。",
+      "evidence": [
+        {
+          "quote": "This structure was identical (with a root mean square deviation for all non-hydrogen atoms of 0.906 Å) to the Alzheimer fold from AD brains30,31.",
+          "section": "Seeded filaments identical to the seeds"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "CBD 種を注入した場合は、74%が1本のプロトフィラメントで、ヒトの I 型 CBD 線維と同じ構造（RMSD 0.576 Å）だった。2本組の線維は10 Å までしか解けず、II 型 CBD 線維の可能性がある。",
+      "evidence": [
+        {
+          "quote": "A reconstruction of the doublets, to a resolution of 10 Å, suggested that they may be type II CBD filaments.",
+          "section": "Seeded filaments identical to the seeds"
+        }
+      ]
+    },
+    {
+      "tag": "実験Tips",
+      "text": "ヒトとマウスの tau は線維の中心部分で配列が同じなので、種の壁がない。注入したヒト tau は1週間後には検出できなくなり、見つかった線維はマウス tau でできていた。",
+      "evidence": [
+        {
+          "quote": "The human tau seeds were visible by staining immediately after injection, but they could no longer be detected after 1 week.",
+          "section": "Phosphorylated mouse tau filaments"
+        },
+        {
+          "quote": "Human and mouse sequences are identical within the ordered cores of tau filaments from human brains, indicating that there may be no species barrier for the transmission of human disease-specific tau strains to the mice.",
+          "section": "Main"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": null,
+    "construct": null,
+    "purification": "脳のサルコシル不溶画分を調製した。",
+    "sample_prep": "AD または CBD 患者脳由来の種を、6〜18週齢の野生型マウスの線条体に注入し、9〜12か月後の脳から線維を抽出。グリッドは Quantifoil R1.2/1.3 で、Vitrobot Mark IV で凍結。",
+    "data_collection": "Titan Krios（300 kV）、Falcon4i、Selectris-X エネルギーフィルター。線量は40 e/Å2。",
+    "evidence": [
+      {
+        "quote": "Sarkosyl-insoluble pellets were prepared from about 0.5 g tissue, as described in ref. 50.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Three microlitres of sarkosyl-insoluble fractions from wild-type mice that had been injected bilaterally with AD or CBD seeds 9–12 months earlier were applied to glow-discharged (Edwards S150B; Edwards High Vacuum International) holey carbon grids (Quantifoil Au R1.2/1.3, 300 mesh) that were subjected to plunge-freezing in liquid ethane using a Vitrobot Mark IV (Thermo Fisher Scientific) at 100% humidity and 4 °C.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Cryo-EM images were acquired on a Titan Krios electron microscope operated at 300 kV, equipped with a Falcon4i direct electron detector (Thermo Fisher Scientific) and a Selectris-X energy filter.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Images were recorded at a dose of 40 electrons per Å2 using EPU software (Thermo Fisher Scientific).",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "tau",
+    "アミロイド線維",
+    "プリオン様伝播",
+    "アルツハイマー病"
+  ],
+  "method_label": "Cryo-EM・3.4–3.6 Å",
+  "ga_pdb_id": "29OS",
+  "editor_notes": "PDB 29OS（AD 種）と 29OU（CBD 種）が公開済み。first_structure の判定はサイトが決める。CBD の2本組は10 Å で構造は未確定と書いた。",
+  "legend_labels": [
+    "マウス tau（線維）"
+  ]
+}

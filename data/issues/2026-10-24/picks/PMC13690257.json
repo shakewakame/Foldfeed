@@ -1,0 +1,156 @@
+{
+  "pmcid": "PMC13690257",
+  "rank": 7,
+  "headline": "SAMを緩く握るMETTL16は、RNAが結合すると動きが収まる",
+  "subhead": "遷移状態を模す二基質アナログとの結晶構造（約2.2 Å）に、MDとQM/MMを組み合わせた",
+  "target_label": "METTL16（ヒト）",
+  "target_en": "Human METTL16 (RNA m6A methyltransferase)",
+  "summary": {
+    "question": "RNA と SAM が同時に結合した構造がなく、METTL16 の触媒の仕組みを構造から調べにくかった。",
+    "approach": "SAM 様の部分とアデノシンをつないだ二基質アナログとの結晶構造を解き、MD と QM/MM で調べた。",
+    "result": "結晶構造は遷移状態を模した配置を示し、RNA ヘアピンがあると MD で SAM が受け口に安定した。",
+    "learned": "メチル基移動は N6 の脱プロトン化なしに進むと計算され、続く生成物の放出が律速らしい。",
+    "open": "アナログが小さく、Rループは結晶構造では秩序化しなかった。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Even though structures of METTL16 in complex with a substrate RNA and in complex with SAH are known, no structure of METTL16 bound to both the substrate RNA and cofactor SAH/SAM simultaneously has been solved.",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "We first solved the crystal structures of METTL16 in complex with bisubstrate analogs (BAs), conjugates of a SAM-like moiety connected to the N6-atom of adenosine.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "The METTL16/BA crystal structures provide an atomistic picture of a transition-state mimic of methyl transfer.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "The presence of the MAT2A hairpin 1 RNA stabilizes SAM in its recognition pocket, and substantially reduces the intrinsic flexibility of the R-loop and N-terminal segment of METTL16.",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Quantum mechanics/molecular mechanics (QM/MM) free energy calculations provide evidence that methyl transfer occurs without prior deprotonation of adenosine-N6.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Overall, our study suggests that the latter step is rate-limiting.",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "The RNA mimicking adenosine of the BAs is too small to trigger the ordering of the R-loop, since the structural feature of the RNA substrate seems to be most important for the recognition by METTL16.",
+          "section": "Results and discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "enzyme",
+    "nucleic"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "BA2・BA4 の結晶構造では、メチル基の供与側と受容側のアデニン N6 が 2.5・2.8 Å、反応に最適な 180° に対し角度は 141°・174° と、メチル基転移に近い配置だった。N184 が触媒に向く向きをとったのは BA4 だけだった。",
+      "evidence": [
+        {
+          "quote": "Indeed, in the BA2 and BA4 structures, this angle is very close to the optimal value (141° and 174°, respectively) and the donor methyl and acceptor N6 groups are very close (2.5 and 2.8 Å, respectively).",
+          "section": "Results and discussion"
+        },
+        {
+          "quote": "Only in the complex with BA4 is N184 in the active conformation.",
+          "section": "Results and discussion"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "METTL3 の D395 に当たる N184 は電荷をもたず、結晶構造ごとに向きが乱れる。SAM のアデニン N1 は METTL16 では水を介した水素結合で、METTL3 の直接の水素結合より弱い。著者は、これが SAM への低い親和性の一因とみている。",
+      "evidence": [
+        {
+          "quote": "In METTL16, the equivalent of D395 is the uncharged N184, which exhibits more disorder than D395 in METTL3, as it can be observed in different conformations among the various METTL16 crystal structures.",
+          "section": "Results and discussion"
+        },
+        {
+          "quote": "This difference explains, at least in part, the lower SAM affinity of METTL16, which is essential to its function.",
+          "section": "Results and discussion"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "計算では、SAM は 1 µs 未満で外れた。QM/MM のメチル基転移の障壁は AMP で約 22、RNA ヘアピンで約 18 kcal/mol で、実測の速度と合う。MD と QM/MM は計算で、実験構造そのものではない。",
+      "evidence": [
+        {
+          "quote": "The unbinding of SAM from METTL16 was observed within a sub-microsecond time scale in the presence of AMP or CAGA.",
+          "section": "Results and discussion"
+        },
+        {
+          "quote": "The QM(GFN2-xTB38)/MM free energy simulations yielded methyl transfer reaction barriers of approximately 22 and 18 kcal mol−1 for AMP and RNA hairpin 1 substrates, respectively (Fig. 7A).",
+          "section": "Results and discussion"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "大腸菌 Rosetta (DE3) で 18 °C 一晩発現（0.5 mM IPTG）。",
+    "construct": "His6 タグ付き METTL16(1–291) を pET-duet に挿入。",
+    "purification": "TEV プロテアーゼでタグを切り、HiLoad 16/600 Superdex 75 でゲルろ過。27 mg/mL に濃縮。",
+    "sample_prep": "ハンギングドロップで結晶化し、25 mM の BA2 または BA4 に 3 時間ソーキング。",
+    "data_collection": "DESY の P13 ビームラインで測定し、autoPROC で処理。6B91 を探索モデルに分子置換。",
+    "evidence": [
+      {
+        "quote": "The protein was overexpressed in Rosetta (DE3) E. coli cells over night at 18 °C, induced with 0.5 mM Isopropyl β-d-1-thiogalactopyranoside (IPTG) at OD600 above 1.0.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Hexahistidine-tagged METTL16(1–291) was cloned into a pET-duet plasmid vector using the BamHI and XhoI restriction enzymes.",
+        "section": "Methods"
+      },
+      {
+        "quote": "The protein was further purified by size-exclusion chromatography on a HiLoad 16/600 Superdex 75 pg gel filtration column (Cytiva) in size-exclusion buffer (25 mM HEPES pH 7.5, 100 mM KCl, 50 mM NaCl, 1 mM TCEP).",
+        "section": "Methods"
+      },
+      {
+        "quote": "4 µL protein at 27 mg mL−1 was mixed with 2 µL reservoir solution (1.435 M K2HPO4, 45 mM NaH2PO4) and incubated in a hanging drop set-up at 21 °C.",
+        "section": "Methods"
+      },
+      {
+        "quote": "the crystals were transferred into a drop containing 1.435 M K2HPO4, 45 mM NaH2PO4, 25% ethylene glycol and 25 mM BA2 or BA4 and incubated for 3 h.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Diffraction data was collected at the P13 beamline of the Deutsches Elektronen-Synchotron (DESY) in Hamburg, Germany.",
+        "section": "Methods"
+      },
+      {
+        "quote": "The structures were solved by molecular replacement with phaser, using the apo-crystal structure of METTL16(1–291) (PDB: 6B91) as search model.",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "METTL16",
+    "m6A",
+    "メチル基転移酵素",
+    "二基質アナログ"
+  ],
+  "ga_pdb_id": "28ZC",
+  "ligand_names": {
+    "HZ2": "BA2",
+    "I0C": "BA4"
+  },
+  "site_ligand": "I0C",
+  "editor_notes": "実験で決めたのは BA2（28WE）・BA4（28ZC）との 2 つの結晶構造だけで、SAM の外れやすさ・R ループの安定化・反応障壁・律速段階は MD と QM/MM（計算）の結果。記事では計算と明記した。METTL16 には既存の PDB 構造が 9 件ある（初構造ではない）。",
+  "legend_labels": [
+    "METTL16（メチル基転移）"
+  ]
+}

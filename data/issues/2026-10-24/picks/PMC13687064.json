@@ -1,0 +1,139 @@
+{
+  "pmcid": "PMC13687064",
+  "rank": 3,
+  "headline": "ボツリヌス毒素に似たPG1は、ジスルフィド結合なしで2本の鎖を抱え込む",
+  "subhead": "PG1の軽鎖・重鎖複合体をクライオ電顕で2.73 Åで解き、昆虫SNAP-25を切る活性も調べた",
+  "target_label": "PG1毒素（P. ghonii）",
+  "target_en": "BoNT-like toxin PG1 (P. ghonii)",
+  "summary": {
+    "question": "PG1 と PG2 は軽鎖と重鎖が別の遺伝子にあるボツリヌス毒素様の毒素で、酵素活性と鎖どうしの結びつきは調べられていなかった。",
+    "approach": "軽鎖の切断活性を細胞やショウジョウバエの幼虫で調べ、軽鎖と重鎖をリンカーでつないだ PG1 をクライオ電顕で解析した。",
+    "result": "PG1 の軽鎖はショウジョウバエの SNAP-25 を N196–E197 で切り、複合体の構造は2.73 Å で決まった。重鎖のベルトはドアのちょうつがい状に軽鎖と接していた。",
+    "learned": "PG1 は鎖間のジスルフィド結合がなくても非共有結合で緊密に折りたたまれ、従来のボツリヌス毒素とは異なる構造をとる。",
+    "open": "PG 毒素の自然宿主は特定されておらず、他の昆虫での検証が必要とされている。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "However, the enzymatic activity of PG-toxin LCs and physical interaction between LC and HC, which would enable function similar to canonical BoNTs, remain to be investigated41.",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "To gain deeper insights into PG-toxins, we rationally designed fusion constructs of PG-toxin LCs and HCs, covalently linked via a flexible 14-amino acid peptide linker to provide inter-domain flexibility (Fig. 4a).",
+          "section": "Results"
+        }
+      ],
+      "result": [
+        {
+          "quote": "The best subset of particles yielded a cryo-EM reconstruction of the PG1 LC–HC complex at approximately 2.73 Å resolution.",
+          "section": "Results"
+        },
+        {
+          "quote": "It forms a door-hinge-like arrangement, interlocking with the LC through localized contacts rather than fully encircling it (Fig. 4b, c).",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Most notably, the PG1 LC–HC complex is stabilized by extensive inter-chain non-covalent interactions, rather than the quintessential inter-chain disulfide bond that defines canonical BoNTs.",
+          "section": "Discussion"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Further testing in other insect species, particularly those in the order of Diptera with conserved SNAP-25 sequence similar to Drosophila, is necessary to confirm the true host of PG-toxins.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "pathogen",
+    "protease"
+  ],
+  "topics": [
+    "membrane"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "PG1 の複合体は、軽鎖・転位ドメイン（HN）・受容体結合ドメインの3ドメイン構成を保ちつつ、軽鎖と重鎖が HN の同じ側に寄った緊密な形をとる。大きさは約107 × 107 × 78 Å。",
+      "evidence": [
+        {
+          "quote": "The overall structural arrangement of PG1 complex closely resembles the conserved BoNT-like three-domain organization (Dimension: ~ 107 Å × 107 Å × 78 Å), yet exhibits notable differences that distinguish it from canonical counterparts12–14(Fig. 4a–c).",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "従来の毒素では重鎖のベルトが軽鎖を巻き込むが、PG1 のベルト（E37–I71）は短く、ところどころの接触で軽鎖とかみ合う。軽鎖の F387 は重鎖側の疎水性ポケットに埋まる。",
+      "evidence": [
+        {
+          "quote": "Most notably, the PG1 HC contains the BoNT-specific “belt” region (residues E37–I71), which in canonical BoNTs wraps around the LC to stabilize the di-chain configuration.",
+          "section": "Results"
+        },
+        {
+          "quote": "Notably, F387 of the LC acts as a structural anchor, embedding into a hydrophobic pocket formed by the spatial convergence of HC residues A6, V8, V13, I66, V68, and Y74 (Supplementary Fig. 11a, c).",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "PG1 の軽鎖だけでヨトウガの仲間（アワヨトウ）の幼虫を70%以上死なせ、重鎖を加えても死亡率は上がらなかった。昆虫向けの殺虫剤候補になる可能性がある。",
+      "evidence": [
+        {
+          "quote": "Injection of PG1 LC alone caused over 70% mortality, with no further increase upon HC addition (Fig. 6e), consistent with cellular results.",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "大腸菌 BL21 (DE3) で発現。",
+    "construct": "PG1 の軽鎖（R333A/Y336A の不活性変異）と重鎖（I5C）を14残基のリンカーでつないだ融合タンパク質。",
+    "purification": "ニッケルカラムとイオン交換（HiRes S5/50）で精製。構造解析用に20 mM MES pH 6.0、100 mM NaCl に調製。",
+    "sample_prep": "約1.3 mg/ml の試料3 μL を Quantifoil R1.2/1.3 Cu 300 メッシュにのせ、Vitrobot で8 °C・湿度100%で凍結。",
+    "data_collection": "Titan Krios G4、Gatan K3、300 keV。ピクセルサイズ0.84 Å、総線量50 e-/Å²、8,815本のムービー。",
+    "evidence": [
+      {
+        "quote": "PG1 LC-HC protein was expressed in BL21 (DE3) and purified using a nickel column and followed by HiRes S5/50 ion-exchange chromatography.",
+        "section": "Methods"
+      },
+      {
+        "quote": "To generate the fusion protein, a 14-amino acid peptide linker (GSGSLVPRGSGSGS) was introduced to connect the LC with double mutations (R333A/Y336A) and the HC carrying the I5C mutation.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Final proteins were prepared in buffer containing 20 mM MES, pH 6.0, 100 mM NaCl for structural analysis.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Grids were blotted with a blot force 3, blot time of 3 s and wait time of 3 s using a FEI Vitrobot plunger at 8 °C and 100% humidity, then plunge-frozen in liquid ethane cooled by liquid nitrogen.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Cryo-EM imaging was performed on a Titan Krios G4 electron microscope equipped with a Gatan K3 direct electron detector and a GIF BioQuantum energy filter.",
+        "section": "Methods"
+      },
+      {
+        "quote": "The microscope was operated at 300 keV with a magnification of 105 kX in super-resolution mode, resulting in a pixel size of 0.84 Å.",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "PG1",
+    "ボツリヌス毒素",
+    "SNAP-25",
+    "クライオ電顕"
+  ],
+  "method_label": "Cryo-EM・2.73 Å",
+  "editor_notes": "軽鎖と重鎖を人工リンカーでつないだ融合タンパク質の構造で、重鎖に I5C、軽鎖に R333A/Y336A の変異が入っている（著者が明記）。論文は『ジスルフィド結合は観察されなかった』と書く。著者が提案する『ベルトが軽鎖の活性中心を覆う』役割はモデルで、実験では確かめていない。ライセンスは CC BY-NC-ND。",
+  "legend_labels": [
+    "PG1 軽鎖（プロテアーゼ）",
+    "PG1 重鎖（HN・HC）"
+  ]
+}

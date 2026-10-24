@@ -1,0 +1,139 @@
+{
+  "pmcid": "PMC13643707",
+  "rank": 9,
+  "headline": "GS-441524を作り変え、コロナウイルスのMac1に効く阻害剤を得た",
+  "subhead": "反応液をそのまま測る方法で最適化し、12pとの結晶構造から結合様式を示した。マウスでは効かなかった。",
+  "target_label": "SARS-CoV-2 Mac1",
+  "target_en": "SARS-CoV-2 nsp3 macrodomain 1 (Mac1)",
+  "summary": {
+    "question": "GS-441524 は Mac1 への結合が弱く、薬として使える強さと代謝の安定性を持つ誘導体が必要だった。",
+    "approach": "反応液を精製せずに蛍光偏光で測る方法でアミド誘導体を繰り返し最適化し、12p との結晶構造を解いた。",
+    "result": "最良の KP-S54 は、SARS-CoV-2 Mac1 に IC50 44 nM、MERS-CoV Mac1 に 91 nM で結合を阻害した。",
+    "learned": "KP-S54 は両ウイルスの Mac1 に効く足がかりだが、薬物動態が悪く、マウスでは感染を抑えなかった。",
+    "open": "KP-S54 の代謝されやすい部位を調べ、薬物動態を改善する必要がある。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "GS-441524 was found to be a moderate binder of SARS-CoV-2 Mac1 with dissociation constant (Kd) of about 10 μM",
+          "section": "Introduction"
+        },
+        {
+          "quote": "Thus, new analogs with better metabolic stability and cellular permeability are needed.",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here we describe our effort to discover some potent and druglike GS-441524 derivatives using a direct-to-biology17 approach.",
+          "section": "Introduction"
+        },
+        {
+          "quote": "We were able to obtain crystals and solve the structure of 12p with SARS-CoV-2 Mac1.",
+          "section": "Results"
+        }
+      ],
+      "result": [
+        {
+          "quote": "we converted GS-441524 (IC50 of ~10 μM for SARS-CoV-2 Mac1) to KP-S54 (18c), a potent inhibitor of both SARS-CoV-2 Mac1 (IC50: 44 nM) and Middle East respiratory syndrome coronavirus (MERS-CoV) Mac1 (IC50: 91 nM) through an iterative direct-to-biology approach.",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "its ability to potently inhibit both SARS-CoV-2 and MERS-CoV macrodomains justifies its future development as it may lead to inhibitors with broad specificity.",
+          "section": "Results"
+        },
+        {
+          "quote": "The inactivity of KP-S54 in mice may be largely attributed to its poor pharmacokinetic profile.",
+          "section": "Results"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Therefore, further structural modification of KP-S54 to improve its PK profile is warranted.",
+          "section": "Results"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "enzyme",
+    "pathogen"
+  ],
+  "topics": [
+    "drug"
+  ],
+  "highlights": [
+    {
+      "tag": "創薬・モダリティ",
+      "text": "GS-441524 の 5 位のアミノ基に、数百種のカルボン酸をアミド結合でつなぐ化合物ライブラリを作った。見つかった有力化合物はグリシンのリンカーを共通に持ち、これが ADP-リボースのピロリン酸の代わりになっていた。",
+      "evidence": [
+        {
+          "quote": "Initial library construction of a GS-441524 5-NH2 analogue leveraging amide-coupling chemistry with hundreds of different carboxylic acids led to hit structures that share a glycine linker mimicking the pyrophosphate in ADPr.",
+          "section": "Introduction"
+        }
+      ]
+    },
+    {
+      "tag": "新しい結合部位",
+      "text": "12p との結晶構造では、ヌクレオシド部分の水素結合が保たれ、スルホニル基が Gly46・Gly47 の主鎖 NH と相互作用していた。結合に関わる構造水のうち、ADP-リボースと共通なのは 1 つだけで、残りは 12p に特有だった。",
+      "evidence": [
+        {
+          "quote": "The −SO2- moiety in 12p interacts with the backbone NH of Gly46 and Gly47, which explains why changing the −OH in 7 with −NHSO2Me (12d) led to 10-fold increase in binding affinity.",
+          "section": "Results"
+        },
+        {
+          "quote": "Among these, only HOH36 is maintained in ADPr binding to SARS-CoV-2 Mac1 while the other three are unique to 12p.",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "KP-S54 の膜透過性（PAMPA）は Remdesivir に近かったが、マウス肝ミクロソームでの半減期は 17 分だった。マウスの感染実験では、処置群と対照群でウイルス量に差がなかった。",
+      "evidence": [
+        {
+          "quote": "Although KP-S54 showed less-than-ideal mouse liver microsomal stability with half-life of only 17 min",
+          "section": "Results"
+        },
+        {
+          "quote": "The PCR results showed similar viral loads in the lungs and the brains between the control and treated groups (Figure S2).",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "Mac1 は既報の方法で発現・精製（本文に詳細なし）。",
+    "construct": null,
+    "purification": null,
+    "sample_prep": "Mac1–12p をハンギングドロップ法、20 ℃ で結晶化（31% PEG-4000 など）。",
+    "data_collection": "CHESS ID7B-2 でデータ収集。PDB 8GIA を鋳型に Phaser で分子置換。",
+    "evidence": [
+      {
+        "quote": "The macrodomain proteins were expressed and purified as previously described.",
+        "section": "Methods"
+      },
+      {
+        "quote": "The Mac1-compound 12p complex was crystallized by the hanging-drop method at 20 °C by mixing 1 μL of the concentrated Mac1-12p solution with 1 μL of well solution (200 mM sodium acetate, 100 mM Tris–HCl pH 8, and 31% (w/v) PEG-4000).",
+        "section": "Methods"
+      },
+      {
+        "quote": "Diffraction data was collected on beamline ID7B-2 at the Center for High-Energy X-ray Sciences (CHEXS) at the Cornell High Energy Synchrotron Source (CHESS).",
+        "section": "Methods"
+      },
+      {
+        "quote": "The structure was solved by molecular replacement using Phaser31 in Phenix32 with a previously published structure of SARS-CoV-2 Mac1 (PDB: 8GIA).",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "Mac1",
+    "マクロドメイン",
+    "GS-441524",
+    "KP-S54"
+  ],
+  "method_label": "X-ray（Mac1–12p 複合体）・FP・酵素アッセイ",
+  "editor_notes": "論文自身の 12p 複合体の PDB ID が本文・候補データにないため、図なしの新しい構造（Structure Update）として書いた。当初は注目の構造（7 点）として採点したが、自前の結晶構造を報告しているため新しい構造の部に移した。ライセンスは tdm。"
+}

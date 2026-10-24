@@ -1,0 +1,144 @@
+{
+  "pmcid": "PMC13684649",
+  "rank": 2,
+  "headline": "MBOAT1はリゾPSを側面の入口から受け入れ、PSを放出する",
+  "subhead": "基質・供与体・産物が結合した状態をクライオ電顕で捉え、PS の脂質リモデリングを説明した",
+  "target_label": "MBOAT1（ヒト）",
+  "target_en": "Human MBOAT1 (membrane-bound O-acyltransferase 1)",
+  "summary": {
+    "question": "MBOAT 酵素がアシル CoA を選び、リゾリン脂質を受け入れ、産物を放出する仕組みは不明だった。",
+    "approach": "ヒト MBOAT1 の野生型と触媒変異体のクライオ電顕構造を、脂質解析・酵素活性・MD と組み合わせて調べた。",
+    "result": "MBOAT1 はリゾ PS を優先して一価不飽和脂肪酸を持つ PS を作り、基質・供与体・産物の結合した構造が得られた。",
+    "learned": "リゾ PS は膜側の側面ゲートから入り、PS はその同じ経路で放出されると考えられる。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "How MBOAT enzymes recognize specific acyl-CoA donors, select lysophospholipid acceptors, and release products is unclear.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here, we address these questions by combining cryo-electron microscopy (cryo-EM), quantitative biochemical analyses, molecular dynamics (MD) simulations, and cell-based lipidomics.",
+          "section": "Introduction"
+        }
+      ],
+      "result": [
+        {
+          "quote": "Here, we showed that MBOAT1 preferentially generates monounsaturated fatty acid–containing PS from lyso-PS.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "High-resolution cryo-electron microscopy structures of human MBOAT1 captured distinct binding poses of the fatty acyl donor, lyso-PS acceptor, and PS product.",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "These structures revealed a lateral gate as an entry pathway for lyso-PS and showed how the substrate advances from a partially inserted entry state to a catalytically competent acceptor pose.",
+          "section": "Results"
+        },
+        {
+          "quote": "In coarse-grained (CG) MD simulations, the PS product was released into the membrane within 800 ns through the lateral gate",
+          "section": "Results"
+        }
+      ],
+      "open": [
+        {
+          "quote": "The relevant substrate pool, however, is the local ER lyso-phospholipid pool, and quantitative information on ER lyso-PS and lyso-PE abundance is limited.",
+          "section": "Discussion"
+        }
+      ]
+    },
+    "open": "ER 内のリゾ PS・リゾ PE の量は情報が乏しく、実際の基質の解明が課題だ。"
+  },
+  "categories": [
+    "enzyme",
+    "regulation"
+  ],
+  "topics": [
+    "membrane",
+    "dynamics"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "精製した MBOAT1 はリゾ PS に強い活性を示し（kcat/Km = 5.77 × 10^4 M^-1 s^-1）、リゾ PE への活性はその約6分の1（0.95 × 10^4）だった。MBOAT1 を欠く細胞では MUFA を持つ PS が減った。",
+      "evidence": [
+        {
+          "quote": "Acyltransferase activity of purified MBOAT1 using different lyso-phospholipid acceptors and oleoyl-CoA as the acyl donor showed robust, saturable activity toward lyso-PS",
+          "section": "Results"
+        },
+        {
+          "quote": "Cells lacking MBOAT1 specifically had lower levels of MUFA-containing PS species, including PS 18:0/18:1 and PS 16:0/18:1, than WT cells (Fig. 2a).",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "触媒残基を替えた H381A と N350A で、リゾ PS が側面ゲートから入って触媒ヒスチジンへ近づく2段階の姿が見えた。Arg125 は基質が奥へ進むにつれて約1.5 Å 頭部へ寄った。",
+      "evidence": [
+        {
+          "quote": "In contrast, the side chain of Arg125 shifted by approximately 1.5 Å towards the phosphoserine head group as the substrate advanced into the acceptor-binding site (Fig. 3h).",
+          "section": "Results"
+        },
+        {
+          "quote": "The position and geometry of the substrate were consistent with a catalytically competent acceptor pose, in which His381 was positioned to activate the lyso-PS sn-2 hydroxyl group for nucleophilic attack on the acyl-CoA thioester.",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "新しい結合部位",
+      "text": "オレオイル CoA 結合型では、18 炭素のアシル鎖が疎水性トンネルに入り、Δ9 の二重結合の曲がりに合う狭まりがあった。MBOAT7 より狭く、多価不飽和のアシル CoA を受け入れにくいと考えられる。",
+      "evidence": [
+        {
+          "quote": "These residues create a narrower pocket that is less compatible with accommodation of acyl-CoA donors carrying multiple cis double bonds.",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "HEK293S GnTI− 細胞にバキュロウイルスで導入して発現。",
+    "construct": "全長ヒト MBOAT1（C 末端に 3C 切断部位と FLAG タグ）。H381A・N350A 変異体も作製。",
+    "purification": "GDN で可溶化し、抗 FLAG 樹脂とSuperose 6 Increase ゲルろ過で精製。",
+    "sample_prep": "Quantifoil R1.2/1.3 に 3.5 μL をのせ、Vitrobot Mark IV で凍結。基質は凍結の20〜30分前に加えた。",
+    "data_collection": "Titan Krios（300 keV）で収集し、cryoSPARC で処理。AlphaFold 3 モデルを初期モデルに使った。",
+    "evidence": [
+      {
+        "quote": "All proteins were expressed in HEK293S GnTI− suspension cells (ATCC) by baculovirus-mediated transduction.",
+        "section": "Methods"
+      },
+      {
+        "quote": "cDNA with the sequence of full-length human MBOAT1 (UniProt: Q6ZNC8) was synthesized and cloned into a modified pEG-BacMam vector containing a C-terminal 3C protease cleavage site and followed by a FLAG tag.",
+        "section": "Methods"
+      },
+      {
+        "quote": "membranes were solubilized by addition of 2% (w/v) glycol-diosgenin (GDN; Anatrace, GDN101) for 1–2 h at 4°C with gentle agitation.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Grids were blotted and plunge-frozen in liquid ethane using a Vitrobot Mark IV (Thermo Fisher Scientific) operated at 4°C and 100% humidity.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Cryo-EM data processing was performed in cryoSPARC software (v4.5.0-v4.7.0)28.",
+        "section": "Methods"
+      },
+      {
+        "quote": "An AlphaFold 3 model of human MBOAT1 was used as the initial model for building into the cryo-EM density maps30.",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "MBOAT1",
+    "ホスファチジルセリン",
+    "Lands サイクル",
+    "リモデリング"
+  ],
+  "method_label": "Cryo-EM・3.07–3.42 Å",
+  "editor_notes": "PDB ID は 37FF・37FG・37FH・37FI（候補データでは未公開扱い）。本文は初構造を主張していないので first_claim は付けていない。D137A の結果は本文中に data not shown。MD は粗視化で、放出経路の裏づけは計算のみ。"
+}

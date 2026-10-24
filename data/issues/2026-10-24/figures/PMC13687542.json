@@ -1,0 +1,57 @@
+{
+ "pdb_id": "9RXM",
+ "view": {
+  "target": [
+   101.13,
+   103.27,
+   107.91
+  ],
+  "dir": [
+   -0.8863,
+   0.2499,
+   -0.3898
+  ],
+  "up": [
+   0.3093,
+   0.946,
+   -0.0969
+  ],
+  "half": [
+   63.5,
+   26.6
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "TCR α鎖（受容体）",
+   "desc": "T cell receptor alpha chain",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "TCR β鎖（受容体）",
+   "desc": "T cell receptor beta chain",
+   "entity": "2"
+  },
+  {
+   "color": "#5F9296",
+   "label": "ORF3aペプチド（抗原）",
+   "desc": "SARS-CoV-2 ORF3a_207-215 epitope",
+   "entity": "3"
+  },
+  {
+   "color": "#A5707A",
+   "label": "HLA-A（MHC）",
+   "desc": "MHC class I antigen",
+   "entity": "4"
+  },
+  {
+   "color": "#7C8AA8",
+   "label": "β2ミクログロブリン",
+   "desc": "Beta-2-microglobulin",
+   "entity": "5"
+  }
+ ],
+ "ligands": []
+}

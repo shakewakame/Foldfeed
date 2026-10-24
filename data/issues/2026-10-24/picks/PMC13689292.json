@@ -1,0 +1,141 @@
+{
+  "pmcid": "PMC13689292",
+  "rank": 11,
+  "headline": "SRP54の好中球減少症変異を、古細菌の高分解能構造で調べた",
+  "subhead": "Thr114Ala・Thr116del・Gly225Gluの3変異体の結晶構造を、ヒトの報告と比べた",
+  "target_label": "SRP54 変異体（P. furiosus）",
+  "target_en": "SRP54 NG mutants (P. furiosus)",
+  "summary": {
+    "question": "SRP54 の変異は重症先天性好中球減少症を起こすが、病気の変異が構造をどう変えるのか、高分解能の構造は乏しかった。",
+    "approach": "好熱性古細菌 P. furiosus の SRP54 NG ドメインで、病気の変異に対応する 3 変異体と野生型の結晶構造を解いた。",
+    "result": "分解能は 1.32〜1.83 Å で、変異ごとに GTP 結合部位のまわりの構造が乱れる様子が見えた。",
+    "learned": "Thr114Ala と Thr116del の構造は、ヒトの変異体で報告された結論をおおむね支持した。",
+    "open": "Gly225Glu の構造は、複合体の中でどう働くかを調べる必要がある。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Recent studies have shown that mutations in the SRP54 gene cause severe neutropenia and are associated with an increased risk of pediatric leukemias.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Solution of a high-resolution structure can provide additional molecular details and help validate the human Thr117del SRP54 model.",
+          "section": "Results and Discussion"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here, we present high-resolution structures of clinically relevant SRP54 mutant proteins from the archaea Pyrococcus furiosus.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "The structures of three mutants are presented along with the model wild type.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "The structure of PfSRP54 delThr116 was solved to 1.50 Å resolution (Figure A) and largely supports conclusions from analysis of the human structure that rationalize dysfunction.",
+          "section": "Results and Discussion"
+        },
+        {
+          "quote": "The asymmetric unit is a monomeric form and the crystals diffracted to 1.32 Å, in P22121.",
+          "section": "Results and Discussion"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "The structures of Thr114Ala and delThr116 largely support the corresponding structures of the human variants, but the high-resolution data provide additional details on structural perturbations and dysfunction.",
+          "section": "Conclusions"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Additionally, structural changes at the NG interface could alter interactions within the targeting complex, leading to stalled assemblies.",
+          "section": "Conclusions"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "regulation",
+    "enzyme"
+  ],
+  "topics": [],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "Thr116 を欠いた変異体では、ヌクレオチドの結合部位で触媒に働く Lys113 が Asp189 から離れ、結合したヌクレオチドとぶつかる位置に来る。GDP を加えて結晶化してもヌクレオチドは結合しておらず、等温滴定熱量測定でも GMPPNP への親和性が下がっていた。",
+      "evidence": [
+        {
+          "quote": "The loss of secondary structure in the G1 element shifts Lys113 away from Asp189, placing it in a position that would clash with a bound substrate (Figure B).",
+          "section": "Results and Discussion"
+        },
+        {
+          "quote": "have revealed a loss of GMPPNP affinity in PfSRP54 delThr116 (Figure S7), consistent with the observed steric clash in the nucleoside-binding pocket.",
+          "section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "Thr114Ala の結晶には、GDP ではなくグアノシンと硫酸イオンが入っていた。マグネシウムイオンを配位する側鎖が失われたためと解釈され、G2 モチーフのらせんがほどけ、i-box が結合部位から離れていた。グアノシンは GDP の分解産物と推定されている。",
+      "evidence": [
+        {
+          "quote": "The loss of Mg+2 coordination supports the observation of a stable complex with guanosine instead of nucleoside diphosphate.",
+          "section": "Results and Discussion"
+        },
+        {
+          "quote": "The α-helix is unwound from Gln149 to the N-terminus of the α-helix and the C-terminal loop is pushed away from the G3 strand.",
+          "section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "Gly225Glu の構造（1.70 Å）では、GDP とマグネシウムイオンが結合し、G ドメインは野生型の相同体とほぼ重なった。変異の位置は N ドメインと G ドメインをつなぐループで、グルタミン酸への置換でβターンが崩れ、N ドメインが動いていた。",
+      "evidence": [
+        {
+          "quote": "The change to a glutamate at position 225 breaks the turn element and shifts the N domain at the interface.",
+          "section": "Results and Discussion"
+        },
+        {
+          "quote": "The presented structure of PfSRP54 Gly225Glu shows little change in the G domain compared to a wild-type homolog with the same active-site occupancy.",
+          "section": "Conclusions"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "N 末端にヘキサヒスチジンタグを付けて大腸菌 BL21 (DE3) で発現。16 ℃、IPTG 200 μM で一晩誘導。",
+    "construct": "P. furiosus SRP54（UniProt Q8U070）の野生型と、Thr114Ala・Thr116del・Gly225Glu の変異体。pET28 に組み込んだ。",
+    "purification": "Ni-NTA 樹脂で精製後、透析し、Superdex 75 のサイズ排除クロマトグラフィーで仕上げた。",
+    "sample_prep": "シッティングドロップ蒸気拡散法。10 mM GDP を加えて共結晶化し、20% グリセロールを含む結晶化液で凍結した。",
+    "data_collection": "APS（NE-CAT）と NSLS-II（AMX・FMX）で回折データを収集し、PDB 3DM5 を鋳型に分子置換で解いた。",
+    "evidence": [
+      {
+        "quote": "Growth continued at 16 °C overnight (∼16 h) and cells were pelleted and resuspended in lysis buffer",
+        "section": "Material and Methods"
+      },
+      {
+        "quote": "In the final purification step, the dialysis products were subjected to size exclusion chromatography (Superdex 75, 16/600, Cytiva, equilibrated in SEC buffer).",
+        "section": "Material and Methods"
+      },
+      {
+        "quote": "Crystals were harvested and flash-frozen in crystallization conditions containing 20% glycerol.",
+        "section": "Material and Methods"
+      },
+      {
+        "quote": "The structures were solved by molecular replacement employing the P. furiosus NG domain (PDB code 3DM5).",
+        "section": "Material and Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "SRP54",
+    "好中球減少症",
+    "GTPase",
+    "P. furiosus"
+  ],
+  "method_label": "X-ray・1.32–1.83 Å",
+  "editor_notes": "PDB ID が本文になく図なし（候補データでも未特定）。古細菌のタンパク質を使った研究で、ヒトの変異体の構造ではない。ライセンスは CC BY-NC-ND。"
+}

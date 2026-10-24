@@ -1,0 +1,146 @@
+{
+  "pmcid": "PMC13689087",
+  "section": "impact",
+  "rank": 1,
+  "headline": "RBDを下に固定する抗体は、マクロファージへの侵入を起こさなかった",
+  "subhead": "公開済みの抗体・スパイク複合体の構造を重ねて立体衝突を数え、偽ウイルスの侵入実験と照らした。",
+  "target_label": "SARS-CoV-2 スパイク",
+  "target_en": "SARS-CoV-2 spike RBD and antibodies",
+  "summary": {
+    "question": "SARS-CoV-2 の抗体のうち、免疫細胞への侵入（AME）を起こすものと起こさないものを何が分けるかは、まだよく分かっていなかった。",
+    "approach": "既存の抗体・スパイク構造を RBD の上下の状態で 4 群に分け、立体衝突を数え、偽ウイルスで侵入を測った。",
+    "result": "THP1 由来マクロファージへの侵入は Group 3 の 2 抗体だけで有意だった。Group 1・2 の抗体はその侵入を阻害した。",
+    "learned": "RBD の状態の調節の仕方と AME の有無には関連があり、AME を避けるワクチンや抗体の設計に役立つ可能性がある。",
+    "open": "上向き優先型や一部の上向き専用抗体が AME を起こす理由は、未解決のままだ。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "why some antibodies and serum mediate entry, and others do not, is not fully understood.",
+          "section": "Introduction"
+        },
+        {
+          "quote": "Notably, it is unknown whether or how the conformational changes of the SARS-CoV-2 spike that are associated with viral fusion with ACE2-expressing cells (16) are involved in antibody-mediated viral fusion with FcγR-expressing cells.",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "we aligned each antibody to baseline spike structures representing the four possible trimer states (i.e., 3-RBD-down, 1-up, 2-up, and 3-up).",
+          "section": "Results"
+        },
+        {
+          "quote": "From this analysis, we thus identified four unique antibody groups that share conformational regulation and AME characteristics.",
+          "section": "Results"
+        }
+      ],
+      "result": [
+        {
+          "quote": "with statistically significant AME shown only for DH1046 and DH1047.",
+          "section": "Results"
+        },
+        {
+          "quote": "All the tested Group 1 and Group 2 antibodies were able to inhibit AME by both Group 3 antibodies in a concentration-dependent manner (Fig. 4A and B).",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Overall, our work indicates a correlation between conformational regulation and AME abilities of antibodies, which may contribute to why some, but not all, antibodies mediate FcγR-dependent entry.",
+          "section": "Discussion"
+        },
+        {
+          "quote": "This connection improves understanding of the AME mechanism and how to inhibit AME for SARS-CoV-2",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "It remains an open question why up-preferring antibodies and some up-exclusive antibodies mediate AME.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "immune",
+    "pathogen"
+  ],
+  "topics": [
+    "antibody"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "既発表の抗体構造を、RBD の上下の状態の取り方と AME の有無で 4 群に分けた。同じ群の抗体はエピトープ（抗原の結合面）が似ており、群どうしでは重なりが小さかった。",
+      "evidence": [
+        {
+          "quote": "We therefore found that antibodies grouped by conformational regulation and AME share similar epitopes.",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "手法の工夫",
+      "text": "各抗体を RBD が上または下の 4 種類のスパイク三量体に重ね、立体衝突を数えた。性質が正反対の Group 2 と Group 4 で衝突の分布が似ていたため、衝突の数だけでは優勢な状態を予測できないと著者は述べている。",
+      "evidence": [
+        {
+          "quote": "Interestingly, Group 2 (down-exclusive) and Group 4 (FcγRIIb AME) antibodies had remarkably similar profiles of clashes across the four spike structures (Fig. 2C)",
+          "section": "Results"
+        },
+        {
+          "quote": "This result demonstrates that the presence of steric clashing can predict some disallowed structures, but predicting which structures dominate in the presence of antibodies would likely require a structural analysis that allows for flexibility and additional favorable interactions.",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "Group 1・2 の中和抗体は、Group 3 抗体による侵入を中和濃度以下で阻害した。アイソタイプ対照では 50% 阻害に届かなかったため、FcγR の取り合いだけでは説明できないという。",
+      "evidence": [
+        {
+          "quote": "Overall, all tested up-exclusive (Group 1) and down-exclusive (Group 2) antibodies were able to inhibit entry mediated by two different Group 3 mAbs at neutralizing concentrations or lower.",
+          "section": "Results"
+        },
+        {
+          "quote": "This isotype control failed to reach 50% inhibition of AME for both Group 3 antibodies in the equivalent tested concentrations.",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "HEK293T に 5 種類のプラスミドを同時導入して偽ウイルスを作製。",
+    "construct": null,
+    "purification": null,
+    "sample_prep": "HIV-1 由来の非増殖型レンチウイルスにスパイクを載せた偽ウイルスを使った。",
+    "data_collection": "PDB の公開構造を PyMOL で重ね、ファンデルワールス重なり 1 Å 以上を Chimera で数えた。",
+    "evidence": [
+      {
+        "quote": "human embryonic kidney (HEK) 293T cells were co-transfected with five plasmids",
+        "section": "Methods"
+      },
+      {
+        "quote": "Non-replicative HIV-1-derived lentiviral particles pseudotyped with SARS-CoV-2 spike were produced as previously described (45).",
+        "section": "Methods"
+      },
+      {
+        "quote": "clashes were defined as van der Waals overlap ≥1 Å after subtracting 0.40 Å for H-bonding and quantified using Chimera.",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "SARS-CoV-2",
+    "スパイク",
+    "抗体",
+    "AME"
+  ],
+  "method_label": "Cryo-EM・X-ray（既存構造の解析）",
+  "ga_pdb_id": "7LD1",
+  "editor_notes": "既存の PDB 構造（6XE1・7LD1 など）の再解析と、偽ウイルスによる侵入実験。自前の構造決定はない。立体衝突の解析は計算で、著者も衝突数だけでは優勢な状態を予測できないと書いている。構造図の凡例（legend_labels）は描画後に確認する。",
+  "legend_labels": [
+    "スパイク（S）",
+    "DH1047 重鎖（抗体）",
+    "DH1047 軽鎖（抗体）"
+  ]
+}

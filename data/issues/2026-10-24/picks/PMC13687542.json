@@ -1,0 +1,159 @@
+{
+  "pmcid": "PMC13687542",
+  "rank": 5,
+  "headline": "同じβ鎖でも、α鎖が違うとT細胞受容体の抱き方が変わる",
+  "subhead": "SARS-CoV-2 ORF3aペプチドを認識するパブリックTCRとプライベートTCRを約3 Åで比べた",
+  "target_label": "ORF3a特異的TCR（SARS-CoV-2）",
+  "target_en": "SARS-CoV-2 ORF3a-specific TCRs / HLA-A*01:01",
+  "summary": {
+    "question": "多くの人に現れるパブリックTCRと個人固有のプライベートTCRで、構造の違いが十分に分かっていなかった。",
+    "approach": "同じペプチド–HLA複合体を認識する2つのTCRを、クライオ電顕とアラニン置換で比べた。",
+    "result": "親和性はどちらも約7〜10 μMだが、TCRpubはペプチド中心、TCRprivはHLAの両ヘリックスに接触が分かれた。",
+    "learned": "α鎖の組み合わせが変わると、共通のβ鎖の上でも抗原結合面の作りが変わる。",
+    "open": "1組の比較なので、一般性は他のTCR/pMHCでの調査が必要だ。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Public T cell receptors (TCRs) recurrently emerge across individuals in response to common pathogens, yet the structural and biophysical basis distinguishing public from private clonotypes remains incompletely defined.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here, we combine epitope mapping, single-cell TCR sequencing, and single-particle cryo-electron microscopy to dissect CD8+ T cell responses to the immunodominant SARS-CoV-2 ORF3a(207-215) epitope presented by HLA-A*01:01.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "Despite comparable micromolar affinities and functional avidities, cryo-EM structures at ~3 Å resolution reveal that the two receptors engage the peptide-MHC complex through distinct CDR-loop configurations and contact footprints.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "TCRpub establishes contacts with the peptide and the MHC α2-helix primarily through the CDR2β and CDR3β loops, whereas TCRpriv distributes contacts across both MHC α-helices and engages the peptide via multiple CDR loops.",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "These findings demonstrate how alternative α-chain pairing reconfigures the antigen-binding interface within a shared β-chain.",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "These observations from a single public-private pair suggest that public TCRs may adopt CDR engagement modes that favour structural complementarity, although broader surveys across additional TCR/pMHC systems will be needed to establish the generality of this pattern.",
+          "section": "Results"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "immune",
+    "pathogen"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "2 つの TCR は CDR3β の 4 残基だけが違う（TCRpub は AGDL、TCRpriv は WTGV）。TCRpriv の Trp94 はペプチドの Leu8 と HLA の Thr71 に接するが、TCRpub では Ala94 になり、この接触がなくなる。",
+      "evidence": [
+        {
+          "quote": "A key distinction lies at position 94: Trp94 in TCRpriv mediates dual contacts with Leu8 of the peptide and Thr71 of the MHC (Fig. 5h, i), whereas its replacement by Ala94 in TCRpub eliminates these interactions (Fig. 5e, f) and instead supports the peptide-centric AGDL docking mode.",
+          "section": "Results"
+        },
+        {
+          "quote": "In TCRpub, the backbone of peptide residue Asp4 forms a hydrogen bond with Arg53, and Ala94 of the CDR3β loop (within the AGDL motif) makes a moderate hydrophobic contact with Tyr5 of the peptide (Fig. 4b).",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "ペプチドを 1 残基ずつアラニンに替えると、TCRpub はより多くの位置で活性が下がり、Asp4 の置換で特に大きく下がった。TCRpriv は置換に強く、Asp4 の置換も比較的よく許した。",
+      "evidence": [
+        {
+          "quote": "TCRpub was affected by alanine substitutions across more positions of the peptide, indicating a greater dependence on peptide side chains for productive recognition.",
+          "section": "Results"
+        },
+        {
+          "quote": "In particular, substitution at Asp4 caused a marked reduction in TCRpub activation, whereas substitutions at Asp4 and, to a lesser extent, at Gln7 were comparatively well tolerated by TCRpriv.",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "手法の工夫",
+      "text": "約 93 kDa と小さく、親和性が μM 程度の野生型 TCR/pMHC を、各 400〜600 万粒子と 30° 傾斜像で解析した。親和性を高めた改変体を使わず、野生型の配列のまま約 3 Å の地図が得られた。",
+      "evidence": [
+        {
+          "quote": "we collected a large dataset for each complex (4-6 million particles) and additionally recorded images at a 30° tilt angle.",
+          "section": "Results"
+        },
+        {
+          "quote": "our results indicate that cryo-EM can also be applied to wild-type CDR sequences to resolve TCR/pMHC complexes with micromolar affinity.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "TCR は Expi293F 細胞に α・β 鎖を共発現。HLA-A*01:01 重鎖と β2m は大腸菌の封入体から調製してリフォールディング。",
+    "construct": "TCR は膜貫通領域を除いた細胞外ドメインのヘテロ二量体。HLA-A*01:01 重鎖は 1–276 にビオチン化配列を付加。",
+    "purification": "TCR は Ni-NTA の後 HRV 3C でタグを切り、Superdex 200 Increase でゲルろ過。",
+    "sample_prep": "0.5–1.0 mg/mL の複合体を架橋せず、Quantifoil R1.2/1.3 に Vitrobot Mark IV で凍結した。",
+    "data_collection": "Titan Krios（300 kV）で撮影し、cryoSPARC と RELION-5 で解析。初期モデルは AlphaFold3 で作り、Coot・Phenix で精密化。",
+    "evidence": [
+      {
+        "quote": "Recombinant TCRs were expressed in Expi293F cells (Thermo Fisher) maintained at 37 °C with 5% CO2, shaking at 160 rpm.",
+        "section": "Methods"
+      },
+      {
+        "quote": "These modified heavy chains (amino acids 1–276) and β2-microglobulin were expressed in a prokaryotic system (pET; R&D Systems), purified from bacterial inclusion bodies, and solubilized in 8 M urea.",
+        "section": "Methods"
+      },
+      {
+        "quote": "we generated soluble TCR heterodimers by removing the transmembrane regions and co-expressing the ectodomains of α- and β-chains in mammalian cells",
+        "section": "Results"
+      },
+      {
+        "quote": "His-tagged TCRs were eluted by IMAC, concentrated to ~500 µL, and treated overnight with HRV 3 C protease (ab285999) to remove tags and leucine zippers.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Proteins were further purified by size-exclusion chromatography (SEC) on a Superdex 200 Increase 10/300 GL column (Cytiva) using an ÄKTA Pure system equilibrated with HBS.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Cryo-EM grids of TCRpriv/pMHC and TCRpub/pMHC complexes were prepared by directly freezing the purified complexes at ~0.5–1.0 mg/mL onto glow-discharged Quantifoil R1.2/1.3 Cu 300 mesh grids (Quantifoil Micro Tools GmbH) using a Vitrobot Mark IV (Thermo Fisher Scientific), without chemical crosslinking.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Final data collection was performed on a Titan Krios transmission electron microscope (Thermo Fisher Scientific) operated at 300 kV.",
+        "section": "Methods"
+      },
+      {
+        "quote": "All datasets were processed using CryoSparc v4.4.156, following standard single-particle analysis workflows, including motion correction, CTF estimation, iterative classification, and refinement.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Initial atomic models of TCRα, TCRβ, the ORF3a(207-215) peptide, and HLA-A*01:01 heavy chain were generated using AlphaFold3 multimer predictions57.",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "TCR",
+    "SARS-CoV-2",
+    "HLA-A*01:01",
+    "クライオ電顕"
+  ],
+  "ga_pdb_id": "9RXM",
+  "editor_notes": "first_structure=true は HLA-A*01:01 に当たる UniProt エントリ（A7WPI8）の PDB 件数が 0 だったため。HLA-A*01:01 と TCR/pMHC の構造はすでに多数あり、論文も初構造とは主張していない。サイトが New Structure に分けると不自然なので、必要なら Structure Update に直してほしい。PDB 9RU5 が TCRpub、9RXM が TCRpriv（本文の Methods に従う）。TCRpub の MHC α3 と β2m は分解能が低く、焦点を絞ったマップで α1/α2 部分だけをモデル化している。",
+  "legend_labels": [
+    "TCR α鎖（受容体）",
+    "TCR β鎖（受容体）",
+    "ORF3aペプチド（抗原）",
+    "HLA-A（MHC）",
+    "β2ミクログロブリン"
+  ]
+}

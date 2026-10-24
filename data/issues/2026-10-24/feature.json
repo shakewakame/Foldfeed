@@ -1,0 +1,6 @@
+{"pmcid": "PMC13687550", "axes": ["structure", "biology", "drug"],
+ "reason": "CNF1 が BCAM の V2 に、ラミニン 511 と同じ様式で結合する構造を示し、この結合を使ったT細胞エンゲージャーが腫瘍を抑えた。",
+ "evidence": [{"quote": "Structural analysis uncovers that CNF1 targets the V2 domain of BCAM, mimicking the interaction mode of laminin 511.", "section": "Abstract"},
+  {"quote": "This TCE potently directs T cells to kill BCAM-overexpressing tumor cells in vitro and suppresses tumor progression in a metastatic ovarian cancer mouse model in female mice.", "section": "Abstract"}],
+ "considered": [{"pmcid": "PMC13684649", "note": "MBOAT1 の基質・産物結合状態から脂質リモデリングの経路が見える。創薬・生物学への直結度で CNF1 を優先。"},
+  {"pmcid": "PMC13689332", "note": "ALP と ProtK が繊維を作る意外な発見だが、機能的な意味は未検証。"}]}
