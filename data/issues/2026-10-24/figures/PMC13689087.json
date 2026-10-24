@@ -1,0 +1,45 @@
+{
+ "pdb_id": "7LD1",
+ "view": {
+  "target": [
+   164.92,
+   180.75,
+   159.81
+  ],
+  "dir": [
+   -0.9156,
+   -0.3991,
+   -0.0484
+  ],
+  "up": [
+   -0.3985,
+   0.9169,
+   -0.022
+  ],
+  "half": [
+   99.5,
+   75.4
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "スパイク（S）",
+   "desc": "Spike glycoprotein",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "DH1047 重鎖（抗体）",
+   "desc": "DH1047 heavy chain",
+   "entity": "2"
+  },
+  {
+   "color": "#5F9296",
+   "label": "DH1047 軽鎖（抗体）",
+   "desc": "DH1047 light chain",
+   "entity": "3"
+  }
+ ],
+ "ligands": []
+}

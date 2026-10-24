@@ -1,0 +1,60 @@
+{
+ "pdb_id": "21IQ",
+ "view": {
+  "target": [
+   137.09,
+   128.19,
+   143.37
+  ],
+  "dir": [
+   -0.9996,
+   0.0126,
+   0.0266
+  ],
+  "up": [
+   0.0131,
+   0.9997,
+   0.0183
+  ],
+  "half": [
+   67.6,
+   40.5
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "BCAM（受容体）",
+   "desc": "Basal cell adhesion molecule",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "CNF1（毒素）",
+   "desc": "Cytotoxic necrotizing factor 1",
+   "entity": "2"
+  }
+ ],
+ "ligands": [],
+ "hero_view": {
+  "target": [
+   137.09,
+   128.19,
+   143.37
+  ],
+  "dir": [
+   -0.9996,
+   0.0126,
+   0.0266
+  ],
+  "up": [
+   0.0131,
+   0.9997,
+   0.0183
+  ],
+  "half": [
+   67.6,
+   40.5
+  ]
+ }
+}

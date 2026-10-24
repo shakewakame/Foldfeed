@@ -1,0 +1,150 @@
+{
+  "pmcid": "PMC13687550",
+  "rank": 4,
+  "headline": "大腸菌の毒素CNF1は、ラミニンに似た形で受容体BCAMに結合する",
+  "subhead": "毒素の全長・受容体との複合体・ラミニン511との複合体を解き、毒素由来のT細胞エンゲージャーを作った",
+  "target_label": "CNF1–BCAM（大腸菌）",
+  "target_en": "E. coli CNF1–BCAM (Lu) complex",
+  "summary": {
+    "question": "CNF1 毒素が受容体 BCAM に結合する仕組みと、BCAM のラミニン 511 との関係は十分に分かっていなかった。",
+    "approach": "全長 CNF1、CNF1–BCAM、ラミニン 511E8–BCAM の構造をクライオ電顕で解き、結合親和性や競合も測った。",
+    "result": "CNF1 の D5 ドメインは BCAM の V2 ドメインに、ラミニンと同様の平行β シートで結合し、Kd は約 3 nM と強かった。",
+    "learned": "CNF1 はラミニン 511 を細胞表面から押しのけられる。この高親和性の結合を使ったT細胞エンゲージャーは、がん細胞を殺した。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Crucially, the molecular mechanisms governing the CNF1-Lu/BCAM and laminin 511-Lu/BCAM complexes remain incompletely elucidated.",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here, we present the high-resolution cryo-EM structures of full-length CNF1, the CNF1-BCAM complex, and the physiological laminin 511-BCAM complex.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "Structural analysis uncovers that CNF1 targets the V2 domain of BCAM, mimicking the interaction mode of laminin 511.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "ITC titration demonstrated that full-length CNF1 and D5 alone bind to BCAM with similar high affinity (Kd ≈ 3 nM)",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "We demonstrate that CNF1 binds BCAM with higher affinity than laminin 511, effectively displacing the physiological ligand from the cell surface.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "This TCE potently directs T cells to kill BCAM-overexpressing tumor cells in vitro and suppresses tumor progression in a metastatic ovarian cancer mouse model in female mice.",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "However, it is important to acknowledge that the local physiological concentrations of the toxin and host matrix proteins during an actual in vivo infection are difficult to establish definitively",
+          "section": "Discussion"
+        }
+      ]
+    },
+    "open": "実際の感染での毒素と宿主タンパク質の濃度は確定が難しく、置換の規模は予測できない。"
+  },
+  "categories": [
+    "pathogen",
+    "receptor"
+  ],
+  "topics": [
+    "drug",
+    "antibody"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "全長 CNF1 では触媒ドメイン D5 の入口が溶媒に露出していたが、全長の脱アミド化活性は D5 単独より弱かった。著者は D2 と D5 の相互作用が D5 の動きを制限する可能性を挙げている。",
+      "evidence": [
+        {
+          "quote": "We also found that full-length CNF1 displayed weaker activity than D5 alone, despite the fact that in CNF1, the catalytic pocket is unobstructed (Fig. 1I-K).",
+          "section": "Results"
+        },
+        {
+          "quote": "It’s possible that the D5-D2, D5-D4 interaction in full-length CNF1 limits certain conformation changes required for full catalytic activity.",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "CNF1 の D5 のβ26（770–776）が BCAM V2 のβ17 と平行β シートを作る。ラミニン α5 の LG1 も同様にβ17 と結合し、毒素はラミニンの結合様式をまねている。β26 を丸ごとアラニンにした M7 変異では結合がほぼ消えた。",
+      "evidence": [
+        {
+          "quote": "At site1, β10 in LG1 forms a parallel beta sheet with β17 in BCAM V2, analogous to CNF1 D5-BCAM V2 interaction (Fig. 4C and Fig. 3A).",
+          "section": "Results"
+        },
+        {
+          "quote": "Taken together, our study provides strong evidence that CNF1 β26 (770-776), rather than previously reported the 709-734 region28,34,51, is critical for BCAM interaction.",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "CNF1 の D5 に抗 CD3 の scFv をつないだT細胞エンゲージャーは、BCAM が多い卵巣がん細胞を低 pM で殺し、マウスのモデルでは腫瘍の進行を抑えた。親和性を下げた Y772A 型は効きが弱く、親和性で効力を調節できる可能性がある。",
+      "evidence": [
+        {
+          "quote": "scFvCD3-D5C866S functioned effectively as a TCE and induced potent tumor lysis by T cells at low pM concentrations.",
+          "section": "Results"
+        },
+        {
+          "quote": "This result suggests that the potency of TCEs can be tuned by adjusting the affinity of the tumor-cell-targeting moiety, which could reduce toxicity against normal tissues.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "CNF1 は大腸菌 Rosetta (DE3)、BCAM は Hi-5 昆虫細胞、ラミニン 511E8 は 293 F 細胞で発現。",
+    "construct": "全長 CNF1 は N 末端に MBP タグを付けて解析。BCAM は V1–C3 の細胞外領域、ラミニンは E8 断片。",
+    "purification": "MBP カラムと陰イオン交換、BCAM は Ni-NTA とゲルろ過。",
+    "sample_prep": "Quantifoil R1.2/1.3 に 3 μL をのせ、20 °C・湿度100%で Vitrobot 凍結。結晶は D5–BCAM V1-C1 を約 8 mg/mL でハンギングドロップ。",
+    "data_collection": "Titan Krios（300 kV）と Falcon4 で収集し、cryoSPARC で処理。",
+    "evidence": [
+      {
+        "quote": "The full-length E. coli CNF1 gene was cloned into a modified pRSFDuet-1 vector (Novagen) with MBP tag and expressed in E. coli Rosetta (DE3) cells (Novagen).",
+        "section": "Methods"
+      },
+      {
+        "quote": "Baculoviruses were produced with SF9 cells and were used to infect Hi-5 insect cells for protein expression.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Baculoviruses were produced with SF9 cells and used to infect 293 F cells for protein expression.",
+        "section": "Methods"
+      },
+      {
+        "quote": "The cryo-EM data were collected at the Center of Cryo-Electron Microscopy at Zhejiang University.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Crystals of CNF1 D5-BCAMV1-C1 were grown at 4˚C using the hanging drop vapor diffusion method",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "CNF1",
+    "BCAM",
+    "ラミニン511",
+    "T細胞エンゲージャー"
+  ],
+  "method_label": "Cryo-EM・X-ray・2.6–3.0 Å",
+  "ga_pdb_id": "21IQ",
+  "editor_notes": "PDB は 21IM（CNF1）・21IQ（CNF1–BCAM）・21IR（ラミニン511–BCAM）・21KE（D5–BCAM 結晶）。CNF1 の D5 単独・BCAM V1-V2 の構造は既存のため first_structure は false。BCAM との複合体、全長 CNF1、ラミニン511–BCAM は新しい。TCE の in vivo は女性マウスの OV90 腹腔内モデル（免疫不全）と同系モデル。著者が『strong evidence』と書く競合は ELISA・細胞結合・接着の実験で、感染時の濃度は不明と本人が限界を述べている。",
+  "legend_labels": [
+    "BCAM（受容体）",
+    "CNF1（毒素）"
+  ],
+  "ligand_names": {}
+}

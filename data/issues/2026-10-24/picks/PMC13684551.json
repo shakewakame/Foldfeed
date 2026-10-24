@@ -1,0 +1,136 @@
+{
+  "pmcid": "PMC13684551",
+  "rank": 10,
+  "headline": "結核菌FtsZに、断片が結合する新しい部位が15か所見つかった",
+  "subhead": "ONとOFFの2状態が同居する結晶で、断片の結合は状態によって大きく偏った",
+  "target_label": "FtsZ（結核菌）",
+  "target_en": "FtsZ (M. tuberculosis)",
+  "summary": {
+    "question": "結核菌の細胞分裂に必要な FtsZ には、薬の足がかりになる結合部位がどれだけあるのかが課題だった。",
+    "approach": "FtsZ の結晶1,070個に低分子の断片を浸し、X線結晶構造解析と PanDDA で結合する断片を探した。",
+    "result": "149個のデータで断片の結合が見え、結合部位は20か所に分かれた。そのうち15か所はこれまで報告のない部位だった。",
+    "learned": "FtsZ には薬の足がかりになりうる表面が多く、ON と OFF の2つの形で断片の結合のしかたが大きく違った。",
+    "open": "結合の強さや FtsZ の重合・GTP 分解への効果は未測定で、機能への影響は今後の検証が必要とされている。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "FtsZ, a GTPase that assembles into protofilaments at the division site of a replicating cell to produce two individual cells, is an attractive target as an essential protein in bacterial cell division.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "1,070 crystals were soaked with fragments and 714 datasets were used for downstream PanDDA analysis.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "Spatial grouping of the fragments identified 20 distinct binding sites distributed across the MtbFtsZ structure (Fig. 2 and S3).",
+          "section": "Results"
+        },
+        {
+          "quote": "The remaining 15 sites have not previously been described as ligand-binding sites in MtbFtsZ.",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "These results demonstrate that MtbFtsZ contains a substantially broader range of ligandable surfaces than indicated by the relatively limited number of previously reported inhibitor-bound structures.",
+          "section": "Discussion"
+        }
+      ],
+      "open": [
+        {
+          "quote": "The fragments identified here are expected to represent starting points, and quantitative binding affinities and effects on MtbFtsZ polymerization or GTPase activity were not measured as part of this screen.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "pathogen",
+    "enzyme"
+  ],
+  "topics": [
+    "drug"
+  ],
+  "highlights": [
+    {
+      "tag": "創薬・モダリティ",
+      "text": "結晶1,070個のうち714個のデータを解析し、149個で断片の電子密度が見えた（ヒット率21%）。ヒットしたデータの平均分解能は2.08 ± 0.22 Å だった。",
+      "evidence": [
+        {
+          "quote": "Manual inspection of PanDDA event maps identified 149 datasets containing electron density supporting placement of one or more fragments, corresponding to an overall crystallographic hit rate of 21%.",
+          "section": "Results"
+        },
+        {
+          "quote": "The average resolution of the hit datasets was 2.08 ± 0.22 Å.",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "新しい結合部位",
+      "text": "1つの結晶に ON 型と OFF 型の2分子があり、同じ条件で比べられた。隠れたポケット2には OFF 型の部位1に59個、ON 型の部位4に23個が結合し、共通するのは6個だけだった。",
+      "evidence": [
+        {
+          "quote": "The strongest example is cryptic pocket 2, where 59 fragments bind site 1 in the OFF protomer compared with 23 at the corresponding site 4 in the ON protomer, with only six fragments shared between the two sites.",
+          "section": "Discussion"
+        }
+      ]
+    },
+    {
+      "tag": "新しい結合部位",
+      "text": "H9 と C 末端のβシートの間の部位2には、ON 型に52個の断片が入る。OFF 型では構造の動きでこの領域に近づきにくくなっていた。",
+      "evidence": [
+        {
+          "quote": "A similarly pronounced conformational dependence was observed at site 2, where 52 fragments occupy a pocket between H9 and the C-terminal β-sheet in the ON protomer, while structural rearrangement substantially reduces accessibility to the corresponding region in the OFF protomer.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "大腸菌 BL21 Star (DE3)、pET-28b(+)。",
+    "construct": "コドンを最適化した FtsZ。N 末端の His タグはトロンビンで切断。",
+    "purification": "サイズ排除クロマトグラフィーで精製し、2.19 mg/ml に濃縮。",
+    "sample_prep": "0.1 M 硫酸アンモニウム、15.6% PEG 3350、0.1 M Bis-Tris pH 5.0 で結晶化（マイクロシーディング）。断片はエコー式液体ハンドラーで加え、平均152分浸漬。",
+    "data_collection": "NSLS-II の AMX ビームライン（17-ID-1）で回折データを収集。解析は PanDDA。",
+    "evidence": [
+      {
+        "quote": "FtsZ was purified as described previously using thrombin cleavage of an N-terminal His-tag14.",
+        "section": "Methods"
+      },
+      {
+        "quote": "The protein was concentrated to 2.19 mg/ml and flash frozen in liquid nitrogen.",
+        "section": "Methods"
+      },
+      {
+        "quote": "FtsZ was codon optimized, cloned into the pET-28b(+) vector, and expressed in BL21 Star™ (DE3).",
+        "section": "Methods"
+      },
+      {
+        "quote": "A grid search of nearby concentrations led to the final condition of 0.1 M ammonium sulfate, 15.6% (w/v) PEG 3350, 0.1 M Bis-Tris pH 5.0.",
+        "section": "Methods"
+      },
+      {
+        "quote": "The average soak time was 152 ± 59 minutes (ranging from 67 to 305 minutes).",
+        "section": "Methods"
+      },
+      {
+        "quote": "X-ray diffraction data were collected at the AMX beamline (17-ID-1) at the National Synchrotron Light Source II at Brookhaven National Laboratory (Upton, NY).",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "FtsZ",
+    "フラグメントスクリーニング",
+    "結核菌",
+    "PanDDA"
+  ],
+  "method_label": "X-ray・2–3 Å",
+  "editor_notes": "bioRxiv のプレプリント（査読前の可能性）。PDB は group deposition G_1002379 として個別エントリで登録されたとあるが、本文に個々の PDB ID はなく補足表 S1 にある。そのため図は付かない。結合の強さや機能への影響は未測定と著者が明記。",
+  "legend_labels": []
+}
