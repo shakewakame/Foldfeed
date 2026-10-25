@@ -1,0 +1,129 @@
+{
+ "pmcid": "PMC13692730",
+ "section": "impact",
+ "rank": 1,
+ "headline": "リポ酸合成酵素は、Ser308が鉄を離すかどうかで反応が分かれる",
+ "subhead": "既存の結晶構造を土台に、変異体の活性と分光で調べた",
+ "target_label": "LipA（大腸菌）",
+ "target_en": "Lipoyl synthase LipA (E. coli)",
+ "method_label": "活性測定・ITC・Mössbauer／EPR 分光",
+ "ga_pdb_id": "5EXK",
+ "summary": {
+  "question": "補助クラスターの鉄に配位する Ser308 を含む RSSY モチーフが、反応にどう関わるかを調べる課題があった。",
+  "approach": "大腸菌 LipA の変異体を作り、活性・ITC・Mössbauer と EPR 分光で調べ、結核菌 LipA の結晶構造で解釈した。",
+  "result": "R306K は基質にほぼ結合しなかった。S308C は鉄3個の中間体の代わりに、S = 7/2 の中間体と 6-オクテノイル産物を生んだ。",
+  "learned": "Ser308 が鉄を離すかどうかが、硫黄の付加へ進むか別の産物へ向かうかを分けると、著者は考えている。",
+  "evidence": {
+   "question": [
+    {
+     "quote": "The auxiliary cluster is ligated by three cysteines in a CX4CX5C motif and one serine residue (Ser308 in Escherichia coli) in a highly conserved R306SS308Y motif in the C-terminal region of the protein.",
+     "section": "Abstract"
+    }
+   ],
+   "approach": [
+    {
+     "quote": "Because the structure of Ec LipA has not been determined, the X-ray crystal structure of Mt LipA was used as a structural reference to interpret Ec LipA’s activity analyses.",
+     "section": "Results"
+    }
+   ],
+   "result": [
+    {
+     "quote": "Substitution of Arg306 with Lys results in an essentially inactive protein due to poor substrate binding and positioning in the active site.",
+     "section": "Abstract"
+    },
+    {
+     "quote": "Instead, the auxiliary cluster remains tetranuclear and forms a monothiolated cross-linked species with a high-spin, S = 7/2 configuration that decays to the 6-octenoyl-containing",
+     "section": "Abstract"
+    }
+   ],
+   "learned": [
+    {
+     "quote": "These results demonstrate that retention of the fourth iron inhibits cluster degradation and promotes an alternative reaction pathway.",
+     "section": "Discussion"
+    }
+   ]
+  }
+ },
+ "categories": [
+  "enzyme"
+ ],
+ "highlights": [
+  {
+   "tag": "機構の解明",
+   "text": "Arg306 を Lys に替えた変異体では、基質タンパク質の結合による熱がITCで検出されなかった。Arg306 が基質のオクタノイル基への結合に必要だと考えられる。",
+   "evidence": [
+    {
+     "quote": "No detectable heat of binding was observed in the ITC experiment, suggesting that the binding affinity is drastically decreased for the variant (Figure C).",
+     "section": "Results"
+    }
+   ]
+  },
+  {
+   "tag": "機構の解明",
+   "text": "Ser308 を Cys に替えると、リポ酸の代わりに 6-オクテノイル産物が増えた（30 μM の酵素で約 8.6 μM、野生型は約 1.6 μM）。Cys は Ser より鉄に強く配位するため鉄が離れず、補助クラスターが壊れないらしい。",
+   "evidence": [
+    {
+     "quote": "In 2.5 h, 30 μM of the Ec LipA S308C variant produced approximately 8.6 μM of the 6-octenoyl peptide product.",
+     "section": "Results"
+    },
+    {
+     "quote": "Cysteine, being a stronger ligand than serine, is more likely to coordinate with the unique iron.",
+     "section": "Results"
+    }
+   ]
+  },
+  {
+   "tag": "手法の工夫",
+   "text": "S308C の反応では、EPR と Mössbauer 分光で S = 7/2 の短命な中間体が見えた。著者はこれを、オクタノイル基のラジカルが補助クラスターの硫黄を攻撃して生じた [4Fe-4S]+ 様の状態と帰属している。",
+   "evidence": [
+    {
+     "quote": "We assign the species with the S = 7/2 ground state to a reduced [4Fe-4S]+-like auxiliary cluster, which we propose is formed by the attack of the octano-6-yl radical on one of the μ3-sulfides of the [4Fe-4S]2+ auxiliary cluster",
+     "section": "Results"
+    }
+   ]
+  }
+ ],
+ "lab_notes": {
+  "expression": "大腸菌 BL21(DE3) で発現。N 末端に His6 タグ。",
+  "construct": null,
+  "purification": null,
+  "sample_prep": "Fe–S クラスターは塩化鉄・硫化ナトリウム・DTT で化学的に再構成した。",
+  "data_collection": "活性測定は嫌気チャンバー内で室温。ITC は VP-ITC を使い、23 ℃ で測定した。",
+  "evidence": [
+   {
+    "quote": "N-terminal hexahistidine-tagged WT Ec NfuA and WT or variant forms of Ec LipA were expressed in Ec BL21",
+    "section": "Methods"
+   },
+   {
+    "quote": "For each protein, Fe-S cluster cofactors were chemically reconstituted with excess ferric chloride, sodium sulfide, and DTT using established procedures",
+    "section": "Methods"
+   },
+   {
+    "quote": "All activity assays were performed under anoxic conditions in a Coy (Grasslake, MI) anaerobic chamber at room temperature.",
+    "section": "Methods"
+   },
+   {
+    "quote": "Isothermal titration calorimetry (ITC) was performed on a VP-ITC (GE Healthcare, Piscataway, NJ) housed in a Coy anaerobic chamber",
+    "section": "Methods"
+   }
+  ]
+ },
+ "keywords": [
+  "LipA",
+  "リポ酸",
+  "ラジカルSAM酵素",
+  "Fe–Sクラスター"
+ ],
+ "editor_notes": "ライセンスは未確認（candidates.json を参照）。大腸菌 LipA の構造は未決定で、論文は結核菌 LipA の結晶構造（5EXJ・5EXK）を参照して解釈している。構造図は結核菌のもの。6 点でぎりぎり（structure は 1 点）。",
+ "legend_labels": [
+  "LipA（リポ酸合成酵素）",
+  "基質ペプチド（Hタンパク質）"
+ ],
+ "ligand_names": {
+  "F3S": "補助クラスター（鉄3個）",
+  "SF4": "[4Fe-4S]（RS）",
+  "5AD": "5'-dA",
+  "MET": "Met"
+ },
+ "site_ligand": "F3S"
+}

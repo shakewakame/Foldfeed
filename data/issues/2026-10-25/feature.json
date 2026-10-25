@@ -1,0 +1,4 @@
+{"pmcid": "PMC13691371", "axes": ["structure", "biology"],
+ "reason": "複製の再開始を防ぐ Hda–DnaN が、八量体から三量体へ濃度で組み替わり、触媒のArg153が埋まる状態と露出する状態を構造で示した。",
+ "evidence": [{"quote": "Importantly, in this state, the arginine finger (Arg153) and surrounding functional surfaces are fully exposed (Fig. 5c), consistent with a RIDA-compatible conformation capable of engaging DnaA.", "section": "Results"}],
+ "considered": [{"pmcid": "PMC13692747", "note": "CFAT は基質結合型の構造が明快だが、対象が細菌の脂質合成の一酵素で、構造生物学の軸のみ。"}, {"pmcid": "PMC13691573", "note": "CorA は KS のふたの違いが分かりやすいが、図がなく、解けたのは二ドメインだけ。"}]}

@@ -1,0 +1,98 @@
+{
+ "screened": 62,
+ "scored": [
+  {
+   "pmcid": "PMC13692730",
+   "type": "mechanism",
+   "scores": {"novelty": 2, "reach": 1, "structure": 1, "support": 2},
+   "selected": true,
+   "reason": "S308C 変異体で、鉄3個の中間体の代わりに S = 7/2 の中間体と 6-オクテノイル産物が見えた点が新しい。大腸菌 LipA の構造は未決定で、結核菌の結晶構造に当てはめて解釈している（structure は 1 点）。対象は LipA という一つの系なので reach は 1。6 点でぎりぎり。",
+   "evidence": {
+    "novelty": [
+     {"quote": "In place of the [3Fe] cluster intermediate, another intermediate with an S = 7/2 ground state is generated.", "section": "Introduction"}
+    ],
+    "reach": [
+     {"quote": "The enzyme is a paradigm for understanding how sulfur atoms are enzymatically attached to aliphatic carbon centers.", "section": "Introduction"}
+    ],
+    "structure": [
+     {"quote": "Analysis of the M. tuberculosis LipA structure provides a framework for interpreting the biochemical data (Figure S2).", "section": "Discussion"}
+    ],
+    "support": [
+     {"quote": "Substitution of Arg306 with Lys results in an essentially inactive protein due to poor substrate binding and positioning in the active site.", "section": "Abstract"}
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13693507",
+   "type": "mechanism",
+   "scores": {"novelty": 1, "reach": 1, "structure": 1, "support": 1},
+   "selected": false,
+   "reason": "ITC と NMR（自前）で UBE3B と UBE3C の結合の違いを示したが、既知の IQ–アポCaM 結合様式の延長で novelty 1。構造モデルは AlphaFold3 と MD。",
+   "evidence": {
+    "novelty": [
+     {"quote": "Phylogenetic analysis further suggests that the UBE3B and UBE3C IQ motifs have followed divergent evolutionary trajectories within the broader IQ motif family.", "section": "Abstract"}
+    ],
+    "reach": [
+     {"quote": "Together, these findings show that conserved IQ motifs in related HECT ligases can encode different apo‐CaM binding modes", "section": "Abstract"}
+    ],
+    "structure": [
+     {"quote": "Here, we combined isothermal titration calorimetry, nuclear magnetic resonance (NMR) spectroscopy, and computational modeling to compare apo‐CaM binding by the UBE3B and UBE3C IQ motifs.", "section": "Abstract"}
+    ],
+    "support": [
+     {"quote": "Addition of the UBE3B IQ peptide caused peaks from free apo‐CaM to disappear while new peaks for the bound complex appeared, indicating slow exchange on the NMR timescale", "section": "Results"}
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13692733",
+   "type": "drug",
+   "scores": {"novelty": 1, "reach": 1, "structure": 0, "support": 1},
+   "selected": false,
+   "reason": "既存の Mpro 構造からの設計とドッキングが根拠で、自前の実験構造がない（structure 0）。質量分析で共有結合は確かめている。",
+   "evidence": {
+    "novelty": [
+     {"quote": "Herein, we describe the structure-based covalent modifications that generate new nonpeptidic covalent Mpro inhibitors.", "section": "Abstract"}
+    ],
+    "reach": [
+     {"quote": "The main protease (Mpro) is a prime target for anti-SARS-CoV-2 drugs.", "section": "Abstract"}
+    ],
+    "support": [
+     {"quote": "The mass spectrometry results confirm the covalent bonding of the compound with the cysteine residue of Mpro.", "section": "Abstract"}
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13683858",
+   "type": "ai_design",
+   "scores": {"novelty": 1, "reach": 0, "structure": 0, "support": 1},
+   "selected": false,
+   "reason": "計算で設計した抗体変異体を ELISA と Biacore で確かめたが、親抗体より親和性が下がり、実験構造もない（structure 0）。",
+   "evidence": {
+    "novelty": [
+     {"quote": "Here, we describe a computational antibody-engineering workflow for designing variants of NAZ-mAb.", "section": "Abstract"}
+    ],
+    "support": [
+     {"quote": "Both variants were successfully expressed as recombinant IgGs", "section": "Abstract"}
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13692751",
+   "type": "method",
+   "scores": {"novelty": 2, "reach": 1, "structure": 0, "support": 1},
+   "selected": false,
+   "reason": "ラジカル SAM 酵素 CrpC が大きなタンパク質基質にランチオニン架橋を入れることを質量分析で示したが、構造の実験はない（structure 0）。",
+   "evidence": {
+    "novelty": [
+     {"quote": "Mass spectrometry and chemical derivatization of modified CrpA indicates that CrpC installs ranthionine crosslinks onto CrpA.", "section": "Abstract"}
+    ],
+    "reach": [
+     {"quote": "RiPPs are short peptides and experimental validation of enzymatically installed thioether crosslinks on large protein substrates is limited.", "section": "Abstract"}
+    ],
+    "support": [
+     {"quote": "Enzyme assays determined that CrpC is active after reconstitution and modifies a cysteine-rich protein substrate in the same BGC, CrpA.", "section": "Abstract"}
+    ]
+   }
+  }
+ ]
+}

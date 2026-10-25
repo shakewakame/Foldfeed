@@ -1,0 +1,114 @@
+{
+ "pdb_id": "25RY",
+ "view": {
+  "target": [
+   137.07,
+   137.19,
+   136.98
+  ],
+  "dir": [
+   1.0,
+   -0.0026,
+   0.0007
+  ],
+  "up": [
+   -0.0007,
+   -0.0013,
+   1.0
+  ],
+  "half": [
+   62.4,
+   63.0
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "DnaN（βクランプ）",
+   "desc": "Beta sliding clamp",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "Hda（調節因子）",
+   "desc": "DnaA regulatory inactivator Hda",
+   "entity": "2"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "ADP",
+   "label": "ADP",
+   "color": "#C23B8E",
+   "desc": "Adenosine-5'-Diphosphate",
+   "entity": [
+    "3"
+   ],
+   "sites": [
+    [
+     "I",
+     "301"
+    ],
+    [
+     "K",
+     "301"
+    ],
+    [
+     "M",
+     "301"
+    ],
+    [
+     "O",
+     "301"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "ADP",
+  "residues": [
+   "E17",
+   "S21",
+   "F22",
+   "W23",
+   "E52",
+   "G53",
+   "A54",
+   "G55",
+   "R56",
+   "S57",
+   "H58",
+   "L165",
+   "A173",
+   "R177",
+   "M201",
+   "R202",
+   "F205"
+  ],
+  "hbonds": 15,
+  "pi": 0,
+  "neighbours": [],
+  "label": "ADP"
+ },
+ "hero_view": {
+  "target": [
+   137.07,
+   137.19,
+   136.98
+  ],
+  "dir": [
+   -1.0,
+   0.0026,
+   -0.0007
+  ],
+  "up": [
+   0.0026,
+   1.0,
+   0.0013
+  ],
+  "half": [
+   63.0,
+   62.4
+  ]
+ }
+}
