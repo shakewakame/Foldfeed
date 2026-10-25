@@ -1,0 +1,132 @@
+{
+ "pmcid": "PMC13692747",
+ "rank": 1,
+ "headline": "システイン酸を選ぶ酵素は、二量体の境目に結合ポケットを持つ",
+ "subhead": "細菌のスルホ脂質をつくるCFATの結晶構造。基質結合型は2.46 Å",
+ "target_label": "CFAT（C. ochracea）",
+ "target_en": "COCFAT (Capnocytophaga ochracea)",
+ "summary": {
+  "question": "細菌のスルホ脂質（スルホ基を持つ脂質）の材料になるシステイン酸を、合成酵素がどう受け止めるかは未解明だった。",
+  "approach": "系統解析、6種の酵素の活性測定、X線結晶構造解析、構造をもとにした変異体解析を組み合わせた。",
+  "result": "二量体の境目にポケットがあり、触媒の骨格はSPTと同じで、基質結合ポケットだけが作り替えられていた。",
+  "learned": "セリンを使うSPTと触媒の骨格は共通で、二量体の境目での基質結合部位の作り替えが、基質の違いに関わる可能性がある。",
+  "open": "SPT型の残基に置き換えても、セリンを使う活性は生まれなかった。",
+  "evidence": {
+   "question": [
+    {
+     "quote": "A central unresolved question is how these enzymes accommodate cysteate as a substrate.",
+     "section": "Introduction"
+    }
+   ],
+   "approach": [
+    {
+     "quote": "Here, we combined phylogenetic analysis, biochemical reconstitution, X-ray crystallography, and structure-guided mutagenesis to characterize CFAT homologues involved in bacterial sulfonolipid biosynthesis.",
+     "section": "Introduction"
+    }
+   ],
+   "result": [
+    {
+     "quote": "This structure reveals a composite active-site pocket formed across the dimer interface, where the conserved PLP-dependent catalytic scaffold is retained but the substrate-binding pocket is significantly remodeled compared to canonical SPTs.",
+     "section": "Abstract"
+    }
+   ],
+   "learned": [
+    {
+     "quote": "The concentration of these substitutions at the dimer interface suggests that remodeling of the intersubunit substrate-binding environment may contribute to accommodation of the larger and more highly charged cysteate substrate.",
+     "section": "Results and Discussion"
+    }
+   ],
+   "open": [
+    {
+     "quote": "Structure-guided mutagenesis identified key residues important for cysteate-dependent catalysis but failed to generate serine activity.",
+     "section": "Abstract"
+    }
+   ]
+  }
+ },
+ "categories": [
+  "enzyme"
+ ],
+ "highlights": [
+  {
+   "tag": "機構の解明",
+   "text": "基質のシステイン酸は、補因子 PLP（ビタミン B6 由来）と結びついた中間体の形で見えた。スルホ基には Asn52・His139・Lys250 が水素結合し、隣のサブユニットの残基もポケットをつくる。",
+   "evidence": [
+    {
+     "quote": "Several residues directly contact the cysteate moiety: Asn52, His139 and Lys250 form hydrogen bonds with the sulfonate group (Figures B and S5), whereas Gly81, Ala82, Met277 and Phe278 from the neighboring protomer contribute to the steric environment around the cysteate side chain (Figures B and S5).",
+     "section": "Results and Discussion"
+    }
+   ]
+  },
+  {
+   "tag": "機構の解明",
+   "text": "セリンを使う通常の SPT（セリン パルミトイル転移酵素）と比べると、PLP まわりの触媒の配置はほぼ同じで、違いは基質の側鎖を受ける環境に集中していた。",
+   "evidence": [
+    {
+     "quote": "Together, these observations indicate that CFAT and SPT retain a highly conserved PLP-dependent catalytic framework but differ substantially in the architecture of the substrate-binding pocket.",
+     "section": "Results and Discussion"
+    }
+   ]
+  },
+  {
+   "tag": "手法の工夫",
+   "text": "ポケットの周りをSPT型の残基に置き換えても、セリンを使う活性は出なかった。19 か所を置換した変異体は正しく折りたたまれなかった。両者の配列の一致は約 30% で、基質の選び方は局所の置換だけでは変えにくいらしい。",
+   "evidence": [
+    {
+     "quote": "The most extensively redesigned COCFAT variant, containing 19 substitutions, was not properly folded, limiting the extent to which the pocket could be rewired within the native protein scaffold.",
+     "section": "Results and Discussion"
+    }
+   ]
+  }
+ ],
+ "lab_notes": {
+  "expression": "大腸菌で発現。N 末端に His6 タグ。16 ℃ で 22 時間培養。",
+  "construct": "C. ochracea の COCFAT など 6 種の遺伝子を大腸菌用にコドン最適化し、pET28a(+) に組み込んだ。",
+  "purification": "Ni 親和性カラムのあと、PLP 0.2 mM を含む緩衝液で Superdex 200 のゲルろ過。",
+  "sample_prep": "10–12 mg/mL に濃縮し、シッティングドロップ蒸気拡散法で 16 ℃ で結晶化。基質結合型はシステイン酸との共結晶化。",
+  "data_collection": "上海放射光施設（SSRF）の BL19U1 で回折データを収集。AlphaFold の予測モデルを検索モデルに分子置換で解いた。",
+  "evidence": [
+   {
+    "quote": "All constructs contained an N-terminal His6 tag.",
+    "section": "Materials and Methods"
+   },
+   {
+    "quote": "Fractions containing CFAT proteins were pooled and further purified by size-exclusion chromatography on a Superdex 200 10/300 GL column equilibrated with 20 mM Tris–HCl (pH 8.0), 100 mM NaCl, and 0.2 mM PLP (Figure S8).",
+    "section": "Materials and Methods"
+   },
+   {
+    "quote": "Purified COCFAT was concentrated to 10–12 mg mL–1 and crystallized using the sitting-drop vapor-diffusion method at 16 °C.",
+    "section": "Materials and Methods"
+   },
+   {
+    "quote": "X-ray diffraction data for the holo and ligand-bound COCFAT crystals were collected at the BL19U1 beamline of the Shanghai Synchrotron Radiation Facility (SSRF, Shanghai, China).",
+    "section": "Materials and Methods"
+   },
+   {
+    "quote": "Both structures were solved by molecular replacement using PHASER, with AlphaFold Colab-predicted CFAT coordinates as the search model.",
+    "section": "Materials and Methods"
+   },
+   {
+    "quote": "Cells were harvested by centrifugation and resuspended in lysis buffer containing 20 mM Tris–HCl (pH 8.0), 300 mM NaCl, and 10% glycerol.",
+    "section": "Materials and Methods"
+   },
+   {
+    "quote": "Cultures were grown at 37 °C until the OD600 reached 0.6–0.8, induced with 0.2 mM IPTG, and further incubated at 16 °C for 22 h.",
+    "section": "Materials and Methods"
+   }
+  ]
+ },
+ "keywords": [
+  "CFAT",
+  "スルホ脂質",
+  "PLP"
+ ],
+ "ga_pdb_id": "28EH",
+ "ligand_names": {
+  "A1FBS": "PLP–システイン酸"
+ },
+ "editor_notes": "ライセンスは CC BY-NC-ND。PDB 28EH（基質結合型 2.46 Å）、28FA（holo 2.15 Å）。",
+ "legend_labels": [
+  "CFAT（アシル転移酵素）"
+ ]
+}

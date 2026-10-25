@@ -1,0 +1,90 @@
+{
+ "pdb_id": "28EH",
+ "view": {
+  "target": [
+   35.09,
+   17.74,
+   -23.22
+  ],
+  "dir": [
+   0.9177,
+   -0.0726,
+   0.3905
+  ],
+  "up": [
+   -0.3971,
+   -0.1483,
+   0.9057
+  ],
+  "half": [
+   43.1,
+   56.6
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "CFAT（アシル転移酵素）",
+   "desc": "Cysteate-C-fatty acyltransferase",
+   "entity": "1"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "A1FBS",
+   "label": "PLP–システイン酸",
+   "color": "#C23B8E",
+   "desc": "(2~{R})-2-[(~{E})-[2-methyl-3-oxidanyl-5-(phosphonooxymethyl)pyridin-4-yl]methylideneamino]-3-sulfo-propanoic acid",
+   "entity": [
+    "2"
+   ],
+   "sites": [
+    [
+     "E",
+     "501"
+    ],
+    [
+     "O",
+     "502"
+    ],
+    [
+     "S",
+     "501"
+    ],
+    [
+     "Y",
+     "502"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "A1FBS",
+  "residues": [
+   "G81",
+   "A82",
+   "M277",
+   "F278",
+   "A279",
+   "K280",
+   "N52",
+   "F113",
+   "G114",
+   "Y115",
+   "H139",
+   "C141",
+   "E187",
+   "D216",
+   "A218",
+   "H219",
+   "T247",
+   "A249",
+   "K250",
+   "G256"
+  ],
+  "hbonds": 13,
+  "pi": 1,
+  "neighbours": [],
+  "label": "PLP–システイン酸"
+ }
+}

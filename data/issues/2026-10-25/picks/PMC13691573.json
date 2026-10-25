@@ -1,0 +1,130 @@
+{
+ "pmcid": "PMC13691573",
+ "rank": 3,
+ "headline": "ループ状のふたが、CorAに多様な基質を受け入れさせる",
+ "subhead": "NRPS-PKS融合酵素CorAのKS-ATをクライオ電顕で解析。12種の産物ができる",
+ "target_label": "CorA KS-AT（粘液細菌）",
+ "target_en": "CorA KS-AT didomain (Corallococcus exiguus)",
+ "method_label": "Cryo-EM・全体 3.13 Å",
+ "summary": {
+  "question": "ペプチド合成とポリケチド合成の融合酵素 CorA が、多様な基質をどう受け入れるのかは未解明だった。",
+  "approach": "全長 CorA の試験管内反応、KS-AT 二ドメインのクライオ電顕、変異体、ドッキングで調べた。",
+  "result": "全長 CorA は12種の産物をつくった。KS-AT 二量体は3.13 Åで、KS のふたがらせんでなくループだった。",
+  "learned": "KS のふたがループであることが大きな基質の受け入れを支え、AT の SGFH モチーフが2種の伸長基質を受け入れるらしい。",
+  "open": "解けたのは KS-AT 二ドメインだけで、NRPS 側の領域は見えなかった。",
+  "evidence": {
+   "question": [
+    {
+     "quote": "Even so, the structural and functional origins of this promiscuity, especially within the KS domain that accommodates multiple amino acid‑derived peptidyl intermediates, remain largely undefined.",
+     "section": "Introduction"
+    }
+   ],
+   "approach": [
+    {
+     "quote": "Here, combining in vitro biochemistry, structure determination by cryo-electron microscopy (EM), mutagenesis, and molecular docking, we show that full-length CorA generates twelve distinct 5-alkylated pyrazinone products using six amino acid combinations and two acyl-CoA extenders, highlighting an unusually permissive gating mechanism within the KS domain.",
+     "section": "Abstract"
+    }
+   ],
+   "result": [
+    {
+     "quote": "The 3.1-Å cryo-EM structure of the CorA KS-AT didomain provides structural insights into its substrate-binding architecture.",
+     "section": "Abstract"
+    },
+    {
+     "quote": "In contrast, the α-helical element that serves as the active-site cap to enclose the substrate-binding pocket is conserved in canonical KS domains but is absent in CorA-KS domain, where it is replaced by a flexible loop (Fig. 4a).",
+     "section": "Results and discussion"
+    }
+   ],
+   "learned": [
+    {
+     "quote": "The atypical SGFH motif of the AT domain permits dual binding of M-CoA and MM-CoA, and an irregular non-helical loop in the KS domain creates an open pocket for large amino acid-derived intermediates.",
+     "section": "Abstract"
+    }
+   ],
+   "open": [
+    {
+     "quote": "Despite these efforts, iterative rounds of 2D classification and 3D refinement yielded clear density maps only for the KS-AT didomain, whereas the remaining regions of CorA, particularly the NRPS module, remained invisible (Figures S9a and S9c).",
+     "section": "Results and discussion"
+    }
+   ]
+  }
+ },
+ "categories": [
+  "enzyme"
+ ],
+ "topics": [
+  "method"
+ ],
+ "highlights": [
+  {
+   "tag": "機構の解明",
+   "text": "ふつうの PKS の KS ドメインでは、活性部位のふたがらせんをつくる。CorA ではこれが柔らかいループに置き換わり、アミノ酸由来の大きな中間体が入る内側のポケットが広く開いていた。",
+   "evidence": [
+    {
+     "quote": "Specifically, the inner acyl pockets of CorA-KS domain and other NRPS-PKS hybrid KS domains are substantially more spacious and open than those of canonical type I PKSs (Figure S23).",
+     "section": "Results and discussion"
+    }
+   ]
+  },
+  {
+   "tag": "手法の工夫",
+   "text": "CorA の KS のふたを DEBS モジュール 5 のらせん型に置き換えた変異体では、6 つの産物のうち 5 つが完全に消え、残る1つもごく微量になった。ふたがループであることが、基質の幅広さに必要だった。",
+   "evidence": [
+    {
+     "quote": "The chimeric enzyme produced only trace amounts of product 2 (Ile-Leu-M-CoA), whereas the formation of the other five products was completely abolished (Fig. 4d).",
+     "section": "Results and discussion"
+    }
+   ]
+  },
+  {
+   "tag": "新しい結合部位",
+   "text": "AT ドメインの基質認識モチーフは、ふつうと違う SGFH 配列だった。M-CoA 用の HAFH や MM-CoA 用の YASH に近づけた変異体でも、基質の好みはほとんど変わらなかった。",
+   "evidence": [
+    {
+     "quote": "Notably, none of these variants displayed a significant shift in substrate selectivity (Fig. 3d), suggesting that residues outside the conserved SGFH motif also contribute to substrate recognition and binding.",
+     "section": "Results and discussion"
+    }
+   ]
+  }
+ ],
+ "lab_notes": {
+  "expression": "大腸菌 BAP1 で発現。",
+  "construct": "全長 corA を pET28a(+) に組み込んだ。Strep-tag II を持つ。",
+  "purification": "Ni-NTA、Strep-Tactin、Superdex 200 ゲルろ過の順に精製。",
+  "sample_prep": "2 mg/mL の CorA 3 μL を Quantifoil R1.2/1.3 金グリッドに載せ、Vitrobot Mark IV で急速凍結した。",
+  "data_collection": "Glacios G2（200 kV）と Falcon 4i で 5,816 本の動画を収集。cryoSPARC で処理し、AlphaFold3 の予測モデルを土台にモデルを作った。",
+  "evidence": [
+   {
+    "quote": "The corA gene fragment was ligated into the pET28a(+) vector, and the resultant recombinant plasmid was transformed into Escherichia coli BAP1 cells.",
+    "section": "Materials and methods"
+   },
+   {
+    "quote": "Imidazole-containing elution buffer (20 mM Tris, pH 7.5, 100 mM NaCl, 300 mM Imidazole) was used to retrieve crude CorA, which was further purified through Strep‑Tag II affinity chromatography.",
+    "section": "Materials and methods"
+   },
+   {
+    "quote": "A Superdex 200 gel filtration column equilibrated with 20 mM Tris (pH 8.0) and 100 mM NaCl was applied for final purification.",
+    "section": "Materials and methods"
+   },
+   {
+    "quote": "For cryo-EM, 3 μL CorA (2 mg·mL⁻¹) was loaded onto glow-discharged Quantifoil R1.2/1.3 gold grids (Quantifoil Micro Tools, Jena, Germany) and then blotted and plunge-frozen with a Vitrobot Mark IV (Thermo Fisher Scientific, Waltham, MA, USA).",
+    "section": "Materials and methods"
+   },
+   {
+    "quote": "A total of 5,816 movies with defocus values from −2.5 to −1.0 μm were recorded, each split into 40 frames over an exposure of 3 s.",
+    "section": "Materials and methods"
+   },
+   {
+    "quote": "The AlphaFold3-predicted CorA structure served as the template for KS-AT didomain de novo modeling.",
+    "section": "Materials and methods"
+   }
+  ]
+ },
+ "keywords": [
+  "CorA",
+  "NRPS-PKS",
+  "ピラジノン",
+  "KSドメイン"
+ ],
+ "editor_notes": "ライセンスは CC BY。PDB 登録は拡張形式の ID（本文は 000027DN）で、通常の 4 文字 ID としてたどれないため図なし。EMDB は EMD-81083（全体）、EMD-81084（AT の局所マップ）。ドッキング・MD の結果は記事に使っていない。"
+}

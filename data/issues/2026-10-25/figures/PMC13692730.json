@@ -1,0 +1,198 @@
+{
+ "pdb_id": "5EXK",
+ "view": {
+  "target": [
+   102.84,
+   3.67,
+   143.84
+  ],
+  "dir": [
+   0.2676,
+   0.414,
+   0.87
+  ],
+  "up": [
+   0.1768,
+   -0.9087,
+   0.3781
+  ],
+  "half": [
+   50.4,
+   62.2
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "LipA（リポ酸合成酵素）",
+   "desc": "Lipoyl synthase",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "基質ペプチド（Hタンパク質）",
+   "desc": "Octanoylated peptide from M. tuberculosis H protein",
+   "entity": "2"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "F3S",
+   "label": "補助クラスター（鉄3個）",
+   "color": "#C23B8E",
+   "desc": "Fe3-S4 Cluster",
+   "entity": [
+    "3"
+   ],
+   "sites": [
+    [
+     "M",
+     "401"
+    ],
+    [
+     "S",
+     "401"
+    ],
+    [
+     "X",
+     "401"
+    ],
+    [
+     "CA",
+     "401"
+    ],
+    [
+     "GA",
+     "401"
+    ],
+    [
+     "KA",
+     "401"
+    ]
+   ]
+  },
+  {
+   "id": "SF4",
+   "label": "[4Fe-4S]（RS）",
+   "color": "#2F9E57",
+   "desc": "Iron/Sulfur Cluster",
+   "entity": [
+    "4"
+   ],
+   "sites": [
+    [
+     "N",
+     "402"
+    ],
+    [
+     "T",
+     "402"
+    ],
+    [
+     "Y",
+     "402"
+    ],
+    [
+     "DA",
+     "402"
+    ],
+    [
+     "HA",
+     "402"
+    ],
+    [
+     "LA",
+     "402"
+    ]
+   ]
+  },
+  {
+   "id": "5AD",
+   "label": "5'-dA",
+   "color": "#7A52C7",
+   "desc": "5'-Deoxyadenosine",
+   "entity": [
+    "5"
+   ],
+   "sites": [
+    [
+     "O",
+     "403"
+    ],
+    [
+     "U",
+     "403"
+    ],
+    [
+     "Z",
+     "403"
+    ],
+    [
+     "EA",
+     "403"
+    ],
+    [
+     "IA",
+     "403"
+    ],
+    [
+     "MA",
+     "403"
+    ]
+   ]
+  },
+  {
+   "id": "MET",
+   "label": "Met",
+   "color": "#D6A21E",
+   "desc": "Methionine",
+   "entity": [
+    "6"
+   ],
+   "sites": [
+    [
+     "P",
+     "404"
+    ],
+    [
+     "V",
+     "404"
+    ],
+    [
+     "AA",
+     "404"
+    ],
+    [
+     "FA",
+     "404"
+    ],
+    [
+     "JA",
+     "404"
+    ],
+    [
+     "NA",
+     "404"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "F3S",
+  "residues": [
+   "C55",
+   "C60",
+   "N62",
+   "I63",
+   "C66",
+   "T73",
+   "R290",
+   "S292",
+   "Y293"
+  ],
+  "hbonds": 0,
+  "pi": 0,
+  "neighbours": [],
+  "label": "補助クラスター（鉄3個）"
+ }
+}

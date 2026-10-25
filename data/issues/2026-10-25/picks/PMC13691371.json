@@ -1,0 +1,141 @@
+{
+ "pmcid": "PMC13691371",
+ "rank": 2,
+ "headline": "Hda–βクランプ複合体は、濃度に応じて組み合わせを変える",
+ "subhead": "クライオ電顕で4つの状態を解析。八量体では活性中心のアルギニンが埋まる",
+ "target_label": "Hda–DnaN（大腸菌）",
+ "target_en": "Hda–β clamp (DnaN) complex (E. coli)",
+ "summary": {
+  "question": "DNA複製の再開始を防ぐ Hda–DnaN 複合体が、不活性な八量体からどう活性な形に切り替わるかは不明だった。",
+  "approach": "クライオ電顕と質量フォトメトリーで、濃度を変えながら複合体の分子量と構造を調べた。",
+  "result": "濃度で割合が変わる複数の集合状態があり、八量体・六量体・三量体の構造を3.12〜3.43 Åで得た。",
+  "learned": "八量体ではArg153が界面に埋まり、三量体では露出する。濃度が下がると活性な形が増えるという制御が考えられる。",
+  "open": "生きた細胞でこれらの状態がどれだけ存在するかは、今後の確認が必要である。",
+  "evidence": {
+   "question": [
+    {
+     "quote": "Yet this structure also raised a central mechanistic question: how can an apparently stable self-inhibited oligomer access lower-order configurations compatible with RIDA activity?",
+     "section": "Introduction"
+    }
+   ],
+   "approach": [
+    {
+     "quote": "Here, we combine cryo-electron microscopy (cryo-EM) and mass photometry (MP) to reveal that the Hda–DnaN complex is not a static, inactive particle, but a concentration-dependent dynamic ensemble that samples multiple oligomeric states.",
+     "section": "Introduction"
+    }
+   ],
+   "result": [
+    {
+     "quote": "Using cryo-electron microscopy and mass photometry, we resolve multiple structural states, including an autoinhibited hetero-octamer, a hetero-hexamer intermediate, and a RIDA-compatible hetero-trimer.",
+     "section": "Abstract"
+    },
+    {
+     "quote": "Our extensive classification and particle-cleaning procedures successfully reconstructed four distinct cryo-EM maps at resolutions of 3.12, 3.43, 3.17, and 3.55 Å, corresponding to Hda4–DnaN4, Hda2–DnaN4, Hda1–DnaN2, and DnaN2, respectively (Fig. 2a, Supplementary Fig. S3, and Table 2).",
+     "section": "Results"
+    }
+   ],
+   "learned": [
+    {
+     "quote": "Importantly, in this state, the arginine finger (Arg153) and surrounding functional surfaces are fully exposed (Fig. 5c), consistent with a RIDA-compatible conformation capable of engaging DnaA.",
+     "section": "Results"
+    },
+    {
+     "quote": "Higher-order assemblies are favored at higher concentrations, whereas lower-order species become enriched upon dilution.",
+     "section": "Discussion"
+    }
+   ],
+   "open": [
+    {
+     "quote": "Nevertheless, direct determination of the oligomeric distribution of Hda–DnaN in living cells will be required to establish the extent to which the higher-order assemblies identified here are populated in vivo.",
+     "section": "Discussion"
+    }
+   ]
+  }
+ },
+ "categories": [
+  "regulation"
+ ],
+ "topics": [
+  "dynamics"
+ ],
+ "highlights": [
+  {
+   "tag": "機構の解明",
+   "text": "八量体のクライオ電顕構造は、以前の結晶構造とよく重なった（RMSD 約 1.8 Å）。DnaA の ATP 加水分解に必要な Arg153 は、Hda どうしの界面に埋まっていた。",
+   "evidence": [
+    {
+     "quote": "The cryo-EM structure of the hetero-octamer exhibits clear D2 symmetry and closely matches the previously reported crystal structure [20] (RMSD ∼1.8 Å), indicating that the autoinhibited assembly is preserved in solution (Fig. 3a).",
+     "section": "Results"
+    },
+    {
+     "quote": "Notably, the catalytic Arg153 is buried within this interface, consistent with an autoinhibited state that prevents interaction with DnaA.",
+     "section": "Results"
+    }
+   ]
+  },
+  {
+   "tag": "機構の解明",
+   "text": "八量体から Hda の二量体が1つ外れた六量体では、Hda どうしの界面だけが大きく変形し、Hda と DnaN の界面はほぼ保たれた。この中間状態は、八量体と三量体をつなぐ分解の経路を示すと著者は考えている。",
+   "evidence": [
+    {
+     "quote": "Our interface comparison shows that the HD interface remains largely unchanged, whereas the HH interface undergoes distortion, particularly in helices α7 and α9 (Fig. 4c), consistent with the reduced binding energy (Fig. 2d, right panel).",
+     "section": "Results"
+    }
+   ]
+  },
+  {
+   "tag": "手法の工夫",
+   "text": "ゲルろ過では状態を分けられなかったが、質量フォトメトリーは濃度を下げるごとに低分子量側へ移る複数の集団を直接捉えた。単粒子の分類と組み合わせて、共存する状態を構造と結びつけた。",
+   "evidence": [
+    {
+     "quote": "In contrast, MP directly detected multiple coexisting species in solution, while cryo-EM provided structural snapshots of these assemblies.",
+     "section": "Discussion"
+    }
+   ]
+  }
+ ],
+ "lab_notes": {
+  "expression": "Hda と His タグ付き DnaN を大腸菌 BL21 (DE3) で共発現。0.3 mM IPTG、16 ℃ で 20 時間。",
+  "construct": "大腸菌の DnaN は N 末端 His6 タグ付きで pET-28a、Hda はタグなしで pET-21b に入れた。",
+  "purification": "Ni–NTA アフィニティのあと Superdex 200 Increase でゲルろ過。約 10 mg/ml に濃縮した。",
+  "sample_prep": "1.5 mg/ml（約 6 μM）の複合体 3 μl を Quantifoil R1.2/1.3 に載せ、Vitrobot Mark IV で急速凍結した。",
+  "data_collection": "JEOL CRYO ARM 200（200 kV）と Gatan K3 で 12 396 本の動画を収集。ピクセルサイズ 0.571 Å。cryoSPARC で処理。",
+  "evidence": [
+   {
+    "quote": "The two plasmids were co-transformed into E. coli BL21 (DE3) cells (Novagen), and transformants were selected using both ampicillin and kanamycin.",
+    "section": "Materials and methods"
+   },
+   {
+    "quote": "The gene encoding Hda (NCBI accession: NP_416991.2) was cloned into a pET-21b vector without an affinity tag.",
+    "section": "Materials and methods"
+   },
+   {
+    "quote": "Purified proteins were concentrated to ∼10 mg/ml using ultrafiltration, flash-frozen in liquid nitrogen, and stored at −80°C.",
+    "section": "Materials and methods"
+   },
+   {
+    "quote": "Three microliters of the Hda–DnaN complex at 1.5 mg/ml (∼6 μM) was applied to glow-discharged holey carbon grids (Cu, R1.2/1.3, 300 mesh, Quantifoil).",
+    "section": "Materials and methods"
+   },
+   {
+    "quote": "A total of 12 396 movies were collected with a total exposure of 76.4 e⁻/Å² over 80 frames.",
+    "section": "Materials and methods"
+   },
+   {
+    "quote": "The eluate was further purified by size-exclusion chromatography (SEC) using a Superdex 200 Increase column (Cytiva)",
+    "section": "Materials and methods"
+   }
+  ]
+ },
+ "keywords": [
+  "Hda",
+  "DnaN",
+  "RIDA",
+  "質量フォトメトリー"
+ ],
+ "editor_notes": "ライセンスは CC BY。DnaN には多数の既存構造があり、論文が初構造と言うのは Hda2–DnaN4 の六量体（中間体）の状態。サイトの New Structure 判定が不自然なら確認してほしい。MD は 1 ns と短く、結合エネルギーの値は参考程度（記事では数値を使っていない）。",
+ "legend_labels": [
+  "DnaN（βクランプ）",
+  "Hda（調節因子）"
+ ]
+}
