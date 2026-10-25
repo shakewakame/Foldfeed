@@ -1,0 +1,33 @@
+{
+ "pdb_id": "29OS",
+ "view": {
+  "target": [
+   143.2,
+   142.83,
+   140.47
+  ],
+  "dir": [
+   0.0291,
+   0.0168,
+   -0.9994
+  ],
+  "up": [
+   0.3483,
+   -0.9374,
+   -0.0056
+  ],
+  "half": [
+   64.1,
+   26.8
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "マウス tau（線維）",
+   "desc": "Isoform Tau-A of Microtubule-associated protein tau",
+   "entity": "1"
+  }
+ ],
+ "ligands": []
+}

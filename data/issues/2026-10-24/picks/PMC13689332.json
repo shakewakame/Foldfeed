@@ -1,0 +1,159 @@
+{
+  "pmcid": "PMC13689332",
+  "rank": 1,
+  "headline": "アルカリホスファターゼとプロテイナーゼKが、繊維を作る",
+  "subhead": "クライオ電顕で、緑膿菌ALPのフィラメントとProtKのナノチューブの構造を決めた",
+  "target_label": "ALP・ProtK（緑膿菌ほか）",
+  "target_en": "Alkaline phosphatase (P. aeruginosa) / proteinase K",
+  "summary": {
+    "question": "酵素が繊維になって活性を調節する例は知られるが、よく使う2つの酵素の重合は報告がなかった。",
+    "approach": "細菌試料のクライオ電顕像に写った未知の繊維を、再構成とモデル構築で同定した。",
+    "result": "緑膿菌ALPの二量体がらせん状に並ぶ繊維（約3.7 Å）と、ProtKの中空ナノチューブ（3.2 Å）が見つかった。",
+    "learned": "ALPの繊維は未同定の密度が足場らしく、ProtKの管は濃度による詰まりと整合する。",
+    "open": "生理的な意義は不明で、活性への影響は今後の実験が必要だ。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Filamentation has been abundantly documented to be responsible for either enzyme activation (6) or repression (7), and thus the polymeric state of an enzyme can provide a new level of biological regulation.",
+          "section": "OBSERVATION"
+        },
+        {
+          "quote": "we have serendipitously discovered a previously unreported filamentation of two commonly used enzymes in molecular microbiology: alkaline phosphatase (ALP) and proteinase K (ProtK).",
+          "section": "OBSERVATION"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "To overcome this problem, we employed asymmetric reconstruction by relaxing symmetry constraints, a strategy successfully leveraged in prior challenging filament studies (9).",
+          "section": "OBSERVATION"
+        },
+        {
+          "quote": "allowing for automated de novo model building using ModelAngelo (15), which identified the subunit as proteinase K",
+          "section": "OBSERVATION"
+        }
+      ],
+      "result": [
+        {
+          "quote": "This approach substantially improved the map, yielding a ~3.7 Å resolution density map that enabled unambiguous atomic model building and identified the filament-forming protein as ALP",
+          "section": "OBSERVATION"
+        },
+        {
+          "quote": "These micrographs revealed the presence of 17 nm diameter nanotubes of unknown composition (Fig. 2A and B).",
+          "section": "OBSERVATION"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "However, the true structural anchors appear to be the unassigned central and peripheral densities.",
+          "section": "OBSERVATION"
+        },
+        {
+          "quote": "Such minimal interfaces are more consistent with a concentration-driven packing than with a cooperatively regulated polymer.",
+          "section": "OBSERVATION"
+        }
+      ],
+      "open": [
+        {
+          "quote": "While the physiological significance of fibrillation in alkaline phosphatase and proteinase K is unknown,",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Distinguishing an evolved function from an incidental property of a sticky, hyperstable enzyme will require direct tests of concentration dependence and of catalytic activity in the polymeric versus monomeric state.",
+          "section": "OBSERVATION"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "enzyme",
+    "protease"
+  ],
+  "highlights": [
+    {
+      "tag": "初構造",
+      "text": "ALP の二量体は 1 個ごとに 28.4 Å 進み 83.2° ねじれて並び、らせんになる。軸の中心と外周には、タンパク質ではない正体不明の密度が走る。",
+      "evidence": [
+        {
+          "quote": "Tilted at ~40° relative to the central filament axis, these ALP dimers assemble into a 1-start helix with a rise of 28.4 Å and a twist of 83.2° per dimer.",
+          "section": "OBSERVATION"
+        },
+        {
+          "quote": "the map revealed two striking, unassigned densities: one running directly down the central axis of the filament and another wrapping along the outer periphery (Fig. 1C).",
+          "section": "OBSERVATION"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "密度に接する ALP の表面は正に帯電し、39-KKK-41 や R219・R248 が接する。大腸菌 ALP にこれらの残基はない。著者は、密度の正体を負電荷の分子（DNA や多糖など）と考えている。",
+      "evidence": [
+        {
+          "quote": "The 39-KKK-41 motif surrounds the central axis density, while residues R219 and R248 contact the peripheral density (Fig. 1F).",
+          "section": "OBSERVATION"
+        },
+        {
+          "quote": "Intriguingly, these positively charged residues are completely absent in the homologous periplasmic E. coli ALP (UniProt P00634), which shares 74% sequence identity (Fig. 1G).",
+          "section": "OBSERVATION"
+        },
+        {
+          "quote": "Such concentrated electropositive tracks indicate that these unknown densities represent negatively charged biomolecules",
+          "section": "OBSERVATION"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "ProtK は 8 本のプロトフィラメントが逆向きに並び、外径約 170 Å・内径約 90 Å の管になる。単量体は既存の結晶構造とほぼ同じで、活性部位は管の外に開いている。",
+      "evidence": [
+        {
+          "quote": "The hollow tubes (with an inner diameter of ~90 Å) are composed of eight ProtK protofilaments that run in an antiparallel fashion as a result of the global dihedral (D1) symmetry (Fig. 2E and F).",
+          "section": "OBSERVATION"
+        },
+        {
+          "quote": "The structural overlay between 3PRK and our model (Fig. 2G) shows that the active site of ProtK is solvent accessible in the nanotube assembly (Fig. 2D through F).",
+          "section": "OBSERVATION"
+        },
+        {
+          "quote": "Outer diameter: ~170 Å, inner diameter: ~90 Å.",
+          "section": "Figure legends"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": null,
+    "construct": null,
+    "purification": null,
+    "sample_prep": "ALP はリン酸制限下で育てた緑膿菌の細胞外の剪断試料、ProtK は市販品で分解したケーブル細菌の細胞壁（サッキュラス）の試料。",
+    "data_collection": "ALP は対称性を課さない再構成（約3.7 Å）、二量体は C2 で局所精製（約3.3 Å）。ProtK はらせんパラメータ rise 8.36 Å・twist −83.72°（3.2 Å）で、ModelAngelo で自動構築。",
+    "evidence": [
+      {
+        "quote": "Cryo-EM micrographs of an extracellular sheared sample from Pseudomonas aeruginosa grown under phosphate-limiting conditions revealed filaments of unknown identity",
+        "section": "OBSERVATION"
+      },
+      {
+        "quote": "we collected cryo-EM data on ProtK (commercial source: cat. no. 124568, Merck/Sigma-Aldrich) digested sacculi of the cable bacterium Electrothrix gigas.",
+        "section": "OBSERVATION"
+      },
+      {
+        "quote": "Local refinement focused on a single ALP dimer with imposed C2 symmetry improved the resolution to ~3.3 Å, providing additional confirmation of the ALP assignment.",
+        "section": "OBSERVATION"
+      },
+      {
+        "quote": "Standard helical processing was used to refine the rise and twist to 8.36 Å and −83.72° and yielded a 3.2 Å reconstruction (Fig. 2C)",
+        "section": "OBSERVATION"
+      }
+    ]
+  },
+  "keywords": [
+    "アルカリホスファターゼ",
+    "プロテイナーゼK",
+    "フィラメント",
+    "クライオ電顕"
+  ],
+  "ga_pdb_id": "36PY",
+  "editor_notes": "ALP（Q02QC9）は PDB にそれまで構造がなく first_structure=true。ただし論文は『初構造』とは書かず、重合が未報告と述べている。ProtK は既存の結晶構造が多数ある別状態（ナノチューブ）。PDB の引用は『To be provided later』で、2 エントリは deposition statement から対応づけた。Methods は補足資料で、packet にない。ProtK ナノチューブは濃度によるアーティファクトの可能性を著者自身が述べている。",
+  "legend_labels": [
+    "ALP（ホスファターゼ）"
+  ]
+}

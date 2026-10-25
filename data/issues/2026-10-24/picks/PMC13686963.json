@@ -1,0 +1,120 @@
+{
+  "pmcid": "PMC13686963",
+  "rank": 12,
+  "headline": "カーボンナノチューブの膜は、クライオ電顕の粒子を溶液から直接つかまえる",
+  "subhead": "標識したナノチューブに細胞抽出液から目的の複合体だけを捕まえ、向きの偏りも減らした",
+  "target_label": "カーボンナノチューブ支持膜",
+  "target_en": "Carbon nanotube grids (20S proteasome, GroES/GroEL)",
+  "summary": {
+    "question": "クライオ電顕の試料づくりでは、気液界面（空気と水の境目）がタンパク質に与える影響が大きな障害になっている。",
+    "approach": "カーボンナノチューブ（CNT）の膜を電顕グリッドの支持膜にし、親和性タグで修飾して20Sプロテアソームや GroES/GroEL で試した。",
+    "result": "修飾した CNT は目的の粒子だけを捕まえ、GroES/GroEL では向きの偏りの指標 SCF が0.322から0.943に上がった。",
+    "learned": "CNT は粒子を氷の中でいろいろな向きに配置し、細胞抽出液から目的の複合体を直接精製して電顕にかけられる。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Specimen preparation is a critical and rate-limiting step in cryo-EM structural analysis, primarily due to challenges posed by the air-water interface.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "In this study, we introduce carbon nanotubes (CNTs) as a one-dimensional fibrous support material to address this issue.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Furthermore, CNTs biofunctionalized with affinity tags exhibit strong specificity in binding target macromolecules, facilitating direct purification of targets from cell lysates and on-grid assembly of complexes for subsequent cryo-EM analysis.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "In contrast, structural reconstruction of the GroES/GroEL complex using particles along the streptavidin-activated CNT grid not only validated on-grid assembly of the GroES/GroEL complex, but also showed a much more diverse orientational distribution than that in the open regions, with a much higher SCF value of 0.943 (Fig. 4f).",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "The CNTs, embedded within the vitreous ice, provide target macromolecules with greater freedom to interact in an omnidirectional configuration, which yields a diverse orientational distribution of particles.",
+          "section": "Discussion"
+        },
+        {
+          "quote": "The results showed minimal capture of proteasome particles, with only small dots visible along the CNTs (Fig. 5a).",
+          "section": "Results"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "other"
+  ],
+  "topics": [
+    "method"
+  ],
+  "highlights": [
+    {
+      "tag": "手法の工夫",
+      "text": "Ni-NTA で修飾した CNT には、His タグ付きの20Sプロテアソームが100 nm あたり5.9個ついた。イミダゾールで洗うと2.0個に減り、修飾なしの対照（2.4個）と同程度になった。",
+      "evidence": [
+        {
+          "quote": "On average, 5.9 particles per 100 nm on the Ni²⁺-NTA-modified CNTs were observed, and after being washed with 500 mM imidazole, 2.0 particles per 100 nm remained, which was comparable to the 2.4 particles per 100 nm on the NTA-modified CNTs group.",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "実験Tips",
+      "text": "PEG24-ビオチンで修飾した CNT は、ストレプトアビジンで活性化しないと粒子が付かなかった。大腸菌の細胞抽出液から Avi タグ付きの20Sプロテアソームだけを捕まえ、その密度マップも再構成できた。",
+      "evidence": [
+        {
+          "quote": "Based on the on-grid purification setup, we could reconstruct the density map of 20S proteasome from cell lysates overexpressing Avi-tagged 20S proteasome (Fig. 5d).",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "手法の工夫",
+      "text": "CNT に固定した GroES/GroEL の局所分解能では、GroES と反対側の端が低かった。論文は、気液界面に出た側が壊れた可能性を述べ、界面が構造決定を損なうことの直接の証拠とみている。",
+      "evidence": [
+        {
+          "quote": "Consequently, these results provide direct evidence that the air-water interface can compromise cryo-EM structural determination and that functionalized CNTs could mitigate this effect.",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": null,
+    "construct": "Avi タグ付き GroES や His6 タグ付き20Sプロテアソームを使用。",
+    "purification": null,
+    "sample_prep": "超配向 CNT アレイから CNT 膜を引き出して電顕グリッドに載せ、Ni2+-NTA または PEG24-ビオチンで修飾。ビオチン修飾はストレプトアビジンで活性化して使用。",
+    "data_collection": "Titan Krios（300 kV）、K3 カメラ。ピクセルサイズ1.0742 Å、線量50 e-/Å2。再構成は cryoSPARC。",
+    "evidence": [
+      {
+        "quote": "The CNT arrays were synthesized on a silicon wafer using a low-pressure chemical vapor deposition method27, spun to form crossed CNT films, and then transferred onto EM grids (Fig. 2a and Supplementary Fig. 1, see Methods for details)28,29.",
+        "section": "Results"
+      },
+      {
+        "quote": "To endow the CNTs with specific binding capacity, we next sought to functionalize the CNTs with various affinity ligands, such as Ni²⁺-NTA or PEG24-biotin, using our previously established protocols31,32.",
+        "section": "Results"
+      },
+      {
+        "quote": "During data collection, all the micrographs were fractioned to 32 frames with a total electron dose of 50 e−/Å2 and motion-corrected using MotionCor247.",
+        "section": "Methods"
+      },
+      {
+        "quote": "The motion-corrected micrographs were imported into CryoSPARC for patch CTF estimation, micrograph selection, Topaz particle picking, 2D classification, and 3D homo-refinement48.",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "カーボンナノチューブ",
+    "クライオ電顕",
+    "試料調製",
+    "オングリッド精製"
+  ],
+  "method_label": "Cryo-EM・3.1–4.1 Å（EMDB のマップ）",
+  "editor_notes": "手法の論文。登録されたのは EMDB のマップ3つ（EMD-80843〜80845）で PDB エントリはなく、構造図は付かない。ここでの 20S プロテアソームや GroES/GroEL は既知の複合体で、新しい構造の報告というより手法の実証。注目の構造ではなく Structure Update に入る形でよいか編集者に確認したい。",
+  "legend_labels": []
+}

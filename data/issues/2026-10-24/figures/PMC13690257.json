@@ -1,0 +1,81 @@
+{
+ "pdb_id": "28ZC",
+ "view": {
+  "target": [
+   -0.04,
+   6.9,
+   25.4
+  ],
+  "dir": [
+   0.8143,
+   0.2801,
+   0.5085
+  ],
+  "up": [
+   0.2506,
+   -0.9597,
+   0.1272
+  ],
+  "half": [
+   26.5,
+   28.1
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "METTL16（メチル基転移）",
+   "desc": "RNA N(6)-adenosine-methyltransferase METTL16",
+   "entity": "1"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "I0C",
+   "label": "BA4",
+   "color": "#C23B8E",
+   "desc": "(2~{S})-4-[[(2~{R},3~{S},4~{R},5~{R})-5-(6-aminopurin-9-yl)-3,4-bis(oxidanyl)oxolan-2-yl]methyl-[3-[[9-[(2~{R},5~{R})-5-(hydroxymethyl)-3,4-bis(oxidanyl)oxolan-2-yl]-7~{H}-purin-6-yl]amino]propyl]amino]-2-azanyl-butanoic acid",
+   "entity": [
+    "3"
+   ],
+   "sites": [
+    [
+     "I",
+     "308"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "I0C",
+  "residues": [
+   "L75",
+   "P77",
+   "R82",
+   "G110",
+   "T111",
+   "S114",
+   "Y117",
+   "T132",
+   "E133",
+   "V134",
+   "D135",
+   "C138",
+   "V160",
+   "Q162",
+   "T164",
+   "L165",
+   "N184",
+   "P185",
+   "P186",
+   "F187",
+   "F227",
+   "R230",
+   "R282"
+  ],
+  "hbonds": 14,
+  "pi": 0,
+  "neighbours": [],
+  "label": "BA4"
+ }
+}

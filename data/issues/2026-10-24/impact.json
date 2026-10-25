@@ -1,0 +1,311 @@
+{
+ "screened": 29,
+ "scored": [
+  {
+   "pmcid": "PMC13643707",
+   "type": "drug",
+   "scores": {
+    "novelty": 2,
+    "reach": 1,
+    "structure": 2,
+    "support": 2
+   },
+   "selected": false,
+   "reason": "採点は 7 点（2/1/2/2）だが、自前の Mac1–12p 結晶構造（PDB ID は本文になし）を報告しているため、注目の構造ではなく新しい構造（図なし）として記事にした。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "we converted GS-441524 (IC50 of ~10 μM for SARS-CoV-2 Mac1) to KP-S54 (18c), a potent inhibitor of both SARS-CoV-2 Mac1 (IC50: 44 nM) and Middle East respiratory syndrome coronavirus (MERS-CoV) Mac1 (IC50: 91 nM) through an iterative direct-to-biology approach.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "This result suggests GS-441524 has the potential of growing into tight-binding and possibly broad-spectrum antiviral drugs targeting viral macrodomains.",
+      "section": "Introduction"
+     }
+    ],
+    "structure": [
+     {
+      "quote": "We were able to obtain crystals and solve the structure of 12p with SARS-CoV-2 Mac1.",
+      "section": "Results"
+     }
+    ],
+    "support": [
+     {
+      "quote": "To validate whether the inhibitory activities observed in the FP assay can reflect compounds’ potency against Mac1 enzyme activity",
+      "section": "Results"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13689087",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 2,
+    "reach": 1,
+    "structure": 1,
+    "support": 2
+   },
+   "selected": true,
+   "reason": "公開済みの抗体・スパイク構造から、AME を起こす抗体の群に固有のエピトープと RBD 調節の特徴を見つけ、偽ウイルス実験で確かめた。6 点の続報寄りだが、AME を起こさない群があることを構造と実験で示した点が新しい。立体衝突は計算で、構造の優勢は予測できないと著者も書いている。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "To our knowledge, these epitope locations and conformational regulation characteristics have not been previously identified as unique features of AME antibodies.",
+      "section": "Discussion"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "Understanding the mechanism of AME into FcγR-expressing cells is critical to preventing it and its downstream inflammatory effects (7).",
+      "section": "Introduction"
+     }
+    ],
+    "structure": [
+     {
+      "quote": "We then examined the published structures of each antibody described in Table 1 to identify their structural epitopes and determine any epitope similarities for antibodies within groups defined by shared conformational regulation and AME characteristics.",
+      "section": "Results"
+     }
+    ],
+    "support": [
+     {
+      "quote": "All the tested Group 1 and Group 2 antibodies were able to inhibit AME by both Group 3 antibodies in a concentration-dependent manner (Fig. 4A and B).",
+      "section": "Results"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13686932",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 3,
+    "reach": 2,
+    "structure": 0,
+    "support": 2
+   },
+   "selected": false,
+   "reason": "キメラ mRNA から GSDMD–TMEM106A が生まれ、細胞・マウスで機能することを示した分野を変える成果だが、構造は AlphaFold 3 の予測だけで、実験構造による裏付けがない。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "We establish that protein-coding chimeric mRNAs formed by regulated transcript fusion events are operative during inflammation and immunity.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "After activation of the inflammasome, GSDMD–TMEM106A directly interacts with canonical GSDMD N termini to accelerate and enhance pore formation and IL-1β release.",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "Finally, we show that GSDMD–TMEM106A balances host defence and immunopathology in vivo",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13687109",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 2,
+    "reach": 1,
+    "structure": 0,
+    "support": 2
+   },
+   "selected": false,
+   "reason": "ファージ由来の CRISPR 対抗系 Healer を見つけた。Gp63 の結合部位の根拠は AlphaFold 3 の予測で、実験で決めた構造がない（structure 0）。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "Here, we report a phage-encoded two-protein system, termed Healer, which neutralizes CRISPR immunity via a post-cleavage DNA repair mechanism.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "Notably, co-expression of the Healer system with Cas9/Cas12 in E. coli, P. aeruginosa, and A. baumannii demonstrated high phage genome-editing efficiency.",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "Mechanistic investigations elucidate that Gp63 acts as a rapid-response effector of CRISPR-induced DNA breaks.",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13689292",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 1,
+    "reach": 1,
+    "structure": 2,
+    "support": 1
+   },
+   "selected": false,
+   "reason": "古細菌 SRP54 の変異体 3 種と野生型の高分解能構造を自前で報告しており、新しい構造の論文。PDB ID が本文・候補データになく uses_existing に分類されたため、注目の構造ではなく新しい構造の記事の候補（親エージェントに報告）。5 点で基準未満。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "Here, we present high-resolution structures of clinically relevant SRP54 mutant proteins from the archaea Pyrococcus furiosus.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "The structures of three mutants are presented along with the model wild type.",
+      "section": "Abstract"
+     }
+    ],
+    "structure": [
+     {
+      "quote": "Here, we present high-resolution structures of clinically relevant SRP54 mutant proteins from the archaea Pyrococcus furiosus.",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "The structures of three mutants are presented along with the model wild type.",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13689173",
+   "type": "drug",
+   "scores": {
+    "novelty": 2,
+    "reach": 1,
+    "structure": 0,
+    "support": 2
+   },
+   "selected": false,
+   "reason": "プレフュージョン F に結合する sdAb-Fc の Hu3F5 は中和活性が高いが、構造は取っておらず、著者も「高分解能の構造による裏付けがない」と書いている（structure 0）。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "Mechanistic analyses show that Hu3F5 neutralizes RSV by locking the F protein in its prefusion state, independent of Fc-mediated effector functions.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "We report the development of Hu3F5, a novel prefusion F-specific single-domain antibody-Fc fusion protein.",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "Although these complementary findings support a proposed “locking” mechanism, direct high-resolution structural evidence for Hu3F5-mediated prefusion stabilization is currently lacking.",
+      "section": "Discussion"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13687069",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 1,
+    "reach": 2,
+    "structure": 0,
+    "support": 1
+   },
+   "selected": false,
+   "reason": "TREK-2 の enhanced-sampling MD が中心で、電気生理は変異の予測を確かめた一部のみ。実験構造による裏付けがない（structure 0）。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "The simulations reveal a shared energetic axis coupling the lower helices, proximal C-terminus, and selectivity filter to govern channel gating.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "The TREK subfamily of two-pore domain potassium (K2P) channels is a key regulator of neuronal excitability",
+      "section": "Introduction"
+     }
+    ],
+    "support": [
+     {
+      "quote": "Predicted conformational effects of a disease-mimicking mutation were validated electrophysiologically using a conformation-sensitive TREK-2 inhibitor.",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13685925",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 1,
+    "reach": 1,
+    "structure": 0,
+    "support": 1
+   },
+   "selected": false,
+   "reason": "アクチンのリン酸放出を全原子 MD で調べた計算研究。既存構造は出発点のみ（structure 0）。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "Simulations show that egress of Pi through the protein channels, including through the N111-R177 backdoor, is not rate limiting and that subunits at the filament ends use alternative egress pathways.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "Actin filaments offer a unique opportunity to understand the fundamentals of Pi release because identical subunits at filament ends and the interior release Pi at markedly different rates.",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "The calculated dissociation rates of Pi from ADP-Mg2+ in the active site correlate with experimentally measured Pi release rates",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13689465",
+   "type": "drug",
+   "scores": {
+    "novelty": 1,
+    "reach": 1,
+    "structure": 0,
+    "support": 2
+   },
+   "selected": false,
+   "reason": "OXA-2 の W157L 変異体が ceftazidime/avibactam 耐性を与えることを速度論で示した。構造は既存の 1K38 の上でのモデリングだけ（structure 0）、novelty 1。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "Kinetic analyses revealed a marked increase in the affinity and catalytic efficiency of OXA-1381 against ceftazidime and ceftolozane",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "The findings document the in vivo evolution of ceftazidime/avibactam resistance in an ESBL-producing P. aeruginosa background",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "Inhibition assays showed similar susceptibility to avibactam for both enzymes, confirming that resistance was driven by enhanced hydrolysis rather than by impaired inhibition.",
+      "section": "Abstract"
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,146 @@
+{
+  "pmcid": "PMC13690239",
+  "rank": 8,
+  "headline": "C型肝炎の抗体は、成熟前でも同じ形でE2に結合する",
+  "subhead": "生殖系列に戻した抗体とE2の結晶構造。親和性を上げた改良E2でも、ナイーブB細胞は増えなかった",
+  "target_label": "HCV E2 コア（HK6a）",
+  "target_en": "HCV E2 core (genotype 6a) + germline Fabs",
+  "summary": {
+    "question": "C型肝炎ウイルスに効く広域中和抗体の前駆体が、E2をどう認識するのかは分かっていなかった。",
+    "approach": "生殖系列型に戻した4種の抗体 Fab と E2 コアの複合体を結晶構造で調べ、構造を手がかりに E2 を改良した。",
+    "result": "どの複合体でも成熟抗体と近い結合様式だった。改良 E2 は親和性が上がったが、ナイーブB細胞への結合は増えなかった。",
+    "learned": "E2 を認識する鍵の特徴は成熟前から使えるが、親和性を上げるだけではナイーブB細胞を呼び込めない。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "However, the structural basis of GL recognition remains unclear.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "we determined the crystal structures of the HK6a E2c3 core in complex with the Fab domain of four reverted Abs: AR3A1-69, AR3CGL, U11–69, and U1GL at 2.0, 1.9, 2.7, and 3.3 Å resolution, respectively",
+          "section": "Results"
+        },
+        {
+          "quote": "Guided by these insights, we engineered E2 variants to enhance GL Ab interactions and stability.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "High-resolution structures reveal a conserved mode of engagement, indicating that key epitope features are accessible prior to affinity maturation.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Although these designs increased affinity, they did not improve engagement of naïve B cells, highlighting a key constraint in GL-targeting strategies.",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "The lack of enhanced naïve B-cell engagement despite improved biochemical affinity suggests that increasing Ab affinity alone is insufficient to promote productive activation of germline B-cell receptors.",
+          "section": "Discussion"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Further structural and biochemical characterization of the interactions between E2 and GL reverted Abs, combined with structure-guided immunogen design and functional validation, will be required",
+          "section": "Discussion"
+        }
+      ]
+    },
+    "open": "ワクチン候補の設計には、E2 と前駆体抗体の追加の構造・生化学の解析が必要だ。"
+  },
+  "categories": [
+    "immune",
+    "pathogen"
+  ],
+  "topics": [
+    "antibody",
+    "design"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "4種の生殖系列型 Fab とE2の結晶構造では、抗体の接近角度や CDR ループの位置に大きな違いはなく、重鎖が主役という VH1-69 抗体の結合様式も保たれた。成熟抗体との接触の多くも維持されていた。",
+      "evidence": [
+        {
+          "quote": "These observations suggest that GL precursors engage the antigen in a manner that closely resembles that of mature Abs.",
+          "section": "Results"
+        },
+        {
+          "quote": "Overall, no substantial redistribution of the angle of approach (S3A Fig) or change in the CDRs’ position and conformation was observed (Fig 3A), and HC dominance was preserved",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "生殖系列型の抗体は E2 に結合できるが、解離が速く、親和性は成熟型より5〜10倍（AR3A、AR3C、U1）から1000倍超（212.1.1）低かった。構造では特定の相互作用の欠落を指摘できず、著者は CDR ループの動きやすさの違いが影響すると推測している。",
+      "evidence": [
+        {
+          "quote": "This reduced binding was mainly due to faster dissociation rates (koff), emphasizing the importance of SHM in stabilizing the E2-Ab interaction",
+          "section": "Results"
+        },
+        {
+          "quote": "We could not identify a single specific interaction responsible for the decreased binding affinity observed in the GL-reverted Abs.",
+          "section": "Discussion"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "FuncLib と PROSS で E2 を設計し、成熟型抗体とは同程度、生殖系列型の AR3C とは最大で約4倍強く結合する改良型ができた。しかしヒト血液やアカゲザルのナイーブB細胞への結合は野生型と変わらず、PROSS 設計の PD1.0 はむしろ減った。",
+      "evidence": [
+        {
+          "quote": "These findings indicate that while our computational designs improved the biochemical binding affinity to mature Abs in vitro, these improvements did not translate to enhanced B-cell binding in the NHP model.",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "抗体は HEK293expi GnTI− 細胞、E2c3 は HEK293T GnTI− の安定発現株などで発現。",
+    "construct": "E2c3 は E2 の 412–645 番で、VR2・VR3 を内部欠失し N448・N576 の糖鎖部位を除いた。",
+    "purification": "抗体 AR3A を固定した Protein G カラムで精製し、Superdex 200 Increase でゲルろ過。",
+    "sample_prep": "シッティングドロップ蒸気拡散法で20 °C、タンパク質 10 mg/ml。",
+    "data_collection": "ESRF の ID30-A1・ID30-A3・ID23-2 で100 K 測定し、Phaser による分子置換で解いた。",
+    "evidence": [
+      {
+        "quote": "E2c3 cloning - the genes of HCV H77 and HK6a E2c3 (E2 residues 412–645 with an internal truncation of VR2, VR3, and the removal of N448 and N576 glycosylation sites) were cloned into the pCMVtpa vector [37].",
+        "section": "Materials and methods"
+      },
+      {
+        "quote": "H77 E2c3 and HK6a E2c3 were expressed in stable HEK293T GnTI- cell lines that constitutively express the E2c3 core domain.",
+        "section": "Materials and methods"
+      },
+      {
+        "quote": "The media were loaded onto an IgG AR3A-conjugated Protein G column using PBS as the binding buffer and eluted with 100 mM Glycine, (pH 2.2).",
+        "section": "Materials and methods"
+      },
+      {
+        "quote": "Crystallization trays were set up using the sitting-drop vapor-diffusion method at 20°C.",
+        "section": "Materials and methods"
+      },
+      {
+        "quote": "Diffraction datasets were collected at the European Synchrotron Radiation Facility (ESRF) beamlines ID30-A1 (HK6a E2c3-AR3A1-69), ID30-A3 (HK6a E2c3-AR3CGL, HK6a E2c3-U1GL), and ID23–2 (HK6a E2c3-U11–69), Grenoble, France, at 100 K.",
+        "section": "Materials and methods"
+      }
+    ]
+  },
+  "keywords": [
+    "HCV",
+    "E2",
+    "生殖系列",
+    "ワクチン",
+    "VH1-69"
+  ],
+  "editor_notes": "PDB ID は 30BC・30CP・30BG・30BH（entry に論文の引用なし、データ可用性の記述で対応づけ）。本文は『AR3-targeted GL-reverted Abs と E2 の最初の構造的解析』と書くが、E2 の構造自体は既存。first_claim は付けていない。AR3C-GL 複合体で CDRH2 の接触が消えたのは結晶パッキングによる可能性と著者が述べている。BLI と ELISA で結果が食い違う点も論文に記載あり。",
+  "legend_labels": [
+    "AR3C-GL 重鎖（Fab）",
+    "AR3C-GL 軽鎖（Fab）",
+    "HCV E2（外被）"
+  ],
+  "ligand_names": {}
+}

@@ -1,0 +1,45 @@
+{
+ "pdb_id": "30CP",
+ "view": {
+  "target": [
+   4.83,
+   17.71,
+   23.78
+  ],
+  "dir": [
+   -0.2355,
+   -0.7559,
+   -0.6108
+  ],
+  "up": [
+   -0.8449,
+   -0.1514,
+   0.513
+  ],
+  "half": [
+   54.8,
+   24.6
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "AR3C-GL 重鎖（Fab）",
+   "desc": "Fab AR3C GL heavy chain",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "AR3C-GL 軽鎖（Fab）",
+   "desc": "Fab AR3C GL light chain",
+   "entity": "2"
+  },
+  {
+   "color": "#5F9296",
+   "label": "HCV E2（外被）",
+   "desc": "HCV E2 envelope protein",
+   "entity": "3"
+  }
+ ],
+ "ligands": []
+}
