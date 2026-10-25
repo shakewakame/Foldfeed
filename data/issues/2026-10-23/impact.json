@@ -1,0 +1,372 @@
+{
+ "screened": 111,
+ "scored": [
+  {
+   "pmcid": "PMC13681069",
+   "type": "method",
+   "scores": {
+    "novelty": 2,
+    "reach": 2,
+    "structure": 2,
+    "support": 2
+   },
+   "selected": true,
+   "reason": "構造が既知の10種のタンパク質で、高pHのNMRにより水素結合を約91%の精度で特定できると示した新しい手法。精度の評価も、フォルドンの解釈も、既存のX線・クライオ電顕・NMR構造との照合に頼る。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "As an alternative, we explored the use of NMR between pH 10 and 11, conditions that promote rapid exchange, for identifying backbone amide protons involved in H-bonds.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "High-pH NMR experiments provide a sensitive, fast, and broadly applicable approach to map H-bonding.",
+      "section": "Abstract"
+     }
+    ],
+    "structure": [
+     {
+      "quote": "This yielded a data set of some 750 amide proton sites from 10 proteins with X-ray or cryoEM structures to investigate the relationship between HX protection at high pH and H-bonded structure.",
+      "section": "Results"
+     },
+     {
+      "quote": "Survival of amide protons at high pH in standard 2D 1H–15N HSQC spectra for 15N-labeled proteins in H2O, or TOCSY for unlabeled proteins, identifies H-bonds with ~91% accuracy, exceeding the ~80% accuracy of traditional H/D exchange experiments in D2O.",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "The foldons observed at high pH are consistent with partially folded structures previously characterized near neutral pH by native state hydrogen exchange, equilibrium unfolding, and protein fragment studies.",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13684300",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 2,
+    "reach": 2,
+    "structure": 1,
+    "support": 2
+   },
+   "selected": true,
+   "reason": "タウの線維が可溶性ペプチドを取り込むとき、最初に接触する部位（V300）を残基ごとのNMRで特定し、スピンラベルで塞ぐと伸長が止まると示した。ただしモデルのペプチド線維（既存のクライオ電顕構造 8V1N）での結果で、水の解析にはMDを含む。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "Together, these results demonstrate that templated seeding is initiated through a single dominant interaction hotspot, here centered at V300 in CR1.",
+      "section": "Results"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "That spin-labeling site 300 alone effectively suppressed seeding shows that regions beyond the canonical VQIINK and VQIVYK hexapeptide motifs can govern the initiation of soluble tau–fibril interactions, expanding therapeutic targeting beyond established amyloid cores to the free-energy contribution of hydration-water release from fibril surfaces.",
+      "section": "Discussion"
+     }
+    ],
+    "structure": [
+     {
+      "quote": "One strand of the jR2R3 P301L cryo-EM structure (PDB #8V1N) with an internal sidechain zipper was used for the water structure analysis.",
+      "section": "Materials and Methods"
+     },
+     {
+      "quote": "A series of 1H-15N SOFAST-HMQC spectra was recorded after the start of the seeding reaction to track the change of 1H and 15N spectral properties of seven selected residues I298, V300, L301, V306, I308, V309, and V313 of jR2R3-P301L (Fig. 2A).",
+      "section": "Results"
+     }
+    ],
+    "support": [
+     {
+      "quote": "Among the three spin-labeled variants, jR2R3-P301L labeled at site 300 in CR1 gave the lowest plateau ThT intensity (Fig. 4A), indicating the strongest inhibition of templated seeding when CR1 is blocked.",
+      "section": "Results"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13685950",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 2,
+    "reach": 2,
+    "structure": 1,
+    "support": 2
+   },
+   "selected": true,
+   "reason": "細菌の共有結合型接着ドメイン（TED）の結合が元に戻る反応で、pHによって切り替わると示した。構造の裏付けは既存の結晶構造との照合にとどまり、結合の姿は AlphaFold3 の予測に頼る。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "In this study, we demonstrated that TED-mediated covalent anchoring is reversible and that its equilibrium is regulated by pH.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "Similar pH-dependent behavior was observed in phylogenetically distinct TEDs, suggesting that pH-responsive adhesion is likely to be a broadly shared feature of TED-containing adhesins across Gram-positive bacteria.",
+      "section": "Abstract"
+     }
+    ],
+    "structure": [
+     {
+      "quote": "In a previously reported crystal structure of a Cys-to-Ala mutant, the Gln carboxamide group remains in the Lys-accommodating pocket (figs. S5 and S8), potentially hindering insertion of the lysine side chain.",
+      "section": "Results"
+     }
+    ],
+    "support": [
+     {
+      "quote": "The Q261A mutant, which cannot form an intermolecular cross-link, showed no dependence on pH during dissociation, whereas the wild-type complex dissociated faster at lower pH.",
+      "section": "Results"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13625682",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 2,
+    "reach": 1,
+    "structure": 1,
+    "support": 2
+   },
+   "selected": false,
+   "reason": "フッ素の位置で誘導二量体の親和性が2桁変わると示したが、その系（トリパレドキシン）だけの知見で、合計6点でも上位3本に入らなかった。構造の根拠は自前のNMRの化学シフト変化を既存の結晶構造 6GXG に写したもの。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "Here, using a series of self-assembling homodimerizers that target an essential parasitic redox enzyme, we present a systematic, fluorination-guided strategy to tune induced protein homodimer affinity by two orders of magnitude.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "These findings establish a generalizable framework for understanding how ligand fluorination shapes protein surface dynamics and induced protein interactions.",
+      "section": "Abstract"
+     }
+    ],
+    "structure": [
+     {
+      "quote": "Next, the inhibitor-induced chemical shift perturbations (CSPs) were mapped onto the Tpx/para-CFT dimer crystal structure (Fig. 2a and S8).",
+      "section": "Results and discussion"
+     }
+    ],
+    "support": [
+     {
+      "quote": "Dissociation constants (KD) of the chemically induced Tpx dimers were obtained using dilution ITC and corroborated a strong dependence between the inhibitor fluorination pattern and induced dimer affinity, spanning two orders of magnitude from meta-CFT (2, KD = 3.7 ± 1.5 µM) to CtFT (4, KD = 410 ± 56 µM) (Fig. 1e and S6).",
+      "section": "Results and discussion"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13684282",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 2,
+    "reach": 2,
+    "structure": 0,
+    "support": 2
+   },
+   "selected": false,
+   "reason": "TRPV1が刺激ごとに異なる開状態をとるという主張は新しいが、根拠は電気生理・蛍光測定と Rosetta のモデルで、2-APB の開状態はクライオ電顕で決まっていない（structure 0）。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "Our functional data reported here, together with the latest structural data (20), establish that TRPV1 activates into distinct open-pore conformations.",
+      "section": "Discussion"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "Besides guiding practical approaches to regulate TRPV1 activities, findings from the present study offer clues for understanding biological polymodal receptors.",
+      "section": "Discussion"
+     }
+    ],
+    "structure": [],
+    "support": [
+     {
+      "quote": "The predicted conductance levels of these models matched well to our experimental observations (Fig. 4D).",
+      "section": "Results"
+     },
+     {
+      "quote": "AMFE measurements confirmed that the open conformations adopted by the TRPV1 pore depend on the activators used and differ sufficiently for permeant ions to sense these differences as they pass through.",
+      "section": "Results"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13685990",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 2,
+    "reach": 2,
+    "structure": 0,
+    "support": 2
+   },
+   "selected": false,
+   "reason": "間期キネトコアでCCANが球殻状に並ぶという像は新しいが、構造の根拠は AlphaFold3 と粗視化MD、および発現顕微鏡（ExM）で、X線・クライオ電顕・NMRで決めた構造による確かめがない（structure 0）。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "Here, using in silico and in vivo analyses, we demonstrate that multiple CCAN units form a spherical shell-like structure in interphase DT40 kinetochores.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "These findings provide important insights into the spatial organization of functional kinetochores within cells.",
+      "section": "Abstract"
+     }
+    ],
+    "structure": [],
+    "support": [
+     {
+      "quote": "Super-resolution imaging reveals the spherical shell-like structure at DT40 kinetochores, and CENP-C knockout or expression of a CENP-C DNA binding deficient mutant abolishes the structure, consistent with the simulation-derived model.",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13679058",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 2,
+    "reach": 1,
+    "structure": 0,
+    "support": 2
+   },
+   "selected": false,
+   "reason": "トリガー因子が新生鎖に結合する動きを1分子蛍光と光ピンセットで調べた研究。実験で決めた構造による裏付けがなく（structure 0）、reach も限られる。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "We find that trigger factor dwell times on ribosome-nascent chain complexes increase non-monotonically with nascent chain length, and that binding to nascent proteins is best described by a combination of multiple weak, dynamic interactions that are established after the chaperone docks onto the ribosome and evolve during polypeptide elongation.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "Trigger factor is a bacterial chaperone that binds to ribosomes, interacting with nascent polypeptides emerging from the ribosome and guiding their early folding steps.",
+      "section": "Abstract"
+     }
+    ],
+    "structure": [],
+    "support": [
+     {
+      "quote": "Application of mechanical force perturbs trigger factor binding, supporting a multivalent interaction model.",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13686171",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 1,
+    "reach": 1,
+    "structure": 1,
+    "support": 2
+   },
+   "selected": false,
+   "reason": "α1-ジアルジンのN末端がオリゴマー化に要ることを変異体と質量フォトメトリーで示したが、構造の根拠は AlphaFold の予測・MD と自前の架橋MSで、その系だけの知見（novelty 1）。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "Here, we present a comprehensive functional analysis of αGs, with a particular focus on α1-giardin (α1G), a leading vaccine candidate against giardiasis and a putative virulence-associated UPS substrate.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "Taken together, our findings provide structural insights relevant to parasite virulence and vaccine development and contribute to a mechanistic model for annexin-mediated UPS in Giardia.",
+      "section": "Abstract"
+     }
+    ],
+    "structure": [
+     {
+      "quote": "Using lipid-binding assays, cross-linking mass spectrometry (XL-MS), and structural modelling, we define conserved and divergent features of αG membrane interactions.",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "Focusing on α1G, we combine site-directed mutagenesis, confocal microscopy, and mass photometry to demonstrate a critical role for its short N-terminal region in oligomerization and membrane association.",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13604702",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 1,
+    "reach": 1,
+    "structure": 1,
+    "support": 1
+   },
+   "selected": false,
+   "reason": "肺炎球菌ソルターゼAの再折りたたみ単量体のNMR帰属と基質ペプチドによる化学シフト変化を報告したが、既知の酵素の特性解析の延長（novelty 1）。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "We further report high-resolution NMR backbone assignments for the active monomer and identify substrate-induced chemical shift perturbations that localize to the active site.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "enzymes covalently anchor surface proteins to Gram-positive bacterial cell walls, promoting colonization and virulence.",
+      "section": "Abstract"
+     }
+    ],
+    "structure": [
+     {
+      "quote": "We further report high-resolution NMR backbone assignments for the active monomer and identify substrate-induced chemical shift perturbations that localize to the active site.",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "The refolded monomer, but not the swapped dimer, catalyzed cleavage and transpeptidation of a canonical LPxTG substrate in a metal-independent manner under the conditions examined.",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13605537",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 2,
+    "reach": 1,
+    "structure": 0,
+    "support": 0
+   },
+   "selected": false,
+   "reason": "ブドウ球菌コアグラーゼのC末端がMORN型の一層βシートをとるという提案だが、根拠は AlphaFold2・ColabFold などの予測モデルだけで、実験構造がない（structure 0）。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "Our results suggest that the major C-terminal domain of SC folds into a single-layer β-sheet structurally similar to the membrane occupation and recognition nexus (MORN) family of tandem repeats.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "These structural and mechanistic insights are critical for understanding SC-mediated fibrin generation, which is highly relevant to heart valve vegetations and biofilm formation during S. aureus infection.",
+      "section": "Abstract"
+     }
+    ],
+    "structure": [],
+    "support": []
+   }
+  }
+ ]
+}

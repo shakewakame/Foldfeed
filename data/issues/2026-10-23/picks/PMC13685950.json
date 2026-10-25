@@ -1,0 +1,136 @@
+{
+  "rank": 3,
+  "headline": "細菌の接着ドメインは、pHで共有結合を外す",
+  "subhead": "SfbI-TEDとフィブリノーゲンの結合は、pH6.0で速くほどける",
+  "target_label": "SfbI-TED（化膿レンサ球菌）",
+  "target_en": "SfbI thioester domain (group A Streptococcus)",
+  "summary": {
+    "question": "細菌のチオエステルドメイン（TED）が作る共有結合は、元に戻らないと考えられてきた。",
+    "approach": "SfbI-TEDとフィブリノーゲンの結合を、干渉法・チオール定量・変異体の網羅解析で調べ、既存の結晶構造と照らした。",
+    "result": "pH 7.3で結合した複合体は、pH 6.0で速くほどけた。チオエステルが切れた割合は、pH 6.0で6.3%、pH 7.3で45.4%だった。",
+    "learned": "pHへの応答は、チオエステルの化学反応そのものの性質に由来し、別のTEDでも見られた。",
+    "open": "感染時の混み合いなどが、このpHスイッチにどう影響するかは今後の課題だ。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Recent studies challenged the prevailing view that TED-mediated chemistry is irreversible (19, 20).",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Biolayer interferometry (BLI) revealed a multistep binding process: initial noncovalent recognition, followed by thioester-mediated formation of an intermolecular cross-link, which is in dynamic equilibrium with the reverse reaction.",
+          "section": "Introduction"
+        }
+      ],
+      "result": [
+        {
+          "quote": "In contrast, the wild type exhibited marked pH dependence, with normalized A324 values being 6.3±1.1% (means±SD,n=3) at pH 6.0 and 45.4±8.9% at pH 7.3 (Fig. 2, C and D).",
+          "section": "Results"
+        },
+        {
+          "quote": "Specifically, SfbI-TED from group A Streptococcus binds tightly to fibrinogen at physiological pH, whereas mild acidification to pH 6.0 induces rapid dissociation of the complex.",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Thermodynamic analyses indicated that this pH responsiveness is largely dictated by the intrinsic pH sensitivity of the thioester-mediated acyl transfer reaction conserved within TEDs, rather than by surface residues specific to individual TEDs.",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "how the complex microenvironment during infection—including molecular crowding and competing host factors—modulates this pH switch remains to be fully elucidated.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "pathogen"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "結合は、非共有結合での認識のあとに共有結合ができる2段階だった。pHで変わるのは共有結合の切れ方で、非共有結合の部分はpHに左右されなかった。",
+      "evidence": [
+        {
+          "quote": "These results indicate that noncovalent interactions are insensitive to pH, whereas the equilibrium governing the formation and cleavage of the intermolecular cross-link is strongly influenced by pH.",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "新しい結合部位",
+      "text": "37残基の変異解析で、認識の中心はHis93と分かった。Leu112・Tyr115・Arg118がその周りを支える。結合の姿はAlphaFold3の予測に基づくもので、実験構造ではない。",
+      "evidence": [
+        {
+          "quote": "Thus, noncovalent target recognition by SfbI-TED was primarily mediated by the hotspot residue His93 (∆∆Gnoncovalent>2 kcal/mol) (31), together with auxiliary interactions contributed by Leu112, Tyr115, and Arg118, which cluster around His93.",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "L112TはpH7.3でほぼ元に戻らない結合を作ったが、pH6.0では速くほどけた。遠縁のCpTIE-TEDでもチオエステルの切れ方がpHで変わった。",
+      "evidence": [
+        {
+          "quote": "Both mutants markedly stabilized the covalent complex, with L112T exhibiting almost irreversible binding at pH 7.3. Nevertheless, dissociation of both mutants was still accelerated at pH 6.0 compared with pH 7.3.",
+          "section": "Results"
+        },
+        {
+          "quote": "Consistent with SfbI-TED, CpTIE-TED displayed a clear pH dependence of thioester bond cleavage (Fig. 6A).",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "大腸菌BL21(DE3)で発現し、15 °Cで一晩誘導。",
+    "construct": "SfbI-TEDはN末端に6×His-SpyTag003を付けた。",
+    "purification": "Ni-NTAのあと、Superdex 75でゲルろ過。",
+    "sample_prep": null,
+    "data_collection": "結合はOctet RED384のバイオレイヤー干渉法で、30 °Cで測定。",
+    "evidence": [
+      {
+        "quote": "With the exception of the mutants analyzed by FASTIA, all TEDs and SpyCatcher003 (40, 41) used in this study were expressed in E. coli BL21(DE3) (Novagen).",
+        "section": "Materials and Methods"
+      },
+      {
+        "quote": "followed by overnight incubation at 15°C.",
+        "section": "Materials and Methods"
+      },
+      {
+        "quote": "Wild-type and mutant SfbI-TED constructs contained N-terminal 6×His-SpyTag003 tags.",
+        "section": "Materials and Methods"
+      },
+      {
+        "quote": "The protein was further purified via SEC on a HiLoad 26/600 Superdex 75-pg column (Cytiva) connected to an ÄKTA prime system equilibrated with SEC buffer.",
+        "section": "Materials and Methods"
+      },
+      {
+        "quote": "BLI measurements were performed using an Octet RED384 system (Sartorius).",
+        "section": "Materials and Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "チオエステルドメイン",
+    "フィブリノーゲン",
+    "pH応答",
+    "共有結合"
+  ],
+  "method_label": "BLI・DSC・チオール定量・既存の結晶構造",
+  "ga_pdb_id": "3GHG",
+  "editor_notes": "新しい構造ではない。構造の根拠は、既存のCys→Ala変異体の結晶構造（番号は本文になし）による変異体の結合欠失の説明と、フィブリノーゲンの既存構造 3GHG（AlphaFold3 の入力）だけで、structure は1点止まり。図は 3GHG（フィブリノーゲン）で、TED 自体の構造ではない。ライセンスは CC BY-NC のため、記事は事実のみを自分の言葉で書いた。",
+  "pmcid": "PMC13685950",
+  "section": "impact",
+  "legend_labels": [
+    "フィブリノーゲンα",
+    "フィブリノーゲンβ",
+    "フィブリノーゲンγ",
+    "ノブ A",
+    "ノブ B"
+  ]
+}

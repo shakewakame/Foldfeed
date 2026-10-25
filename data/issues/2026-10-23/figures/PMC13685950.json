@@ -1,0 +1,57 @@
+{
+ "pdb_id": "3GHG",
+ "view": {
+  "target": [
+   75.54,
+   -25.79,
+   -77.74
+  ],
+  "dir": [
+   -0.2499,
+   0.4885,
+   -0.836
+  ],
+  "up": [
+   0.215,
+   0.8698,
+   0.444
+  ],
+  "half": [
+   248.8,
+   62.9
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "フィブリノーゲンα",
+   "desc": "Fibrinogen alpha chain",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "フィブリノーゲンβ",
+   "desc": "Fibrinogen beta chain",
+   "entity": "2"
+  },
+  {
+   "color": "#5F9296",
+   "label": "フィブリノーゲンγ",
+   "desc": "Fibrinogen gamma chain",
+   "entity": "3"
+  },
+  {
+   "color": "#A5707A",
+   "label": "ノブ A",
+   "desc": "A knob",
+   "entity": "4"
+  },
+  {
+   "color": "#7C8AA8",
+   "label": "ノブ B",
+   "desc": "B knob",
+   "entity": "5"
+  }
+ ],
+ "ligands": []
+}

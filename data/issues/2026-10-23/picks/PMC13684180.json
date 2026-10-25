@@ -1,0 +1,156 @@
+{
+  "pmcid": "PMC13684180",
+  "rank": 2,
+  "headline": "DAB1複合体のクライオ電顕で、活性部位の2状態が見えた",
+  "subhead": "状態Aは反応物の入口、状態BはHCO3−の出口とみられる通路が開いていた",
+  "target_label": "DAB1（Thermocrinis albus）",
+  "target_en": "DAB1 complex (T. albus)",
+  "summary": {
+    "question": "DAB1 は膜のプロトン勾配と結びつき、CO2 を一方向に水和する炭酸脱水酵素（CA）だが、その仕組みは不明だった。",
+    "approach": "好熱菌 Thermocrinis albus の DAB1 複合体をクライオ電顕（2.29 Å）で解き、変異体のスクリーニングも行った。",
+    "result": "活性部位は DabA の内部で溶媒から 10 Å 以上奥にあった。3D 分類で、周囲の残基の動きが異なる状態 A と状態 B が得られた。",
+    "learned": "状態 A で CO2 と水の入口が開き、状態 B でそれが閉じて HCO3− の出口が開く、という機構が提案された。",
+    "open": "活性部位のプロトンを除く最終段階は、構造からは分からない。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "The mechanism of this vectorial CA activity has remained unclear.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "it is an open question how these complexes mechanistically act as vectorial CAs, rather than reversibly catalyzing hydration, as all other CAs do.",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "To that end, we used cryoelectron microscopy (Cryo-EM) to solve the structure of the DAB1 complex from the thermophile, Thermocrinis albus, to 2.29 Å resolution.",
+          "section": "Introduction"
+        },
+        {
+          "quote": "We investigated the molecular basis of this mechanism using a suppressor screen in CAFree",
+          "section": "Results and Discussion"
+        }
+      ],
+      "result": [
+        {
+          "quote": "In contrast, the DabA active site is buried more than 10 Å from solvent, sequestered by a flexible lid domain comprising residues 471 to 509",
+          "section": "Results and Discussion"
+        },
+        {
+          "quote": "We therefore performed 3D classification, which revealed two distinct states with sufficient quality cryo-EM density for model building.",
+          "section": "Results and Discussion"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Together, these structures support a model in which the substrates enter through CO2 and water channels for CO2 hydration, after which a transition to State B closes the entry routes and opens a separate exit channel to release HCO3− to the cytosol.",
+          "section": "Results and Discussion"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Our structural data do not provide an obvious mechanism for the final step in the cycle.",
+          "section": "Results and Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "transporter",
+    "enzyme"
+  ],
+  "topics": [
+    "membrane",
+    "dynamics"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "状態 B では F476 が大きく動いて疎水性の通路 A1 を閉じ、C494 が約 5 Å 動いて水の通路 A2 をふさぐ。同時に G474 と S716 が約 3 Å ずれ、反対側に親水性の通路 B が開く。",
+      "evidence": [
+        {
+          "quote": "Relative to State A, the GI(A/G)GFFG motif adopts a more helical conformation, forcing F476 to undergo a dramatic movement",
+          "section": "Results and Discussion"
+        },
+        {
+          "quote": "Meanwhile, both G474 and S716 shift ~3 Å to open a new hydrophilic channel (Channel B) opposite to the State A channels, which opens to the solvent near the membrane leaflet.",
+          "section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "DabA の活性部位は典型的な β 型 CA で、Zn2+ に C449・C709・H694 と水が配位する。HCO3− と水素結合する位置が Leu825 で、HCO3− を放しやすくしている可能性がある。",
+      "evidence": [
+        {
+          "quote": "Our structural analysis confirms that these residues do in fact form a typical β-CA active site in which a Zn2+ ion is coordinated by two cysteines (C449 and C709), a histidine (H694), and a water in a tetrahedral geometry",
+          "section": "Results and Discussion"
+        },
+        {
+          "quote": "It is possible that this lack of an H-bond donor in DabA raises the barrier to HCO3− binding and encourages product release after hydration.",
+          "section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "プロトン伝達を壊した DabB の H229A でも空気中で増える DabA 変異体を選ぶと、C494 や N901 の置換が見つかった。通路の閉鎖と DabA–DabB の連結が、共役の維持に必要と解釈されている。",
+      "evidence": [
+        {
+          "quote": "These mutants highlight two features of the complex that are required to normally maintain coupling: regulation of channel opening and closure, and mechanical linkage to transmit structural changes from the proton translocation pathway to the DabA active site.",
+          "section": "Results and Discussion"
+        },
+        {
+          "quote": "Only one tested variant, epS1, which contains a mutation to C494 that likely perturbs the State A - State B transition, demonstrated in vitro CA activity.",
+          "section": "Results and Discussion"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "T. albus の DAB1 を、DabC の C 末端に His タグを付けて大腸菌 BL21-AI で発現。",
+    "construct": null,
+    "purification": "LMNG で膜から可溶化し、Ni-IMAC、70 °C 加熱、ゲルろ過で精製。",
+    "sample_prep": "グラフェンオキサイドを付けた C-Flat 2/2 グリッドに 3 μL（0.06〜0.2 mg/mL）をのせ、Vitrobot Mark IV で凍結。",
+    "data_collection": "Krios G3i と K3 で 6,032 本のムービーを収集。cryoSPARC で、活性部位にマスクをかけた 3D 分類により 2 状態を分離。",
+    "evidence": [
+      {
+        "quote": "We expressed the DAB1 complex from T. albus with a C-terminal His-tag on DabC in BL21-AI E. coli.",
+        "section": "DAB1 Is a Heterotrimer Containing DabA, DabB, and DabC."
+      },
+      {
+        "quote": "purified by Ni-IMAC, heat treatment at 70 °C, and gel filtration chromatography",
+        "section": "DAB1 Is a Heterotrimer Containing DabA, DabB, and DabC."
+      },
+      {
+        "quote": "then graphene oxide was deposited on all grids using the drop cast method (49) modified to include cleaning with chloroform and coating the grid in PEI as described in ref. 50.",
+        "section": "Cryo-EM Sample Preparation and Data Acquisition."
+      },
+      {
+        "quote": "3 μL of sample at various concentrations (0.06 to 0.2 mg/mL) were placed on the grid, blotted, and plunge-frozen in liquid ethane using an FEI Mark IV Vitrobot set to 6 °C, 100% humidity.",
+        "section": "Cryo-EM Sample Preparation and Data Acquisition."
+      },
+      {
+        "quote": "A total of 6,032 movies were acquired using Serial EM",
+        "section": "Cryo-EM Sample Preparation and Data Acquisition."
+      },
+      {
+        "quote": "A mask surrounding the active site and its surrounding flexible region was constructed in ChimeraX (55), then used as a focus map in 3D classification to classify six classes at a filter resolution of 4 Å.",
+        "section": "Cryo-EM Image Processing."
+      }
+    ]
+  },
+  "keywords": [
+    "DAB1",
+    "炭酸脱水酵素",
+    "CO2 濃縮機構",
+    "プロトン駆動力",
+    "クライオ電顕"
+  ],
+  "editor_notes": "PDB の 2 エントリ（38RH 状態 A、38RI 状態 B）はどちらも 2.29 Å（密度修正後の論文値は 2.12・2.13 Å）で、引用情報は未登録（寄託の記載から対応づけ）。candidates.json の polymers は 2 つ（DabA、DabB 相当）のみで DabC が PDB に入っているか不明のため、legend_labels は未記入（render 後に要確認。D3SP02 が DabB のはず）。リガンドは PDB 上になく（Zn2+ のみ）、ligand_names・site_ligand は未記入。状態 A・B は『触媒サイクルの一部の状態』と論文が書いており、機構は提案として記述した。",
+  "legend_labels": [
+    "DabA（炭酸脱水酵素）",
+    "複合体Ⅰ様サブユニット"
+  ]
+}

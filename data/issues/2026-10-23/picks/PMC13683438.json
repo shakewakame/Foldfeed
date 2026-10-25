@@ -1,0 +1,163 @@
+{
+  "pmcid": "PMC13683438",
+  "rank": 1,
+  "headline": "大小5種の阻害剤を、酵母のMKは同じ部位で受け止める",
+  "subhead": "5つの阻害剤複合体の結晶構造で、小さなループと側鎖の動きが鎖長の差を吸収していた",
+  "target_label": "ScMK（出芽酵母）",
+  "target_en": "ScMK (S. cerevisiae mevalonate kinase)",
+  "summary": {
+    "question": "メバロン酸キナーゼ（MK）は下流の産物で阻害される。ATP と同じ一か所に大きさの違う阻害剤がどう収まるかは不明だった。",
+    "approach": "出芽酵母の MK（ScMK）で 5 種の阻害剤の Ki を測り、apo 型と 5 種の阻害剤結合型の結晶構造を解いた。",
+    "result": "Ki は FPP の 0.29 μM から IPP の 46 μM まで約 2 桁に及んだ。ピロリン酸部は共通で、長い鎖は疎水ポケットの壁に沿って曲がっていた。",
+    "learned": "阻害剤は ATP 結合部位の同じ疎水領域に入り、長い鎖は曲がって収まる。必要な動きは小さなループと側鎖の変化だけだった。",
+    "open": "ATP が結合した ScMK の構造はまだなく、Phe110 を含むループが ATP と阻害剤を切り替える可能性は未検証だ。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "but how MK is able to accommodate so many different inhibitors of such varying sizes at a single site that must also bind the ATP substrate is unknown.",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "In this work, we first characterized the inhibition kinetics of MK from Saccharomyces cerevisiae (ScMK) in the presence of IPP, DMAPP, GPP, FPP, and GGPP.",
+          "section": "Introduction"
+        },
+        {
+          "quote": "We then solved crystal structures of ScMK bound to all of these inhibitors, in addition to the structure of apo ScMK",
+          "section": "Introduction"
+        }
+      ],
+      "result": [
+        {
+          "quote": "Interestingly, Ki values for all five ScMK inhibitors span two orders of magnitude.",
+          "section": "Results"
+        },
+        {
+          "quote": "Upon refinement, the pyrophosphate head groups of all inhibitors occupy a similar position and coordinate Mg2+",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Taken together, these structures depict all inhibitors occupying the same hydrophobic region within the ATP-binding site of MK, with larger inhibitors curling up to adopt a compact size in order to fit within the binding pocket.",
+          "section": "Results"
+        },
+        {
+          "quote": "Only small loop and side chain movements are necessary to enable the enzyme to accommodate and adapt to inhibitors of varying sizes.",
+          "section": "Results"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Corroborating evidence of this idea awaits structural information on ATP binding in ScMK.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "kinase",
+    "enzyme"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "鎖が GPP まで伸びると Phe54 が一つの向きに固定され、ポケットの奥が開く。FPP は壁で約90°曲がり、GGPP は Phe59 に阻まれてさらに曲がり、J 字形に折り返して収まる。",
+      "evidence": [
+        {
+          "quote": "As the inhibitor chain lengthens by five carbons from IPP/DMAPP to GPP, Phe54 adopts a single conformation that no longer blocks larger inhibitors",
+          "section": "Results"
+        },
+        {
+          "quote": "Finally, when the alkyl chain lengthens even further to GGPP, Phe59 sterically blocks a linear continuation of the chain",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "最も強い阻害剤は中くらいの GPP と FPP（0.33・0.29 μM）で、IPP と DMAPP は弱い。GGPP は 3.3 μM で、曲がって収まる負担が弱さの一因かもしれないと論文は考えている。",
+      "evidence": [
+        {
+          "quote": "The strongest inhibition potency is afforded by intermediate-sized GPP and FPP, with Ki values one order of magnitude lower still, at 0.33 ± 0.02 μM and 0.29 ± 0.02 μM, respectively.",
+          "section": "Results"
+        },
+        {
+          "quote": "Therefore, it is possible that weaker binding may instead be attributed to a penalty associated with the need for the large GGPP molecule to adopt a more compact conformation for binding.",
+          "section": "Discussion"
+        }
+      ]
+    },
+    {
+      "tag": "初構造",
+      "text": "ScMK の構造はこれが初めてで、真菌の MK としても最初の報告だ。代謝工学で広く使われる酵素なので、フィードバック阻害を弱める酵素改変の足がかりになると論文は述べている。",
+      "evidence": [
+        {
+          "quote": "yet no structure of this MK has been determined until now.",
+          "section": "Discussion"
+        },
+        {
+          "quote": "notably, the structures of ScMK here are also the first structures reported of a fungal MK.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "大腸菌 BL21(DE3) で発現し、0.5 mM IPTG で誘導して 20 °C で一晩培養。",
+    "construct": "コドン最適化した ScMK を、TEV で切れる N 末端 His タグ付きの pSKB3 に組み込んだ。",
+    "purification": "Ni-NTA アフィニティークロマトグラフィーで精製し、透析して約 20 mg/ml に濃縮。",
+    "sample_prep": "ハンギングドロップ蒸気拡散で結晶化（MES pH 6.0・酒石酸 Na/K）。阻害剤は apo 結晶に 5 mM で 30〜45 分ソーキング。",
+    "data_collection": "APS 24-ID-C/E で 100 K に収集。1KVK の RnMK を鋳型に分子置換し、Phenix と Coot で精密化。",
+    "evidence": [
+      {
+        "quote": "Expression was induced with 0.5 mM isopropyl β-d-thiogalactopyranoside (IPTG) and continued at 20 °C overnight.",
+        "section": "Protein expression and purification"
+      },
+      {
+        "quote": "was cloned by Gibson assembly (50) into the plasmid pSKB3, a modified pET28b vector with a tobacco etch virus protease-cleavable N-terminal hexahistidine tag",
+        "section": "Protein expression and purification"
+      },
+      {
+        "quote": "ScMK was purified using Ni-NTA affinity chromatography.",
+        "section": "Protein expression and purification"
+      },
+      {
+        "quote": "The best condition contained 2 μl of 6 to 10 mg/ml purified ScMK mixed with 1 μl of crystallization solution (100 mM MES pH 6.0 and 900–1100 mM sodium potassium tartrate)",
+        "section": "Protein crystallization"
+      },
+      {
+        "quote": "apo ScMK crystals were soaked in a solution that contained a 50-50 mixture of the crystallization solution and the cryoprotectant solution plus 5 mM of IPP, DMAPP, GPP, FPP, or GGPP for 30 to 45 min before flash-freezing in liquid nitrogen.",
+        "section": "Protein crystallization"
+      },
+      {
+        "quote": "X-ray diffraction data were collected at the Advanced Photon Source beamlines 24-ID-C and 24-ID-E at 100 K.",
+        "section": "X-ray data collection, model building, and refinement"
+      },
+      {
+        "quote": "with one protein monomer without any ligands bound from the prior structure of RnMK (43), PDB entry 1KVK, as a search model (31% sequence identity).",
+        "section": "X-ray data collection, model building, and refinement"
+      }
+    ]
+  },
+  "keywords": [
+    "メバロン酸キナーゼ",
+    "フィードバック阻害",
+    "イソプレノイド",
+    "出芽酵母",
+    "X 線結晶構造"
+  ],
+  "ga_pdb_id": "36WN",
+  "legend_labels": [
+    "ScMK（メバロン酸キナーゼ）"
+  ],
+  "ligand_names": {
+    "IPE": "IPP",
+    "DMA": "DMAPP",
+    "GRG": "GGPP",
+    "BGC": "グルコース"
+  },
+  "site_ligand": "GRG",
+  "editor_notes": "PDB の 6 エントリ（apo 36WI、IPP 36WJ、DMAPP 36WK、GPP 36WL、FPP 36WM、GGPP 36WN）すべてが本論文の構造。ScMK は PDB に既存構造がなく candidates.json で first_structure=true（New Structure）。図は GGPP 結合型（36WN）。BGC（グルコース）は GPP・GGPP 型で低温保護剤を当てはめたもので、阻害剤ではない。結晶中の活性部位に未帰属の電子密度があると論文が断っている。"
+}

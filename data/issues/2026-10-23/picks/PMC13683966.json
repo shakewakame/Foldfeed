@@ -1,0 +1,144 @@
+{
+  "pmcid": "PMC13683966",
+  "rank": 11,
+  "headline": "MetXSの二量体は、蓋の形が左右で違う",
+  "subhead": "apo構造を1.86 Åで決定。Arg335がスクシニルCoAの選択に関わる可能性がある",
+  "target_label": "CnMetXS（ネクトル菌）",
+  "target_en": "CnMetXS (C. necator H16)",
+  "summary": {
+    "question": "C. necator のメチオニン合成酵素 MetXS は、ゲノム注釈だけで、実験では確かめられていなかった。",
+    "approach": "CnMetXS を大腸菌で発現して活性を測り、X 線結晶構造（1.86 Å）を決めた。基質のドッキングも行った。",
+    "result": "スクシニル CoA を使い、アセチル CoA では不活性だった。二量体の2分子は、蓋の領域の形が互いに違っていた。",
+    "learned": "MetX-G2 型の酵素と分類できた。Arg335 がスクシニル中間体を安定化し、特異性を説明する可能性がある。",
+    "open": "鎖 B の形が溶液中でも現れるかは未解決である。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "This includes l‐methionine biosynthesis, for which genome‐based functional annotations of key enzymes have not been validated experimentally.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here, we report the identification, heterologous expression, and in vitro characterization of the HST from C. necator (CnMetXS).",
+          "section": "Introduction"
+        },
+        {
+          "quote": "Furthermore, we determined the X‐ray structure at 1.86 Å resolution of CnMetXS",
+          "section": "Introduction"
+        }
+      ],
+      "result": [
+        {
+          "quote": "catalyzes the transsuccinylation of l‐homoserine to O‐succinyl‐l‐homoserine but exhibits no transacetylase activity",
+          "section": "Abstract"
+        },
+        {
+          "quote": "More notably, the two CnMetXS monomers adopt distinct conformations of this region",
+          "section": "Results and Discussion"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "The active‐site composition supports classification of CnMetXS as a MetX‐G2 homoserine O‐succinyltransferase",
+          "section": "Results and Discussion"
+        },
+        {
+          "quote": "Structural analysis and docking suggest that Arg335 stabilizes the succinylated enzyme intermediate and explains the observed succinyl‐CoA specificity.",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "the functional significance of the crystallographic asymmetry in solution remains unresolved",
+          "section": "Conclusion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "enzyme"
+  ],
+  "topics": [],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "二量体の2分子で、蓋の領域（Thr244–Ala291）の配置が異なる。鎖 B では Tyr245 を含むループが活性部位の入口を狭め、Arg335 も触媒部位から離れていた。ただし鎖 B の形は結晶中の接触で支えられた可能性があり、慎重に解釈すべきだと著者は述べている。",
+      "evidence": [
+        {
+          "quote": "In chain B, the loop containing Tyr245 is rearranged into the active site, seemingly narrowing the entrance",
+          "section": "Results and Discussion"
+        },
+        {
+          "quote": "However, it cannot be ruled out that the chain B conformation is influenced by crystal packing",
+          "section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "活性部位には Ser168・Asp333・His366 の触媒三つ組がある。アセチル基を使う近縁酵素（HAT）ではロイシンになる位置を、CnMetXS では Arg335 が占めており、スクシニル CoA への特異性に関わる残基に当たる。",
+      "evidence": [
+        {
+          "quote": "The active site sits between the two domains and contains a classical α/β‐hydrolase catalytic triad formed by Ser168, Asp333, and His366",
+          "section": "Results and Discussion"
+        },
+        {
+          "quote": "Arg335, associated with succinyl‐CoA specificity in CnMetXS, occupies the structural position corresponding to a leucine residue in all four HAT homologs",
+          "section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "基質は浸漬でも共結晶化でも密度が見えなかったため、スクシニル化した Ser168 にホモセリンを計算でドッキングした。鎖 A でだけ妥当な配置が得られ、Arg335 がスクシニル基と相互作用した。これは計算モデルである。",
+      "evidence": [
+        {
+          "quote": "no interpretable electron density was observed for either substrate or for a succinylated Ser168 intermediate",
+          "section": "Results and Discussion"
+        },
+        {
+          "quote": "While l‐homoserine could be successfully docked into the active site of chain A of succinylated CnMetXS, no reasonable docking position was obtained for chain B.",
+          "section": "Results and Discussion"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "pET-28a(+) の N 末端ヘキサヒスチジンタグ付きで大腸菌 BL21 (DE3) に発現。",
+    "construct": null,
+    "purification": null,
+    "sample_prep": "結晶に 50 mM のホモセリンを浸漬したが、基質の密度は見えなかった。",
+    "data_collection": "空間群 P21 で 1.86 Å。異常分散シグナルが 5σ を超えるピークを臭化物としてモデル化した。",
+    "evidence": [
+      {
+        "quote": "The recombinant enzyme was heterologously expressed in E. coli BL21 (DE3)",
+        "section": "Results and Discussion"
+      },
+      {
+        "quote": "the gene was subcloned into a pET‐28a(+) expression vector with an N‐terminal hexahistidine tag for purification",
+        "section": "Results and Discussion"
+      },
+      {
+        "quote": "The protein was soaked with 50 mM homoserine, but no density corresponding to the substrate was observed.",
+        "section": "Results and Discussion"
+      },
+      {
+        "quote": "The crystal structure of CnMetXS was solved to a resolution of 1.86 Å in space group P21",
+        "section": "Results and Discussion"
+      },
+      {
+        "quote": "Peaks with anomalous signals greater than 5σ were modeled as bromide",
+        "section": "Results and Discussion"
+      }
+    ]
+  },
+  "keywords": [
+    "MetXS",
+    "ホモセリン O-スクシニルトランスフェラーゼ",
+    "メチオニン合成",
+    "Cupriavidus necator"
+  ],
+  "method_label": "X-ray・1.86 Å",
+  "editor_notes": "PDB 30UN は未公開のため図なし。first_claim は付けていない（論文は構造の初報とは書かず、HAT ホモログの構造と比較している）ため Structure Update になる見込み。Arg335 の役割はドッキングによる提案で、変異体実験はこの論文にない。"
+}

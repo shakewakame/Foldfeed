@@ -1,0 +1,188 @@
+{
+  "pmcid": "PMC13686013",
+  "rank": 6,
+  "headline": "3つの調節薬の併用で、ドーパミンの効きが1000倍以上に",
+  "subhead": "TM1とTM7の間にある新しい2つの溝に結合する調節薬を、クライオ電顕で解いた",
+  "target_label": "ドーパミンD1受容体（ヒト）",
+  "target_en": "Human dopamine D1 receptor-Gs complex",
+  "summary": {
+    "question": "アロステリック部位（作動薬と別の結合場所）が協調する仕組みは分かっていなかった。結合部位が確かめられた調節薬は LY3154207 だけだった。",
+    "approach": "新しい調節薬 UNC9815・UNC10062 を作り、BMS-A1 などと組み合わせた D1R-Gs 複合体をクライオ電顕で解き、変異体と MD でも調べた。",
+    "result": "2.44〜2.65 Å の構造で、BMS-A1 は TM1・TM7 間の下の溝、UNC 化合物は真上の溝に入った。3種の併用でドーパミンの EC50 は1000倍以上下がった。",
+    "learned": "3つの調節薬は重ならない3か所に同時に結合して協調する。MD は、複数部位への結合が受容体の活性型を安定化することを示した。",
+    "open": "治療効果の向上や副作用の軽減につながるかは、今後の薬理学や in vivo の研究で確かめる必要がある。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Although multiple allosteric binding sites have been identified in GPCRs, whether and how these spatially distinct sites cooperate to regulate receptor activation remain poorly understood.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "the molecular basis underlying this allosteric cooperativity remains poorly understood, with only the binding site of LY3154207 definitively characterized to date",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "We developed two novel D1R positive allosteric modulators (PAMs), UNC9815 and UNC10062, and used cryo–electron microscopy to structurally identify two previously uncharacterized D1R allosteric sites occupied by UNC9815/UNC10062 and another D1R PAM, BMS-A1.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "To confirm the above structural findings, we performed extensive mutagenesis experiments targeting the PAM contact residues within the D1R TM1-TM7 upper and lower allosteric pockets.",
+          "section": "Results"
+        }
+      ],
+      "result": [
+        {
+          "quote": "The cryo-EM structures of D1R-Gs in complex with SKF81297/LY3154207/BMS-A1, SKF81297/LY3154207/BMS-A1/UNC10062, and DA/LY3154207/BMS-A1/UNC9815 were determined at global resolutions of 2.65, 2.59, and 2.44 Å, respectively",
+          "section": "Results"
+        },
+        {
+          "quote": "are organized in a spatially complementary manner as vertically adjacent binding pockets",
+          "section": "Results"
+        },
+        {
+          "quote": "When all three chemically distinct classes of PAMs were combined with DA, we observed a ≥1000-fold shift in the DA EC50",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Our structures demonstrate the simultaneous binding of the chemically distinct PAMs (LY3154207, BMS-A1, and UNC9815/UNC10062) in three nonoverlapping pockets.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Molecular dynamics (MD) simulations revealed that multisite PAM engagement restricts intracellular loop 3 dynamics",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "However, whether this strategy can ultimately improve therapeutic efficacy, broaden therapeutic windows, or reduce adverse effects remains to be determined through future pharmacological and in vivo studies.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "receptor"
+  ],
+  "topics": [
+    "drug",
+    "membrane"
+  ],
+  "highlights": [
+    {
+      "tag": "新しい結合部位",
+      "text": "下の溝に BMS-A1、その真上の溝に UNC9815/UNC10062 が入る。2つの調節薬が縦に積み重なる配置は、論文の知る限り他の GPCR で報告がない。上の溝にはコレステロールが入った構造もあった。",
+      "evidence": [
+        {
+          "quote": "The stacked arrangement of two PAMs sandwiched between TM1 and TM7 represents, to our knowledge, a previously unknown allosteric binding configuration in other GPCRs.",
+          "section": "Results"
+        },
+        {
+          "quote": "In the map of D1R-SKF81297/LY3154207/BMS-A1, we observed a clear density of cholesterol at a site similar to that occupied by the UNC compounds",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "UNC 化合物は MLS6585 を最適化したもの。上の溝の3残基（V315A・F319L・A322S）を置換すると、UNC9815 は効きを弱める調節薬（NAM）に変わった。下の溝の変異では BMS-A1 が働かなくなった。",
+      "evidence": [
+        {
+          "quote": "we first optimized MLS6585 through medicinal chemistry, yielding two analogs, UNC10062 and UNC9815, with enhanced potency and efficacy",
+          "section": "Introduction"
+        },
+        {
+          "quote": "However, UNC9815 unexpectedly behaved as a weak negative allosteric modulator (NAM) when tested alone or in combination with BMS-A1 or LY3154207",
+          "section": "Results"
+        },
+        {
+          "quote": "BMS-A1 was rendered functionally inactive for altering DA potency either alone or in combination with UNC9815 or LY3154207",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "G タンパク質のない MD では、ICL3 の動きと NPxxY モチーフのゆらぎが、3種そろうと LY3154207 だけのときより小さくなった。細胞外ループ ECL2 のゆらぎも 2.46 ± 0.77 Å から 0.87 ± 0.11 Å に減った。",
+      "evidence": [
+        {
+          "quote": "Multisite PAM engagement produced stabilizing effects not achieved by LY3154207 alone.",
+          "section": "Results"
+        },
+        {
+          "quote": "Root mean square fluctuation analyses revealed a progressive reduction in ECL2 flexibility: from 2.46 ± 0.77 Å in the D1R-SKF81297-only system to 1.98 ± 0.09 Å in the D1R-SKF81297/LY3154207 system and 0.87 ± 0.11 Å in the triple PAM-bound system",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "Sf9 昆虫細胞に D1R・miniGαs_DN・Gβ1・Gγ2 のバキュロウイルスを 1:1:1:1 で共感染。",
+    "construct": "ヒト D1R の N 末に FLAG と β2AR N 末断片、C 末に 8×His。miniGαs は G226A・A366S 変異体。",
+    "purification": "LMNG と CHS で可溶化し、FLAG 樹脂とゲルろ過で精製。全試料に LY3154207 を加えた。",
+    "sample_prep": "Quantifoil R1.2/1.3 に 3 μL（10.9〜16.0 mg/ml）をのせ、Vitrobot Mark IV で凍結。",
+    "data_collection": "Titan Krios で 6,244〜8,517 本の動画を収集。RELION 4.0 と cryoSPARC v4 で処理し、7LJC を初期モデルに精密化。",
+    "evidence": [
+      {
+        "quote": "For the expression of the D1R-Gs complexes, Sf9 cells (Spodoptera frugiperda; Expression Systems, catalog no. 94-001F; RRID:CVCL_0549) were coinfected with the four types of baculoviruses prepared at 1:1:1:1 ratio.",
+        "section": "Expression, assembly, and purification of D1R-Gs complexes"
+      },
+      {
+        "quote": "The N-terminal of D1R sequence was induced with FLAG tag followed by a fragment of β2AR N-terminal tail region (BN, hereafter) as fusion protein while the C-terminal was attached with an 8 × His tag to facilitate the protein expression and purification",
+        "section": "Construct design"
+      },
+      {
+        "quote": "A miniGαs format of Gαs with dominant negative mutations, G226A and A366S, was engineered (miniGαs_DN)",
+        "section": "Construct design"
+      },
+      {
+        "quote": "solubilized directly by 0.5% (w/v) lauryl maltose neopentyl glycol (LMNG; Anatrace) and 0.1% (w/v) cholesteryl hemisuccinate tris salt (CHS; Anatrace)",
+        "section": "Expression, assembly, and purification of D1R-Gs complexes"
+      },
+      {
+        "quote": "For the preparation of cryo-EM grids, 3 μl of the purified complexes at 10.9 mg/ml for the D1R-Gs complex with SKF81297/LY3154207/BMS-A1",
+        "section": "Cryo-EM grid preparation and data collection"
+      },
+      {
+        "quote": "Grids were plunge-frozen in liquid ethane using Vitrobot Mark IV (Thermo Fisher Scientific).",
+        "section": "Cryo-EM grid preparation and data collection"
+      },
+      {
+        "quote": "all collected movie stacks were motion-corrected and dose-weighted in RELION 4.0",
+        "section": "Image processing and map construction"
+      },
+      {
+        "quote": "was used as initial model for model rebuilding and refinement against the cryo-EM density maps of D1R-Gs complexes",
+        "section": "Model building and refinement"
+      }
+    ]
+  },
+  "keywords": [
+    "ドーパミンD1受容体",
+    "アロステリック調節薬",
+    "BMS-A1",
+    "UNC9815",
+    "LY3154207"
+  ],
+  "ga_pdb_id": "9WG6",
+  "ligand_names": {
+    "A1EWF": "UNC9815",
+    "A1EWL": "UNC10062",
+    "A1EV3": "BMS-A1",
+    "G4C": "LY3154207",
+    "SK0": "SKF81297",
+    "LDP": "ドーパミン"
+  },
+  "site_ligand": "A1EWF",
+  "editor_notes": "candidates.json の source は impact_search だが kind は new_structure（9WEU・9WG0・9WG6 の3エントリ、PDB の引用題は別題 'Molecular insights into the cooperative allosteric modulation of D1 dopamine receptor' で DOI 未登録）。1000倍以上は β-arrestin 回収アッセイの DA の EC50 シフト（SKF81297 では3種でも2種を超えず頭打ち）。MD は補助的な裏付けとして書き、結果は著者の解釈（示唆）の範囲にとどめた。legend_labels は未設定（β2AR-D1R-NanoLuc 融合鎖・Nb35・Gα/β/γ の順を render 後に確認してほしい）。",
+  "legend_labels": [
+    "Gαs（G タンパク質）",
+    "Gβ1",
+    "Gγ2",
+    "ナノボディ35",
+    "D1 受容体"
+  ]
+}
