@@ -275,8 +275,22 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .queue .btns a {{ display:inline-block; padding:9px 16px; border:1px solid var(--ink); font-family:var(--mono); font-size:13px; }}
 .queue .btns a.go {{ background:var(--ink); color:#fff; }}
 .colo {{ margin-top:22px; border-top:4px solid var(--ink); }}
-.colophon {{ padding-top:16px; padding-bottom:70px; font-size:12.5px; color:var(--mute); line-height:1.8; }}
-.colophon p {{ margin:0 0 6px; max-width:760px; }}
+/* the footer: the name and what the site is on the left, the places on the right; under a hairline one quiet line */
+.colophon {{ padding-top:30px; padding-bottom:64px; font-size:12.5px; color:var(--mute); line-height:1.8; }}
+.co-top {{ display:flex; justify-content:space-between; align-items:flex-start; gap:28px 48px; flex-wrap:wrap; padding-bottom:26px; }}
+.co-word {{ font-family:var(--latin); font-size:24px; font-weight:700; line-height:1.1; letter-spacing:-.01em; color:var(--ink);
+            text-decoration:none; }}
+.co-word:hover {{ color:var(--acc-ink); text-decoration:none; }}
+.co-brand p {{ margin:8px 0 0; font-size:12.5px; color:var(--desc); }}
+.co-nav {{ display:flex; flex-wrap:wrap; gap:10px 30px; padding-top:6px; }}
+.co-nav a {{ font-family:var(--mono); font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink2);
+             text-decoration:none; }}
+.co-nav a:hover {{ color:var(--acc-ink); }}
+.co-bot {{ display:flex; flex-wrap:wrap; align-items:baseline; gap:6px 26px; padding-top:14px; border-top:1px solid var(--hair); }}
+.co-bot p {{ margin:0; }}
+.co-bot a {{ color:var(--desc); }}
+.co-bot a:hover {{ color:var(--acc-ink); }}
+.co-beta {{ font-family:var(--mono); font-size:11.5px; letter-spacing:.06em; }}
 
 
 /* the front page: the day's pick fills the first screen on the page ground, closed by a heavy rule */
@@ -661,12 +675,10 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
 /* the article's four-line introduction: plain lines, one weight, no rules; the labels are quiet and sit beside the text */
 .art-4 .open dd {{ color:var(--desc); font-size:15px; }}
 
-/* proteins.html: browse by kind of protein, search by name or ID */
-.pp-head h1 {{ margin:40px 0 4px; font-size:34px; line-height:1.4; }}
-.pp-head p {{ margin:0; color:var(--desc); font-size:15px; }}
+/* search.html: the articles found, grouped by kind of protein */
 .pg {{ margin-top:40px; scroll-margin-top:20px; }}
-.pr {{ display:grid; grid-template-columns:132px minmax(0,1fr) 250px; gap:6px 22px; padding:13px 0; border-top:1px solid var(--hair);
-       align-items:baseline; }}
+.pr {{ display:grid; grid-template-columns:132px minmax(0,1fr) 250px; gap:6px 22px; padding:13px 0; align-items:baseline; }}
+.pr:not([hidden]) ~ .pr {{ border-top:1px solid var(--hair); }}   /* the first row shown sits on the heading's rule */
 .pr .pd {{ font-family:var(--mono); font-size:12px; color:var(--mute); white-space:nowrap; }}
 .pr .pt {{ font-family:var(--sans); font-size:17px; font-weight:700; line-height:1.55; }}
 .pr .ps {{ display:block; margin-top:2px; font-family:var(--sans); font-size:13.5px; font-weight:400; color:var(--desc); }}
@@ -797,6 +809,7 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
 .flow figcaption a {{ color:var(--ink2); text-decoration:underline; text-decoration-color:var(--hair); text-underline-offset:4px; }}
 .flow figcaption a:hover {{ color:var(--acc-ink); text-decoration-color:var(--acc); }}
 .flow figcaption .arr {{ margin-left:8px; font-family:var(--mono); }}
+.concept-go {{ display:none; margin:0; }}
 .anim .flow-bar {{ transform-origin:left; transform:scaleX(0); transition:transform 1s cubic-bezier(.2,.8,.2,1) .25s; }}
 .anim .flow li.in .flow-bar, .anim .flow.in .flow-bar {{ transform:none; }}
 /* the pick's four lines on the front page (question, approach, result, learned) */
@@ -825,7 +838,15 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
 .mi-th a:hover .th-tg b {{ color:var(--acc-ink); }}
 .mi-more a:hover {{ color:var(--acc-ink); }}
 
-/* Browse: a tile for each way in, the newest structures of it on top */
+/* Search, while nothing is asked: a tile for each way in, the newest structures of it on top */
+.find-page .find {{ max-width:760px; margin:0 0 40px; }}
+.lp-lead .s {{ text-wrap:balance; }}
+.lp-lead .w {{ white-space:nowrap; }}
+.find-page .find input {{ padding:13px 14px; font-size:15.5px; }}
+.find-page .bt-sec:first-child {{ margin-top:72px; }}
+.fp-ways[hidden] {{ display:none; }}
+.js .fp-results:not(.on) {{ display:none; }}   /* without JavaScript the tiles, then every article */
+.fp-results .pg:first-child {{ margin-top:8px; }}
 .bt-sec + .bt-sec, .lp-lead + .bt-sec {{ margin-top:88px; }}
 .bt-h {{ position:relative; margin:0 0 22px; font-family:var(--latin); font-size:22px; font-weight:700; color:var(--ink); }}
 .bt-h::before {{ content:""; position:absolute; left:0; top:-26px; width:36px; border-top:4px solid var(--ink); }}
@@ -1075,6 +1096,11 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
   .about-dl div {{ grid-template-columns:minmax(0,1fr); gap:8px; }}
   .about-dl dd {{ font-size:15px; }}
   .about-dl .bl {{ font-size:14.5px; }}
+  .co-nav {{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:14px 20px; width:100%; padding-top:0; }}
+  .co-bot p {{ flex-basis:100%; }}
+  /* the way from Concept to the pick on the same page (the owner, 2026-10-26) */
+  .concept-go {{ display:block; margin:40px 0 0; }}
+  .concept-go .ix-all {{ display:flex; justify-content:space-between; }}
   .bl.bl-parts {{ grid-template-columns:minmax(0,1fr); gap:0; }}
   .bl-parts li + li b {{ margin-top:.9em; }}
   .bl-parts .s {{ padding-left:18px; }}   /* under the name, past its colour */
@@ -1430,7 +1456,7 @@ MENU_SCRIPT = r"""
   root.classList.add('anim');
   var SEL = '.ix-h, .about-dl > div, .about-side, .about .jl, .about > .wrap > .about-sub, .pickup, .concept-t, .flow li, '
           + '.today-4 > div, .reads, .cards > li, .mi-th > li, .bt, .iss-list > li, .find, .mail-grid, .shell:not(.sticky-side) .side .sd, '
-          + '.ihead, .part, .art, .rest, .pp-head, .pg .pr, .queue li';
+          + '.ihead, .part, .art, .rest, .pg .pr, .queue li';
   var els = [].slice.call(document.querySelectorAll(SEL));
   var seen = new Map();
   els.forEach(function (el) {                     // a short stagger among siblings that come in together
@@ -1512,7 +1538,7 @@ def search_form(up: str) -> str:
     with how many articles each has, so the first screen stays plain until it is wanted. Typing narrows the suggestions
     and lists matching articles (search.json). Without JavaScript it is a plain search sent to the search page."""
     def group(title, items):
-        links = "".join(f'<a href="{up}proteins.html?{k}={esc(v)}" data-k="{esc(unicodedata.normalize("NFKC", key).lower())}">'
+        links = "".join(f'<a href="{up}search.html?{k}={esc(v)}" data-k="{esc(unicodedata.normalize("NFKC", key).lower())}">'
                         f'{esc(label)}<span>{n}</span></a>' for k, v, label, n, key in items)
         return f'<div class="hs-g"><p class="hs-h">{title}</p><div class="hs-c">{links}</div></div>' if items else ""
     f = FACETS
@@ -1520,11 +1546,11 @@ def search_form(up: str) -> str:
               + group("Research Type", [("topic", k, TOPICS[k], n, f"{TOPICS[k]} {TOPIC_EN.get(k, k)}") for k, n in f["topics"]])
               + group("Method", [("method", m, m, n, m) for m, n in f["methods"]])
               + group("Part", [("part", k, PARTS[k][0], n, f"{PARTS[k][0]} {PARTS[k][1]}") for k, n in f["parts"]]))
-    return (f'<form class="hs" action="{up}proteins.html" method="get" role="search" data-up="{up}">'
+    return (f'<form class="hs" action="{up}search.html" method="get" role="search" data-up="{up}">'
             f'<span class="hs-box">{MAGNIFIER}<input class="hs-q" type="search" name="q" autocomplete="off" '
             f'placeholder="タンパク質・PDB ID・研究の種類で探す" aria-label="記事を探す" aria-expanded="false" aria-controls="hs-pop"></span>'
             f'<div class="hs-pop" id="hs-pop" hidden><div class="hs-res" hidden></div>{groups}'
-            f'<a class="hs-all" href="{up}proteins.html">すべての記事から探す<span aria-hidden="true">→</span></a></div></form>')
+            f'<a class="hs-all" href="{up}search.html">すべての記事から探す<span aria-hidden="true">→</span></a></div></form>')
 
 
 SEARCH_SCRIPT = r"""
@@ -1557,7 +1583,7 @@ SEARCH_SCRIPT = r"""
     });
     groups.forEach(function (g) { g.hidden = !g.querySelector('.hs-c a:not([hidden])'); });
     all.firstChild.textContent = terms.length ? '「' + q.value.trim() + '」ですべての記事を探す' : 'すべての記事から探す';
-    all.href = up + 'proteins.html' + (terms.length ? '?q=' + encodeURIComponent(q.value.trim()) : '');
+    all.href = up + 'search.html' + (terms.length ? '?q=' + encodeURIComponent(q.value.trim()) : '');
     if (!terms.length || !data) { res.hidden = true; return; }
     var hits = data.filter(function (a) { return terms.every(function (t) { return a.s.indexOf(t) >= 0; }); });
     res.innerHTML = '<p class="hs-h">Articles<span>' + hits.length + '</span></p>' + (hits.length ? hits.slice(0, 6).map(function (a) {
@@ -1646,15 +1672,15 @@ LATER_SCRIPT = r"""
 """
 
 
-# the parts (New Structure, ...) are the first row of Browse: eight places and the search do not fit in one row
-NAV = (("latest", "Latest Issue"), ("browse", "Browse"), ("back", "Back Issues"), ("news", "Newsletters & Alerts"),
+# the parts (New Structure, ...) are the first row of Search: eight places and the search do not fit in one row
+NAV = (("latest", "Latest Issue"), ("browse", "Search"), ("back", "Back Issues"), ("news", "Newsletters & Alerts"),
        ("about", "About"))
 
 
 def nav_links(up: str, current: str | None = None) -> list[tuple[str, str, bool]]:
     """(label, href, is the current page) of the global navigation, also the MENU on a phone."""
     latest = f'{up}issues/{LATEST["date"]}.html' if LATEST["date"] else f"{up}index.html"
-    href = {"latest": latest, "browse": f"{up}browse.html", "back": f"{up}issues.html", "news": f"{up}newsletter.html",
+    href = {"latest": latest, "browse": f"{up}search.html", "back": f"{up}issues.html", "news": f"{up}newsletter.html",
             "about": f"{up}about.html"}
     return [(label, href[k], k == current) for k, label in NAV]
 
@@ -1663,7 +1689,7 @@ def nav_links(up: str, current: str | None = None) -> list[tuple[str, str, bool]
 # short form under it in the phone's MENU
 NAV_NOTE = {
     "latest": ("最新号（{date} 号・{n} 本）の解説記事を読めます。", "最新号の解説記事"),
-    "browse": ("これまでの記事を、部・タンパク質の種類・研究の種類・手法から探せます。", "分類から記事を探す"),
+    "browse": ("これまでの記事を、キーワードや、部・タンパク質の種類・研究の種類・手法から探せます。", "キーワードや分類から記事を探す"),
     "back": ("これまでに出た号を、新しい順に一覧できます。", "これまでの号"),
     "news": ("新しい号のお知らせや、気になるタンパク質の新着をメールで受け取れます（準備中）。", "メールのお知らせ（準備中）"),
     "about": ("FoldFeed がどんなサイトか、記事の作り方や掲載のタイミングをご紹介します。", "このサイトについて"),
@@ -1677,8 +1703,8 @@ def nav_items(key: str, up: str) -> list[tuple[str, str, str]]:
         return [("Contents", f"{latest}#contents", str(NAV_INFO["articles"]))] + [
             (PICK_TITLE if k == "pick" else PARTS[k][0], f"{latest}#{k}", str(n)) for k, n in NAV_INFO["groups"]]
     if key == "browse":
-        return ([(PARTS[k][0], f"{up}{PART_PAGES[k]}", "") for k in PARTS]
-                + [(t, f"{up}browse.html#{a}", "") for a, t in BROWSE_GROUPS[1:]] + [("Article Search", f"{up}proteins.html", "")])
+        return ([("キーワードで探す", f"{up}search.html", "")] + [(PARTS[k][0], f"{up}{PART_PAGES[k]}", "") for k in PARTS]
+                + [(t, f"{up}search.html#{a}", "") for a, t in BROWSE_GROUPS[1:]])
     if key == "back":
         return [(f"{y}.{m:02d}.{d:02d}", f"{up}issues/{date}.html", n_articles(n))
                 for date, n in NAV_INFO["recent"] for y, m, d, _ in [date_parts(date)]] + [("すべての号一覧", f"{up}issues.html", "")]
@@ -1745,9 +1771,16 @@ def shell(main: str, side: str, sticky: bool = False) -> str:
             f'<aside class="side"><div class="side-in">{side}</div></aside></div>')
 
 
-def colophon(extra: str = "") -> str:
-    return (f'<footer class="colo"><div class="wrap colophon"><p>{esc(brand.SITE_NAME)} — 構造生物学者のための毎日の新着構造。</p>'
-            f'{extra}<p>β版</p></div></footer>')   # how the articles are made is told in About FoldFeed
+def colophon(extra: str = "", up: str = "") -> str:
+    """The footer: the name and what the site is (as in the header), the places of the navigation and Read Later, then
+    one quiet line: β版, the way to 著作権と出典 and, on a page made from PMC's data, its credit. How the articles are made
+    is told in About FoldFeed."""
+    links = "".join(f'<a href="{h}">{esc(t)}</a>' for t, h, _ in nav_links(up)) + f'<a href="{up}later.html">Read Later</a>'
+    return (f'<footer class="colo"><div class="wrap colophon"><div class="co-top">'
+            f'<div class="co-brand"><a class="co-word" href="{up}index.html">{esc(brand.SITE_NAME)}</a>'
+            f'<p>{esc(TAGLINE)}</p></div><nav class="co-nav" aria-label="サイト内のページ">{links}</nav></div>'
+            f'<div class="co-bot"><span class="co-beta">β版</span><a href="{up}about.html#rights">著作権と出典</a>{extra}</div>'
+            f'</div></footer>')
 
 
 def sd(label: str, inner: str, cls: str = "") -> str:
@@ -2176,7 +2209,9 @@ def concept_html(meta: dict, picks: list, href: str, featured: str | None = None
     return (f'<section class="sec concept" id="concept"><div class="ix-h"><h2 class="label">Concept</h2></div>'
             f'<div class="concept-grid"><p class="concept-t">{sentences(text)}</p>'
             f'<figure class="flow"><ol>{items}</ol><figcaption><a href="{href}">{m}.{d:02d} の新着から {im}.{idd:02d} 号へ'
-            f'<span class="arr" aria-hidden="true">→</span></a></figcaption></figure></div></section>')
+            f'<span class="arr" aria-hidden="true">→</span></a></figcaption></figure></div>'
+            f'<p class="concept-go"><a class="ix-all" href="#today">{PICK_TITLE}<span class="arr" aria-hidden="true">↓</span></a></p>'
+            f'</section>')
 
 
 def more_html(picks: list, date: str, root: Path, fig_base: str, href: str, featured: str | None) -> str:
@@ -2558,7 +2593,7 @@ def issue_page(date: str, prev_date: str | None, next_date: str | None,
     side = toc_side(picks, feature and feature["pmcid"]) if picks else ""   # the issue links and the search are elsewhere
     head = masthead(1, current=None if preview else "latest" if date == LATEST["date"] else "back")
     from_nlm = meta.get("source") == pmcoa.SOURCE      # Europe PMC was not indexing: the papers came from NLM's PMC data
-    foot = colophon(f'<p>{esc(pmcoa.CREDIT)}</p>' if from_nlm else "")   # what the issue covers is on its first screen
+    foot = colophon(f'<p>{esc(pmcoa.CREDIT)}</p>' if from_nlm else "", "../")   # what the issue covers is on its first screen
     desc = "、".join(pk["target_label"] for _, pk in picks[:6])
     title = f"{brand.SITE_NAME} {date.replace('-', '')}"   # "FoldFeed 20261018" (the owner's naming, 2026-10-18)
     body = f'<div class="wrap issue-top">{"".join(top)}</div>' + shell("".join(main), side, sticky=True)
@@ -2657,6 +2692,9 @@ def sentences(text: str) -> str:
     return "".join(phrases(x + "。") for x in text.split("。") if x)
 
 
+ABOUT_ID = {"紹介する論文": "papers", "掲載のタイミング": "timing", "記事のつくり": "making", "著作権と出典": "rights"}
+
+
 def about_body(lead: str, items: tuple) -> str:
     """An ABOUT passage: the lead, then its items as lists (a run of sentences, a run of parts)."""
     out = f'<p class="ab-lead">{sentences(lead)}</p>'
@@ -2674,7 +2712,7 @@ def about_html(issues: list[str], lib: list[dict], own_page: bool = False) -> st
     every journal the papers came from, as bars. All numbers are computed from the data; a paper that came back in a
     later issue counts once. On the front page Concept is left out: it has its own section near the top."""
     journals = journal_counts(issues)
-    rows = "".join(f'<div><dt>{esc(k)}</dt><dd>{about_body(lead, items)}</dd></div>'
+    rows = "".join(f'<div{f" id={ABOUT_ID[k]}" if k in ABOUT_ID else ""}><dt>{esc(k)}</dt><dd>{about_body(lead, items)}</dd></div>'
                    for k, lead, items in ABOUT if own_page or k != "Concept")
     most = max([c for _, c in journals] + [1])
     jl = "".join(f'<li style="--i:{i}"><span class="jn">{esc(n)}</span><span class="c">{c}</span>'
@@ -2819,10 +2857,10 @@ def newsletter_page() -> str:
                 description="FoldFeed のメール配信とアラート（準備中）。")
 
 
-def browse_page(lib: list[dict]) -> str:
-    """Browse (browse.html): every way into the articles, as tiles that show the newest structures of each: the parts
-    (their own pages), the kinds of protein, of research and the methods (the search page, filtered). The header
-    search's suggestions offer the same ways in, small; here they are seen whole."""
+def browse_html(lib: list[dict]) -> str:
+    """The ways into the articles on Search, as tiles that show the newest structures of each: the parts (their own
+    pages), the kinds of protein, of research and the methods (this page, filtered). The header search's suggestions
+    offer the same ways in, small; here they are seen whole."""
     def thumbs(rows):
         out, seen = "", set()
         for r in rows:
@@ -2847,18 +2885,12 @@ def browse_page(lib: list[dict]) -> str:
         return f'<section class="bt-sec" id="{anchor}"><h2 class="bt-h">{title}</h2>{body}</section>'
 
     parts = [(PARTS[k][0], PART_PAGES[k], [r for r in lib if r["part"] == k], PARTS[k][1]) for k in PARTS]
-    cats = sorted(((CATEGORIES[k], f"proteins.html?cat={k}", [r for r in lib if k in r["cats"]], "") for k in CATEGORIES),
+    cats = sorted(((CATEGORIES[k], f"search.html?cat={k}", [r for r in lib if k in r["cats"]], "") for k in CATEGORIES),
                   key=lambda t: -len(t[2]))
-    topics = [(TOPICS[k], f"proteins.html?topic={k}", [r for r in lib if k in r["topics"]], "") for k in TOPICS]
-    methods = [(m, f"proteins.html?method={m}", [r for r in lib if m in r["method"]], "") for m in METHOD_FACETS]
-    main = (f'<div class="wrap list-page"><div class="ix-h"><h1 class="label">Browse</h1>'
-            f'<span class="ixm"><b>{n_articles(len(lib))}</b></span></div>'
-            f'<p class="lp-lead">これまでの記事を、部・タンパク質の種類・研究の種類・手法から探せます。'
-            f'言葉で探すときは <a href="proteins.html">Article Search</a> へ。</p>'
-            + group("Part", tiles(parts, "lg")) + group("Protein Type", tiles(cats, "sm"))
-            + group("Research Type", tiles(topics, "sm")) + group("Method", tiles(methods, "sm")) + '</div>')
-    return page(f"Browse · {brand.SITE_NAME}", masthead(0, current="browse") + main + colophon(), depth=0,
-                description="FoldFeed の記事を、部・タンパク質の種類・研究の種類・手法から探す。")
+    topics = [(TOPICS[k], f"search.html?topic={k}", [r for r in lib if k in r["topics"]], "") for k in TOPICS]
+    methods = [(m, f"search.html?method={m}", [r for r in lib if m in r["method"]], "") for m in METHOD_FACETS]
+    return (group("Part", tiles(parts, "lg")) + group("Protein Type", tiles(cats, "sm"))
+            + group("Research Type", tiles(topics, "sm")) + group("Method", tiles(methods, "sm")))
 
 
 def home(issues: list[str]) -> str:
@@ -2967,6 +2999,7 @@ def part_page(key: str, issues: list[str]) -> str:
 PROTEIN_SCRIPT = r"""
 (function () {
   var q = document.getElementById('q'), rows = [].slice.call(document.querySelectorAll('.pr')),
+      ways = document.getElementById('fp-ways'), results = document.getElementById('fp-results'),
       groups = [].slice.call(document.querySelectorAll('.pg')), none = document.getElementById('pg-none'),
       total = document.getElementById('pg-total'), filt = document.getElementById('pg-filter'),
       labels = JSON.parse(document.getElementById('pg-labels').textContent);
@@ -2991,11 +3024,13 @@ PROTEIN_SCRIPT = r"""
       c.textContent = (terms.length || facet ? n + ' / ' : '') + c.getAttribute('data-all') + ' 本';
     });
     none.style.display = shown ? 'none' : 'block';
-    total.textContent = (terms.length || facet) ? shown + ' 本が見つかった' : '';
+    total.textContent = (terms.length || facet) ? shown + ' 本が見つかりました' : '';
+    var asked = !!(terms.length || facet);   // nothing asked: the ways in; something asked: the articles
+    ways.hidden = asked; results.classList.toggle('on', asked);
   }
   if (facet) {
     filt.hidden = false;
-    filt.innerHTML = '<span>' + (labels[facet[0] + '=' + facet[1]] || facet[1]) + '</span><a href="proteins.html">条件を外す ×</a>';
+    filt.innerHTML = '<span>' + (labels[facet[0] + '=' + facet[1]] || facet[1]) + '</span><a href="search.html">条件を外す ×</a>';
   }
   if (params.get('q')) q.value = params.get('q');
   q.addEventListener('input', apply);
@@ -3100,9 +3135,11 @@ def facets(lib: list[dict]) -> dict:
     return {k: [(a, n) for a, n in v if n] for k, v in out.items()}
 
 
-def proteins_page(issues: list[str]) -> str:
-    """proteins.html: every article grouped by kind of protein; a search box narrows them by UniProt ID, gene name,
-    protein name, PDB ID or any word of the headline. Works without JavaScript as a plain grouped list."""
+def search_page(issues: list[str]) -> str:
+    """Search (search.html): the one place to find articles (the owner found Browse and Article Search hard to tell
+    apart, 2026-10-26). A box for words (UniProt ID, gene name, protein name, PDB ID or any word of the headline) and,
+    while nothing is asked, the ways in as tiles (browse_html). A word typed, or a way in taken (?cat=, ?topic=,
+    ?method=, ?part=), puts the matching articles in place of the tiles, grouped by kind of protein."""
     lib = library(issues)
     counts = dict(category_counts(lib))
     groups = []
@@ -3131,21 +3168,28 @@ def proteins_page(issues: list[str]) -> str:
                       f'{"".join(items)}</ul></section>')
     labels = {**{f"cat={k}": v for k, v in CATEGORIES.items()}, **{f"topic={k}": v for k, v in TOPICS.items()},
               **{f"method={m}": m for m in METHOD_FACETS}, **{f"part={k}": v[0] for k, v in PARTS.items()}}
-    head = (f'<header class="pp-head"><h1>Article Search</h1>'
+    main = (f'<div class="wrap list-page find-page"><div class="ix-h"><h1 class="label">Search</h1>'
+            f'<span class="ixm"><b>{n_articles(len({r["cand"]["pmcid"] for r in lib}))}</b></span></div>'
+            f'<p class="lp-lead">{phrases("これまでの記事を、|キーワードや、|部・タンパク質の種類・|研究の種類・手法から|探せます。")}</p>'
             f'<form class="find" role="search"><input id="q" type="search" name="q" autocomplete="off" '
             f'placeholder="例：P72047 / kinase / 25IP / リボソーム / de novo" aria-label="記事を探す"><button type="submit">探す</button></form>'
             f'<p id="pg-filter" class="pg-filter" hidden></p><p id="pg-total" class="sd-meta"></p>'
-            f'<script type="application/json" id="pg-labels">{json.dumps(labels, ensure_ascii=False)}</script></header>')
-    main = head + "".join(groups) + '<p id="pg-none" class="pg-none">該当する記事はありませんでした。</p>'
-    side = (sd("Protein Type", '<div class="sd-cats">' + "".join(
-                f'<a href="#c-{k}"><span>{esc(CATEGORIES[k])}</span><span class="c">{counts[k]}</span></a>'
-                for k in CATEGORIES if k in counts) + "</div>")
-            + sd("Research Type", '<div class="sd-cats">' + "".join(
-                f'<a href="?topic={k}"><span>{esc(TOPICS[k])}</span><span class="c">{n}</span></a>' for k, n in FACETS["topics"]) + "</div>")
-            + sd("Pages", '<div class="sd-nav"><a href="index.html">トップへ</a></div>'))
+            f'<script type="application/json" id="pg-labels">{json.dumps(labels, ensure_ascii=False)}</script>'
+            f'<div class="fp-ways" id="fp-ways">{browse_html(lib)}</div>'
+            f'<div class="fp-results" id="fp-results">{"".join(groups)}'
+            f'<p id="pg-none" class="pg-none">該当する記事はありませんでした。</p></div></div>')
     # the page's own search box is the search here: the header's would repeat it
-    return page(f"タンパク質から探す · {brand.SITE_NAME}", masthead(0, search=False) + shell(main, side, sticky=True) + colophon(), depth=0,
-                description="これまでに紹介した構造を、タンパク質の種類・UniProt ID・タンパク質名で探す。", script=PROTEIN_SCRIPT)
+    return page(f"Search · {brand.SITE_NAME}", masthead(0, search=False, current="browse") + main + colophon(), depth=0,
+                description="FoldFeed のこれまでの記事を、キーワードや、部・タンパク質の種類・研究の種類・手法から探す。",
+                script=PROTEIN_SCRIPT)
+
+
+def moved_page(to: str) -> str:
+    """An old address (browse.html, proteins.html): on to its page, keeping what was asked (?cat=..., #...)."""
+    return (f'<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="robots" content="noindex">'
+            f'<meta http-equiv="refresh" content="0; url={to}"><link rel="canonical" href="{to}"><title>{brand.SITE_NAME}</title>'
+            f'<script>location.replace("{to}" + location.search + location.hash);</script></head>'
+            f'<body><p><a href="{to}">{to}</a></p></body></html>')
 
 
 def issue_dates(root: Path, require_articles: bool = True) -> list[str]:
@@ -3171,7 +3215,7 @@ def preview_index(previews: list[str], root: Path | None) -> str:
             '<div class="wrap"><p class="intro">マージ前の号のプレビュー。見た目を確認して、問題がなければ Pull Request を開いて'
             '「Merge pull request」→「Confirm merge」で公開する。このページはブックマークやホーム画面に追加しておける。</p>',
             f'<ul class="queue">{"".join(items)}</ul>' if items else '<p class="intro">いま確認待ちの号はない。</p>',
-            '</div>', colophon()]
+            '</div>', colophon(up="../")]
     return page(f"確認待ちの号 · {brand.SITE_NAME}", "".join(body), depth=1, noindex=True)
 
 
@@ -3205,10 +3249,11 @@ def build(preview_root: Path | None = None) -> int:
         if src.exists():
             shutil.copytree(src, SITE_DIR / "figures" / date, ignore=shutil.ignore_patterns("*.json"))
     (SITE_DIR / "index.html").write_text(home(issues), encoding="utf-8")
-    (SITE_DIR / "proteins.html").write_text(proteins_page(issues), encoding="utf-8")
+    (SITE_DIR / "search.html").write_text(search_page(issues), encoding="utf-8")
+    for old in ("proteins.html", "browse.html"):   # the two pages Search took over (2026-10-26)
+        (SITE_DIR / old).write_text(moved_page("search.html"), encoding="utf-8")
     (SITE_DIR / "later.html").write_text(later_page(), encoding="utf-8")
     (SITE_DIR / "issues.html").write_text(issues_page(issues), encoding="utf-8")
-    (SITE_DIR / "browse.html").write_text(browse_page(lib), encoding="utf-8")
     (SITE_DIR / "newsletter.html").write_text(newsletter_page(), encoding="utf-8")
     (SITE_DIR / "about.html").write_text(about_page(issues, lib), encoding="utf-8")
     for key, name in PART_PAGES.items():

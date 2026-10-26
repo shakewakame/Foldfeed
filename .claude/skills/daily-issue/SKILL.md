@@ -281,7 +281,7 @@ MD・構造予測・ドッキングだけが根拠の論文は入れない（オ
       これにも引用が必要（`summary.evidence.open`）。
   - `categories`（1〜3 個）：タンパク質の種類。`pipeline/schema.py` の `CATEGORIES` から選ぶ
     （kinase・protease・receptor・channel・transporter・enzyme・nucleic・chromatin・translation・regulation・immune・pathogen・
-    photosynthesis・other）。ホームの「タンパク質の種類から探す」と `proteins.html` に使われる。迷ったら主役のタンパク質の働きで選ぶ。
+    photosynthesis・other）。ホームの「タンパク質の種類から探す」と `search.html` に使われる。迷ったら主役のタンパク質の働きで選ぶ。
   - `topics`（任意、0〜3 個）：研究の種類。`pipeline/schema.py` の `TOPICS` から選ぶ（design デノボデザイン・drug 創薬・阻害剤・
     antibody 抗体・ナノボディ・ai AI・構造予測・membrane 膜タンパク質・dynamics 構造変化・中間状態・insitu in situ・トモグラフィー・
     method 手法の開発）。ヘッダーの検索の「Research Type」に使われる。**書かなければサイトが題名・要旨・記事の文から自動で付ける**ので、

@@ -27,7 +27,7 @@ SUMMARY_FIELDS = {
 # calls for). Written only when the paper says it; needs its own quote like the four lines above.
 SUMMARY_OPTIONAL = {"open": "残された課題"}
 
-# What a protein is, for browsing the archive (proteins.html). One to three per article, from this list.
+# What a protein is, for browsing the archive (search.html). One to three per article, from this list.
 CATEGORIES = {
     "kinase": "キナーゼ",
     "protease": "プロテアーゼ",
