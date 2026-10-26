@@ -695,7 +695,6 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
 .art-4 .open dd {{ color:var(--desc); font-size:15px; }}
 
 /* search.html: the articles found, grouped by kind of protein */
-.pg {{ margin-top:40px; scroll-margin-top:20px; }}
 .pr {{ display:grid; grid-template-columns:132px minmax(0,1fr) 250px; gap:6px 22px; padding:13px 0; align-items:baseline; }}
 .pr:not([hidden]) ~ .pr {{ border-top:1px solid var(--hair); }}   /* the first row shown sits on the heading's rule */
 .pr .pd {{ font-family:var(--mono); font-size:12px; color:var(--mute); white-space:nowrap; }}
@@ -704,8 +703,12 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
 .pr .pm {{ font-family:var(--mono); font-size:11.5px; line-height:1.7; color:var(--ink2); overflow-wrap:anywhere; }}
 .pr .pm i {{ color:var(--mute); font-style:normal; letter-spacing:.08em; margin-right:6px; }}
 .pg-none {{ display:none; margin-top:30px; font-family:var(--mono); font-size:13px; color:var(--acc-ink); }}
-.sd-cats a {{ display:flex; justify-content:space-between; gap:12px; padding:5px 0; font-family:var(--sans); font-size:14px; }}
-.sd-cats .c {{ font-family:var(--mono); font-size:12px; color:var(--mute); }}
+.pg-list {{ list-style:none; margin:10px 0 0; padding:0; border-top:1px solid var(--rule); }}
+.pg-list .pr:first-child {{ border-top:0; }}
+.pg-more {{ display:block; margin:26px 0 0; padding:11px 18px; font:inherit; font-family:var(--mono); font-size:12.5px;
+            color:var(--ink); background:transparent; border:1px solid var(--ink); cursor:pointer; }}
+.pg-more:hover {{ background:var(--ink); color:#fff; }}
+.pg-more[hidden] {{ display:none; }}
 
 /* the global navigation: one row of the main places under the header's double rule, small capitals; the current page
    in vermilion. A phone has the same places in the MENU, and only there is the MENU */
@@ -865,7 +868,6 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
 .find-page .bt-sec:first-child {{ margin-top:72px; }}
 .fp-ways[hidden] {{ display:none; }}
 .js .fp-results:not(.on) {{ display:none; }}   /* without JavaScript the tiles, then every article */
-.fp-results .pg:first-child {{ margin-top:8px; }}
 .bt-sec + .bt-sec, .lp-lead + .bt-sec {{ margin-top:88px; }}
 .bt-h {{ position:relative; margin:0 0 22px; font-family:var(--latin); font-size:22px; font-weight:700; color:var(--ink); }}
 .bt-h::before {{ content:""; position:absolute; left:0; top:-26px; width:36px; border-top:4px solid var(--ink); }}
@@ -1506,7 +1508,7 @@ MENU_SCRIPT = r"""
   root.classList.add('anim');
   var SEL = '.ix-h, .about-dl > div, .about-side, .about .jl, .about > .wrap > .about-sub, .pickup, .concept-t, .flow li, '
           + '.today-4 > div, .reads, .cards > li, .mi-th > li, .bt, .iss-list > li, .find, .mail-grid, .shell:not(.sticky-side) .side .sd, '
-          + '.ihead, .part, .art, .rest, .pg .pr, .queue li';
+          + '.ihead, .part, .art, .rest, .queue li';
   var els = [].slice.call(document.querySelectorAll(SEL));
   var seen = new Map();
   els.forEach(function (el) {                     // a short stagger among siblings that come in together
@@ -3165,45 +3167,61 @@ def part_page(key: str, issues: list[str]) -> str:
                 description=f"FoldFeed の {title}：{note}")
 
 
-PROTEIN_SCRIPT = r"""
+SEARCH_PAGE_STEP = 50   # results drawn at a time on the search page
+
+SEARCH_PAGE_SCRIPT = r"""
 (function () {
-  var q = document.getElementById('q'), rows = [].slice.call(document.querySelectorAll('.pr')),
-      ways = document.getElementById('fp-ways'), results = document.getElementById('fp-results'),
-      groups = [].slice.call(document.querySelectorAll('.pg')), none = document.getElementById('pg-none'),
+  var q = document.getElementById('q'), ways = document.getElementById('fp-ways'), results = document.getElementById('fp-results'),
+      list = document.getElementById('pg-list'), more = document.getElementById('pg-more'), none = document.getElementById('pg-none'),
       total = document.getElementById('pg-total'), filt = document.getElementById('pg-filter'),
       labels = JSON.parse(document.getElementById('pg-labels').textContent);
-  var params = new URLSearchParams(location.search), facet = null;
+  var params = new URLSearchParams(location.search), facet = null, data = null, hits = [], shown = 0;
   ['cat', 'topic', 'method', 'part'].forEach(function (k) { if (params.get(k) && !facet) facet = [k, params.get(k)]; });
   function norm(s) { return s.normalize('NFKC').toLowerCase(); }
-  function inFacet(r) {
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function inFacet(a) {
     if (!facet) return true;
-    var v = (r.getAttribute('data-' + facet[0]) || '');
-    return facet[0] === 'method' ? v.indexOf(facet[1]) >= 0 : (' ' + v + ' ').indexOf(' ' + facet[1] + ' ') >= 0;
+    var v = facet[1];
+    return facet[0] === 'cat' ? a.c.indexOf(v) >= 0 : facet[0] === 'topic' ? a.tp.indexOf(v) >= 0
+         : facet[0] === 'method' ? a.m.indexOf(v) >= 0 : a.p === v;
+  }
+  function row(a) {
+    var meta = [];
+    if (a.u.length) meta.push('<i>UNIPROT</i>' + esc(a.u.join(', ')));
+    if (a.g.length) meta.push('<i>GENE</i>' + esc(a.g.join(', ')));
+    if (a.pdb.length) meta.push('<i>PDB</i>' + esc(a.pdb.join(', ')));
+    return '<li class="pr"><span class="pd">' + a.d.replace(/-/g, '.') + ' · ' + (a.n < 10 ? '0' : '') + a.n + '</span>' +
+      '<a class="pt" href="issues/' + a.d + '.html#a' + a.n + '">' + esc(a.h) + '<span class="ps">' + esc(a.t) + '</span></a>' +
+      '<span class="pm">' + meta.join('<br>') + '</span></li>';
+  }
+  function page() {   // the next STEP of the matches
+    list.insertAdjacentHTML('beforeend', hits.slice(shown, shown + STEP).map(row).join(''));
+    shown = Math.min(hits.length, shown + STEP);
+    more.hidden = shown >= hits.length;
+    more.textContent = 'さらに表示（残り ' + (hits.length - shown) + ' 本）';
   }
   function apply() {
-    var terms = norm(q.value).split(/\s+/).filter(Boolean), shown = 0, seen = {};
-    rows.forEach(function (r) {
-      var ok = inFacet(r) && terms.every(function (t) { return r.getAttribute('data-s').indexOf(t) >= 0; });
-      var a = r.getAttribute('data-a');
-      r.hidden = !ok; if (ok && !seen[a]) { seen[a] = 1; shown++; }
-    });
-    groups.forEach(function (g) {
-      var n = g.querySelectorAll('.pr:not([hidden])').length, c = g.querySelector('.pg-c');
-      g.hidden = !n;
-      c.textContent = (terms.length || facet ? n + ' / ' : '') + c.getAttribute('data-all') + ' 本';
-    });
-    none.style.display = shown ? 'none' : 'block';
-    total.textContent = (terms.length || facet) ? shown + ' 本が見つかりました' : '';
-    var asked = !!(terms.length || facet);   // nothing asked: the ways in; something asked: the articles
-    ways.hidden = asked; results.classList.toggle('on', asked);
+    var terms = norm(q.value).split(/\s+/).filter(Boolean), asked = !!(terms.length || facet);
+    ways.hidden = asked; results.classList.toggle('on', asked);   // nothing asked: the ways in; something asked: the articles
+    if (!asked) return;
+    if (!data) { total.textContent = '読み込んでいます…'; return; }
+    hits = data.filter(function (a) { return inFacet(a) && terms.every(function (t) { return a.s.indexOf(t) >= 0; }); });
+    list.innerHTML = ''; shown = 0; page();
+    none.style.display = hits.length ? 'none' : 'block';
+    total.textContent = hits.length + ' 本が見つかりました';
   }
   if (facet) {
     filt.hidden = false;
-    filt.innerHTML = '<span>' + (labels[facet[0] + '=' + facet[1]] || facet[1]) + '</span><a href="search.html">条件を外す ×</a>';
+    filt.innerHTML = '<span>' + esc(labels[facet[0] + '=' + facet[1]] || facet[1]) + '</span><a href="search.html">条件を外す ×</a>';
   }
   if (params.get('q')) q.value = params.get('q');
-  q.addEventListener('input', apply);
+  var timer;
+  q.addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(apply, 120); });
   q.form.addEventListener('submit', function (e) { e.preventDefault(); apply(); });
+  more.addEventListener('click', page);
+  fetch('search.json').then(function (r) { return r.json(); }).then(function (d) {
+    data = d.sort(function (x, y) { return x.d < y.d ? 1 : x.d > y.d ? -1 : x.n - y.n; }); apply();
+  }).catch(function () { total.textContent = '記事の一覧を読み込めませんでした。'; });
   apply();
 })();
 """
@@ -3277,7 +3295,8 @@ def later_page() -> str:
 
 
 def search_index(lib: list[dict]) -> list[dict]:
-    """search.json: one entry per paper (its newest article) for the header search and Read Later."""
+    """search.json: one entry per paper (its newest article) for the header search, the search page and Read Later.
+    The pages fetch it when first needed and draw only what matches, so they stay light as the articles grow."""
     out, seen = [], set()
     for r in lib:
         pm = r["cand"]["pmcid"]
@@ -3289,7 +3308,11 @@ def search_index(lib: list[dict]) -> list[dict]:
                     "t": r["pick"].get("target_en") or r["pick"]["target_label"],
                     "j": r["cand"].get("journal_abbrev") or r["cand"].get("journal") or "",
                     "p": r["part"], "pl": PARTS[r["part"]][0],
-                    "f": f"figures/{r['date']}/{pm}-thumb.svg" if thumb.exists() else "", "s": r["search"]})
+                    "f": f"figures/{r['date']}/{pm}-thumb.svg" if thumb.exists() else "", "s": r["search"],
+                    # for the search page: its kinds and method (filters) and the IDs shown on a result's row
+                    "c": r["cats"], "tp": r["topics"], "m": r["method"],
+                    "u": r["uniprot"][:4] + (["…"] if len(r["uniprot"]) > 4 else []), "g": r["genes"][:4],
+                    "pdb": r["pdbs"][:4] + (["…"] if len(r["pdbs"]) > 4 else [])})
     return out
 
 
@@ -3308,33 +3331,10 @@ def search_page(issues: list[str]) -> str:
     """Search (search.html): the one place to find articles (the owner found Browse and Article Search hard to tell
     apart, 2026-10-26). A box for words (UniProt ID, gene name, protein name, PDB ID or any word of the headline) and,
     while nothing is asked, the ways in as tiles (browse_html). A word typed, or a way in taken (?cat=, ?topic=,
-    ?method=, ?part=), puts the matching articles in place of the tiles, grouped by kind of protein."""
+    ?method=, ?part=), puts the matching articles in place of the tiles, newest first. The articles are not in the
+    page: SEARCH_PAGE_SCRIPT reads search.json and draws the matches, SEARCH_PAGE_STEP at a time, so the page stays as
+    light with thousands of articles as with a hundred."""
     lib = library(issues)
-    counts = dict(category_counts(lib))
-    groups = []
-    for key in CATEGORIES:
-        rows = [r for r in lib if key in r["cats"] or (key == "other" and not set(r["cats"]) & set(CATEGORIES))]
-        if not rows:
-            continue
-        items = []
-        for r in rows:
-            y, m, d, _ = date_parts(r["date"])
-            meta = []
-            if r["uniprot"]:
-                meta.append(f'<i>UNIPROT</i>{esc(", ".join(r["uniprot"][:4]))}{" …" if len(r["uniprot"]) > 4 else ""}')
-            if r["genes"]:
-                meta.append(f'<i>GENE</i>{esc(", ".join(r["genes"][:4]))}')
-            if r["pdbs"]:
-                meta.append(f'<i>PDB</i>{esc(", ".join(r["pdbs"][:4]))}{" …" if len(r["pdbs"]) > 4 else ""}')
-            items.append(f'<li class="pr" data-a="{r["date"]}#{r["n"]}" data-s="{esc(r["search"])}" data-cat="{" ".join(r["cats"])}" '
-                         f'data-topic="{" ".join(r["topics"])}" data-method="{esc(r["method"])}" data-part="{r["part"]}">'
-                         f'<span class="pd">{y}.{m:02d}.{d:02d} · {pad(r["n"])}</span>'
-                         f'<a class="pt" href="issues/{r["date"]}.html#a{r["n"]}">{esc(r["pick"]["headline"])}'
-                         f'<span class="ps">{esc(r["pick"].get("target_en") or r["pick"]["target_label"])}</span></a>'
-                         f'<span class="pm">{"<br>".join(meta)}</span></li>')
-        groups.append(f'<section class="pg" id="c-{key}"><div class="ix-h"><h2 class="label">{esc(CATEGORIES[key])}</h2>'
-                      f'<span class="pg-c" data-all="{counts[key]}">{counts[key]} 本</span></div><ul class="rows" style="list-style:none;margin:0;padding:0">'
-                      f'{"".join(items)}</ul></section>')
     labels = {**{f"cat={k}": v for k, v in CATEGORIES.items()}, **{f"topic={k}": v for k, v in TOPICS.items()},
               **{f"method={m}": m for m in METHOD_FACETS}, **{f"part={k}": v[0] for k, v in PARTS.items()}}
     main = (f'<div class="wrap list-page find-page"><div class="ix-h"><h1 class="label">Search</h1>'
@@ -3342,15 +3342,19 @@ def search_page(issues: list[str]) -> str:
             f'<p class="lp-lead">{phrases("これまでの記事を、|キーワードや、|部・タンパク質の種類・|研究の種類・手法から|探せます。")}</p>'
             f'<form class="find" role="search"><input id="q" type="search" name="q" autocomplete="off" '
             f'placeholder="例：P72047 / kinase / 25IP / リボソーム / de novo" aria-label="記事を探す"><button type="submit">探す</button></form>'
-            f'<p id="pg-filter" class="pg-filter" hidden></p><p id="pg-total" class="sd-meta"></p>'
+            f'<p id="pg-filter" class="pg-filter" hidden></p>'
             f'<script type="application/json" id="pg-labels">{json.dumps(labels, ensure_ascii=False)}</script>'
             f'<div class="fp-ways" id="fp-ways">{browse_html(lib)}</div>'
-            f'<div class="fp-results" id="fp-results">{"".join(groups)}'
-            f'<p id="pg-none" class="pg-none">該当する記事はありませんでした。</p></div></div>')
+            f'<div class="fp-results" id="fp-results"><p id="pg-total" class="sd-meta" aria-live="polite"></p>'
+            f'<ol id="pg-list" class="rows pg-list"></ol>'
+            f'<button id="pg-more" class="pg-more" type="button" hidden></button>'
+            f'<p id="pg-none" class="pg-none">該当する記事はありませんでした。</p></div>'
+            f'<noscript><p class="pg-none" style="display:block">言葉での検索には JavaScript が要ります。'
+            f'上の分類から、部や種類ごとに記事をたどれます。</p></noscript></div>')
     # the page's own search box is the search here: the header's would repeat it
     return page(f"Search · {brand.SITE_NAME}", masthead(0, search=False, current="browse") + main + colophon(), depth=0,
                 description="FoldFeed のこれまでの記事を、キーワードや、部・タンパク質の種類・研究の種類・手法から探す。",
-                script=PROTEIN_SCRIPT)
+                script=SEARCH_PAGE_SCRIPT.replace("STEP", str(SEARCH_PAGE_STEP)))
 
 
 def moved_page(to: str) -> str:
