@@ -42,7 +42,7 @@
   すべて止め、JavaScript がなくても全部見える（最終値が最初から書いてある）。下の 10-13 の「意味のないアニメーション」の禁止は、
   この「意味のある動きは使う」に置き換わる。
 - 2026-10-18：**見出しはすべて英語**（Picked up Today’s Structure・About FoldFeed・New Structure・Notable Structure（旧 注目の構造）・
-  Browse by Protein Type・Past Issues・Newsletter・Highlights・Lab Notes・Related Articles・サイドバーの Article Search・My Interests・
+  Browse by Protein Type・Back Issues・Newsletter・Highlights・Lab Notes・Related Articles・サイドバーの Article Search・My Interests・
   In This Issue など）。行の項目名（疑問・課題、どんなサイトか など）とタンパク質の種類の名前は日本語のまま。
 - 2026-10-13：デザインの禁止事項：SaaS 風のカード、不必要なグラデーション・ドロップシャドウ・過剰な角丸、意味のないアニメーション、
   装飾アイコン。既存の論文データ・リンク・取得処理を壊さない。実際の PDB データに基づかない構造図を実構造のように見せない

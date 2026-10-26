@@ -797,7 +797,14 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
               font-family:var(--mono); font-size:11px; color:var(--mute); text-align:center; }}
 .mi-no {{ position:absolute; left:0; top:0; padding:0 8px 3px 0; background:var(--ground); font-family:var(--latin); font-size:22px;
           line-height:1; color:var(--ink); }}   /* as a card's number: on the figure's top-left */
-.mi-more a {{ height:100%; display:flex; align-items:center; font-family:var(--mono); font-size:15px; color:var(--mute); }}
+.mi-more a {{ height:100%; box-sizing:border-box; padding-bottom:var(--th-tg); display:flex; align-items:center; font-family:var(--mono);
+              font-size:15px; color:var(--mute); }}   /* level with the figures, not with figure and target */
+/* the target under a small figure (This Issue, Back Issues): the name only, two lines at most (three on a phone); the
+   whole target is the figure's title */
+.th-tg {{ display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; height:2.7em; margin-top:7px;
+          font-family:var(--latin); font-size:13px; line-height:1.35; color:var(--ink2); overflow-wrap:anywhere; }}
+.mi-th {{ --th-tg:calc(7px + 2.7 * 13px); }}
+.mi-th a:hover .th-tg b {{ color:var(--acc-ink); }}
 .mi-more a:hover {{ color:var(--acc-ink); }}
 
 /* Browse: a tile for each way in, the newest structures of it on top */
@@ -817,7 +824,8 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
 .bt-c {{ flex:none; font-family:var(--mono); font-size:12px; font-weight:400; color:var(--mute); }}
 .bt-d {{ display:block; margin-top:6px; font-size:14px; line-height:1.6; color:var(--desc); }}
 
-/* a list of issues (Back Issues, Past Issues): the date, the parts with their counts, a strip of the structures */
+/* a list of issues (Back Issues, on its page and on the front page): the date, the parts with their counts, a strip of the
+   structures with their targets */
 .iss-list {{ list-style:none; margin:0; padding:0; }}
 .iss {{ display:grid; grid-template-columns:200px 250px minmax(0,1fr); gap:0 36px; align-items:center; padding:18px 0;
         border-top:1px solid var(--hair); }}
@@ -830,11 +838,17 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
 .iss-n {{ margin:0; display:flex; flex-direction:column; gap:3px; font-family:var(--mono); font-size:12px; }}
 .iss-n span {{ display:flex; align-items:center; }}
 .iss-n b {{ margin-left:auto; padding-left:12px; color:var(--ink); }}
-.iss-th {{ display:grid; grid-template-columns:repeat({THUMBS_PER_ISSUE}, minmax(0,1fr)) 44px; gap:8px; align-items:center; }}
+.iss-th {{ --th-tg:calc(6px + 2.7 * 11.5px); display:grid; grid-template-columns:repeat({THUMBS_PER_ISSUE}, minmax(0,1fr)) 44px;
+           gap:8px; align-items:start; color:var(--ink); text-decoration:none; }}
+.iss-th:hover {{ text-decoration:none; }}
+.iss-th .it {{ display:block; min-width:0; }}
+.iss-th .th-tg {{ margin-top:6px; font-size:11.5px; }}
+.iss-th:hover .th-tg b {{ color:var(--acc-ink); }}
 .iss-th img {{ display:block; width:100%; height:auto; transition:transform .4s cubic-bezier(.2,.8,.2,1); }}
 .iss-th:hover img {{ transform:scale(1.06); }}
-.iss-th .no {{ aspect-ratio:3/2; border:1px solid var(--hair); }}
-.iss-th .more {{ font-family:var(--mono); font-size:12px; color:var(--mute); }}
+.iss-th .no {{ display:block; aspect-ratio:3/2; border:1px solid var(--hair); }}
+.iss-th .more {{ align-self:stretch; display:flex; align-items:center; padding-bottom:var(--th-tg); font-family:var(--mono);
+                 font-size:12px; color:var(--mute); }}
 .past .ix-h .ix-all {{ margin-left:auto; }}
 .list-page {{ padding-top:40px; padding-bottom:var(--sec); }}
 .lp-lead {{ margin:-6px 0 34px; font-size:15.5px; line-height:1.7; color:var(--desc); }}
@@ -1128,9 +1142,9 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
   :root {{ --fig-shadow:none; --fig-shadow-up:none; }}   /* no shadows on a phone (the owner's choice, 2026-10-20) */
   .pk-s {{ font-size:15.5px; }}
   .iss {{ grid-template-columns:minmax(0,1fr); gap:10px; }}
-  .iss-n {{ flex-direction:row; flex-wrap:wrap; gap:4px 18px; }}
-  .iss-n b {{ padding-left:8px; }}
-  .iss-th {{ grid-template-columns:repeat(4, minmax(0,1fr)); }}
+  .iss-n {{ display:none; }}   /* the parts' counts are on the issue page (the owner, 2026-10-26) */
+  .iss-th {{ grid-template-columns:repeat(4, minmax(0,1fr)); gap:14px 8px; }}
+  .iss-th .more {{ padding-bottom:0; }}
   .mi-th, .mi-th.more {{ grid-template-columns:repeat(3, minmax(0,1fr)); gap:22px 14px; }}
   .concept-grid {{ grid-template-columns:minmax(0,1fr); gap:36px; }}
   .concept-t {{ font-size:16px; }}
@@ -1139,6 +1153,9 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
   .flow li > b {{ font-size:44px; }}
   .mi-no {{ font-size:17px; }}
   .mi-more {{ grid-column:1 / -1; margin-top:-8px; }}   /* "+5" on a line of its own under the figures */
+  .mi-more a {{ padding-bottom:0; }}
+  .th-tg {{ -webkit-line-clamp:3; height:4.05em; font-size:12px; }}
+  .iss-th .th-tg {{ font-size:11px; }}
   .iss-d b {{ font-size:26px; }}
   .lp-row {{ grid-template-columns:110px minmax(0,1fr); gap:6px 16px; align-items:start; }}
   .lp-row .later {{ grid-column:2; justify-self:start; }}
@@ -1632,7 +1649,7 @@ def nav_items(key: str, up: str) -> list[tuple[str, str, str]]:
                 + [(t, f"{up}browse.html#{a}", "") for a, t in BROWSE_GROUPS[1:]] + [("Article Search", f"{up}proteins.html", "")])
     if key == "back":
         return [(f"{y}.{m:02d}.{d:02d}", f"{up}issues/{date}.html", n_articles(n))
-                for date, n in NAV_INFO["recent"] for y, m, d, _ in [date_parts(date)]] + [("すべての号", f"{up}issues.html", "")]
+                for date, n in NAV_INFO["recent"] for y, m, d, _ in [date_parts(date)]] + [("すべての号一覧", f"{up}issues.html", "")]
     if key == "news":
         return [("毎朝の号のお知らせ", f"{up}newsletter.html", ""), ("週のまとめ", f"{up}newsletter.html", ""),
                 ("タンパク質アラート", f"{up}newsletter.html", "")]
@@ -2045,6 +2062,13 @@ CARD_SIZE = {"new": "md", "update": "sm", "impact": "sm"}   # New Structure a si
 TRAILING_NOTE = re.compile(r"^(.*\S)\s*(\([^()]*\))$")
 
 
+def target_name(pick: dict) -> str:
+    """The target's name alone, without the closing parenthesis (the organism, mostly): under a small figure."""
+    target = pick.get("target_en") or pick["target_label"]
+    m = TRAILING_NOTE.match(target)
+    return f"<b>{esc(m.group(1) if m else target)}</b>"
+
+
 def target_html(pick: dict) -> str:
     """The target's English name, its name in bold and a closing parenthesis (the organism, mostly) in a lighter tone,
     so the protein's name is what the eye catches."""
@@ -2126,7 +2150,7 @@ def concept_html(meta: dict, picks: list, href: str, featured: str | None = None
 def more_html(picks: list, date: str, root: Path, fig_base: str, href: str, featured: str | None) -> str:
     """Under Picked up Today's Structure on the front page, the way into the issue (the owner's request, 2026-10-21: the
     front page keeps the pick as a taste, what else came out is read on the issue page): the issue's other structures
-    as a strip of figures, each a link to its article, and the button to the whole issue."""
+    as a strip of figures with their targets, each a link to its article, and the button to the whole issue."""
     number = numbers(picks)
     rest = [(c, pk) for c, pk in picks if c["pmcid"] != featured]
     if not rest:
@@ -2138,7 +2162,7 @@ def more_html(picks: list, date: str, root: Path, fig_base: str, href: str, feat
         fig = (f'<img src="{fig_base}/{date}/{esc(c["pmcid"])}-thumb.svg" width="600" height="400" alt="{name}" loading="lazy">'
                if (root / date / "figures" / f'{c["pmcid"]}-thumb.svg').exists() else f'<span class="no">{esc(no_figure(c))}</span>')
         thumbs += (f'<li><a href="{href}#a{n}" title="{name}">{fig}<span class="mi-no" aria-hidden="true">{pad(n)}</span>'
-                   f'</a></li>')
+                   f'<span class="th-tg">{target_name(pk)}</span></a></li>')
     more = len(rest) - MORE_THUMBS
     if more > 0:
         thumbs += f'<li class="mi-more"><a href="{href}">+{more}</a></li>'
@@ -2793,7 +2817,7 @@ def home(issues: list[str]) -> str:
     page) and Today's Structure in 3D. Right under it Picked up Today's Structure, the one article shown in full as a
     taste of the site, and the way into the issue with its other structures as small figures: what else came out is
     seen and read on the issue page (the owner's request, 2026-10-21; the front page had every article as cards).
-    Then the latest past issues and About FoldFeed. Browse and Newsletters & Alerts are pages of their own, in the
+    Then the latest Back Issues (the newest past issues) and About FoldFeed. Browse and Newsletters & Alerts are pages of their own, in the
     global navigation (2026-10-19)."""
     latest = next((d for d in issues if load_issue(d, ISSUES_DIR)[1]), issues[0])  # newest issue that has articles
     past = [d for d in issues if d != latest]
@@ -2819,8 +2843,8 @@ def home(issues: list[str]) -> str:
     if past:
         number = {d: len(issues) - i for i, d in enumerate(issues)}
         rows = "".join(issue_row(d, number[d], ISSUES_DIR, "figures", "issues/") for d in past[:PAST_ON_HOME])
-        main.append(f'<section class="sec past"><div class="ix-h"><h2 class="label">Past Issues</h2>'
-                    f'<a class="ix-all" href="issues.html">すべての号<span class="arr" aria-hidden="true">→</span></a></div>'
+        main.append(f'<section class="sec past"><div class="ix-h"><h2 class="label">Back Issues</h2>'
+                    f'<a class="ix-all" href="issues.html">すべての号一覧<span class="arr" aria-hidden="true">→</span></a></div>'
                     f'<ol class="iss-list">{rows}</ol></section>')
     side = ""   # no sidebar: the search is in the header (2026-10-19), the interests were dropped (2026-10-18)
     return page(brand.SITE_NAME,
@@ -2836,7 +2860,7 @@ PAST_ON_HOME = 5   # the latest past issues on the front page; all of them are o
 
 def issue_row(date: str, number: int, root: Path, fig_base: str, href_base: str) -> str:
     """One issue in a list of issues: its date, number and weekday, how many articles of each part, and a strip of
-    its structures (the first few; how many more after them)."""
+    its structures with their targets (the first few; how many more after them)."""
     _, picks, _ = load_issue(date, root)
     y, m, d, _ = date_parts(date)
     href = f"{href_base}{date}.html"
@@ -2844,11 +2868,10 @@ def issue_row(date: str, number: int, root: Path, fig_base: str, href_base: str)
                      for k, v in render.sections(picks).items() if v) or "<span>記事なし</span>"
     thumbs = ""
     for c, pk in picks[:THUMBS_PER_ISSUE]:
-        if (root / date / "figures" / f'{c["pmcid"]}-thumb.svg').exists():
-            thumbs += (f'<img src="{fig_base}/{date}/{esc(c["pmcid"])}-thumb.svg" width="600" height="400" '
-                       f'alt="{esc(pk.get("target_en") or pk["target_label"])}" loading="lazy">')
-        else:
-            thumbs += '<span class="no" aria-hidden="true"></span>'
+        name = esc(pk.get("target_en") or pk["target_label"])
+        fig = (f'<img src="{fig_base}/{date}/{esc(c["pmcid"])}-thumb.svg" width="600" height="400" alt="" loading="lazy">'
+               if (root / date / "figures" / f'{c["pmcid"]}-thumb.svg').exists() else '<span class="no" aria-hidden="true"></span>')
+        thumbs += f'<span class="it" title="{name}">{fig}<span class="th-tg">{target_name(pk)}</span></span>'
     more = len(picks) - THUMBS_PER_ISSUE
     thumbs += f'<span class="more">+{more}</span>' if more > 0 else ""
     return (f'<li class="iss"><a class="iss-d" href="{href}"><span class="k">Issue No. {number} · '
