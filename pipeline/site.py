@@ -1006,13 +1006,13 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
      issue's date top right, the structure large and past the right edge, the Picked up mark at the bottom left. The
      breakdown is in Concept on a phone; the way to About is not needed (Concept follows) */
   .lead {{ position:relative; overflow:clip; }}
-  .lead-grid {{ position:relative; min-height:0; padding-top:24px; padding-bottom:4px; gap:0; align-content:start; }}
+  .lead-grid {{ position:relative; min-height:0; padding-top:46px; padding-bottom:4px; gap:0; align-content:start; }}
   .lead-text {{ display:contents; }}
   .lead-h, .lead-mark, .lead-badge {{ position:relative; z-index:1; }}
-  .lead-h {{ order:1; font-size:clamp(22px, 6.4vw, 30px); line-height:1.5; letter-spacing:.01em; }}
+  .lead-h {{ order:1; padding-left:10px; font-size:clamp(19px, 5.4vw, 24px); line-height:1.6; letter-spacing:.01em; }}   /* the owner's B, 2026-10-26 */
   .lead-h span {{ white-space:normal; word-break:keep-all; }}
   .lead-h .sp {{ display:inline; }}
-  .lead-badge {{ display:block; position:absolute; top:31px; right:var(--pad); margin:0; padding:6px 8px 5px; background:var(--acc);
+  .lead-badge {{ display:block; position:absolute; top:52px; right:var(--pad); margin:0; padding:6px 8px 5px; background:var(--acc);
                  color:#fff; line-height:1; white-space:nowrap; }}
   .lead-badge span {{ margin-right:5px; font-family:var(--mono); font-size:9px; letter-spacing:.1em; text-transform:uppercase; }}
   .lead-badge b {{ font-family:var(--latin); font-size:14px; font-weight:700; letter-spacing:.02em; }}
@@ -1023,7 +1023,7 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
      the ground keeps them off its lines */
   .lead-art .v3d-view, .lead-art .lead-pic {{ opacity:.55; }}
   .lead-h, .lead-mark {{ text-shadow:0 0 3px var(--ground), 0 0 10px var(--ground), 0 0 18px var(--ground); }}
-  .lead-mark {{ order:3; display:block; justify-self:start; max-width:100%; margin-top:-64px; color:var(--ink); text-decoration:none; }}
+  .lead-mark {{ order:3; display:block; justify-self:start; max-width:100%; margin-top:-64px; padding-left:10px; color:var(--ink); text-decoration:none; }}
   .lead-mark:hover {{ text-decoration:none; }}
   .lead-mark .k {{ display:block; font-family:var(--mono); font-size:11px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--acc-ink); }}
   .lead-mark b {{ display:block; margin-top:5px; font-family:var(--latin); font-size:clamp(24px, 7.4vw, 30px); line-height:1.05;
@@ -2163,11 +2163,13 @@ def feature_of(feature: dict | None, picks: list) -> tuple[int, dict, dict] | No
     return None
 
 
-def lead_html(feature: dict | None, picks: list, date: str, root: Path, fig_base: str, number: int | None = None) -> str:
+def lead_html(feature: dict | None, picks: list, date: str, root: Path, fig_base: str, number: int | None = None,
+              pick_from: tuple | None = None) -> str:
     """The first screen of the front page: what the site is (three lines), the button down to Today's Structure, and
     on the right Today's Structure in the 3D viewer, opened by itself on a wide screen, with no text around it but
     "読み込み中" while it loads. On a phone (where it is not opened) and when it cannot load, the same structure is
-    shown as a drawing from the same view (pipeline.render: <pmcid>-hero.svg)."""
+    shown as a drawing from the same view (pipeline.render: <pmcid>-hero.svg). pick_from: (feature, picks, date) of the
+    Today's Structure to show when the latest issue has none (the one before it, the owner 2026-10-26)."""
     lines = "".join(f'<span style="--i:{i}">{"<br class=sp>".join(esc(x) for x in t.split("|"))}</span>' for i, t in enumerate(LEAD))
     y, m, d, wd = date_parts(date)
     # when it was updated, quietly under the structure (the owner, 2026-10-23: above the introduction it stood out)
@@ -2185,23 +2187,26 @@ def lead_html(feature: dict | None, picks: list, date: str, root: Path, fig_base
                     for k, v in render.sections(picks).items() if v)
     go += (f'<p class="lead-parts kl"><span class="t">今日の内訳</span>{parts}</p>' if parts else "")
     go += '<a class="lead-about" href="#concept">はじめての方へ：FoldFeed について<span aria-hidden="true">▽</span></a>'
-    hit = feature_of(feature, picks)
+    pf, pp, pdate = pick_from or (feature, picks, date)
+    hit = feature_of(pf, pp)
     # a phone (the owner, 2026-10-24): the introduction top left, in the serif of the first design; the issue's date top
     # right (Issue of yy.mm.dd); the structure large between; the Picked up mark (Today's Structure, its target) at
     # the bottom left
     badge = f'<p class="lead-badge"><span>Issue of</span><b>{y % 100:02d}.{m:02d}.{d:02d}</b></p>'
     mark = (f'<a class="lead-mark" href="#today"><span class="k">Picked up</span><b>Today’s Structure</b>'
-            f'<span class="t">{esc(hit[2]["target_label"])}</span></a>') if hit else ""
+            f'<span class="t">{esc(hit[2]["target_label"])}'
+            + (f'（{date_parts(pdate)[1]}.{date_parts(pdate)[2]:02d} 号から）' if pdate != date else "") + '</span></a>') if hit else ""
     art_html = ""
-    if hit and (root / date / "figures" / f"{hit[1]['pmcid']}-hero.svg").exists():
+    if hit and (root / pdate / "figures" / f"{hit[1]['pmcid']}-hero.svg").exists():
         pm, pk = hit[1]["pmcid"], hit[2]
-        fd = root / date / "figures"
+        fd = root / pdate / "figures"
         info = read_json(fd / f"{pm}.json") if (fd / f"{pm}.json").exists() else {}
         attrs, _, _ = viewer_bar(info, "", info.get("hero_view"))
-        img = (f'<img class="fig" src="{fig_base}/{date}/{esc(pm)}-hero.svg"{wh(fd / f"{pm}-hero.svg")} '
+        img = (f'<img class="fig" src="{fig_base}/{pdate}/{esc(pm)}-hero.svg"{wh(fd / f"{pm}-hero.svg")} '
                f'alt="構造図：{esc(pk.get("target_en") or pk["target_label"])}">')
         # under the structure, small: what it is (the pick's headline), a way down to it
-        cap = (f'<a class="lead-cap" href="#today"><span class="k">Picked up Today’s Structure</span>'
+        cap = (f'<a class="lead-cap" href="#today"><span class="k">Picked up Today’s Structure'
+               + (f' · {date_parts(pdate)[1]}.{date_parts(pdate)[2]:02d} 号から' if pdate != date else "") + '</span>'
                f'<span class="h">{esc(pk["headline"])}</span></a>')
         if attrs:   # opens by itself on a wide screen (assets/viewer.js). While it loads, only "読み込み中" shows; the
             # drawing is for a phone (where it does not open) and for a browser that cannot load it. No buttons, no help.
@@ -2255,11 +2260,13 @@ def read_links(cand: dict, href: str) -> str:
             f'{paper_button(cand, note=False)}</div>')
 
 
-def today_html(feature: dict | None, picks: list, date: str, root: Path, fig_base: str, href_base: str = "") -> str:
+def today_html(feature: dict | None, picks: list, date: str, root: Path, fig_base: str, href_base: str = "",
+               carried: bool = False) -> str:
     """Picked up Today's Structure on the front page, the largest card: the article's own figure (overview and binding
     site; its portrait version on a phone), its part and number, the target, the headline and supplement, the four
     lines (question, approach, result, learned; the owner, 2026-10-23) and the ways on (the article, the paper, Read
-    Later). Highlights and Lab Notes are in the article; the reason it was picked is for the pull request."""
+    Later). Highlights and Lab Notes are in the article; the reason it was picked is for the pull request. carried: the
+    latest issue had none, so this is the one before it, and the heading says from which issue."""
     hit = feature_of(feature, picks)
     if not hit:
         return ""
@@ -2277,7 +2284,9 @@ def today_html(feature: dict | None, picks: list, date: str, root: Path, fig_bas
     else:
         fig = thumb_html(cand, pk, date, root, fig_base, href)
     fig = f'<div class="cfig">{fig}<span class="cno" aria-hidden="true">{pad(n)}</span></div>'
-    return (f'<section class="today" id="today"><div class="ix-h"><h2 class="label">Picked up Today’s Structure</h2></div>'
+    _, m, d, _ = date_parts(date)
+    when = f'<span class="ixm"><b>{m}.{d:02d} 号から</b></span>' if carried else ""
+    return (f'<section class="today" id="today"><div class="ix-h"><h2 class="label">Picked up Today’s Structure</h2>{when}</div>'
             f'<article class="pickup">{fig}<div class="pk-t">'
             f'<p class="ck"><span class="ct">{PARTS[render.part_of(cand, pk)][0]}</span>{later_button(pm, True)}</p>'
             f'<p class="pk-tg ctg">{target_html(pk)}</p>'
@@ -2793,8 +2802,19 @@ def home(issues: list[str]) -> str:
     feature = load_feature(latest, ISSUES_DIR, picks)
     lib = library(issues)
     meta = load_issue(latest, ISSUES_DIR)[0]
+    # no Today's Structure in the latest issue (fewer than FEATURE_MIN articles): the one before it is shown again, so
+    # the front page is never without one (the owner, 2026-10-26)
+    shown = (feature, picks, latest)
+    if not feature_of(feature, picks):
+        for d in issues[issues.index(latest) + 1:]:
+            _, pp, _ = load_issue(d, ISSUES_DIR)
+            pf = load_feature(d, ISSUES_DIR, pp)
+            if feature_of(pf, pp):
+                shown = (pf, pp, d)
+                break
+    carried = shown[2] != latest
     main = [concept_html(meta, picks, href, feature and feature["pmcid"]),
-            today_html(feature, picks, latest, ISSUES_DIR, "figures", href),
+            today_html(*shown, ISSUES_DIR, "figures", f"issues/{shown[2]}.html", carried=carried),
             more_html(picks, latest, ISSUES_DIR, "figures", href, feature and feature["pmcid"])]
     if past:
         number = {d: len(issues) - i for i, d in enumerate(issues)}
@@ -2804,7 +2824,7 @@ def home(issues: list[str]) -> str:
                     f'<ol class="iss-list">{rows}</ol></section>')
     side = ""   # no sidebar: the search is in the header (2026-10-19), the interests were dropped (2026-10-18)
     return page(brand.SITE_NAME,
-                masthead(0) + lead_html(feature, picks, latest, ISSUES_DIR, "figures", len(issues) - issues.index(latest))
+                masthead(0) + lead_html(feature, picks, latest, ISSUES_DIR, "figures", len(issues) - issues.index(latest), shown)
                 + shell("".join(main), side)
                 + about_html(issues, lib)
                 + colophon(f'<p>{esc(pmcoa.CREDIT)}</p>' if load_issue(latest, ISSUES_DIR)[0].get("source") == pmcoa.SOURCE else ""),
