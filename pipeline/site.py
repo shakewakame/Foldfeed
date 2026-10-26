@@ -20,6 +20,7 @@ from __future__ import annotations
 import argparse
 import datetime
 import html
+import itertools
 import json
 import math
 import re
@@ -261,7 +262,7 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .lab dt {{ font-family:var(--mono); font-size:11px; color:var(--mute); padding-top:3px; }}
 .lab dd {{ margin:0; }}
 .rest {{ margin-top:var(--sec); }}
-.rest ul {{ margin:10px 0 0; padding-left:1.2em; font-size:14.5px; }}
+.rest .bl {{ margin-top:10px; font-size:14.5px; }}
 
 .preview-bar {{ background:var(--acc); color:#fff; font-family:var(--mono); font-size:12.5px;
                 letter-spacing:.04em; padding:9px 28px; text-align:center; }}
@@ -295,8 +296,8 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .find button:hover {{ background:var(--acc-ink); border-color:var(--acc-ink); }}
 .mail-grid {{ display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,1fr); gap:48px; margin-top:16px; align-items:start; }}
 .mail p {{ margin:0 0 8px; font-size:15px; color:var(--desc); }}
-.mail ul {{ margin:6px 0 0; padding-left:1.3em; font-size:14.5px; line-height:1.65; color:var(--desc); }}
-.mail li + li {{ margin-top:12px; }}
+.mail .bl {{ margin:6px 0 0; font-size:14.5px; line-height:1.65; color:var(--desc); }}
+.mail .bl li + li {{ margin-top:12px; }}
 .mail .soon {{ font-family:var(--mono); font-size:12px; letter-spacing:.06em; color:var(--acc-ink); }}
 .mail form {{ display:flex; gap:8px; }}
 .mail input {{ flex:1; min-width:0; font:inherit; font-family:var(--sans); font-size:14.5px; padding:10px 12px; border:1px solid var(--ink);
@@ -639,6 +640,23 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
 .about-dl dd .s {{ display:block; text-wrap:balance; }}
 .about-dl dd .s + .s {{ margin-top:.75em; }}
 .about-dl dd .w {{ white-space:nowrap; }}
+.about-dl .ab-lead {{ margin:0; color:var(--ink); }}
+/* a list (About, Newsletters & Alerts, Not Covered): a short dash hung in the margin, at the first line's middle; the
+   lines of an item are kept close, the items a little apart */
+.bl {{ list-style:none; margin:14px 0 0; padding:0; }}
+.bl li {{ position:relative; padding-left:1.5em; }}
+.bl li + li {{ margin-top:.6em; }}
+.bl li::before {{ content:""; position:absolute; left:.15em; top:.82em; top:calc(.5lh - .5px); width:.7em; border-top:1px solid var(--mute); }}
+.about-dl .bl {{ font-size:15px; line-height:1.75; }}
+/* the parts and what goes in each: the part's name with its colour, its text beside it (under it on a phone) */
+.bl.bl-parts {{ display:grid; grid-template-columns:max-content minmax(0,1fr); gap:.6em 1.4em; align-items:baseline; margin:18px 0; }}
+.bl-parts li {{ display:contents; }}
+.bl-parts li::before {{ display:none; }}
+.bl-parts b {{ font-family:var(--latin); font-weight:700; color:var(--ink); white-space:nowrap; }}
+.bl-parts i {{ display:inline-block; width:9px; height:9px; margin-right:9px; border-radius:2px; vertical-align:.05em; }}
+.bl-parts .sw-n {{ background:{CHART_NEW}; }}
+.bl-parts .sw-u {{ background:{CHART_UPD}; }}
+.bl-parts .sw-h {{ background:{CHART_HOT}; }}
 
 /* the article's four-line introduction: plain lines, one weight, no rules; the labels are quiet and sit beside the text */
 .art-4 .open dd {{ color:var(--desc); font-size:15px; }}
@@ -830,6 +848,7 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
 .iss {{ display:grid; grid-template-columns:200px 250px minmax(0,1fr); gap:0 36px; align-items:center; padding:18px 0;
         border-top:1px solid var(--hair); }}
 .iss:last-child {{ border-bottom:1px solid var(--hair); }}
+.ix-h + .iss-list > .iss:first-child {{ border-top:0; }}   /* the heading's rule is the first line */
 .iss-d {{ display:block; text-decoration:none; }}
 .iss-d:hover {{ text-decoration:none; }}
 .iss-d .k {{ display:block; font-family:var(--mono); font-size:11.5px; letter-spacing:.06em; color:var(--acc-ink); }}
@@ -1055,6 +1074,10 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
   .about-grid {{ grid-template-columns:minmax(0,1fr); gap:30px; }}
   .about-dl div {{ grid-template-columns:minmax(0,1fr); gap:8px; }}
   .about-dl dd {{ font-size:15px; }}
+  .about-dl .bl {{ font-size:14.5px; }}
+  .bl.bl-parts {{ grid-template-columns:minmax(0,1fr); gap:0; }}
+  .bl-parts li + li b {{ margin-top:.9em; }}
+  .bl-parts .s {{ padding-left:18px; }}   /* under the name, past its colour */
   .lead-art img {{ max-height:none; }}
   /* a phone: the figures run the screen's full width (the owner's memo, 2026-10-22: wide margins beside a picture
      make a phone's screen feel cramped); a card's number moves in with the text */
@@ -1141,10 +1164,19 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
   .pickup .pk-tg {{ font-size:19px; }}
   :root {{ --fig-shadow:none; --fig-shadow-up:none; }}   /* no shadows on a phone (the owner's choice, 2026-10-20) */
   .pk-s {{ font-size:15.5px; }}
-  .iss {{ grid-template-columns:minmax(0,1fr); gap:10px; }}
+  /* an issue in the list: the structures lead (the owner, 2026-10-26). One quiet line over them, the date (still the
+     largest text) on the left, the number and weekday small and grey on the right; the structures larger, in a row
+     that runs off the right edge and scrolls sideways */
+  .iss {{ grid-template-columns:minmax(0,1fr); gap:12px; padding:20px 0 22px; }}
+  .iss-d {{ display:flex; align-items:baseline; justify-content:space-between; gap:12px; }}
+  .iss-d b {{ order:-1; margin:0; font-size:20px; }}
+  .iss-d .k {{ font-size:11px; letter-spacing:.04em; color:var(--mute); }}
+  .iss-th {{ display:flex; gap:14px; overflow-x:auto; overscroll-behavior-x:contain; scroll-snap-type:x mandatory;
+             margin-right:calc(-1 * var(--pad)); padding-right:var(--pad); scrollbar-width:none; }}
+  .iss-th::-webkit-scrollbar {{ display:none; }}
+  .iss-th .it {{ flex:0 0 37%; scroll-snap-align:start; }}
+  .iss-th .more {{ flex:none; align-self:stretch; padding:0 6px var(--th-tg); }}
   .iss-n {{ display:none; }}   /* the parts' counts are on the issue page (the owner, 2026-10-26) */
-  .iss-th {{ grid-template-columns:repeat(4, minmax(0,1fr)); gap:14px 8px; }}
-  .iss-th .more {{ padding-bottom:0; }}
   .mi-th, .mi-th.more {{ grid-template-columns:repeat(3, minmax(0,1fr)); gap:22px 14px; }}
   .concept-grid {{ grid-template-columns:minmax(0,1fr); gap:36px; }}
   .concept-t {{ font-size:16px; }}
@@ -1155,8 +1187,8 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
   .mi-more {{ grid-column:1 / -1; margin-top:-8px; }}   /* "+5" on a line of its own under the figures */
   .mi-more a {{ padding-bottom:0; }}
   .th-tg {{ -webkit-line-clamp:3; height:4.05em; font-size:12px; }}
-  .iss-th .th-tg {{ font-size:11px; }}
-  .iss-d b {{ font-size:26px; }}
+  .iss-th {{ --th-tg:calc(6px + 2.7 * 12px); }}
+  .iss-th .th-tg {{ -webkit-line-clamp:2; height:2.7em; font-size:12px; }}
   .lp-row {{ grid-template-columns:110px minmax(0,1fr); gap:6px 16px; align-items:start; }}
   .lp-row .later {{ grid-column:2; justify-self:start; }}
   .lp-h {{ font-size:16px; }}
@@ -2140,7 +2172,7 @@ def concept_html(meta: dict, picks: list, href: str, featured: str | None = None
                   + '</span>' if last else "")
         items += (f'<li><b data-count="{n}">{n:,}</b><span class="flow-bar" style="--w:{w:.3f}" aria-hidden="true">{bar}</span>'
                   f'<span class="flow-t">{"<br>".join(esc(x) for x in t.split("|"))}</span>{legend}</li>')
-    text = next(v for k, v in ABOUT if k == "Concept")
+    text = next(lead for k, lead, _ in ABOUT if k == "Concept")
     return (f'<section class="sec concept" id="concept"><div class="ix-h"><h2 class="label">Concept</h2></div>'
             f'<div class="concept-grid"><p class="concept-t">{sentences(text)}</p>'
             f'<figure class="flow"><ol>{items}</ol><figcaption><a href="{href}">{m}.{d:02d} の新着から {im}.{idd:02d} 号へ'
@@ -2521,7 +2553,7 @@ def issue_page(date: str, prev_date: str | None, next_date: str | None,
     if rest:
         items = "".join(f'<li><a href="{doi_url(x)}">{esc(x["title"])}</a> — <i>{esc(x["journal_abbrev"] or x["journal"])}</i>'
                         f'（{esc(render.KIND_JA[x["kind"]])}）</li>' for x in rest)
-        main.append(f'<section class="rest"><div class="ix-h"><h2 class="label">Not Covered</h2></div><ul>{items}</ul></section>')
+        main.append(f'<section class="rest"><div class="ix-h"><h2 class="label">Not Covered</h2></div><ul class="bl">{items}</ul></section>')
     main.append(issue_nav(prev_date, next_date, "issue-nav", top=True))
     side = toc_side(picks, feature and feature["pmcid"]) if picks else ""   # the issue links and the search are elsewhere
     head = masthead(1, current=None if preview else "latest" if date == LATEST["date"] else "back")
@@ -2534,37 +2566,40 @@ def issue_page(date: str, prev_date: str | None, next_date: str | None,
                 description=f"{jp_date(date)}の新しい構造：{desc}", noindex=preview, viewer=True, script=CAROUSEL_SCRIPT)
 
 
-ABOUT = (   # the front page's About FoldFeed, in polite Japanese (the owner's wording request, 2026-10-18)
-    # One sentence per line. "|" marks where a sentence may wrap (between phrases), so a long sentence breaks into
-    # even halves at a phrase boundary and no line is left with 「す。」 alone.
+ABOUT = (   # About FoldFeed, in polite Japanese (the owner's wording, 2026-10-18; rewritten by the owner 2026-10-26)
+    # (heading, lead, items). The lead is said first, plainly; the items under it are a list: a sentence (a short dash)
+    # or a part of the issue with what goes in it ((part, text): the part's colour). One sentence per line. "|" marks
+    # where a sentence may wrap (between phrases), so a long sentence breaks into even halves at a phrase boundary and
+    # no line is left with 「す。」 alone.
     ("Concept",   # was どんなサイトか (the owner, 2026-10-23); on the front page it is its own section (concept_html)
      "FoldFeed は、|構造生物学に携わる方のための|情報収集サポートサイトです。"
      "前日に|論文データベース（Europe PMC）へ|新しく登録された|査読済みの|オープンアクセス論文の中から、|"
-     "構造生物学の論文を|毎日ピックアップして|ご紹介します。"),
+     "構造生物学の論文を|毎日ピックアップして|ご紹介します。", ()),
     ("紹介する論文",
-     "構造が初めて解かれた|タンパク質の論文は、|New Structure で|すべてご紹介します。"
-     "既に構造がある|タンパク質の新しい構造|（別の状態や複合体など）の論文は、|Structure Update で|すべてご紹介します。"
-     "PDB ID を|本文から確かめられない論文も、|構造図なしで|ご紹介します。"
-     "そのほか、|既存の構造を使って|仕組みの解明や創薬に迫った|注目の研究を、|Structure-Based Study で |1 日 3 本まで|ご紹介します。"),
+     "FoldFeed では、|構造生物学の論文を|以下のように分類し、|ご紹介しています。",
+     (("new", "構造が初めて解かれた|タンパク質の論文"),
+      ("update", "既に構造がある|タンパク質の新しい構造|（別の構造状態や複合体など）の論文"),
+      ("impact", "そのほか、|既存の構造を使って|仕組みの解明や創薬に迫った|注目の研究論文|（1 日 3 本まで）"),
+      "PDB ID を|本文から確かめられない論文は、|構造図なしでの|紹介になります。")),
     ("掲載のタイミング",
-     "論文は、|論文データベースに登録された|翌日にご紹介します。"
-     "データベースに|論文が届く時期は、|雑誌によって異なります。"
-     "Nature 系の雑誌は|出版からおよそ 1 か月後に届くため、|掲載もそのころになります。"),
+     "論文は、|論文データベースに登録された|翌日にご紹介します。",
+     ("データベースに|論文が届く時期は、|雑誌によって異なり、|Nature 系の雑誌は|出版からおよそ 1 か月後に届くため、|"
+      "掲載もそのころになります。",)),
     ("記事のつくり",
-     "各記事では、|論文が明らかにしたことを|日本語で短くまとめ、|構造図とリガンドの結合部位の拡大図、|実験条件のメモを|添えています。"
-     "分解能・PDB ID・リガンドは、|PDB と UniProt から|取得しています。"
-     "構造図は、|PDB の座標から|描いています。"
-     "紹介文は AI が|論文本文をもとに作成し、|内容ごとに|論文本文の該当箇所を|引用したうえで、|編集者が確認してから|"
-     "公開しています。"),
+     "各記事では、|論文が明らかにしたことを|短くまとめ、|構造図と|リガンド結合部位の拡大図、|実験条件のメモを|添えています。",
+     ("分解能・PDB ID・リガンド名は、|PDB と UniProt から|取得しています。",
+      "構造図は、|PDB の座標から|描画しています。",
+      "紹介文は AI が|論文本文をもとに作成し、|内容ごとに|論文本文の該当箇所を|引用したうえで、|編集者が確認してから|"
+      "公開しています。")),
     ("著作権と出典",   # facts only (the owner's request, 2026-10-20): what is used under which terms, not "no problems"
-     "ご紹介する論文は、|全文が無料で読める|オープンアクセス論文です。"
-     "その多くは、|CC BY などの|クリエイティブ・コモンズ・ライセンスで|公開されています。"
-     "記事の文章は、|論文の転載や翻訳ではなく、|論文の内容をもとに|日本語で新しく書いたものです。"
-     "論文の文章は、|根拠として|短い英文を引用するにとどめ、|「原文」と明示しています。"
-     "各記事には、|雑誌名とライセンス、|原著論文へのリンクを|載せています。"
-     "論文の図や表は|載せていません。"
-     "論文の著作権は、|それぞれの著者または出版社にあります。"
-     "PDB のデータ（CC0）と|UniProt のデータ（CC BY 4.0）を、|それぞれのライセンスに従って|使っています。"),
+     "ご紹介する論文は、|全文が無料で読める|オープンアクセス論文です。",
+     ("その多くは、|CC BY などの|クリエイティブ・コモンズ・ライセンスで|公開されています。",
+      "記事の文章は、|論文の転載や翻訳ではなく、|論文の内容をもとに|日本語で新しく書いたものです。",
+      "論文の文章は、|根拠として|短い英文を引用するにとどめ、|「原文」と明示しています。",
+      "各記事には、|雑誌名とライセンス、|原著論文へのリンクを|載せています。",
+      "論文の図や表は|載せていません。",
+      "論文の著作権は、|それぞれの著者または出版社にあります。",
+      "PDB のデータ（CC0）と|UniProt のデータ（CC BY 4.0）を、|それぞれのライセンスに従って|使っています。")),
 )
 
 
@@ -2612,12 +2647,26 @@ def numbers_html(issues: list[str], lib: list[dict]) -> str:
     return f'<div class="kpis">{kpis}</div>{meter}{chart}'
 
 
+def phrases(x: str) -> str:
+    """Text that may wrap only at the marked phrase boundaries ("|"), balanced over its lines."""
+    return "<span class=s>" + "<wbr>".join(f'<span class=w>{esc(w)}</span>' for w in x.split("|")) + "</span>"
+
+
 def sentences(text: str) -> str:
-    """An ABOUT passage: one sentence per line; a sentence may wrap only at the marked phrase boundaries ("|"),
-    balanced over its lines."""
-    def sentence(x: str) -> str:
-        return "<wbr>".join(f'<span class=w>{esc(w)}</span>' for w in x.split("|"))
-    return "".join(f"<span class=s>{sentence(x)}。</span>" for x in text.split("。") if x)
+    """An ABOUT passage: one sentence per line, each wrapping only at its phrase boundaries."""
+    return "".join(phrases(x + "。") for x in text.split("。") if x)
+
+
+def about_body(lead: str, items: tuple) -> str:
+    """An ABOUT passage: the lead, then its items as lists (a run of sentences, a run of parts)."""
+    out = f'<p class="ab-lead">{sentences(lead)}</p>'
+    for is_part, run in itertools.groupby(items, key=lambda x: isinstance(x, tuple)):
+        if is_part:
+            out += '<ul class="bl bl-parts">' + "".join(
+                f'<li><b><i class="sw-{PART_CLS[k]}"></i>{PARTS[k][0]}</b>{phrases(t)}</li>' for k, t in run) + '</ul>'
+        else:
+            out += '<ul class="bl">' + "".join(f'<li>{sentences(t)}</li>' for t in run) + '</ul>'
+    return out
 
 
 def about_html(issues: list[str], lib: list[dict], own_page: bool = False) -> str:
@@ -2625,8 +2674,8 @@ def about_html(issues: list[str], lib: list[dict], own_page: bool = False) -> st
     every journal the papers came from, as bars. All numbers are computed from the data; a paper that came back in a
     later issue counts once. On the front page Concept is left out: it has its own section near the top."""
     journals = journal_counts(issues)
-    rows = "".join(f'<div><dt>{esc(k)}</dt><dd>{sentences(v)}</dd></div>'
-                   for k, v in ABOUT if own_page or k != "Concept")
+    rows = "".join(f'<div><dt>{esc(k)}</dt><dd>{about_body(lead, items)}</dd></div>'
+                   for k, lead, items in ABOUT if own_page or k != "Concept")
     most = max([c for _, c in journals] + [1])
     jl = "".join(f'<li style="--i:{i}"><span class="jn">{esc(n)}</span><span class="c">{c}</span>'
                  f'<span class="bar" aria-hidden="true"><i style="--v:{c / most:.3f}"></i></span></li>'
@@ -2761,7 +2810,7 @@ def newsletter_page() -> str:
     """Newsletters & Alerts (newsletter.html): what is planned; not working yet (TODO.md)."""
     main = ('<div class="wrap list-page mail"><div class="ix-h"><h1 class="label">Newsletters &amp; Alerts</h1>'
             '<span class="soon">準備中</span></div><div class="mail-grid"><div>'
-            '<ul><li>毎朝の号の知らせ（New Structure・Structure Update・Structure-Based Study）</li><li>週のまとめ</li>'
+            '<ul class="bl"><li>毎朝の号の知らせ（New Structure・Structure Update・Structure-Based Study）</li><li>週のまとめ</li>'
             '<li>気になるタンパク質のアラート（UniProt ID を登録）</li></ul></div><div>'
             '<form aria-disabled="true" onsubmit="return false"><input type="email" placeholder="メールアドレス" disabled '
             'aria-label="メールアドレス（準備中）"><button type="button" disabled>登録（準備中）</button></form>'

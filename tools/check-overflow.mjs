@@ -24,10 +24,19 @@ for (const w of [340, 360, 375, 390, 414]) {
     await p.waitForTimeout(300);
     const r = await p.evaluate(() => {
       const W = document.documentElement.clientWidth, out = [];
+      // a row that scrolls sideways on its own (a phone's strip of an issue's structures) and itself fits: what runs
+      // past the edge inside it is reached by scrolling the row, not the page
+      const fitsOn = (e, re) => {
+        for (let a = e.parentElement; a && a !== document.body; a = a.parentElement) {
+          const cs = getComputedStyle(a);
+          if (re.test(cs.overflowX) && a.getBoundingClientRect().right <= W + 0.5) return true;
+        }
+        return false;
+      };
       const tw = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
       let n;
       while ((n = tw.nextNode())) {
-        if (!n.textContent.trim()) continue;
+        if (!n.textContent.trim() || fitsOn(n, /auto|scroll/)) continue;
         const range = document.createRange();
         range.selectNodeContents(n);
         for (const b of range.getClientRects()) {
@@ -35,14 +44,8 @@ for (const w of [340, 360, 375, 390, 414]) {
         }
       }
       // a box may run past the edge inside a parent that clips it and itself fits (a phone's first-screen structure,
-      // large on purpose): that cannot widen the page or be scrolled to. Text is checked above all the same.
-      const clipped = e => {
-        for (let a = e.parentElement; a && a !== document.body; a = a.parentElement) {
-          const cs = getComputedStyle(a);
-          if (/clip|hidden/.test(cs.overflowX) && a.getBoundingClientRect().right <= W + 0.5) return true;
-        }
-        return false;
-      };
+      // large on purpose): that cannot widen the page or be scrolled to. Clipped text is checked above all the same.
+      const clipped = e => fitsOn(e, /clip|hidden|auto|scroll/);
       document.querySelectorAll('body *').forEach(e => {
         const b = e.getBoundingClientRect();
         if (b.width && b.right > W + 0.5 && !clipped(e)) out.push(e.tagName.toLowerCase() + '.' + (typeof e.className === 'string' ? e.className : '') + ' right=' + Math.round(b.right));
