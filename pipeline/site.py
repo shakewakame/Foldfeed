@@ -29,7 +29,7 @@ import sys
 import unicodedata
 from pathlib import Path
 
-from . import brand, impact, jats, pmcoa, render
+from . import brand, cards, impact, jats, pmcoa, render
 from .common import ISSUES_DIR, ROOT, read_json
 from .schema import CATEGORIES, FEATURE_AXES, FEATURE_MIN, LAB_NOTE_FIELDS, SUMMARY_FIELDS, SUMMARY_OPTIONAL, TOPICS
 
@@ -1357,9 +1357,20 @@ def new_tab(html_text: str) -> str:
     return EXTERNAL_LINK.sub(fix, html_text)
 
 
+SITE_URL = (read_json(ROOT / "config" / "editorial.json").get("site_url") or "").rstrip("/") + "/"
+OG = {"default": None}   # the link preview of pages that have none of their own: the newest issue's (set by build)
+
+
+def og_image(date: str | None) -> str | None:
+    """The address of an issue's link-preview image: its lead article's card (pipeline.cards), when there is one."""
+    pm = date and cards.lead_of(date)
+    return f"{SITE_URL}figures/{date}/{pm}-card.png" if pm and cards.card_path(date, pm).exists() else None
+
+
 def page(title: str, body: str, depth: int, description: str = DESCRIPTION, noindex: bool = False,
-         viewer: bool = False, script: str = "") -> str:
+         viewer: bool = False, script: str = "", image: str | None = None) -> str:
     up = "../" * depth
+    image = image or OG["default"]
     return (f'<!doctype html><html lang="ja"><head><meta charset="utf-8">'
             f'<script>document.documentElement.className += " js";</script>'
             f'<meta name="viewport" content="width=device-width, initial-scale=1">'
@@ -1369,6 +1380,9 @@ def page(title: str, body: str, depth: int, description: str = DESCRIPTION, noin
             f'<meta property="og:title" content="{esc(title)}">'
             f'<meta property="og:description" content="{esc(description)}">'
             f'<meta property="og:type" content="website">'
+            + (f'<meta property="og:image" content="{esc(image)}"><meta property="og:image:width" content="1200">'
+               f'<meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image">'
+               if image else '<meta name="twitter:card" content="summary">') +
             f'<link rel="icon" href="{up}assets/logo-mark.svg">'
             f'<link rel="preconnect" href="https://fonts.googleapis.com">'
             f'<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
@@ -2667,7 +2681,7 @@ def issue_page(date: str, prev_date: str | None, next_date: str | None,
     desc = "、".join(pk["target_label"] for _, pk in picks[:6])
     title = f"{brand.SITE_NAME} {date.replace('-', '')}"   # "FoldFeed 20261018" (the owner's naming, 2026-10-18)
     body = f'<div class="wrap issue-top">{"".join(top)}</div>' + shell("".join(main), side, sticky=True)
-    return page(("［プレビュー］" if preview else "") + title, bar + head + body + foot, depth=1,
+    return page(("［プレビュー］" if preview else "") + title, bar + head + body + foot, depth=1, image=og_image(date),
                 description=f"{jp_date(date)}の新しい構造：{desc}", noindex=preview, viewer=True, script=CAROUSEL_SCRIPT)
 
 
@@ -3104,7 +3118,7 @@ def home(issues: list[str]) -> str:
                 + shell("".join(main), side)
                 + about_html(issues, lib)
                 + colophon(f'<p>{esc(pmcoa.CREDIT)}</p>' if load_issue(latest, ISSUES_DIR)[0].get("source") == pmcoa.SOURCE else ""),
-                depth=0, viewer=True, script=LEAD_SCRIPT)
+                depth=0, viewer=True, script=LEAD_SCRIPT, image=og_image(shown[2]))
 
 
 PAST_ON_HOME = 5   # the latest past issues on the front page; all of them are on issues.html (Back Issues)
@@ -3404,6 +3418,7 @@ def build(preview_root: Path | None = None) -> int:
     for name in ("logo.svg", "logo-mark.svg", "viewer.js"):
         shutil.copy(ROOT / "assets" / name, SITE_DIR / "assets" / name)
     LATEST["date"] = next((d for d in issues if load_issue(d, ISSUES_DIR)[1]), None)
+    OG["default"] = next((u for u in map(og_image, issues) if u), None)
     shutil.copytree(ROOT / "assets" / "vendor", SITE_DIR / "assets" / "vendor")
     lib = library(issues)
     FACETS.update(facets(lib))

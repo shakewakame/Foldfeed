@@ -6,7 +6,7 @@
 // Needs playwright-core and a Chromium (in the cloud sessions: /opt/pw-browsers). For each width it reports how far
 // the page is wider than the screen and what sticks out. It looks at the lines of text, not only at element boxes:
 // a line that may not wrap (white-space:nowrap) runs past its box without making the box any wider.
-import { chromium } from 'playwright-core';
+const { chromium } = await import('playwright-core').catch(() => import('/opt/node-tools/node_modules/playwright-core/index.mjs'));
 
 const base = process.argv[2] || 'http://127.0.0.1:8765';
 const pages = ['/index.html', '/search.html', '/search.html?cat=enzyme', '/later.html', '/issues.html', '/new.html', '/update.html', '/study.html', '/newsletter.html', '/about.html', '/privacy.html', '/tokushoho.html', '/issues/' + (process.argv[3] || 'latest')];
