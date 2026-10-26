@@ -1,0 +1,88 @@
+{
+ "pdb_id": "6VJJ",
+ "view": {
+  "target": [
+   -13.12,
+   -13.35,
+   23.03
+  ],
+  "dir": [
+   0.2784,
+   0.9492,
+   0.1467
+  ],
+  "up": [
+   0.5859,
+   -0.2889,
+   0.7571
+  ],
+  "half": [
+   20.1,
+   28.6
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "KRAS（RAS GTPase）",
+   "desc": "GTPase KRas",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "RAF1（RBD）",
+   "desc": "RAF proto-oncogene serine/threonine-protein kinase",
+   "entity": "2"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "GNP",
+   "label": "GppNHp（GTP類似体）",
+   "color": "#C23B8E",
+   "desc": "Phosphoaminophosphonic Acid-Guanylate Ester",
+   "entity": [
+    "4"
+   ],
+   "sites": [
+    [
+     "D",
+     "202"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "GNP",
+  "residues": [
+   "A11",
+   "G12",
+   "G13",
+   "V14",
+   "G15",
+   "K16",
+   "S17",
+   "A18",
+   "F28",
+   "V29",
+   "D30",
+   "E31",
+   "Y32",
+   "P34",
+   "T35",
+   "A59",
+   "G60",
+   "N116",
+   "K117",
+   "D119",
+   "L120",
+   "S145",
+   "A146",
+   "K147"
+  ],
+  "hbonds": 25,
+  "pi": 2,
+  "neighbours": [],
+  "label": "GppNHp（GTP類似体）"
+ }
+}

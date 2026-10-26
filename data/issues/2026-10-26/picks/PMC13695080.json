@@ -1,0 +1,147 @@
+{
+ "pmcid": "PMC13695080",
+ "section": "impact",
+ "rank": 1,
+ "headline": "RAS阻害剤への耐性は、薬が結ぶ複合体を壊す変異で起こる",
+ "subhead": "患者検体の耐性変異を結晶構造と変異体で解析し、Y64変異にも効く化合物を示した",
+ "target_label": "KRAS・CYPA（ヒト）",
+ "target_en": "KRAS–CYPA with RAS(ON) inhibitors (human)",
+ "method_label": "X-ray・生化学・細胞アッセイ",
+ "ga_pdb_id": "6VJJ",
+ "summary": {
+  "question": "RAS阻害剤ダラキソンラシブへの耐性が、どう生じるかは十分に分かっていなかった。",
+  "approach": "患者40人の検体で耐性変異を探し、結晶構造と生化学・細胞の測定で仕組みを調べた。",
+  "result": "KRAS Y64変異は薬との芳香環の積み重なりを壊し、Y71HはCRAFのRBDとの結合を強めた。",
+  "learned": "耐性変異は、薬がRASとCYPAをつなぐ分子糊の働きを壊す点で共通していた。",
+  "open": "Y71HがCYPA結合にも作用する可能性は、今回のデータでは除外できない。",
+  "evidence": {
+   "question": [
+    {
+     "quote": "Although these agents have shown clinical activity in RAS mutant cancers, resistance mechanisms remain poorly defined.",
+     "section": "Abstract"
+    }
+   ],
+   "approach": [
+    {
+     "quote": "Here, we analyzed paired baseline and end-of-treatment samples from 40 patients treated with the RAS inhibitor daraxonrasib and identified recurrent alterations in 18 cases.",
+     "section": "Abstract"
+    },
+    {
+     "quote": "we solved the tertiary structure of KRAS Y71H in complex with the RBD of CRAF at a 1.76-Å resolution (Figure 4D; Table S1).",
+     "section": "Results"
+    }
+   ],
+   "result": [
+    {
+     "quote": "The crystal structure of KRAS G12D in complex with the RAS(ON) inhibitor RMC-7977 revealed that Y64 forms a π-π stacking interaction with the indole ring of the inhibitor (Figure 3A).",
+     "section": "Results"
+    },
+    {
+     "quote": "The structure shows that H71 forms a neomorphic interaction involving both an H-bond and a π-cation interaction with the arginine 67 (R67) residue in the CRAF RBD.",
+     "section": "Results"
+    }
+   ],
+   "learned": [
+    {
+     "quote": "These findings uncover convergent resistance mechanisms that undermine the molecular glue function",
+     "section": "Abstract"
+    }
+   ],
+   "open": [
+    {
+     "quote": "the data do not exclude the possibility of a dual mechanism where Y71H also modulates CYPA binding (also allosterically)",
+     "section": "Discussion"
+    }
+   ]
+  }
+ },
+ "categories": [
+  "regulation"
+ ],
+ "topics": [
+  "drug"
+ ],
+ "highlights": [
+  {
+   "tag": "機構の解明",
+   "text": "KRAS Y71HとCRAFのRBDの結晶構造で、H71がRBDのArg67と水素結合とπ-カチオン相互作用を作っていた。この余分な結合でRAFへの親和性が上がり、薬でRAFを追い出しにくくなると考えられる。",
+   "evidence": [
+    {
+     "quote": "Our structural data suggest that the additional interaction of Y71H is responsible for the higher affinity for the CRAFRBD",
+     "section": "Results"
+    },
+    {
+     "quote": "The structure shows that H71 forms a neomorphic interaction involving both an H-bond and a π-cation interaction with the arginine 67 (R67) residue in the CRAF RBD.",
+     "section": "Results"
+    }
+   ]
+  },
+  {
+   "tag": "創薬・モダリティ",
+   "text": "別の阻害剤RMC-4791とKRAS・CYPAの複合体では、Y64の積み重なる相手が薬の尾部のピリジン環に変わっていた。この化合物はY64変異体でも効果を保った。",
+   "evidence": [
+    {
+     "quote": "Moreover, the Y64 residue formed a π-π stacking interaction with the pyridine ring at the tail end of RMC-4791",
+     "section": "Results"
+    },
+    {
+     "quote": "Together, these data suggest that RMC-4791 is a promising lead to overcome the resistance driven by Y64 mutations",
+     "section": "Results"
+    }
+   ]
+  },
+  {
+   "tag": "機構の解明",
+   "text": "キナーゼ活性のないBRAF変異も耐性を生んだ。RAFが二量体になるとCRDがKRASに結合しやすい向きになり、薬で外れにくくなるらしい。この部分はAlphaFoldのモデルと細胞の実験による。",
+   "evidence": [
+    {
+     "quote": "The live-cell data argue that RAF dimerization repositions the CRD of RAF in an orientation where it can optimally interact with KRAS, a conformation that is harder to displace by TCIs, thus leading to attenuated inhibition.",
+     "section": "Results"
+    }
+   ]
+  }
+ ],
+ "lab_notes": {
+  "expression": "KRAS（1–169）とCRAFのRBD（52–131）を大腸菌BL21(DE3)で発現。N末端にHisタグ。",
+  "construct": null,
+  "purification": "Ni–NTAで精製し、TEVでタグを外してSuperdex 75でゲルろ過した。",
+  "sample_prep": "シッティングドロップ蒸気拡散法、18 ℃で結晶化。",
+  "data_collection": "NSLS-IIのFMXビームラインで回折データを収集し、6VJJを探索モデルに分子置換で解いた。",
+  "evidence": [
+   {
+    "quote": "residues 1–169 of KRAS and residues 52–131 of the RBD were expressed in E. coli BL21(DE3) as N-terminal His-tagged constructs and purified by Ni–NTA affinity chromatography.",
+    "section": "Methods"
+   },
+   {
+    "quote": "The His tag was removed by TEV protease digestion overnight at 4 °C, followed by size-exclusion chromatography on a Superdex 75 column.",
+    "section": "Methods"
+   },
+   {
+    "quote": "Crystallization was carried out by sitting-drop vapor diffusion in 96-well format, mixing 0.5 μL protein solution with 0.5 μL reservoir solution at 18 °C.",
+    "section": "Methods"
+   },
+   {
+    "quote": "Diffraction data were collected at beamline 17-ID-2 (FMX) at NSLS-II, processed with XDS and scaled with AIMLESS.",
+    "section": "Methods"
+   },
+   {
+    "quote": "The structure was solved by molecular replacement with Phaser (Phenix) using the KRAS–CRAF RBD complex (PDB: 6VJJ) as the search model.",
+    "section": "Methods"
+   }
+  ]
+ },
+ "keywords": [
+  "KRAS",
+  "ダラキソンラシブ",
+  "シクロフィリンA",
+  "モレキュラーグルー"
+ ],
+ "editor_notes": "collect は『既存構造の利用』に分類したが、本文は自前の結晶構造2つ（KRAS Y71H–CRAF RBD 1.76 Å、KRAS–RMC-4791–CYPA 1.57 Å）を報告している。PDB ID は本文に書かれておらず（Table S1 のみ）、照合できないため新しい構造としては扱わず、注目の構造（8点）として書いた。構造図は既存の KRAS–CRAF RBD 複合体（6VJJ）。",
+ "legend_labels": [
+  "KRAS（RAS GTPase）",
+  "RAF1（RBD）"
+ ],
+ "ligand_names": {
+  "GNP": "GppNHp（GTP類似体）"
+ }
+}
