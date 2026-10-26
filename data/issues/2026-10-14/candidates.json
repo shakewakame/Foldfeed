@@ -229,7 +229,41 @@
           "name": "Dynein light chain 1, cytoplasmic",
           "organism": "Homo sapiens",
           "prior_pdb_count": 21,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Acetylation",
+            "Activator",
+            "Apoptosis",
+            "Chromosome",
+            "Cytoplasm",
+            "Cytoskeleton",
+            "DNA damage",
+            "Dynein",
+            "Host-virus interaction",
+            "Isopeptide bond",
+            "Microtubule",
+            "Mitochondrion",
+            "Motor protein",
+            "Nucleus",
+            "Phosphoprotein",
+            "Transcription",
+            "Transcription regulation",
+            "Transport",
+            "Ubl conjugation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF01221"
+          ],
+          "interpro": [
+            "IPR001372",
+            "IPR019763",
+            "IPR037177"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P63208",
@@ -243,7 +277,32 @@
           "name": "S-phase kinase-associated protein 1",
           "organism": "Homo sapiens",
           "prior_pdb_count": 72,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Alternative splicing",
+            "Host-virus interaction",
+            "Isopeptide bond",
+            "Phosphoprotein",
+            "Ubl conjugation",
+            "Ubl conjugation pathway"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF01466",
+            "PF03931"
+          ],
+          "interpro": [
+            "IPR001232",
+            "IPR011333",
+            "IPR016072",
+            "IPR016073",
+            "IPR016897",
+            "IPR036296"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P68371",
@@ -254,7 +313,46 @@
           "name": "Tubulin beta-4B chain",
           "organism": "Homo sapiens",
           "prior_pdb_count": 4,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Acetylation",
+            "Cell projection",
+            "Cilium",
+            "Cytoplasm",
+            "Cytoskeleton",
+            "Deafness",
+            "Disease variant",
+            "Flagellum",
+            "GTP-binding",
+            "Isopeptide bond",
+            "Leber congenital amaurosis",
+            "Magnesium",
+            "Metal-binding",
+            "Microtubule",
+            "Nucleotide-binding",
+            "Phosphoprotein"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00091",
+            "PF03953"
+          ],
+          "interpro": [
+            "IPR000217",
+            "IPR002453",
+            "IPR003008",
+            "IPR008280",
+            "IPR013838",
+            "IPR017975",
+            "IPR018316",
+            "IPR023123",
+            "IPR036525",
+            "IPR037103"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "Q008S8",
@@ -266,7 +364,29 @@
           "name": "Epithelial cell-transforming sequence 2 oncogene-like",
           "organism": "Homo sapiens",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "Guanine-nucleotide releasing factor"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00621",
+            "PF12937",
+            "PF14252"
+          ],
+          "interpro": [
+            "IPR000219",
+            "IPR001810",
+            "IPR011993",
+            "IPR025592",
+            "IPR035899",
+            "IPR036047",
+            "IPR052805"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "Q49MG5",
@@ -277,7 +397,28 @@
           "name": "Microtubule-associated protein 9",
           "organism": "Homo sapiens",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "Acetylation",
+            "Alternative splicing",
+            "Cell cycle",
+            "Cell division",
+            "Coiled coil",
+            "Cytoplasm",
+            "Cytoskeleton",
+            "Microtubule",
+            "Mitosis",
+            "Phosphoprotein"
+          ],
+          "ec": [],
+          "pfam": [],
+          "interpro": [
+            "IPR026106"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "Q71U36",
@@ -288,7 +429,50 @@
           "name": "Tubulin alpha-1A chain",
           "organism": "Homo sapiens",
           "prior_pdb_count": 15,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Acetylation",
+            "Alternative splicing",
+            "Cell projection",
+            "Cilium",
+            "Cytoplasm",
+            "Cytoskeleton",
+            "Disease variant",
+            "Flagellum",
+            "GTP-binding",
+            "Hydrolase",
+            "Isopeptide bond",
+            "Lissencephaly",
+            "Magnesium",
+            "Metal-binding",
+            "Methylation",
+            "Microtubule",
+            "Nitration",
+            "Nucleotide-binding",
+            "Phosphoprotein"
+          ],
+          "ec": [
+            "3.6.5.-"
+          ],
+          "pfam": [
+            "PF00091",
+            "PF03953"
+          ],
+          "interpro": [
+            "IPR000217",
+            "IPR002452",
+            "IPR003008",
+            "IPR008280",
+            "IPR017975",
+            "IPR018316",
+            "IPR023123",
+            "IPR036525",
+            "IPR037103"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "Q8WWF8",
@@ -297,7 +481,27 @@
           "name": "Calcyphosin-like protein",
           "organism": "Homo sapiens",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "Calcium",
+            "Cytoplasm",
+            "Metal-binding",
+            "Repeat"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF13499"
+          ],
+          "interpro": [
+            "IPR002048",
+            "IPR011992",
+            "IPR018247",
+            "IPR051581"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "Q9BYV8",
@@ -308,7 +512,36 @@
           "name": "Centrosomal protein of 41 kDa",
           "organism": "Homo sapiens",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "Alternative splicing",
+            "Autism",
+            "Autism spectrum disorder",
+            "Cell projection",
+            "Ciliopathy",
+            "Cilium",
+            "Cilium biogenesis/degradation",
+            "Cytoplasm",
+            "Cytoskeleton",
+            "Joubert syndrome",
+            "Methylation",
+            "Phosphoprotein",
+            "Protein transport",
+            "Transport"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00581"
+          ],
+          "interpro": [
+            "IPR001763",
+            "IPR036873",
+            "IPR051889"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "Q9H0I2",
@@ -319,7 +552,28 @@
           "name": "Enkurin domain-containing protein 1",
           "organism": "Homo sapiens",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "Alternative splicing",
+            "Cell projection",
+            "Cilium biogenesis/degradation",
+            "Cytoplasm",
+            "Cytoskeleton",
+            "Microtubule",
+            "Phosphoprotein"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF13864"
+          ],
+          "interpro": [
+            "IPR027012",
+            "IPR052102"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "Q9NVP4",
@@ -331,7 +585,36 @@
           "name": "Double zinc ribbon and ankyrin repeat-containing protein 1",
           "organism": "Homo sapiens",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "ANK repeat",
+            "Alternative splicing",
+            "Cell projection",
+            "Cytoplasm",
+            "Cytoskeleton",
+            "Metal-binding",
+            "Phosphoprotein",
+            "Repeat",
+            "Zinc",
+            "Zinc-finger"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF12773",
+            "PF12796",
+            "PF13287"
+          ],
+          "interpro": [
+            "IPR002110",
+            "IPR025874",
+            "IPR026876",
+            "IPR036770",
+            "IPR052481"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "Q9Y6A4",
@@ -344,7 +627,28 @@
           "name": "Cilia- and flagella-associated protein 20",
           "organism": "Homo sapiens",
           "prior_pdb_count": 2,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Cell projection",
+            "Cilium",
+            "Cytoplasm",
+            "Cytoskeleton",
+            "Flagellum",
+            "Microtubule",
+            "Nucleus"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF05018"
+          ],
+          "interpro": [
+            "IPR007714",
+            "IPR040441"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 87,
@@ -364,7 +668,12 @@
           }
         ]
       },
-      "license_url": null
+      "license_url": null,
+      "categories_draft": [
+        "transporter",
+        "regulation",
+        "enzyme"
+      ]
     },
     {
       "pmcid": "PMC13657631",
@@ -565,7 +874,52 @@
           "name": "Glutamine synthetase",
           "organism": "Homo sapiens",
           "prior_pdb_count": 7,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "ATP-binding",
+            "Acetylation",
+            "Angiogenesis",
+            "Cell membrane",
+            "Cytoplasm",
+            "Disease variant",
+            "Endoplasmic reticulum",
+            "Epilepsy",
+            "Intellectual disability",
+            "Ligase",
+            "Lipoprotein",
+            "Magnesium",
+            "Manganese",
+            "Membrane",
+            "Metal-binding",
+            "Microsome",
+            "Mitochondrion",
+            "Nucleotide-binding",
+            "Palmitate",
+            "Phosphoprotein",
+            "Transferase",
+            "Ubl conjugation"
+          ],
+          "ec": [
+            "2.3.1.225",
+            "6.3.1.2"
+          ],
+          "pfam": [
+            "PF00120",
+            "PF03951"
+          ],
+          "interpro": [
+            "IPR008146",
+            "IPR008147",
+            "IPR014746",
+            "IPR027302",
+            "IPR027303",
+            "IPR036651",
+            "IPR050292"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 65,
@@ -581,7 +935,10 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "enzyme"
+      ]
     },
     {
       "pmcid": "PMC13657355",
@@ -676,7 +1033,41 @@
           "name": "ATP-dependent Clp protease ATP-binding subunit ClpC",
           "organism": "Staphylococcus aureus (strain NCTC 8325 / PS 47)",
           "prior_pdb_count": 8,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "ATP-binding",
+            "Chaperone",
+            "Nucleotide-binding",
+            "Repeat",
+            "Stress response",
+            "Virulence"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00004",
+            "PF02861",
+            "PF07724",
+            "PF10431",
+            "PF17871"
+          ],
+          "interpro": [
+            "IPR001270",
+            "IPR001943",
+            "IPR003593",
+            "IPR003959",
+            "IPR004176",
+            "IPR018368",
+            "IPR019489",
+            "IPR027417",
+            "IPR028299",
+            "IPR036628",
+            "IPR041546",
+            "IPR050130"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Bacillati"
+          ]
         }
       ],
       "score": 62,
@@ -692,7 +1083,11 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "translation",
+        "pathogen"
+      ]
     },
     {
       "pmcid": "PMC13655128",
@@ -1086,7 +1481,31 @@
           "name": "Outer membrane protein assembly factor BamA",
           "organism": "Escherichia coli",
           "prior_pdb_count": 1,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Cell outer membrane",
+            "Membrane",
+            "Repeat",
+            "Signal",
+            "Transmembrane",
+            "Transmembrane beta strand"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF01103",
+            "PF07244"
+          ],
+          "interpro": [
+            "IPR000184",
+            "IPR010827",
+            "IPR023707",
+            "IPR034746",
+            "IPR039910"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Pseudomonadati"
+          ]
         },
         {
           "uniprot": "P0A903",
@@ -1098,7 +1517,29 @@
           "name": "Outer membrane protein assembly factor BamC",
           "organism": "Escherichia coli (strain K12)",
           "prior_pdb_count": 105,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Cell outer membrane",
+            "Lipoprotein",
+            "Membrane",
+            "Palmitate",
+            "Signal"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF06804",
+            "PF29358"
+          ],
+          "interpro": [
+            "IPR010653",
+            "IPR014524",
+            "IPR042268",
+            "IPR064009"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Pseudomonadati"
+          ]
         },
         {
           "uniprot": "P0A937",
@@ -1109,7 +1550,27 @@
           "name": "Outer membrane protein assembly factor BamE",
           "organism": "Escherichia coli (strain K12)",
           "prior_pdb_count": 96,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Cell outer membrane",
+            "Lipoprotein",
+            "Membrane",
+            "Palmitate",
+            "Signal"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF04355"
+          ],
+          "interpro": [
+            "IPR007450",
+            "IPR026592",
+            "IPR037873"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Pseudomonadati"
+          ]
         },
         {
           "uniprot": "P0AC02",
@@ -1120,7 +1581,27 @@
           "name": "Outer membrane protein assembly factor BamD",
           "organism": "Escherichia coli (strain K12)",
           "prior_pdb_count": 96,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Cell outer membrane",
+            "Lipoprotein",
+            "Membrane",
+            "Palmitate",
+            "Signal"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF13525"
+          ],
+          "interpro": [
+            "IPR011990",
+            "IPR017689",
+            "IPR039565"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Pseudomonadati"
+          ]
         },
         {
           "uniprot": "P66948",
@@ -1131,7 +1612,35 @@
           "name": "Beta-barrel assembly-enhancing protease",
           "organism": "Escherichia coli (strain K12)",
           "prior_pdb_count": 7,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Hydrolase",
+            "Metal-binding",
+            "Metalloprotease",
+            "Periplasm",
+            "Protease",
+            "Repeat",
+            "Signal",
+            "TPR repeat",
+            "Zinc"
+          ],
+          "ec": [
+            "3.4.-.-"
+          ],
+          "pfam": [
+            "PF01435",
+            "PF14559"
+          ],
+          "interpro": [
+            "IPR001915",
+            "IPR011990",
+            "IPR030873",
+            "IPR051156"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Pseudomonadati"
+          ]
         },
         {
           "uniprot": "P77774",
@@ -1142,7 +1651,29 @@
           "name": "Outer membrane protein assembly factor BamB",
           "organism": "Escherichia coli (strain K12)",
           "prior_pdb_count": 102,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Cell outer membrane",
+            "Lipoprotein",
+            "Membrane",
+            "Palmitate",
+            "Signal"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF13360"
+          ],
+          "interpro": [
+            "IPR002372",
+            "IPR011047",
+            "IPR015943",
+            "IPR017687",
+            "IPR018391"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Pseudomonadati"
+          ]
         }
       ],
       "score": 52,
@@ -1166,7 +1697,10 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "categories_draft": [
+        "protease"
+      ]
     },
     {
       "pmcid": "PMC13653941",
@@ -1308,7 +1842,28 @@
           "name": "Minor fimbrium subunit Mfa1",
           "organism": "Porphyromonas gingivalis (strain ATCC 33277 / DSM 20709 / CIP 103683 / JCM 12257 / NCTC 11834 / 2561)",
           "prior_pdb_count": 2,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Cell outer membrane",
+            "Fimbrium",
+            "Lipoprotein",
+            "Membrane",
+            "Palmitate",
+            "Signal",
+            "Virulence"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF15495"
+          ],
+          "interpro": [
+            "IPR029140",
+            "IPR047786"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Pseudomonadati"
+          ]
         }
       ],
       "score": 51,
@@ -1328,7 +1883,10 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "categories_draft": [
+        "pathogen"
+      ]
     },
     {
       "pmcid": "PMC13655263",

@@ -88,7 +88,28 @@
           "name": "Cytochrome P450",
           "organism": "Nonomuraea solani",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "Heme",
+            "Iron",
+            "Metal-binding",
+            "Monooxygenase",
+            "Oxidoreductase"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00067"
+          ],
+          "interpro": [
+            "IPR001128",
+            "IPR002397",
+            "IPR017972",
+            "IPR036396"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Bacillati"
+          ]
         }
       ],
       "score": 91,
@@ -112,7 +133,8 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13649706",
@@ -284,7 +306,27 @@
           "name": "Probable O-antigen/lipopolysaccharide transport ATP-binding protein ABC transporter RfbE",
           "organism": "Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "ATP-binding",
+            "Nucleotide-binding",
+            "Transport"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00005"
+          ],
+          "interpro": [
+            "IPR003439",
+            "IPR003593",
+            "IPR015860",
+            "IPR027417",
+            "IPR050683"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Bacillati"
+          ]
         },
         {
           "uniprot": "P72049",
@@ -293,7 +335,25 @@
           "name": "Probable O-antigen/lipopolysaccharide transport integral membrane protein ABC transporter RfbD",
           "organism": "Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "Cell membrane",
+            "Membrane",
+            "Transmembrane",
+            "Transmembrane helix",
+            "Transport"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF01061"
+          ],
+          "interpro": [
+            "IPR013525"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Bacillati"
+          ]
         }
       ],
       "score": 88,
@@ -317,7 +377,10 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "categories_draft": [
+        "transporter"
+      ]
     },
     {
       "pmcid": "PMC13650167",
@@ -423,7 +486,43 @@
           "name": "Transcription termination factor Rho",
           "organism": "Mycobacterium tuberculosis (strain CDC 1551 / Oshkosh)",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "ATP-binding",
+            "Cytoplasm",
+            "Hydrolase",
+            "Magnesium",
+            "Metal-binding",
+            "Nucleotide-binding",
+            "RNA-binding",
+            "Transcription",
+            "Transcription regulation",
+            "Transcription termination"
+          ],
+          "ec": [
+            "3.6.4.-"
+          ],
+          "pfam": [
+            "PF00006",
+            "PF07497",
+            "PF07498"
+          ],
+          "interpro": [
+            "IPR000194",
+            "IPR003593",
+            "IPR004665",
+            "IPR011112",
+            "IPR011113",
+            "IPR011129",
+            "IPR012340",
+            "IPR027417",
+            "IPR036269",
+            "IPR041703"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Bacillati"
+          ]
         }
       ],
       "score": 87,
@@ -439,7 +538,11 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by-nc/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "categories_draft": [
+        "nucleic",
+        "regulation"
+      ]
     },
     {
       "pmcid": "PMC13651826",
@@ -520,7 +623,46 @@
           "name": "HLA class II histocompatibility antigen, DR alpha chain",
           "organism": "Homo sapiens",
           "prior_pdb_count": 142,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Adaptive immunity",
+            "Cell membrane",
+            "Cytoplasmic vesicle",
+            "Disulfide bond",
+            "Endoplasmic reticulum",
+            "Endosome",
+            "Glycoprotein",
+            "Host-virus interaction",
+            "Immunity",
+            "Isopeptide bond",
+            "Lysosome",
+            "MHC II",
+            "Membrane",
+            "Signal",
+            "Transmembrane",
+            "Transmembrane helix",
+            "Ubl conjugation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00993",
+            "PF07654"
+          ],
+          "interpro": [
+            "IPR001003",
+            "IPR003006",
+            "IPR003597",
+            "IPR007110",
+            "IPR011162",
+            "IPR013783",
+            "IPR014745",
+            "IPR036179",
+            "IPR050160"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P10155",
@@ -532,7 +674,34 @@
           "name": "RNA-binding protein RO60",
           "organism": "Homo sapiens",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "Acetylation",
+            "Alternative splicing",
+            "Cilium biogenesis/degradation",
+            "Cytoplasm",
+            "Metal-binding",
+            "Phosphoprotein",
+            "RNA-binding",
+            "Repeat",
+            "Ribonucleoprotein"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF05731",
+            "PF25045"
+          ],
+          "interpro": [
+            "IPR008858",
+            "IPR036465",
+            "IPR037214",
+            "IPR040322",
+            "IPR056800"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "Q5Y7D1",
@@ -541,7 +710,41 @@
           "name": "HLA class II histocompatibility antigen DR beta chain",
           "organism": "Homo sapiens",
           "prior_pdb_count": 2,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Adaptive immunity",
+            "Disulfide bond",
+            "Endosome",
+            "Glycoprotein",
+            "Immunity",
+            "Immunoglobulin domain",
+            "Lysosome",
+            "MHC II",
+            "Membrane",
+            "Signal",
+            "Transmembrane",
+            "Transmembrane helix"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00969",
+            "PF07654"
+          ],
+          "interpro": [
+            "IPR000353",
+            "IPR003006",
+            "IPR003597",
+            "IPR007110",
+            "IPR011162",
+            "IPR013783",
+            "IPR014745",
+            "IPR036179",
+            "IPR050160"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 81,
@@ -557,7 +760,12 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "immune",
+        "nucleic",
+        "translation"
+      ]
     },
     {
       "pmcid": "PMC13649712",
@@ -659,7 +867,38 @@
           "name": "Period circadian protein homolog 2",
           "organism": "Mus musculus",
           "prior_pdb_count": 3,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Acetylation",
+            "Biological rhythms",
+            "Cytoplasm",
+            "Nucleus",
+            "Phosphoprotein",
+            "Repeat",
+            "Transcription",
+            "Transcription regulation",
+            "Ubl conjugation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF08447",
+            "PF12114",
+            "PF21353",
+            "PF23170"
+          ],
+          "interpro": [
+            "IPR000014",
+            "IPR013655",
+            "IPR022728",
+            "IPR035965",
+            "IPR048814",
+            "IPR050760",
+            "IPR057310"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P08515",
@@ -668,7 +907,30 @@
           "name": "Glutathione S-transferase class-mu 26 kDa isozyme",
           "organism": "Schistosoma japonicum",
           "prior_pdb_count": 68,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Transferase"
+          ],
+          "ec": [
+            "2.5.1.18"
+          ],
+          "pfam": [
+            "PF02798",
+            "PF14497"
+          ],
+          "interpro": [
+            "IPR004045",
+            "IPR004046",
+            "IPR010987",
+            "IPR036249",
+            "IPR036282",
+            "IPR040079",
+            "IPR050213"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P61965",
@@ -680,7 +942,34 @@
           "name": "WD repeat-containing protein 5",
           "organism": "Mus musculus",
           "prior_pdb_count": 4,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Acetylation",
+            "Chromatin regulator",
+            "Isopeptide bond",
+            "Nucleus",
+            "Repeat",
+            "Transcription",
+            "Transcription regulation",
+            "Ubl conjugation",
+            "WD repeat"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF25175"
+          ],
+          "interpro": [
+            "IPR001680",
+            "IPR015943",
+            "IPR019775",
+            "IPR020472",
+            "IPR036322",
+            "IPR059122"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 62,
@@ -700,7 +989,12 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "regulation",
+        "chromatin",
+        "enzyme"
+      ]
     },
     {
       "pmcid": "PMC13649839",
@@ -750,7 +1044,8 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13649775",
@@ -892,7 +1187,63 @@
           "name": "DNA repair protein Ku70",
           "organism": "Homo sapiens",
           "prior_pdb_count": 64,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "ADP-ribosylation",
+            "ATP-binding",
+            "Acetylation",
+            "Activator",
+            "Alternative splicing",
+            "Chromosome",
+            "Cytoplasm",
+            "DNA damage",
+            "DNA recombination",
+            "DNA repair",
+            "DNA-binding",
+            "Helicase",
+            "Host-virus interaction",
+            "Hydrolase",
+            "Immunity",
+            "Innate immunity",
+            "Isomerase",
+            "Isopeptide bond",
+            "Lyase",
+            "Methylation",
+            "Multifunctional enzyme",
+            "Nucleotide-binding",
+            "Nucleus",
+            "Phosphoprotein",
+            "Systemic lupus erythematosus",
+            "Transcription",
+            "Transcription regulation",
+            "Ubl conjugation"
+          ],
+          "ec": [
+            "4.2.99.18",
+            "5.6.2.4"
+          ],
+          "pfam": [
+            "PF02037",
+            "PF02735",
+            "PF03730",
+            "PF03731"
+          ],
+          "interpro": [
+            "IPR003034",
+            "IPR005160",
+            "IPR005161",
+            "IPR006164",
+            "IPR006165",
+            "IPR016194",
+            "IPR027388",
+            "IPR036361",
+            "IPR036465",
+            "IPR047087"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P13010",
@@ -903,7 +1254,59 @@
           "name": "DNA repair protein Ku80",
           "organism": "Homo sapiens",
           "prior_pdb_count": 67,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "ADP-ribosylation",
+            "ATP-binding",
+            "Acetylation",
+            "Activator",
+            "Chromosome",
+            "DNA damage",
+            "DNA recombination",
+            "DNA repair",
+            "DNA-binding",
+            "Helicase",
+            "Host-virus interaction",
+            "Hydrolase",
+            "Immunity",
+            "Innate immunity",
+            "Isomerase",
+            "Isopeptide bond",
+            "Lyase",
+            "Nucleotide-binding",
+            "Nucleus",
+            "Phosphoprotein",
+            "Ribosome biogenesis",
+            "Systemic lupus erythematosus",
+            "Transcription",
+            "Transcription regulation",
+            "Ubl conjugation"
+          ],
+          "ec": [
+            "4.2.99.18",
+            "5.6.2.4"
+          ],
+          "pfam": [
+            "PF02735",
+            "PF03730",
+            "PF03731",
+            "PF08785"
+          ],
+          "interpro": [
+            "IPR002035",
+            "IPR005160",
+            "IPR005161",
+            "IPR006164",
+            "IPR014893",
+            "IPR016194",
+            "IPR024193",
+            "IPR036465",
+            "IPR036494"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P49917",
@@ -912,7 +1315,51 @@
           "name": "DNA ligase 4",
           "organism": "Homo sapiens",
           "prior_pdb_count": 31,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "ATP-binding",
+            "Cell cycle",
+            "Cell division",
+            "DNA damage",
+            "DNA recombination",
+            "DNA repair",
+            "Disease variant",
+            "Ligase",
+            "Magnesium",
+            "Metal-binding",
+            "Nucleotide-binding",
+            "Nucleus",
+            "Repeat",
+            "SCID"
+          ],
+          "ec": [
+            "6.5.1.1"
+          ],
+          "pfam": [
+            "PF00533",
+            "PF01068",
+            "PF04675",
+            "PF04679",
+            "PF11411"
+          ],
+          "interpro": [
+            "IPR000977",
+            "IPR001357",
+            "IPR012308",
+            "IPR012309",
+            "IPR012310",
+            "IPR012340",
+            "IPR016059",
+            "IPR021536",
+            "IPR029710",
+            "IPR036420",
+            "IPR036599",
+            "IPR044125"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "Q13426",
@@ -921,7 +1368,42 @@
           "name": "DNA repair protein XRCC4",
           "organism": "Homo sapiens",
           "prior_pdb_count": 35,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Alternative splicing",
+            "Chromosome",
+            "Coiled coil",
+            "Cytoplasm",
+            "DNA damage",
+            "DNA recombination",
+            "DNA repair",
+            "DNA-binding",
+            "Disease variant",
+            "Dwarfism",
+            "Isopeptide bond",
+            "Nucleus",
+            "Phosphoprotein",
+            "Ubl conjugation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF06632",
+            "PF21924",
+            "PF21925"
+          ],
+          "interpro": [
+            "IPR009089",
+            "IPR010585",
+            "IPR014751",
+            "IPR038051",
+            "IPR053961",
+            "IPR053962",
+            "IPR053963"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "Q9BUH6",
@@ -933,7 +1415,28 @@
           "name": "Protein PAXX",
           "organism": "Homo sapiens",
           "prior_pdb_count": 20,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Alternative splicing",
+            "Chromosome",
+            "Cytoplasm",
+            "DNA damage",
+            "DNA repair",
+            "Nucleus",
+            "Phosphoprotein"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF15384"
+          ],
+          "interpro": [
+            "IPR027873",
+            "IPR054134"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "Q9H9Q4",
@@ -944,7 +1447,35 @@
           "name": "Non-homologous end-joining factor 1",
           "organism": "Homo sapiens",
           "prior_pdb_count": 26,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Alternative splicing",
+            "Chromosomal rearrangement",
+            "Chromosome",
+            "Coiled coil",
+            "DNA damage",
+            "DNA repair",
+            "DNA-binding",
+            "Disease variant",
+            "Nucleus",
+            "Phosphoprotein",
+            "SCID"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF09302",
+            "PF21928"
+          ],
+          "interpro": [
+            "IPR015381",
+            "IPR038051",
+            "IPR052287",
+            "IPR053829"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "Q9UGP5",
@@ -953,7 +1484,52 @@
           "name": "DNA polymerase lambda",
           "organism": "Homo sapiens",
           "prior_pdb_count": 96,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Alternative splicing",
+            "Chromosome",
+            "DNA damage",
+            "DNA repair",
+            "DNA replication",
+            "DNA synthesis",
+            "DNA-binding",
+            "DNA-directed DNA polymerase",
+            "Lyase",
+            "Manganese",
+            "Metal-binding",
+            "Nucleotidyltransferase",
+            "Nucleus",
+            "Transferase"
+          ],
+          "ec": [
+            "2.7.7.7",
+            "4.2.99.-"
+          ],
+          "pfam": [
+            "PF10391",
+            "PF14716",
+            "PF14791",
+            "PF14792"
+          ],
+          "interpro": [
+            "IPR001357",
+            "IPR002008",
+            "IPR002054",
+            "IPR010996",
+            "IPR018944",
+            "IPR019843",
+            "IPR022312",
+            "IPR027421",
+            "IPR028207",
+            "IPR029398",
+            "IPR036420",
+            "IPR037160",
+            "IPR043519"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 51,
@@ -969,7 +1545,12 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "nucleic",
+        "regulation",
+        "immune"
+      ]
     },
     {
       "pmcid": "PMC13652343",

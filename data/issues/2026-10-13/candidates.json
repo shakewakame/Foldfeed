@@ -89,7 +89,18 @@
           "name": "Secreted effector PIT2",
           "organism": "Mycosarcoma maydis",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "Secreted",
+            "Signal"
+          ],
+          "ec": [],
+          "pfam": [],
+          "interpro": [],
+          "lineage": [
+            "Eukaryota",
+            "Fungi"
+          ]
         },
         {
           "uniprot": "P19909",
@@ -98,7 +109,33 @@
           "name": "Immunoglobulin G-binding protein G",
           "organism": "Streptococcus sp. group G",
           "prior_pdb_count": 91,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Cell wall",
+            "IgG-binding protein",
+            "Peptidoglycan-anchor",
+            "Repeat",
+            "Secreted",
+            "Signal"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00746",
+            "PF01378",
+            "PF17573"
+          ],
+          "interpro": [
+            "IPR000724",
+            "IPR005877",
+            "IPR009063",
+            "IPR019931",
+            "IPR019950",
+            "IPR035152"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Bacillati"
+          ]
         }
       ],
       "score": 86,
@@ -114,7 +151,8 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13654475",

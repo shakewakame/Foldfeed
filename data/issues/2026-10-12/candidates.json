@@ -139,7 +139,55 @@
           "name": "Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit delta isoform",
           "organism": "Homo sapiens",
           "prior_pdb_count": 18,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "ATP-binding",
+            "Adaptive immunity",
+            "Alternative splicing",
+            "Chemotaxis",
+            "Cytoplasm",
+            "Differentiation",
+            "Disease variant",
+            "Immunity",
+            "Inflammatory response",
+            "Innate immunity",
+            "Kinase",
+            "Lipid metabolism",
+            "Nucleotide-binding",
+            "Phosphoprotein",
+            "Transferase"
+          ],
+          "ec": [
+            "2.7.1.137",
+            "2.7.1.153"
+          ],
+          "pfam": [
+            "PF00454",
+            "PF00613",
+            "PF00792",
+            "PF00794",
+            "PF02192"
+          ],
+          "interpro": [
+            "IPR000341",
+            "IPR000403",
+            "IPR001263",
+            "IPR002420",
+            "IPR003113",
+            "IPR011009",
+            "IPR015433",
+            "IPR016024",
+            "IPR018936",
+            "IPR029071",
+            "IPR035892",
+            "IPR036940",
+            "IPR037703",
+            "IPR042236"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P23727",
@@ -148,7 +196,43 @@
           "name": "Phosphatidylinositol 3-kinase regulatory subunit alpha",
           "organism": "Bos taurus",
           "prior_pdb_count": 28,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Acetylation",
+            "Cytoplasm",
+            "GTPase activation",
+            "Phosphoprotein",
+            "Protein transport",
+            "Repeat",
+            "SH2 domain",
+            "SH3 domain",
+            "Stress response",
+            "Transport",
+            "Ubl conjugation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00017",
+            "PF00620",
+            "PF16454"
+          ],
+          "interpro": [
+            "IPR000198",
+            "IPR000980",
+            "IPR001452",
+            "IPR008936",
+            "IPR032498",
+            "IPR035020",
+            "IPR035022",
+            "IPR035591",
+            "IPR036028",
+            "IPR036860",
+            "IPR044124"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 57,
@@ -164,7 +248,12 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "kinase",
+        "transporter",
+        "immune"
+      ]
     },
     {
       "pmcid": "PMC13653627",
@@ -402,7 +491,45 @@
             "PDL1"
           ],
           "name": "Programmed cell death 1 ligand 1",
-          "organism": "Homo sapiens"
+          "organism": "Homo sapiens",
+          "keywords": [
+            "Adaptive immunity",
+            "Alternative splicing",
+            "Cell membrane",
+            "Diabetes mellitus",
+            "Disulfide bond",
+            "Endosome",
+            "Glycoprotein",
+            "Immunity",
+            "Immunoglobulin domain",
+            "Membrane",
+            "Nucleus",
+            "Receptor",
+            "Repeat",
+            "Secreted",
+            "Signal",
+            "Transmembrane",
+            "Transmembrane helix",
+            "Ubl conjugation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF07686",
+            "PF08205"
+          ],
+          "interpro": [
+            "IPR003599",
+            "IPR007110",
+            "IPR013106",
+            "IPR013162",
+            "IPR013783",
+            "IPR036179",
+            "IPR051713"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 5,
@@ -422,7 +549,11 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "receptor",
+        "immune"
+      ]
     },
     {
       "pmcid": "PMC13653116",
@@ -817,7 +948,66 @@
             "Cbp"
           ],
           "name": "Histone lysine acetyltransferase CREBBP",
-          "organism": "Mus musculus"
+          "organism": "Mus musculus",
+          "keywords": [
+            "Acetylation",
+            "Activator",
+            "Acyltransferase",
+            "Biological rhythms",
+            "Bromodomain",
+            "Cytoplasm",
+            "Isopeptide bond",
+            "Metal-binding",
+            "Methylation",
+            "Nucleus",
+            "Phosphoprotein",
+            "Repeat",
+            "Transcription",
+            "Transcription regulation",
+            "Transferase",
+            "Ubl conjugation",
+            "Zinc",
+            "Zinc-finger"
+          ],
+          "ec": [
+            "2.3.1.-",
+            "2.3.1.48"
+          ],
+          "pfam": [
+            "PF00439",
+            "PF00569",
+            "PF02135",
+            "PF02172",
+            "PF06001",
+            "PF09030",
+            "PF23570",
+            "PF29847"
+          ],
+          "interpro": [
+            "IPR000197",
+            "IPR000433",
+            "IPR001487",
+            "IPR003101",
+            "IPR009110",
+            "IPR010303",
+            "IPR013083",
+            "IPR013178",
+            "IPR014744",
+            "IPR018359",
+            "IPR031162",
+            "IPR035898",
+            "IPR036427",
+            "IPR036529",
+            "IPR037073",
+            "IPR038547",
+            "IPR043145",
+            "IPR056484",
+            "IPR064044"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "Q9Y6Q9",
@@ -829,7 +1019,54 @@
             "TRAM1"
           ],
           "name": "Nuclear receptor coactivator 3",
-          "organism": "Homo sapiens"
+          "organism": "Homo sapiens",
+          "keywords": [
+            "Acetylation",
+            "Activator",
+            "Acyltransferase",
+            "Alternative splicing",
+            "Cytoplasm",
+            "Methylation",
+            "Nucleus",
+            "Phosphoprotein",
+            "Repeat",
+            "Transcription",
+            "Transcription regulation",
+            "Transferase"
+          ],
+          "ec": [
+            "2.3.1.48"
+          ],
+          "pfam": [
+            "PF00989",
+            "PF07469",
+            "PF08815",
+            "PF08832",
+            "PF14598",
+            "PF16279",
+            "PF16665",
+            "PF23172"
+          ],
+          "interpro": [
+            "IPR000014",
+            "IPR009110",
+            "IPR010011",
+            "IPR011598",
+            "IPR013767",
+            "IPR014920",
+            "IPR014935",
+            "IPR017426",
+            "IPR032565",
+            "IPR035965",
+            "IPR036638",
+            "IPR037077",
+            "IPR056193",
+            "IPR056194"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 5,
@@ -849,7 +1086,11 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "categories_draft": [
+        "regulation",
+        "enzyme"
+      ]
     },
     {
       "pmcid": "PMC13653633",

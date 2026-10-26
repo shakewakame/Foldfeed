@@ -87,7 +87,29 @@
           "name": "5-histidylcysteine sulfoxide synthase",
           "organism": "Amycolatopsis keratiniphila subsp. keratiniphila",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "Iron",
+            "Oxidoreductase"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF03781",
+            "PF12867"
+          ],
+          "interpro": [
+            "IPR005532",
+            "IPR016187",
+            "IPR024775",
+            "IPR027577",
+            "IPR029063",
+            "IPR042095",
+            "IPR051043"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Bacillati"
+          ]
         }
       ],
       "score": 91,
@@ -103,7 +125,8 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13671523",
@@ -284,7 +307,33 @@
           "name": "Genome polyprotein",
           "organism": "Foot-and-mouth disease virus serotype O",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "Capsid protein",
+            "Host cytoplasm",
+            "Host-virus interaction",
+            "Lipoprotein",
+            "Myristate",
+            "T=pseudo3 icosahedral capsid protein",
+            "Viral attachment to host cell",
+            "Virion",
+            "Virus entry into host cell"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00073"
+          ],
+          "interpro": [
+            "IPR001676",
+            "IPR004080",
+            "IPR029053",
+            "IPR033703",
+            "IPR037080"
+          ],
+          "lineage": [
+            "Viruses",
+            "Riboviria"
+          ]
         },
         {
           "uniprot": "A0A1C6ZW66",
@@ -293,7 +342,33 @@
           "name": "Genome polyprotein",
           "organism": "Foot-and-mouth disease virus serotype O",
           "prior_pdb_count": 2,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Capsid protein",
+            "Host cytoplasm",
+            "Host-virus interaction",
+            "Lipoprotein",
+            "Myristate",
+            "T=pseudo3 icosahedral capsid protein",
+            "Viral attachment to host cell",
+            "Virion",
+            "Virus entry into host cell"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00073"
+          ],
+          "interpro": [
+            "IPR001676",
+            "IPR004080",
+            "IPR029053",
+            "IPR033703",
+            "IPR037080"
+          ],
+          "lineage": [
+            "Viruses",
+            "Riboviria"
+          ]
         },
         {
           "uniprot": "A0A1P8DYS7",
@@ -302,7 +377,28 @@
           "name": "Genome polyprotein",
           "organism": "Foot-and-mouth disease virus serotype O",
           "prior_pdb_count": 2,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Capsid protein",
+            "Host-virus interaction",
+            "Viral attachment to host cell",
+            "Virion",
+            "Virus entry into host cell"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00073"
+          ],
+          "interpro": [
+            "IPR001676",
+            "IPR004080",
+            "IPR029053",
+            "IPR033703"
+          ],
+          "lineage": [
+            "Viruses",
+            "Riboviria"
+          ]
         },
         {
           "uniprot": "J9PGT1",
@@ -311,7 +407,46 @@
           "name": "Genome polyprotein",
           "organism": "Foot-and-mouth disease virus serotype O",
           "prior_pdb_count": 2,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Capsid protein",
+            "Host cytoplasm",
+            "Host-virus interaction",
+            "Hydrolase",
+            "Inhibition of host ISG15 by virus",
+            "Inhibition of host innate immune response by virus",
+            "Inhibition of host interferon signaling pathway by virus",
+            "Interferon antiviral system evasion",
+            "Lipoprotein",
+            "Modulation of host ubiquitin pathway by viral deubiquitinase",
+            "Modulation of host ubiquitin pathway by virus",
+            "Myristate",
+            "Protease",
+            "T=pseudo3 icosahedral capsid protein",
+            "Thiol protease",
+            "Viral attachment to host cell",
+            "Viral immunoevasion",
+            "Virion",
+            "Virus entry into host cell"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00073",
+            "PF05408"
+          ],
+          "interpro": [
+            "IPR001676",
+            "IPR004080",
+            "IPR008739",
+            "IPR029053",
+            "IPR033703",
+            "IPR037080",
+            "IPR038765"
+          ],
+          "lineage": [
+            "Viruses",
+            "Riboviria"
+          ]
         },
         {
           "uniprot": "Q00574",
@@ -320,7 +455,33 @@
           "name": "Genome polyprotein",
           "organism": "Foot-and-mouth disease virus serotype O",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "Capsid protein",
+            "Host cytoplasm",
+            "Host-virus interaction",
+            "Lipoprotein",
+            "Myristate",
+            "T=pseudo3 icosahedral capsid protein",
+            "Viral attachment to host cell",
+            "Virion",
+            "Virus entry into host cell"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00073"
+          ],
+          "interpro": [
+            "IPR001676",
+            "IPR004080",
+            "IPR029053",
+            "IPR033703",
+            "IPR037080"
+          ],
+          "lineage": [
+            "Viruses",
+            "Riboviria"
+          ]
         }
       ],
       "score": 87,
@@ -348,7 +509,11 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "pathogen",
+        "protease"
+      ]
     },
     {
       "pmcid": "PMC13669386",
@@ -410,7 +575,15 @@
           "name": "Uncharacterized protein",
           "organism": "Francisella tularensis subsp. novicida (strain ATCC 15482 / CCUG 33449 / U112)",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [],
+          "ec": [],
+          "pfam": [],
+          "interpro": [],
+          "lineage": [
+            "Bacteria",
+            "Pseudomonadati"
+          ]
         }
       ],
       "score": 81,
@@ -430,7 +603,8 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13671375",
@@ -622,7 +796,8 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13674496",
@@ -734,7 +909,34 @@
           "name": "5-aminolevulinate synthase, mitochondrial",
           "organism": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
           "prior_pdb_count": 3,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Acyltransferase",
+            "Heme biosynthesis",
+            "Mitochondrion",
+            "Pyridoxal phosphate",
+            "Transferase",
+            "Transit peptide"
+          ],
+          "ec": [
+            "2.3.1.37"
+          ],
+          "pfam": [
+            "PF00155"
+          ],
+          "interpro": [
+            "IPR001917",
+            "IPR004839",
+            "IPR010961",
+            "IPR015421",
+            "IPR015422",
+            "IPR015424",
+            "IPR050087"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Fungi"
+          ]
         }
       ],
       "score": 62,
@@ -750,7 +952,10 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by-nc/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "categories_draft": [
+        "enzyme"
+      ]
     },
     {
       "pmcid": "PMC13673511",
@@ -814,7 +1019,26 @@
           "name": "Chalcone-flavonone isomerase family protein",
           "organism": "Medicago truncatula",
           "prior_pdb_count": 1,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Flavonoid biosynthesis",
+            "Isomerase"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF02431"
+          ],
+          "interpro": [
+            "IPR016087",
+            "IPR016088",
+            "IPR016089",
+            "IPR036298",
+            "IPR044164"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Viridiplantae"
+          ]
         }
       ],
       "score": 61,
@@ -830,7 +1054,8 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13669642",
@@ -908,7 +1133,29 @@
           "name": "Coproheme decarboxylase",
           "organism": "Listeria monocytogenes serovar 1/2a (strain ATCC BAA-679 / EGD-e)",
           "prior_pdb_count": 4,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Heme",
+            "Heme biosynthesis",
+            "Iron",
+            "Metal-binding",
+            "Oxidoreductase"
+          ],
+          "ec": [
+            "1.3.98.5"
+          ],
+          "pfam": [
+            "PF06778"
+          ],
+          "interpro": [
+            "IPR010644",
+            "IPR011008",
+            "IPR031332"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Bacillati"
+          ]
         }
       ],
       "score": 61,
@@ -924,7 +1171,10 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "enzyme"
+      ]
     },
     {
       "pmcid": "PMC13669362",
@@ -1371,7 +1621,32 @@
           "name": "Sodium-dependent neutral amino acid transporter B(0)AT1",
           "organism": "Homo sapiens",
           "prior_pdb_count": 11,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Amino-acid transport",
+            "Cell membrane",
+            "Disease variant",
+            "Glycoprotein",
+            "Membrane",
+            "Phosphoprotein",
+            "Symport",
+            "Transmembrane",
+            "Transmembrane helix",
+            "Transport"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00209"
+          ],
+          "interpro": [
+            "IPR000175",
+            "IPR002438",
+            "IPR037272"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "Q9BYF1",
@@ -1380,7 +1655,49 @@
           "name": "Angiotensin-converting enzyme 2",
           "organism": "Homo sapiens",
           "prior_pdb_count": 351,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Alternative splicing",
+            "Carboxypeptidase",
+            "Cell membrane",
+            "Cell projection",
+            "Chloride",
+            "Cytoplasm",
+            "Disulfide bond",
+            "Glycoprotein",
+            "Host cell receptor for virus entry",
+            "Host-virus interaction",
+            "Hydrolase",
+            "Isopeptide bond",
+            "Membrane",
+            "Metal-binding",
+            "Metalloprotease",
+            "Phosphoprotein",
+            "Protease",
+            "Receptor",
+            "Secreted",
+            "Signal",
+            "Transmembrane",
+            "Transmembrane helix",
+            "Ubl conjugation",
+            "Zinc"
+          ],
+          "ec": [
+            "3.4.17.-",
+            "3.4.17.23"
+          ],
+          "pfam": [
+            "PF01401",
+            "PF16959"
+          ],
+          "interpro": [
+            "IPR001548",
+            "IPR031588"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 60,
@@ -1404,7 +1721,12 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "protease",
+        "receptor",
+        "transporter"
+      ]
     },
     {
       "pmcid": "PMC13676158",
@@ -1478,7 +1800,8 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13672079",
@@ -1548,7 +1871,8 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13676316",
@@ -1653,7 +1977,45 @@
           "name": "Coagulation factor VIII",
           "organism": "Homo sapiens",
           "prior_pdb_count": 27,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Acute phase",
+            "Alternative splicing",
+            "Blood coagulation",
+            "Calcium",
+            "Disease variant",
+            "Disulfide bond",
+            "Glycoprotein",
+            "Hemophilia",
+            "Hemostasis",
+            "Metal-binding",
+            "Pharmaceutical",
+            "Repeat",
+            "Secreted",
+            "Signal",
+            "Sulfation",
+            "Thrombophilia"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00754",
+            "PF07731",
+            "PF07732"
+          ],
+          "interpro": [
+            "IPR000421",
+            "IPR008972",
+            "IPR008979",
+            "IPR011706",
+            "IPR011707",
+            "IPR024715",
+            "IPR033138",
+            "IPR050633"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 52,
@@ -1669,7 +2031,8 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13669508",
@@ -1765,7 +2128,41 @@
           "name": "Wilms tumor protein",
           "organism": "Homo sapiens",
           "prior_pdb_count": 30,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Alternative initiation",
+            "Alternative splicing",
+            "Chromosomal rearrangement",
+            "Cytoplasm",
+            "DNA-binding",
+            "Disease variant",
+            "Isopeptide bond",
+            "Metal-binding",
+            "Nucleus",
+            "RNA editing",
+            "RNA-binding",
+            "Repeat",
+            "Transcription",
+            "Transcription regulation",
+            "Tumor suppressor",
+            "Ubl conjugation",
+            "Zinc",
+            "Zinc-finger"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00096",
+            "PF02165"
+          ],
+          "interpro": [
+            "IPR000976",
+            "IPR013087",
+            "IPR036236"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P61769",
@@ -1774,7 +2171,38 @@
           "name": "Beta-2-microglobulin",
           "organism": "Homo sapiens",
           "prior_pdb_count": 1408,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Amyloid",
+            "Amyloidosis",
+            "Disease variant",
+            "Disulfide bond",
+            "Glycation",
+            "Glycoprotein",
+            "Immunity",
+            "Immunoglobulin domain",
+            "MHC I",
+            "Pyrrolidone carboxylic acid",
+            "Secreted",
+            "Signal"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF07654"
+          ],
+          "interpro": [
+            "IPR003006",
+            "IPR003597",
+            "IPR007110",
+            "IPR013783",
+            "IPR015707",
+            "IPR036179",
+            "IPR050160"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "Q53Z42",
@@ -1783,7 +2211,44 @@
           "name": "HLA class I antigen",
           "organism": "Homo sapiens",
           "prior_pdb_count": 15,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Disulfide bond",
+            "Glycoprotein",
+            "Immunity",
+            "Immunoglobulin domain",
+            "MHC I",
+            "Membrane",
+            "Metal-binding",
+            "Phosphoprotein",
+            "Signal",
+            "Transmembrane",
+            "Transmembrane helix",
+            "Zinc"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00129",
+            "PF06623",
+            "PF07654"
+          ],
+          "interpro": [
+            "IPR001039",
+            "IPR003006",
+            "IPR003597",
+            "IPR007110",
+            "IPR010579",
+            "IPR011161",
+            "IPR011162",
+            "IPR013783",
+            "IPR036179",
+            "IPR037055",
+            "IPR050208"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 51,
@@ -1803,7 +2268,12 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "immune",
+        "nucleic",
+        "regulation"
+      ]
     },
     {
       "pmcid": "PMC13669040",
@@ -1875,7 +2345,8 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13672277",
@@ -1940,7 +2411,8 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13672209",
@@ -4666,7 +5138,51 @@
           "gene": "Plcd1",
           "synonyms": [],
           "name": "1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase delta-1",
-          "organism": "Rattus norvegicus"
+          "organism": "Rattus norvegicus",
+          "keywords": [
+            "Calcium",
+            "Cell membrane",
+            "Cytoplasm",
+            "Glycoprotein",
+            "Hydrolase",
+            "Lipid degradation",
+            "Lipid metabolism",
+            "Membrane",
+            "Metal-binding",
+            "Phosphoprotein",
+            "Repeat",
+            "Transducer"
+          ],
+          "ec": [
+            "3.1.4.11"
+          ],
+          "pfam": [
+            "PF00168",
+            "PF00387",
+            "PF00388",
+            "PF09279",
+            "PF16457"
+          ],
+          "interpro": [
+            "IPR000008",
+            "IPR000909",
+            "IPR001192",
+            "IPR001711",
+            "IPR001849",
+            "IPR002048",
+            "IPR011992",
+            "IPR011993",
+            "IPR015359",
+            "IPR017946",
+            "IPR018247",
+            "IPR028391",
+            "IPR035892",
+            "IPR046975"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 5,
@@ -4690,7 +5206,10 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "enzyme"
+      ]
     },
     {
       "pmcid": "PMC13669357",

@@ -135,7 +135,56 @@
           "name": "NAD-dependent protein deacetylase sirtuin-2",
           "organism": "Homo sapiens",
           "prior_pdb_count": 79,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Acetylation",
+            "Alternative splicing",
+            "Autophagy",
+            "Cell cycle",
+            "Cell division",
+            "Cell membrane",
+            "Cell projection",
+            "Chromosome",
+            "Cytoplasm",
+            "Cytoskeleton",
+            "Differentiation",
+            "Immunity",
+            "Innate immunity",
+            "Meiosis",
+            "Membrane",
+            "Metal-binding",
+            "Microtubule",
+            "Mitosis",
+            "NAD",
+            "Neurodegeneration",
+            "Neurogenesis",
+            "Nucleus",
+            "Phosphoprotein",
+            "Transcription",
+            "Transcription regulation",
+            "Transferase",
+            "Ubl conjugation",
+            "Zinc"
+          ],
+          "ec": [
+            "2.3.1.-",
+            "2.3.1.286"
+          ],
+          "pfam": [
+            "PF02146"
+          ],
+          "interpro": [
+            "IPR003000",
+            "IPR017328",
+            "IPR026590",
+            "IPR026591",
+            "IPR029035",
+            "IPR050134"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 63,
@@ -155,7 +204,12 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "regulation",
+        "immune",
+        "enzyme"
+      ]
     },
     {
       "pmcid": "PMC13646271",
@@ -303,7 +357,8 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13646831",
@@ -536,7 +591,57 @@
           "name": "Interferon-induced helicase C domain-containing protein 1",
           "organism": "Homo sapiens",
           "prior_pdb_count": 9,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "ATP-binding",
+            "Aicardi-Goutieres syndrome",
+            "Alternative splicing",
+            "Antiviral defense",
+            "Cytoplasm",
+            "Diabetes mellitus",
+            "Disease variant",
+            "Helicase",
+            "Host-virus interaction",
+            "Hydrolase",
+            "Immunity",
+            "Innate immunity",
+            "Isopeptide bond",
+            "Metal-binding",
+            "Mitochondrion",
+            "Nucleotide-binding",
+            "Nucleus",
+            "Phosphoprotein",
+            "RNA-binding",
+            "Repeat",
+            "Ubl conjugation",
+            "Zinc"
+          ],
+          "ec": [
+            "3.6.4.13"
+          ],
+          "pfam": [
+            "PF00271",
+            "PF04851",
+            "PF11648",
+            "PF16739",
+            "PF18119"
+          ],
+          "interpro": [
+            "IPR001650",
+            "IPR006935",
+            "IPR011029",
+            "IPR014001",
+            "IPR021673",
+            "IPR027417",
+            "IPR031964",
+            "IPR038557",
+            "IPR041204",
+            "IPR051363"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 59,
@@ -556,7 +661,11 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "nucleic",
+        "immune"
+      ]
     },
     {
       "pmcid": "PMC13648278",
@@ -655,7 +764,8 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13648974",
@@ -927,7 +1037,54 @@
           "name": "Spike glycoprotein",
           "organism": "Middle East respiratory syndrome-related coronavirus (isolate United Kingdom/H123990006/2012)",
           "prior_pdb_count": 64,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Coiled coil",
+            "Disulfide bond",
+            "Fusion of virus membrane with host endosomal membrane",
+            "Fusion of virus membrane with host membrane",
+            "Glycoprotein",
+            "Host cell membrane",
+            "Host membrane",
+            "Host-virus interaction",
+            "Lipoprotein",
+            "Membrane",
+            "Palmitate",
+            "Signal",
+            "Transmembrane",
+            "Transmembrane helix",
+            "Viral attachment to host cell",
+            "Viral envelope protein",
+            "Viral penetration into host cytoplasm",
+            "Virion",
+            "Virulence",
+            "Virus entry into host cell"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF01601",
+            "PF09408",
+            "PF16451",
+            "PF19214"
+          ],
+          "interpro": [
+            "IPR002552",
+            "IPR018548",
+            "IPR032500",
+            "IPR036326",
+            "IPR042578",
+            "IPR043002",
+            "IPR043473",
+            "IPR043614",
+            "IPR044337",
+            "IPR044376",
+            "IPR044873",
+            "IPR044874"
+          ],
+          "lineage": [
+            "Viruses",
+            "Riboviria"
+          ]
         },
         {
           "uniprot": "P27487",
@@ -939,7 +1096,44 @@
           "name": "Dipeptidyl peptidase 4",
           "organism": "Homo sapiens",
           "prior_pdb_count": 116,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Aminopeptidase",
+            "Cell adhesion",
+            "Cell junction",
+            "Cell membrane",
+            "Cell projection",
+            "Disulfide bond",
+            "Glycoprotein",
+            "Host-virus interaction",
+            "Hydrolase",
+            "Membrane",
+            "Protease",
+            "Receptor",
+            "Secreted",
+            "Serine protease",
+            "Signal-anchor",
+            "Transmembrane",
+            "Transmembrane helix"
+          ],
+          "ec": [
+            "3.4.14.5"
+          ],
+          "pfam": [
+            "PF00326",
+            "PF00930"
+          ],
+          "interpro": [
+            "IPR001375",
+            "IPR002469",
+            "IPR002471",
+            "IPR029058",
+            "IPR050278"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 55,
@@ -955,7 +1149,12 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "protease",
+        "receptor",
+        "pathogen"
+      ]
     },
     {
       "pmcid": "PMC13648238",
@@ -993,7 +1192,8 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13646716",

@@ -268,11 +268,47 @@
           "name": "Mevalonate kinase",
           "organism": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "ATP-binding",
+            "Cytoplasm",
+            "Kinase",
+            "Lipid biosynthesis",
+            "Lipid metabolism",
+            "Magnesium",
+            "Metal-binding",
+            "Nucleotide-binding",
+            "Steroid biosynthesis",
+            "Steroid metabolism",
+            "Sterol biosynthesis",
+            "Sterol metabolism",
+            "Transferase"
+          ],
+          "ec": [
+            "2.7.1.36"
+          ],
+          "pfam": [
+            "PF00288"
+          ],
+          "interpro": [
+            "IPR006203",
+            "IPR006204",
+            "IPR006205",
+            "IPR014721",
+            "IPR020568",
+            "IPR036554"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Fungi"
+          ]
         }
       ],
       "score": 95,
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "kinase"
+      ]
     },
     {
       "pmcid": "PMC13683441",
@@ -371,7 +407,26 @@
           "name": "Saccharopine dehydrogenase",
           "organism": "[Clostridium] leptum DSM 753",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "Oxidoreductase"
+          ],
+          "ec": [
+            "1.5.1.7"
+          ],
+          "pfam": [
+            "PF03435",
+            "PF16653"
+          ],
+          "interpro": [
+            "IPR005097",
+            "IPR032095",
+            "IPR036291"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Bacillati"
+          ]
         },
         {
           "uniprot": "I9VY56",
@@ -380,11 +435,31 @@
           "name": "Saccharopine dehydrogenase",
           "organism": "Bacteroides fragilis CL05T12C13",
           "prior_pdb_count": 1,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Nucleotide-binding"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF03435",
+            "PF16653"
+          ],
+          "interpro": [
+            "IPR005097",
+            "IPR032095",
+            "IPR036291"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Pseudomonadati"
+          ]
         }
       ],
       "score": 87,
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "enzyme"
+      ]
     },
     {
       "pmcid": "PMC13684180",
@@ -506,7 +581,26 @@
           "name": "Probable inorganic carbon transporter subunit DabA",
           "organism": "Thermocrinis albus (strain DSM 14484 / JCM 11386 / HI 11/12)",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "Cell inner membrane",
+            "Cell membrane",
+            "Membrane",
+            "Metal-binding",
+            "Transport",
+            "Zinc"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF10070"
+          ],
+          "interpro": [
+            "IPR018752"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Pseudomonadati"
+          ]
         },
         {
           "uniprot": "D3SP02",
@@ -515,11 +609,32 @@
           "name": "NADH/Ubiquinone/plastoquinone (Complex I)",
           "organism": "Thermocrinis albus (strain DSM 14484 / JCM 11386 / HI 11/12)",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "Membrane",
+            "Transmembrane",
+            "Transmembrane helix",
+            "Ubiquinone"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00361",
+            "PF00662"
+          ],
+          "interpro": [
+            "IPR001516",
+            "IPR001750",
+            "IPR003945"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Pseudomonadati"
+          ]
         }
       ],
       "score": 87,
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13683372",
@@ -1171,7 +1286,35 @@
           "name": "Myosin light chain kinase 2, skeletal/cardiac muscle",
           "organism": "Bos taurus",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "ATP-binding",
+            "Acetylation",
+            "Calmodulin-binding",
+            "Cytoplasm",
+            "Kinase",
+            "Nucleotide-binding",
+            "Phosphoprotein",
+            "Serine/threonine-protein kinase",
+            "Transferase"
+          ],
+          "ec": [
+            "2.7.11.18"
+          ],
+          "pfam": [
+            "PF00069"
+          ],
+          "interpro": [
+            "IPR000719",
+            "IPR008271",
+            "IPR011009",
+            "IPR017441",
+            "IPR042717"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P21242",
@@ -1183,7 +1326,28 @@
           "name": "Probable proteasome subunit alpha type-7",
           "organism": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
           "prior_pdb_count": 377,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Acetylation",
+            "Cytoplasm",
+            "Nucleus",
+            "Proteasome"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00227",
+            "PF10584"
+          ],
+          "interpro": [
+            "IPR000426",
+            "IPR001353",
+            "IPR023332",
+            "IPR029055"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Fungi"
+          ]
         },
         {
           "uniprot": "P21243",
@@ -1195,7 +1359,32 @@
           "name": "Proteasome subunit alpha type-1",
           "organism": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
           "prior_pdb_count": 377,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Acetylation",
+            "Cytoplasm",
+            "Isopeptide bond",
+            "Nucleus",
+            "Phosphoprotein",
+            "Proteasome",
+            "Ubl conjugation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00227",
+            "PF10584"
+          ],
+          "interpro": [
+            "IPR000426",
+            "IPR001353",
+            "IPR023332",
+            "IPR029055",
+            "IPR034642"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Fungi"
+          ]
         },
         {
           "uniprot": "P22141",
@@ -1204,7 +1393,29 @@
           "name": "Proteasome subunit beta type-4",
           "organism": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
           "prior_pdb_count": 374,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Acetylation",
+            "Cytoplasm",
+            "Nucleus",
+            "Phosphoprotein",
+            "Proteasome"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00227"
+          ],
+          "interpro": [
+            "IPR001353",
+            "IPR016050",
+            "IPR023333",
+            "IPR029055",
+            "IPR035206"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Fungi"
+          ]
         },
         {
           "uniprot": "P23638",
@@ -1215,7 +1426,30 @@
           "name": "Proteasome subunit alpha type-3",
           "organism": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
           "prior_pdb_count": 371,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Cytoplasm",
+            "Isopeptide bond",
+            "Nucleus",
+            "Proteasome",
+            "Ubl conjugation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00227",
+            "PF10584"
+          ],
+          "interpro": [
+            "IPR000426",
+            "IPR001353",
+            "IPR016050",
+            "IPR023332",
+            "IPR029055"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Fungi"
+          ]
         },
         {
           "uniprot": "P23639",
@@ -1226,7 +1460,29 @@
           "name": "Proteasome subunit alpha type-2",
           "organism": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
           "prior_pdb_count": 377,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Cytoplasm",
+            "Isopeptide bond",
+            "Nucleus",
+            "Proteasome",
+            "Ubl conjugation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00227",
+            "PF10584"
+          ],
+          "interpro": [
+            "IPR000426",
+            "IPR001353",
+            "IPR023332",
+            "IPR029055"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Fungi"
+          ]
         },
         {
           "uniprot": "P25043",
@@ -1235,7 +1491,35 @@
           "name": "Proteasome subunit beta type-2",
           "organism": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
           "prior_pdb_count": 364,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Cytoplasm",
+            "Hydrolase",
+            "Nucleus",
+            "Protease",
+            "Proteasome",
+            "Threonine protease",
+            "Zymogen"
+          ],
+          "ec": [
+            "3.4.25.1"
+          ],
+          "pfam": [
+            "PF00227",
+            "PF12465"
+          ],
+          "interpro": [
+            "IPR000243",
+            "IPR001353",
+            "IPR016050",
+            "IPR023333",
+            "IPR024689",
+            "IPR029055"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Fungi"
+          ]
         },
         {
           "uniprot": "P25451",
@@ -1244,7 +1528,30 @@
           "name": "Proteasome subunit beta type-3",
           "organism": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
           "prior_pdb_count": 374,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Cytoplasm",
+            "Isopeptide bond",
+            "Nucleus",
+            "Phosphoprotein",
+            "Proteasome",
+            "Ubl conjugation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00227"
+          ],
+          "interpro": [
+            "IPR001353",
+            "IPR016050",
+            "IPR023333",
+            "IPR029055",
+            "IPR033811"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Fungi"
+          ]
         },
         {
           "uniprot": "P32379",
@@ -1255,7 +1562,29 @@
           "name": "Proteasome subunit alpha type-5",
           "organism": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
           "prior_pdb_count": 378,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Cytoplasm",
+            "Nucleus",
+            "Phosphoprotein",
+            "Proteasome"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00227",
+            "PF10584"
+          ],
+          "interpro": [
+            "IPR000426",
+            "IPR001353",
+            "IPR023332",
+            "IPR029055",
+            "IPR033812"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Fungi"
+          ]
         },
         {
           "uniprot": "P38293",
@@ -1264,7 +1593,21 @@
           "name": "Proteasome maturation factor UMP1",
           "organism": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
           "prior_pdb_count": 13,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Chaperone"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF05348"
+          ],
+          "interpro": [
+            "IPR008012"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Fungi"
+          ]
         },
         {
           "uniprot": "P38624",
@@ -1273,7 +1616,34 @@
           "name": "Proteasome subunit beta type-1",
           "organism": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
           "prior_pdb_count": 370,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Acetylation",
+            "Cytoplasm",
+            "Hydrolase",
+            "Nucleus",
+            "Protease",
+            "Proteasome",
+            "Threonine protease",
+            "Zymogen"
+          ],
+          "ec": [
+            "3.4.25.1"
+          ],
+          "pfam": [
+            "PF00227"
+          ],
+          "interpro": [
+            "IPR000243",
+            "IPR001353",
+            "IPR016050",
+            "IPR023333",
+            "IPR029055"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Fungi"
+          ]
         },
         {
           "uniprot": "P40302",
@@ -1282,7 +1652,30 @@
           "name": "Proteasome subunit alpha type-6",
           "organism": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
           "prior_pdb_count": 377,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Cytoplasm",
+            "Isopeptide bond",
+            "Nucleus",
+            "Phosphoprotein",
+            "Proteasome",
+            "Ubl conjugation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00227",
+            "PF10584"
+          ],
+          "interpro": [
+            "IPR000426",
+            "IPR001353",
+            "IPR023332",
+            "IPR029055"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Fungi"
+          ]
         },
         {
           "uniprot": "P40303",
@@ -1291,7 +1684,29 @@
           "name": "Proteasome subunit alpha type-4",
           "organism": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
           "prior_pdb_count": 377,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Cytoplasm",
+            "Nucleus",
+            "Phosphoprotein",
+            "Proteasome"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00227",
+            "PF10584"
+          ],
+          "interpro": [
+            "IPR000426",
+            "IPR001353",
+            "IPR016050",
+            "IPR023332",
+            "IPR029055"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Fungi"
+          ]
         },
         {
           "uniprot": "P43583",
@@ -1302,11 +1717,43 @@
           "name": "Proteasome activator BLM10",
           "organism": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
           "prior_pdb_count": 7,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Cytoplasm",
+            "DNA damage",
+            "DNA repair",
+            "Nucleus",
+            "Phosphoprotein",
+            "Repeat"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF11919",
+            "PF16507",
+            "PF16547",
+            "PF23096"
+          ],
+          "interpro": [
+            "IPR016024",
+            "IPR021843",
+            "IPR032372",
+            "IPR032430",
+            "IPR035309",
+            "IPR055455"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Fungi"
+          ]
         }
       ],
       "score": 85,
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "protease",
+        "kinase",
+        "nucleic"
+      ]
     },
     {
       "pmcid": "PMC13686013",
@@ -1622,7 +2069,38 @@
           "name": "Beta-2 adrenergic receptor",
           "organism": "Homo sapiens",
           "prior_pdb_count": 146,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Cell membrane",
+            "Disulfide bond",
+            "G protein-coupled receptor",
+            "Glycoprotein",
+            "Golgi apparatus",
+            "Hydroxylation",
+            "Lipoprotein",
+            "Membrane",
+            "Palmitate",
+            "Phosphoprotein",
+            "Receptor",
+            "Transducer",
+            "Transmembrane",
+            "Transmembrane helix",
+            "Ubl conjugation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00001"
+          ],
+          "interpro": [
+            "IPR000276",
+            "IPR000332",
+            "IPR002233",
+            "IPR017452"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P21728",
@@ -1631,7 +2109,39 @@
           "name": "Dopamine receptor D1",
           "organism": "Homo sapiens",
           "prior_pdb_count": 32,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Cell membrane",
+            "Cell projection",
+            "Disulfide bond",
+            "Endoplasmic reticulum",
+            "G protein-coupled receptor",
+            "Glycoprotein",
+            "Lipoprotein",
+            "Membrane",
+            "Palmitate",
+            "Phosphoprotein",
+            "Postsynaptic cell membrane",
+            "Receptor",
+            "Synapse",
+            "Transducer",
+            "Transmembrane",
+            "Transmembrane helix"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00001"
+          ],
+          "interpro": [
+            "IPR000276",
+            "IPR000929",
+            "IPR001413",
+            "IPR017452"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P54311",
@@ -1640,7 +2150,31 @@
           "name": "Guanine nucleotide-binding protein G(I)/G(S)/G(T) subunit beta-1",
           "organism": "Rattus norvegicus",
           "prior_pdb_count": 183,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Acetylation",
+            "Phosphoprotein",
+            "Repeat",
+            "Transducer",
+            "WD repeat"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF25391"
+          ],
+          "interpro": [
+            "IPR001632",
+            "IPR001680",
+            "IPR015943",
+            "IPR016346",
+            "IPR019775",
+            "IPR020472",
+            "IPR036322"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P63092",
@@ -1652,7 +2186,45 @@
           "name": "Guanine nucleotide-binding protein G(s) subunit alpha isoforms short",
           "organism": "Homo sapiens",
           "prior_pdb_count": 487,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "ADP-ribosylation",
+            "Alternative splicing",
+            "Cell membrane",
+            "Cushing syndrome",
+            "Disease variant",
+            "Dwarfism",
+            "GTP-binding",
+            "Hydrolase",
+            "Isopeptide bond",
+            "Lipoprotein",
+            "Magnesium",
+            "Membrane",
+            "Metal-binding",
+            "Nucleotide-binding",
+            "Obesity",
+            "Palmitate",
+            "Phosphoprotein",
+            "Proto-oncogene",
+            "Transducer",
+            "Ubl conjugation"
+          ],
+          "ec": [
+            "3.6.5.-"
+          ],
+          "pfam": [
+            "PF00503"
+          ],
+          "interpro": [
+            "IPR000367",
+            "IPR001019",
+            "IPR011025",
+            "IPR027417"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P63212",
@@ -1661,11 +2233,37 @@
           "name": "Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-2",
           "organism": "Bos taurus",
           "prior_pdb_count": 226,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Acetylation",
+            "Cell membrane",
+            "Lipoprotein",
+            "Membrane",
+            "Methylation",
+            "Prenylation",
+            "Transducer"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00631"
+          ],
+          "interpro": [
+            "IPR001770",
+            "IPR015898",
+            "IPR036284"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 63,
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "receptor",
+        "enzyme"
+      ]
     },
     {
       "pmcid": "PMC13683432",
@@ -1820,7 +2418,37 @@
           "name": "Capsid protein VP1",
           "organism": "Adeno-associated virus 2 (isolate Srivastava/1982)",
           "prior_pdb_count": 24,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Alternative initiation",
+            "Alternative splicing",
+            "Capsid protein",
+            "Clathrin-mediated endocytosis of virus by host",
+            "Host nucleus",
+            "Host-virus interaction",
+            "T=1 icosahedral capsid protein",
+            "Viral attachment to host cell",
+            "Viral penetration into host cytoplasm",
+            "Viral penetration via permeabilization of host membrane",
+            "Virion",
+            "Virus endocytosis by host",
+            "Virus entry into host cell"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00740",
+            "PF08398"
+          ],
+          "interpro": [
+            "IPR001403",
+            "IPR013607",
+            "IPR016184",
+            "IPR036952"
+          ],
+          "lineage": [
+            "Viruses",
+            "Floreoviria"
+          ]
         },
         {
           "uniprot": "P52293",
@@ -1831,11 +2459,44 @@
           "name": "Importin subunit alpha-1",
           "organism": "Mus musculus",
           "prior_pdb_count": 154,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Acetylation",
+            "Cytoplasm",
+            "Nucleus",
+            "Phosphoprotein",
+            "Protein transport",
+            "Repeat",
+            "Transport",
+            "Ubl conjugation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00514",
+            "PF01749",
+            "PF16186"
+          ],
+          "interpro": [
+            "IPR000225",
+            "IPR002652",
+            "IPR011989",
+            "IPR016024",
+            "IPR024931",
+            "IPR032413",
+            "IPR036975"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 58,
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "transporter",
+        "pathogen"
+      ]
     },
     {
       "pmcid": "PMC13683342",
@@ -1915,11 +2576,61 @@
           "name": "Genome polyprotein",
           "organism": "Norovirus (strain Human/NoV/United States/Norwalk/1968/GI)",
           "prior_pdb_count": 33,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "ATP-binding",
+            "Covalent protein-RNA linkage",
+            "Host Golgi apparatus",
+            "Host cytoplasm",
+            "Host endoplasmic reticulum",
+            "Host membrane",
+            "Host-virus interaction",
+            "Hydrolase",
+            "Magnesium",
+            "Membrane",
+            "Metal-binding",
+            "Nucleotide-binding",
+            "Nucleotidyltransferase",
+            "Phosphoprotein",
+            "Protease",
+            "RNA-directed RNA polymerase",
+            "Secreted",
+            "Thiol protease",
+            "Transferase",
+            "Viral RNA replication"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00680",
+            "PF00910",
+            "PF05416",
+            "PF08405"
+          ],
+          "interpro": [
+            "IPR000605",
+            "IPR001205",
+            "IPR001665",
+            "IPR007094",
+            "IPR009003",
+            "IPR013614",
+            "IPR014759",
+            "IPR027417",
+            "IPR043128",
+            "IPR043502"
+          ],
+          "lineage": [
+            "Viruses",
+            "Riboviria"
+          ]
         }
       ],
       "score": 56,
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "protease",
+        "nucleic",
+        "pathogen"
+      ]
     },
     {
       "pmcid": "PMC13683344",
@@ -2146,7 +2857,32 @@
           "name": "Histone H3",
           "organism": "Xenopus laevis",
           "prior_pdb_count": 65,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "ADP-ribosylation",
+            "Acetylation",
+            "Chromosome",
+            "DNA-binding",
+            "Hydroxylation",
+            "Isopeptide bond",
+            "Methylation",
+            "Nucleosome core",
+            "Nucleus",
+            "Ubl conjugation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00125"
+          ],
+          "interpro": [
+            "IPR000164",
+            "IPR007125",
+            "IPR009072"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P02281",
@@ -2155,7 +2891,32 @@
           "name": "Histone H2B 1.1",
           "organism": "Xenopus laevis",
           "prior_pdb_count": 392,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Acetylation",
+            "Chromosome",
+            "DNA-binding",
+            "Glycoprotein",
+            "Isopeptide bond",
+            "Nucleosome core",
+            "Nucleus",
+            "Phosphoprotein",
+            "Ubl conjugation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00125"
+          ],
+          "interpro": [
+            "IPR000558",
+            "IPR007125",
+            "IPR009072",
+            "IPR055333"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P26358",
@@ -2168,7 +2929,59 @@
           "name": "DNA (cytosine-5)-methyltransferase 1",
           "organism": "Homo sapiens",
           "prior_pdb_count": 27,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Acetylation",
+            "Activator",
+            "Alternative splicing",
+            "Chromatin regulator",
+            "Chromosome",
+            "DNA-binding",
+            "Deafness",
+            "Disease variant",
+            "Isopeptide bond",
+            "Metal-binding",
+            "Methylation",
+            "Methyltransferase",
+            "Neuropathy",
+            "Nucleus",
+            "Phosphoprotein",
+            "Repeat",
+            "Repressor",
+            "S-adenosyl-L-methionine",
+            "Transcription",
+            "Transcription regulation",
+            "Transferase",
+            "Ubl conjugation",
+            "Zinc",
+            "Zinc-finger"
+          ],
+          "ec": [
+            "2.1.1.37"
+          ],
+          "pfam": [
+            "PF00145",
+            "PF01426",
+            "PF02008",
+            "PF06464",
+            "PF12047"
+          ],
+          "interpro": [
+            "IPR001025",
+            "IPR001525",
+            "IPR002857",
+            "IPR010506",
+            "IPR018117",
+            "IPR022702",
+            "IPR029063",
+            "IPR031303",
+            "IPR043151",
+            "IPR050390"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P62799",
@@ -2177,7 +2990,35 @@
           "name": "Histone H4",
           "organism": "Xenopus laevis",
           "prior_pdb_count": 409,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Acetylation",
+            "Chromosome",
+            "Citrullination",
+            "DNA-binding",
+            "Hydroxylation",
+            "Isopeptide bond",
+            "Methylation",
+            "Nucleosome core",
+            "Nucleus",
+            "Phosphoprotein",
+            "Ubl conjugation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF15511"
+          ],
+          "interpro": [
+            "IPR001951",
+            "IPR004823",
+            "IPR009072",
+            "IPR019809",
+            "IPR035425"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "Q6AZJ8",
@@ -2190,11 +3031,43 @@
           "name": "Histone H2A",
           "organism": "Xenopus laevis",
           "prior_pdb_count": 93,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Acetylation",
+            "Chromosome",
+            "DNA-binding",
+            "Isopeptide bond",
+            "Nucleosome core",
+            "Nucleus",
+            "Phosphoprotein",
+            "Ubl conjugation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00125",
+            "PF16211"
+          ],
+          "interpro": [
+            "IPR002119",
+            "IPR007125",
+            "IPR009072",
+            "IPR032454",
+            "IPR032458",
+            "IPR061508"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 52,
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "nucleic",
+        "chromatin",
+        "regulation"
+      ]
     },
     {
       "pmcid": "PMC13683624",
@@ -2287,7 +3160,8 @@
       },
       "proteins": [],
       "score": 51,
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13683386",
@@ -2361,7 +3235,8 @@
       },
       "proteins": [],
       "score": 51,
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13684271",
@@ -2406,7 +3281,8 @@
       },
       "proteins": [],
       "score": 51,
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13604635",
@@ -2441,7 +3317,8 @@
       },
       "proteins": [],
       "score": 40,
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13683389",
@@ -2483,7 +3360,8 @@
       },
       "proteins": [],
       "score": 35,
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13604265",
@@ -2771,11 +3649,48 @@
             "TAU"
           ],
           "name": "Microtubule-associated protein tau",
-          "organism": "Homo sapiens"
+          "organism": "Homo sapiens",
+          "keywords": [
+            "Acetylation",
+            "Alternative splicing",
+            "Alzheimer disease",
+            "Cell membrane",
+            "Cell projection",
+            "Cytoplasm",
+            "Cytoskeleton",
+            "Disease variant",
+            "Disulfide bond",
+            "Glycation",
+            "Glycoprotein",
+            "Isopeptide bond",
+            "Membrane",
+            "Methylation",
+            "Microtubule",
+            "Neurodegeneration",
+            "Parkinsonism",
+            "Phosphoprotein",
+            "Repeat",
+            "Secreted",
+            "Ubl conjugation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00418"
+          ],
+          "interpro": [
+            "IPR001084",
+            "IPR002955",
+            "IPR027324"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 5,
-      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13605298",
@@ -4081,25 +4996,132 @@
           "gene": "FGA",
           "synonyms": [],
           "name": "Fibrinogen alpha chain",
-          "organism": "Homo sapiens"
+          "organism": "Homo sapiens",
+          "keywords": [
+            "Adaptive immunity",
+            "Alternative splicing",
+            "Amyloid",
+            "Amyloidosis",
+            "Blood coagulation",
+            "Calcium",
+            "Coiled coil",
+            "Disease variant",
+            "Disulfide bond",
+            "Glycoprotein",
+            "Hemostasis",
+            "Hydroxylation",
+            "Immunity",
+            "Innate immunity",
+            "Isopeptide bond",
+            "Metal-binding",
+            "Phosphoprotein",
+            "Secreted",
+            "Signal"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00147",
+            "PF08702",
+            "PF12160"
+          ],
+          "interpro": [
+            "IPR002181",
+            "IPR012290",
+            "IPR014716",
+            "IPR020837",
+            "IPR021996",
+            "IPR036056",
+            "IPR037579"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P02675",
           "gene": "FGB",
           "synonyms": [],
           "name": "Fibrinogen beta chain",
-          "organism": "Homo sapiens"
+          "organism": "Homo sapiens",
+          "keywords": [
+            "Adaptive immunity",
+            "Blood coagulation",
+            "Coiled coil",
+            "Disease variant",
+            "Disulfide bond",
+            "Glycoprotein",
+            "Hemostasis",
+            "Immunity",
+            "Innate immunity",
+            "Pyrrolidone carboxylic acid",
+            "Secreted",
+            "Signal"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00147",
+            "PF08702"
+          ],
+          "interpro": [
+            "IPR002181",
+            "IPR012290",
+            "IPR014716",
+            "IPR020837",
+            "IPR036056",
+            "IPR037579"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P02679",
           "gene": "FGG",
           "synonyms": [],
           "name": "Fibrinogen gamma chain",
-          "organism": "Homo sapiens"
+          "organism": "Homo sapiens",
+          "keywords": [
+            "Alternative splicing",
+            "Blood coagulation",
+            "Calcium",
+            "Coiled coil",
+            "Disease variant",
+            "Disulfide bond",
+            "Glycoprotein",
+            "Hemostasis",
+            "Isopeptide bond",
+            "Metal-binding",
+            "Phosphoprotein",
+            "Secreted",
+            "Signal",
+            "Sulfation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00147",
+            "PF08702"
+          ],
+          "interpro": [
+            "IPR002181",
+            "IPR012290",
+            "IPR014716",
+            "IPR020837",
+            "IPR036056",
+            "IPR037579"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 5,
-      "license_url": "https://creativecommons.org/licenses/by-nc/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "categories_draft": [
+        "immune"
+      ]
     },
     {
       "pmcid": "PMC13683209",
@@ -6306,21 +7328,81 @@
           "gene": null,
           "synonyms": [],
           "name": "Coat protein",
-          "organism": "Escherichia coli O1:K1 / APEC"
+          "organism": "Escherichia coli O1:K1 / APEC",
+          "keywords": [],
+          "ec": [],
+          "pfam": [
+            "PF11651"
+          ],
+          "interpro": [
+            "IPR024659"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Pseudomonadati"
+          ]
         },
         {
           "uniprot": "P00644",
           "gene": "nuc",
           "synonyms": [],
           "name": "Thermonuclease",
-          "organism": "Staphylococcus aureus"
+          "organism": "Staphylococcus aureus",
+          "keywords": [
+            "Calcium",
+            "Endonuclease",
+            "Hydrolase",
+            "Membrane",
+            "Metal-binding",
+            "Nuclease",
+            "Secreted",
+            "Signal",
+            "Zymogen"
+          ],
+          "ec": [
+            "3.1.31.1"
+          ],
+          "pfam": [
+            "PF00565"
+          ],
+          "interpro": [
+            "IPR002071",
+            "IPR016071",
+            "IPR035437"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Bacillati"
+          ]
         },
         {
           "uniprot": "P00974",
           "gene": null,
           "synonyms": [],
           "name": "Pancreatic trypsin inhibitor",
-          "organism": "Bos taurus"
+          "organism": "Bos taurus",
+          "keywords": [
+            "Disulfide bond",
+            "Pharmaceutical",
+            "Protease inhibitor",
+            "Secreted",
+            "Serine protease inhibitor",
+            "Signal"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00014"
+          ],
+          "interpro": [
+            "IPR002223",
+            "IPR020901",
+            "IPR036880",
+            "IPR050098"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P03069",
@@ -6331,7 +7413,29 @@
             "ARG9"
           ],
           "name": "General control transcription factor GCN4",
-          "organism": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)"
+          "organism": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+          "keywords": [
+            "Activator",
+            "Amino-acid biosynthesis",
+            "DNA-binding",
+            "Nucleus",
+            "Phosphoprotein",
+            "Transcription",
+            "Transcription regulation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF07716"
+          ],
+          "interpro": [
+            "IPR004827",
+            "IPR046347",
+            "IPR050946"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Fungi"
+          ]
         },
         {
           "uniprot": "P0A8N3",
@@ -6341,7 +7445,39 @@
             "herC"
           ],
           "name": "Lysine--tRNA ligase",
-          "organism": "Escherichia coli (strain K12)"
+          "organism": "Escherichia coli (strain K12)",
+          "keywords": [
+            "ATP-binding",
+            "Aminoacyl-tRNA synthetase",
+            "Cytoplasm",
+            "Ligase",
+            "Magnesium",
+            "Metal-binding",
+            "Nucleotide-binding",
+            "Protein biosynthesis"
+          ],
+          "ec": [
+            "6.1.1.6"
+          ],
+          "pfam": [
+            "PF00152",
+            "PF01336"
+          ],
+          "interpro": [
+            "IPR002313",
+            "IPR004364",
+            "IPR004365",
+            "IPR006195",
+            "IPR012340",
+            "IPR018149",
+            "IPR034762",
+            "IPR044136",
+            "IPR045864"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Pseudomonadati"
+          ]
         },
         {
           "uniprot": "P0A9X9",
@@ -6350,14 +7486,65 @@
             "cspS"
           ],
           "name": "Cold shock protein CspA",
-          "organism": "Escherichia coli (strain K12)"
+          "organism": "Escherichia coli (strain K12)",
+          "keywords": [
+            "Activator",
+            "Cytoplasm",
+            "DNA-binding",
+            "Stress response",
+            "Transcription",
+            "Transcription regulation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00313"
+          ],
+          "interpro": [
+            "IPR002059",
+            "IPR011129",
+            "IPR012156",
+            "IPR012340",
+            "IPR019844",
+            "IPR050181"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Pseudomonadati"
+          ]
         },
         {
           "uniprot": "P0CG48",
           "gene": "UBC",
           "synonyms": [],
           "name": "Polyubiquitin-C",
-          "organism": "Homo sapiens"
+          "organism": "Homo sapiens",
+          "keywords": [
+            "ADP-ribosylation",
+            "Cytoplasm",
+            "Isopeptide bond",
+            "Membrane",
+            "Mitochondrion",
+            "Mitochondrion outer membrane",
+            "Nucleus",
+            "Phosphoprotein",
+            "Repeat",
+            "Ubl conjugation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00240"
+          ],
+          "interpro": [
+            "IPR000626",
+            "IPR019954",
+            "IPR019956",
+            "IPR029071",
+            "IPR050158"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P10408",
@@ -6368,21 +7555,96 @@
             "prlD"
           ],
           "name": "Protein translocase subunit SecA",
-          "organism": "Escherichia coli (strain K12)"
+          "organism": "Escherichia coli (strain K12)",
+          "keywords": [
+            "ATP-binding",
+            "Cell inner membrane",
+            "Cell membrane",
+            "Cytoplasm",
+            "Membrane",
+            "Metal-binding",
+            "Nucleotide-binding",
+            "Protein transport",
+            "Translocase",
+            "Translocation",
+            "Transport",
+            "Zinc"
+          ],
+          "ec": [
+            "7.4.2.8"
+          ],
+          "pfam": [
+            "PF01043",
+            "PF02810",
+            "PF07516",
+            "PF07517",
+            "PF21090"
+          ],
+          "interpro": [
+            "IPR000185",
+            "IPR001650",
+            "IPR004027",
+            "IPR011115",
+            "IPR011116",
+            "IPR011130",
+            "IPR014001",
+            "IPR014018",
+            "IPR020937",
+            "IPR027417",
+            "IPR036266",
+            "IPR036670",
+            "IPR044722"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Pseudomonadati"
+          ]
         },
         {
           "uniprot": "P26747",
           "gene": "5",
           "synonyms": [],
           "name": "Major capsid protein",
-          "organism": "Salmonella phage P22"
+          "organism": "Salmonella phage P22",
+          "keywords": [
+            "Capsid protein",
+            "Late protein",
+            "T=7 icosahedral capsid protein",
+            "Virion"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF11651"
+          ],
+          "interpro": [
+            "IPR024659"
+          ],
+          "lineage": [
+            "Viruses",
+            "Duplodnaviria"
+          ]
         },
         {
           "uniprot": "P26748",
           "gene": "8",
           "synonyms": [],
           "name": "Scaffolding protein",
-          "organism": "Salmonella phage P22"
+          "organism": "Salmonella phage P22",
+          "keywords": [
+            "Late protein"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF09306"
+          ],
+          "interpro": [
+            "IPR015385",
+            "IPR027393"
+          ],
+          "lineage": [
+            "Viruses",
+            "Duplodnaviria"
+          ]
         },
         {
           "uniprot": "P56536",
@@ -6391,18 +7653,84 @@
             "Nkhc2"
           ],
           "name": "Kinesin heavy chain isoform 5C",
-          "organism": "Rattus norvegicus"
+          "organism": "Rattus norvegicus",
+          "keywords": [
+            "ATP-binding",
+            "Cell projection",
+            "Coiled coil",
+            "Cytoplasm",
+            "Cytoskeleton",
+            "Hydrolase",
+            "Microtubule",
+            "Motor protein",
+            "Nucleotide-binding",
+            "Phosphoprotein",
+            "Transport"
+          ],
+          "ec": [
+            "3.6.4.-"
+          ],
+          "pfam": [
+            "PF00225"
+          ],
+          "interpro": [
+            "IPR001752",
+            "IPR019821",
+            "IPR027417",
+            "IPR027640",
+            "IPR036961",
+            "IPR059182"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "Q6QLM7",
           "gene": "Kif5a",
           "synonyms": [],
           "name": "Kinesin heavy chain isoform 5A",
-          "organism": "Rattus norvegicus"
+          "organism": "Rattus norvegicus",
+          "keywords": [
+            "ATP-binding",
+            "Acetylation",
+            "Coiled coil",
+            "Cytoplasm",
+            "Cytoskeleton",
+            "Hydrolase",
+            "Isomerase",
+            "Microtubule",
+            "Motor protein",
+            "Nucleotide-binding",
+            "Phosphoprotein"
+          ],
+          "ec": [
+            "5.6.1.3"
+          ],
+          "pfam": [
+            "PF00225"
+          ],
+          "interpro": [
+            "IPR001752",
+            "IPR027417",
+            "IPR027640",
+            "IPR036961",
+            "IPR059182"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 5,
-      "license_url": null
+      "license_url": null,
+      "categories_draft": [
+        "nucleic",
+        "enzyme",
+        "regulation"
+      ]
     },
     {
       "pmcid": "PMC13603264",

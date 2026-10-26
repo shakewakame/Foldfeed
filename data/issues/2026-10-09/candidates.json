@@ -604,7 +604,31 @@
           "name": "Histone H2B",
           "organism": "Xenopus laevis",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "Acetylation",
+            "Chromosome",
+            "DNA-binding",
+            "Isopeptide bond",
+            "Nucleosome core",
+            "Nucleus",
+            "Phosphoprotein",
+            "Ubl conjugation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00125"
+          ],
+          "interpro": [
+            "IPR000558",
+            "IPR007125",
+            "IPR009072",
+            "IPR055333"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "A0A310TTQ1",
@@ -616,7 +640,32 @@
           "name": "Histone H3",
           "organism": "Xenopus laevis",
           "prior_pdb_count": 65,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "ADP-ribosylation",
+            "Acetylation",
+            "Chromosome",
+            "DNA-binding",
+            "Hydroxylation",
+            "Isopeptide bond",
+            "Methylation",
+            "Nucleosome core",
+            "Nucleus",
+            "Ubl conjugation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00125"
+          ],
+          "interpro": [
+            "IPR000164",
+            "IPR007125",
+            "IPR009072"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "A0A8J1LZU9",
@@ -625,7 +674,31 @@
           "name": "Histone H2B",
           "organism": "Xenopus laevis",
           "prior_pdb_count": 5,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Acetylation",
+            "Chromosome",
+            "DNA-binding",
+            "Isopeptide bond",
+            "Nucleosome core",
+            "Nucleus",
+            "Phosphoprotein",
+            "Ubl conjugation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00125"
+          ],
+          "interpro": [
+            "IPR000558",
+            "IPR007125",
+            "IPR009072",
+            "IPR055333"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "G3R763",
@@ -634,7 +707,48 @@
           "name": "DNA repair protein Ku80",
           "organism": "Gorilla gorilla gorilla",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "ATP-binding",
+            "Chromosome",
+            "DNA damage",
+            "DNA recombination",
+            "DNA repair",
+            "DNA-binding",
+            "Helicase",
+            "Host-virus interaction",
+            "Hydrolase",
+            "Isomerase",
+            "Lyase",
+            "Nucleotide-binding",
+            "Nucleus",
+            "Ubl conjugation"
+          ],
+          "ec": [
+            "4.2.99.18",
+            "5.6.2.4"
+          ],
+          "pfam": [
+            "PF02735",
+            "PF03730",
+            "PF03731",
+            "PF08785"
+          ],
+          "interpro": [
+            "IPR002035",
+            "IPR005160",
+            "IPR005161",
+            "IPR006164",
+            "IPR014893",
+            "IPR016194",
+            "IPR024193",
+            "IPR036465",
+            "IPR036494"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P12956",
@@ -645,7 +759,63 @@
           "name": "DNA repair protein Ku70",
           "organism": "Homo sapiens",
           "prior_pdb_count": 60,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "ADP-ribosylation",
+            "ATP-binding",
+            "Acetylation",
+            "Activator",
+            "Alternative splicing",
+            "Chromosome",
+            "Cytoplasm",
+            "DNA damage",
+            "DNA recombination",
+            "DNA repair",
+            "DNA-binding",
+            "Helicase",
+            "Host-virus interaction",
+            "Hydrolase",
+            "Immunity",
+            "Innate immunity",
+            "Isomerase",
+            "Isopeptide bond",
+            "Lyase",
+            "Methylation",
+            "Multifunctional enzyme",
+            "Nucleotide-binding",
+            "Nucleus",
+            "Phosphoprotein",
+            "Systemic lupus erythematosus",
+            "Transcription",
+            "Transcription regulation",
+            "Ubl conjugation"
+          ],
+          "ec": [
+            "4.2.99.18",
+            "5.6.2.4"
+          ],
+          "pfam": [
+            "PF02037",
+            "PF02735",
+            "PF03730",
+            "PF03731"
+          ],
+          "interpro": [
+            "IPR003034",
+            "IPR005160",
+            "IPR005161",
+            "IPR006164",
+            "IPR006165",
+            "IPR016194",
+            "IPR027388",
+            "IPR036361",
+            "IPR036465",
+            "IPR047087"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P13010",
@@ -656,7 +826,59 @@
           "name": "DNA repair protein Ku80",
           "organism": "Homo sapiens",
           "prior_pdb_count": 64,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "ADP-ribosylation",
+            "ATP-binding",
+            "Acetylation",
+            "Activator",
+            "Chromosome",
+            "DNA damage",
+            "DNA recombination",
+            "DNA repair",
+            "DNA-binding",
+            "Helicase",
+            "Host-virus interaction",
+            "Hydrolase",
+            "Immunity",
+            "Innate immunity",
+            "Isomerase",
+            "Isopeptide bond",
+            "Lyase",
+            "Nucleotide-binding",
+            "Nucleus",
+            "Phosphoprotein",
+            "Ribosome biogenesis",
+            "Systemic lupus erythematosus",
+            "Transcription",
+            "Transcription regulation",
+            "Ubl conjugation"
+          ],
+          "ec": [
+            "4.2.99.18",
+            "5.6.2.4"
+          ],
+          "pfam": [
+            "PF02735",
+            "PF03730",
+            "PF03731",
+            "PF08785"
+          ],
+          "interpro": [
+            "IPR002035",
+            "IPR005160",
+            "IPR005161",
+            "IPR006164",
+            "IPR014893",
+            "IPR016194",
+            "IPR024193",
+            "IPR036465",
+            "IPR036494"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P62799",
@@ -665,7 +887,35 @@
           "name": "Histone H4",
           "organism": "Xenopus laevis",
           "prior_pdb_count": 409,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Acetylation",
+            "Chromosome",
+            "Citrullination",
+            "DNA-binding",
+            "Hydroxylation",
+            "Isopeptide bond",
+            "Methylation",
+            "Nucleosome core",
+            "Nucleus",
+            "Phosphoprotein",
+            "Ubl conjugation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF15511"
+          ],
+          "interpro": [
+            "IPR001951",
+            "IPR004823",
+            "IPR009072",
+            "IPR019809",
+            "IPR035425"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P78527",
@@ -677,7 +927,65 @@
           "name": "DNA-dependent protein kinase catalytic subunit",
           "organism": "Homo sapiens",
           "prior_pdb_count": 47,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "ATP-binding",
+            "Acetylation",
+            "Alternative splicing",
+            "Biological rhythms",
+            "Cytoplasm",
+            "DNA damage",
+            "DNA recombination",
+            "DNA repair",
+            "DNA-binding",
+            "Disease variant",
+            "Immunity",
+            "Innate immunity",
+            "Kinase",
+            "Nucleotide-binding",
+            "Nucleus",
+            "Phosphoprotein",
+            "Repeat",
+            "Ribosome biogenesis",
+            "SCID",
+            "Serine/threonine-protein kinase",
+            "TPR repeat",
+            "Transferase",
+            "Ubl conjugation"
+          ],
+          "ec": [
+            "2.7.11.1"
+          ],
+          "pfam": [
+            "PF00454",
+            "PF02259",
+            "PF02260",
+            "PF08163",
+            "PF19704",
+            "PF20500",
+            "PF20502"
+          ],
+          "interpro": [
+            "IPR000403",
+            "IPR003151",
+            "IPR003152",
+            "IPR011009",
+            "IPR011989",
+            "IPR012582",
+            "IPR014009",
+            "IPR016024",
+            "IPR018936",
+            "IPR036940",
+            "IPR037706",
+            "IPR045581",
+            "IPR046803",
+            "IPR046804",
+            "IPR050517"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P84048",
@@ -688,7 +996,30 @@
           "name": "Histone H4",
           "organism": "Acrolepiopsis assectella",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "Acetylation",
+            "Chromosome",
+            "DNA-binding",
+            "Methylation",
+            "Nucleosome core",
+            "Nucleus"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF15511"
+          ],
+          "interpro": [
+            "IPR001951",
+            "IPR004823",
+            "IPR009072",
+            "IPR019809",
+            "IPR035425"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "Q6AZJ8",
@@ -701,7 +1032,34 @@
           "name": "Histone H2A",
           "organism": "Xenopus laevis",
           "prior_pdb_count": 94,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Acetylation",
+            "Chromosome",
+            "DNA-binding",
+            "Isopeptide bond",
+            "Nucleosome core",
+            "Nucleus",
+            "Phosphoprotein",
+            "Ubl conjugation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00125",
+            "PF16211"
+          ],
+          "interpro": [
+            "IPR002119",
+            "IPR007125",
+            "IPR009072",
+            "IPR032454",
+            "IPR032458",
+            "IPR061508"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 85,
@@ -717,7 +1075,12 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "nucleic",
+        "chromatin",
+        "immune"
+      ]
     },
     {
       "pmcid": "PMC13642953",
@@ -1493,7 +1856,39 @@
           "name": "Calmodulin-1",
           "organism": "Homo sapiens",
           "prior_pdb_count": 335,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Acetylation",
+            "Calcium",
+            "Cell projection",
+            "Cilium",
+            "Cytoplasm",
+            "Cytoskeleton",
+            "Disease variant",
+            "Flagellum",
+            "Host-virus interaction",
+            "Isopeptide bond",
+            "Long QT syndrome",
+            "Metal-binding",
+            "Methylation",
+            "Phosphoprotein",
+            "Repeat",
+            "Ubl conjugation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF13499"
+          ],
+          "interpro": [
+            "IPR002048",
+            "IPR011992",
+            "IPR018247",
+            "IPR050230"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P11716",
@@ -1502,7 +1897,67 @@
           "name": "Ryanodine receptor 1",
           "organism": "Oryctolagus cuniculus",
           "prior_pdb_count": 145,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "ATP-binding",
+            "Calcium",
+            "Calcium channel",
+            "Calcium transport",
+            "Calmodulin-binding",
+            "Developmental protein",
+            "Ion channel",
+            "Ion transport",
+            "Ligand-gated ion channel",
+            "Membrane",
+            "Metal-binding",
+            "Nucleotide-binding",
+            "Phosphoprotein",
+            "Receptor",
+            "Repeat",
+            "S-nitrosylation",
+            "Sarcoplasmic reticulum",
+            "Transmembrane",
+            "Transmembrane helix",
+            "Transport"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00520",
+            "PF00622",
+            "PF01365",
+            "PF02026",
+            "PF02815",
+            "PF06459",
+            "PF08454",
+            "PF08709",
+            "PF21119"
+          ],
+          "interpro": [
+            "IPR000699",
+            "IPR001870",
+            "IPR003032",
+            "IPR003877",
+            "IPR005821",
+            "IPR009460",
+            "IPR011992",
+            "IPR013320",
+            "IPR013333",
+            "IPR013662",
+            "IPR014821",
+            "IPR015925",
+            "IPR016093",
+            "IPR035761",
+            "IPR035762",
+            "IPR035764",
+            "IPR035910",
+            "IPR036300",
+            "IPR043136",
+            "IPR048581"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P68106",
@@ -1516,7 +1971,29 @@
           "name": "Peptidyl-prolyl cis-trans isomerase FKBP1B",
           "organism": "Homo sapiens",
           "prior_pdb_count": 119,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Alternative splicing",
+            "Cytoplasm",
+            "Isomerase",
+            "Rotamase",
+            "Sarcoplasmic reticulum"
+          ],
+          "ec": [
+            "5.2.1.8"
+          ],
+          "pfam": [
+            "PF00254"
+          ],
+          "interpro": [
+            "IPR001179",
+            "IPR046357",
+            "IPR050689"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 65,
@@ -1532,7 +2009,12 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "categories_draft": [
+        "receptor",
+        "channel",
+        "enzyme"
+      ]
     },
     {
       "pmcid": "PMC13642346",
@@ -1637,7 +2119,30 @@
           "name": "Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-2",
           "organism": "Homo sapiens",
           "prior_pdb_count": 1322,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Acetylation",
+            "Cell membrane",
+            "Host-virus interaction",
+            "Lipoprotein",
+            "Membrane",
+            "Methylation",
+            "Prenylation",
+            "Transducer"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00631"
+          ],
+          "interpro": [
+            "IPR001770",
+            "IPR015898",
+            "IPR036284"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P62873",
@@ -1646,7 +2151,35 @@
           "name": "Guanine nucleotide-binding protein G(I)/G(S)/G(T) subunit beta-1",
           "organism": "Homo sapiens",
           "prior_pdb_count": 1332,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Acetylation",
+            "Alternative splicing",
+            "Disease variant",
+            "Host-virus interaction",
+            "Intellectual disability",
+            "Phosphoprotein",
+            "Repeat",
+            "Transducer",
+            "WD repeat"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF25391"
+          ],
+          "interpro": [
+            "IPR001632",
+            "IPR001680",
+            "IPR015943",
+            "IPR016346",
+            "IPR019775",
+            "IPR020472",
+            "IPR036322"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P63096",
@@ -1655,7 +2188,49 @@
           "name": "Guanine nucleotide-binding protein G(i) subunit alpha-1",
           "organism": "Homo sapiens",
           "prior_pdb_count": 672,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "ADP-ribosylation",
+            "Alternative splicing",
+            "Cell cycle",
+            "Cell division",
+            "Cell membrane",
+            "Cytoplasm",
+            "Cytoskeleton",
+            "Disease variant",
+            "Epilepsy",
+            "GTP-binding",
+            "Host-virus interaction",
+            "Hydrolase",
+            "Intellectual disability",
+            "Lipoprotein",
+            "Magnesium",
+            "Membrane",
+            "Metal-binding",
+            "Mitosis",
+            "Myristate",
+            "Nucleotide-binding",
+            "Nucleus",
+            "Palmitate",
+            "Transducer",
+            "Transport"
+          ],
+          "ec": [
+            "3.6.5.-"
+          ],
+          "pfam": [
+            "PF00503"
+          ],
+          "interpro": [
+            "IPR001019",
+            "IPR001408",
+            "IPR011025",
+            "IPR027417"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "Q9NQS5",
@@ -1666,7 +2241,30 @@
           "name": "G protein-coupled receptor 84",
           "organism": "Homo sapiens",
           "prior_pdb_count": 10,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Cell membrane",
+            "G protein-coupled receptor",
+            "Glycoprotein",
+            "Membrane",
+            "Phosphoprotein",
+            "Receptor",
+            "Transducer",
+            "Transmembrane",
+            "Transmembrane helix"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00001"
+          ],
+          "interpro": [
+            "IPR000276",
+            "IPR017452"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 56,
@@ -1694,7 +2292,11 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "receptor",
+        "enzyme"
+      ]
     },
     {
       "pmcid": "PMC13644787",
@@ -1786,7 +2388,31 @@
           "name": "Large-conductance mechanosensitive channel",
           "organism": "Escherichia coli (strain K12)",
           "prior_pdb_count": 5,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Cell inner membrane",
+            "Cell membrane",
+            "Ion channel",
+            "Ion transport",
+            "Membrane",
+            "Transmembrane",
+            "Transmembrane helix",
+            "Transport"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF01741"
+          ],
+          "interpro": [
+            "IPR001185",
+            "IPR019823",
+            "IPR036019",
+            "IPR037673"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Pseudomonadati"
+          ]
         }
       ],
       "score": 52,
@@ -1802,7 +2428,10 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by-nc/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "categories_draft": [
+        "channel"
+      ]
     },
     {
       "pmcid": "PMC7619511",
@@ -1935,7 +2564,25 @@
           "name": "Invasin IpaD",
           "organism": "Shigella flexneri",
           "prior_pdb_count": 13,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Coiled coil",
+            "Plasmid",
+            "Secreted",
+            "Virulence"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF06511"
+          ],
+          "interpro": [
+            "IPR009483",
+            "IPR036708"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Pseudomonadati"
+          ]
         }
       ],
       "score": 52,
@@ -1955,7 +2602,10 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "pathogen"
+      ]
     },
     {
       "pmcid": "PMC13642728",

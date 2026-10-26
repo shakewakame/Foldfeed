@@ -1,6 +1,8 @@
 """Fill in, for the issues already made, what the collector now records for every new paper.
 
     python3 -m pipeline.backfill licenses     # each article's licence address (jats.license_url)
+    python3 -m pipeline.backfill uniprot      # its proteins' keywords, EC numbers, Pfam / InterPro, lineage, and the
+                                              # draft of its kinds of protein (uniprot.categories_draft)
 
 Only the articles (picks) of each issue are looked at; candidates.json gets the new field, nothing else changes.
 """
@@ -12,7 +14,7 @@ import sys
 import xml.etree.ElementTree as ET
 from concurrent.futures import ThreadPoolExecutor
 
-from . import europepmc, jats, pmcoa
+from . import europepmc, jats, pmcoa, uniprot
 from .common import ISSUES_DIR, cached, fetch, read_json, write_json
 
 
@@ -62,11 +64,26 @@ def licenses() -> None:
         print(f"{issue.name}: {sum(bool(c['license_url']) for c in todo)}/{len(todo)} with a licence address", file=sys.stderr)
 
 
+def uniprot_fields() -> None:
+    for issue in sorted(d for d in ISSUES_DIR.iterdir() if (d / "candidates.json").exists()):
+        meta = read_json(issue / "candidates.json")
+        todo = [c for c in meta["candidates"] if c["pmcid"] in picked(issue)]
+        accs = sorted({p["uniprot"] for c in todo for p in c.get("proteins", []) if "keywords" not in p})
+        if not todo:
+            continue
+        fresh = uniprot.lookup(accs) if accs else {}
+        for c in todo:
+            c["proteins"] = [{**p, **fresh.get(p["uniprot"], {})} for p in c.get("proteins", [])]
+            c["categories_draft"] = uniprot.categories_draft(c["proteins"])
+        write_json(issue / "candidates.json", meta)
+        print(f"{issue.name}: {len(accs)} proteins, {len(todo)} articles", file=sys.stderr)
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    ap.add_argument("what", choices=["licenses"])
+    ap.add_argument("what", choices=["licenses", "uniprot"])
     a = ap.parse_args(argv)
-    {"licenses": licenses}[a.what]()
+    {"licenses": licenses, "uniprot": uniprot_fields}[a.what]()
     return 0
 
 

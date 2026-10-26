@@ -2856,7 +2856,7 @@ def library(issues: list[str], root: Path = ISSUES_DIR) -> list[dict]:
                     ids += q.get("uniprot_ids", [])
             genes = [p["gene"] for p in cand.get("proteins", []) if p.get("gene")]
             method = facts(cand, pick)["method"]
-            row = {"date": date, "n": n, "cand": cand, "pick": pick, "cats": pick.get("categories") or ["other"],
+            row = {"date": date, "n": n, "cand": cand, "pick": pick, "cats": pick.get("categories") or cand.get("categories_draft") or ["other"],
                    "topics": topics_of(cand, pick, types.get(cand["pmcid"])), "part": render.part_of(cand, pick),
                    "uniprot": sorted(set(ids)), "genes": sorted(set(genes)), "names": sorted(set(names)),
                    "pdbs": sorted({x["pdb_id"] for x in released}), "method": method,

@@ -182,7 +182,31 @@
           "name": "MurR/RpiR family transcriptional regulator",
           "organism": "Streptococcus pneumoniae",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "Carbohydrate metabolism",
+            "DNA-binding",
+            "Transcription",
+            "Transcription regulation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF01380",
+            "PF01418"
+          ],
+          "interpro": [
+            "IPR000281",
+            "IPR001347",
+            "IPR009057",
+            "IPR035472",
+            "IPR036388",
+            "IPR046348",
+            "IPR047640"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Bacillati"
+          ]
         },
         {
           "uniprot": "A0A0H2ZPE9",
@@ -191,7 +215,31 @@
           "name": "Phosphosugar-binding transcriptional regulator, putative",
           "organism": "Streptococcus pneumoniae serotype 2 (strain D39 / NCTC 7466)",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "Carbohydrate metabolism",
+            "DNA-binding",
+            "Transcription",
+            "Transcription regulation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF01380",
+            "PF01418"
+          ],
+          "interpro": [
+            "IPR000281",
+            "IPR001347",
+            "IPR009057",
+            "IPR035472",
+            "IPR036388",
+            "IPR046348",
+            "IPR047640"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Bacillati"
+          ]
         }
       ],
       "score": 94,
@@ -211,7 +259,11 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "nucleic",
+        "regulation"
+      ]
     },
     {
       "pmcid": "PMC13635403",
@@ -606,7 +658,39 @@
           "name": "NAD(P) transhydrogenase subunit alpha",
           "organism": "Escherichia coli (strain K12)",
           "prior_pdb_count": 6,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Cell inner membrane",
+            "Cell membrane",
+            "Membrane",
+            "NAD",
+            "NADP",
+            "Nucleotide-binding",
+            "Translocase",
+            "Transmembrane",
+            "Transmembrane helix"
+          ],
+          "ec": [
+            "7.1.1.1"
+          ],
+          "pfam": [
+            "PF01262",
+            "PF05222",
+            "PF12769"
+          ],
+          "interpro": [
+            "IPR007698",
+            "IPR007886",
+            "IPR008142",
+            "IPR008143",
+            "IPR024605",
+            "IPR026255",
+            "IPR036291"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Pseudomonadati"
+          ]
         },
         {
           "uniprot": "P0AB67",
@@ -615,7 +699,32 @@
           "name": "NAD(P) transhydrogenase subunit beta",
           "organism": "Escherichia coli (strain K12)",
           "prior_pdb_count": 3,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Cell inner membrane",
+            "Cell membrane",
+            "Membrane",
+            "NAD",
+            "NADP",
+            "Translocase",
+            "Transmembrane",
+            "Transmembrane helix"
+          ],
+          "ec": [
+            "7.1.1.1"
+          ],
+          "pfam": [
+            "PF02233"
+          ],
+          "interpro": [
+            "IPR012136",
+            "IPR029035",
+            "IPR034300"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Pseudomonadati"
+          ]
         }
       ],
       "score": 60,
@@ -643,7 +752,11 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "transporter",
+        "enzyme"
+      ]
     },
     {
       "pmcid": "PMC13635745",
@@ -689,7 +802,8 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13635751",
@@ -730,7 +844,8 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13635308",

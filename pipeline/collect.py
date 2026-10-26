@@ -291,6 +291,31 @@ def run(index_date: str, issue_date: str, index_from: str | None = None, force: 
         candidates.append(c)
         cached("packets", m["pmcid"], ".md").write_text(jats.packet_text(p), encoding="utf-8")
 
+    # The codes are only in a supplementary table (or the paper lists only its EMDB maps): the PDB entries whose
+    # primary citation is this paper, from PDBe (by DOI or PubMed ID, else by the title)
+    unlisted = [c for c in candidates if c["kind"] in ("new_structure_ids_unlisted", "new_map_only")]
+    if unlisted:
+        def look(c):
+            first = ((c.get("people") or {}).get("first") or {}).get("name")
+            try:
+                return pdb.by_citation(c.get("doi"), c.get("pmid"), c["title"], first)
+            except Exception as e:   # a failed lookup leaves the paper as it was
+                print(f"  PDBe lookup failed for {c['pmcid']}: {e}", file=sys.stderr)
+                return []
+        with ThreadPoolExecutor(6) as ex:
+            found = dict(zip([c["pmcid"] for c in unlisted], ex.map(look, unlisted)))
+        more = sorted({pid for ids in found.values() for pid in ids} - set(released))
+        if more:
+            released.update(pdb.entries(more))
+        hits = 0
+        for c in unlisted:
+            own = [{**released[pid], "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"}
+                   for pid in found[c["pmcid"]] if pid in released]
+            if own:
+                c.update(own_structures=own, kind="new_structure", pdb_from_citation=True)
+                hits += 1
+        print(f"PDB by citation: codes found for {hits} of {len(unlisted)} papers that do not list them", file=sys.stderr)
+
     def structures(c):
         return c["own_structures"] + c.get("cited_structures", [])
 
@@ -305,6 +330,7 @@ def run(index_date: str, issue_date: str, index_from: str | None = None, force: 
         c_accs = sorted({a for s in structures(c) for poly in s.get("polymers", [])
                          for a in poly["uniprot_ids"]})
         c["proteins"] = [proteins[a] for a in c_accs if a in proteins]
+        c["categories_draft"] = uniprot.categories_draft(c["proteins"])   # the writer starts from it (SKILL.md)
         c["score"] = score(c)
     candidates.sort(key=lambda c: (-c["score"], c["title"]))
 

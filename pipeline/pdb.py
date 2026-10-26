@@ -3,6 +3,9 @@
 from __future__ import annotations
 
 import json
+import re
+import unicodedata
+import urllib.parse
 
 from .common import cached, fetch, fetch_json
 
@@ -10,6 +13,7 @@ GRAPHQL = "https://data.rcsb.org/graphql"
 HOLDINGS = "https://data.rcsb.org/rest/v1/holdings/status/{}"
 PDBE_BEST = "https://www.ebi.ac.uk/pdbe/api/mappings/best_structures/{}"
 COORDS = "https://files.rcsb.org/download/{}.cif.gz"
+PDBE_SEARCH = "https://www.ebi.ac.uk/pdbe/search/pdb/select"   # PDBe's Solr search (RCSB's search API is not reachable here)
 
 # Buffer components, cryoprotectants, detergents, common ions and glycans that are rarely the story.
 COMMON_ADDITIVES = {
@@ -140,3 +144,46 @@ def coordinates(pdb_id: str, max_bytes: int = 20_000_000) -> bytes | None:
         return None
     path.write_bytes(body)
     return body
+
+
+GREEK = {"α": "alpha", "β": "beta", "γ": "gamma", "δ": "delta", "ε": "epsilon", "κ": "kappa", "λ": "lambda",
+         "μ": "mu", "σ": "sigma", "ω": "omega", "Δ": "delta"}
+TITLE_STOP = {"the", "and", "for", "with", "from", "into", "its", "via", "are", "this", "that", "how", "between", "reveal",
+              "reveals", "structure", "structures", "structural", "basis", "insights", "insight", "analysis", "study"}
+
+
+def title_words(title: str) -> list[str]:
+    """The words of a title that carry it, lower case, Greek letters spelled out (a PDB citation writes β as beta)."""
+    t = "".join(GREEK.get(ch, ch) for ch in unicodedata.normalize("NFKC", title or ""))
+    return [w for w in re.findall(r"[a-z0-9]+", t.lower()) if len(w) > 2 and w not in TITLE_STOP]
+
+
+def _pdbe(q: str, rows: int = 100) -> list[dict]:
+    params = {"q": q, "fl": "pdb_id,citation_title,citation_authors,citation_year,citation_doi,pubmed_id",
+              "wt": "json", "rows": rows, "group": "true", "group.field": "pdb_id"}
+    d = fetch_json(f"{PDBE_SEARCH}?{urllib.parse.urlencode(params)}", retries=2)
+    return [g["doclist"]["docs"][0] for g in ((d or {}).get("grouped") or {}).get("pdb_id", {}).get("groups", [])]
+
+
+def by_citation(doi: str | None, pmid: str | None, title: str, first_author: str | None = None) -> list[str]:
+    """PDB entries whose primary citation is this paper, for a paper that does not list its codes in the text (they
+    are in a supplementary table): by the citation's PubMed ID or DOI, else (a new entry's citation often has neither
+    yet) by its title, kept only when nearly all of the title's words match and, if known, the first author's
+    surname is among the citation's authors. Upper-case IDs, sorted."""
+    ids = set()
+    exact = [f"pubmed_id:{int(pmid)}"] if pmid and str(pmid).isdigit() else []
+    if doi:
+        exact.append('citation_doi:"%s"' % doi.lower().replace('"', ""))
+    if exact:
+        ids |= {d["pdb_id"].upper() for d in _pdbe(" OR ".join(exact))}
+    words = title_words(title)
+    if not ids and len(words) >= 3:
+        mine = set(words)
+        surname = (first_author or "").split(",")[0].split()[-1].lower() if first_author else ""
+        for d in _pdbe(" AND ".join(f"t_citation_title:{w}" for w in words)):
+            theirs = set(title_words(d.get("citation_title") or ""))
+            same = len(mine & theirs) / max(len(mine | theirs), 1)
+            authors = " ".join(d.get("citation_authors") or []).lower()
+            if same >= 0.8 and (not surname or surname in authors):
+                ids.add(d["pdb_id"].upper())
+    return sorted(ids)

@@ -276,11 +276,42 @@
           "name": "Alpha-1,3-mannosyl-glycoprotein 2-beta-N-acetylglucosaminyltransferase",
           "organism": "Homo sapiens",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "Cytoplasm",
+            "Disulfide bond",
+            "Glycosyltransferase",
+            "Golgi apparatus",
+            "Manganese",
+            "Membrane",
+            "Metal-binding",
+            "Signal-anchor",
+            "Transferase",
+            "Transmembrane",
+            "Transmembrane helix"
+          ],
+          "ec": [
+            "2.4.1.101"
+          ],
+          "pfam": [
+            "PF03071"
+          ],
+          "interpro": [
+            "IPR004139",
+            "IPR029044",
+            "IPR052261"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 95,
-      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "categories_draft": [
+        "enzyme"
+      ]
     },
     {
       "pmcid": "PMC13678209",
@@ -550,7 +581,97 @@
           "name": "Genome polyprotein",
           "organism": "Human enterovirus 71",
           "prior_pdb_count": 6,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "ATP-binding",
+            "Activation of host autophagy by virus",
+            "Autocatalytic cleavage",
+            "Capsid protein",
+            "Covalent protein-RNA linkage",
+            "DNA replication",
+            "Eukaryotic host gene expression shutoff by virus",
+            "Eukaryotic host translation shutoff by virus",
+            "Helicase",
+            "Host cytoplasm",
+            "Host cytoplasmic vesicle",
+            "Host gene expression shutoff by virus",
+            "Host mRNA suppression by virus",
+            "Host membrane",
+            "Host nucleus",
+            "Host-virus interaction",
+            "Hydrolase",
+            "Inhibition of host MDA5 by virus",
+            "Inhibition of host RLR pathway by virus",
+            "Inhibition of host innate immune response by virus",
+            "Inhibition of host mRNA nuclear export by virus",
+            "Ion channel",
+            "Ion transport",
+            "Lipoprotein",
+            "Magnesium",
+            "Membrane",
+            "Metal-binding",
+            "Myristate",
+            "Nucleotide-binding",
+            "Nucleotidyltransferase",
+            "Phosphoprotein",
+            "Pore-mediated penetration of viral genome into host cell",
+            "Protease",
+            "RNA-binding",
+            "RNA-directed RNA polymerase",
+            "Repeat",
+            "T=pseudo3 icosahedral capsid protein",
+            "Thiol protease",
+            "Transferase",
+            "Transport",
+            "Viral RNA replication",
+            "Viral attachment to host cell",
+            "Viral immunoevasion",
+            "Viral ion channel",
+            "Viral penetration into host cytoplasm",
+            "Virion",
+            "Virus endocytosis by host",
+            "Virus entry into host cell",
+            "Zinc",
+            "Zinc-finger"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00073",
+            "PF00548",
+            "PF00680",
+            "PF00910",
+            "PF00947",
+            "PF01552",
+            "PF02226",
+            "PF08727",
+            "PF22663"
+          ],
+          "interpro": [
+            "IPR000081",
+            "IPR000199",
+            "IPR000605",
+            "IPR001205",
+            "IPR001676",
+            "IPR002527",
+            "IPR003138",
+            "IPR003593",
+            "IPR007094",
+            "IPR009003",
+            "IPR014759",
+            "IPR014838",
+            "IPR027417",
+            "IPR029053",
+            "IPR033703",
+            "IPR036203",
+            "IPR043128",
+            "IPR043502",
+            "IPR044067",
+            "IPR059138"
+          ],
+          "lineage": [
+            "Viruses",
+            "Riboviria"
+          ]
         },
         {
           "uniprot": "Q5DW46",
@@ -559,11 +680,106 @@
           "name": "Genome polyprotein",
           "organism": "Human enterovirus 71",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "ATP-binding",
+            "Activation of host autophagy by virus",
+            "Autocatalytic cleavage",
+            "Capsid protein",
+            "Covalent protein-RNA linkage",
+            "DNA replication",
+            "Eukaryotic host gene expression shutoff by virus",
+            "Eukaryotic host translation shutoff by virus",
+            "Helicase",
+            "Host cytoplasm",
+            "Host cytoplasmic vesicle",
+            "Host gene expression shutoff by virus",
+            "Host mRNA suppression by virus",
+            "Host membrane",
+            "Host nucleus",
+            "Host-virus interaction",
+            "Hydrolase",
+            "Inhibition of host MDA5 by virus",
+            "Inhibition of host RLR pathway by virus",
+            "Inhibition of host innate immune response by virus",
+            "Inhibition of host mRNA nuclear export by virus",
+            "Ion channel",
+            "Ion transport",
+            "Lipoprotein",
+            "Magnesium",
+            "Membrane",
+            "Metal-binding",
+            "Myristate",
+            "Nucleotide-binding",
+            "Nucleotidyltransferase",
+            "Phosphoprotein",
+            "Pore-mediated penetration of viral genome into host cell",
+            "Protease",
+            "RNA-binding",
+            "RNA-directed RNA polymerase",
+            "Repeat",
+            "T=pseudo3 icosahedral capsid protein",
+            "Thiol protease",
+            "Transferase",
+            "Transport",
+            "Viral RNA replication",
+            "Viral attachment to host cell",
+            "Viral immunoevasion",
+            "Viral ion channel",
+            "Viral penetration into host cytoplasm",
+            "Virion",
+            "Virus endocytosis by host",
+            "Virus entry into host cell",
+            "Zinc",
+            "Zinc-finger"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00073",
+            "PF00548",
+            "PF00680",
+            "PF00910",
+            "PF00947",
+            "PF01552",
+            "PF02226",
+            "PF08727",
+            "PF22663"
+          ],
+          "interpro": [
+            "IPR000081",
+            "IPR000199",
+            "IPR000605",
+            "IPR001205",
+            "IPR001676",
+            "IPR002527",
+            "IPR003138",
+            "IPR003593",
+            "IPR007094",
+            "IPR009003",
+            "IPR014759",
+            "IPR014838",
+            "IPR027417",
+            "IPR029053",
+            "IPR033703",
+            "IPR036203",
+            "IPR043128",
+            "IPR043502",
+            "IPR044067",
+            "IPR059138"
+          ],
+          "lineage": [
+            "Viruses",
+            "Riboviria"
+          ]
         }
       ],
       "score": 95,
-      "license_url": "https://creativecommons.org/licenses/by-nc/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "categories_draft": [
+        "protease",
+        "channel",
+        "nucleic"
+      ]
     },
     {
       "pmcid": "PMC13677706",
@@ -641,11 +857,45 @@
           "name": "Serine/threonine-protein",
           "organism": "Staphylococcus aureus (strain N315)",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "ATP-binding",
+            "Germination",
+            "Kinase",
+            "Membrane",
+            "Nucleotide-binding",
+            "Serine/threonine-protein kinase",
+            "Signal-anchor",
+            "Transferase",
+            "Transmembrane",
+            "Transmembrane helix"
+          ],
+          "ec": [
+            "2.7.11.1"
+          ],
+          "pfam": [
+            "PF00069",
+            "PF03793",
+            "PF21160"
+          ],
+          "interpro": [
+            "IPR000719",
+            "IPR005543",
+            "IPR008271",
+            "IPR011009",
+            "IPR017441"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Bacillati"
+          ]
         }
       ],
       "score": 91,
-      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "categories_draft": [
+        "kinase"
+      ]
     },
     {
       "pmcid": "PMC13679361",
@@ -842,7 +1092,42 @@
           "name": "Myeloperoxidase",
           "organism": "Mus musculus",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "Calcium",
+            "Chromosome",
+            "Cytoplasmic vesicle",
+            "Disulfide bond",
+            "Glycoprotein",
+            "Heme",
+            "Hydrogen peroxide",
+            "Iron",
+            "Lysosome",
+            "Metal-binding",
+            "Nucleus",
+            "Oxidation",
+            "Oxidoreductase",
+            "Peroxidase",
+            "Secreted",
+            "Signal"
+          ],
+          "ec": [
+            "1.11.2.2"
+          ],
+          "pfam": [
+            "PF03098",
+            "PF31271"
+          ],
+          "interpro": [
+            "IPR010255",
+            "IPR019791",
+            "IPR037120",
+            "IPR061955"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "Q6RFG4",
@@ -851,11 +1136,49 @@
           "name": "Myeloperoxidase",
           "organism": "Mus musculus",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "Calcium",
+            "Chromosome",
+            "Cytoplasmic vesicle",
+            "Disulfide bond",
+            "Glycoprotein",
+            "Heme",
+            "Hydrogen peroxide",
+            "Iron",
+            "Lysosome",
+            "Metal-binding",
+            "Nucleus",
+            "Oxidation",
+            "Oxidoreductase",
+            "Peroxidase",
+            "Secreted",
+            "Signal"
+          ],
+          "ec": [
+            "1.11.2.2"
+          ],
+          "pfam": [
+            "PF03098",
+            "PF31271"
+          ],
+          "interpro": [
+            "IPR010255",
+            "IPR019791",
+            "IPR037120",
+            "IPR061955"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 87,
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "enzyme"
+      ]
     },
     {
       "pmcid": "PMC13677734",
@@ -963,11 +1286,67 @@
           "name": "Lysine-specific demethylase 2A",
           "organism": "Homo sapiens",
           "prior_pdb_count": 6,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "ADP-ribosylation",
+            "Alternative splicing",
+            "Biological rhythms",
+            "Chromatin regulator",
+            "Chromosome",
+            "DNA-binding",
+            "Dioxygenase",
+            "Iron",
+            "Isopeptide bond",
+            "Leucine-rich repeat",
+            "Metal-binding",
+            "Nucleus",
+            "Oxidoreductase",
+            "Phosphoprotein",
+            "Repeat",
+            "Repressor",
+            "Transcription",
+            "Transcription regulation",
+            "Ubl conjugation",
+            "Ubl conjugation pathway",
+            "Zinc",
+            "Zinc-finger"
+          ],
+          "ec": [
+            "1.14.11.27"
+          ],
+          "pfam": [
+            "PF02008",
+            "PF12937",
+            "PF16866",
+            "PF17811"
+          ],
+          "interpro": [
+            "IPR001810",
+            "IPR001965",
+            "IPR002857",
+            "IPR003347",
+            "IPR006553",
+            "IPR011011",
+            "IPR013083",
+            "IPR019786",
+            "IPR019787",
+            "IPR032675",
+            "IPR041070",
+            "IPR050690"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 61,
-      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "categories_draft": [
+        "nucleic",
+        "chromatin",
+        "regulation"
+      ]
     },
     {
       "pmcid": "SN-s41594-026-01902-8",
@@ -1261,7 +1640,38 @@
           "name": "Structural maintenance of chromosomes protein 2",
           "organism": "Homo sapiens",
           "prior_pdb_count": 2,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "ATP-binding",
+            "Acetylation",
+            "Alternative splicing",
+            "Cell cycle",
+            "Cell division",
+            "Chromosome",
+            "Coiled coil",
+            "Cytoplasm",
+            "DNA condensation",
+            "Mitosis",
+            "Nucleotide-binding",
+            "Nucleus"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF02463",
+            "PF06470"
+          ],
+          "interpro": [
+            "IPR003395",
+            "IPR010935",
+            "IPR024704",
+            "IPR027120",
+            "IPR027417",
+            "IPR036277"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P42695",
@@ -1273,7 +1683,38 @@
           "name": "Condensin-2 complex subunit D3",
           "organism": "Homo sapiens",
           "prior_pdb_count": 1,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Cell cycle",
+            "Cell division",
+            "Coiled coil",
+            "DNA condensation",
+            "Disease variant",
+            "Mitosis",
+            "Nucleus",
+            "Phosphoprotein",
+            "Primary microcephaly",
+            "Repeat"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF12717",
+            "PF26777",
+            "PF26778",
+            "PF26779"
+          ],
+          "interpro": [
+            "IPR011989",
+            "IPR012371",
+            "IPR016024",
+            "IPR026971",
+            "IPR032682",
+            "IPR060186"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "Q6IBW4",
@@ -1284,7 +1725,30 @@
           "name": "Condensin-2 complex subunit H2",
           "organism": "Homo sapiens",
           "prior_pdb_count": 1,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Alternative splicing",
+            "Chromosome",
+            "DNA condensation",
+            "Nucleus",
+            "Phosphoprotein"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF06278",
+            "PF16858",
+            "PF16869"
+          ],
+          "interpro": [
+            "IPR009378",
+            "IPR031719",
+            "IPR031737",
+            "IPR031739"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "Q6P0N0",
@@ -1298,7 +1762,35 @@
           "name": "Mis18-binding protein 1",
           "organism": "Homo sapiens",
           "prior_pdb_count": 4,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Alternative splicing",
+            "Cell cycle",
+            "Cell division",
+            "Centromere",
+            "Chromosome",
+            "DNA-binding",
+            "Isopeptide bond",
+            "Mitosis",
+            "Nucleus",
+            "Phosphoprotein",
+            "Ubl conjugation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF09133"
+          ],
+          "interpro": [
+            "IPR001005",
+            "IPR009057",
+            "IPR015216",
+            "IPR017884",
+            "IPR039110"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "Q86XI2",
@@ -1309,7 +1801,30 @@
           "name": "Condensin-2 complex subunit G2",
           "organism": "Homo sapiens",
           "prior_pdb_count": 1,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Alternative splicing",
+            "Cell cycle",
+            "Cell division",
+            "DNA condensation",
+            "Disease variant",
+            "Mitosis",
+            "Nucleus",
+            "Phosphoprotein"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF12422"
+          ],
+          "interpro": [
+            "IPR011989",
+            "IPR016024",
+            "IPR024741"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "Q9NTJ3",
@@ -1321,11 +1836,45 @@
           "name": "Structural maintenance of chromosomes protein 4",
           "organism": "Homo sapiens",
           "prior_pdb_count": 2,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "ATP-binding",
+            "Acetylation",
+            "Alternative splicing",
+            "Cell cycle",
+            "Cell division",
+            "Chromosome",
+            "Coiled coil",
+            "Cytoplasm",
+            "DNA condensation",
+            "Mitosis",
+            "Nucleotide-binding",
+            "Nucleus",
+            "Phosphoprotein"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF02463",
+            "PF06470"
+          ],
+          "interpro": [
+            "IPR003395",
+            "IPR010935",
+            "IPR024704",
+            "IPR027417",
+            "IPR036277"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 58,
-      "license_url": null
+      "license_url": null,
+      "categories_draft": [
+        "nucleic"
+      ]
     },
     {
       "pmcid": "PMC13677718",
@@ -1516,7 +2065,30 @@
           "name": "Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-2",
           "organism": "Homo sapiens",
           "prior_pdb_count": 1321,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Acetylation",
+            "Cell membrane",
+            "Host-virus interaction",
+            "Lipoprotein",
+            "Membrane",
+            "Methylation",
+            "Prenylation",
+            "Transducer"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00631"
+          ],
+          "interpro": [
+            "IPR001770",
+            "IPR015898",
+            "IPR036284"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P62873",
@@ -1525,7 +2097,35 @@
           "name": "Guanine nucleotide-binding protein G(I)/G(S)/G(T) subunit beta-1",
           "organism": "Homo sapiens",
           "prior_pdb_count": 1339,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Acetylation",
+            "Alternative splicing",
+            "Disease variant",
+            "Host-virus interaction",
+            "Intellectual disability",
+            "Phosphoprotein",
+            "Repeat",
+            "Transducer",
+            "WD repeat"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF25391"
+          ],
+          "interpro": [
+            "IPR001632",
+            "IPR001680",
+            "IPR015943",
+            "IPR016346",
+            "IPR019775",
+            "IPR020472",
+            "IPR036322"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "Q96RJ0",
@@ -1538,11 +2138,41 @@
           "name": "Trace amine-associated receptor 1",
           "organism": "Homo sapiens",
           "prior_pdb_count": 17,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Cell membrane",
+            "Disulfide bond",
+            "Endoplasmic reticulum",
+            "G protein-coupled receptor",
+            "Glycoprotein",
+            "Membrane",
+            "Receptor",
+            "Transducer",
+            "Transmembrane",
+            "Transmembrane helix"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00001"
+          ],
+          "interpro": [
+            "IPR000276",
+            "IPR009132",
+            "IPR009133",
+            "IPR017452",
+            "IPR050569"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 57,
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "receptor"
+      ]
     },
     {
       "pmcid": "PMC13678007",
@@ -1603,7 +2233,8 @@
       },
       "proteins": [],
       "score": 53,
-      "license_url": "https://creativecommons.org/licenses/by-nc/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13677743",
@@ -1660,7 +2291,8 @@
       },
       "proteins": [],
       "score": 51,
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13679927",
@@ -1736,7 +2368,8 @@
       },
       "proteins": [],
       "score": 40,
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13679249",
@@ -3642,7 +4275,42 @@
             "GNAI2B"
           ],
           "name": "Guanine nucleotide-binding protein G(i) subunit alpha-2",
-          "organism": "Homo sapiens"
+          "organism": "Homo sapiens",
+          "keywords": [
+            "ADP-ribosylation",
+            "Alternative splicing",
+            "Cell cycle",
+            "Cell division",
+            "Cell membrane",
+            "Cytoplasm",
+            "Cytoskeleton",
+            "GTP-binding",
+            "Hydrolase",
+            "Lipoprotein",
+            "Magnesium",
+            "Membrane",
+            "Metal-binding",
+            "Myristate",
+            "Nucleotide-binding",
+            "Palmitate",
+            "Transducer"
+          ],
+          "ec": [
+            "3.6.5.-"
+          ],
+          "pfam": [
+            "PF00503"
+          ],
+          "interpro": [
+            "IPR001019",
+            "IPR001408",
+            "IPR011025",
+            "IPR027417"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P05067",
@@ -3652,28 +4320,187 @@
             "AD1"
           ],
           "name": "Amyloid-beta precursor protein",
-          "organism": "Homo sapiens"
+          "organism": "Homo sapiens",
+          "keywords": [
+            "Alternative splicing",
+            "Alzheimer disease",
+            "Amyloid",
+            "Amyloidosis",
+            "Apoptosis",
+            "Cell adhesion",
+            "Cell membrane",
+            "Cell projection",
+            "Coated pit",
+            "Copper",
+            "Cytoplasm",
+            "Cytoplasmic vesicle",
+            "Disease variant",
+            "Disulfide bond",
+            "Endocytosis",
+            "Endoplasmic reticulum",
+            "Endosome",
+            "Glycoprotein",
+            "Golgi apparatus",
+            "Heparin-binding",
+            "Iron",
+            "Isopeptide bond",
+            "Membrane",
+            "Metal-binding",
+            "Neurodegeneration",
+            "Notch signaling pathway",
+            "Nucleus",
+            "Oxidation",
+            "Phosphoprotein",
+            "Protease inhibitor",
+            "Proteoglycan",
+            "Secreted",
+            "Serine protease inhibitor",
+            "Signal",
+            "Sulfation",
+            "Transmembrane",
+            "Transmembrane helix",
+            "Ubl conjugation",
+            "Zinc"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00014",
+            "PF02177",
+            "PF03494",
+            "PF10515",
+            "PF12924",
+            "PF12925"
+          ],
+          "interpro": [
+            "IPR002223",
+            "IPR008154",
+            "IPR008155",
+            "IPR011178",
+            "IPR011993",
+            "IPR013803",
+            "IPR015849",
+            "IPR019543",
+            "IPR019744",
+            "IPR019745",
+            "IPR020901",
+            "IPR024329",
+            "IPR036176",
+            "IPR036454",
+            "IPR036669",
+            "IPR036880",
+            "IPR037071"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P09471",
           "gene": "GNAO1",
           "synonyms": [],
           "name": "Guanine nucleotide-binding protein G(o) subunit alpha",
-          "organism": "Homo sapiens"
+          "organism": "Homo sapiens",
+          "keywords": [
+            "ADP-ribosylation",
+            "Alternative splicing",
+            "Cell membrane",
+            "Disease variant",
+            "Epilepsy",
+            "GTP-binding",
+            "Hydrolase",
+            "Lipoprotein",
+            "Magnesium",
+            "Membrane",
+            "Metal-binding",
+            "Myristate",
+            "Nucleotide-binding",
+            "Palmitate",
+            "Transducer"
+          ],
+          "ec": [
+            "3.6.5.-"
+          ],
+          "pfam": [
+            "PF00503"
+          ],
+          "interpro": [
+            "IPR001019",
+            "IPR001408",
+            "IPR011025",
+            "IPR027417"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P0ABE7",
           "gene": "cybC",
           "synonyms": [],
           "name": "Soluble cytochrome b562",
-          "organism": "Escherichia coli"
+          "organism": "Escherichia coli",
+          "keywords": [
+            "Electron transport",
+            "Heme",
+            "Iron",
+            "Metal-binding",
+            "Periplasm",
+            "Signal",
+            "Transport"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF07361"
+          ],
+          "interpro": [
+            "IPR009155",
+            "IPR010980"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Pseudomonadati"
+          ]
         },
         {
           "uniprot": "P14416",
           "gene": "DRD2",
           "synonyms": [],
           "name": "Dopamine receptor D2",
-          "organism": "Homo sapiens"
+          "organism": "Homo sapiens",
+          "keywords": [
+            "Alternative splicing",
+            "Cell membrane",
+            "Disulfide bond",
+            "G protein-coupled receptor",
+            "Glycoprotein",
+            "Golgi apparatus",
+            "Lipoprotein",
+            "Membrane",
+            "Palmitate",
+            "Phosphoprotein",
+            "Postsynaptic cell membrane",
+            "Receptor",
+            "Synapse",
+            "Transducer",
+            "Transmembrane",
+            "Transmembrane helix"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00001"
+          ],
+          "interpro": [
+            "IPR000276",
+            "IPR000929",
+            "IPR001922",
+            "IPR017452"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P25090",
@@ -3684,28 +4511,127 @@
             "LXA4R"
           ],
           "name": "N-formyl peptide receptor 2",
-          "organism": "Homo sapiens"
+          "organism": "Homo sapiens",
+          "keywords": [
+            "Cell membrane",
+            "Chemotaxis",
+            "Disulfide bond",
+            "G protein-coupled receptor",
+            "Glycoprotein",
+            "Immunity",
+            "Inflammatory response",
+            "Innate immunity",
+            "Membrane",
+            "Receptor",
+            "Transducer",
+            "Transmembrane",
+            "Transmembrane helix"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00001"
+          ],
+          "interpro": [
+            "IPR000276",
+            "IPR000826",
+            "IPR017452"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P35462",
           "gene": "DRD3",
           "synonyms": [],
           "name": "Dopamine receptor D3",
-          "organism": "Homo sapiens"
+          "organism": "Homo sapiens",
+          "keywords": [
+            "Alternative splicing",
+            "Cell membrane",
+            "Disulfide bond",
+            "G protein-coupled receptor",
+            "Glycoprotein",
+            "Lipoprotein",
+            "Membrane",
+            "Palmitate",
+            "Receptor",
+            "Schizophrenia",
+            "Transducer",
+            "Transmembrane",
+            "Transmembrane helix"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00001"
+          ],
+          "interpro": [
+            "IPR000276",
+            "IPR000929",
+            "IPR001620",
+            "IPR017452"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P42212",
           "gene": "GFP",
           "synonyms": [],
           "name": "Green fluorescent protein",
-          "organism": "Aequorea victoria"
+          "organism": "Aequorea victoria",
+          "keywords": [
+            "Chromophore",
+            "Luminescence",
+            "Photoprotein"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF01353"
+          ],
+          "interpro": [
+            "IPR000786",
+            "IPR009017",
+            "IPR011584"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P54311",
           "gene": "Gnb1",
           "synonyms": [],
           "name": "Guanine nucleotide-binding protein G(I)/G(S)/G(T) subunit beta-1",
-          "organism": "Rattus norvegicus"
+          "organism": "Rattus norvegicus",
+          "keywords": [
+            "Acetylation",
+            "Phosphoprotein",
+            "Repeat",
+            "Transducer",
+            "WD repeat"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF25391"
+          ],
+          "interpro": [
+            "IPR001632",
+            "IPR001680",
+            "IPR015943",
+            "IPR016346",
+            "IPR019775",
+            "IPR020472",
+            "IPR036322"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P59768",
@@ -3714,7 +4640,30 @@
           "name": "Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-2",
           "organism": "Homo sapiens",
           "prior_pdb_count": 1321,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Acetylation",
+            "Cell membrane",
+            "Host-virus interaction",
+            "Lipoprotein",
+            "Membrane",
+            "Methylation",
+            "Prenylation",
+            "Transducer"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00631"
+          ],
+          "interpro": [
+            "IPR001770",
+            "IPR015898",
+            "IPR036284"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P62873",
@@ -3723,18 +4672,93 @@
           "name": "Guanine nucleotide-binding protein G(I)/G(S)/G(T) subunit beta-1",
           "organism": "Homo sapiens",
           "prior_pdb_count": 1339,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Acetylation",
+            "Alternative splicing",
+            "Disease variant",
+            "Host-virus interaction",
+            "Intellectual disability",
+            "Phosphoprotein",
+            "Repeat",
+            "Transducer",
+            "WD repeat"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF25391"
+          ],
+          "interpro": [
+            "IPR001632",
+            "IPR001680",
+            "IPR015943",
+            "IPR016346",
+            "IPR019775",
+            "IPR020472",
+            "IPR036322"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P63096",
           "gene": "GNAI1",
           "synonyms": [],
           "name": "Guanine nucleotide-binding protein G(i) subunit alpha-1",
-          "organism": "Homo sapiens"
+          "organism": "Homo sapiens",
+          "keywords": [
+            "ADP-ribosylation",
+            "Alternative splicing",
+            "Cell cycle",
+            "Cell division",
+            "Cell membrane",
+            "Cytoplasm",
+            "Cytoskeleton",
+            "Disease variant",
+            "Epilepsy",
+            "GTP-binding",
+            "Host-virus interaction",
+            "Hydrolase",
+            "Intellectual disability",
+            "Lipoprotein",
+            "Magnesium",
+            "Membrane",
+            "Metal-binding",
+            "Mitosis",
+            "Myristate",
+            "Nucleotide-binding",
+            "Nucleus",
+            "Palmitate",
+            "Transducer",
+            "Transport"
+          ],
+          "ec": [
+            "3.6.5.-"
+          ],
+          "pfam": [
+            "PF00503"
+          ],
+          "interpro": [
+            "IPR001019",
+            "IPR001408",
+            "IPR011025",
+            "IPR027417"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 5,
-      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "categories_draft": [
+        "receptor",
+        "enzyme",
+        "immune"
+      ]
     },
     {
       "pmcid": "PMC13679038",
@@ -4810,11 +5834,63 @@
             "ZNF147"
           ],
           "name": "E3 ubiquitin/ISG15 ligase TRIM25",
-          "organism": "Homo sapiens"
+          "organism": "Homo sapiens",
+          "keywords": [
+            "Acetylation",
+            "Antiviral defense",
+            "Coiled coil",
+            "Cytoplasm",
+            "Host-virus interaction",
+            "Immunity",
+            "Innate immunity",
+            "Isopeptide bond",
+            "Ligase",
+            "Metal-binding",
+            "Nucleus",
+            "Phosphoprotein",
+            "Transferase",
+            "Ubl conjugation",
+            "Ubl conjugation pathway",
+            "Zinc",
+            "Zinc-finger"
+          ],
+          "ec": [
+            "2.3.2.27",
+            "6.3.2.n3"
+          ],
+          "pfam": [
+            "PF00622",
+            "PF13445",
+            "PF13765",
+            "PF25600"
+          ],
+          "interpro": [
+            "IPR001841",
+            "IPR001870",
+            "IPR003877",
+            "IPR003879",
+            "IPR006574",
+            "IPR013083",
+            "IPR013320",
+            "IPR017907",
+            "IPR027370",
+            "IPR042753",
+            "IPR043136",
+            "IPR051051",
+            "IPR058030"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 5,
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "immune",
+        "enzyme"
+      ]
     },
     {
       "pmcid": "PMC13677755",

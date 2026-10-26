@@ -976,7 +976,46 @@
             "RASK2"
           ],
           "name": "GTPase KRas",
-          "organism": "Homo sapiens"
+          "organism": "Homo sapiens",
+          "keywords": [
+            "Acetylation",
+            "Alternative splicing",
+            "Cardiomyopathy",
+            "Cell membrane",
+            "Cytoplasm",
+            "Deafness",
+            "Disease variant",
+            "Ectodermal dysplasia",
+            "GTP-binding",
+            "Glycoprotein",
+            "Hydrolase",
+            "Intellectual disability",
+            "Isopeptide bond",
+            "Lipoprotein",
+            "Membrane",
+            "Methylation",
+            "Nucleotide-binding",
+            "Palmitate",
+            "Prenylation",
+            "Proto-oncogene",
+            "Ubl conjugation"
+          ],
+          "ec": [
+            "3.6.5.2"
+          ],
+          "pfam": [
+            "PF00071"
+          ],
+          "interpro": [
+            "IPR001806",
+            "IPR005225",
+            "IPR020849",
+            "IPR027417"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P04049",
@@ -985,7 +1024,54 @@
             "RAF"
           ],
           "name": "RAF proto-oncogene serine/threonine-protein kinase",
-          "organism": "Homo sapiens"
+          "organism": "Homo sapiens",
+          "keywords": [
+            "ATP-binding",
+            "Alternative splicing",
+            "Cardiomyopathy",
+            "Cell membrane",
+            "Cytoplasm",
+            "Deafness",
+            "Disease variant",
+            "Kinase",
+            "Membrane",
+            "Metal-binding",
+            "Methylation",
+            "Mitochondrion",
+            "Nucleotide-binding",
+            "Nucleus",
+            "Phosphoprotein",
+            "Proto-oncogene",
+            "Serine/threonine-protein kinase",
+            "Transferase",
+            "Zinc",
+            "Zinc-finger"
+          ],
+          "ec": [
+            "2.7.11.1"
+          ],
+          "pfam": [
+            "PF00130",
+            "PF02196",
+            "PF07714"
+          ],
+          "interpro": [
+            "IPR000719",
+            "IPR001245",
+            "IPR002219",
+            "IPR003116",
+            "IPR008271",
+            "IPR011009",
+            "IPR017441",
+            "IPR020454",
+            "IPR029071",
+            "IPR046349",
+            "IPR051681"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P62937",
@@ -994,11 +1080,48 @@
             "CYPA"
           ],
           "name": "Peptidyl-prolyl cis-trans isomerase A",
-          "organism": "Homo sapiens"
+          "organism": "Homo sapiens",
+          "keywords": [
+            "Acetylation",
+            "Alternative splicing",
+            "Apoptosis",
+            "Cell membrane",
+            "Cytoplasm",
+            "Glycoprotein",
+            "Host-virus interaction",
+            "Isomerase",
+            "Isopeptide bond",
+            "Membrane",
+            "Nucleus",
+            "Phosphoprotein",
+            "Rotamase",
+            "Secreted",
+            "Ubl conjugation"
+          ],
+          "ec": [
+            "5.2.1.8"
+          ],
+          "pfam": [
+            "PF00160"
+          ],
+          "interpro": [
+            "IPR002130",
+            "IPR020892",
+            "IPR024936",
+            "IPR029000"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 5,
-      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "categories_draft": [
+        "enzyme",
+        "kinase"
+      ]
     },
     {
       "pmcid": "PMC13694986",

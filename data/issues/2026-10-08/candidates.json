@@ -123,7 +123,18 @@
           "name": "Uncharacterized protein",
           "organism": "Escherichia coli",
           "prior_pdb_count": 2,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [],
+          "ec": [],
+          "pfam": [],
+          "interpro": [
+            "IPR014729",
+            "IPR049676"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Pseudomonadati"
+          ]
         },
         {
           "uniprot": "A0A6N2XJ30",
@@ -132,7 +143,20 @@
           "name": "Uncharacterized protein",
           "organism": "Citrobacter amalonaticus",
           "prior_pdb_count": 1,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [],
+          "ec": [],
+          "pfam": [
+            "PF28083"
+          ],
+          "interpro": [
+            "IPR049675",
+            "IPR060674"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Pseudomonadati"
+          ]
         }
       ],
       "score": 62,
@@ -148,7 +172,8 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13638461",
@@ -214,7 +239,30 @@
           "name": "HIV-1 retropepsin",
           "organism": "Human immunodeficiency virus type 1",
           "prior_pdb_count": 1,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Aspartyl protease",
+            "Hydrolase",
+            "Protease"
+          ],
+          "ec": [
+            "3.4.23.1",
+            "3.4.23.16"
+          ],
+          "pfam": [
+            "PF00077"
+          ],
+          "interpro": [
+            "IPR001969",
+            "IPR001995",
+            "IPR018061",
+            "IPR021109",
+            "IPR034170"
+          ],
+          "lineage": [
+            "Viruses",
+            "Riboviria"
+          ]
         }
       ],
       "score": 61,
@@ -234,7 +282,11 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "protease",
+        "pathogen"
+      ]
     },
     {
       "pmcid": "PMC13639345",
@@ -320,7 +372,34 @@
           "name": "Flagellar biosynthesis protein FlhA",
           "organism": "Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)",
           "prior_pdb_count": 12,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Bacterial flagellum biogenesis",
+            "Bacterial flagellum protein export",
+            "Cell inner membrane",
+            "Cell membrane",
+            "Membrane",
+            "Protein transport",
+            "Transmembrane",
+            "Transmembrane helix",
+            "Transport"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00771"
+          ],
+          "interpro": [
+            "IPR001712",
+            "IPR006301",
+            "IPR025505",
+            "IPR042193",
+            "IPR042194",
+            "IPR042196"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Pseudomonadati"
+          ]
         }
       ],
       "score": 52,
@@ -336,7 +415,10 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "categories_draft": [
+        "transporter"
+      ]
     },
     {
       "pmcid": "PMC13639035",
@@ -384,7 +466,8 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13638577",

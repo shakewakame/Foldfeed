@@ -159,7 +159,30 @@
           "name": "Protein CLN8",
           "organism": "Homo sapiens",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "Disease variant",
+            "Endoplasmic reticulum",
+            "Epilepsy",
+            "Intellectual disability",
+            "Membrane",
+            "Neurodegeneration",
+            "Neuronal ceroid lipofuscinosis",
+            "Transmembrane",
+            "Transmembrane helix"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF03798"
+          ],
+          "interpro": [
+            "IPR006634",
+            "IPR050846"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 88,
@@ -175,7 +198,8 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13663681",
@@ -333,7 +357,34 @@
           "name": "Dynein axonemal assembly factor 19",
           "organism": "Homo sapiens",
           "prior_pdb_count": 1,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Alternative splicing",
+            "Cell projection",
+            "Ciliopathy",
+            "Cilium",
+            "Cilium biogenesis/degradation",
+            "Coiled coil",
+            "Cytoplasm",
+            "Disease variant",
+            "Flagellum",
+            "Kartagener syndrome",
+            "Primary ciliary dyskinesia"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF13877",
+            "PF15867"
+          ],
+          "interpro": [
+            "IPR025986",
+            "IPR031733",
+            "IPR042422"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "Q9BVM2",
@@ -342,7 +393,19 @@
           "name": "Protein DPCD",
           "organism": "Homo sapiens",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [],
+          "ec": [],
+          "pfam": [
+            "PF14913"
+          ],
+          "interpro": [
+            "IPR026224"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "Q9Y230",
@@ -355,7 +418,48 @@
           "name": "RuvB-like 2",
           "organism": "Homo sapiens",
           "prior_pdb_count": 50,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "ATP-binding",
+            "Acetylation",
+            "Activator",
+            "Alternative splicing",
+            "Chromatin regulator",
+            "Cytoplasm",
+            "DNA damage",
+            "DNA recombination",
+            "DNA repair",
+            "Growth regulation",
+            "Helicase",
+            "Hydrolase",
+            "Isopeptide bond",
+            "Membrane",
+            "Nucleotide-binding",
+            "Nucleus",
+            "Phosphoprotein",
+            "Transcription",
+            "Transcription regulation",
+            "Ubl conjugation"
+          ],
+          "ec": [
+            "3.6.4.12"
+          ],
+          "pfam": [
+            "PF06068",
+            "PF17856"
+          ],
+          "interpro": [
+            "IPR003593",
+            "IPR010339",
+            "IPR027238",
+            "IPR027417",
+            "IPR041048",
+            "IPR042487"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "Q9Y265",
@@ -369,7 +473,51 @@
           "name": "RuvB-like 1",
           "organism": "Homo sapiens",
           "prior_pdb_count": 48,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "ATP-binding",
+            "Acetylation",
+            "Activator",
+            "Alternative splicing",
+            "Cell cycle",
+            "Cell division",
+            "Chromatin regulator",
+            "Cytoplasm",
+            "Cytoskeleton",
+            "DNA damage",
+            "DNA recombination",
+            "DNA repair",
+            "Growth regulation",
+            "Helicase",
+            "Hydrolase",
+            "Isopeptide bond",
+            "Membrane",
+            "Mitosis",
+            "Nucleotide-binding",
+            "Nucleus",
+            "Transcription",
+            "Transcription regulation",
+            "Ubl conjugation"
+          ],
+          "ec": [
+            "3.6.4.12"
+          ],
+          "pfam": [
+            "PF06068",
+            "PF17856"
+          ],
+          "interpro": [
+            "IPR003593",
+            "IPR010339",
+            "IPR027238",
+            "IPR027417",
+            "IPR041048",
+            "IPR042487"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 87,
@@ -389,7 +537,12 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "nucleic",
+        "chromatin",
+        "regulation"
+      ]
     },
     {
       "pmcid": "PMC13661225",
@@ -538,7 +691,29 @@
           "name": "Lipid II flippase MurJ",
           "organism": "Escherichia coli (strain K12)",
           "prior_pdb_count": 7,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Cell inner membrane",
+            "Cell membrane",
+            "Cell shape",
+            "Cell wall biogenesis/degradation",
+            "Membrane",
+            "Peptidoglycan synthesis",
+            "Transmembrane",
+            "Transmembrane helix",
+            "Transport"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF03023"
+          ],
+          "interpro": [
+            "IPR004268"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Pseudomonadati"
+          ]
         },
         {
           "uniprot": "Q2FXH6",
@@ -547,7 +722,26 @@
           "name": "Polysaccharide biosynthesis protein, putative",
           "organism": "Staphylococcus aureus (strain NCTC 8325 / PS 47)",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "Cell membrane",
+            "Membrane",
+            "Transmembrane",
+            "Transmembrane helix"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF01943"
+          ],
+          "interpro": [
+            "IPR002797",
+            "IPR024923",
+            "IPR050833"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Bacillati"
+          ]
         }
       ],
       "score": 84,
@@ -563,7 +757,10 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "transporter"
+      ]
     },
     {
       "pmcid": "PMC13661285",
@@ -761,7 +958,38 @@
           "name": "Kelch-like ECH-associated protein 1",
           "organism": "Homo sapiens",
           "prior_pdb_count": 117,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Cytoplasm",
+            "Host-virus interaction",
+            "Kelch repeat",
+            "Nucleus",
+            "Repeat",
+            "S-nitrosylation",
+            "Ubl conjugation",
+            "Ubl conjugation pathway"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00651",
+            "PF01344",
+            "PF07707",
+            "PF24681"
+          ],
+          "interpro": [
+            "IPR000210",
+            "IPR006652",
+            "IPR011333",
+            "IPR011705",
+            "IPR015915",
+            "IPR017096",
+            "IPR030563",
+            "IPR047098"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 64,
@@ -777,7 +1005,8 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13661529",
@@ -1073,7 +1302,43 @@
           "name": "Apolipoprotein A-I",
           "organism": "Homo sapiens",
           "prior_pdb_count": 31,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Amyloid",
+            "Amyloidosis",
+            "Atherosclerosis",
+            "Cholesterol metabolism",
+            "Disease variant",
+            "Glycation",
+            "Glycoprotein",
+            "HDL",
+            "Lipid metabolism",
+            "Lipid transport",
+            "Lipoprotein",
+            "Neuropathy",
+            "Nitration",
+            "Oxidation",
+            "Palmitate",
+            "Phosphoprotein",
+            "Repeat",
+            "Secreted",
+            "Signal",
+            "Steroid metabolism",
+            "Sterol metabolism",
+            "Transport"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF01442"
+          ],
+          "interpro": [
+            "IPR000074",
+            "IPR050163"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "Q9JK62",
@@ -1082,7 +1347,31 @@
           "name": "Potassium channel TASK2",
           "organism": "Mus musculus",
           "prior_pdb_count": 2,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Ion channel",
+            "Ion transport",
+            "Membrane",
+            "Potassium",
+            "Potassium channel",
+            "Potassium transport",
+            "Transmembrane",
+            "Transmembrane helix",
+            "Transport"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF07885"
+          ],
+          "interpro": [
+            "IPR003092",
+            "IPR003280",
+            "IPR013099"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 60,
@@ -1098,7 +1387,11 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "channel",
+        "transporter"
+      ]
     },
     {
       "pmcid": "PMC13661610",
@@ -1448,7 +1741,28 @@
           "name": "Soluble cytochrome b562",
           "organism": "Escherichia coli",
           "prior_pdb_count": 654,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Electron transport",
+            "Heme",
+            "Iron",
+            "Metal-binding",
+            "Periplasm",
+            "Signal",
+            "Transport"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF07361"
+          ],
+          "interpro": [
+            "IPR009155",
+            "IPR010980"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Pseudomonadati"
+          ]
         },
         {
           "uniprot": "P59768",
@@ -1457,7 +1771,30 @@
           "name": "Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-2",
           "organism": "Homo sapiens",
           "prior_pdb_count": 1323,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Acetylation",
+            "Cell membrane",
+            "Host-virus interaction",
+            "Lipoprotein",
+            "Membrane",
+            "Methylation",
+            "Prenylation",
+            "Transducer"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00631"
+          ],
+          "interpro": [
+            "IPR001770",
+            "IPR015898",
+            "IPR036284"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P62873",
@@ -1466,7 +1803,35 @@
           "name": "Guanine nucleotide-binding protein G(I)/G(S)/G(T) subunit beta-1",
           "organism": "Homo sapiens",
           "prior_pdb_count": 1333,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Acetylation",
+            "Alternative splicing",
+            "Disease variant",
+            "Host-virus interaction",
+            "Intellectual disability",
+            "Phosphoprotein",
+            "Repeat",
+            "Transducer",
+            "WD repeat"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF25391"
+          ],
+          "interpro": [
+            "IPR001632",
+            "IPR001680",
+            "IPR015943",
+            "IPR016346",
+            "IPR019775",
+            "IPR020472",
+            "IPR036322"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "Q96LA9",
@@ -1479,7 +1844,31 @@
           "name": "Mas-related G protein-coupled receptor member X4",
           "organism": "Homo sapiens",
           "prior_pdb_count": 7,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Cell membrane",
+            "Disulfide bond",
+            "G protein-coupled receptor",
+            "Glycoprotein",
+            "Membrane",
+            "Receptor",
+            "Transducer",
+            "Transmembrane",
+            "Transmembrane helix"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00001"
+          ],
+          "interpro": [
+            "IPR000276",
+            "IPR017452",
+            "IPR026234"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 60,
@@ -1507,7 +1896,11 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "receptor",
+        "photosynthesis"
+      ]
     },
     {
       "pmcid": "PMC13667928",

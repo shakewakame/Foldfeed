@@ -123,7 +123,39 @@
           "name": "Solute carrier family 22 member 4",
           "organism": "Homo sapiens",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "ATP-binding",
+            "Cell membrane",
+            "Disease variant",
+            "Glycoprotein",
+            "Ion transport",
+            "Membrane",
+            "Mitochondrion",
+            "Nucleotide-binding",
+            "Sodium",
+            "Sodium transport",
+            "Symport",
+            "Transmembrane",
+            "Transmembrane helix",
+            "Transport"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00083"
+          ],
+          "interpro": [
+            "IPR004749",
+            "IPR005828",
+            "IPR005829",
+            "IPR020846",
+            "IPR036259",
+            "IPR045915"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 87,
@@ -159,7 +191,10 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "categories_draft": [
+        "transporter"
+      ]
     },
     {
       "pmcid": "PMC13672803",
@@ -427,7 +462,22 @@
           "name": "Scaffold protein OPG125",
           "organism": "Vaccinia virus (strain Western Reserve)",
           "prior_pdb_count": 20,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Late protein",
+            "Membrane"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF03340"
+          ],
+          "interpro": [
+            "IPR005008"
+          ],
+          "lineage": [
+            "Viruses",
+            "Varidnaviria"
+          ]
         },
         {
           "uniprot": "Q76ZR4",
@@ -436,7 +486,22 @@
           "name": "Scaffold protein OPG125",
           "organism": "Vaccinia virus (strain Ankara)",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "Late protein",
+            "Membrane"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF03340"
+          ],
+          "interpro": [
+            "IPR005008"
+          ],
+          "lineage": [
+            "Viruses",
+            "Varidnaviria"
+          ]
         }
       ],
       "score": 85,
@@ -452,7 +517,10 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "categories_draft": [
+        "pathogen"
+      ]
     },
     {
       "pmcid": "PMC13672361",
@@ -524,7 +592,36 @@
           "name": "Sodium/hydrogen exchanger 9B1",
           "organism": "Homo sapiens",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "Alternative splicing",
+            "Antiport",
+            "Cell membrane",
+            "Cell projection",
+            "Cilium",
+            "Fertilization",
+            "Flagellum",
+            "Ion transport",
+            "Membrane",
+            "Sodium",
+            "Sodium transport",
+            "Transmembrane",
+            "Transmembrane helix",
+            "Transport"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00999"
+          ],
+          "interpro": [
+            "IPR006153",
+            "IPR038770",
+            "IPR051843"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 81,
@@ -540,7 +637,10 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "categories_draft": [
+        "transporter"
+      ]
     },
     {
       "pmcid": "PMC13672072",
@@ -709,7 +809,36 @@
           "name": "Histone H2B",
           "organism": "Xenopus tropicalis",
           "prior_pdb_count": 2,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Acetylation",
+            "Chromosome",
+            "Citrullination",
+            "DNA-binding",
+            "Isopeptide bond",
+            "Nucleosome core",
+            "Nucleus",
+            "Phosphoprotein",
+            "Ubl conjugation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00125",
+            "PF00538"
+          ],
+          "interpro": [
+            "IPR000558",
+            "IPR005818",
+            "IPR007125",
+            "IPR009072",
+            "IPR036388",
+            "IPR036390",
+            "IPR055333"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "A0A310TTQ1",
@@ -721,7 +850,32 @@
           "name": "Histone H3",
           "organism": "Xenopus laevis",
           "prior_pdb_count": 69,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "ADP-ribosylation",
+            "Acetylation",
+            "Chromosome",
+            "DNA-binding",
+            "Hydroxylation",
+            "Isopeptide bond",
+            "Methylation",
+            "Nucleosome core",
+            "Nucleus",
+            "Ubl conjugation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00125"
+          ],
+          "interpro": [
+            "IPR000164",
+            "IPR007125",
+            "IPR009072"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "B0QYP2",
@@ -730,7 +884,32 @@
           "name": "Chromobox 7",
           "organism": "Homo sapiens",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "Chromatin regulator",
+            "Nucleus",
+            "Repressor",
+            "Transcription",
+            "Transcription regulation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00385",
+            "PF17218"
+          ],
+          "interpro": [
+            "IPR000953",
+            "IPR016197",
+            "IPR017984",
+            "IPR023779",
+            "IPR023780",
+            "IPR033773",
+            "IPR043000"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P35226",
@@ -742,7 +921,35 @@
           "name": "Polycomb complex protein BMI-1",
           "organism": "Homo sapiens",
           "prior_pdb_count": 24,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Chromatin regulator",
+            "Cytoplasm",
+            "Metal-binding",
+            "Nucleus",
+            "Proto-oncogene",
+            "Repressor",
+            "Transcription",
+            "Transcription regulation",
+            "Ubl conjugation",
+            "Zinc",
+            "Zinc-finger"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF13923",
+            "PF16207"
+          ],
+          "interpro": [
+            "IPR001841",
+            "IPR013083",
+            "IPR017907",
+            "IPR032443"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P62798",
@@ -751,7 +958,35 @@
           "name": "Histone H4",
           "organism": "Xenopus borealis",
           "prior_pdb_count": 4,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Acetylation",
+            "Chromosome",
+            "Citrullination",
+            "DNA-binding",
+            "Hydroxylation",
+            "Isopeptide bond",
+            "Methylation",
+            "Nucleosome core",
+            "Nucleus",
+            "Phosphoprotein",
+            "Ubl conjugation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF15511"
+          ],
+          "interpro": [
+            "IPR001951",
+            "IPR004823",
+            "IPR009072",
+            "IPR019809",
+            "IPR035425"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "Q4R5N4",
@@ -760,7 +995,35 @@
           "name": "Ubiquitin-conjugating enzyme E2 D3",
           "organism": "Macaca fascicularis",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "Apoptosis",
+            "Cell membrane",
+            "DNA damage",
+            "DNA repair",
+            "Disulfide bond",
+            "Endosome",
+            "Membrane",
+            "Phosphoprotein",
+            "Transferase",
+            "Ubl conjugation pathway"
+          ],
+          "ec": [
+            "2.3.2.23",
+            "2.3.2.24"
+          ],
+          "pfam": [
+            "PF00179"
+          ],
+          "interpro": [
+            "IPR000608",
+            "IPR016135",
+            "IPR023313"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "Q6AZJ8",
@@ -773,7 +1036,34 @@
           "name": "Histone H2A",
           "organism": "Xenopus laevis",
           "prior_pdb_count": 96,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Acetylation",
+            "Chromosome",
+            "DNA-binding",
+            "Isopeptide bond",
+            "Nucleosome core",
+            "Nucleus",
+            "Phosphoprotein",
+            "Ubl conjugation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00125",
+            "PF16211"
+          ],
+          "interpro": [
+            "IPR002119",
+            "IPR007125",
+            "IPR009072",
+            "IPR032454",
+            "IPR032458",
+            "IPR061508"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "Q8IXK0",
@@ -785,7 +1075,36 @@
           "name": "Polyhomeotic-like protein 2",
           "organism": "Homo sapiens",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "Alternative splicing",
+            "DNA-binding",
+            "Developmental protein",
+            "Isopeptide bond",
+            "Metal-binding",
+            "Nucleus",
+            "Phosphoprotein",
+            "Ubl conjugation",
+            "Zinc",
+            "Zinc-finger"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00536",
+            "PF16616",
+            "PF21319"
+          ],
+          "interpro": [
+            "IPR001660",
+            "IPR012313",
+            "IPR013761",
+            "IPR038603",
+            "IPR050548"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "Q99496",
@@ -799,7 +1118,47 @@
           "name": "E3 ubiquitin-protein ligase RING2",
           "organism": "Homo sapiens",
           "prior_pdb_count": 27,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Acetylation",
+            "Alternative splicing",
+            "Chromosome",
+            "Cytoplasm",
+            "Disease variant",
+            "Epilepsy",
+            "Intellectual disability",
+            "Isopeptide bond",
+            "Metal-binding",
+            "Nucleus",
+            "Phosphoprotein",
+            "Repressor",
+            "Transcription",
+            "Transcription regulation",
+            "Transferase",
+            "Ubl conjugation",
+            "Ubl conjugation pathway",
+            "Zinc",
+            "Zinc-finger"
+          ],
+          "ec": [
+            "2.3.2.27"
+          ],
+          "pfam": [
+            "PF13923",
+            "PF16207"
+          ],
+          "interpro": [
+            "IPR001841",
+            "IPR013083",
+            "IPR017907",
+            "IPR032443",
+            "IPR037937",
+            "IPR043540"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 81,
@@ -819,7 +1178,12 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "nucleic",
+        "chromatin",
+        "regulation"
+      ]
     },
     {
       "pmcid": "PMC13645619",
@@ -904,7 +1268,38 @@
           "name": "Beta-2 adrenergic receptor",
           "organism": "Homo sapiens",
           "prior_pdb_count": 148,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Cell membrane",
+            "Disulfide bond",
+            "G protein-coupled receptor",
+            "Glycoprotein",
+            "Golgi apparatus",
+            "Hydroxylation",
+            "Lipoprotein",
+            "Membrane",
+            "Palmitate",
+            "Phosphoprotein",
+            "Receptor",
+            "Transducer",
+            "Transmembrane",
+            "Transmembrane helix",
+            "Ubl conjugation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00001"
+          ],
+          "interpro": [
+            "IPR000276",
+            "IPR000332",
+            "IPR002233",
+            "IPR017452"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 61,
@@ -924,7 +1319,10 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "categories_draft": [
+        "receptor"
+      ]
     },
     {
       "pmcid": "PMC13672387",
@@ -1112,7 +1510,24 @@
           "name": "Photosystem I reaction center subunit III",
           "organism": "Thermosynechococcus vestitus (strain NIES-2133 / IAM M-273 / BP-1)",
           "prior_pdb_count": 18,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Photosynthesis",
+            "Photosystem I",
+            "Signal"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF02507"
+          ],
+          "interpro": [
+            "IPR003666",
+            "IPR036577"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Bacillati"
+          ]
         },
         {
           "uniprot": "P0A403",
@@ -1121,7 +1536,27 @@
           "name": "Photosystem I reaction center subunit XII",
           "organism": "Thermosynechococcus vestitus (strain NIES-2133 / IAM M-273 / BP-1)",
           "prior_pdb_count": 18,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Membrane",
+            "Photosynthesis",
+            "Photosystem I",
+            "Thylakoid",
+            "Transmembrane",
+            "Transmembrane helix"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF07465"
+          ],
+          "interpro": [
+            "IPR010010",
+            "IPR037279"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Bacillati"
+          ]
         },
         {
           "uniprot": "P0A405",
@@ -1130,7 +1565,41 @@
           "name": "Photosystem I P700 chlorophyll a apoprotein A1",
           "organism": "Thermosynechococcus vestitus (strain NIES-2133 / IAM M-273 / BP-1)",
           "prior_pdb_count": 18,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "4Fe-4S",
+            "Chlorophyll",
+            "Chromophore",
+            "Electron transport",
+            "Iron",
+            "Iron-sulfur",
+            "Magnesium",
+            "Membrane",
+            "Metal-binding",
+            "Oxidoreductase",
+            "Photosynthesis",
+            "Photosystem I",
+            "Thylakoid",
+            "Transmembrane",
+            "Transmembrane helix",
+            "Transport"
+          ],
+          "ec": [
+            "1.97.1.12"
+          ],
+          "pfam": [
+            "PF00223"
+          ],
+          "interpro": [
+            "IPR001280",
+            "IPR006243",
+            "IPR020586",
+            "IPR036408"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Bacillati"
+          ]
         },
         {
           "uniprot": "P0A407",
@@ -1139,7 +1608,41 @@
           "name": "Photosystem I P700 chlorophyll a apoprotein A2",
           "organism": "Thermosynechococcus vestitus (strain NIES-2133 / IAM M-273 / BP-1)",
           "prior_pdb_count": 18,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "4Fe-4S",
+            "Chlorophyll",
+            "Chromophore",
+            "Electron transport",
+            "Iron",
+            "Iron-sulfur",
+            "Magnesium",
+            "Membrane",
+            "Metal-binding",
+            "Oxidoreductase",
+            "Photosynthesis",
+            "Photosystem I",
+            "Thylakoid",
+            "Transmembrane",
+            "Transmembrane helix",
+            "Transport"
+          ],
+          "ec": [
+            "1.97.1.12"
+          ],
+          "pfam": [
+            "PF00223"
+          ],
+          "interpro": [
+            "IPR001280",
+            "IPR006244",
+            "IPR020586",
+            "IPR036408"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Bacillati"
+          ]
         },
         {
           "uniprot": "P0A415",
@@ -1148,7 +1651,37 @@
           "name": "Photosystem I iron-sulfur center",
           "organism": "Thermosynechococcus vestitus (strain NIES-2133 / IAM M-273 / BP-1)",
           "prior_pdb_count": 18,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "4Fe-4S",
+            "Electron transport",
+            "Iron",
+            "Iron-sulfur",
+            "Membrane",
+            "Metal-binding",
+            "Oxidoreductase",
+            "Photosynthesis",
+            "Photosystem I",
+            "Repeat",
+            "Thylakoid",
+            "Transport"
+          ],
+          "ec": [
+            "1.97.1.12"
+          ],
+          "pfam": [
+            "PF12838"
+          ],
+          "interpro": [
+            "IPR017491",
+            "IPR017896",
+            "IPR017900",
+            "IPR050157"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Bacillati"
+          ]
         },
         {
           "uniprot": "P0A420",
@@ -1157,7 +1690,23 @@
           "name": "Photosystem I reaction center subunit II",
           "organism": "Thermosynechococcus vestitus (strain NIES-2133 / IAM M-273 / BP-1)",
           "prior_pdb_count": 18,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Photosynthesis",
+            "Photosystem I"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF02531"
+          ],
+          "interpro": [
+            "IPR003685",
+            "IPR036579"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Bacillati"
+          ]
         },
         {
           "uniprot": "P0A423",
@@ -1166,7 +1715,25 @@
           "name": "Photosystem I reaction center subunit IV",
           "organism": "Thermosynechococcus vestitus (strain NIES-2133 / IAM M-273 / BP-1)",
           "prior_pdb_count": 18,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Membrane",
+            "Photosynthesis",
+            "Photosystem I",
+            "Thylakoid"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF02427"
+          ],
+          "interpro": [
+            "IPR003375",
+            "IPR008990"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Bacillati"
+          ]
         },
         {
           "uniprot": "P0A425",
@@ -1175,7 +1742,29 @@
           "name": "Photosystem I reaction center subunit PsaK",
           "organism": "Thermosynechococcus vestitus (strain NIES-2133 / IAM M-273 / BP-1)",
           "prior_pdb_count": 17,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Membrane",
+            "Photosynthesis",
+            "Photosystem I",
+            "Thylakoid",
+            "Transmembrane",
+            "Transmembrane helix"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF01241"
+          ],
+          "interpro": [
+            "IPR000549",
+            "IPR017492",
+            "IPR035982",
+            "IPR037101"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Bacillati"
+          ]
         },
         {
           "uniprot": "P0A427",
@@ -1184,7 +1773,27 @@
           "name": "Photosystem I reaction center subunit VIII",
           "organism": "Thermosynechococcus vestitus (strain NIES-2133 / IAM M-273 / BP-1)",
           "prior_pdb_count": 18,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Membrane",
+            "Photosynthesis",
+            "Photosystem I",
+            "Thylakoid",
+            "Transmembrane",
+            "Transmembrane helix"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00796"
+          ],
+          "interpro": [
+            "IPR001302",
+            "IPR036357"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Bacillati"
+          ]
         },
         {
           "uniprot": "P0A429",
@@ -1193,7 +1802,27 @@
           "name": "Photosystem I reaction center subunit IX",
           "organism": "Thermosynechococcus vestitus (strain NIES-2133 / IAM M-273 / BP-1)",
           "prior_pdb_count": 18,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Membrane",
+            "Photosynthesis",
+            "Photosystem I",
+            "Thylakoid",
+            "Transmembrane",
+            "Transmembrane helix"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF01701"
+          ],
+          "interpro": [
+            "IPR002615",
+            "IPR036062"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Bacillati"
+          ]
         },
         {
           "uniprot": "Q8DKP6",
@@ -1202,7 +1831,24 @@
           "name": "Photosystem I 4.8K protein",
           "organism": "Thermosynechococcus vestitus (strain NIES-2133 / IAM M-273 / BP-1)",
           "prior_pdb_count": 16,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Membrane",
+            "Transmembrane",
+            "Transmembrane helix"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF08078"
+          ],
+          "interpro": [
+            "IPR012986",
+            "IPR036243"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Bacillati"
+          ]
         }
       ],
       "score": 61,
@@ -1226,7 +1872,12 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "photosynthesis",
+        "enzyme",
+        "transporter"
+      ]
     },
     {
       "pmcid": "PMC13672095",
@@ -1655,7 +2306,37 @@
           "name": "Voltage-dependent calcium channel gamma-2 subunit",
           "organism": "Mus musculus",
           "prior_pdb_count": 41,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Calcium",
+            "Calcium channel",
+            "Calcium transport",
+            "Glycoprotein",
+            "Ion channel",
+            "Ion transport",
+            "Membrane",
+            "Phosphoprotein",
+            "Synapse",
+            "Synaptosome",
+            "Transmembrane",
+            "Transmembrane helix",
+            "Transport",
+            "Voltage-gated channel"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00822"
+          ],
+          "interpro": [
+            "IPR004031",
+            "IPR005422",
+            "IPR008368",
+            "IPR051072"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P19491",
@@ -1667,7 +2348,47 @@
           "name": "Glutamate receptor 2",
           "organism": "Rattus norvegicus",
           "prior_pdb_count": 342,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Alternative splicing",
+            "Cell membrane",
+            "Disulfide bond",
+            "Glycoprotein",
+            "Ion channel",
+            "Ion transport",
+            "Ligand-gated ion channel",
+            "Lipoprotein",
+            "Membrane",
+            "Palmitate",
+            "Phosphoprotein",
+            "Postsynaptic cell membrane",
+            "RNA editing",
+            "Receptor",
+            "Signal",
+            "Synapse",
+            "Transmembrane",
+            "Transmembrane helix",
+            "Transport",
+            "Ubl conjugation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00060",
+            "PF01094",
+            "PF10613"
+          ],
+          "interpro": [
+            "IPR001320",
+            "IPR001508",
+            "IPR001828",
+            "IPR015683",
+            "IPR019594",
+            "IPR028082"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 60,
@@ -1683,7 +2404,11 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "categories_draft": [
+        "channel",
+        "receptor"
+      ]
     },
     {
       "pmcid": "PMC13672294",
@@ -1777,7 +2502,47 @@
           "name": "Beta-galactosidase",
           "organism": "Escherichia coli (strain K12)",
           "prior_pdb_count": 85,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Glycosidase",
+            "Hydrolase",
+            "Magnesium",
+            "Manganese",
+            "Metal-binding",
+            "Sodium"
+          ],
+          "ec": [
+            "3.2.1.23"
+          ],
+          "pfam": [
+            "PF00703",
+            "PF02836",
+            "PF02837",
+            "PF02929",
+            "PF16353"
+          ],
+          "interpro": [
+            "IPR004199",
+            "IPR006101",
+            "IPR006102",
+            "IPR006103",
+            "IPR006104",
+            "IPR008979",
+            "IPR011013",
+            "IPR013783",
+            "IPR014718",
+            "IPR017853",
+            "IPR023230",
+            "IPR023232",
+            "IPR023933",
+            "IPR032312",
+            "IPR036156",
+            "IPR050347"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Pseudomonadati"
+          ]
         }
       ],
       "score": 57,
@@ -1793,7 +2558,10 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "enzyme"
+      ]
     },
     {
       "pmcid": "PMC13672055",
@@ -1890,7 +2658,44 @@
           "name": "NACHT, LRR and PYD domains-containing protein 6",
           "organism": "Homo sapiens",
           "prior_pdb_count": 2,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "ATP-binding",
+            "Alternative splicing",
+            "Cell membrane",
+            "Cytoplasm",
+            "Immunity",
+            "Inflammasome",
+            "Inflammatory response",
+            "Innate immunity",
+            "Leucine-rich repeat",
+            "Membrane",
+            "Nucleotide-binding",
+            "Nucleus",
+            "Repeat",
+            "Ubl conjugation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF02758",
+            "PF05729",
+            "PF17776",
+            "PF17779"
+          ],
+          "interpro": [
+            "IPR004020",
+            "IPR007111",
+            "IPR011029",
+            "IPR027417",
+            "IPR032675",
+            "IPR041075",
+            "IPR041267",
+            "IPR050637"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 57,
@@ -1906,7 +2711,10 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "categories_draft": [
+        "immune"
+      ]
     },
     {
       "pmcid": "PMC13672075",
@@ -2203,7 +3011,43 @@
           "name": "Microtubule-associated protein tau",
           "organism": "Homo sapiens",
           "prior_pdb_count": 299,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Acetylation",
+            "Alternative splicing",
+            "Alzheimer disease",
+            "Cell membrane",
+            "Cell projection",
+            "Cytoplasm",
+            "Cytoskeleton",
+            "Disease variant",
+            "Disulfide bond",
+            "Glycation",
+            "Glycoprotein",
+            "Isopeptide bond",
+            "Membrane",
+            "Methylation",
+            "Microtubule",
+            "Neurodegeneration",
+            "Parkinsonism",
+            "Phosphoprotein",
+            "Repeat",
+            "Secreted",
+            "Ubl conjugation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00418"
+          ],
+          "interpro": [
+            "IPR001084",
+            "IPR002955",
+            "IPR027324"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 55,
@@ -2219,7 +3063,8 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13662703",
@@ -2387,7 +3232,8 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13657626",
@@ -2451,7 +3297,8 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13670144",
@@ -2501,7 +3348,8 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/3.0/"
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13672045",
@@ -2550,7 +3398,8 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13662807",
@@ -5581,14 +6430,68 @@
             "Gnai-1"
           ],
           "name": "Guanine nucleotide-binding protein G(i) subunit alpha-1",
-          "organism": "Rattus norvegicus"
+          "organism": "Rattus norvegicus",
+          "keywords": [
+            "Cell cycle",
+            "Cell division",
+            "Cell membrane",
+            "Cytoplasm",
+            "Cytoskeleton",
+            "GTP-binding",
+            "Hydrolase",
+            "Lipoprotein",
+            "Magnesium",
+            "Membrane",
+            "Metal-binding",
+            "Mitosis",
+            "Myristate",
+            "Nucleotide-binding",
+            "Nucleus",
+            "Palmitate",
+            "Transducer",
+            "Transport"
+          ],
+          "ec": [
+            "3.6.5.-"
+          ],
+          "pfam": [
+            "PF00503"
+          ],
+          "interpro": [
+            "IPR001019",
+            "IPR001408",
+            "IPR011025",
+            "IPR027417"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P20068",
           "gene": "Nts",
           "synonyms": [],
           "name": "Neurotensin/neuromedin N",
-          "organism": "Rattus norvegicus"
+          "organism": "Rattus norvegicus",
+          "keywords": [
+            "Cleavage on pair of basic residues",
+            "Cytoplasmic vesicle",
+            "Secreted",
+            "Signal",
+            "Vasoactive"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF07421"
+          ],
+          "interpro": [
+            "IPR008055"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P20789",
@@ -5597,7 +6500,34 @@
             "Ntsr"
           ],
           "name": "Neurotensin receptor type 1",
-          "organism": "Rattus norvegicus"
+          "organism": "Rattus norvegicus",
+          "keywords": [
+            "Cell membrane",
+            "Disulfide bond",
+            "G protein-coupled receptor",
+            "Glycoprotein",
+            "Lipoprotein",
+            "Membrane",
+            "Palmitate",
+            "Receptor",
+            "Transducer",
+            "Transmembrane",
+            "Transmembrane helix"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00001"
+          ],
+          "interpro": [
+            "IPR000276",
+            "IPR003984",
+            "IPR003985",
+            "IPR017452"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P42866",
@@ -5607,7 +6537,39 @@
             "Oprm"
           ],
           "name": "Mu-type opioid receptor",
-          "organism": "Mus musculus"
+          "organism": "Mus musculus",
+          "keywords": [
+            "Alternative splicing",
+            "Cell membrane",
+            "Cell projection",
+            "Disulfide bond",
+            "Endosome",
+            "G protein-coupled receptor",
+            "Glycoprotein",
+            "Lipoprotein",
+            "Membrane",
+            "Palmitate",
+            "Phosphoprotein",
+            "Receptor",
+            "Transducer",
+            "Transmembrane",
+            "Transmembrane helix",
+            "Ubl conjugation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00001"
+          ],
+          "interpro": [
+            "IPR000105",
+            "IPR000276",
+            "IPR001418",
+            "IPR017452"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P59768",
@@ -5616,14 +6578,61 @@
           "name": "Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-2",
           "organism": "Homo sapiens",
           "prior_pdb_count": 1323,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Acetylation",
+            "Cell membrane",
+            "Host-virus interaction",
+            "Lipoprotein",
+            "Membrane",
+            "Methylation",
+            "Prenylation",
+            "Transducer"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00631"
+          ],
+          "interpro": [
+            "IPR001770",
+            "IPR015898",
+            "IPR036284"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P62871",
           "gene": "GNB1",
           "synonyms": [],
           "name": "Guanine nucleotide-binding protein G(I)/G(S)/G(T) subunit beta-1",
-          "organism": "Bos taurus"
+          "organism": "Bos taurus",
+          "keywords": [
+            "Acetylation",
+            "Phosphoprotein",
+            "Repeat",
+            "Transducer",
+            "WD repeat"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF25391"
+          ],
+          "interpro": [
+            "IPR001632",
+            "IPR001680",
+            "IPR015943",
+            "IPR016346",
+            "IPR019775",
+            "IPR020472",
+            "IPR036322"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P62873",
@@ -5632,28 +6641,141 @@
           "name": "Guanine nucleotide-binding protein G(I)/G(S)/G(T) subunit beta-1",
           "organism": "Homo sapiens",
           "prior_pdb_count": 1333,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Acetylation",
+            "Alternative splicing",
+            "Disease variant",
+            "Host-virus interaction",
+            "Intellectual disability",
+            "Phosphoprotein",
+            "Repeat",
+            "Transducer",
+            "WD repeat"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF25391"
+          ],
+          "interpro": [
+            "IPR001632",
+            "IPR001680",
+            "IPR015943",
+            "IPR016346",
+            "IPR019775",
+            "IPR020472",
+            "IPR036322"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P63096",
           "gene": "GNAI1",
           "synonyms": [],
           "name": "Guanine nucleotide-binding protein G(i) subunit alpha-1",
-          "organism": "Homo sapiens"
+          "organism": "Homo sapiens",
+          "keywords": [
+            "ADP-ribosylation",
+            "Alternative splicing",
+            "Cell cycle",
+            "Cell division",
+            "Cell membrane",
+            "Cytoplasm",
+            "Cytoskeleton",
+            "Disease variant",
+            "Epilepsy",
+            "GTP-binding",
+            "Host-virus interaction",
+            "Hydrolase",
+            "Intellectual disability",
+            "Lipoprotein",
+            "Magnesium",
+            "Membrane",
+            "Metal-binding",
+            "Mitosis",
+            "Myristate",
+            "Nucleotide-binding",
+            "Nucleus",
+            "Palmitate",
+            "Transducer",
+            "Transport"
+          ],
+          "ec": [
+            "3.6.5.-"
+          ],
+          "pfam": [
+            "PF00503"
+          ],
+          "interpro": [
+            "IPR001019",
+            "IPR001408",
+            "IPR011025",
+            "IPR027417"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P63211",
           "gene": "GNGT1",
           "synonyms": [],
           "name": "Guanine nucleotide-binding protein G(T) subunit gamma-T1",
-          "organism": "Homo sapiens"
+          "organism": "Homo sapiens",
+          "keywords": [
+            "Cell membrane",
+            "Lipoprotein",
+            "Membrane",
+            "Methylation",
+            "Prenylation",
+            "Transducer"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00631"
+          ],
+          "interpro": [
+            "IPR001770",
+            "IPR015898",
+            "IPR036284"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P63212",
           "gene": "GNG2",
           "synonyms": [],
           "name": "Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-2",
-          "organism": "Bos taurus"
+          "organism": "Bos taurus",
+          "keywords": [
+            "Acetylation",
+            "Cell membrane",
+            "Lipoprotein",
+            "Membrane",
+            "Methylation",
+            "Prenylation",
+            "Transducer"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00631"
+          ],
+          "interpro": [
+            "IPR001770",
+            "IPR015898",
+            "IPR036284"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 5,
@@ -5673,7 +6795,11 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "categories_draft": [
+        "receptor",
+        "enzyme"
+      ]
     },
     {
       "pmcid": "PMC13669652",

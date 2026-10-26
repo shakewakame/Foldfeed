@@ -209,7 +209,23 @@
           "name": "N-acetyltransferase domain-containing protein",
           "organism": "Trypanosoma brucei brucei (strain 927/4 GUTat10.1)",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "Acyltransferase",
+            "Transferase"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00583"
+          ],
+          "interpro": [
+            "IPR000182",
+            "IPR016181"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Discoba"
+          ]
         }
       ],
       "score": 93,
@@ -229,7 +245,8 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13674229",
@@ -547,7 +564,42 @@
           "name": "Pleiotropic ABC efflux transporter of multiple drugs CDR1",
           "organism": "Candida glabrata (strain ATCC 2001 / BCRC 20586 / JCM 3761 / NBRC 0622 / NRRL Y-65 / CBS 138)",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "ATP-binding",
+            "Cell membrane",
+            "Glycoprotein",
+            "Membrane",
+            "Nucleotide-binding",
+            "Phosphoprotein",
+            "Repeat",
+            "Transmembrane",
+            "Transmembrane helix",
+            "Transport"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00005",
+            "PF01061",
+            "PF06422",
+            "PF14510"
+          ],
+          "interpro": [
+            "IPR003439",
+            "IPR003593",
+            "IPR005285",
+            "IPR010929",
+            "IPR013525",
+            "IPR017871",
+            "IPR027417",
+            "IPR029481",
+            "IPR034001",
+            "IPR034003"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Fungi"
+          ]
         }
       ],
       "score": 90,
@@ -567,7 +619,10 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "transporter"
+      ]
     },
     {
       "pmcid": "PMC13676158",
@@ -685,7 +740,8 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by-nc/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13672277",
@@ -5751,7 +5807,35 @@
           "gene": "E",
           "synonyms": [],
           "name": "Endolysin",
-          "organism": "Enterobacteria phage T4"
+          "organism": "Enterobacteria phage T4",
+          "keywords": [
+            "Antimicrobial",
+            "Bacteriolytic enzyme",
+            "Cytolysis",
+            "Glycosidase",
+            "Host cell lysis by virus",
+            "Host cytoplasm",
+            "Hydrolase",
+            "Viral release from host cell"
+          ],
+          "ec": [
+            "3.2.1.17"
+          ],
+          "pfam": [
+            "PF00959"
+          ],
+          "interpro": [
+            "IPR001165",
+            "IPR002196",
+            "IPR023346",
+            "IPR023347",
+            "IPR034690",
+            "IPR052619"
+          ],
+          "lineage": [
+            "Viruses",
+            "Duplodnaviria"
+          ]
         },
         {
           "uniprot": "P07550",
@@ -5761,14 +5845,73 @@
             "B2AR"
           ],
           "name": "Beta-2 adrenergic receptor",
-          "organism": "Homo sapiens"
+          "organism": "Homo sapiens",
+          "keywords": [
+            "Cell membrane",
+            "Disulfide bond",
+            "G protein-coupled receptor",
+            "Glycoprotein",
+            "Golgi apparatus",
+            "Hydroxylation",
+            "Lipoprotein",
+            "Membrane",
+            "Palmitate",
+            "Phosphoprotein",
+            "Receptor",
+            "Transducer",
+            "Transmembrane",
+            "Transmembrane helix",
+            "Ubl conjugation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00001"
+          ],
+          "interpro": [
+            "IPR000276",
+            "IPR000332",
+            "IPR002233",
+            "IPR017452"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P07700",
           "gene": "ADRB1",
           "synonyms": [],
           "name": "Beta-1 adrenergic receptor",
-          "organism": "Meleagris gallopavo"
+          "organism": "Meleagris gallopavo",
+          "keywords": [
+            "Cell membrane",
+            "Disulfide bond",
+            "G protein-coupled receptor",
+            "Glycoprotein",
+            "Lipoprotein",
+            "Membrane",
+            "Palmitate",
+            "Phosphoprotein",
+            "Receptor",
+            "Transducer",
+            "Transmembrane",
+            "Transmembrane helix"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00001"
+          ],
+          "interpro": [
+            "IPR000276",
+            "IPR000507",
+            "IPR002233",
+            "IPR017452"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P0AA25",
@@ -5778,7 +5921,29 @@
             "tsnC"
           ],
           "name": "Thioredoxin 1",
-          "organism": "Escherichia coli (strain K12)"
+          "organism": "Escherichia coli (strain K12)",
+          "keywords": [
+            "Acetylation",
+            "Disulfide bond",
+            "Electron transport",
+            "Host-virus interaction",
+            "Redox-active center",
+            "Transport"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00085"
+          ],
+          "interpro": [
+            "IPR005746",
+            "IPR013766",
+            "IPR017937",
+            "IPR036249"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Pseudomonadati"
+          ]
         },
         {
           "uniprot": "P29274",
@@ -5787,7 +5952,33 @@
             "ADORA2"
           ],
           "name": "Adenosine receptor A2a",
-          "organism": "Homo sapiens"
+          "organism": "Homo sapiens",
+          "keywords": [
+            "Cell membrane",
+            "Disulfide bond",
+            "G protein-coupled receptor",
+            "Glycoprotein",
+            "Membrane",
+            "Receptor",
+            "Transducer",
+            "Transmembrane",
+            "Transmembrane helix",
+            "Ubl conjugation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00001"
+          ],
+          "interpro": [
+            "IPR000276",
+            "IPR001513",
+            "IPR001634",
+            "IPR017452"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P63092",
@@ -5797,7 +5988,45 @@
             "GSP"
           ],
           "name": "Guanine nucleotide-binding protein G(s) subunit alpha isoforms short",
-          "organism": "Homo sapiens"
+          "organism": "Homo sapiens",
+          "keywords": [
+            "ADP-ribosylation",
+            "Alternative splicing",
+            "Cell membrane",
+            "Cushing syndrome",
+            "Disease variant",
+            "Dwarfism",
+            "GTP-binding",
+            "Hydrolase",
+            "Isopeptide bond",
+            "Lipoprotein",
+            "Magnesium",
+            "Membrane",
+            "Metal-binding",
+            "Nucleotide-binding",
+            "Obesity",
+            "Palmitate",
+            "Phosphoprotein",
+            "Proto-oncogene",
+            "Transducer",
+            "Ubl conjugation"
+          ],
+          "ec": [
+            "3.6.5.-"
+          ],
+          "pfam": [
+            "PF00503"
+          ],
+          "interpro": [
+            "IPR000367",
+            "IPR001019",
+            "IPR011025",
+            "IPR027417"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 5,
@@ -5813,7 +6042,12 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "receptor",
+        "enzyme",
+        "pathogen"
+      ]
     },
     {
       "pmcid": "PMC13670034",
@@ -7698,7 +7932,35 @@
           "gene": null,
           "synonyms": [],
           "name": "Glucosylceramidase",
-          "organism": "Thermoanaerobacterium xylanolyticum (strain ATCC 49914 / DSM 7097 / LX-11)"
+          "organism": "Thermoanaerobacterium xylanolyticum (strain ATCC 49914 / DSM 7097 / LX-11)",
+          "keywords": [
+            "Calcium",
+            "Glycosidase",
+            "Hydrolase",
+            "Lipoprotein",
+            "Metal-binding",
+            "Palmitate",
+            "Signal"
+          ],
+          "ec": [
+            "3.2.1.45"
+          ],
+          "pfam": [
+            "PF04685",
+            "PF12215"
+          ],
+          "interpro": [
+            "IPR006775",
+            "IPR008928",
+            "IPR012341",
+            "IPR014551",
+            "IPR024462",
+            "IPR052566"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Bacillati"
+          ]
         }
       ],
       "score": 5,
@@ -7714,7 +7976,10 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "enzyme"
+      ]
     },
     {
       "pmcid": "PMC13674577",
@@ -8183,7 +8448,8 @@
         },
         "corresp": []
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13673352",

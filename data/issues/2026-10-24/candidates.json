@@ -130,7 +130,40 @@
           "name": "Proteinase K",
           "organism": "Parengyodontium album",
           "prior_pdb_count": 262,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Calcium",
+            "Disulfide bond",
+            "Hydrolase",
+            "Metal-binding",
+            "Protease",
+            "Serine protease",
+            "Signal",
+            "Zymogen"
+          ],
+          "ec": [
+            "3.4.21.64"
+          ],
+          "pfam": [
+            "PF00082",
+            "PF05922"
+          ],
+          "interpro": [
+            "IPR000209",
+            "IPR010259",
+            "IPR015500",
+            "IPR022398",
+            "IPR023827",
+            "IPR023828",
+            "IPR034193",
+            "IPR036852",
+            "IPR037045",
+            "IPR050131"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Fungi"
+          ]
         },
         {
           "uniprot": "Q02QC9",
@@ -139,11 +172,40 @@
           "name": "Alkaline phosphatase H",
           "organism": "Pseudomonas aeruginosa (strain UCBPP-PA14)",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "Hydrolase",
+            "Magnesium",
+            "Metal-binding",
+            "Periplasm",
+            "Phosphoprotein",
+            "Secreted",
+            "Signal",
+            "Zinc"
+          ],
+          "ec": [
+            "3.1.3.1"
+          ],
+          "pfam": [
+            "PF00245"
+          ],
+          "interpro": [
+            "IPR001952",
+            "IPR017850",
+            "IPR018299"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Pseudomonadati"
+          ]
         }
       ],
       "score": 82,
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "protease",
+        "enzyme"
+      ]
     },
     {
       "pmcid": "PMC13687542",
@@ -310,7 +372,40 @@
           "name": "MHC class I antigen",
           "organism": "Homo sapiens",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "Disulfide bond",
+            "Glycoprotein",
+            "Immunity",
+            "Immunoglobulin domain",
+            "MHC I",
+            "Membrane",
+            "Phosphoprotein",
+            "Signal",
+            "Transmembrane",
+            "Transmembrane helix"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00129",
+            "PF07654"
+          ],
+          "interpro": [
+            "IPR001039",
+            "IPR003006",
+            "IPR003597",
+            "IPR007110",
+            "IPR011161",
+            "IPR011162",
+            "IPR013783",
+            "IPR036179",
+            "IPR037055",
+            "IPR050208"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "F6IQR9",
@@ -319,7 +414,40 @@
           "name": "MHC class I antigen",
           "organism": "Homo sapiens",
           "prior_pdb_count": 3,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Disulfide bond",
+            "Glycoprotein",
+            "Immunity",
+            "Immunoglobulin domain",
+            "MHC I",
+            "Membrane",
+            "Phosphoprotein",
+            "Signal",
+            "Transmembrane",
+            "Transmembrane helix"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00129",
+            "PF07654"
+          ],
+          "interpro": [
+            "IPR001039",
+            "IPR003006",
+            "IPR003597",
+            "IPR007110",
+            "IPR011161",
+            "IPR011162",
+            "IPR013783",
+            "IPR036179",
+            "IPR037055",
+            "IPR050208"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P0DTC3",
@@ -328,7 +456,40 @@
           "name": "ORF3a protein",
           "organism": "Severe acute respiratory syndrome coronavirus 2",
           "prior_pdb_count": 7,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Activation of host autophagy by virus",
+            "Glycoprotein",
+            "Host cell membrane",
+            "Host cytoplasm",
+            "Host endoplasmic reticulum",
+            "Host endosome",
+            "Host lysosome",
+            "Host membrane",
+            "Host-virus interaction",
+            "Ion channel",
+            "Ion transport",
+            "Membrane",
+            "Secreted",
+            "Transmembrane",
+            "Transmembrane helix",
+            "Transport",
+            "Viral ion channel",
+            "Virion"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF11289"
+          ],
+          "interpro": [
+            "IPR024407",
+            "IPR046445",
+            "IPR046446"
+          ],
+          "lineage": [
+            "Viruses",
+            "Riboviria"
+          ]
         },
         {
           "uniprot": "P61769",
@@ -337,11 +498,47 @@
           "name": "Beta-2-microglobulin",
           "organism": "Homo sapiens",
           "prior_pdb_count": 1408,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Amyloid",
+            "Amyloidosis",
+            "Disease variant",
+            "Disulfide bond",
+            "Glycation",
+            "Glycoprotein",
+            "Immunity",
+            "Immunoglobulin domain",
+            "MHC I",
+            "Pyrrolidone carboxylic acid",
+            "Secreted",
+            "Signal"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF07654"
+          ],
+          "interpro": [
+            "IPR003006",
+            "IPR003597",
+            "IPR007110",
+            "IPR013783",
+            "IPR015707",
+            "IPR036179",
+            "IPR050160"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 82,
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "immune",
+        "channel",
+        "pathogen"
+      ]
     },
     {
       "pmcid": "PMC13686013",
@@ -819,11 +1016,40 @@
           "name": "RNA N(6)-adenosine-methyltransferase METTL16",
           "organism": "Homo sapiens",
           "prior_pdb_count": 9,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Alternative splicing",
+            "Cytoplasm",
+            "Methyltransferase",
+            "Nucleus",
+            "Phosphoprotein",
+            "RNA-binding",
+            "S-adenosyl-L-methionine",
+            "Transferase"
+          ],
+          "ec": [
+            "2.1.1.346",
+            "2.1.1.348"
+          ],
+          "pfam": [
+            "PF05971"
+          ],
+          "interpro": [
+            "IPR010286",
+            "IPR017182",
+            "IPR029063"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 62,
-      "license_url": "https://creativecommons.org/licenses/by/3.0/"
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "categories_draft": [
+        "nucleic"
+      ]
     },
     {
       "pmcid": "PMC13690239",
@@ -1026,7 +1252,8 @@
       },
       "proteins": [],
       "score": 59,
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13684649",
@@ -1091,7 +1318,8 @@
       },
       "proteins": [],
       "score": 54,
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13687550",
@@ -1307,7 +1535,47 @@
           "name": "Laminin subunit alpha-5",
           "organism": "Homo sapiens",
           "prior_pdb_count": 2,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Alternative splicing",
+            "Basement membrane",
+            "Cell adhesion",
+            "Coiled coil",
+            "Disease variant",
+            "Disulfide bond",
+            "Extracellular matrix",
+            "Glycoprotein",
+            "Laminin EGF-like domain",
+            "Repeat",
+            "Secreted",
+            "Signal"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00052",
+            "PF00053",
+            "PF00054",
+            "PF00055",
+            "PF02210",
+            "PF06008",
+            "PF24973"
+          ],
+          "interpro": [
+            "IPR000034",
+            "IPR000742",
+            "IPR001368",
+            "IPR001791",
+            "IPR002049",
+            "IPR008211",
+            "IPR009254",
+            "IPR013320",
+            "IPR050440",
+            "IPR056863"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P07942",
@@ -1316,7 +1584,43 @@
           "name": "Laminin subunit beta-1",
           "organism": "Homo sapiens",
           "prior_pdb_count": 3,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Basement membrane",
+            "Cell adhesion",
+            "Coiled coil",
+            "Disease variant",
+            "Disulfide bond",
+            "Extracellular matrix",
+            "Glycoprotein",
+            "Laminin EGF-like domain",
+            "Lissencephaly",
+            "Phosphoprotein",
+            "Repeat",
+            "Secreted",
+            "Signal"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00053",
+            "PF00055",
+            "PF21199",
+            "PF23219",
+            "PF24973"
+          ],
+          "interpro": [
+            "IPR000742",
+            "IPR002049",
+            "IPR008211",
+            "IPR013015",
+            "IPR050440",
+            "IPR056558",
+            "IPR056863"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P11047",
@@ -1327,7 +1631,39 @@
           "name": "Laminin subunit gamma-1",
           "organism": "Homo sapiens",
           "prior_pdb_count": 4,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Basement membrane",
+            "Cell adhesion",
+            "Coiled coil",
+            "Disulfide bond",
+            "Extracellular matrix",
+            "Glycoprotein",
+            "Laminin EGF-like domain",
+            "Phosphoprotein",
+            "Repeat",
+            "Secreted",
+            "Signal"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00052",
+            "PF00053",
+            "PF00055",
+            "PF24973"
+          ],
+          "interpro": [
+            "IPR000034",
+            "IPR000742",
+            "IPR002049",
+            "IPR008211",
+            "IPR050440",
+            "IPR056863"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P50895",
@@ -1339,7 +1675,43 @@
           "name": "Basal cell adhesion molecule",
           "organism": "Homo sapiens",
           "prior_pdb_count": 2,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Blood group antigen",
+            "Cell adhesion",
+            "Cell membrane",
+            "Disulfide bond",
+            "Glycoprotein",
+            "Immunoglobulin domain",
+            "Membrane",
+            "Phosphoprotein",
+            "Receptor",
+            "Repeat",
+            "Signal",
+            "Transmembrane",
+            "Transmembrane helix"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF07686",
+            "PF08205",
+            "PF13895",
+            "PF13927"
+          ],
+          "interpro": [
+            "IPR003598",
+            "IPR003599",
+            "IPR007110",
+            "IPR013106",
+            "IPR013162",
+            "IPR013783",
+            "IPR036179",
+            "IPR051116"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "Q47106",
@@ -1348,11 +1720,34 @@
           "name": "Cytotoxic necrotizing factor 1",
           "organism": "Escherichia coli",
           "prior_pdb_count": 2,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [],
+          "ec": [],
+          "pfam": [
+            "PF05785",
+            "PF15962",
+            "PF20178"
+          ],
+          "interpro": [
+            "IPR008430",
+            "IPR011324",
+            "IPR031886",
+            "IPR037040",
+            "IPR046673",
+            "IPR061408"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Pseudomonadati"
+          ]
         }
       ],
       "score": 54,
-      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "categories_draft": [
+        "receptor",
+        "immune"
+      ]
     },
     {
       "pmcid": "PMC13686949",
@@ -1462,11 +1857,43 @@
           "name": "Microtubule-associated protein tau",
           "organism": "Mus musculus",
           "prior_pdb_count": 2,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Acetylation",
+            "Alternative splicing",
+            "Cell membrane",
+            "Cell projection",
+            "Cytoplasm",
+            "Cytoskeleton",
+            "Disulfide bond",
+            "Glycoprotein",
+            "Isopeptide bond",
+            "Membrane",
+            "Methylation",
+            "Microtubule",
+            "Phosphoprotein",
+            "Repeat",
+            "Secreted",
+            "Ubl conjugation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00418"
+          ],
+          "interpro": [
+            "IPR001084",
+            "IPR002955",
+            "IPR027324"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 52,
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13688729",
@@ -1697,7 +2124,8 @@
       },
       "proteins": [],
       "score": 51,
-      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13684551",
@@ -1739,7 +2167,8 @@
       },
       "proteins": [],
       "score": 40,
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13686963",
@@ -1782,7 +2211,8 @@
       },
       "proteins": [],
       "score": 35,
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13689815",
@@ -2885,18 +3315,99 @@
           "gene": null,
           "synonyms": [],
           "name": "IGH + IGL c137_light_IGLV2-8_IGLJ2",
-          "organism": "Homo sapiens"
+          "organism": "Homo sapiens",
+          "keywords": [
+            "Adaptive immunity",
+            "Cell membrane",
+            "Disulfide bond",
+            "Immunity",
+            "Immunoglobulin",
+            "Immunoglobulin domain",
+            "Membrane",
+            "Secreted"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF07686"
+          ],
+          "interpro": [
+            "IPR003599",
+            "IPR007110",
+            "IPR013106",
+            "IPR013783",
+            "IPR036179",
+            "IPR050150"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P0DTC2",
           "gene": "S",
           "synonyms": [],
           "name": "Spike glycoprotein",
-          "organism": "Severe acute respiratory syndrome coronavirus 2"
+          "organism": "Severe acute respiratory syndrome coronavirus 2",
+          "keywords": [
+            "Coiled coil",
+            "Disulfide bond",
+            "Fusion of virus membrane with host endosomal membrane",
+            "Fusion of virus membrane with host membrane",
+            "Glycoprotein",
+            "Host cell membrane",
+            "Host membrane",
+            "Host-virus interaction",
+            "Inhibition of host innate immune response by virus",
+            "Inhibition of host tetherin by virus",
+            "Lipoprotein",
+            "Membrane",
+            "Palmitate",
+            "Signal",
+            "Superantigen",
+            "Transmembrane",
+            "Transmembrane helix",
+            "Viral attachment to host cell",
+            "Viral envelope protein",
+            "Viral immunoevasion",
+            "Viral penetration into host cytoplasm",
+            "Virion",
+            "Virulence",
+            "Virus entry into host cell"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF01601",
+            "PF09408",
+            "PF16451",
+            "PF19209"
+          ],
+          "interpro": [
+            "IPR002552",
+            "IPR018548",
+            "IPR032500",
+            "IPR036326",
+            "IPR042578",
+            "IPR043002",
+            "IPR043473",
+            "IPR043607",
+            "IPR044341",
+            "IPR044366",
+            "IPR044873",
+            "IPR044874"
+          ],
+          "lineage": [
+            "Viruses",
+            "Riboviria"
+          ]
         }
       ],
       "score": 5,
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "immune",
+        "pathogen"
+      ]
     },
     {
       "pmcid": "PMC13683633",
@@ -5961,11 +6472,189 @@
           "gene": "rep",
           "synonyms": [],
           "name": "Replicase polyprotein 1ab",
-          "organism": "Severe acute respiratory syndrome coronavirus 2"
+          "organism": "Severe acute respiratory syndrome coronavirus 2",
+          "keywords": [
+            "ATP-binding",
+            "Activation of host autophagy by virus",
+            "Decay of host mRNAs by virus",
+            "Disulfide bond",
+            "Endonuclease",
+            "Eukaryotic host gene expression shutoff by virus",
+            "Eukaryotic host translation shutoff by virus",
+            "Exonuclease",
+            "Helicase",
+            "Host Golgi apparatus",
+            "Host cytoplasm",
+            "Host endoplasmic reticulum",
+            "Host endosome",
+            "Host gene expression shutoff by virus",
+            "Host mRNA suppression by virus",
+            "Host membrane",
+            "Host nucleus",
+            "Host-virus interaction",
+            "Hydrolase",
+            "Inhibition of host IRF3 by virus",
+            "Inhibition of host ISG15 by virus",
+            "Inhibition of host NF-kappa-B by virus",
+            "Inhibition of host RLR pathway by virus",
+            "Inhibition of host TBK1 by virus",
+            "Inhibition of host TLR pathway by virus",
+            "Inhibition of host innate immune response by virus",
+            "Inhibition of host interferon signaling pathway by virus",
+            "Interferon antiviral system evasion",
+            "Isopeptide bond",
+            "Leucine-rich repeat",
+            "Lyase",
+            "Membrane",
+            "Metal-binding",
+            "Methyltransferase",
+            "Modulation of host ubiquitin pathway by viral deubiquitinase",
+            "Modulation of host ubiquitin pathway by virus",
+            "Nuclease",
+            "Nucleotide-binding",
+            "Nucleotidyltransferase",
+            "Protease",
+            "RNA-binding",
+            "RNA-directed RNA polymerase",
+            "Repeat",
+            "Ribosomal frameshifting",
+            "Thiol protease",
+            "Transferase",
+            "Transmembrane",
+            "Transmembrane helix",
+            "Ubl conjugation",
+            "Ubl conjugation pathway",
+            "Viral RNA replication",
+            "Viral immunoevasion",
+            "Zinc",
+            "Zinc-finger"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00680",
+            "PF01661",
+            "PF05409",
+            "PF06460",
+            "PF06471",
+            "PF06478",
+            "PF08710",
+            "PF08715",
+            "PF08716",
+            "PF08717",
+            "PF09401",
+            "PF11501",
+            "PF11633",
+            "PF12124",
+            "PF12379",
+            "PF13087",
+            "PF16251",
+            "PF16348",
+            "PF19211",
+            "PF19213",
+            "PF19215",
+            "PF19216",
+            "PF19217",
+            "PF19218",
+            "PF19219",
+            "PF20631",
+            "PF20632",
+            "PF20633"
+          ],
+          "interpro": [
+            "IPR001205",
+            "IPR002589",
+            "IPR007094",
+            "IPR008740",
+            "IPR009003",
+            "IPR009461",
+            "IPR009466",
+            "IPR009469",
+            "IPR013016",
+            "IPR014822",
+            "IPR014828",
+            "IPR014829",
+            "IPR018995",
+            "IPR021590",
+            "IPR022733",
+            "IPR024358",
+            "IPR024375",
+            "IPR027351",
+            "IPR027352",
+            "IPR027417",
+            "IPR029063",
+            "IPR032505",
+            "IPR032592",
+            "IPR036333",
+            "IPR036499",
+            "IPR037204",
+            "IPR037227",
+            "IPR037230",
+            "IPR038030",
+            "IPR038083",
+            "IPR038123",
+            "IPR038166",
+            "IPR038400",
+            "IPR041679",
+            "IPR042515",
+            "IPR042570",
+            "IPR043174",
+            "IPR043177",
+            "IPR043178",
+            "IPR043472",
+            "IPR043477",
+            "IPR043478",
+            "IPR043502",
+            "IPR043503",
+            "IPR043606",
+            "IPR043608",
+            "IPR043609",
+            "IPR043610",
+            "IPR043611",
+            "IPR043612",
+            "IPR043613",
+            "IPR043615",
+            "IPR044315",
+            "IPR044322",
+            "IPR044330",
+            "IPR044343",
+            "IPR044351",
+            "IPR044353",
+            "IPR044357",
+            "IPR044367",
+            "IPR044371",
+            "IPR044389",
+            "IPR044401",
+            "IPR044863",
+            "IPR044864",
+            "IPR046435",
+            "IPR046436",
+            "IPR046438",
+            "IPR046440",
+            "IPR046441",
+            "IPR046442",
+            "IPR046443",
+            "IPR047566",
+            "IPR047567",
+            "IPR047570",
+            "IPR047573",
+            "IPR048672",
+            "IPR048673",
+            "IPR049894",
+            "IPR050534"
+          ],
+          "lineage": [
+            "Viruses",
+            "Riboviria"
+          ]
         }
       ],
       "score": 5,
-      "license_url": null
+      "license_url": null,
+      "categories_draft": [
+        "protease",
+        "nucleic",
+        "pathogen"
+      ]
     },
     {
       "pmcid": "PMC13690249",
@@ -11601,21 +12290,90 @@
           "gene": "SRPRB",
           "synonyms": [],
           "name": "Signal recognition particle receptor subunit beta",
-          "organism": "Oryctolagus cuniculus"
+          "organism": "Oryctolagus cuniculus",
+          "keywords": [
+            "Endoplasmic reticulum",
+            "GTP-binding",
+            "Membrane",
+            "Metal-binding",
+            "Nucleotide-binding",
+            "Phosphoprotein",
+            "Receptor",
+            "Transmembrane",
+            "Transmembrane helix"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF09439"
+          ],
+          "interpro": [
+            "IPR019009",
+            "IPR024156",
+            "IPR027417"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "G1TCX6",
           "gene": "SRPRA",
           "synonyms": [],
           "name": "SRP receptor subunit alpha",
-          "organism": "Oryctolagus cuniculus"
+          "organism": "Oryctolagus cuniculus",
+          "keywords": [
+            "Endoplasmic reticulum",
+            "GTP-binding",
+            "Membrane",
+            "Metal-binding",
+            "Nucleotide-binding",
+            "Receptor"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00448",
+            "PF02881"
+          ],
+          "interpro": [
+            "IPR000897",
+            "IPR003593",
+            "IPR011012",
+            "IPR013822",
+            "IPR027417",
+            "IPR036225",
+            "IPR042101"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "J9PAS6",
           "gene": "SRP19",
           "synonyms": [],
           "name": "Signal recognition particle 19 kDa protein",
-          "organism": "Canis lupus familiaris"
+          "organism": "Canis lupus familiaris",
+          "keywords": [
+            "Cytoplasm",
+            "Nucleus",
+            "RNA-binding",
+            "Ribonucleoprotein",
+            "Signal recognition particle"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF01922"
+          ],
+          "interpro": [
+            "IPR002778",
+            "IPR036521"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P08240",
@@ -11624,60 +12382,289 @@
             "SRPR"
           ],
           "name": "Signal recognition particle receptor subunit alpha",
-          "organism": "Homo sapiens"
+          "organism": "Homo sapiens",
+          "keywords": [
+            "Alternative splicing",
+            "Endoplasmic reticulum",
+            "GTP-binding",
+            "Membrane",
+            "Nucleotide-binding",
+            "Phosphoprotein",
+            "Receptor"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00448",
+            "PF02881",
+            "PF04086"
+          ],
+          "interpro": [
+            "IPR000897",
+            "IPR003593",
+            "IPR007222",
+            "IPR011012",
+            "IPR013822",
+            "IPR027417",
+            "IPR036225",
+            "IPR042101"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P16255",
           "gene": "SRP14",
           "synonyms": [],
           "name": "Signal recognition particle 14 kDa protein",
-          "organism": "Canis lupus familiaris"
+          "organism": "Canis lupus familiaris",
+          "keywords": [
+            "Cytoplasm",
+            "Phosphoprotein",
+            "RNA-binding",
+            "Ribonucleoprotein",
+            "Signal recognition particle"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF02290"
+          ],
+          "interpro": [
+            "IPR003210",
+            "IPR009018"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P21262",
           "gene": "SRP9",
           "synonyms": [],
           "name": "Signal recognition particle 9 kDa protein",
-          "organism": "Canis lupus familiaris"
+          "organism": "Canis lupus familiaris",
+          "keywords": [
+            "Cytoplasm",
+            "RNA-binding",
+            "Ribonucleoprotein",
+            "Signal recognition particle"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF05486"
+          ],
+          "interpro": [
+            "IPR008832",
+            "IPR009018",
+            "IPR039432",
+            "IPR039914"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P33731",
           "gene": "SRP72",
           "synonyms": [],
           "name": "Signal recognition particle subunit SRP72",
-          "organism": "Canis lupus familiaris"
+          "organism": "Canis lupus familiaris",
+          "keywords": [
+            "Acetylation",
+            "Cytoplasm",
+            "Endoplasmic reticulum",
+            "Isopeptide bond",
+            "Phosphoprotein",
+            "Repeat",
+            "Ribonucleoprotein",
+            "Signal recognition particle",
+            "TPR repeat",
+            "Ubl conjugation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF08492",
+            "PF13181",
+            "PF17004"
+          ],
+          "interpro": [
+            "IPR011990",
+            "IPR013699",
+            "IPR019734",
+            "IPR026270",
+            "IPR031545"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P61010",
           "gene": "SRP54",
           "synonyms": [],
           "name": "Signal recognition particle subunit SRP54",
-          "organism": "Canis lupus familiaris"
+          "organism": "Canis lupus familiaris",
+          "keywords": [
+            "Cytoplasm",
+            "Endoplasmic reticulum",
+            "GTP-binding",
+            "Hydrolase",
+            "Nucleotide-binding",
+            "Nucleus",
+            "RNA-binding",
+            "Ribonucleoprotein",
+            "Signal recognition particle"
+          ],
+          "ec": [
+            "3.6.5.4"
+          ],
+          "pfam": [
+            "PF00448",
+            "PF02881",
+            "PF02978"
+          ],
+          "interpro": [
+            "IPR000897",
+            "IPR003593",
+            "IPR004125",
+            "IPR006325",
+            "IPR013822",
+            "IPR022941",
+            "IPR027417",
+            "IPR036225",
+            "IPR036891",
+            "IPR042101"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P61011",
           "gene": "SRP54",
           "synonyms": [],
           "name": "Signal recognition particle subunit SRP54",
-          "organism": "Homo sapiens"
+          "organism": "Homo sapiens",
+          "keywords": [
+            "Alternative splicing",
+            "Cytoplasm",
+            "Disease variant",
+            "Endoplasmic reticulum",
+            "GTP-binding",
+            "Hydrolase",
+            "Nucleotide-binding",
+            "Nucleus",
+            "RNA-binding",
+            "Ribonucleoprotein",
+            "Signal recognition particle"
+          ],
+          "ec": [
+            "3.6.5.4"
+          ],
+          "pfam": [
+            "PF00448",
+            "PF02881",
+            "PF02978"
+          ],
+          "interpro": [
+            "IPR000897",
+            "IPR003593",
+            "IPR004125",
+            "IPR006325",
+            "IPR013822",
+            "IPR022941",
+            "IPR027417",
+            "IPR036225",
+            "IPR036891",
+            "IPR042101"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "Q00004",
           "gene": "SRP68",
           "synonyms": [],
           "name": "Signal recognition particle subunit SRP68",
-          "organism": "Canis lupus familiaris"
+          "organism": "Canis lupus familiaris",
+          "keywords": [
+            "Acetylation",
+            "Cytoplasm",
+            "Endoplasmic reticulum",
+            "Nucleus",
+            "Phosphoprotein",
+            "RNA-binding",
+            "Ribonucleoprotein",
+            "Signal recognition particle"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF16969"
+          ],
+          "interpro": [
+            "IPR026258",
+            "IPR034652",
+            "IPR038253"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "Q8U070",
           "gene": "srp54",
           "synonyms": [],
           "name": "Signal recognition particle 54 kDa protein",
-          "organism": "Pyrococcus furiosus (strain ATCC 43587 / DSM 3638 / JCM 8422 / Vc1)"
+          "organism": "Pyrococcus furiosus (strain ATCC 43587 / DSM 3638 / JCM 8422 / Vc1)",
+          "keywords": [
+            "Cytoplasm",
+            "GTP-binding",
+            "Hydrolase",
+            "Nucleotide-binding",
+            "RNA-binding",
+            "Ribonucleoprotein",
+            "Signal recognition particle"
+          ],
+          "ec": [
+            "3.6.5.4"
+          ],
+          "pfam": [
+            "PF00448",
+            "PF02881",
+            "PF02978"
+          ],
+          "interpro": [
+            "IPR000897",
+            "IPR003593",
+            "IPR004125",
+            "IPR013822",
+            "IPR022941",
+            "IPR027417",
+            "IPR036225",
+            "IPR036891",
+            "IPR042101"
+          ],
+          "lineage": [
+            "Archaea",
+            "Methanobacteriati"
+          ]
         }
       ],
       "score": 5,
-      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "categories_draft": [
+        "translation",
+        "nucleic",
+        "receptor"
+      ]
     },
     {
       "pmcid": "PMC13688573",

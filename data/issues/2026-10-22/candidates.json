@@ -289,7 +289,39 @@
           "name": "HLA class II histocompatibility antigen, DR alpha chain",
           "organism": "Eptesicus fuscus",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "Adaptive immunity",
+            "Disulfide bond",
+            "Glycoprotein",
+            "Immunity",
+            "Immunoglobulin domain",
+            "MHC II",
+            "Membrane",
+            "Signal",
+            "Transmembrane",
+            "Transmembrane helix"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00993",
+            "PF07654"
+          ],
+          "interpro": [
+            "IPR001003",
+            "IPR003006",
+            "IPR003597",
+            "IPR007110",
+            "IPR011162",
+            "IPR013783",
+            "IPR014745",
+            "IPR036179",
+            "IPR050160"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P67883",
@@ -298,11 +330,35 @@
           "name": "Large ribosomal subunit protein eL30",
           "organism": "Gallus gallus",
           "prior_pdb_count": 3,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Cytoplasm",
+            "Ribonucleoprotein",
+            "Ribosomal protein"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF01248"
+          ],
+          "interpro": [
+            "IPR000231",
+            "IPR004038",
+            "IPR022991",
+            "IPR029064",
+            "IPR039109"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 88,
-      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "categories_draft": [
+        "translation",
+        "immune"
+      ]
     },
     {
       "pmcid": "PMC13681716",
@@ -406,7 +462,37 @@
           "name": "RNA-directed RNA polymerase",
           "organism": "Alongshan virus",
           "prior_pdb_count": 4,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Host nucleus",
+            "Membrane",
+            "Nucleotide-binding",
+            "Nucleotidyltransferase",
+            "RNA-directed RNA polymerase",
+            "S-adenosyl-L-methionine",
+            "Transferase",
+            "Viral RNA replication"
+          ],
+          "ec": [
+            "2.7.7.48"
+          ],
+          "pfam": [
+            "PF00972",
+            "PF01728",
+            "PF20483"
+          ],
+          "interpro": [
+            "IPR000208",
+            "IPR002877",
+            "IPR007094",
+            "IPR029063",
+            "IPR043502",
+            "IPR046811"
+          ],
+          "lineage": [
+            "Viruses",
+            "Riboviria"
+          ]
         },
         {
           "uniprot": "A0A4P2RZ45",
@@ -415,11 +501,45 @@
           "name": "RNA-directed RNA polymerase",
           "organism": "Amblyomma virus GXTV108",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "Host nucleus",
+            "Membrane",
+            "Nucleotide-binding",
+            "Nucleotidyltransferase",
+            "RNA-directed RNA polymerase",
+            "Transferase",
+            "Transmembrane",
+            "Transmembrane helix",
+            "Viral RNA replication"
+          ],
+          "ec": [
+            "2.7.7.48"
+          ],
+          "pfam": [
+            "PF00972",
+            "PF01728",
+            "PF20483"
+          ],
+          "interpro": [
+            "IPR000208",
+            "IPR002877",
+            "IPR007094",
+            "IPR029063",
+            "IPR043502",
+            "IPR046811"
+          ],
+          "lineage": [
+            "Viruses"
+          ]
         }
       ],
       "score": 87,
-      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "categories_draft": [
+        "nucleic",
+        "pathogen"
+      ]
     },
     {
       "pmcid": "PMC13681662",
@@ -1092,7 +1212,25 @@
           "name": "Major capsid protein",
           "organism": "Varicella-zoster virus (strain Dumas)",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "Capsid protein",
+            "Host nucleus",
+            "T=16 icosahedral capsid protein",
+            "Virion"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF03122"
+          ],
+          "interpro": [
+            "IPR000912",
+            "IPR023233"
+          ],
+          "lineage": [
+            "Viruses",
+            "Duplodnaviria"
+          ]
         },
         {
           "uniprot": "P09276",
@@ -1101,7 +1239,26 @@
           "name": "Triplex capsid protein 1",
           "organism": "Varicella-zoster virus (strain Dumas)",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "Capsid protein",
+            "Host nucleus",
+            "Host-virus interaction",
+            "Inhibition of host caspases by virus",
+            "Modulation of host cell apoptosis by virus",
+            "Virion"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF03327"
+          ],
+          "interpro": [
+            "IPR004999"
+          ],
+          "lineage": [
+            "Viruses",
+            "Duplodnaviria"
+          ]
         },
         {
           "uniprot": "P09279",
@@ -1110,7 +1267,23 @@
           "name": "Small capsomere-interacting protein",
           "organism": "Varicella-zoster virus (strain Dumas)",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "Capsid protein",
+            "Host nucleus",
+            "Virion"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF04496"
+          ],
+          "interpro": [
+            "IPR007584"
+          ],
+          "lineage": [
+            "Viruses",
+            "Duplodnaviria"
+          ]
         },
         {
           "uniprot": "P09291",
@@ -1119,7 +1292,23 @@
           "name": "Triplex capsid protein 2",
           "organism": "Varicella-zoster virus (strain Dumas)",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "Capsid protein",
+            "Host nucleus",
+            "Virion"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF01802"
+          ],
+          "interpro": [
+            "IPR002690"
+          ],
+          "lineage": [
+            "Viruses",
+            "Duplodnaviria"
+          ]
         },
         {
           "uniprot": "P10201",
@@ -1128,7 +1317,26 @@
           "name": "Capsid vertex component 1",
           "organism": "Human herpesvirus 1 (strain 17)",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "Capsid protein",
+            "Host nucleus",
+            "Late protein",
+            "Viral genome packaging",
+            "Viral release from host cell",
+            "Virion"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF04559"
+          ],
+          "interpro": [
+            "IPR007640"
+          ],
+          "lineage": [
+            "Viruses",
+            "Duplodnaviria"
+          ]
         },
         {
           "uniprot": "P10209",
@@ -1137,7 +1345,28 @@
           "name": "Capsid vertex component 2",
           "organism": "Human herpesvirus 1 (strain 17)",
           "prior_pdb_count": 1,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Capsid protein",
+            "Host nucleus",
+            "Host-virus interaction",
+            "Viral genome packaging",
+            "Viral penetration into host nucleus",
+            "Viral release from host cell",
+            "Virion",
+            "Virus entry into host cell"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF01499"
+          ],
+          "interpro": [
+            "IPR002493"
+          ],
+          "lineage": [
+            "Viruses",
+            "Duplodnaviria"
+          ]
         },
         {
           "uniprot": "P10220",
@@ -1146,7 +1375,39 @@
           "name": "Large tegument protein deneddylase",
           "organism": "Human herpesvirus 1 (strain 17)",
           "prior_pdb_count": 2,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Host cytoplasm",
+            "Host nucleus",
+            "Host-virus interaction",
+            "Hydrolase",
+            "Modulation of host ubiquitin pathway by viral deubiquitinase",
+            "Modulation of host ubiquitin pathway by virus",
+            "Protease",
+            "Repeat",
+            "Thiol protease",
+            "Ubl conjugation pathway",
+            "Virion",
+            "Virion tegument"
+          ],
+          "ec": [
+            "3.4.19.12",
+            "3.4.22.-"
+          ],
+          "pfam": [
+            "PF03586",
+            "PF04843"
+          ],
+          "interpro": [
+            "IPR005210",
+            "IPR006928",
+            "IPR034702",
+            "IPR038765"
+          ],
+          "lineage": [
+            "Viruses",
+            "Duplodnaviria"
+          ]
         },
         {
           "uniprot": "Q6QCL5",
@@ -1158,7 +1419,25 @@
           "name": "Major capsid protein",
           "organism": "Human herpesvirus 3",
           "prior_pdb_count": 3,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Capsid protein",
+            "Host nucleus",
+            "T=16 icosahedral capsid protein",
+            "Virion"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF03122"
+          ],
+          "interpro": [
+            "IPR000912",
+            "IPR023233"
+          ],
+          "lineage": [
+            "Viruses",
+            "Duplodnaviria"
+          ]
         },
         {
           "uniprot": "U5NQG6",
@@ -1167,11 +1446,31 @@
           "name": "Small capsomere-interacting protein",
           "organism": "Human herpesvirus 3",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "Capsid protein",
+            "Host nucleus",
+            "Virion"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF04496"
+          ],
+          "interpro": [
+            "IPR007584"
+          ],
+          "lineage": [
+            "Viruses",
+            "Duplodnaviria"
+          ]
         }
       ],
       "score": 85,
-      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "categories_draft": [
+        "pathogen",
+        "protease"
+      ]
     },
     {
       "pmcid": "PMC13681685",
@@ -1441,11 +1740,130 @@
           "name": "RNA-directed RNA polymerase",
           "organism": "Zika virus",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "ATP-binding",
+            "Acetylation",
+            "Activation of host autophagy by virus",
+            "Capsid protein",
+            "Cleavage on pair of basic residues",
+            "Disulfide bond",
+            "Fusion of virus membrane with host endosomal membrane",
+            "Fusion of virus membrane with host membrane",
+            "GTP-binding",
+            "Glycoprotein",
+            "Helicase",
+            "Host cytoplasm",
+            "Host endoplasmic reticulum",
+            "Host membrane",
+            "Host nucleus",
+            "Host-virus interaction",
+            "Hydrolase",
+            "Inhibition of host STAT2 by virus",
+            "Inhibition of host innate immune response by virus",
+            "Inhibition of host interferon signaling pathway by virus",
+            "Interferon antiviral system evasion",
+            "Isopeptide bond",
+            "Membrane",
+            "Metal-binding",
+            "Methyltransferase",
+            "Nucleotide-binding",
+            "Nucleotidyltransferase",
+            "Phosphoprotein",
+            "Protease",
+            "RNA-binding",
+            "RNA-directed RNA polymerase",
+            "S-adenosyl-L-methionine",
+            "Secreted",
+            "Serine protease",
+            "Transferase",
+            "Transmembrane",
+            "Transmembrane helix",
+            "Ubl conjugation",
+            "Viral RNA replication",
+            "Viral attachment to host cell",
+            "Viral immunoevasion",
+            "Viral penetration into host cytoplasm",
+            "Virion",
+            "Virus entry into host cell",
+            "Zinc",
+            "mRNA capping",
+            "mRNA processing"
+          ],
+          "ec": [
+            "2.7.7.48"
+          ],
+          "pfam": [
+            "PF00869",
+            "PF00948",
+            "PF00949",
+            "PF00972",
+            "PF01002",
+            "PF01003",
+            "PF01004",
+            "PF01005",
+            "PF01349",
+            "PF01350",
+            "PF01570",
+            "PF01728",
+            "PF02832",
+            "PF07652",
+            "PF20483",
+            "PF20907",
+            "PF21659"
+          ],
+          "interpro": [
+            "IPR000069",
+            "IPR000208",
+            "IPR000336",
+            "IPR000404",
+            "IPR000487",
+            "IPR000752",
+            "IPR001122",
+            "IPR001157",
+            "IPR001528",
+            "IPR001650",
+            "IPR001850",
+            "IPR002535",
+            "IPR002877",
+            "IPR007094",
+            "IPR009003",
+            "IPR011492",
+            "IPR011998",
+            "IPR013755",
+            "IPR013756",
+            "IPR014001",
+            "IPR014412",
+            "IPR014756",
+            "IPR026470",
+            "IPR026490",
+            "IPR027287",
+            "IPR027417",
+            "IPR029063",
+            "IPR036253",
+            "IPR037172",
+            "IPR038055",
+            "IPR038302",
+            "IPR038345",
+            "IPR038688",
+            "IPR043502",
+            "IPR046811",
+            "IPR047530",
+            "IPR049486"
+          ],
+          "lineage": [
+            "Viruses",
+            "Riboviria"
+          ]
         }
       ],
       "score": 85,
-      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "categories_draft": [
+        "protease",
+        "nucleic",
+        "pathogen"
+      ]
     },
     {
       "pmcid": "PMC13681512",
@@ -1661,11 +2079,65 @@
           "name": "Spike glycoprotein",
           "organism": "Severe acute respiratory syndrome coronavirus 2",
           "prior_pdb_count": 2270,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Coiled coil",
+            "Disulfide bond",
+            "Fusion of virus membrane with host endosomal membrane",
+            "Fusion of virus membrane with host membrane",
+            "Glycoprotein",
+            "Host cell membrane",
+            "Host membrane",
+            "Host-virus interaction",
+            "Inhibition of host innate immune response by virus",
+            "Inhibition of host tetherin by virus",
+            "Lipoprotein",
+            "Membrane",
+            "Palmitate",
+            "Signal",
+            "Superantigen",
+            "Transmembrane",
+            "Transmembrane helix",
+            "Viral attachment to host cell",
+            "Viral envelope protein",
+            "Viral immunoevasion",
+            "Viral penetration into host cytoplasm",
+            "Virion",
+            "Virulence",
+            "Virus entry into host cell"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF01601",
+            "PF09408",
+            "PF16451",
+            "PF19209"
+          ],
+          "interpro": [
+            "IPR002552",
+            "IPR018548",
+            "IPR032500",
+            "IPR036326",
+            "IPR042578",
+            "IPR043002",
+            "IPR043473",
+            "IPR043607",
+            "IPR044341",
+            "IPR044366",
+            "IPR044873",
+            "IPR044874"
+          ],
+          "lineage": [
+            "Viruses",
+            "Riboviria"
+          ]
         }
       ],
       "score": 58,
-      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "categories_draft": [
+        "pathogen"
+      ]
     },
     {
       "pmcid": "PMC13681632",
@@ -1764,7 +2236,47 @@
           "name": "Transmembrane protease serine 2",
           "organism": "Homo sapiens",
           "prior_pdb_count": 33,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Alternative splicing",
+            "Autocatalytic cleavage",
+            "Cell membrane",
+            "Disulfide bond",
+            "Glycoprotein",
+            "Host-virus interaction",
+            "Hydrolase",
+            "Membrane",
+            "Protease",
+            "Secreted",
+            "Serine protease",
+            "Signal-anchor",
+            "Transmembrane",
+            "Transmembrane helix",
+            "Zymogen"
+          ],
+          "ec": [
+            "3.4.21.122"
+          ],
+          "pfam": [
+            "PF00089",
+            "PF15494"
+          ],
+          "interpro": [
+            "IPR001190",
+            "IPR001254",
+            "IPR001314",
+            "IPR002172",
+            "IPR009003",
+            "IPR018114",
+            "IPR023415",
+            "IPR033116",
+            "IPR036055",
+            "IPR036772"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "Q5MQD0",
@@ -1773,11 +2285,61 @@
           "name": "Spike glycoprotein",
           "organism": "Human coronavirus HKU1 (isolate N1)",
           "prior_pdb_count": 31,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Coiled coil",
+            "Disulfide bond",
+            "Fusion of virus membrane with host endosomal membrane",
+            "Fusion of virus membrane with host membrane",
+            "Glycoprotein",
+            "Host cell membrane",
+            "Host membrane",
+            "Host-virus interaction",
+            "Lipoprotein",
+            "Membrane",
+            "Palmitate",
+            "Signal",
+            "Transmembrane",
+            "Transmembrane helix",
+            "Viral attachment to host cell",
+            "Viral envelope protein",
+            "Viral penetration into host cytoplasm",
+            "Virion",
+            "Virulence",
+            "Virus entry into host cell"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF01601",
+            "PF09408",
+            "PF16451",
+            "PF19209"
+          ],
+          "interpro": [
+            "IPR002552",
+            "IPR018548",
+            "IPR032500",
+            "IPR036326",
+            "IPR042578",
+            "IPR043002",
+            "IPR043473",
+            "IPR043607",
+            "IPR044339",
+            "IPR044873",
+            "IPR044874"
+          ],
+          "lineage": [
+            "Viruses",
+            "Riboviria"
+          ]
         }
       ],
       "score": 56,
-      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "categories_draft": [
+        "protease",
+        "pathogen"
+      ]
     },
     {
       "pmcid": "PMC13681648",
@@ -1880,7 +2442,8 @@
       },
       "proteins": [],
       "score": 55,
-      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "SN-s41586-026-11184-1",
@@ -2039,7 +2602,39 @@
           "name": "Protocadherin-1",
           "organism": "Homo sapiens",
           "prior_pdb_count": 4,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Alternative splicing",
+            "Calcium",
+            "Cell adhesion",
+            "Cell junction",
+            "Cell membrane",
+            "Glycoprotein",
+            "Membrane",
+            "Phosphoprotein",
+            "Repeat",
+            "Signal",
+            "Transmembrane",
+            "Transmembrane helix"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00028",
+            "PF08266",
+            "PF08374"
+          ],
+          "interpro": [
+            "IPR002126",
+            "IPR013164",
+            "IPR013585",
+            "IPR015919",
+            "IPR020894",
+            "IPR050174"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "Q9E006",
@@ -2048,11 +2643,65 @@
           "name": "Envelopment polyprotein",
           "organism": "Andes orthohantavirus",
           "prior_pdb_count": 13,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Activation of host autophagy by virus",
+            "Disulfide bond",
+            "Fusion of virus membrane with host endosomal membrane",
+            "Fusion of virus membrane with host membrane",
+            "Glycoprotein",
+            "Host Golgi apparatus",
+            "Host endoplasmic reticulum",
+            "Host membrane",
+            "Host mitochondrion",
+            "Host-virus interaction",
+            "Inhibition of host MAVS by virus",
+            "Inhibition of host RLR pathway by virus",
+            "Inhibition of host TRAFs by virus",
+            "Inhibition of host innate immune response by virus",
+            "Membrane",
+            "Metal-binding",
+            "Phosphoprotein",
+            "Repeat",
+            "Signal",
+            "Transmembrane",
+            "Transmembrane helix",
+            "Viral attachment to host cell",
+            "Viral envelope protein",
+            "Viral immunoevasion",
+            "Viral penetration into host cytoplasm",
+            "Virion",
+            "Virus endocytosis by host",
+            "Virus entry into host cell",
+            "Zinc",
+            "Zinc-finger"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF01561",
+            "PF01567",
+            "PF20679",
+            "PF20682"
+          ],
+          "interpro": [
+            "IPR002532",
+            "IPR002534",
+            "IPR012316",
+            "IPR016402",
+            "IPR048790",
+            "IPR048791"
+          ],
+          "lineage": [
+            "Viruses",
+            "Riboviria"
+          ]
         }
       ],
       "score": 53,
-      "license_url": null
+      "license_url": null,
+      "categories_draft": [
+        "pathogen"
+      ]
     },
     {
       "pmcid": "PMC13681510",
@@ -2275,7 +2924,71 @@
           "name": "Structural polyprotein",
           "organism": "Semliki forest virus",
           "prior_pdb_count": 16,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Autocatalytic cleavage",
+            "Capsid protein",
+            "Clathrin-mediated endocytosis of virus by host",
+            "Cleavage on pair of basic residues",
+            "Disulfide bond",
+            "Fusion of virus membrane with host endosomal membrane",
+            "Fusion of virus membrane with host membrane",
+            "Glycoprotein",
+            "Host Golgi apparatus",
+            "Host cell membrane",
+            "Host cytoplasm",
+            "Host endoplasmic reticulum",
+            "Host membrane",
+            "Host nucleus",
+            "Host-virus interaction",
+            "Hydrolase",
+            "Ion channel",
+            "Ion transport",
+            "Lipoprotein",
+            "Membrane",
+            "Palmitate",
+            "Protease",
+            "RNA-binding",
+            "Ribosomal frameshifting",
+            "Serine protease",
+            "T=4 icosahedral capsid protein",
+            "Transmembrane",
+            "Transmembrane helix",
+            "Transport",
+            "Viral attachment to host cell",
+            "Viral attachment to host entry receptor",
+            "Viral envelope protein",
+            "Viral ion channel",
+            "Viral penetration into host cytoplasm",
+            "Virion",
+            "Virus endocytosis by host",
+            "Virus entry into host cell"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00943",
+            "PF00944",
+            "PF01563",
+            "PF01589"
+          ],
+          "interpro": [
+            "IPR000336",
+            "IPR000930",
+            "IPR000936",
+            "IPR002533",
+            "IPR002548",
+            "IPR009003",
+            "IPR014756",
+            "IPR036253",
+            "IPR038055",
+            "IPR042304",
+            "IPR042305",
+            "IPR042306"
+          ],
+          "lineage": [
+            "Viruses",
+            "Riboviria"
+          ]
         },
         {
           "uniprot": "P98155",
@@ -2284,11 +2997,66 @@
           "name": "Very low-density lipoprotein receptor",
           "organism": "Homo sapiens",
           "prior_pdb_count": 24,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Alternative splicing",
+            "Cell membrane",
+            "Cholesterol metabolism",
+            "Coated pit",
+            "Disulfide bond",
+            "EGF-like domain",
+            "Endocytosis",
+            "Glycoprotein",
+            "Host-virus interaction",
+            "Intellectual disability",
+            "Isopeptide bond",
+            "Lipid metabolism",
+            "Lipid transport",
+            "Membrane",
+            "Receptor",
+            "Repeat",
+            "Signal",
+            "Steroid metabolism",
+            "Sterol metabolism",
+            "Transmembrane",
+            "Transmembrane helix",
+            "Transport",
+            "Ubl conjugation",
+            "VLDL"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00057",
+            "PF00058",
+            "PF07645",
+            "PF14670"
+          ],
+          "interpro": [
+            "IPR000033",
+            "IPR000152",
+            "IPR000742",
+            "IPR001881",
+            "IPR002172",
+            "IPR011042",
+            "IPR018097",
+            "IPR023415",
+            "IPR036055",
+            "IPR049883",
+            "IPR051221"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 53,
-      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "categories_draft": [
+        "protease",
+        "receptor",
+        "channel"
+      ]
     },
     {
       "pmcid": "PMC13681652",
@@ -2460,7 +3228,27 @@
           "name": "Leptin",
           "organism": "Homo sapiens",
           "prior_pdb_count": 7,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Diabetes mellitus",
+            "Disease variant",
+            "Disulfide bond",
+            "Obesity",
+            "Secreted",
+            "Signal"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF02024"
+          ],
+          "interpro": [
+            "IPR000065",
+            "IPR009079"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P48357",
@@ -2472,11 +3260,51 @@
           "name": "Leptin receptor",
           "organism": "Homo sapiens",
           "prior_pdb_count": 6,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Alternative splicing",
+            "Cell membrane",
+            "Disulfide bond",
+            "Glycoprotein",
+            "Immunoglobulin domain",
+            "Membrane",
+            "Obesity",
+            "Phosphoprotein",
+            "Receptor",
+            "Repeat",
+            "Secreted",
+            "Signal",
+            "Transmembrane",
+            "Transmembrane helix"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00041",
+            "PF06328",
+            "PF18589"
+          ],
+          "interpro": [
+            "IPR003529",
+            "IPR003531",
+            "IPR003961",
+            "IPR007110",
+            "IPR010457",
+            "IPR013783",
+            "IPR036116",
+            "IPR041182"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 53,
-      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "categories_draft": [
+        "receptor",
+        "immune"
+      ]
     },
     {
       "pmcid": "PMC13681568",
@@ -2572,11 +3400,50 @@
           "name": "Fusion glycoprotein F0",
           "organism": "Human respiratory syncytial virus A (strain A2)",
           "prior_pdb_count": 93,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Cleavage on pair of basic residues",
+            "Coiled coil",
+            "Disulfide bond",
+            "Fusion of virus membrane with host cell membrane",
+            "Fusion of virus membrane with host membrane",
+            "Glycoprotein",
+            "Host Golgi apparatus",
+            "Host cell membrane",
+            "Host membrane",
+            "Host-virus interaction",
+            "Lipoprotein",
+            "Membrane",
+            "Palmitate",
+            "Signal",
+            "Syncytium formation induced by viral infection",
+            "Transmembrane",
+            "Transmembrane helix",
+            "Viral attachment to host cell",
+            "Viral attachment to host entry receptor",
+            "Viral envelope protein",
+            "Viral penetration into host cytoplasm",
+            "Virion",
+            "Virus entry into host cell"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00523"
+          ],
+          "interpro": [
+            "IPR000776"
+          ],
+          "lineage": [
+            "Viruses",
+            "Riboviria"
+          ]
         }
       ],
       "score": 51,
-      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "categories_draft": [
+        "pathogen"
+      ]
     },
     {
       "pmcid": "PMC13681533",
@@ -2672,11 +3539,50 @@
           "name": "Envelope glycoprotein B",
           "organism": "Human herpesvirus 1 (strain KOS)",
           "prior_pdb_count": 13,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Disulfide bond",
+            "Glycoprotein",
+            "Host Golgi apparatus",
+            "Host cell membrane",
+            "Host endosome",
+            "Host membrane",
+            "Host-virus interaction",
+            "Membrane",
+            "Phosphoprotein",
+            "Signal",
+            "Transmembrane",
+            "Transmembrane helix",
+            "Ubl conjugation",
+            "Viral attachment to host cell",
+            "Viral envelope protein",
+            "Virion",
+            "Virus entry into host cell"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00606",
+            "PF17416",
+            "PF17417"
+          ],
+          "interpro": [
+            "IPR000234",
+            "IPR035377",
+            "IPR035381",
+            "IPR038631",
+            "IPR055341"
+          ],
+          "lineage": [
+            "Viruses",
+            "Duplodnaviria"
+          ]
         }
       ],
       "score": 51,
-      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "categories_draft": [
+        "pathogen"
+      ]
     },
     {
       "pmcid": "PMC13681189",
@@ -4307,7 +5213,35 @@
           "gene": "e",
           "synonyms": [],
           "name": "Endolysin",
-          "organism": "Enterobacteria phage T4"
+          "organism": "Enterobacteria phage T4",
+          "keywords": [
+            "Antimicrobial",
+            "Bacteriolytic enzyme",
+            "Cytolysis",
+            "Glycosidase",
+            "Host cell lysis by virus",
+            "Host cytoplasm",
+            "Hydrolase",
+            "Viral release from host cell"
+          ],
+          "ec": [
+            "3.2.1.17"
+          ],
+          "pfam": [
+            "PF00959"
+          ],
+          "interpro": [
+            "IPR001165",
+            "IPR002196",
+            "IPR023346",
+            "IPR023347",
+            "IPR034690",
+            "IPR052619"
+          ],
+          "lineage": [
+            "Viruses",
+            "Duplodnaviria"
+          ]
         },
         {
           "uniprot": "P04896",
@@ -4316,7 +5250,39 @@
             "GNAS1"
           ],
           "name": "Guanine nucleotide-binding protein G(s) subunit alpha isoforms short",
-          "organism": "Bos taurus"
+          "organism": "Bos taurus",
+          "keywords": [
+            "Alternative splicing",
+            "Cell membrane",
+            "GTP-binding",
+            "Hydrolase",
+            "Isopeptide bond",
+            "Lipoprotein",
+            "Magnesium",
+            "Membrane",
+            "Metal-binding",
+            "Nucleotide-binding",
+            "Palmitate",
+            "Phosphoprotein",
+            "Transducer",
+            "Ubl conjugation"
+          ],
+          "ec": [
+            "3.6.5.-"
+          ],
+          "pfam": [
+            "PF00503"
+          ],
+          "interpro": [
+            "IPR000367",
+            "IPR001019",
+            "IPR011025",
+            "IPR027417"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P07550",
@@ -4326,32 +5292,142 @@
             "B2AR"
           ],
           "name": "Beta-2 adrenergic receptor",
-          "organism": "Homo sapiens"
+          "organism": "Homo sapiens",
+          "keywords": [
+            "Cell membrane",
+            "Disulfide bond",
+            "G protein-coupled receptor",
+            "Glycoprotein",
+            "Golgi apparatus",
+            "Hydroxylation",
+            "Lipoprotein",
+            "Membrane",
+            "Palmitate",
+            "Phosphoprotein",
+            "Receptor",
+            "Transducer",
+            "Transmembrane",
+            "Transmembrane helix",
+            "Ubl conjugation"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00001"
+          ],
+          "interpro": [
+            "IPR000276",
+            "IPR000332",
+            "IPR002233",
+            "IPR017452"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P07700",
           "gene": "ADRB1",
           "synonyms": [],
           "name": "Beta-1 adrenergic receptor",
-          "organism": "Meleagris gallopavo"
+          "organism": "Meleagris gallopavo",
+          "keywords": [
+            "Cell membrane",
+            "Disulfide bond",
+            "G protein-coupled receptor",
+            "Glycoprotein",
+            "Lipoprotein",
+            "Membrane",
+            "Palmitate",
+            "Phosphoprotein",
+            "Receptor",
+            "Transducer",
+            "Transmembrane",
+            "Transmembrane helix"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00001"
+          ],
+          "interpro": [
+            "IPR000276",
+            "IPR000507",
+            "IPR002233",
+            "IPR017452"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P62871",
           "gene": "GNB1",
           "synonyms": [],
           "name": "Guanine nucleotide-binding protein G(I)/G(S)/G(T) subunit beta-1",
-          "organism": "Bos taurus"
+          "organism": "Bos taurus",
+          "keywords": [
+            "Acetylation",
+            "Phosphoprotein",
+            "Repeat",
+            "Transducer",
+            "WD repeat"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF25391"
+          ],
+          "interpro": [
+            "IPR001632",
+            "IPR001680",
+            "IPR015943",
+            "IPR016346",
+            "IPR019775",
+            "IPR020472",
+            "IPR036322"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "P63212",
           "gene": "GNG2",
           "synonyms": [],
           "name": "Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-2",
-          "organism": "Bos taurus"
+          "organism": "Bos taurus",
+          "keywords": [
+            "Acetylation",
+            "Cell membrane",
+            "Lipoprotein",
+            "Membrane",
+            "Methylation",
+            "Prenylation",
+            "Transducer"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00631"
+          ],
+          "interpro": [
+            "IPR001770",
+            "IPR015898",
+            "IPR036284"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 5,
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "receptor",
+        "enzyme",
+        "pathogen"
+      ]
     },
     {
       "pmcid": "PMC13680313",

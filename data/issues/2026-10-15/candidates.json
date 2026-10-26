@@ -362,7 +362,46 @@
           "name": "Rh5-interacting protein",
           "organism": "Plasmodium falciparum (isolate 3D7)",
           "prior_pdb_count": 5,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Cell membrane",
+            "Cytoplasmic vesicle",
+            "Disulfide bond",
+            "Glycoprotein",
+            "Host cell membrane",
+            "Host membrane",
+            "Membrane",
+            "Secreted",
+            "Signal"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF29970",
+            "PF29972",
+            "PF29973",
+            "PF29974",
+            "PF29979",
+            "PF29990",
+            "PF29991",
+            "PF29995",
+            "PF29999"
+          ],
+          "interpro": [
+            "IPR000742",
+            "IPR062502",
+            "IPR062543",
+            "IPR062548",
+            "IPR062556",
+            "IPR062557",
+            "IPR062558",
+            "IPR063498",
+            "IPR063499",
+            "IPR063500"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Sar"
+          ]
         },
         {
           "uniprot": "P0DOX5",
@@ -371,7 +410,39 @@
           "name": "Immunoglobulin gamma-1 heavy chain",
           "organism": "Homo sapiens",
           "prior_pdb_count": 108,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Adaptive immunity",
+            "Cell membrane",
+            "Disulfide bond",
+            "Glycoprotein",
+            "Immunity",
+            "Immunoglobulin",
+            "Immunoglobulin domain",
+            "Membrane",
+            "Pyrrolidone carboxylic acid",
+            "Repeat",
+            "Secreted"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF07654",
+            "PF07686"
+          ],
+          "interpro": [
+            "IPR003006",
+            "IPR003597",
+            "IPR003599",
+            "IPR007110",
+            "IPR013106",
+            "IPR013783",
+            "IPR036179",
+            "IPR050380"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         },
         {
           "uniprot": "Q8IFM8",
@@ -382,7 +453,29 @@
           "name": "Cysteine-rich protective antigen",
           "organism": "Plasmodium falciparum (isolate 3D7)",
           "prior_pdb_count": 12,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Cell membrane",
+            "Cytoplasmic vesicle",
+            "Disulfide bond",
+            "Glycoprotein",
+            "Host cell membrane",
+            "Host membrane",
+            "Membrane",
+            "Secreted",
+            "Signal"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF18638"
+          ],
+          "interpro": [
+            "IPR041396"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Sar"
+          ]
         }
       ],
       "score": 60,
@@ -402,7 +495,10 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "immune"
+      ]
     },
     {
       "pmcid": "PMC13658822",
@@ -672,7 +768,33 @@
           "name": "IgLON family member 5",
           "organism": "Homo sapiens",
           "prior_pdb_count": 2,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Disulfide bond",
+            "Glycoprotein",
+            "Immunoglobulin domain",
+            "Repeat",
+            "Secreted",
+            "Signal"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF07686",
+            "PF13927"
+          ],
+          "interpro": [
+            "IPR003598",
+            "IPR003599",
+            "IPR007110",
+            "IPR013106",
+            "IPR013783",
+            "IPR036179",
+            "IPR050876"
+          ],
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ]
         }
       ],
       "score": 52,
@@ -688,7 +810,10 @@
           }
         ]
       },
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "immune"
+      ]
     },
     {
       "pmcid": "PMC13660411",

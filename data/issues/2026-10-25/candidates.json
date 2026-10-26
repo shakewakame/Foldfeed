@@ -132,11 +132,39 @@
           "name": "Cysteate-C-fatty acyltransferase",
           "organism": "Capnocytophaga ochracea (strain ATCC 27872 / DSM 7271 / CCUG 9716 / JCM 12966 / NCTC 12371 / SS31 / VPI 2845)",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "Acyltransferase",
+            "Lipid biosynthesis",
+            "Lipid metabolism",
+            "Pyridoxal phosphate",
+            "Transferase"
+          ],
+          "ec": [
+            "2.3.1.-"
+          ],
+          "pfam": [
+            "PF00155"
+          ],
+          "interpro": [
+            "IPR001917",
+            "IPR004839",
+            "IPR015421",
+            "IPR015422",
+            "IPR015424",
+            "IPR050087"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Pseudomonadati"
+          ]
         }
       ],
       "score": 92,
-      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "categories_draft": [
+        "enzyme"
+      ]
     },
     {
       "pmcid": "PMC13691371",
@@ -341,7 +369,32 @@
           "name": "Beta sliding clamp",
           "organism": "Escherichia coli O157:H7",
           "prior_pdb_count": 0,
-          "first_structure": true
+          "first_structure": true,
+          "keywords": [
+            "Cytoplasm",
+            "DNA replication",
+            "DNA-binding",
+            "DNA-directed DNA polymerase",
+            "Nucleotidyltransferase",
+            "Transferase"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00712",
+            "PF02767",
+            "PF02768"
+          ],
+          "interpro": [
+            "IPR001001",
+            "IPR022634",
+            "IPR022635",
+            "IPR022637",
+            "IPR046938"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Pseudomonadati"
+          ]
         },
         {
           "uniprot": "P69931",
@@ -353,11 +406,39 @@
           "name": "DnaA regulatory inactivator Hda",
           "organism": "Escherichia coli (strain K12)",
           "prior_pdb_count": 1,
-          "first_structure": false
+          "first_structure": false,
+          "keywords": [
+            "Cell inner membrane",
+            "Cell membrane",
+            "DNA replication",
+            "DNA replication inhibitor",
+            "Membrane",
+            "Nucleotide-binding"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF00308",
+            "PF22688"
+          ],
+          "interpro": [
+            "IPR013317",
+            "IPR017788",
+            "IPR020591",
+            "IPR022864",
+            "IPR027417",
+            "IPR055199"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Pseudomonadati"
+          ]
         }
       ],
       "score": 89,
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "nucleic"
+      ]
     },
     {
       "pmcid": "PMC13690257",
@@ -626,7 +707,8 @@
       },
       "proteins": [],
       "score": 35,
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": []
     },
     {
       "pmcid": "PMC13688107",
@@ -1005,18 +1087,69 @@
           "gene": "lipA",
           "synonyms": [],
           "name": "Lipoyl synthase",
-          "organism": "Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)"
+          "organism": "Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)",
+          "keywords": [
+            "4Fe-4S",
+            "Cytoplasm",
+            "Iron",
+            "Iron-sulfur",
+            "Metal-binding",
+            "S-adenosyl-L-methionine",
+            "Transferase"
+          ],
+          "ec": [
+            "2.8.1.8"
+          ],
+          "pfam": [
+            "PF04055",
+            "PF16881"
+          ],
+          "interpro": [
+            "IPR003698",
+            "IPR006638",
+            "IPR007197",
+            "IPR013785",
+            "IPR031691",
+            "IPR058240"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Bacillati"
+          ]
         },
         {
           "uniprot": "P9WN55",
           "gene": "gcvH",
           "synonyms": [],
           "name": "Glycine cleavage system H protein",
-          "organism": "Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)"
+          "organism": "Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)",
+          "keywords": [
+            "Acetylation",
+            "Lipoyl"
+          ],
+          "ec": [],
+          "pfam": [
+            "PF01597"
+          ],
+          "interpro": [
+            "IPR000089",
+            "IPR002930",
+            "IPR003016",
+            "IPR011053",
+            "IPR017453",
+            "IPR033753"
+          ],
+          "lineage": [
+            "Bacteria",
+            "Bacillati"
+          ]
         }
       ],
       "score": 5,
-      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "categories_draft": [
+        "enzyme"
+      ]
     },
     {
       "pmcid": "PMC13691223",
