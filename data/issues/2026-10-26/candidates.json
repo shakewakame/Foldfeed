@@ -1,0 +1,4107 @@
+{
+  "issue_date": "2026-10-26",
+  "index_date": "2026-10-25",
+  "health": {
+    "fresh_oa": 0,
+    "baseline": 10.5,
+    "days": 14,
+    "threshold": 50,
+    "status": "stalled"
+  },
+  "source": "pmc-aws",
+  "generated_at": "2026-10-26T00:10:20+00:00",
+  "query": "PMC Open Access on AWS, articles written 2026-10-25..2026-10-25",
+  "impact_query": "PMC Open Access on AWS, articles written 2026-10-25..2026-10-25",
+  "counts": {
+    "hits": 26,
+    "excluded_types": 8,
+    "parsed": 37,
+    "new_structure": 0,
+    "new_structure_ids_unlisted": 0,
+    "new_map_only": 0,
+    "uses_existing": 14,
+    "no_ids": 23,
+    "impact_search_hits": 30,
+    "impact_search_parsed": 19,
+    "impact_pool": 37
+  },
+  "candidates": [
+    {
+      "pmcid": "PMC13695309",
+      "pmid": 42927089,
+      "doi": "10.1016/j.nmni.2026.101863",
+      "title": "A case of infection with a candidate new subtype, tentatively termed M, of human immunodeficiency virus type 1 of group M",
+      "journal": "New Microbes and New Infections",
+      "journal_abbrev": "New Microbes New Infect",
+      "authors": "Colson P, Boschi C, Bedotto M, Motte A, Solas C, Lefebvre M, Million M, Tomei C, Delerce J, Fantini J",
+      "pub_date": "2026-10-09",
+      "index_date": "2026-10-25",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "BackgroundHIV-1 emergence is estimated to have occurred c.a. 1920s in the Democratic Republic of the Congo (DRC). Only its group M is pandemic. It currently comprises 10 established subtypes. Here, we describe a near-complete HIV-1 genome that meets the definition of a candidate new subtype.MethodsIn-house-designed or commercial PCR primers were used for amplification of HIV-1 DNA from blood. Sequencing used Sanger and next-generation (Oxford Nanopore, Illumina) technologies. Bioinformatic analyses used Samtools, Minimap2, Viroscore, Bootscan, IQ-TREE, iTOL, MEGA12, and Nextclade. Structural analyses used Mutate, HyperChem, and Molegro Molecular Viewer.ResultsThe patient originates from the DRC. CD4+ T cell counts fluctuated between 351 and 2394/mm3, and plasma viral load, initially 5.0 log10copies/mL, reached undetectability on antiretroviral therapy. The obtained near-full length genome (PZ307881) showed a mean nucleotide divergence of 12.7% (range, 11.9-13.7%) with genomes of the 10 established subtypes, while mean divergence was 12.6% (10.0-13.7%) between these 10 subtypes. Phylogeny displayed a star-like tree topology. No recombination was identified. No natural antiretroviral drug resistance was detected. Reverse transcriptase (RT) structure exhibited slight changes compared to subtype B RT that could alter processivity and may favor increased genetic diversity.ConclusionsThese data support a candidate new HIV-1 group M subtype we tentatively termed M pending official taxonomic classification. They indicate that HIV-1 diversity is still not comprehensively deciphered and are in line with the DRC as an epicenter of the HIV-1/M pandemic. They warrant further studies to establish this provisional candidate new subtype by detecting it in other epidemiologically unlinked individuals, and to assess its epidemiological, genotypic and phenotypic features.",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "1RTD"
+      ],
+      "emdb_ids": [],
+      "people": {
+        "first": {
+          "name": "Philippe Colson",
+          "aff": "France"
+        },
+        "corresp": [
+          {
+            "name": "Philippe Colson",
+            "aff": "France"
+          }
+        ]
+      },
+      "cited_structures": [
+        {
+          "pdb_id": "1RTD",
+          "status": "released",
+          "title": "STRUCTURE OF A CATALYTIC COMPLEX OF HIV-1 REVERSE TRANSCRIPTASE: IMPLICATIONS FOR NUCLEOSIDE ANALOG DRUG RESISTANCE",
+          "method": "X-RAY DIFFRACTION",
+          "em_reconstruction": null,
+          "resolution": 3.2,
+          "release_date": "1998-12-09",
+          "deposit_date": "1998-08-26",
+          "citation_doi": "10.1126/science.282.5394.1669",
+          "citation_pmid": "9831551",
+          "citation_title": "Structure of a covalently trapped catalytic complex of HIV-1 reverse transcriptase: implications for drug resistance.",
+          "polymers": [
+            {
+              "description": "PROTEIN (REVERSE TRANSCRIPTASE)",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P04585"
+              ],
+              "organisms": [
+                "Human immunodeficiency virus 1"
+              ]
+            },
+            {
+              "description": "PROTEIN (REVERSE TRANSCRIPTASE)",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P03366"
+              ],
+              "organisms": [
+                "Human immunodeficiency virus 1"
+              ]
+            },
+            {
+              "description": "DNA PRIMER FOR REVERSE TRANSCRIPTASE",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": []
+            },
+            {
+              "description": "DNA TEMPLATE FOR REVERSE TRANSCRIPTASE",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": []
+            }
+          ],
+          "ligands": [
+            {
+              "id": "TTP",
+              "name": "THYMIDINE-5'-TRIPHOSPHATE"
+            }
+          ]
+        }
+      ],
+      "impact": {
+        "score": 2,
+        "types": [],
+        "validation": [],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [
+        {
+          "uniprot": "P03366",
+          "gene": "gag-pol",
+          "synonyms": [],
+          "name": "Gag-Pol polyprotein",
+          "organism": "Human immunodeficiency virus type 1 group M subtype B (isolate BH10)"
+        },
+        {
+          "uniprot": "P04585",
+          "gene": "gag-pol",
+          "synonyms": [],
+          "name": "Gag-Pol polyprotein",
+          "organism": "Human immunodeficiency virus type 1 group M subtype B (isolate HXB2)"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13694233",
+      "pmid": 42773176,
+      "doi": "10.1038/s43018-026-01234-y",
+      "title": "An iron-regulated methionine redox axis governs adipose browning and cancer cachexia",
+      "journal": "Nature Cancer",
+      "journal_abbrev": "Nat Cancer",
+      "authors": "Nam JS, Ahn SS, Shin Y, Vargas-Castillo A, Dixon MS, Ahmadi P, Schilling K, Zandkarimi F, Chen A, Yoon NA, Cullen H, Sun Y, Caffrey TC, Klute KA, Swanson BJ, Lu J, Pan S, Chen Y, Ichimiya S, Kim G, Genkinger JM, Sugahara K, Kluger MD, Grandgenett P, Hollingsworth MA, Berchowitz L, Ferrante AW, Zeltser LM, Diano S, Chio IIC",
+      "pub_date": "2026-09-22",
+      "index_date": "2026-10-25",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "Adipose browning and atrophy are early events of cachexia, a lethal metabolic disorder affecting nearly half of the population with cancer. Here, using individual-derived specimens and mouse models, we identified an iron-dependent pathway that initiates adipose browning in both physiological and cachectic settings. Upon adrenergic stimulation of adipocytes, an influx of iron induces the activity of methionine sulfoxide reductase A (MSRA), an enzyme that reverses the oxidation of proteinaceous methionine residues. Mechanistically, iron coordination by the conserved iron-binding EXXH motif of two MSRA polypeptides serves to dimerize, stabilize and elevate its reductase activity. Iron-bound MSRA dimers in turn promote adipose browning by maintaining the reduced state of select substrates, including the catalytic subunit of protein kinase A. Remarkably, in mouse models, MsrA deletion impairs adipose browning, mitigates cachexia and prolongs the survival of tumor-bearing animals. Thus, as a key nexus of cancer-associated cachexia, the β3 adrenergic receptor–iron–MSRA axis is a promising target for clinical intervention.",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "3FJQ",
+        "4NTS"
+      ],
+      "emdb_ids": [],
+      "people": {
+        "first": {
+          "name": "Jung Seung Nam",
+          "aff": "Columbia University Irving Medical Center, USA"
+        },
+        "corresp": [
+          {
+            "name": "Iok In Christine Chio",
+            "aff": "Columbia University Irving Medical Center, USA"
+          }
+        ]
+      },
+      "cited_structures": [
+        {
+          "pdb_id": "3FJQ",
+          "status": "released",
+          "title": "Crystal structure of cAMP-dependent protein kinase catalytic subunit alpha in complex with peptide inhibitor PKI alpha (6-25)",
+          "method": "X-RAY DIFFRACTION",
+          "em_reconstruction": null,
+          "resolution": 1.6,
+          "release_date": "2009-08-04",
+          "deposit_date": "2008-12-15",
+          "citation_doi": "10.1002/pro.209",
+          "citation_pmid": "19610074",
+          "citation_title": "Comparative surface geometry of the protein kinase family.",
+          "polymers": [
+            {
+              "description": "cAMP-dependent protein kinase inhibitor alpha",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P63248"
+              ],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "cAMP-dependent protein kinase catalytic subunit alpha",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P05132"
+              ],
+              "organisms": [
+                "Mus musculus"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "ATP",
+              "name": "ADENOSINE-5'-TRIPHOSPHATE"
+            }
+          ]
+        },
+        {
+          "pdb_id": "4NTS",
+          "status": "released",
+          "title": "Apo structure of the catalytic subunit of cAMP-dependent protein kinase",
+          "method": "X-RAY DIFFRACTION",
+          "em_reconstruction": null,
+          "resolution": 2.9,
+          "release_date": "2014-10-15",
+          "deposit_date": "2013-12-02",
+          "citation_doi": "10.1021/bi500684c",
+          "citation_pmid": "25077557",
+          "citation_title": "Molecular Features of Product Release for the PKA Catalytic Cycle.",
+          "polymers": [
+            {
+              "description": "cAMP-dependent protein kinase catalytic subunit alpha",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P05132"
+              ],
+              "organisms": [
+                "Mus musculus"
+              ]
+            }
+          ],
+          "ligands": []
+        }
+      ],
+      "impact": {
+        "score": 3,
+        "types": [
+          "mechanism"
+        ],
+        "validation": [],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [
+        {
+          "uniprot": "P05132",
+          "gene": "Prkaca",
+          "synonyms": [
+            "Pkaca"
+          ],
+          "name": "cAMP-dependent protein kinase catalytic subunit alpha",
+          "organism": "Mus musculus"
+        },
+        {
+          "uniprot": "P63248",
+          "gene": "Pkia",
+          "synonyms": [],
+          "name": "cAMP-dependent protein kinase inhibitor alpha",
+          "organism": "Mus musculus"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13694346",
+      "pmid": 42446667,
+      "doi": "10.1007/s00204-026-04505-w",
+      "title": "Ancestry informative genetic variants associated with tobacco metabolic and detoxification capacity measured by 4-(methylnitrosamino)-1-(3-pyridyl)-1-butanol (NNAL) among smokers",
+      "journal": "Archives of Toxicology",
+      "journal_abbrev": "Arch Toxicol",
+      "authors": "Lanade O, He Z, Zhou Y, Blackman E, Gibbs D, Harrison S, Devarajan K, Andrake M, Dunbrack RL, Nkogbu G, Wagh A, Slifker M, Erkmen C, Patterson F, Satti A, Lawson-Myers HD, Roberts R, Mitchell D, Liu JC, Erblich J, Ragin C",
+      "pub_date": "2026-07-14",
+      "index_date": "2026-10-25",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "Tobacco use remains the leading preventable cause of cancer mortality worldwide, with marked disparities in cancer incidence and outcomes across racial and ethnic groups. This study investigates the genetic determinants of tobacco carcinogen metabolism among smokers, focusing on ancestry-informative markers (AIMs) near genes involved in metabolic activation (Phase I), detoxification (Phase II), and transport (Phase III) of tobacco-specific carcinogens. Using data from 274 smokers recruited in the United States and the Caribbean, we measured urinary NNAL (a metabolite of NNK) to classify metabolic phenotypes and performed genotyping with a customized array enriched for AIMs. Most participants (94%) were classified as poor metabolizers of NNAL, with a higher prevalence among Black/African American smokers. Multivariable analyses, after adjusting for age, sex, assay batch, and number of cigarettes smoked per day, identified 14 AIMs near Phase I, II, and III pathway genes significantly associated with NNAL metabolizer phenotype, with African ancestry alleles conferring increased odds of poor metabolism. Functional annotation revealed that most significant AIMs overlapped regulatory regions, and the CYP3A5 rs776746 variant demonstrated structural disruption likely to impair enzymatic activity. Majority of participants had high African ancestry and were poor NNAL metabolizers, consistent with the observed association between African ancestry and poor NNAL metabolism. These findings highlight the biological basis for tobacco-related cancer disparities and underscore the importance of integrating genetic ancestry and metabolic phenotyping in risk assessment and personalized prevention strategies for tobacco-associated cancers.Supplementary InformationThe online version contains supplementary material available at https://doi.org/10.1007/s00204-026-04505-w.",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "5VEU",
+        "7Z36"
+      ],
+      "emdb_ids": [],
+      "people": {
+        "first": {
+          "name": "Oladimeji Lanade",
+          "aff": "Fox Chase Cancer Center-Temple Health, USA"
+        },
+        "corresp": [
+          {
+            "name": "Camille Ragin",
+            "aff": "Fox Chase Cancer Center-Temple Health, USA"
+          }
+        ]
+      },
+      "cited_structures": [
+        {
+          "pdb_id": "5VEU",
+          "status": "released",
+          "title": "Human Cytochrome P450 3A5 (CYP3A5)",
+          "method": "X-RAY DIFFRACTION",
+          "em_reconstruction": null,
+          "resolution": 2.91,
+          "release_date": "2017-11-15",
+          "deposit_date": "2017-04-05",
+          "citation_doi": "10.1124/mol.117.109744",
+          "citation_pmid": "29093019",
+          "citation_title": "The X-Ray Crystal Structure of the Human Mono-Oxygenase Cytochrome P450 3A5-Ritonavir Complex Reveals Active Site Differences between P450s 3A4 and 3A5.",
+          "polymers": [
+            {
+              "description": "Cytochrome P450 3A5",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P20815"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "HEM",
+              "name": "PROTOPORPHYRIN IX CONTAINING FE"
+            },
+            {
+              "id": "RIT",
+              "name": "RITONAVIR"
+            }
+          ]
+        },
+        {
+          "pdb_id": "7Z36",
+          "status": "released",
+          "title": "Crystal structure of the KAP1 tripartite motif in complex with the ZNF93 KRAB domain",
+          "method": "X-RAY DIFFRACTION",
+          "em_reconstruction": null,
+          "resolution": 2.8,
+          "release_date": "2022-11-02",
+          "deposit_date": "2022-03-01",
+          "citation_doi": "10.15252/embj.2022111179",
+          "citation_pmid": "36341546",
+          "citation_title": "Structure and functional mapping of the KRAB-KAP1 repressor complex.",
+          "polymers": [
+            {
+              "description": "Endolysin,Transcription intermediary factor 1-beta,Isoform 2 of Transcription intermediary factor 1-beta",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P00720",
+                "Q13263"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "Zinc finger protein 93",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P35789"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "SMARCAD1 CUE1 domain",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9H4L7"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": []
+        }
+      ],
+      "impact": {
+        "score": 0,
+        "types": [
+          "mechanism"
+        ],
+        "validation": [
+          "assay"
+        ],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": [
+          "生体高分子が主題でない可能性"
+        ]
+      },
+      "proteins": [
+        {
+          "uniprot": "P00720",
+          "gene": "E",
+          "synonyms": [],
+          "name": "Endolysin",
+          "organism": "Enterobacteria phage T4"
+        },
+        {
+          "uniprot": "P20815",
+          "gene": "CYP3A5",
+          "synonyms": [],
+          "name": "Cytochrome P450 3A5",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P35789",
+          "gene": "ZNF93",
+          "synonyms": [
+            "ZNF505"
+          ],
+          "name": "Zinc finger protein 93",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "Q13263",
+          "gene": "TRIM28",
+          "synonyms": [
+            "KAP1",
+            "RNF96",
+            "TIF1B"
+          ],
+          "name": "Transcription intermediary factor 1-beta",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "Q9H4L7",
+          "gene": "SMARCAD1",
+          "synonyms": [
+            "KIAA1122"
+          ],
+          "name": "SWI/SNF-related matrix-associated actin-dependent regulator of chromatin subfamily A containing DEAD/H box 1",
+          "organism": "Homo sapiens"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13695380",
+      "pmid": 42927389,
+      "doi": "10.1016/j.mrl.2026.200313",
+      "title": "Design of an engineered Gαq protein for high-yield expression and NMR isotope labeling in E. coli",
+      "journal": "Magnetic Resonance Letters",
+      "journal_abbrev": "Magn Reson Lett",
+      "authors": "Zhang Q, Yang J, Yan R, Hu Y",
+      "pub_date": "2026-10-16",
+      "index_date": "2026-10-25",
+      "license": "cc by-nc-nd",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "G protein-coupled receptors (GPCRs) are pivotal therapeutic targets that signal through heterotrimeric G proteins. While structural insights into Gαs and Gαi/o subfamilies have advanced significantly, characterizing the Gαq/11 subfamily remains challenging due to poor soluble expression in prokaryotic systems, precluding high-yield isotope labeling needed for NMR studies. Here, we present an efficient expression strategy for Gαq protein in Escherichia coli. We identified the H5 helix as a critical determinant of folding and solubility. By swapping this helix with its Gαi/o counterpart and employing low-temperature co-expression with bacterial chaperones, we significantly enhance soluble yields while retaining GTPase activity. The 15N-labeled protein exhibited well-dispersed 1H–15N HSQC spectra, validating the suitability of this expression strategy for future high-resolution NMR investigations.",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "3AH8",
+        "6VU5"
+      ],
+      "emdb_ids": [],
+      "people": {
+        "first": {
+          "name": "Qiang Zhang",
+          "aff": "Chinese Academy of Sciences, China"
+        },
+        "corresp": [
+          {
+            "name": "Yunfei Hu",
+            "aff": "Chinese Academy of Sciences, China"
+          }
+        ]
+      },
+      "cited_structures": [
+        {
+          "pdb_id": "3AH8",
+          "status": "released",
+          "title": "Structure of heterotrimeric G protein Galpha-q beta gamma in complex with an inhibitor YM-254890",
+          "method": "X-RAY DIFFRACTION",
+          "em_reconstruction": null,
+          "resolution": 2.9,
+          "release_date": "2010-07-21",
+          "deposit_date": "2010-04-20",
+          "citation_doi": "10.1073/pnas.1003553107",
+          "citation_pmid": "20639466",
+          "citation_title": "Structural basis for the specific inhibition of heterotrimeric Gq protein by a small molecule.",
+          "polymers": [
+            {
+              "description": "YM-254890",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Chromobacterium sp."
+              ]
+            },
+            {
+              "description": "Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P63212"
+              ],
+              "organisms": [
+                "Bos taurus"
+              ]
+            },
+            {
+              "description": "Guanine nucleotide-binding protein G(I)/G(S)/G(T) subunit beta-1",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P62871"
+              ],
+              "organisms": [
+                "Bos taurus"
+              ]
+            },
+            {
+              "description": "Guanine nucleotide-binding protein G(i) subunit alpha-1/Guanine nucleotide-binding protein G(q) subunit alpha chimeric protein",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P10824",
+                "P21279"
+              ],
+              "organisms": [
+                "Mus musculus",
+                "Rattus norvegicus"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "GDP",
+              "name": "GUANOSINE-5'-DIPHOSPHATE"
+            }
+          ]
+        },
+        {
+          "pdb_id": "6VU5",
+          "status": "released",
+          "title": "Structure of G-alpha-q bound to its chaperone Ric-8A",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 3.5,
+          "release_date": "2020-03-18",
+          "deposit_date": "2020-02-14",
+          "citation_doi": "10.1016/j.celrep.2020.02.086",
+          "citation_pmid": "32126208",
+          "citation_title": "Structures of G alpha Proteins in Complex with Their Chaperone Reveal Quality Control Mechanisms.",
+          "polymers": [
+            {
+              "description": "Guanine nucleotide-binding protein G(q) subunit alpha",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P50148"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "Resistance to inhibitors of cholinesterase-8A (Ric-8A)",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q80ZG1"
+              ],
+              "organisms": [
+                "Rattus norvegicus"
+              ]
+            }
+          ],
+          "ligands": []
+        }
+      ],
+      "impact": {
+        "score": 4,
+        "types": [
+          "method"
+        ],
+        "validation": [
+          "nmr"
+        ],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [
+        {
+          "uniprot": "P10824",
+          "gene": "Gnai1",
+          "synonyms": [
+            "Gnai-1"
+          ],
+          "name": "Guanine nucleotide-binding protein G(i) subunit alpha-1",
+          "organism": "Rattus norvegicus"
+        },
+        {
+          "uniprot": "P21279",
+          "gene": "Gnaq",
+          "synonyms": [],
+          "name": "Guanine nucleotide-binding protein G(q) subunit alpha",
+          "organism": "Mus musculus"
+        },
+        {
+          "uniprot": "P50148",
+          "gene": "GNAQ",
+          "synonyms": [
+            "GAQ"
+          ],
+          "name": "Guanine nucleotide-binding protein G(q) subunit alpha",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P62871",
+          "gene": "GNB1",
+          "synonyms": [],
+          "name": "Guanine nucleotide-binding protein G(I)/G(S)/G(T) subunit beta-1",
+          "organism": "Bos taurus"
+        },
+        {
+          "uniprot": "P63212",
+          "gene": "GNG2",
+          "synonyms": [],
+          "name": "Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-2",
+          "organism": "Bos taurus"
+        },
+        {
+          "uniprot": "Q80ZG1",
+          "gene": "Ric8a",
+          "synonyms": [],
+          "name": "Chaperone Ric-8A",
+          "organism": "Rattus norvegicus"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13695244",
+      "pmid": 42893657,
+      "doi": "10.1016/j.psj.2026.107811",
+      "title": "Dietary esculetin improves growth performance and spleen function via the NF-κB/MAPK pathway in heat-stressed broilers",
+      "journal": "Poultry Science",
+      "journal_abbrev": "Poult Sci",
+      "authors": "Qi J, Yang H, Yang Y, Dou X, Chen X, An Q, Wu T, Liu X, Yu B, Wang H, Wang S, Song Y, Shi C, Ma C, Chen J, Zhao Y, Fan H",
+      "pub_date": "2026-09-21",
+      "index_date": "2026-10-25",
+      "license": "cc by-nc-nd",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "This study evaluated the effects of esculetin on heat stress-induced splenic immunosuppression in broilers. Esculetin significantly reduced rectal temperature and respiratory rate in heat-stressed broilers (P < 0.05), improved growth performance, serum biochemical parameters, and the spleen index, and attenuated heat stress-induced splenic histopathological damage and HSP70 expression. Concurrently, esculetin elevated serum levels of immunoglobulins (IgA, IgM, and IgG) and upregulated the gene expression of anti-inflammatory cytokines, while downregulating pro-inflammatory cytokine genes (IL-1β, IL-6, and TNF-α). Network pharmacology analysis, molecular docking, and in vivo validation demonstrated that the immunomodulatory effects of esculetin were primarily mediated through targeting NF-κB, TNF-α, and IL-6, thereby modulating the NF-κB/MAPK signaling pathway. These findings provide a scientific basis for the application of esculetin as a functional feed additive to alleviate heat stress-induced immune dysfunction in poultry.",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "2AZ5",
+        "1IOB",
+        "1ALU"
+      ],
+      "emdb_ids": [],
+      "people": {
+        "first": {
+          "name": "Jie Qi",
+          "aff": "Northeast Agricultural University, China"
+        },
+        "corresp": [
+          {
+            "name": "Honggang Fan",
+            "aff": "Northeast Agricultural University, China"
+          }
+        ]
+      },
+      "cited_structures": [
+        {
+          "pdb_id": "2AZ5",
+          "status": "released",
+          "title": "Crystal Structure of TNF-alpha with a small molecule inhibitor",
+          "method": "X-RAY DIFFRACTION",
+          "em_reconstruction": null,
+          "resolution": 2.1,
+          "release_date": "2005-11-29",
+          "deposit_date": "2005-09-09",
+          "citation_doi": "10.1126/science.1116304",
+          "citation_pmid": "16284179",
+          "citation_title": "Small-molecule inhibition of TNF-alpha.",
+          "polymers": [
+            {
+              "description": "Tumor necrosis factor (TNF-alpha) (Tumor necrosis factor ligand superfamily member 2) (TNF-a) (Cachectin) [Contains: Tumor necrosis factor, membrane form; Tumor necrosis factor, soluble form]",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P01375"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "307",
+              "name": "6,7-DIMETHYL-3-[(METHYL{2-[METHYL({1-[3-(TRIFLUOROMETHYL)PHENYL]-1H-INDOL-3-YL}METHYL)AMINO]ETHYL}AMINO)METHYL]-4H-CHROMEN-4-ONE"
+            }
+          ]
+        },
+        {
+          "pdb_id": "1IOB",
+          "status": "released",
+          "title": "INTERLEUKIN-1 BETA FROM JOINT X-RAY AND NMR REFINEMENT",
+          "method": "X-RAY DIFFRACTION, SOLUTION NMR",
+          "em_reconstruction": null,
+          "resolution": 2.0,
+          "release_date": "1996-08-17",
+          "deposit_date": "1996-03-14",
+          "citation_doi": null,
+          "citation_pmid": "1502561",
+          "citation_title": "Combining experimental information from crystal and solution studies: joint X-ray and NMR refinement.",
+          "polymers": [
+            {
+              "description": "INTERLEUKIN-1 BETA",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P01584"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": []
+        },
+        {
+          "pdb_id": "1ALU",
+          "status": "released",
+          "title": "HUMAN INTERLEUKIN-6",
+          "method": "X-RAY DIFFRACTION",
+          "em_reconstruction": null,
+          "resolution": 1.9,
+          "release_date": "1998-06-03",
+          "deposit_date": "1997-06-03",
+          "citation_doi": "10.1093/emboj/16.5.989",
+          "citation_pmid": "9118960",
+          "citation_title": "1.9 A crystal structure of interleukin 6: implications for a novel mode of receptor dimerization and signaling.",
+          "polymers": [
+            {
+              "description": "INTERLEUKIN-6",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P05231"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": []
+        }
+      ],
+      "impact": {
+        "score": -5,
+        "types": [],
+        "validation": [
+          "in vivo"
+        ],
+        "low": [
+          "molecular docking",
+          "network pharmacology"
+        ],
+        "journal": false,
+        "exp_structure": true,
+        "flags": [
+          "生体高分子が主題でない可能性"
+        ]
+      },
+      "proteins": [
+        {
+          "uniprot": "P01375",
+          "gene": "TNF",
+          "synonyms": [
+            "TNFA",
+            "TNFSF2"
+          ],
+          "name": "Tumor necrosis factor",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P01584",
+          "gene": "IL1B",
+          "synonyms": [
+            "IL1F2"
+          ],
+          "name": "Interleukin-1 beta",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P05231",
+          "gene": "IL6",
+          "synonyms": [
+            "IFNB2"
+          ],
+          "name": "Interleukin-6",
+          "organism": "Homo sapiens"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13695080",
+      "pmid": 42092352,
+      "doi": "10.1016/j.cell.2026.03.031",
+      "title": "Disrupted molecular glue complex drives RAS inhibitor resistance",
+      "journal": "Cell",
+      "journal_abbrev": "Cell",
+      "authors": "Sang B, Ye LF, Fu Z, Pourfarjam Y, Cuevas-Navarro A, Fan S, Hu F, Washington A, Rodriguez DJ, Vides A, Kar S, Ahler E, Lin KK, Hegde A, Smith JAM, Wolpin BM, Punekar SR, Spira AI, Garrido-Laguna I, Hong DS, Dar AC, Yaeger R, Arbour KC, Lito P",
+      "pub_date": "2026-05-05",
+      "index_date": "2026-10-25",
+      "license": "cc by-nc-nd",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "SUMMARYTri-complex inhibitors (TCIs) are molecular glues that bind the active, guanosine triphosphate (GTP)-bound state of RAS and recruit cyclophilin A (CYPA) to form a synthetic complex that blocks oncogenic signaling. Although these agents have shown clinical activity in RAS mutant cancers, resistance mechanisms remain poorly defined. Here, we analyzed paired baseline and end-of-treatment samples from 40 patients treated with the RAS inhibitor daraxonrasib and identified recurrent alterations in 18 cases. Structural and functional analyses revealed that acquired mutations confer resistance by disrupting interactions essential for daraxonrasib binding to RAS, including RAS Y64 mutations, or by enhancing the RAS-RAF interaction, thereby favoring native RAS-RAF signaling, including RAS Y71 or kinase-dead/hypoactive BRAF mutations. We then identified a TCI that targets RAS Y64 mutants and combination therapies to target resistance driven by kinase-dead BRAF. These findings uncover convergent resistance mechanisms that undermine the molecular glue function and offer a mechanistic blueprint for enhancing therapeutic efficacy in RAS-driven malignancies.",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "6VJJ",
+        "5US4",
+        "3K0N"
+      ],
+      "emdb_ids": [],
+      "people": {
+        "first": {
+          "name": "Ben Sang",
+          "aff": "Memorial Sloan Kettering Cancer Center, USA"
+        },
+        "corresp": [
+          {
+            "name": "Piro Lito",
+            "aff": "Memorial Sloan Kettering Cancer Center, USA"
+          }
+        ]
+      },
+      "cited_structures": [
+        {
+          "pdb_id": "6VJJ",
+          "status": "released",
+          "title": "Crystal Structure of wild-type KRAS4b (GMPPNP-bound) in complex with RAS-binding domain (RBD) of RAF1/CRAF",
+          "method": "X-RAY DIFFRACTION",
+          "em_reconstruction": null,
+          "resolution": 1.4,
+          "release_date": "2020-11-25",
+          "deposit_date": "2020-01-16",
+          "citation_doi": "10.1038/s41467-021-21422-x",
+          "citation_pmid": "33608534",
+          "citation_title": "KRAS interaction with RAF1 RAS-binding domain and cysteine-rich domain provides insights into RAS-mediated RAF activation.",
+          "polymers": [
+            {
+              "description": "RAF proto-oncogene serine/threonine-protein kinase",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P04049"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "GTPase KRas",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P01116"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "GNP",
+              "name": "PHOSPHOAMINOPHOSPHONIC ACID-GUANYLATE ESTER"
+            }
+          ]
+        },
+        {
+          "pdb_id": "5US4",
+          "status": "released",
+          "title": "Crystal structure of human KRAS G12D mutant in complex with GDP",
+          "method": "X-RAY DIFFRACTION",
+          "em_reconstruction": null,
+          "resolution": 1.83,
+          "release_date": "2017-03-22",
+          "deposit_date": "2017-02-13",
+          "citation_doi": "10.1016/j.cell.2017.02.006",
+          "citation_pmid": "28235199",
+          "citation_title": "Multivalent Small-Molecule Pan-RAS Inhibitors.",
+          "polymers": [
+            {
+              "description": "GTPase KRas",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P01116"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "GDP",
+              "name": "GUANOSINE-5'-DIPHOSPHATE"
+            }
+          ]
+        },
+        {
+          "pdb_id": "3K0N",
+          "status": "released",
+          "title": "Room temperature structure of CypA",
+          "method": "X-RAY DIFFRACTION",
+          "em_reconstruction": null,
+          "resolution": 1.391,
+          "release_date": "2009-12-08",
+          "deposit_date": "2009-09-24",
+          "citation_doi": "10.1038/nature08615",
+          "citation_pmid": "19956261",
+          "citation_title": "Hidden alternative structures of proline isomerase essential for catalysis.",
+          "polymers": [
+            {
+              "description": "Cyclophilin A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P62937"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": []
+        }
+      ],
+      "impact": {
+        "score": 6,
+        "types": [
+          "mechanism"
+        ],
+        "validation": [
+          "mutant"
+        ],
+        "low": [],
+        "journal": true,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [
+        {
+          "uniprot": "P01116",
+          "gene": "KRAS",
+          "synonyms": [
+            "KRAS2",
+            "RASK2"
+          ],
+          "name": "GTPase KRas",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P04049",
+          "gene": "RAF1",
+          "synonyms": [
+            "RAF"
+          ],
+          "name": "RAF proto-oncogene serine/threonine-protein kinase",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P62937",
+          "gene": "PPIA",
+          "synonyms": [
+            "CYPA"
+          ],
+          "name": "Peptidyl-prolyl cis-trans isomerase A",
+          "organism": "Homo sapiens"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13694986",
+      "pmid": 42921656,
+      "doi": "10.1093/nar/gkag1005",
+      "title": "E. coli RsmF activity depends on prior modification of 16S rRNA helix 44",
+      "journal": "Nucleic Acids Research",
+      "journal_abbrev": "Nucleic Acids Res",
+      "authors": "Barmada MI, Hanna A, Bair CR, McGinity EN, Zelinskaya N, Dey D, Conn GL",
+      "pub_date": "2026-10-24",
+      "index_date": "2026-10-25",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "AbstractBacterial ribosomal RNA (rRNA) methylations are important for accurate translation. Four distinct methylations incorporated by RsmE, RsmF, and RsmH/ RsmI form a cluster of three modified 16S rRNA nucleotides (m3U1498, m5C1407, and m4Cm1402) surrounding the decoding center of the 30S subunit. Given their common substrate requirement of a late-stage intermediate 30S subunit, these enzymes likely act contemporaneously during subunit biogenesis, but whether there exists a required modification order is unknown. Here, using hypomethylated 30S subunits obtained from a collection of rsmH/I/E/F-deleted Escherichia coli strains, we identify RsmF activity to be highly dependent on prior modification of h44 both in vitro and in E. coli. RsmF activity on hypomethylated 30S subunits could be partially rescued by prior in vitro methylation using RsmE and RsmH, indicating that incorporation of these methyl groups directly shapes h44 for recognition by RsmF. RNA structure probing using selective 2′-hydroxyl acylation analyzed by primer extension and mutational profiling and molecular dynamics simulations reveal specific alterations in 16S rRNA structure and dynamics in the absence of the m4C1402 (RsmH) and m3U1498 (RsmE) modifications that likely restrict RsmF action. These studies thus uncover a previously unappreciated “order of operations” for 16S rRNA modification during ribosome biogenesis with important implications for studies on the collective functions of these modifications.",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "9Q87"
+      ],
+      "emdb_ids": [],
+      "people": {
+        "first": {
+          "name": "Mohamed I Barmada",
+          "aff": "Emory University School of Medicine, United States"
+        },
+        "corresp": [
+          {
+            "name": "Graeme L Conn",
+            "aff": "Emory University School of Medicine, United States"
+          }
+        ]
+      },
+      "cited_structures": [
+        {
+          "pdb_id": "9Q87",
+          "status": "released",
+          "title": "Principles of ion binding to RNA inferred from the analysis of a 1.55 Angstrom resolution bacterial ribosome structure - Part I: Mg2+",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 1.55,
+          "release_date": "2025-05-14",
+          "deposit_date": "2025-02-23",
+          "citation_doi": "10.1093/nar/gkae1148",
+          "citation_pmid": "39791453",
+          "citation_title": "Principles of ion binding to RNA inferred from the analysis of a 1.55 angstrom resolution bacterial ribosome structure - Part I: Mg2.",
+          "polymers": [
+            {
+              "description": "Small ribosomal subunit protein uS9",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0A7X3"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Small ribosomal subunit protein uS8",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0A7W7"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Small ribosomal subunit protein uS7",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02359"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Small ribosomal subunit protein bS6, fully modified isoform",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02358"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Large ribosomal subunit protein bL32",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0A7N4"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Large ribosomal subunit protein uL30",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0AG51"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Large ribosomal subunit protein uL29",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0A7M6"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Large ribosomal subunit protein bL28",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0A7M2"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Large ribosomal subunit protein bL27",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0A7L8"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Large ribosomal subunit protein bL25",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P68919"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Small ribosomal subunit protein uS5",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0A7W1"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Large ribosomal subunit protein uL24",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P60624"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Large ribosomal subunit protein uL23",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0ADZ0"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Large ribosomal subunit protein uL22",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P61175"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Large ribosomal subunit protein bL21",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0AG48"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Large ribosomal subunit protein bL20",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0A7L3"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Large ribosomal subunit protein bL19",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0A7K6"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Large ribosomal subunit protein uL18",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0C018"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Large ribosomal subunit protein bL17",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0AG44"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Large ribosomal subunit protein uL16",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0ADY7"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Large ribosomal subunit protein uL15",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02413"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Small ribosomal subunit protein uS4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0A7V8"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Large ribosomal subunit protein uL14",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0ADY3"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Large ribosomal subunit protein uL13",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0AA10"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Large ribosomal subunit protein bL9",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0A7R1"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Large ribosomal subunit protein uL6",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0AG55"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Large ribosomal subunit protein uL5",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P62399"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Large ribosomal subunit protein uL4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P60723"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Large ribosomal subunit protein uL3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P60438"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Large ribosomal subunit protein uL2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P60422"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "5S rRNA",
+              "type": "RNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "23S rRNA",
+              "type": "RNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Small ribosomal subunit protein uS3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0A7V3"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "A-site tRNA",
+              "type": "RNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Large ribosomal subunit protein uL11",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0A7J7"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Large ribosomal subunit protein bL36A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0A7Q6"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Large ribosomal subunit protein bL35",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0A7Q1"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Large ribosomal subunit protein bL34",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0A7P5"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Large ribosomal subunit protein bL33",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0A7N9"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "P-site tRNA",
+              "type": "RNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "mRNA",
+              "type": "RNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Small ribosomal subunit protein bS21",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P68679"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Small ribosomal subunit protein bS20",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0A7U7"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Small ribosomal subunit protein uS2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0A7V0"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Small ribosomal subunit protein uS19",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0A7U3"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Small ribosomal subunit protein bS18",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0A7T7"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Small ribosomal subunit protein uS17",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0AG63"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Small ribosomal subunit protein bS16",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0A7T3"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Small ribosomal subunit protein uS15",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0ADZ4"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Small ribosomal subunit protein uS14",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0AG59"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Small ribosomal subunit protein uS13",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0A7S9"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Small ribosomal subunit protein uS12",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0A7S3"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Small ribosomal subunit protein uS11",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0A7R9"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "Small ribosomal subunit protein uS10",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0A7R5"
+              ],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            },
+            {
+              "description": "30S",
+              "type": "RNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "Escherichia coli B"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "CU1",
+              "name": "COPPER (I) ION"
+            }
+          ]
+        }
+      ],
+      "impact": {
+        "score": 5,
+        "types": [],
+        "validation": [
+          "in vitro"
+        ],
+        "low": [],
+        "journal": true,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [
+        {
+          "uniprot": "P02358",
+          "gene": "rpsF",
+          "synonyms": [],
+          "name": "Small ribosomal subunit protein bS6",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P02359",
+          "gene": "rpsG",
+          "synonyms": [],
+          "name": "Small ribosomal subunit protein uS7",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P02413",
+          "gene": "rplO",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein uL15",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P0A7J7",
+          "gene": "rplK",
+          "synonyms": [
+            "relC"
+          ],
+          "name": "Large ribosomal subunit protein uL11",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P0A7K6",
+          "gene": "rplS",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein bL19",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P0A7L3",
+          "gene": "rplT",
+          "synonyms": [
+            "pdzA"
+          ],
+          "name": "Large ribosomal subunit protein bL20",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P0A7L8",
+          "gene": "rpmA",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein bL27",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P0A7M2",
+          "gene": "rpmB",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein bL28",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P0A7M6",
+          "gene": "rpmC",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein uL29",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P0A7N4",
+          "gene": "rpmF",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein bL32",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P0A7N9",
+          "gene": "rpmG",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein bL33",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P0A7P5",
+          "gene": "rpmH",
+          "synonyms": [
+            "rimA",
+            "ssaF"
+          ],
+          "name": "Large ribosomal subunit protein bL34",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P0A7Q1",
+          "gene": "rpmI",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein bL35",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P0A7Q6",
+          "gene": "rpmJ1",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein bL36A",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P0A7R1",
+          "gene": "rplI",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein bL9",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P0A7R5",
+          "gene": "rpsJ",
+          "synonyms": [
+            "nusE"
+          ],
+          "name": "Small ribosomal subunit protein uS10",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P0A7R9",
+          "gene": "rpsK",
+          "synonyms": [],
+          "name": "Small ribosomal subunit protein uS11",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P0A7S3",
+          "gene": "rpsL",
+          "synonyms": [
+            "strA"
+          ],
+          "name": "Small ribosomal subunit protein uS12",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P0A7S9",
+          "gene": "rpsM",
+          "synonyms": [],
+          "name": "Small ribosomal subunit protein uS13",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P0A7T3",
+          "gene": "rpsP",
+          "synonyms": [],
+          "name": "Small ribosomal subunit protein bS16",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P0A7T7",
+          "gene": "rpsR",
+          "synonyms": [],
+          "name": "Small ribosomal subunit protein bS18",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P0A7U3",
+          "gene": "rpsS",
+          "synonyms": [],
+          "name": "Small ribosomal subunit protein uS19",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P0A7U7",
+          "gene": "rpsT",
+          "synonyms": [],
+          "name": "Small ribosomal subunit protein bS20",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P0A7V0",
+          "gene": "rpsB",
+          "synonyms": [],
+          "name": "Small ribosomal subunit protein uS2",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P0A7V3",
+          "gene": "rpsC",
+          "synonyms": [],
+          "name": "Small ribosomal subunit protein uS3",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P0A7V8",
+          "gene": "rpsD",
+          "synonyms": [
+            "ramA"
+          ],
+          "name": "Small ribosomal subunit protein uS4",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P0A7W1",
+          "gene": "rpsE",
+          "synonyms": [
+            "spc"
+          ],
+          "name": "Small ribosomal subunit protein uS5",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P0A7W7",
+          "gene": "rpsH",
+          "synonyms": [],
+          "name": "Small ribosomal subunit protein uS8",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P0A7X3",
+          "gene": "rpsI",
+          "synonyms": [],
+          "name": "Small ribosomal subunit protein uS9",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P0AA10",
+          "gene": "rplM",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein uL13",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P0ADY3",
+          "gene": "rplN",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein uL14",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P0ADY7",
+          "gene": "rplP",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein uL16",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P0ADZ0",
+          "gene": "rplW",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein uL23",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P0ADZ4",
+          "gene": "rpsO",
+          "synonyms": [
+            "secC"
+          ],
+          "name": "Small ribosomal subunit protein uS15",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P0AG44",
+          "gene": "rplQ",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein bL17",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P0AG48",
+          "gene": "rplU",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein bL21",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P0AG51",
+          "gene": "rpmD",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein uL30",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P0AG55",
+          "gene": "rplF",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein uL6",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P0AG59",
+          "gene": "rpsN",
+          "synonyms": [],
+          "name": "Small ribosomal subunit protein uS14",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P0AG63",
+          "gene": "rpsQ",
+          "synonyms": [
+            "neaA"
+          ],
+          "name": "Small ribosomal subunit protein uS17",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P0C018",
+          "gene": "rplR",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein uL18",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P60422",
+          "gene": "rplB",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein uL2",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P60438",
+          "gene": "rplC",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein uL3",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P60624",
+          "gene": "rplX",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein uL24",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P60723",
+          "gene": "rplD",
+          "synonyms": [
+            "eryA"
+          ],
+          "name": "Large ribosomal subunit protein uL4",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P61175",
+          "gene": "rplV",
+          "synonyms": [
+            "eryB"
+          ],
+          "name": "Large ribosomal subunit protein uL22",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P62399",
+          "gene": "rplE",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein uL5",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P68679",
+          "gene": "rpsU",
+          "synonyms": [],
+          "name": "Small ribosomal subunit protein bS21",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P68919",
+          "gene": "rplY",
+          "synonyms": [],
+          "name": "Large ribosomal subunit protein bL25",
+          "organism": "Escherichia coli (strain K12)"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13694243",
+      "pmid": null,
+      "doi": "10.1038/s41598-026-72601-z",
+      "title": "Functional characterization and pharmacochaperone rescue of a novel SLC6A1 variant associated with developmental epileptic encephalopathies",
+      "journal": "Scientific Reports",
+      "journal_abbrev": "Sci Rep",
+      "authors": "Song ZD, DeLeeuw MB, Mandelenaki D, Shen W, Eda RS, Wang J, Kang JQ",
+      "pub_date": "2026-10-07",
+      "index_date": "2026-10-25",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "Mutations in SLC6A1, encoding the γ-aminobutyric acid (GABA) transporter 1 (GAT-1), are associated with a spectrum of neurodevelopmental disorders, including epilepsy syndromes, intellectual disability (ID), and autism. An important question is whether the impact of these mutations can be predicted at scale using artificial intelligence (AI), and how such predictions correlate with experimental findings. In this study, AI was explored as a predictive tool, not as a replacement for data collected experimentally. We reported clinical presentations including seizures and EEG features, autism related phenotypes and motor skills in a novel variant c.1069G > A (p.Ala357Thr, A357T) in two siblings. We used both AI tools and experimental approaches to characterize this novel mutation in the SLC6A1 gene and compared it with another variant in the same amino acid, c.1070 C > T (p.Ala357Val, A357V). Both AI and experimental approaches indicate that the GAT-1(A357T) and (A357V) mutations destabilize the global protein conformation and have increased localization inside the endoplasmic reticulum (ER). Additionally, the presence of the mutant GAT-1 made the wildtype GAT-1 less mature. Radioactive 3H-labeled GABA uptake assay indicated the mutation drastically reduced the function of the GAT-1(A357T) compared with the wildtype across cell types and pharmacochaperones such as 4-phenylbutyrate rescued the trafficking and function of the mutant GAT-1. Common and differential clinical phenotypes were identified in the siblings carrying the same variant. Mutant GAT-1 caused increased ER retention and impaired the trafficking of wild type GAT-1. PBA treatment rescued the mutant GAT-1 protein expression and GABA uptake function. AI-assisted in silico protein structural modeling and experimental approaches consistently suggest that the A357T and A357V variants destabilize global GAT-1 protein conformation. AI-assisted protein stability predictions provide supportive structural insight but cannot replace experimental assessment of GAT-1 expression and function.Supplementary InformationThe online version contains supplementary material available at https://doi.org/10.1038/s41598-026-72601-z.",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "7Y7W"
+      ],
+      "emdb_ids": [],
+      "people": {
+        "first": {
+          "name": "Ziang Debbie Song",
+          "aff": "Vanderbilt University Medical Center, USA"
+        },
+        "corresp": [
+          {
+            "name": "Jing-Qiong Kang",
+            "aff": "Vanderbilt University Medical Center, USA"
+          }
+        ]
+      },
+      "cited_structures": [
+        {
+          "pdb_id": "7Y7W",
+          "status": "released",
+          "title": "Cryo-EM structure of human GABA transporter GAT1 bound with GABA in NaCl solution in an inward-occluded state at 2.4 angstrom",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.4,
+          "release_date": "2023-04-26",
+          "deposit_date": "2022-06-22",
+          "citation_doi": "10.1038/s41594-023-00983-z",
+          "citation_pmid": "37400655",
+          "citation_title": "Molecular basis for substrate recognition and transport of human GABA transporter GAT1.",
+          "polymers": [
+            {
+              "description": "Sodium- and chloride-dependent GABA transporter 1",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P30531"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "ABU",
+              "name": "GAMMA-AMINO-BUTANOIC ACID"
+            }
+          ]
+        }
+      ],
+      "impact": {
+        "score": 2,
+        "types": [],
+        "validation": [
+          "assay",
+          "mutant"
+        ],
+        "low": [
+          "in silico"
+        ],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [
+        {
+          "uniprot": "P30531",
+          "gene": "SLC6A1",
+          "synonyms": [
+            "GABATR",
+            "GABT1",
+            "GAT1"
+          ],
+          "name": "Sodium- and chloride-dependent GABA transporter 1",
+          "organism": "Homo sapiens"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13695137",
+      "pmid": 42927003,
+      "doi": "10.1016/j.isci.2026.117911",
+      "title": "Lactate-driven histone lactylation by AARS1 promotes pulmonary arterial hypertension",
+      "journal": "iScience",
+      "journal_abbrev": "iScience",
+      "authors": "Chen Z, Cai Z, Lin Y, Chen A, Cao R, Yu L, Cai K, Lian G, Xie L",
+      "pub_date": "2026-10-19",
+      "index_date": "2026-10-25",
+      "license": "cc by-nc-nd",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "SummaryGlycolytic reprogramming drives lactate accumulation in pulmonary arterial hypertension (PAH). We used a monocrotaline-induced rat PAH model and platelet-derived growth factor-BB (PDGF-BB)-stimulated pulmonary artery smooth muscle cells (PASMCs), together with oxamate intervention and molecular assays, to investigate lactate-mediated histone lactylation. PAH tissues exhibited increased lactate, MCT4, and histone H3 lysine 18 lactylation (H3K18la), accompanied by reduced HDAC1. Oxamate reversed these alterations and alleviated pulmonary vascular remodeling. Manipulating MCT4 expression modulated H3K18la levels. Upregulated alanyl-tRNA synthetase 1 (AARS1) displayed enhanced nuclear localization after lactate exposure; AARS1 depletion suppressed lactate-triggered H3K18la and PASMC proliferation. H3K18la was enriched at the Ctnnb1 promoter and correlated with enhanced Ctnnb1 transcription. These findings suggest that lactate may act as an epigenetic signal, linking glycolysis to Ctnnb1 activation through AARS1-associated H3K18la, thereby offering a potential target for PAH treatment.",
+      "source": "impact_search",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "4XEM"
+      ],
+      "emdb_ids": [],
+      "people": {
+        "first": {
+          "name": "Zhihai Chen",
+          "aff": "Fujian Medical University, China"
+        },
+        "corresp": [
+          {
+            "name": "Guili Lian",
+            "aff": "Fujian Medical University, China"
+          },
+          {
+            "name": "Liangdi Xie",
+            "aff": "Fujian Medical University, China"
+          }
+        ]
+      },
+      "cited_structures": [
+        {
+          "pdb_id": "4XEM",
+          "status": "released",
+          "title": "Crystal Structure of wild type human AlaRS catalytic domain",
+          "method": "X-RAY DIFFRACTION",
+          "em_reconstruction": null,
+          "resolution": 1.278,
+          "release_date": "2016-02-17",
+          "deposit_date": "2014-12-24",
+          "citation_doi": null,
+          "citation_pmid": null,
+          "citation_title": "Crystal structure of wild type human AlaRS catalytic domain",
+          "polymers": [
+            {
+              "description": "Alanine--tRNA ligase, cytoplasmic",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P49588"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "A5A",
+              "name": "'5'-O-(N-(L-ALANYL)-SULFAMOYL)ADENOSINE"
+            }
+          ]
+        }
+      ],
+      "impact": {
+        "score": 5,
+        "types": [
+          "drug",
+          "mechanism"
+        ],
+        "validation": [
+          "assay"
+        ],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [
+        {
+          "uniprot": "P49588",
+          "gene": "AARS1",
+          "synonyms": [
+            "AARS"
+          ],
+          "name": "Alanine--tRNA ligase, cytoplasmic",
+          "organism": "Homo sapiens"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13694897",
+      "pmid": 42927214,
+      "doi": "10.1016/j.ibneur.2026.09.019",
+      "title": "Neuroprotective effects of Entandrophragma cylindricum (Meliaceae) extract against “Odontol’’-induced cognitive and depressive disorders: An integrated HPLC, molecular docking and experimental validation",
+      "journal": "IBRO Neuroscience Reports",
+      "journal_abbrev": "IBRO Neurosci Rep",
+      "authors": "Nadège AOA, Espoir AMR, Ronald BAG, Symphorien MT, Marcelle DB, Ulrich NTJ, Désiré DP",
+      "pub_date": "2026-10-12",
+      "index_date": "2026-10-25",
+      "license": "cc by-nc-nd",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "BackgroundThe bark of Entandrophragma cylindricum (Meliaceae) is used in traditional Cameroonian medicine to treat jaundice, gastric ulcers, wounds, pain, and malaria. Chronic consumption of \"Odontol,\" a traditional Cameroonian artisanal alcohol, is associated with hepatotoxicity and progressive neurological impairment. This study evaluated the neuroprotective, anti-amnesic, and antidepressive potentials of the aqueous bark extract of E. cylindricum in a rat model of \"Odontol\"-induced neurotoxicity.MethodsFollowing collection and extraction of the plant, HPLC analysis was performed to determine the compounds present in the plant extract. The aqueous extract was administered concomitantly with \"Odontol\" at 200, 300, and 400 mg/kg/day for 41 days in male Wistar rats, with silymarin (100 mg/kg) as reference drug. Behavioral assessments included open field test, forced swim test, novel object recognition test, and Morris water maze test. On day 42, blood, liver, and hippocampal tissues were collected for biochemical, oxidative stress, neuroinflammatory, and histological analyses. CBdock2 and Biovia discovery studio 2024 were used to perform molecular docking between Entandrophragma cylindricum identified compounds and target proteins GABAr A, NMDA receptor AchE and CaMK.Results\"Odontol\" induced significant anxiety-like behavior, increased immobility, and cognitive deficits. Hippocampal analysis revealed elevated Ca²⁺, serotonin, TNF-α, IL-1β, malondialdehyde, and nitrite, and reduced GABA, acetylcholine, BDNF, glutathione, catalase, and magnesium. Histology showed neuronal necrosis and reduced cell density in CA1, CA3, and dentate gyrus regions. Extract at 300 and 400 mg/kg significantly attenuated all behavioral, biochemical, and histological alterations compared to silymarin. Although molecular docking remains predictive, compounds such as rutin and quercetin bound to target proteins with significant binding energies, thereby potentially modulating the activity of these proteins to protect against Odontol-induced neurotoxicity.ConclusionE. cylindricum aqueous bark extract exerts antioxidant, anti-inflammatory, anti-amnesic, and antidepressive effects, likely through its biochemical constituents.",
+      "source": "impact_search",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "4EY7",
+        "6D6U",
+        "7EU8",
+        "3SOA",
+        "2Z5X"
+      ],
+      "emdb_ids": [],
+      "people": {
+        "first": {
+          "name": "Atangana Onana Adélaïde Nadège",
+          "aff": "University of Yaoundé 1, Cameroon"
+        },
+        "corresp": [
+          {
+            "name": "Ayissi Mbomo Rigobert Espoir",
+            "aff": "University of Ebolowa, Cameroon"
+          }
+        ]
+      },
+      "cited_structures": [
+        {
+          "pdb_id": "4EY7",
+          "status": "released",
+          "title": "Crystal Structure of Recombinant Human Acetylcholinesterase in Complex with Donepezil",
+          "method": "X-RAY DIFFRACTION",
+          "em_reconstruction": null,
+          "resolution": 2.3509,
+          "release_date": "2012-10-17",
+          "deposit_date": "2012-05-01",
+          "citation_doi": "10.1021/jm300871x",
+          "citation_pmid": "23035744",
+          "citation_title": "Structures of human acetylcholinesterase in complex with pharmacologically important ligands.",
+          "polymers": [
+            {
+              "description": "Acetylcholinesterase",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P22303"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "E20",
+              "name": "1-BENZYL-4-[(5,6-DIMETHOXY-1-INDANON-2-YL)METHYL]PIPERIDINE"
+            }
+          ]
+        },
+        {
+          "pdb_id": "6D6U",
+          "status": "released",
+          "title": "Human GABA-A receptor alpha1-beta2-gamma2 subtype in complex with GABA and flumazenil, conformation A",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 3.92,
+          "release_date": "2018-06-27",
+          "deposit_date": "2018-04-22",
+          "citation_doi": "10.1038/s41586-018-0255-3",
+          "citation_pmid": "29950725",
+          "citation_title": "Structure of a human synaptic GABAAreceptor.",
+          "polymers": [
+            {
+              "description": "IgG2b Fab Heavy Chain",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "Kappa Fab Light Chain",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "Gamma-aminobutyric acid receptor subunit gamma-2,Gamma-aminobutyric acid receptor subunit gamma-2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P18507"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "Gamma-aminobutyric acid receptor subunit alpha-1,Gamma-aminobutyric acid receptor subunit alpha-1",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P14867"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "Gamma-aminobutyric acid receptor subunit beta-2,Gamma-aminobutyric acid receptor subunit beta-2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P47870"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "ABU",
+              "name": "GAMMA-AMINO-BUTANOIC ACID"
+            },
+            {
+              "id": "FYP",
+              "name": "ethyl 8-fluoro-5-methyl-6-oxo-5,6-dihydro-4H-imidazo[1,5-a][1,4]benzodiazepine-3-carboxylate"
+            }
+          ]
+        },
+        {
+          "pdb_id": "7EU8",
+          "status": "released",
+          "title": "Structure of the human GluN1-GluN2B NMDA receptor in complex with S-ketamine,glycine and glutamate",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 4.07,
+          "release_date": "2021-07-28",
+          "deposit_date": "2021-05-16",
+          "citation_doi": "10.1038/s41586-021-03769-9",
+          "citation_pmid": "34321660",
+          "citation_title": "Structural basis of ketamine action on human NMDA receptors.",
+          "polymers": [
+            {
+              "description": "Glutamate receptor ionotropic, NMDA 2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q13224"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "Glutamate receptor ionotropic, NMDA 1",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q05586"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "JC9",
+              "name": "(2~{S})-2-(2-chlorophenyl)-2-(methylamino)cyclohexan-1-one"
+            }
+          ]
+        },
+        {
+          "pdb_id": "3SOA",
+          "status": "released",
+          "title": "Full-length human CaMKII",
+          "method": "X-RAY DIFFRACTION",
+          "em_reconstruction": null,
+          "resolution": 3.5501,
+          "release_date": "2011-08-31",
+          "deposit_date": "2011-06-30",
+          "citation_doi": "10.1016/j.cell.2011.07.038",
+          "citation_pmid": "21884935",
+          "citation_title": "A Mechanism for Tunable Autoinhibition in the Structure of a Human Ca(2+)/Calmodulin- Dependent Kinase II Holoenzyme.",
+          "polymers": [
+            {
+              "description": "Calcium/calmodulin-dependent protein kinase type II subunit alpha with a beta 7 linker",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UQM7"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "DB8",
+              "name": "4-[(2,4-dichloro-5-methoxyphenyl)amino]-6-methoxy-7-[3-(4-methylpiperazin-1-yl)propoxy]quinoline-3-carbonitrile"
+            }
+          ]
+        },
+        {
+          "pdb_id": "2Z5X",
+          "status": "released",
+          "title": "Crystal Structure of Human Monoamine Oxidase A with Harmine",
+          "method": "X-RAY DIFFRACTION",
+          "em_reconstruction": null,
+          "resolution": 2.2,
+          "release_date": "2008-04-01",
+          "deposit_date": "2007-07-20",
+          "citation_doi": "10.1073/pnas.0710626105",
+          "citation_pmid": "18391214",
+          "citation_title": "Structure of human monoamine oxidase A at 2.2-A resolution: The control of opening the entry for substrates/inhibitors",
+          "polymers": [
+            {
+              "description": "Amine oxidase [flavin-containing] A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P21397"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "FAD",
+              "name": "FLAVIN-ADENINE DINUCLEOTIDE"
+            },
+            {
+              "id": "HRM",
+              "name": "7-METHOXY-1-METHYL-9H-BETA-CARBOLINE"
+            },
+            {
+              "id": "DCX",
+              "name": "DECYL(DIMETHYL)PHOSPHINE OXIDE"
+            }
+          ]
+        }
+      ],
+      "impact": {
+        "score": 1,
+        "types": [
+          "drug"
+        ],
+        "validation": [],
+        "low": [
+          "molecular docking"
+        ],
+        "journal": false,
+        "exp_structure": true,
+        "flags": [
+          "計算のみの可能性（molecular docking）"
+        ]
+      },
+      "proteins": [
+        {
+          "uniprot": "P14867",
+          "gene": "GABRA1",
+          "synonyms": [],
+          "name": "Gamma-aminobutyric acid receptor subunit alpha-1",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P18507",
+          "gene": "GABRG2",
+          "synonyms": [],
+          "name": "Gamma-aminobutyric acid receptor subunit gamma-2",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P21397",
+          "gene": "MAOA",
+          "synonyms": [],
+          "name": "Amine oxidase [flavin-containing] A",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P22303",
+          "gene": "ACHE",
+          "synonyms": [],
+          "name": "Acetylcholinesterase",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P47870",
+          "gene": "GABRB2",
+          "synonyms": [],
+          "name": "Gamma-aminobutyric acid receptor subunit beta-2",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "Q05586",
+          "gene": "GRIN1",
+          "synonyms": [
+            "NMDAR1"
+          ],
+          "name": "Glutamate receptor ionotropic, NMDA 1",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "Q13224",
+          "gene": "GRIN2B",
+          "synonyms": [
+            "NMDAR2B"
+          ],
+          "name": "Glutamate receptor ionotropic, NMDA 2B",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "Q9UQM7",
+          "gene": "CAMK2A",
+          "synonyms": [
+            "CAMKA",
+            "KIAA0968"
+          ],
+          "name": "Calcium/calmodulin-dependent protein kinase type II subunit alpha",
+          "organism": "Homo sapiens"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13694702",
+      "pmid": 42732001,
+      "doi": "10.1038/s44319-026-00933-y",
+      "title": "Selection favors cost-ordered adaptive mutational paths in a stress-magnitude-dependent manner",
+      "journal": "EMBO Reports",
+      "journal_abbrev": "EMBO Rep",
+      "authors": "Patil AV, Zhao J, Khairnar SV, Srivastava S, Yang L, Anand A",
+      "pub_date": "2026-09-12",
+      "index_date": "2026-10-25",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "Chronic exposure to stress requires adaptive strategies beyond canonical regulatory mechanisms. Stress varies, both qualitatively and quantitatively, across physiological niches and exerts distinct selection pressures on colonizing bacteria. Bacteria employ diverse defense strategies to withstand various stressful conditions, yet how they tailor their responses to different magnitudes of the same stressor remains poorly understood. We used multiple adaptive laboratory evolution experiments of Escherichia coli across varying paraquat concentrations and genetic backgrounds to dissect adaptive strategies at different levels of stress. Integrating multi-omic analyses with a tailored genome-scale metabolic model-based parametrized cost calculations, we identify two fundamentally distinct tolerance mechanisms. Under low-paraquat stress, blocking the polyamine transporter that is reported to be hijacked for paraquat influx suffices to maintain optimal growth. In contrast, higher stress levels activate an energetically demanding program involving enhanced detoxification and efflux. The transport flux regulation establishes a primary defense layer, upon which metabolic repair systems provide additional fitness advantages. The stress magnitude-dependent differential engagement of previously reported paraquat tolerance approaches offers insights into the principles governing dynamic bacterial adaptation.",
+      "source": "impact_search",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "8Y5I"
+      ],
+      "emdb_ids": [],
+      "people": {
+        "first": {
+          "name": "Anjali V Patil",
+          "aff": "Tata Institute of Fundamental Research, India"
+        },
+        "corresp": [
+          {
+            "name": "Amitesh Anand",
+            "aff": "Tata Institute of Fundamental Research, India"
+          }
+        ]
+      },
+      "cited_structures": [
+        {
+          "pdb_id": "8Y5I",
+          "status": "released",
+          "title": "Cryo-EM structure of E.coli spermidine transporter PotD-PotABC in translocation intermidiate state",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 3.0,
+          "release_date": "2024-10-09",
+          "deposit_date": "2024-01-31",
+          "citation_doi": "10.1126/sciadv.ado8107",
+          "citation_pmid": "39303029",
+          "citation_title": "Structural insights into polyamine spermidine uptake by the ABC transporter PotD-PotABC.",
+          "polymers": [
+            {
+              "description": "Spermidine/putrescine import ATP-binding protein PotA",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P69874"
+              ],
+              "organisms": [
+                "Escherichia coli"
+              ]
+            },
+            {
+              "description": "Spermidine/putrescine transport system permease protein PotB",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0AFK4"
+              ],
+              "organisms": [
+                "Escherichia coli"
+              ]
+            },
+            {
+              "description": "Spermidine/putrescine transport system permease protein PotC",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0AFK6"
+              ],
+              "organisms": [
+                "Escherichia coli"
+              ]
+            },
+            {
+              "description": "Putrescine-binding periplasmic protein",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P0AFK9"
+              ],
+              "organisms": [
+                "Escherichia coli"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "ATP",
+              "name": "ADENOSINE-5'-TRIPHOSPHATE"
+            }
+          ]
+        }
+      ],
+      "impact": {
+        "score": 3,
+        "types": [
+          "mechanism"
+        ],
+        "validation": [],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [
+        {
+          "uniprot": "P0AFK4",
+          "gene": "potB",
+          "synonyms": [],
+          "name": "Spermidine/putrescine transport system permease protein PotB",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P0AFK6",
+          "gene": "potC",
+          "synonyms": [],
+          "name": "Spermidine/putrescine transport system permease protein PotC",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P0AFK9",
+          "gene": "potD",
+          "synonyms": [],
+          "name": "Spermidine/putrescine-binding periplasmic protein",
+          "organism": "Escherichia coli (strain K12)"
+        },
+        {
+          "uniprot": "P69874",
+          "gene": "potA",
+          "synonyms": [],
+          "name": "Spermidine/putrescine import ATP-binding protein PotA",
+          "organism": "Escherichia coli (strain K12)"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13695116",
+      "pmid": null,
+      "doi": "10.1016/j.jgeb.2026.100837",
+      "title": "Smoking-associated changes in serum TP53 levels and molecular characterization of nicotine interaction with the MDM2–p53 complex: an integrated clinical and in silico study",
+      "journal": "Journal of Genetic Engineering & Biotechnology",
+      "journal_abbrev": "J Genet Eng Biotechnol",
+      "authors": "Khalifa NK, Hussein MK",
+      "pub_date": "2026-10-19",
+      "index_date": "2026-10-25",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "Smoking induces cellular stress and genomic damage that may disrupt regulation of the p53 tumor-suppressor pathway. This cross-sectional study evaluated serum p53 concentrations in 154 Iraqi adults, including 92 smokers and 62 non-smoking controls, and examined the predicted interaction of nicotine with the MDM2–p53 complex using molecular docking and molecular dynamics simulations. Serum p53 was measured by sandwich ELISA, while smokers were classified as Cigarette, narghile, or Electronic-Cigarette users, and associations between cumulative smoking exposure and serum p53 were assessed. Nicotine was docked into the MDM2–p53 peptide complex structure (PDB ID: 4HFZ) using MOE 2019, followed by a 110-ns molecular dynamics simulation in Desmond. Serum p53 concentrations were significantly higher in smokers than in controls (4791.2 vs. 3024.1 pg/mL, p < 0.001). No significant differences were detected among smoking types (p = 0.547), and cumulative exposure was not significantly correlated with serum p53 in any subgroup. Docking identified a preferred nicotine-binding pose with a predicted score of −5.31 kcal/mol and interactions involving Val28 and Arg29. The simulated complex exhibited marked early conformational adjustment, followed by a comparatively stable trajectory supported by persistent and intermittent noncovalent interactions. These findings indicate that smoking is associated with elevated circulating p53 concentrations and suggest that nicotine may interact with residues within the MDM2–p53 binding region; however, further cellular and biochemical validation is required.",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "4HFZ"
+      ],
+      "emdb_ids": [],
+      "people": {
+        "first": {
+          "name": "Noor Kareem Khalifa",
+          "aff": "Baghdad University, Iraq"
+        },
+        "corresp": [
+          {
+            "name": "Noor Kareem Khalifa",
+            "aff": "Baghdad University, Iraq"
+          }
+        ]
+      },
+      "cited_structures": [
+        {
+          "pdb_id": "4HFZ",
+          "status": "released",
+          "title": "Crystal Structure of an MDM2/P53 Peptide Complex",
+          "method": "X-RAY DIFFRACTION",
+          "em_reconstruction": null,
+          "resolution": 2.694,
+          "release_date": "2013-07-31",
+          "deposit_date": "2012-10-05",
+          "citation_doi": "10.1107/s0907444913004459",
+          "citation_pmid": "23897459",
+          "citation_title": "The structure of an MDM2-Nutlin-3a complex solved by the use of a validated MDM2 surface-entropy reduction mutant.",
+          "polymers": [
+            {
+              "description": "E3 ubiquitin-protein ligase Mdm2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q00987"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "Cellular tumor antigen p53",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P04637"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": []
+        }
+      ],
+      "impact": {
+        "score": -1,
+        "types": [
+          "mechanism"
+        ],
+        "validation": [],
+        "low": [
+          "in silico",
+          "molecular docking"
+        ],
+        "journal": false,
+        "exp_structure": true,
+        "flags": [
+          "計算のみの可能性（in silico、molecular docking）"
+        ]
+      },
+      "proteins": [
+        {
+          "uniprot": "P04637",
+          "gene": "TP53",
+          "synonyms": [
+            "P53"
+          ],
+          "name": "Cellular tumor antigen p53",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "Q00987",
+          "gene": "MDM2",
+          "synonyms": [],
+          "name": "E3 ubiquitin-protein ligase Mdm2",
+          "organism": "Homo sapiens"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13694374",
+      "pmid": 42362749,
+      "doi": "10.1007/s00204-026-04483-z",
+      "title": "Structure–activity relationship of synthetic cathinones: integrated in silico, in vitro, and in vivo studies of α-PiHP analogues",
+      "journal": "Archives of Toxicology",
+      "journal_abbrev": "Arch Toxicol",
+      "authors": "Pazos MD, García-Díez G, Pubill D, Berzosa X, Estrada-Tejedor R, Camarasa J, Escubedo E, López-Arnau R, Nadal-Gratacós N",
+      "pub_date": "2026-06-27",
+      "index_date": "2026-10-25",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "Synthetic cathinones represent the main group of emerging psychostimulants consumed worldwide. Structural modifications of these compounds have led to pyrovalerones, potent dopamine transporter (DAT) inhibitors associated with high abuse liability. Among them, α-pyrrolidinoisohexanophenone (α-PiHP) became the most seized pyrovalerone in the European Union in 2023. Novel analogues have rapidly appeared, yet their neuropharmacological and toxicological properties remain unknown. This study aimed to characterize α-PiHP and five structurally related derivatives (3-Me-α-PiHP, 4-Me-α-PiHP, 3-F-α-PiHP, 4-F-α-PiHP, and MDPiHP). Monoamine transporter activity was evaluated using HEK293 cells expressing human norepinephrine (hNET), hDAT, or serotonin (hSERT) transporters through uptake inhibition and binding assays. Molecular docking was performed to model interactions at hDAT. Psychostimulant, thigmotactic, and rewarding effects were evaluated in male Swiss CD-1 mice using horizontal locomotor activity, open field, and conditioned place preference paradigms. Lethality after drug administration was also assessed. All compounds potently inhibited hDAT and hNET, while displaying limited activity at hSERT. This resulted in high hDAT/hSERT ratios indicative of a stimulant-like profile and elevated abuse liability, confirmed in vivo by pronounced psychostimulant and rewarding effects. All molecules interacted with the orthosteric binding site at hDAT and displayed higher binding affinity than cocaine in in vitro and in silico studies. Meta-substituted analogues showed greater hDAT affinity and behavioural responses than para-isomers. Notably, MDPiHP exhibited the highest potency and affinity, strongest psychostimulant effects and significant lethality. These findings demonstrate that minor structural modifications markedly influence pharmacological activity of pyrovalerone derivatives, highlighting the high abuse potential and health risks associated with emerging α-PiHP analogues.Supplementary InformationThe online version contains supplementary material available at https://doi.org/10.1007/s00204-026-04483-z.",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "9EO4"
+      ],
+      "emdb_ids": [],
+      "people": {
+        "first": {
+          "name": "Martalu D. Pazos",
+          "aff": "Universitat de Barcelona, Spain"
+        },
+        "corresp": [
+          {
+            "name": "Raúl López-Arnau",
+            "aff": "Universitat de Barcelona, Spain"
+          },
+          {
+            "name": "Núria Nadal-Gratacós",
+            "aff": "Universitat de Barcelona, Spain"
+          }
+        ]
+      },
+      "cited_structures": [
+        {
+          "pdb_id": "9EO4",
+          "status": "released",
+          "title": "Outward-open structure of human dopamine transporter bound to cocaine",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.66,
+          "release_date": "2024-07-03",
+          "deposit_date": "2024-03-14",
+          "citation_doi": "10.1038/s41586-024-07804-3",
+          "citation_pmid": "39112703",
+          "citation_title": "Structure of the human dopamine transporter in complex with cocaine.",
+          "polymers": [
+            {
+              "description": "Sodium-dependent dopamine transporter",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q01959"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [
+            {
+              "id": "COC",
+              "name": "COCAINE"
+            }
+          ]
+        }
+      ],
+      "impact": {
+        "score": 2,
+        "types": [
+          "drug"
+        ],
+        "validation": [
+          "assay",
+          "binding affinity",
+          "in vitro",
+          "in vivo",
+          "mice"
+        ],
+        "low": [
+          "in silico",
+          "molecular docking"
+        ],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [
+        {
+          "uniprot": "Q01959",
+          "gene": "SLC6A3",
+          "synonyms": [
+            "DAT1"
+          ],
+          "name": "Sodium-dependent dopamine transporter",
+          "organism": "Homo sapiens"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13694438",
+      "pmid": 42446669,
+      "doi": "10.1007/s00204-026-04497-7",
+      "title": "TEAD inhibitor induced switch in energy metabolism drives human podocyte injury in vitro",
+      "journal": "Archives of Toxicology",
+      "journal_abbrev": "Arch Toxicol",
+      "authors": "Zielinski A, Hauptstein J, Baier B, Schaarschmidt P, Ketter N, Dietrich DR, Meier F",
+      "pub_date": "2026-07-06",
+      "index_date": "2026-10-25",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "Early detection and understanding of the potential adverse effects of a drug candidate is of utmost importance to reduce the attrition rate during drug development while delivering safe medications to patients. The kidney is one of the most frequently challenged organs involved in drug-induced toxicity, including general glomerulopathy and podocyte- specific cytotoxicity with ensuing overt proteinuria. Whilst TEAD inhibitors address the need for treatment of mesotheliomas and other tumours unaffected by approved drugs, animal testing and clinical trials provide evidence of renal toxicity induced by this novel class of drugs. Here we present an in vitro test system consisting of immortalized human podocytes PODO/TERT256 to characterize the potential adverse effects of TEAD inhibitors. We demonstrate that TEAD inhibitors K-975, IK-930 and VT-107 affect the podocyte monolayer in a wide dose range (33.3–100 µM), disrupt the cellular vesicle system, and subsequently induce cell death, especially after exposure to pan-TEAD inhibitors (VT-107 and K-975). Of note, low micromolar concentrations of TEAD inhibitors lowered mitochondrial oxidative phosphorylation directly after exposure which was confirmed by reduced basal ATP levels after 3 d of exposure. In summary, the in vitro human podocyte model presented can characterize glomerular filtration functionality decline subsequent to TEAD inhibitor exposure and thus represents a promising model for early detection and prediction of potential drug related glomerulopathy in humans.",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "3KYS"
+      ],
+      "emdb_ids": [],
+      "people": {
+        "first": {
+          "name": "Alexander Zielinski",
+          "aff": "University of Konstanz, Germany"
+        },
+        "corresp": [
+          {
+            "name": "Florian Meier",
+            "aff": "Global Non-clinical Safety Science Germany"
+          }
+        ]
+      },
+      "cited_structures": [
+        {
+          "pdb_id": "3KYS",
+          "status": "released",
+          "title": "Crystal structure of human YAP and TEAD complex",
+          "method": "X-RAY DIFFRACTION",
+          "em_reconstruction": null,
+          "resolution": 2.8,
+          "release_date": "2010-02-23",
+          "deposit_date": "2009-12-07",
+          "citation_doi": "10.1101/gad.1865810",
+          "citation_pmid": "20123905",
+          "citation_title": "Structural insights into the YAP and TEAD complex",
+          "polymers": [
+            {
+              "description": "65 kDa Yes-associated protein",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P46937"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "Transcriptional enhancer factor TEF-1",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P28347"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": []
+        }
+      ],
+      "impact": {
+        "score": 5,
+        "types": [
+          "method",
+          "drug"
+        ],
+        "validation": [
+          "in vitro"
+        ],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [
+        {
+          "uniprot": "P28347",
+          "gene": "TEAD1",
+          "synonyms": [
+            "TCF13",
+            "TEF1"
+          ],
+          "name": "Transcriptional enhancer factor TEF-1",
+          "organism": "Homo sapiens"
+        },
+        {
+          "uniprot": "P46937",
+          "gene": "YAP1",
+          "synonyms": [
+            "YAP65"
+          ],
+          "name": "Transcriptional coactivator YAP1",
+          "organism": "Homo sapiens"
+        }
+      ],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13693258",
+      "pmid": 42921423,
+      "doi": "10.1021/acsmeasuresciau.6c00178",
+      "title": "A Tutorial on Automated Mass Spectral Analysis Using NucleoSpec for Compositional Assignment of Nucleic Acid-Silver Complexes and Nanoclusters",
+      "journal": "ACS Measurement Science Au",
+      "journal_abbrev": "ACS Meas Sci Au",
+      "authors": "Lin IH, Copp SM",
+      "pub_date": "2026-08-15",
+      "index_date": "2026-10-25",
+      "license": "cc by-nc-nd",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "Nucleic acid–metal complexes, such as DNA-stabilized silver nanoclusters (DNA-Ag N ) and Ag­(I)-mediated DNA duplexes, show promise for applications ranging from biomedical imaging to bioelectronics and sensing. Electrospray ionization mass spectrometry (ESI-MS) is a powerful tool for precisely resolving their compositions, but the data analysis procedure can be challenging and time-consuming. No general-purpose software can automatically assign compositions of nucleic acid–silver complexes, most notably for DNA-Ag N , whose masses depend on the oxidation state of the silver core. We address these challenges by developing an automated data analysis workflow for ESI-MS of nucleic acid–silver complexes. This tutorial presents the analysis workflow and introduces NucleoSpec, an open-source, web-based platform that consolidates charge state determination, constraint-based composition enumeration, isotope-pattern matching, and adduct/conjugate handling into a single browser-accessible interface. The platform is benchmarked on published molecular formulas determined by manual analysis for DNA-Ag N , xeno-nucleic acid stabilized Ag N (XNA-Ag N ), nucleic acid–Ag­(I) complexes, and chemically modified DNA-Ag N , reproducing assignments to single-proton precision (median centroid offset of 0.03 m/z) for spectra of adequate signal-to-noise. Low-signal peaks for which adjacent valence electron counts become difficult to distinguish are flagged by NucleoSpec for user inspection. By lowering the barrier to high-resolution compositional analysis and supporting integration into high-throughput pipelines, NucleoSpec addresses a key experimental bottleneck in informatics-guided design of nucleic acid–metal complexes.",
+      "source": "impact_search",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "people": {
+        "first": {
+          "name": "I-Hsin Lin",
+          "aff": "University of California, United States"
+        },
+        "corresp": [
+          {
+            "name": "Stacy M. Copp",
+            "aff": "University of California, United States"
+          }
+        ]
+      },
+      "cited_structures": [],
+      "impact": {
+        "score": 3,
+        "types": [
+          "method"
+        ],
+        "validation": [],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13694780",
+      "pmid": 42927158,
+      "doi": "10.1016/j.fochx.2026.104603",
+      "title": "Acyl transfer activity inhibition and its application in moderate enzymatic degumming of crude soybean oil",
+      "journal": "Food Chemistry: X",
+      "journal_abbrev": "Food Chem X",
+      "authors": "Guo R, Du X, Luo S, Wang L, Yang F, Yu D",
+      "pub_date": "2026-10-13",
+      "index_date": "2026-10-25",
+      "license": "cc by-nc-nd",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "In this study, sodium tetraborate (Na2B4O7) was used as an inhibitor to exploit the electron-withdrawing capability of boron atoms, it locks the activated lone pair electrons of hydroxyl oxygen and blocks the formation of the first intermediate, thereby inhibiting acyl migration. Under the optimized conditions of pH 6.0, temperature 60 °C, enzyme addition 0.02%, Na2B4O7 addition 0.8%, and reaction time of 4 h, the phosphorus content in crude soybean oil was reduced to 12.1 mg/kg, while the FFA content increased to 1.05 g/100 g. Compared to conventional enzymatic degumming, the FFA content was reduced by 0.19 g/100 g, and the acyl migration rate was decreased by 17.0%. Liquid chromatography analysis confirmed that the addition of the inhibitor achieved moderate enzymatic degumming of crude soybean oil.",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "people": {
+        "first": {
+          "name": "Ruichi Guo",
+          "aff": "Harbin University of Commerce, China"
+        },
+        "corresp": [
+          {
+            "name": "Liqi Wang",
+            "aff": "Harbin University of Commerce, China"
+          },
+          {
+            "name": "Fuming Yang",
+            "aff": "Northeast Agricultural University, China"
+          }
+        ]
+      },
+      "cited_structures": [],
+      "impact": {
+        "score": -4,
+        "types": [],
+        "validation": [],
+        "low": [],
+        "journal": false,
+        "exp_structure": false,
+        "flags": [
+          "実験構造の手がかりなし"
+        ]
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13694807",
+      "pmid": 42874293,
+      "doi": "10.1016/j.ebiom.2026.106506",
+      "title": "CNPY3 variants associated with a recessive developmental and epileptic encephalopathy affect inflammasome and TLR function",
+      "journal": "eBioMedicine",
+      "journal_abbrev": "EBioMedicine",
+      "authors": "Garloff V, Grimmel M, Maroofian R, Efthymiou S, Stengel S, Bello D, Tille C, Ghait M, Ohlenschläger O, Dieckmann A, de Vries H, Waginger M, Nadeef S, Barkhordari E, Kaiyrzhanov R, Bühler S, Pjeci I, Beck-Wödl S, Alvi JR, Sultan T, Chassevent A, Smith-Hicks C, Mishina I, Rodríguez-Palmero A, Wassmer E, Vogt J, Meudt CM, Jamra RA, Abbaszadegan MR, Ajami N",
+      "pub_date": "2026-10-14",
+      "index_date": "2026-10-25",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "SummaryBackgroundCanopy FGF signalling regulator 3 (CNPY3) is an endoplasmic reticulum (ER)-resident chaperone essential for toll-like receptor (TLR) folding, trafficking and inflammasome activation. In rare paediatric cases, biallelic CNPY3 variants have been associated with developmental and epileptic encephalopathy (DEE), but available data remain sparse.Methods50 individuals from 38 unrelated families with biallelic CNPY3 variants and DEE were evaluated for exome and genome findings, standardised clinical phenotype descriptions, EEG results, and neuroimaging data. A selection of variants underwent functional analysis focussing on protein stability and localisation, TLR2 function, NLPR3 inflammasome activation, and structural conformation.FindingsDisease onset occurred in early infancy (median age at onset 68 days), with a clinical phenotype comprising global developmental delay (100%) and intractable epilepsy (86%), accompanied by microcephaly (70%), spasticity (77%), growth faltering (63%), stridor (48%), and early mortality (38%). Epileptic spasms and tonic seizures (46% each) were the most frequent seizure types, and EEG findings included suppression-burst (37%) and hypsarrhythmia (28%). Phenotypic severity varied substantially, with most patients being severely affected (median score 16, range 2–20). Most variants occurred in the homozygous state (95%), including 13 missense changes and 7 truncating alleles. Variants were classified as of uncertain significance (71%), followed by likely pathogenic (23%) and pathogenic (6%) according to ACMG/AMP criteria. Genotype–phenotype correlation showed that individuals with truncating variants were, on average, more severely affected than those with non-truncating variants (median score 18 vs 14.5). Protein modelling predicted conformational effects for most missense variants. In cells, frameshift alleles abolished CNPY3 protein expression, whereas nonsense alleles markedly reduced protein levels. ER localisation of CNPY3 remained preserved across tested genotypes; however, capacity to support TLR2 maturation and processing varied substantially. Remarkably, some missense variants permitted TLR2 surface expression but impaired downstream signalling and inflammasome activation, uncoupling trafficking from signal transduction.InterpretationCNPY3-associated DEE is a severe early-onset disorder with genotype-dependent phenotypic severity, accompanied by allele-specific disruption of innate immune pathways. Our findings reveal separable effects on TLR trafficking, downstream signalling and inflammasome activation, identifying CNPY3 as a key regulator of multiple cellular pathways involved in inflammatory responses and neurodevelopment.FundingInterdisciplinary Center of Clinical Research and Jena School of Molecular Medicine, 10.13039/501100007653Jena University Hospital; 10.13039/100012957Friedrich Schiller University Jena; The Wellcome Trust; The Medical Research Council; 10.13039/100013128The MSA Trust; The National Institute for Health Research University College London Hospitals Biomedical Research Centre; 10.13039/100000864The Michael J Fox Foundation; 10.13039/501100000268Biotechnology and Biological Sciences Research Council; The Fidelity Trust; 10.13039/501100000833Rosetrees Trust; 10.13039/501100000346Ataxia UK; 10.13039/100013790Brain Research UK; Sparks GOSH Charity; Alzheimer's Research UK; CureDRPLA; UK Dementia Research Institute; 10.13039/501100000304Parkinson's UK; 10.13039/501100006095South-Eastern Norway Regional Health Authority, Norway; France Genomic Medicine Plan 2025; 10.13039/501100001659Deutsche Forschungsgemeinschaft; 10.13039/501100000780European Commission; Federal Government of Germany; State of Thuringia; 10.13039/100009374Pakistan Science Foundation; 10.13039/501100013302King Abdullah International Medical Research Center; 10.13039/501100003009Science and Technology Development Fund; 10.13039/501100019345King Salman Center for Disability Research.",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "people": {
+        "first": {
+          "name": "Vera Garloff",
+          "aff": "Jena University Hospital, Germany"
+        },
+        "corresp": [
+          {
+            "name": "Ignacio Rubio",
+            "aff": "Jena University Hospital, Germany"
+          },
+          {
+            "name": "Ralf A. Husain",
+            "aff": "Jena University Hospital, Germany"
+          }
+        ]
+      },
+      "cited_structures": [],
+      "impact": {
+        "score": -3,
+        "types": [
+          "mechanism"
+        ],
+        "validation": [],
+        "low": [],
+        "journal": false,
+        "exp_structure": false,
+        "flags": [
+          "実験構造の手がかりなし"
+        ]
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13693366",
+      "pmid": 42921180,
+      "doi": "10.1093/bioadv/vbag186",
+      "title": "Characterizing the fragmentation of AlphaFold predictions",
+      "journal": "Bioinformatics Advances",
+      "journal_abbrev": "Bioinform Adv",
+      "authors": "Cazals F, Sarti E",
+      "pub_date": "2026-10-23",
+      "index_date": "2026-10-25",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "AbstractMotivationThe Nobel Prize-winning program AlphaFold2 computes plausible structures of (well) folded proteins. The main quality assessment is based on the predicted local distance difference test (pLDDT), a per-amino acid confidence score.ResultsTo enhance quality assessment, we provide novel quantitative measures to identify coherent amino acid (a.a.) stretches along the sequence in terms of pLDDT values. These constructions, grounded in standard techniques from topological data analysis and combinatorics, provide a canonical framework for identifying regions along the protein backbone and analyzing their properties, such as their propensity for disorder and their consistency with a null model. The outcome of our analysis can readily be used to select reliable regions/domains within proteins whose pLDDT values span the entire pLDDT range.ResultsAvailability and implementation: The software acompanying this work is available in the package Alphafold_analysis of the Structural Bioinformatics Library.",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "people": {
+        "first": {
+          "name": "Frédéric Cazals",
+          "aff": "Centre Inria d’Université Côte d’Azur, France"
+        },
+        "corresp": [
+          {
+            "name": "Frédéric Cazals",
+            "aff": "Centre Inria d’Université Côte d’Azur, France"
+          }
+        ]
+      },
+      "cited_structures": [],
+      "impact": {
+        "score": -1,
+        "types": [
+          "method",
+          "ai_design",
+          "drug"
+        ],
+        "validation": [],
+        "low": [],
+        "journal": false,
+        "exp_structure": false,
+        "flags": [
+          "実験構造の手がかりなし"
+        ]
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13694717",
+      "pmid": 42728375,
+      "doi": "10.1038/s44319-026-00907-0",
+      "title": "Circulating cholesterol fuels SARS-CoV-2 replication via ORF3a",
+      "journal": "EMBO Reports",
+      "journal_abbrev": "EMBO Rep",
+      "authors": "Hayashi JM, Taha TY, Chen IP, Suryawanshi RK, Swaney DL, McCavitt-Malvido M, Montano M, Syed AM, Khalid MM, Simoneau CR, Chen PY, Leon KE, Tsou CL, Stevenson E, Gordon M, Chaplin NR, Jorgens DM, Wang Z, Puschnik AS, Doudna JA, Krogan NJ, Ott M",
+      "pub_date": "2026-09-11",
+      "index_date": "2026-10-25",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "High levels of “bad” cholesterol increase the risk of cardiovascular disease and are also linked to more severe COVID-19, though the reason has been unclear. We show that low-density lipoprotein (LDL) directly enhances SARS-CoV-2 RNA replication, especially in the Beta variant. The viral accessory protein ORF3a is both necessary and sufficient to increase cholesterol uptake in cell culture and hamster models. ORF3a stabilizes the host LDL receptor by displacing the PCSK9 chaperone, leading to greater cholesterol entry into cells. While wild-type ORF3a disrupts endosomal acidification and limits cholesterol recycling through interaction with VPS39 (part of the HOPS complex), the Beta variant does not, allowing more efficient cholesterol recovery and stronger LDL responsiveness. Overall, our findings show that SARS-CoV-2 can directly link its replication to host cholesterol levels via ORF3a. This mechanism may help guide antiviral strategies, particularly for individuals with high cholesterol.",
+      "source": "impact_search",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "people": {
+        "first": {
+          "name": "Jennifer M Hayashi",
+          "aff": "J. David Gladstone Institutes, USA"
+        },
+        "corresp": [
+          {
+            "name": "Melanie Ott",
+            "aff": "J. David Gladstone Institutes, USA"
+          }
+        ]
+      },
+      "cited_structures": [],
+      "impact": {
+        "score": 3,
+        "types": [
+          "mechanism"
+        ],
+        "validation": [],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13693252",
+      "pmid": 42921435,
+      "doi": "10.1021/acsnanoscienceau.6c00146",
+      "title": "Copper-Based Nanostructures as Peroxidase Mimics: Elucidating the Roles of Shape, Composition, and Chloride Ion Modulation",
+      "journal": "ACS Nanoscience Au",
+      "journal_abbrev": "ACS Nanosci Au",
+      "authors": "Salmanian G, Zhang L, Benamara M, Bell A, Chen J",
+      "pub_date": "2026-10-13",
+      "index_date": "2026-10-25",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "Nanozymes, artificial enzymes that have emerged as promising alternatives to traditional enzymes, offer high stability, versatility, and ease of production. In this study, we investigated the peroxidase-mimicking activity of Cu-based nanostructures, including nanoparticles (CuNS) and nanowires (CuNW), as well as Cu–Au alloys and intermetallic nanoparticles. The substrate 3,3′,5,5′-tetramethylbenzidine (TMB) was used to monitor the kinetics. Our results showed that CuNW exhibited 2.1-fold higher activity toward TMB oxidation than CuNS, with a k cat value of 10.0 × 10–4 s–1. The addition of NaCl enhanced catalytic activity, decreasing the activation energy (E a) from 15.54 to 11.92 kJ/mol for CuNS and from 14.30 to 12.83 kJ/mol for CuNW. The mechanism involves a Cu­(I)/Cu­(II) cycle, where Cu metal coupling and chloride ions facilitate the reaction. The Cu3Au alloy nanoparticles exhibited 1.8-fold higher catalytic activity than their intermetallic counterparts, with a k cat value of 3.68 × 10–4 s–1 due to differences in their Cu stability. Chloride ions had a positive effect on catalytic activity, lowering E a values from 30.45 to 16.80 kJ/mol for the alloy and from 37.92 to 32.10 kJ/mol for the intermetallic. Our findings provide new insights into the development of nonprecious metal-containing catalysts as efficient nanozymes for various applications.",
+      "source": "impact_search",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "people": {
+        "first": {
+          "name": "Ghazaleh Salmanian",
+          "aff": "University of Arkansas, United States"
+        },
+        "corresp": [
+          {
+            "name": "Jingyi Chen",
+            "aff": "University of Arkansas, United States"
+          }
+        ]
+      },
+      "cited_structures": [],
+      "impact": {
+        "score": 4,
+        "types": [
+          "mechanism"
+        ],
+        "validation": [
+          "kinetic"
+        ],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13694597",
+      "pmid": 42909555,
+      "doi": "10.1007/s13402-026-01291-6",
+      "title": "DPP9 modulates RPA1 stability and temozolomide sensitivity through RFWD3 Nuclear localization in glioma",
+      "journal": "Cellular Oncology",
+      "journal_abbrev": "Cell Oncol (Dordr)",
+      "authors": "Wang W, Che C, Wang F, Lu B, Huang J, Ni S",
+      "pub_date": "2026-09-05",
+      "index_date": "2026-10-25",
+      "license": "cc by-nc-nd",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "BackgroundTemozolomide resistance is a major barrier to effective glioma treatment and is frequently associated with enhanced DNA damage repair capacity. Although DPP9 has been linked to tumor development in several malignancies, whether it contributes to glioma therapeutic resistance has not been explored.MethodsTranscriptomic datasets, glioma specimens, and genetic gain- and loss-of-function approaches were employed to characterize DPP9 expression and function. RNA sequencing, co-immunoprecipitation, subcellular fractionation, and ubiquitination analyses were conducted to define the molecular basis of DPP9-mediated effects.ResultsHigher DPP9 expression was observed in glioma specimens and coincided with shorter patient survival. DPP9 depletion inhibited glioma growth and enhanced TMZ sensitivity in both cultured cells and xenograft tumors. Functional experiments support a role for altered RFWD3 localization in the association between DPP9 depletion and reduced RPA1 stability. Loss of DPP9 promoted RFWD3 redistribution to the cytoplasm, resulting in increased RPA1 ubiquitination and degradation. The reduction in RPA1 was accompanied by elevated replication stress, increased accumulation of DNA damage markers, and enhanced sensitivity to TMZ-induced genotoxic stress. Restoration of RPA1 expression attenuated these defects, indicating that RPA1 mediates a substantial portion of the cellular consequences associated with DPP9 loss.ConclusionDPP9 contributes to glioma resistance to TMZ by sustaining RPA1-dependent DNA damage responses through regulation of the RFWD3-RPA1 axis. These results identify DPP9 as an important determinant of genome maintenance in glioma cells and nominate DPP9 as a candidate target for further investigation in TMZ-resistant glioma.Graphical Abstract Supplementary InformationThe online version contains supplementary material available at https://doi.org/10.1007/s13402-026-01291-6.",
+      "source": "impact_search",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "people": {
+        "first": {
+          "name": "Wei Wang",
+          "aff": "Affiliated Hospital of Nantong University & Medical School of Nantong University, China"
+        },
+        "corresp": [
+          {
+            "name": "Jianfei Huang",
+            "aff": "Affiliated Hospital of Nantong University & Medical School of Nantong University, China"
+          },
+          {
+            "name": "Sujie Ni",
+            "aff": "Affiliated Hospital of Nantong University, China"
+          }
+        ]
+      },
+      "cited_structures": [],
+      "impact": {
+        "score": 2,
+        "types": [],
+        "validation": [],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13694818",
+      "pmid": 42926845,
+      "doi": "10.1016/j.isci.2026.117881",
+      "title": "Design and validation of a GMP-compliant manufacturing platform of extracellular vesicles from mesenchymal stromal cells",
+      "journal": "iScience",
+      "journal_abbrev": "iScience",
+      "authors": "Courageux Y, Monguió-Tortajada M, López-Fernández A, Schoch L, Poblador F, Morini S, Prat-Vidal C, Rodriguez L, Torrents S, Aran G, Codinach M, Gálvez-Montón C, Bayes-Genis A, Vives J, Querol S, Roura S",
+      "pub_date": "2026-10-15",
+      "index_date": "2026-10-25",
+      "license": "cc by-nc-nd",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "SummaryThere is growing interest in mesenchymal stromal cell-derived extracellular vesicles (MSC-EVs) as key components in the development of next-generation regenerative cell-free therapies; however, their clinical translation remains limited by a lack of validated clinical-grade manufacturing platforms. Thus, we have established a good manufacturing practice (GMP)-compliant, semi-automated, mid-scale manufacturing workflow that couples the single-use stirred-tank bioreactor expansion of Wharton’s jelly-derived MSCs with tangential flow filtration and automated size-exclusion chromatography, featuring in-line monitoring of critical process parameters. The MSC-EV-based product meets pre-specified critical quality attributes (CQAs), co-expresses parental-cell- and EV-specific markers, and complies with standardized quality and safety regulations. Moreover, the final product CQAs—including CD73-associated immunomodulatory activity—remained within acceptable limits for 12 months of storage in PlasmaLyte 148 at −80°C. Overall, our integrated platform yields MSC-EVs with high batch-to-batch reproducibility, in alignment with current GMP and regulatory standards, thereby providing a robust foundation supporting their potential clinical applicability.",
+      "source": "impact_search",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "people": {
+        "first": {
+          "name": "Yvan Courageux",
+          "aff": "Health Science Research Institute Germans Trias i Pujol, Spain"
+        },
+        "corresp": [
+          {
+            "name": "Santiago Roura",
+            "aff": "Health Science Research Institute Germans Trias i Pujol, Spain"
+          }
+        ]
+      },
+      "cited_structures": [],
+      "impact": {
+        "score": 4,
+        "types": [
+          "method",
+          "drug"
+        ],
+        "validation": [],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13694466",
+      "pmid": 42909692,
+      "doi": "10.1007/s00705-026-06764-5",
+      "title": "Detection, characterization, and evolutionary inferences regarding a novel virus identified in Amblyomma dissimile Koch, 1844 (Acari: Ixodidae) from the Amazon, Pará, Brazil",
+      "journal": "Archives of Virology",
+      "journal_abbrev": "Arch Virol",
+      "authors": "da Silva e Silva LH, da Silva SP, de Castro PHG, Maurício KD, da Silva FS, Dias DD, Hernández LHA, da Silva SLS, Reis HCF, dos Santos LEC, do Nascimento BLS, Brandão RCF, Vieira DBR, Nunes BTD, Cruz ACR, Nunes Neto JP",
+      "pub_date": "2026-10-23",
+      "index_date": "2026-10-25",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "Ticks are among the primary vectors of infectious agents of medical and veterinary importance, second only to mosquitoes in the number of pathogens transmitted to humans. These arthropods are capable of transmitting a wide diversity of microorganisms, including protozoa, bacteria, and viruses. Notable among tick-borne viruses are those associated with viral encephalitis, which cause severe acute and chronic neurological infections in humans. This study aimed to characterize the RNA virome of an Amblyomma dissimile specimen collected from a Boa constrictor rescued in the municipality of Ananindeua, Pará state, in the Brazilian Amazon, using an RNA metagenomic sequencing approach. A total of eleven viral sequences were identified, distributed across five families: Chuviridae (n = 2), Rhabdoviridae (n = 2), Orthomyxoviridae (n = 5), Nodaviridae (n = 1), and Orthototiviridae (n = 1). A key finding was the identification of Dissimile tick rhabdovirus a potential new member of the Rhabdoviridae family described here for the first time, with no prior records in the scientific literature. Additionally, segments of Granville quaranjavirus were detected in Brazil for the first time, expanding the known geographic distribution of this virus. These results highlight the underrepresentation of viral diversity associated with Brazilian ticks in reference databases, underscoring the need to expand metagenomic surveillance and virological characterization efforts in the country, particularly given the potential impacts of climate change on tick distribution and virus circulation dynamics.Supplementary InformationThe online version contains supplementary material available at https://doi.org/10.1007/s00705-026-06764-5.",
+      "source": "impact_search",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "people": {
+        "first": {
+          "name": "Lucas Henrique da Silva e Silva",
+          "aff": "State of Pará University, Brazil"
+        },
+        "corresp": [
+          {
+            "name": "Joaquim Pinto Nunes Neto",
+            "aff": "State of Pará University, Brazil"
+          }
+        ]
+      },
+      "cited_structures": [],
+      "impact": {
+        "score": 3,
+        "types": [
+          "drug"
+        ],
+        "validation": [],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13692743",
+      "pmid": 42921026,
+      "doi": "10.1021/acsbiomedchemau.6c00157",
+      "title": "Development of a Screening Workflow for the Halogenation of Nitrogen Heterocycles with Vanadium-Dependent Haloperoxidases",
+      "journal": "ACS Bio & Med Chem Au",
+      "journal_abbrev": "ACS Bio Med Chem Au",
+      "authors": "Brzezinski CU, Solis SA, Slocumb HS, Bacsa J, Biegasiewicz KF",
+      "pub_date": "2026-10-12",
+      "index_date": "2026-10-25",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "The halogenation of nitrogen heterocycles is a privileged transformation for accessing important synthetic intermediates and biologically active targets in medicinal chemistry. Despite the importance of N-heterocycle halogenation, current methods rely on reagents or catalysts that are largely unselective and produce a significant number of waste products. With an emerging interest in using halogenating enzymes to address these challenges, the vanadium-dependent haloperoxidase class of enzymes has emerged as a powerful platform for halogenation reactions under a uniquely broad set of reaction conditions. Herein, we report the development of a screening workflow for the halogenation of heterocycles with chloroperoxidase from Curvularia inaequalis (CiVCPO). Using a high-throughput screening strategy, representative model heterocycles are screened for direct chlorination and bromination reactions, and the optimized conditions are translated to an extended substrate scope in moderate to high yields. The volume of high-throughput data obtained allowed for the development of a predictive model for the substrate halogenation conditions. This screening platform is applied to established industrial intermediates and to the discovery of previously undiscovered enzymatic nitrogen-chlorine bond formation and decarboxylative halogenation reactions.",
+      "source": "impact_search",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "people": {
+        "first": {
+          "name": "Carter U. Brzezinski",
+          "aff": "Emory University, United States"
+        },
+        "corresp": [
+          {
+            "name": "Kyle F. Biegasiewicz",
+            "aff": "Emory University, United States"
+          }
+        ]
+      },
+      "cited_structures": [],
+      "impact": {
+        "score": 3,
+        "types": [
+          "method"
+        ],
+        "validation": [],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13695160",
+      "pmid": 42927286,
+      "doi": "10.1016/j.mtbio.2026.103755",
+      "title": "EMSCs-derived exosomes rescue p75NTR−/− -mediated osteogenesis deficiency via PI3K/Akt/ERK1/2 signaling pathways",
+      "journal": "Materials Today Bio",
+      "journal_abbrev": "Mater Today Bio",
+      "authors": "Ye J, Jin X, Huang Y, Khup PL, Yu Y, Cheng M, Yuan Q, Xu D, Nie X, Cheng G",
+      "pub_date": "2026-10-17",
+      "index_date": "2026-10-25",
+      "license": "cc by-nc-nd",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "The repair of the critical-sized bone defects remains a major challenge for orthopedic surgeons, particularly when osteogenesis is impaired by p75 neurotrophin receptor (p75NTR) deficiency. However, the underlying molecular mechanisms are not fully understood. This study aimed to clarify the role of p75NTR in bone regeneration and to develop a cell-free approach to rescue p75NTR−/− deficiency–mediated osteogenic deficiency through a controlled releasing of wild-type ectomesenchymal stem cells exosomes (WT-Exo) which were incorporated into silk fibroin/polycaprolactone2:5/polyvinyl alcohol (SF/PCL2:5/PVA) coaxial nanofibrous membranes. p75NTR−/− mice exhibited a reduced bone mass and delayed ossification, while WT-Exo–loaded membranes partially restored osteogenic deficiency in p75NTR−/− cells and enhanced expression of osteogenic markers such as alkaline phosphatase (ALP), collagen type I (Col-I), osteopontin (OPN) and runt-related transcription factor 2 (Runx2) aaccompanied by activating of phosphoinositide 3-kinase (PI3K)/protein kinase B (Akt)/extracellular signal-regulated kinase 1/2 (ERK1/2) signaling pathway. Following implantation of the WT-Exo–loaded membranes into the critical-sized cranial defects in p75NTR−/− mice, new bone formation in the defect site was significantly improved by a sustained release of WT-Exo. Overall, the findings in this study highlighted the critical role of p75NTR in osteogenic differentiation of ectomesenchymal stem cells (EMSCs) and demonstrated that WT-Exo, delivered via the coaxial electrospun membranes, represented an effective cell-free intervention method to reverse bone formation deficiency caused by p75NTR deficiency, providing a promising strategy for gene deficiency–related bone diseases.",
+      "source": "impact_search",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "people": {
+        "first": {
+          "name": "Jiaqi Ye",
+          "aff": "Wenzhou Medical University, China"
+        },
+        "corresp": [
+          {
+            "name": "Xin Nie",
+            "aff": "Wenzhou Medical University, China"
+          },
+          {
+            "name": "Gu Cheng",
+            "aff": "Wenzhou Medical University, China"
+          }
+        ]
+      },
+      "cited_structures": [],
+      "impact": {
+        "score": 4,
+        "types": [
+          "mechanism"
+        ],
+        "validation": [
+          "mice"
+        ],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13695163",
+      "pmid": 42927304,
+      "doi": "10.1016/j.mtbio.2026.103749",
+      "title": "High-dose cerium dioxide nanorods induce behavioral and electroencephalographic abnormalities through 5-HT1B receptor signaling disruption with an evaluation of anpirtoline's therapeutic potential",
+      "journal": "Materials Today Bio",
+      "journal_abbrev": "Mater Today Bio",
+      "authors": "Liu M, Li Y, Shen C, Huang H, Liu Q, Fu B, Wu B, Wu X, Luo Y, Shan Y, Niu X, Zhao G",
+      "pub_date": "2026-10-14",
+      "index_date": "2026-10-25",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "Cerium dioxide nanorods (CeO2 NRs) have drawn extensive research attention in the past few years for their exceptional generation of reactive oxygen species (ROS) and intrinsic catalytic properties. The two ends of the biological effect show a dose-dependent difference: protection of cells at low doses and damage to cells at high doses. Although the above processes are well documented in other biological contexts, the neurotoxicity induced by acute exposure to CeO2 NRs, as well as its mechanism and possible prevention strategies, have yet to be elucidated. In the present study, we have found that CeO2 NRs at a concentration of 500 μg/mL or higher induced neuronal apoptosis and reduced cell viability in vitro. After intranasal instillation in mice, CeO2 NRs accumulated in the lysosomes and nuclei of neurons in the hippocampus and striatum. There was an increase in these abnormal exploratory behaviors, heightened seizure susceptibility, and altered electroencephalographic (EEG) oscillations. Integrated transcriptomic and proteomic profiling further indicated disruption of serotonin (5-HT) metabolism, caused by a downregulation of the 5-HT1B receptor, and thus provided a possible molecular mechanism for the behaviors and EEG abnormalities observed. Considerable changes also occurred in the various serotonergic mediators, neuronal excitability indicators, and inflammatory markers. Pharmacological activation of the 5-HT1B receptor with anpirtoline partially reversed the behaviors and EEG changes induced by CeO2 NRs.",
+      "source": "impact_search",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "people": {
+        "first": {
+          "name": "Mingshan Liu",
+          "aff": "Xuanwu Hospital of Capital Medical University, China"
+        },
+        "corresp": [
+          {
+            "name": "Yongzhi Shan",
+            "aff": "Xuanwu Hospital of Capital Medical University, China"
+          },
+          {
+            "name": "Xuegang Niu",
+            "aff": "Xuanwu Hospital of Capital Medical University, China"
+          },
+          {
+            "name": "Guoguang Zhao",
+            "aff": "Xuanwu Hospital of Capital Medical University, China"
+          }
+        ]
+      },
+      "cited_structures": [],
+      "impact": {
+        "score": 6,
+        "types": [
+          "drug",
+          "mechanism"
+        ],
+        "validation": [
+          "in vitro",
+          "mice"
+        ],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13693218",
+      "pmid": 42921094,
+      "doi": "10.1021/acsmeasuresciau.6c00218",
+      "title": "Hydrophobic Confinement Enables Direct Identification of Thyroid Hormones with Single-Atom Resolution",
+      "journal": "ACS Measurement Science Au",
+      "journal_abbrev": "ACS Meas Sci Au",
+      "authors": "Gao Y, Jiang J, Zhou X, Long YT, Li MY",
+      "pub_date": "2026-09-04",
+      "index_date": "2026-10-25",
+      "license": "cc by-nc-nd",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "The direct detection of small hydrophobic biomolecules remains a major challenge for biological nanopores. This is due to the weak interactions provided by the hydrophilic lumens, which result in ultrafast translocation and insufficient molecular recognition. Here, to reconcile the hydrophilicity for ionic flow and hydrophobic interactions for molecule recognition, we engineer a hydrophobic confinement stabilized by an interconnected hydrogen-bond network. By introducing tyrosine and tryptophan into the primary sensing region, a localized hydrophobic environment is established while maintaining nanopore structural stability and low current noise. Molecular dynamics simulations demonstrated the formation of a localized hydrophobic environment stabilized by an interconnected hydrogen-bond network, enabling the direct identification of thyroid hormones, aromatic amino acid-derived hydrophobic biomolecules containing iodinated aromatic structures, through enhanced molecular interactions. We show that the hydrophobic confinement could discriminate single iodine atom differences within diverse thyroid hormones, of which individual events can be automatically classified using an unsupervised clustering algorithm without prior model training. Furthermore, the isobaric triiodothyronine and reverse triiodothyronine could be directly resolved in a mixture. This work establishes hydrophobic confinement engineering as an effective strategy for extending biological nanopores to the direct single-molecule measurement of clinically relevant hydrophobic biomolecules.",
+      "source": "impact_search",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "people": {
+        "first": {
+          "name": "Yan Gao",
+          "aff": "Nanjing University, China"
+        },
+        "corresp": [
+          {
+            "name": "Jie Jiang",
+            "aff": "University of Science and Technology of China"
+          },
+          {
+            "name": "Meng-Yin Li",
+            "aff": "Nanjing University, China"
+          }
+        ]
+      },
+      "cited_structures": [],
+      "impact": {
+        "score": 4,
+        "types": [
+          "method"
+        ],
+        "validation": [
+          "single-molecule"
+        ],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13692744",
+      "pmid": 42921289,
+      "doi": "10.1021/acsnanoscienceau.6c00096",
+      "title": "Lipid Nanoparticles at the Crossroads of Chemistry and Medicine: A Tutorial",
+      "journal": "ACS Nanoscience Au",
+      "journal_abbrev": "ACS Nanosci Au",
+      "authors": "Rogado MT, Wang A, Zeng S, Wang Z, Burda C",
+      "pub_date": "2026-09-28",
+      "index_date": "2026-10-25",
+      "license": "cc by-nc-nd",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "Lipid nanoparticles (LNPs) have risen to the forefront of modern therapeutics by enabling the clinical success of COVID-19 mRNA vaccines. In order for them to function as drug delivery vesicles, LNPs must have scalable, tunable, and targeted nanoscale platforms whose strengths in versatility, performance, and clinical relevance are driven by key design parameters and formulation strategies. This Tutorial Review traces the historical evolution of LNPs and examines the fundamental design principles governing their structure, physicochemical properties, and biological behavior. It further highlights modern analytical characterization techniques that have advanced mechanistic understanding of LNP composition, morphology, and function as well as targeting strategies to improve LNP delivery to extrahepatic sites. Current translational challenges and emerging advances are also discussed. This Tutorial Review provides a framework for understanding the foundations, current landscape, and future directions of LNP research.",
+      "source": "impact_search",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "people": {
+        "first": {
+          "name": "Myxie Tana Rogado",
+          "aff": "Case Western Reserve University, United States"
+        },
+        "corresp": [
+          {
+            "name": "Zhenghe Wang",
+            "aff": "Case Western Reserve University, United States"
+          },
+          {
+            "name": "Clemens Burda",
+            "aff": "Case Western Reserve University, United States"
+          }
+        ]
+      },
+      "cited_structures": [],
+      "impact": {
+        "score": 2,
+        "types": [],
+        "validation": [],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13691922",
+      "pmid": 42924418,
+      "doi": "10.1111/tpj.71178",
+      "title": "Non‐peroxisomal allantoin biosynthesis reveals unexpected flexibility in plant purine catabolism",
+      "journal": "The Plant Journal",
+      "journal_abbrev": "Plant J",
+      "authors": "Takeuchi Y, Sumida T, Shimada H, Sakamoto A",
+      "pub_date": "2026-10-23",
+      "index_date": "2026-10-25",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "SUMMARYAllantoin, a central intermediate of purine catabolism, plays key roles in nitrogen remobilization and is also implicated in stress protection in plants. As in other eukaryotes, allantoin biosynthesis in land plants has long been considered restricted to peroxisomes, where this process is catalyzed by ALLANTOIN SYNTHASE (ALNS). However, angiosperms produce not only the canonical peroxisomal isoform but also a shorter splice variant lacking a type 2 peroxisomal targeting signal (PTS2), raising the question of whether allantoin biosynthesis can occur outside peroxisomes. Through comparative sequence analyses across Archaeplastida, we show that PTS2‐lacking ALNS exhibits a patchy distribution within Viridiplantae, including species without identifiable PTS2‐containing ALNS homologs, suggesting the evolutionary significance of non‐peroxisomal allantoin biosynthesis. Fluorescent protein fusion analysis showed that PTS2‐lacking ALNS proteins from the angiosperm Arabidopsis thaliana, the monilophyte Dryopteris erythrosora, and the bryophyte Marchantia polymorpha localize outside peroxisomes, consistent with cytosolic localization. Furthermore, recombinant proteins from all three species catalyzed stereospecific (S)‐allantoin formation. Arabidopsis alns knockout mutants accumulated racemic allantoin, indicating that ALNS ensures the stereospecific formation of (S)‐allantoin while preventing the generation of poorly metabolizable (R)‐allantoin, which likely arises through spontaneous decomposition of the unstable ALNS substrate 5‐hydroxyisourate. Importantly, expression of either ALNS isoform restored normal allantoin metabolism and largely rescued the growth and physiological defects of the alns mutants. These findings demonstrate the functional equivalence of cytosolic and peroxisomal ALNS in Arabidopsis and reveal previously unrecognized flexibility in the subcellular organization of purine catabolism in plants.",
+      "source": "impact_search",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "people": {
+        "first": {
+          "name": "Yuta Takeuchi",
+          "aff": "Hiroshima University, Japan"
+        },
+        "corresp": [
+          {
+            "name": "Atsushi Sakamoto",
+            "aff": "Hiroshima University, Japan"
+          }
+        ]
+      },
+      "cited_structures": [],
+      "impact": {
+        "score": 3,
+        "types": [],
+        "validation": [
+          "mutant"
+        ],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13694303",
+      "pmid": 42446670,
+      "doi": "10.1007/s00204-026-04494-w",
+      "title": "Repeated aminoglycoside exposure activates interferon-stimulated genes in human renal proximal tubular models",
+      "journal": "Archives of Toxicology",
+      "journal_abbrev": "Arch Toxicol",
+      "authors": "Chandrasekaran V, Meijer T, Leonard MO, Wilmes A, Jennings P",
+      "pub_date": "2026-07-14",
+      "index_date": "2026-10-25",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "Aminoglycosides remain clinically important antibiotics, but their use is limited by nephrotoxicity. Although proximal tubular accumulation mediated by megalin is well established, the downstream cellular response is still incompletely understood. Here, we compared repeated-dose transcriptomic responses to gentamicin and tobramycin in a panel of human proximal tubular models comprising primary proximal tubular epithelial cells (PTEC; three donors), human iPSC-derived proximal tubular-like cells (PTL; three donors), RPTEC/TERT1 cells, and HK-2 cells. Cells were exposed daily for seven days to 12, 250, or 450 µg/mL gentamicin or tobramycin, and gene expression was assessed using the TempO-Seq EU-ToxRisk v2.1 panel followed by DESeq2 analysis. Primary PTEC and PTL showed the clearest and most coherent response, characterised by strong induction of interferon-stimulated genes including IFI27, IFI6, IFIT1-3, ISG15, MX1, OAS1, UBE2L6, USP18, IFI44L, HERC6, and RSAD2. Targeted regulator analysis showed strong enrichment of overlapping ISGF3, IRF7, and IRF1 target networks, consistent with a dominant interferon-stimulated gene program, together with a smaller NF-κB-associated inflammatory branch. In contrast, RPTEC/TERT1 and HK-2 cells showed weaker and less coherent responses. Tobramycin generally induced a stronger and more consistent transcriptional response than gentamicin across responsive models. These data identify a robust innate immune-like transcriptional signature in human proximal tubular models following repeated aminoglycoside exposure and support primary PTEC and PTL as more informative in vitro systems for mechanistic investigation of aminoglycoside nephrotoxicity.Supplementary InformationThe online version contains supplementary material available at https://doi.org/10.1007/s00204-026-04494-w.",
+      "source": "impact_search",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "people": {
+        "first": {
+          "name": "Vidya Chandrasekaran",
+          "aff": "Vrije Universiteit Amsterdam, The Netherlands"
+        },
+        "corresp": [
+          {
+            "name": "Anja Wilmes",
+            "aff": "Vrije Universiteit Amsterdam, The Netherlands"
+          },
+          {
+            "name": "Paul Jennings",
+            "aff": "Vrije Universiteit Amsterdam, The Netherlands"
+          }
+        ]
+      },
+      "cited_structures": [],
+      "impact": {
+        "score": 3,
+        "types": [],
+        "validation": [
+          "in vitro"
+        ],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13695568",
+      "pmid": null,
+      "doi": "10.1002/anov.70034",
+      "title": "Sacrificial Methionine Residues Protect Active-Site Histidines From Oxidation",
+      "journal": "Angewandte chemie novit",
+      "journal_abbrev": "Angew Chem Novit",
+      "authors": "Wralstad EC, Sayers J, Fittolani G, Sarabia-Castillo D, Callahan AJ, Pentelute BL, Raines RT",
+      "pub_date": "2026-09-17",
+      "index_date": "2026-10-25",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "Histidine is the most common residue in enzymic active sites because of the chemical versatility of its imidazole side chain, but is also highly vulnerable to oxidative damage. Here, we demonstrate that methionine residues in secretory ribonucleases such as bovine RNase A serve as sacrificial antioxidants that protect active-site histidines. In the human homolog RNase 1, five methionine residues cluster near the catalytic histidines His12 and His119, which serve as a base and an acid, respectively, during RNA cleavage. Bioinformatic analyses reveal that these methionines are conserved across the RNase A superfamily and adopt S–aryl motifs with proximal aromatic residues that modulate the electron density at sulfur and thereby tune the susceptibility of methionine to oxidation. Chemoselective labeling of methionine with an oxaziridine probe increased the vulnerability of RNase 1 to oxidation-induced inactivation, implicating Met29 and Met35 as protective residues. Total chemical synthesis of an RNase 1 variant in which these residues were replaced by norleucine, a sulfur-free isostere of methionine, corroborated their protective role. A similar arrangement of methionines is present in unrelated secretory proteins, including serine proteases and calprotectin, suggesting a broadly recurring protective strategy.",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "people": {
+        "first": {
+          "name": "Evans C. Wralstad",
+          "aff": "Massachusetts Institute of Technology, USA"
+        },
+        "corresp": [
+          {
+            "name": "Ronald T. Raines",
+            "aff": "Massachusetts Institute of Technology, USA"
+          }
+        ]
+      },
+      "cited_structures": [],
+      "impact": {
+        "score": -3,
+        "types": [
+          "mechanism"
+        ],
+        "validation": [],
+        "low": [],
+        "journal": false,
+        "exp_structure": false,
+        "flags": [
+          "実験構造の手がかりなし"
+        ]
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13692419",
+      "pmid": 42924720,
+      "doi": "10.3390/epigenomes10040061",
+      "title": "Spn1 Maintains Nucleosome Organization at Transcription End Sites",
+      "journal": "Epigenomes",
+      "journal_abbrev": "Epigenomes",
+      "authors": "Schwartz U",
+      "pub_date": "2026-09-30",
+      "index_date": "2026-10-25",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "Background/Objectives: Transcription by RNA polymerase II (RNAPII) occurs within chromatin and requires continuous disassembly and reassembly of nucleosomes. Histone chaperones associate with RNAPII, facilitate transcription, and maintain nucleosome organization. This study investigated the role of the conserved histone chaperone Spn1 in coordinating chromatin organization with transcription termination in Saccharomyces cerevisiae. Methods: Spn1 interacts with elongating RNAPII via Spt6 and its function was examined by reanalyzing published MNase-seq, RNAPII ChIP-seq, NET-seq, and TSS-seq datasets. Results: Mutations that disrupt the Spn1–Spt6 interaction at nonpermissive temperatures caused a pronounced loss of nucleosome array regularity at polyadenylation (pA) sites, whereas nucleosome organization around transcription start sites was less affected. These mutants also showed shorter nucleosome repeat lengths at gene ends. RNAPII accumulated near pA sites and displayed increased termination-proximal stalling, consistent with impaired transcription termination. In addition, transcription of neighboring downstream genes in tandem orientation was preferentially reduced, suggesting interference between termination of the upstream gene and initiation at the neighboring promoter. Conclusions: Together, these results identify Spn1 as an important determinant of chromatin organization at gene ends and suggest that it helps maintain transcriptional fidelity across closely spaced genes.",
+      "source": "impact_search",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "people": {
+        "first": {
+          "name": "Uwe Schwartz",
+          "aff": "University of Regensburg"
+        },
+        "corresp": []
+      },
+      "cited_structures": [],
+      "impact": {
+        "score": 4,
+        "types": [
+          "mechanism"
+        ],
+        "validation": [
+          "mutant"
+        ],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13694767",
+      "pmid": 42927122,
+      "doi": "10.1016/j.bioactmat.2026.10.006",
+      "title": "Targeting the lactate/P300/H3K18la epigenetic pathway with a mechanoadaptive biomimetic hydrogel to suppress traumatic tendon heterotopic ossification",
+      "journal": "Bioactive Materials",
+      "journal_abbrev": "Bioact Mater",
+      "authors": "Feng H, Ang K, Deng Z, Cui C, Chen J, Huang N, Feng Y, Zhang J, Li D, Kong Z, Cai Z, Sun Y, Yang Y",
+      "pub_date": "2026-10-14",
+      "index_date": "2026-10-25",
+      "license": "cc by-nc-nd",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "Traumatic heterotopic ossification (HO) is a debilitating complication of tendon injury, yet its pathogenic mechanisms remain elusive and effective preventive strategies are lacking. Here, we identify a glycometabolic-epigenetic axis that drives HO progression. Single-cell profiling and functional analyses reveal that hypoxic chondrocytes undergo glycolytic reprogramming, leading to lactate accumulation and transfer into tendon-derived mesenchymal stem cells (TD-MSCs) through MCT1. This metabolic coupling promotes P300-dependent histone H3 lysine 18 lactylation (H3K18la), activating osteogenic programs characterized by Col6a1, Zhx3, Lox and Vdr expression and thereby facilitating pathological endochondral ossification. Guided by this mechanism, we develop a tendon-adhesive hydrogel (GelHA-A485@Exos) that integrates mechanical repair with targeted epigenetic modulation. MSC-derived exosomes enable localized delivery of the P300 inhibitor A485, suppressing H3K18la and aberrant osteogenic activation, while the hydrogel scaffold enhances tendon regeneration. In vivo and in vitro studies demonstrate that GelHA-A485@Exos promotes tendon healing while preventing HO formation. Our findings establish metabolic-epigenetic communication as a central regulator of traumatic HO and provide a translational therapeutic strategy for its clinical prevention.",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "people": {
+        "first": {
+          "name": "Haoyang Feng",
+          "aff": "The Third Affiliated Hospital of Southern Medical University, China"
+        },
+        "corresp": [
+          {
+            "name": "Yongjian Sun",
+            "aff": "The Third Affiliated Hospital of Southern Medical University, China"
+          },
+          {
+            "name": "Yusheng Yang",
+            "aff": "Southern Medical University, China"
+          }
+        ]
+      },
+      "cited_structures": [],
+      "impact": {
+        "score": -4,
+        "types": [
+          "method",
+          "mechanism"
+        ],
+        "validation": [
+          "in vitro",
+          "in vivo"
+        ],
+        "low": [],
+        "journal": false,
+        "exp_structure": false,
+        "flags": [
+          "実験構造の手がかりなし",
+          "生体高分子が主題でない可能性"
+        ]
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13692491",
+      "pmid": 42924733,
+      "doi": "10.3390/medicines13040028",
+      "title": "The Role of Zinc and Junctional Adhesion Molecule A Protein in Platelet Plug Formation",
+      "journal": "Medicines",
+      "journal_abbrev": "Medicines (Basel)",
+      "authors": "Nagidi SH, Stringham J, Firth E, Lisonbee B, Hart C, Mizrachi D",
+      "pub_date": "2026-09-29",
+      "index_date": "2026-10-25",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "Background: The coagulation cascade depends on the active participation of several elements present in the blood as well as signals arising from the endothelial cells. A platelet plug is a temporary, fast-response seal formed by platelets at the site of a damaged blood vessel to initiate hemostasis. Among the changes platelets undergo is the degranulation step. Platelet degranulation results in the release of substances like ADP, serotonin, fibrinogen, and zinc. Currently, zinc’s targets are unknown. Methods: Platelet-to-platelet aggregation relies on specific surface receptors and plasma bridge proteins. Such mechanistic elements have been extensively studied (i.e., αIIbβ3 integrin). In this work, using platelet aggregation methods and recombinant proteins, we will expand the repertoire of proteins relevant to platelet plug formation. Particularly, size-exclusion chromatography (SEC), surface plasmon resonance (SPR), and transmission electron microscopy (TEM) were mainly used. Using 1 mM zinc and 10 µM ADP, we evaluated platelet aggregation and proteins responsible for this aggregation’s behavior in response to zinc release from platelets’ granules upon activation. SPR provided results to evaluate the affinity of our target proteins on the surface of platelets when influenced by the increase in zinc after degranulation. Results: In the present work, we provide evidence that the high local concentration of zinc is intended to target junctional adhesion molecule A (JAM-A), which remains inactive (inhibiting cell-adhesion and cytoskeleton dynamics) when coagulation is not needed, and platelets move through the bloodstream as single units. Zinc-activated JAM-A leads the platelets to aggregate. Our experimentation includes work with platelets and a synthetic biology small peptide to quench the effects of zinc. Conclusions: JAM-A interacts with zinc to aid in the formation of the platelet plug. This interaction activates the cell-adhesion and cytoskeleton dynamics functions of JAM-A. We suggest that further exploring this mechanism of zinc-activated JAM-A can be advantageous for understanding hemostasis, its role in antithrombotic therapy, coagulation inhibition, or thrombosis prevention.",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "people": {
+        "first": {
+          "name": "Sai Harsha Nagidi",
+          "aff": "Midwestern University"
+        },
+        "corresp": [
+          {
+            "name": "Dario Mizrachi",
+            "aff": "Noorda College of Osteopathic Medicine"
+          }
+        ]
+      },
+      "cited_structures": [],
+      "impact": {
+        "score": -2,
+        "types": [
+          "mechanism"
+        ],
+        "validation": [
+          "surface plasmon"
+        ],
+        "low": [],
+        "journal": false,
+        "exp_structure": false,
+        "flags": [
+          "実験構造の手がかりなし"
+        ]
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13693807",
+      "pmid": 42921270,
+      "doi": "10.1039/d6ra06540f",
+      "title": "The reactivity of coordinated and uncoordinated chromate ions in the quasi-intramolecular redox reactions of [pentaamminechromatocobalt(iii)] chloride and chromate resulting in tuneable cobalt-chromium spinel oxide catalysts",
+      "journal": "RSC Advances",
+      "journal_abbrev": "RSC Adv",
+      "authors": "Tulik B, Dürvanger Z, Kubuki S, Farkas A, Krehula S, Petruševski VM, Bereczki L, Homonnay Z, Marković M, Rakic A, Dimić D, Trif L, Károly Z, Kótai L, Béres KA",
+      "pub_date": "2026-10-23",
+      "index_date": "2026-10-25",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "The synthesis routes, crystal and molecular structures, and controlled thermal decomposition reactions of two [pentamminecobalt(iii) compounds having a coordinated chromate ion, [Co(NH3)5CrO4]Cl (compound 1) and [Co(NH3)5CrO4]2CrO4 (compound 2) were studied experimentally. Quantum chemical optimizations and QTAIM calculations were performed for compounds 1 and 2, and the selected Bond Critical Points (BCPs) properties were discussed. The extended hydrogen-bond network between the coordinated chromate ions and ammonia ligands acts as reactive redox reaction centres, and both compounds show solid-phase quasi-intramolecular redox reactions with the formation of Co[Co0.5Cr1.5O3.75] and Co[Co0.2Cr1.8O3.90] nanosized regular spinels with nominal Co : Cr = 1 : 1 and 2 : 3 molar ratios, respectively. The tetrahedral positions of these spinels are filled with CoII ions. The octahedral positions of 2 : 3 and 1 : 1 spinels prepared in air are filled CrIII and mainly with CoIII ions. The 2 : 3 spinel prepared under N2 shows a similar distribution of ions, whereas the 1 : 1 spinel prepared under N2 contains only CoII ions at T-4, and CrIII, CoIII, and CoII ions at the OC-6 positions, resulting in a strongly defective structure. The position of the chromate ions (inner-sphere coordinated or outer-sphere non-coordinated) plays an important role in the quasi-intramolecular redox reactions and thermal decomposition characteristics of compounds 1 and 2. The inner-sphere coordinated chromate ions of both compounds took part in redox reactions with their own coordinated ammonia only after the loss of the fifth ammonia, in an endothermic ligand-releasing and an exothermic redox reaction mediated by the outer-sphere chromate ion for compounds 1 and 2, respectively. The cobalt(iii) content of both complexes is also reduced completely to cobalt(ii). These spinels were proven to be active catalysts in the visible-light-driven photocatalytic oxidation of rhodamine B with H2O2.",
+      "source": "impact_search",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "people": {
+        "first": {
+          "name": "Bálint Tulik",
+          "aff": "HUN-REN Research Centre for Natural Sciences, Hungary"
+        },
+        "corresp": [
+          {
+            "name": "László Kótai",
+            "aff": "HUN-REN Research Centre for Natural Sciences, Hungary"
+          }
+        ]
+      },
+      "cited_structures": [],
+      "impact": {
+        "score": 3,
+        "types": [
+          "mechanism"
+        ],
+        "validation": [],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13695142",
+      "pmid": 42847890,
+      "doi": "10.1093/jimb/kuag027",
+      "title": "Thermostability and pH differentiation in Geobacillus hydrolases: a comparative perspective",
+      "journal": "Journal of Industrial Microbiology & Biotechnology",
+      "journal_abbrev": "J Ind Microbiol Biotechnol",
+      "authors": "Akbiyik E, Varol A, Tekgul ZB, Genc B, Adiguzel A",
+      "pub_date": "2026-10-08",
+      "index_date": "2026-10-25",
+      "license": "cc by",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "AbstractThermostable enzymes are central to high-temperature industrial processes because they combine catalytic efficiency with structural resilience under demanding conditions. Among thermophilic bacteria, Geobacillus has emerged as a prominent source of industrially relevant enzymes, particularly hydrolases such as proteases, lipases, and carbohydrate-active enzymes. Although many individual enzymes have been characterized in detail, comparative synthesis across catalytic classes within the genus remains limited. In this review, we integrate biochemical data and structural evidence to explore whether thermostability in Geobacillus reflects isolated enzyme-specific traits or recurring functional patterns across enzyme classes. Reported Tmax and pHmax values from purified and partially purified hydrolases were systematically compiled to assess class-level tendencies. Temperature optima cluster within a relatively narrow thermophilic range across enzyme groups, supporting high-temperature activity as a common feature within the genus. In contrast, pH optima display clearer functional differentiation, with proteases and lipases consistently shifted toward alkaline values relative to carbohydrate-active hydrolases. Recurrent stabilizing elements, including reinforced hydrophobic cores, expanded electrostatic interaction networks, and a balanced rigidity–flexibility profile, are observed across multiple enzyme classes, indicating shared structural trends rather than independent enzyme-specific variation. By situating catalytic optima within a comparative framework and relating them to shared structural determinants, this review provides a comparative interpretation of patterns observed across Geobacillus-derived enzymes, linking structure, catalysis, and functional adaptation. One-sentence summary Thermostable enzymes from Geobacillus thrive at similar high temperatures but diverge in pH behavior, revealing simple patterns that can guide smarter use in biotechnology.",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "people": {
+        "first": {
+          "name": "Elifnur Akbiyik",
+          "aff": "Ataturk University, Turkiye"
+        },
+        "corresp": [
+          {
+            "name": "Ahmet Adiguzel",
+            "aff": "Ataturk University, Turkiye"
+          }
+        ]
+      },
+      "cited_structures": [],
+      "impact": {
+        "score": -3,
+        "types": [
+          "mechanism"
+        ],
+        "validation": [],
+        "low": [],
+        "journal": false,
+        "exp_structure": false,
+        "flags": [
+          "実験構造の手がかりなし"
+        ]
+      },
+      "proteins": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13694882",
+      "pmid": 42927196,
+      "doi": "10.1016/j.isci.2026.117855",
+      "title": "β motifs and molecular flux promote fibril growth at condensate interfaces",
+      "journal": "iScience",
+      "journal_abbrev": "iScience",
+      "authors": "Biswas S, Potoyan DA",
+      "pub_date": "2026-10-14",
+      "index_date": "2026-10-25",
+      "license": "cc by-nc-nd",
+      "pub_types": [
+        "research-article"
+      ],
+      "abstract": "SummaryBiomolecular condensates can age into gel-like or solid-like states, and their interfaces can promote amyloid fibril formation. Yet the physical principles selecting distinct interfacial aging pathways remain unclear. Here, we develop flux-driven molecular dynamics (FD-MD), a coarse-grained framework to disentangle the roles of rigid β-prone motifs, hydrophobic sequence patterning and molecular deposition rate. We show that rigid motifs can sustain orientational order that converts interfacial adsorption into directional fibrillar growth, whereas flexible chains form spreading surface aggregates. Furthermore for fixed molecular architecture, changing the rate and manner of molecular delivery redirects assembly between lateral spreading, outward fibrillar growth, and bridging between opposing interfaces. Counterinutively, stronger initial drift toward the interface accelerates surface coverage but slows axial fibril elongation, consistent with competition between interfacial accumulation, orientational ordering and outward growth. Molecular architecture thus provides the capacity for directional assembly, while molecular supply selects it morphological outcome. Our findings provide a minimal physical framework for distinct condensate-aging pathwasy and suggest routes to redirect aging through molecular delivery and tuning of interfacial properties of condensates.",
+      "source": "impact_search",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "people": {
+        "first": {
+          "name": "Subhadip Biswas",
+          "aff": "Iowa State University, USA"
+        },
+        "corresp": [
+          {
+            "name": "Subhadip Biswas",
+            "aff": "Iowa State University, USA"
+          },
+          {
+            "name": "Davit A. Potoyan",
+            "aff": "Iowa State University, USA"
+          }
+        ]
+      },
+      "cited_structures": [],
+      "impact": {
+        "score": 3,
+        "types": [
+          "method"
+        ],
+        "validation": [],
+        "low": [],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [],
+      "score": 0
+    }
+  ]
+}

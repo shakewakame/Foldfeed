@@ -1,0 +1,195 @@
+{
+ "screened": 37,
+ "scored": [
+  {
+   "pmcid": "PMC13695080",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 2,
+    "reach": 2,
+    "structure": 2,
+    "support": 2
+   },
+   "selected": true,
+   "reason": "患者検体とモデルで見つかったRAS阻害剤の耐性変異を、自前の結晶構造2つと変異体の測定で説明し、耐性を回避する化合物まで示した。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "Unexpectedly, we identified kinase-dead and hypoactive class III BRAF mutations in patients progressing on daraxonrasib.",
+      "section": "Discussion"
+     },
+     {
+      "quote": "Although the structural basis of how RAS interacts with the RBD and the CRD of RAF is known,60 there are no high-resolution structures to inform how this interaction is coordinated when RAF is dimerized.",
+      "section": "Results"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "Overall, our study provides a mechanistic framework for understanding acquired resistance to daraxonrasib and other emerging TCIs in RAS mutant cancers.",
+      "section": "Discussion"
+     }
+    ],
+    "structure": [
+     {
+      "quote": "we solved the tertiary structure of KRAS Y71H in complex with the RBD of CRAF at a 1.76-Å resolution (Figure 4D; Table S1).",
+      "section": "Results"
+     },
+     {
+      "quote": "We solved the crystal structure of the KRAS-GNP:RMC-4791:CYPA ternary complex at a 1.57-Å resolution and found that the positioning of RMC-4791 in the binding interface was shifted relative to that of RMC-7977",
+      "section": "Results"
+     }
+    ],
+    "support": [
+     {
+      "quote": "The presence of a double G12V/Y64D mutation on KRAS led to a ~20-fold increase in the EC50 (half maximal effective concentration) for KRAS-CYPA complex formation, as compared with the single G12V mutation.",
+      "section": "Results"
+     },
+     {
+      "quote": "These data suggest that to sustain signaling and confer resistance during daraxonrasib treatment, kinase-dead BRAF must retain the ability to interact with RAS.",
+      "section": "Results"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13694986",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 2,
+    "reach": 1,
+    "structure": 1,
+    "support": 2
+   },
+   "selected": false,
+   "reason": "rRNAメチル化の順序依存を示した点は新しいが、構造データは化学プロービング（SHAPE-MaP）で、原子分解能の実験構造はなく、MDは既存構造9Q87を出発点にしている。reachも1（この酵素の系に限られる）。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "These studies thus uncover a previously unappreciated “order of operations” for 16S rRNA modification during ribosome biogenesis with important implications for studies on the collective functions of these modifications.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "Bacterial ribosomal RNA (rRNA) methylations are important for accurate translation.",
+      "section": "Abstract"
+     }
+    ],
+    "structure": [
+     {
+      "quote": "RNA structure probing using selective 2′-hydroxyl acylation analyzed by primer extension and mutational profiling and molecular dynamics simulations reveal specific alterations in 16S rRNA structure and dynamics in the absence of the m4C1402 (RsmH) and m3U1498 (RsmE) modifications that likely restrict RsmF action.",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "we identify RsmF activity to be highly dependent on prior modification of h44 both in vitro and in E. coli",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13695380",
+   "type": "method",
+   "scores": {
+    "novelty": 1,
+    "reach": 2,
+    "structure": 1,
+    "support": 1
+   },
+   "selected": false,
+   "reason": "Gαqを大腸菌で作る発現法の改良で、HSQCスペクトルは出したが構造決定や機構の新規性は小さい（5点）。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "Here, we present an efficient expression strategy for Gαq protein in Escherichia coli.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "G protein-coupled receptors (GPCRs) are pivotal therapeutic targets that signal through heterotrimeric G proteins.",
+      "section": "Abstract"
+     }
+    ],
+    "structure": [
+     {
+      "quote": "The 15N-labeled protein exhibited well-dispersed 1H–15N HSQC spectra, validating the suitability of this expression strategy for future high-resolution NMR investigations.",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "we significantly enhance soluble yields while retaining GTPase activity",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13695568",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 2,
+    "reach": 2,
+    "structure": 0,
+    "support": 2
+   },
+   "selected": false,
+   "reason": "メチオニンが活性部位のヒスチジンを酸化から守るという着想は新しいが、実験で決めた構造による検証がなく（structure 0）、既存構造の距離解析と化学合成・酸化実験が根拠。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "Here, we demonstrate that methionine residues in secretory ribonucleases such as bovine RNase A serve as sacrificial antioxidants that protect active-site histidines.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "A similar arrangement of methionines is present in unrelated secretory proteins, including serine proteases and calprotectin, suggesting a broadly recurring protective strategy.",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "Total chemical synthesis of an RNase 1 variant in which these residues were replaced by norleucine, a sulfur-free isostere of methionine, corroborated their protective role.",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13694243",
+   "type": "ai_design",
+   "scores": {
+    "novelty": 1,
+    "reach": 1,
+    "structure": 0,
+    "support": 2
+   },
+   "selected": false,
+   "reason": "SLC6A1変異の安定性をAI予測と細胞実験で調べたが、構造は既存のGAT-1構造（7Y7W）に予測ツールを当てただけで、実験構造による検証はない。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "We reported clinical presentations including seizures and EEG features, autism related phenotypes and motor skills in a novel variant c.1069G > A (p.Ala357Thr, A357T) in two siblings.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "Mutations in SLC6A1, encoding the γ-aminobutyric acid (GABA) transporter 1 (GAT-1), are associated with a spectrum of neurodevelopmental disorders, including epilepsy syndromes, intellectual disability (ID), and autism.",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "PBA treatment rescued the mutant GAT-1 protein expression and GABA uptake function.",
+      "section": "Abstract"
+     }
+    ]
+   }
+  }
+ ]
+}
