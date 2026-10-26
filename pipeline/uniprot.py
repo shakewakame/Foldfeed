@@ -37,11 +37,17 @@ def lookup(accessions: list[str]) -> dict[str, dict]:
                 "keywords": sorted({k["name"] for k in r.get("keywords", [])} - {"3D-structure", "Reference proteome",
                                    "Proteomics identification", "Direct protein sequencing"}),
                 "ec": sorted({e["value"] for n in names for e in n.get("ecNumbers", [])}),
-                "pfam": sorted({x["id"] for x in xrefs if x.get("database") == "Pfam"}),
-                "interpro": sorted({x["id"] for x in xrefs if x.get("database") == "InterPro"}),
+                "pfam": family_names(xrefs, "Pfam"),
+                "interpro": family_names(xrefs, "InterPro"),
                 "lineage": [l for l in (r.get("organism", {}).get("lineage") or [])][:2],
             }
     return out
+
+
+def family_names(xrefs: list[dict], db: str) -> dict[str, str]:
+    """{"PF00069": "Pkinase", ...}: a database's families of the protein, with their short names."""
+    return {x["id"]: next((p["value"] for p in x.get("properties", []) if p.get("key") == "EntryName"), x["id"])
+            for x in xrefs if x.get("database") == db}
 
 
 def topology(accession: str) -> list[dict] | None:

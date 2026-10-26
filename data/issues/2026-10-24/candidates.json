@@ -144,22 +144,22 @@
           "ec": [
             "3.4.21.64"
           ],
-          "pfam": [
-            "PF00082",
-            "PF05922"
-          ],
-          "interpro": [
-            "IPR000209",
-            "IPR010259",
-            "IPR015500",
-            "IPR022398",
-            "IPR023827",
-            "IPR023828",
-            "IPR034193",
-            "IPR036852",
-            "IPR037045",
-            "IPR050131"
-          ],
+          "pfam": {
+            "PF05922": "Inhibitor_I9",
+            "PF00082": "Peptidase_S8"
+          },
+          "interpro": {
+            "IPR034193": "PCSK9_ProteinaseK-like",
+            "IPR000209": "Peptidase_S8/S53_dom",
+            "IPR036852": "Peptidase_S8/S53_dom_sf",
+            "IPR023827": "Peptidase_S8_Asp-AS",
+            "IPR022398": "Peptidase_S8_His-AS",
+            "IPR023828": "Peptidase_S8_Ser-AS",
+            "IPR050131": "Peptidase_S8_subtilisin-like",
+            "IPR015500": "Peptidase_S8_subtilisin-rel",
+            "IPR010259": "S8pro/Inhibitor_I9",
+            "IPR037045": "S8pro/Inhibitor_I9_sf"
+          },
           "lineage": [
             "Eukaryota",
             "Fungi"
@@ -186,14 +186,14 @@
           "ec": [
             "3.1.3.1"
           ],
-          "pfam": [
-            "PF00245"
-          ],
-          "interpro": [
-            "IPR001952",
-            "IPR017850",
-            "IPR018299"
-          ],
+          "pfam": {
+            "PF00245": "Alk_phosphatase"
+          },
+          "interpro": {
+            "IPR001952": "Alkaline_phosphatase",
+            "IPR018299": "Alkaline_phosphatase_AS",
+            "IPR017850": "Alkaline_phosphatase_core_sf"
+          },
           "lineage": [
             "Bacteria",
             "Pseudomonadati"
@@ -386,22 +386,22 @@
             "Transmembrane helix"
           ],
           "ec": [],
-          "pfam": [
-            "PF00129",
-            "PF07654"
-          ],
-          "interpro": [
-            "IPR001039",
-            "IPR003006",
-            "IPR003597",
-            "IPR007110",
-            "IPR011161",
-            "IPR011162",
-            "IPR013783",
-            "IPR036179",
-            "IPR037055",
-            "IPR050208"
-          ],
+          "pfam": {
+            "PF07654": "C1-set",
+            "PF00129": "MHC_I"
+          },
+          "interpro": {
+            "IPR007110": "Ig-like_dom",
+            "IPR036179": "Ig-like_dom_sf",
+            "IPR013783": "Ig-like_fold",
+            "IPR003006": "Ig/MHC_CS",
+            "IPR003597": "Ig_C1-set",
+            "IPR050208": "MHC_class-I_related",
+            "IPR011161": "MHC_I-like_Ag-recog",
+            "IPR037055": "MHC_I-like_Ag-recog_sf",
+            "IPR011162": "MHC_I/II-like_Ag-recog",
+            "IPR001039": "MHC_I_a_a1/a2"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -428,22 +428,22 @@
             "Transmembrane helix"
           ],
           "ec": [],
-          "pfam": [
-            "PF00129",
-            "PF07654"
-          ],
-          "interpro": [
-            "IPR001039",
-            "IPR003006",
-            "IPR003597",
-            "IPR007110",
-            "IPR011161",
-            "IPR011162",
-            "IPR013783",
-            "IPR036179",
-            "IPR037055",
-            "IPR050208"
-          ],
+          "pfam": {
+            "PF07654": "C1-set",
+            "PF00129": "MHC_I"
+          },
+          "interpro": {
+            "IPR007110": "Ig-like_dom",
+            "IPR036179": "Ig-like_dom_sf",
+            "IPR013783": "Ig-like_fold",
+            "IPR003006": "Ig/MHC_CS",
+            "IPR003597": "Ig_C1-set",
+            "IPR050208": "MHC_class-I_related",
+            "IPR011161": "MHC_I-like_Ag-recog",
+            "IPR037055": "MHC_I-like_Ag-recog_sf",
+            "IPR011162": "MHC_I/II-like_Ag-recog",
+            "IPR001039": "MHC_I_a_a1/a2"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -478,14 +478,14 @@
             "Virion"
           ],
           "ec": [],
-          "pfam": [
-            "PF11289"
-          ],
-          "interpro": [
-            "IPR024407",
-            "IPR046445",
-            "IPR046446"
-          ],
+          "pfam": {
+            "PF11289": "bCoV_viroporin"
+          },
+          "interpro": {
+            "IPR046446": "a/bCoV_VIROPORIN_3A-like_CD",
+            "IPR046445": "a/bCoV_VIROPORIN_3A-like_TM",
+            "IPR024407": "Protein_3a_bCoV"
+          },
           "lineage": [
             "Viruses",
             "Riboviria"
@@ -514,18 +514,18 @@
             "Signal"
           ],
           "ec": [],
-          "pfam": [
-            "PF07654"
-          ],
-          "interpro": [
-            "IPR003006",
-            "IPR003597",
-            "IPR007110",
-            "IPR013783",
-            "IPR015707",
-            "IPR036179",
-            "IPR050160"
-          ],
+          "pfam": {
+            "PF07654": "C1-set"
+          },
+          "interpro": {
+            "IPR015707": "B2Microglobulin",
+            "IPR007110": "Ig-like_dom",
+            "IPR036179": "Ig-like_dom_sf",
+            "IPR013783": "Ig-like_fold",
+            "IPR003006": "Ig/MHC_CS",
+            "IPR003597": "Ig_C1-set",
+            "IPR050160": "MHC/Immunoglobulin"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -1031,14 +1031,14 @@
             "2.1.1.346",
             "2.1.1.348"
           ],
-          "pfam": [
-            "PF05971"
-          ],
-          "interpro": [
-            "IPR010286",
-            "IPR017182",
-            "IPR029063"
-          ],
+          "pfam": {
+            "PF05971": "Methyltransf_10"
+          },
+          "interpro": {
+            "IPR017182": "METTL16/PsiM",
+            "IPR010286": "METTL16/RlmF",
+            "IPR029063": "SAM-dependent_MTases_sf"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -1551,27 +1551,27 @@
             "Signal"
           ],
           "ec": [],
-          "pfam": [
-            "PF00052",
-            "PF00053",
-            "PF00054",
-            "PF00055",
-            "PF02210",
-            "PF06008",
-            "PF24973"
-          ],
-          "interpro": [
-            "IPR000034",
-            "IPR000742",
-            "IPR001368",
-            "IPR001791",
-            "IPR002049",
-            "IPR008211",
-            "IPR009254",
-            "IPR013320",
-            "IPR050440",
-            "IPR056863"
-          ],
+          "pfam": {
+            "PF00053": "EGF_laminin",
+            "PF24973": "EGF_LMN_ATRN",
+            "PF00052": "Laminin_B",
+            "PF00054": "Laminin_G_1",
+            "PF02210": "Laminin_G_2",
+            "PF06008": "Laminin_I",
+            "PF00055": "Laminin_N"
+          },
+          "interpro": {
+            "IPR013320": "ConA-like_dom_sf",
+            "IPR000742": "EGF",
+            "IPR050440": "Laminin/Netrin_ECM",
+            "IPR009254": "Laminin_aI",
+            "IPR001791": "Laminin_G",
+            "IPR000034": "Laminin_IV",
+            "IPR008211": "Laminin_N",
+            "IPR002049": "LE_dom",
+            "IPR056863": "LMN_ATRN_NET-like_EGF",
+            "IPR001368": "TNFR/NGFR_Cys_rich_reg"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -1601,22 +1601,22 @@
             "Signal"
           ],
           "ec": [],
-          "pfam": [
-            "PF00053",
-            "PF00055",
-            "PF21199",
-            "PF23219",
-            "PF24973"
-          ],
-          "interpro": [
-            "IPR000742",
-            "IPR002049",
-            "IPR008211",
-            "IPR013015",
-            "IPR050440",
-            "IPR056558",
-            "IPR056863"
-          ],
+          "pfam": {
+            "PF00053": "EGF_laminin",
+            "PF24973": "EGF_LMN_ATRN",
+            "PF23219": "LAMB1",
+            "PF21199": "LAMININ_IV_B",
+            "PF00055": "Laminin_N"
+          },
+          "interpro": {
+            "IPR000742": "EGF",
+            "IPR056558": "LAMB1-4_helical",
+            "IPR050440": "Laminin/Netrin_ECM",
+            "IPR013015": "Laminin_IV_B",
+            "IPR008211": "Laminin_N",
+            "IPR002049": "LE_dom",
+            "IPR056863": "LMN_ATRN_NET-like_EGF"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -1646,20 +1646,20 @@
             "Signal"
           ],
           "ec": [],
-          "pfam": [
-            "PF00052",
-            "PF00053",
-            "PF00055",
-            "PF24973"
-          ],
-          "interpro": [
-            "IPR000034",
-            "IPR000742",
-            "IPR002049",
-            "IPR008211",
-            "IPR050440",
-            "IPR056863"
-          ],
+          "pfam": {
+            "PF00053": "EGF_laminin",
+            "PF24973": "EGF_LMN_ATRN",
+            "PF00052": "Laminin_B",
+            "PF00055": "Laminin_N"
+          },
+          "interpro": {
+            "IPR000742": "EGF",
+            "IPR050440": "Laminin/Netrin_ECM",
+            "IPR000034": "Laminin_IV",
+            "IPR008211": "Laminin_N",
+            "IPR002049": "LE_dom",
+            "IPR056863": "LMN_ATRN_NET-like_EGF"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -1692,22 +1692,22 @@
             "Transmembrane helix"
           ],
           "ec": [],
-          "pfam": [
-            "PF07686",
-            "PF08205",
-            "PF13895",
-            "PF13927"
-          ],
-          "interpro": [
-            "IPR003598",
-            "IPR003599",
-            "IPR007110",
-            "IPR013106",
-            "IPR013162",
-            "IPR013783",
-            "IPR036179",
-            "IPR051116"
-          ],
+          "pfam": {
+            "PF08205": "C2-set_2",
+            "PF13895": "Ig_2",
+            "PF13927": "Ig_3",
+            "PF07686": "V-set"
+          },
+          "interpro": {
+            "IPR013162": "CD80_C2-set",
+            "IPR007110": "Ig-like_dom",
+            "IPR036179": "Ig-like_dom_sf",
+            "IPR013783": "Ig-like_fold",
+            "IPR003599": "Ig_sub",
+            "IPR003598": "Ig_sub2",
+            "IPR013106": "Ig_V-set",
+            "IPR051116": "Surface_Rcpt/Adhesion_Mol"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -1723,19 +1723,19 @@
           "first_structure": false,
           "keywords": [],
           "ec": [],
-          "pfam": [
-            "PF05785",
-            "PF15962",
-            "PF20178"
-          ],
-          "interpro": [
-            "IPR008430",
-            "IPR011324",
-            "IPR031886",
-            "IPR037040",
-            "IPR046673",
-            "IPR061408"
-          ],
+          "pfam": {
+            "PF05785": "CNF1",
+            "PF15962": "DUF4765",
+            "PF20178": "ToxA_N"
+          },
+          "interpro": {
+            "IPR061408": "CNF1-like",
+            "IPR008430": "CNF_Rho-act",
+            "IPR037040": "CNF_Rho-act_sf",
+            "IPR011324": "Cytotoxic_necrot_fac-like_cat",
+            "IPR031886": "DUF4765",
+            "IPR046673": "ToxA_N"
+          },
           "lineage": [
             "Bacteria",
             "Pseudomonadati"
@@ -1877,14 +1877,14 @@
             "Ubl conjugation"
           ],
           "ec": [],
-          "pfam": [
-            "PF00418"
-          ],
-          "interpro": [
-            "IPR001084",
-            "IPR002955",
-            "IPR027324"
-          ],
+          "pfam": {
+            "PF00418": "Tubulin-binding"
+          },
+          "interpro": {
+            "IPR027324": "MAP2/MAP4/Tau",
+            "IPR001084": "MAP_tubulin-bd_rpt",
+            "IPR002955": "Tau"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -3327,17 +3327,17 @@
             "Secreted"
           ],
           "ec": [],
-          "pfam": [
-            "PF07686"
-          ],
-          "interpro": [
-            "IPR003599",
-            "IPR007110",
-            "IPR013106",
-            "IPR013783",
-            "IPR036179",
-            "IPR050150"
-          ],
+          "pfam": {
+            "PF07686": "V-set"
+          },
+          "interpro": {
+            "IPR007110": "Ig-like_dom",
+            "IPR036179": "Ig-like_dom_sf",
+            "IPR013783": "Ig-like_fold",
+            "IPR003599": "Ig_sub",
+            "IPR013106": "Ig_V-set",
+            "IPR050150": "IgV_Light_Chain"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -3376,26 +3376,26 @@
             "Virus entry into host cell"
           ],
           "ec": [],
-          "pfam": [
-            "PF01601",
-            "PF09408",
-            "PF16451",
-            "PF19209"
-          ],
-          "interpro": [
-            "IPR002552",
-            "IPR018548",
-            "IPR032500",
-            "IPR036326",
-            "IPR042578",
-            "IPR043002",
-            "IPR043473",
-            "IPR043607",
-            "IPR044341",
-            "IPR044366",
-            "IPR044873",
-            "IPR044874"
-          ],
+          "pfam": {
+            "PF16451": "bCoV_S1_N",
+            "PF09408": "bCoV_S1_RBD",
+            "PF19209": "CoV_S1_C",
+            "PF01601": "CoV_S2"
+          },
+          "interpro": {
+            "IPR032500": "bCoV_S1_N",
+            "IPR042578": "BETA_CORONA_SPIKE",
+            "IPR043607": "CoV_S1_C",
+            "IPR043473": "S2_sf_CoV",
+            "IPR043002": "Spike_N_sf",
+            "IPR044341": "Spike_S1_N_SARS-CoV-like",
+            "IPR018548": "Spike_S1_RBD_bCoV",
+            "IPR044366": "Spike_S1_RBD_SARS-CoV-2",
+            "IPR036326": "Spike_S1_RBD_sf_bCoV",
+            "IPR002552": "Spike_S2_CoV",
+            "IPR044873": "Spike_S2_CoV_HR1",
+            "IPR044874": "Spike_S2_CoV_HR2"
+          },
           "lineage": [
             "Viruses",
             "Riboviria"
@@ -6530,118 +6530,118 @@
             "Zinc-finger"
           ],
           "ec": [],
-          "pfam": [
-            "PF00680",
-            "PF01661",
-            "PF05409",
-            "PF06460",
-            "PF06471",
-            "PF06478",
-            "PF08710",
-            "PF08715",
-            "PF08716",
-            "PF08717",
-            "PF09401",
-            "PF11501",
-            "PF11633",
-            "PF12124",
-            "PF12379",
-            "PF13087",
-            "PF16251",
-            "PF16348",
-            "PF19211",
-            "PF19213",
-            "PF19215",
-            "PF19216",
-            "PF19217",
-            "PF19218",
-            "PF19219",
-            "PF20631",
-            "PF20632",
-            "PF20633"
-          ],
-          "interpro": [
-            "IPR001205",
-            "IPR002589",
-            "IPR007094",
-            "IPR008740",
-            "IPR009003",
-            "IPR009461",
-            "IPR009466",
-            "IPR009469",
-            "IPR013016",
-            "IPR014822",
-            "IPR014828",
-            "IPR014829",
-            "IPR018995",
-            "IPR021590",
-            "IPR022733",
-            "IPR024358",
-            "IPR024375",
-            "IPR027351",
-            "IPR027352",
-            "IPR027417",
-            "IPR029063",
-            "IPR032505",
-            "IPR032592",
-            "IPR036333",
-            "IPR036499",
-            "IPR037204",
-            "IPR037227",
-            "IPR037230",
-            "IPR038030",
-            "IPR038083",
-            "IPR038123",
-            "IPR038166",
-            "IPR038400",
-            "IPR041679",
-            "IPR042515",
-            "IPR042570",
-            "IPR043174",
-            "IPR043177",
-            "IPR043178",
-            "IPR043472",
-            "IPR043477",
-            "IPR043478",
-            "IPR043502",
-            "IPR043503",
-            "IPR043606",
-            "IPR043608",
-            "IPR043609",
-            "IPR043610",
-            "IPR043611",
-            "IPR043612",
-            "IPR043613",
-            "IPR043615",
-            "IPR044315",
-            "IPR044322",
-            "IPR044330",
-            "IPR044343",
-            "IPR044351",
-            "IPR044353",
-            "IPR044357",
-            "IPR044367",
-            "IPR044371",
-            "IPR044389",
-            "IPR044401",
-            "IPR044863",
-            "IPR044864",
-            "IPR046435",
-            "IPR046436",
-            "IPR046438",
-            "IPR046440",
-            "IPR046441",
-            "IPR046442",
-            "IPR046443",
-            "IPR047566",
-            "IPR047567",
-            "IPR047570",
-            "IPR047573",
-            "IPR048672",
-            "IPR048673",
-            "IPR049894",
-            "IPR050534"
-          ],
+          "pfam": {
+            "PF13087": "AAA_12",
+            "PF16251": "bCoV_NAB",
+            "PF11501": "bCoV_NSP1",
+            "PF12379": "bCoV_NSP3_N",
+            "PF12124": "bCoV_SUD_C",
+            "PF11633": "bCoV_SUD_M",
+            "PF06471": "CoV_ExoN",
+            "PF06460": "CoV_Methyltr_2",
+            "PF09401": "CoV_NSP10",
+            "PF20631": "CoV_NSP13_1B",
+            "PF20633": "CoV_NSP13_stalk",
+            "PF20632": "CoV_NSP13_ZBD",
+            "PF19215": "CoV_NSP15_C",
+            "PF19216": "CoV_NSP15_M",
+            "PF19219": "CoV_NSP15_N",
+            "PF19211": "CoV_NSP2_N",
+            "PF19218": "CoV_NSP3_C",
+            "PF16348": "CoV_NSP4_C",
+            "PF19217": "CoV_NSP4_N",
+            "PF19213": "CoV_NSP6",
+            "PF08716": "CoV_NSP7",
+            "PF08717": "CoV_NSP8",
+            "PF08710": "CoV_NSP9",
+            "PF08715": "CoV_peptidase",
+            "PF06478": "CoV_RPol_N",
+            "PF01661": "Macro",
+            "PF05409": "Peptidase_C30",
+            "PF00680": "RdRP_1"
+          },
+          "interpro": {
+            "IPR027351": "(+)RNA_virus_helicase_core_dom",
+            "IPR046443": "a/bCoV_NSP1_glob",
+            "IPR046440": "AV_NSP11N_COV_NSP15M",
+            "IPR046442": "bCoV_NSP1_C",
+            "IPR050534": "Coronavir_polyprotein_1ab",
+            "IPR043608": "CoV_NSP15_M",
+            "IPR043606": "CoV_NSP15_N",
+            "IPR043613": "CoV_NSP2_C",
+            "IPR047573": "CoV_NSP2_M",
+            "IPR049894": "COV_NSP3_3ECTO",
+            "IPR043611": "CoV_NSP3_C",
+            "IPR047566": "CoV_NSP3_Y",
+            "IPR032505": "CoV_NSP4_C",
+            "IPR043612": "CoV_NSP4_N",
+            "IPR043502": "DNA/RNA_pol_sf",
+            "IPR041679": "DNA2/NAM7-like_C",
+            "IPR022733": "DPUP_SUD_C_bCoV",
+            "IPR037227": "EndoU-like",
+            "IPR002589": "Macro_dom",
+            "IPR043472": "Macro_dom-like",
+            "IPR044371": "Macro_X_NSP3-like",
+            "IPR046435": "N7_MTase_CoV",
+            "IPR043609": "NendoU_nidovirus",
+            "IPR044863": "NIRAN",
+            "IPR046438": "NIV_2_O_MTASE",
+            "IPR046436": "NIV_EXON",
+            "IPR036333": "NSP10_sf_CoV",
+            "IPR047570": "NSP12_IF_CoV",
+            "IPR044343": "NSP13_1B_dom_CoV",
+            "IPR048673": "NSP13_stalk_CoV",
+            "IPR048672": "NSP13_ZBD_CoV",
+            "IPR027352": "NSP13_ZBD_CoV-like",
+            "IPR044315": "NSP14_betaCoV",
+            "IPR009466": "NSP14_CoV",
+            "IPR044330": "NSP15_alpha_betaCoV_N",
+            "IPR044322": "NSP15_M_alpha_beta_CoV",
+            "IPR043174": "NSP15_middle_sf",
+            "IPR042515": "NSP15_N_CoV",
+            "IPR044401": "NSP15_NendoU_CoV",
+            "IPR009461": "NSP16_CoV-like",
+            "IPR021590": "NSP1_glob_bCoV",
+            "IPR038030": "NSP1_glob_sf_bCoV",
+            "IPR043615": "NSP2_N_CoV",
+            "IPR044389": "NSP2_SARS-CoV-like",
+            "IPR024375": "NSP3_bCoV",
+            "IPR047567": "NSP3_G2M_bCoV",
+            "IPR024358": "NSP3_N_bCoV",
+            "IPR032592": "NSP3_NAB_bCoV",
+            "IPR042570": "NSP3_NAB_bCoV_sf",
+            "IPR038166": "NSP3_PL2pro_sf_bCoV",
+            "IPR038400": "NSP3_SUD-M_sf_bCoV",
+            "IPR044864": "NSP3_SUD-N_bCoV",
+            "IPR043478": "NSP3_SUD-N_sf_bCoV",
+            "IPR044357": "NSP3_Ubl1_dom_CoV",
+            "IPR044353": "Nsp3_Ubl2_dom_CoV",
+            "IPR038083": "NSP3A-like",
+            "IPR038123": "NSP4_C_sf_CoV",
+            "IPR044367": "NSP6_betaCoV",
+            "IPR043610": "NSP6_CoV",
+            "IPR014828": "NSP7_CoV",
+            "IPR037204": "NSP7_sf_CoV",
+            "IPR014829": "NSP8_CoV",
+            "IPR037230": "NSP8_sf_CoV",
+            "IPR014822": "NSP9_CoV",
+            "IPR036499": "NSP9_sf_CoV",
+            "IPR027417": "P-loop_NTPase",
+            "IPR013016": "Peptidase_C16_CoV",
+            "IPR008740": "Peptidase_C30_CoV",
+            "IPR043477": "Peptidase_C30_dom3_CoV",
+            "IPR009003": "Peptidase_S1_PA",
+            "IPR043177": "PLpro_N_sf_CoV",
+            "IPR043503": "PLpro_palm_finger_dom_CoV",
+            "IPR043178": "PLpro_thumb_sf_CoV",
+            "IPR046441": "RdRp_CoV",
+            "IPR009469": "RdRp_N_CoV",
+            "IPR044351": "RdRp_SARS-CoV-like",
+            "IPR001205": "RNA-dir_pol_C",
+            "IPR007094": "RNA-dir_pol_PSvirus",
+            "IPR018995": "RNA_synth_NSP10_CoV",
+            "IPR029063": "SAM-dependent_MTases_sf"
+          },
           "lineage": [
             "Viruses",
             "Riboviria"
@@ -12303,14 +12303,14 @@
             "Transmembrane helix"
           ],
           "ec": [],
-          "pfam": [
-            "PF09439"
-          ],
-          "interpro": [
-            "IPR019009",
-            "IPR024156",
-            "IPR027417"
-          ],
+          "pfam": {
+            "PF09439": "SRPRB"
+          },
+          "interpro": {
+            "IPR027417": "P-loop_NTPase",
+            "IPR024156": "Small_GTPase_ARF",
+            "IPR019009": "SRP_receptor_beta_su"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -12331,19 +12331,19 @@
             "Receptor"
           ],
           "ec": [],
-          "pfam": [
-            "PF00448",
-            "PF02881"
-          ],
-          "interpro": [
-            "IPR000897",
-            "IPR003593",
-            "IPR011012",
-            "IPR013822",
-            "IPR027417",
-            "IPR036225",
-            "IPR042101"
-          ],
+          "pfam": {
+            "PF00448": "SRP54",
+            "PF02881": "SRP54_N"
+          },
+          "interpro": {
+            "IPR003593": "AAA+_ATPase",
+            "IPR011012": "Longin-like_dom_sf",
+            "IPR027417": "P-loop_NTPase",
+            "IPR013822": "Signal_recog_particl_SRP54_hlx",
+            "IPR036225": "SRP/SRP_N",
+            "IPR000897": "SRP54_GTPase_dom",
+            "IPR042101": "SRP54_N_sf"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -12363,13 +12363,13 @@
             "Signal recognition particle"
           ],
           "ec": [],
-          "pfam": [
-            "PF01922"
-          ],
-          "interpro": [
-            "IPR002778",
-            "IPR036521"
-          ],
+          "pfam": {
+            "PF01922": "SRP19"
+          },
+          "interpro": {
+            "IPR002778": "Signal_recog_particle_SRP19",
+            "IPR036521": "SRP19-like_sf"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -12393,21 +12393,21 @@
             "Receptor"
           ],
           "ec": [],
-          "pfam": [
-            "PF00448",
-            "PF02881",
-            "PF04086"
-          ],
-          "interpro": [
-            "IPR000897",
-            "IPR003593",
-            "IPR007222",
-            "IPR011012",
-            "IPR013822",
-            "IPR027417",
-            "IPR036225",
-            "IPR042101"
-          ],
+          "pfam": {
+            "PF04086": "SRP-alpha_N",
+            "PF00448": "SRP54",
+            "PF02881": "SRP54_N"
+          },
+          "interpro": {
+            "IPR003593": "AAA+_ATPase",
+            "IPR011012": "Longin-like_dom_sf",
+            "IPR027417": "P-loop_NTPase",
+            "IPR013822": "Signal_recog_particl_SRP54_hlx",
+            "IPR036225": "SRP/SRP_N",
+            "IPR000897": "SRP54_GTPase_dom",
+            "IPR042101": "SRP54_N_sf",
+            "IPR007222": "SRPRA_N"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -12427,13 +12427,13 @@
             "Signal recognition particle"
           ],
           "ec": [],
-          "pfam": [
-            "PF02290"
-          ],
-          "interpro": [
-            "IPR003210",
-            "IPR009018"
-          ],
+          "pfam": {
+            "PF02290": "SRP14"
+          },
+          "interpro": {
+            "IPR003210": "Signal_recog_particle_SRP14",
+            "IPR009018": "Signal_recog_particle_SRP9/14"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -12452,15 +12452,15 @@
             "Signal recognition particle"
           ],
           "ec": [],
-          "pfam": [
-            "PF05486"
-          ],
-          "interpro": [
-            "IPR008832",
-            "IPR009018",
-            "IPR039432",
-            "IPR039914"
-          ],
+          "pfam": {
+            "PF05486": "SRP9-21"
+          },
+          "interpro": {
+            "IPR009018": "Signal_recog_particle_SRP9/14",
+            "IPR008832": "SRP9",
+            "IPR039914": "SRP9-like",
+            "IPR039432": "SRP9_dom"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -12485,18 +12485,18 @@
             "Ubl conjugation"
           ],
           "ec": [],
-          "pfam": [
-            "PF08492",
-            "PF13181",
-            "PF17004"
-          ],
-          "interpro": [
-            "IPR011990",
-            "IPR013699",
-            "IPR019734",
-            "IPR026270",
-            "IPR031545"
-          ],
+          "pfam": {
+            "PF08492": "SRP72",
+            "PF17004": "SRP_TPR_like",
+            "PF13181": "TPR_8"
+          },
+          "interpro": {
+            "IPR013699": "Signal_recog_part_SRP72_RNA-bd",
+            "IPR026270": "SRP72",
+            "IPR031545": "SRP72_TPR-like",
+            "IPR011990": "TPR-like_helical_dom_sf",
+            "IPR019734": "TPR_rpt"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -12522,23 +12522,23 @@
           "ec": [
             "3.6.5.4"
           ],
-          "pfam": [
-            "PF00448",
-            "PF02881",
-            "PF02978"
-          ],
-          "interpro": [
-            "IPR000897",
-            "IPR003593",
-            "IPR004125",
-            "IPR006325",
-            "IPR013822",
-            "IPR022941",
-            "IPR027417",
-            "IPR036225",
-            "IPR036891",
-            "IPR042101"
-          ],
+          "pfam": {
+            "PF00448": "SRP54",
+            "PF02881": "SRP54_N",
+            "PF02978": "SRP_SPB"
+          },
+          "interpro": {
+            "IPR003593": "AAA+_ATPase",
+            "IPR027417": "P-loop_NTPase",
+            "IPR036891": "Signal_recog_part_SRP54_M_sf",
+            "IPR013822": "Signal_recog_particl_SRP54_hlx",
+            "IPR004125": "Signal_recog_particle_SRP54_M",
+            "IPR036225": "SRP/SRP_N",
+            "IPR022941": "SRP54",
+            "IPR006325": "SRP54_euk",
+            "IPR000897": "SRP54_GTPase_dom",
+            "IPR042101": "SRP54_N_sf"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -12566,23 +12566,23 @@
           "ec": [
             "3.6.5.4"
           ],
-          "pfam": [
-            "PF00448",
-            "PF02881",
-            "PF02978"
-          ],
-          "interpro": [
-            "IPR000897",
-            "IPR003593",
-            "IPR004125",
-            "IPR006325",
-            "IPR013822",
-            "IPR022941",
-            "IPR027417",
-            "IPR036225",
-            "IPR036891",
-            "IPR042101"
-          ],
+          "pfam": {
+            "PF00448": "SRP54",
+            "PF02881": "SRP54_N",
+            "PF02978": "SRP_SPB"
+          },
+          "interpro": {
+            "IPR003593": "AAA+_ATPase",
+            "IPR027417": "P-loop_NTPase",
+            "IPR036891": "Signal_recog_part_SRP54_M_sf",
+            "IPR013822": "Signal_recog_particl_SRP54_hlx",
+            "IPR004125": "Signal_recog_particle_SRP54_M",
+            "IPR036225": "SRP/SRP_N",
+            "IPR022941": "SRP54",
+            "IPR006325": "SRP54_euk",
+            "IPR000897": "SRP54_GTPase_dom",
+            "IPR042101": "SRP54_N_sf"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -12605,14 +12605,14 @@
             "Signal recognition particle"
           ],
           "ec": [],
-          "pfam": [
-            "PF16969"
-          ],
-          "interpro": [
-            "IPR026258",
-            "IPR034652",
-            "IPR038253"
-          ],
+          "pfam": {
+            "PF16969": "SRP68"
+          },
+          "interpro": {
+            "IPR026258": "SRP68",
+            "IPR034652": "SRP68-RBD",
+            "IPR038253": "SRP68_N_sf"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -12636,22 +12636,22 @@
           "ec": [
             "3.6.5.4"
           ],
-          "pfam": [
-            "PF00448",
-            "PF02881",
-            "PF02978"
-          ],
-          "interpro": [
-            "IPR000897",
-            "IPR003593",
-            "IPR004125",
-            "IPR013822",
-            "IPR022941",
-            "IPR027417",
-            "IPR036225",
-            "IPR036891",
-            "IPR042101"
-          ],
+          "pfam": {
+            "PF00448": "SRP54",
+            "PF02881": "SRP54_N",
+            "PF02978": "SRP_SPB"
+          },
+          "interpro": {
+            "IPR003593": "AAA+_ATPase",
+            "IPR027417": "P-loop_NTPase",
+            "IPR036891": "Signal_recog_part_SRP54_M_sf",
+            "IPR013822": "Signal_recog_particl_SRP54_hlx",
+            "IPR004125": "Signal_recog_particle_SRP54_M",
+            "IPR036225": "SRP/SRP_N",
+            "IPR022941": "SRP54",
+            "IPR000897": "SRP54_GTPase_dom",
+            "IPR042101": "SRP54_N_sf"
+          },
           "lineage": [
             "Archaea",
             "Methanobacteriati"

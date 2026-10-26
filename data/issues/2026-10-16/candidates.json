@@ -172,13 +172,13 @@
             "Transmembrane helix"
           ],
           "ec": [],
-          "pfam": [
-            "PF03798"
-          ],
-          "interpro": [
-            "IPR006634",
-            "IPR050846"
-          ],
+          "pfam": {
+            "PF03798": "TRAM_LAG1_CLN8"
+          },
+          "interpro": {
+            "IPR006634": "TLC-dom",
+            "IPR050846": "TLCD"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -372,15 +372,15 @@
             "Primary ciliary dyskinesia"
           ],
           "ec": [],
-          "pfam": [
-            "PF13877",
-            "PF15867"
-          ],
-          "interpro": [
-            "IPR025986",
-            "IPR031733",
-            "IPR042422"
-          ],
+          "pfam": {
+            "PF15867": "Dynein_attach_N",
+            "PF13877": "RPAP3_C"
+          },
+          "interpro": {
+            "IPR042422": "CC103",
+            "IPR031733": "Dynein_attach_N",
+            "IPR025986": "RPAP3-like_C"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -396,12 +396,12 @@
           "first_structure": true,
           "keywords": [],
           "ec": [],
-          "pfam": [
-            "PF14913"
-          ],
-          "interpro": [
-            "IPR026224"
-          ],
+          "pfam": {
+            "PF14913": "DPCD"
+          },
+          "interpro": {
+            "IPR026224": "DPCD"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -444,18 +444,18 @@
           "ec": [
             "3.6.4.12"
           ],
-          "pfam": [
-            "PF06068",
-            "PF17856"
-          ],
-          "interpro": [
-            "IPR003593",
-            "IPR010339",
-            "IPR027238",
-            "IPR027417",
-            "IPR041048",
-            "IPR042487"
-          ],
+          "pfam": {
+            "PF06068": "TIP49",
+            "PF17856": "TIP49_C"
+          },
+          "interpro": {
+            "IPR003593": "AAA+_ATPase",
+            "IPR027417": "P-loop_NTPase",
+            "IPR027238": "RuvB-like",
+            "IPR041048": "RuvB-like_C",
+            "IPR042487": "RuvBL1/2_DNA/RNA_bd_dom",
+            "IPR010339": "TIP49_P-loop"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -502,18 +502,18 @@
           "ec": [
             "3.6.4.12"
           ],
-          "pfam": [
-            "PF06068",
-            "PF17856"
-          ],
-          "interpro": [
-            "IPR003593",
-            "IPR010339",
-            "IPR027238",
-            "IPR027417",
-            "IPR041048",
-            "IPR042487"
-          ],
+          "pfam": {
+            "PF06068": "TIP49",
+            "PF17856": "TIP49_C"
+          },
+          "interpro": {
+            "IPR003593": "AAA+_ATPase",
+            "IPR027417": "P-loop_NTPase",
+            "IPR027238": "RuvB-like",
+            "IPR041048": "RuvB-like_C",
+            "IPR042487": "RuvBL1/2_DNA/RNA_bd_dom",
+            "IPR010339": "TIP49_P-loop"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -704,12 +704,12 @@
             "Transport"
           ],
           "ec": [],
-          "pfam": [
-            "PF03023"
-          ],
-          "interpro": [
-            "IPR004268"
-          ],
+          "pfam": {
+            "PF03023": "MurJ"
+          },
+          "interpro": {
+            "IPR004268": "MurJ"
+          },
           "lineage": [
             "Bacteria",
             "Pseudomonadati"
@@ -730,14 +730,14 @@
             "Transmembrane helix"
           ],
           "ec": [],
-          "pfam": [
-            "PF01943"
-          ],
-          "interpro": [
-            "IPR002797",
-            "IPR024923",
-            "IPR050833"
-          ],
+          "pfam": {
+            "PF01943": "Polysacc_synt"
+          },
+          "interpro": {
+            "IPR024923": "PG_synth_SpoVB",
+            "IPR050833": "Poly_Biosynth_Transport",
+            "IPR002797": "Polysacc_synth"
+          },
           "lineage": [
             "Bacteria",
             "Bacillati"
@@ -970,22 +970,22 @@
             "Ubl conjugation pathway"
           ],
           "ec": [],
-          "pfam": [
-            "PF00651",
-            "PF01344",
-            "PF07707",
-            "PF24681"
-          ],
-          "interpro": [
-            "IPR000210",
-            "IPR006652",
-            "IPR011333",
-            "IPR011705",
-            "IPR015915",
-            "IPR017096",
-            "IPR030563",
-            "IPR047098"
-          ],
+          "pfam": {
+            "PF07707": "BACK",
+            "PF00651": "BTB",
+            "PF01344": "Kelch_1",
+            "PF24681": "Kelch_KLHDC2_KLHL20_DRC7"
+          },
+          "interpro": {
+            "IPR011705": "BACK",
+            "IPR017096": "BTB-kelch_protein",
+            "IPR000210": "BTB/POZ_dom",
+            "IPR047098": "KEAP1_BACK",
+            "IPR030563": "KEAP1_BTB_POZ_dom",
+            "IPR015915": "Kelch-typ_b-propeller",
+            "IPR006652": "Kelch_1",
+            "IPR011333": "SKP1/BTB/POZ_sf"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -1328,13 +1328,13 @@
             "Transport"
           ],
           "ec": [],
-          "pfam": [
-            "PF01442"
-          ],
-          "interpro": [
-            "IPR000074",
-            "IPR050163"
-          ],
+          "pfam": {
+            "PF01442": "Apolipoprotein"
+          },
+          "interpro": {
+            "IPR000074": "ApoA_E",
+            "IPR050163": "Apolipoprotein_A1/A4/E"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -1360,14 +1360,14 @@
             "Transport"
           ],
           "ec": [],
-          "pfam": [
-            "PF07885"
-          ],
-          "interpro": [
-            "IPR003092",
-            "IPR003280",
-            "IPR013099"
-          ],
+          "pfam": {
+            "PF07885": "Ion_trans_2"
+          },
+          "interpro": {
+            "IPR003280": "2pore_dom_K_chnl",
+            "IPR003092": "2pore_dom_K_chnl_TASK",
+            "IPR013099": "K_chnl_dom"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -1752,13 +1752,13 @@
             "Transport"
           ],
           "ec": [],
-          "pfam": [
-            "PF07361"
-          ],
-          "interpro": [
-            "IPR009155",
-            "IPR010980"
-          ],
+          "pfam": {
+            "PF07361": "Cytochrom_B562"
+          },
+          "interpro": {
+            "IPR009155": "Cyt_b562",
+            "IPR010980": "Cyt_c/b562"
+          },
           "lineage": [
             "Bacteria",
             "Pseudomonadati"
@@ -1783,14 +1783,14 @@
             "Transducer"
           ],
           "ec": [],
-          "pfam": [
-            "PF00631"
-          ],
-          "interpro": [
-            "IPR001770",
-            "IPR015898",
-            "IPR036284"
-          ],
+          "pfam": {
+            "PF00631": "G-gamma"
+          },
+          "interpro": {
+            "IPR001770": "G-protein_gamma",
+            "IPR015898": "G-protein_gamma-like_dom",
+            "IPR036284": "GGL_sf"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -1816,18 +1816,18 @@
             "WD repeat"
           ],
           "ec": [],
-          "pfam": [
-            "PF25391"
-          ],
-          "interpro": [
-            "IPR001632",
-            "IPR001680",
-            "IPR015943",
-            "IPR016346",
-            "IPR019775",
-            "IPR020472",
-            "IPR036322"
-          ],
+          "pfam": {
+            "PF25391": "WD40_Gbeta"
+          },
+          "interpro": {
+            "IPR016346": "G-protein_beta_1-5",
+            "IPR015943": "WD40/YVTN_repeat-like_dom_sf",
+            "IPR001632": "WD40_G-protein_beta-like",
+            "IPR020472": "WD40_PAC1",
+            "IPR019775": "WD40_repeat_CS",
+            "IPR036322": "WD40_repeat_dom_sf",
+            "IPR001680": "WD40_rpt"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -1857,14 +1857,14 @@
             "Transmembrane helix"
           ],
           "ec": [],
-          "pfam": [
-            "PF00001"
-          ],
-          "interpro": [
-            "IPR000276",
-            "IPR017452",
-            "IPR026234"
-          ],
+          "pfam": {
+            "PF00001": "7tm_1"
+          },
+          "interpro": {
+            "IPR000276": "GPCR_Rhodpsn",
+            "IPR017452": "GPCR_Rhodpsn_7TM",
+            "IPR026234": "MRGPCRFAMILY"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"

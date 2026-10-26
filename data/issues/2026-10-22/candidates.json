@@ -303,21 +303,21 @@
             "Transmembrane helix"
           ],
           "ec": [],
-          "pfam": [
-            "PF00993",
-            "PF07654"
-          ],
-          "interpro": [
-            "IPR001003",
-            "IPR003006",
-            "IPR003597",
-            "IPR007110",
-            "IPR011162",
-            "IPR013783",
-            "IPR014745",
-            "IPR036179",
-            "IPR050160"
-          ],
+          "pfam": {
+            "PF07654": "C1-set",
+            "PF00993": "MHC_II_alpha"
+          },
+          "interpro": {
+            "IPR007110": "Ig-like_dom",
+            "IPR036179": "Ig-like_dom_sf",
+            "IPR013783": "Ig-like_fold",
+            "IPR003006": "Ig/MHC_CS",
+            "IPR003597": "Ig_C1-set",
+            "IPR050160": "MHC/Immunoglobulin",
+            "IPR011162": "MHC_I/II-like_Ag-recog",
+            "IPR014745": "MHC_II_a/b_N",
+            "IPR001003": "MHC_II_a_N"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -337,16 +337,16 @@
             "Ribosomal protein"
           ],
           "ec": [],
-          "pfam": [
-            "PF01248"
-          ],
-          "interpro": [
-            "IPR000231",
-            "IPR004038",
-            "IPR022991",
-            "IPR029064",
-            "IPR039109"
-          ],
+          "pfam": {
+            "PF01248": "Ribosomal_L7Ae"
+          },
+          "interpro": {
+            "IPR000231": "Ribosomal_eL30",
+            "IPR039109": "Ribosomal_eL30-like",
+            "IPR029064": "Ribosomal_eL30-like_sf",
+            "IPR022991": "Ribosomal_eL30_CS",
+            "IPR004038": "Ribosomal_eL8/eL30/eS12/Gad45"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -476,19 +476,19 @@
           "ec": [
             "2.7.7.48"
           ],
-          "pfam": [
-            "PF00972",
-            "PF01728",
-            "PF20483"
-          ],
-          "interpro": [
-            "IPR000208",
-            "IPR002877",
-            "IPR007094",
-            "IPR029063",
-            "IPR043502",
-            "IPR046811"
-          ],
+          "pfam": {
+            "PF00972": "Flavi_NS5",
+            "PF20483": "Flavi_NS5_thumb",
+            "PF01728": "FtsJ"
+          },
+          "interpro": {
+            "IPR043502": "DNA/RNA_pol_sf",
+            "IPR046811": "Flavi_NS5_thumb",
+            "IPR000208": "Flavi_RdRp_fingers/palm",
+            "IPR007094": "RNA-dir_pol_PSvirus",
+            "IPR002877": "RNA_MeTrfase_FtsJ_dom",
+            "IPR029063": "SAM-dependent_MTases_sf"
+          },
           "lineage": [
             "Viruses",
             "Riboviria"
@@ -516,19 +516,19 @@
           "ec": [
             "2.7.7.48"
           ],
-          "pfam": [
-            "PF00972",
-            "PF01728",
-            "PF20483"
-          ],
-          "interpro": [
-            "IPR000208",
-            "IPR002877",
-            "IPR007094",
-            "IPR029063",
-            "IPR043502",
-            "IPR046811"
-          ],
+          "pfam": {
+            "PF00972": "Flavi_NS5",
+            "PF20483": "Flavi_NS5_thumb",
+            "PF01728": "FtsJ"
+          },
+          "interpro": {
+            "IPR043502": "DNA/RNA_pol_sf",
+            "IPR046811": "Flavi_NS5_thumb",
+            "IPR000208": "Flavi_RdRp_fingers/palm",
+            "IPR007094": "RNA-dir_pol_PSvirus",
+            "IPR002877": "RNA_MeTrfase_FtsJ_dom",
+            "IPR029063": "SAM-dependent_MTases_sf"
+          },
           "lineage": [
             "Viruses"
           ]
@@ -1220,13 +1220,13 @@
             "Virion"
           ],
           "ec": [],
-          "pfam": [
-            "PF03122"
-          ],
-          "interpro": [
-            "IPR000912",
-            "IPR023233"
-          ],
+          "pfam": {
+            "PF03122": "Herpes_MCP"
+          },
+          "interpro": {
+            "IPR000912": "Herpes_MCP",
+            "IPR023233": "Herpes_MCP_upper_sf"
+          },
           "lineage": [
             "Viruses",
             "Duplodnaviria"
@@ -1249,12 +1249,12 @@
             "Virion"
           ],
           "ec": [],
-          "pfam": [
-            "PF03327"
-          ],
-          "interpro": [
-            "IPR004999"
-          ],
+          "pfam": {
+            "PF03327": "Herpes_VP19C"
+          },
+          "interpro": {
+            "IPR004999": "Herpes_1"
+          },
           "lineage": [
             "Viruses",
             "Duplodnaviria"
@@ -1274,12 +1274,12 @@
             "Virion"
           ],
           "ec": [],
-          "pfam": [
-            "PF04496"
-          ],
-          "interpro": [
-            "IPR007584"
-          ],
+          "pfam": {
+            "PF04496": "Herpes_UL35"
+          },
+          "interpro": {
+            "IPR007584": "Herpes_UL35"
+          },
           "lineage": [
             "Viruses",
             "Duplodnaviria"
@@ -1299,12 +1299,12 @@
             "Virion"
           ],
           "ec": [],
-          "pfam": [
-            "PF01802"
-          ],
-          "interpro": [
-            "IPR002690"
-          ],
+          "pfam": {
+            "PF01802": "Herpes_V23"
+          },
+          "interpro": {
+            "IPR002690": "Herpes_capsid_2"
+          },
           "lineage": [
             "Viruses",
             "Duplodnaviria"
@@ -1327,12 +1327,12 @@
             "Virion"
           ],
           "ec": [],
-          "pfam": [
-            "PF04559"
-          ],
-          "interpro": [
-            "IPR007640"
-          ],
+          "pfam": {
+            "PF04559": "Herpes_UL17"
+          },
+          "interpro": {
+            "IPR007640": "UL17-like"
+          },
           "lineage": [
             "Viruses",
             "Duplodnaviria"
@@ -1357,12 +1357,12 @@
             "Virus entry into host cell"
           ],
           "ec": [],
-          "pfam": [
-            "PF01499"
-          ],
-          "interpro": [
-            "IPR002493"
-          ],
+          "pfam": {
+            "PF01499": "Herpes_UL25"
+          },
+          "interpro": {
+            "IPR002493": "Herpes_UL25"
+          },
           "lineage": [
             "Viruses",
             "Duplodnaviria"
@@ -1394,16 +1394,16 @@
             "3.4.19.12",
             "3.4.22.-"
           ],
-          "pfam": [
-            "PF03586",
-            "PF04843"
-          ],
-          "interpro": [
-            "IPR005210",
-            "IPR006928",
-            "IPR034702",
-            "IPR038765"
-          ],
+          "pfam": {
+            "PF04843": "Herpes_teg_N",
+            "PF03586": "Herpes_UL36"
+          },
+          "interpro": {
+            "IPR005210": "Herpes_LT_deneddylase",
+            "IPR006928": "Herpes_teg_USP",
+            "IPR034702": "HSV_LTP",
+            "IPR038765": "Papain-like_cys_pep_sf"
+          },
           "lineage": [
             "Viruses",
             "Duplodnaviria"
@@ -1427,13 +1427,13 @@
             "Virion"
           ],
           "ec": [],
-          "pfam": [
-            "PF03122"
-          ],
-          "interpro": [
-            "IPR000912",
-            "IPR023233"
-          ],
+          "pfam": {
+            "PF03122": "Herpes_MCP"
+          },
+          "interpro": {
+            "IPR000912": "Herpes_MCP",
+            "IPR023233": "Herpes_MCP_upper_sf"
+          },
           "lineage": [
             "Viruses",
             "Duplodnaviria"
@@ -1453,12 +1453,12 @@
             "Virion"
           ],
           "ec": [],
-          "pfam": [
-            "PF04496"
-          ],
-          "interpro": [
-            "IPR007584"
-          ],
+          "pfam": {
+            "PF04496": "Herpes_UL35"
+          },
+          "interpro": {
+            "IPR007584": "Herpes_UL35"
+          },
           "lineage": [
             "Viruses",
             "Duplodnaviria"
@@ -1793,64 +1793,64 @@
           "ec": [
             "2.7.7.48"
           ],
-          "pfam": [
-            "PF00869",
-            "PF00948",
-            "PF00949",
-            "PF00972",
-            "PF01002",
-            "PF01003",
-            "PF01004",
-            "PF01005",
-            "PF01349",
-            "PF01350",
-            "PF01570",
-            "PF01728",
-            "PF02832",
-            "PF07652",
-            "PF20483",
-            "PF20907",
-            "PF21659"
-          ],
-          "interpro": [
-            "IPR000069",
-            "IPR000208",
-            "IPR000336",
-            "IPR000404",
-            "IPR000487",
-            "IPR000752",
-            "IPR001122",
-            "IPR001157",
-            "IPR001528",
-            "IPR001650",
-            "IPR001850",
-            "IPR002535",
-            "IPR002877",
-            "IPR007094",
-            "IPR009003",
-            "IPR011492",
-            "IPR011998",
-            "IPR013755",
-            "IPR013756",
-            "IPR014001",
-            "IPR014412",
-            "IPR014756",
-            "IPR026470",
-            "IPR026490",
-            "IPR027287",
-            "IPR027417",
-            "IPR029063",
-            "IPR036253",
-            "IPR037172",
-            "IPR038055",
-            "IPR038302",
-            "IPR038345",
-            "IPR038688",
-            "IPR043502",
-            "IPR046811",
-            "IPR047530",
-            "IPR049486"
-          ],
+          "pfam": {
+            "PF20907": "Flav_NS3-hel_C",
+            "PF01003": "Flavi_capsid",
+            "PF07652": "Flavi_DEAD",
+            "PF21659": "Flavi_E_stem",
+            "PF02832": "Flavi_glycop_C",
+            "PF00869": "Flavi_glycoprot",
+            "PF01004": "Flavi_M",
+            "PF00948": "Flavi_NS1",
+            "PF01005": "Flavi_NS2A",
+            "PF01002": "Flavi_NS2B",
+            "PF01350": "Flavi_NS4A",
+            "PF01349": "Flavi_NS4B",
+            "PF00972": "Flavi_NS5",
+            "PF20483": "Flavi_NS5_thumb",
+            "PF01570": "Flavi_propep",
+            "PF01728": "FtsJ",
+            "PF00949": "Peptidase_S7"
+          },
+          "interpro": {
+            "IPR043502": "DNA/RNA_pol_sf",
+            "IPR000069": "Env_glycoprot_M_flavivir",
+            "IPR038302": "Env_glycoprot_M_sf_flavivir",
+            "IPR013755": "Flav_gly_cen_dom_subdom1",
+            "IPR001122": "Flavi_capsidC",
+            "IPR037172": "Flavi_capsidC_sf",
+            "IPR011492": "Flavi_DEAD",
+            "IPR027287": "Flavi_E_Ig-like",
+            "IPR026470": "Flavi_E_Stem/Anchor_dom",
+            "IPR038345": "Flavi_E_Stem/Anchor_dom_sf",
+            "IPR011998": "Flavi_Glycoprot_E_cen/dimer",
+            "IPR001157": "Flavi_NS1",
+            "IPR000752": "Flavi_NS2A",
+            "IPR000487": "Flavi_NS2B",
+            "IPR001850": "Flavi_NS3_S7",
+            "IPR000404": "Flavi_NS4A",
+            "IPR001528": "Flavi_NS4B",
+            "IPR046811": "Flavi_NS5_thumb",
+            "IPR002535": "Flavi_propep",
+            "IPR038688": "Flavi_propep_sf",
+            "IPR047530": "Flavi_RdRp",
+            "IPR000208": "Flavi_RdRp_fingers/palm",
+            "IPR000336": "Flavivir/Alphavir_Ig-like_sf",
+            "IPR014412": "Gen_Poly_FLV",
+            "IPR036253": "Glycoprot_cen/dimer_sf",
+            "IPR038055": "Glycoprot_E_dimer_dom",
+            "IPR013756": "GlyE_cen_dom_subdom2",
+            "IPR014001": "Helicase_ATP-bd",
+            "IPR001650": "Helicase_C-like",
+            "IPR014756": "Ig_E-set",
+            "IPR026490": "mRNA_cap_0/1_MeTrfase",
+            "IPR049486": "NS3-hel_C_flaviviridae",
+            "IPR027417": "P-loop_NTPase",
+            "IPR009003": "Peptidase_S1_PA",
+            "IPR007094": "RNA-dir_pol_PSvirus",
+            "IPR002877": "RNA_MeTrfase_FtsJ_dom",
+            "IPR029063": "SAM-dependent_MTases_sf"
+          },
           "lineage": [
             "Viruses",
             "Riboviria"
@@ -2107,26 +2107,26 @@
             "Virus entry into host cell"
           ],
           "ec": [],
-          "pfam": [
-            "PF01601",
-            "PF09408",
-            "PF16451",
-            "PF19209"
-          ],
-          "interpro": [
-            "IPR002552",
-            "IPR018548",
-            "IPR032500",
-            "IPR036326",
-            "IPR042578",
-            "IPR043002",
-            "IPR043473",
-            "IPR043607",
-            "IPR044341",
-            "IPR044366",
-            "IPR044873",
-            "IPR044874"
-          ],
+          "pfam": {
+            "PF16451": "bCoV_S1_N",
+            "PF09408": "bCoV_S1_RBD",
+            "PF19209": "CoV_S1_C",
+            "PF01601": "CoV_S2"
+          },
+          "interpro": {
+            "IPR032500": "bCoV_S1_N",
+            "IPR042578": "BETA_CORONA_SPIKE",
+            "IPR043607": "CoV_S1_C",
+            "IPR043473": "S2_sf_CoV",
+            "IPR043002": "Spike_N_sf",
+            "IPR044341": "Spike_S1_N_SARS-CoV-like",
+            "IPR018548": "Spike_S1_RBD_bCoV",
+            "IPR044366": "Spike_S1_RBD_SARS-CoV-2",
+            "IPR036326": "Spike_S1_RBD_sf_bCoV",
+            "IPR002552": "Spike_S2_CoV",
+            "IPR044873": "Spike_S2_CoV_HR1",
+            "IPR044874": "Spike_S2_CoV_HR2"
+          },
           "lineage": [
             "Viruses",
             "Riboviria"
@@ -2257,22 +2257,22 @@
           "ec": [
             "3.4.21.122"
           ],
-          "pfam": [
-            "PF00089",
-            "PF15494"
-          ],
-          "interpro": [
-            "IPR001190",
-            "IPR001254",
-            "IPR001314",
-            "IPR002172",
-            "IPR009003",
-            "IPR018114",
-            "IPR023415",
-            "IPR033116",
-            "IPR036055",
-            "IPR036772"
-          ],
+          "pfam": {
+            "PF15494": "SRCR_2",
+            "PF00089": "Trypsin"
+          },
+          "interpro": {
+            "IPR036055": "LDL_receptor-like_sf",
+            "IPR023415": "LDLR_class-A_CS",
+            "IPR002172": "LDrepeatLR_classA_rpt",
+            "IPR009003": "Peptidase_S1_PA",
+            "IPR001314": "Peptidase_S1A",
+            "IPR001190": "SRCR",
+            "IPR036772": "SRCR-like_dom_sf",
+            "IPR001254": "Trypsin_dom",
+            "IPR018114": "TRYPSIN_HIS",
+            "IPR033116": "TRYPSIN_SER"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -2309,25 +2309,25 @@
             "Virus entry into host cell"
           ],
           "ec": [],
-          "pfam": [
-            "PF01601",
-            "PF09408",
-            "PF16451",
-            "PF19209"
-          ],
-          "interpro": [
-            "IPR002552",
-            "IPR018548",
-            "IPR032500",
-            "IPR036326",
-            "IPR042578",
-            "IPR043002",
-            "IPR043473",
-            "IPR043607",
-            "IPR044339",
-            "IPR044873",
-            "IPR044874"
-          ],
+          "pfam": {
+            "PF16451": "bCoV_S1_N",
+            "PF09408": "bCoV_S1_RBD",
+            "PF19209": "CoV_S1_C",
+            "PF01601": "CoV_S2"
+          },
+          "interpro": {
+            "IPR032500": "bCoV_S1_N",
+            "IPR042578": "BETA_CORONA_SPIKE",
+            "IPR043607": "CoV_S1_C",
+            "IPR043473": "S2_sf_CoV",
+            "IPR043002": "Spike_N_sf",
+            "IPR044339": "Spike_S1_NTD_MHV-like",
+            "IPR018548": "Spike_S1_RBD_bCoV",
+            "IPR036326": "Spike_S1_RBD_sf_bCoV",
+            "IPR002552": "Spike_S2_CoV",
+            "IPR044873": "Spike_S2_CoV_HR1",
+            "IPR044874": "Spike_S2_CoV_HR2"
+          },
           "lineage": [
             "Viruses",
             "Riboviria"
@@ -2618,19 +2618,19 @@
             "Transmembrane helix"
           ],
           "ec": [],
-          "pfam": [
-            "PF00028",
-            "PF08266",
-            "PF08374"
-          ],
-          "interpro": [
-            "IPR002126",
-            "IPR013164",
-            "IPR013585",
-            "IPR015919",
-            "IPR020894",
-            "IPR050174"
-          ],
+          "pfam": {
+            "PF00028": "Cadherin",
+            "PF08266": "Cadherin_2",
+            "PF08374": "Protocadherin"
+          },
+          "interpro": {
+            "IPR002126": "Cadherin-like_dom",
+            "IPR015919": "Cadherin-like_sf",
+            "IPR020894": "Cadherin_CS",
+            "IPR013164": "Cadherin_N",
+            "IPR013585": "Protocadherin",
+            "IPR050174": "Protocadherin/Cadherin-CA"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -2677,20 +2677,20 @@
             "Zinc-finger"
           ],
           "ec": [],
-          "pfam": [
-            "PF01561",
-            "PF01567",
-            "PF20679",
-            "PF20682"
-          ],
-          "interpro": [
-            "IPR002532",
-            "IPR002534",
-            "IPR012316",
-            "IPR016402",
-            "IPR048790",
-            "IPR048791"
-          ],
+          "pfam": {
+            "PF20682": "Hanta_Gc_C",
+            "PF01561": "Hanta_Gc_N",
+            "PF20679": "Hanta_Gn-B",
+            "PF01567": "Hanta_Gn-H"
+          },
+          "interpro": {
+            "IPR016402": "Envelope_glycoprot_Hantavirus",
+            "IPR048791": "Gc_C_bunya",
+            "IPR048790": "Gn-B_hanta",
+            "IPR002532": "Hanta_Gc_N",
+            "IPR002534": "Hanta_Gn-H",
+            "IPR012316": "ITAM_motif_hantavir-typ"
+          },
           "lineage": [
             "Viruses",
             "Riboviria"
@@ -2965,26 +2965,26 @@
             "Virus entry into host cell"
           ],
           "ec": [],
-          "pfam": [
-            "PF00943",
-            "PF00944",
-            "PF01563",
-            "PF01589"
-          ],
-          "interpro": [
-            "IPR000336",
-            "IPR000930",
-            "IPR000936",
-            "IPR002533",
-            "IPR002548",
-            "IPR009003",
-            "IPR014756",
-            "IPR036253",
-            "IPR038055",
-            "IPR042304",
-            "IPR042305",
-            "IPR042306"
-          ],
+          "pfam": {
+            "PF01589": "Alpha_E1_glycop",
+            "PF00943": "Alpha_E2_glycop",
+            "PF01563": "Alpha_E3_glycop",
+            "PF00944": "Peptidase_S3"
+          },
+          "interpro": {
+            "IPR002548": "Alpha_E1_glycop",
+            "IPR000936": "Alpha_E2_glycop",
+            "IPR002533": "Alpha_E3_glycop",
+            "IPR042304": "Alphavir_E2_A",
+            "IPR042305": "Alphavir_E2_B",
+            "IPR042306": "Alphavir_E2_C",
+            "IPR000336": "Flavivir/Alphavir_Ig-like_sf",
+            "IPR036253": "Glycoprot_cen/dimer_sf",
+            "IPR038055": "Glycoprot_E_dimer_dom",
+            "IPR014756": "Ig_E-set",
+            "IPR009003": "Peptidase_S1_PA",
+            "IPR000930": "Peptidase_S3"
+          },
           "lineage": [
             "Viruses",
             "Riboviria"
@@ -3025,25 +3025,25 @@
             "VLDL"
           ],
           "ec": [],
-          "pfam": [
-            "PF00057",
-            "PF00058",
-            "PF07645",
-            "PF14670"
-          ],
-          "interpro": [
-            "IPR000033",
-            "IPR000152",
-            "IPR000742",
-            "IPR001881",
-            "IPR002172",
-            "IPR011042",
-            "IPR018097",
-            "IPR023415",
-            "IPR036055",
-            "IPR049883",
-            "IPR051221"
-          ],
+          "pfam": {
+            "PF07645": "EGF_CA",
+            "PF14670": "FXa_inhibition",
+            "PF00057": "Ldl_recept_a",
+            "PF00058": "Ldl_recept_b"
+          },
+          "interpro": {
+            "IPR011042": "6-blade_b-propeller_TolB-like",
+            "IPR000742": "EGF",
+            "IPR001881": "EGF-like_Ca-bd_dom",
+            "IPR000152": "EGF-type_Asp/Asn_hydroxyl_site",
+            "IPR018097": "EGF_Ca-bd_CS",
+            "IPR036055": "LDL_receptor-like_sf",
+            "IPR051221": "LDLR-related",
+            "IPR023415": "LDLR_class-A_CS",
+            "IPR000033": "LDLR_classB_rpt",
+            "IPR002172": "LDrepeatLR_classA_rpt",
+            "IPR049883": "NOTCH1_EGF-like"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -3238,13 +3238,13 @@
             "Signal"
           ],
           "ec": [],
-          "pfam": [
-            "PF02024"
-          ],
-          "interpro": [
-            "IPR000065",
-            "IPR009079"
-          ],
+          "pfam": {
+            "PF02024": "Leptin"
+          },
+          "interpro": {
+            "IPR009079": "4_helix_cytokine-like_core",
+            "IPR000065": "Leptin"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -3278,21 +3278,21 @@
             "Transmembrane helix"
           ],
           "ec": [],
-          "pfam": [
-            "PF00041",
-            "PF06328",
-            "PF18589"
-          ],
-          "interpro": [
-            "IPR003529",
-            "IPR003531",
-            "IPR003961",
-            "IPR007110",
-            "IPR010457",
-            "IPR013783",
-            "IPR036116",
-            "IPR041182"
-          ],
+          "pfam": {
+            "PF00041": "fn3",
+            "PF06328": "Lep_receptor_Ig",
+            "PF18589": "ObR_Ig"
+          },
+          "interpro": {
+            "IPR003961": "FN3_dom",
+            "IPR036116": "FN3_sf",
+            "IPR003529": "Hematopoietin_rcpt_Gp130_CS",
+            "IPR003531": "Hempt_rcpt_S_F1_CS",
+            "IPR007110": "Ig-like_dom",
+            "IPR013783": "Ig-like_fold",
+            "IPR010457": "IgC2-like_lig-bd",
+            "IPR041182": "LEP-R_IGD"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -3427,12 +3427,12 @@
             "Virus entry into host cell"
           ],
           "ec": [],
-          "pfam": [
-            "PF00523"
-          ],
-          "interpro": [
-            "IPR000776"
-          ],
+          "pfam": {
+            "PF00523": "Fusion_gly"
+          },
+          "interpro": {
+            "IPR000776": "Fusion_F0_Paramyxovir"
+          },
           "lineage": [
             "Viruses",
             "Riboviria"
@@ -3560,18 +3560,18 @@
             "Virus entry into host cell"
           ],
           "ec": [],
-          "pfam": [
-            "PF00606",
-            "PF17416",
-            "PF17417"
-          ],
-          "interpro": [
-            "IPR000234",
-            "IPR035377",
-            "IPR035381",
-            "IPR038631",
-            "IPR055341"
-          ],
+          "pfam": {
+            "PF17416": "Glycoprot_B_PH1",
+            "PF17417": "Glycoprot_B_PH2",
+            "PF00606": "Glycoprotein_B"
+          },
+          "interpro": {
+            "IPR035377": "Glycoprot_B_PH1",
+            "IPR035381": "Glycoprot_B_PH2",
+            "IPR038631": "Glycoprot_B_PH2_sf",
+            "IPR055341": "Glycoprotein_B_ecto_C",
+            "IPR000234": "Herpes_Glycoprot_B"
+          },
           "lineage": [
             "Viruses",
             "Duplodnaviria"
@@ -5227,17 +5227,17 @@
           "ec": [
             "3.2.1.17"
           ],
-          "pfam": [
-            "PF00959"
-          ],
-          "interpro": [
-            "IPR001165",
-            "IPR002196",
-            "IPR023346",
-            "IPR023347",
-            "IPR034690",
-            "IPR052619"
-          ],
+          "pfam": {
+            "PF00959": "Phage_lysozyme"
+          },
+          "interpro": {
+            "IPR034690": "Endolysin_T4_type",
+            "IPR002196": "Glyco_hydro_24",
+            "IPR023346": "Lysozyme-like_dom_sf",
+            "IPR023347": "Lysozyme_dom_sf",
+            "IPR052619": "Phage_lysozyme-like",
+            "IPR001165": "T4-type_lysozyme"
+          },
           "lineage": [
             "Viruses",
             "Duplodnaviria"
@@ -5270,15 +5270,15 @@
           "ec": [
             "3.6.5.-"
           ],
-          "pfam": [
-            "PF00503"
-          ],
-          "interpro": [
-            "IPR000367",
-            "IPR001019",
-            "IPR011025",
-            "IPR027417"
-          ],
+          "pfam": {
+            "PF00503": "G-alpha"
+          },
+          "interpro": {
+            "IPR000367": "Gprotein_alpha_S",
+            "IPR001019": "Gprotein_alpha_su",
+            "IPR011025": "GproteinA_insert",
+            "IPR027417": "P-loop_NTPase"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -5311,15 +5311,15 @@
             "Ubl conjugation"
           ],
           "ec": [],
-          "pfam": [
-            "PF00001"
-          ],
-          "interpro": [
-            "IPR000276",
-            "IPR000332",
-            "IPR002233",
-            "IPR017452"
-          ],
+          "pfam": {
+            "PF00001": "7tm_1"
+          },
+          "interpro": {
+            "IPR002233": "ADR_fam",
+            "IPR000332": "ADRB2_rcpt",
+            "IPR000276": "GPCR_Rhodpsn",
+            "IPR017452": "GPCR_Rhodpsn_7TM"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -5346,15 +5346,15 @@
             "Transmembrane helix"
           ],
           "ec": [],
-          "pfam": [
-            "PF00001"
-          ],
-          "interpro": [
-            "IPR000276",
-            "IPR000507",
-            "IPR002233",
-            "IPR017452"
-          ],
+          "pfam": {
+            "PF00001": "7tm_1"
+          },
+          "interpro": {
+            "IPR002233": "ADR_fam",
+            "IPR000507": "ADRB1_rcpt",
+            "IPR000276": "GPCR_Rhodpsn",
+            "IPR017452": "GPCR_Rhodpsn_7TM"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -5374,18 +5374,18 @@
             "WD repeat"
           ],
           "ec": [],
-          "pfam": [
-            "PF25391"
-          ],
-          "interpro": [
-            "IPR001632",
-            "IPR001680",
-            "IPR015943",
-            "IPR016346",
-            "IPR019775",
-            "IPR020472",
-            "IPR036322"
-          ],
+          "pfam": {
+            "PF25391": "WD40_Gbeta"
+          },
+          "interpro": {
+            "IPR016346": "G-protein_beta_1-5",
+            "IPR015943": "WD40/YVTN_repeat-like_dom_sf",
+            "IPR001632": "WD40_G-protein_beta-like",
+            "IPR020472": "WD40_PAC1",
+            "IPR019775": "WD40_repeat_CS",
+            "IPR036322": "WD40_repeat_dom_sf",
+            "IPR001680": "WD40_rpt"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -5407,14 +5407,14 @@
             "Transducer"
           ],
           "ec": [],
-          "pfam": [
-            "PF00631"
-          ],
-          "interpro": [
-            "IPR001770",
-            "IPR015898",
-            "IPR036284"
-          ],
+          "pfam": {
+            "PF00631": "G-gamma"
+          },
+          "interpro": {
+            "IPR001770": "G-protein_gamma",
+            "IPR015898": "G-protein_gamma-like_dom",
+            "IPR036284": "GGL_sf"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"

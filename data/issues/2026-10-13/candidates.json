@@ -95,8 +95,8 @@
             "Signal"
           ],
           "ec": [],
-          "pfam": [],
-          "interpro": [],
+          "pfam": {},
+          "interpro": {},
           "lineage": [
             "Eukaryota",
             "Fungi"
@@ -119,19 +119,19 @@
             "Signal"
           ],
           "ec": [],
-          "pfam": [
-            "PF00746",
-            "PF01378",
-            "PF17573"
-          ],
-          "interpro": [
-            "IPR000724",
-            "IPR005877",
-            "IPR009063",
-            "IPR019931",
-            "IPR019950",
-            "IPR035152"
-          ],
+          "pfam": {
+            "PF17573": "GA-like",
+            "PF00746": "Gram_pos_anchor",
+            "PF01378": "IgG_binding_B"
+          },
+          "interpro": {
+            "IPR035152": "GA-like",
+            "IPR009063": "Ig/albumin-bd_sf",
+            "IPR000724": "IgG-bd_B",
+            "IPR019931": "LPXTG_anchor",
+            "IPR019950": "M_anchor",
+            "IPR005877": "YSIRK_signal_dom"
+          },
           "lineage": [
             "Bacteria",
             "Bacillati"

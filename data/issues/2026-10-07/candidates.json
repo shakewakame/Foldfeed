@@ -190,19 +190,19 @@
             "Transcription regulation"
           ],
           "ec": [],
-          "pfam": [
-            "PF01380",
-            "PF01418"
-          ],
-          "interpro": [
-            "IPR000281",
-            "IPR001347",
-            "IPR009057",
-            "IPR035472",
-            "IPR036388",
-            "IPR046348",
-            "IPR047640"
-          ],
+          "pfam": {
+            "PF01418": "HTH_6",
+            "PF01380": "SIS"
+          },
+          "interpro": {
+            "IPR009057": "Homeodomain-like_sf",
+            "IPR000281": "HTH_RpiR",
+            "IPR047640": "RpiR-like",
+            "IPR035472": "RpiR-like_SIS",
+            "IPR001347": "SIS_dom",
+            "IPR046348": "SIS_dom_sf",
+            "IPR036388": "WH-like_DNA-bd_sf"
+          },
           "lineage": [
             "Bacteria",
             "Bacillati"
@@ -223,19 +223,19 @@
             "Transcription regulation"
           ],
           "ec": [],
-          "pfam": [
-            "PF01380",
-            "PF01418"
-          ],
-          "interpro": [
-            "IPR000281",
-            "IPR001347",
-            "IPR009057",
-            "IPR035472",
-            "IPR036388",
-            "IPR046348",
-            "IPR047640"
-          ],
+          "pfam": {
+            "PF01418": "HTH_6",
+            "PF01380": "SIS"
+          },
+          "interpro": {
+            "IPR009057": "Homeodomain-like_sf",
+            "IPR000281": "HTH_RpiR",
+            "IPR047640": "RpiR-like",
+            "IPR035472": "RpiR-like_SIS",
+            "IPR001347": "SIS_dom",
+            "IPR046348": "SIS_dom_sf",
+            "IPR036388": "WH-like_DNA-bd_sf"
+          },
           "lineage": [
             "Bacteria",
             "Bacillati"
@@ -673,20 +673,20 @@
           "ec": [
             "7.1.1.1"
           ],
-          "pfam": [
-            "PF01262",
-            "PF05222",
-            "PF12769"
-          ],
-          "interpro": [
-            "IPR007698",
-            "IPR007886",
-            "IPR008142",
-            "IPR008143",
-            "IPR024605",
-            "IPR026255",
-            "IPR036291"
-          ],
+          "pfam": {
+            "PF01262": "AlaDh_PNT_C",
+            "PF05222": "AlaDh_PNT_N",
+            "PF12769": "PNTB_4TM"
+          },
+          "interpro": {
+            "IPR008143": "Ala_DH/PNT_CS2",
+            "IPR008142": "AlaDH/PNT_CS1",
+            "IPR007886": "AlaDH/PNT_N",
+            "IPR007698": "AlaDH/PNT_NAD(H)-bd",
+            "IPR036291": "NAD(P)-bd_dom_sf",
+            "IPR026255": "NADP_transhyd_a",
+            "IPR024605": "NADP_transhyd_a_C"
+          },
           "lineage": [
             "Bacteria",
             "Pseudomonadati"
@@ -713,14 +713,14 @@
           "ec": [
             "7.1.1.1"
           ],
-          "pfam": [
-            "PF02233"
-          ],
-          "interpro": [
-            "IPR012136",
-            "IPR029035",
-            "IPR034300"
-          ],
+          "pfam": {
+            "PF02233": "PNTB"
+          },
+          "interpro": {
+            "IPR029035": "DHS-like_NAD/FAD-binding_dom",
+            "IPR012136": "NADH_DH_b",
+            "IPR034300": "PNTB-like"
+          },
           "lineage": [
             "Bacteria",
             "Pseudomonadati"

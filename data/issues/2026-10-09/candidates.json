@@ -616,15 +616,15 @@
             "Ubl conjugation"
           ],
           "ec": [],
-          "pfam": [
-            "PF00125"
-          ],
-          "interpro": [
-            "IPR000558",
-            "IPR007125",
-            "IPR009072",
-            "IPR055333"
-          ],
+          "pfam": {
+            "PF00125": "Histone"
+          },
+          "interpro": {
+            "IPR007125": "H2A/H2B/H3",
+            "IPR009072": "Histone-fold",
+            "IPR000558": "Histone_H2B",
+            "IPR055333": "HISTONE_H2B_site"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -654,14 +654,14 @@
             "Ubl conjugation"
           ],
           "ec": [],
-          "pfam": [
-            "PF00125"
-          ],
-          "interpro": [
-            "IPR000164",
-            "IPR007125",
-            "IPR009072"
-          ],
+          "pfam": {
+            "PF00125": "Histone"
+          },
+          "interpro": {
+            "IPR007125": "H2A/H2B/H3",
+            "IPR009072": "Histone-fold",
+            "IPR000164": "Histone_H3/CENP-A"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -686,15 +686,15 @@
             "Ubl conjugation"
           ],
           "ec": [],
-          "pfam": [
-            "PF00125"
-          ],
-          "interpro": [
-            "IPR000558",
-            "IPR007125",
-            "IPR009072",
-            "IPR055333"
-          ],
+          "pfam": {
+            "PF00125": "Histone"
+          },
+          "interpro": {
+            "IPR007125": "H2A/H2B/H3",
+            "IPR009072": "Histone-fold",
+            "IPR000558": "Histone_H2B",
+            "IPR055333": "HISTONE_H2B_site"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -728,23 +728,23 @@
             "4.2.99.18",
             "5.6.2.4"
           ],
-          "pfam": [
-            "PF02735",
-            "PF03730",
-            "PF03731",
-            "PF08785"
-          ],
-          "interpro": [
-            "IPR002035",
-            "IPR005160",
-            "IPR005161",
-            "IPR006164",
-            "IPR014893",
-            "IPR016194",
-            "IPR024193",
-            "IPR036465",
-            "IPR036494"
-          ],
+          "pfam": {
+            "PF02735": "Ku",
+            "PF03730": "Ku_C",
+            "PF03731": "Ku_N",
+            "PF08785": "Ku_PK_bind"
+          },
+          "interpro": {
+            "IPR006164": "DNA_bd_Ku70/Ku80",
+            "IPR024193": "Ku80",
+            "IPR005160": "Ku_C",
+            "IPR036494": "Ku_C_sf",
+            "IPR005161": "Ku_N",
+            "IPR014893": "Ku_PK_bind",
+            "IPR016194": "SPOC-like_C_dom_sf",
+            "IPR002035": "VWF_A",
+            "IPR036465": "vWFA_dom_sf"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -794,24 +794,24 @@
             "4.2.99.18",
             "5.6.2.4"
           ],
-          "pfam": [
-            "PF02037",
-            "PF02735",
-            "PF03730",
-            "PF03731"
-          ],
-          "interpro": [
-            "IPR003034",
-            "IPR005160",
-            "IPR005161",
-            "IPR006164",
-            "IPR006165",
-            "IPR016194",
-            "IPR027388",
-            "IPR036361",
-            "IPR036465",
-            "IPR047087"
-          ],
+          "pfam": {
+            "PF02735": "Ku",
+            "PF03730": "Ku_C",
+            "PF03731": "Ku_N",
+            "PF02037": "SAP"
+          },
+          "interpro": {
+            "IPR006164": "DNA_bd_Ku70/Ku80",
+            "IPR006165": "Ku70",
+            "IPR027388": "Ku70_bridge/pillars_dom_sf",
+            "IPR047087": "KU70_core_dom",
+            "IPR005160": "Ku_C",
+            "IPR005161": "Ku_N",
+            "IPR003034": "SAP_dom",
+            "IPR036361": "SAP_dom_sf",
+            "IPR016194": "SPOC-like_C_dom_sf",
+            "IPR036465": "vWFA_dom_sf"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -858,23 +858,23 @@
             "4.2.99.18",
             "5.6.2.4"
           ],
-          "pfam": [
-            "PF02735",
-            "PF03730",
-            "PF03731",
-            "PF08785"
-          ],
-          "interpro": [
-            "IPR002035",
-            "IPR005160",
-            "IPR005161",
-            "IPR006164",
-            "IPR014893",
-            "IPR016194",
-            "IPR024193",
-            "IPR036465",
-            "IPR036494"
-          ],
+          "pfam": {
+            "PF02735": "Ku",
+            "PF03730": "Ku_C",
+            "PF03731": "Ku_N",
+            "PF08785": "Ku_PK_bind"
+          },
+          "interpro": {
+            "IPR006164": "DNA_bd_Ku70/Ku80",
+            "IPR024193": "Ku80",
+            "IPR005160": "Ku_C",
+            "IPR036494": "Ku_C_sf",
+            "IPR005161": "Ku_N",
+            "IPR014893": "Ku_PK_bind",
+            "IPR016194": "SPOC-like_C_dom_sf",
+            "IPR002035": "VWF_A",
+            "IPR036465": "vWFA_dom_sf"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -902,16 +902,16 @@
             "Ubl conjugation"
           ],
           "ec": [],
-          "pfam": [
-            "PF15511"
-          ],
-          "interpro": [
-            "IPR001951",
-            "IPR004823",
-            "IPR009072",
-            "IPR019809",
-            "IPR035425"
-          ],
+          "pfam": {
+            "PF15511": "CENP-T_C"
+          },
+          "interpro": {
+            "IPR035425": "CENP-T/H4_C",
+            "IPR009072": "Histone-fold",
+            "IPR001951": "Histone_H4",
+            "IPR019809": "Histone_H4_CS",
+            "IPR004823": "TAF_TATA-bd_Histone-like_dom"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -956,32 +956,32 @@
           "ec": [
             "2.7.11.1"
           ],
-          "pfam": [
-            "PF00454",
-            "PF02259",
-            "PF02260",
-            "PF08163",
-            "PF19704",
-            "PF20500",
-            "PF20502"
-          ],
-          "interpro": [
-            "IPR000403",
-            "IPR003151",
-            "IPR003152",
-            "IPR011009",
-            "IPR011989",
-            "IPR012582",
-            "IPR014009",
-            "IPR016024",
-            "IPR018936",
-            "IPR036940",
-            "IPR037706",
-            "IPR045581",
-            "IPR046803",
-            "IPR046804",
-            "IPR050517"
-          ],
+          "pfam": {
+            "PF20500": "DNA-PKcs_N",
+            "PF20502": "DNAPKcs_CC1-2",
+            "PF08163": "DNAPKcs_CC3",
+            "PF19704": "DNAPKcs_CC5",
+            "PF02259": "FAT",
+            "PF02260": "FATC",
+            "PF00454": "PI3_PI4_kinase"
+          },
+          "interpro": {
+            "IPR011989": "ARM-like",
+            "IPR016024": "ARM-type_fold",
+            "IPR050517": "DDR_Repair_Kinase",
+            "IPR037706": "DNA-PK_dom",
+            "IPR046804": "DNA-PKcs_N",
+            "IPR046803": "DNAPKcs_CC1-2",
+            "IPR012582": "DNAPKcs_CC3",
+            "IPR045581": "DNAPKcs_CC5",
+            "IPR003152": "FATC_dom",
+            "IPR011009": "Kinase-like_dom_sf",
+            "IPR000403": "PI3/4_kinase_cat_dom",
+            "IPR036940": "PI3/4_kinase_cat_sf",
+            "IPR018936": "PI3/4_kinase_CS",
+            "IPR003151": "PIK-rel_kinase_FAT",
+            "IPR014009": "PIK_FAT"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -1006,16 +1006,16 @@
             "Nucleus"
           ],
           "ec": [],
-          "pfam": [
-            "PF15511"
-          ],
-          "interpro": [
-            "IPR001951",
-            "IPR004823",
-            "IPR009072",
-            "IPR019809",
-            "IPR035425"
-          ],
+          "pfam": {
+            "PF15511": "CENP-T_C"
+          },
+          "interpro": {
+            "IPR035425": "CENP-T/H4_C",
+            "IPR009072": "Histone-fold",
+            "IPR001951": "Histone_H4",
+            "IPR019809": "Histone_H4_CS",
+            "IPR004823": "TAF_TATA-bd_Histone-like_dom"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -1044,18 +1044,18 @@
             "Ubl conjugation"
           ],
           "ec": [],
-          "pfam": [
-            "PF00125",
-            "PF16211"
-          ],
-          "interpro": [
-            "IPR002119",
-            "IPR007125",
-            "IPR009072",
-            "IPR032454",
-            "IPR032458",
-            "IPR061508"
-          ],
+          "pfam": {
+            "PF00125": "Histone",
+            "PF16211": "Histone_H2A_C"
+          },
+          "interpro": {
+            "IPR007125": "H2A/H2B/H3",
+            "IPR061508": "HFD_H2A",
+            "IPR009072": "Histone-fold",
+            "IPR002119": "Histone_H2A",
+            "IPR032454": "Histone_H2A_C",
+            "IPR032458": "Histone_H2A_CS"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -1876,15 +1876,15 @@
             "Ubl conjugation"
           ],
           "ec": [],
-          "pfam": [
-            "PF13499"
-          ],
-          "interpro": [
-            "IPR002048",
-            "IPR011992",
-            "IPR018247",
-            "IPR050230"
-          ],
+          "pfam": {
+            "PF13499": "EF-hand_7"
+          },
+          "interpro": {
+            "IPR050230": "CALM/Myosin/TropC-like",
+            "IPR011992": "EF-hand-dom_pair",
+            "IPR018247": "EF_Hand_1_Ca_BS",
+            "IPR002048": "EF_hand_dom"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -1921,39 +1921,39 @@
             "Transport"
           ],
           "ec": [],
-          "pfam": [
-            "PF00520",
-            "PF00622",
-            "PF01365",
-            "PF02026",
-            "PF02815",
-            "PF06459",
-            "PF08454",
-            "PF08709",
-            "PF21119"
-          ],
-          "interpro": [
-            "IPR000699",
-            "IPR001870",
-            "IPR003032",
-            "IPR003877",
-            "IPR005821",
-            "IPR009460",
-            "IPR011992",
-            "IPR013320",
-            "IPR013333",
-            "IPR013662",
-            "IPR014821",
-            "IPR015925",
-            "IPR016093",
-            "IPR035761",
-            "IPR035762",
-            "IPR035764",
-            "IPR035910",
-            "IPR036300",
-            "IPR043136",
-            "IPR048581"
-          ],
+          "pfam": {
+            "PF08709": "Ins145_P3_rec",
+            "PF00520": "Ion_trans",
+            "PF02815": "MIR",
+            "PF08454": "RIH_assoc",
+            "PF06459": "RR_TM4-6",
+            "PF01365": "RYDR_ITPR",
+            "PF21119": "RYDR_Jsol",
+            "PF02026": "RyR",
+            "PF00622": "SPRY"
+          },
+          "interpro": {
+            "IPR001870": "B30.2/SPRY",
+            "IPR043136": "B30.2/SPRY_sf",
+            "IPR013320": "ConA-like_dom_sf",
+            "IPR011992": "EF-hand-dom_pair",
+            "IPR014821": "Ins145_P3_rcpt",
+            "IPR005821": "Ion_trans_dom",
+            "IPR036300": "MIR_dom_sf",
+            "IPR016093": "MIR_motif",
+            "IPR013662": "RIH_assoc-dom",
+            "IPR000699": "RIH_dom",
+            "IPR013333": "Ryan_recept",
+            "IPR015925": "Ryanodine_IP3_receptor",
+            "IPR003032": "Ryanodine_rcpt",
+            "IPR009460": "Ryanrecept_TM4-6",
+            "IPR048581": "RYDR_Jsol",
+            "IPR035910": "RyR/IP3R_RIH_dom_sf",
+            "IPR035761": "SPRY1_RyR",
+            "IPR035764": "SPRY2_RyR",
+            "IPR035762": "SPRY3_RyR",
+            "IPR003877": "SPRY_dom"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -1982,14 +1982,14 @@
           "ec": [
             "5.2.1.8"
           ],
-          "pfam": [
-            "PF00254"
-          ],
-          "interpro": [
-            "IPR001179",
-            "IPR046357",
-            "IPR050689"
-          ],
+          "pfam": {
+            "PF00254": "FKBP_C"
+          },
+          "interpro": {
+            "IPR050689": "FKBP-type_PPIase",
+            "IPR046357": "PPIase_dom_sf",
+            "IPR001179": "PPIase_FKBP_dom"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -2131,14 +2131,14 @@
             "Transducer"
           ],
           "ec": [],
-          "pfam": [
-            "PF00631"
-          ],
-          "interpro": [
-            "IPR001770",
-            "IPR015898",
-            "IPR036284"
-          ],
+          "pfam": {
+            "PF00631": "G-gamma"
+          },
+          "interpro": {
+            "IPR001770": "G-protein_gamma",
+            "IPR015898": "G-protein_gamma-like_dom",
+            "IPR036284": "GGL_sf"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -2164,18 +2164,18 @@
             "WD repeat"
           ],
           "ec": [],
-          "pfam": [
-            "PF25391"
-          ],
-          "interpro": [
-            "IPR001632",
-            "IPR001680",
-            "IPR015943",
-            "IPR016346",
-            "IPR019775",
-            "IPR020472",
-            "IPR036322"
-          ],
+          "pfam": {
+            "PF25391": "WD40_Gbeta"
+          },
+          "interpro": {
+            "IPR016346": "G-protein_beta_1-5",
+            "IPR015943": "WD40/YVTN_repeat-like_dom_sf",
+            "IPR001632": "WD40_G-protein_beta-like",
+            "IPR020472": "WD40_PAC1",
+            "IPR019775": "WD40_repeat_CS",
+            "IPR036322": "WD40_repeat_dom_sf",
+            "IPR001680": "WD40_rpt"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -2218,15 +2218,15 @@
           "ec": [
             "3.6.5.-"
           ],
-          "pfam": [
-            "PF00503"
-          ],
-          "interpro": [
-            "IPR001019",
-            "IPR001408",
-            "IPR011025",
-            "IPR027417"
-          ],
+          "pfam": {
+            "PF00503": "G-alpha"
+          },
+          "interpro": {
+            "IPR001408": "Gprotein_alpha_I",
+            "IPR001019": "Gprotein_alpha_su",
+            "IPR011025": "GproteinA_insert",
+            "IPR027417": "P-loop_NTPase"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -2254,13 +2254,13 @@
             "Transmembrane helix"
           ],
           "ec": [],
-          "pfam": [
-            "PF00001"
-          ],
-          "interpro": [
-            "IPR000276",
-            "IPR017452"
-          ],
+          "pfam": {
+            "PF00001": "7tm_1"
+          },
+          "interpro": {
+            "IPR000276": "GPCR_Rhodpsn",
+            "IPR017452": "GPCR_Rhodpsn_7TM"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -2400,15 +2400,15 @@
             "Transport"
           ],
           "ec": [],
-          "pfam": [
-            "PF01741"
-          ],
-          "interpro": [
-            "IPR001185",
-            "IPR019823",
-            "IPR036019",
-            "IPR037673"
-          ],
+          "pfam": {
+            "PF01741": "MscL"
+          },
+          "interpro": {
+            "IPR019823": "Mechanosensitive_channel_CS",
+            "IPR001185": "MS_channel",
+            "IPR037673": "MSC/AndL",
+            "IPR036019": "MscL_channel"
+          },
           "lineage": [
             "Bacteria",
             "Pseudomonadati"
@@ -2572,13 +2572,13 @@
             "Virulence"
           ],
           "ec": [],
-          "pfam": [
-            "PF06511"
-          ],
-          "interpro": [
-            "IPR009483",
-            "IPR036708"
-          ],
+          "pfam": {
+            "PF06511": "T3SS_TC"
+          },
+          "interpro": {
+            "IPR036708": "BipD-like_sf",
+            "IPR009483": "IpaD/BipD/SipD"
+          },
           "lineage": [
             "Bacteria",
             "Pseudomonadati"

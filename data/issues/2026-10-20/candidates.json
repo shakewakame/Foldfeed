@@ -215,13 +215,13 @@
             "Transferase"
           ],
           "ec": [],
-          "pfam": [
-            "PF00583"
-          ],
-          "interpro": [
-            "IPR000182",
-            "IPR016181"
-          ],
+          "pfam": {
+            "PF00583": "Acetyltransf_1"
+          },
+          "interpro": {
+            "IPR016181": "Acyl_CoA_acyltransferase",
+            "IPR000182": "GNAT_dom"
+          },
           "lineage": [
             "Eukaryota",
             "Discoba"
@@ -578,24 +578,24 @@
             "Transport"
           ],
           "ec": [],
-          "pfam": [
-            "PF00005",
-            "PF01061",
-            "PF06422",
-            "PF14510"
-          ],
-          "interpro": [
-            "IPR003439",
-            "IPR003593",
-            "IPR005285",
-            "IPR010929",
-            "IPR013525",
-            "IPR017871",
-            "IPR027417",
-            "IPR029481",
-            "IPR034001",
-            "IPR034003"
-          ],
+          "pfam": {
+            "PF01061": "ABC2_membrane",
+            "PF00005": "ABC_tran",
+            "PF14510": "ABC_trans_N",
+            "PF06422": "PDR_CDR"
+          },
+          "interpro": {
+            "IPR003593": "AAA+_ATPase",
+            "IPR013525": "ABC2_TM",
+            "IPR029481": "ABC_trans_N",
+            "IPR003439": "ABC_transporter-like_ATP-bd",
+            "IPR017871": "ABC_transporter-like_CS",
+            "IPR034001": "ABCG_PDR_1",
+            "IPR034003": "ABCG_PDR_2",
+            "IPR005285": "Drug-R_PDR/CDR",
+            "IPR027417": "P-loop_NTPase",
+            "IPR010929": "PDR_CDR_ABC"
+          },
           "lineage": [
             "Eukaryota",
             "Fungi"
@@ -5821,17 +5821,17 @@
           "ec": [
             "3.2.1.17"
           ],
-          "pfam": [
-            "PF00959"
-          ],
-          "interpro": [
-            "IPR001165",
-            "IPR002196",
-            "IPR023346",
-            "IPR023347",
-            "IPR034690",
-            "IPR052619"
-          ],
+          "pfam": {
+            "PF00959": "Phage_lysozyme"
+          },
+          "interpro": {
+            "IPR034690": "Endolysin_T4_type",
+            "IPR002196": "Glyco_hydro_24",
+            "IPR023346": "Lysozyme-like_dom_sf",
+            "IPR023347": "Lysozyme_dom_sf",
+            "IPR052619": "Phage_lysozyme-like",
+            "IPR001165": "T4-type_lysozyme"
+          },
           "lineage": [
             "Viruses",
             "Duplodnaviria"
@@ -5864,15 +5864,15 @@
             "Ubl conjugation"
           ],
           "ec": [],
-          "pfam": [
-            "PF00001"
-          ],
-          "interpro": [
-            "IPR000276",
-            "IPR000332",
-            "IPR002233",
-            "IPR017452"
-          ],
+          "pfam": {
+            "PF00001": "7tm_1"
+          },
+          "interpro": {
+            "IPR002233": "ADR_fam",
+            "IPR000332": "ADRB2_rcpt",
+            "IPR000276": "GPCR_Rhodpsn",
+            "IPR017452": "GPCR_Rhodpsn_7TM"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -5899,15 +5899,15 @@
             "Transmembrane helix"
           ],
           "ec": [],
-          "pfam": [
-            "PF00001"
-          ],
-          "interpro": [
-            "IPR000276",
-            "IPR000507",
-            "IPR002233",
-            "IPR017452"
-          ],
+          "pfam": {
+            "PF00001": "7tm_1"
+          },
+          "interpro": {
+            "IPR002233": "ADR_fam",
+            "IPR000507": "ADRB1_rcpt",
+            "IPR000276": "GPCR_Rhodpsn",
+            "IPR017452": "GPCR_Rhodpsn_7TM"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -5931,15 +5931,15 @@
             "Transport"
           ],
           "ec": [],
-          "pfam": [
-            "PF00085"
-          ],
-          "interpro": [
-            "IPR005746",
-            "IPR013766",
-            "IPR017937",
-            "IPR036249"
-          ],
+          "pfam": {
+            "PF00085": "Thioredoxin"
+          },
+          "interpro": {
+            "IPR005746": "Thioredoxin",
+            "IPR036249": "Thioredoxin-like_sf",
+            "IPR017937": "Thioredoxin_CS",
+            "IPR013766": "Thioredoxin_domain"
+          },
           "lineage": [
             "Bacteria",
             "Pseudomonadati"
@@ -5966,15 +5966,15 @@
             "Ubl conjugation"
           ],
           "ec": [],
-          "pfam": [
-            "PF00001"
-          ],
-          "interpro": [
-            "IPR000276",
-            "IPR001513",
-            "IPR001634",
-            "IPR017452"
-          ],
+          "pfam": {
+            "PF00001": "7tm_1"
+          },
+          "interpro": {
+            "IPR001513": "Adeno_A2A_rcpt",
+            "IPR001634": "Adenosn_rcpt",
+            "IPR000276": "GPCR_Rhodpsn",
+            "IPR017452": "GPCR_Rhodpsn_7TM"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -6014,15 +6014,15 @@
           "ec": [
             "3.6.5.-"
           ],
-          "pfam": [
-            "PF00503"
-          ],
-          "interpro": [
-            "IPR000367",
-            "IPR001019",
-            "IPR011025",
-            "IPR027417"
-          ],
+          "pfam": {
+            "PF00503": "G-alpha"
+          },
+          "interpro": {
+            "IPR000367": "Gprotein_alpha_S",
+            "IPR001019": "Gprotein_alpha_su",
+            "IPR011025": "GproteinA_insert",
+            "IPR027417": "P-loop_NTPase"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -7945,18 +7945,18 @@
           "ec": [
             "3.2.1.45"
           ],
-          "pfam": [
-            "PF04685",
-            "PF12215"
-          ],
-          "interpro": [
-            "IPR006775",
-            "IPR008928",
-            "IPR012341",
-            "IPR014551",
-            "IPR024462",
-            "IPR052566"
-          ],
+          "pfam": {
+            "PF04685": "GH116_catalytic",
+            "PF12215": "Glyco_hydr_116N"
+          },
+          "interpro": {
+            "IPR008928": "6-hairpin_glycosidase_sf",
+            "IPR012341": "6hp_glycosidase-like_sf",
+            "IPR014551": "B_Glucosidase_GBA2-typ",
+            "IPR006775": "GH116_catalytic",
+            "IPR024462": "GH116_N",
+            "IPR052566": "Non-lysos_glucosylceramidase"
+          },
           "lineage": [
             "Bacteria",
             "Bacillati"

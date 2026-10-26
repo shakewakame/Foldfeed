@@ -68,7 +68,7 @@ def uniprot_fields() -> None:
     for issue in sorted(d for d in ISSUES_DIR.iterdir() if (d / "candidates.json").exists()):
         meta = read_json(issue / "candidates.json")
         todo = [c for c in meta["candidates"] if c["pmcid"] in picked(issue)]
-        accs = sorted({p["uniprot"] for c in todo for p in c.get("proteins", []) if "keywords" not in p})
+        accs = sorted({p["uniprot"] for c in todo for p in c.get("proteins", []) if not isinstance(p.get("pfam"), dict)})
         if not todo:
             continue
         fresh = uniprot.lookup(accs) if accs else {}

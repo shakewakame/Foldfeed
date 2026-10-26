@@ -2860,7 +2860,13 @@ def library(issues: list[str], root: Path = ISSUES_DIR) -> list[dict]:
                    "topics": topics_of(cand, pick, types.get(cand["pmcid"])), "part": render.part_of(cand, pick),
                    "uniprot": sorted(set(ids)), "genes": sorted(set(genes)), "names": sorted(set(names)),
                    "pdbs": sorted({x["pdb_id"] for x in released}), "method": method,
-                   "gene_of": {p["uniprot"]: p["gene"] for p in cand.get("proteins", []) if p.get("gene")}}
+                   "gene_of": {p["uniprot"]: p["gene"] for p in cand.get("proteins", []) if p.get("gene")},
+                   # for related articles: the proteins' Pfam families (id -> short name; not a polyprotein's or a
+                   # giant's, whose many domains would tie it to everything) and the ligands but the common cofactors
+                   "pfam": {k: v for p in cand.get("proteins", []) if len(dict(p.get("pfam") or {})) <= 6
+                            for k, v in dict(p.get("pfam") or {}).items()},
+                   "ligands": {lig["id"]: lig.get("name") or lig["id"] for x in released for lig in x.get("ligands", [])
+                               if lig["id"] not in COFACTORS}}
             text = " ".join([pick["target_label"], pick.get("target_en") or "", pick["headline"], pick.get("subhead") or "", cand["title"]]
                             + list(pick.get("legend_labels") or []) + row["genes"] + row["uniprot"] + row["names"] + row["pdbs"]
                             + [method] + [w for key, w in METHOD_WORDS if key in method]
@@ -2874,25 +2880,51 @@ def library(issues: list[str], root: Path = ISSUES_DIR) -> list[dict]:
 BROAD_KINDS = {"enzyme", "nucleic", "other"}   # too wide to say two articles are related
 
 
+# cofactors and sugars that many unrelated structures carry: not a reason to call two articles related
+COFACTORS = {"ATP", "ADP", "AMP", "ANP", "ACP", "AGS", "GTP", "GDP", "GNP", "GSP", "GCP", "NAD", "NAI", "NAP", "NDP", "NADPH",
+             "FAD", "FMN", "SAM", "SAH", "HEM", "HEC", "SF4", "FES", "F3S", "COA", "PLP", "TPP", "BGC", "GLC", "NGA", "SIA",
+             "UDP", "CTP", "UTP", "MLY", "CLA", "BCR", "PQN", "PL9", "LUT", "HEA", "CU1", "MO",
+             "BEF", "ALF", "AF3", "VO4", "MGF",   # phosphate analogues in nucleotide sites
+             "ALA", "ARG", "ASN", "ASP", "CYS", "GLN", "GLU", "GLY", "HIS", "ILE", "LEU", "LYS", "MET", "PHE", "PRO", "SER",
+             "THR", "TRP", "TYR", "VAL"}   # free amino acids
+
+
 def related_articles(lib: list[dict], limit: int = 3) -> dict[tuple[str, int], list[dict]]:
-    """For every article, up to `limit` other articles of the site that share something checkable: first a UniProt
-    accession (the same protein), then the same main kind of protein. Nothing here is a claim about the papers."""
+    """For every article, up to `limit` other articles of the site that share something checkable, in this order: a
+    UniProt accession (the same protein); a Pfam family (InterPro was tried: its superfamilies tie unrelated proteins);
+    a ligand of the structures; the same main kind of protein. A family or a ligand counts only when few articles have
+    it (a domain or a ligand found in many says little). Nothing here is a claim about the papers."""
+    def df(key):
+        n = {}
+        for r in lib:
+            for k in set(r[key]):
+                n[k] = n.get(k, 0) + 1
+        return n
+    rare = max(3, len(lib) // 12)   # in at most this many articles
+    fam_n, lig_n = df("pfam"), df("ligands")
     out = {}
     for r in lib:
-        strong, weak = [], []
+        tiers = ([], [], [], [])
         for o in lib:
-            if o is r:
+            if o is r or o["cand"]["pmcid"] == r["cand"]["pmcid"]:
                 continue
             shared = sorted(set(r["uniprot"]) & set(o["uniprot"]))
+            fam = [k for k in sorted(set(r["pfam"]) & set(o["pfam"])) if fam_n[k] <= rare]
+            lig = [k for k in sorted(set(r["ligands"]) & set(o["ligands"])) if lig_n[k] <= rare]
+            when = (o["date"], o["n"])
             if shared:
                 names = [r["gene_of"].get(a) or o["gene_of"].get(a) or a for a in shared]
-                strong.append((len(shared), o["date"], o["n"], o, "同じタンパク質：" + "、".join(dict.fromkeys(names[:3]))))
+                tiers[0].append((len(shared), when, o, "同じタンパク質：" + "、".join(dict.fromkeys(names[:3]))))
+            elif fam:
+                tiers[1].append((len(fam), when, o, "同じファミリー（Pfam）：" + "、".join(r["pfam"][k] for k in fam[:2])))
+            elif lig:
+                tiers[2].append((len(lig), when, o, "同じリガンド：" + "、".join(lig[:2])))
             elif r["cats"][0] == o["cats"][0] and r["cats"][0] not in BROAD_KINDS:
-                weak.append((o["date"], o["n"], o, f"同じ種類：{CATEGORIES.get(r['cats'][0], r['cats'][0])}"))
-        strong.sort(key=lambda t: (t[0], t[1], t[2]), reverse=True)   # most shared proteins, then newest
-        weak.sort(key=lambda t: (t[0], t[1]), reverse=True)
-        picked = [{"row": t[3], "why": t[4]} for t in strong[:limit]]
-        picked += [{"row": t[2], "why": t[3]} for t in weak[:max(0, limit - len(picked))]]
+                tiers[3].append((0, when, o, f"同じ種類：{CATEGORIES.get(r['cats'][0], r['cats'][0])}"))
+        picked = []
+        for t in tiers:   # most shared, then newest
+            t.sort(key=lambda x: (x[0], x[1]), reverse=True)
+            picked += [{"row": x[2], "why": x[3]} for x in t[:limit - len(picked)]]
         out[(r["date"], r["n"])] = picked
     return out
 

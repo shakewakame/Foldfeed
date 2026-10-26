@@ -170,17 +170,17 @@
             "2.3.1.-",
             "2.3.1.286"
           ],
-          "pfam": [
-            "PF02146"
-          ],
-          "interpro": [
-            "IPR003000",
-            "IPR017328",
-            "IPR026590",
-            "IPR026591",
-            "IPR029035",
-            "IPR050134"
-          ],
+          "pfam": {
+            "PF02146": "SIR2"
+          },
+          "interpro": {
+            "IPR029035": "DHS-like_NAD/FAD-binding_dom",
+            "IPR050134": "NAD-dep_sirtuin_deacylases",
+            "IPR003000": "Sirtuin",
+            "IPR026591": "Sirtuin_cat_small_dom_sf",
+            "IPR017328": "Sirtuin_class_I",
+            "IPR026590": "Ssirtuin_cat_dom"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -619,25 +619,25 @@
           "ec": [
             "3.6.4.13"
           ],
-          "pfam": [
-            "PF00271",
-            "PF04851",
-            "PF11648",
-            "PF16739",
-            "PF18119"
-          ],
-          "interpro": [
-            "IPR001650",
-            "IPR006935",
-            "IPR011029",
-            "IPR014001",
-            "IPR021673",
-            "IPR027417",
-            "IPR031964",
-            "IPR038557",
-            "IPR041204",
-            "IPR051363"
-          ],
+          "pfam": {
+            "PF16739": "CARD_2",
+            "PF00271": "Helicase_C",
+            "PF04851": "ResIII",
+            "PF18119": "RIG-I_C",
+            "PF11648": "RIG-I_C-RD"
+          },
+          "interpro": {
+            "IPR031964": "CARD_dom",
+            "IPR011029": "DEATH-like_dom_sf",
+            "IPR006935": "Helicase/UvrB_N",
+            "IPR014001": "Helicase_ATP-bd",
+            "IPR001650": "Helicase_C-like",
+            "IPR027417": "P-loop_NTPase",
+            "IPR041204": "RIG-I-like_C",
+            "IPR038557": "RLR_C_sf",
+            "IPR021673": "RLR_CTR",
+            "IPR051363": "RLR_Helicase"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -1061,26 +1061,26 @@
             "Virus entry into host cell"
           ],
           "ec": [],
-          "pfam": [
-            "PF01601",
-            "PF09408",
-            "PF16451",
-            "PF19214"
-          ],
-          "interpro": [
-            "IPR002552",
-            "IPR018548",
-            "IPR032500",
-            "IPR036326",
-            "IPR042578",
-            "IPR043002",
-            "IPR043473",
-            "IPR043614",
-            "IPR044337",
-            "IPR044376",
-            "IPR044873",
-            "IPR044874"
-          ],
+          "pfam": {
+            "PF16451": "bCoV_S1_N",
+            "PF09408": "bCoV_S1_RBD",
+            "PF01601": "CoV_S2",
+            "PF19214": "CoV_S2_C"
+          },
+          "interpro": {
+            "IPR032500": "bCoV_S1_N",
+            "IPR042578": "BETA_CORONA_SPIKE",
+            "IPR043473": "S2_sf_CoV",
+            "IPR043002": "Spike_N_sf",
+            "IPR044337": "Spike_S1_N_MERS-CoV-like",
+            "IPR018548": "Spike_S1_RBD_bCoV",
+            "IPR044376": "Spike_S1_RBD_MERS-CoV",
+            "IPR036326": "Spike_S1_RBD_sf_bCoV",
+            "IPR002552": "Spike_S2_CoV",
+            "IPR043614": "Spike_S2_CoV_C",
+            "IPR044873": "Spike_S2_CoV_HR1",
+            "IPR044874": "Spike_S2_CoV_HR2"
+          },
           "lineage": [
             "Viruses",
             "Riboviria"
@@ -1119,17 +1119,17 @@
           "ec": [
             "3.4.14.5"
           ],
-          "pfam": [
-            "PF00326",
-            "PF00930"
-          ],
-          "interpro": [
-            "IPR001375",
-            "IPR002469",
-            "IPR002471",
-            "IPR029058",
-            "IPR050278"
-          ],
+          "pfam": {
+            "PF00930": "DPPIV_N",
+            "PF00326": "Peptidase_S9"
+          },
+          "interpro": {
+            "IPR029058": "AB_hydrolase_fold",
+            "IPR002471": "Pept_S9_AS",
+            "IPR001375": "Peptidase_S9_cat",
+            "IPR002469": "Peptidase_S9B_N",
+            "IPR050278": "Serine_Prot_S9B/DPPIV"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"

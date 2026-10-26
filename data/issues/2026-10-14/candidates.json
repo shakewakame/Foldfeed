@@ -252,14 +252,14 @@
             "Ubl conjugation"
           ],
           "ec": [],
-          "pfam": [
-            "PF01221"
-          ],
-          "interpro": [
-            "IPR001372",
-            "IPR019763",
-            "IPR037177"
-          ],
+          "pfam": {
+            "PF01221": "Dynein_light"
+          },
+          "interpro": {
+            "IPR037177": "DLC_sf",
+            "IPR019763": "Dynein_light_1/2_CS",
+            "IPR001372": "Dynein_light_chain_typ-1/2"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -287,18 +287,18 @@
             "Ubl conjugation pathway"
           ],
           "ec": [],
-          "pfam": [
-            "PF01466",
-            "PF03931"
-          ],
-          "interpro": [
-            "IPR001232",
-            "IPR011333",
-            "IPR016072",
-            "IPR016073",
-            "IPR016897",
-            "IPR036296"
-          ],
+          "pfam": {
+            "PF01466": "Skp1",
+            "PF03931": "Skp1_POZ"
+          },
+          "interpro": {
+            "IPR016897": "SKP1",
+            "IPR001232": "SKP1-like",
+            "IPR036296": "SKP1-like_dim_sf",
+            "IPR011333": "SKP1/BTB/POZ_sf",
+            "IPR016072": "Skp1_comp_dimer",
+            "IPR016073": "Skp1_comp_POZ"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -333,22 +333,22 @@
             "Phosphoprotein"
           ],
           "ec": [],
-          "pfam": [
-            "PF00091",
-            "PF03953"
-          ],
-          "interpro": [
-            "IPR000217",
-            "IPR002453",
-            "IPR003008",
-            "IPR008280",
-            "IPR013838",
-            "IPR017975",
-            "IPR018316",
-            "IPR023123",
-            "IPR036525",
-            "IPR037103"
-          ],
+          "pfam": {
+            "PF00091": "Tubulin",
+            "PF03953": "Tubulin_C"
+          },
+          "interpro": {
+            "IPR013838": "Beta-tubulin_BS",
+            "IPR002453": "Beta_tubulin",
+            "IPR008280": "Tub_FtsZ_C",
+            "IPR000217": "Tubulin",
+            "IPR037103": "Tubulin/FtsZ-like_C",
+            "IPR018316": "Tubulin/FtsZ_2-layer-sand-dom",
+            "IPR036525": "Tubulin/FtsZ_GTPase_sf",
+            "IPR023123": "Tubulin_C",
+            "IPR017975": "Tubulin_CS",
+            "IPR003008": "Tubulin_FtsZ_GTPase"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -369,20 +369,20 @@
             "Guanine-nucleotide releasing factor"
           ],
           "ec": [],
-          "pfam": [
-            "PF00621",
-            "PF12937",
-            "PF14252"
-          ],
-          "interpro": [
-            "IPR000219",
-            "IPR001810",
-            "IPR011993",
-            "IPR025592",
-            "IPR035899",
-            "IPR036047",
-            "IPR052805"
-          ],
+          "pfam": {
+            "PF14252": "DUF4347",
+            "PF12937": "F-box-like",
+            "PF00621": "RhoGEF"
+          },
+          "interpro": {
+            "IPR035899": "DBL_dom_sf",
+            "IPR000219": "DH_dom",
+            "IPR025592": "DUF4347",
+            "IPR036047": "F-box-like_dom_sf",
+            "IPR001810": "F-box_dom",
+            "IPR052805": "GEF_Ubiquitin-Prot_Reg",
+            "IPR011993": "PH-like_dom_sf"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -411,10 +411,10 @@
             "Phosphoprotein"
           ],
           "ec": [],
-          "pfam": [],
-          "interpro": [
-            "IPR026106"
-          ],
+          "pfam": {},
+          "interpro": {
+            "IPR026106": "MAP9"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -454,21 +454,21 @@
           "ec": [
             "3.6.5.-"
           ],
-          "pfam": [
-            "PF00091",
-            "PF03953"
-          ],
-          "interpro": [
-            "IPR000217",
-            "IPR002452",
-            "IPR003008",
-            "IPR008280",
-            "IPR017975",
-            "IPR018316",
-            "IPR023123",
-            "IPR036525",
-            "IPR037103"
-          ],
+          "pfam": {
+            "PF00091": "Tubulin",
+            "PF03953": "Tubulin_C"
+          },
+          "interpro": {
+            "IPR002452": "Alpha_tubulin",
+            "IPR008280": "Tub_FtsZ_C",
+            "IPR000217": "Tubulin",
+            "IPR037103": "Tubulin/FtsZ-like_C",
+            "IPR018316": "Tubulin/FtsZ_2-layer-sand-dom",
+            "IPR036525": "Tubulin/FtsZ_GTPase_sf",
+            "IPR023123": "Tubulin_C",
+            "IPR017975": "Tubulin_CS",
+            "IPR003008": "Tubulin_FtsZ_GTPase"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -489,15 +489,15 @@
             "Repeat"
           ],
           "ec": [],
-          "pfam": [
-            "PF13499"
-          ],
-          "interpro": [
-            "IPR002048",
-            "IPR011992",
-            "IPR018247",
-            "IPR051581"
-          ],
+          "pfam": {
+            "PF13499": "EF-hand_7"
+          },
+          "interpro": {
+            "IPR051581": "Ca-bind",
+            "IPR011992": "EF-hand-dom_pair",
+            "IPR018247": "EF_Hand_1_Ca_BS",
+            "IPR002048": "EF_hand_dom"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -530,14 +530,14 @@
             "Transport"
           ],
           "ec": [],
-          "pfam": [
-            "PF00581"
-          ],
-          "interpro": [
-            "IPR001763",
-            "IPR036873",
-            "IPR051889"
-          ],
+          "pfam": {
+            "PF00581": "Rhodanese"
+          },
+          "interpro": {
+            "IPR051889": "CEP41",
+            "IPR001763": "Rhodanese-like_dom",
+            "IPR036873": "Rhodanese-like_dom_sf"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -563,13 +563,13 @@
             "Phosphoprotein"
           ],
           "ec": [],
-          "pfam": [
-            "PF13864"
-          ],
-          "interpro": [
-            "IPR027012",
-            "IPR052102"
-          ],
+          "pfam": {
+            "PF13864": "Enkurin"
+          },
+          "interpro": {
+            "IPR027012": "Enkurin_dom",
+            "IPR052102": "Enkurin_domain-protein"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -599,18 +599,18 @@
             "Zinc-finger"
           ],
           "ec": [],
-          "pfam": [
-            "PF12773",
-            "PF12796",
-            "PF13287"
-          ],
-          "interpro": [
-            "IPR002110",
-            "IPR025874",
-            "IPR026876",
-            "IPR036770",
-            "IPR052481"
-          ],
+          "pfam": {
+            "PF12796": "Ank_2",
+            "PF12773": "DZR",
+            "PF13287": "Fn3_assoc"
+          },
+          "interpro": {
+            "IPR002110": "Ankyrin_rpt",
+            "IPR036770": "Ankyrin_rpt-contain_sf",
+            "IPR052481": "DZAN1",
+            "IPR025874": "DZR",
+            "IPR026876": "Fn3_assoc_repeat"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -638,13 +638,13 @@
             "Nucleus"
           ],
           "ec": [],
-          "pfam": [
-            "PF05018"
-          ],
-          "interpro": [
-            "IPR007714",
-            "IPR040441"
-          ],
+          "pfam": {
+            "PF05018": "CFA20_dom"
+          },
+          "interpro": {
+            "IPR040441": "CFA20/CFAP20DC",
+            "IPR007714": "CFA20_dom"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -903,19 +903,19 @@
             "2.3.1.225",
             "6.3.1.2"
           ],
-          "pfam": [
-            "PF00120",
-            "PF03951"
-          ],
-          "interpro": [
-            "IPR008146",
-            "IPR008147",
-            "IPR014746",
-            "IPR027302",
-            "IPR027303",
-            "IPR036651",
-            "IPR050292"
-          ],
+          "pfam": {
+            "PF00120": "Gln-synt_C",
+            "PF03951": "Gln-synt_N"
+          },
+          "interpro": {
+            "IPR008147": "Gln_synt_N",
+            "IPR036651": "Gln_synt_N_sf",
+            "IPR014746": "Gln_synth/guanido_kin_cat_dom",
+            "IPR008146": "Gln_synth_cat_dom",
+            "IPR027303": "Gln_synth_gly_rich_site",
+            "IPR027302": "Gln_synth_N_conserv_site",
+            "IPR050292": "Glutamine_Synthetase"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -1043,27 +1043,27 @@
             "Virulence"
           ],
           "ec": [],
-          "pfam": [
-            "PF00004",
-            "PF02861",
-            "PF07724",
-            "PF10431",
-            "PF17871"
-          ],
-          "interpro": [
-            "IPR001270",
-            "IPR001943",
-            "IPR003593",
-            "IPR003959",
-            "IPR004176",
-            "IPR018368",
-            "IPR019489",
-            "IPR027417",
-            "IPR028299",
-            "IPR036628",
-            "IPR041546",
-            "IPR050130"
-          ],
+          "pfam": {
+            "PF00004": "AAA",
+            "PF07724": "AAA_2",
+            "PF17871": "AAA_lid_9",
+            "PF02861": "Clp_N",
+            "PF10431": "ClpB_D2-small"
+          },
+          "interpro": {
+            "IPR003593": "AAA+_ATPase",
+            "IPR003959": "ATPase_AAA_core",
+            "IPR019489": "Clp_ATPase_C",
+            "IPR036628": "Clp_N_dom_sf",
+            "IPR004176": "Clp_R_N",
+            "IPR001270": "ClpA/B",
+            "IPR018368": "ClpA/B_CS1",
+            "IPR028299": "ClpA/B_CS2",
+            "IPR041546": "ClpA/ClpB_AAA_lid",
+            "IPR050130": "ClpA_ClpB",
+            "IPR027417": "P-loop_NTPase",
+            "IPR001943": "UVR_dom"
+          },
           "lineage": [
             "Bacteria",
             "Bacillati"
@@ -1491,17 +1491,17 @@
             "Transmembrane beta strand"
           ],
           "ec": [],
-          "pfam": [
-            "PF01103",
-            "PF07244"
-          ],
-          "interpro": [
-            "IPR000184",
-            "IPR010827",
-            "IPR023707",
-            "IPR034746",
-            "IPR039910"
-          ],
+          "pfam": {
+            "PF01103": "Omp85",
+            "PF07244": "POTRA"
+          },
+          "interpro": {
+            "IPR000184": "Bac_surfAg_D15",
+            "IPR010827": "BamA/TamA_POTRA",
+            "IPR039910": "D15-like",
+            "IPR023707": "OM_assembly_BamA",
+            "IPR034746": "POTRA"
+          },
           "lineage": [
             "Bacteria",
             "Pseudomonadati"
@@ -1526,16 +1526,16 @@
             "Signal"
           ],
           "ec": [],
-          "pfam": [
-            "PF06804",
-            "PF29358"
-          ],
-          "interpro": [
-            "IPR010653",
-            "IPR014524",
-            "IPR042268",
-            "IPR064009"
-          ],
+          "pfam": {
+            "PF29358": "BamC-like_N",
+            "PF06804": "BamC_C"
+          },
+          "interpro": {
+            "IPR014524": "BamC",
+            "IPR010653": "BamC-like",
+            "IPR064009": "BamC-like_N",
+            "IPR042268": "BamC_C"
+          },
           "lineage": [
             "Bacteria",
             "Pseudomonadati"
@@ -1559,14 +1559,14 @@
             "Signal"
           ],
           "ec": [],
-          "pfam": [
-            "PF04355"
-          ],
-          "interpro": [
-            "IPR007450",
-            "IPR026592",
-            "IPR037873"
-          ],
+          "pfam": {
+            "PF04355": "BamE"
+          },
+          "interpro": {
+            "IPR026592": "BamE",
+            "IPR037873": "BamE-like",
+            "IPR007450": "BamE_dom"
+          },
           "lineage": [
             "Bacteria",
             "Pseudomonadati"
@@ -1590,14 +1590,14 @@
             "Signal"
           ],
           "ec": [],
-          "pfam": [
-            "PF13525"
-          ],
-          "interpro": [
-            "IPR011990",
-            "IPR017689",
-            "IPR039565"
-          ],
+          "pfam": {
+            "PF13525": "YfiO"
+          },
+          "interpro": {
+            "IPR017689": "BamD",
+            "IPR039565": "BamD-like",
+            "IPR011990": "TPR-like_helical_dom_sf"
+          },
           "lineage": [
             "Bacteria",
             "Pseudomonadati"
@@ -1627,16 +1627,16 @@
           "ec": [
             "3.4.-.-"
           ],
-          "pfam": [
-            "PF01435",
-            "PF14559"
-          ],
-          "interpro": [
-            "IPR001915",
-            "IPR011990",
-            "IPR030873",
-            "IPR051156"
-          ],
+          "pfam": {
+            "PF01435": "Peptidase_M48",
+            "PF14559": "TPR_19"
+          },
+          "interpro": {
+            "IPR051156": "Mito/Outer_Membr_Metalloprot",
+            "IPR001915": "Peptidase_M48",
+            "IPR030873": "Protease_BepA",
+            "IPR011990": "TPR-like_helical_dom_sf"
+          },
           "lineage": [
             "Bacteria",
             "Pseudomonadati"
@@ -1660,16 +1660,16 @@
             "Signal"
           ],
           "ec": [],
-          "pfam": [
-            "PF13360"
-          ],
-          "interpro": [
-            "IPR002372",
-            "IPR011047",
-            "IPR015943",
-            "IPR017687",
-            "IPR018391"
-          ],
+          "pfam": {
+            "PF13360": "PQQ_2"
+          },
+          "interpro": {
+            "IPR017687": "BamB",
+            "IPR018391": "PQQ_b-propeller_rpt",
+            "IPR002372": "PQQ_rpt_dom",
+            "IPR011047": "Quinoprotein_ADH-like_sf",
+            "IPR015943": "WD40/YVTN_repeat-like_dom_sf"
+          },
           "lineage": [
             "Bacteria",
             "Pseudomonadati"
@@ -1853,13 +1853,13 @@
             "Virulence"
           ],
           "ec": [],
-          "pfam": [
-            "PF15495"
-          ],
-          "interpro": [
-            "IPR029140",
-            "IPR047786"
-          ],
+          "pfam": {
+            "PF15495": "Fimbrillin_C"
+          },
+          "interpro": {
+            "IPR029140": "Mfa1_C",
+            "IPR047786": "Mfa1_fim"
+          },
           "lineage": [
             "Bacteria",
             "Pseudomonadati"

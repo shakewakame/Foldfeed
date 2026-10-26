@@ -1003,15 +1003,15 @@
           "ec": [
             "3.6.5.2"
           ],
-          "pfam": [
-            "PF00071"
-          ],
-          "interpro": [
-            "IPR001806",
-            "IPR005225",
-            "IPR020849",
-            "IPR027417"
-          ],
+          "pfam": {
+            "PF00071": "Ras"
+          },
+          "interpro": {
+            "IPR027417": "P-loop_NTPase",
+            "IPR005225": "Small_GTP-bd",
+            "IPR001806": "Small_GTPase",
+            "IPR020849": "Small_GTPase_Ras-type"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -1050,24 +1050,24 @@
           "ec": [
             "2.7.11.1"
           ],
-          "pfam": [
-            "PF00130",
-            "PF02196",
-            "PF07714"
-          ],
-          "interpro": [
-            "IPR000719",
-            "IPR001245",
-            "IPR002219",
-            "IPR003116",
-            "IPR008271",
-            "IPR011009",
-            "IPR017441",
-            "IPR020454",
-            "IPR029071",
-            "IPR046349",
-            "IPR051681"
-          ],
+          "pfam": {
+            "PF00130": "C1_1",
+            "PF07714": "PK_Tyr_Ser-Thr",
+            "PF02196": "RBD"
+          },
+          "interpro": {
+            "IPR046349": "C1-like_sf",
+            "IPR020454": "DAG/PE-bd",
+            "IPR011009": "Kinase-like_dom_sf",
+            "IPR002219": "PKC_DAG/PE",
+            "IPR000719": "Prot_kinase_dom",
+            "IPR017441": "Protein_kinase_ATP_BS",
+            "IPR003116": "RBD_dom",
+            "IPR001245": "Ser-Thr/Tyr_kinase_cat_dom",
+            "IPR008271": "Ser/Thr_kinase_AS",
+            "IPR051681": "Ser/Thr_Kinases-Pseudokinases",
+            "IPR029071": "Ubiquitin-like_domsf"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -1101,15 +1101,15 @@
           "ec": [
             "5.2.1.8"
           ],
-          "pfam": [
-            "PF00160"
-          ],
-          "interpro": [
-            "IPR002130",
-            "IPR020892",
-            "IPR024936",
-            "IPR029000"
-          ],
+          "pfam": {
+            "PF00160": "Pro_isomerase"
+          },
+          "interpro": {
+            "IPR029000": "Cyclophilin-like_dom_sf",
+            "IPR024936": "Cyclophilin-type_PPIase",
+            "IPR020892": "Cyclophilin-type_PPIase_CS",
+            "IPR002130": "Cyclophilin-type_PPIase_dom"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"

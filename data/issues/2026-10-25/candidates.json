@@ -143,17 +143,17 @@
           "ec": [
             "2.3.1.-"
           ],
-          "pfam": [
-            "PF00155"
-          ],
-          "interpro": [
-            "IPR001917",
-            "IPR004839",
-            "IPR015421",
-            "IPR015422",
-            "IPR015424",
-            "IPR050087"
-          ],
+          "pfam": {
+            "PF00155": "Aminotran_1_2"
+          },
+          "interpro": {
+            "IPR001917": "Aminotrans_II_pyridoxalP_BS",
+            "IPR004839": "Aminotransferase_I/II_large",
+            "IPR050087": "AON_synthase_class-II",
+            "IPR015424": "PyrdxlP-dep_Trfase",
+            "IPR015421": "PyrdxlP-dep_Trfase_major",
+            "IPR015422": "PyrdxlP-dep_Trfase_small"
+          },
           "lineage": [
             "Bacteria",
             "Pseudomonadati"
@@ -379,18 +379,18 @@
             "Transferase"
           ],
           "ec": [],
-          "pfam": [
-            "PF00712",
-            "PF02767",
-            "PF02768"
-          ],
-          "interpro": [
-            "IPR001001",
-            "IPR022634",
-            "IPR022635",
-            "IPR022637",
-            "IPR046938"
-          ],
+          "pfam": {
+            "PF00712": "DNA_pol3_beta",
+            "PF02767": "DNA_pol3_beta_2",
+            "PF02768": "DNA_pol3_beta_3"
+          },
+          "interpro": {
+            "IPR046938": "DNA_clamp_sf",
+            "IPR001001": "DNA_polIII_beta",
+            "IPR022635": "DNA_polIII_beta_C",
+            "IPR022637": "DNA_polIII_beta_cen",
+            "IPR022634": "DNA_polIII_beta_N"
+          },
           "lineage": [
             "Bacteria",
             "Pseudomonadati"
@@ -416,18 +416,18 @@
             "Nucleotide-binding"
           ],
           "ec": [],
-          "pfam": [
-            "PF00308",
-            "PF22688"
-          ],
-          "interpro": [
-            "IPR013317",
-            "IPR017788",
-            "IPR020591",
-            "IPR022864",
-            "IPR027417",
-            "IPR055199"
-          ],
+          "pfam": {
+            "PF00308": "Bac_DnaA",
+            "PF22688": "Hda_lid"
+          },
+          "interpro": {
+            "IPR020591": "Chromosome_initiator_DnaA-like",
+            "IPR013317": "DnaA_dom",
+            "IPR017788": "Hda",
+            "IPR022864": "Hda_Enterobact",
+            "IPR055199": "Hda_lid",
+            "IPR027417": "P-loop_NTPase"
+          },
           "lineage": [
             "Bacteria",
             "Pseudomonadati"
@@ -1100,18 +1100,18 @@
           "ec": [
             "2.8.1.8"
           ],
-          "pfam": [
-            "PF04055",
-            "PF16881"
-          ],
-          "interpro": [
-            "IPR003698",
-            "IPR006638",
-            "IPR007197",
-            "IPR013785",
-            "IPR031691",
-            "IPR058240"
-          ],
+          "pfam": {
+            "PF16881": "LIAS_N",
+            "PF04055": "Radical_SAM"
+          },
+          "interpro": {
+            "IPR013785": "Aldolase_TIM",
+            "IPR006638": "Elp3/MiaA/NifB-like_rSAM",
+            "IPR031691": "LIAS_N",
+            "IPR003698": "Lipoyl_synth",
+            "IPR007197": "rSAM",
+            "IPR058240": "rSAM_sf"
+          },
           "lineage": [
             "Bacteria",
             "Bacillati"
@@ -1128,17 +1128,17 @@
             "Lipoyl"
           ],
           "ec": [],
-          "pfam": [
-            "PF01597"
-          ],
-          "interpro": [
-            "IPR000089",
-            "IPR002930",
-            "IPR003016",
-            "IPR011053",
-            "IPR017453",
-            "IPR033753"
-          ],
+          "pfam": {
+            "PF01597": "GCV_H"
+          },
+          "interpro": {
+            "IPR003016": "2-oxoA_DH_lipoyl-BS",
+            "IPR000089": "Biotin_lipoyl",
+            "IPR002930": "GCV_H",
+            "IPR033753": "GCV_H/Fam206",
+            "IPR017453": "GCV_H_sub",
+            "IPR011053": "Single_hybrid_motif"
+          },
           "lineage": [
             "Bacteria",
             "Bacillati"

@@ -93,19 +93,19 @@
             "Oxidoreductase"
           ],
           "ec": [],
-          "pfam": [
-            "PF03781",
-            "PF12867"
-          ],
-          "interpro": [
-            "IPR005532",
-            "IPR016187",
-            "IPR024775",
-            "IPR027577",
-            "IPR029063",
-            "IPR042095",
-            "IPR051043"
-          ],
+          "pfam": {
+            "PF12867": "DinB_2",
+            "PF03781": "FGE-sulfatase"
+          },
+          "interpro": {
+            "IPR016187": "CTDL_fold",
+            "IPR024775": "EgtB_DinB-like",
+            "IPR027577": "OvoA_Nterm",
+            "IPR029063": "SAM-dependent_MTases_sf",
+            "IPR051043": "Sulfatase_Mod_Factor_Kinase",
+            "IPR005532": "SUMF_dom",
+            "IPR042095": "SUMF_sf"
+          },
           "lineage": [
             "Bacteria",
             "Bacillati"
@@ -320,16 +320,16 @@
             "Virus entry into host cell"
           ],
           "ec": [],
-          "pfam": [
-            "PF00073"
-          ],
-          "interpro": [
-            "IPR001676",
-            "IPR004080",
-            "IPR029053",
-            "IPR033703",
-            "IPR037080"
-          ],
+          "pfam": {
+            "PF00073": "Rhv"
+          },
+          "interpro": {
+            "IPR037080": "Capsid_VP4_sf_Picornavirus",
+            "IPR004080": "FMDV_VP1_coat",
+            "IPR001676": "Picornavirus_capsid",
+            "IPR033703": "Rhv-like",
+            "IPR029053": "Viral_coat"
+          },
           "lineage": [
             "Viruses",
             "Riboviria"
@@ -355,16 +355,16 @@
             "Virus entry into host cell"
           ],
           "ec": [],
-          "pfam": [
-            "PF00073"
-          ],
-          "interpro": [
-            "IPR001676",
-            "IPR004080",
-            "IPR029053",
-            "IPR033703",
-            "IPR037080"
-          ],
+          "pfam": {
+            "PF00073": "Rhv"
+          },
+          "interpro": {
+            "IPR037080": "Capsid_VP4_sf_Picornavirus",
+            "IPR004080": "FMDV_VP1_coat",
+            "IPR001676": "Picornavirus_capsid",
+            "IPR033703": "Rhv-like",
+            "IPR029053": "Viral_coat"
+          },
           "lineage": [
             "Viruses",
             "Riboviria"
@@ -386,15 +386,15 @@
             "Virus entry into host cell"
           ],
           "ec": [],
-          "pfam": [
-            "PF00073"
-          ],
-          "interpro": [
-            "IPR001676",
-            "IPR004080",
-            "IPR029053",
-            "IPR033703"
-          ],
+          "pfam": {
+            "PF00073": "Rhv"
+          },
+          "interpro": {
+            "IPR004080": "FMDV_VP1_coat",
+            "IPR001676": "Picornavirus_capsid",
+            "IPR033703": "Rhv-like",
+            "IPR029053": "Viral_coat"
+          },
           "lineage": [
             "Viruses",
             "Riboviria"
@@ -430,19 +430,19 @@
             "Virus entry into host cell"
           ],
           "ec": [],
-          "pfam": [
-            "PF00073",
-            "PF05408"
-          ],
-          "interpro": [
-            "IPR001676",
-            "IPR004080",
-            "IPR008739",
-            "IPR029053",
-            "IPR033703",
-            "IPR037080",
-            "IPR038765"
-          ],
+          "pfam": {
+            "PF05408": "Peptidase_C28",
+            "PF00073": "Rhv"
+          },
+          "interpro": {
+            "IPR037080": "Capsid_VP4_sf_Picornavirus",
+            "IPR004080": "FMDV_VP1_coat",
+            "IPR038765": "Papain-like_cys_pep_sf",
+            "IPR008739": "Peptidase_C28",
+            "IPR001676": "Picornavirus_capsid",
+            "IPR033703": "Rhv-like",
+            "IPR029053": "Viral_coat"
+          },
           "lineage": [
             "Viruses",
             "Riboviria"
@@ -468,16 +468,16 @@
             "Virus entry into host cell"
           ],
           "ec": [],
-          "pfam": [
-            "PF00073"
-          ],
-          "interpro": [
-            "IPR001676",
-            "IPR004080",
-            "IPR029053",
-            "IPR033703",
-            "IPR037080"
-          ],
+          "pfam": {
+            "PF00073": "Rhv"
+          },
+          "interpro": {
+            "IPR037080": "Capsid_VP4_sf_Picornavirus",
+            "IPR004080": "FMDV_VP1_coat",
+            "IPR001676": "Picornavirus_capsid",
+            "IPR033703": "Rhv-like",
+            "IPR029053": "Viral_coat"
+          },
           "lineage": [
             "Viruses",
             "Riboviria"
@@ -578,8 +578,8 @@
           "first_structure": true,
           "keywords": [],
           "ec": [],
-          "pfam": [],
-          "interpro": [],
+          "pfam": {},
+          "interpro": {},
           "lineage": [
             "Bacteria",
             "Pseudomonadati"
@@ -921,18 +921,18 @@
           "ec": [
             "2.3.1.37"
           ],
-          "pfam": [
-            "PF00155"
-          ],
-          "interpro": [
-            "IPR001917",
-            "IPR004839",
-            "IPR010961",
-            "IPR015421",
-            "IPR015422",
-            "IPR015424",
-            "IPR050087"
-          ],
+          "pfam": {
+            "PF00155": "Aminotran_1_2"
+          },
+          "interpro": {
+            "IPR010961": "4pyrrol_synth_NH2levulA_synth",
+            "IPR001917": "Aminotrans_II_pyridoxalP_BS",
+            "IPR004839": "Aminotransferase_I/II_large",
+            "IPR050087": "AON_synthase_class-II",
+            "IPR015424": "PyrdxlP-dep_Trfase",
+            "IPR015421": "PyrdxlP-dep_Trfase_major",
+            "IPR015422": "PyrdxlP-dep_Trfase_small"
+          },
           "lineage": [
             "Eukaryota",
             "Fungi"
@@ -1025,16 +1025,16 @@
             "Isomerase"
           ],
           "ec": [],
-          "pfam": [
-            "PF02431"
-          ],
-          "interpro": [
-            "IPR016087",
-            "IPR016088",
-            "IPR016089",
-            "IPR036298",
-            "IPR044164"
-          ],
+          "pfam": {
+            "PF02431": "Chalcone"
+          },
+          "interpro": {
+            "IPR044164": "CFI",
+            "IPR016087": "Chalcone_isomerase",
+            "IPR016088": "Chalcone_isomerase_3-sand",
+            "IPR016089": "Chalcone_isomerase_bundle_sf",
+            "IPR036298": "Chalcone_isomerase_sf"
+          },
           "lineage": [
             "Eukaryota",
             "Viridiplantae"
@@ -1144,14 +1144,14 @@
           "ec": [
             "1.3.98.5"
           ],
-          "pfam": [
-            "PF06778"
-          ],
-          "interpro": [
-            "IPR010644",
-            "IPR011008",
-            "IPR031332"
-          ],
+          "pfam": {
+            "PF06778": "Chlor_dismutase"
+          },
+          "interpro": {
+            "IPR031332": "CHDC",
+            "IPR010644": "ChdC/CLD",
+            "IPR011008": "Dimeric_a/b-barrel"
+          },
           "lineage": [
             "Bacteria",
             "Bacillati"
@@ -1635,14 +1635,14 @@
             "Transport"
           ],
           "ec": [],
-          "pfam": [
-            "PF00209"
-          ],
-          "interpro": [
-            "IPR000175",
-            "IPR002438",
-            "IPR037272"
-          ],
+          "pfam": {
+            "PF00209": "SNF"
+          },
+          "interpro": {
+            "IPR000175": "Na/ntran_symport",
+            "IPR002438": "Neutral_aa_SLC6",
+            "IPR037272": "SNS_sf"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -1686,14 +1686,14 @@
             "3.4.17.-",
             "3.4.17.23"
           ],
-          "pfam": [
-            "PF01401",
-            "PF16959"
-          ],
-          "interpro": [
-            "IPR001548",
-            "IPR031588"
-          ],
+          "pfam": {
+            "PF16959": "Collectrin",
+            "PF01401": "Peptidase_M2"
+          },
+          "interpro": {
+            "IPR031588": "Collectrin_dom",
+            "IPR001548": "Peptidase_M2"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -1997,21 +1997,21 @@
             "Thrombophilia"
           ],
           "ec": [],
-          "pfam": [
-            "PF00754",
-            "PF07731",
-            "PF07732"
-          ],
-          "interpro": [
-            "IPR000421",
-            "IPR008972",
-            "IPR008979",
-            "IPR011706",
-            "IPR011707",
-            "IPR024715",
-            "IPR033138",
-            "IPR050633"
-          ],
+          "pfam": {
+            "PF07731": "Cu-oxidase_2",
+            "PF07732": "Cu-oxidase_3",
+            "PF00754": "F5_F8_type_C"
+          },
+          "interpro": {
+            "IPR011707": "Cu-oxidase-like_N",
+            "IPR011706": "Cu-oxidase_C",
+            "IPR033138": "Cu_oxidase_CS",
+            "IPR008972": "Cupredoxin",
+            "IPR000421": "FA58C",
+            "IPR024715": "Factor_5/8-like",
+            "IPR008979": "Galactose-bd-like_sf",
+            "IPR050633": "Neuropilin_MCO_CoagFactor"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -2150,15 +2150,15 @@
             "Zinc-finger"
           ],
           "ec": [],
-          "pfam": [
-            "PF00096",
-            "PF02165"
-          ],
-          "interpro": [
-            "IPR000976",
-            "IPR013087",
-            "IPR036236"
-          ],
+          "pfam": {
+            "PF02165": "WT1",
+            "PF00096": "zf-C2H2"
+          },
+          "interpro": {
+            "IPR000976": "Wilms_tumour_N",
+            "IPR036236": "Znf_C2H2_sf",
+            "IPR013087": "Znf_C2H2_type"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -2187,18 +2187,18 @@
             "Signal"
           ],
           "ec": [],
-          "pfam": [
-            "PF07654"
-          ],
-          "interpro": [
-            "IPR003006",
-            "IPR003597",
-            "IPR007110",
-            "IPR013783",
-            "IPR015707",
-            "IPR036179",
-            "IPR050160"
-          ],
+          "pfam": {
+            "PF07654": "C1-set"
+          },
+          "interpro": {
+            "IPR015707": "B2Microglobulin",
+            "IPR007110": "Ig-like_dom",
+            "IPR036179": "Ig-like_dom_sf",
+            "IPR013783": "Ig-like_fold",
+            "IPR003006": "Ig/MHC_CS",
+            "IPR003597": "Ig_C1-set",
+            "IPR050160": "MHC/Immunoglobulin"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -2227,24 +2227,24 @@
             "Zinc"
           ],
           "ec": [],
-          "pfam": [
-            "PF00129",
-            "PF06623",
-            "PF07654"
-          ],
-          "interpro": [
-            "IPR001039",
-            "IPR003006",
-            "IPR003597",
-            "IPR007110",
-            "IPR010579",
-            "IPR011161",
-            "IPR011162",
-            "IPR013783",
-            "IPR036179",
-            "IPR037055",
-            "IPR050208"
-          ],
+          "pfam": {
+            "PF07654": "C1-set",
+            "PF00129": "MHC_I",
+            "PF06623": "MHC_I_C"
+          },
+          "interpro": {
+            "IPR007110": "Ig-like_dom",
+            "IPR036179": "Ig-like_dom_sf",
+            "IPR013783": "Ig-like_fold",
+            "IPR003006": "Ig/MHC_CS",
+            "IPR003597": "Ig_C1-set",
+            "IPR050208": "MHC_class-I_related",
+            "IPR011161": "MHC_I-like_Ag-recog",
+            "IPR037055": "MHC_I-like_Ag-recog_sf",
+            "IPR011162": "MHC_I/II-like_Ag-recog",
+            "IPR001039": "MHC_I_a_a1/a2",
+            "IPR010579": "MHC_I_a_C"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -5156,29 +5156,29 @@
           "ec": [
             "3.1.4.11"
           ],
-          "pfam": [
-            "PF00168",
-            "PF00387",
-            "PF00388",
-            "PF09279",
-            "PF16457"
-          ],
-          "interpro": [
-            "IPR000008",
-            "IPR000909",
-            "IPR001192",
-            "IPR001711",
-            "IPR001849",
-            "IPR002048",
-            "IPR011992",
-            "IPR011993",
-            "IPR015359",
-            "IPR017946",
-            "IPR018247",
-            "IPR028391",
-            "IPR035892",
-            "IPR046975"
-          ],
+          "pfam": {
+            "PF00168": "C2",
+            "PF09279": "EF-hand_like",
+            "PF16457": "PH_12",
+            "PF00388": "PI-PLC-X",
+            "PF00387": "PI-PLC-Y"
+          },
+          "interpro": {
+            "IPR000008": "C2_dom",
+            "IPR035892": "C2_domain_sf",
+            "IPR011992": "EF-hand-dom_pair",
+            "IPR018247": "EF_Hand_1_Ca_BS",
+            "IPR002048": "EF_hand_dom",
+            "IPR011993": "PH-like_dom_sf",
+            "IPR001849": "PH_domain",
+            "IPR001192": "PI-PLC_fam",
+            "IPR028391": "PLC-delta1_cat",
+            "IPR046975": "PLC-delta1_EF",
+            "IPR017946": "PLC-like_Pdiesterase_TIM-brl",
+            "IPR015359": "PLC_EF-hand-like",
+            "IPR000909": "PLipase_C_PInositol-sp_X_dom",
+            "IPR001711": "PLipase_C_Pinositol-sp_Y"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"

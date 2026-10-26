@@ -126,11 +126,11 @@
           "first_structure": false,
           "keywords": [],
           "ec": [],
-          "pfam": [],
-          "interpro": [
-            "IPR014729",
-            "IPR049676"
-          ],
+          "pfam": {},
+          "interpro": {
+            "IPR049676": "QatC",
+            "IPR014729": "Rossmann-like_a/b/a_fold"
+          },
           "lineage": [
             "Bacteria",
             "Pseudomonadati"
@@ -146,13 +146,13 @@
           "first_structure": false,
           "keywords": [],
           "ec": [],
-          "pfam": [
-            "PF28083"
-          ],
-          "interpro": [
-            "IPR049675",
-            "IPR060674"
-          ],
+          "pfam": {
+            "PF28083": "QatB"
+          },
+          "interpro": {
+            "IPR060674": "QatB",
+            "IPR049675": "QatB_proteobact"
+          },
           "lineage": [
             "Bacteria",
             "Pseudomonadati"
@@ -249,16 +249,16 @@
             "3.4.23.1",
             "3.4.23.16"
           ],
-          "pfam": [
-            "PF00077"
-          ],
-          "interpro": [
-            "IPR001969",
-            "IPR001995",
-            "IPR018061",
-            "IPR021109",
-            "IPR034170"
-          ],
+          "pfam": {
+            "PF00077": "RVP"
+          },
+          "interpro": {
+            "IPR001969": "Aspartic_peptidase_AS",
+            "IPR001995": "Peptidase_A2_cat",
+            "IPR021109": "Peptidase_aspartic_dom_sf",
+            "IPR034170": "Retropepsin-like_cat_dom",
+            "IPR018061": "Retropepsins"
+          },
           "lineage": [
             "Viruses",
             "Riboviria"
@@ -385,17 +385,17 @@
             "Transport"
           ],
           "ec": [],
-          "pfam": [
-            "PF00771"
-          ],
-          "interpro": [
-            "IPR001712",
-            "IPR006301",
-            "IPR025505",
-            "IPR042193",
-            "IPR042194",
-            "IPR042196"
-          ],
+          "pfam": {
+            "PF00771": "FHIPEP"
+          },
+          "interpro": {
+            "IPR042194": "FHIPEP_1",
+            "IPR042193": "FHIPEP_3",
+            "IPR042196": "FHIPEP_4",
+            "IPR025505": "FHIPEP_CS",
+            "IPR006301": "FlhA",
+            "IPR001712": "T3SS_FHIPEP"
+          },
           "lineage": [
             "Bacteria",
             "Pseudomonadati"

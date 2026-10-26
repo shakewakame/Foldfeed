@@ -375,29 +375,29 @@
             "Signal"
           ],
           "ec": [],
-          "pfam": [
-            "PF29970",
-            "PF29972",
-            "PF29973",
-            "PF29974",
-            "PF29979",
-            "PF29990",
-            "PF29991",
-            "PF29995",
-            "PF29999"
-          ],
-          "interpro": [
-            "IPR000742",
-            "IPR062502",
-            "IPR062543",
-            "IPR062548",
-            "IPR062556",
-            "IPR062557",
-            "IPR062558",
-            "IPR063498",
-            "IPR063499",
-            "IPR063500"
-          ],
+          "pfam": {
+            "PF29973": "RIPR_C",
+            "PF29991": "RIPR_EGF-like_10th",
+            "PF29979": "RIPR_EGF-like_6th",
+            "PF29974": "RIPR_EGF-like_7th",
+            "PF29990": "RIPR_EGF-like_9th",
+            "PF29999": "RIPR_jelly-roll-like",
+            "PF29972": "RIPR_M",
+            "PF29970": "RIPR_mid",
+            "PF29995": "RIPR_N"
+          },
+          "interpro": {
+            "IPR000742": "EGF",
+            "IPR062558": "RIPR_C",
+            "IPR062502": "RIPR_EGF-like_6th",
+            "IPR062543": "RIPR_EGF-like_7th",
+            "IPR063499": "RIPR_EGF-like_8th",
+            "IPR063500": "RIPR_EGF-like_9th",
+            "IPR063498": "RIPR_jelly-roll-like_2nd",
+            "IPR062556": "RIPR_jelly-roll-like_4th",
+            "IPR062548": "RIPR_jelly_roll-like_5th",
+            "IPR062557": "RIPR_N"
+          },
           "lineage": [
             "Eukaryota",
             "Sar"
@@ -425,20 +425,20 @@
             "Secreted"
           ],
           "ec": [],
-          "pfam": [
-            "PF07654",
-            "PF07686"
-          ],
-          "interpro": [
-            "IPR003006",
-            "IPR003597",
-            "IPR003599",
-            "IPR007110",
-            "IPR013106",
-            "IPR013783",
-            "IPR036179",
-            "IPR050380"
-          ],
+          "pfam": {
+            "PF07654": "C1-set",
+            "PF07686": "V-set"
+          },
+          "interpro": {
+            "IPR007110": "Ig-like_dom",
+            "IPR036179": "Ig-like_dom_sf",
+            "IPR013783": "Ig-like_fold",
+            "IPR003006": "Ig/MHC_CS",
+            "IPR003597": "Ig_C1-set",
+            "IPR003599": "Ig_sub",
+            "IPR013106": "Ig_V-set",
+            "IPR050380": "Immune_Resp_Modulators"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
@@ -466,12 +466,12 @@
             "Signal"
           ],
           "ec": [],
-          "pfam": [
-            "PF18638"
-          ],
-          "interpro": [
-            "IPR041396"
-          ],
+          "pfam": {
+            "PF18638": "CyRPA"
+          },
+          "interpro": {
+            "IPR041396": "CyRPA"
+          },
           "lineage": [
             "Eukaryota",
             "Sar"
@@ -778,19 +778,19 @@
             "Signal"
           ],
           "ec": [],
-          "pfam": [
-            "PF07686",
-            "PF13927"
-          ],
-          "interpro": [
-            "IPR003598",
-            "IPR003599",
-            "IPR007110",
-            "IPR013106",
-            "IPR013783",
-            "IPR036179",
-            "IPR050876"
-          ],
+          "pfam": {
+            "PF13927": "Ig_3",
+            "PF07686": "V-set"
+          },
+          "interpro": {
+            "IPR007110": "Ig-like_dom",
+            "IPR036179": "Ig-like_dom_sf",
+            "IPR013783": "Ig-like_fold",
+            "IPR003599": "Ig_sub",
+            "IPR003598": "Ig_sub2",
+            "IPR013106": "Ig_V-set",
+            "IPR050876": "IgLON_domain"
+          },
           "lineage": [
             "Eukaryota",
             "Metazoa"
