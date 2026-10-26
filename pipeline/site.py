@@ -184,6 +184,7 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .ppl {{ font-size:15px; color:var(--ink2); }}
 .ppl .pa {{ font-size:13.5px; color:var(--mute); }}
 .ppl .ja {{ font-family:var(--sans); }}
+.pj {{ font-size:14.5px; color:var(--ink2); }}
 .art-4 {{ margin-top:22px; }}
 .nopdb {{ margin:0 0 8px; padding:10px 16px; border-left:3px solid var(--acc); font-size:15px; line-height:1.8; color:var(--ink2); }}
 .art .reads {{ margin-top:22px; }}
@@ -382,7 +383,9 @@ html, body {{ overflow-x:clip; }}   /* a guard: nothing may widen the page sidew
 .lead-go {{ display:inline-flex; align-items:center; gap:12px; margin-top:34px; padding:14px 24px 14px 20px;
             background:var(--ink); color:#fff; font-family:var(--mono); font-size:14.5px; letter-spacing:.06em; }}
 .lead-go .tri {{ font-size:13px; }}
-.lead-badge, .lead-mark {{ display:none; }}   /* a phone's first screen only */
+.lead-mark {{ display:none; }}   /* a phone's first screen only */
+.upd {{ display:none; }}   /* a phone's header only */
+.totop {{ display:none; }}   /* a phone only */
 .lead-upd {{ margin:8px 0 0; text-align:center; font-family:var(--mono); font-size:11.5px; letter-spacing:.06em; color:var(--mute); }}
 .lead-upd span {{ margin-left:12px; }}
 .lead-text .lead-upd {{ margin-top:22px; text-align:left; }}
@@ -502,10 +505,9 @@ html, body {{ overflow-x:clip; }}   /* a guard: nothing may widen the page sidew
 @keyframes drift {{ from {{ transform:translate3d(1.5%, 0, 0) rotate(-3deg); }}
                   to {{ transform:translate3d(-2.5%, 2%, 0) rotate(3.5deg) scale(1.06); }} }}
 @keyframes slidein {{ from {{ opacity:0; transform:translateX(-18px); }} to {{ opacity:1; transform:none; }} }}
-@media (max-width:860px) {{   /* the phone's first screen comes in line by line, then the date, the structure (it swings
+@media (max-width:860px) {{   /* the phone's first screen comes in line by line, then the structure (it swings
                                   in, then sways, never a full turn; the scroll turns it a little more: LEAD_SCRIPT) and
                                   the Picked up mark */
-  .anim .lead-badge {{ animation:fadein .8s ease .5s both; }}
   .anim .lead-mark {{ animation:slidein .8s cubic-bezier(.2,.7,.2,1) 1.1s both; }}
   .anim .lead-art .fig {{ animation:comein 1.6s cubic-bezier(.2,.7,.2,1) .3s both, drift 6.5s ease-in-out 1.9s infinite alternate;
                           will-change:transform; }}
@@ -966,8 +968,8 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
   .later.on:hover {{ background:var(--ink); border-color:var(--ink); }}
 }}
 .later.sm {{ margin-top:14px; padding:4px 11px; font-size:12.5px; }}
-.art-top {{ display:flex; justify-content:space-between; align-items:center; gap:10px 20px; margin:0 0 10px; }}
-.art-top .kicker {{ margin:0; }}
+.art-top {{ display:flex; justify-content:space-between; align-items:flex-start; gap:10px 24px; margin:0; }}
+.art-top .later {{ flex:none; margin-top:6px; }}
 
 /* later.html */
 .later-page {{ padding-top:40px; padding-bottom:var(--sec); }}
@@ -1045,7 +1047,16 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
   .mast {{ padding-top:0; background:var(--ink); }}
   .rules {{ display:none; }}
   .mast-row {{ position:relative; flex-wrap:nowrap; align-items:center; gap:12px; height:var(--head); }}
-  .vol {{ position:static; flex:none; gap:6px; }}
+  .vol {{ position:static; flex:none; gap:6px; margin-right:-10px; }}
+  /* back to the top: an ink square like MENU (which is 朱), at the bottom right under MENU's edge, once the first
+     screen is past */
+  .totop {{ display:flex; align-items:center; justify-content:center; position:fixed; z-index:900; width:40px; height:40px;
+            right:calc(var(--pad) - 10px); bottom:calc(16px + env(safe-area-inset-bottom)); border-radius:3px;
+            background:var(--ink); color:#fff; opacity:0; transform:translateY(10px); pointer-events:none;
+            transition:opacity .3s ease, transform .3s cubic-bezier(.2,.8,.2,1), background-color .2s; }}
+  .totop.on {{ opacity:.92; transform:none; pointer-events:auto; }}
+  .totop:hover, .totop:active {{ background:var(--acc-ink); color:#fff; }}
+  .totop:active {{ transform:scale(.94); }}   /* MENU a little nearer the edge (the owner, 2026-10-26) */
   .menu .mb {{ width:40px; height:40px; gap:4px; border-radius:3px; background:var(--acc); }}
   .menu summary:hover .mb, .menu summary:focus-visible .mb {{ background:var(--acc-ink); }}
   .menu .mb i {{ width:17px; }}
@@ -1055,6 +1066,11 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
   .word {{ gap:9px; color:#fff; }}
   .word img {{ width:28px; height:28px; border-radius:24%; outline:1.5px solid rgba(255,255,255,.85); outline-offset:1px; }}
   .word .name {{ font-size:22px; color:#fff; }}
+  .word .nm {{ display:flex; flex-direction:column; }}
+  .word .name {{ line-height:1.05; }}
+  .upd {{ display:block; margin-top:3px; font-family:var(--mono); font-size:9px; line-height:1; letter-spacing:.12em;
+          text-transform:uppercase; color:rgba(255,255,255,.62); }}
+  .upd b {{ margin-left:3px; font-weight:500; letter-spacing:.06em; color:#fff; }}
   .tag {{ display:none; }}
   /* a phone's first screen (the owner, 2026-10-24): the introduction top left in the serif of the first design, the
      issue's date top right, the structure large and past the right edge, the Picked up mark at the bottom left. The
@@ -1062,14 +1078,10 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
   .lead {{ position:relative; overflow:clip; }}
   .lead-grid {{ position:relative; min-height:0; padding-top:46px; padding-bottom:4px; gap:0; align-content:start; }}
   .lead-text {{ display:contents; }}
-  .lead-h, .lead-mark, .lead-badge {{ position:relative; z-index:1; }}
+  .lead-h, .lead-mark {{ position:relative; z-index:1; }}
   .lead-h {{ order:1; padding-left:10px; font-size:clamp(19px, 5.4vw, 24px); line-height:1.6; letter-spacing:.01em; }}   /* the owner's B, 2026-10-26 */
   .lead-h span {{ white-space:normal; word-break:keep-all; }}
   .lead-h .sp {{ display:inline; }}
-  .lead-badge {{ display:block; position:absolute; top:52px; right:var(--pad); margin:0; padding:6px 8px 5px; background:var(--acc);
-                 color:#fff; line-height:1; white-space:nowrap; }}
-  .lead-badge span {{ margin-right:5px; font-family:var(--mono); font-size:9px; letter-spacing:.1em; text-transform:uppercase; }}
-  .lead-badge b {{ font-family:var(--latin); font-size:14px; font-weight:700; letter-spacing:.02em; }}
   .lead-art {{ order:2; position:relative; z-index:0; margin:-22px calc(-1 * var(--pad) - 36vw) 0 calc(-1 * var(--pad) + 2vw);
                pointer-events:none; }}
   .lead-art .lead-cap, .lead-art .lead-upd, .lead-text .lead-upd {{ display:none; }}
@@ -1218,7 +1230,18 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
   .lp-row {{ grid-template-columns:110px minmax(0,1fr); gap:6px 16px; align-items:start; }}
   .lp-row .later {{ grid-column:2; justify-self:start; }}
   .lp-h {{ font-size:16px; }}
-  .art {{ grid-template-columns:minmax(0,1fr); gap:14px; }}
+  /* an article on a phone, in one column in the owner's order (2026-10-26): the number with Read Later beside it, the
+     headline and its supplement, the facts (Target ... Organism), the paper (title, authors, journal, date, licence),
+     then the rest. The margin and text columns give up their boxes so their parts can be put in that order */
+  .art {{ grid-template-columns:minmax(0,1fr) auto; gap:0; align-items:start; }}
+  .art .margin, .art .margin .sticky, .art .text, .art .art-top {{ display:contents; }}
+  .art .text > *, .art .art-top > * {{ grid-column:1 / -1; order:10; }}
+  .art .margin .no {{ grid-column:1; order:1; align-self:center; margin-bottom:0; }}
+  .art .art-top .later {{ grid-column:2; order:2; align-self:center; margin:0; }}
+  .art .art-h {{ order:3; margin-top:18px; }}
+  .art .subhead {{ order:4; }}
+  .art .margin dl {{ grid-column:1 / -1; order:5; margin-top:22px; }}
+  .art .pmeta {{ order:6; margin-top:20px; }}
   .ih-date {{ font-size:56px; }}
   .ih-big .kv {{ font-size:48px; }}
   .ihc-grid {{ grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px 16px; }}
@@ -1241,7 +1264,7 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
   .mail-grid {{ grid-template-columns:minmax(0,1fr); gap:20px; }}
   .pr {{ grid-template-columns:minmax(0,1fr); }}
   .rel li {{ grid-template-columns:minmax(0,1fr); }}
-  .margin .no {{ font-size:52px; margin-bottom:10px; }}
+  .margin .no {{ font-size:52px; }}
   .margin dl {{ display:grid; grid-template-columns:78px minmax(0,1fr); gap:3px 12px; }}
   .margin dt {{ margin-top:0; padding-top:2px; }}
   .margin .pdb {{ display:inline; margin-right:12px; }}
@@ -1331,6 +1354,8 @@ def page(title: str, body: str, depth: int, description: str = DESCRIPTION, noin
             f'<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
             f'<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">'
             f'<style>{CSS}</style></head><body><div class="page">{new_tab(body)}</div>'
+            f'<a class="totop" href="#" aria-label="ページの先頭へ"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true">'
+            f'<path d="M10 16V4M4.5 9.5 10 4l5.5 5.5" fill="none" stroke="currentColor" stroke-width="2"/></svg></a>'
             + (f'<script src="{up}assets/viewer.js" defer></script>' if viewer else "")
             + f'<script>{MENU_SCRIPT}{SEARCH_SCRIPT}{LATER_SCRIPT}{script}</script></body></html>')
 
@@ -1365,8 +1390,15 @@ MENU_SCRIPT = r"""
     head.classList.toggle('away', on);
     document.body.classList.toggle('head-away', on);
   }
+  var totop = document.querySelector('.totop');   // a phone: back to the top, once the first screen is past
+  if (totop) totop.addEventListener('click', function (e) {
+    e.preventDefault();
+    var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, behavior: calm ? 'auto' : 'smooth' });
+  });
   window.addEventListener('scroll', function () {
     var y = window.scrollY, d = y - last;
+    if (totop) totop.classList.toggle('on', y > window.innerHeight * 0.8);
     if (phone.matches) { away(y > head.offsetHeight); last = y; return; }
     if (y < head.offsetHeight && d < 0) jumped = false;   // back at the top by scrolling up (not the first step of a jump down)
     if (y < firstScreen() && !jumped) away(false);
@@ -1673,7 +1705,7 @@ LATER_SCRIPT = r"""
 
 
 # the parts (New Structure, ...) are the first row of Search: eight places and the search do not fit in one row
-NAV = (("latest", "Latest Issue"), ("browse", "Search"), ("back", "Back Issues"), ("news", "Newsletters & Alerts"),
+NAV = (("latest", "Latest Issue"), ("back", "Back Issues"), ("browse", "Search"), ("news", "Newsletters & Alerts"),
        ("about", "About"))
 
 
@@ -1750,10 +1782,19 @@ def masthead(depth: int, right: str = "", search: bool = True, current: str | No
     open_btn = f'<button class="hs-open" type="button" aria-label="記事を探す">{MAGNIFIER}探す</button>' if search else ""
     return (f'<header class="mast"><div class="wrap"><div class="mast-row">'
             f'<div class="brand"><a class="word" href="{up}index.html"><img src="{up}assets/logo-mark.svg" alt="">'
-            f'<span class="name">{esc(brand.SITE_NAME)}</span></a>'
+            f'<span class="nm"><span class="name">{esc(brand.SITE_NAME)}</span>{update_html()}</span></a>'
             f'<p class="tag">{esc(TAGLINE)}</p></div>'
             f'<div class="vol">{right}{open_btn}{menu_html(up)}</div></div></div><div class="rules"></div></header>'
             f'{global_nav(up, current, find)}')
+
+
+def update_html() -> str:
+    """Update yy.mm.dd (the newest issue with articles) under FoldFeed in a phone's header bar (the owner, 2026-10-26:
+    it was a badge on the front page's first screen)."""
+    if not LATEST["date"]:
+        return ""
+    y, m, d, _ = date_parts(LATEST["date"])
+    return f'<span class="upd">Update <b>{y % 100:02d}.{m:02d}.{d:02d}</b></span>'
 
 
 def later_button(pmcid: str, small: bool = False) -> str:
@@ -2006,9 +2047,18 @@ def authors_html(cand: dict) -> str:
     return "".join(rows)
 
 
+def journal_rows(cand: dict) -> str:
+    """After the authors: the journal, the paper's publication date and its licence (the owner, 2026-10-26: they were a
+    line over the headline)."""
+    lic = esc((cand.get("license") or "ライセンス不明").upper())
+    when = esc((cand.get("pub_date") or "").replace("-", "."))
+    return (f'<p class="pj"><span class="pl">Journal</span><span lang="en">{esc(journal_name(cand))}</span></p>'
+            + (f'<p class="pj"><span class="pl">Published</span><span>{when}</span></p>' if when else "")
+            + f'<p class="pj"><span class="pl">License</span><span>{lic}</span></p>')
+
+
 def article_html(cand: dict, pick: dict, date: str, n: int, root: Path, fig_base: str,
                  impact_type: str | None = None, up: str = "../", related: list[dict] | None = None) -> str:
-    lic = esc((cand.get("license") or "ライセンス不明").upper())
     hls = "".join(f'<div class="hl"><p>{esc(h["text"])}</p>{quotes(h.get("evidence"))}</div>'
                   for h in pick["highlights"])
     notes = pick.get("lab_notes") or {}
@@ -2018,12 +2068,10 @@ def article_html(cand: dict, pick: dict, date: str, n: int, root: Path, fig_base
         rows = "".join(f"<div><dt>{esc(k)}</dt><dd>{esc(v)}</dd></div>" for k, v in filled)
         lab = f'<h3>Lab Notes</h3><dl class="lab">{rows}</dl>'   # its quotes are in the data, not on the page
     text = (f'<div class="text">'
-            f'<div class="art-top"><p class="kicker"><b>{esc(cand["journal"] or cand["journal_abbrev"])}</b> · {esc(cand["pub_date"])} · {lic}</p>'
-            f'{later_button(cand["pmcid"])}</div>'
-            f'<h2 class="art-h">{esc(pick["headline"])}</h2>'
+            f'<div class="art-top"><h2 class="art-h">{esc(pick["headline"])}</h2>{later_button(cand["pmcid"])}</div>'
             f'<p class="subhead">{esc(pick.get("subhead") or "")}</p>'
             f'<div class="pmeta"><p class="ptitle"><span class="pl">Paper</span><span lang="en">{esc(cand["title"])}</span></p>'
-            f'{authors_html(cand)}</div>'
+            f'{authors_html(cand)}{journal_rows(cand)}</div>'
             f'{figures_html(cand, pick, date, root, fig_base, up) or no_pdb_note(cand)}'
             f'{intro_html(pick)}{paper_link(cand)}'
             f'<h3>Highlights</h3>{hls}{lab}{related_html(related or [], up)}</div>')
@@ -2280,10 +2328,8 @@ def lead_html(feature: dict | None, picks: list, date: str, root: Path, fig_base
     go += '<a class="lead-about" href="#concept">はじめての方へ：FoldFeed について<span aria-hidden="true">▽</span></a>'
     pf, pp, pdate = pick_from or (feature, picks, date)
     hit = feature_of(pf, pp)
-    # a phone (the owner, 2026-10-24): the introduction top left, in the serif of the first design; the issue's date top
-    # right (Issue of yy.mm.dd); the structure large between; the Picked up mark (Today's Structure, its target) at
-    # the bottom left
-    badge = f'<p class="lead-badge"><span>Issue of</span><b>{y % 100:02d}.{m:02d}.{d:02d}</b></p>'
+    # a phone (the owner, 2026-10-24): the introduction top left, in the serif of the first design; the structure large
+    # under it; the Picked up mark (Today's Structure, its target) at the bottom left. The date is in the header bar
     mark = (f'<a class="lead-mark" href="#today"><span class="k">Picked up</span><b>Today’s Structure</b>'
             f'<span class="t">{esc(hit[2]["target_label"])}'
             + (f'（{date_parts(pdate)[1]}.{date_parts(pdate)[2]:02d} 号から）' if pdate != date else "") + '</span></a>') if hit else ""
@@ -2305,7 +2351,7 @@ def lead_html(feature: dict | None, picks: list, date: str, root: Path, fig_base
                         f'<div class="v3d-canvas"></div><p class="lead-wait" aria-live="polite">読み込み中</p></div></div>{cap}{updated}</div>')
         else:
             art_html = f'<div class="lead-art"><a class="lead-pic" href="#today" tabindex="-1">{img}</a>{cap}{updated}</div>'
-    return (f'<section class="lead"><div class="wrap lead-grid">{badge}<div class="lead-text">'
+    return (f'<section class="lead"><div class="wrap lead-grid"><div class="lead-text">'
             f'<h1 class="lead-h">{lines}</h1>{go}{"" if art_html else updated}</div>{art_html}{mark}</div></section>')
 
 
