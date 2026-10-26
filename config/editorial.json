@@ -1,5 +1,6 @@
 {
   "site_name": "FoldFeed（構造生物学デイリー）",
+  "site_url": "https://shakewakame.github.io/Foldfeed/",
   "review_required": true,
   "cover_all_new_structures": true,
   "note": "新しい構造を報告した論文はすべて記事にする（本数の上限なし）。構造が初めて解かれたタンパク質は New Structure、それ以外の新しい構造（既知のタンパク質の新しい構造、マップのみ、PDB ID が本文にない論文）は Structure Update、既存の構造を使った注目の研究（1 日最大 3 本）は Structure-Based Study。review_required が true の間は、毎日の号を Pull Request として出し、編集者（オーナー）の確認後にマージする。"

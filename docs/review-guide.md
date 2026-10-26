@@ -9,6 +9,7 @@
 ### 最初に一度だけ
 - **確認待ちの一覧**を開いて、ホーム画面に追加する：
   https://shakewakame.github.io/Foldfeed/preview/
+  （独自ドメインに移ったら新しいアドレスで作り直す。`docs/custom-domain.md`）
   - iPhone（Safari）：下の共有ボタン →「ホーム画面に追加」
   - Android（Chrome）：右上のメニュー →「ホーム画面に追加」
 - （任意）GitHub アプリを入れてログインし、通知を許可する。PR ができたときのメンション通知がスマホに届く。
