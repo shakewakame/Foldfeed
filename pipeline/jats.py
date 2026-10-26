@@ -7,6 +7,13 @@ import unicodedata
 import xml.etree.ElementTree as ET
 
 XLINK = "{http://www.w3.org/1999/xlink}href"
+ALI_LICENSE = "{http://www.niso.org/schemas/ali/1.0/}license_ref"
+# a Creative Commons licence: its address, or how a licence paragraph names it ("CC-BY-NC-ND 4.0", "Creative Commons
+# Attribution-NonCommercial 4.0 International")
+CC_URL = re.compile(r"creativecommons\.org/(licenses/(by(?:-nc)?(?:-nd|-sa)?)/(\d\.\d)|publicdomain/zero/1\.0)", re.I)
+CC_SHORT = re.compile(r"\bCC[ -]?(BY(?:[ -](?:NC|ND|SA)){0,2})[ -]?(\d\.\d)\b", re.I)
+CC_WORDS = re.compile(r"Creative\s+Commons\s+(Attribution(?:[\s-]+(?:Non-?Commercial|No-?Deriv(?:ative)?s|Share-?Alike)){0,2})"
+                      r"\D{0,60}?(\d\.\d)", re.I)
 
 # Sections that never help summarise the science.
 SKIP_TITLES = re.compile(
@@ -268,8 +275,52 @@ def parse(xml: str) -> dict:
         "figure_captions": captions,
         "tables": tables,
         "people": people(root),
+        "license_url": license_url(root),
         **ids,
     }
+
+
+def cc_url(kind: str, version: str) -> str:
+    """'by-nc-nd', '4.0' -> the licence's address on creativecommons.org."""
+    return f"https://creativecommons.org/licenses/{kind.lower()}/{version}/"
+
+
+def license_url(root) -> str | None:
+    """The address of the article's Creative Commons licence, from <permissions>: the licence's link (xlink:href,
+    ali:license_ref, a link in its paragraph), else the licence as its paragraph names it. None for any other licence
+    (a publisher's own terms) or when the version is not stated."""
+    for lic in root.iter("license"):
+        texts = [lic.get(XLINK, "")] + [_text(x) for x in lic.iter(ALI_LICENSE)] + [x.get(XLINK, "") for x in lic.iter("ext-link")]
+        for t in texts:
+            m = CC_URL.search(t or "")
+            if m:
+                return (cc_url(m.group(2), m.group(3)) if m.group(2)
+                        else "https://creativecommons.org/publicdomain/zero/1.0/")
+        words = _text(lic)
+        m = CC_URL.search(words)   # the address written out in the paragraph
+        if m:
+            return (cc_url(m.group(2), m.group(3)) if m.group(2)
+                    else "https://creativecommons.org/publicdomain/zero/1.0/")
+        m = CC_SHORT.search(words)
+        if m:
+            return cc_url(re.sub(r"[ -]+", "-", m.group(1)), m.group(2))
+        m = CC_WORDS.search(words)
+        if m:
+            name = m.group(1).lower()
+            kind = "by" + ("-nc" if "commercial" in name else "") + ("-nd" if "deriv" in name else "") \
+                + ("-sa" if "share" in name else "")
+            return cc_url(kind, m.group(2))
+        if re.search(r"\bCC0\b|publicdomain/zero", words):
+            return "https://creativecommons.org/publicdomain/zero/1.0/"
+    return None
+
+
+def license_label(url: str) -> str:
+    """'https://creativecommons.org/licenses/by-nc-nd/4.0/' -> 'CC BY-NC-ND 4.0'."""
+    m = CC_URL.search(url)
+    if not m:
+        return url
+    return f"CC {m.group(2).upper()} {m.group(3)}" if m.group(2) else "CC0 1.0"
 
 
 def extract_ids(root, data_availability: str, sections: list[dict]) -> dict:

@@ -363,7 +363,8 @@
             "aff": "Harvard Medical School, USA"
           }
         ]
-      }
+      },
+      "license_url": null
     },
     {
       "pmcid": "PMC13657631",
@@ -579,7 +580,8 @@
             "aff": "University of California San Francisco, United States"
           }
         ]
-      }
+      },
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "pmcid": "PMC13657355",
@@ -689,7 +691,8 @@
             "aff": "Center for Molecular Biology of Heidelberg University (ZMBH), Germany"
           }
         ]
-      }
+      },
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "pmcid": "PMC13655128",
@@ -1162,7 +1165,8 @@
             "aff": "WEL Research Institute, Belgium"
           }
         ]
-      }
+      },
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
     },
     {
       "pmcid": "PMC13653941",
@@ -1323,7 +1327,8 @@
             "aff": "Okinawa Institute of Science and Technology Graduate University, Japan"
           }
         ]
-      }
+      },
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
     },
     {
       "pmcid": "PMC13655263",

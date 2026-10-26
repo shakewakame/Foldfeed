@@ -301,7 +301,8 @@
           "first_structure": false
         }
       ],
-      "score": 88
+      "score": 88,
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
     },
     {
       "pmcid": "PMC13681716",
@@ -417,7 +418,8 @@
           "first_structure": true
         }
       ],
-      "score": 87
+      "score": 87,
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
     },
     {
       "pmcid": "PMC13681662",
@@ -1168,7 +1170,8 @@
           "first_structure": true
         }
       ],
-      "score": 85
+      "score": 85,
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
     },
     {
       "pmcid": "PMC13681685",
@@ -1441,7 +1444,8 @@
           "first_structure": true
         }
       ],
-      "score": 85
+      "score": 85,
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
     },
     {
       "pmcid": "PMC13681512",
@@ -1660,7 +1664,8 @@
           "first_structure": false
         }
       ],
-      "score": 58
+      "score": 58,
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
     },
     {
       "pmcid": "PMC13681632",
@@ -1771,7 +1776,8 @@
           "first_structure": false
         }
       ],
-      "score": 56
+      "score": 56,
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
     },
     {
       "pmcid": "PMC13681648",
@@ -1873,7 +1879,8 @@
         ]
       },
       "proteins": [],
-      "score": 55
+      "score": 55,
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
     },
     {
       "pmcid": "SN-s41586-026-11184-1",
@@ -2044,7 +2051,8 @@
           "first_structure": false
         }
       ],
-      "score": 53
+      "score": 53,
+      "license_url": null
     },
     {
       "pmcid": "PMC13681510",
@@ -2279,7 +2287,8 @@
           "first_structure": false
         }
       ],
-      "score": 53
+      "score": 53,
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
     },
     {
       "pmcid": "PMC13681652",
@@ -2466,7 +2475,8 @@
           "first_structure": false
         }
       ],
-      "score": 53
+      "score": 53,
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
     },
     {
       "pmcid": "PMC13681568",
@@ -2565,7 +2575,8 @@
           "first_structure": false
         }
       ],
-      "score": 51
+      "score": 51,
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
     },
     {
       "pmcid": "PMC13681533",
@@ -2664,7 +2675,8 @@
           "first_structure": false
         }
       ],
-      "score": 51
+      "score": 51,
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
     },
     {
       "pmcid": "PMC13681189",
@@ -4338,7 +4350,8 @@
           "organism": "Bos taurus"
         }
       ],
-      "score": 5
+      "score": 5,
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "pmcid": "PMC13680313",

@@ -401,7 +401,8 @@
             "aff": "University of Oxford, UK"
           }
         ]
-      }
+      },
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "pmcid": "PMC13658822",
@@ -686,7 +687,8 @@
             "aff": "Lausanne University Hospital and University of Lausanne, Switzerland"
           }
         ]
-      }
+      },
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "pmcid": "PMC13660411",

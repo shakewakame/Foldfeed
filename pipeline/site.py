@@ -29,7 +29,7 @@ import sys
 import unicodedata
 from pathlib import Path
 
-from . import brand, impact, pmcoa, render
+from . import brand, impact, jats, pmcoa, render
 from .common import ISSUES_DIR, ROOT, read_json
 from .schema import CATEGORIES, FEATURE_AXES, FEATURE_MIN, LAB_NOTE_FIELDS, SUMMARY_FIELDS, SUMMARY_OPTIONAL, TOPICS
 
@@ -185,6 +185,8 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .ppl .pa {{ font-size:13.5px; color:var(--mute); }}
 .ppl .ja {{ font-family:var(--sans); }}
 .pj {{ font-size:14.5px; color:var(--ink2); }}
+.pj a {{ color:var(--ink2); text-decoration:underline; text-decoration-color:var(--hair); text-underline-offset:3px; }}
+.pj a:hover {{ color:var(--acc-ink); text-decoration-color:var(--acc); }}
 .art-4 {{ margin-top:22px; }}
 .nopdb {{ margin:0 0 8px; padding:10px 16px; border-left:3px solid var(--acc); font-size:15px; line-height:1.8; color:var(--ink2); }}
 .art .reads {{ margin-top:22px; }}
@@ -292,6 +294,21 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .co-bot a {{ color:var(--desc); }}
 .co-bot a:hover {{ color:var(--acc-ink); }}
 .co-beta {{ font-family:var(--mono); font-size:11.5px; letter-spacing:.06em; }}
+/* a page of text (Privacy Policy, 特定商取引法に基づく表示): one readable column */
+.doc .doc-lead, .doc .doc-sec, .doc .doc-date {{ max-width:760px; }}   /* left, under the heading, as the other pages */
+.doc-lead {{ margin:0 0 8px; font-size:16px; line-height:1.9; color:var(--ink); }}
+.doc-sec {{ margin-top:40px; }}
+.doc-sec h2 {{ margin:0 0 12px; font-family:var(--sans); font-size:17px; font-weight:700; color:var(--ink); }}
+.doc-sec p {{ margin:0; font-size:15px; line-height:1.9; color:var(--ink2); }}
+.doc-sec p + p, .doc-sec .bl + p {{ margin-top:12px; }}
+.doc-sec .bl {{ margin:12px 0 0; font-size:15px; line-height:1.8; color:var(--ink2); }}
+.doc-dl {{ margin:0; }}
+.doc-dl div {{ display:grid; grid-template-columns:200px minmax(0,1fr); gap:6px 24px; padding:14px 0; border-top:1px solid var(--hair); }}
+.doc-dl div:last-child {{ border-bottom:1px solid var(--hair); }}
+.doc-dl dt {{ font-size:14.5px; font-weight:700; color:var(--ink2); }}
+.doc-dl dd {{ margin:0; font-size:14.5px; line-height:1.8; color:var(--ink2); }}
+.doc-dl .todo {{ color:var(--mute); }}
+.doc-date {{ margin:48px 0 0; font-size:13px; color:var(--mute); }}
 
 
 /* the front page: the day's pick fills the first screen on the page ground, closed by a heavy rule */
@@ -1110,6 +1127,7 @@ a.ib.next:hover .ar {{ transform:translateX(4px); }}
   .about-dl .bl {{ font-size:14.5px; }}
   .co-nav {{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:14px 20px; width:100%; padding-top:0; }}
   .co-bot p {{ flex-basis:100%; }}
+  .doc-dl div {{ grid-template-columns:minmax(0,1fr); gap:2px; }}
   /* the way from Concept to the pick on the same page (the owner, 2026-10-26) */
   .concept-go {{ display:block; margin:40px 0 0; }}
   .concept-go .ix-all {{ display:flex; justify-content:space-between; }}
@@ -1814,13 +1832,15 @@ def shell(main: str, side: str, sticky: bool = False) -> str:
 
 def colophon(extra: str = "", up: str = "") -> str:
     """The footer: the name and what the site is (as in the header), the places of the navigation and Read Later, then
-    one quiet line: β版, the way to 著作権と出典 and, on a page made from PMC's data, its credit. How the articles are made
+    one quiet line: β版, the ways to 著作権と出典, the privacy policy and 特定商取引法に基づく表示 and, on a page made from
+    PMC's data, its credit. How the articles are made
     is told in About FoldFeed."""
     links = "".join(f'<a href="{h}">{esc(t)}</a>' for t, h, _ in nav_links(up)) + f'<a href="{up}later.html">Read Later</a>'
     return (f'<footer class="colo"><div class="wrap colophon"><div class="co-top">'
             f'<div class="co-brand"><a class="co-word" href="{up}index.html">{esc(brand.SITE_NAME)}</a>'
             f'<p>{esc(TAGLINE)}</p></div><nav class="co-nav" aria-label="サイト内のページ">{links}</nav></div>'
-            f'<div class="co-bot"><span class="co-beta">β版</span><a href="{up}about.html#rights">著作権と出典</a>{extra}</div>'
+            f'<div class="co-bot"><span class="co-beta">β版</span><a href="{up}about.html#rights">著作権と出典</a>'
+            f'<a href="{up}privacy.html">プライバシーポリシー</a><a href="{up}tokushoho.html">特定商取引法に基づく表示</a>{extra}</div>'
             f'</div></footer>')
 
 
@@ -2050,7 +2070,9 @@ def authors_html(cand: dict) -> str:
 def journal_rows(cand: dict) -> str:
     """After the authors: the journal, the paper's publication date and its licence (the owner, 2026-10-26: they were a
     line over the headline)."""
-    lic = esc((cand.get("license") or "ライセンス不明").upper())
+    url = cand.get("license_url")   # a Creative Commons licence: its name and version, linked to its text
+    lic = (f'<a href="{esc(url)}" rel="license">{esc(jats.license_label(url))}</a>' if url
+           else esc((cand.get("license") or "ライセンス不明").upper()))
     when = esc((cand.get("pub_date") or "").replace("-", "."))
     return (f'<p class="pj"><span class="pl">Journal</span><span lang="en">{esc(journal_name(cand))}</span></p>'
             + (f'<p class="pj"><span class="pl">Published</span><span>{when}</span></p>' if when else "")
@@ -2660,7 +2682,7 @@ ABOUT = (   # About FoldFeed, in polite Japanese (the owner's wording, 2026-10-1
      "FoldFeed では、|構造生物学の論文を|以下のように分類し、|ご紹介しています。",
      (("new", "構造が初めて解かれた|タンパク質の論文"),
       ("update", "既に構造がある|タンパク質の新しい構造|（別の構造状態や複合体など）の論文"),
-      ("impact", "そのほか、|既存の構造を使って|仕組みの解明や創薬に迫った|注目の研究論文|（1 日 3 本まで）"),
+      ("impact", "既存の構造を使って|仕組みの解明や創薬に迫った|注目の研究論文|（1 日 3 本まで）"),
       "PDB ID を|本文から確かめられない論文は、|構造図なしでの|紹介になります。")),
     ("掲載のタイミング",
      "論文は、|論文データベースに登録された|翌日にご紹介します。",
@@ -2901,6 +2923,75 @@ def newsletter_page() -> str:
             '</div></div></div>')
     return page(f"Newsletters & Alerts · {brand.SITE_NAME}", masthead(0, current="news") + main + colophon(), depth=0,
                 description="FoldFeed のメール配信とアラート（準備中）。")
+
+
+LEGAL = ROOT / "config" / "legal.json"   # the operator's details for the two pages below (empty until the owner fills them)
+
+
+def doc_page(title: str, lead: str, sections: list[tuple[str, str]], file: str, description: str, foot: str = "") -> str:
+    """A page of text (Privacy Policy, 特定商取引法に基づく表示): a lead, then headed sections."""
+    body = "".join(f'<section class="doc-sec"><h2>{esc(h)}</h2>{html_}</section>' for h, html_ in sections)
+    main = (f'<div class="wrap list-page doc"><div class="ix-h"><h1 class="label">{esc(title)}</h1></div>'
+            f'<p class="doc-lead">{lead}</p>{body}{foot}</div>')
+    return page(f"{title} · {brand.SITE_NAME}", masthead(0) + main + colophon(), depth=0, description=description)
+
+
+def legal_info() -> dict:
+    return read_json(LEGAL) if LEGAL.exists() else {"tokushoho": {}}
+
+
+def established(info: dict) -> str:
+    y, m, d, _ = date_parts(info.get("established") or "2026-10-26")
+    return f"{y}年{m}月{d}日"
+
+
+def privacy_page() -> str:
+    """privacy.html (the owner's request, 2026-10-22): what the site does with its readers' information, as it is now —
+    no accounts, no cookies, no analytics; Read Later stays in the browser; the outside services the pages load from.
+    To be revised before newsletters, analytics or advertising start."""
+    info = legal_info()
+    contact = esc(info.get("contact") or "") or "準備中です（About に掲載します）。"
+    li = lambda *xs: '<ul class="bl">' + "".join(f"<li>{x}</li>" for x in xs) + "</ul>"
+    sections = [
+        ("取得する情報",
+         "<p>FoldFeed は、会員登録・お問い合わせフォーム・メールの登録などで、氏名やメールアドレスなどの個人情報を取得していません。"
+         "Cookie を使っておらず、アクセス解析も行っていません。</p>"),
+        ("ブラウザの中に保存する情報",
+         "<p>「後で読む」で保存した記事の一覧は、お使いのブラウザの中（localStorage）だけに保存され、FoldFeed や第三者には送信されません。"
+         "ブラウザのデータを消すと、一覧も消えます。「後で読む」のページでコピーできるリンクには、保存した記事の番号が含まれます。</p>"),
+        ("外部のサービス",
+         "<p>ページの表示のために、次のサービスから文字のデータや構造のデータを読み込みます。そのとき、お使いのブラウザから各サービスへ、"
+         "IP アドレスやブラウザの種類などが送られます。各サービスでの扱いは、それぞれのプライバシーポリシーによります。</p>"
+         + li("GitHub Pages（GitHub, Inc.）：このサイトの配信",
+              "Google Fonts（Google LLC）：文字（フォント）の表示",
+              "RCSB PDB：3D ビューアで表示する構造の座標")
+         + "<p>記事には、出版社・Europe PMC・PDB・UniProt などへのリンクがあります。リンク先での情報の扱いは、各サイトの方針によります。</p>"),
+        ("この方針の変更",
+         "<p>メールの配信、アクセス解析、広告などを始めるときは、取得する情報・利用の目的・第三者への提供の有無をこのページに書き、"
+         "始める前に改定します。</p>"),
+        ("お問い合わせ", f"<p>{contact}</p>"),
+    ]
+    foot = f'<p class="doc-date">{established(info)} 制定</p>'
+    return doc_page("Privacy Policy", "FoldFeed（以下「このサイト」）での、利用者の情報の扱いについて定めます。", sections,
+                    "privacy.html", "FoldFeed のプライバシーポリシー。", foot)
+
+
+TOKUSHOHO_TODO = "有料サービスの開始時に掲載します"
+
+
+def tokushoho_page() -> str:
+    """tokushoho.html (the owner's request, 2026-10-22; needed once anything is sold): FoldFeed sells nothing yet, so
+    the page says so and lists what it will show; the values come from config/legal.json."""
+    info = legal_info()
+    rows = "".join(f'<div><dt>{esc(k)}</dt><dd>{esc(v) if v else f"<span class=todo>{TOKUSHOHO_TODO}</span>"}</dd></div>'
+                   for k, v in (info.get("tokushoho") or {}).items())
+    selling = any((info.get("tokushoho") or {}).values())
+    lead = ("特定商取引法に基づき、有料サービスについて次のとおり表示します。" if selling else
+            "現在、FoldFeed は有料の商品・サービスを提供していません。有料のサービスを始めるときに、"
+            "特定商取引法に基づき、次の事項をこのページに表示します。")
+    main = [("表示する事項", f'<dl class="doc-dl">{rows}</dl>')]
+    return doc_page("特定商取引法に基づく表示", lead, main, "tokushoho.html", "FoldFeed の特定商取引法に基づく表示。",
+                    f'<p class="doc-date">{established(info)} 制定</p>')
 
 
 def browse_html(lib: list[dict]) -> str:
@@ -3301,6 +3392,8 @@ def build(preview_root: Path | None = None) -> int:
     (SITE_DIR / "later.html").write_text(later_page(), encoding="utf-8")
     (SITE_DIR / "issues.html").write_text(issues_page(issues), encoding="utf-8")
     (SITE_DIR / "newsletter.html").write_text(newsletter_page(), encoding="utf-8")
+    (SITE_DIR / "privacy.html").write_text(privacy_page(), encoding="utf-8")
+    (SITE_DIR / "tokushoho.html").write_text(tokushoho_page(), encoding="utf-8")
     (SITE_DIR / "about.html").write_text(about_page(issues, lib), encoding="utf-8")
     for key, name in PART_PAGES.items():
         (SITE_DIR / name).write_text(part_page(key, issues), encoding="utf-8")

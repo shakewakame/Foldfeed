@@ -271,7 +271,8 @@
           "first_structure": true
         }
       ],
-      "score": 95
+      "score": 95,
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "pmcid": "PMC13683441",
@@ -382,7 +383,8 @@
           "first_structure": false
         }
       ],
-      "score": 87
+      "score": 87,
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "pmcid": "PMC13684180",
@@ -516,7 +518,8 @@
           "first_structure": true
         }
       ],
-      "score": 87
+      "score": 87,
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "pmcid": "PMC13683372",
@@ -1302,7 +1305,8 @@
           "first_structure": false
         }
       ],
-      "score": 85
+      "score": 85,
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "pmcid": "PMC13686013",
@@ -1660,7 +1664,8 @@
           "first_structure": false
         }
       ],
-      "score": 63
+      "score": 63,
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "pmcid": "PMC13683432",
@@ -1829,7 +1834,8 @@
           "first_structure": false
         }
       ],
-      "score": 58
+      "score": 58,
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "pmcid": "PMC13683342",
@@ -1912,7 +1918,8 @@
           "first_structure": false
         }
       ],
-      "score": 56
+      "score": 56,
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "pmcid": "PMC13683344",
@@ -2186,7 +2193,8 @@
           "first_structure": false
         }
       ],
-      "score": 52
+      "score": 52,
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "pmcid": "PMC13683624",
@@ -2278,7 +2286,8 @@
         ]
       },
       "proteins": [],
-      "score": 51
+      "score": 51,
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "pmcid": "PMC13683386",
@@ -2351,7 +2360,8 @@
         ]
       },
       "proteins": [],
-      "score": 51
+      "score": 51,
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "pmcid": "PMC13684271",
@@ -2395,7 +2405,8 @@
         ]
       },
       "proteins": [],
-      "score": 51
+      "score": 51,
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "pmcid": "PMC13604635",
@@ -2429,7 +2440,8 @@
         ]
       },
       "proteins": [],
-      "score": 40
+      "score": 40,
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "pmcid": "PMC13683389",
@@ -2470,7 +2482,8 @@
         ]
       },
       "proteins": [],
-      "score": 35
+      "score": 35,
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "pmcid": "PMC13604265",
@@ -2761,7 +2774,8 @@
           "organism": "Homo sapiens"
         }
       ],
-      "score": 5
+      "score": 5,
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
     },
     {
       "pmcid": "PMC13605298",
@@ -4084,7 +4098,8 @@
           "organism": "Homo sapiens"
         }
       ],
-      "score": 5
+      "score": 5,
+      "license_url": "https://creativecommons.org/licenses/by-nc/4.0/"
     },
     {
       "pmcid": "PMC13683209",
@@ -6386,7 +6401,8 @@
           "organism": "Rattus norvegicus"
         }
       ],
-      "score": 5
+      "score": 5,
+      "license_url": null
     },
     {
       "pmcid": "PMC13603264",

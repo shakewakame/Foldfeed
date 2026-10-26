@@ -142,7 +142,8 @@
           "first_structure": true
         }
       ],
-      "score": 82
+      "score": 82,
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "pmcid": "PMC13687542",
@@ -339,7 +340,8 @@
           "first_structure": false
         }
       ],
-      "score": 82
+      "score": 82,
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "pmcid": "PMC13686013",
@@ -820,7 +822,8 @@
           "first_structure": false
         }
       ],
-      "score": 62
+      "score": 62,
+      "license_url": "https://creativecommons.org/licenses/by/3.0/"
     },
     {
       "pmcid": "PMC13690239",
@@ -1022,7 +1025,8 @@
         ]
       },
       "proteins": [],
-      "score": 59
+      "score": 59,
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "pmcid": "PMC13684649",
@@ -1086,7 +1090,8 @@
         ]
       },
       "proteins": [],
-      "score": 54
+      "score": 54,
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "pmcid": "PMC13687550",
@@ -1346,7 +1351,8 @@
           "first_structure": false
         }
       ],
-      "score": 54
+      "score": 54,
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
     },
     {
       "pmcid": "PMC13686949",
@@ -1459,7 +1465,8 @@
           "first_structure": false
         }
       ],
-      "score": 52
+      "score": 52,
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "pmcid": "PMC13688729",
@@ -1689,7 +1696,8 @@
         ]
       },
       "proteins": [],
-      "score": 51
+      "score": 51,
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
     },
     {
       "pmcid": "PMC13684551",
@@ -1730,7 +1738,8 @@
         ]
       },
       "proteins": [],
-      "score": 40
+      "score": 40,
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
     },
     {
       "pmcid": "PMC13686963",
@@ -1772,7 +1781,8 @@
         ]
       },
       "proteins": [],
-      "score": 35
+      "score": 35,
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "pmcid": "PMC13689815",
@@ -2885,7 +2895,8 @@
           "organism": "Severe acute respiratory syndrome coronavirus 2"
         }
       ],
-      "score": 5
+      "score": 5,
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "pmcid": "PMC13683633",
@@ -5953,7 +5964,8 @@
           "organism": "Severe acute respiratory syndrome coronavirus 2"
         }
       ],
-      "score": 5
+      "score": 5,
+      "license_url": null
     },
     {
       "pmcid": "PMC13690249",
@@ -11664,7 +11676,8 @@
           "organism": "Pyrococcus furiosus (strain ATCC 43587 / DSM 3638 / JCM 8422 / Vc1)"
         }
       ],
-      "score": 5
+      "score": 5,
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
     },
     {
       "pmcid": "PMC13688573",

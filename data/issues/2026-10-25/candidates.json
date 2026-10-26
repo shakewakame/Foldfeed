@@ -135,7 +135,8 @@
           "first_structure": true
         }
       ],
-      "score": 92
+      "score": 92,
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
     },
     {
       "pmcid": "PMC13691371",
@@ -355,7 +356,8 @@
           "first_structure": false
         }
       ],
-      "score": 89
+      "score": 89,
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "pmcid": "PMC13690257",
@@ -623,7 +625,8 @@
         ]
       },
       "proteins": [],
-      "score": 35
+      "score": 35,
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "pmcid": "PMC13688107",
@@ -1012,7 +1015,8 @@
           "organism": "Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)"
         }
       ],
-      "score": 5
+      "score": 5,
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "pmcid": "PMC13691223",

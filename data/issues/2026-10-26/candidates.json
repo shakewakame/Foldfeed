@@ -997,7 +997,8 @@
           "organism": "Homo sapiens"
         }
       ],
-      "score": 5
+      "score": 5,
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
     },
     {
       "pmcid": "PMC13694986",
