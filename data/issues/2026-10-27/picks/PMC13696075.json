@@ -1,0 +1,162 @@
+{
+ "pmcid": "PMC13696075",
+ "rank": 2,
+ "headline": "DciAは、DnaBの輪を楔のように割って開く",
+ "subhead": "DnaBとDciAの複合体を3.5 Åのクライオ電顕で解析。1本のN末端ドメインが輪の切れ目に入り込む",
+ "target_label": "DnaB・DciA（コレラ菌）",
+ "target_en": "DnaB–DciA (V. cholerae)",
+ "method_label": "Cryo-EM・3.5 Å",
+ "summary": {
+  "question": "DNAをほどく輪状の酵素DnaBを、DciAがどう開いて装填するのかは分かっていなかった。",
+  "approach": "コレラ菌のDnaB・DciA複合体をクライオ電顕で解析し、DciAの断片や変異体で機能を調べた。",
+  "result": "3.5 Åの構造で、DnaBは切れ目を1か所もつ右巻きの開いた螺旋になり、約16 Åの隙間ができていた。",
+  "learned": "DciAのC末端が輪の外側で土台になり、N末端ドメインの1つが切れ目に入って、輪を開いた状態に保つ。",
+  "open": "ヘリカーゼがDNAに載った後、DciAがいつ外れるのかは分かっていない。",
+  "evidence": {
+   "question": [
+    {
+     "quote": "In bacteria, most species lack canonical AAA+ helicase loaders and instead rely on DciA, an evolutionarily conserved, ATP-independent factor whose mechanism has remained unclear.",
+     "section": "Abstract"
+    },
+    {
+     "quote": "How this ancestral factor remodels the DnaB hexamer and whether its distinct domains contribute differentially to efficient helicase deposition remain unknown.",
+     "section": "Introduction"
+    }
+   ],
+   "approach": [
+    {
+     "quote": "Here we address these questions using the V. cholerae DnaB–DciA system.",
+     "section": "Introduction"
+    },
+    {
+     "quote": "To investigate the respective contributions of the two DciA domains to helicase regulation we produced separate N-terminal and C-terminal constructs",
+     "section": "Results"
+    }
+   ],
+   "result": [
+    {
+     "quote": "The helicase adopts a right-handed, open-helical arrangement in which one subunit interface is disrupted in both the N-terminal and C-terminal tiers",
+     "section": "Results"
+    },
+    {
+     "quote": "A 3.5 Å cryo-EM structure reveals a DnaB6·DciA3 complex in which DciA binds the periphery of the helicase and stabilizes a right-handed open-helical conformation with a single cracked interface.",
+     "section": "Abstract"
+    }
+   ],
+   "learned": [
+    {
+     "quote": "one N-terminal domain (NTD) engages the cracked interface, occupying the pocket vacated by the displaced linker helix and acting as a wedge to promote ring opening",
+     "section": "Abstract"
+    }
+   ],
+   "open": [
+    {
+     "quote": "Whether DciA dissociates before, during or after this process remains unknown.",
+     "section": "Discussion"
+    }
+   ]
+  }
+ },
+ "categories": [
+  "enzyme",
+  "nucleic"
+ ],
+ "topics": [
+  "dynamics"
+ ],
+ "highlights": [
+  {
+   "tag": "機構の解明",
+   "text": "DciAの3分子は、1つおきのリンカーヘリックス・ドッキングヘリックスの対に結合する。うち1分子のN末端ドメインが、はずれたリンカーヘリックスの跡に入り、輪を割る楔になる。",
+   "evidence": [
+    {
+     "quote": "Three DciA molecules dock onto alternate linker-helix/docking-helix modules, while one N-terminal domain (NTD) engages the cracked interface, occupying the pocket vacated by the displaced linker helix and acting as a wedge to promote ring opening.",
+     "section": "Abstract"
+    }
+   ]
+  },
+  {
+   "tag": "機構の解明",
+   "text": "大腸菌のDnaCやファージλのPが作る開いた形と、DnaBの構造がよく一致した。配列も構造も無関係な因子が、同じ継ぎ目に短いヘリックスを差し込んで輪を開く。",
+   "evidence": [
+    {
+     "quote": "The open-helical architecture closely matches that of E. coli DnaB bound to either DnaC or the phage λ loader P",
+     "section": "Results"
+    },
+    {
+     "quote": "Although unrelated in sequence and structure, DnaC, λP and DciA exploit the same mechanical gateway of DnaB.",
+     "section": "Discussion"
+    }
+   ]
+  },
+  {
+   "tag": "実験Tips",
+   "text": "断片で調べると役割が分かれた。ATP分解の抑制は主にN末端側が担い、C末端側だけでは装填できなかった。N末端の変異T9E/I13Eでは装填活性が下がった。",
+   "evidence": [
+    {
+     "quote": "These data indicate that ATPase suppression is primarily mediated by the N-terminal region of DciA",
+     "section": "Results"
+    },
+    {
+     "quote": "whereas the isolated C-terminal fragment was completely inactive",
+     "section": "Results"
+    },
+    {
+     "quote": "These findings support a specific role for residues T9 and I13 in the function of the N-terminal wedge during helicase loading.",
+     "section": "Results"
+    }
+   ]
+  }
+ ],
+ "lab_notes": {
+  "expression": "コレラ菌のdnaBをC41株、dciAをBL21 codon-plus (DE3) RIL株の大腸菌で発現した。",
+  "construct": "DnaBはC末端にTEV切断可能なMBP-His6タグ、DciAはN末端にHis6-MBP-TEVタグを付けた。",
+  "purification": "Ni-Sepharose、TEV処理、再度のNiカラムの後、DnaBはSuperdex S200でゲルろ過した。",
+  "sample_prep": "DnaBとDciAをモル比1:1.5で混合し、薄いカーボン膜つきのQuantifoil金グリッドに載せて凍結した。",
+  "data_collection": "Krios G4で撮影した4507枚の動画をRELION-5.0で処理し、3.5 Åのマップを得た。",
+  "evidence": [
+   {
+    "quote": "The plasmid was then transformed into a C41 E. coli strain",
+    "section": "Methods"
+   },
+   {
+    "quote": "The plasmid was then transformed into a BL21 codon-plus (DE3) RIL E. coli strain",
+    "section": "Methods"
+   },
+   {
+    "quote": "cloned into a pET-derived vector encoding a C-terminal Tobacco Etch Virus (TEV)-cleavable MBP-His6 tag (2CcT vector)",
+    "section": "Methods"
+   },
+   {
+    "quote": "cloned into a pET derived vector behind an N-terminal His6-MBP-TEV protease cleavage sequence tag (1C vector)",
+    "section": "Methods"
+   },
+   {
+    "quote": "applied to a Superdex S200 gel filtration column (Cytiva)",
+    "section": "Methods"
+   },
+   {
+    "quote": "DnaB was mixed with DciA at a 1:1.5 molar ratio and diluted into buffer",
+    "section": "Methods"
+   },
+   {
+    "quote": "applied to glow-discharged Quantifoil Gold 2/1, 300 mesh grids coated with a second layer of homemade thin continuous carbon",
+    "section": "Methods"
+   },
+   {
+    "quote": "A total of 4507 movies were imported into RELION-5.0",
+    "section": "Methods"
+   },
+   {
+    "quote": "resulting in the final 3.5 Å-resolution map",
+    "section": "Methods"
+   }
+  ]
+ },
+ "keywords": [
+  "DnaB",
+  "DciA",
+  "ヘリカーゼ"
+ ],
+ "editor_notes": "PDB 9TZF は未公開のため構造図なし。同じ DnaB・DciA の既報（閉じた環の結晶構造）があるが、本論文は開いた環の初のクライオ電顕構造とは明言していないので「初」とは書いていない。原文は CC BY-NC。"
+}
