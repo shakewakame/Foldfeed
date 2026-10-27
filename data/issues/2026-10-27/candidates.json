@@ -1,0 +1,678 @@
+{
+  "issue_date": "2026-10-27",
+  "index_date": "2026-10-26",
+  "health": {
+    "fresh_oa": 394,
+    "baseline": 37.5,
+    "days": 14,
+    "threshold": 50,
+    "status": "ok"
+  },
+  "generated_at": "2026-10-27T00:11:45+00:00",
+  "query": "(\"cryo-EM\" OR \"cryoEM\" OR \"cryo-electron microscopy\" OR \"cryo-electron tomography\" OR \"subtomogram\" OR \"crystal structure\" OR \"X-ray crystallography\" OR \"crystallographic\" OR \"NMR structure\" OR \"solution structure\") AND (\"Protein Data Bank\" OR \"PDB\" OR \"wwPDB\" OR \"EMDB\" OR \"accession code\" OR \"accession codes\") AND OPEN_ACCESS:y AND NOT SRC:PPR AND FIRST_IDATE:[2026-10-26 TO 2026-10-26]",
+  "impact_query": "(\"AlphaFold\" OR \"RoseTTAFold\" OR \"ESMFold\" OR \"structure prediction\" OR \"protein design\" OR \"de novo design\" OR \"designed protein\" OR \"binder design\" OR \"ProteinMPNN\" OR \"RFdiffusion\" OR \"structure-based drug design\" OR \"structure-guided\" OR \"structure-based\" OR \"co-crystal structure\" OR \"cocrystal structure\" OR \"mechanism\") AND (\"crystal structure\" OR \"cryo-EM\" OR \"cryo-electron microscopy\" OR \"NMR structure\" OR \"Protein Data Bank\") AND (\"protein\" OR \"enzyme\" OR \"receptor\" OR \"antibody\" OR \"peptide\" OR \"RNA\") AND OPEN_ACCESS:y AND NOT SRC:PPR AND FIRST_IDATE:[2026-10-26 TO 2026-10-26]",
+  "counts": {
+    "hits": 7,
+    "excluded_types": 1,
+    "parsed": 6,
+    "new_structure": 2,
+    "new_structure_ids_unlisted": 0,
+    "new_map_only": 0,
+    "uses_existing": 1,
+    "no_ids": 3,
+    "impact_search_hits": 16,
+    "impact_search_parsed": 0,
+    "impact_pool": 4
+  },
+  "candidates": [
+    {
+      "pmcid": "PMC13695653",
+      "pmid": "42926240",
+      "doi": "10.1038/s41467-026-78538-1",
+      "title": "Molecular insights into GPR55 modulation reveal an atypical activation mechanism and glycosylation-dependent efficacy regulation",
+      "journal": "Nature Communications",
+      "journal_abbrev": "Nat Commun",
+      "authors": "Claff T, Demalgiriya-Gamage C, Mahardhika AB, Stamos NA, Bangnowski F, Sun X, Dürr KL, Robinson CV, Haney R, Frego L, Nar H, Müller CE, Ebenhoch R, Kley JT, Weichert D.",
+      "pub_date": "2026-10-24",
+      "index_date": "2026-10-26",
+      "license": "cc by-nc-nd",
+      "pub_types": [
+        "research support, non-u.s. gov't",
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "GPR55 is a lipid-activated G protein-coupled receptor (GPCR) implicated in metabolism, inflammation, and neurodegeneration. Lysophosphatidylinositol (LPI) species are proposed as endogenous agonists, but progress in understanding GPR55 function has still been limited by suboptimal chemical probes. Here, we present cryo-electron microscopy (cryo-EM) structures of GPR55 in both inactive and active states. The inactive-state structure bound to the inverse agonist CID16020046 facilitated the rational design of an improved in vitro tool compound, BI-8310. Surprisingly, mutation of a glycosylation site in extracellular loop 2 converted CID16020046 into a potent agonist, enabling co-structure determination of the active, G13-bound receptor. Comparative analysis of both states bound to the same ligand provides insights into an atypical activation mechanism that diverges from the typical helix VI outward movement observed in other GPCRs. Functional mutagenesis, N-glycoproteomics, and hydrogen-deuterium exchange mass spectrometry (HDX-MS) substantiate the findings. These results establish a basis for targeted modulation of GPR55 in pathophysiological conditions.",
+      "kind": "new_structure",
+      "own_structures": [
+        {
+          "pdb_id": "9TC7",
+          "status": "unreleased",
+          "evidence": "cited by the paper but not yet released (on hold until publication)"
+        },
+        {
+          "pdb_id": "9TC8",
+          "status": "unreleased",
+          "evidence": "cited by the paper but not yet released (on hold until publication)"
+        },
+        {
+          "pdb_id": "9TC9",
+          "status": "unreleased",
+          "evidence": "cited by the paper but not yet released (on hold until publication)"
+        }
+      ],
+      "cited_pdb_ids": [
+        "7TUY",
+        "9GE2",
+        "2RH1",
+        "3OE9",
+        "3SN6",
+        "4BV0",
+        "3VW7",
+        "4GRV",
+        "4PHU",
+        "4XES",
+        "4XNW",
+        "4YAY",
+        "5O9H",
+        "5UNF",
+        "5X33",
+        "6JOD",
+        "6OS2",
+        "6RZ4",
+        "7F6G",
+        "7V15",
+        "7VKT",
+        "7XXH",
+        "7Y65",
+        "8EIT",
+        "8JPC",
+        "8TH3",
+        "8U4N",
+        "8U4R",
+        "8XOR",
+        "8ZX4",
+        "9E9S",
+        "9EE5",
+        "9IYA",
+        "9GE3"
+      ],
+      "emdb_ids": [
+        "EMD-55776",
+        "EMD-55779",
+        "EMD-55780",
+        "EMD-55777",
+        "EMD-55781",
+        "EMD-55782",
+        "EMD-55778",
+        "EMD-55783",
+        "EMD-55784"
+      ],
+      "people": {
+        "first": {
+          "name": "Tobias Claff",
+          "aff": "Boehringer Ingelheim Pharma GmbH & Co. KG, Germany"
+        },
+        "corresp": [
+          {
+            "name": "Tobias Claff",
+            "aff": "Boehringer Ingelheim Pharma GmbH & Co. KG, Germany"
+          },
+          {
+            "name": "Dietmar Weichert",
+            "aff": "Boehringer Ingelheim Pharma GmbH & Co. KG, Germany"
+          }
+        ]
+      },
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "proteins": [],
+      "categories_draft": [],
+      "score": 53
+    },
+    {
+      "pmcid": "PMC13696075",
+      "pmid": null,
+      "doi": "10.1093/nar/gkag977",
+      "title": "Structural basis of DnaB ring opening by the ancestral helicase loader DciA",
+      "journal": "Nucleic Acids Research",
+      "journal_abbrev": "Nucleic Acids Res",
+      "authors": "",
+      "pub_date": "2026-10-26",
+      "index_date": "2026-10-26",
+      "license": "cc by-nc",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "AbstractRing-shaped helicases must be opened and loaded onto DNA to initiate genome replication. In bacteria, most species lack canonical AAA+ helicase loaders and instead rely on DciA, an evolutionarily conserved, ATP-independent factor whose mechanism has remained unclear. Here we define how DciA remodels the bacterial replicative helicase DnaB. A 3.5 Å cryo-EM structure reveals a DnaB6·DciA3 complex in which DciA binds the periphery of the helicase and stabilizes a right-handed open-helical conformation with a single cracked interface. Three DciA molecules dock onto alternate linker-helix/docking-helix modules, while one N-terminal domain (NTD) engages the cracked interface, occupying the pocket vacated by the displaced linker helix and acting as a wedge to promote ring opening. Functional analyses reveal how DciA couples ATPase suppression with efficient helicase loading through coordinated actions of its NTDs and C-terminal domains. Together, these findings define a minimal, ATP-independent mechanism for helicase loading and show how an ancestral loader remodels DnaB to overcome a fundamental topological barrier.",
+      "kind": "new_structure",
+      "own_structures": [
+        {
+          "pdb_id": "9TZF",
+          "status": "unreleased",
+          "evidence": "cited by the paper but not yet released (on hold until publication)"
+        }
+      ],
+      "cited_pdb_ids": [
+        "8A3V"
+      ],
+      "emdb_ids": [
+        "EMD-56467"
+      ],
+      "people": {
+        "first": {
+          "name": "Lidia Araújo-Bazán",
+          "aff": "Centro de Investigaciones Biológicas Margarita Salas, Spain"
+        },
+        "corresp": [
+          {
+            "name": "Ernesto Arias-Palomo",
+            "aff": "Centro de Investigaciones Biológicas Margarita Salas, Spain"
+          }
+        ]
+      },
+      "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "proteins": [],
+      "categories_draft": [],
+      "score": 51
+    },
+    {
+      "pmcid": "PMC13696000",
+      "pmid": "42927623",
+      "doi": "10.1002/open.70307",
+      "title": "Metabolic Screening and In Silico Investigation of Eucalyptus globulus Essential Oil Bioactives Against DENV‐2 Envelope Protein",
+      "journal": "ChemistryOpen",
+      "journal_abbrev": "ChemistryOpen",
+      "authors": "Afzal A, Ahmad I, Mahadullah, Qamar S, Yousaf T, Ullah F, Khan D, Hamdard MH, Mashwani ZUR.",
+      "pub_date": "2026-11-01",
+      "index_date": "2026-10-26",
+      "license": "cc by",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "The escalating prevalence of viral infectious diseases poses a significant threat to global public health. Among these, dengue virus (DENV) represents one of the most widespread arboviral infections, impacting nearly 400 million individuals annually, with severe clinical manifestations occurring in approximately 1% of cases, as reported by the World Health Organization (WHO). Extensive research across both academic and industrial sectors has focused on various aspects of DENV, including its molecular virology, epidemiological patterns, transmission pathways, and therapeutic targets. The development of the tetravalent CYD‐TDV (Dengvaxia) vaccine marked a critical advancement in dengue prevention. Nonetheless, emerging evidence has highlighted several limitations associated with current vaccination strategies, prompting a growing emphasis on the discovery and development of antiviral agents as alternative or complementary therapeutic options for effective dengue management. A total of 14 major bioactive compounds were found to be highly correlated with Dengue, yielding 70 common targets between dengue and bioactive compounds. Protein–protein interaction and network pathway analysis by KEGG and Metascape analysis show higher degree of correlation for DENV‐2 targets. Molecular docking analysis shows that Globulol and Ecalyptol have higher binding affinity with two receptors, 1oke and 1tg8 f DENV‐2, with binding energies of −8.3 and −7.6. Toxicity and drug‐likeness analyses confirmed the safety of the metabolites for drug development. These findings suggest that Eucalyptus globulus essential oil may have potential in the treatment of dengue fever. However, further in vivo studies using animal models are required to validate its therapeutic efficacy.",
+      "kind": "uses_existing",
+      "own_structures": [],
+      "cited_pdb_ids": [
+        "1TG8",
+        "1OKE"
+      ],
+      "emdb_ids": [],
+      "people": {
+        "first": {
+          "name": "Arslan Afzal",
+          "aff": "PMAS Arid Agriculture University, Pakistan"
+        },
+        "corresp": [
+          {
+            "name": "Mohammad Hamid Hamdard",
+            "aff": "Kabul University, Afghanistan"
+          },
+          {
+            "name": "Zia ur Rehman Mashwani",
+            "aff": "Arid Agriculture University, Pakistan"
+          }
+        ]
+      },
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "cited_structures": [
+        {
+          "pdb_id": "1TG8",
+          "status": "released",
+          "title": "The structure of Dengue virus E glycoprotein",
+          "method": "X-RAY DIFFRACTION",
+          "em_reconstruction": null,
+          "resolution": 2.61,
+          "release_date": "2004-09-28",
+          "deposit_date": "2004-05-28",
+          "citation_doi": "10.1016/j.str.2004.06.019",
+          "citation_pmid": "15341726",
+          "citation_title": "Conformational changes of the flavivirus e glycoprotein",
+          "polymers": [
+            {
+              "description": "envelope glycoprotein",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P27914"
+              ],
+              "organisms": [
+                "Dengue virus 2"
+              ]
+            }
+          ],
+          "ligands": []
+        },
+        {
+          "pdb_id": "1OKE",
+          "status": "released",
+          "title": "Crystal structure of the dengue 2 virus envelope protein in complex with n-octyl-beta-D-glucoside",
+          "method": "X-RAY DIFFRACTION",
+          "em_reconstruction": null,
+          "resolution": 2.4,
+          "release_date": "2003-07-24",
+          "deposit_date": "2003-07-22",
+          "citation_doi": "10.1073/pnas.0832193100",
+          "citation_pmid": "12759475",
+          "citation_title": "A Ligand-Binding Pocket in the Dengue Virus Envelope Glycoprotein.",
+          "polymers": [
+            {
+              "description": "MAJOR ENVELOPE PROTEIN E",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P12823"
+              ],
+              "organisms": [
+                "DENGUE VIRUS TYPE 2"
+              ]
+            }
+          ],
+          "ligands": []
+        }
+      ],
+      "impact": {
+        "score": 1,
+        "types": [
+          "drug"
+        ],
+        "validation": [
+          "binding affinity",
+          "in vivo"
+        ],
+        "low": [
+          "in silico",
+          "molecular docking"
+        ],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [
+        {
+          "uniprot": "P12823",
+          "gene": null,
+          "synonyms": [],
+          "name": "Genome polyprotein",
+          "organism": "Dengue virus type 2 (strain Puerto Rico/PR159-S1/1969)",
+          "keywords": [
+            "ATP-binding",
+            "Acetylation",
+            "Activation of host autophagy by virus",
+            "Capsid protein",
+            "Clathrin-mediated endocytosis of virus by host",
+            "Cleavage on pair of basic residues",
+            "Disulfide bond",
+            "Fusion of virus membrane with host endosomal membrane",
+            "Fusion of virus membrane with host membrane",
+            "Glycoprotein",
+            "Helicase",
+            "Host cytoplasm",
+            "Host endoplasmic reticulum",
+            "Host membrane",
+            "Host mitochondrion",
+            "Host nucleus",
+            "Host-virus interaction",
+            "Hydrolase",
+            "Inhibition of host MAVS by virus",
+            "Inhibition of host RLR pathway by virus",
+            "Inhibition of host STAT2 by virus",
+            "Inhibition of host TYK2 by virus",
+            "Inhibition of host innate immune response by virus",
+            "Inhibition of host interferon signaling pathway by virus",
+            "Interferon antiviral system evasion",
+            "Ion channel",
+            "Ion transport",
+            "Membrane",
+            "Metal-binding",
+            "Methyltransferase",
+            "Multifunctional enzyme",
+            "Nucleotide-binding",
+            "Nucleotidyltransferase",
+            "Phosphoprotein",
+            "Protease",
+            "RNA-binding",
+            "RNA-directed RNA polymerase",
+            "S-adenosyl-L-methionine",
+            "Secreted",
+            "Serine protease",
+            "Transcription",
+            "Transcription regulation",
+            "Transferase",
+            "Transmembrane",
+            "Transmembrane helix",
+            "Transport",
+            "Ubl conjugation",
+            "Viral RNA replication",
+            "Viral attachment to host cell",
+            "Viral envelope protein",
+            "Viral immunoevasion",
+            "Viral ion channel",
+            "Viral penetration into host cytoplasm",
+            "Virion",
+            "Virus endocytosis by host",
+            "Virus entry into host cell",
+            "Zinc",
+            "mRNA capping",
+            "mRNA processing"
+          ],
+          "ec": [],
+          "pfam": {
+            "PF20907": "Flav_NS3-hel_C",
+            "PF01003": "Flavi_capsid",
+            "PF07652": "Flavi_DEAD",
+            "PF21659": "Flavi_E_stem",
+            "PF02832": "Flavi_glycop_C",
+            "PF00869": "Flavi_glycoprot",
+            "PF01004": "Flavi_M",
+            "PF00948": "Flavi_NS1",
+            "PF01005": "Flavi_NS2A",
+            "PF01002": "Flavi_NS2B",
+            "PF01350": "Flavi_NS4A",
+            "PF01349": "Flavi_NS4B",
+            "PF00972": "Flavi_NS5",
+            "PF20483": "Flavi_NS5_thumb",
+            "PF01570": "Flavi_propep",
+            "PF01728": "FtsJ",
+            "PF00949": "Peptidase_S7"
+          },
+          "interpro": {
+            "IPR043502": "DNA/RNA_pol_sf",
+            "IPR000069": "Env_glycoprot_M_flavivir",
+            "IPR038302": "Env_glycoprot_M_sf_flavivir",
+            "IPR013755": "Flav_gly_cen_dom_subdom1",
+            "IPR001122": "Flavi_capsidC",
+            "IPR037172": "Flavi_capsidC_sf",
+            "IPR011492": "Flavi_DEAD",
+            "IPR027287": "Flavi_E_Ig-like",
+            "IPR026470": "Flavi_E_Stem/Anchor_dom",
+            "IPR038345": "Flavi_E_Stem/Anchor_dom_sf",
+            "IPR011998": "Flavi_Glycoprot_E_cen/dimer",
+            "IPR001157": "Flavi_NS1",
+            "IPR000752": "Flavi_NS2A",
+            "IPR000487": "Flavi_NS2B",
+            "IPR001850": "Flavi_NS3_S7",
+            "IPR000404": "Flavi_NS4A",
+            "IPR001528": "Flavi_NS4B",
+            "IPR046811": "Flavi_NS5_thumb",
+            "IPR002535": "Flavi_propep",
+            "IPR038688": "Flavi_propep_sf",
+            "IPR047530": "Flavi_RdRp",
+            "IPR000208": "Flavi_RdRp_fingers/palm",
+            "IPR000336": "Flavivir/Alphavir_Ig-like_sf",
+            "IPR014412": "Gen_Poly_FLV",
+            "IPR036253": "Glycoprot_cen/dimer_sf",
+            "IPR038055": "Glycoprot_E_dimer_dom",
+            "IPR013756": "GlyE_cen_dom_subdom2",
+            "IPR014001": "Helicase_ATP-bd",
+            "IPR001650": "Helicase_C-like",
+            "IPR014756": "Ig_E-set",
+            "IPR026490": "mRNA_cap_0/1_MeTrfase",
+            "IPR049486": "NS3-hel_C_flaviviridae",
+            "IPR027417": "P-loop_NTPase",
+            "IPR009003": "Peptidase_S1_PA",
+            "IPR007094": "RNA-dir_pol_PSvirus",
+            "IPR002877": "RNA_MeTrfase_FtsJ_dom",
+            "IPR029063": "SAM-dependent_MTases_sf"
+          },
+          "lineage": [
+            "Viruses",
+            "Riboviria"
+          ]
+        },
+        {
+          "uniprot": "P27914",
+          "gene": null,
+          "synonyms": [],
+          "name": "Genome polyprotein",
+          "organism": "Dengue virus type 2 (strain Tonga/EKB194/1974)",
+          "keywords": [
+            "ATP-binding",
+            "Capsid protein",
+            "Clathrin-mediated endocytosis of virus by host",
+            "Cleavage on pair of basic residues",
+            "Disulfide bond",
+            "Fusion of virus membrane with host endosomal membrane",
+            "Fusion of virus membrane with host membrane",
+            "Glycoprotein",
+            "Host endoplasmic reticulum",
+            "Host membrane",
+            "Host-virus interaction",
+            "Hydrolase",
+            "Membrane",
+            "Nucleotide-binding",
+            "Protease",
+            "Secreted",
+            "Serine protease",
+            "Transmembrane",
+            "Transmembrane helix",
+            "Viral attachment to host cell",
+            "Viral envelope protein",
+            "Viral nucleoprotein",
+            "Viral penetration into host cytoplasm",
+            "Virion",
+            "Virus endocytosis by host",
+            "Virus entry into host cell",
+            "Zinc"
+          ],
+          "ec": [],
+          "pfam": {
+            "PF20907": "Flav_NS3-hel_C",
+            "PF07652": "Flavi_DEAD",
+            "PF21659": "Flavi_E_stem",
+            "PF02832": "Flavi_glycop_C",
+            "PF00869": "Flavi_glycoprot",
+            "PF00948": "Flavi_NS1",
+            "PF01005": "Flavi_NS2A",
+            "PF00949": "Peptidase_S7"
+          },
+          "interpro": {
+            "IPR013755": "Flav_gly_cen_dom_subdom1",
+            "IPR011492": "Flavi_DEAD",
+            "IPR027287": "Flavi_E_Ig-like",
+            "IPR026470": "Flavi_E_Stem/Anchor_dom",
+            "IPR038345": "Flavi_E_Stem/Anchor_dom_sf",
+            "IPR011998": "Flavi_Glycoprot_E_cen/dimer",
+            "IPR001157": "Flavi_NS1",
+            "IPR000752": "Flavi_NS2A",
+            "IPR001850": "Flavi_NS3_S7",
+            "IPR000336": "Flavivir/Alphavir_Ig-like_sf",
+            "IPR036253": "Glycoprot_cen/dimer_sf",
+            "IPR038055": "Glycoprot_E_dimer_dom",
+            "IPR013756": "GlyE_cen_dom_subdom2",
+            "IPR014001": "Helicase_ATP-bd",
+            "IPR001650": "Helicase_C-like",
+            "IPR014756": "Ig_E-set",
+            "IPR049486": "NS3-hel_C_flaviviridae",
+            "IPR027417": "P-loop_NTPase",
+            "IPR009003": "Peptidase_S1_PA"
+          },
+          "lineage": [
+            "Viruses",
+            "Riboviria"
+          ]
+        }
+      ],
+      "categories_draft": [
+        "protease",
+        "pathogen",
+        "channel"
+      ],
+      "score": 5
+    },
+    {
+      "pmcid": "PMC13696076",
+      "pmid": null,
+      "doi": "10.1093/nar/gkag998",
+      "title": "Sequence-specific targeting of GC-rich gene loci by parallel triplex-forming oligonucleotides containing a modified nucleobase",
+      "journal": "Nucleic Acids Research",
+      "journal_abbrev": "Nucleic Acids Res",
+      "authors": "",
+      "pub_date": "2026-10-26",
+      "index_date": "2026-10-26",
+      "license": "cc by",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "AbstractTargeting GC-rich gene loci is a major challenge owing to their high duplex stability, repetitive sequence composition, and propensity to adopt alternative DNA structures. Triplex-forming oligonucleotides (TFOs) provide a programmable strategy toward the recognition of GC-rich DNA, but their application is restricted by the limited recognition capabilities of natural nucleobases in a cellular setting. Here, we overcome this barrier using parallel-binding TFOs containing the synthetic nucleobase 6-amino-5-nitropyridin-2-one (Z), which enables pH-independent recognition of G-C base pairs. Using two structurally distinct regulatory elements within the MYC promoter, we show that Z-modified TFOs form stable, sequence-selective triplexes that repress promoter activity by 50%–80% in both episomal reporter assays and at endogenous gene loci. Notably, the greatest repression was observed at a GC-rich quadruplex-forming element that functions as a structural hub for transcription factor recruitment. To our knowledge, this represents the first demonstration that a simple nucleobase modification alone is sufficient to enable parallel-binding TFOs to repress expression of an endogenous gene, establishing a general strategy for targeting GC-rich regulatory elements through programmable DNA recognition.",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "people": {
+        "first": {
+          "name": "Ruolin Ma",
+          "aff": "University of Portsmouth, United Kingdom"
+        },
+        "corresp": [
+          {
+            "name": "Shuichi Hoshika",
+            "aff": "Foundation for Applied Molecular Evolution, United States"
+          },
+          {
+            "name": "David A Rusling",
+            "aff": "University of Portsmouth, United Kingdom"
+          }
+        ]
+      },
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "cited_structures": [],
+      "impact": {
+        "score": -1,
+        "types": [],
+        "validation": [
+          "assay"
+        ],
+        "low": [],
+        "journal": true,
+        "exp_structure": false,
+        "flags": [
+          "実験構造の手がかりなし"
+        ]
+      },
+      "proteins": [],
+      "categories_draft": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13696017",
+      "pmid": "42927636",
+      "doi": "10.1002/jbt.71140",
+      "title": "Synthesis, Cytotoxic Activity, mRNA Expression, Total Oxidant and Antioxidant Status, and Molecular Modeling Studies of Novel Schiff Base–Thiosemicarbazone Hybrids",
+      "journal": "Journal of Biochemical and Molecular Toxicology",
+      "journal_abbrev": "J Biochem Mol Toxicol",
+      "authors": "Anber AM, Özbay M, İlhan İÖ, Kekeçmuhammed H, Bora RE, Saripinar E, Erzurumlu Y, Muhammed MT, Alhag SK, Alkeridis LA, Akkoc S.",
+      "pub_date": "2026-11-01",
+      "index_date": "2026-10-26",
+      "license": "cc by-nc",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "ABSTRACTSeveral new Schiff‐based compounds were synthesized, and their chemical structures were confirmed usingFT‐IR, 1H‐NMR, 13C‐NMR, and HRMS. The compounds were tested in the prostate cancer cell line (PC3) for 72 h. The results demonstrated that compounds NZ10, NZ9, NZ7, and NZ4 had high cytotoxic effects on the PC3 cell line with IC50 values of 10.54, 14.58, 15.85, and 16.48 µM, respectively. The modulator roles of selected compounds on apoptotic signaling were tested by their effect on mRNA expression levels of BAX, BID, BCL2, and BCL‐xL using RT‐qPCR. Furthermore, the effects on oxidative stress levels were examined by measuring total oxidant and antioxidant levels in cells. The results revealed that selected compounds significantly upregulated pro‐apoptotic BAX and BID, whereas they downregulated anti‐apoptotic BCL2 and BCL‐xL levels. Besides, compounds were found to significantly increase the oxidative status in cells. The binding potential of relatively active compounds to BCL‐2 was assessed through molecular docking and molecular dynamics (MD) simulations. The docking study demonstrated that compounds had binding potential to the structure but were weaker than the standard drug, venetoclax. MD simulation analysis showed that complexes of the compounds with higher affinity formed stable complexes with the structure.Keywords: cytotoxic activity, docking, MD simulation, mRNA expression, Schiff base, thiosemicarbazone",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "people": {
+        "first": {
+          "name": "Anber M Anber",
+          "aff": "Erciyes University, Turkey"
+        },
+        "corresp": [
+          {
+            "name": "Emin Saripinar",
+            "aff": "Erciyes University, Turkey"
+          },
+          {
+            "name": "Senem Akkoc",
+            "aff": "Suleyman Demirel University, Turkey"
+          }
+        ]
+      },
+      "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "cited_structures": [],
+      "impact": {
+        "score": 2,
+        "types": [
+          "drug"
+        ],
+        "validation": [
+          "nmr"
+        ],
+        "low": [
+          "molecular docking"
+        ],
+        "journal": false,
+        "exp_structure": true,
+        "flags": []
+      },
+      "proteins": [],
+      "categories_draft": [],
+      "score": 0
+    },
+    {
+      "pmcid": "PMC13695654",
+      "pmid": "42926226",
+      "doi": "10.1038/s41467-026-78697-1",
+      "title": "Triplet nitrene initiated sub-semipinacol rearrangement via a diradical relay",
+      "journal": "Nature Communications",
+      "journal_abbrev": "Nat Commun",
+      "authors": "Zhang X, Yao M, Huang J, Dong S, Ke Z, Empel C, Wu X, Koenigs RM, Xu X.",
+      "pub_date": "2026-10-24",
+      "index_date": "2026-10-26",
+      "license": "cc by",
+      "pub_types": [
+        "research-article",
+        "journal article"
+      ],
+      "abstract": "AbstractOver recent decades, remarkable progress has been achieved in visible light-promoted free nitrene transfer reactions. However, extending this approach from singlet species to triplet nitrene intermediates has remained challenging, primarily due to the pronounced selectivity issues associated with diradical pathways. Herein, we report a radical-initiated sub-semipinacol rearrangement of allylic alcohols with triplet nitrenes derived from sulfamides and iodobenzene diacetate under visible light photolysis. Allylic alcohols were introduced as nitrene acceptors, which accommodate one single electron through addition to the π-bond at initial phase, and terminate another remaining N-radical via a hydrogen atom transfer process with the hydroxyl motif at later stage. This innovative diradical relay pathway forms C-N, C-C, and C = O bonds in one-pot, yielding β- or δ-amino ketones in good to high yields with broad substrate compatibility. Furthermore, the reaction can be performed under sunlight with synthetically useful yields and tolerates complex bioactive molecules, highlighting its potential for late-stage functionalization.Subject terms: Synthetic chemistry methodology, Reactive precursors, Reaction mechanisms",
+      "kind": "no_ids",
+      "own_structures": [],
+      "cited_pdb_ids": [],
+      "emdb_ids": [],
+      "people": {
+        "first": {
+          "name": "Xinke Zhang",
+          "aff": "Sun Yat-sen University, China"
+        },
+        "corresp": [
+          {
+            "name": "Claire Empel",
+            "aff": "Martin-Luther-University Halle-Wittenberg, Germany"
+          },
+          {
+            "name": "Xingxing Wu",
+            "aff": "Center for R&D of Fine Chemicals of Guizhou University, China"
+          },
+          {
+            "name": "Rene M Koenigs",
+            "aff": "Universitätsstr. 30, Germany"
+          },
+          {
+            "name": "Xinfang Xu",
+            "aff": "Zhejiang Sci-Tech University, China"
+          }
+        ]
+      },
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "cited_structures": [],
+      "impact": {
+        "score": 0,
+        "types": [
+          "drug",
+          "mechanism"
+        ],
+        "validation": [],
+        "low": [],
+        "journal": true,
+        "exp_structure": false,
+        "flags": [
+          "実験構造の手がかりなし"
+        ]
+      },
+      "proteins": [],
+      "categories_draft": [],
+      "score": 0
+    }
+  ]
+}

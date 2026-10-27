@@ -1,0 +1,155 @@
+{
+ "pmcid": "PMC13695653",
+ "rank": 1,
+ "headline": "糖鎖の部位を変えると、GPR55の阻害剤が作動薬になる",
+ "subhead": "阻害剤との不活性型と活性型をクライオ電顕で解き、ヘリックスVIIの約90°の回転による活性化を示した",
+ "target_label": "GPR55（脂質受容体）",
+ "target_en": "GPR55 with inverse agonists (BI-6229, BI-8310)",
+ "method_label": "Cryo-EM・2.66–2.88 Å",
+ "ligand_label": "CID16020046（BI-6229）",
+ "summary": {
+  "question": "GPR55の阻害剤がどう結合するかの理解が乏しく、使いやすい化学プローブも不足していた。",
+  "approach": "阻害剤CID16020046との不活性型と、糖鎖部位N171Qの変異体で得た活性型を、クライオ電顕で解析した。",
+  "result": "不活性型は2.66 Å、活性型は2.77 Åで決まった。N171Qで阻害剤は作動薬になり、ヘリックスVIIは約90°回った。",
+  "learned": "ヘリックスVIの外向きの動きではなく、ヘリックスVII/VIIIの切り替えで活性化するという、非典型的な機構が示された。",
+  "open": "糖鎖の付く部位を変えると阻害剤が作動薬に変わる分子的な理由は、完全には分かっていない。",
+  "evidence": {
+   "question": [
+    {
+     "quote": "progress in understanding GPR55 function has still been limited by suboptimal chemical probes",
+     "section": "Abstract"
+    },
+    {
+     "quote": "a broader understanding of how structurally distinct antagonists bind to this receptor is crucial to guide drug discovery efforts",
+     "section": "Introduction"
+    }
+   ],
+   "approach": [
+    {
+     "quote": "Here, we present cryo-electron microscopy (cryo-EM) structures of GPR55 in both inactive and active states.",
+     "section": "Abstract"
+    },
+    {
+     "quote": "Surprisingly, mutation of a glycosylation site in extracellular loop 2 converted CID16020046 into a potent agonist, enabling co-structure determination of the active, G13-bound receptor.",
+     "section": "Abstract"
+    }
+   ],
+   "result": [
+    {
+     "quote": "yielded a 3D reconstruction at 2.66 Å global resolution",
+     "section": "Results"
+    },
+    {
+     "quote": "The cryo-EM structure was resolved at 2.77 Å global resolution",
+     "section": "Results"
+    },
+    {
+     "quote": "activation involves a helix VII/VIII switch enabled by a pronounced ~90° rotation of helix VII",
+     "section": "Results"
+    }
+   ],
+   "learned": [
+    {
+     "quote": "Comparative analysis of both states bound to the same ligand provides insights into an atypical activation mechanism that diverges from the typical helix VI outward movement observed in other GPCRs.",
+     "section": "Abstract"
+    }
+   ],
+   "open": [
+    {
+     "quote": "the precise molecular basis by which the glycosylation removal converts CID16020046 and its charged derivatives from inverse agonists to potent agonists is not completely understood",
+     "section": "Discussion"
+    }
+   ]
+  }
+ },
+ "categories": [
+  "receptor"
+ ],
+ "topics": [
+  "drug",
+  "membrane"
+ ],
+ "highlights": [
+  {
+   "tag": "機構の解明",
+   "text": "不活性型ではヘリックスVIIがそのままC末端側へ伸びている。活性化するとヘリックスVIIが約90°回ってヘリックスVIIIができ、Gタンパク質が結合できるようになる。",
+   "evidence": [
+    {
+     "quote": "In the inactive state, GPR55 lacks the amphipathic helix VIII, as helix VII extends into a continuous C-terminal helix.",
+     "section": "Results"
+    },
+    {
+     "quote": "Only upon activation, helix VIII is formed by rotation around V2917.56, enabling G protein binding that would otherwise be sterically blocked",
+     "section": "Results"
+    }
+   ]
+  },
+  {
+   "tag": "機構の解明",
+   "text": "糖鎖の付くN171をQに変えると、CID16020046はEC50 10.2 nM・Emax 83%の強い作動薬になった。ただしこの切り替えはG13経路だけで、β-アレスチン2では見られない。",
+   "evidence": [
+    {
+     "quote": "Remarkably, CID16020046 transformed from a weak inverse agonist into a potent agonist at N171ECL2Q and N171ECL2A",
+     "section": "Results"
+    },
+    {
+     "quote": "the efficacy switch of CID16020046 was exclusively present in the G13 pathway",
+     "section": "Discussion"
+    }
+   ]
+  },
+  {
+   "tag": "創薬・モダリティ",
+   "text": "不活性型の構造を手がかりに、溶解性と選択性に難のある化合物4を改良してBI-8310を作った。膜透過性が低いため、in vitro用のプローブとして位置づけられる。",
+   "evidence": [
+    {
+     "quote": "showed markedly enhanced solubility across a broad range of pH values",
+     "section": "Results"
+    },
+    {
+     "quote": "BI-8310 displays low membrane permeability and should therefore be regarded primarily as an in vitro tool compound",
+     "section": "Discussion"
+    }
+   ]
+  }
+ ],
+ "lab_notes": {
+  "expression": "ICL3にbRILを入れ、C末端を削った受容体をTni昆虫細胞（High Five）で発現した。",
+  "construct": "ICL3の213–215をbRILに置換し、C末端を306残基で切って、S108Kを導入した。",
+  "purification": "LMNG/CHS-Tris可溶化し、StrepTactin XT樹脂で精製した。",
+  "sample_prep": "Vitrobot Mark IVを使い、液体エタンに落として凍結した。",
+  "data_collection": "Titan Krios G4にSelectrisXフィルターを組み合わせて撮影し、cryoSPARCで処理した。",
+  "evidence": [
+   {
+    "quote": "The construct was expressed in Tni insect cells (High Five Cells, Thermo Fisher Scientific)",
+    "section": "Methods"
+   },
+   {
+    "quote": "amino acids 213-215 of the ICL3 of GPR55 were replaced by bRIL, the C-terminus was truncated to amino acid 306 and a single stabilizing point mutation",
+    "section": "Methods"
+   },
+   {
+    "quote": "The complex was solubilized from the membranes using a LMNG/CHS-Tris solubilization buffer and bound to a StrepTactin XT 4flow high-capacity resin",
+    "section": "Methods"
+   },
+   {
+    "quote": "Samples were vitrified by plunging into liquid ethane.",
+    "section": "Methods"
+   },
+   {
+    "quote": "equipped with a cold-field emission gun and a SelectrisX energy filter (10 eV slit width)",
+    "section": "Methods"
+   },
+   {
+    "quote": "Cryo-EM data processing was performed with cryoSPARC (Structura Biotechnology)",
+    "section": "Methods"
+   }
+  ]
+ },
+ "keywords": [
+  "GPR55",
+  "GPCR",
+  "糖鎖"
+ ],
+ "editor_notes": "PDB 9TC7・9TC8・9TC9 は未公開のため構造図なし。GPR55 は 9GE2・9GE3 など既存構造があるため Structure Update の見込み。原文は CC BY-NC-ND。"
+}
