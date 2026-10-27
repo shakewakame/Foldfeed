@@ -1912,6 +1912,9 @@ def quotes(evidence: list) -> str:
             f'<span>{esc(e.get("section", ""))}</span></p></div></div>')
 
 
+UNIPROT_SHOWN = 8   # UniProt entries named in an article's margin (a nucleosome alone has four histones)
+
+
 def margin_html(cand: dict, pick: dict, n: int, impact_type: str | None = None) -> str:
     hot = render.is_impact(pick)
     own = cand["own_structures"] if not hot else cand.get("cited_structures", [])
@@ -1933,8 +1936,15 @@ def margin_html(cand: dict, pick: dict, n: int, impact_type: str | None = None) 
         pdb_dd = "—" if hot else "本文に記載なし"
     pdb_label = "EMDB" if not own and cand["kind"] == "new_map_only" else ("PDB（使用）" if hot else "PDB")
     prots = cand.get("proteins", [])
+    # the proteins the article is about first (their gene in the target or the headline: PARP2 before the four
+    # histones of its nucleosome), then the rest; up to UNIPROT_SHOWN, the number of the others after them
+    about = f'{pick.get("target_en") or ""} {pick["target_label"]} {pick["headline"]}'.lower()
+    named = lambda p: bool(p.get("gene")) and re.search(rf"(?<![a-z0-9]){re.escape(p['gene'].lower())}(?![a-z0-9])", about)
+    prots = sorted(prots, key=lambda p: not named(p))
     uni = ", ".join(f'<a href="https://www.uniprot.org/uniprotkb/{esc(p["uniprot"])}">{esc(p.get("gene") or p["uniprot"])}</a>'
-                    for p in prots[:4])
+                    for p in prots[:UNIPROT_SHOWN])
+    if len(prots) > UNIPROT_SHOWN:
+        uni += f" <span>ほか {len(prots) - UNIPROT_SHOWN} 件</span>"
     orgs = sorted({o for s in rel for q in s.get("polymers", []) for o in q["organisms"]})
     rows = [("Target", esc(pick.get("target_en") or pick["target_label"])), ("Method", esc(method)), (pdb_label, pdb_dd),
             ("Ligand", esc(pick.get("ligand_label") or ("—" if hot else render.ligand_line(cand))))]
