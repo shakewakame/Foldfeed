@@ -115,7 +115,8 @@ EXAMPLE = {
     "ga_pdb_id": "構造図に使う PDB ID（省略時は分解能が最も高い自前の構造）",
     "method_label": "手法・分解能の表示（PDB 情報がないときだけ。手法は英語で：Cryo-EM / Cryo-ET / X-ray / NMR。例：Cryo-EM・2.8 Å）",
     "ligand_label": "結合分子の表示（略号より分かりやすい名前。例：オラパリブ、タラゾパリブ）",
-    "legend_labels": ["構造図の色の凡例名を entity の順に上書き（任意）"],
+    "legend_labels": ["構造図の色の凡例名を entity の順に上書き（任意）。引き出し線は 8 本まで。凡例だけに出して線を引かない分子は"
+                      " {\"label\": \"…\", \"line\": false}"],
     "ligand_names": {"A1CKT": "OX04529", "43M": "4CmC"},
     "section": "既存の構造を使った研究（注目の構造の採点で選んだもの）なら \"impact\"。新しい構造の記事では書かない",
     # Optional: only when none of the paper's proteins could be matched to UniProt (PDB entries not yet released, IDs not

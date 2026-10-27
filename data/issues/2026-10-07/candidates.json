@@ -821,8 +821,4806 @@
         "journal article"
       ],
       "abstract": "AbstractSingle-strand DNA breaks are among the most frequent forms of DNA damage, yet how PARP2 recognizes these lesions within the constrained geometry of chromatin remains unclear. Here we use cryogenic electron microscopy (cryo-EM) to determine structures of PARP2 and HPF1 bound to nucleosomes containing a site-specific single-strand break (SSB) at superhelical location + 5.3. The structures reveal a multivalent binding mode in which the Trp-Gly-Arg (WGR) domain engages the break while the helical domain and HPF1 contact the opposing DNA gyre, spanning both DNA gyres of the nucleosome. This configuration explains the higher affinity of PARP2 for nucleosomal SSBs relative to free DNA. 3D classification resolves multiple PARP2-bound states with distinct WGR orientations and DNA backbone distortions, revealing structural plasticity during damage recognition. Comparative analysis shows that HPF1 constrains the conformational ensemble of PARP2 and promotes a defined catalytic domain architecture compatible with histone PARylation. PARP inhibitors (olaparib, talazoparib, EB-47) stabilize WGR–helical domain interfaces and make the ADP-ribosyltransferase–HPF1 catalytic module dynamic, consistent with reverse allosteric retention on damaged chromatin, while also promoting asymmetric nucleosomal DNA unwrapping. Together, these structures provide a chromatin-context framework for understanding PARP2 recognition of nucleosomal DNA breaks and how PARPis reshape these interactions to promote PARP retention and local chromatin remodeling.",
-      "kind": "new_structure_ids_unlisted",
-      "own_structures": [],
+      "kind": "new_structure",
+      "own_structures": [
+        {
+          "pdb_id": "9TUN",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with the WGR domain of human PARP2, Class 1",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.59,
+          "release_date": "2026-10-14",
+          "deposit_date": "2026-01-08",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "Chains: I,J",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "Chains: M",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "Chains: L",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "Chains: K",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9YLR",
+          "status": "released",
+          "title": "Nucleosome scFv complex with a nick at SHL +5.3",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 1.99,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-10-09",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "scFv20",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "DNA (130-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA (153-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA (23-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZS5",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2, HPF1 and Talazoparib, Class 1",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.32,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-12-22",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "PL2-6 scFv",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "DNA 130-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 23-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 153-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZS6",
+          "status": "released",
+          "title": "Nucleosome with an SSD at SHL +5.3 in complex with human PARP2, HPF1, and Talazoparib, Class 2",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.67,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-12-22",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "DNA 153-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 23-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 130-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "PL2-6 scFv",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZSG",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2, HPF1, and Talazoparib, Class 3",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.6,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-12-22",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "DNA 153-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 23-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 130-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "PL2-6 scFv",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZSI",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2, HPF1, and Talazoparib, Class 4",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.69,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-12-22",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "DNA 153-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 23-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 130-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "PL2-6 scFv",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZSJ",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2, HPF1, and Talazoparib, Class 5",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.42,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-12-22",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "DNA 153-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 23-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 130-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "PL2-6 scFv",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZSK",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2, HPF1, and Talazoparib, Class 6",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.4,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-12-22",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "PL2-6 scFv",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "DNA 153-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 23-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 130-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZSL",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2, HPF1, and Talazoparib, Class 7",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.33,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-12-22",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "PL2-6 scFv",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "DNA 153-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 23-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 130-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZSM",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2, HPF1, and Talazoparib, Class 8",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.49,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-12-22",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "PL2-6 scFv",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "DNA 23-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 153-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "DNA 130-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZSO",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2, HPF1, and Talazoparib, Class 9",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.71,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-12-22",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "mAb PL2-6 antibody",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "DNA (153-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA (130-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZSP",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2, HPF1, and EB47, Class 2",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.42,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-12-22",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "mAb PL2-6 antibody",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "DNA (153-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA (23-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA (130-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZSQ",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2, HPF1, and EB47, Class 3",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.28,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-12-22",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "mAb PL2-6 antibody",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "DNA (130-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA (23-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA (153-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZSR",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2, HPF1, and EB47, Class 4",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.58,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-12-22",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "mAB PL2-6",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "DNA (23-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA (130-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA (153-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZSS",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2, HPF1, and EB47, Class 6",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.77,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-12-22",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "DNA (130-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA (153-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "mAb PL2-6 antibody",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "DNA (23-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZST",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2, HPF1, and EB47, Class 7",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.75,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-12-22",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "mAb PL2-6 antibody",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "DNA (153-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA (130-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZSU",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2, HPF1, and Olaparib, Class 2",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.21,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-12-22",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "mAb PL2-6 antibody",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "DNA (153-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA (23-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA (130-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZSW",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2, HPF1, and Olaparib, Class 3",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.21,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-12-22",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "DNA (153-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA (130-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA (23-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "mAb PL2-6 antibody",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZSX",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2, HPF1, and Olaparib, Class 4",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.34,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-12-22",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "PL2-6 scFv",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "DNA 153-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 23-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 130-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZSY",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2, HPF1, and Olaparib, Class 5",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.37,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-12-22",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "PL2-6 scFv",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "DNA 153-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 23-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 130-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZSZ",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2, HPF1 and Olaparib, Class 6",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.46,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-12-22",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "mAb PL2-6 antibody",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "DNA (153-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA (130-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZTA",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2, Class 1",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.65,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-12-23",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "DNA 153-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 30-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 130-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "mAb PL2-6 antibody",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZTD",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2, HPF1, and EB47, Class 5",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.5,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-12-23",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "mAb PL2-6 antibody",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "DNA 153-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 23-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 130-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZTE",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2, HPF1, and EB47, Class 1",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.32,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-12-23",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "DNA 153-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 23-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 130-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "mAb PL2-6 antibody",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZTF",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2, Class 2",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.67,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-12-23",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "DNA 153-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 23-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 130-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "mAb PL2-6 antibody",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZTG",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2, Class 3",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.68,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-12-23",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "DNA 153-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 23-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 130-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "mAb PL2-6 antibody",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZTH",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2, Class 4",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.64,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-12-23",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "DNA 153-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 23-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 130-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "mAb PL2-6 antibody",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZTI",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2, Class 6",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.57,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-12-23",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "DNA 23-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "DNA 153-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 130-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "mAb PL2-6 antibody",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZTM",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2, Class 9",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.49,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-12-23",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "mAb PL2-6 antibody",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "DNA (130-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA (23-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "DNA (153-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZTN",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2 and HPF1, Class 1",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.84,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-12-23",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "Histone PARylation factor 1",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9NWY4"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "DNA 153-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 23-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 130-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "PL2-6 scFv",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZTO",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2 and HPF1, Class 2",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.51,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-12-23",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "DNA 153-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 23-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 130-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "PL2-6 scFv",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZTP",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2 and HPF1, Class 3",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.49,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-12-23",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "PL2-6 scFv",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "DNA 130-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 23-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 153-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZTQ",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2, Class 5",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.63,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-12-23",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "DNA 153-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 23-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 130-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "mAb PL2-6 antibody",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZTR",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2 and HPF1, Class 4",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.33,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-12-23",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "DNA 153-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 23-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 130-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "PL2-6 scFv",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZTS",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2 and HPF1, Class 5",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.5,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-12-23",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "DNA 153-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 23-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 130-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "PL2-6 scFv",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZTU",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2 and HPF1, Class 6",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.48,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-12-23",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "DNA 153-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 23-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 130-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "PL2-6 scFv",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZTW",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2 and HPF1, Class 7",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.51,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-12-23",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "DNA 153-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 23-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 130-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "PL2-6 scFv",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZTX",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2 and HPF1, Class 8",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.51,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-12-23",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "PL2-6 scFv",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "DNA 130-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 23-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 153-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZTY",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2 and HPF1, Class 10",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.49,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-12-23",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "DNA 153-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 23-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 130-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "PL2-6 scFv",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZTZ",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2 and HPF1, Class 9",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.49,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-12-23",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "DNA 153-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 23-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 130-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "PL2-6 scFv",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZU0",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2, Class 10",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.33,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-12-23",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "DNA (153-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA (23-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA (130-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "mAb PL2-6 antibody",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZU5",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2, Class 7",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.55,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-12-23",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "DNA 153-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 23-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 130-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "mAb PL2-6 antibody",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZU7",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2, Class 12",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.39,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-12-23",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "DNA (153-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA (23-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA (130-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "mAb PL2-6 antibody",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZU8",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2, Class 11",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.33,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-12-23",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "DNA (153-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA (23-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA (130-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "mAb PL2-6 antibody",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZUA",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2, Class 13",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.53,
+          "release_date": "2026-10-14",
+          "deposit_date": "2025-12-23",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "DNA (153-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA (23-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA (130-MER)",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "mAb PL2-6 antibody",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZXL",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2, Class 14",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.48,
+          "release_date": "2026-10-14",
+          "deposit_date": "2026-01-05",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "PL2-6 scFv",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "DNA 130-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 23-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 153-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZY2",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2, Class 8",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.59,
+          "release_date": "2026-10-14",
+          "deposit_date": "2026-01-05",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "DNA 153-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 23-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 130-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "PL2-6 scFv",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZYC",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with human PARP2, HPF1 and Olaparib, Class 1",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.26,
+          "release_date": "2026-10-14",
+          "deposit_date": "2026-01-05",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "DNA 153-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 23-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 130-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "PL2-6 scFv",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        },
+        {
+          "pdb_id": "9ZZZ",
+          "status": "released",
+          "title": "Nucleosome with an SSB at SHL +5.3 in complex with the WGR domain of PARP2, Class 2",
+          "method": "ELECTRON MICROSCOPY",
+          "em_reconstruction": "SINGLE PARTICLE",
+          "resolution": 2.56,
+          "release_date": "2026-10-14",
+          "deposit_date": "2026-01-08",
+          "citation_doi": "10.1093/nar/gkag939",
+          "citation_pmid": "42831429",
+          "citation_title": "Structural basis of PARP2 recognition of nucleosomal DNA breaks and inhibitor trapping.",
+          "polymers": [
+            {
+              "description": "PL2-6 scFv",
+              "type": "Protein",
+              "uniprot_ids": [],
+              "organisms": [
+                "Mus musculus"
+              ]
+            },
+            {
+              "description": "Poly [ADP-ribose] polymerase 2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9UGN5"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "DNA 153-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 23-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "DNA 130-mer",
+              "type": "DNA",
+              "uniprot_ids": [],
+              "organisms": [
+                "synthetic construct"
+              ]
+            },
+            {
+              "description": "Histone H4",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84040"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H3",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02299"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2B",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P02283"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            },
+            {
+              "description": "Histone H2A",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P84051"
+              ],
+              "organisms": [
+                "Drosophila melanogaster"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        }
+      ],
       "cited_pdb_ids": [
         "7K61",
         "7AEO",
@@ -830,7 +5628,226 @@
         "6USJ"
       ],
       "emdb_ids": [],
-      "proteins": [],
+      "proteins": [
+        {
+          "uniprot": "P02283",
+          "gene": "His2B",
+          "synonyms": [],
+          "name": "Histone H2B",
+          "organism": "Drosophila melanogaster",
+          "keywords": [
+            "Chromosome",
+            "DNA-binding",
+            "Glycoprotein",
+            "Isopeptide bond",
+            "Methylation",
+            "Nucleosome core",
+            "Nucleus",
+            "Ubl conjugation"
+          ],
+          "ec": [],
+          "pfam": {
+            "PF00125": "Histone"
+          },
+          "interpro": {
+            "IPR007125": "H2A/H2B/H3",
+            "IPR009072": "Histone-fold",
+            "IPR000558": "Histone_H2B",
+            "IPR055333": "HISTONE_H2B_site"
+          },
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ],
+          "prior_pdb_count": 22,
+          "first_structure": false
+        },
+        {
+          "uniprot": "P02299",
+          "gene": "His3",
+          "synonyms": [],
+          "name": "Histone H3",
+          "organism": "Drosophila melanogaster",
+          "keywords": [
+            "ADP-ribosylation",
+            "Acetylation",
+            "Chromosome",
+            "DNA-binding",
+            "Methylation",
+            "Nucleosome core",
+            "Nucleus",
+            "Phosphoprotein"
+          ],
+          "ec": [],
+          "pfam": {
+            "PF00125": "Histone"
+          },
+          "interpro": {
+            "IPR007125": "H2A/H2B/H3",
+            "IPR009072": "Histone-fold",
+            "IPR000164": "Histone_H3/CENP-A"
+          },
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ],
+          "prior_pdb_count": 31,
+          "first_structure": false
+        },
+        {
+          "uniprot": "P84040",
+          "gene": "His4",
+          "synonyms": [
+            "H4"
+          ],
+          "name": "Histone H4",
+          "organism": "Drosophila melanogaster",
+          "keywords": [
+            "Acetylation",
+            "Chromosome",
+            "DNA-binding",
+            "Methylation",
+            "Nucleosome core",
+            "Nucleus",
+            "Phosphoprotein"
+          ],
+          "ec": [],
+          "pfam": {
+            "PF15511": "CENP-T_C"
+          },
+          "interpro": {
+            "IPR035425": "CENP-T/H4_C",
+            "IPR009072": "Histone-fold",
+            "IPR001951": "Histone_H4",
+            "IPR019809": "Histone_H4_CS",
+            "IPR004823": "TAF_TATA-bd_Histone-like_dom"
+          },
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ],
+          "prior_pdb_count": 25,
+          "first_structure": false
+        },
+        {
+          "uniprot": "P84051",
+          "gene": "His2A",
+          "synonyms": [
+            "H2a"
+          ],
+          "name": "Histone H2A",
+          "organism": "Drosophila melanogaster",
+          "keywords": [
+            "Acetylation",
+            "Chromosome",
+            "DNA-binding",
+            "Isopeptide bond",
+            "Methylation",
+            "Nucleosome core",
+            "Nucleus",
+            "Phosphoprotein",
+            "Ubl conjugation"
+          ],
+          "ec": [],
+          "pfam": {
+            "PF00125": "Histone",
+            "PF16211": "Histone_H2A_C"
+          },
+          "interpro": {
+            "IPR007125": "H2A/H2B/H3",
+            "IPR061508": "HFD_H2A",
+            "IPR009072": "Histone-fold",
+            "IPR002119": "Histone_H2A",
+            "IPR032454": "Histone_H2A_C",
+            "IPR032458": "Histone_H2A_CS"
+          },
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ],
+          "prior_pdb_count": 21,
+          "first_structure": false
+        },
+        {
+          "uniprot": "Q9NWY4",
+          "gene": "HPF1",
+          "synonyms": [
+            "C4orf27"
+          ],
+          "name": "Histone PARylation factor 1",
+          "organism": "Homo sapiens",
+          "keywords": [
+            "ADP-ribosylation",
+            "Acetylation",
+            "Chromosome",
+            "DNA damage",
+            "DNA repair",
+            "Nucleus"
+          ],
+          "ec": [],
+          "pfam": {
+            "PF10228": "HPF1"
+          },
+          "interpro": {
+            "IPR019361": "HPF1"
+          },
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ],
+          "prior_pdb_count": 8,
+          "first_structure": false
+        },
+        {
+          "uniprot": "Q9UGN5",
+          "gene": "PARP2",
+          "synonyms": [
+            "ADPRT2",
+            "ADPRTL2"
+          ],
+          "name": "Poly [ADP-ribose] polymerase 2",
+          "organism": "Homo sapiens",
+          "keywords": [
+            "ADP-ribosylation",
+            "Acetylation",
+            "Allosteric enzyme",
+            "Alternative splicing",
+            "Chromosome",
+            "DNA damage",
+            "DNA repair",
+            "DNA-binding",
+            "Glycosyltransferase",
+            "NAD",
+            "Nucleotidyltransferase",
+            "Nucleus",
+            "Phosphoprotein",
+            "Transferase"
+          ],
+          "ec": [
+            "2.4.2.-",
+            "2.4.2.30"
+          ],
+          "pfam": {
+            "PF00644": "PARP",
+            "PF02877": "PARP_reg",
+            "PF05406": "WGR"
+          },
+          "interpro": {
+            "IPR050800": "ARTD/PARP",
+            "IPR012317": "Poly(ADP-ribose)pol_cat_dom",
+            "IPR004102": "Poly(ADP-ribose)pol_reg_dom",
+            "IPR036616": "Poly(ADP-ribose)pol_reg_dom_sf",
+            "IPR036930": "WGR_dom_sf",
+            "IPR008893": "WGR_domain"
+          },
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ],
+          "prior_pdb_count": 30,
+          "first_structure": false
+        }
+      ],
       "score": 40,
       "people": {
         "first": {
@@ -845,7 +5862,11 @@
         ]
       },
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "categories_draft": []
+      "categories_draft": [
+        "nucleic",
+        "chromatin"
+      ],
+      "pdb_from_citation": true
     },
     {
       "pmcid": "PMC13635308",

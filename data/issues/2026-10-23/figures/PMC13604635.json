@@ -1,5 +1,39 @@
 {
- "pdb_id": null,
- "legend": [],
+ "pdb_id": "32DH",
+ "view": {
+  "target": [
+   17.36,
+   13.13,
+   8.26
+  ],
+  "dir": [
+   -0.5396,
+   0.7887,
+   -0.2944
+  ],
+  "up": [
+   0.8412,
+   0.4907,
+   -0.2272
+  ],
+  "half": [
+   15.2,
+   12.8
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "YAP1（WW1 ドメイン）",
+   "desc": "Transcriptional coactivator YAP1",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "LATS2（ペプチド）",
+   "desc": "Serine/threonine-protein kinase LATS2",
+   "entity": "2"
+  }
+ ],
  "ligands": []
 }

@@ -159,5 +159,9 @@
     "PPxY"
   ],
   "method_label": "X-ray・1.03 Å",
-  "editor_notes": "PDB ID は本文に「32dh」とあるが、Data availability に表記はなく PDB と照合できないため図なし（kind: new_structure_ids_unlisted）。結晶構造は YAPWW1 と LATS2 ペプチド（Cys を Ser にした mLATS2）の複合体で、YAPWW1 の SMAD7 複合体（PDB 2ltw）は既存。論文は「初めて」とは書いていないので first_claim なし。TAZWW 複合体は Boltz-2 モデルで、紹介文は実験で得た部分（結晶構造・NanoDSF・NMR・SPR）を中心に書いた。"
+  "editor_notes": "PDB ID は本文に「32dh」とあるが、Data availability に表記はなく PDB と照合できないため図なし（kind: new_structure_ids_unlisted）。結晶構造は YAPWW1 と LATS2 ペプチド（Cys を Ser にした mLATS2）の複合体で、YAPWW1 の SMAD7 複合体（PDB 2ltw）は既存。論文は「初めて」とは書いていないので first_claim なし。TAZWW 複合体は Boltz-2 モデルで、紹介文は実験で得た部分（結晶構造・NanoDSF・NMR・SPR）を中心に書いた。（2026-10-27：PDBe で論文の引用から PDB エントリーを逆引きして見つけ、構造図を付けた）",
+  "legend_labels": [
+    "YAP1（WW1 ドメイン）",
+    "LATS2（ペプチド）"
+  ]
 }

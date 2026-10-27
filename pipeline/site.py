@@ -2886,7 +2886,7 @@ def library(issues: list[str], root: Path = ISSUES_DIR) -> list[dict]:
                    "ligands": {lig["id"]: lig.get("name") or lig["id"] for x in released for lig in x.get("ligands", [])
                                if lig["id"] not in COFACTORS}}
             text = " ".join([pick["target_label"], pick.get("target_en") or "", pick["headline"], pick.get("subhead") or "", cand["title"]]
-                            + list(pick.get("legend_labels") or []) + row["genes"] + row["uniprot"] + row["names"] + row["pdbs"]
+                            + [render.label_text(t) for t in pick.get("legend_labels") or []] + row["genes"] + row["uniprot"] + row["names"] + row["pdbs"]
                             + [method] + [w for key, w in METHOD_WORDS if key in method]
                             + [CATEGORIES.get(c, "") for c in row["cats"]] + [TOPICS[t] for t in row["topics"]]
                             + [CATEGORY_EN.get(c, "") for c in row["cats"]] + [TOPIC_EN.get(t, "") for t in row["topics"]])

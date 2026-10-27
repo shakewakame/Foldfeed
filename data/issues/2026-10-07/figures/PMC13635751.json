@@ -1,5 +1,102 @@
 {
- "pdb_id": null,
- "legend": [],
- "ligands": []
+ "pdb_id": "9ZSW",
+ "view": {
+  "target": [
+   165.59,
+   164.93,
+   175.23
+  ],
+  "dir": [
+   -0.2636,
+   0.9646,
+   -0.0086
+  ],
+  "up": [
+   0.9232,
+   0.2548,
+   0.2876
+  ],
+  "half": [
+   66.1,
+   55.4
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "ヒストン H2A",
+   "desc": "Histone H2A",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "ヒストン H2B",
+   "desc": "Histone H2B",
+   "entity": "2"
+  },
+  {
+   "color": "#5F9296",
+   "label": "ヒストン H3",
+   "desc": "Histone H3",
+   "entity": "3"
+  },
+  {
+   "color": "#A5707A",
+   "label": "ヒストン H4",
+   "desc": "Histone H4",
+   "entity": "4"
+  },
+  {
+   "color": "#7C8AA8",
+   "label": "DNA 153 塩基（つながった鎖）",
+   "desc": "DNA (153-MER)",
+   "entity": "5"
+  },
+  {
+   "color": "#8A9A5B",
+   "label": "DNA 130 塩基（切れた鎖）",
+   "desc": "DNA (130-MER)",
+   "entity": "6"
+  },
+  {
+   "color": "#9C7B55",
+   "label": "DNA 23 塩基（切れた鎖）",
+   "desc": "DNA (23-MER)",
+   "entity": "7"
+  },
+  {
+   "color": "#6E6E8E",
+   "label": "PL2-6（抗体）",
+   "desc": "mAb PL2-6 antibody",
+   "entity": "8"
+  },
+  {
+   "color": "#2a3f62",
+   "label": "PARP2（切断を認識）",
+   "desc": "Poly [ADP-ribose] polymerase 2",
+   "entity": "9"
+  }
+ ],
+ "ligands": [],
+ "hero_view": {
+  "target": [
+   165.59,
+   164.93,
+   175.23
+  ],
+  "dir": [
+   -0.2636,
+   0.9646,
+   -0.0086
+  ],
+  "up": [
+   0.9232,
+   0.2548,
+   0.2876
+  ],
+  "half": [
+   66.1,
+   55.4
+  ]
+ }
 }

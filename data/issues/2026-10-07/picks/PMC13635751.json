@@ -124,10 +124,28 @@
   ],
   "method_label": "Cryo-EM・全体 2.8 Å",
   "ligand_label": "オラパリブ、タラゾパリブ、EB-47",
-  "editor_notes": "PDB/EMDB の ID は補足資料（Table S5）にのみ記載されており、構造データ表と構造図は空欄。ヒストンはショウジョウバエ由来。",
+  "editor_notes": "PDB/EMDB の ID は補足資料（Table S5）にのみ記載されており、構造データ表と構造図は空欄。ヒストンはショウジョウバエ由来。（2026-10-27：PDBe で論文の引用から PDB エントリーを逆引きして見つけ、構造図を付けた）",
   "categories": [
     "chromatin",
     "nucleic",
     "enzyme"
+  ],
+  "ga_pdb_id": "9ZSW",
+  "legend_labels": [
+    "ヒストン H2A",
+    "ヒストン H2B",
+    "ヒストン H3",
+    "ヒストン H4",
+    "DNA 153 塩基（つながった鎖）",
+    {
+      "label": "DNA 130 塩基（切れた鎖）",
+      "line": false
+    },
+    {
+      "label": "DNA 23 塩基（切れた鎖）",
+      "line": false
+    },
+    "PL2-6（抗体）",
+    "PARP2（切断を認識）"
   ]
 }

@@ -3299,8 +3299,46 @@
         "research-article"
       ],
       "abstract": "The two paralogs YAP and TAZ act through TEAD transcription factors and bind PPxY motif proteins in the Hippo pathway via WW domains. YAP has up to two WW domains, whereas TAZ has one. Because YAPWW1 and TAZWW are the most similar in sequence, they can be considered as corresponding modules in these two proteins. This study shows that, despite their similarity, they differ strongly in conformational stability and in how they bind flexible ligands. Nano-differential scanning fluorimetry, circular dichroism, and NMR indicate that both isolated domains populate partially folded or exchanging states in solution, but TAZWW is more thermally stable and has a larger folded population. Peptide binding stabilizes both domains, producing sharper NMR signals. Surface plasmon resonance measurements with PPxY peptides show micromolar affinities and generally modest differences between YAPWW1 and TAZWW, although these differences increase for conformationally plastic ligands. A high resolution LATS2:YAPWW1 crystal structure and molecular dynamics simulations suggest that preorganized peptides bind more tightly and less selectively, while flexible peptides incur larger binding penalties that dynamic YAPWW1 compensates more effectively. These observations indicate that differences in WW-domain stability contribute to subtle YAP/TAZ binding preferences despite conserved binding surfaces and evolutionary relatedness between the paralogs.",
-      "kind": "new_structure_ids_unlisted",
-      "own_structures": [],
+      "kind": "new_structure",
+      "own_structures": [
+        {
+          "pdb_id": "32DH",
+          "status": "released",
+          "title": "Crystal structure of YAP1(165-209) in complex with LATS2(511-522_C513S)",
+          "method": "X-RAY DIFFRACTION",
+          "em_reconstruction": null,
+          "resolution": 1.03,
+          "release_date": "2026-10-07",
+          "deposit_date": "2026-07-06",
+          "citation_doi": "10.3390/biom16091355",
+          "citation_pmid": "42793187",
+          "citation_title": "Comparing YAP WW1 and TAZ WW : Similar Binding Sites but Different Stability and Conformational Dynamics.",
+          "polymers": [
+            {
+              "description": "Serine/threonine-protein kinase LATS2",
+              "type": "Protein",
+              "uniprot_ids": [
+                "Q9NRM7"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            },
+            {
+              "description": "Transcriptional coactivator YAP1",
+              "type": "Protein",
+              "uniprot_ids": [
+                "P46937"
+              ],
+              "organisms": [
+                "Homo sapiens"
+              ]
+            }
+          ],
+          "ligands": [],
+          "evidence": "PDB entry whose primary citation is this paper (PDBe; the codes are not in the text)"
+        }
+      ],
       "cited_pdb_ids": [],
       "emdb_ids": [],
       "people": {
@@ -3315,10 +3353,109 @@
           }
         ]
       },
-      "proteins": [],
+      "proteins": [
+        {
+          "uniprot": "P46937",
+          "gene": "YAP1",
+          "synonyms": [
+            "YAP65"
+          ],
+          "name": "Transcriptional coactivator YAP1",
+          "organism": "Homo sapiens",
+          "keywords": [
+            "Activator",
+            "Alternative splicing",
+            "Cell junction",
+            "Cell membrane",
+            "Coiled coil",
+            "Cytoplasm",
+            "Membrane",
+            "Nucleus",
+            "Phosphoprotein",
+            "Proto-oncogene",
+            "Repeat",
+            "Repressor",
+            "Tight junction",
+            "Transcription",
+            "Transcription regulation",
+            "Ubl conjugation"
+          ],
+          "ec": [],
+          "pfam": {
+            "PF15238": "TEADIR3",
+            "PF00397": "WW"
+          },
+          "interpro": {
+            "IPR053819": "TEADIR3_omega_loop",
+            "IPR001202": "WW_dom",
+            "IPR036020": "WW_dom_sf",
+            "IPR051583": "YAP1"
+          },
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ],
+          "prior_pdb_count": 41,
+          "first_structure": false
+        },
+        {
+          "uniprot": "Q9NRM7",
+          "gene": "LATS2",
+          "synonyms": [
+            "KPM"
+          ],
+          "name": "Serine/threonine-protein kinase LATS2",
+          "organism": "Homo sapiens",
+          "keywords": [
+            "ATP-binding",
+            "Cell cycle",
+            "Cell division",
+            "Cytoplasm",
+            "Cytoskeleton",
+            "Kinase",
+            "Magnesium",
+            "Metal-binding",
+            "Mitosis",
+            "Nucleotide-binding",
+            "Nucleus",
+            "Phosphoprotein",
+            "Serine/threonine-protein kinase",
+            "Transferase",
+            "Tumor suppressor"
+          ],
+          "ec": [
+            "2.7.11.1"
+          ],
+          "pfam": {
+            "PF00069": "Pkinase",
+            "PF00433": "Pkinase_C"
+          },
+          "interpro": {
+            "IPR000961": "AGC-kinase_C",
+            "IPR011009": "Kinase-like_dom_sf",
+            "IPR017892": "Pkinase_C",
+            "IPR000719": "Prot_kinase_dom",
+            "IPR017441": "Protein_kinase_ATP_BS",
+            "IPR008271": "Ser/Thr_kinase_AS",
+            "IPR050236": "Ser_Thr_kinase_AGC",
+            "IPR015940": "UBA",
+            "IPR009060": "UBA-like_sf"
+          },
+          "lineage": [
+            "Eukaryota",
+            "Metazoa"
+          ],
+          "prior_pdb_count": 1,
+          "first_structure": false
+        }
+      ],
       "score": 40,
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "categories_draft": []
+      "categories_draft": [
+        "kinase",
+        "regulation"
+      ],
+      "pdb_from_citation": true
     },
     {
       "pmcid": "PMC13683389",

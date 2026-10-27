@@ -1580,6 +1580,8 @@ apo構造を1.86 Åで決定。Arg335がスクシニルCoAの選択に関わる�
 
 ![構造図：YAPWW1・TAZWW（ヒト）](figures/PMC13604635.svg)
 
+<sub>色（順に）：YAP1（WW1 ドメイン） / LATS2（ペプチド）</sub>
+
 **YAPWW1はTAZWWより熱安定性が低い**
 
 LATS2との1.03 Å結晶構造を解き、ペプチドの柔軟さと選択性の関係を探った
@@ -1666,7 +1668,12 @@ SMAD7 の Ser212 を Pro にして硬くすると、TAZ/YAP の Kd 比は 4.4 �
 
 #### 構造データ
 
-寄託の記載はあるが、ID は補足資料にのみ記載されている。
+| PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
+|---|---|---|---|---|---|
+| [32DH](https://www.rcsb.org/structure/32DH) | X-ray | 1.03 Å | 2026-10-07 | Homo sapiens | — |
+
+- [P46937](https://www.uniprot.org/uniprotkb/P46937) YAP1 Transcriptional coactivator YAP1 — *Homo sapiens* （既存の PDB 構造 41 件）
+- [Q9NRM7](https://www.uniprot.org/uniprotkb/Q9NRM7) LATS2 Serine/threonine-protein kinase LATS2 — *Homo sapiens* （既存の PDB 構造 1 件）
 
 #### 実験メモ
 
@@ -1701,7 +1708,7 @@ SMAD7 の Ser212 を Pro にして硬くすると、TAZ/YAP の Kd 比は 4.4 �
 
 </details>
 
-> 📝 編集者への確認事項：PDB ID は本文に「32dh」とあるが、Data availability に表記はなく PDB と照合できないため図なし（kind: new_structure_ids_unlisted）。結晶構造は YAPWW1 と LATS2 ペプチド（Cys を Ser にした mLATS2）の複合体で、YAPWW1 の SMAD7 複合体（PDB 2ltw）は既存。論文は「初めて」とは書いていないので first_claim なし。TAZWW 複合体は Boltz-2 モデルで、紹介文は実験で得た部分（結晶構造・NanoDSF・NMR・SPR）を中心に書いた。
+> 📝 編集者への確認事項：PDB ID は本文に「32dh」とあるが、Data availability に表記はなく PDB と照合できないため図なし（kind: new_structure_ids_unlisted）。結晶構造は YAPWW1 と LATS2 ペプチド（Cys を Ser にした mLATS2）の複合体で、YAPWW1 の SMAD7 複合体（PDB 2ltw）は既存。論文は「初めて」とは書いていないので first_claim なし。TAZWW 複合体は Boltz-2 モデルで、紹介文は実験で得た部分（結晶構造・NanoDSF・NMR・SPR）を中心に書いた。（2026-10-27：PDBe で論文の引用から PDB エントリーを逆引きして見つけ、構造図を付けた）
 
 ---
 

@@ -1,6 +1,7 @@
 """Render an issue: graphical abstracts (SVG) and the issue page for review (README.md).
 
     python3 -m pipeline.render 2026-10-07
+    python3 -m pipeline.render 2026-10-07 --only PMC13635751   # one article's figures (the others are left as they are)
 """
 
 from __future__ import annotations
@@ -289,6 +290,24 @@ def chem_name(name: str | None) -> str:
     return name.title() if name.isupper() else name
 
 
+def label_text(entry) -> str:
+    """An entry of pick["legend_labels"]: the label, or {"label": ..., "line": false} for a molecule named in the legend
+    but given no leader line (a complex of more than MAX_LABELS molecules: the line goes to the ones that matter)."""
+    return entry.get("label", "") if isinstance(entry, dict) else entry
+
+
+def leader_names(pick: dict) -> list:
+    """(name, role) of each entity in legend order that gets a leader line (at most MAX_LABELS), None for the others."""
+    out, n = [], 0
+    for t in pick.get("legend_labels") or []:
+        if (isinstance(t, dict) and t.get("line") is False) or n >= MAX_LABELS:
+            out.append(None)
+        else:
+            out.append(split_label(label_text(t)))
+            n += 1
+    return out
+
+
 def split_label(text: str) -> tuple[str, str]:
     """'Wzm（膜貫通サブユニット）' -> ('Wzm', '膜貫通サブユニット'): the name and, smaller beneath it, what it does."""
     m = re.match(r"^(.*?)[（(](.*)[）)]\s*$", text.strip())
@@ -308,7 +327,7 @@ def figure_notes(pick: dict) -> list[dict]:
 def _annotation_inputs(pick: dict, lig_ids: set, pdb_names: dict, site: dict | None, prefer: list) -> tuple:
     """What the leader lines say: (entity labels the writer gave, up to 4 ligand labels with the zoomed one first,
     figure_notes)."""
-    names = [split_label(t) for t in (pick.get("legend_labels") or [])[:MAX_LABELS]]
+    names = leader_names(pick)
     lig_order = ([site["ligand"]] if site else []) + [x for x in prefer if x in lig_ids and not (site and x == site["ligand"])]
     lig_order += [x for x in sorted(lig_ids) if x not in lig_order]
     lig_labels = {}
@@ -365,7 +384,7 @@ def structure_figure(cand: dict, pick: dict, theme: brand.Theme | None = None) -
             if inset_body:
                 body += _inset(inset_body, inset, probe.get("site"), pick, th, ligand_name(
                     site["ligand"], pdb_names.get(site["ligand"]), pick))
-            labels = pick.get("legend_labels") or []
+            labels = [label_text(t) for t in pick.get("legend_labels") or []]
             legend = [(col, labels[i] if i < len(labels) else lab, desc, ent)
                       for i, (col, lab, desc, ent) in enumerate(legend)]
     ground = None  # the figure is transparent: it sits on the page ground
@@ -511,7 +530,7 @@ def _compare_inputs(cand: dict, pick: dict):
     if mark:
         mark = {"entity": int(mark.get("entity", 1)) - 1, "residue": int(mark["residue"]), "text": mark.get("text", "")}
     genes = {p["uniprot"]: p["gene"] for p in cand.get("proteins", []) if p.get("gene")}
-    names = [split_label(t)[0] for t in (pick.get("legend_labels") or [])[:MAX_LABELS]]
+    names = [x[0] if x else "" for x in leader_names(pick)]
     return panels, focus, mark, genes, names, int(spec.get("align", 1)) - 1
 
 
@@ -785,6 +804,9 @@ def issue_md(meta: dict, picks: list[tuple[dict, dict]], infos: dict | None = No
 
 def main(argv=None) -> int:
     argv = argv if argv is not None else sys.argv[1:]
+    only = None
+    if len(argv) == 3 and argv[1] == "--only":   # an article of an issue already published: its figures only
+        only, argv = argv[2], argv[:1]
     if len(argv) != 1:
         print(__doc__)
         return 2
@@ -800,6 +822,10 @@ def main(argv=None) -> int:
     fig_dir.mkdir(exist_ok=True)
     infos = {}
     for cand, pick in picks:
+        if only and cand["pmcid"] != only:
+            jp = fig_dir / f"{cand['pmcid']}.json"
+            infos[cand["pmcid"]] = read_json(jp) if jp.exists() else {}
+            continue
         svg, info = structure_figure(cand, pick)
         fig_path = fig_dir / f"{cand['pmcid']}.svg"
         if svg:
@@ -839,6 +865,8 @@ def main(argv=None) -> int:
         infos[cand["pmcid"]] = info
     feature = read_json(d / "feature.json") if (d / "feature.json").exists() and len(picks) >= FEATURE_MIN else None
     for cand, pick in picks:   # the front page's large picture: Today's Structure only
+        if only and cand["pmcid"] != only:
+            continue
         hero_path = fig_dir / f"{cand['pmcid']}-hero.svg"
         hero, view = hero_figure(cand, pick) if feature and feature.get("pmcid") == cand["pmcid"] else ("", None)
         if hero:

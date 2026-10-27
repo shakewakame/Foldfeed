@@ -22,7 +22,7 @@
 
 | # | 標的 | 手法・分解能 | 見出し |
 |---|---|---|---|
-| 1 | ヒトPARP2–HPF1／ヌクレオソーム | Cryo-EM・全体 2.8 Å | PARP2は、ヌクレオソームの2周にまたがって切断を認識する |
+| 1 | ヒトPARP2–HPF1／ヌクレオソーム | Cryo-EM・1.99–2.84 Å（49 構造） | PARP2は、ヌクレオソームの2周にまたがって切断を認識する |
 | 2 | SpNanR（肺炎球菌） | X-ray・2.01–2.99 Å（4 構造） | 肺炎球菌のNanRは、代謝物が四量体をつなぎとめて安定化する |
 | 3 | LbCas12a Lid2変異体 | PDB 公開待ち | Lidをループに置き換えると、Cas12aは非標的鎖だけを切る |
 | 4 | 大腸菌NNT（PntA/PntB） | Cryo-EM・2.74–3.85 Å（9 構造） | NNTは基質の結合でdIIIを外し、プロトン通路を切り替える |
@@ -42,6 +42,8 @@
 筆頭著者：Chathuni Jayathilake（Case Western Reserve University, United States）　責任著者：Tae Hun Kim（Case Western Reserve University, United States）
 
 ![構造図：ヒトPARP2–HPF1／ヌクレオソーム](figures/PMC13635751.svg)
+
+<sub>色（順に）：ヒストン H2A / ヒストン H2B / ヒストン H3 / ヒストン H4 / DNA 153 塩基（つながった鎖） / DNA 130 塩基（切れた鎖） / DNA 23 塩基（切れた鎖） / PL2-6（抗体） / PARP2（切断を認識）</sub>
 
 **PARP2は、ヌクレオソームの2周にまたがって切断を認識する**
 
@@ -114,7 +116,64 @@ WGRドメインが上側のDNAジャイアで切断を認識し、HDのArg296と
 
 #### 構造データ
 
-寄託の記載はあるが、ID は補足資料にのみ記載されている。
+| PDB | 手法 | 分解能 | 公開 | 生物種 | リガンド |
+|---|---|---|---|---|---|
+| [9TUN](https://www.rcsb.org/structure/9TUN) | Cryo-EM | 2.59 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9YLR](https://www.rcsb.org/structure/9YLR) | Cryo-EM | 1.99 Å | 2026-10-14 | Drosophila melanogaster, Mus musculus, synthetic construct | — |
+| [9ZS5](https://www.rcsb.org/structure/9ZS5) | Cryo-EM | 2.32 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9ZS6](https://www.rcsb.org/structure/9ZS6) | Cryo-EM | 2.67 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9ZSG](https://www.rcsb.org/structure/9ZSG) | Cryo-EM | 2.60 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9ZSI](https://www.rcsb.org/structure/9ZSI) | Cryo-EM | 2.69 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9ZSJ](https://www.rcsb.org/structure/9ZSJ) | Cryo-EM | 2.42 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9ZSK](https://www.rcsb.org/structure/9ZSK) | Cryo-EM | 2.40 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9ZSL](https://www.rcsb.org/structure/9ZSL) | Cryo-EM | 2.33 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9ZSM](https://www.rcsb.org/structure/9ZSM) | Cryo-EM | 2.49 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9ZSO](https://www.rcsb.org/structure/9ZSO) | Cryo-EM | 2.71 Å | 2026-10-14 | Drosophila melanogaster, Mus musculus, synthetic construct | — |
+| [9ZSP](https://www.rcsb.org/structure/9ZSP) | Cryo-EM | 2.42 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9ZSQ](https://www.rcsb.org/structure/9ZSQ) | Cryo-EM | 2.28 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9ZSR](https://www.rcsb.org/structure/9ZSR) | Cryo-EM | 2.58 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9ZSS](https://www.rcsb.org/structure/9ZSS) | Cryo-EM | 2.77 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9ZST](https://www.rcsb.org/structure/9ZST) | Cryo-EM | 2.75 Å | 2026-10-14 | Drosophila melanogaster, Mus musculus, synthetic construct | — |
+| [9ZSU](https://www.rcsb.org/structure/9ZSU) | Cryo-EM | 2.21 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9ZSW](https://www.rcsb.org/structure/9ZSW) | Cryo-EM | 2.21 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9ZSX](https://www.rcsb.org/structure/9ZSX) | Cryo-EM | 2.34 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9ZSY](https://www.rcsb.org/structure/9ZSY) | Cryo-EM | 2.37 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9ZSZ](https://www.rcsb.org/structure/9ZSZ) | Cryo-EM | 2.46 Å | 2026-10-14 | Drosophila melanogaster, Mus musculus, synthetic construct | — |
+| [9ZTA](https://www.rcsb.org/structure/9ZTA) | Cryo-EM | 2.65 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9ZTD](https://www.rcsb.org/structure/9ZTD) | Cryo-EM | 2.50 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9ZTE](https://www.rcsb.org/structure/9ZTE) | Cryo-EM | 2.32 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9ZTF](https://www.rcsb.org/structure/9ZTF) | Cryo-EM | 2.67 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9ZTG](https://www.rcsb.org/structure/9ZTG) | Cryo-EM | 2.68 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9ZTH](https://www.rcsb.org/structure/9ZTH) | Cryo-EM | 2.64 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9ZTI](https://www.rcsb.org/structure/9ZTI) | Cryo-EM | 2.57 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9ZTM](https://www.rcsb.org/structure/9ZTM) | Cryo-EM | 2.49 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9ZTN](https://www.rcsb.org/structure/9ZTN) | Cryo-EM | 2.84 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9ZTO](https://www.rcsb.org/structure/9ZTO) | Cryo-EM | 2.51 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9ZTP](https://www.rcsb.org/structure/9ZTP) | Cryo-EM | 2.49 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9ZTQ](https://www.rcsb.org/structure/9ZTQ) | Cryo-EM | 2.63 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9ZTR](https://www.rcsb.org/structure/9ZTR) | Cryo-EM | 2.33 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9ZTS](https://www.rcsb.org/structure/9ZTS) | Cryo-EM | 2.50 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9ZTU](https://www.rcsb.org/structure/9ZTU) | Cryo-EM | 2.48 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9ZTW](https://www.rcsb.org/structure/9ZTW) | Cryo-EM | 2.51 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9ZTX](https://www.rcsb.org/structure/9ZTX) | Cryo-EM | 2.51 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9ZTY](https://www.rcsb.org/structure/9ZTY) | Cryo-EM | 2.49 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9ZTZ](https://www.rcsb.org/structure/9ZTZ) | Cryo-EM | 2.49 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9ZU0](https://www.rcsb.org/structure/9ZU0) | Cryo-EM | 2.33 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9ZU5](https://www.rcsb.org/structure/9ZU5) | Cryo-EM | 2.55 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9ZU7](https://www.rcsb.org/structure/9ZU7) | Cryo-EM | 2.39 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9ZU8](https://www.rcsb.org/structure/9ZU8) | Cryo-EM | 2.33 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9ZUA](https://www.rcsb.org/structure/9ZUA) | Cryo-EM | 2.53 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9ZXL](https://www.rcsb.org/structure/9ZXL) | Cryo-EM | 2.48 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9ZY2](https://www.rcsb.org/structure/9ZY2) | Cryo-EM | 2.59 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9ZYC](https://www.rcsb.org/structure/9ZYC) | Cryo-EM | 2.26 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+| [9ZZZ](https://www.rcsb.org/structure/9ZZZ) | Cryo-EM | 2.56 Å | 2026-10-14 | Drosophila melanogaster, Homo sapiens, Mus musculus, synthetic construct | — |
+
+- [P02283](https://www.uniprot.org/uniprotkb/P02283) His2B Histone H2B — *Drosophila melanogaster* （既存の PDB 構造 22 件）
+- [P02299](https://www.uniprot.org/uniprotkb/P02299) His3 Histone H3 — *Drosophila melanogaster* （既存の PDB 構造 31 件）
+- [P84040](https://www.uniprot.org/uniprotkb/P84040) His4 Histone H4 — *Drosophila melanogaster* （既存の PDB 構造 25 件）
+- [P84051](https://www.uniprot.org/uniprotkb/P84051) His2A Histone H2A — *Drosophila melanogaster* （既存の PDB 構造 21 件）
+- [Q9NWY4](https://www.uniprot.org/uniprotkb/Q9NWY4) HPF1 Histone PARylation factor 1 — *Homo sapiens* （既存の PDB 構造 8 件）
+- [Q9UGN5](https://www.uniprot.org/uniprotkb/Q9UGN5) PARP2 Poly [ADP-ribose] polymerase 2 — *Homo sapiens* （既存の PDB 構造 30 件）
 
 #### 実験メモ
 
@@ -140,7 +199,7 @@ WGRドメインが上側のDNAジャイアで切断を認識し、HDのArg296と
 
 </details>
 
-> 📝 編集者への確認事項：PDB/EMDB の ID は補足資料（Table S5）にのみ記載されており、構造データ表と構造図は空欄。ヒストンはショウジョウバエ由来。
+> 📝 編集者への確認事項：PDB/EMDB の ID は補足資料（Table S5）にのみ記載されており、構造データ表と構造図は空欄。ヒストンはショウジョウバエ由来。（2026-10-27：PDBe で論文の引用から PDB エントリーを逆引きして見つけ、構造図を付けた）
 
 ---
 
