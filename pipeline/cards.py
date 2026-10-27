@@ -51,15 +51,18 @@ body {{ width:1200px; height:630px; position:relative; overflow:hidden; backgrou
 <div class="fig"><img src="{figure}" alt=""></div></body></html>"""
 
 
-def card_path(date: str, pmcid: str, out: Path | None = None) -> Path:
-    return (out / f"{date}-{pmcid}.png") if out else ISSUES_DIR / date / "figures" / f"{pmcid}-card.png"
+def card_path(date: str, pmcid: str, out: Path | None = None, root: Path = ISSUES_DIR) -> Path:
+    return (out / f"{date}-{pmcid}.png") if out else root / date / "figures" / f"{pmcid}-card.png"
 
 
-def lead_of(date: str) -> str | None:
-    """The issue's lead article: Today's Structure, else the first article in page order."""
+def lead_of(date: str, root: Path = ISSUES_DIR) -> str | None:
+    """The issue's lead article: Today's Structure, else the first article in page order. None for an issue that is
+    not under `root` (a preview's issue is not in data/issues until it is merged)."""
     from . import site   # the page order and the pick are the site's
-    _, picks, _ = site.load_issue(date, ISSUES_DIR)
-    feature = site.load_feature(date, ISSUES_DIR, picks)
+    if not (root / date / "candidates.json").exists():
+        return None
+    _, picks, _ = site.load_issue(date, root)
+    feature = site.load_feature(date, root, picks)
     return feature["pmcid"] if feature else (picks[0][0]["pmcid"] if picks else None)
 
 

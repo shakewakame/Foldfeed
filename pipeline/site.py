@@ -1361,10 +1361,11 @@ SITE_URL = (read_json(ROOT / "config" / "editorial.json").get("site_url") or "")
 OG = {"default": None}   # the link preview of pages that have none of their own: the newest issue's (set by build)
 
 
-def og_image(date: str | None) -> str | None:
-    """The address of an issue's link-preview image: its lead article's card (pipeline.cards), when there is one."""
-    pm = date and cards.lead_of(date)
-    return f"{SITE_URL}figures/{date}/{pm}-card.png" if pm and cards.card_path(date, pm).exists() else None
+def og_image(date: str | None, root: Path = ISSUES_DIR, base: str = "figures") -> str | None:
+    """The address of an issue's link-preview image: its lead article's card (pipeline.cards), when there is one.
+    A preview's issue is read from its own folder (`root`) and its figures are served under preview/ (`base`)."""
+    pm = date and cards.lead_of(date, root)
+    return f"{SITE_URL}{base}/{date}/{pm}-card.png" if pm and cards.card_path(date, pm, root=root).exists() else None
 
 
 def page(title: str, body: str, depth: int, description: str = DESCRIPTION, noindex: bool = False,
@@ -2681,7 +2682,8 @@ def issue_page(date: str, prev_date: str | None, next_date: str | None,
     desc = "、".join(pk["target_label"] for _, pk in picks[:6])
     title = f"{brand.SITE_NAME} {date.replace('-', '')}"   # "FoldFeed 20261018" (the owner's naming, 2026-10-18)
     body = f'<div class="wrap issue-top">{"".join(top)}</div>' + shell("".join(main), side, sticky=True)
-    return page(("［プレビュー］" if preview else "") + title, bar + head + body + foot, depth=1, image=og_image(date),
+    return page(("［プレビュー］" if preview else "") + title, bar + head + body + foot, depth=1,
+                image=og_image(date, root, "preview/figures" if preview else "figures"),
                 description=f"{jp_date(date)}の新しい構造：{desc}", noindex=preview, viewer=True, script=CAROUSEL_SCRIPT)
 
 
