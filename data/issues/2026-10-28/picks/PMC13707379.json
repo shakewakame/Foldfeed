@@ -1,0 +1,151 @@
+{
+  "pmcid": "PMC13707379",
+  "section": "impact",
+  "rank": 1,
+  "headline": "小さなキナーゼのATP結合部位が、鋳型照合で見えた",
+  "subhead": "既知の構造を鋳型に粒子の向きを決める2DTMで、公開データから約43 kDaの酵素を再構成した",
+  "target_label": "プロテインキナーゼA",
+  "target_en": "Protein kinase A catalytic subunit (~43 kDa)",
+  "method_label": "Cryo-EM・2DTM",
+  "ga_pdb_id": "1ATP",
+  "summary": {
+    "question": "50 kDa未満の小さな複合体は画像のコントラストが弱く、単粒子クライオ電顕で高分解能の構造を決めにくい。",
+    "approach": "既知の高分解能構造を鋳型にする2Dテンプレートマッチング（2DTM）で粒子の向きを決め、公開済みのキナーゼのデータを再解析した。",
+    "result": "ATPを鋳型から外しても、ATPとMn2+の密度が戻った。2DTMの向きを使った地図は3.1 Åで、RELIONの3.7 Åより明瞭だった。",
+    "learned": "この方法は、50 kDaを大きく下回る薬剤結合複合体にも広げられると理論解析は予測する。鋳型の精度が結果を左右する。",
+    "open": "AlphaFold3の鋳型で残基ごとに検証する作業は計算量が大きく、今後の課題とされている。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Despite recent advances in single-particle cryo-EM, structure determination for sub-50 kDa complexes remains challenging.",
+          "section": "Introduction"
+        },
+        {
+          "quote": "Small complexes contain fewer atoms and scatter fewer electrons, leading to images with lower signal-to-noise ratios (SNRs).",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "We apply this method to a previously published dataset of the ∼43 kDa catalytic domain of protein kinase A (Herzik et al., 2019) and demonstrate improved reconstruction of its ligand-binding sites.",
+          "section": "Introduction"
+        },
+        {
+          "quote": "In this work, we demonstrate that the alignment and reconstruction of small macromolecular complexes can be improved using high-resolution structures as priors, combined with 2D template matching.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "In all three cases, the reconstructions showed well-defined ATP and Mn2+ densities in the binding pocket.",
+          "section": "Results"
+        },
+        {
+          "quote": "The reconstruction using 2DTM orientations reached 3.1 Å at the FSC = 0.143 threshold, compared with 3.7 Å for the RELION auto-refined reconstruction",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Our theoretical analysis predicts that this method can further extend single-particle cryo-EM to important drug-binding complexes well below 50 kDa.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "highlighting the importance of template accuracy in enabling efficient detection and reconstruction of small complexes",
+          "section": "Results"
+        }
+      ],
+      "open": [
+        {
+          "quote": "extending this approach to AlphaFold3-based templates remains computationally expensive and we consider this an important direction for future work",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "kinase"
+  ],
+  "topics": [
+    "method"
+  ],
+  "highlights": [
+    {
+      "tag": "手法の工夫",
+      "text": "元の報告の地図は約4.3 Å（74,413粒子）で、ATP結合部位が解けなかった。本研究は画像と粒子を厳しく選び、ATPと数残基を鋳型から外したまま、7,353粒子でATPの密度を取り出した。",
+      "evidence": [
+        {
+          "quote": "In the original publication (Herzik et al., 2019), a final stack of 74,413 particles was used to obtain a reconstruction at ∼4.3 Å resolution by gold-standard FSC.",
+          "section": "Results"
+        },
+        {
+          "quote": "In particular, the ATP-binding pocket was not resolved in the map",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "手法の工夫",
+      "text": "ATPから3.0 Åと5.5 Å以内の残基まで鋳型から外して試した。ATPの密度は安定して戻ったが、周りの残基は削る範囲が広いほど戻りにくかった。",
+      "evidence": [
+        {
+          "quote": "We also found that nearby protein residues were more affected by template deletion than ATP.",
+          "section": "Results"
+        },
+        {
+          "quote": "In contrast, ATP density was consistently recovered more robustly than nearby residues.",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "実験Tips",
+      "text": "約10残基ずつ外した36通りの鋳型から合成した地図では、タンパク質の各所で密度が戻った。ただし、戻りやすさは場所によって違った。",
+      "evidence": [
+        {
+          "quote": "The resulting composite map shows that density can be recovered at distributed locations across the structure, including regions far from the alignment center.",
+          "section": "Results"
+        },
+        {
+          "quote": "Recovery is variable across sites",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": null,
+    "construct": null,
+    "purification": null,
+    "sample_prep": null,
+    "data_collection": "公開データ（EMPIAR-10252、4809枚）を使った。MotionCor2で補正し、鋳型は1ATPからcisTEMのsimulateで作った。再構成もcisTEMで行った。",
+    "evidence": [
+      {
+        "quote": "Unaligned movies of the protein kinase were downloaded from EMPIAR-10252 (Herzik et al., 2019). The dataset contains 4809 images",
+        "section": "Methods"
+      },
+      {
+        "quote": "Motion correction and exposure weighting were performed using the MotionCor2 program",
+        "section": "Methods"
+      },
+      {
+        "quote": "was simulated using the simulate program in cisTEM with a uniform B-factor of 30 Å2",
+        "section": "Results"
+      },
+      {
+        "quote": "A 3D reconstruction was generated using the cisTEM program reconstruct3d.",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "クライオ電顕",
+    "2DTM",
+    "キナーゼ"
+  ],
+  "editor_notes": "新しい構造ではなく、公開済みの EMPIAR-10252 データの再解析（手法の論文）。構造図は鋳型に使った X 線構造 1ATP。FSC はどちらも鋳型由来の向きを使うため gold-standard ではないと本文が断っており、記事の 3.1 Å / 3.7 Å もその前提。点数は 7（novelty 2・reach 2・structure 2・support 1）。",
+  "legend_labels": [
+    "PKA（キナーゼ）",
+    "PKI（阻害ペプチド）"
+  ]
+}

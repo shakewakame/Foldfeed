@@ -1,0 +1,176 @@
+{
+  "pmcid": "PMC13702157",
+  "rank": 2,
+  "headline": "KBATの塩化物イオン結合は、E320のプロトン化と関係する",
+  "subhead": "ヒトSLC26A11の内向き型構造をクライオ電顕で解き、MDでE320の働きとエレベーター型の輸送を調べた",
+  "target_label": "ヒトKBAT（SLC26A11）",
+  "target_en": "Human KBAT (SLC26A11)",
+  "summary": {
+    "question": "KBAT（SLC26A11）が塩化物イオンをどう認識し、どう輸送するのか、その分子の仕組みは不明だった。",
+    "approach": "全長のヒトKBATをクライオ電顕で解き、分子動力学（MD）シミュレーションで結合と構造変化を調べた。",
+    "result": "内向き型の構造で、TM3とTM10の間に塩化物イオンが見えた。MDでは、E320がプロトン化するとS363との接触が67.4%から1.4%に減った。",
+    "learned": "E320のプロトン化が塩化物イオンを取り込むスイッチになると提案された。輸送はエレベーター型と考えられる。",
+    "open": "E320がプロトン化しているかどうかは、クライオ電顕の密度からは決められない。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Despite its physiological significance, the molecular basis of substrate recognition and transport by KBAT remains elusive.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here, we present the structure of full-length human KBAT in an inward-facing conformation with chloride ions (Cl−) bound.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Protonation of E320 abolishes its interaction with S363 and correlates with Cl− binding in the canonical substrate pocket, as substantiated by molecular dynamics (MD) simulations.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "A well-defined extra cryo-EM density is present at this site and was assigned to a chloride ion",
+          "section": "Results"
+        },
+        {
+          "quote": "In the charged state, E320 maintains a tight interaction with S363 (67.4% contact occupancy).",
+          "section": "Results"
+        },
+        {
+          "quote": "upon protonation, this contact occupancy drastically drops to 1.4%",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "We thus propose that E320 protonation constitutes a molecular switch that modulates both substrate stability and transport function.",
+          "section": "Results"
+        },
+        {
+          "quote": "Quantitative MD contact analysis delineates the rearrangements of residue interactions underlying the alternative access transport, consistent with an elevator-like transport mechanism.",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Yet the protonation state of E320 cannot be defined through Cryo-EM density maps.",
+          "section": "Results"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "transporter"
+  ],
+  "topics": [
+    "membrane",
+    "dynamics"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "塩化物イオンは、S363・Q65・Y69の側鎖と、ほどけかけたTM3・TM10の主鎖のアミドで保持される。イオンの位置は、SLC26ファミリーの他の構造でも共通している。",
+      "evidence": [
+        {
+          "quote": "The chloride ion is mostly coordinated by side-chains of S363, Q65, and Y69, and mainchain amide nitrogen from F364, G365, A106, and T105",
+          "section": "Results"
+        },
+        {
+          "quote": "The locations of the substrate halide ions are highly conserved among SLC26 homologs, further supporting the assignment of Cl− ion in this pocket",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "MDでは、E320がプロトン化すると塩化物イオンが結合部位に入り、90 ns以上とどまった。電荷をもつ状態では安定に結合しなかった。いずれもシミュレーション上の結果である。",
+      "evidence": [
+        {
+          "quote": "a chloride ion from the bulk solution spontaneously entered the binding cavity within the first 5 ns and remained stably coordinated for over 90 ns",
+          "section": "Results"
+        },
+        {
+          "quote": "when E320 was charged, chloride ions only occasionally approached the pocket vestibule with substantial positional fluctuations, failing to establish stable occupancy",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "AlphaFold3が予測した外向き型では、コアドメインが実験構造より細胞外側へ上がっていた。両方のMDを比べると、ゲートドメインの16残基が、コアドメインの接触相手を切り替えていた。",
+      "evidence": [
+        {
+          "quote": "the Core domain undergoes a pronounced displacement toward the extracellular side in the predicted structure",
+          "section": "Results"
+        },
+        {
+          "quote": "This analysis found that 16 Gate residues systematically switch interaction partners in the Core domain",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "全長のヒトSLC26A11を、ヒトの培養細胞（HEK細胞株）で発現した。C末端にFlagタグとStrepタグをつけた。",
+    "construct": "cDNAから増幅した全長のコード配列を、pSQベクターに入れた。",
+    "purification": "1.5% DDMで可溶化して抗Flag樹脂で精製し、0.01% GDN中でSuperose 6 Increaseのゲルろ過にかけた。",
+    "sample_prep": "約12 mg/mLに濃縮し、Quantifoil Cu R1.2/1.3のグリッドに載せた。3.5秒ブロットし、Vitrobot Mark IVで凍結した。",
+    "data_collection": "Titan Krios G3（300 kV、K3）で撮影し、cryoSPARC 4.6.2で処理した。AlphaFold 3の予測を初期モデルにして、COOTとPHENIXで精密化した。",
+    "evidence": [
+      {
+        "quote": "The full-length protein-coding DNA segment for human SLC26A11 (UniProt ID: Q86WA9) was amplified from a cDNA library and subcloned into the pSQ vector.",
+        "section": "Methods"
+      },
+      {
+        "quote": "The Flag tag and Strep tag was fused to the C-terminus of KBAT.",
+        "section": "Methods"
+      },
+      {
+        "quote": "HEK 293F cells were cultured in SMM 293-TII medium under 5% CO2, 37 °C, 130 rpm",
+        "section": "Methods"
+      },
+      {
+        "quote": "Then the cells were lysed in 1.5% n-dodecyl-β-D-maltopyranoside (DDM) with 0.2 mM phenylmethylsulfonyl fluoride (PMSF) at 4 °C for 2 h.",
+        "section": "Methods"
+      },
+      {
+        "quote": "The resin was washed with 0.01% glyco-diosgenin (GDN) and eluted in the same buffer with an additional 0.25 mg/mL Flag peptide.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Then the protein was further purified by size exclusion chromatography (Superose 6 Increase 10/300 GL",
+        "section": "Methods"
+      },
+      {
+        "quote": "The purified KBAT sample was concentrated to approximately 12 mg/mL before being applied to glow-discharged holey carbon grids",
+        "section": "Methods"
+      },
+      {
+        "quote": "The grids were then blotted for 3.5 s and flash-frozen in liquid ethane cooled by liquid nitrogen using the Vitrobot",
+        "section": "Methods"
+      },
+      {
+        "quote": "operating at 300 kV, equipped with a Gatan K3 Summit detector",
+        "section": "Methods"
+      },
+      {
+        "quote": "The Cryo-EM structures of KBAT were solved in cryoSPARC 4.6.2 [21].",
+        "section": "Methods"
+      },
+      {
+        "quote": "Molecular model of human KBAT predicted by AlphaFold 3 (AF3, AF-Q86WA9-F1) [22] was fit to the cryo-EM map by Chimera",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "KBAT",
+    "SLC26A11",
+    "塩化物イオン"
+  ],
+  "editor_notes": "本文は全体の分解能を 3.5 Å と書くが、PDB 9XQF は 3.82 Å。数値は記事に書いていない。E320 のプロトン化との関係と輸送機構の議論は MD が根拠で、変異体などの実験は本論文にない。",
+  "legend_labels": [
+    "KBAT（輸送体）"
+  ]
+}

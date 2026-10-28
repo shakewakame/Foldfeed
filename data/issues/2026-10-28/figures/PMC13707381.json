@@ -1,0 +1,80 @@
+{
+ "pdb_id": "7BFB",
+ "view": {
+  "target": [
+   2.03,
+   -2.75,
+   -16.34
+  ],
+  "dir": [
+   0.2902,
+   0.8398,
+   0.4588
+  ],
+  "up": [
+   -0.7125,
+   -0.1305,
+   0.6895
+  ],
+  "half": [
+   29.3,
+   38.5
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "Mpro（プロテアーゼ）",
+   "desc": "Main Protease",
+   "entity": "1"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "9JT",
+   "label": "エブセレン",
+   "color": "#C23B8E",
+   "desc": "N-phenyl-2-selanylbenzamide",
+   "entity": [
+    "2"
+   ],
+   "sites": [
+    [
+     "C",
+     "401"
+    ],
+    [
+     "D",
+     "402"
+    ],
+    [
+     "E",
+     "403"
+    ],
+    [
+     "L",
+     "1002"
+    ],
+    [
+     "O",
+     "1005"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "9JT",
+  "residues": [
+   "H41",
+   "C44",
+   "T45",
+   "M49",
+   "D187",
+   "Q189"
+  ],
+  "hbonds": 0,
+  "pi": 1,
+  "neighbours": [],
+  "label": "エブセレン"
+ }
+}

@@ -1,0 +1,33 @@
+{
+ "pdb_id": "9XQF",
+ "view": {
+  "target": [
+   148.81,
+   148.79,
+   134.99
+  ],
+  "dir": [
+   -0.9374,
+   0.3484,
+   -0.0002
+  ],
+  "up": [
+   0.0003,
+   0.0002,
+   -1.0
+  ],
+  "half": [
+   59.3,
+   39.8
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "KBAT（輸送体）",
+   "desc": "Sodium-independent sulfate anion transporter",
+   "entity": "1"
+  }
+ ],
+ "ligands": []
+}

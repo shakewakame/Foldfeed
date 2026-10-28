@@ -1,0 +1,176 @@
+{
+  "pmcid": "PMC13697223",
+  "rank": 1,
+  "headline": "ファージのDNA合成酵素は、複製の手前でウラシルを外す",
+  "subhead": "UDGドメインを融合した2種の酵素をクライオ電顕で解析。DNAを締める2つの挿入部も見えた",
+  "target_label": "SP15型DNA合成酵素（ファージ）",
+  "target_en": "SP15-like DNA polymerases (YerA41, phiLo phages)",
+  "method_label": "Cryo-EM",
+  "summary": {
+    "question": "ウラシルを外す酵素（UDG）を自らに融合したファージのDNA合成酵素が、複製とウラシルの除去をどう両立するかを調べた。",
+    "approach": "YerA41とphiLoという2つのファージの酵素を、DNAとの複合体でクライオ電顕により解析し、活性も測った。",
+    "result": "DNAを挟む2つの大きな挿入部が約30 Å離れて並んでいた。dUを含む鋳型の5′端は、UDGドメインの活性部位の近くに届いていた。",
+    "learned": "UDGドメインが複製部位の手前でdUを外し、できた脱塩基部位をdAを入れて通り越すことを示した。",
+    "open": "糖で修飾されたYerA41のDNAを基質にした実験が、まだ必要だとされている。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "The association of the UDG domain with PolA provides an opportunity to recognize dU when it becomes exposed in the ssDNA template at the replication fork, immediately before nucleotide incorporation, tightly coupling uracil surveillance to DNA synthesis.",
+          "section": "Introduction"
+        },
+        {
+          "quote": "Here, we identify a new group of A-family DNAPs in phages that are fused to an active UDG domain and contain other large insertions.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "We determined the atomic cryo-EM structures for two of its members in various active functional and conformational states, from YerA41 and phiLo phages.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "In this study, we present a structural and functional characterization of two A-family DNAPs fused with active UDG domains",
+          "section": "Introduction"
+        }
+      ],
+      "result": [
+        {
+          "quote": "These structural insertions create two extended arms located ~30 Å apart",
+          "section": "Results"
+        },
+        {
+          "quote": "We observed electron density corresponding to the 5′ end of the DNA template strand near the active site of the UDG-like domain, hereafter referred to as the template entry region",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "how they can recognize dU bases ahead of the replication fork through their UDG domain, generating abasic sites that are preferentially bypassed through dA incorporation.",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "However, experimental studies using glycosylated YerA41 DNA as a substrate are needed to fully establish the molecular adaptations of SP15-like DNAPs to T-modified DNA.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "enzyme",
+    "nucleic"
+  ],
+  "topics": [],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "dUを含む鋳型との複合体（3.6 Å）では、鋳型の5′端がUDGドメインの活性部位の入口に届き、dUの塩基が外に出て活性部位の近くに置かれた。ただし、占有率が一部のモデルである。",
+      "evidence": [
+        {
+          "quote": "allowing the modeling of partially occupied dU base flipped into the active site of the UDG domain",
+          "section": "Results"
+        },
+        {
+          "quote": "A map at 3.6 Å resolution was obtained, allowing for a more precise modeling of the DNA substrate.",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "2つの挿入部がDNAを両側から挟み、複製中の酵素をDNAに固定する。位置はT7のチオレドキシンに似ており、複製の処理能力を高める可能性がある。",
+      "evidence": [
+        {
+          "quote": "Their combined role is clearly to tighten the grip on the DNA",
+          "section": "Results"
+        },
+        {
+          "quote": "This suggests that Insert 2 may play a role analogous to thioredoxin-mediated polymerase processivity enhancement",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "実験Tips",
+      "text": "dUは外されたが、5位にC6アミノ基をもつチミジンは外されなかった。この修飾チミジンは複製中に許容され、複製もされた。ファージ自身の修飾DNAは、UDGの基質にならないとみられる。",
+      "evidence": [
+        {
+          "quote": "indicating that these hypermodified thymidines are tolerated during replication and are not substrates for UDG activity",
+          "section": "Results"
+        },
+        {
+          "quote": "SP15-like DNAPs efficiently replicated the modified base, as demonstrated by the full-length primer extension products",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "大腸菌BL21 Star (DE3)で発現した。IPTGで誘導し、YerA41は15℃、phiLoは20℃で一晩培養した。",
+    "construct": "N末端に14個のHisタグとTEV切断部位をつけた。構造解析にはエキソヌクレアーゼ活性を欠く変異体（Exo−）を使った。",
+    "purification": "HisTrapで精製した後、HiTrap Heparinカラムにかけ、1 M NaClで溶出した。",
+    "sample_prep": "YerA41のExo−酵素とDNA二本鎖を1:2で混ぜ、ゲルろ過で精製した。取り込まれるヌクレオチドを4℃で5分加えてグリッドにした。",
+    "data_collection": "Glacios（200 kV）で撮影し、CryoSPARCで処理した。YerA41はTitan Krios G4の追加データも使った。",
+    "evidence": [
+      {
+        "quote": "Escherichia coli BL21 Star (DE3) cells (Invitrogen) were transformed with the engineered plasmids.",
+        "section": "Methods"
+      },
+      {
+        "quote": "After incubation overnight at 20°C for YerA_127, YerA_158, and phiLo_158, and 15°C for YerA_144",
+        "section": "Methods"
+      },
+      {
+        "quote": "These genes were cloned into a modified pRSF1-Duet expression vector, which includes an N-terminal 14-histidine tag and a TEV protease cleavage site.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Exonuclease-deficient mutants (Exo−) of the DNAPs from YerA and phiLo phages were subcloned for further studies.",
+        "section": "Methods"
+      },
+      {
+        "quote": "The proteins of interest were isolated by purification of the lysates on a HisTrap column",
+        "section": "Methods"
+      },
+      {
+        "quote": "Collected proteins were diluted to 50 mM NaCl and repurified on a HiTrap Heparin column with an elution at 1 M NaCl.",
+        "section": "Methods"
+      },
+      {
+        "quote": "50 μM exo− YerA41_144 was mixed with the duplex osM0072/oSM0074 at a 1:2 molar ratio and purified by size-exclusion chromatography",
+        "section": "Methods"
+      },
+      {
+        "quote": "The purified complex was then incubated with the incoming nucleotide for 5 min at 4°C prior to grid preparation.",
+        "section": "Methods"
+      },
+      {
+        "quote": "using a Glacios transmission electron microscope (Thermo Fisher Scientific), operated at 200 kV",
+        "section": "Methods"
+      },
+      {
+        "quote": "The movie stacks collected were processed in CryoSPARC [40].",
+        "section": "Methods"
+      },
+      {
+        "quote": "An additional dataset of DNAP YERA41 in complex with DNA was collected on a Titan Krios G4",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "DNA合成酵素",
+    "UDG",
+    "ファージ"
+  ],
+  "editor_notes": "PDB 9QHS・9QLH は公開済み、9QHU は未公開。UniProt は YerA41 の 1 つだけ対応し、phiLo は対応なし。タンパク質の初構造かは論文が明言していないので「初」とは書いていない。dU 複合体の 3.6 Å は 9QHU と思われるが未公開で照合できない。原文は CC BY-NC。",
+  "legend_labels": [
+    "DNA合成酵素（phiLo）",
+    "鋳型DNA",
+    "プライマーDNA"
+  ],
+  "ligand_names": {
+    "DCT": "ddCTP"
+  }
+}

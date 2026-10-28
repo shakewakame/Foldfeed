@@ -1,0 +1,101 @@
+{
+  "screened": 143,
+  "scored": [
+    {
+      "pmcid": "PMC13707379",
+      "type": "method",
+      "scores": {"novelty": 2, "reach": 2, "structure": 2, "support": 1},
+      "selected": true,
+      "reason": "既存の高分解能構造を鋳型にした2Dテンプレートマッチングで、43 kDaのキナーゼの未解決だったATP結合部位をクライオ電顕のデータから再構成した。新しいのは、鋳型に入れなかった原子の密度まで取り戻せることを示した点。検証は公開済みの1データセットに限られるため、support は1点。",
+      "evidence": {
+        "novelty": [
+          {"quote": "In this work, we demonstrate that the alignment and reconstruction of small macromolecular complexes can be improved using high-resolution structures as priors, combined with 2D template matching.", "section": "Abstract"}
+        ],
+        "reach": [
+          {"quote": "Approximately 75% of proteins in the human proteome are below 50 kDa (Wentinck et al., 2022).", "section": "Introduction"}
+        ],
+        "structure": [
+          {"quote": "Using this method, we reconstructed a previously intractable ∼43 kDa protein kinase and improved the density of its ligand-binding site.", "section": "Abstract"}
+        ],
+        "support": [
+          {"quote": "The reconstruction using 2DTM orientations reached 3.1 Å at the FSC = 0.143 threshold, compared with 3.7 Å for the RELION auto-refined reconstruction", "section": "Results"}
+        ]
+      }
+    },
+    {
+      "pmcid": "PMC13707381",
+      "type": "drug",
+      "scores": {"novelty": 2, "reach": 1, "structure": 1, "support": 2},
+      "selected": true,
+      "reason": "ぎりぎりの6点。ペプチド模倣阻害剤は二量体を安定にし、エブセレンは二量体を壊す、という2つの作用をネイティブMSとHDX-MSで分け、エブセレンの新しい共有結合部位C300を変異体で確かめた。構造データは自前のHDX-MSで、結晶構造は新しく解いていない。",
+      "evidence": {
+        "novelty": [
+          {"quote": "Notably, tandem mass spectrometry identified a novel covalent binding site for ebselen at C300.", "section": "Abstract"}
+        ],
+        "reach": [
+          {"quote": "Especially, the identification of C300 as a druggable allosteric hotspot offers an alternative strategy to combat drug resistance arising from active site mutations.", "section": "Discussion"}
+        ],
+        "structure": [
+          {"quote": "HDX-MS was employed to provide conformational insights into the binding of inhibitors.", "section": "Results"}
+        ],
+        "support": [
+          {"quote": "However, unlike WT Mpro, ebselen did not markedly shift the monomer–dimer equilibrium of C300S toward the monomeric state.", "section": "Results"}
+        ]
+      }
+    },
+    {
+      "pmcid": "PMC13706394",
+      "type": "mechanism",
+      "scores": {"novelty": 1, "reach": 1, "structure": 1, "support": 0},
+      "selected": false,
+      "reason": "構造の根拠はクライオ電顕の2Dクラスだけで、原子モデルはAlphaFoldの予測。スラミンの結合はドッキングと100 nsのMD 1本で、新規性も1点。",
+      "evidence": {
+        "novelty": [
+          {"quote": "We examined the NP of Tacheng tick virus 2 (TcTV2), a highly divergent member of the genus Uukuvirus.", "section": "Abstract"}
+        ],
+        "reach": [
+          {"quote": "Tick-borne phenuiviruses include a diverse set of emerging pathogens whose nucleoproteins (NPs) package viral RNA despite extensive sequence divergence across lineages.", "section": "Abstract"}
+        ],
+        "structure": [
+          {"quote": "Recombinant TcTV2 NP co-purified with bacterial RNA and formed heterogeneous ring-like particles, with pentamer-like particles predominating in cryo-EM 2D classes.", "section": "Abstract"}
+        ]
+      }
+    },
+    {
+      "pmcid": "PMC13709427",
+      "type": "mechanism",
+      "scores": {"novelty": 1, "reach": 1, "structure": 0, "support": 2},
+      "selected": false,
+      "reason": "電気生理と変異体の測定は丁寧だが、構造の根拠は構造モデリングだけで、実験で決めた構造がない（structure 0）。",
+      "evidence": {
+        "novelty": [
+          {"quote": "We investigated the molecular basis of Kv4.1-selective inhibition by BlTx2, an α-KTx15 scorpion toxin from Buthacus leptochelys.", "section": "Abstract"}
+        ],
+        "reach": [
+          {"quote": "Kv4 channels generate transient A-type potassium currents, but the contribution of Kv4.1 remains difficult to define because few pharmacological tools discriminate among Kv4 isoforms.", "section": "Abstract"}
+        ],
+        "support": [
+          {"quote": "Substitution of conserved α-KTx residues Lys27 and Tyr36 abolished detectable inhibition, whereas N30A reduced potency, supporting a canonical pore-blocking mechanism.", "section": "Abstract"}
+        ]
+      }
+    },
+    {
+      "pmcid": "PMC13708272",
+      "type": "mechanism",
+      "scores": {"novelty": 1, "reach": 1, "structure": 0, "support": 2},
+      "selected": false,
+      "reason": "黄色ブドウ球菌のUNGの生化学的な性質づけで、結果は既知のファミリー1と同じ。実験で決めた構造は使われていない（structure 0）。",
+      "evidence": {
+        "novelty": [
+          {"quote": "Although Family 1 UNGs are well characterized in model organisms, the biochemical and functional properties of Staphylococcus aureus UNG (SaUNG) is not well characterized.", "section": "Abstract"}
+        ],
+        "reach": [
+          {"quote": "Uracil-DNA glycosylase (UNG) initiates base excision repair by removing uracil from DNA.", "section": "Abstract"}
+        ],
+        "support": [
+          {"quote": "SaUNG complemented the mutation avoidance defect of an E. coli (ung− mug−) mutant and initiated uracil repair in a reconstituted S. aureus base excision repair system.", "section": "Abstract"}
+        ]
+      }
+    }
+  ]
+}
