@@ -19,6 +19,7 @@ from __future__ import annotations
 
 import argparse
 import datetime
+import email.utils
 import html
 import itertools
 import json
@@ -330,6 +331,10 @@ a:hover {{ color:var(--acc-ink); text-decoration:underline; text-decoration-colo
 .mail p {{ margin:0 0 8px; font-size:15px; color:var(--desc); }}
 .mail .bl {{ margin:6px 0 0; font-size:14.5px; line-height:1.65; color:var(--desc); }}
 .mail .bl li + li {{ margin-top:12px; }}
+.mail-rss {{ margin:40px 0 0; font-family:var(--latin); font-size:20px; font-weight:700; color:var(--ink); }}
+.mail-rss-p {{ margin:8px 0 0; font-size:14.5px; line-height:1.8; color:var(--desc); }}
+.mail .bl a {{ color:var(--ink); text-decoration:underline; text-decoration-color:var(--acc); text-underline-offset:3px; }}
+.mail .bl a:hover {{ color:var(--acc-ink); }}
 .mail .soon {{ font-family:var(--mono); font-size:12px; letter-spacing:.06em; color:var(--acc-ink); }}
 .mail form {{ display:flex; gap:8px; }}
 .mail input {{ flex:1; min-width:0; font:inherit; font-family:var(--sans); font-size:14.5px; padding:10px 12px; border:1px solid var(--ink);
@@ -1385,6 +1390,8 @@ def page(title: str, body: str, depth: int, description: str = DESCRIPTION, noin
                f'<meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image">'
                if image else '<meta name="twitter:card" content="summary">') +
             f'<link rel="icon" href="{up}assets/logo-mark.svg">'
+            f'<link rel="alternate" type="application/rss+xml" title="FoldFeed（号ごと）" href="{up}feed.xml">'
+            f'<link rel="alternate" type="application/rss+xml" title="FoldFeed（記事ごと）" href="{up}feed-articles.xml">'
             f'<link rel="preconnect" href="https://fonts.googleapis.com">'
             f'<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
             f'<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">'
@@ -1857,7 +1864,8 @@ def colophon(extra: str = "", up: str = "") -> str:
             f'<div class="co-brand"><a class="co-word" href="{up}index.html">{esc(brand.SITE_NAME)}</a>'
             f'<p>{esc(TAGLINE)}</p></div><nav class="co-nav" aria-label="サイト内のページ">{links}</nav></div>'
             f'<div class="co-bot"><span class="co-beta">β版</span><a href="{up}about.html#rights">著作権と出典</a>'
-            f'<a href="{up}privacy.html">プライバシーポリシー</a><a href="{up}tokushoho.html">特定商取引法に基づく表示</a>{extra}</div>'
+            f'<a href="{up}privacy.html">プライバシーポリシー</a><a href="{up}tokushoho.html">特定商取引法に基づく表示</a>'
+            f'<a href="{up}feed.xml">RSS</a>{extra}</div>'
             f'</div></footer>')
 
 
@@ -2977,7 +2985,10 @@ def newsletter_page() -> str:
     main = ('<div class="wrap list-page mail"><div class="ix-h"><h1 class="label">Newsletters &amp; Alerts</h1>'
             '<span class="soon">準備中</span></div><div class="mail-grid"><div>'
             '<ul class="bl"><li>毎朝の号の知らせ（New Structure・Structure Update・Structure-Based Study）</li><li>週のまとめ</li>'
-            '<li>気になるタンパク質のアラート（UniProt ID を登録）</li></ul></div><div>'
+            '<li>気になるタンパク質のアラート（UniProt ID を登録）</li></ul>'
+            '<h2 class="mail-rss">RSS</h2><p class="mail-rss-p">いまは RSS で毎日の号を受け取れます。RSS リーダーや Slack などに登録してください。</p>'
+            '<ul class="bl"><li><a href="feed.xml">号ごと</a>（1 日 1 件。その日の記事の一覧つき）</li>'
+            '<li><a href="feed-articles.xml">記事ごと</a>（記事 1 本ずつ）</li></ul></div><div>'
             '<form aria-disabled="true" onsubmit="return false"><input type="email" placeholder="メールアドレス" disabled '
             'aria-label="メールアドレス（準備中）"><button type="button" disabled>登録（準備中）</button></form>'
             '</div></div></div>')
@@ -3391,6 +3402,65 @@ def moved_page(to: str) -> str:
             f'<body><p><a href="{to}">{to}</a></p></body></html>')
 
 
+FEED_ISSUES, FEED_ARTICLES = 30, 100   # items in feed.xml (one per issue) and feed-articles.xml (one per article)
+
+
+def feed_xml(title: str, path: str, items: list[str]) -> str:
+    """An RSS 2.0 feed of FoldFeed (absolute addresses from config site_url)."""
+    now = email.utils.format_datetime(datetime.datetime.now(datetime.timezone.utc))
+    return ('<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>'
+            f'<title>{esc(title)}</title><link>{esc(SITE_URL)}</link><description>{esc(TAGLINE)}</description>'
+            f'<language>ja</language><lastBuildDate>{now}</lastBuildDate>'
+            f'<atom:link href="{esc(SITE_URL + path)}" rel="self" type="application/rss+xml"/>'
+            + "".join(items) + '</channel></rss>\n')
+
+
+def issue_time(date: str) -> str:
+    """An issue's date as a feed writes it: the morning (9:00 JST) the issue is made."""
+    y, m, d, _ = date_parts(date)
+    jst = datetime.timezone(datetime.timedelta(hours=9))
+    return email.utils.format_datetime(datetime.datetime(y, m, d, 9, 0, tzinfo=jst))
+
+
+def feeds(issues: list[str]) -> tuple[str, str]:
+    """feed.xml (one item per issue: the lead article's headline as its title, the articles listed, the issue's card)
+    and feed-articles.xml (one item per article: headline, supplement, target, part). Issues without articles are
+    left out."""
+    issue_items, article_items = [], []
+    for date in issues:
+        _, picks, _ = load_issue(date, ISSUES_DIR)
+        if not picks:
+            continue
+        y, m, d, _ = date_parts(date)
+        url = f"{SITE_URL}issues/{date}.html"
+        feature = load_feature(date, ISSUES_DIR, picks)
+        lead = next((pk for c, pk in picks if feature and c["pmcid"] == feature["pmcid"]), picks[0][1])
+        rows = "".join(f'<li><a href="{url}#a{n}">{esc(pk["headline"])}</a>（{esc(PARTS[render.part_of(c, pk)][0])}・'
+                       f'{esc(pk.get("target_en") or pk["target_label"])}）</li>' for n, (c, pk) in enumerate(picks, 1))
+        card = og_image(date)
+        card_file = cards.card_path(date, cards.lead_of(date) or "")
+        body = (f'<img src="{card}" alt="" width="1200" height="630">' if card else "") + f"<ul>{rows}</ul>"
+        if len(issue_items) < FEED_ISSUES:
+            issue_items.append(
+                f'<item><title>{y}.{m:02d}.{d:02d} 号：{esc(lead["headline"])}（{n_articles(len(picks))}）</title>'
+                f'<link>{url}</link><guid isPermaLink="true">{url}</guid><pubDate>{issue_time(date)}</pubDate>'
+                f'<description>{esc(body)}</description>'
+                + (f'<enclosure url="{esc(card)}" length="{card_file.stat().st_size}" type="image/png"/>' if card else "")
+                + '</item>')
+        for n, (c, pk) in enumerate(picks, 1):
+            if len(article_items) >= FEED_ARTICLES:
+                break
+            part = PARTS[render.part_of(c, pk)][0]
+            text = (f'<p>{esc(pk.get("subhead") or "")}</p><p>{esc(pk.get("target_en") or pk["target_label"])}・{esc(part)}・'
+                    f'{esc(journal_name(c))}</p><p>{y}.{m:02d}.{d:02d} 号 No. {pad(n)}</p>')
+            article_items.append(
+                f'<item><title>{esc(pk["headline"])}</title><link>{url}#a{n}</link>'
+                f'<guid isPermaLink="true">{url}#a{n}</guid><pubDate>{issue_time(date)}</pubDate>'
+                f'<category>{esc(part)}</category><description>{esc(text)}</description></item>')
+    return (feed_xml(f"{brand.SITE_NAME}（号ごと）", "feed.xml", issue_items),
+            feed_xml(f"{brand.SITE_NAME}（記事ごと）", "feed-articles.xml", article_items))
+
+
 def issue_dates(root: Path, require_articles: bool = True) -> list[str]:
     if not root or not root.exists():
         return []
@@ -3456,6 +3526,8 @@ def build(preview_root: Path | None = None) -> int:
     (SITE_DIR / "issues.html").write_text(issues_page(issues), encoding="utf-8")
     (SITE_DIR / "newsletter.html").write_text(newsletter_page(), encoding="utf-8")
     (SITE_DIR / "privacy.html").write_text(privacy_page(), encoding="utf-8")
+    for name, xml in zip(("feed.xml", "feed-articles.xml"), feeds(issues)):
+        (SITE_DIR / name).write_text(xml, encoding="utf-8")
     (SITE_DIR / "tokushoho.html").write_text(tokushoho_page(), encoding="utf-8")
     (SITE_DIR / "about.html").write_text(about_page(issues, lib), encoding="utf-8")
     for key, name in PART_PAGES.items():

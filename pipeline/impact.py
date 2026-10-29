@@ -23,8 +23,11 @@ from __future__ import annotations
 # that the extra papers are not the weak ones that sat at 6 (single-system follow-ups, and papers whose "structure"
 # was an MD / docking / QM-MM model built on a PDB entry): novelty must be at least 2 and the structure criterion is
 # stricter (see RUBRIC). Applies to the issues from 2026-10-19 on; earlier issues keep what was chosen.
+# 2026-10-29 (owner): one step lower, 6 -> 5, the two guards kept. Over 10-19..10-29 (11 issues, 17 chosen, 1.5 a day)
+# it would have added 3 (to about 1.8 a day); dropping the novelty guard as well would have added 7, mostly the
+# "known system, one more result" papers the guard was put there for.
 MAX_PER_DAY = 3
-THRESHOLD = 6            # total score (out of 10) needed to be selected
+THRESHOLD = 5            # total score (out of 10) needed to be selected
 SHORTLIST = 10           # papers the writer reads in full and scores
 MIN_SCORED = 5           # score at least this many (when the pool has that many) so a quiet day is not skipped unread
 
