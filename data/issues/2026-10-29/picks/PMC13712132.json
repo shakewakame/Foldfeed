@@ -1,0 +1,124 @@
+{
+  "pmcid": "PMC13712132",
+  "rank": 17,
+  "headline": "甘草のスチルベンは、プレニル基の数と位置で効き方が変わる",
+  "subhead": "合成した類縁体とERαの結晶構造6つから、5桁に及ぶ活性差が同じ受容体の形で説明された",
+  "target_label": "エストロゲン受容体α",
+  "target_en": "Human estrogen receptor α (ERα) LBD",
+  "method_label": "X-ray・6構造",
+  "ligand_label": "プレニル化スチルベノイド",
+  "summary": {
+    "question": "甘草のプレニル化ポリフェノールが、受容体の結合や活性をどう変えるかは、分かっていなかった。",
+    "approach": "レスベラトロールなどを土台にプレニル基を付けた16種を合成し、細胞での活性とERαとの結晶構造を調べた。",
+    "result": "活性は5桁の幅で広がった。結晶構造では、結合ポケットの片端の側鎖の向きだけが違った。",
+    "learned": "プレニル基の数・位置・環化が、ポケットの片端の柔らかさを使って活性を決める。この規則をプレニル化の「暗号」と呼んでいる。",
+    "open": "最も強い化合物7-C2C6について、他の核内受容体への選択性は調べられておらず、今後の確認が必要である。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "the specific mechanisms by which prenylated polyphenolics in licorice regulate ER ligand binding and activity remain unknown",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "we synthesized 16 mono- or diprenylated stilbennoid analogs based on common resveratrol or dihydroresveratrol cores",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Crystal structures of six of the stilbene compounds in complex with the ERα LBD enabled us to identify structural features of prenyl substitution that control the potency of ER activation",
+          "section": "Results"
+        }
+      ],
+      "result": [
+        {
+          "quote": "These variously prenylated stilbenoid compounds exhibited ER agonistic effects on cell growth with a remarkable 5-log range of cellular potencies.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Remarkably, the >5-log range of potencies were accounted for by changes in ER sidechain rotamers that were concentrated at only one end of the ligand binding pocket",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Thus, chemical diversity from a simple class of stilbenoids generated biological diversity through the modular combination of prenyl substitutions that revealed localized structural flexibility in an otherwise highly stable ER agonist conformation.",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Broader receptor counter-screening will therefore be required to establish its specificity profile.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "receptor",
+    "regulation"
+  ],
+  "topics": [
+    "drug"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "プレニル基を2つ付けた7-C2C6は、EC50が約10 pMでレスベラトロール誘導体の中で最も強い。2つのプレニル基はそれぞれヘリックス8側と12側に伸び、アゴニスト型の構造をさらに安定にする。",
+      "evidence": [
+        {
+          "quote": "The two prenyl groups in 7-C2C6, the most potent resveratrol analog, formed flexible winged shapes orthogonal to the axis of the ligand core (Fig. 4D).",
+          "section": "Results"
+        },
+        {
+          "quote": "The second prenyl in 7-C2C6 extended toward helix 12, contacting both helices 3 and 11 to further stabilize the agonist conformation (Fig. 4D).",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "新しい結合部位",
+      "text": "ポケットのフェノール側の端は側鎖の向きがほぼ固定され、プレニル基を受け入れる反対の端だけが動く。動く6残基のうち3つはメチオニンで、その柔らかさが関わるとみられている。",
+      "evidence": [
+        {
+          "quote": "Notably, 3 of these 6 conformationally dynamic residues are methionines, highlighting a special role for this amino acid in providing a degree of steric “softness” in ligand binding in that region (29).",
+          "section": "Discussion"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "プレニル基を環化して硬くすると、位置によっては活性が下がる。3つの環が縮合した18-C2(3)C6(5)は、ポケットの両側に張り出して活性が大きく落ちた。",
+      "evidence": [
+        {
+          "quote": "which greatly reduced activity (Fig. 3E), suggesting that there is additional space mostly on one side of the A-ring of the stilbenoids.",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "ERα LBD（残基298–554、Y537S変異）を大腸菌 BL21(DE3) で発現",
+    "construct": "ERα リガンド結合ドメイン（298–554、Y537S）",
+    "purification": null,
+    "sample_prep": "各リガンドと共結晶化（以前の報告と同じ方法）",
+    "data_collection": "SSRL BL12-2とAPS SER-CATで100 Kで測定。autoPROCとSTARANISOで処理し、分子置換・PHENIXで精密化",
+    "evidence": [
+      {
+        "quote": "The ERα LBD (amino acid residues 298–554) with a Y537S mutation was expressed in BL21 (DE3) Escherichia coli cells, purified, and co-crystallized with the various ligands as previously described (27, 30).",
+        "section": "Materials and methods"
+      },
+      {
+        "quote": "and scaled using autoPROC (31) and STARANISO (Global Phasing Ltd) to accommodate anisotropic diffraction.",
+        "section": "Materials and methods"
+      }
+    ]
+  },
+  "keywords": [
+    "エストロゲン受容体",
+    "プレニル化",
+    "甘草",
+    "スチルベノイド"
+  ],
+  "editor_notes": "PDB（9OUD 他6件）は未公開で、UniProt に対応づけられず図なし。ERαは既存構造が多数あり、初構造とは書いていない。"
+}

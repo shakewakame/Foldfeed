@@ -1,0 +1,143 @@
+{
+  "pmcid": "PMC13712944",
+  "rank": 1,
+  "headline": "電気を運ぶ細菌のナノワイヤーは、逆向きに束ねて並ぶ",
+  "subhead": "深部地下の塩水に棲む菌のシトクロム線維をクライオ電顕で解き、束の接触面を示した",
+  "target_label": "OmcE ナノワイヤー（D. soudanensis）",
+  "target_en": "OmcE cytochrome nanowire (D. soudanensis)",
+  "summary": {
+    "question": "シトクロムナノワイヤーどうしが繰り返し接する様子を示した原子構造は、これまで報告がなかった。",
+    "approach": "深部地下の塩水から単離した菌のナノワイヤーを、クライオ電顕で解析した。導電性と酸化還元も測った。",
+    "result": "線維は逆向きに束ねて並び、非対称再構成は3.1 Åで決まった。接触面は2種類あり、束の中点電位は−145 mVだった。",
+    "learned": "シトクロムナノワイヤーは特別な束の接触面を作れる。これが導電性のバイオフィルムの形成に役立つ可能性がある。",
+    "open": "束が実際のバイオフィルムの中にあるかは、まだ確かめられていない。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "To date, no atomic structures showing direct repeated interactions between any class of nanowire have been reported.",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "In this work, we present the cryo-EM structure of a bundle formed by cytochrome nanowires produced by Desulfuromonas soudanensis WTL, a halophilic iron-reducing bacterium isolated from anoxic deep subsurface brine.",
+          "section": "Introduction"
+        },
+        {
+          "quote": "Electronic measurements of purified nanowire bundle films reveal that these bundles are conductive, with conductance increasing in a concentration-dependent manner.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "Manual inspection of all these volumes consistently showed the same anti-parallel packing arrangement between cytochrome nanowires",
+          "section": "Results"
+        },
+        {
+          "quote": "which reached a global resolution of 3.1 Å as judged by map-to-map FSC",
+          "section": "Results"
+        },
+        {
+          "quote": "The apparent midpoint potential of these OmcE bundles was −145 mV vs SHE.",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Our findings demonstrate that cytochrome nanowires are widespread and can form specialized bundle interfaces.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "This novel state could facilitate conductive biofilm formation and form the basis for direct microbial electron exchange.",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "although direct in vivo confirmation within intact biofilms remains a future goal",
+          "section": "Abstract"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "photosynthesis",
+    "other"
+  ],
+  "topics": [],
+  "highlights": [
+    {
+      "tag": "初構造",
+      "text": "Geobacter sulfurreducens以外の細菌で決まった、初めてのシトクロムナノワイヤー構造。OmcEの相同体で、ヘムの並びはG. sulfurreducensのものとほぼ同じだった。",
+      "evidence": [
+        {
+          "quote": "This is the first structure of a cytochrome nanowire in a bacterium outside of G. sulfurreducens.",
+          "section": "Introduction"
+        },
+        {
+          "quote": "Despite their significant structural and sequence differences, the heme arrangement in the D. soudanensis OmcE filament is nearly identical to that of G. sulfurreducens",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "線維どうしの接触面は2種類で、埋もれる面積は110 Å2と220 Å2と小さい。ただ線維に沿って繰り返されるため、隣り合う2本の間では21.7 nmごとに440 Å2が積み重なる。",
+      "evidence": [
+        {
+          "quote": "two unique interfaces were observed, with buried surface areas of 110 Å (2) (type 1 interface) and 220 Å (2) (type 2 interface)",
+          "section": "Results"
+        },
+        {
+          "quote": "between two adjacent cytochrome filaments, the interface area is 440 Å (2) per 21.7 nm",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "束の酸化還元は約370 mVの幅にわたり、5つのヘムが静電的に連動する挙動を示した。ただし導電性の測定は乾燥した膜の全体を測ったもので、単一の線維の値ではない。",
+      "evidence": [
+        {
+          "quote": "They exhibit redox activity over a ~370 mV window attributable to five electrostatically coupled hemes",
+          "section": "Abstract"
+        },
+        {
+          "quote": "we acknowledge that they represent an ensemble measurement of dried material",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "D. soudanensis WTLを改変Soudan Mine培地で1 L培養した。",
+    "construct": null,
+    "purification": "細胞懸濁液を注射器と針に通して細胞外の線維を切り離した。",
+    "sample_prep": "濃縮した試料を放電処理したレーシーカーボングリッドに載せ、EM GP2で急速凍結した。",
+    "data_collection": "Titan Krios（300 keV）とK3カメラで撮影した。ピクセルサイズ1.07 Å、総線量50 e⁻/Å2。",
+    "evidence": [
+      {
+        "quote": "D. soudanensis cells were collected from 1 L of culture in a modified Soudan Mine (SM) medium.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Extracellular filaments were sheared by drawing and expelling the cell suspension through a 5 mL syringe attached to a 25 G × 7/8-inch needle 10 times.",
+        "section": "Methods"
+      },
+      {
+        "quote": "the enriched cytochrome nanowire sample (4.5 μL) was applied to glow-discharged lacey carbon grids and then plunge-frozen using an EM GP2 Plunge Freezer (Leica).",
+        "section": "Methods"
+      },
+      {
+        "quote": "Cryo-EM micrographs were collected on a 300 keV Titan Krios microscope equipped with a K3 camera at a pixel size of 1.07 Å and a total dose of 50 e⁻/Å².",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "OmcE",
+    "シトクロムナノワイヤー",
+    "Desulfuromonas soudanensis"
+  ],
+  "editor_notes": "論文は「Geobacter sulfurreducens 以外の細菌で初めてのシトクロムナノワイヤー構造」「ナノワイヤーの束の初めての報告」と明言している。導電性は乾燥膜の測定で、論文自身が限界として書いている。束が試料調製で生じた可能性を論文も排除していない。"
+}

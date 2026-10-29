@@ -1,0 +1,51 @@
+{
+ "pdb_id": "9VWM",
+ "view": {
+  "target": [
+   265.7,
+   382.99,
+   405.11
+  ],
+  "dir": [
+   0.3604,
+   -0.5146,
+   -0.778
+  ],
+  "up": [
+   -0.9306,
+   -0.2549,
+   -0.2626
+  ],
+  "half": [
+   93.8,
+   54.1
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "Envelope protein E",
+   "desc": "",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "Small envelope protein M",
+   "desc": "",
+   "entity": "2"
+  },
+  {
+   "color": "#5F9296",
+   "label": "1C11 Fab heavy chain variable region",
+   "desc": "",
+   "entity": "3"
+  },
+  {
+   "color": "#A5707A",
+   "label": "1C11 Fab light chain variable region",
+   "desc": "",
+   "entity": "4"
+  }
+ ],
+ "ligands": []
+}

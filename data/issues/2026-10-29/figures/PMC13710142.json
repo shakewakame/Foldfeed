@@ -1,0 +1,39 @@
+{
+ "pdb_id": "4RCJ",
+ "view": {
+  "target": [
+   -9.09,
+   -6.51,
+   -6.18
+  ],
+  "dir": [
+   -0.5807,
+   0.8087,
+   -0.0934
+  ],
+  "up": [
+   0.8039,
+   0.5878,
+   0.0909
+  ],
+  "half": [
+   26.2,
+   18.4
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "YTHDF1",
+   "desc": "YTH domain-containing family protein 1",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "RNA (5'-R(*GP*GP*(6MZ)P*CP*U)-3')",
+   "desc": "",
+   "entity": "2"
+  }
+ ],
+ "ligands": []
+}

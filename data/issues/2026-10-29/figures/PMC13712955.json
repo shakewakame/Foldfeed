@@ -1,0 +1,51 @@
+{
+ "pdb_id": "12IU",
+ "view": {
+  "target": [
+   175.04,
+   193.62,
+   201.89
+  ],
+  "dir": [
+   -0.7423,
+   -0.6692,
+   -0.0341
+  ],
+  "up": [
+   -0.6664,
+   0.7427,
+   -0.0658
+  ],
+  "half": [
+   65.1,
+   59.6
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "2F03 light chain",
+   "desc": "",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "2F03 heavy chain",
+   "desc": "",
+   "entity": "2"
+  },
+  {
+   "color": "#5F9296",
+   "label": "HA",
+   "desc": "Hemagglutinin HA1",
+   "entity": "3"
+  },
+  {
+   "color": "#A5707A",
+   "label": "HA",
+   "desc": "Hemagglutinin HA2",
+   "entity": "4"
+  }
+ ],
+ "ligands": []
+}

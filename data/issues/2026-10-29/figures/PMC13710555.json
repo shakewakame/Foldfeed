@@ -1,0 +1,63 @@
+{
+ "pdb_id": "9YBY",
+ "view": {
+  "target": [
+   141.31,
+   132.47,
+   118.48
+  ],
+  "dir": [
+   -0.0176,
+   -0.01,
+   0.9998
+  ],
+  "up": [
+   0.8156,
+   0.5783,
+   0.0201
+  ],
+  "half": [
+   62.6,
+   62.1
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "F",
+   "desc": "Fusion glycoprotein F2",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "F",
+   "desc": "Fusion glycoprotein F1",
+   "entity": "2"
+  },
+  {
+   "color": "#5F9296",
+   "label": "MeV-15 Fab Heavy Chain",
+   "desc": "",
+   "entity": "3"
+  },
+  {
+   "color": "#A5707A",
+   "label": "MeV-15 Fab Light Chain",
+   "desc": "",
+   "entity": "4"
+  },
+  {
+   "color": "#7C8AA8",
+   "label": "MeV-104 Fab Heavy Chain",
+   "desc": "",
+   "entity": "5"
+  },
+  {
+   "color": "#8A9A5B",
+   "label": "MeV-104 Fab Light Chain",
+   "desc": "",
+   "entity": "6"
+  }
+ ],
+ "ligands": []
+}

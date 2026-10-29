@@ -1,0 +1,249 @@
+{
+ "screened": 45,
+ "scored": [
+  {
+   "pmcid": "PMC13710142",
+   "type": "drug",
+   "scores": {
+    "novelty": 2,
+    "reach": 2,
+    "structure": 2,
+    "support": 2
+   },
+   "selected": true,
+   "reason": "自前の共結晶構造でYTHDFにm6Aポケット隣の未知の結合部位を示し、変異体のITCと細胞・マウスで確かめた。3種のYTHDFを同時に抑える点が新しい。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "Instead, EA binds to a previously unrecognized non-canonical site located adjacent to the m6A-recognition pocket.",
+      "section": "Results"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "effectively inhibiting all three YTHDF proteins without compensatory escape",
+      "section": "Abstract"
+     }
+    ],
+    "structure": [
+     {
+      "quote": "we solved the co-crystal structure of the YTHDF1-YTH domain bound to EA",
+      "section": "Results"
+     }
+    ],
+    "support": [
+     {
+      "quote": "EA effectively suppresses TNBC cell proliferation and malignancy both in vitro and in vivo",
+      "section": "Results"
+     },
+     {
+      "quote": "ITC measurements confirmed that alanine substitution of these conserved histidine residues",
+      "section": "Results"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13712870",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 2,
+    "reach": 1,
+    "structure": 2,
+    "support": 2
+   },
+   "selected": true,
+   "reason": "低pHで解いた自前のデルタコロナウイルスのスパイク構造で、受容体結合ドメインの14°の回転を示し、SPRとブタの実験で感染性の上昇と結びつけた。対象はPDCoV一種に近い。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "representing the first deltacoronavirus S structure determined at low pH",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "This pH-dependent conformational priming is shared by alpha- and deltacoronaviruses with intra-subunit S1 domain packing",
+      "section": "Abstract"
+     }
+    ],
+    "structure": [
+     {
+      "quote": "low pH drives a 14° outward rotation of the S1 C-terminal receptor-binding domain",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "with the dissociation constant (KD) decreasing from 20.20 μM at pH 7.2 to 1.69 μM at pH 4.0",
+      "section": "Abstract"
+     },
+     {
+      "quote": "neutralization of gastric acid in piglets effectively attenuates PDCoV infection and pathogenicity in vivo",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13712852",
+   "type": "drug",
+   "scores": {
+    "novelty": 1,
+    "reach": 2,
+    "structure": 1,
+    "support": 2
+   },
+   "selected": false,
+   "reason": "既存のレプリカーゼ構造に基づく変異の網羅的な試験とマウスでの弱毒化は有用だが、構造は変異の選び方に使われただけで構造データは自前になく、新しさは続報の域。6点だが novelty が1点。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "their value for attenuation had not been systematically explored",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "Together, these findings provide a molecular framework for the rational design of live-attenuated alphavirus vaccine candidates",
+      "section": "Abstract"
+     }
+    ],
+    "structure": [
+     {
+      "quote": "we evaluated 58 structure-guided mutations in nsP4 predicted to disrupt interactions with nsP1, nsP2, or viral RNA using a trans-replicase system",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "with F164A being avirulent, immunogenic, and conferring complete protection against lethal challenge",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13713018",
+   "type": "ai_design",
+   "scores": {
+    "novelty": 2,
+    "reach": 2,
+    "structure": 0,
+    "support": 1
+   },
+   "selected": false,
+   "reason": "AlphaFold2と遺伝学でERGU-1を見つけた新しい発見だが、実験で決めた構造がなく、structureが0点。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "we combine AlphaFold2 and functional screens in C. elegans to discover a previously uncharacterized and evolutionarily conserved protein ERGU-1",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "Human and Drosophila homologs of ERGU-1 rescue C. elegans mutant phenotypes, demonstrating ancient and conserved functions.",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "purified ERGU-1 and TMEM161B exhibit redox-modulated oligomeric states",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13711793",
+   "type": "ai_design",
+   "scores": {
+    "novelty": 1,
+    "reach": 1,
+    "structure": 0,
+    "support": 1
+   },
+   "selected": false,
+   "reason": "AlphaFold Multimerの予測を変異体で確かめた研究で、実験構造による裏付けがない（structure 0点）。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "we used AlphaFold Multimer modeling to identify a conserved C-terminal tail in both PilC1 and PilC2",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "identifying a potential target for anti-adhesion therapeutic strategies",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "site-directed mutagenesis of the PilX β-strand residues predicted to contact PilC2 largely phenocopied the PilC2 C-terminal tail point mutations",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13713030",
+   "type": "drug",
+   "scores": {
+    "novelty": 1,
+    "reach": 1,
+    "structure": 0,
+    "support": 1
+   },
+   "selected": false,
+   "reason": "細胞でのスクリーニングで見つけたGCN2活性化剤で、結合様式はモデリングの推定のみ。実験構造がなく structure 0点。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "one of these molecules activated GCN2 independently of GCN1",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "This overcomes a key requirement of other GCN2 activators.",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "identified three structurally distinct compounds with low micromolar stimulatory activities",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13710742",
+   "type": "method",
+   "scores": {
+    "novelty": 1,
+    "reach": 2,
+    "structure": 0,
+    "support": 0
+   },
+   "selected": false,
+   "reason": "配列と構造モデリングによる計算だけの予測で、論文自身が中和試験などによる実験的な検証が必要と書いている。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "mAb114 (Ebanga) binding is compromised by E112D and P116A mutations",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "MBP134 retains conserved targeting and holds promise as a broadly protective therapeutic",
+      "section": "Abstract"
+     }
+    ]
+   }
+  }
+ ]
+}

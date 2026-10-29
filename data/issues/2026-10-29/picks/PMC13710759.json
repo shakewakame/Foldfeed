@@ -1,0 +1,148 @@
+{
+  "pmcid": "PMC13710759",
+  "rank": 2,
+  "headline": "鞭毛の輸送装置は、脂質の層を挟んでFlhAとつながる",
+  "subhead": "ライム病菌の細胞内でin situクライオ電顕により解析。膜が大きく曲がり、漏斗状の通り道ができていた",
+  "target_label": "鞭毛の輸送装置（ライム病菌）",
+  "target_en": "Flagellar export apparatus (B. burgdorferi)",
+  "summary": {
+    "question": "鞭毛の輸送装置が天然の膜の中でどう組み上がり、働くのかは、よく分かっていなかった。",
+    "approach": "ライム病菌の細胞内で、in situ単粒子クライオ電顕とクライオ電子トモグラフィーにより輸送装置を解析した。",
+    "result": "FlhAと輸送ゲートは膜内で直接触れず、脂質のような薄い密度で隔てられていた。膜は深さ10 nm曲がっていた。",
+    "learned": "輸送装置は膜を大きく曲げて組み上がる。FlhBのヒンジヘリックスが、プロトン駆動力と輸送を結びつける可能性がある。",
+    "open": "FlhAの細胞質ドメインは単粒子解析では十分に解けず、約16 Åにとどまった。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "However, how the export apparatus assembles and functions within native membranes remains poorly understood.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here, using in situ single-particle cryo-electron microscopy and cryo-electron tomography, we resolve high-resolution structures of the flagellar export apparatus within intact cells of the Lyme disease spirochete Borrelia burgdorferi.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "The FlhA nonamer and FliPQR–FlhB export gate lack direct transmembrane contacts and are separated by a thin, bilayer-like density, revealing a lipid-mediated interface.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "The membrane underneath the MS-ring bends sharply toward the cytoplasmic side, forming a pronounced hemispherical deformation with a depth of 10 nm",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "The conserved FlhB hinge helix extends into the FlhA tunnel and may couple PMF-driven energy transduction to substrate translocation.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Together, these findings establish a mechanistic framework for export apparatus assembly and energy transduction, providing broader insights into type III secretion.",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Although the FlhACTD nonamer was not well resolved by in situ single-particle cryo-EM, likely due to conformational flexibility or interference from the cellular background",
+          "section": "Results"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "transporter",
+    "pathogen"
+  ],
+  "topics": [
+    "membrane",
+    "insitu"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "MS-リングが組み上がると、細胞膜が深さ10 nmの半球状にへこむ。輸送ゲートがないとU字形、あるとW字形の膜になり、輸送ゲートとの相互作用が間の膜を持ち上げていると考えられる。",
+      "evidence": [
+        {
+          "quote": "suggesting that MS-ring assembly drives membrane deformation, while interactions between the MS-ring and the export gate locally elevate the intervening membrane",
+          "section": "Results"
+        },
+        {
+          "quote": "MS-ring assembly without the export gate or its core components (FliP, FliQ, and FliR) induces a U-shaped membrane deformation",
+          "section": "Discussion"
+        }
+      ]
+    },
+    {
+      "tag": "新しい結合部位",
+      "text": "FlhAと輸送ゲートの間には、FliQ側で約18 Å、FlhB側で約7 Åの非対称なすき間があり、薄い脂質層のような密度が詰まっている。はっきりした脂質分子は見えず、脂質は動的だと考えられる。",
+      "evidence": [
+        {
+          "quote": "a pronounced asymmetric gap separates the two assemblies, with a wider separation on the FliQ-facing side (~18 Å) and a narrower distance on the FlhB-facing side (~7 Å)",
+          "section": "Results"
+        },
+        {
+          "quote": "However, no rigid or well-defined lipid molecules are resolved in situ, suggesting that these lipids are dynamic.",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "FlhAの親水性の通り道に沿った酸性残基のうち、Asp158をAsnにすると運動性も桿・フック・線維の形成も失われた。Gluでは鞭毛が短くなった。一方、Asp199は不要だった。",
+      "evidence": [
+        {
+          "quote": "flhA-D158E cells showed reduced motility and produced short flagella",
+          "section": "Results"
+        },
+        {
+          "quote": "flhA-D158N cells were non-motile and lacked rod-hook-filament structures",
+          "section": "Results"
+        },
+        {
+          "quote": "Asp199, located above Asp158 in the tunnel, is dispensable",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "B. burgdorferi B31A株を、ウサギ血清6%入りのBSK-II培地で35 °C、二酸化炭素3%の条件で培養した。",
+    "construct": null,
+    "purification": null,
+    "sample_prep": "細胞懸濁液（OD600 約0.2）5 μlを放電処理したグリッドに載せ、GP2で液体エタンに急速凍結した。",
+    "data_collection": "Titan Krios（K3検出器）で撮影した。総線量は約70 e−/Å2を40フレームに分割した。画像処理はCryoSPARC。",
+    "evidence": [
+      {
+        "quote": "High-passage B. burgdorferi strain B31A (WT) and its isogenic mutants (Supplementary Table 1) were grown in BSK-II liquid medium supplemented with 6% rabbit serum",
+        "section": "Methods"
+      },
+      {
+        "quote": "A 5 μl aliquot of the cell suspension (OD600 ≈ 0.2) was applied to freshly glow-discharged holey carbon grids (Quantifoil) or lacey carbon grids (Ted Pella).",
+        "section": "Methods"
+      },
+      {
+        "quote": "Data were collected on a Titan Krios electron microscope (Thermo Fisher Scientific) operated at 300 kV and equipped with a K3 direct electron detector",
+        "section": "Methods"
+      },
+      {
+        "quote": "Each movie was recorded with a total electron dose of ~70 e−/Å2 fractionated over 40 frames, with a defocus range of −1.5 to −2.2 μm.",
+        "section": "Methods"
+      },
+      {
+        "quote": "All image processing and structural analyses were performed in CryoSPARC",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "FlhA",
+    "FliPQR",
+    "FlhB",
+    "MS-リング",
+    "III型分泌装置"
+  ],
+  "editor_notes": "論文は「初めての構造」とは明言していない（サイトの判定では複数のタンパク質で初構造）。in situ 構造の分解能は部分ごとに 3.4〜6.5 Å で、FlhA の細胞質ドメインは約16 Å（クライオ ET）。12 個の PDB エントリ（12DR〜12DW、12EQ）のうち主なものは複合体の全体図 12DW。今日の一本の候補に値する（in situ・膜のリモデリング・変異体で検証）。"
+}

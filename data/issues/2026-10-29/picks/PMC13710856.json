@@ -1,0 +1,127 @@
+{
+  "pmcid": "PMC13710856",
+  "rank": 19,
+  "headline": "PARP10は、RRMが環状に連なって凝縮する",
+  "subhead": "RRM1–3が頭尾でつながる開いた環を捉え、変異で静電的な接点を確かめた",
+  "target_label": "PARP10（RRM1–3）",
+  "target_en": "PARP10 RRM1–3 oligomer",
+  "method_label": "Cryo-EM・中分解能マップ",
+  "summary": {
+    "question": "相分離が酵素の活性をどう左右するのかは、まだよく分かっていなかった。",
+    "approach": "精製PARP10をクライオ電顕で調べ、マップにAlphaFoldモデルをはめて、変異体を細胞で試した。",
+    "result": "開いた環や9量体の閉じた環が見え、RRM1のR34–R36とRRM3のE190・E194・E196が接するモデルが得られた。",
+    "learned": "RRM1とRRM3の頭尾の静電的な接触が、PARP10の集合と凝縮に必要だと考えられる。",
+    "open": "アルギニン領域以外のドメイン間の相互作用は、今後の検討課題とされている。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Despite growing interest, the extent to which phase separation regulates enzymatic activity and the functional consequences of elevated activity within condensates remain poorly understood.",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "We further examined the self-association behavior of recombinant PARP10 using single-particle cryogenic electron microscopy (cryo-EM)",
+          "section": "Results"
+        },
+        {
+          "quote": "We thus fitted the predicted models of the head-to-tail dimer of RRM1-3 into our cryo-EM density",
+          "section": "Results"
+        }
+      ],
+      "result": [
+        {
+          "quote": "A closed ring composed of nine protomers was observed, exhibiting an internal angle of ~140°.",
+          "section": "Results"
+        },
+        {
+          "quote": "At this interface, residues R34, R35, and R36 of RRM1 are positioned to interact with a negatively charged patch on RRM3",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "All mutations abolished condensate formation, phenocopying RRM deletion",
+          "section": "Results"
+        },
+        {
+          "quote": "Cryo-EM structural analysis combined with mutagenesis experiments demonstrates that an arginine-rich tract is essential for PARP10 oligomerization and phase separation in cells.",
+          "section": "Discussion"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Further investigations will elucidate the precise inter-domain interactions, in addition to the arginine tract identified here, that govern PARP10 oligomerization.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "enzyme",
+    "immune"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "環はRRM1と隣のRRM3が頭尾でつながってできる。電荷を保つR→K変異では凝縮が残り、電荷を消す・反転させる変異では凝縮が起きなかった。",
+      "evidence": [
+        {
+          "quote": "Ring assembly occurs through a head-to-tail interaction between RRM1 of one protomer and RRM3 of the adjacent protomer.",
+          "section": "Results"
+        },
+        {
+          "quote": "In contrast, a 3 RK mutant, which preserves the positive charge, retained the ability to form condensates",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "マップで見えたのはN末端のRRM1–3だけで、触媒ドメインなどは柔軟なため見えなかった。六量体のモデルは、AlphaFoldの予測をマップにはめて作られている。",
+      "evidence": [
+        {
+          "quote": "Other regions of PARP10, including the catalytic domain, were not visible, likely due to intrinsic flexibility",
+          "section": "Results"
+        },
+        {
+          "quote": "Clear density was observed for four of the six subunits, while the remaining two were partially resolved",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "凝縮体は酵素活性を高めてNAD+の消費を増やし、ウイルスの複製を抑えると著者は述べている。",
+      "evidence": [
+        {
+          "quote": "PARP10 condensates enhance enzymatic activity, resulting in increased NAD⁺ consumption that ultimately inhibits viral replication.",
+          "section": "Abstract"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": null,
+    "construct": null,
+    "purification": null,
+    "sample_prep": "0.45 mg/mLのPARP10に0.05% n-オクチル-β-D-グルコシドを加え、Quantifoilグリッドに載せて凍結",
+    "data_collection": "Titan Krios G4・300 kV・Falcon 4i。12,772ムービーを収集し、CryoSPARCで処理",
+    "evidence": [
+      {
+        "quote": "0.45 mg/mL purified PARP10 was supplemented with 0.05% n-octyl-β-D-glucoside (Anatrace, O311) before being applied onto glow-discharged holey carbon grids",
+        "section": "Methods"
+      },
+      {
+        "quote": "A total of 12,772 movies were collected on Titan Krios G4 Cryo-TEM (Thermo Fisher Scientific) operating at 300 kV",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "PARP10",
+    "相分離",
+    "RRM"
+  ],
+  "editor_notes": "EMD-65291 は中分解能のマップ（本文に分解能の数値なし）で、モデルはAlphaFoldの予測をはめたもの。論文の中心は細胞・生化学の実験で、構造は補助的。PDB 登録はない。"
+}

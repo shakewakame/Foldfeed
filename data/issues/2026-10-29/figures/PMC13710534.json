@@ -1,0 +1,84 @@
+{
+ "pdb_id": "13FZ",
+ "view": {
+  "target": [
+   182.78,
+   181.72,
+   185.59
+  ],
+  "dir": [
+   -0.0002,
+   0.0056,
+   1.0
+  ],
+  "up": [
+   1.0,
+   -0.0063,
+   0.0003
+  ],
+  "half": [
+   58.4,
+   114.5
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "ZNFX1（ヘリカーゼ）",
+   "desc": "NFX1-type zinc finger-containing protein 1",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "RNA",
+   "desc": "",
+   "entity": "2"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "AGS",
+   "label": "ATPγS",
+   "color": "#C23B8E",
+   "desc": "Phosphothiophosphoric Acid-Adenylate Ester",
+   "entity": [
+    "3"
+   ],
+   "sites": [
+    [
+     "E",
+     "2000"
+    ],
+    [
+     "F",
+     "2000"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "AGS",
+  "residues": [
+   "K597",
+   "D599",
+   "Q602",
+   "P621",
+   "G622",
+   "T623",
+   "G624",
+   "K625",
+   "T626",
+   "Y627",
+   "Q1035",
+   "H1073",
+   "R1074",
+   "G1189",
+   "E1191",
+   "R1223"
+  ],
+  "hbonds": 19,
+  "pi": 2,
+  "neighbours": [],
+  "label": "ATPγS"
+ }
+}

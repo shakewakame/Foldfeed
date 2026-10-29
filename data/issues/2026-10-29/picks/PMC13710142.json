@@ -1,0 +1,132 @@
+{
+ "pmcid": "PMC13710142",
+ "section": "impact",
+ "rank": 1,
+ "headline": "エラグ酸は、YTHDF3種すべてのm6A認識を妨げる",
+ "subhead": "共結晶構造でm6A結合ポケット隣の結合部位を示し、三陰性乳がんの増殖も抑えた",
+ "target_label": "YTHDF1（ヒト）",
+ "target_en": "Human YTHDF1 YTH domain (YTHDF1–3)",
+ "method_label": "X-ray",
+ "ligand_label": "エラグ酸（EA）",
+ "summary": {
+  "question": "YTHDF1〜3は互いに補い合うため、3つを同時に抑える低分子が求められていた。",
+  "approach": "蛍光偏光法で276化合物を調べて見つけたエラグ酸（EA）を、YTHDF1のYTHドメインとの共結晶構造で解析した。",
+  "result": "EAはm6A結合ポケットの隣の未知の部位に結合した。近くのH416をAlaに変えると結合が大きく弱まった。",
+  "learned": "EAは保存されたヒスチジンに依存する非典型の部位に結合し、YTHDFのm6A認識を妨げると考えられる。",
+  "open": "天然ポリフェノールのEAはYTHDF以外の標的にも働く可能性があり、選択性の改良が課題だ。",
+  "evidence": {
+   "question": [
+    {
+     "quote": "Due to the compensatory interplay of YTHDF1–3, simultaneously targeting all three paralogs may provide a superior m6A-targeting strategy by overcoming compensatory resistance and expanding therapeutic applications.",
+     "section": "Introduction"
+    }
+   ],
+   "approach": [
+    {
+     "quote": "Using this assay, we screened a focused library of 276 structurally diverse compounds at 1.0 μM and identified two primary hits, EA and Kobe2602",
+     "section": "Results"
+    },
+    {
+     "quote": "To define the molecular basis of EA recognition, we solved the co-crystal structure of the YTHDF1-YTH domain bound to EA",
+     "section": "Results"
+    }
+   ],
+   "result": [
+    {
+     "quote": "The structure showed that EA does not occupy the canonical m6A-binding pocket.",
+     "section": "Results"
+    },
+    {
+     "quote": "ITC measurements confirmed that alanine substitution of these conserved histidine residues",
+     "section": "Results"
+    }
+   ],
+   "learned": [
+    {
+     "quote": "The co-crystal structure, histidine-mutant binding data, and CD spectroscopy collectively support a model in which EA perturbs the m6A-recognition-competent state of YTHDF proteins and impairs YTHDF-m6A RNA interactions.",
+     "section": "Results"
+    }
+   ],
+   "open": [
+    {
+     "quote": "Finally, as a natural polyphenol, EA likely engages targets beyond the YTHDF family.",
+     "section": "Discussion"
+    }
+   ]
+  }
+ },
+ "categories": [
+  "regulation",
+  "nucleic"
+ ],
+ "topics": [
+  "drug"
+ ],
+ "highlights": [
+  {
+   "tag": "新しい結合部位",
+   "text": "EAはm6Aが入るポケットではなく、その隣の未知の部位に結合する。近くのH416は3種のYTHDFで保存され、AlaにするとEAの結合は大きく弱まった。",
+   "evidence": [
+    {
+     "quote": "Instead, EA binds to a previously unrecognized non-canonical site located adjacent to the m6A-recognition pocket.",
+     "section": "Results"
+    },
+    {
+     "quote": "this histidine residue is strictly conserved across all three YTHDF paralogs",
+     "section": "Results"
+    }
+   ]
+  },
+  {
+   "tag": "創薬・モダリティ",
+   "text": "3種のYTHDFに対するIC50は0.18〜0.56 μMで、ITCのKdは約1 μMだった。EAは三陰性乳がん細胞の増殖を抑え、マウスの異種移植腫瘍も小さくした。",
+   "evidence": [
+    {
+     "quote": "indicating comparable potency across all three paralogs",
+     "section": "Results"
+    },
+    {
+     "quote": "EA administration markedly reduced tumor volume and weight",
+     "section": "Results"
+    }
+   ]
+  },
+  {
+   "tag": "機構の解明",
+   "text": "EAでPFKFB4のmRNAが安定になり、PFKFB4が増えてHIF-1αの分解が抑えられ、BNIP3を介して細胞死が起きる。これは細胞での解析に基づく経路だ。",
+   "evidence": [
+    {
+     "quote": "Mechanistically, EA binds to YTHDF proteins, disrupting their interaction with PFKFB4 mRNA and consequently enhancing PFKFB4 transcript stability and protein expression.",
+     "section": "Results"
+    }
+   ]
+  }
+ ],
+ "lab_notes": {
+  "expression": "YTHDF1のYTHドメイン（361–559）を大腸菌BL21(DE3)で発現した。",
+  "construct": null,
+  "purification": null,
+  "sample_prep": "タンパク質とEAをモル比1:2で氷上で30分preincubationし、ハンギングドロップ蒸気拡散法で結晶化した。",
+  "data_collection": "上海放射光施設のBL19U1でデータを集め、XDSで処理して、PHENIXの分子置換で解いた。",
+  "evidence": [
+   {
+    "quote": "The YTH domain of human YTHDF1 (residues 361–559) was subcloned into pET-28a (+) with an N-terminal, thrombin-cleavable His6 tag and overproduced in Escherichia coli BL21(DE3).",
+    "section": "Methods"
+   },
+   {
+    "quote": "The protein was pre-incubated with EA on ice at a 1:2 molar ratio for 30 min. Crystallization was subsequently performed using the hanging-drop vapor diffusion method.",
+    "section": "Methods"
+   },
+   {
+    "quote": "X-ray diffraction data were collected at BL19U1 beamline of Shanghai Synchrotron Radiation Facility and processed using program XDS.",
+    "section": "Methods"
+   }
+  ]
+ },
+ "keywords": [
+  "YTHDF",
+  "m6A",
+  "エラグ酸"
+ ],
+ "editor_notes": "本文に PDB ID・分解能の記載がなく、候補では既存構造の利用に分類されたが、EA との共結晶構造は自前のもの（新しい構造に近い）。図の既定は引用された 4RCJ（m6A 結合型）なので、EA 結合型として見せないこと。EA と H416 のπ-π積層は結晶中の対称分子の H416 との間と本文にある。原文は CC BY-NC-ND。"
+}

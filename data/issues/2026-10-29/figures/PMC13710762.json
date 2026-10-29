@@ -1,0 +1,39 @@
+{
+ "pdb_id": "9SCE",
+ "view": {
+  "target": [
+   13.22,
+   -8.46,
+   19.47
+  ],
+  "dir": [
+   -0.0078,
+   0.742,
+   0.6704
+  ],
+  "up": [
+   0.8367,
+   0.372,
+   -0.4019
+  ],
+  "half": [
+   60.6,
+   28.9
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "Cleavage and polyadenylation factor complex subunit C74.02c",
+   "desc": "",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "Uncharacterized WD repeat-containing protein C824.04",
+   "desc": "",
+   "entity": "2"
+  }
+ ],
+ "ligands": []
+}

@@ -1,0 +1,6 @@
+{"pmcid": "PMC13710158", "axes": ["structure", "drug"],
+ "reason": "ヒトテロメラーゼと阻害剤の初の複合体構造（9 本）で、阻害剤が TERT の指とパームの間の未知のポケットに結合すると示した。",
+ "evidence": [{"quote": "BIBR1532 binds a previously unknown pocket between TERT finger and palm.", "section": "Abstract"},
+  {"quote": "to date there are no reported structures of human telomerase with inhibitor, impeding structure-based drug design and optimization.", "section": "Abstract"}],
+ "considered": [{"pmcid": "PMC13712944", "note": "電子伝達ナノワイヤーの初構造で有力だったが、創薬への直結度で劣るため見送り。"},
+  {"pmcid": "PMC13710759", "note": "in situ の鞭毛輸送装置で有力だったが、分解能の幅が大きく主張の突出度で劣るため見送り。"}]}

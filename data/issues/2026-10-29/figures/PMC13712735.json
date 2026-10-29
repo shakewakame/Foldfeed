@@ -1,0 +1,45 @@
+{
+ "pdb_id": "12ID",
+ "view": {
+  "target": [
+   200.45,
+   201.43,
+   217.97
+  ],
+  "dir": [
+   -0.8581,
+   0.5135,
+   0.0001
+  ],
+  "up": [
+   0.5135,
+   0.8581,
+   -0.0
+  ],
+  "half": [
+   74.4,
+   62.1
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "Hemagglutinin",
+   "desc": "",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "KL-BHA-3F4 heavy chain",
+   "desc": "",
+   "entity": "2"
+  },
+  {
+   "color": "#5F9296",
+   "label": "KL-BHA-3F4 light chain",
+   "desc": "",
+   "entity": "3"
+  }
+ ],
+ "ligands": []
+}

@@ -1,0 +1,142 @@
+{
+  "pmcid": "PMC13710762",
+  "rank": 3,
+  "headline": "WDR82は、2つの短い配列で分かれた相手をつなぐ",
+  "subhead": "PNUTSとSymplekinがWD40タンパク質WDR82の別々の面に結合する構造を、X線結晶構造で示した",
+  "target_label": "WDR82–PNUTS–Symplekin–Ssu72",
+  "target_en": "WDR82–PNUTS–Symplekin–Ssu72 (S. pombe)",
+  "summary": {
+    "question": "PP1ホスファターゼが転写の場でどう組み立てられ、活性化されるのかは不明だった。",
+    "approach": "分裂酵母のPNUTS・WDR82・Symplekin・Ssu72の複合体を、X線結晶構造解析と変異体の遺伝学で調べた。",
+    "result": "PNUTSとSymplekinはWDR82の別々の部位に結合した。SymplekinのDPR配列を変えると結合が消え、終結が乱れた。",
+    "learned": "WDR82がPNUTS-PP1とSymplekinをつなぐ橋渡し役になり、PP1を3′末端のプロセシング装置に結びつけると考えられる。",
+    "open": "WDR82が複数の相手を使い分ける仕組みは、実験構造による検証が今後必要だという。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Despite the conserved role of PP1 in transcription, how PP1 holoenzymes are organised and activated on chromatin to regulate this process remains unclear.",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "We present the structure of a PNUTS-WDR82-Symplekin-Ssu72 complex, revealing that PNUTS and Symplekin bind WDR82 through distinct interfaces using conserved short linear motifs.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "This demonstrates that the DPR motif in Symplekin is essential for binding WDR82.",
+          "section": "Results"
+        },
+        {
+          "quote": "SymplekinDPR-AAA lost the ability to interact with PPW, however interactions with the rest of CPA were retained",
+          "section": "Results"
+        },
+        {
+          "quote": "Normalisation confirmed that the 3′-end processing and termination defects associated with SymplekinDPR-AAA globally affect transcription across the genome",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "We demonstrate that WDR82 bridges PNUTS-PP1 to the CPA machinery via Symplekin.",
+          "section": "Results"
+        },
+        {
+          "quote": "Our findings demonstrate that the PP1 complex is essential for coupling transcription to pre-mRNA 3′-end maturation, ensuring production of functional mRNA.",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Future structural studies with experimental techniques will be required to validate this combinatorial WDR82-binding code.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "nucleic",
+    "regulation"
+  ],
+  "topics": [],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "PNUTSの565〜644番付近が、WDR82の溝に疎水的な接触で入り込む。結合面積は約3500 Å2で、PNUTS側には保存されたWPL/Iモチーフと、LI様モチーフが使われる。",
+      "evidence": [
+        {
+          "quote": "PNUTSWBR interacts extensively with WDR82, burying a surface area of ~3500 Å2",
+          "section": "Results"
+        },
+        {
+          "quote": "A stretch of hydrophobic residues 565EIIWYKPVPIKF576 (WPL/I) makes contacts along a groove in WDR82",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "新しい結合部位",
+      "text": "Symplekinの長いループの先端にあるDPR（Asp-Pro-Arg）配列が、WDR82のWD40ドメインのポケットに差し込まれる。この3残基をアラニンにするとWDR82と結合できなくなり、細胞の増殖も回復しなかった。",
+      "evidence": [
+        {
+          "quote": "with the tip of the loop protruding outwards from Symplekin and inserting into a pocket in WDR82 formed by two blades of the WD40 domain",
+          "section": "Results"
+        },
+        {
+          "quote": "Complementing the Symplekin-AID strain with a wild-type copy of Symplekin verified that SymplekinWT and SymplekinDPR-AAA were expressed at similar levels",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "PNUTSはPP1を結びつけるだけでなく、Spt5の脱リン酸化を約1.5倍に高める。WDR82自体にはPP1を活性化する働きがなく、役割は複合体を処理装置につなぐことにある。",
+      "evidence": [
+        {
+          "quote": "The addition of PNUTS stimulated PP1 activity 1.5-fold for all the substrates",
+          "section": "Results"
+        },
+        {
+          "quote": "The addition of WDR82 did not stimulate PP1 activity with or without functional PNUTS present",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "PNUTSなどは大腸菌Rosetta (DE3)、複合体の各成分はSf9昆虫細胞のバキュロウイルス系で発現した。",
+    "construct": null,
+    "purification": null,
+    "sample_prep": "PNUTSWBR-WDR82は9.85 mg/mLで、シッティングドロップ蒸気拡散法により20 °Cで結晶化した。",
+    "data_collection": "Diamond Light Sourceのビームライン I04でX線回折データを収集した。",
+    "evidence": [
+      {
+        "quote": "Proteins were expressed in E. coli Rosetta (DE3) cells grown in 2 × TY medium",
+        "section": "Methods"
+      },
+      {
+        "quote": "All proteins expressed from Sf9 were cloned into pACEBac1.",
+        "section": "Methods"
+      },
+      {
+        "quote": "PNUTSWBR-WDR82 at 9.85 mg/mL was crystallised using the sitting-drop vapour diffusion set-up at 20 °C.",
+        "section": "Methods"
+      },
+      {
+        "quote": "X-ray diffraction data were collected on the I04 beamline at Diamond Light Source (Harwell, UK).",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "WDR82",
+    "PNUTS",
+    "Symplekin",
+    "Ssu72",
+    "PP1"
+  ],
+  "editor_notes": "論文は「初めての構造」とは明言していない（サイトの判定では Ssu72・Pta1 の初構造が New Structure になる）。9SYQ は 3.79 Å で Ssu72 の密度が弱く、論文もその点を書いている。",
+  "legend_labels": []
+}

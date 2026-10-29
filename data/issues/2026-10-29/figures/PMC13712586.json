@@ -1,0 +1,39 @@
+{
+ "pdb_id": "9X2N",
+ "view": {
+  "target": [
+   97.17,
+   96.67,
+   96.3
+  ],
+  "dir": [
+   0.1389,
+   -0.9839,
+   0.1129
+  ],
+  "up": [
+   -0.9903,
+   -0.1391,
+   0.006
+  ],
+  "half": [
+   29.5,
+   28.7
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "MurJ（脂質フリッパーゼ）",
+   "desc": "Lipid II flippase MurJ",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "SglPP7（溶菌タンパク質）",
+   "desc": "Lysis protein",
+   "entity": "2"
+  }
+ ],
+ "ligands": []
+}

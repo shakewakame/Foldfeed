@@ -1,0 +1,137 @@
+{
+  "pmcid": "PMC13712371",
+  "rank": 9,
+  "headline": "大腸がん向けRIOK1阻害剤CINS-1の結合を結晶で確認",
+  "subhead": "好熱性古細菌のRIOK1との複合体を2.76 Åで解き、ATP結合ポケットへの入り方を示した",
+  "target_label": "RIOK1（古細菌）",
+  "target_en": "AfRIOK1 (A. fulgidus) with CINS-1",
+  "ligand_label": "CINS-1",
+  "summary": {
+    "question": "RIOK1を狙う化合物は少なく、大腸がんでの抗腫瘍効果も十分に調べられていなかった。",
+    "approach": "既知の阻害剤WP1086を土台に誘導体を作り、強いCINS-1を選んで古細菌RIOK1との結晶構造を解いた。",
+    "result": "複合体は2.76 Åで決まり、CINS-1はATP結合部位の近くに入った。Kdは0.097 μMで、WP1086の50.6 μMより強い。",
+    "learned": "CINS-1はATPポケットに結合する。ヒトRIOK1にも強く結合し、大腸がん細胞の増殖を抑えた。",
+    "open": "ヒトRIOK1とCINS-1の複合体は結晶化できず、結合様式はドッキングによる推定にとどまる。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "However, few compounds have been designed to target RIOK1, and the antitumor activity of RIOK1 inhibitors has yet to be thoroughly investigated.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Leveraging the crystal structure of AfRIOK1 protein and the inhibitor WP1086 reported in the literature26, we synthesized a series of compounds by modifying the polarity of the pyridine ring and benzene ring of WP1086.",
+          "section": "Introduction"
+        },
+        {
+          "quote": "we resolved the crystal structure of the complex of CINS-1 and Archaeoglobusfulgidus RIOK1 (AfRIOK1) protein.",
+          "section": "Results"
+        }
+      ],
+      "result": [
+        {
+          "quote": "In the overall structure of the complex at a resolution of 2.76 Å",
+          "section": "Results"
+        },
+        {
+          "quote": "WP1086 bound to AfRIOK1 with weak binding affinity (Kd = 50.6 μmol/L) (Fig. 8C), whereas CINS-1 exhibited much stronger binding affinity (Kd = 0.097 μmol/L) under the same conditions",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "These results indicate that compound CINS-1 can stably bind to RIOK1 (HsRIOK1) and AfRIOK1, and the binding of the two proteins to CINS-1 has high similarity.",
+          "section": "Results"
+        },
+        {
+          "quote": "In this study, we report the optimization of pyridine caffeic acid benzyl amide derivatives as RIOK1 inhibitors and identified CINS-1 as a potent compound with markedly enhanced binding affinity for AfRIOK1 and RIOK1.",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "we were unable to obtain crystals of sufficient diffraction quality to resolve the human RIOK1–CINS-1 complex",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "kinase"
+  ],
+  "topics": [
+    "drug"
+  ],
+  "highlights": [
+    {
+      "tag": "創薬・モダリティ",
+      "text": "WP1086のベンゼン環側を二つのフェニル基をもつ構造に変えたCINS-1は、HCT116細胞での増殖抑制のIC50がWP1086の27.55 μMから7.81 μMへ下がった。",
+      "evidence": [
+        {
+          "quote": "Notably, compound 5e (CINS-1) exhibited significantly better inhibitory activity (IC50 = 7.81 μmol/L) than WP1086 (IC50 = 27.55 μmol/L) in HCT116 cells.",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "新しい結合部位",
+      "text": "結晶構造では、CINS-1はAfRIOK1のGlu148と水素結合し、周囲の残基15個と疎水的に接する。結合に関わる主要な残基はヒトRIOK1と同じで、ドッキングでも同じ部位を占めた。",
+      "evidence": [
+        {
+          "quote": "the glutamic acid at position 148 in AfRIOK1 protein formed an intermolecular hydrogen bond with the oxygen atom at position one in CINS-1, and the hydrophobic interaction involved 15 nearby residues in the binding interface between AfRIOK1 and CINS-1",
+          "section": "Results"
+        },
+        {
+          "quote": "The key residues responsible for anchoring CINS-1 (e.g., Lys59, Glu60, Glu148, Phe149, Ile150) were identical between species.",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "CINS-1を加えた大腸がん細胞では、成熟前の18S rRNAが細胞質に溜まり、p53が増えた。著者はリボソーム合成の乱れがp53を介した核小体ストレス応答を起こすと提案するが、因果関係の確認は今後の課題としている。",
+      "evidence": [
+        {
+          "quote": "In control cells, only weak signals were detected in the cytoplasm, whereas treatment with CINS-1 resulted in an increased signal, indicating impaired processing.",
+          "section": "Results"
+        },
+        {
+          "quote": "It is proposed that CINS-1 inhibits the formation of 18S rRNA by affecting RIOK1 function, thereby inducing a P53-mediated nucleolar stress response (Fig. 13).",
+          "section": "Conclusions"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": null,
+    "construct": "古細菌 Archaeoglobus fulgidus のRIOK1（AfRIOK1）を使用",
+    "purification": null,
+    "sample_prep": "AfRIOK1（約30 mg/mL）にCINS-1をモル比1:5で氷上1時間混ぜ、1.5 M硫酸リチウム・酢酸ナトリウム pH 4.6の条件で蒸気拡散法により結晶化",
+    "data_collection": "上海放射光施設でデータ収集。XDSで処理し、4JINを探索モデルに分子置換。Coot・Refmac5で精密化",
+    "evidence": [
+      {
+        "quote": "The best crystals were produced in a reservoir solution containing 1.5 mol/L lithium sulfate monohydrate, 0.1 mol/L sodium acetate trihydrate pH 4.6, and crystals appeared within 12 days.",
+        "section": "Experimental"
+      },
+      {
+        "quote": "Molecular replacement was performed with Phaser using the known structure of AfRIOK1 (PDB ID: 4JIN) as a search model.",
+        "section": "Experimental"
+      }
+    ]
+  },
+  "keywords": [
+    "RIOK1",
+    "CINS-1",
+    "大腸がん",
+    "リボソーム合成"
+  ],
+  "editor_notes": "構造は古細菌AfRIOK1との複合体で、ヒトRIOK1との対応はドッキングによる。",
+  "ligand_names": {
+    "A1EZG": "CINS-1"
+  },
+  "site_ligand": "A1EZG",
+  "legend_labels": [
+    "AfRIOK1（キナーゼ）"
+  ]
+}

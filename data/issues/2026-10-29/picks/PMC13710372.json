@@ -1,0 +1,131 @@
+{
+  "pmcid": "PMC13710372",
+  "rank": 11,
+  "headline": "ジカウイルスだけを見分けて中和する、ワクチン由来のサル抗体",
+  "subhead": "1C11 Fabとウイルス粒子を約3.2 Åで解析。D67を含む部位が見分けの鍵になる",
+  "target_label": "ジカウイルスEタンパク質",
+  "target_en": "Zika virus E protein with Fab 1C11",
+  "summary": {
+    "question": "フュージョンループを改変したジカワクチンの効果は、マウスでの検証にとどまっていた。",
+    "approach": "改変ワクチンを接種したサル由来の抗体1C11のFabと、ジカウイルス粒子の複合体をクライオ電顕で解いた。",
+    "result": "約3.2 Åで、粒子表面の180個のEタンパク質すべてにFabが結合し、ドメインIIの表面に乗っていた。",
+    "learned": "エピトープのD67-M68-A69がジカ特異性を決め、デングのN67糖鎖が立体障害になると考えられる。",
+    "open": "近縁のエピトープで抗体を回避するウイルスが出るリスクは、今後の評価が必要だという。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "yet validations restricted to murine models limit human translatability due to profound species divergence",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "we determined the cryo-EM structure of the ZIKV virion in complex with the fragment antigen-binding (Fab) of an ultrapotent nAb RM1.1C11",
+          "section": "Results"
+        }
+      ],
+      "result": [
+        {
+          "quote": "The map density revealed full occupancy of all 180 E proteins on the icosahedral viral surface by Fab 1C11",
+          "section": "Results"
+        },
+        {
+          "quote": "The 1C11 footprint primarily locates on the solvent-exposed surface of domain II in the E protomer",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Notably, ZIKV specificity is dictated by the epitope residues D67-M68-A69, whereas a homologous DENV N67-linked glycan imposes steric shielding to preclude cross-reactivity.",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "It will be important to evaluate the risk of antibody-driven viral escape for the closely related epitopes in this hotspot",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "pathogen",
+    "immune"
+  ],
+  "topics": [
+    "antibody"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "ジカのD67NとA69Tを入れてデング型の糖鎖が付く配列にすると、1C11を含む43抗体すべてが結合しなくなった。",
+      "evidence": [
+        {
+          "quote": "D67N/A67T mutations abolished binding by mAb 1C11 (100% reduction) (Figure 5B) and all the other 42 1C11-like nAbs",
+          "section": "Results"
+        },
+        {
+          "quote": "This indicated that the epitope residues D67-M68-A69 determined the specificity of these public and dominant IGHV5-20 antibodies",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "ワクチンを打った4頭のサルすべてで、重鎖遺伝子IGHV5-20（ヒトIGHV5-10-1に近い）の抗体が優勢だった。ヒト型に置換した16抗体のうち12がジカに結合した。",
+      "evidence": [
+        {
+          "quote": "Analysis of individual repertoires identified IGHV5-20 as the predominant V gene convergent across all four macaques (RM1–RM4)",
+          "section": "Results"
+        },
+        {
+          "quote": "Notably, 12 out of 16 human IGHV5-10-1-substituted mAbs bound to ZIKV virions",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "1C11のIgGは、Fabより1,440倍以上強くジカを中和した。IgGは粒子を凝集させるが、Fabは凝集を起こさなかった。",
+      "evidence": [
+        {
+          "quote": "IgG 1C11 demonstrated over 1,440-fold enhanced neutralization potency (IC50) relative to its monovalent Fab counterpart",
+          "section": "Results"
+        },
+        {
+          "quote": "By contrast, monovalent Fab failed to induce aggregation.",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": null,
+    "construct": null,
+    "purification": null,
+    "sample_prep": "ウイルスとFabをE:Fab＝1:3で混ぜ、Vitrobotで凍結した（4°C、ブロット7秒）。",
+    "data_collection": "Falcon 4iで23,051枚を撮影し、50,154粒子を正二十面体対称で精密化して3.21 Åを得た。",
+    "evidence": [
+      {
+        "quote": "Purified ZIKV was incubated with a slight molar excess of the 1C11 Fab fragment (E protein:Fab, molar ratio 1:3) at 4°C for 30 min",
+        "section": "Methods"
+      },
+      {
+        "quote": "In total, 23,051 micrographs were collected for the ZIKV:Fab 1C11 complex.",
+        "section": "Methods"
+      },
+      {
+        "quote": "50,154 particles were subjected to non-uniform refinement with icosahedral (I) symmetry, resulting in a 3.21 Å resolution reconstruction",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "Zika",
+    "フュージョンループ",
+    "mRNAワクチン",
+    "ADE",
+    "1C11"
+  ],
+  "editor_notes": "PDB 9VWM（3.2 Å）。デングN67糖鎖の立体障害は、モデリングと変異体の結合実験に基づく論文の解釈。ワクチンの動物試験が主題の論文だが、構造は1C11 Fabとウイルス粒子の複合体。"
+}

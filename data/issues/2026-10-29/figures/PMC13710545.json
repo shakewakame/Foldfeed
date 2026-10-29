@@ -1,0 +1,45 @@
+{
+ "pdb_id": "22LL",
+ "view": {
+  "target": [
+   128.5,
+   128.68,
+   130.1
+  ],
+  "dir": [
+   -0.9951,
+   0.0987,
+   -0.0072
+  ],
+  "up": [
+   0.0986,
+   0.9951,
+   0.0081
+  ],
+  "half": [
+   51.8,
+   43.0
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "G4 heavy chain",
+   "desc": "",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "G4 light chain",
+   "desc": "",
+   "entity": "2"
+  },
+  {
+   "color": "#5F9296",
+   "label": "OPG099",
+   "desc": "Entry-fusion complex associated protein OPG095",
+   "entity": "3"
+  }
+ ],
+ "ligands": []
+}
