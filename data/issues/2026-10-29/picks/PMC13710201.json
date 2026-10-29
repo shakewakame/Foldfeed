@@ -1,0 +1,146 @@
+{
+  "pmcid": "PMC13710201",
+  "rank": 15,
+  "headline": "転写因子RamRは、2か所の変異で鏡像体を見分ける",
+  "subhead": "30万種超の変異体を測り、結晶構造で立体障害と電荷の役割を示した。酵素の選択性の反転にも使えた",
+  "target_label": "RamR（大腸菌の転写因子）",
+  "target_en": "Evolved RamR enantioselective TFs (E. coli)",
+  "summary": {
+    "question": "不斉触媒の改良はキラルな分析の遅さが壁になる。鏡像体を見分ける転写因子は、酵素の改良に使われてこなかった。",
+    "approach": "転写因子RamRの30万種超の変異体で用量応答を測った。選択性の高い変異体は、結晶構造で調べた。",
+    "result": "選択性の高い6つの変異体を解いた。S体用ではGluの塩橋が、R体用ではAspが、プロトン化したアミンを認識した。",
+    "learned": "電荷がイミンとアミンを区別し、ポケットの形による立体障害が鏡像体を区別する。2つのセンサーで酵素の選択性を反転できた。",
+    "open": "センサーはLC–MSより感度が低く、活性の低い酵素は測れなかった。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "which is often bottlenecked by the speed of chiral screening",
+          "section": "Main"
+        },
+        {
+          "quote": "Despite this promise, the TF enantioselectivity has never been leveraged to evolve asymmetric biocatalysts",
+          "section": "Main"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here we measure the dose–response curves for over 300,000 TF mutants to enantiomeric intermediates and an achiral precursor of the pharmaceutical solifenacin.",
+          "section": "Main"
+        },
+        {
+          "quote": "High-resolution crystal structures reveal how sterics discriminate enantioselectivity, while charge–charge interactions are used to differentiate an imine precursor from amine reaction products.",
+          "section": "Main"
+        }
+      ],
+      "result": [
+        {
+          "quote": "we obtained structures for all six high-selectivity variants—four in complex with their cognate ligand and two in their apo form",
+          "section": "Results"
+        },
+        {
+          "quote": "a negatively charged glutamate introduced by the C135E mutation strongly interacts with the protonated amine of S-THIQ by salt-bridge interactions",
+          "section": "Results"
+        },
+        {
+          "quote": "the R2.1 variant uses a negatively charged Asp153 to specifically recognize the positively charged amine group of R-THIQ",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "High-resolution structures of evolved eTFs elucidate how steric effects enforce enantioselectivity, while charge interactions distinguish the imine from the amines.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Using two eTFs, we create an ultrahigh-throughput chiral screen to evolve an imine reductase with inverted enantioselectivity.",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "our eTFs, with a ~5 µmol l−1 limit of detection, could not reliably measure the activity of poorly active IREDs",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "regulation",
+    "enzyme"
+  ],
+  "topics": [
+    "method"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "S体用の変異体ではC135Eで入ったGluが、プロトン化したアミンと塩橋を作る。イミン（DHIQ）用のD2.3ではC135Rが、中性のイミンと相互作用する。",
+      "evidence": [
+        {
+          "quote": "a negatively charged glutamate introduced by the C135E mutation strongly interacts with the protonated amine of S-THIQ by salt-bridge interactions",
+          "section": "Results"
+        },
+        {
+          "quote": "the DHIQ-selective D2.3 variant contains a C135R mutation that selectively interacts with the neutral imine group of DHIQ at a distance of 3.5 Å",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "手法の工夫",
+      "text": "S体用とR体用の2つのセンサーとFACSで、イミン還元酵素IR35の選択性を反転させた。3か所の変異（P130A、N177E、M184W）で鏡像体過剰率は86%になった。この酵素の構造は予測モデルへのドッキングで、結晶構造ではない。",
+      "evidence": [
+        {
+          "quote": "we identified a mutant of IR35, referred to as IR35_C4, bearing the substitutions P130A, N177E and M184W, with inverted enantioselectivity",
+          "section": "Results"
+        },
+        {
+          "quote": "For IRED modeling (Fig. 5e), AlphaFold3 was used to generate a structure of IR35 (MCP2166807.1) in complex with NADP, which was then docked with R-THIQ using SwissDock54.",
+          "section": "Methods"
+        }
+      ]
+    },
+    {
+      "tag": "実験Tips",
+      "text": "S-THIQ用のセンサーは、C135EとS138Eの2変異だけで50倍超の選択性に達した。ライブラリの比較では、相同体を混ぜる遺伝子シャッフリングが、高性能なセンサーの割合で最も高かった。",
+      "evidence": [
+        {
+          "quote": "only two mutations (C135E and S138E) were needed to create a RamR variant with >50-fold enantioselectivity and an EC50 under 2 μmol l−1 for S-THIQ",
+          "section": "Discussion"
+        },
+        {
+          "quote": "the shuffle library yielded a substantially higher ratio of performant sensors for each ligand compared to the random and site-saturation libraries",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "タンパク質の発現に大腸菌BL21(DE3)を、精製にTerrific brothを使った。",
+    "construct": null,
+    "purification": null,
+    "sample_prep": "X線結晶構造解析は過去の報告と同様の手順で、詳細は補足資料にある。",
+    "data_collection": null,
+    "evidence": [
+      {
+        "quote": "E. coli BL21(DE3) (New England Biolabs) was used for protein expression.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Terrific broth (Thermo Fisher Scientific, 22711022) was used for protein purification.",
+        "section": "Methods"
+      },
+      {
+        "quote": "A protocol similar to that in ref. 10 was used for X-ray crystallography.",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "RamR",
+    "イミン還元酵素",
+    "鏡像体選択性",
+    "バイオセンサー"
+  ],
+  "editor_notes": "RamR には既存の PDB 構造（3VVX）があり、論文は『初めての構造』とは書いていない（サイトでは Structure Update になる見込み）。IR35 の変異体の構造は AlphaFold3 とドッキングによるモデルで、実験構造ではない。9DNL（R2.2 apo）は 4.0 Å と低分解能。"
+}

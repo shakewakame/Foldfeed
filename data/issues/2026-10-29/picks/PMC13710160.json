@@ -1,0 +1,135 @@
+{
+  "pmcid": "PMC13710160",
+  "rank": 8,
+  "headline": "共有結合の活性化剤は、PFKLを活性型に固定する",
+  "subhead": "K677に結合するXJ-4-85とPFKLの複合体をクライオ電顕で解き、R状態の維持を示した",
+  "target_label": "PFKL（解糖系酵素）",
+  "target_en": "Human PFKL with covalent activator XJ-4-85",
+  "summary": {
+    "question": "がん細胞は代謝を変えて解糖に頼るが、その柔軟さのために、解糖を標的にした抗がん剤を作るのは難しい。",
+    "approach": "PFKLのK677に共有結合する活性化剤XJ-4-85を作り、F6PとATPを加えた複合体をクライオ電顕で解析した。",
+    "result": "3.2 Å分解能の構造で、離れた薬剤部分がアロステリック部位に入り、PFKLは活性なR状態だった。",
+    "learned": "XJ-4-85は薬剤部分が入ることでT状態への変化を妨げ、PFKLを活性型に保つと考えられる。",
+    "open": "PFKLとCPT2の両方を欠くモデルでの検証など、作用機構の細部は今後の課題とされている。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Nevertheless, inhibition of upregulation of glycolysis in cancer cells remains a challenge owing to the inherent metabolic plasticity of these cells",
+          "section": "Main"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "To determine the activation mechanism of XJ-4-85, we solved the cryo-EM structure of PFKL in complex with XJ-4-85 and substrates ATP and F6P",
+          "section": "Results"
+        }
+      ],
+      "result": [
+        {
+          "quote": "exhibited clear density for the XJ-4-85 leaving group in the allosteric activating site between the PFKL catalytic and regulatory domains",
+          "section": "Results"
+        },
+        {
+          "quote": "XJ-4-85-bound PFKL was in the active R-state conformation, with F6P and ADP bound at active sites",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "XJ-4-85 seemed to activate PFKL by sterically preventing compression of the allosteric activating site, thereby resisting transition to the T-state conformation.",
+          "section": "Results"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Future studies should include testing of the PFKL activator in a PFKL/CPT2 double-KO model.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "enzyme",
+    "kinase"
+  ],
+  "topics": [
+    "drug"
+  ],
+  "highlights": [
+    {
+      "tag": "創薬・モダリティ",
+      "text": "XJ-4-85はPFKLのK677に共有結合し、切り離される薬剤部分がCPT2を阻害する。結合部位が似たPFKMやPFKPは活性化せず、K315の違いが選択性に関わる。",
+      "evidence": [
+        {
+          "quote": "XJ-4-85 failed to activate PFKP or PFKM, even though these isoforms contained a homologous lysine residue",
+          "section": "Results"
+        },
+        {
+          "quote": "Given the proximity of K315 to the leaving group, we substituted this nonconserved residue with arginine",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "結合部位はAMPやADPなど天然の活性化因子と重なる。T状態へ移ると薬剤部分と触媒ドメインが衝突するため、PFKLはR状態にとどまる。",
+      "evidence": [
+        {
+          "quote": "The XJ-4-85 binding pose overlapped with those of native activators (AMP and ADP) and reversible PFKL activator NA-11",
+          "section": "Results"
+        },
+        {
+          "quote": "Rotation to the T-state would result in steric clashes between the XJ-4-85 leaving group and incoming catalytic domain",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "共有結合部のK677は柔らかく、密度は一部の分類でしか見えなかった。このためK677だけの修飾ではT状態を防ぐのに十分でなく、薬剤部分と合わせて効くと論文は推定している。",
+      "evidence": [
+        {
+          "quote": "This suggests that both the covalent modification and the leaving group contribute to the steric effect on activation.",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "コドンを最適化したPFKLを、Expi293F細胞にPEIで導入して発現した。",
+    "construct": "N末端にTwin-StrepタグとTEV切断部位を付けた。",
+    "purification": "Strep-Tactin XTのカラムで精製し、F6P入りの緩衝液に置換した。",
+    "sample_prep": "4.2 µMのPFKLに25 µMのXJ-4-85を加え、F6PとATPを足してVitrobotで凍結した。",
+    "data_collection": "Glacios（200 kV）とK3カメラで撮影し、cryoSPARCで処理した。",
+    "evidence": [
+      {
+        "quote": "PFKL was expressed in Expi293F cells (Thermo Fisher).",
+        "section": "Methods"
+      },
+      {
+        "quote": "It was subcloned into the pcDNA3.1(+) vector with an amino-terminal Twin-Strep tag and TEV cleavage site using Gibson assembly.",
+        "section": "Methods"
+      },
+      {
+        "quote": "passed over a pre-equilibrated 1-ml Strep-Tactin XT 4Flow (IBA Life Sciences) gravity column",
+        "section": "Methods"
+      },
+      {
+        "quote": "we combined 4.2 µM PFKL in 20 mM HEPES (pH 8.0), 150 mM KCl, 3% glycerol, 500 µM F6P and 2 mM DTT with 25 µM XJ-4-85",
+        "section": "Methods"
+      },
+      {
+        "quote": "Movies were acquired using a Glacios microscope (Thermo Fisher) operated at 200 kV, equipped with a K3 Direct Detect camera",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "PFKL",
+    "共有結合",
+    "解糖",
+    "アロステリック"
+  ],
+  "ligand_label": "XJ-4-85",
+  "editor_notes": "PFKL は既存の PDB 構造があるため Structure Update の見込み。共有結合した部分と薬剤部分の密度は一部しか見えず、直鎖アルキル鎖は未モデル。論文の多くは化学プロテオミクスと担がんマウスで、構造は活性化機構の部分。ligand_names / site_ligand は描画後にリガンド ID（A1CFQ・A1C4X など）を見て決める必要あり。創薬の軸で今日の一本の候補。"
+}

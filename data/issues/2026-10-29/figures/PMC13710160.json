@@ -1,0 +1,131 @@
+{
+ "pdb_id": "9P0J",
+ "view": {
+  "target": [
+   141.77,
+   188.51,
+   191.33
+  ],
+  "dir": [
+   0.0654,
+   0.7989,
+   0.5979
+  ],
+  "up": [
+   -0.189,
+   -0.5785,
+   0.7935
+  ],
+  "half": [
+   35.4,
+   46.5
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "PFKL",
+   "desc": "ATP-dependent 6-phosphofructokinase, liver type",
+   "entity": "1"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "A1C4X",
+   "label": "A1C4X",
+   "color": "#C23B8E",
+   "desc": "5-[bis(oxidanylidene)-$l^{5}-sulfanyl]-1,3-benzodioxole",
+   "entity": [
+    "2"
+   ],
+   "sites": [
+    [
+     "B",
+     "801"
+    ]
+   ]
+  },
+  {
+   "id": "FBP",
+   "label": "FBP",
+   "color": "#2F9E57",
+   "desc": "1,6-di-O-phosphono-beta-D-fructofuranose",
+   "entity": [
+    "3"
+   ],
+   "sites": [
+    [
+     "C",
+     "802"
+    ]
+   ]
+  },
+  {
+   "id": "ADP",
+   "label": "ADP",
+   "color": "#7A52C7",
+   "desc": "Adenosine-5'-Diphosphate",
+   "entity": [
+    "4"
+   ],
+   "sites": [
+    [
+     "D",
+     "803"
+    ]
+   ]
+  },
+  {
+   "id": "F6P",
+   "label": "F6P",
+   "color": "#D6A21E",
+   "desc": "6-O-phosphono-beta-D-fructofuranose",
+   "entity": [
+    "5"
+   ],
+   "sites": [
+    [
+     "E",
+     "804"
+    ]
+   ]
+  },
+  {
+   "id": "A1CFQ",
+   "label": "A1CFQ",
+   "color": "#178F8F",
+   "desc": "4-[bis(3,4-difluorophenyl)methylidene]piperidine",
+   "entity": [
+    "6"
+   ],
+   "sites": [
+    [
+     "F",
+     "805"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "ADP",
+  "residues": [
+   "G24",
+   "G25",
+   "R88",
+   "C89",
+   "F92",
+   "T93",
+   "G117",
+   "G118",
+   "D119",
+   "G120",
+   "S121",
+   "G124",
+   "I127"
+  ],
+  "hbonds": 9,
+  "pi": 0,
+  "neighbours": [],
+  "label": "ADP"
+ }
+}

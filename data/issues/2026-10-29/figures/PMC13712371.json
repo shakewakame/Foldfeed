@@ -1,0 +1,71 @@
+{
+ "pdb_id": "9X8Y",
+ "view": {
+  "target": [
+   -6.37,
+   20.28,
+   6.49
+  ],
+  "dir": [
+   0.573,
+   -0.7893,
+   0.2203
+  ],
+  "up": [
+   0.1006,
+   0.3346,
+   0.937
+  ],
+  "half": [
+   23.8,
+   29.0
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "AfRIOK1（キナーゼ）",
+   "desc": "RIO-type serine/threonine-protein kinase Rio1",
+   "entity": "1"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "A1EZG",
+   "label": "CINS-1",
+   "color": "#C23B8E",
+   "desc": "(~{Z})-2-cyano-3-(4-hydroxyphenyl)-~{N}-[(4-phenylphenyl)methyl]prop-2-enamide",
+   "entity": [
+    "2"
+   ],
+   "sites": [
+    [
+     "B",
+     "301"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "A1EZG",
+  "residues": [
+   "I55",
+   "S56",
+   "G58",
+   "K59",
+   "E60",
+   "A61",
+   "A78",
+   "K80",
+   "E148",
+   "F149",
+   "I150",
+   "I211",
+   "D212"
+  ],
+  "hbonds": 6,
+  "pi": 0,
+  "neighbours": [],
+  "label": "CINS-1"
+ }
+}

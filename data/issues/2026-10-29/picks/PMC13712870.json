@@ -1,0 +1,146 @@
+{
+ "pmcid": "PMC13712870",
+ "section": "impact",
+ "rank": 2,
+ "headline": "胃酸のpHで、PDCoVのスパイクが受容体に結合しやすくなる",
+ "subhead": "pH 4.0のクライオ電顕構造で、受容体結合ドメインが約14°外へ回っていた",
+ "target_label": "PDCoV スパイク（ブタ）",
+ "target_en": "PDCoV spike (porcine deltacoronavirus)",
+ "method_label": "Cryo-EM・2.83 Å",
+ "summary": {
+  "question": "ブタの胃の酸性環境にPDCoVがどう適応するかは、分子レベルでは分かっていなかった。",
+  "approach": "pH 4.0で処理したスパイクのクライオ電顕構造を解き、受容体pAPNとの結合を表面プラズモン共鳴で測った。",
+  "result": "pH 4.0で結合のKDは20.20 μMから1.69 μMに下がった。構造では受容体結合ドメインが14°外へ回っていた。",
+  "learned": "低pHでスパイクは閉じた型と開いた型の中間の活性化型になり、受容体に結合しやすくなる。",
+  "open": "構造はpH 4.0の1条件だけで、pHを段階的に変えた影響は調べていない。",
+  "evidence": {
+   "question": [
+    {
+     "quote": "However, the molecular mechanism underlying PDCoV adaptation to the acidic gastric environment of hosts remains elusive.",
+     "section": "Abstract"
+    }
+   ],
+   "approach": [
+    {
+     "quote": "We solved the high-resolution cryo-electron microscopy (cryo-EM) structure of the PDCoV S protein under acidic conditions, representing the first deltacoronavirus S structure determined at low pH.",
+     "section": "Abstract"
+    },
+    {
+     "quote": "We further quantified the binding affinity between the two proteins via surface plasmon resonance (SPR).",
+     "section": "Results"
+    }
+   ],
+   "result": [
+    {
+     "quote": "with the dissociation constant (KD) decreasing from 20.20 μM at pH 7.2 to 1.69 μM at pH 4.0",
+     "section": "Abstract"
+    },
+    {
+     "quote": "low pH drives a 14° outward rotation of the S1 C-terminal receptor-binding domain",
+     "section": "Abstract"
+    }
+   ],
+   "learned": [
+    {
+     "quote": "generating an intermediate activated conformation between the fully closed and fully open states, while the S2 fusion core remains structurally conserved",
+     "section": "Abstract"
+    },
+    {
+     "quote": "acidic pH induces functionally important conformational rearrangements of the PDCoV spike (S) protein, which markedly increases its binding affinity for the cellular receptor porcine aminopeptidase N (pAPN)",
+     "section": "Abstract"
+    }
+   ],
+   "open": [
+    {
+     "quote": "we have only resolved the structure of the PDCoV S protein at a single pH condition (pH 4.0)",
+     "section": "Discussion"
+    }
+   ]
+  }
+ },
+ "categories": [
+  "pathogen"
+ ],
+ "topics": [
+  "dynamics"
+ ],
+ "highlights": [
+  {
+   "tag": "機構の解明",
+   "text": "pH 4.0のスパイク（2.83 Å）は、6B7Nに基づく中性pHのモデルより三量体の頭部が開き、S1の受容体結合ドメインが14°外へ回っていた。S2の融合コアはほぼ変わらない。",
+   "evidence": [
+    {
+     "quote": "We finally resolved the prefusion conformation of PDCoV S protein under pH 4.0 (designated S4.0) at an overall resolution of 2.83 Å.",
+     "section": "Results"
+    },
+    {
+     "quote": "the trimer head of S4.0 is more extended and adopts a more open conformation",
+     "section": "Results"
+    }
+   ]
+  },
+  {
+   "tag": "機構の解明",
+   "text": "受容体結合モチーフの大半はS1の内側に隠れている。ドッキング計算では閉じた型だとpAPNが近づけず、14°の回転はこの障害を和らげると論文は論じている。",
+   "evidence": [
+    {
+     "quote": "Molecular docking simulations demonstrated that when S1-CTD is in the closed (down) conformation under neutral conditions, severe steric hindrance prevents pAPN from accessing the RBM.",
+     "section": "Results"
+    },
+    {
+     "quote": "The 14° outward rotation of S1-CTD in the S4.0 structure, while not forming a full up conformation, greatly reduces the spatial constraint imposed by S1-NTD on S1-CTD",
+     "section": "Results"
+    }
+   ]
+  },
+  {
+   "tag": "機構の解明",
+   "text": "子ブタに水酸化アルミニウムを飲ませて胃酸を中和すると、PDCoVの感染と病原性が弱まった。pH 4.0の前処理で、腸上皮細胞への感染性も高まった。",
+   "evidence": [
+    {
+     "quote": "neutralization of gastric acid in piglets effectively attenuates PDCoV infection and pathogenicity in vivo",
+     "section": "Abstract"
+    },
+    {
+     "quote": "low-pH pretreatment at pH 4.0 significantly enhances the infectivity of PDCoV in porcine intestinal epithelial cells",
+     "section": "Results"
+    }
+   ]
+  }
+ ],
+ "lab_notes": {
+  "expression": "スパイクの外領域の三量体をExpiCHO発現系で発現・精製し、pH 4.0のバッファーで処理した。",
+  "construct": "シグナルペプチドと膜貫通領域を除き、残基20–1077を残した。",
+  "purification": null,
+  "sample_prep": "4 μLを乗せたグリッドをVitrobotで4°C・湿度100%の条件で凍結した。",
+  "data_collection": "9,408枚の顕微鏡写真から993,371粒子を選んで再構成した。処理はRELION 4.0かcryoSPARCで行った。",
+  "evidence": [
+   {
+    "quote": "The ectodomain trimer of PDCoV S protein was expressed and purified using the ExpiCHO eukaryotic expression system, then treated with pH 4.0 buffer for structural analysis.",
+    "section": "Results"
+   },
+   {
+    "quote": "The N-terminal signal peptide and the C-terminal transmembrane region of the S protein were removed, whereas amino acid residues 20-1077 were retained.",
+    "section": "Methods"
+   },
+   {
+    "quote": "A 4 μL aliquot of protein sample was applied to the treated grids, which were then vitrified with a Vitrobot under conditions of 4°C and 100% humidity",
+    "section": "Methods"
+   },
+   {
+    "quote": "After screening 9,408 micrographs, a total of 993,371 valid particles were selected for 3D reconstruction and refinement",
+    "section": "Results"
+   },
+   {
+    "quote": "Image processing was performed with RELION 4.0 or cryoSPARC.",
+    "section": "Methods"
+   }
+  ]
+ },
+ "keywords": [
+  "PDCoV",
+  "スパイク",
+  "低pH"
+ ],
+ "editor_notes": "本文に新しい PDB ID の記載がなく、候補では既存構造の利用に分類されたが、pH 4.0 のクライオ電顕構造は自前のもの（新しい構造に近い）。比較相手の中性 pH 構造は 6B7N に基づくホモロジーモデルで実測ではない。図の既定は引用された 6B7N（中性 pH）になるので注意。"
+}

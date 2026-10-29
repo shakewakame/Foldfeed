@@ -1,0 +1,139 @@
+{
+  "pmcid": "PMC13710555",
+  "rank": 12,
+  "headline": "2つのヒト抗体が、麻疹ウイルスFタンパク質の別の面に結合する",
+  "subhead": "MeV-15・MeV-104のFabと融合前Fを約2.9 Åで解析。どちらも隣り合う2単位にまたがる",
+  "target_label": "麻疹ウイルスFタンパク質",
+  "target_en": "Measles virus F (prefusion) with MeV-15/104 Fabs",
+  "summary": {
+    "question": "麻疹ウイルスの表面タンパク質に対し、ヒト抗体が中和する構造上の決め手は分かっていなかった。",
+    "approach": "回復者から得た抗体のうち、MeV-15とMeV-104のFabと融合前Fの複合体をクライオ電顕で解いた。",
+    "result": "全体で約3 Å。Fabは3コピーずつ結合し、MeV-15は頭部の側面に、MeV-104は上面に付いていた。",
+    "learned": "どちらも2つのプロトマーにまたがり、融合前の形を保つと考えられる。MeV-15は耐性ウイルスが得られなかった。",
+    "open": "保護が中和だけによるのか、Fcの働きも関わるのかは、調べていないと論文は述べる。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "There is limited knowledge about the human antibody response to a measles infection or vaccination or the structural determinants of antibody-mediated neutralization",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "We determined the structural basis of molecular recognition and virus neutralization using cryo-electron microscopy (cryo-EM) for two antibodies that recognize distinct sites of the F protein, MeV-15 and MeV-104.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "The preF/MeV-15/MeV-104 complex structure was resolved to an overall ∼3 Å resolution",
+          "section": "Results"
+        },
+        {
+          "quote": "three Fab molecules of MeV-15 and three Fab molecules of MeV-104 are simultaneously bound to the preF protein trimer",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "suggest MeV-104 conformationally locks the F protein in the prefusion state",
+          "section": "Results"
+        },
+        {
+          "quote": "we never selected an MeV-15 escape mutant virus",
+          "section": "Results"
+        }
+      ],
+      "open": [
+        {
+          "quote": "we did not determine whether this protection is due solely to neutralizing activity or whether engagement of Fc effector functions also plays a role",
+          "section": "Limitations of the study"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "immune",
+    "pathogen"
+  ],
+  "topics": [
+    "antibody"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "MeV-15の結合面積は1,591 Å2で、一般的な抗体の約800 Å2を大きく上回る。融合ループとドメインI・IIIを含み、隣のプロトマーにもまたがる。",
+      "evidence": [
+        {
+          "quote": "The total buried surface area of MeV-15 is 1,591 Å2, which is considerably larger than the average antibody-epitope buried surface area",
+          "section": "Results"
+        },
+        {
+          "quote": "The epitope involves regions from multiple functional domains of the F trimer, including domain III (DIII), domain I (DI), and the fusion loop (FL)",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "MeV-104は、頂部のN67糖鎖を約9 Å、143°動かし、R70と水素結合や塩橋を作る。R70Gの変異ウイルスはMeV-104に中和されなくなった。",
+      "evidence": [
+        {
+          "quote": "pushing the glycan by 9 Å, 143° compared to the apo form of the F protein",
+          "section": "Results"
+        },
+        {
+          "quote": "MeV-104 selected viruses with a R70G mutation in the F protein in both variant viruses",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "2つの抗体は、マウスでの予防投与と、コットンラットでの治療投与のどちらでもウイルスの複製を抑えた。",
+      "evidence": [
+        {
+          "quote": "These antibodies also strongly inhibited viral replication in vivo when administered prophylactically in a murine transgenic model and when administered therapeutically in a cotton rat model of established infection.",
+          "section": "Abstract"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "融合前安定化F三量体はExpi293F、抗体とFabはExpiCHOで発現した。",
+    "construct": "F三量体はGCN4三量体化ドメインとTwin Strepタグを付けた。",
+    "purification": "FabはCaptureSelect CH1-XLで精製した。",
+    "sample_prep": "F:Fabを1:4:4で混ぜてゲルろ過し、0.3 mg/mLでVitrobotにより凍結した。",
+    "data_collection": "配向の偏りを避けるため、グリッドの種類と傾斜を変えた複数のデータを統合した。",
+    "evidence": [
+      {
+        "quote": "The construct contained an IL-2 signal peptide, a GCN4 trimerization domain, an HRV 3C cleavage site, and a Twin Strep-tag.",
+        "section": "Methods"
+      },
+      {
+        "quote": "The plasmids were transiently transfected into ExpiCHO cells using the ExpiCHO expression system",
+        "section": "Methods"
+      },
+      {
+        "quote": "Fab proteins were purified using CaptureSelect CH1-XL",
+        "section": "Methods"
+      },
+      {
+        "quote": "After incubation of preF:Fabs for 2 h at room temperature the mixture in a molar ratio of 1:4:4 was purified by gel filtration on Superose 6 increase 10/300 column",
+        "section": "Methods"
+      },
+      {
+        "quote": "To overcome preferred orientation problems, multiple datasets were collected on different grid types and with different tilt angles.",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "麻疹",
+    "Fタンパク質",
+    "MeV-15",
+    "MeV-104",
+    "中和抗体"
+  ],
+  "editor_notes": "PDB 9YBY（2.9 Å）。耐性ウイルスの選択はVSVにMeVの糖タンパク質を載せた系で、本物の麻疹ウイルスの挙動とは限らないと論文が限界に書いている。"
+}

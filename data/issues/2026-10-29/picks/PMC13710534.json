@@ -1,0 +1,140 @@
+{
+  "pmcid": "PMC13710534",
+  "rank": 5,
+  "headline": "ZNFX1は、RNAに出会うまで自分でRNAの溝をふさいでいる",
+  "subhead": "RNAなしの四量体フィラメントとRNA結合型の二量体を比べ、ヘリカーゼの活性化の仕組みを描いた",
+  "target_label": "ZNFX1（RNAヘリカーゼ）",
+  "target_en": "Human ZNFX1 RNA helicase",
+  "summary": {
+    "question": "ZNFX1はRNAが結合するとどう活性化されるのか。RNAなしで解かれた構造は不活性型とみられるだけだった。",
+    "approach": "全長のヒトZNFX1を、RNAなしと一本鎖RNA結合型の2つの状態でクライオ電顕により解析し、生化学実験と合わせた。",
+    "result": "RNAなしでは阻害ヘリックスが溝をふさぎ、四量体が連なる短いフィラメントを作る。RNAで溝が開き、二量体になる。",
+    "learned": "阻害ヘリックスが溝をふさぐ自己阻害が基本で、RNA結合が構造を作り替えてヘリカーゼを活性化すると考えられる。",
+    "open": "RNAと結合する際に二量体になる理由や、C末端のE3リガーゼ部分の構造は、まだ分かっていない。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "However, because the structure was determined in the absence of nucleic acid, it likely represents an inactive state.",
+          "section": "Introduction"
+        },
+        {
+          "quote": "raising fundamental questions about how RNA-binding activates this multifunctional enzyme",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here, we combine cryo-electron microscopy with biochemical analyses to define the structural basis of ZNFX1 regulation.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "In the absence of RNA, ZNFX1 adopts an autoinhibited conformation in which a blocking helix occludes the RNA-binding groove.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Binding of single-stranded RNA (ssRNA) remodels these higher-order assemblies into RNA-bound ZNFX1 monomers and dimers.",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Together, these findings support a regulatory mechanism in which autoinhibited ZNFX1 exists as monomers or concentration-dependent higher-order oligomers, whereas RNA binding promotes structural remodeling and helicase activation.",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Stabilization of the E3 ligase module, potentially through binding of E2 enzyme, ubiquitin, or RNA substrates, will be an important goal for future structural studies",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "nucleic",
+    "immune"
+  ],
+  "topics": [
+    "dynamics"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "RNAなしのZNFX1では、1Zドメインから伸びるヘリックスがRNA結合溝に入り込んでいる。このヘリックスは負電荷の残基に富み、RNAの結合を妨げる。",
+      "evidence": [
+        {
+          "quote": "Because the helix is enriched in negatively charged residues and sterically occludes the RNA-binding groove, we refer to it as the blocking helix.",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "一本鎖RNAが結合すると、阻害ヘリックスが押し出され、1B領域が約7.8 Å離れて溝が広がる。13個のリボヌクレオチドが溝に収まり、UPF1などより長い範囲でRNAをつかむ。",
+      "evidence": [
+        {
+          "quote": "Notably, ssRNA binding displaces the blocking helix that occupies the RNA-binding groove in the autoinhibited state",
+          "section": "Results"
+        },
+        {
+          "quote": "Thirteen ribonucleotides are well resolved and interact extensively with each ZNFX1 protomer",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "阻害ヘリックスを置換した変異体は、ATPを分解する基本活性が高いのに、RNAをほどく活性は野生型より低かった。ATPの分解が増えるだけではほどけないことが分かる。",
+      "evidence": [
+        {
+          "quote": "indicating that increasing ATP hydrolysis alone is insufficient for efficient RNA unwinding",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "cryo-EM用にはBacMamウイルスを感染させたFreeStyle 293-F細胞で発現した。",
+    "construct": "N末端に3xFLAGタグを付けた全長のヒトZNFX1。",
+    "purification": "抗FLAG樹脂で精製し、Superose 6 Increaseのサイズ排除クロマトグラフィーで仕上げた。",
+    "sample_prep": "ZNFX1 1 µMにATPγS 1 mMを加え、RNA結合型では60 nt ssRNA 10 µMも加えて、Vitrobot Mark IVで凍結した。",
+    "data_collection": "Titan Krios（300 kV）とK3検出器で撮影し、cryoSPARCとRELION 5.0で処理した。",
+    "evidence": [
+      {
+        "quote": "P2 virus was harvested and used to infect FreeStyle™ 293-F cells (Thermo Fisher Scientific)",
+        "section": "Methods"
+      },
+      {
+        "quote": "cloned into the pEG BacMam vector with an N-terminal 3xFLAG tag for mammalian expression",
+        "section": "Methods"
+      },
+      {
+        "quote": "further purified by size-exclusion chromatography on a Superose 6 Increase column (GE Healthcare)",
+        "section": "Methods"
+      },
+      {
+        "quote": "1 µM ZNFX1 was mixed with 10 µM 60-nt ssRNA in the presence of 1 mM ATPγS",
+        "section": "Methods"
+      },
+      {
+        "quote": "Cryo-EM data were collected using a Titan Krios electron microscope (Thermo Fisher Scientific) operating at 300 kV",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "ZNFX1",
+    "RNAヘリカーゼ",
+    "自己阻害"
+  ],
+  "ligand_names": {
+    "AGS": "ATPγS"
+  },
+  "editor_notes": "ZNFX1 は既報の単量体構造（PDB あり）があるため New Structure ではなく Structure Update の見込み。1Z–1Z と ARM–ZnF の界面は AlphaFold 予測をあてはめた部分があり、論文も限定つきで書いている。E3 リガーゼ部分は未解像。",
+  "legend_labels": [
+    "ZNFX1（ヘリカーゼ）",
+    "RNA"
+  ]
+}

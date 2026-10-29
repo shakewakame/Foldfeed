@@ -1,0 +1,131 @@
+{
+  "pmcid": "PMC13712955",
+  "rank": 14,
+  "headline": "インフルエンザHAの側面パッチは、変異で抗体を逃れてきた",
+  "subhead": "抗体2種とHAの複合体をクライオ電顕で解き、A259Tなど離れた変異も抗体結合を弱めると示した",
+  "target_label": "H1 HA（A/California/04/2009）",
+  "target_en": "Influenza H1 HA (A/California/04/2009) with Fabs",
+  "ligand_label": "抗体Fab 047-09 1A02、047-09M 2F03",
+  "summary": {
+    "question": "H1のHAの側面パッチ（HAの頭部の裏側の保存された領域）が、時間や動物種を超えてどれだけ保存されているかは定まっていなかった。",
+    "approach": "ヒト由来の側面パッチ抗体28種を、1918〜2022年のH1の組換えHAにぶつけて結合を調べ、2種の抗体との複合体をクライオ電顕で解いた。",
+    "result": "2009年以降のH1N1では、K166Q・A259T・S83Rなどが抗体を逃れていた。解いた構造は3.06 Åなどだった。",
+    "learned": "側面パッチは約100年間よく保存されてきた。ブタやトリのH1にも広く保たれ、既存の抗体が将来のH1Nx流行に効く可能性がある。",
+    "open": "側面パッチの機能は分かっておらず、保存される理由は未解明である。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "The conservation of the lateral patch across time and animal reservoirs remains ill-defined.",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "We assessed lateral patch-specific mAb binding affinity to H1 HA antigens from 1918 to 2022 to understand the conservation of the lateral patch",
+          "section": "Introduction"
+        },
+        {
+          "quote": "by determining the cryo-EM structures of 047-09 1A02 (Fig. 3B, Fig. S2 and Table S4) and 047-09M 2F03 (Fig. 3C; Fig. S3, Table S4) in complex with CA/09 HA.",
+          "section": "Results"
+        }
+      ],
+      "result": [
+        {
+          "quote": "We found that both class 1 and class 2 antibodies lost binding to pH1N1 strains around 2014, suggesting antigenic drift affected mAb binding (Fig. 2C).",
+          "section": "Results"
+        },
+        {
+          "quote": "resulted in a final map for 047-09 1A02 and 047-09M 2F03 at 3.7 and 3.06 Å resolutions, respectively",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Our study supports that the lateral patch was well conserved for nearly 100 years, except for mutations arising in the 1950s and 1977 sH1N1 viruses that evade class 1 antibodies and mutations in post-2014 pH1N1 viruses that evade both class 1 and class 2 mAbs.",
+          "section": "Discussion"
+        },
+        {
+          "quote": "suggesting that existing lateral patch antibodies could protect against a future zoonotic H1Nx pandemic",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Understanding the function, or lack thereof, of the lateral patch could reveal why this region has been well conserved across human and enzootic H1Nx isolates.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "immune",
+    "pathogen"
+  ],
+  "topics": [
+    "antibody"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "3つのクラス1抗体はどれもHCDR3のY-x-Rモチーフで側面パッチに結合し、N170はY100bと水素結合する。同じ遺伝子と同じモチーフを使っても、細部の接触は抗体ごとに異なっていた。",
+      "evidence": [
+        {
+          "quote": "Notably, all three mAbs used a Y-x-R motif in the HCDR3 that contacted residues within the 120 β-strand or the 170-loop, with HA N170 forming a hydrogen bond with Y100b within the HCDR3 of all three mAbs (Fig. 3A through D).",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "A259Tは抗体と直接接触せず、表面にも出ていない。MDシミュレーションでは、170ループの柔軟さが増し、これが抗体結合の低下の理由と著者は考えている。この点は計算による推定である。",
+      "evidence": [
+        {
+          "quote": "However, our structural characterization of class 1 lateral patch mAbs revealed that A259 is neither in direct contact with these antibodies nor is it surface exposed.",
+          "section": "Results"
+        },
+        {
+          "quote": "Introduction of T259 into CA/09 increased the flexibility of the 170-loop, as well as the β-strand where residue 259 resides (Fig. S5A and B).",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "クラス1抗体の047-09M 2F03は、2009年以降のH1N1すべてに結合を保った。同じクローンの1A02はA259Tで結合を失ったので、2F03がなぜ逃れられないのかは分かっていない。",
+      "evidence": [
+        {
+          "quote": "It remains unknown what mechanism allows 047-09M 2F03 to retain binding to post-2014 H1N1 viruses.",
+          "section": "Discussion"
+        },
+        {
+          "quote": "We identified 047-09M 2F03 retained binding to all post-2009 pH1N1 viruses tested (Fig. 2C).",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "HEK293TまたはExpi293FでHAを一過性発現し、Ni-NTAで精製",
+    "construct": "三量体化ドメイン（foldon）・AviTag・6×Hisを付けたH1 HA外部ドメイン。Y98F変異を共通で入れた",
+    "purification": "抗体はProtein Aで精製",
+    "sample_prep": "Fab:HAをモル比3:1で1時間混合し、0.1% octyl-β-glucosideを加えて、Vitrobot Mark IVで凍結",
+    "data_collection": "Glacios（200 kV）とFalcon 4iで撮影し、CryoSPARC v4.7.1で処理。最終分解能は047-09M 2F03が3.06 Å",
+    "evidence": [
+      {
+        "quote": "HA complexes were prepared by mixing Fab with a 3:1 molar ratio of Fab:HA (i.e., 3 Fabs per HA trimer) and incubated for 1 h at room temperature.",
+        "section": "Materials and methods"
+      },
+      {
+        "quote": "Final map resolutions determined by gold-standard Fourier shell correlation, were 3.06 Å for 047-09M 2F03 and 3.93 Å for 047-09-1A02.",
+        "section": "Materials and methods"
+      }
+    ]
+  },
+  "keywords": [
+    "インフルエンザ",
+    "ヘマグルチニン",
+    "側面パッチ",
+    "抗原性ドリフト"
+  ],
+  "editor_notes": "1A02の分解能が本文3.7 Å、方法3.93 Å、PDB 3.76 Åと食い違うため、要約には2F03の3.06 Åだけを使った。A259TのMDは計算による推定で、記事ではそう書いた。"
+}

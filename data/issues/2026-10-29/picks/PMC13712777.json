@@ -1,0 +1,138 @@
+{
+  "pmcid": "PMC13712777",
+  "rank": 18,
+  "headline": "FlhGがないと、スピロヘータのべん毛の数と並びが乱れる",
+  "subhead": "クライオ電子線トモグラフィーで、欠失株ではモーターの輪状の構造が見えなかった",
+  "target_label": "FlhG（ライム病ボレリア）",
+  "target_en": "FlhG (B. burgdorferi)",
+  "method_label": "Cryo-ET・サブトモグラム平均",
+  "summary": {
+    "question": "スピロヘータで、べん毛の形成を細胞分裂とどう結びつけているかは分かっていなかった。",
+    "approach": "ボレリアのflhG欠失株を、遺伝学・蛍光顕微鏡・クライオ電子線トモグラフィーで調べた。",
+    "result": "欠失株ではべん毛が1つの極あたり2〜15本とばらつき、束もできなかった。野生型は7〜11本だった。",
+    "learned": "FlhGはFlhFとFliFを極に配置してべん毛の数と並びを整え、分裂の進行とも連動させると結論している。",
+    "open": "FlhG自身が極や分裂部位にどう配置されるのかは、まだ分かっていない。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "However, the mechanism coupling flagellar biogenesis to cell division in spirochetes remains unclear.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Using an integrated approach combining genetics, biochemistry, fluorescence microscopy, and cryo-ET",
+          "section": "Introduction"
+        }
+      ],
+      "result": [
+        {
+          "quote": "In ΔflhG cells, however, this pattern was severely disrupted: PF numbers were highly variable, ranging from 2 to 15 per cell pole",
+          "section": "Results"
+        },
+        {
+          "quote": "B. burgdorferi cells typically have 7–11 PFs per pole",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Through this spatial regulation, FlhG coordinates flagellar biogenesis with cytokinetic progression.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "These findings demonstrate that FlhGBb is required for the polar targeting of both FlhF and FliF, thereby coordinating flagellar assembly, number, and spatial organization.",
+          "section": "Results"
+        }
+      ],
+      "open": [
+        {
+          "quote": "An important remaining question is how FlhGBb is positioned at the cell poles and division site in B. burgdorferi.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "pathogen",
+    "regulation"
+  ],
+  "topics": [
+    "insitu"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "FlhGはMinDに似たATPaseで、脂質を加えると活性が上がる。ATP分解を失ったD69A変異体では、運動性が戻らなかった。",
+      "evidence": [
+        {
+          "quote": "The addition of polar lipid significantly (P < 0.0001) enhanced the ATPase activity of FlhGBb",
+          "section": "Results"
+        },
+        {
+          "quote": "complementation with an ATPase-deficient point mutant (ΔflhGD69A) failed to rescue motility",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "flhF欠失株ではFlhF-GFPが極に約2個ずつ集まったが、flhGを欠くと1細胞に約19個の点として散らばった。FliFも極から細胞全体に広がった。",
+      "evidence": [
+        {
+          "quote": "deletion of flhG completely disrupted the polar localization of FlhF, resulting in numerous dispersed FlhF-GFP puncta distributed throughout the cell (18.93 ± 5.43 puncta per cell, n = 29)",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "手法の工夫",
+      "text": "サブトモグラム平均で、野生型のモーターにある輪状の構造が欠失株では見えず、相補株で戻った。この構造はスピロヘータ特有のカラーの上にあるが、できる仕組みは未解明である。",
+      "evidence": [
+        {
+          "quote": "subtomogram averaging revealed that a ring-like structure present in the wild-type flagellar motor (Fig. 5A and D) was absent in the ΔflhG mutant",
+          "section": "Results"
+        },
+        {
+          "quote": "This ring-like structure sits atop the flagellar collar, a hallmark feature unique to spirochetal flagellar motors",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "ATPase測定用はE. coli Lemo21で発現（1 mM IPTG、16°C、18時間）",
+    "construct": null,
+    "purification": "Ni-NTAアガロースで精製（ネイティブ条件）",
+    "sample_prep": "細胞をPBSでOD600 1.0にし、10 nm金粒子を加えてQuantifoilグリッドに載せ、凍結",
+    "data_collection": "Titan Krios G2・300 kV・K3。サブトモグラム平均はProtomoで算出",
+    "evidence": [
+      {
+        "quote": "Protein expression was induced with 1 mM IPTG for 18 h at 16°C.",
+        "section": "Materials and Methods"
+      },
+      {
+        "quote": "Cells were harvested for protein purification using Ni-NTA agarose columns under native conditions.",
+        "section": "Materials and Methods"
+      },
+      {
+        "quote": "B. burgdorferi cells in liquid culture were resuspended in PBS to a final OD600 of 1.0.",
+        "section": "Materials and Methods"
+      },
+      {
+        "quote": "Tilt series were recorded with SerialEM software (78) at 42,000 × magnification, with a physical pixel size of 2.148 Å and a defocus of 4.8 μm.",
+        "section": "Materials and Methods"
+      },
+      {
+        "quote": "Protomo (85) was used to determine in situ structure of the flagellar motors as described previously",
+        "section": "Materials and Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "FlhG",
+    "べん毛",
+    "ボレリア"
+  ],
+  "editor_notes": "EMD-76329 はΔflhG変異体のモーターのサブトモグラム平均で、分解能の記載は本文にない。FlhG自体の構造はAlphaFoldモデルの比較のみで、実験構造はない。論文の中心は遺伝学・細胞学で、構造は補助的。"
+}

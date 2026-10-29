@@ -1,0 +1,85 @@
+{
+ "pdb_id": "9N84",
+ "view": {
+  "target": [
+   140.4,
+   133.36,
+   137.88
+  ],
+  "dir": [
+   0.0612,
+   -0.9832,
+   -0.1719
+  ],
+  "up": [
+   -0.8583,
+   0.0361,
+   -0.5119
+  ],
+  "half": [
+   53.4,
+   42.1
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "Tim17（輸送路）",
+   "desc": "Mitochondrial import inner membrane translocase subunit TIM17",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "Tim23（チャネル）",
+   "desc": "Mitochondrial import inner membrane translocase subunit TIM23",
+   "entity": "2"
+  },
+  {
+   "color": "#5F9296",
+   "label": "Tim44（足場）",
+   "desc": "Mitochondrial import inner membrane translocase subunit TIM44",
+   "entity": "3"
+  },
+  {
+   "color": "#A5707A",
+   "label": "Fab 軽鎖",
+   "desc": "Antibody Fab fragment light chain",
+   "entity": "4"
+  },
+  {
+   "color": "#7C8AA8",
+   "label": "Fab 重鎖",
+   "desc": "Antibody Fab fragment heavy chain",
+   "entity": "5"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "M12",
+   "label": "ステンドマイシン",
+   "color": "#C23B8E",
+   "desc": "10-Methylundecanoic Acid",
+   "entity": [
+    "9"
+   ],
+   "sites": [
+    [
+     "I",
+     "101"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "M12",
+  "residues": [
+   "F65",
+   "P2",
+   "G4"
+  ],
+  "hbonds": 2,
+  "pi": 0,
+  "neighbours": [],
+  "label": "ステンドマイシン"
+ }
+}

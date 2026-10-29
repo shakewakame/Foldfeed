@@ -1,0 +1,140 @@
+{
+  "pmcid": "PMC13710158",
+  "rank": 4,
+  "headline": "テロメラーゼ阻害剤は、予想外の場所に結合していた",
+  "subhead": "BIBR1532との複合体を9つ解き、活性部位から離れた袋で最初の伸長段階を遅らせると示した",
+  "target_label": "ヒトテロメラーゼ（TERT）",
+  "target_en": "Human telomerase (TERT–TER) with BIBR1532",
+  "summary": {
+    "question": "テロメラーゼと阻害剤の複合体の構造がなく、阻害剤を構造から設計し改良することが難しかった。",
+    "approach": "阻害剤BIBR1532の有無とヌクレオチド類似体の有無で、ヒトテロメラーゼの9つの構造をクライオ電顕で調べた。",
+    "result": "BIBR1532はTERTのフィンガーとパームの間の袋に入っていた。阻害は最初の伸長段階で約60%と大きかった。",
+    "learned": "BIBR1532は活性部位を直接ふさがず、鋳型とDNAの二本鎖が位置を移す動きを妨げて阻害すると考えられる。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "However, to date there are no reported structures of human telomerase with inhibitor, impeding structure-based drug design and optimization.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "We report nine cryo-electron microscopy structures of human telomerase with and without BIBR1532, a highly selective small-molecule telomerase inhibitor.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "Unexpectedly, BIBR1532 binds a previously unknown pocket between TERT finger and palm.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "BIBR1532 causes a modest reduction in activity (10–20%) across most steps but a much larger inhibitory effect (~60%) at the first step of nucleotide addition",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "The single-step direct telomerase assays and cryo-EM structures showed that BIBR1532 inhibits telomerase by affecting the movement of the template–DNA duplex needed to vacate the active site, especially during the first slow, rate-limiting step.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "nucleic",
+    "enzyme"
+  ],
+  "topics": [
+    "drug",
+    "dynamics"
+  ],
+  "highlights": [
+    {
+      "tag": "新しい結合部位",
+      "text": "BIBR1532はTERT C末端側の領域に結合するという従来の予想とは違い、逆転写ドメインのフィンガーとパームの間の深い袋に入っていた。活性部位から約12 Å離れている。",
+      "evidence": [
+        {
+          "quote": "Instead, we observed a distinct density within a deep pocket on the RT domain",
+          "section": "Results"
+        },
+        {
+          "quote": "BIBR1532 does not directly interact with either the RNA template or the active-site residues but is in close proximity to both, ~6 Å and 12 Å away, respectively",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "多くのDNAポリメラーゼはdNTPが入るとフィンガーが閉じるが、TERTではTRBDがフィンガーを固定し、動きは1 Å未満だった。この硬さが、テロメラーゼの遅い反応と低い正確さを説明すると論文は述べている。",
+      "evidence": [
+        {
+          "quote": "Notably, the finger loop in the nucleotide-binding pocket shifts <1 Å when dTpNHpp is added, with or without BIBR1532",
+          "section": "Results"
+        },
+        {
+          "quote": "The structural rigidity of the finger induced by interactions with the TRBD offers a structural explanation for these enzymological properties of telomerase.",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "従来の誘導体設計は別の昆虫由来TERTの結合部位を手がかりにしていた。ヒトTERTの結合袋の構造は、それらが効果を高められなかった理由を説明し、改良の道すじを示す。",
+      "evidence": [
+        {
+          "quote": "These findings also explain why previous SAR studies to optimize the original BIBR1532 on the basis of the TcTERT model have not produced more effective inhibitors.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "ヒト培養細胞（HEK）でTERTとTERを共発現してテロメラーゼを再構成した。",
+    "construct": "TERTにZZタグとStrepタグを付け、TPP1のOBドメイン（88–249）を後から加えた。",
+    "purification": "IgGアガロース、ストレプトアビジンアガロース、MagStrep XTの順に精製した。",
+    "sample_prep": "1 µMのBIBR1532と1 mMのdNTP類似体を加え、グラフェン酸化物の膜つきグリッドをVitrobot Mark IVで凍結した。",
+    "data_collection": "Titan Krios（300 kV）で撮影し、cryoSPARCで処理した。",
+    "evidence": [
+      {
+        "quote": "HEK 293T cells, cultured on 150-mm plates with DMEM (Gibco) supplemented with 10% FBS (Atalanta)",
+        "section": "Methods"
+      },
+      {
+        "quote": "500 nM TPP1 OB was added to human telomerase and incubated for 1 h before vitrification.",
+        "section": "Methods"
+      },
+      {
+        "quote": "The supernatant was further incubated with MagStrep XT3 resin (IBA LifeSciences) overnight at 4 °C.",
+        "section": "Methods"
+      },
+      {
+        "quote": "flash-frozen in a liquid propane–ethane mixture (63%:37%) with a Vitrobot Mark IV (Thermo Fisher)",
+        "section": "Methods"
+      },
+      {
+        "quote": "All steps described below were performed with cryoSPARC53 unless otherwise indicated.",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "テロメラーゼ",
+    "TERT",
+    "BIBR1532"
+  ],
+  "ligand_names": {
+    "55C": "BIBR1532"
+  },
+  "site_ligand": "55C",
+  "editor_notes": "論文は「ヒトテロメラーゼと阻害剤の初の構造」とは明記していないが、既報の構造がないと書いている。TERT は既存 PDB 構造があるため Structure Update の見込み。今日の一本の候補（創薬の軸）。凡例ラベルは描画後に確認が必要。",
+  "ga_pdb_id": "9Q0Z",
+  "legend_labels": [
+    "TERT（逆転写酵素）",
+    "テロメラーゼRNA",
+    "テロメア配列の鋳型",
+    "ヒストンH2B",
+    "ヒストンH2A",
+    "ACD（TPP1）"
+  ]
+}

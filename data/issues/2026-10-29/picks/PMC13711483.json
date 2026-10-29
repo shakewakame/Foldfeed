@@ -1,0 +1,142 @@
+{
+  "pmcid": "PMC13711483",
+  "rank": 16,
+  "headline": "ヘムが、コイルドコイルの並びを一ヘプタッドずらす",
+  "subhead": "設計ペプチドのヘム結合型を1.9 Åで解き、各ヘムが2つのHisで配位する四本鎖を示した",
+  "target_label": "GRW-L16CL30H（設計ペプチド）",
+  "target_en": "Designed coiled-coil peptide GRW-L16CL30H with heme",
+  "method_label": "X-ray・1.9 Å",
+  "ligand_label": "ヘム b（2分子）",
+  "summary": {
+    "question": "設計したコイルドコイルにヘムが結合した状態の、高分解能の構造データは乏しかった。",
+    "approach": "強塩基性で調製したヘム結合型の設計ペプチドを結晶化し、1.9 Åの回折データから構造を決めた。",
+    "result": "4本のらせんが1ヘプタッドずれて束ねられ、2つのヘムを各2個のHisが配位していた。Fe–N距離は約2.0 Åだった。",
+    "learned": "ヘムのHis配位が、並びのずれた逆平行の四本鎖をつくる構造要素として働く可能性がある。",
+    "open": "結晶中の構造が溶液中の平衡状態に当たるかは断定できず、試料の履歴などとも区別できていない。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "yet high‐resolution structural data for these systems remain scarce",
+          "section": "Abstract"
+        },
+        {
+          "quote": "There is no reported crystal structure of a purely self‐assembling and heme‐binding coiled coil.",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "The holo protein prepared under these strongly basic conditions was subsequently subjected to crystallization",
+          "section": "Introduction"
+        },
+        {
+          "quote": "determined at 1.9 Å resolution",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "with an out‐of‐register ABAB arrangement that accommodates two bis‐histidine ligated hemes",
+          "section": "Results and Discussion"
+        },
+        {
+          "quote": "The Fe‐NHis bond lengths are approximately 2.0 Å on average for all four coordinating His",
+          "section": "Results and Discussion"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "In this context, the heme cofactors may act as structural organizing elements that guide the peptide into a specific oligomeric state through Fe‐N(His) coordination.",
+          "section": "Results and Discussion"
+        }
+      ],
+      "open": [
+        {
+          "quote": "The bis‐His state may reflect sample history, kinetic trapping, and/or crystallization‐induced stabilization, but the present data do not distinguish between these possibilities.",
+          "section": "Results and Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "other"
+  ],
+  "topics": [
+    "design"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "ヘムが加わると、平行な三本鎖は逆平行の四本鎖に変わる。塩基性では一部の鎖が約1ヘプタッド（7残基の繰り返し）ずれ、ヘムをはさむHisの位置がそろう。",
+      "evidence": [
+        {
+          "quote": "Heme alters peptide assembly in two ways: first, by converting a parallel 3SCC into an antiparallel 4SCC across all pH ranges, and second, by inducing slip stacking at basic pH.",
+          "section": "Results and Discussion"
+        },
+        {
+          "quote": "chains B and D are slip‐stacked relative to chains A and C by approximately one full heptad repeat",
+          "section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "2つのヘムの縁どうしは38 Å離れ、ほぼ同一平面にある。軸のHis二つのイミダゾール面は99°と108°で、ほぼ直交する配置だった。",
+      "evidence": [
+        {
+          "quote": "the edge‐to‐edge distance between the conjugated tetrapyrrole rings for the two hemes is 38 Å",
+          "section": "Results and Discussion"
+        },
+        {
+          "quote": "indicating a near‐orthogonal arrangement",
+          "section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "tag": "手法の工夫",
+      "text": "結晶では、隣り合う四量体のヘムどうしの接触とGlu–Lysの塩橋が格子を支える。著者はヘムが結晶化の鋳型として働いた可能性を挙げている。",
+      "evidence": [
+        {
+          "quote": "Heme‐heme contacts between symmetry‐related tetramers contribute to the crystal packing, generating an extended supramolecular lattice",
+          "section": "Results and Discussion"
+        },
+        {
+          "quote": "These findings suggest that heme may act as a self‐organizing crystallographic template",
+          "section": "Introduction"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "化学合成ペプチド（合成・精製・ヘム錯形成は既報の手順）",
+    "construct": null,
+    "purification": null,
+    "sample_prep": "50 mg/mLに濃縮し、シッティングドロップ蒸気拡散（293 K）。2.0 M NaCl・2.0 M硫酸アンモニウム（pH 5.04）で結晶化",
+    "data_collection": "Soleil Proxima-1でネイティブデータ1.9 Åを収集",
+    "evidence": [
+      {
+        "quote": "Conducted according to our previously reported procedure (Koebke et al., 2021).",
+        "section": "Materials and Methods"
+      },
+      {
+        "quote": "Crystallization trials (see Figure S1a) were performed using the sitting‐drop vapor‐diffusion method at 293 K in 96‐well Swissci‐3 plates",
+        "section": "Materials and Methods"
+      },
+      {
+        "quote": "Suitable crystals, that grew using the crystallization solution of 2.0 M NaCl and 2.0 M ammonium sulfate (pH = 5.04)",
+        "section": "Materials and Methods"
+      },
+      {
+        "quote": "while native diffraction data of holo‐GRW‐L16CL30H were collected to 1.9 Å resolution on the beamline Proxima‐1 at the Soleil synchrotron (Paris, France)",
+        "section": "Materials and Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "コイルドコイル",
+    "ヘム",
+    "デノボデザイン"
+  ],
+  "editor_notes": "candidates.json の PDB ID「3SCC」は三本鎖コイルドコイル（3SCC）の略語の誤検出で、図の凡例では PDB code 32MQ とある（未公開）。図は描けない。論文は「純粋に自己会合するヘム結合コイルドコイルの結晶構造の報告はない」と書くが『初めて』とは明言しないため first_claim は付けなかった（Structure Update）。"
+}

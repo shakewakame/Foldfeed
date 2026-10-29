@@ -1,0 +1,144 @@
+{
+  "pmcid": "PMC13712586",
+  "rank": 7,
+  "headline": "ファージの溶菌タンパク質は、MurJの空洞に尾を差し込む",
+  "subhead": "MurJとSglPP7の複合体を3.2 Åで解析。外向き型に固定され、脂質IIの輸送が止まると考えられる",
+  "target_label": "MurJ（大腸菌）",
+  "target_en": "E. coli MurJ with phage lysis protein SglPP7",
+  "summary": {
+    "question": "SglPP7はLysMと配列が似ないが、同じMurJを標的にするらしい。結合様式を調べる必要があった。",
+    "approach": "ナノディスクのMurJ/SglPP7複合体をクライオ電顕で解き、変異体解析とMDで補った。",
+    "result": "3.2 Åで、SglPP7は膜貫通ヘリックス1本と短い尾から成り、尾（50–55番）がMurJの空洞に入っていた。",
+    "learned": "SglPP7はMurJを外向き型に安定化する。LysMやSglCJ3とは結合様式が違い、収斂進化と矛盾しない。",
+    "open": "MurJの溝に見えた脂質様の密度は、頭部が見えず、どの脂質か特定できなかった。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "recent genetic screening suggested that SglPP7, a 55-residue Sgl of Pseudomonas aeruginosa phage PP7, also targets MurJ",
+          "section": "Introduction"
+        },
+        {
+          "quote": "In contrast to LysM, SglPP7 is encoded at a distinct genomic position and shows no amino acid sequence similarity",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "reconstituted into nanodiscs with E. coli lipids, and its cryo-EM structure was determined at an overall resolution of 3.2 Å",
+          "section": "Results"
+        },
+        {
+          "quote": "Structural, mutational, and molecular dynamics (MD) simulation analyses revealed that SglPP7 binds along the intramembrane cleft of MurJ",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "The modeled region of SglPP7 in each structure forms a single transmembrane helix followed by a short C-terminal tail that inserts deeply into a positively charged internal cavity",
+          "section": "Results"
+        },
+        {
+          "quote": "The C-terminal embedded tail (residues 50–55) inserts deeply into the positively charged interior of MurJ",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "these sequence-divergent Sgl proteins stabilize MurJ in the outward-facing conformation through distinct binding modes, consistent with the possibility of convergent evolution toward MurJ inhibition",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "However, the map does not contain features corresponding to the hydrophilic headgroup of lipid II, precluding identification of its molecular species.",
+          "section": "Results"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "transporter",
+    "pathogen"
+  ],
+  "topics": [
+    "membrane",
+    "dynamics"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "尾のW53が鍵になる。W53KとW53Rでは溶菌活性が失われ、53番までの配列が残っていないと活性が出なかった。",
+      "evidence": [
+        {
+          "quote": "W53K and W53R lost lytic activity",
+          "section": "Results"
+        },
+        {
+          "quote": "retention of the sequence through residue 53 was required for lytic activity",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "3つの溶菌タンパク質は、MurJの別の領域に結合する。尾が空洞を占めるSglPP7、表面に結合するLysM、溝に入るSglCJ3と、結合様式が異なる。",
+      "evidence": [
+        {
+          "quote": "Thus, the three Sgl proteins interact with different regions of MurJ through their C-terminal regions and stabilize MurJ in the outward-facing conformation through distinct binding modes characterized as cavity-occupying, surface-binding, and cleft-binding for SglPP7, LysM, and SglCJ3, respectively.",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "手法の工夫",
+      "text": "AlphaFold3はSglPP7の位置を予測できず、MurJも内向き型で予測した。実験で決めた構造が重要だと論文は述べる。",
+      "evidence": [
+        {
+          "quote": "failed to predict the experimentally observed positioning of SglPP7 on MurJ and showed low confidence in this region",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "MurJとSglPP7を大腸菌BL21 ΔrecA (DE3)で共発現し、IPTGとアラビノースで誘導した。",
+    "construct": "N末端Met-His10付きSglPP7（1–55）と、MurJ（2–511）を用いた。",
+    "purification": "DDM・LMNG・CHSで可溶化し、Ni-NTAとSuperose 6 Increaseで精製した。",
+    "sample_prep": "MSP1D1と大腸菌リン脂質を1.4:1:120で混ぜ、ナノディスクに再構成した。",
+    "data_collection": "SPring-8のCRYO ARM 300で17,650ムービーを集め、cryoSPARCで処理した。",
+    "evidence": [
+      {
+        "quote": "Protein expression was induced with 1 mM isopropyl β-D-thiogalactopyranoside (IPTG) and 0.2% (w/v) L-arabinose.",
+        "section": "Methods"
+      },
+      {
+        "quote": "N-terminally Met-His10-tagged SglPP71–55(WT) and Met-Ala-E. coli MurJ2–511",
+        "section": "Results"
+      },
+      {
+        "quote": "The protein was subsequently purified using Ni-NTA agarose resin (QIAGEN), followed by a Superose 6 Increase 10/300 GL column (Cytiva).",
+        "section": "Methods"
+      },
+      {
+        "quote": "The purified MurJ/SglPP7 complex was mixed with MSP1D1 [31] and E. coli phospholipids (Avanti) at a molar ratio of 1.4:1:120",
+        "section": "Methods"
+      },
+      {
+        "quote": "A total of 17,650 movies were aligned using patch motion correction",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "MurJ",
+    "SglPP7",
+    "LysM",
+    "脂質IIフリッパーゼ",
+    "ファージ"
+  ],
+  "editor_notes": "別グループによる3.70 ÅのMurJ/SglPP7構造が既報（論文が本文で比較）。MD解析は短時間（120 ns×3）で、補助的な位置づけ。",
+  "legend_labels": [
+    "MurJ（脂質フリッパーゼ）",
+    "SglPP7（溶菌タンパク質）"
+  ]
+}

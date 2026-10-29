@@ -1,0 +1,144 @@
+{
+  "pmcid": "PMC13710545",
+  "rank": 10,
+  "headline": "別の場所に結合する2つの抗体が、ポックスウイルスを中和する",
+  "subhead": "サル由来G4・B9のFabとM1Rの複合体を解析。G4は変異D35Nでも結合を保つ",
+  "target_label": "M1R/L1R（ポックスウイルス）",
+  "target_en": "MPXV M1R with Fabs G4 and B9",
+  "summary": {
+    "question": "オルソポックスウイルスには承認された抗体医薬がなく、広く効く抗体が求められていた。",
+    "approach": "サルの免疫で得たG4とB9のFabをM1Rとの複合体にして、クライオ電顕で解析した。",
+    "result": "B9は3.46 Å、G4は3.31 Åで決まり、結合部位は重ならなかった。G4はループ、B9は側面のβシートに結合する。",
+    "learned": "G4は従来抗体が頼るD35が変わった系でも結合を保ち、B9はβ2鎖に未報告の直線状エピトープを持つ。",
+    "open": "G4とB9の中和の仕組み、特にウイルス侵入のどの段階に効くかは、今後の検討課題である。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Yet, approved antibody-based therapeutics for OPXVs are lacking.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "we isolated and characterized two M1R-targeting neutralizing mAbs from Macaca fascicularis",
+          "section": "Introduction"
+        },
+        {
+          "quote": "we generated the M1R–B9 Fab complex and determined its structure using cryo-electron microscopy (cryo-EM)",
+          "section": "Results"
+        }
+      ],
+      "result": [
+        {
+          "quote": "achieving a final reconstruction at 3.46 Å resolution",
+          "section": "Results"
+        },
+        {
+          "quote": "ultimately obtaining a dimeric complex structure at a resolution of 3.31 Å",
+          "section": "Results"
+        },
+        {
+          "quote": "In summary, the cryo-EM structural analysis demonstrates that G4 and B9 bind to distinct regions on the M1R surface, possessing non-overlapping epitopes.",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "G4 recognizes a conventional conformational epitope but overcomes neutralization escape associated with the Asp35 residue, whereas B9 binds to an epitope on the lateral β-sheets of M1R.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Notably, the β2 strand (residues C49–V53 and N55) represents a previously unreported linear neutralizing epitope",
+          "section": "Results"
+        }
+      ],
+      "open": [
+        {
+          "quote": "the neutralization mechanisms of G4 and B9 still require further investigation",
+          "section": "Limitations of the study"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "immune",
+    "pathogen"
+  ],
+  "topics": [
+    "antibody"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "G4は、ECTVで置き換わっているD35Nの変異体にも2.08 nMのKDで結合した。同じ場所に結合する従来抗体7D11は、この変異体に結合しなかった。",
+      "evidence": [
+        {
+          "quote": "BLI assays confirmed that G4 maintained binding affinity to the M1R-D35N with a KD value of 2.08 nM, whereas 7D11 showed no detectable binding to this mutant",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "新しい結合部位",
+      "text": "B9はβ1・β2鎖とα5–β3ループにまたがって結合する。β2鎖（C49–V53、N55）を、著者は未報告の直線状の中和エピトープとしている。",
+      "evidence": [
+        {
+          "quote": "Notably, the β2 strand (residues C49–V53 and N55) represents a previously unreported linear neutralizing epitope",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "MPXVに対するIC50は、G4が4.40 nM、B9が84.47 nMだった。2つを混ぜると1.57 nMまで下がり、単独より強く中和した。",
+      "evidence": [
+        {
+          "quote": "Neutralization assays against MPXV yielded IC50 of 4.40, 84.47, and 20.33 nM for G4, B9, and 7D11, respectively",
+          "section": "Results"
+        },
+        {
+          "quote": "Notably, the combination of G4 and B9 resulted in an IC50 value of 1.57 nM",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "Fabは重鎖にヒトIgG1のCH1とC末端6×Hisを付け、Expi293Fで発現した。",
+    "construct": "M1Rは細胞外ドメイン（1–183）にC末端6×Hisを付けた。クライオ電顕用は大腸菌で発現した。",
+    "purification": "M1RはNiアフィニティーとゲルろ過（Superdex 200 Increase）で精製した。",
+    "sample_prep": "Vitrobotで凍結した（M1R–B9は5.3 mg/mL、M1R–G4は1.0 mg/mL）。",
+    "data_collection": "Krios G4とEPUを300 kVで使って撮影した。",
+    "evidence": [
+      {
+        "quote": "For Fab expression, the variable region gene of heavy chain was constructed into pcDNA3.4 vector with the CH1 domain of human IgG1 and a C-terminal 6×His tag.",
+        "section": "Methods"
+      },
+      {
+        "quote": "For cryo-EM, the M1R protein was constructed on the pTIG vector with C-terminal 6×His tag and expressed using Escherichia coli expressing system.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Proteins were harvested from the supernatant and purified using Ni affinity chromatography",
+        "section": "Methods"
+      },
+      {
+        "quote": "the M1R–B9 Fab complex (4 μL, 5.3 mg/mL) and the M1R–G4 Fab complex (4 μL, 1.0 mg/mL) was applied to the Au grids",
+        "section": "Methods"
+      },
+      {
+        "quote": "Cryo-EM dataset acquisition was conducted on a Krios G4 microscope and EPU software operating at 300 kV.",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "M1R",
+    "L1R",
+    "mpox",
+    "抗体",
+    "G4",
+    "B9"
+  ],
+  "editor_notes": "β2鎖の範囲が本文でN50–V53（序論）とC49–V53（結果）と揺れているため、結果の記述に合わせた。PDB 9XJK・22LLは引用なしの登録。結合に関わる実験は動物免疫由来の抗体で、MPXVのマウスモデルはBALB/c（論文の限界に明記）。"
+}

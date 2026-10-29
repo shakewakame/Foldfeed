@@ -1,0 +1,142 @@
+{
+  "pmcid": "PMC13710162",
+  "rank": 6,
+  "headline": "抗生物質が、ミトコンドリアの入口にらせんで栓をする",
+  "subhead": "ステンドマイシンが結合したTIM23をクライオ電顕で解き、Tim17の空洞をふさぐ姿を示した",
+  "target_label": "TIM23（酵母）",
+  "target_en": "Yeast TIM23 complex with stendomycin",
+  "ligand_label": "ステンドマイシン",
+  "summary": {
+    "question": "ミトコンドリア内膜のTIM23とTIM22が、輸送するタンパク質の目印をどう見分けるかは、よく分かっていなかった。",
+    "approach": "TIM23の阻害剤ステンドマイシンを結合させた酵母のTIM23をクライオ電顕で解き、変異体で調べた。",
+    "result": "3.2 Å分解能で、ステンドマイシンがTim17の空洞にらせん状に収まる姿が見えた。Tim22も1か所の変異で結合した。",
+    "learned": "ステンドマイシンは輸送基質の目印のらせんを真似て空洞をふさぐ。Tim17とTim22の空洞は、機能を保ったまま入れ替えが効く。",
+    "open": "目印配列（MTS）が結合した状態の構造は、まだ実験で得られていない。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "The mechanisms underlying the recognition of these sequences and client engagement remain poorly understood.",
+          "section": "Main"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Cryogenic-electron microscopy shows that stendomycin binds to the protein translocation cavity of Tim17, mimicking α-helical topogenic sequences.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Here we addressed these questions by determining the structure of stendomycin-bound TIM23 and performing mutational studies.",
+          "section": "Main"
+        }
+      ],
+      "result": [
+        {
+          "quote": "we obtained a cryo-EM map of the stendomycin-bound TIM23 complex at an overall resolution of 3.2 Å",
+          "section": "Results"
+        },
+        {
+          "quote": "Even the single T52G mutation enabled stendomycin binding to Tim22, despite the substantial surface differences between Tim22 and Tim17 cavities.",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Taken together, our data indicate that the Tim17 and Tim22 cavities are largely interchangeable while maintaining their respective functions.",
+          "section": "Results"
+        },
+        {
+          "quote": "These findings reveal a mechanistic overlap between protein translocases and insertases.",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Although experimental structures of MTS-bound TIM23 complexes will be needed for a detailed mechanistic understanding",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "transporter"
+  ],
+  "topics": [
+    "membrane",
+    "drug"
+  ],
+  "highlights": [
+    {
+      "tag": "新しい結合部位",
+      "text": "ステンドマイシンはTim17の空洞に栓のように収まる。結合の大部分はファンデルワールス力で、TIM23の構造は何も結合していない状態とほとんど同じだった。",
+      "evidence": [
+        {
+          "quote": "Stendomycin binds to the concave cavity of Tim17, adopting a cork stopper-like structure (Fig. 2a–d).",
+          "section": "Results"
+        },
+        {
+          "quote": "The binding is mediated largely by van der Waals interactions between the hydrophobic surfaces of stendomycin and the Tim17 cavity.",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "ステンドマイシンの一部は、D型アミノ酸が多いため左巻きのαヘリックスになる。この形が、ミトコンドリアへの目印配列のらせんを真似て空洞に入る手がかりになると著者は考えている。",
+      "evidence": [
+        {
+          "quote": "Notably, parts of the stem and the cyclic peptide together form a left-handed α-helix (Fig. 2b,c).",
+          "section": "Results"
+        },
+        {
+          "quote": "As MTSs are generally thought to form a helical conformation, the stendomycin-bound structure may thus mimic an MTS-engaged state",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "Tim22は通常ステンドマイシンと結合しないが、空洞内のThr52をGlyに変えるだけで感受性になった。7〜14残基を入れ替えた変異体でも、IC50は約0.85〜1.0 µMだった。",
+      "evidence": [
+        {
+          "quote": "The T52G mutant showed an IC50 of ~1.0 µM, whereas 22mut1 and 22mut2 exhibited IC50 values of 0.93 µM and 0.85 µM, respectively.",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "酵母（S. cerevisiae）の株にβ-エストラジオールを加えて発現を誘導",
+    "construct": "Tim17・Tim23・Tim44からなるコアTIM23複合体。Tim44に対する抗体断片（Fab）を目印に使った",
+    "purification": "ミトコンドリアをGDNとLMNGで可溶化し、抗BC2ナノボディ樹脂で精製。ペプチディスクに再構成してからステンドマイシンを加えた",
+    "sample_prep": "Quantifoil R 1.2/1.3 の金グリッドに3 µlを載せ、Vitrobot Mark IVで凍結",
+    "data_collection": "Titan Krios G3i（300 kV）とK3検出器で撮影。Warp・cryoSPARCで処理し、3,348枚の画像から105,256粒子で3.2 Åに到達",
+    "evidence": [
+      {
+        "quote": "The complex was then reconstituted to peptidiscs by mixing with the NSPr peptide (Peptidisc Laboratory) at a ratio of 1.2:1 (w/w, TIM23/NSPr) and incubated on ice for 45 min.",
+        "section": "Methods"
+      },
+      {
+        "quote": "The final reconstruction was refined to a nominal resolution of 3.2 Å from 105,256 particles.",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "TIM23",
+    "Tim17",
+    "ステンドマイシン",
+    "ミトコンドリア"
+  ],
+  "editor_notes": "UniProt 上は酵母のTIM23・TIM17・TIM44。Tim22側は既存構造との比較・変異解析で、新規構造は1つ。",
+  "ligand_names": {
+    "M12": "ステンドマイシン"
+  },
+  "site_ligand": "M12",
+  "legend_labels": [
+    "Tim17（輸送路）",
+    "Tim23（チャネル）",
+    "Tim44（足場）",
+    "Fab 軽鎖",
+    "Fab 重鎖"
+  ]
+}

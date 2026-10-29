@@ -1,0 +1,81 @@
+{
+ "pdb_id": "9DN9",
+ "view": {
+  "target": [
+   8.55,
+   5.99,
+   -3.64
+  ],
+  "dir": [
+   0.8848,
+   -0.1564,
+   -0.4389
+  ],
+  "up": [
+   0.4202,
+   -0.139,
+   0.8967
+  ],
+  "half": [
+   31.6,
+   55.0
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "ramR",
+   "desc": "Transcriptional regulator RamR",
+   "entity": "1"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "A1BED",
+   "label": "A1BED",
+   "color": "#C23B8E",
+   "desc": "(1S)-1-phenyl-1,2,3,4-tetrahydroisoquinoline",
+   "entity": [
+    "3"
+   ],
+   "sites": [
+    [
+     "F",
+     "202"
+    ],
+    [
+     "H",
+     "202"
+    ],
+    [
+     "J",
+     "202"
+    ],
+    [
+     "L",
+     "202"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "A1BED",
+  "residues": [
+   "T86",
+   "I89",
+   "W90",
+   "Y93",
+   "L131",
+   "E135",
+   "Q138",
+   "F156",
+   "M185",
+   "L189",
+   "T190"
+  ],
+  "hbonds": 1,
+  "pi": 0,
+  "neighbours": [],
+  "label": "A1BED"
+ }
+}

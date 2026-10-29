@@ -1,0 +1,125 @@
+{
+ "pdb_id": "9Q0Z",
+ "view": {
+  "target": [
+   224.37,
+   213.52,
+   191.3
+  ],
+  "dir": [
+   0.0133,
+   0.8798,
+   -0.4751
+  ],
+  "up": [
+   -0.0408,
+   0.4753,
+   0.8789
+  ],
+  "half": [
+   47.0,
+   72.0
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "TERT（逆転写酵素）",
+   "desc": "Telomerase RNA",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "テロメラーゼRNA",
+   "desc": "Telomerase reverse transcriptase",
+   "entity": "2"
+  },
+  {
+   "color": "#5F9296",
+   "label": "テロメア配列の鋳型",
+   "desc": "Telomeric repeat substrate",
+   "entity": "3"
+  },
+  {
+   "color": "#A5707A",
+   "label": "ヒストンH2B",
+   "desc": "Histone H2B type 1-C/E/F/G/I",
+   "entity": "4"
+  },
+  {
+   "color": "#7C8AA8",
+   "label": "ヒストンH2A",
+   "desc": "Histone H2A.J",
+   "entity": "5"
+  },
+  {
+   "color": "#8A9A5B",
+   "label": "ACD（TPP1）",
+   "desc": "Adrenocortical dysplasia protein homolog",
+   "entity": "6"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "55C",
+   "label": "BIBR1532",
+   "color": "#C23B8E",
+   "desc": "2-{[(2E)-3-(naphthalen-2-yl)but-2-enoyl]amino}benzoic acid",
+   "entity": [
+    "7"
+   ],
+   "sites": [
+    [
+     "G",
+     "1201"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "55C",
+  "residues": [
+   "L617",
+   "S619",
+   "M636",
+   "T655",
+   "V658",
+   "Q722",
+   "F812",
+   "M813",
+   "H816",
+   "A817",
+   "Q827",
+   "G830",
+   "I831",
+   "P832",
+   "S835",
+   "I836"
+  ],
+  "hbonds": 3,
+  "pi": 2,
+  "neighbours": [],
+  "label": "BIBR1532"
+ },
+ "hero_view": {
+  "target": [
+   224.37,
+   213.52,
+   191.3
+  ],
+  "dir": [
+   -0.0133,
+   -0.8798,
+   0.4751
+  ],
+  "up": [
+   -0.9991,
+   -0.0077,
+   -0.0422
+  ],
+  "half": [
+   72.0,
+   47.0
+  ]
+ }
+}

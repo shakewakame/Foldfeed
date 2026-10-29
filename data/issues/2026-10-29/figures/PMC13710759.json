@@ -1,0 +1,33 @@
+{
+ "pdb_id": "12DS",
+ "view": {
+  "target": [
+   320.41,
+   320.5,
+   381.52
+  ],
+  "dir": [
+   0.9902,
+   -0.1393,
+   0.0002
+  ],
+  "up": [
+   -0.0002,
+   -0.0001,
+   1.0
+  ],
+  "half": [
+   93.9,
+   52.2
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "fliF",
+   "desc": "Flagellar M-ring protein",
+   "entity": "1"
+  }
+ ],
+ "ligands": []
+}
