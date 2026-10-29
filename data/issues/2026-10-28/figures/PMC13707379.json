@@ -1,0 +1,91 @@
+{
+ "pdb_id": "1ATP",
+ "view": {
+  "target": [
+   9.3,
+   4.5,
+   -2.57
+  ],
+  "dir": [
+   0.9744,
+   0.224,
+   0.0165
+  ],
+  "up": [
+   0.2195,
+   -0.9653,
+   0.1416
+  ],
+  "half": [
+   21.1,
+   30.0
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "PKA（キナーゼ）",
+   "desc": "cAMP-DEPENDENT PROTEIN KINASE",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "PKI（阻害ペプチド）",
+   "desc": "PEPTIDE INHIBITOR PKI(5-24)",
+   "entity": "2"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "ATP",
+   "label": "ATP",
+   "color": "#C23B8E",
+   "desc": "Adenosine-5'-Triphosphate",
+   "entity": [
+    "4"
+   ],
+   "sites": [
+    [
+     "E",
+     "355"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "ATP",
+  "residues": [
+   "L49",
+   "G50",
+   "T51",
+   "G52",
+   "S53",
+   "F54",
+   "G55",
+   "V57",
+   "A70",
+   "K72",
+   "V104",
+   "M120",
+   "E121",
+   "Y122",
+   "V123",
+   "E127",
+   "D166",
+   "K168",
+   "E170",
+   "N171",
+   "L173",
+   "T183",
+   "D184",
+   "F327",
+   "R18",
+   "N20",
+   "A21"
+  ],
+  "hbonds": 22,
+  "pi": 0,
+  "neighbours": [],
+  "label": "ATP"
+ }
+}

@@ -1,0 +1,5 @@
+{"pmcid": "PMC13697223", "axes": ["structure", "biology"],
+ "reason": "ウラシルを外すUDGを融合した大型のDNA合成酵素を、2つのファージでクライオ電顕により解析し、複製の手前でのdU除去を構造と活性測定の両方で示した。",
+ "evidence": [{"quote": "The structures reveal how these large DNAPs function as replicative DNAPs, and how they can recognize dU bases ahead of the replication fork through their UDG domain, generating abasic sites that are preferentially bypassed through dA incorporation.", "section": "Abstract"}],
+ "considered": [{"pmcid": "PMC13702157", "note": "KBATの内向き型構造と塩化物イオンの結合部位は新しいが、プロトン化の効果と輸送機構の議論はMDが根拠で、実験による検証が本論文にない。"},
+                {"pmcid": "PMC13707379", "note": "2DTMは手法として広く効くが、検証は公開済みの1データセットのキナーゼに限られる。"}]}

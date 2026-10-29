@@ -1,0 +1,147 @@
+{
+  "pmcid": "PMC13707381",
+  "section": "impact",
+  "rank": 2,
+  "headline": "エブセレンは、C300への結合でMproの二量体を不安定にする",
+  "subhead": "ペプチド模倣阻害剤は二量体を安定にする。ネイティブMSとHDX-MSで、阻害のしかたの違いを分けた",
+  "target_label": "SARS-CoV-2 Mpro",
+  "target_en": "SARS-CoV-2 main protease (Mpro)",
+  "method_label": "Native MS・HDX-MS・MD",
+  "ga_pdb_id": "7BFB",
+  "summary": {
+    "question": "SARS-CoV-2のMproは活性のある二量体と不活性な単量体の平衡にあり、二量体の界面が薬の標的になりうる。",
+    "approach": "13C標識を使うネイティブMSとHDX-MSで、複数の阻害剤がMproの二量体化と構造の揺らぎに与える影響を比べた。",
+    "result": "ペプチド模倣阻害剤は二量体を増やして界面を硬くし、エブセレンは二量体を減らして界面の揺らぎを増やした。",
+    "learned": "エブセレンはC300を修飾し、二量体界面の水素結合網を変えて二量体の崩れに寄与する。C300はアロステリックな標的になりうる。",
+    "open": "AT7519とpelitinibの結合は、HDX-MSの限界のため変化として検出できなかった可能性がある。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "The SARS-CoV-2 main protease (Mpro) is a key antiviral target that equilibrates between an active dimer and inactive monomer, making the dimerization interface a promising therapeutic vulnerability.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "This study investigates Mpro monomer-dimer equilibrium and conformational changes induced by inhibitor binding using 13C labeling with native mass spectrometry and hydrogen/deuterium exchange mass spectrometry (HDX-MS).",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "peptidomimetic inhibitors significantly shifted the equilibrium towards the dimeric state, suppressing subunit exchange dynamics and rigidifying the dimer interface; in contrast, ebselen impaired dimer formation and increased interface flexibility.",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Molecular dynamics simulations and mutational analyses demonstrated that this C300 modification allosterically alters the hydrogen bond network of the dimer interface, directly contributing to ebselen-mediated dimer disruption and enzymatic inhibition.",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "The lack of observed HDX might stem from experimental limitations in studying the weak interactions of binders using HDX-MS.",
+          "section": "Results"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "protease",
+    "pathogen"
+  ],
+  "topics": [
+    "drug",
+    "dynamics"
+  ],
+  "highlights": [
+    {
+      "tag": "創薬・モダリティ",
+      "text": "PF-07321332を結合させると、単量体の割合は5.35%から0.48%に下がり、13C標識体との交換で生じるヘテロ二量体も30分間検出されなかった。二量体が強く固定されたことを示す。",
+      "evidence": [
+        {
+          "quote": "PF-07321332 markedly reduced the monomer fraction to 0.48±0.06%, consistent with stabilization of the dimeric state.",
+          "section": "Results"
+        },
+        {
+          "quote": "In contrast to free Mpro, the heterodimer Mpro signal was undetected after PF-07321332 binding over the course of 30 min",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "エブセレンは活性部位のC145ではなく、C44とC300を修飾した。C44への結合は、既存の結晶構造7BFBとも合う。C300は二量体の界面にある。",
+      "evidence": [
+        {
+          "quote": "Incubation of Mpro with ebselen revealed ebselen-mediated cysteine modifications at C44 and C300",
+          "section": "Results"
+        },
+        {
+          "quote": "The crystal structure of the ebselen-Mpro complex demonstrates that ebselen forms a covalent bond with C44 (PDB: 7BFB), aligning with our MS findings.",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "実験Tips",
+      "text": "C300をSerに変えると、エブセレンによる阻害は約47%から約22%に下がった。C300Fは主に単量体で、活性は約10%だった。",
+      "evidence": [
+        {
+          "quote": "Ebselen reduced WT activity to approximately 53%, corresponding to approximately 47% inhibition. Under the same conditions, C300S retained approximately 78% activity and showed only approximately 22% inhibition",
+          "section": "Results"
+        },
+        {
+          "quote": "C300S retained approximately 70% activity, whereas C300F retained only approximately 10%",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "タグなしの組換えMpro（C300S・C300F・13C標識体を含む）は、Beijing Anbiqi Biotechnology社が調製した。",
+    "construct": null,
+    "purification": null,
+    "sample_prep": "共有結合性の阻害剤は1:3、アロステリック阻害剤は1:50でMproと混ぜ、室温で30分置いてからHDXを行った。",
+    "data_collection": "ネイティブMSとHDX-MSはWaters Synapt G2-Siで測り、結合部位はトリプシン消化後にtimsTOF Pro 2で調べた。MDは7ALIを出発点にし、1000 nsを3回行った。",
+    "evidence": [
+      {
+        "quote": "Tag-free SARS-CoV-2 Mpro, C300S Mpro, C300F Mpro, and 13C-labeled SARS-CoV-2 Mpro were produced by Beijing Anbiqi Biotechnology Co., Ltd (Beijing, China).",
+        "section": "Methods"
+      },
+      {
+        "quote": "Mpro was incubated with covalent inhibitors at a ratio of 1:3 or allosteric inhibitors at a ratio of 1:50 for 30 min at room temperature before HDX experiments.",
+        "section": "Methods"
+      },
+      {
+        "quote": "HDX-MS experiments were performed on a Waters Synapt G2-Si",
+        "section": "Methods"
+      },
+      {
+        "quote": "Samples were analyzed on a Bruker timsTOF Pro 2 Mass Spectrometer",
+        "section": "Methods"
+      },
+      {
+        "quote": "The initial conformation of the SARS-CoV-2 Mpro model was obtained from the PDB database (PDB ID: 7ALI).",
+        "section": "Methods"
+      },
+      {
+        "quote": "We performed 1000 ns of MD simulations in triplicate",
+        "section": "Results"
+      }
+    ]
+  },
+  "keywords": [
+    "Mpro",
+    "エブセレン",
+    "HDX-MS"
+  ],
+  "editor_notes": "新しい構造ではない（既存構造 7BFB・7ALI を参照）。構造の根拠は自前の HDX-MS とネイティブ MS で、点数は 6 点ちょうど（novelty 2・reach 1・structure 1・support 2）。C300 が阻害に効く部分は変異体で確かめているが、結合の構造は MD の予測を含む。7BFB はエブセレンが C300 付近にあるが電子密度はほぼセレンのみと本文が断っている。",
+  "legend_labels": [
+    "Mpro（プロテアーゼ）"
+  ],
+  "ligand_names": {
+    "9JT": "エブセレン"
+  }
+}

@@ -1,0 +1,104 @@
+{
+ "pdb_id": "9QHS",
+ "view": {
+  "target": [
+   163.16,
+   174.62,
+   150.16
+  ],
+  "dir": [
+   0.9073,
+   -0.3373,
+   -0.2509
+  ],
+  "up": [
+   0.3959,
+   0.4848,
+   0.7799
+  ],
+  "half": [
+   61.0,
+   52.3
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "DNA合成酵素（phiLo）",
+   "desc": "Putative DNA-directed DNA polymerase I",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "鋳型DNA",
+   "desc": "DNA template",
+   "entity": "2"
+  },
+  {
+   "color": "#5F9296",
+   "label": "プライマーDNA",
+   "desc": "DNA primer",
+   "entity": "3"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "DCT",
+   "label": "ddCTP",
+   "color": "#C23B8E",
+   "desc": "2',3'-Dideoxycytidine 5'-Triphosphate",
+   "entity": [
+    "5"
+   ],
+   "sites": [
+    [
+     "E",
+     "1202"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "DCT",
+  "residues": [
+   "D873",
+   "Y874",
+   "S875",
+   "Q876",
+   "H902",
+   "F930",
+   "Y934",
+   "Q1011",
+   "D1044",
+   "E1080",
+   "DG29",
+   "DG8",
+   "DC9"
+  ],
+  "hbonds": 9,
+  "pi": 2,
+  "neighbours": [],
+  "label": "ddCTP"
+ },
+ "hero_view": {
+  "target": [
+   163.16,
+   174.62,
+   150.16
+  ],
+  "dir": [
+   -0.9073,
+   0.3373,
+   0.2509
+  ],
+  "up": [
+   0.1414,
+   0.807,
+   -0.5734
+  ],
+  "half": [
+   52.3,
+   61.0
+  ]
+ }
+}
