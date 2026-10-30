@@ -1,0 +1,172 @@
+{
+  "pmcid": "PMC13715515",
+  "rank": 13,
+  "headline": "合成した15化合物のうち5つが、PKAをナノモルで阻害した",
+  "subhead": "断片をサブポケットごとに成長させる計算法で設計し、最も強い化合物の結晶構造が予測とよく重なった",
+  "target_label": "PKA（ハムスター）",
+  "target_en": "PKA catalytic subunit α (C. griseus)",
+  "method_label": "X-ray・1.38 Å",
+  "ligand_label": "化合物30",
+  "summary": {
+    "question": "断片を使うキナーゼ阻害剤の設計は、キナーゼ特有の構造情報を生かしにくい。断片の全組み合わせを調べるのも計算が重い。",
+    "approach": "キナーゼ向けの断片ライブラリKinFragLibを、サブポケットの情報を使うテンプレートドッキングで段階的に成長させ、PKAに適用した。",
+    "result": "33758分子を生成し、合成した15化合物のうち5つのIC50が2〜3桁のナノモルだった。最小は58 nMだった。",
+    "learned": "最も強い化合物の結晶構造は予測の結合様式とよく重なり、著者は構造に基づく断片設計を拡張できる探索法とみている。",
+    "open": "キナーゼ選択性は調べておらず、今後キナーゼパネルでの評価が必要だ。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Fragment-based drug design offers a powerful route to kinase inhibitors but often neglects kinase-specific structural insights.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "exhaustive recombination of its fragments is computationally demanding",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here, we present an efficient exploration strategy that integrates subpocket-guided fragment growing with template docking to navigate this vast chemical space.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "Applied to the PKA kinase, the approach produced 33758 candidate molecules with promising docking scores, of which 15 were synthesized.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "The IC50 determination ultimately revealed that five of the molecules were effective in the two- to three-digit nanomolar range.",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "X-ray crystallography of the most active compound confirmed substantial overlap between the predicted and experimental binding modes.",
+          "section": "Conclusion"
+        },
+        {
+          "quote": "This methodology demonstrates how structure-informed guidance can transform fragment-based design into a scalable route for discovering novel kinase inhibitors.",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "A limitation of the present study is that kinase selectivity was not explicitly studied.",
+          "section": "Conclusion"
+        },
+        {
+          "quote": "Future work should therefore include profiling of generated compounds against representative kinase panels to assess selectivity",
+          "section": "Conclusion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "kinase"
+  ],
+  "topics": [
+    "drug",
+    "method"
+  ],
+  "highlights": [
+    {
+      "tag": "手法の工夫",
+      "text": "ATP結合部位を6つのサブポケットに分け、アデニン結合部位（AP）を核に、FP、GAの順に断片を足していく。各段階で上位の候補だけを残すビーム探索で、128 CPUを使い約17時間で約6万分子を列挙した。",
+      "evidence": [
+        {
+          "quote": "we selected the AP subpocket as the core and defined a fragment-growing path through the FP and GA subpockets",
+          "section": "Results and Discussion"
+        },
+        {
+          "quote": "The growing process employs a beam search technique, a greedy algorithm to heuristically solve optimization problems.",
+          "section": "Introduction"
+        },
+        {
+          "quote": "The total runtime in this setup was approximately 17 h with close to 60000 enumerated molecules.",
+          "section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "合成した15化合物のうち7つが100 μMでPKA活性を半分以下にし、5つが10 μMで残存活性約25%以下だった。IC50は化合物30の58 nMから39bの940 nMまで。ただし試した化合物は計算上位から人が選んだもので、偏りのない標本ではない。",
+      "evidence": [
+        {
+          "quote": "Prescreening at an inhibitor concentration of 100 μM revealed that seven of the 15 compounds tested met our cutoff criterion of reducing kinase activity by significantly more than 50%",
+          "section": "Results and Discussion"
+        },
+        {
+          "quote": "In total, five compounds showed promising activity at a concentration of 10 μM, exhibiting residual kinase activity of approximately 25% or less.",
+          "section": "Results and Discussion"
+        },
+        {
+          "quote": "therefore do not represent an unbiased sample of the ranked compound set",
+          "section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "化合物30との共結晶構造（9TEC、1.38 Å）では、リガンドは予測の結合様式とよく重なった。Lys72とThr183の側鎖、Glu121とVal123の主鎖と4本の水素結合を作る。予測にないPhe54とのT字型π–π相互作用も見えた。",
+      "evidence": [
+        {
+          "quote": "the crystallized ligand matches the predicted docking pose well",
+          "section": "Results and Discussion"
+        },
+        {
+          "quote": "Additionally, a T-shaped π–π interaction involving phenylalanine 54 can be observed in the X-ray structure.",
+          "section": "Results and Discussion"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "CHO-PKAを大腸菌で発現した。SLB培地で291.15 K、一晩培養した。",
+    "construct": "7xHisタグつきのPKAを使い、TEVプロテアーゼでタグを切った。",
+    "purification": "Ni-NTAカラム、TEV処理後の再カラムの後、Mono Sの陽イオン交換でリン酸化の程度の違うPKAを分けた。",
+    "sample_prep": "PKA、PKI、リガンドを混ぜ、微小結晶シーディングを併用して277 Kのシッティングドロップ法で結晶化した。",
+    "data_collection": "DESYのP13で1.38 Åのデータを集め、5N1Fを鋳型に分子置換した。XDSAPPで処理し、Phenixで精密化した。",
+    "evidence": [
+      {
+        "quote": "Expression was carried out in SLB media overnight at 291.15 K.",
+        "section": "Materials and Methods"
+      },
+      {
+        "quote": "The eluted protein was treated with TEV protease for 48 h to cleave the 7xHis-tag, followed by affinity chromatography again.",
+        "section": "Materials and Methods"
+      },
+      {
+        "quote": "the phosphorylation levels of CHO-PKA were separated by cation exchange chromatography (Mono S, Cytiva) with increasing NaCl gradient (2.5 mM to 500 mM).",
+        "section": "Materials and Methods"
+      },
+      {
+        "quote": "Microseed matrix screening was performed on a sitting drop 24-well crystallization plate at 277 K.",
+        "section": "Materials and Methods"
+      },
+      {
+        "quote": "The data set was collected at beamline P13 from the electron storage ring DESY Hamburg, Germany on an EIGER 16M pixel detector with a resolution of 1.38 Å.",
+        "section": "Materials and Methods"
+      },
+      {
+        "quote": "Molecular replacement was then performed with Phaser MR and a modified PDB structure of PKA from cricetulus griseus (PDB code: 5N1F)",
+        "section": "Materials and Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "PKA",
+    "フラグメント",
+    "KinFragLib",
+    "ドッキング"
+  ],
+  "ga_pdb_id": "9TEC",
+  "site_ligand": "A1JVM",
+  "legend_labels": [
+    "PKA（触媒サブユニット）"
+  ],
+  "ligand_names": {
+    "A1JVM": "化合物30"
+  },
+  "editor_notes": "PKA はすでに多数の PDB 構造があり、9TEC は新しいリガンドとの複合体（Structure Update）。論文の中心は計算手法で、自前の結晶構造 1 件が予測の検証。IC50 は人の PKA（Eurofins）、スクリーニングはハムスター PKA。9TEC の PDB 登録は本文では『公開後に利用可』と書かれているが candidates では公開済み。"
+}

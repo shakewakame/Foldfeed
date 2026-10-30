@@ -1,0 +1,93 @@
+{
+ "pdb_id": "8W6J",
+ "view": {
+  "target": [
+   135.39,
+   134.54,
+   165.85
+  ],
+  "dir": [
+   0.9989,
+   0.0461,
+   0.0114
+  ],
+  "up": [
+   -0.0095,
+   -0.0402,
+   0.9991
+  ],
+  "half": [
+   32.8,
+   86.5
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "EnvC（分解の活性化因子）",
+   "desc": "Cell division ATP-binding protein FtsE",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "FtsX（膜貫通・PLD）",
+   "desc": "Cell division protein FtsX",
+   "entity": "2"
+  },
+  {
+   "color": "#5F9296",
+   "label": "FtsE（ATPase）",
+   "desc": "Murein hydrolase activator EnvC",
+   "entity": "3"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "ATP",
+   "label": "ATP",
+   "color": "#C23B8E",
+   "desc": "Adenosine-5'-Triphosphate",
+   "entity": [
+    "4"
+   ],
+   "sites": [
+    [
+     "F",
+     "301"
+    ],
+    [
+     "G",
+     "301"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "ATP",
+  "residues": [
+   "Q137",
+   "L138",
+   "S139",
+   "G140",
+   "G141",
+   "E142",
+   "N167",
+   "Y11",
+   "R15",
+   "H36",
+   "S37",
+   "G38",
+   "A39",
+   "G40",
+   "K41",
+   "S42",
+   "T43",
+   "Q86",
+   "H195"
+  ],
+  "hbonds": 31,
+  "pi": 2,
+  "neighbours": [],
+  "label": "ATP"
+ }
+}

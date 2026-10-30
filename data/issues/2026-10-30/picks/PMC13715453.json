@@ -1,0 +1,151 @@
+{
+  "pmcid": "PMC13715453",
+  "rank": 12,
+  "headline": "ニワトリの複製起点のDNAは、Cが飛び出したG4を作る",
+  "subhead": "NMRで決めた3層の(3+1)ハイブリッド型で、5'端のGがanti型で外側の層に入る",
+  "target_label": "ChOGRE23（ニワトリDNA）",
+  "target_en": "ChOGRE23 G-quadruplex (chicken β-globin origin)",
+  "summary": {
+    "question": "複製起点のG-rich配列（OGRE）がつくるG4の構造は、よく分かっていなかった。",
+    "approach": "ニワトリβグロビン複製起点の23塩基（ChOGRE23）をK+溶液中でNMR解析し、NOEから構造を計算した。",
+    "result": "3枚のG-カルテットが重なる分子内の(3+1)ハイブリッド型G4で、2本目のGの並びを割るC8が外に飛び出していた。Tmは64.6℃だった。",
+    "learned": "5'端のGがanti型で外側のカルテットに入る並びは、既報の分子内(3+1)型G4にないと論文は述べる。Cのバルジとあわせ独自の表面を作る。",
+    "open": "ChOGRE23は最小単位で、長い配列や染色体上の起点でも同じG4ができるかは今後の課題だ。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "However, G4 structures formed by OGRE remain poorly understood.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "The NMR structure of ChOGRE23 in K+ solution was calculated on the basis of NOE restraints (Table S1) derived from NOESY spectra.",
+          "section": "Results"
+        },
+        {
+          "quote": "we analyzed a 36‐nt DNA fragment from the β‐globin replication origin in chicken",
+          "section": "Introduction"
+        }
+      ],
+      "result": [
+        {
+          "quote": "Accordingly, ChOGRE23 folds into a three‐layer intramolecular (3 + 1) G4",
+          "section": "Results"
+        },
+        {
+          "quote": "Notably, the second G‐tract is interrupted by a cytosine residue at position 8, giving rise to an extruded bulge",
+          "section": "Results"
+        },
+        {
+          "quote": "with a Tm of 64.6°C in 70 mM KCl and 20 mM phosphate buffer at pH 7.0",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "the first 5'‐ guanosine adopts an anti conformation and is involved in an outermost G‐quartet, differing from all previously reported unimolecular (3+1) hybrid G4 structures",
+          "section": "Discussion"
+        },
+        {
+          "quote": "these unusual structural features create a distinct molecular surface that may facilitate selective recognition by replication‑associated proteins or small molecules",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Future studies using longer constructs, chromatinized templates, and replication‐associated protein‐binding assays will be required to determine whether this cytosine‐bulged G4 topology is formed and recognized in a genomic replication context.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "nucleic"
+  ],
+  "first_claim": [
+    {
+      "quote": "we report the first high‑resolution G4 structure formed by OGRE from the β‐globin replication origin of chicken",
+      "section": "Abstract"
+    }
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "ニワトリβグロビン複製起点のOGREがつくるG4として、論文が初めてと述べる高分解能構造。36塩基では複数の構造が混ざったため、均一なスペクトルを示す23塩基に切り詰めて解析した。",
+      "evidence": [
+        {
+          "quote": "we report the first high‑resolution G4 structure formed by OGRE from the β‐globin replication origin of chicken",
+          "section": "Abstract"
+        },
+        {
+          "quote": "was selected for further study as its well‐dispersed spectrum indicated a single predominant G4 conformation in solution",
+          "section": "Introduction"
+        }
+      ]
+    },
+    {
+      "tag": "新しい結合部位",
+      "text": "C8が2本目のGの並び（G7とG9の間）を割ってカルテットの外へ突き出し、バルジをつくる。ループのC6、C11、C14はG-カルテットの上に積み重なり、非対称な分子表面ができる。",
+      "evidence": [
+        {
+          "quote": "Interestingly, C8 interrupts the second G‐tract between G7 and G9 and is extruded from the G‐quartet core.",
+          "section": "Results"
+        },
+        {
+          "quote": "C6 lies over the G3·G7·G18·G22 G‐quartet in an approximately coplanar orientation, capping the G‐quartet through stacking interactions",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "手法の工夫",
+      "text": "グアニンのイミノ陽子は、5%の15N標識を部位ごとに入れた試料で帰属した。H1–H8のNOEから3枚のG-カルテットと、水素結合の向きの違いを決めた。",
+      "evidence": [
+        {
+          "quote": "were unambiguously assigned by using a site‐specific low‐enrichment (5%) 15N‐labeling strategy",
+          "section": "Results"
+        },
+        {
+          "quote": "Analysis of H1‐H8 NOE cross‐peaks established the presence of three stacked G‐quartets formed by G1·G10·G16·G20, G2·G9·G17·G21 and G3·G7·G18·G22",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "DNAは化学合成品（BGI GenomicsとTakara）。部位特異的に5%の15N,13Cで標識したオリゴも用いた。",
+    "construct": "ChOGRE23（23塩基）。36塩基のChickOG36を切り詰めたもの。",
+    "purification": null,
+    "sample_prep": "70 mM KCl・20 mMリン酸カリウム（pH 7.0）で0.1 mMとし、95℃で15分加熱して一晩かけて室温まで徐冷した。",
+    "data_collection": "Varian INOVA 500・800 MHzで25℃にNOESYなどを測定。XPLOR-NIHで構造を計算し、違反のない低エネルギー10構造を採用した。",
+    "evidence": [
+      {
+        "quote": "Unlabeled nucleotides and site‐specific 5% 15N, 13C‐labeled low‐enrichment nucleotides were synthesized by BGI Genomics and Takara.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Samples were annealed by heating to 95°C for 15 min, followed by gradual cooling to room temperature overnight.",
+        "section": "Methods"
+      },
+      {
+        "quote": "NMR experiments were conducted on Varian INOVA 500 and 800 MHz spectrometers at 25°C.",
+        "section": "Methods"
+      },
+      {
+        "quote": "The 10 lowest‑energy structures without NOE violations were selected as the final ensemble.",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "G-quadruplex",
+    "複製起点",
+    "NMR"
+  ],
+  "legend_labels": [
+    "ChOGRE23（G4 DNA）"
+  ],
+  "topics": [],
+  "editor_notes": "タンパク質を含まないため first_claim（論文の 'the first high-resolution G4 structure formed by OGRE'）で New Structure 扱いにした。DNA の 'first' であり、タンパク質の初構造ではない点を確認してほしい。PDB 9WNM は NMR（分解能なし）。"
+}

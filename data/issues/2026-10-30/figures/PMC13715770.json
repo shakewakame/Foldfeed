@@ -1,0 +1,87 @@
+{
+ "pdb_id": "22MT",
+ "view": {
+  "target": [
+   -28.23,
+   -3.97,
+   -0.56
+  ],
+  "dir": [
+   0.825,
+   0.4937,
+   0.2751
+  ],
+  "up": [
+   0.5037,
+   -0.863,
+   0.0381
+  ],
+  "half": [
+   31.7,
+   33.6
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "c-di-GMP-IIリボスイッチ（RNA）",
+   "desc": "RNA (77-MER)",
+   "entity": "1"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "1SY",
+   "label": "2′,3′-cGAMP",
+   "color": "#C23B8E",
+   "desc": "cGAMP",
+   "entity": [
+    "2"
+   ],
+   "sites": [
+    [
+     "C",
+     "101"
+    ],
+    [
+     "H",
+     "101"
+    ]
+   ]
+  },
+  {
+   "id": "CAC",
+   "label": "cacodylate ion",
+   "color": "#2F9E57",
+   "desc": "Cacodylate Ion",
+   "entity": [
+    "5"
+   ],
+   "sites": [
+    [
+     "G",
+     "105"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "1SY",
+  "residues": [
+   "G34",
+   "A8",
+   "A9",
+   "U55",
+   "A56",
+   "A64",
+   "A65",
+   "C66",
+   "G68",
+   "G69"
+  ],
+  "hbonds": 27,
+  "pi": 10,
+  "neighbours": [],
+  "label": "2′,3′-cGAMP"
+ }
+}

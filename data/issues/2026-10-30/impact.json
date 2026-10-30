@@ -1,0 +1,251 @@
+{
+ "screened": 67,
+ "scored": [
+  {
+   "pmcid": "PMC13711622",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 2,
+    "reach": 1,
+    "structure": 1,
+    "support": 2
+   },
+   "selected": true,
+   "reason": "Trp113を替えても二ヘム間の電子移動が保たれ、プロピオン酸基経由の経路との二重変異で初めて止まる点が新しい。既存の結晶構造6E1C上で変異と測定結果が説明されるが、経路計算は計算で、対象はMbnH一種に近い。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "These results demonstrate that an intervening tryptophan is not required for fast inter-heme electron transfer",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "instead reveal an additional, non-covalent pathway that may be a general feature of diheme peroxidases",
+      "section": "Abstract"
+     }
+    ],
+    "structure": [
+     {
+      "quote": "The crystal structure of MbnH (PDB 6E1C) was accessed from the PDB and the coordinates were fed into HARLEM",
+      "section": "Experimental"
+     }
+    ],
+    "support": [
+     {
+      "quote": "Consistent with this prediction, only simultaneous disruption of both the tryptophan and propionate-mediated pathways abolished bis-FeIV formation entirely.",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13715999",
+   "type": "method",
+   "scores": {
+    "novelty": 2,
+    "reach": 1,
+    "structure": 1,
+    "support": 2
+   },
+   "selected": true,
+   "reason": "19F–19F NOESYでタンパク質中のF–F距離を較正した最初の研究で、2.5〜3.0 Åは容易、上限は約5 Åと使える範囲を示した。自前のNMRデータとX線の基準距離との比較がある。距離の基準はTrp内の固定距離で、適用範囲はまだ狭い。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "Here, we present the first 19F–19F NOESY study designed to calibrate inter‐fluorine distances in proteins.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "expanding the toolbox for studying protein‐protein or protein‐ligand interactions by NMR.",
+      "section": "Abstract"
+     }
+    ],
+    "structure": [
+     {
+      "quote": "Series of 19F–19F NOESY build‐up experiments were recorded for each labeled protein, and the extracted cross‐relaxation rates were compared to fixed reference distances.",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "Our data show that distances up to ∼5 Å are accessible and that the NMR‐determined distances agree well with those from small molecule X‐ray structures of model compounds.",
+      "section": "Conclusion"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13715816",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 1,
+    "reach": 1,
+    "structure": 1,
+    "support": 2
+   },
+   "selected": false,
+   "reason": "HAP40がHTTの必須の相手で、欠くと相互作用相手と自食作用が変わるという細胞生物学の結果。構造はBRETセンサーの設計に使った程度で、新しさもHTT–HAP40の既知の関係の延長。noveltyが1で基準外。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "Here, using HAP40 knockout models, we report that HAP40 is an obligate binding partner which fundamentally controls HTT behavior.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "These findings establish HAP40 as a proteostasis regulator that is required to stabilize canonical HTT interactions and mitigate mutant HTT proteotoxicity.",
+      "section": "Abstract"
+     }
+    ],
+    "structure": [
+     {
+      "quote": "Informed by the structure of the HTT–HAP40 complex, we focused on five negatively charged residues in HAP40",
+      "section": "Results"
+     }
+    ],
+    "support": [
+     {
+      "quote": "In comparison to PA-mCit-HAP40WT the protein variants PA-mCit-HAP40M2, M3, and M5 showed significantly reduced BRET values",
+      "section": "Results"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13714390",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 1,
+    "reach": 1,
+    "structure": 0,
+    "support": 2
+   },
+   "selected": false,
+   "reason": "NEK1の自己リン酸化部位とALS変異体の活性の分類で、構造はAlphaFold3のモデルだけ（4APC・4B9Dはドメインの境界の確認に使った程度）。structureが0で選べない。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "Our study establishes the first activity-based framework for functional classification of NEK1 missense variants",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "The phosphospecific antibodies, isogenic cell lines and curated phosphoproteomic datasets generated here provide a community resource for future studies of NEK1 regulation",
+      "section": "Abstract"
+     }
+    ],
+    "structure": [],
+    "support": [
+     {
+      "quote": "We experimentally assign pSer14, pThr156 and pSer418 as NEK1 autophosphorylation sites using kinase-dead controls, targeted extracted ion chromatogram analysis, phosphosite mutagenesis and phosphospecific antibodies.",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13714281",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 2,
+    "reach": 1,
+    "structure": 0,
+    "support": 2
+   },
+   "selected": false,
+   "reason": "リン酸化のパターンがタウの微小管上の協同性とフィラメント形成を変えるという結果は明確に新しいが、構造は決めておらず実験構造の裏付けがない（structure 0）。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "Strikingly, the specific pattern of phosphorylation, rather than overall level, strongly promotes tau filament assembly in vitro.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "These findings provide insights into how tau phosphorylation modulates its physiological microtubule interactions and its pathoconversion into NFTs.",
+      "section": "Abstract"
+     }
+    ],
+    "structure": [],
+    "support": [
+     {
+      "quote": "However, we find that phosphorylation more dramatically impacts cooperativity between tau molecules during envelope formation.",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13715313",
+   "type": "method",
+   "scores": {
+    "novelty": 1,
+    "reach": 2,
+    "structure": 0,
+    "support": 2
+   },
+   "selected": false,
+   "reason": "ホタルルシフェラーゼの安定化変異体N116Hとコストの低い二重レポーター系。結晶構造4G36は変異の予測の入力に使っただけで、構造による裏付けはない（structure 0）。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "Here, we engineered Fluc variants (N116H, M118L and N116H/M118L) with improved catalytic performance, thermostability, and soluble expression.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "Firefly luciferase (Fluc) is one the most widely used bioluminescent reporters for biological imaging and gene expression analysis",
+      "section": "Abstract"
+     }
+    ],
+    "structure": [],
+    "support": [
+     {
+      "quote": "The N116H variant exhibited the most pronounced enhancement, including a 4.6-fold increase in kcat, a 2.7-fold higher soluble expression yield, a 3.5-fold longer half-life at 37 °C",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13715512",
+   "type": "drug",
+   "scores": {
+    "novelty": 1,
+    "reach": 1,
+    "structure": 0,
+    "support": 1
+   },
+   "selected": false,
+   "reason": "デングウイルスNS4Bは実験構造がなく、AlphaFold 3のモデルへのドッキングと3D-QSARで化合物を選んだ。細胞での抗ウイルス活性は測ったが、構造の裏付けがない（structure 0）。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "This study establishes a general framework for targeting structurally elusive viral membrane proteins.",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "Conserved binding interactions across serotypes support broad-spectrum potential.",
+      "section": "Abstract"
+     }
+    ],
+    "structure": [],
+    "support": [
+     {
+      "quote": "Experimental validation confirms potent activity against dengue virus serotype 2",
+      "section": "Abstract"
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,162 @@
+{
+  "pmcid": "PMC13714246",
+  "rank": 2,
+  "headline": "ClpPを遠くから止める、新しい阻害剤",
+  "subhead": "活性部位から約30 Å離れたポケットに結合し、触媒残基の並びをずらして不活性にする",
+  "target_label": "ヒトClpP（ミトコンドリア）",
+  "target_en": "Human mitochondrial ClpP with OICR18704",
+  "summary": {
+    "question": "ClpPの阻害剤は、活性部位に結合すると逆に活性化する現象があり、開発が難しかった。",
+    "approach": "キナゾリノン系の阻害剤OICR18704と結合したヒトClpPの構造をクライオ電顕で決め、HDX-MSで動きも調べた。",
+    "result": "7つのポケットのうち阻害剤が入るのは2つだけで、触媒のHis178を置く取っ手のβシートはどのサブユニットでも消えていた。",
+    "learned": "結合部位は活性部位から約30 Å離れており、クラスターが壊れると触媒三残基がずれて活性を失う。",
+    "open": "生体内での効果がClpP阻害によるのか、PRKCIなどによるのかは今後の課題とされる。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "the development of ClpP inhibitors has been hampered by paradoxical activation upon orthosteric inhibitor binding",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "we used cryo-EM to determine the structure of human ClpP bound to one of our representative inhibitors, OICR18704",
+          "section": "Results"
+        },
+        {
+          "quote": "Cryo-EM and H/D exchange mass spectrometry reveal that our lead compound binds sub-stoichiometrically",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "clear inhibitor density was observed in only two of the seven inter-subunit hydrophobic pockets on the apical surface of ClpP",
+          "section": "Results"
+        },
+        {
+          "quote": "Notably, the handle β-sheet that positions the catalytic His178 was absent in all subunits, resulting in misalignment of the catalytic triad and loss of proteolytic activity.",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "binds sub-stoichiometrically to a distal hydrophobic pocket ~30 Å from the active sites, disrupts a conserved inter-subunit cluster, and induces a conformational change that misaligns the catalytic triad, thereby inactivating ClpP",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Future studies will determine whether the in vivo efficacy was due to inhibition of ClpP, PRKCI, a combination of these, or additional targets.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "protease"
+  ],
+  "topics": [
+    "drug",
+    "dynamics"
+  ],
+  "highlights": [
+    {
+      "tag": "新しい結合部位",
+      "text": "阻害剤は、活性化剤ドルダビプロン（ONC201）の結合ポケットと一部重なる場所に入る。キナゾリノン部分はドルダビプロンに似た結合をするが、トリフルオロメチルベンゾニトリル基が軸孔側へ伸びて疎水性クラスターをこじ開け、阻害に転じる。",
+      "evidence": [
+        {
+          "quote": "Unlike dordaviprone, the trifluoromethyl benzonitrile group of OICR18704 extends toward the axial pore and acts as a wedge that disrupts a conserved hydrophobic cluster",
+          "section": "Results"
+        },
+        {
+          "quote": "The disruption of this critical allosteric hotspot at the interface of adjacent ClpP subunits enables OICR18704 to act as an inhibitor rather than an activator.",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "クラスターを壊すV62A変異体も、非対称なヘプタマー（7量体）で不活性になり、ドルダビプロンで活性が戻る。HDX-MSでも、取っ手ドメインが不安定になることが示された。",
+      "evidence": [
+        {
+          "quote": "Both the V62A substitution and OICR18704 binding stabilize the inactive heptameric state of ClpP and thereby abolish activity.",
+          "section": "Results"
+        },
+        {
+          "quote": "the loss of activity resulting from the perturbation of the N-terminal cluster is restored by the stoichiometric addition of dordaviprone",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "活性部位に結合する阻害剤は、低濃度でClpPを活性化してしまう。この化合物群は別の部位を使い、白血病のマウスモデルで経口投与後に腫瘍量を減らした。",
+      "evidence": [
+        {
+          "quote": "we previously demonstrated that they elicit a hormetic response, characterized by bell-shaped dose-response curves where low inhibitor concentrations paradoxically activate ClpP",
+          "section": "Discussion"
+        },
+        {
+          "quote": "In a xenograft mouse model of leukemia, our lead compound significantly reduced tumor burden following short-term oral administration.",
+          "section": "Abstract"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "大腸菌T7 Expressで発現。",
+    "construct": "ミトコンドリア標的配列（1–56）を除いた野生型とV62A変異体。切断可能なHis6-SUMOタグ付き。",
+    "purification": "Niカラム、Ulp1でタグ切断、再度Niカラム、Superdex 200 Increaseでゲル濾過。",
+    "sample_prep": "ClpP 15 mg/mlに1 mMのOICR18704を加え、0.025%のIGEPAL CA-630を添加。Vitrobot Mark IV（4 °C、湿度100%）で凍結。",
+    "data_collection": "Titan Krios、K3検出器、SerialEMで収集。cryoSPARC v4で処理。",
+    "evidence": [
+      {
+        "quote": "Plasmids were transformed into competent T7 Express Escherichia coli cells by heat-shock",
+        "section": "Methods"
+      },
+      {
+        "quote": "A cleavable N-terminal His6-SUMO tag was incorporated into both plasmids.",
+        "section": "Methods"
+      },
+      {
+        "quote": "The eluted sample was incubated with Ulp1 protease for His-SUMO tag cleavage and was dialyzed against lysis buffer for 18 h.",
+        "section": "Methods"
+      },
+      {
+        "quote": "subjected to size exclusion chromatography (SEC) on a Superdex 200 Increase 10/300 GL column (Cytiva)",
+        "section": "Methods"
+      },
+      {
+        "quote": "IGEPAL CA-630 was added to the sample in both cases to a final concentration of 0.025% to improve particle orientation.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Sample vitrification was performed using a Vitrobot Mark IV (Thermo Fisher Scientific) at 4 °C and 100% humidity.",
+        "section": "Methods"
+      },
+      {
+        "quote": "on a Titan Krios microscope (Thermo Fisher Scientific)",
+        "section": "Methods"
+      },
+      {
+        "quote": "All cryo-EM data processing was performed using cryoSPARCv4",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "ClpP",
+    "OICR18704",
+    "ドルダビプロン",
+    "アロステリック阻害"
+  ],
+  "editor_notes": "論文はOICR18704の立体化学（3位のS体）を密度から決められなかったと書いている。ヘプタマー環の構造（9XYH）を主図に使う。創薬の軸で今日の一本の候補になりうる。",
+  "ga_pdb_id": "9XYH",
+  "legend_labels": [
+    "ClpP（プロテアーゼ）"
+  ],
+  "ligand_names": {
+    "A1CRQ": "OICR18704"
+  },
+  "site_ligand": "A1CRQ"
+}
