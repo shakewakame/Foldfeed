@@ -1,0 +1,139 @@
+{
+  "pmcid": "PMC13715821",
+  "rank": 3,
+  "headline": "腸内細菌に、8交差の複雑な結び目をもつタンパク質が見つかった",
+  "subhead": "X線構造で結び目を確かめ、変性は6段階で進むと分かった",
+  "target_label": "EIGHT fold（結び目タンパク質）",
+  "target_en": "EIGHT fold knotted proteins (Lachnospiraceae)",
+  "summary": {
+    "question": "結び目をもつタンパク質のうち、実験で構造が確かめられた結び目の種類は少なく、交差が8回のものは未確認だった。",
+    "approach": "AlphaFoldが交差8回の結び目をもつと予測した細菌タンパク質を発現し、X線結晶構造を決め、安定性と変性の速さも測った。",
+    "result": "結晶構造3つが結び目を確かめた。変性は少なくとも6段階で進み、半減期は約0.1秒から25時間超に及んだ。",
+    "learned": "同じ折りたたみは細菌の296タンパク質に見つかった。折りたたみの経路は既知の理論では説明できないと著者は述べる。",
+    "open": "このタンパク質の機能は分かっていない。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "There are only a few types of knots with confirmed experimental structure, based on the KnotProt Database",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here, we report X-ray structures of proteins containing an 83 knot and adopting a previously unrecognized fold.",
+          "section": "Introduction"
+        }
+      ],
+      "result": [
+        {
+          "quote": "Based on the X-ray structures, we confirm that the protein backbone forms an 83 knot.",
+          "section": "Results"
+        },
+        {
+          "quote": "Studies of the unfolding kinetics of 83 proteins reveal at least six distinct unfolding phases",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "We identified 296 proteins in the UniProtKB Database with the same 83 knotted fold, all of which originated from bacteria.",
+          "section": "Conclusions"
+        },
+        {
+          "quote": "Native contacts allow the EIGHT fold to self-tie, but the observed folding pathway cannot be explained by any known protein-folding theory.",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "The 83 knotted proteins possess a novel fold and topology whose function is unknown.",
+          "section": "Results"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "other"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "タンパク質εとαの結晶構造3つ（2.2〜2.92 Å）が、交差8回の結び目を確かめた。結び目は約470残基のほぼ全長にわたり、全体が1ドメインのα-ヘリックスだけでできている。",
+      "evidence": [
+        {
+          "quote": "The monomer is a single-domain protein with a purely α-helical structure (20 helices; Fig. 2).",
+          "section": "Results"
+        },
+        {
+          "quote": "In protein ϵ, the knot spans residues 36 to 467, while in protein α, it extends from residues 29 to 453",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "手法の工夫",
+      "text": "構造決定にはAlphaFold2モデルを使った分子置換を用いたため、モデルの偏りが入る恐れがある。著者は、結び目のないモデルでは解けず結び目のあるモデルでは解けたことを、結び目を支持する独立の証拠としている。",
+      "evidence": [
+        {
+          "quote": "the unknotted search model failed to yield a molecular-replacement solution, whereas the knotted model succeeded.",
+          "section": "Conclusions"
+        },
+        {
+          "quote": "While molecular replacement with the AlphaFold model carries a risk of bias",
+          "section": "Conclusions"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "構造は、似た2つの半分（ジグザグのヘリックス束・長いヘリックス・二重のHLH領域）からなる。著者は、単純な祖先の重複で生じた可能性を挙げている。",
+      "evidence": [
+        {
+          "quote": "The 83 protein’s structure is composed of two structurally similar halves.",
+          "section": "Results"
+        },
+        {
+          "quote": "The similarity between the two halves might be due to the duplication",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": null,
+    "construct": "AlphaKnotで8交差の結び目をもつとされたタンパク質から、結晶化しやすそうな6種を選んだ。",
+    "purification": null,
+    "sample_prep": null,
+    "data_collection": "分子置換（AlphaFold2モデル）で決定した。SeMet置換の結晶は6 Åを超えて回折しなかった。",
+    "evidence": [
+      {
+        "quote": "we selected six proteins based on their crystallizability potential",
+        "section": "Results"
+      },
+      {
+        "quote": "All of the structures were determined with molecular replacement based on Alpha Fold 2 models.",
+        "section": "Materials and Methods"
+      },
+      {
+        "quote": "none of the crystals that were obtained diffracted beyond 6 Å",
+        "section": "Materials and Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "結び目タンパク質",
+    "EIGHT fold",
+    "AlphaFold"
+  ],
+  "first_claim": [
+    {
+      "quote": "Here, we report X-ray structures of proteins containing an 83 knot and adopting a previously unrecognized fold.",
+      "section": "Introduction"
+    }
+  ],
+  "ga_pdb_id": "9TMH",
+  "legend_labels": [
+    "EIGHT fold（結び目）"
+  ],
+  "editor_notes": "UniProt に対応づけられず proteins が空のため first_claim を付けた（論文は「previously unrecognized fold」と書くが「初の構造」とは明記していない。Structure Update に直すなら first_claim を外す）。発現・精製・結晶化の詳細は SI にあり packet にない。ライセンスは CC BY-NC-ND なので要旨や構成をなぞらないよう注意した。"
+}

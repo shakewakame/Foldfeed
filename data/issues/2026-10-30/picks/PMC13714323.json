@@ -1,0 +1,155 @@
+{
+  "pmcid": "PMC13714323",
+  "rank": 11,
+  "headline": "DTX4のRINGは、結晶中でドメインを入れ替えた二量体を作る",
+  "subhead": "ADP-リボース結合型のRING-DTCを2.8 Åで解析し、ADP-リボースへの結合も測った",
+  "target_label": "DTX4（ヒト）",
+  "target_en": "Human DTX4 RING-DTC domains",
+  "summary": {
+    "question": "E3リガーゼDTX4が基質結合でどう働くかはほとんど分かっておらず、実験で決めた構造もなかった。",
+    "approach": "DTX4のRING-DTCドメインをADP-リボースとの複合体で結晶化し、DTCドメインの結合を熱量測定で調べた。",
+    "result": "RINGドメインの前半が隣の分子と入れ替わった二量体になっていた。DTCドメインはADP-リボースに結合し（KD 44.9 μM）、ADPには結合しなかった。",
+    "learned": "DTX4のDTCドメインはDTX1・DTX2と同様にADP-リボースを認識する。RINGのドメインスワップが働きに関わるかは未確定だ。",
+    "open": "二量体が溶液中や細胞内でも生じ、機能を持つのかは分かっていない。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "However, little is known about the role of the DTX E3 ligase DTX4 in substrate binding and ubiquitination.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "no experimental protein structures for DTX4 have been published to date",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "we present the crystal structure of the DTX4 RING-DTC domains in complex with ADP-ribose to a final resolution of 2.8 Å",
+          "section": "Abstract"
+        },
+        {
+          "quote": "We then analysed its binding to ADP-ribose and ADP using ITC",
+          "section": "Results"
+        }
+      ],
+      "result": [
+        {
+          "quote": "with the N-terminal portion of the RING domain (residues 383–428) bound to an adjacent DTX4 molecule in the crystal lattice",
+          "section": "Results"
+        },
+        {
+          "quote": "The DTX4 DTC domain bound ADP-ribose with a KD of 44.9 μM.",
+          "section": "Results"
+        },
+        {
+          "quote": "Conversely, we did not detect binding of the DTC domain to ADP.",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "the data indicate that the DTC domains of DTX4, DTX1 and DTX2 recognise and bind to ADP-ribose",
+          "section": "Results"
+        },
+        {
+          "quote": "Overall, the DTX4 RING-DTC domains exist in the crystal as a dimer formed by the extensive RING domain interactions",
+          "section": "Results"
+        }
+      ],
+      "open": [
+        {
+          "quote": "We cannot, however, rule out that dimerisation may have been promoted by the effects of buffer composition in the crystallisation experiment or that it could be promoted by other factors present in a cellular environment and therefore have functional relevance.",
+          "section": "Results"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "enzyme"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "DTX4で初めて報告された構造。RINGドメインの前半（383–428）が結晶中の隣のDTX4分子と結合し、亜鉛イオン1個が2つの分子の残基で配位されていた。",
+      "evidence": [
+        {
+          "quote": "we have described the first structure of the catalytic domains of the DTX E3 ligase DTX4, discovering a distinctive domain swap within the RING domain",
+          "section": "Discussion"
+        },
+        {
+          "quote": "with one Zn2+ ion coordinated by residues from two different DTX4 molecules",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "入れ替わりは、DTX4のループ（422–428）がDTX1より2残基短いために可能になると著者は述べる。ただしゲルろ過では約32 μMまで単量体で、二量体は結晶化の高濃度で生じた可能性がある。",
+      "evidence": [
+        {
+          "quote": "The formation of the dimer is made possible by DTX4 possessing a loop (residues 422–428) that is two amino acids shorter than the equivalent loop in DTX1",
+          "section": "Results"
+        },
+        {
+          "quote": "at analytical SEC concentrations of up to 32 μM the protein is monomeric, while at the higher concentrations achieved during the vapour diffusion crystallisation process dimerisation is possible",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "二量体のRINGをE2~Ub複合体の模型に重ねても、E2の結合面はふさがれない。一方、ADP-リボースの3'OHとユビキチン側の結合との距離は11.0 Åで、DTX2の7.7 Åより長い。結晶中の詰まり方の影響が大きい可能性もある。",
+      "evidence": [
+        {
+          "quote": "This showed that the domain-swapped DTX4 RING domain does not occlude the E2 binding surface.",
+          "section": "Results"
+        },
+        {
+          "quote": "the 3′ OH of the ADP-ribose acceptor was located 11.0 Å from the isopeptide bond of the ubiquitin donor",
+          "section": "Results"
+        },
+        {
+          "quote": "the difference in distance is likely strongly influenced by crystal packing",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "ヒトDTX4のGln383–Asp619を、His6-TEVタグ付きで大腸菌に発現した。",
+    "construct": "RING-DTCドメイン（383–619）。複数の切り詰めのうち2つだけがタンパク質を発現した。",
+    "purification": "Ni-IMACでタグ付きタンパク質を精製し、TEVでタグを外して再びNi-IMACにかけ、Superdex 75のSECで精製した。",
+    "sample_prep": "10 mg/mlのタンパク質を1.5 mMのADP-リボースと氷上で10分混ぜ、Morpheus fusionスクリーンのH11の条件で結晶を得た。",
+    "data_collection": "Diamond Light SourceのI03でデータを集め、XDSとAIMLESSで処理し、DTX1の構造を鋳型にPhaserの分子置換、REFMAC5で精密化した。",
+    "evidence": [
+      {
+        "quote": "Litre-scale expression of the DTX4 construct spanning residues Gln383 to Asp619",
+        "section": "Results"
+      },
+      {
+        "quote": "DTX4 RING-DTC domain (10 mg/ml) was incubated with ADP-ribose (1.5 mM) in gel filtration buffer",
+        "section": "Methods"
+      },
+      {
+        "quote": "They were then purified by SEC on a Superdex 75 16/600 column",
+        "section": "Methods"
+      },
+      {
+        "quote": "X-ray diffraction data were then collected at Diamond Light Source, beamline I03.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Molecular replacement was performed in Phaser [43] using the structure of the RING-DTC domain of DTX1 bound to NAD+ (PDB: 6Y5P) as a search model.",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "DTX4",
+    "E3リガーゼ",
+    "ADP-リボース"
+  ],
+  "method_label": "X-ray・2.8 Å",
+  "ligand_label": "ADP-リボース",
+  "editor_notes": "PDB 30XN は未公開（candidates では unreleased）のため図なし。method_label は本文の 2.8 Å による。DTX4 に PDB の既存構造がなかったかは UniProt 照合ができず、初構造は論文の記述（the first structure of the catalytic domains of ... DTX4）による。ドメインスワップは結晶中の二量体で、溶液中では単量体と著者が書いているので、見出しは「結晶中で」とした。"
+}

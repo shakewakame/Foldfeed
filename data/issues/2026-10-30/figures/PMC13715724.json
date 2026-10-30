@@ -1,0 +1,45 @@
+{
+ "pdb_id": "9T53",
+ "view": {
+  "target": [
+   132.41,
+   136.57,
+   134.39
+  ],
+  "dir": [
+   -0.9924,
+   0.1232,
+   -0.0077
+  ],
+  "up": [
+   0.1186,
+   0.9337,
+   -0.3378
+  ],
+  "half": [
+   85.6,
+   50.2
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "P（補助因子）",
+   "desc": "RNA-directed RNA polymerase L",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "N0（核タンパク質）",
+   "desc": "Nucleoprotein",
+   "entity": "2"
+  },
+  {
+   "color": "#5F9296",
+   "label": "L（RNAポリメラーゼ）",
+   "desc": "Phosphoprotein",
+   "entity": "3"
+  }
+ ],
+ "ligands": []
+}

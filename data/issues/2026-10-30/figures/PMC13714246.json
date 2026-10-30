@@ -1,0 +1,96 @@
+{
+ "pdb_id": "9XYH",
+ "view": {
+  "target": [
+   125.33,
+   128.22,
+   129.27
+  ],
+  "dir": [
+   0.9999,
+   -0.0101,
+   0.0036
+  ],
+  "up": [
+   -0.0021,
+   0.1465,
+   0.9892
+  ],
+  "half": [
+   51.3,
+   50.0
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "ClpP（プロテアーゼ）",
+   "desc": "ATP-dependent Clp protease proteolytic subunit, mitochondrial",
+   "entity": "1"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "A1CRQ",
+   "label": "OICR18704",
+   "color": "#C23B8E",
+   "desc": "4-[4-({7-chloro-3-[(1S)-1-cyanoethyl]-4-oxo-3,4-dihydroquinazolin-2-yl}methyl)piperazin-1-yl]-2-(trifluoromethyl)benzonitrile",
+   "entity": [
+    "2"
+   ],
+   "sites": [
+    [
+     "H",
+     "301"
+    ],
+    [
+     "I",
+     "301"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "A1CRQ",
+  "residues": [
+   "I100",
+   "A101",
+   "Q102",
+   "L104",
+   "F105",
+   "R78",
+   "E82",
+   "I84",
+   "H116",
+   "Y118",
+   "W146",
+   "V148",
+   "L245"
+  ],
+  "hbonds": 1,
+  "pi": 3,
+  "neighbours": [],
+  "label": "OICR18704"
+ },
+ "hero_view": {
+  "target": [
+   125.33,
+   128.22,
+   129.27
+  ],
+  "dir": [
+   -0.9999,
+   0.0101,
+   -0.0036
+  ],
+  "up": [
+   0.0105,
+   0.9892,
+   -0.1465
+  ],
+  "half": [
+   50.0,
+   51.3
+  ]
+ }
+}

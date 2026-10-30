@@ -1,0 +1,145 @@
+{
+  "pmcid": "PMC13714783",
+  "rank": 10,
+  "headline": "3-O-硫酸の隣も切れる、腸内細菌のヘパリン酵素",
+  "subhead": "X線結晶構造で切断後の二糖が活性部位に収まる様子を捉え、LC-MSとNMRの結果を裏づけた",
+  "target_label": "BeHepI（B. eggerthii）",
+  "target_en": "Heparin lyase I (B. eggerthii)",
+  "summary": {
+    "question": "ヘパリン分析の酵素は3-O-硫酸をもつ糖の近くをほとんど切れず、この部分の標準品を作りにくかった。",
+    "approach": "B. eggerthii由来のヘパリンリアーゼI（BeHepI）が五糖フォンダパリヌクスをどう切るかを、LC-MS・NMR・結晶構造で調べた。",
+    "result": "BeHepIは3-O-硫酸グルコサミンの手前も含む2か所を切った。従来のPhHepIは1か所だけだった。",
+    "learned": "BeHepIは、3-O-硫酸をもつ標準品の調製に向くと著者は考えている。",
+    "open": "ブタ粘膜ヘパリンから3-O-硫酸二糖を直接得られるかは、まだ確かめられていない。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Pedobacter heparinus heparin lyases are currently widely employed for characterization of heparin and its derivatives, but have limited activity near regions of 3-O-sulfation, hindering analyses of anticoagulation relevant sequences.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Here, using a panel of biophysical and structural techniques, we show that Bacteroides eggerthii lyase I liberates ΔUA-GlcNS3S6S disaccharides from the defined pentasaccharide, fondaparinux.",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "consistent with cleavage at both A↓GA*↓IA-OMe to liberate A, GA* and IA-OMe respectively",
+          "section": "Results and discussion"
+        },
+        {
+          "quote": "indicating single cleavage at AGA*↓IA-OMe",
+          "section": "Results and discussion"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Such activity likely renders BeHepI better suited to the preparation of standards containing 3-O-sulfation, which will aid analyses of biologically important heparin/HS sequences.",
+          "section": "Results and discussion"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Whilst we have not unequivocally ascertained here whether BeHepI by itself can liberate 3-O-sulfated disaccharides from PMH",
+          "section": "Results and discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "enzyme"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "フォンダパリヌクスと反応させた結晶には、切断産物の不飽和二糖（GA*）が−1、−2サブサイトに見えた。3-O-硫酸はTyr93とLys99に配位し、切断で生じた二重結合の周りの密度は平面に近かった。",
+      "evidence": [
+        {
+          "quote": "3-O-sulfate coordinated to Tyr93 and Lys99",
+          "section": "Results and discussion"
+        },
+        {
+          "quote": "electron density for GA* within the BeHepI active site was highly planar across the C3–C4–C5 region, in line with β-eliminative formation of a π-bond",
+          "section": "Results and discussion"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "PhHepIの実験構造はなく、AlphaFold予測との比較では、BeHepIのループ2に8残基の伸長があり、活性部位を覆う陽性の蓋になっている。これが活性の差の一因かもしれないという推測にとどまる。",
+      "evidence": [
+        {
+          "quote": "Loop 2 of BeHepI also contains an eight amino acid extension compared to PhHepI, forming an elongated cationic lid that covers its active site.",
+          "section": "Results and discussion"
+        },
+        {
+          "quote": "These differences may rationalize (in part) the improved activity of BeHepI against more negatively charged heparin/HS oligosaccharides carrying 3-O-sulfation",
+          "section": "Results and discussion"
+        }
+      ]
+    },
+    {
+      "tag": "実験Tips",
+      "text": "NMRで切断を時間を追って測ると、AGA*↓IAの結合はA↓GA*IAよりずっと速く切れた。3-O-硫酸の隣も切れるが、ほかの部位が優先される。",
+      "evidence": [
+        {
+          "quote": "Quantitation of ΔUA 1H peaks over time revealed that the AGA*↓IA-OMe site was cleaved substantially more rapidly than A↓GA*IA-OMe",
+          "section": "Results and discussion"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "大腸菌C41(DE3) pLysSでpET-22b(+)から発現し、1 mM IPTGで誘導。",
+    "construct": "N末端のリーダー配列を除いた残基21–394（WP_004294077.1）。",
+    "purification": "HisTrap FF、サイズ排除（S75）、陽イオン交換（Resource S）の順。緩衝液に5 mM CaCl2を含む。",
+    "sample_prep": "2 M硫酸アンモニウム、0.1 M酢酸Na（pH 5.0）で結晶化。複合体はフォンダパリヌクスの粉末を結晶の滴に直接加え、5分後に回収。",
+    "data_collection": "Diamond Light Sourceで収集。3IKWを探索モデルにMOLREPで位相を決め、REFMAC5で精密化。",
+    "evidence": [
+      {
+        "quote": "Transformed cells were grown to OD600 0.6–0.8, and induced with 1 mM IPTG.",
+        "section": "Methods"
+      },
+      {
+        "quote": "lacking the N-terminal leader sequence (21–394), was inserted into pET-22b(+)",
+        "section": "Methods"
+      },
+      {
+        "quote": "Initial protein capture was carried out by using a HisTrap FF column (Cytiva)",
+        "section": "Methods"
+      },
+      {
+        "quote": "Further polishing was conducted by size-exclusion (Cytiva S75 16/600; 25 mM Tris, 100 mM NaCl, 5 mM CaCl2 pH 7.4 buffer) and ion-exchange",
+        "section": "Methods"
+      },
+      {
+        "quote": "Well-diffracting crystals of BeHepI were grown and cryo-harvested from 2 M (NH4)2SO4, 0.1 M CH3CO2Na, pH 5.0.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Ligand complexes with fondaparinux were obtained by addition of ligand powder directly into drops containing crystals, followed by incubation for 5 minutes before harvesting.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Diffraction data was collected at Diamond Light Source (UK).",
+        "section": "Methods"
+      },
+      {
+        "quote": "Structures were solved by molecular replacement with MOLREP (Vagin and Teplyakov 2010), using PDB 3IKW as a search model",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "ヘパリンリアーゼ",
+    "BeHepI",
+    "フォンダパリヌクス"
+  ],
+  "editor_notes": "本文は apo を 1.7 Å、フォンダパリヌクス処理を 1.9 Å と書くが、PDB では 9GRW が 1.85 Å、9GV9 が 1.715 Å で逆になっている。数値は書かず PDB に任せた。3IKW（B. thetaiotaomicron の相同体）が既報。9GV9 は 3-O 硫酸二糖（GA*）が入った産物複合体。",
+  "ga_pdb_id": "9GV9",
+  "legend_labels": [
+    "ヘパリンリアーゼI（多糖分解酵素）"
+  ]
+}

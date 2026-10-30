@@ -1,0 +1,33 @@
+{
+ "pdb_id": "9WNM",
+ "view": {
+  "target": [
+   65.74,
+   -14.41,
+   27.08
+  ],
+  "dir": [
+   -0.8883,
+   -0.4574,
+   0.0403
+  ],
+  "up": [
+   -0.0989,
+   0.1048,
+   -0.9896
+  ],
+  "half": [
+   11.8,
+   11.4
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "ChOGRE23（G4 DNA）",
+   "desc": "DNA (5'-D(*GP*GP*GP*AP*AP*CP*GP*CP*GP*GP*CP*AP*TP*CP*AP*GP*GP*GP*TP*GP*GP*GP*G)-3')",
+   "entity": "1"
+  }
+ ],
+ "ligands": []
+}

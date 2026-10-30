@@ -1,0 +1,158 @@
+{
+  "pmcid": "PMC13715422",
+  "rank": 6,
+  "headline": "HCN2の細胞質ドメインを移したチャネルは、縮んだ形をとる",
+  "subhead": "キメラとCNBD欠失体の構造から、cAMP応答と自己抑制を調べた",
+  "target_label": "HCN112／HCN1ΔC（ヒト）",
+  "target_en": "Human HCN1/HCN2 chimera (HCN112) and HCN1ΔC channels",
+  "summary": {
+    "question": "HCN2はcAMPに強く応答するがHCN1はほとんど応答せず、その構造上の理由は十分に分かっていなかった。",
+    "approach": "HCN1にHCN2のC-リンカーとcAMP結合ドメイン（CNBD）を移したHCN112と、細胞質側を欠くHCN1ΔCをクライオ電顕で解析した。",
+    "result": "HCN112は膜に垂直な方向に約3.5 Å縮み、サブユニット間の結合が増えた。HCN1ΔCはゲートの細孔半径が1 Åから約2.5 Åに広がった。",
+    "learned": "縮んだ配置がHCN2でcAMPが効きやすい一因かもしれない。細胞質側を欠くと細孔が中間的に開くことから、野生型ではCNBDが開口を抑えると考えられる。",
+    "open": "構造だけでは縮みとcAMP感受性の因果は示せず、機能実験が必要だと論文は述べる。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "with isoform-specific cyclic AMP (cAMP) sensitivity remaining poorly understood",
+          "section": "Abstract"
+        },
+        {
+          "quote": "While HCN2 exhibits strong cAMP regulation, HCN1 shows minimal response.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "One variant (HCN112) incorporates the C-linker and cyclic nucleotide-binding domain from HCN2 into the HCN1 backbone",
+          "section": "Abstract"
+        },
+        {
+          "quote": "we analyzed two engineered HCN1 variants using cryo-electron microscopy",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "This compression amounts to ∼3.5 Å when measuring the distance from the top of the S5 helix (residue Q323) to the distal end of the CNBD (residue G547)",
+          "section": "Results"
+        },
+        {
+          "quote": "at the gate residue Q398, the pore radius in HCN112 ligand-free is 1 Å, whereas in HCN1ΔC it increases to ∼2.5 Å",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "We suggest that this compressed conformation is one of the reasons why cAMP works more efficiently in HCN2 than in HCN1 channels.",
+          "section": "Results"
+        },
+        {
+          "quote": "supporting auto-inhibitory regulation by the cyclic nucleotide-binding domain in wild-type channels",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "they do not establish a causal link to the enhanced cAMP sensitivity of HCN112",
+          "section": "Results"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "channel"
+  ],
+  "topics": [
+    "membrane",
+    "dynamics"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "HCN112では膜貫通ドメインとCNBDが近づき、HCN1にはないサブユニット間の水素結合・塩橋が17個みられた。その大半は、cAMPの結合と開口を結びつけるとされるC-リンカーに集まっていた。",
+      "evidence": [
+        {
+          "quote": "However, most of the unique interactions in HCN112 between chain A and B are localized in the C-linker, a region that has been shown repeatedly to be important for coupling ligand binding to channel opening",
+          "section": "Results"
+        },
+        {
+          "quote": "there are 17 inter-chain H-bonds and salt bridges in the ligand-free form of HCN112",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "cAMPが結合するとCNBDが回転してC-リンカーから離れ、この17個の大半が切れた。結合による相互作用の解消が開口を助ける可能性を著者は挙げるが、検証は今後の課題だ。",
+      "evidence": [
+        {
+          "quote": "Most of these interactions are broken in the cAMP-bound state except for three remaining H-bonds",
+          "section": "Results"
+        },
+        {
+          "quote": "The largest conformational change upon cAMP-binding can be observed in the CNBD, which rotates and tilts away from the C-linker",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "C-リンカーとCNBDを丸ごと欠くHCN1ΔCは、細孔が中間的に開いた形だった。ただし膜貫通部分の分解能は限られ、側鎖の解釈には注意が要ると著者は述べる。",
+      "evidence": [
+        {
+          "quote": "In contrast, the truncated HCN1ΔC variant (lacking the cytoplasmic domain) displayed an intermediately open pore conformation",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Notably, the TMD of HCN1ΔC shows limited resolution, making detailed side-chain interpretation difficult",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "HEK293S GnTI−細胞にバキュロウイルス（BacMam）で発現した。",
+    "construct": "HCN1EMを土台に、HCN1のMet1–Leu400にHCN2のAsp401–Leu658をつないだHCN112と、Met1–Asp401までのHCN1ΔCを作った。",
+    "purification": "LMNG＋CHSで可溶化し、GFPナノボディ樹脂で捕捉してPreScissionでタグを切り、Superose 6でゲルろ過した。",
+    "sample_prep": "cAMP結合型は3.5 mg/mlのHCN112に0.4 mMのcAMPを加え、AuFoilグリッドにVitrobot IVで凍結した。",
+    "data_collection": "Titan Krios（300 keV）で撮影し、cryoSPARCでC4対称を課して精密化した。",
+    "evidence": [
+      {
+        "quote": "The different HCN constructs were expressed in HEK293S GnTI− cells (Goehring et al., 2014)",
+        "section": "Methods"
+      },
+      {
+        "quote": "HCN1ΔC corresponds to the HCN1 gene covering the sequence between Met1-Asp401, with a deletion that spans the entire C-terminal region.",
+        "section": "Methods"
+      },
+      {
+        "quote": "The supernatant was incubated with the GFP nanobody-coupled sepharose resin prepared in-house",
+        "section": "Methods"
+      },
+      {
+        "quote": "0.4 mM cAMP was added to 3.5 mg/ml HCN112 in order to perform single particle analysis on the HCN112 cAMP-bound sample.",
+        "section": "Methods"
+      },
+      {
+        "quote": "During refinement, C4 symmetry was imposed in all datasets.",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "HCNチャネル",
+    "cAMP",
+    "HCN112",
+    "HCN1ΔC"
+  ],
+  "ga_pdb_id": "9R1T",
+  "ligand_names": {
+    "CMP": "cAMP"
+  },
+  "site_ligand": "CMP",
+  "editor_notes": "UniProt への対応づけがなく proteins が空のため、New/Update の振り分けはサイト側の判定に任せた（論文は HCN1・HCN4 の既存構造に触れており、初構造とは書いていない）。HCN112 は人工キメラ、HCN1ΔC は人工の欠失体。legend_labels は 9R1T のエンティティ数が未確認のため書いていない（描画後に確認が必要）。",
+  "legend_labels": [
+    "HCN1／HCN2 キメラ（チャネル）"
+  ]
+}

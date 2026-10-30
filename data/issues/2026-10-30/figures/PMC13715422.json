@@ -1,0 +1,84 @@
+{
+ "pdb_id": "9R1T",
+ "view": {
+  "target": [
+   159.25,
+   159.25,
+   153.01
+  ],
+  "dir": [
+   -0.1478,
+   0.989,
+   -0.0001
+  ],
+  "up": [
+   -0.0,
+   0.0001,
+   1.0
+  ],
+  "half": [
+   50.4,
+   52.3
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "HCN1／HCN2 キメラ（チャネル）",
+   "desc": "Potassium/sodium hyperpolarization-activated cyclic nucleotide-gated channel 1,Potassium/sodium hyperpolarization-activated cyclic nucleotide-gated channel 2,Potassium/sodium hyperpolarization-activated cyclic nucleotide-gated channel 1,Potassium/sodium hyperpolarization-activated cyclic nucleotide-gated channel 2,HCN112 holo, in complex with cAMP",
+   "entity": "1"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "CMP",
+   "label": "cAMP",
+   "color": "#C23B8E",
+   "desc": "Adenosine-3',5'-Cyclic-Monophosphate",
+   "entity": [
+    "2"
+   ],
+   "sites": [
+    [
+     "E",
+     "1001"
+    ],
+    [
+     "F",
+     "1001"
+    ],
+    [
+     "G",
+     "1001"
+    ],
+    [
+     "H",
+     "1001"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "CMP",
+  "residues": [
+   "I503",
+   "V522",
+   "F538",
+   "G539",
+   "E540",
+   "I541",
+   "C542",
+   "R549",
+   "T550",
+   "A551",
+   "V553",
+   "R590",
+   "R593",
+   "I594"
+  ],
+  "hbonds": 10,
+  "pi": 0,
+  "neighbours": [],
+  "label": "cAMP"
+ }
+}

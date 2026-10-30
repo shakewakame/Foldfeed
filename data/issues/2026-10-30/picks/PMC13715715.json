@@ -1,0 +1,148 @@
+{
+  "pmcid": "PMC13715715",
+  "rank": 9,
+  "headline": "抗GFRAL抗体は、GFRALの表面を作り替えてRETをふさぐ",
+  "subhead": "Fab–GFRAL D3の結晶構造（2.3 Å）が誘導適合を示し、悪液質のマウスで効果を確かめた",
+  "target_label": "GFRAL D3＋抗体Fab",
+  "target_en": "Human GFRAL D3 with anti-GFRAL Fab (GB2Ab)",
+  "summary": {
+    "question": "GDF15を標的にした治療はあるが、受容体GFRALを強く阻む拮抗薬は十分に得られていなかった。",
+    "approach": "GFRAL D3に結合する抗体（GB2Ab）のFabとD3の複合体を結晶構造解析し、ヒト化抗体をがん悪液質のマウスで調べた。",
+    "result": "結合でGFRALのヘリックスがループに変わり、疎水ポケットが現れた。KDは46 pM（親のマウス抗体）で、ヒト化抗体は摂食量と体重を回復させた。",
+    "learned": "抗体が結合面を作り替える誘導適合で、高い親和性、遅い解離、RETとの結合面のブロックが説明されると著者は考える。",
+    "open": "長期投与での治療域や神経免疫への影響は、今後の研究で調べる必要がある。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "which highlights an unmet need for potent and effective GFRAL-targeting antagonists",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "we determined the crystal structure of the chimeric 17F5 Fab–hGFRAL D3 domain complex at 2.3 Å resolution",
+          "section": "Results"
+        },
+        {
+          "quote": "we established an orthotopic MC38 cecal allograft model recapitulating the key features of CAC",
+          "section": "Results"
+        }
+      ],
+      "result": [
+        {
+          "quote": "this shielding helix underwent a helix-to-loop transition, and the adjacent α3 helix was displaced",
+          "section": "Results"
+        },
+        {
+          "quote": "(KD = 46 pM, kon = 1.3 × 105 M−1 s−1, koff = 5.8 × 10−6 s−1)",
+          "section": "Results"
+        },
+        {
+          "quote": "3D-hz-GB2Ab treatment progressively increased cumulative food intake",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "reveals an induced-fit mechanism in which GB2Ab sterically occludes the GFRAL–RET interface and remodels the primary RET CLD1–CLD2 binding site, providing a structural basis for high-affinity binding, slow dissociation, and potent antagonism",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Nevertheless, longer-term studies will be needed to define the therapeutic window and potential neuroimmune consequences of GFRAL antagonism.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "immune",
+    "receptor"
+  ],
+  "topics": [
+    "antibody",
+    "drug"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "6つのCDRがすべて、D3のα1・α2・α3・α5にまたがる立体エピトープを認識する。結合でD3の疎水コアを覆う短いヘリックス（D255–T261）がループになり、α3がずれて深い疎水ポケットが露出した。",
+      "evidence": [
+        {
+          "quote": "All six CDRs from both heavy and light chains were shown to participate in the recognition of a conformational epitope spanning helices α1, α2, α3, and α5 of hGFRAL D3",
+          "section": "Results"
+        },
+        {
+          "quote": "thereby exposing a deep hydrophobic pocket otherwise occluded",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "重鎖CDR3の3つのTyr（Y102–Y104）が、現れたポケットに深く入る。GB2AbはRETのCLD1–CLD2が触れる側を覆い、別の拮抗抗体（CLD2–CLD3の接合部側に結合する）とはエピトープが重ならない。",
+      "evidence": [
+        {
+          "quote": "A triad of tyrosine residues from the heavy-chain CDR3 (Y102, Y103, Y104) inserted deeply into the newly exposed hydrophobic pocket",
+          "section": "Results"
+        },
+        {
+          "quote": "they recognize distinct, non-overlapping epitopes to block the GFRAL–RET interface",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "手法の工夫",
+      "text": "構造に基づくヒト化として、抗体のCDRを構造が最も近い抗ErbB2抗体（PDB 1L7I）の骨格に移し、配列ベースと比べた。戻し変異で、どちらもKD 0.2 nM台まで親和性が回復した。",
+      "evidence": [
+        {
+          "quote": "The second (novel structure-based) approach involved grafting the 17F5 CDRs onto the most structurally homologous human antibody framework (anti-ErbB2 antibody, PDB: 1L7I, RMSD = 1.4 Å)",
+          "section": "Results"
+        },
+        {
+          "quote": "which successfully restored high-affinity binding with KD values of 0.23 nM and 0.25 nM, respectively",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "Fabの重鎖・軽鎖は大腸菌Top10Fのペリプラズムで発現（0.02%アラビノース、28℃）。GFRAL D3はExpi293F細胞で発現した。",
+    "construct": "ヒトGFRAL D3は218–351残基。FabはキメラGB2Ab（マウスVH/VLにヒトCH1/CLを連結）。",
+    "purification": "FabはNi-NTAとSEC（Superdex 200 Increase）で精製した。",
+    "sample_prep": "FabとD3を1:2で混ぜてSECで複合体を分け、4 mg/mlに濃縮して18℃でハンギングドロップ蒸気拡散法で結晶化した。",
+    "data_collection": "浦項加速器研究所5CでデータをとりHKL2000で処理。Phaserの分子置換（AlphaFold予測のFabと6Q2J）、COOTとPHENIXで精密化した。",
+    "evidence": [
+      {
+        "quote": "Protein expression was induced with 0.02% arabinose at an OD600 of 1.0, and the cells were further cultured for 18 h at 28°C",
+        "section": "Methods"
+      },
+      {
+        "quote": "Purified chimeric 17F5 Fab and hGFRAL D3 were mixed at a 1:2 molar ratio and incubated overnight at 4°C.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Crystals were grown at 18°C using the hanging-drop vapor diffusion method",
+        "section": "Methods"
+      },
+      {
+        "quote": "X-ray diffraction data were collected at the Pohang Accelerator Laboratory, Republic of Korea (beamline 5C).",
+        "section": "Methods"
+      },
+      {
+        "quote": "initial phases were calculated using the molecular replacement technique with Phaser (v2.8.3)",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "GFRAL",
+    "GDF15",
+    "抗体",
+    "悪液質"
+  ],
+  "method_label": "X-ray・2.3 Å",
+  "editor_notes": "PDB 9X4Y は未公開のため図なし（method_label は本文の 2.3 Å）。ライセンスは CC BY-NC。マウス実験は結果の1行に留め、構造の読みどころを中心にした。論文の著者（Shong 教授）は THOR Therapeutics と関係があり、データ提供の記載にある。"
+}

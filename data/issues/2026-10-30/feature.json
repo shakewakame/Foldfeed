@@ -1,0 +1,4 @@
+{"pmcid": "PMC13714246", "axes": ["structure", "drug"],
+ "reason": "活性部位から約30 Å離れたポケットに結合するClpP阻害剤の作用を、クライオ電顕で触媒三残基のずれとして示した。",
+ "evidence": [{"quote": "binds sub-stoichiometrically to a distal hydrophobic pocket ~30 Å from the active sites, disrupts a conserved inter-subunit cluster, and induces a conformational change that misaligns the catalytic triad, thereby inactivating ClpP", "section": "Abstract"}],
+ "considered": [{"pmcid": "PMC13714248", "note": "ウイルスGPCRのGq活性化中間状態を3つ捉えた構造研究。機構の示し方は強いが、創薬への直結度でClpPを選んだ。"}]}

@@ -1,0 +1,154 @@
+{
+  "pmcid": "PMC13715724",
+  "rank": 4,
+  "headline": "VSVのポリメラーゼは、N0をRNAの出口そばに留める",
+  "subhead": "L-P-N0のクライオ電顕で、N0がLCTD付近を動く様子と3.8 Åの安定な状態を得た",
+  "target_label": "VSV L-P-N0複合体",
+  "target_en": "VSV L–P–N0 polymerase complex",
+  "summary": {
+    "question": "複製中のLが、新生RNAを包む可溶性のN0をどう呼び込むかは、答えの出ていない問いだった。",
+    "approach": "VSVのL-P-N0複合体を精製タンパク質から再構成し、単粒子クライオ電顕で解析した。",
+    "result": "N0はLCTD付近を連続的に動いていた。一部（約13%）は出口近くで安定し、3.8 Åの地図でモデルを作れた。",
+    "learned": "LCTDは複製に特化した足場で、Pに保持されたN0をRNAの出口へ導くと考えられる。",
+    "open": "RNAがNに渡る瞬間は未観察で、時間分解やRNAを捕えた状態の解析が必要だ。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "how the replication machinery recruits N0 to the nascent RNA and couples encapsidation to polymerase elongation",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "we reconstituted a VSV L-P-N0 complex from purified proteins, using the N-terminal region of P",
+          "section": "Results"
+        },
+        {
+          "quote": "Here, we reconstitute the VSV L-P-N0 complex and determine its structure by cryo–electron microscopy (cryo-EM).",
+          "section": "Introduction"
+        }
+      ],
+      "result": [
+        {
+          "quote": "This analysis indicates that the N protein is in a dynamic continuum of positions",
+          "section": "Results"
+        },
+        {
+          "quote": "we identified a stable conformation for which 3DFlex yielded a map with an average resolution of 3.8 Å",
+          "section": "Results"
+        },
+        {
+          "quote": "The relatively low percentage of L-P-N0 complexes found in the stable conformation (∼13%)",
+          "section": "Discussion"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Here, we define a structural solution to that problem for the VSV polymerase in which the LCTD operates as a replication-specific docking platform that is engaged by the PNTR to recruit N0 to the RNA exit path.",
+          "section": "Discussion"
+        },
+        {
+          "quote": "This study reveals a function for LCTD in encapsidation of nascent RNAs",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "we do not visualize RNA threaded through the exit tunnel and into the N-binding cleft, which will require time-resolved or RNA-trapped states to capture the moment of hand-off",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "pathogen",
+    "nucleic"
+  ],
+  "topics": [
+    "dynamics"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "N0を抱えたPの先頭部分（PNTD）がLCTDに近づいて触れる状態が、焦点を絞った3D分類で複数分かれた。3DFlexの解析は、N0が連続した位置をとることを示した。",
+      "evidence": [
+        {
+          "quote": "First, focused cryo-EM classification centered on PY53 resolves multiple states in which an N-like, bilobed body, identified by signal subtraction and rigid-body fitting as N0-PNTD, approaches and contacts the LCTD.",
+          "section": "Discussion"
+        },
+        {
+          "quote": "This analysis indicates that the N protein is in a dynamic continuum of positions",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "安定な状態の原子モデル（9T53）では、N0がLCTDの端に置かれ、PNTDがPのLBS1とLCTDの両方に接していた。既知のL-P構造とN0-P構造は、目立った変化なく地図に収まった。",
+      "evidence": [
+        {
+          "quote": "The model highlights an N0 protomer positioned at the edge of the LCTD platform and contacts between the PNTD and both PLBS1 and LCTD",
+          "section": "Results"
+        },
+        {
+          "quote": "We rigid-body fitted the available structures of the L-P and N0-P complexes in the density map and did not detect any notable conformational changes",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "界面の埋もれ面積を比べると、N0-PとL-Pをつなぐ接触はPによるもの（325 Å2）がN-L間（187 Å2）より大きい。Nの動きはPNTDとLの接点を中心にしており、Pが安定化の中心と著者は読み取る。",
+      "evidence": [
+        {
+          "quote": "show that P, rather than N or L, provides the largest contact surface between N0-P and L-P complexes (PNTD-L + PLBS1-PNTD + PLBS1-N = 325 Å2; N-L = 187 Å2)",
+          "section": "Results"
+        },
+        {
+          "quote": "Overall, these results highlight a central role of P in the formation and stabilization of the conformation.",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "N0-P（NとPの1–106）は大腸菌Rosetta 2 (DE3)で、Lは組換えVSVを感染させたBSR-T7細胞から調製した。",
+    "construct": "Pは全長ではなくN末端領域（1–106）を使った。LはN末端に8xHis-3Cタグを付けた組換えウイルスから得た。",
+    "purification": "Ni-NTAビーズ上でLにN0-Pを結合させ、anti-Flagビーズで精製してHRV-3Cでタグを外した。",
+    "sample_prep": "0.2 mg/mlの複合体3 μLをlacey carbonの銅グリッドに載せ、Vitrobot Mark IVで液体エタンに凍結した。",
+    "data_collection": "200 keVのGlacios・Falcon IVで10,322本の動画を撮り、CryoSPARC 4.6.0で処理した。3DFlexで3.8 Åの地図を得た。",
+    "evidence": [
+      {
+        "quote": "The N0-P complex was expressed in Rosetta 2 (DE3) cells transformed with the plasmid",
+        "section": "Methods"
+      },
+      {
+        "quote": "L was purified from BSR-T7 cells infected with rVSV-eGFP-8xHis-3C-L.",
+        "section": "Methods"
+      },
+      {
+        "quote": "The purified and cleaved N0-P complexes were then added to the beads and incubated at 4°C for 4 hours.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Cryo-EM grids were prepared using a Vitrobot Mark IV",
+        "section": "Methods"
+      },
+      {
+        "quote": "Movies and particles were processed using CryoSPARC version 4.6.0",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "VSV",
+    "L-P-N0",
+    "RNAポリメラーゼ"
+  ],
+  "legend_labels": [
+    "P（補助因子）",
+    "N0（核タンパク質）",
+    "L（RNAポリメラーゼ）"
+  ],
+  "editor_notes": "legend_labels は candidates の polymers の順（P・N・L）で書いた。render で凡例の順を確かめて直してほしい。図の 9T53 は 3.8 Å。N-L の接触面積など数値は論文の記述。「約13%」は論文の 'percentage ... found in the stable conformation (~13%)'。"
+}

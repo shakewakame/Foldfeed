@@ -1,0 +1,73 @@
+{
+ "pdb_id": "9TEC",
+ "view": {
+  "target": [
+   -40.73,
+   8.4,
+   -24.77
+  ],
+  "dir": [
+   0.7497,
+   0.5768,
+   0.3244
+  ],
+  "up": [
+   -0.4217,
+   0.0386,
+   0.9059
+  ],
+  "half": [
+   21.7,
+   29.9
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "PKA（触媒サブユニット）",
+   "desc": "cAMP-dependent protein kinase catalytic subunit alpha",
+   "entity": "1"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "A1JVM",
+   "label": "化合物30",
+   "color": "#C23B8E",
+   "desc": "4-[3-(1,2,4-triazol-1-ylmethyl)phenyl]-1~{H}-pyrrolo[2,3-b]pyridine",
+   "entity": [
+    "2"
+   ],
+   "sites": [
+    [
+     "B",
+     "401"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "A1JVM",
+  "residues": [
+   "L49",
+   "F54",
+   "V57",
+   "A70",
+   "K72",
+   "V104",
+   "M120",
+   "E121",
+   "Y122",
+   "V123",
+   "N171",
+   "L173",
+   "T183",
+   "D184",
+   "F327"
+  ],
+  "hbonds": 4,
+  "pi": 0,
+  "neighbours": [],
+  "label": "化合物30"
+ }
+}

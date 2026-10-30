@@ -1,0 +1,178 @@
+{
+  "pmcid": "PMC13714248",
+  "rank": 1,
+  "headline": "ウイルスGPCRで、Gq活性化の途中の状態を3つ捉えた",
+  "subhead": "クライオ電顕でE・T2C・C状態を解析し、α5の形成が塩橋の切断を介してGDP放出を促すと提案",
+  "target_label": "US28–Gq（サイトメガロウイルス）",
+  "target_en": "HCMV US28–Gq complex with CX3CL1.44",
+  "method_label": "Cryo-EM",
+  "summary": {
+    "question": "GPCRがGタンパク質と出会ってからGDPを放すまでの構造変化は、構造としては捉えにくかった。",
+    "approach": "ウイルスのGPCRであるUS28と改変ケモカインでGqとの複合体を作り、クライオ電顕に、MDと変異体解析を組み合わせた。",
+    "result": "GDP結合のE状態（2.6 Å）、中間体とみられるT2C状態（2.9 Å）、GDPのないC状態（2.6 Å）が得られた。",
+    "learned": "α5ヘリックスの挿入がP-loopのGlu49とSwitch IのArg183の塩橋を切り、この解錠はAHDが大きく開くより先に起きると提案している。",
+    "open": "状態の起きる時間的な順序は、リアルタイムの1分子解析などがないと決められない。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "the initial recognition of the inactive, GDP-bound G protein by the receptor and the subsequent conformational transitions that catalyze GDP release have remained structurally elusive",
+          "section": "Introduction"
+        },
+        {
+          "quote": "However, the sequence of structural events from G protein recognition to GDP release has remained elusive.",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "Using cryo-electron microscopy and an engineered chemokine superagonist, we determined three distinct complex structures, capturing a GDP-bound Encounter state, the nucleotide-free Canonical state, and a putative intermediate bridging the two states, the Transition-to-Canonical state.",
+          "section": "Abstract"
+        },
+        {
+          "quote": "These structures, along with simulations and functional data, provide high-resolution snapshots of a plausible G protein activation trajectory",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "This structure, refined to 2.6 Å resolution, is analogous to the previously reported TL-state CX3CL1-US28-G11 structure but at substantially higher resolution",
+          "section": "Results"
+        },
+        {
+          "quote": "Notably, 3D classification resolved a putative intermediate bridging these two states: the “Transition-to-Canonical” state (T2C-state), refined to 2.9 Å resolution (Fig. 2a).",
+          "section": "Results"
+        },
+        {
+          "quote": "we focused on the particle subset that yielded the highest-quality map at 2.6 Å resolution",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Based on comparative analysis, we propose that the transition from initial engagement to the nucleotide-free state is driven by α5 engagement, which acts through an allosteric conduit to disrupt the salt bridge between the conserved glutamate and arginine in the P-loop and Switch I, respectively.",
+          "section": "Introduction"
+        },
+        {
+          "quote": "Crucially, our structures, combined with MD simulations, demonstrate that the unlocking of the nucleotide-binding pocket is a distinct event that precedes the large-scale opening of the AHD.",
+          "section": "Discussion"
+        }
+      ],
+      "open": [
+        {
+          "quote": "Defining the precise temporal sequence would require real-time single-molecule or time-resolved assays, which remain technically challenging here.",
+          "section": "Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "receptor",
+    "pathogen"
+  ],
+  "topics": [
+    "membrane",
+    "dynamics"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "E状態からT2C状態でα5がほぼ完成すると、TCATモチーフが乱れ、Glu49–Arg183の塩橋が切れる。Glu49はArg247と新しい塩橋を作り、Arg247とGln152（AHD）の結合が切れて、AHDとRHDの界面が不安定になる。",
+      "evidence": [
+        {
+          "quote": "This sequential breakage and formation of ionic interactions constitute a “salt bridge relay” that transmits the allosteric signal from Switch I to the AHD interface.",
+          "section": "Results"
+        },
+        {
+          "quote": "The transition from the E- to T2C-state triggers a sequence of allosteric rearrangements, initiated as the Gαq α5 helix is almost fully formed (Fig. 5c).",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "C状態ではα5が完成してα1ヘリックスがずれ、その衝突でGDPが押し出され、AHDも離れる。E状態からC状態までに、GqはUS28に対して約33°回転する。",
+      "evidence": [
+        {
+          "quote": "The displaced α1 helix creates a steric clash that physically expels GDP and subsequently pushes the AHD away",
+          "section": "Results"
+        },
+        {
+          "quote": "Gq rotates by approximately 33° accompanied by a slight translation of less than 2 Å along the αN helix",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "実験Tips",
+      "text": "T2C状態から始めた16本の約2 µsのMDのうち、6本がC状態へ、1本がE状態へ部分的に向かった。GDP放出は見られなかった。変異体R129Aでは、Gq活性化が完全に消えた。",
+      "evidence": [
+        {
+          "quote": "In 6 simulations, we identified partial transitions toward the C-state.",
+          "section": "Results"
+        },
+        {
+          "quote": "We did not observe GDP release at the simulated timescales.",
+          "section": "Results"
+        },
+        {
+          "quote": "This mutation completely abolished Gq activation in response to CX3CL1.44.",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "CX3CL1.44とUS28はBacMam系でHEK293S GnTI−細胞に、GαqiN18とGβ1・Gγ2はTrichoplusia ni細胞に発現させた。",
+    "construct": "Gαqの先頭18残基をGαi1の配列に替えたGαqiN18を使い、scFv16が結合できるようにした。",
+    "purification": "アピラーゼで残ったGDPを分解し、FLAGカラムで余分なGqiN18を除いた。scFv16を加え、Superdex 200のSECで精製した。",
+    "sample_prep": "試料に0.1% fOMまたは10 mM CHAPSOを加え、Quantifoilグリッドに3 µLを載せ、Leica EM GPで凍結した。",
+    "data_collection": "Titan Krios（300 kV、K3）で収集し、cryoSPARCで処理した。E状態は193,867粒子で2.6 Åになった。",
+    "evidence": [
+      {
+        "quote": "CX3CL1.44, an engineered version of the chemokine domain of CX3CL1, and full-length US28 were expressed separately with the BacMam system using HEK293S GnTI- cells",
+        "section": "Methods"
+      },
+      {
+        "quote": "GαqiN18 was co-expressed with 6xHis-tagged Gβ1 and Gγ2 in Trichoplusia ni cells (Expression Systems)",
+        "section": "Methods"
+      },
+      {
+        "quote": "GαqiN18 was designed similarly to Gα11iN18 (ref. 27) by replacing the N-terminal 18 amino acid residues with the corresponding region of Gαi1 for scFv16 binding",
+        "section": "Methods"
+      },
+      {
+        "quote": "Residual GDP in the reaction buffer was hydrolyzed with apyrase (NEB), reducing the chance of GDP rebinding from the buffer solution.",
+        "section": "Methods"
+      },
+      {
+        "quote": "3 µL of each mixture was applied to glow-discharged 300 mesh gold grids (Quantifoil R1.2/1.3).",
+        "section": "Methods"
+      },
+      {
+        "quote": "The cryo-EM movies were collected on a Titan Krios operated at 300 kV and equipped with a Gatan K3 camera and BioQuantum imaging filter in super-resolution mode.",
+        "section": "Methods"
+      },
+      {
+        "quote": "The selected 193,867 particles yielded the E-state map with 2.6 Å nominal-resolution determined by gold-standard FSC with the 0.143 criterion",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "US28",
+    "Gq",
+    "GPCR",
+    "GDP放出"
+  ],
+  "editor_notes": "T2C 状態は著者自身が putative intermediate と書いているため『中間体とみられる』とした。構造は界面活性剤ミセル中・scFv16 つきで、MD は T2C 状態からの 16 本のみ（著者が限界として明記）。図は GDP 結合の E 状態 9XH2 を使用。比較図（compare）は付けていない。",
+  "ga_pdb_id": "9XH2",
+  "site_ligand": "GDP",
+  "legend_labels": [
+    "Gαq（G タンパク質 α）",
+    "Gβ1（G タンパク質 β）",
+    "Gγ2（G タンパク質 γ）",
+    "scFv16（抗体断片）",
+    "US28（ウイルス GPCR）",
+    "CX3CL1.44（改変ケモカイン）"
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "pmcid": "PMC13716388",
+  "rank": 5,
+  "headline": "対称な大腸菌FtsEXが、非対称なEnvCを受け止める",
+  "subhead": "ATP結合状態の構造をクライオ電顕で解析。柔らかいループが相手の形に合わせて結合する",
+  "target_label": "FtsEX・EnvC（大腸菌）",
+  "target_en": "E. coli FtsEX (with EnvC)",
+  "summary": {
+    "question": "大腸菌でFtsEXとEnvCが細胞壁の分解をどう制御するかは、構造から調べられていなかった。",
+    "approach": "ATP類似体を結合したFtsEXと、EnvCとの複合体を、ペプチディスクに再構成してクライオ電顕で解析した。",
+    "result": "FtsEXは3.7 Å、EnvCとの複合体は3.4 Åの構造が得られた。EnvCが結合しても、2つのPLDは対称のままだった。",
+    "learned": "柔軟なループと疎水性の接触により、対称なFtsEXが非対称なEnvCに対応すると考えられる。",
+    "open": "EnvC・AmiBとの全体の複合体は、クライオ電顕で明瞭な密度図が得られなかった。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "the structural intricacies governing PG degradation by the FtsEX complex and EnvC in Escherichia coli cytokinesis remain unexplored",
+          "section": "Abstract"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "we subjected the WT EcoFtsEX sample, incubated with 3 mM ATPγS, to single-particle cryo-EM analysis and achieved a resolution of 3.7 Å",
+          "section": "Results"
+        },
+        {
+          "quote": "purified FtsEXE163Q mutant was reconstituted in peptidiscs and incubated with EnvC in the presence of 2 mM ATP for cryo-EM analysis",
+          "section": "Results"
+        }
+      ],
+      "result": [
+        {
+          "quote": "a major conformation stands out with resolution determined at 3.4 Å",
+          "section": "Results"
+        },
+        {
+          "quote": "even when bound to the asymmetrical EnvC, FtsEX—including its two PLD domains interacting directly with EnvC—maintains a symmetrical conformation",
+          "section": "Results"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Thus, our data suggest that the flexible loops, along with the hydrophobic interactions they facilitate, equip the symmetrical FtsEX to effectively engage with asymmetrical partners.",
+          "section": "Results"
+        }
+      ],
+      "open": [
+        {
+          "quote": "The attempt to obtain a cryo-EM structure of the complex was also unsuccessful, possibly because of its inherent flexibility, preventing the reconstruction of a clear EM map.",
+          "section": "Results"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "transporter",
+    "pathogen"
+  ],
+  "topics": [
+    "membrane"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "ATPγS、AMP-PNP、ADPでも複合体が安定になり、FtsEの加水分解できないE163Q変異体でも安定だった。安定化にはATPの加水分解でなく結合で足りる。EnvCが加わるとATPase活性は約2.2倍になる。",
+      "evidence": [
+        {
+          "quote": "it indicates that ATP binding, rather than hydrolysis, is sufficient for complex stabilization",
+          "section": "Results"
+        },
+        {
+          "quote": "in the presence of EnvC, the Vmax (92.7±5.1 nmol/mg/min) was approximately 2.2-fold higher than that observed for FtsEX (42.7±2.1 nmol/mg/min) alone",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "既報の結晶構造（6TPI）ではPLDが非対称で、EnvCのコイルドコイルが開いていた。今回の構造ではコイルドコイルのヘリックス間が24 Åから10 Åに縮み、LytMドメインの密度も見えない。著者はATPの存在下でLytMが放出されると推測している。",
+      "evidence": [
+        {
+          "quote": "the distance between the terminal residue of the α1 helix (Q127) and the initial residue of the α2 helix (Q143) within the CCD domain is reduced from 24 Å to a mere 10 Å",
+          "section": "Results"
+        },
+        {
+          "quote": "Together, we hypothesize that in the presence of ATP, the LytM domain is released, facilitating AmiB recruitment.",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "手法の工夫",
+      "text": "FtsEX・EnvC・AmiBの複合体をネガティブ染色で観察すると、膜から約290 Å伸びた棒状の像が得られた。緑膿菌の系と同様の伸びた形で、活性化状態に近いと著者は考えるが、分解活性は確かめられていない。",
+      "evidence": [
+        {
+          "quote": "extending about 290 Å into the periplasm, which we attribute to the bound EnvC and AmiB",
+          "section": "Results"
+        },
+        {
+          "quote": "A 2D classification analysis presented an elongated structure, mirroring previous observations in P. aeruginosa",
+          "section": "Results"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "大腸菌BL21(DE3) pLysSで発現し、IPTGで誘導。",
+    "construct": "His6タグ付きの全長FtsEXと、ATPを加水分解できないFtsE E163Q変異体。",
+    "purification": "DDMで膜を可溶化し、TALON樹脂上でペプチディスクに再構成。Superose 6でゲル濾過。精製の全過程で2 mM ATP/MgCl2を維持。",
+    "sample_prep": "3 mg/mlの試料をQuantifoilグリッドに載せ、ATPγS（FtsEX）またはATP（E163Q/EnvC）とともに37 °Cで8分置いてから凍結。",
+    "data_collection": "Titan KriosとK3検出器、SerialEMで収集（ピクセル1.06 Å）。cryoSPARCで処理。",
+    "evidence": [
+      {
+        "quote": "FtsEX and its mutants are expressed in E. coli strain BL21(DE3) pLysS (Invitrogen) using lysogeny broth (LB)",
+        "section": "Methods"
+      },
+      {
+        "quote": "to produce pTD68 [PT7::his6-FtsEX]",
+        "section": "Methods"
+      },
+      {
+        "quote": "Mutations to EcoFtsE were generated utilizing the QuikChange kit (Agilent Technologies)",
+        "section": "Methods"
+      },
+      {
+        "quote": "solubilization of the membrane takes place in buffer B, containing 50 mM Tris-HCl, 250 mM NaCl, 1.3% DDM, pH 8.0, 10% glycerol, and 2 mM ATP/MgCl2",
+        "section": "Methods"
+      },
+      {
+        "quote": "The purified protein was directed through a gel filtration chromatography column (Superose 6 increase 10/300)",
+        "section": "Methods"
+      },
+      {
+        "quote": "the sample was incubated at 37°C for 8 minutes with 3 mM ATPγS-2 mM Mg2+ (FtsEX)",
+        "section": "Methods"
+      },
+      {
+        "quote": "which corresponded to a calibrated pixel size of 1.06 Å on the specimen level",
+        "section": "Methods"
+      },
+      {
+        "quote": "For electron microscopy (EM) data processing, CryoSPARC (Punjani et al., 2017) was utilized.",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "FtsEX",
+    "EnvC",
+    "ABC輸送体",
+    "細胞分裂"
+  ],
+  "editor_notes": "PDB 8W6I・8W6J は引用情報なし（寄託情報から対応づけ）。凡例の順は 8W6J のポリマー順（EnvC, FtsX, FtsE）と仮定したので、描画後に確認が必要。緑膿菌FtsEXの既報構造があり、初構造とは書かれていない。",
+  "ga_pdb_id": "8W6J",
+  "legend_labels": [
+    "EnvC（分解の活性化因子）",
+    "FtsX（膜貫通・PLD）",
+    "FtsE（ATPase）"
+  ]
+}

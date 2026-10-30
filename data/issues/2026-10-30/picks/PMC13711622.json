@@ -1,0 +1,146 @@
+{
+ "pmcid": "PMC13711622",
+ "section": "impact",
+ "rank": 1,
+ "headline": "二ヘム酵素の電子は、トリプトファンなしでも運ばれる",
+ "subhead": "MbnHの変異体解析で、ヘムのプロピオン酸基を通る別の電子の通り道が見えた",
+ "target_label": "MbnH（メタン酸化菌）",
+ "target_en": "MbnH (M. trichosporium OB3b)",
+ "method_label": "UV-Vis・EPR・ストップトフロー・変異体解析",
+ "summary": {
+  "question": "二つのヘムの間で電子を運ぶのに、間にあるトリプトファンは欠かせないのかが問われていた。",
+  "approach": "既存のMbnH結晶構造（6E1C）で電子移動の経路を計算し、Trp113とArg283の変異体を分光と速度論で調べた。",
+  "result": "Trp113かArg283の単独変異体はどれも野生型と同じ速度でbis-FeIVを作り、二重変異体W113H/R283Lだけが作れなかった。",
+  "learned": "MbnHでは、Trp113を通る経路とヘムのプロピオン酸基を通る非共有結合の経路が重なって働き、片方が壊れても電子移動は保たれる。",
+  "evidence": {
+   "question": [
+    {
+     "quote": "a tryptophan positioned between the two hemes has been proposed as the dominant pathway for inter-heme electron transfer in MauG and MbnH",
+     "section": "Abstract"
+    },
+    {
+     "quote": "The structural principles governing this shared strategy for ET in bCcPs remain poorly understood.",
+     "section": "Introduction"
+    }
+   ],
+   "approach": [
+    {
+     "quote": "The crystal structure of MbnH (PDB 6E1C) was accessed from the PDB and the coordinates were fed into HARLEM",
+     "section": "Experimental"
+    },
+    {
+     "quote": "we prepared a series of Trp mutants in which the native Trp113 residue was mutated to an Ala, Ser, His, Tyr, and Phe",
+     "section": "Results"
+    }
+   ],
+   "result": [
+    {
+     "quote": "All mutants exhibited indistinguishable formation kinetics, with an average bimolecular rate constant of",
+     "section": "Results"
+    },
+    {
+     "quote": "In contrast, in the W113H/R283L double mutant, we failed to observe a nIR band under identical conditions",
+     "section": "Results"
+    }
+   ],
+   "learned": [
+    {
+     "quote": "this work establishes that diheme peroxidases can rely on redundant electron transfer pathways, a Trp113-mediated route and an additional non-covalent route by leveraging the heme propionate",
+     "section": "Conclusions"
+    }
+   ]
+  }
+ },
+ "categories": [
+  "enzyme"
+ ],
+ "topics": [],
+ "highlights": [
+  {
+   "tag": "機構の解明",
+   "text": "経路計算では、野生型はTrp113を通る経路が最も強く結合した。Trp113を別の残基に替えると、Phe282・Arg283からヘムのプロピオン酸基へ抜ける経路が、同程度の結合の強さで現れた。",
+   "evidence": [
+    {
+     "quote": "In the WT protein, the intervening tryptophan, Trp113, is calculated to be the most coupled pathway irrespective of an electron tunneling or hopping mechanism",
+     "section": "Results"
+    },
+    {
+     "quote": "Our HARLEM analysis identified a previously overlooked pathway, running through Phe282 and Arg283 to a heme propionate, with electronic coupling comparable to the canonical Trp113 pathway",
+     "section": "Discussion"
+    }
+   ]
+  },
+  {
+   "tag": "機構の解明",
+   "text": "Trp113とArg283の単独変異体はどれもbis-FeIVに特徴的な近赤外の吸収を示した。二重変異体W113H/R283Lだけはこの吸収が出ず、プロピオン酸経路と合わせて両方を壊すとbis-FeIVができなかった。",
+   "evidence": [
+    {
+     "quote": "All single point mutants at Trp113 and Arg283 generated the same spectral signatures of bis-FeIV formation as WT when reacted with hydrogen peroxide",
+     "section": "Results"
+    },
+    {
+     "quote": "In contrast, in the W113H/R283L double mutant, we failed to observe a nIR band under identical conditions",
+     "section": "Results"
+    }
+   ]
+  },
+  {
+   "tag": "機構の解明",
+   "text": "bis-FeIVを作れる変異体だけが基質MbnPを修飾でき、二重変異体で共発現したMbnPの銅の結合は15%未満だった。bis-FeIVが基質修飾の触媒中間体だと示す結果だ。",
+   "evidence": [
+    {
+     "quote": "All MbnH mutants capable of forming bis-FeIV remain competent for substrate turnover, while the double mutant incapable of forming bis-FeIV is not, directly linking this high-valent state to substrate modification",
+     "section": "Results"
+    },
+    {
+     "quote": "Copper-binding measurements corroborate this result.",
+     "section": "Results"
+    }
+   ]
+  }
+ ],
+ "lab_notes": {
+  "expression": "MbnPとMbnHを大腸菌BL21-star (DE3)に共発現し、18°Cで約15時間発現させた。",
+  "construct": "Trp113をAla・Ser・His・Tyr・Pheに、Arg283をLys・Leuに置換し、二重変異体W113H/R283Lも作った。",
+  "purification": "Strep-Tactin 4Flow樹脂で精製し、Superdex 200 pgのゲルろ過で仕上げた。",
+  "sample_prep": null,
+  "data_collection": "UV-Vis-nIR分光とストップトフローで速度を測り、電子移動の経路計算はHARLEMで行った。",
+  "evidence": [
+   {
+    "quote": "was co-transformed into BL21-star (DE3) (Invitrogen) with the pEC86 plasmid",
+    "section": "Experimental"
+   },
+   {
+    "quote": "Once the OD600 reached ~0.5, the temperature was reduced to 18 °C, and cells were allowed to express for ~15 hours.",
+    "section": "Experimental"
+   },
+   {
+    "quote": "we prepared a series of Trp mutants in which the native Trp113 residue was mutated to an Ala, Ser, His, Tyr, and Phe",
+    "section": "Results"
+   },
+   {
+    "quote": "The supernatant was first applied to a self-packed column of Strep-Tactin 4Flow resin (IBA) for the isolation of MbnH.",
+    "section": "Experimental"
+   },
+   {
+    "quote": "The affinity column eluents were further purified and buffer exchanged with size-exclusion chromatography using a HiLoad 16/600 Superdex 200 pg (Cytiva)",
+    "section": "Experimental"
+   },
+   {
+    "quote": "All UV-Vis-nIR spectra were collected on a Cary 3500 UV-Vis Spectrophotometer at ambient conditions.",
+    "section": "Experimental"
+   },
+   {
+    "quote": "ET calculations were performed with HARLEM, a software developed by Kurnikov and coworkers.",
+    "section": "Experimental"
+   }
+  ]
+ },
+ "keywords": [
+  "MbnH",
+  "二ヘム酵素",
+  "電子移動"
+ ],
+ "ga_pdb_id": "6E1C",
+ "editor_notes": "新しい構造ではない。MbnH の既存の結晶構造 6E1C（2.6 Å）を電子移動経路の計算（HARLEM）に使い、変異体の分光・速度論で確かめた論文。実験データは分光・EPR・共鳴ラマンで、論文自身の構造決定はない。structure は 1 点（測った結果が既存構造の上で説明される）としたが、経路計算自体は計算である。"
+}

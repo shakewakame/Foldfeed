@@ -1,0 +1,144 @@
+{
+  "pmcid": "PMC13719106",
+  "rank": 8,
+  "headline": "サルの抗体は、ヒトの抗体と似た向きでHCVのE2に結合した",
+  "subhead": "BD抗体25種を調べ、RM3-26とE2コアの結晶構造を2.24 Åで決めた",
+  "target_label": "HCV E2コア×抗体RM3-26",
+  "target_en": "HCV E2 core with macaque antibody RM3-26",
+  "summary": {
+    "question": "C型肝炎ウイルス（HCV）のE1E2にある橋渡しドメイン（BD）を狙う抗体は、まだ十分に理解されていなかった。",
+    "approach": "感染者とワクチン接種したサルから得たBD抗体25種の配列・エピトープ・中和能を調べ、サルの抗体RM3-26の結晶構造も決めた。",
+    "result": "抗体は多様なB細胞系列に由来するが、CDRH3に共通のモチーフが現れ、抗原領域AR4とAR5にまたがるエピトープを認識した。",
+    "learned": "RM3-26はE2の後ろ層（BL）に結合し、ヒトのhcab40と似た向きをとる。BDはワクチン設計の有望な標的だと論文は述べる。",
+    "open": "結晶構造はE2コアとのもので、天然のE1E2上のBDは直接見えていない。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "but BD epitopes and their cognate bnAbs are still poorly understood",
+          "section": "Discussion"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "we characterized the genetic, structural, functional, and epitope features of 25 BD-directed nAbs isolated from HCV-infected individuals or immunized macaques",
+          "section": "Abstract"
+        },
+        {
+          "quote": "A crystal structure of the macaque nAb RM3-26 bound to E2 core domain",
+          "section": "Abstract"
+        }
+      ],
+      "result": [
+        {
+          "quote": "These antibodies derive from diverse B cell lineages but frequently display recurrent CDRH3 motifs and recognize overlapping epitopes spanning antigenic regions AR4 and AR5",
+          "section": "Abstract"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "reveals a BL-directed binding mode analogous to the human nAb hcab40",
+          "section": "Abstract"
+        },
+        {
+          "quote": "Together, these findings underscore BD as a promising target for rational HCV vaccine design.",
+          "section": "Abstract"
+        }
+      ],
+      "open": [
+        {
+          "quote": "the RM3-26 X-ray structure was determined using a soluble E2 core construct rather than the native membrane-associated E1E2 complex",
+          "section": "Limitations of the study"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "immune",
+    "pathogen"
+  ],
+  "topics": [
+    "antibody"
+  ],
+  "highlights": [
+    {
+      "tag": "新しい結合部位",
+      "text": "RM3-26とE2コアの界面は592 Å2と小さく、その97%を重鎖が占める。CDRH1とCDRH3がE2の後ろ層（614〜641番付近）に主に接する。",
+      "evidence": [
+        {
+          "quote": "The RM3-26-E2c3 interaction is almost entirely mediated by the antibody heavy chain, which accounts for 97% of the buried surface area",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "機構の解明",
+      "text": "RM3-26とヒトのhcab40は結合の角度が約5°しか違わず、CDRH1のSGYモチーフがE2と同じように水素結合する。種の違う抗体が似た解を取っている。",
+      "evidence": [
+        {
+          "quote": "Among them, RM3-26 and hcab40 exhibited similar overall binding modes, with approach angles differing by only ~5° (Figure 5B).",
+          "section": "Results"
+        },
+        {
+          "quote": "Both antibodies contain an SGY motif within CDRH1 that mediates hydrogen bonding",
+          "section": "Results"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "BD抗体は、中和面（NF）を狙う抗体と組み合わせると、培養細胞での偽ウイルスの中和が加算的に強まり、一部は相乗的だった。動物での防御効果は未評価だ。",
+      "evidence": [
+        {
+          "quote": "Combining antibodies targeting non-overlapping epitopes enhanced neutralization potency and breadth, with effects that were largely additive and, in some cases, exceeded Bliss independence predictions",
+          "section": "Results"
+        },
+        {
+          "quote": "the protective efficacy of these new antibodies have not been evaluated in vivo",
+          "section": "Limitations of the study"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "FabはExpi293F細胞に重鎖・軽鎖のベクターを一過性に共導入して発現した。",
+    "construct": "E2c3は可変領域3を除いたE2コアで、412–459、486–568、598–645番の残基からなる。",
+    "purification": "CaptureSelect CH1-XLでFabを精製し、Superdex 200でゲルろ過した。",
+    "sample_prep": "H77 E2c3とRM3-26 Fabを1:1.2で混ぜ、ゲルろ過後に蒸気拡散法で結晶化した。",
+    "data_collection": "APS・SSRL・NSLS-IIのビームラインで収集し、Phaser-MRによる分子置換で決定した。",
+    "evidence": [
+      {
+        "quote": "antibody Fab format was expressed by transient co-transfection of the Fab heavy- and light-chain expression vectors into Expi293 F cells",
+        "section": "Methods"
+      },
+      {
+        "quote": "an E2 core domain variant comprising residues 412–459, 486–568, and 598–645",
+        "section": "Introduction"
+      },
+      {
+        "quote": "Affinity chromatography using CaptureSelect CH1-XL affinity matrix (Thermo Fisher Scientific) was used to purify recombinant Fab from culture supernatant",
+        "section": "Methods"
+      },
+      {
+        "quote": "H77 E2c3 protein was mixed with RM3-26 Fab in a 1:1.2 molar ratio and incubated overnight at 4°C.",
+        "section": "Methods"
+      },
+      {
+        "quote": "Diffraction data were collected at synchrotron beamlines APS 23-ID-D, SSRL 12–1, and NSLS-II 17-ID-2",
+        "section": "Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "HCV",
+    "E1E2",
+    "中和抗体",
+    "RM3-26"
+  ],
+  "ga_pdb_id": "9MSK",
+  "legend_labels": [
+    "HCV E2コア（抗原）",
+    "RM3-26 軽鎖（抗体）",
+    "RM3-26 重鎖（抗体）"
+  ],
+  "editor_notes": "PDB は 9MSK（RM3-26+E2c3、PDB 2.23 Å／論文 2.24 Å）のほか、抗体 Fab 単独の 9YJS（B098）・9YK6（B107）。E2 は既存の構造がある（6MEJ など）ので Structure Update の見込み。legend_labels の順は PDB の polymer 順（E2、軽鎖、重鎖）を仮定、描画後に確認が必要。CC BY-NC。"
+}

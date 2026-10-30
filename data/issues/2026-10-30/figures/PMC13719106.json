@@ -1,0 +1,45 @@
+{
+ "pdb_id": "9MSK",
+ "view": {
+  "target": [
+   7.26,
+   0.45,
+   36.71
+  ],
+  "dir": [
+   -0.7942,
+   0.4786,
+   0.3745
+  ],
+  "up": [
+   0.5743,
+   0.7925,
+   0.2051
+  ],
+  "half": [
+   47.4,
+   25.5
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "HCV E2コア（抗原）",
+   "desc": "RM3-26 fab heavy chain",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "RM3-26 軽鎖（抗体）",
+   "desc": "RM3-26 fab light chain",
+   "entity": "2"
+  },
+  {
+   "color": "#5F9296",
+   "label": "RM3-26 重鎖（抗体）",
+   "desc": "Envelope glycoprotein E2",
+   "entity": "3"
+  }
+ ],
+ "ligands": []
+}

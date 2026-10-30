@@ -1,0 +1,155 @@
+{
+  "pmcid": "PMC13714833",
+  "rank": 14,
+  "headline": "テラゾシンは、PGK1が閉じるのを妨げて開いた状態に保つ",
+  "subhead": "NMR滴定と、NOEだけで決めたNMR²構造が、X線構造と同じ結合部位を溶液中で示した",
+  "target_label": "PGK1（ヒト）",
+  "target_en": "Human PGK1 (phosphoglycerate kinase 1)",
+  "summary": {
+    "question": "テラゾシンは低濃度でPGK1の働きを高め、高濃度で抑えるが、X線構造の結合部位はADPと一部重なっていた。",
+    "approach": "NMR滴定でPGK1の開閉を追い、リガンドとタンパク質の間のNOEだけで複合体の構造を決めるNMR²法を使った。",
+    "result": "テラゾシン（Kd 13 μM）はADPで閉じたPGK1を開く方向へ戻した。NMR²構造はX線構造と同じ結合様式に収束した。",
+    "learned": "テラゾシンは別の結合部位でなく、通常の活性部位でPGK1の開閉の平衡を変えて働くと、論文は結論している。",
+    "open": "テラゾシンの中央部（ピペラジン環）には、距離の拘束が直接得られていない。",
+    "evidence": {
+      "question": [
+        {
+          "quote": "Despite this, terazosin enhances ATP production at low concentrations and acts as an inhibitor at higher concentrations.",
+          "section": "Introduction"
+        },
+        {
+          "quote": "terazosin binds in the nucleotide binding domain with partial overlap of the ADP binding site, suggesting direct competition",
+          "section": "Introduction"
+        }
+      ],
+      "approach": [
+        {
+          "quote": "we use chemical shift perturbation analysis and solution NMR structure calculation using NMR2",
+          "section": "Introduction"
+        },
+        {
+          "quote": "NMR2 is a method that determines the three-dimensional structure of a small-molecule ligand bound to a protein from intermolecular NOE-derived distance restraints alone, without requiring full resonance assignment of the protein.",
+          "section": "Introduction"
+        }
+      ],
+      "result": [
+        {
+          "quote": "The binding affinity using peak E318 for ADP and terazosin was measured to be 105 ± 25 μM and 13 ± 7 μM, respectively",
+          "section": "Results and Discussion"
+        },
+        {
+          "quote": "indicating that a reversed transition is induced by terazosin addition",
+          "section": "Results and Discussion"
+        },
+        {
+          "quote": "The structure converges on the same binding mode observed in the X-ray structure of the terazosin complex (4O33)",
+          "section": "Results and Discussion"
+        }
+      ],
+      "learned": [
+        {
+          "quote": "Together, these findings establish that terazosin’s functional effects arise from modulation of conformational equilibria within the canonical active site rather than from binding at an alternative site.",
+          "section": "Conclusion"
+        }
+      ],
+      "open": [
+        {
+          "quote": "leaving the middle portion of terazosin without direct distance restraints",
+          "section": "Results and Discussion"
+        }
+      ]
+    }
+  },
+  "categories": [
+    "enzyme"
+  ],
+  "topics": [
+    "drug",
+    "dynamics"
+  ],
+  "highlights": [
+    {
+      "tag": "機構の解明",
+      "text": "テラゾシンはADPと同じヌクレオチド結合ドメインに結合し、3PG-MgF3−とADPで閉じたPGK1のスペクトルを、開いた状態のパターンへ戻した。低濃度で産物の放出を助け、高濃度で競合阻害する機構と合う。",
+      "evidence": [
+        {
+          "quote": "indicating that a reversed transition is induced by terazosin addition",
+          "section": "Results and Discussion"
+        },
+        {
+          "quote": "support the idea of a mechanism in which terazosin facilitates product release by stabilizing the open conformation at low concentrations, while acting as a competitive inhibitor at higher concentrations",
+          "section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "tag": "手法の工夫",
+      "text": "NMR²は、タンパク質の全共鳴を帰属せず、リガンドとメチル基の間のNOEだけで構造を決める。44.5 kDaのPGK1に使い、Ala・Leu・Ile・Thrの選択的アンラベルで一部のメチル基を帰属して拘束を補った。",
+      "evidence": [
+        {
+          "quote": "NMR2 is a method that determines the three-dimensional structure of a small-molecule ligand bound to a protein from intermolecular NOE-derived distance restraints alone, without requiring full resonance assignment of the protein.",
+          "section": "Introduction"
+        },
+        {
+          "quote": "we prepared 13C,15N labeled PGK1 samples with selectively unlabeled residues (alanine, leucine, isoleucine, threonine)",
+          "section": "Results and Discussion"
+        }
+      ]
+    },
+    {
+      "tag": "創薬・モダリティ",
+      "text": "NMR²構造（32PI）は、X線構造（4O33）とキナゾリン環・ピペラジン環の配置が近く、フラン環だけ少し傾く。溶液中で強く占有される別の結合部位の証拠はなかった。",
+      "evidence": [
+        {
+          "quote": "The NMR2 structure exhibits a slight displacement relative to the X-ray structure, with the quinazoline and the piperazine rings adopting similar conformations, while the furan ring shows a slight tilt.",
+          "section": "Results and Discussion"
+        },
+        {
+          "quote": "with no evidence for a distinct, well-defined secondary binding site that would have been strongly populated under solution conditions",
+          "section": "Results and Discussion"
+        }
+      ]
+    }
+  ],
+  "lab_notes": {
+    "expression": "hPGK1-pET28aをBL21 star大腸菌のM9最少培地（15Nまたは15N,13C）で発現し、0.5 mM IPTG、25℃で誘導した。",
+    "construct": "選択的アンラベルは、培地にLeu・Ile・Thr（1 g/L）またはAla（0.5 g/L）を加えて行った。",
+    "purification": "ニッケル親和性精製、TEVでHisタグ除去、逆ニッケル親和性の後、PD10でNMR緩衝液に交換した。",
+    "sample_prep": "フィルターNOESYは、800 μMの13C,15N-hPGK1に1 mMのテラゾシンと1 mMの3PGを加えて測定した。",
+    "data_collection": "900 MHzでフィルターNOESYを測定。NMR²は4O33を出発構造に計算し、HADDOCK 2.4で水中の精密化を行った。",
+    "evidence": [
+      {
+        "quote": "hPGK1 was recombinantly expressed using a hPGK1-PET28a vector in BL21 star Escherichia coli cells.",
+        "section": "Materials and Methods"
+      },
+      {
+        "quote": "In the case of selective unlabeling, 1 g/L of leucine, isoleucine, or threonine, or 0.5 g/L of alanine was added to the culture before induction.",
+        "section": "Materials and Methods"
+      },
+      {
+        "quote": "After reverse nickel affinity chromatography, the buffer was exchanged to NMR buffer",
+        "section": "Materials and Methods"
+      },
+      {
+        "quote": "The F1-[13C,15N]-Filtered [1H,1H]-NOESY spectra were acquired with 800 μM 13C,15N-labeled hPGK1, 1 mM terazosin and 1 mM 3PG",
+        "section": "Materials and Methods"
+      },
+      {
+        "quote": "Thereby, PDB 4O33 was used as starting structure.",
+        "section": "Materials and Methods"
+      },
+      {
+        "quote": "The best resulting structure was submitted into HADDOCK 2.4 web portal water refinement tool.",
+        "section": "Materials and Methods"
+      }
+    ]
+  },
+  "keywords": [
+    "PGK1",
+    "テラゾシン",
+    "NMR²"
+  ],
+  "method_label": "NMR",
+  "ligand_label": "テラゾシン",
+  "editor_notes": "PDB 32PI は未公開のため図なし。新しい NMR 構造だが、既知の X 線構造 4O33 と同じ結合様式を溶液で確かめたもので、新規性は小さい（Structure Update 向き）。論文は『活性化は低濃度で産物放出が促進される』を既報のモデルと整合的としており、見出しは滴定で示された『開いた状態に保つ』に限った。"
+}

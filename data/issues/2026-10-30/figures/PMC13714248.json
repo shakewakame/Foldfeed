@@ -1,0 +1,107 @@
+{
+ "pdb_id": "9XH2",
+ "view": {
+  "target": [
+   148.54,
+   149.1,
+   175.02
+  ],
+  "dir": [
+   0.9046,
+   0.4037,
+   0.1366
+  ],
+  "up": [
+   -0.3488,
+   0.517,
+   0.7817
+  ],
+  "half": [
+   51.8,
+   64.0
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "Gαq（G タンパク質 α）",
+   "desc": "Guanine nucleotide-binding protein G(q) subunit alpha",
+   "entity": "1"
+  },
+  {
+   "color": "#C9A04B",
+   "label": "Gβ1（G タンパク質 β）",
+   "desc": "Guanine nucleotide-binding protein G(I)/G(S)/G(T) subunit beta-1",
+   "entity": "2"
+  },
+  {
+   "color": "#5F9296",
+   "label": "Gγ2（G タンパク質 γ）",
+   "desc": "Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-2",
+   "entity": "3"
+  },
+  {
+   "color": "#A5707A",
+   "label": "scFv16（抗体断片）",
+   "desc": "Antibody fragment scFv16",
+   "entity": "4"
+  },
+  {
+   "color": "#7C8AA8",
+   "label": "US28（ウイルス GPCR）",
+   "desc": "G-protein coupled receptor homolog US28",
+   "entity": "5"
+  },
+  {
+   "color": "#8A9A5B",
+   "label": "CX3CL1.44（改変ケモカイン）",
+   "desc": "N-terminal fragment of the engineered fractalkine CX3CL1.44",
+   "entity": "6"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "GDP",
+   "label": "GDP",
+   "color": "#C23B8E",
+   "desc": "Guanosine-5'-Diphosphate",
+   "entity": [
+    "7"
+   ],
+   "sites": [
+    [
+     "G",
+     "401"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "GDP",
+  "residues": [
+   "T47",
+   "E49",
+   "S50",
+   "G51",
+   "K52",
+   "S53",
+   "T54",
+   "D155",
+   "S156",
+   "L180",
+   "R181",
+   "R183",
+   "N274",
+   "K275",
+   "D277",
+   "L278",
+   "C330",
+   "A331",
+   "T332"
+  ],
+  "hbonds": 27,
+  "pi": 1,
+  "neighbours": [],
+  "label": "GDP"
+ }
+}
