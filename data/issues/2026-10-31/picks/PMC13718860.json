@@ -1,0 +1,152 @@
+{
+ "pmcid": "PMC13718860",
+ "section": "impact",
+ "rank": 1,
+ "headline": "Nur77 のリガンド結合ドメインは、2つの状態で共存している",
+ "subhead": "NMR と変異体解析で、H1–H3 ループ周辺の弱い相互作用網が状態の比率を保つことが分かった",
+ "target_label": "Nur77 LBD（NR4A1）",
+ "target_en": "Nur77 (NR4A1) ligand-binding domain",
+ "method_label": "NMR・19F NMR・変異体解析",
+ "summary": {
+  "question": "Nur77 はリガンドの入る空洞が側鎖で埋まっており、アロステリーの仕組みはよく分かっていなかった。",
+  "approach": "LBD を 1H–15N HSQC と 19F NMR で調べ、既存の結晶構造 4JGV に対応づけた。変異体と THPN の滴定も行った。",
+  "result": "apo の LBD は主状態が約56%、副状態が約44%で共存した。副状態は W420 周辺の溶媒への露出が大きかった。",
+  "learned": "H1–H3 ループと周辺の弱い相互作用網が2状態の比を保つ。THPN には溶媒に開いた副状態のほうが結合しやすい。",
+  "open": "各状態の高分解能の構造は未解明で、クライオ電顕や溶液構造の決定が必要だと論文は書いている。",
+  "evidence": {
+   "question": [
+    {
+     "quote": "The poorly understood conformational dynamics and allosteric regulatory mechanisms of the Nur77 LBD have severely impeded progress in deciphering Nur77 signal transduction and in rational drug design.",
+     "section": "Introduction"
+    }
+   ],
+   "approach": [
+    {
+     "quote": "Using NMR spectroscopy, we identified two conformational substates defined by a pocket enclosed by the H1–H3 loop of the ligand-binding domain.",
+     "section": "Abstract"
+    },
+    {
+     "quote": "we mapped the residues displaying peak splitting in the 1H–15N HSQC spectrum (Fig. 1A) onto the crystal structure of the Nur77 LBD (Fig. 2A)",
+     "section": "Results"
+    }
+   ],
+   "result": [
+    {
+     "quote": "which yielded a major-state population of approximately 56% and a minor-state population of approximately 44%.",
+     "section": "Results"
+    },
+    {
+     "quote": "the minor-state resonance displayed a pronounced SIIS of approximately 11 Hz",
+     "section": "Results"
+    }
+   ],
+   "learned": [
+    {
+     "quote": "Thus, the H1–H3 loop serves as an essential, but not exclusive, allosteric regulator of the Nur77 LBD conformational equilibrium.",
+     "section": "Results"
+    },
+    {
+     "quote": "firmly establish that the minor substate is the preferred binding conformation",
+     "section": "Results"
+    }
+   ],
+   "open": [
+    {
+     "quote": "First, high-resolution structural models of the individual substates are still lacking, and the current structural interpretation relies on an existing crystal structure together with NMR-derived restraints; further structural studies, such as cryo-electron microscopy or solution-state structure determination, will be needed to visualize each substate directly.",
+     "section": "Discussion"
+    }
+   ]
+  }
+ },
+ "categories": [
+  "receptor"
+ ],
+ "topics": [],
+ "highlights": [
+  {
+   "tag": "機構の解明",
+   "text": "H1–H3 ループの該当部分を Nurr1 のものに替えると2状態が1つになった。逆に Nurr1 へ Nur77 のループを移しても2状態にならず、ループは必要だが十分ではない。",
+   "evidence": [
+    {
+     "quote": "These results demonstrate that the H1–H3 loop is a necessary element for the conformational heterogeneity observed in Nur77, as its replacement by the Nurr1 loop completely eliminates the conformational heterogeneity. However, the reciprocal experiment shows that the loop alone is not sufficient to confer the two-state behavior.",
+     "section": "Results"
+    }
+   ]
+  },
+  {
+   "tag": "機構の解明",
+   "text": "H372・G376・P377・S413・C465 の周りの弱い相互作用網に点変異を入れると、どの変異でも2状態は1つになった。P377A は露出した副状態に偏った。",
+   "evidence": [
+    {
+     "quote": "Strikingly, all mutations resulted in the collapse of the dual-peak pattern, yielding a single resonance that is indicative of a uniform conformational state (Fig. 4B).",
+     "section": "Results"
+    },
+    {
+     "quote": "the HSQC data unambiguously show that the minor state is preferentially stabilized",
+     "section": "Results"
+    }
+   ]
+  },
+  {
+   "tag": "創薬・モダリティ",
+   "text": "THPN の滴定では副状態の信号が先に減った。副状態に偏る P377A は、野生型より2.5倍強く THPN に結合した。ただし試した低分子は THPN だけである。",
+   "evidence": [
+    {
+     "quote": "upon incremental addition of the ligand, the resonance corresponding to the minor substate diminished preferentially",
+     "section": "Results"
+    },
+    {
+     "quote": "the P377A mutant exhibited a 2.5-fold higher binding affinity than the wild-type protein",
+     "section": "Results"
+    }
+   ]
+  }
+ ],
+ "lab_notes": {
+  "expression": "大腸菌 BL21 (DE3) で発現し、IPTG 0.5 mM、20°C で20時間誘導した。15N は M9 培地、19F は 5-フルオロインドールで標識した。",
+  "construct": "Nur77 LBD は残基351–598（His6 タグつき）。ループ交換キメラと点変異体も作った。",
+  "purification": "Ni-Sepharose のアフィニティーと PG75 のゲルろ過で精製した。",
+  "sample_prep": null,
+  "data_collection": "1H–15N HSQC は Bruker 850 MHz、19F NMR は 700・600 MHz で、298 K で測定した。",
+  "evidence": [
+   {
+    "quote": "followed by induction with 0.5 mM isopropyl-β-d-1-thiogalactopyranoside (IPTG) and incubation at 20 °C for 20 h with agitation at 220 rpm.",
+    "section": "Materials and methods"
+   },
+   {
+    "quote": "For 15N labeling, M9 minimal medium with 15NH4Cl as the sole nitrogen source was employed;",
+    "section": "Materials and methods"
+   },
+   {
+    "quote": "The recombinant constructs used in this study were His6-Nur77 LBD (residues “351–598”; calculated mass 28.706 kDa including His6 tag",
+    "section": "Materials and methods"
+   },
+   {
+    "quote": "the clarified supernatant was subjected to Ni-Sepharose affinity chromatography, and the eluate was concentrated and further purified by PG75 size-exclusion chromatography.",
+    "section": "Materials and methods"
+   },
+   {
+    "quote": "NMR spectra for 1H–15N HSQC were recorded using Bruker 850 MHz instruments.",
+    "section": "Materials and methods"
+   },
+   {
+    "quote": "NMR spectra for 19F were recorded using Bruker 700 MHz and 600 MHz instruments.",
+    "section": "Materials and methods"
+   }
+  ]
+ },
+ "keywords": [
+  "Nur77",
+  "NR4A1",
+  "NMR"
+ ],
+ "ga_pdb_id": "4JGV",
+ "legend_labels": [
+  "Nur77 LBD（核内受容体）"
+ ],
+ "ligand_names": {
+  "T94": "THPN"
+ },
+ "site_ligand": "T94",
+ "editor_notes": "新しい構造ではない。論文自身の構造決定はなく、NMR（HSQC・19F）で既存の結晶構造 4JGV に対応づけた研究。structure は 1 点とした。"
+}

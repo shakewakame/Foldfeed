@@ -1,0 +1,136 @@
+{
+ "pmcid": "PMC13717605",
+ "rank": 2,
+ "headline": "細菌のシアリダーゼは、補体のシアル酸を外して免疫を逃れる",
+ "subhead": "T. denticola の NanH を結晶構造と血清殺菌試験で調べ、触媒ドメインの共通性も示した",
+ "target_label": "NanH（T. denticola）",
+ "target_en": "T. denticola NanH sialidase (GH33)",
+ "method_label": "X-ray・1.55〜1.81 Å",
+ "summary": {
+  "question": "細菌のシアリダーゼが補体系にどう影響するかは、よく分かっていなかった。",
+  "approach": "6種のシアリダーゼで補体タンパク質の脱シアル化を調べ、T. denticola の NanH は結晶構造まで決めた。",
+  "result": "6種すべてが補体タンパク質のシアル酸を外した。NanH で前処理した血清では、補体の活性化と菌への沈着が減った。",
+  "learned": "シアリダーゼは補体因子のシアル酸を外して菌を血清殺菌から守る。この仕組みは5種の病原菌の6酵素に共通していた。",
+  "evidence": {
+   "question": [
+    {
+     "quote": "yet their impact on the complement system, a central component of innate immunity, remains poorly understood.",
+     "section": "Abstract"
+    }
+   ],
+   "approach": [
+    {
+     "quote": "Using the oral pathogen T. denticola and its sialidase NanH as a representative model, we demonstrate that sialidase‐mediated desialylation suppresses complement activation and surface deposition, promoting complement evasion.",
+     "section": "Abstract"
+    }
+   ],
+   "result": [
+    {
+     "quote": "We show that major complement proteins, including C1q, C4, and C5, as well as complement regulators Factor I, Factor H, and C4BP, are modified by terminal sialic acids (sialylation) and undergo terminal desialylation by all six sialidases.",
+     "section": "Abstract"
+    },
+    {
+     "quote": "pretreatment of human serum with active Td‐NanH, but not the inactive Td‐NanH* mutant, significantly reduced complement activation and deposition on the surface of T. denticola cells",
+     "section": "Results"
+    }
+   ],
+   "learned": [
+    {
+     "quote": "Collectively, these results demonstrate that GH33 sialidases protect bacteria from complement‐mediated killing by desialylating serum complement factors.",
+     "section": "Results"
+    },
+    {
+     "quote": "Together, these findings establish a conserved structural and functional mechanism by which diverse bacterial pathogens desialylate complement components to impair innate immune defense.",
+     "section": "Abstract"
+    }
+   ]
+  }
+ },
+ "categories": [
+  "enzyme",
+  "pathogen"
+ ],
+ "highlights": [
+  {
+   "tag": "機構の解明",
+   "text": "NanH は N 末端の β-grasp ドメインと、六枚羽根 β プロペラの触媒ドメインからなる。活性部位には Tyr463・Glu338・Asp165 と、3つの Arg（140・354・423）が並ぶ。",
+   "evidence": [
+    {
+     "quote": "Td‐NanH comprises two major domains: an N‐terminal domain (N0471; residues 44–121) with an undefined function and a C‐terminal catalytic domain (C0471; residues 122–543) adopting the canonical six‐bladed β‐propeller fold characteristic of GH33 sialidases",
+     "section": "Results"
+    },
+    {
+     "quote": "Its conserved active site cleft (Figure 7a), located at the center of the β‐propeller, contains Tyr‐463 and Glu‐338 as the catalytic nucleophile and general base, Asp‐165 as the general acid/base for water activation, and three conserved arginine residues (Arg‐140, Arg‐354, and Arg‐423)",
+     "section": "Results"
+    }
+   ]
+  },
+  {
+   "tag": "新しい結合部位",
+   "text": "Neu5Ac との複合体では、C4 水酸基が Arg159・Asp165・Asp205 と水素結合し、N-アセチル基は疎水性のポケットに入る。DANA は遷移状態アナログの阻害剤で、ほぼ同じ向きに結合する。",
+   "evidence": [
+    {
+     "quote": "Clear electron density revealed binding of β‐Neu5Ac in the active site (Figure 7b and Figures S13 and S14), where its C4 hydroxyl forms hydrogen bonds with Arg‐159, Asp‐165, and Asp‐205 and its N‐acetyl group inserts into a hydrophobic pocket formed by Leu‐166, Val‐222, Tyr‐228, Leu‐237, and Phe‐272, and is further stabilized by an ionic interaction with Asp‐205.",
+     "section": "Results"
+    },
+    {
+     "quote": "we solved the crystal structures of Td‐NanH in complex with Neu5Ac (Figure 7b) and 2,3‐dehydro‐2‐deoxy‐N‐acetylneuraminic acid (DANA, a transition‐state analogue sialidase inhibitor (Schreiner et al., 1991)) (Figure 7c) at 1.56 and 1.55 Å resolution, respectively.",
+     "section": "Results"
+    },
+    {
+     "quote": "DANA binds in an almost identical pose",
+     "section": "Results"
+    }
+   ]
+  },
+  {
+   "tag": "機構の解明",
+   "text": "D165A 変異体と 3′-シアリルラクトースの複合体（1.81 Å）では、末端のシアル酸が DANA とほぼ同じ形で結合した。結合しても大きな構造変化はなく、活性部位は硬い足場として働く。",
+   "evidence": [
+    {
+     "quote": "Importantly, the terminal sialic acid of 3′‐SL binds in nearly the same conformation as DANA, with only a slightly less distorted boat conformation of the sugar ring.",
+     "section": "Results"
+    },
+    {
+     "quote": "Structural comparisons across unliganded, substrate‐bound, and inhibitor‐bound states reveal a rigid active‐site scaffold",
+     "section": "Results"
+    }
+   ]
+  }
+ ],
+ "lab_notes": {
+  "expression": "Lemo21 (DE3) 大腸菌で発現し、IPTG 1 mM で18°C、16時間誘導した。",
+  "construct": "野生型と、触媒活性を弱めた D165A 変異体を作った。",
+  "purification": null,
+  "sample_prep": "Berkeley Screen の G12 条件（Bis-Tris Propane・クエン酸・CdCl2・PEG400）を最適化し、シーディングで結晶化した。",
+  "data_collection": "APS の 23-ID-B / 23-ID-D で100 K の回折データを集め、Xia2/DIALS で処理した。AlphaFold2 モデルを使い Phaser で分子置換した。",
+  "evidence": [
+   {
+    "quote": "Plasmids encoding wild‐type Td‐NanH and point mutant D165A were transformed into Lemo21 (DE3) E. coli.",
+    "section": "Crystallography"
+   },
+   {
+    "quote": "The cells were induced by the addition of IPTG to a final concentration of 1 mM and the temperature was lowered to 18°C.",
+    "section": "Crystallography"
+   },
+   {
+    "quote": "identified a lead from condition G12 (0.075 M Bis‐Tris Propane, 0.025 M Citric Acid, pH 8.2, 0.02 M Cadmium Chloride, 25% PEG400) of the Berkeley Screen (Rigaku, Bainbridge Island, WA). The initial hit appeared as liquid–liquid phase separation with a strong UV signal and was optimized by standard methods, including seeding.",
+    "section": "Crystallography"
+   },
+   {
+    "quote": "X‐ray diffraction data were collected at 100 K on beamlines 23‐ID‐B (unliganded Td‐NanH, Td‐NanH:Neu5Ac, and Td‐NanH:DANA) and 23‐ID‐D (Td‐NanH:3′‐SL) at the Advanced Photon Source",
+    "section": "Crystallography"
+   },
+   {
+    "quote": "The structure of unliganded Td‐NanH was determined by molecular replacement using Phaser",
+    "section": "Crystallography"
+   }
+  ]
+ },
+ "keywords": [
+  "シアリダーゼ",
+  "補体",
+  "T. denticola"
+ ],
+ "editor_notes": "PDB ID は本文になく（補足資料のみ）、図なし。分解能は本文の値。「初めて」とは書いていないので Structure Update の扱い。"
+}

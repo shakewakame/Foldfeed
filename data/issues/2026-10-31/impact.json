@@ -1,0 +1,207 @@
+{
+ "screened": 29,
+ "scored": [
+  {
+   "pmcid": "PMC13718860",
+   "type": "mechanism",
+   "scores": {
+    "novelty": 2,
+    "reach": 1,
+    "structure": 1,
+    "support": 2
+   },
+   "selected": true,
+   "reason": "アポ型 LBD が2状態で共存し、弱い相互作用網がその比を保つと NMR と変異体で示した。ただし構造は既存の 4JGV に対応づけたもので、系は Nur77 に限られる（5〜6点のため何が新しいかを書く：空洞のない受容体にも立体構造の可塑性があるという点）。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "Our NMR investigation reveals that this apparent structural simplicity masks a complex conformational landscape.",
+      "section": "Discussion"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "The Nur77 LBD has thus emerged as a promising drug target, holding considerable therapeutic potential for cancer and other major diseases",
+      "section": "Introduction"
+     }
+    ],
+    "structure": [
+     {
+      "quote": "we mapped the residues displaying peak splitting in the 1H–15N HSQC spectrum (Fig. 1A) onto the crystal structure of the Nur77 LBD (Fig. 2A)",
+      "section": "Results"
+     }
+    ],
+    "support": [
+     {
+      "quote": "Strikingly, all mutations resulted in the collapse of the dual-peak pattern, yielding a single resonance that is indicative of a uniform conformational state (Fig. 4B).",
+      "section": "Results"
+     },
+     {
+      "quote": "the P377A mutant exhibited a 2.5-fold higher binding affinity than the wild-type protein",
+      "section": "Results"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13717755",
+   "type": "drug",
+   "scores": {
+    "novelty": 1,
+    "reach": 1,
+    "structure": 1,
+    "support": 2
+   },
+   "selected": false,
+   "reason": "ドッキングで選んだ化合物の結合を HSQC の化学シフト変化と HTRF・MST で確かめた。阻害剤の続報で、新しさは基準未満。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "Calculated binding-pose analysis revealed 79 compounds",
+      "section": "Introduction"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "Targeting the YTHDF paralogs",
+      "section": "Introduction"
+     }
+    ],
+    "structure": [
+     {
+      "quote": "Binding-induced chemical shift perturbations (CSPs) upon the addition of DT11",
+      "section": "Results"
+     }
+    ],
+    "support": [
+     {
+      "quote": "Binding-induced chemical shift perturbations (CSPs) upon the addition of DT11",
+      "section": "Results"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13719170",
+   "type": "drug",
+   "scores": {
+    "novelty": 1,
+    "reach": 1,
+    "structure": 0,
+    "support": 2
+   },
+   "selected": false,
+   "reason": "hPepT2 は相同性モデルと MD が根拠で、実験構造による確認がない（structure 0）。変異体の取り込み実験は機能測定。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "This study establishes the first structure-interaction relationship",
+      "section": "Discussion"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "Multidrug-resistant (MDR) Gram-negative bacteria pose a critical global health threat",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "Through the commonly used alanine-scanning mutagenesis approach",
+      "section": "Results"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13718768",
+   "type": "drug",
+   "scores": {
+    "novelty": 1,
+    "reach": 1,
+    "structure": 0,
+    "support": 1
+   },
+   "selected": false,
+   "reason": "ファージディスプレイで得た単一ドメイン抗体 J8 の機能研究。自前の構造データはなく、既存のフィブリル構造の引用にとどまる（structure 0）。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "phage display against immobilized Aβ40 fibrils",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "Alzheimer disease is characterized by extracellular amyloid-β deposition",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "J8 bound fibrils with high apparent affinity",
+      "section": "Abstract"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13718419",
+   "type": "ai_design",
+   "scores": {
+    "novelty": 2,
+    "reach": 2,
+    "structure": 0,
+    "support": 1
+   },
+   "selected": false,
+   "reason": "配列選択なしでアプタマーを設計する計算パイプライン。既知の共結晶構造との照合が評価の中心で、設計した複合体の実験構造はない（structure 0）。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "We introduce Xelari, a modular pipeline for de novo DNA and RNA aptamer design",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "can be constrained by target availability, selection biases, and optimization requirements",
+      "section": "Abstract"
+     }
+    ],
+    "support": [
+     {
+      "quote": "The benchmark contains 38 protein-aptamer co-crystal structures",
+      "section": "Results"
+     }
+    ]
+   }
+  },
+  {
+   "pmcid": "PMC13717786",
+   "type": "method",
+   "scores": {
+    "novelty": 1,
+    "reach": 1,
+    "structure": 0,
+    "support": 0
+   },
+   "selected": false,
+   "reason": "物理ベースの in silico 進化ワークフロー。MD とモデリングが中心で、既存の結晶構造 9PHG は出発点にすぎない（structure 0）。",
+   "evidence": {
+    "novelty": [
+     {
+      "quote": "This Virtual Protein EngineeR (referred to as ViPER)",
+      "section": "Abstract"
+     }
+    ],
+    "reach": [
+     {
+      "quote": "Directed evolution consistently delivers engineered enzymes",
+      "section": "Abstract"
+     }
+    ]
+   }
+  }
+ ]
+}
