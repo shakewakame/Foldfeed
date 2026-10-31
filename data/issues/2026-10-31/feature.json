@@ -1,0 +1,23 @@
+{
+ "pmcid": "PMC13717195",
+ "axes": [
+  "structure"
+ ],
+ "reason": "分岐後からバックスプライシング直前まで、金属イオンの入れ替わりを8つの構造でたどり、新しい一価イオン部位 K3 を示した。",
+ "evidence": [
+  {
+   "quote": "Crucially, we identify a previously unrecognized, highly selective monovalent cation-binding site, K3,",
+   "section": "Abstract"
+  }
+ ],
+ "considered": [
+  {
+   "pmcid": "PMC13717605",
+   "note": "結晶構造と血清試験で補体回避を示したが、構造は既知の GH33 の枠内で、構造からの新しさは Gdi-1 のほうが大きい。"
+  },
+  {
+   "pmcid": "PMC13718860",
+   "note": "NMR の2状態の発見は面白いが、論文自身の構造決定はなく、既存構造への対応づけにとどまる。"
+  }
+ ]
+}

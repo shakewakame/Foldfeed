@@ -1,0 +1,131 @@
+{
+ "pmcid": "PMC13717195",
+ "rank": 1,
+ "headline": "環状RNAを作るリボザイムは、一価イオンを足場に活性部位を組み直す",
+ "subhead": "8つのクライオ電顕構造が、分岐からバックスプライシングへ移る金属イオンの入れ替わりを示した",
+ "target_label": "Gdi-1 イントロン（酢酸菌）",
+ "target_en": "Gdi-1 CP group II intron (G. diazotrophicus)",
+ "method_label": "Cryo-EM・2.42〜3.20 Å",
+ "summary": {
+  "question": "分岐反応のあと、バックスプライシングへ移るときに活性部位がどう組み直されるかは、よく分かっていなかった。",
+  "approach": "Gdi-1 イントロンを K+/Mg2+・K+/Ca2+・Cs+/Mg2+ の3条件に置き、クライオ電顕で8つの状態の構造を決めた。",
+  "result": "バックスプライシング直前の構造に、新しい一価イオン結合部位 K3 が見つかった。K+/Ca2+ では K3 も M2 も見えなかった。",
+  "learned": "K3 が γ–γ′ 相互作用を安定させ、4つの金属イオンからなる触媒の核が再構築されて、第2段階の活性部位ができる。",
+  "evidence": {
+   "question": [
+    {
+     "quote": "While the initial branching step is structurally characterized, the mechanistic principles that govern the subsequent large-scale active-site remodeling and stringent metal-ion specificity required for backsplicing remain poorly understood.",
+     "section": "Abstract"
+    }
+   ],
+   "approach": [
+    {
+     "quote": "Here, we present a series of high-resolution cryo-EM structures of the CP group II intron from Gluconacetobacter diazotrophicus PAL5 (Gdi-1), capturing the ribozyme at discrete stages along the branching -to- backsplicing pathway under distinct ionic conditions.",
+     "section": "Abstract"
+    }
+   ],
+   "result": [
+    {
+     "quote": "In contrast, no corresponding density is detected in the K+/Ca2+ structure (Fig. 5A), indicating that occupancy of the K3 site is associated with backsplicing-competent active-site organization.",
+     "section": "Results"
+    },
+    {
+     "quote": "No corresponding density is detected under K+/Ca2+ conditions, indicating failure to establish a catalytically competent M2 site.",
+     "section": "Results"
+    }
+   ],
+   "learned": [
+    {
+     "quote": "Concomitantly, the K3 coordination network is established and the heteronuclear four-metal core is reassembled, generating a catalytically competent second-step active site in which M1 and M2 occupy their functional catalytic positions.",
+     "section": "Results"
+    }
+   ]
+  }
+ },
+ "categories": [
+  "nucleic"
+ ],
+ "highlights": [
+  {
+   "tag": "機構の解明",
+   "text": "分岐反応の直後に触媒金属イオン M1 が外れ、M2 だけが残る。D6 が下向きに動くと bpA が約20 Å回って G209 が遠ざかり、3′ スプライス部位が活性部位に入る。",
+   "evidence": [
+    {
+     "quote": "K1 and K2 occupy positions nearly identical to those observed in the pre-branching state, whereas M1 is no longer detected.",
+     "section": "Results"
+    },
+    {
+     "quote": "During this transition, bpA undergoes an ∼20 Å clockwise rotation, carrying the covalently linked G209 away from the catalytic center as the 3′SS is docked into the active site",
+     "section": "Results"
+    }
+   ]
+  },
+  {
+   "tag": "新しい結合部位",
+   "text": "K3 は C84・G210・U134 の間にあり、バックスプライシング直前の状態だけで見える。Cs+ に置き換えた構造でも同じ位置に Cs3 が入り、一価イオンという割り当てを支える。",
+   "evidence": [
+    {
+     "quote": "Located between C84 of the 2-nt bulge, G210 in the 5′SS region, and U134 of the 3′SS, this density resides immediately adjacent to both K1 and M1",
+     "section": "Results"
+    },
+    {
+     "quote": "A strong density was observed at the equivalent position, where a Cs+ ion (Cs3) occupies the K3 site and engages the same set of ligands observed in the K+/Mg2+ structure, albeit with longer coordination distances consistent with the larger ionic radius of Cs+ (Fig. 5C).",
+     "section": "Results"
+    }
+   ]
+  },
+  {
+   "tag": "機構の解明",
+   "text": "γ–γ′ 相互作用を壊す置換は環状RNAの生成を大きく下げ、塩基対を戻す補償変異でほぼ野生型の活性に戻った。この相互作用が第2段階の活性部位に必要だと示す。",
+   "evidence": [
+    {
+     "quote": "Quantification of circRNA production after 10 min of self-splicing at 5 mM Mg2+ showed that disruption of the γ–γ′ interaction markedly reduced circRNA formation under all conditions tested, whereas compensatory mutations restored activity to near wild-type levels",
+     "section": "Results"
+    },
+    {
+     "quote": "Together, these structural and biochemical data demonstrate that formation of the γ–γ′ interaction is required for productive assembly of the second-step active site, thereby promoting efficient backsplicing.",
+     "section": "Results"
+    }
+   ]
+  }
+ ],
+ "lab_notes": {
+  "expression": null,
+  "construct": null,
+  "purification": "in vitro 転写した RNA を変性尿素 PAGE で分け、切り出して溶出・精製した。",
+  "sample_prep": "RNA を 20 mM の MgCl2 または CaCl2 とともに 37°C で30分置き、約15 µM に濃縮した。Vitrobot Mark IV で凍結した。",
+  "data_collection": "Krios G4（300 kV）と Falcon 4i で撮影し、cryoSPARC v4 で解析した。モデルは Phenix.real_space_refine で精密化した。",
+  "evidence": [
+   {
+    "quote": "RNA bands were excised and eluted overnight at 4°C in RNase-free water containing 300 mM NaOAc and 50 mM EDTA, filtered through 0.22 μm membranes, precipitated with isopropanol",
+    "section": "Materials and methods"
+   },
+   {
+    "quote": "0.5 µM RNA was annealed as described above, incubated with 20 mM MgCl2 or CaCl2 at 37°C for 30 min in a 1.5 ml reaction volume.",
+    "section": "Materials and methods"
+   },
+   {
+    "quote": "Grids were blotted for 1.5 s at 4°C (100% humidity) and plunge-frozen in liquid ethane using a Vitrobot Mark IV (Thermo Fisher Scientific).",
+    "section": "Materials and methods"
+   },
+   {
+    "quote": "All datasets were acquired using a Thermo Fisher Krios G4 cryo–electron microscope operating at 300 kV under identical microscope settings.",
+    "section": "Materials and methods"
+   },
+   {
+    "quote": "two rounds of reference-free 2D classification in cryoSPARC v4",
+    "section": "Materials and methods"
+   },
+   {
+    "quote": "All models were refined against the corresponding cryo-EM maps using Phenix.real_space_refine",
+    "section": "Materials and methods"
+   }
+  ]
+ },
+ "keywords": [
+  "グループ II イントロン",
+  "環状RNA",
+  "金属イオン"
+ ],
+ "editor_notes": "PDB ID（20XR など）は未公開のため図なし。論文の PDB ID は '20XR' のように数字で始まる形式で、本文のとおりに扱った。第1著者・責任著者は collect の people を参照。"
+}

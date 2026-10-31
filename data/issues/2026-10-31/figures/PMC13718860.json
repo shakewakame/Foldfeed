@@ -1,0 +1,69 @@
+{
+ "pdb_id": "4JGV",
+ "view": {
+  "target": [
+   -5.89,
+   21.56,
+   18.26
+  ],
+  "dir": [
+   0.8436,
+   -0.5322,
+   -0.0716
+  ],
+  "up": [
+   0.051,
+   -0.0533,
+   0.9973
+  ],
+  "half": [
+   23.3,
+   42.8
+  ]
+ },
+ "legend": [
+  {
+   "color": "#3C5A8C",
+   "label": "Nur77 LBD（核内受容体）",
+   "desc": "Nuclear receptor subfamily 4 group A member 1",
+   "entity": "1"
+  }
+ ],
+ "ligands": [
+  {
+   "id": "T94",
+   "label": "THPN",
+   "color": "#C23B8E",
+   "desc": "1-(3,4,5-trihydroxyphenyl)nonan-1-one",
+   "entity": [
+    "2"
+   ],
+   "sites": [
+    [
+     "C",
+     "601"
+    ]
+   ]
+  }
+ ],
+ "site": {
+  "ligand": "T94",
+  "residues": [
+   "L493",
+   "L506",
+   "L509",
+   "V510",
+   "I512",
+   "T513",
+   "Q528",
+   "L555",
+   "L556",
+   "K558",
+   "L559"
+  ],
+  "hbonds": 6,
+  "pi": 0,
+  "neighbours": [],
+  "label": "THPN"
+ }
+}
